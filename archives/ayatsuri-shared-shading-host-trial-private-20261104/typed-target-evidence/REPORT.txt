@@ -1,0 +1,85 @@
+ESP32-S3 bounded memcpy(4) vs typed stores: isolated A/B, 2026-11-04
+
+Integrity and scope
+Control model SHA256: 8e4217e57e12568094c0443e022df74d712ef8bcd215ba7a74bef154bd0c0c89
+Candidate model SHA256: fb2595f220e47c02efc684fcd0ad4ba0da146eba99fd182e5aa25557eafa752c
+Both shader SHA256: 535c7b47326d7251deeb2fff5cd0c2b4e61945f0579be53646ecd8c213d11719
+Patch SHA256: 0f3d8855fdedd7a9af29cd4d4d3ece2c6596b250f0a4737b2d5223af6e5ffb4b
+Pair SHA256: 6ba28593e7963fed5f9901db57a065847be3030189dc957f09eba5ce659453e0
+All verified before use; only the model source differs among the twelve copied
+files. The complete separate pair uses SHARED=1 and TYPED_STORES=0 or1 as
+requested; its source retains the array initializer. No arithmetic or failure
+checks were changed, and no new alignment/alias assumption or cast was added.
+
+Four fresh objects compiled with the actual firmware command/ABI/picolibc
+settings: GNU23, finalO2, contraction off, longcalls, disabled memcpy builtins.
+Only variant main include roots, source and output/dependency paths changed;
+stack/IRA/reload diagnostics and pair selector macros were added. GCC15.2.0,
+objdump2.45. Exact argv/cwd/shell commands and response/spec hashes are saved.
+
+Control identity check
+Fresh control MODEL and PAIR allocated sections and code/literal relocation
+records match the previous candidate-bounded outputs exactly. Previous objects,
+relocations and .su are included under results/previous-bounded-reference.
+Debug paths/source lines differ, so whole object hashes are not equality gates.
+
+Observed byte counts                     Control          Typed
+model text incl. literals/rodata            36896          36788 (-108)
+mesh_packet .text                            7234           7134 (-100)
+mesh_packet local frame                      1424           1424
+model data/BSS                                0/0            0/0
+pair text incl. literals/rodata                974            953 (-21)
+shade_pair .text                              495            478 (-17)
+shade_pair local frame                         80             80
+pair data/BSS                                 0/0            0/0
+from_terms helper local frame                  64             64
+model terms_prepare helper local frame         80             80
+instance_evaluate local frame                1072           1072
+
+Calls and actual final stores
+- mesh_packet has13->11 external memcpy static sites: the two added color-copy
+  sites disappear; existing decoder/other memcpy sites remain. Four color
+  helper and two terms_prepare sites remain, with unchanged shader arithmetic.
+- shade_pair has1->0 memcpy sites. The first result stays in a7 across the
+  second color helper. Only AFTER that call, destination is loaded from the
+  incoming pointer argument at SP+80, then:
+    .text.shade_pair+0x15e: s16i a7,a8,0
+    .text.shade_pair+0x161: s16i a10,a8,2
+- MODEL front fields are inside a known-aligned vertex struct. GCC combines
+  the two type-correct assignments into register packing and ONE s32i to the
+  actual vertex at+12 (.text.mesh_packet+0x10d8), after the second helper.
+- MODEL back uint16_t* has only its existing type alignment. It uses TWO s16i
+  (.text.mesh_packet+0x132e B at+2, +0x1331 A at+0), after both computations.
+  The compiler can schedule the two nonvolatile stores in reverse order; no
+  pair atomicity or externally observed store-order guarantee is claimed.
+- The PAIR is likewise only a uint16_t* output and keeps two halfword stores.
+  There is no forced/assumed unaligned32-bit store.
+
+Registers and memory traffic
+The typed pair's addressable colors local is eliminated; reload RTL has no
+colors[0]/colors[1] local-memory references. ColorA is kept in a7. In the model
+front it stays in a7 and is packed with colorB; on back it stays in a6.
+Pair's shared front/back scalars cross calls in preserved caller registers
+(a4/a2). Control reload RTL preserves thin/back/spec at SP+32/+36/+40 over the
+first helper; typed reload instead preserves thin/spec at SP+16/+20. These
+%sfp scalar preserve/reload sites are distinct from explicit local arrays.
+The outgoing thin argument at SP+0 is ABI traffic (the scalarized helper has
+seven arguments). Incoming pair output pointer at SP+80 is also ABI traffic,
+not a spill. Helper frames remain64/80 and the pair frame stays80 despite the
+removed copy/temp accesses. Model normal/projection/index arrays and unrelated
+scalar spills remain; no raw stack-access count is presented as a spill count.
+selected-evidence.txt gives assembly and reload excerpts, with full dumps saved.
+
+Limits
+This is object-code observation, not adoption or runtime acceptance. No S3
+numerical execution, cycles, FPS, total peak stack, register-window overflow,
+link-relaxation effects or hardware behavior was measured. Host correctness
+work is independent and not claimed here. Original checkout/settings, SDK,
+software installs, public repository, CI and hardware were untouched.
+
+Reproduce
+compile_compare.py preserves the actual firmware command (use fresh per-variant
+results output directories); analyze.py regenerates metrics and compares the
+saved previous bounded references. Exact recorded argv can also be replayed.
+Paths in commands identify this environment; remap only documented roots and
+outputs on another machine, preserving flags, response and specs settings.

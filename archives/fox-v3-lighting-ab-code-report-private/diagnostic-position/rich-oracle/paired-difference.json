@@ -1,0 +1,42 @@
+{
+  "front": {
+    "11": {
+      "foregroundRGBMAE": {
+        "baseline": 0.050528651885350585,
+        "direction": 0.0573550040580267
+      },
+      "formalStableDeltaRGBRMSE": 0.04583402703473113,
+      "formalStableDeltaLumaRMSE": 0.039911915589880664,
+      "notNewStabilityEstimate": true
+    },
+    "29": {
+      "foregroundRGBMAE": {
+        "baseline": 0.05053924339662377,
+        "direction": 0.057422740467331965
+      },
+      "formalStableDeltaRGBRMSE": 0.04576528878813901,
+      "formalStableDeltaLumaRMSE": 0.03977395415185879,
+      "notNewStabilityEstimate": true
+    }
+  },
+  "oblique": {
+    "11": {
+      "foregroundRGBMAE": {
+        "baseline": 0.04914212901702376,
+        "direction": 0.0555023145363576
+      },
+      "formalStableDeltaRGBRMSE": 0.04904481975128253,
+      "formalStableDeltaLumaRMSE": 0.042529336876835126,
+      "notNewStabilityEstimate": true
+    },
+    "29": {
+      "foregroundRGBMAE": {
+        "baseline": 0.049201384712030685,
+        "direction": 0.055542412375084095
+      },
+      "formalStableDeltaRGBRMSE": 0.0490868327048641,
+      "formalStableDeltaLumaRMSE": 0.04250793555305508,
+      "notNewStabilityEstimate": true
+    }
+  }
+}

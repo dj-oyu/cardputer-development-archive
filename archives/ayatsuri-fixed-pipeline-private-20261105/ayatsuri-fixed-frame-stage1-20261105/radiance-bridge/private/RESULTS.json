@@ -1,0 +1,29 @@
+{
+  "scope": "supplied-term independent integer arithmetic; synthetic inputs only",
+  "random_oracle_trials": 100000,
+  "oracle": "unsigned128-bit scale and addition in test only",
+  "seed": "754196601d521a17",
+  "accepted": 25955,
+  "scale_overflow_rejected": 24188,
+  "aa_range_rejected": 49857,
+  "accepted_value_mismatches": 0,
+  "failure_atomicity_mismatches": 0,
+  "batch_widths": [
+    1,
+    2,
+    4,
+    8
+  ],
+  "batch_mismatches": 0,
+  "reducer_bound_q19": 8589934590,
+  "scaled_bound_q24": 274877906880,
+  "direct49936_plus_reflection_rejected": true,
+  "four_slot_mean_q19": 1310720,
+  "profile_calls_after_mean": 1,
+  "synthetic_rgb565": 59228,
+  "sanitizers": "ASan+UBSan; leak detection disabled",
+  "O0_O2_equal": true,
+  "old_historical_corpus_used": false,
+  "latest_model_validated": false,
+  "performance_measured": false
+}

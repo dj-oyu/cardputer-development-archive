@@ -1,0 +1,984 @@
+
+/workspace/ayatsuri-s3-fixed-arithmetic-objects-20261105/q24-O2/control.o:     file format elf32-xtensa-le
+
+
+Disassembly of section .text.cp_eval:
+
+00000000 <cp_eval>:
+cp_eval():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:7
+   0:	014136        	entry	a1, 160
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:8
+   3:	40f280        	nsau	a8, a2
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:7
+   6:	02ad      	mov.n	a10, a2
+   8:	186162        	s32i	a6, a1, 96
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:8
+   b:	120c      	movi.n	a2, 1
+   d:	418580        	srli	a8, a8, 5
+  10:	04ba16        	beqz	a10, 5f <cp_eval+0x5f>	10: R_XTENSA_SLOT0_OP	.text.cp_eval+0x5f
+  13:	838260        	moveqz	a8, a2, a6
+  16:	045856        	bnez	a8, 5f <cp_eval+0x5f>	16: R_XTENSA_SLOT0_OP	.text.cp_eval+0x5f
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:8 (discriminator 2)
+  19:	832a      	add.n	a8, a3, a2
+  1b:	d97c      	movi.n	a9, -3
+  1d:	10b890        	and	a11, a8, a9
+  20:	398897        	bany	a8, a9, 5d <cp_eval+0x5d>	20: R_XTENSA_SLOT0_OP	.text.cp_eval+0x5d
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:8 (discriminator 4)
+  23:	b87c      	movi.n	a8, -5
+  25:	108480        	and	a8, a4, a8
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:8 (discriminator 5)
+  28:	04b826        	beqi	a8, 16, 30 <cp_eval+0x30>	28: R_XTENSA_SLOT0_OP	.text.cp_eval+0x30
+  2b:	e8c482        	addi	a8, a4, -24
+  2e:	b8ec      	bnez.n	a8, 5d <cp_eval+0x5d>	2e: R_XTENSA_SLOT0_OP	.text.cp_eval+0x5d
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:8 (discriminator 9)
+  30:	120c      	movi.n	a2, 1
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:8 (discriminator 8)
+  32:	2725f6        	bgeui	a5, 2, 5d <cp_eval+0x5d>	32: R_XTENSA_SLOT0_OP	.text.cp_eval+0x5d
+  35:	0acd      	mov.n	a12, a10
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:9 (discriminator 15)
+  37:	18a1e2        	movi	a14, 0x118
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:9 (discriminator 14)
+  3a:	9f0c      	movi.n	a15, 9
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:9 (discriminator 15)
+  3c:	400b00        	ssr	a11
+  3f:	9180e0        	srl	a8, a14
+  42:	049080        	extui	a9, a8, 0, 1
+  45:	33e807        	bbsi	a8, 0, 7c <cp_eval+0x7c>	45: R_XTENSA_SLOT0_OP	.text.cp_eval+0x7c
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:9 (discriminator 5)
+  48:	405b26        	beqi	a11, 5, 8c <cp_eval+0x8c>	48: R_XTENSA_SLOT0_OP	.text.cp_eval+0x8c
+  4b:	097d      	mov.n	a7, a9
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:9 (discriminator 9)
+  4d:	0c88      	l32i.n	a8, a12, 0
+  4f:	31df80        	srai	a13, a8, 31
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:9 (discriminator 11)
+  52:	00d896        	bltz	a8, 63 <cp_eval+0x63>	52: R_XTENSA_SLOT0_OP	.text.cp_eval+0x63
+  55:	000061        	l32r	a6, fffc0058 <cp_eval+0xfffc0058>	55: R_XTENSA_SLOT0_OP	.literal.cp_eval
+  58:	07b687        	bgeu	a6, a8, 63 <cp_eval+0x63>	58: R_XTENSA_SLOT0_OP	.text.cp_eval+0x63
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:9 (discriminator 12)
+  5b:	220c      	movi.n	a2, 2
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:18
+  5d:	f01d      	retw.n
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:8 (discriminator 9)
+  5f:	120c      	movi.n	a2, 1
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:18
+  61:	f01d      	retw.n
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:9 (discriminator 9)
+  63:	f42d77        	blt	a13, a7, 5b <cp_eval+0x5b>	63: R_XTENSA_SLOT0_OP	.text.cp_eval+0x5b
+  66:	1a17d7        	beq	a7, a13, 84 <cp_eval+0x84>	66: R_XTENSA_SLOT0_OP	.text.cp_eval+0x84
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:9 (discriminator 13)
+  69:	bb1b      	addi.n	a11, a11, 1
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:9 (discriminator 14)
+  6b:	351bf7        	beq	a11, a15, a4 <cp_eval+0xa4>	6b: R_XTENSA_SLOT0_OP	.text.cp_eval+0xa4
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:9 (discriminator 15)
+  6e:	400b00        	ssr	a11
+  71:	9180e0        	srl	a8, a14
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:9 (discriminator 14)
+  74:	cc4b      	addi.n	a12, a12, 4
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:9 (discriminator 15)
+  76:	049080        	extui	a9, a8, 0, 1
+  79:	cb6807        	bbci	a8, 0, 48 <cp_eval+0x48>	79: R_XTENSA_SLOT0_OP	.text.cp_eval+0x48
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:9 (discriminator 2)
+  7c:	000091        	l32r	a9, fffc007c <cp_eval+0xfffc007c>	7c: R_XTENSA_SLOT0_OP	.literal.cp_eval+0x1c
+  7f:	f77c      	movi.n	a7, -1
+  81:	fff206        	j	4d <cp_eval+0x4d>	81: R_XTENSA_SLOT0_OP	.text.cp_eval+0x4d
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:9 (discriminator 9)
+  84:	e1b897        	bgeu	a8, a9, 69 <cp_eval+0x69>	84: R_XTENSA_SLOT0_OP	.text.cp_eval+0x69
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:9 (discriminator 12)
+  87:	220c      	movi.n	a2, 2
+  89:	fff406        	j	5d <cp_eval+0x5d>	89: R_XTENSA_SLOT0_OP	.text.cp_eval+0x5d
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:9 (discriminator 9)
+  8c:	0c88      	l32i.n	a8, a12, 0
+  8e:	319f80        	srai	a9, a8, 31
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:9 (discriminator 11)
+  91:	005896        	bltz	a8, 9a <cp_eval+0x9a>	91: R_XTENSA_SLOT0_OP	.text.cp_eval+0x9a
+  94:	0000b1        	l32r	a11, fffc0094 <cp_eval+0xfffc0094>	94: R_XTENSA_SLOT0_OP	.literal.cp_eval+0x18
+  97:	c03b87        	bltu	a11, a8, 5b <cp_eval+0x5b>	97: R_XTENSA_SLOT0_OP	.text.cp_eval+0x5b
+  9a:	fbd996        	bltz	a9, 5b <cp_eval+0x5b>	9a: R_XTENSA_SLOT0_OP	.text.cp_eval+0x5b
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:9 (discriminator 14)
+  9d:	cc4b      	addi.n	a12, a12, 4
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:9 (discriminator 13)
+  9f:	6b0c      	movi.n	a11, 6
+  a1:	ffe5c6        	j	3c <cp_eval+0x3c>	a1: R_XTENSA_SLOT0_OP	.text.cp_eval+0x3c
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:10 (discriminator 1)
+  a4:	5a88      	l32i.n	a8, a10, 20
+  a6:	1b6182        	s32i	a8, a1, 108
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:10
+  a9:	65cc      	bnez.n	a5, b3 <cp_eval+0xb3>	a9: R_XTENSA_SLOT0_OP	.text.cp_eval+0xb3
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:10 (discriminator 1)
+  ab:	118880        	slli	a8, a8, 8
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:10 (discriminator 2)
+  ae:	320c      	movi.n	a2, 3
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:10 (discriminator 1)
+  b0:	fa9856        	bnez	a8, 5d <cp_eval+0x5d>	b0: R_XTENSA_SLOT0_OP	.text.cp_eval+0x5d
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:11
+  b3:	8a58      	l32i.n	a5, a10, 32
+  b5:	3ad8      	l32i.n	a13, a10, 12
+  b7:	080c      	movi.n	a8, 0
+  b9:	31cf50        	srai	a12, a5, 31
+  bc:	4a98      	l32i.n	a9, a10, 16
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:11 (discriminator 2)
+  be:	086d      	mov.n	a6, a8
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:11
+  c0:	31efd0        	srai	a14, a13, 31
+  c3:	1961c2        	s32i	a12, a1, 100
+  c6:	31bf90        	srai	a11, a9, 31
+  c9:	b38de0        	movgez	a8, a13, a14
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:11 (discriminator 2)
+  cc:	06cd      	mov.n	a12, a6
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:11
+  ce:	00aed6        	bgez	a14, dc <cp_eval+0xdc>	ce: R_XTENSA_SLOT0_OP	.text.cp_eval+0xdc
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:11 (discriminator 1)
+  d1:	60c0e0        	neg	a12, a14
+  d4:	ec0b      	addi.n	a14, a12, -1
+  d6:	93ced0        	movnez	a12, a14, a13
+  d9:	6060d0        	neg	a6, a13
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:11 (discriminator 4)
+  dc:	0e0c      	movi.n	a14, 0
+  de:	0edd      	mov.n	a13, a14
+  e0:	b3d9b0        	movgez	a13, a9, a11
+  e3:	1a61d2        	s32i	a13, a1, 104
+  e6:	50db96        	bltz	a11, 5f7 <cp_eval+0x5f7>	e6: R_XTENSA_SLOT0_OP	.text.cp_eval+0x5f7
+  e9:	000091        	l32r	a9, fffc00ec <cp_eval+0xfffc00ec>	e9: R_XTENSA_SLOT0_OP	.literal.cp_eval
+  ec:	1e61e2        	s32i	a14, a1, 120
+  ef:	1f6192        	s32i	a9, a1, 124
+  f2:	1961e2        	s32i	a14, a1, 100
+  f5:	0ebd      	mov.n	a11, a14
+  f7:	0e2d      	mov.n	a2, a14
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:12
+  f9:	020366        	bnei	a3, -1, ff <cp_eval+0xff>	f9: R_XTENSA_SLOT0_OP	.text.cp_eval+0xff
+  fc:	014846        	j	621 <cp_eval+0x621>	fc: R_XTENSA_SLOT0_OP	.text.cp_eval+0x621
+prod():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:6
+  ff:	000091        	l32r	a9, fffc0100 <cp_eval+0xfffc0100>	ff: R_XTENSA_SLOT0_OP	.literal.cp_eval+0x10
+rne():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5 (discriminator 4)
+ 102:	0000f1        	l32r	a15, fffc0104 <cp_eval+0xfffc0104>	102: R_XTENSA_SLOT0_OP	.literal.cp_eval
+prod():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:6
+ 105:	82d890        	mull	a13, a8, a9
+ 108:	b28890        	mulsh	a8, a8, a9
+rne():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5 (discriminator 4)
+ 10b:	119d80        	slli	a9, a13, 8
+ 10e:	419890        	srli	a9, a9, 8
+ 111:	070c      	movi.n	a7, 0
+ 113:	404810        	ssai	24
+ 116:	81d8d0        	src	a13, a8, a13
+ 119:	c0ff90        	sub	a15, a15, a9
+ 11c:	758880        	extui	a8, a8, 24, 8
+ 11f:	17dc      	bnez.n	a7, 134 <cp_eval+0x134>	11f: R_XTENSA_SLOT0_OP	.text.cp_eval+0x134
+ 121:	0fbf97        	bgeu	a15, a9, 134 <cp_eval+0x134>	121: R_XTENSA_SLOT0_OP	.text.cp_eval+0x134
+cp_eval():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:12 (discriminator 9)
+ 124:	000071        	l32r	a7, fffc0124 <cp_eval+0xfffc0124>	124: R_XTENSA_SLOT0_OP	.literal.cp_eval+0x3c
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:12 (discriminator 11)
+ 127:	000091        	l32r	a9, fffc0128 <cp_eval+0xfffc0128>	127: R_XTENSA_SLOT0_OP	.literal.cp_eval+0x14
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:12 (discriminator 9)
+ 12a:	dd7a      	add.n	a13, a13, a7
+ 12c:	627d70        	saltu	a7, a13, a7
+ 12f:	787a      	add.n	a7, a8, a7
+ 131:	000486        	j	147 <cp_eval+0x147>	131: R_XTENSA_SLOT0_OP	.text.cp_eval+0x147
+rne():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5 (discriminator 6)
+ 134:	0299f7        	bne	a9, a15, 13a <cp_eval+0x13a>	134: R_XTENSA_SLOT0_OP	.text.cp_eval+0x13a
+ 137:	014c06        	j	66b <cp_eval+0x66b>	137: R_XTENSA_SLOT0_OP	.text.cp_eval+0x66b
+cp_eval():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:12 (discriminator 9)
+ 13a:	000071        	l32r	a7, fffc013c <cp_eval+0xfffc013c>	13a: R_XTENSA_SLOT0_OP	.literal.cp_eval+0x24
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:12 (discriminator 11)
+ 13d:	000091        	l32r	a9, fffc0140 <cp_eval+0xfffc0140>	13d: R_XTENSA_SLOT0_OP	.literal.cp_eval+0x14
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:12 (discriminator 9)
+ 140:	dd7a      	add.n	a13, a13, a7
+ 142:	627d70        	saltu	a7, a13, a7
+ 145:	787a      	add.n	a7, a8, a7
+prod():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:6
+ 147:	82f690        	mull	a15, a6, a9
+ 14a:	82cc90        	mull	a12, a12, a9
+ 14d:	a29690        	muluh	a9, a6, a9
+rne():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5 (discriminator 4)
+ 150:	118f80        	slli	a8, a15, 8
+prod():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:6
+ 153:	9c9a      	add.n	a9, a12, a9
+rne():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5 (discriminator 4)
+ 155:	0000c1        	l32r	a12, fffc0158 <cp_eval+0xfffc0158>	155: R_XTENSA_SLOT0_OP	.literal.cp_eval
+ 158:	418880        	srli	a8, a8, 8
+ 15b:	060c      	movi.n	a6, 0
+ 15d:	404810        	ssai	24
+ 160:	81f9f0        	src	a15, a9, a15
+ 163:	c0cc80        	sub	a12, a12, a8
+ 166:	759890        	extui	a9, a9, 24, 8
+ 169:	405656        	bnez	a6, 572 <cp_eval+0x572>	169: R_XTENSA_SLOT0_OP	.text.cp_eval+0x572
+ 16c:	023c87        	bltu	a12, a8, 172 <cp_eval+0x172>	16c: R_XTENSA_SLOT0_OP	.text.cp_eval+0x172
+ 16f:	00ffc6        	j	572 <cp_eval+0x572>	16f: R_XTENSA_SLOT0_OP	.text.cp_eval+0x572
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5 (discriminator 12)
+ 172:	8f1b      	addi.n	a8, a15, 1
+ 174:	62f8f0        	saltu	a15, a8, a15
+ 177:	9f9a      	add.n	a9, a15, a9
+ 179:	08fd      	mov.n	a15, a8
+prod():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:6
+ 17b:	1a2162        	l32i	a6, a1, 104
+ 17e:	0000c1        	l32r	a12, fffc0180 <cp_eval+0xfffc0180>	17e: R_XTENSA_SLOT0_OP	.literal.cp_eval+0x8
+cp_eval():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:12 (discriminator 14)
+ 181:	c07790        	sub	a7, a7, a9
+ 184:	629df0        	saltu	a9, a13, a15
+prod():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:6
+ 187:	8286c0        	mull	a8, a6, a12
+cp_eval():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:12 (discriminator 14)
+ 18a:	c09790        	sub	a9, a7, a9
+ 18d:	1d6192        	s32i	a9, a1, 116
+ 190:	c09df0        	sub	a9, a13, a15
+prod():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:6
+ 193:	b2c6c0        	mulsh	a12, a6, a12
+cp_eval():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:12 (discriminator 14)
+ 196:	1c6192        	s32i	a9, a1, 112
+rne():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5 (discriminator 4)
+ 199:	116880        	slli	a6, a8, 8
+ 19c:	000091        	l32r	a9, fffc019c <cp_eval+0xfffc019c>	19c: R_XTENSA_SLOT0_OP	.literal.cp_eval
+ 19f:	416860        	srli	a6, a6, 8
+ 1a2:	0d0c      	movi.n	a13, 0
+ 1a4:	404810        	ssai	24
+ 1a7:	818c80        	src	a8, a12, a8
+ 1aa:	c09960        	sub	a9, a9, a6
+ 1ad:	75c8c0        	extui	a12, a12, 24, 8
+ 1b0:	3a4d56        	bnez	a13, 558 <cp_eval+0x558>	1b0: R_XTENSA_SLOT0_OP	.text.cp_eval+0x558
+ 1b3:	023967        	bltu	a9, a6, 1b9 <cp_eval+0x1b9>	1b3: R_XTENSA_SLOT0_OP	.text.cp_eval+0x1b9
+ 1b6:	00e786        	j	558 <cp_eval+0x558>	1b6: R_XTENSA_SLOT0_OP	.text.cp_eval+0x558
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5 (discriminator 12)
+ 1b9:	981b      	addi.n	a9, a8, 1
+ 1bb:	628980        	saltu	a8, a9, a8
+ 1be:	c8ca      	add.n	a12, a8, a12
+ 1c0:	098d      	mov.n	a8, a9
+cp_eval():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:13 (discriminator 1)
+ 1c2:	000091        	l32r	a9, fffc01c4 <cp_eval+0xfffc01c4>	1c2: R_XTENSA_SLOT0_OP	.literal.cp_eval+0x28
+ 1c5:	d89a      	add.n	a13, a8, a9
+rne():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5 (discriminator 4)
+ 1c7:	192182        	l32i	a8, a1, 100
+cp_eval():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:13 (discriminator 1)
+ 1ca:	629d90        	saltu	a9, a13, a9
+ 1cd:	cc9a      	add.n	a12, a12, a9
+rne():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5 (discriminator 4)
+ 1cf:	0218e7        	beq	a8, a14, 1d5 <cp_eval+0x1d5>	1cf: R_XTENSA_SLOT0_OP	.text.cp_eval+0x1d5
+ 1d2:	00d786        	j	534 <cp_eval+0x534>	1d2: R_XTENSA_SLOT0_OP	.text.cp_eval+0x534
+ 1d5:	1f2182        	l32i	a8, a1, 124
+ 1d8:	1e2192        	l32i	a9, a1, 120
+ 1db:	023897        	bltu	a8, a9, 1e1 <cp_eval+0x1e1>	1db: R_XTENSA_SLOT0_OP	.text.cp_eval+0x1e1
+ 1de:	00d486        	j	534 <cp_eval+0x534>	1de: R_XTENSA_SLOT0_OP	.text.cp_eval+0x534
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5 (discriminator 12)
+ 1e1:	8b1b      	addi.n	a8, a11, 1
+ 1e3:	62b8b0        	saltu	a11, a8, a11
+ 1e6:	2b2a      	add.n	a2, a11, a2
+ 1e8:	08bd      	mov.n	a11, a8
+prod():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:6
+ 1ea:	000081        	l32r	a8, fffc01ec <cp_eval+0xfffc01ec>	1ea: R_XTENSA_SLOT0_OP	.literal.cp_eval+0xc
+cp_eval():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:13 (discriminator 2)
+ 1ed:	c02c20        	sub	a2, a12, a2
+prod():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:6
+ 1f0:	b2f580        	mulsh	a15, a5, a8
+ 1f3:	828580        	mull	a8, a5, a8
+rne():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5
+ 1f6:	31eff0        	srai	a14, a15, 31
+ 1f9:	308e80        	xor	a8, a14, a8
+ 1fc:	6278e0        	saltu	a7, a8, a14
+cp_eval():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:13 (discriminator 2)
+ 1ff:	62cdb0        	saltu	a12, a13, a11
+rne():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5
+ 202:	309ef0        	xor	a9, a14, a15
+ 205:	c088e0        	sub	a8, a8, a14
+cp_eval():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:13 (discriminator 2)
+ 208:	c0bdb0        	sub	a11, a13, a11
+rne():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5
+ 20b:	c099e0        	sub	a9, a9, a14
+cp_eval():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:13 (discriminator 2)
+ 20e:	1e61b2        	s32i	a11, a1, 120
+rne():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5 (discriminator 4)
+ 211:	11e880        	slli	a14, a8, 8
+ 214:	0000b1        	l32r	a11, fffc0214 <cp_eval+0xfffc0214>	214: R_XTENSA_SLOT0_OP	.literal.cp_eval
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5
+ 217:	c09970        	sub	a9, a9, a7
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5 (discriminator 4)
+ 21a:	41e8e0        	srli	a14, a14, 8
+cp_eval():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:13 (discriminator 2)
+ 21d:	c022c0        	sub	a2, a2, a12
+rne():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5 (discriminator 4)
+ 220:	0c0c      	movi.n	a12, 0
+ 222:	404810        	ssai	24
+ 225:	818980        	src	a8, a9, a8
+ 228:	c0bbe0        	sub	a11, a11, a14
+ 22b:	759890        	extui	a9, a9, 24, 8
+ 22e:	2e8c56        	bnez	a12, 51a <cp_eval+0x51a>	22e: R_XTENSA_SLOT0_OP	.text.cp_eval+0x51a
+ 231:	023be7        	bltu	a11, a14, 237 <cp_eval+0x237>	231: R_XTENSA_SLOT0_OP	.text.cp_eval+0x237
+ 234:	00b886        	j	51a <cp_eval+0x51a>	234: R_XTENSA_SLOT0_OP	.text.cp_eval+0x51a
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5 (discriminator 12)
+ 237:	c81b      	addi.n	a12, a8, 1
+ 239:	628c80        	saltu	a8, a12, a8
+ 23c:	989a      	add.n	a9, a8, a9
+ 23e:	0c8d      	mov.n	a8, a12
+ 240:	348f96        	bltz	a15, 58c <cp_eval+0x58c>	240: R_XTENSA_SLOT0_OP	.text.cp_eval+0x58c
+cp_eval():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:14 (discriminator 1)
+ 243:	000091        	l32r	a9, fffc0244 <cp_eval+0xfffc0244>	243: R_XTENSA_SLOT0_OP	.literal.cp_eval+0x2c
+rne():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5 (discriminator 4)
+ 246:	0e0c      	movi.n	a14, 0
+cp_eval():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:14 (discriminator 1)
+ 248:	889a      	add.n	a8, a8, a9
+prod():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:6
+ 24a:	b2b580        	mulsh	a11, a5, a8
+ 24d:	82d580        	mull	a13, a5, a8
+rne():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5
+ 250:	6090b0        	neg	a9, a11
+ 253:	6080d0        	neg	a8, a13
+ 256:	f90b      	addi.n	a15, a9, -1
+ 258:	939fd0        	movnez	a9, a15, a13
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5 (discriminator 4)
+ 25b:	11c880        	slli	a12, a8, 8
+ 25e:	0000d1        	l32r	a13, fffc0260 <cp_eval+0xfffc0260>	25e: R_XTENSA_SLOT0_OP	.literal.cp_eval
+ 261:	41c8c0        	srli	a12, a12, 8
+ 264:	404810        	ssai	24
+ 267:	818980        	src	a8, a9, a8
+ 26a:	0efd      	mov.n	a15, a14
+ 26c:	759890        	extui	a9, a9, 24, 8
+ 26f:	c0ddc0        	sub	a13, a13, a12
+ 272:	021ee7        	beq	a14, a14, 278 <cp_eval+0x278>	272: R_XTENSA_SLOT0_OP	.text.cp_eval+0x278
+ 275:	00a0c6        	j	4fc <cp_eval+0x4fc>	275: R_XTENSA_SLOT0_OP	.text.cp_eval+0x4fc
+ 278:	023dc7        	bltu	a13, a12, 27e <cp_eval+0x27e>	278: R_XTENSA_SLOT0_OP	.text.cp_eval+0x27e
+ 27b:	009f46        	j	4fc <cp_eval+0x4fc>	27b: R_XTENSA_SLOT0_OP	.text.cp_eval+0x4fc
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5 (discriminator 12)
+ 27e:	b81b      	addi.n	a11, a8, 1
+ 280:	628b80        	saltu	a8, a11, a8
+ 283:	989a      	add.n	a9, a8, a9
+ 285:	0b8d      	mov.n	a8, a11
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5 (discriminator 13)
+ 287:	609090        	neg	a9, a9
+ 28a:	b90b      	addi.n	a11, a9, -1
+ 28c:	939b80        	movnez	a9, a11, a8
+ 28f:	608080        	neg	a8, a8
+cp_eval():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:14 (discriminator 2)
+ 292:	0000b1        	l32r	a11, fffc0294 <cp_eval+0xfffc0294>	292: R_XTENSA_SLOT0_OP	.literal.cp_eval+0x30
+rne():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5 (discriminator 4)
+ 295:	0e0c      	movi.n	a14, 0
+cp_eval():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:14 (discriminator 2)
+ 297:	88ba      	add.n	a8, a8, a11
+ 299:	62b8b0        	saltu	a11, a8, a11
+ 29c:	99ba      	add.n	a9, a9, a11
+prod():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:6
+ 29e:	31bf50        	srai	a11, a5, 31
+ 2a1:	82cb80        	mull	a12, a11, a8
+ 2a4:	829950        	mull	a9, a9, a5
+ 2a7:	a2b850        	muluh	a11, a8, a5
+ 2aa:	99ca      	add.n	a9, a9, a12
+ 2ac:	b9ba      	add.n	a11, a9, a11
+ 2ae:	828850        	mull	a8, a8, a5
+rne():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5
+ 2b1:	31dfb0        	srai	a13, a11, 31
+ 2b4:	308d80        	xor	a8, a13, a8
+ 2b7:	309db0        	xor	a9, a13, a11
+ 2ba:	62c8d0        	saltu	a12, a8, a13
+ 2bd:	c099d0        	sub	a9, a9, a13
+ 2c0:	c088d0        	sub	a8, a8, a13
+ 2c3:	c099c0        	sub	a9, a9, a12
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5 (discriminator 4)
+ 2c6:	11d880        	slli	a13, a8, 8
+ 2c9:	404810        	ssai	24
+ 2cc:	81c980        	src	a12, a9, a8
+ 2cf:	000081        	l32r	a8, fffc02d0 <cp_eval+0xfffc02d0>	2cf: R_XTENSA_SLOT0_OP	.literal.cp_eval
+ 2d2:	41d8d0        	srli	a13, a13, 8
+ 2d5:	759890        	extui	a9, a9, 24, 8
+ 2d8:	c088d0        	sub	a8, a8, a13
+ 2db:	203e56        	bnez	a14, 4e2 <cp_eval+0x4e2>	2db: R_XTENSA_SLOT0_OP	.text.cp_eval+0x4e2
+ 2de:	0238d7        	bltu	a8, a13, 2e4 <cp_eval+0x2e4>	2de: R_XTENSA_SLOT0_OP	.text.cp_eval+0x2e4
+ 2e1:	007f46        	j	4e2 <cp_eval+0x4e2>	2e1: R_XTENSA_SLOT0_OP	.text.cp_eval+0x4e2
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5 (discriminator 12)
+ 2e4:	dc1b      	addi.n	a13, a12, 1
+ 2e6:	628dc0        	saltu	a8, a13, a12
+ 2e9:	989a      	add.n	a9, a8, a9
+ 2eb:	0dcd      	mov.n	a12, a13
+ 2ed:	00abd6        	bgez	a11, 2fb <cp_eval+0x2fb>	2ed: R_XTENSA_SLOT0_OP	.text.cp_eval+0x2fb
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5 (discriminator 13)
+ 2f0:	609090        	neg	a9, a9
+ 2f3:	890b      	addi.n	a8, a9, -1
+ 2f5:	9398c0        	movnez	a9, a8, a12
+ 2f8:	60c0c0        	neg	a12, a12
+cp_eval():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:14 (discriminator 3)
+ 2fb:	0000b1        	l32r	a11, fffc02fc <cp_eval+0xfffc02fc>	2fb: R_XTENSA_SLOT0_OP	.literal.cp_eval+0x34
+ 2fe:	890b      	addi.n	a8, a9, -1
+ 300:	ccba      	add.n	a12, a12, a11
+ 302:	01bcb7        	bgeu	a12, a11, 307 <cp_eval+0x307>	302: R_XTENSA_SLOT0_OP	.text.cp_eval+0x307
+ 305:	098d      	mov.n	a8, a9
+prod():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:6
+ 307:	319f50        	srai	a9, a5, 31
+ 30a:	82b9c0        	mull	a11, a9, a12
+ 30d:	828850        	mull	a8, a8, a5
+ 310:	a29c50        	muluh	a9, a12, a5
+ 313:	88ba      	add.n	a8, a8, a11
+ 315:	989a      	add.n	a9, a8, a9
+ 317:	82cc50        	mull	a12, a12, a5
+rne():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5
+ 31a:	31bf90        	srai	a11, a9, 31
+ 31d:	30cbc0        	xor	a12, a11, a12
+ 320:	308b90        	xor	a8, a11, a9
+ 323:	62dcb0        	saltu	a13, a12, a11
+ 326:	c088b0        	sub	a8, a8, a11
+ 329:	c0ccb0        	sub	a12, a12, a11
+ 32c:	c088d0        	sub	a8, a8, a13
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5 (discriminator 4)
+ 32f:	11bc80        	slli	a11, a12, 8
+ 332:	0000d1        	l32r	a13, fffc0334 <cp_eval+0xfffc0334>	332: R_XTENSA_SLOT0_OP	.literal.cp_eval
+ 335:	41b8b0        	srli	a11, a11, 8
+ 338:	0e0c      	movi.n	a14, 0
+ 33a:	404810        	ssai	24
+ 33d:	81c8c0        	src	a12, a8, a12
+ 340:	c0ddb0        	sub	a13, a13, a11
+ 343:	758880        	extui	a8, a8, 24, 8
+ 346:	17ee56        	bnez	a14, 4c8 <cp_eval+0x4c8>	346: R_XTENSA_SLOT0_OP	.text.cp_eval+0x4c8
+ 349:	023db7        	bltu	a13, a11, 34f <cp_eval+0x34f>	349: R_XTENSA_SLOT0_OP	.text.cp_eval+0x34f
+ 34c:	005e06        	j	4c8 <cp_eval+0x4c8>	34c: R_XTENSA_SLOT0_OP	.text.cp_eval+0x4c8
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5 (discriminator 12)
+ 34f:	bc1b      	addi.n	a11, a12, 1
+ 351:	62cbc0        	saltu	a12, a11, a12
+ 354:	8c8a      	add.n	a8, a12, a8
+ 356:	0bcd      	mov.n	a12, a11
+ 358:	00a9d6        	bgez	a9, 366 <cp_eval+0x366>	358: R_XTENSA_SLOT0_OP	.text.cp_eval+0x366
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5 (discriminator 13)
+ 35b:	608080        	neg	a8, a8
+ 35e:	980b      	addi.n	a9, a8, -1
+ 360:	9389c0        	movnez	a8, a9, a12
+ 363:	60c0c0        	neg	a12, a12
+cp_eval():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:16 (discriminator 4)
+ 366:	e2c472        	addi	a7, a4, -30
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:14 (discriminator 4)
+ 369:	000061        	l32r	a6, fffc036c <cp_eval+0xfffc036c>	369: R_XTENSA_SLOT0_OP	.literal.cp_eval+0x38
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:16 (discriminator 4)
+ 36c:	607070        	neg	a7, a7
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:15 (discriminator 1)
+ 36f:	331b      	addi.n	a3, a3, 1
+ 371:	8b0c      	movi.n	a11, 8
+ 373:	490c      	movi.n	a9, 4
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:16 (discriminator 4)
+ 375:	0d2c      	movi.n	a13, 32
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:15 (discriminator 1)
+ 377:	939b30        	movnez	a9, a11, a3
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:16 (discriminator 4)
+ 37a:	10d7d0        	and	a13, a7, a13
+ 37d:	1961d2        	s32i	a13, a1, 100
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:14 (discriminator 4)
+ 380:	cc6a      	add.n	a12, a12, a6
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:15 (discriminator 4)
+ 382:	9a9a      	add.n	a9, a10, a9
+ 384:	0ae8      	l32i.n	a14, a10, 0
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:16 (discriminator 4)
+ 386:	040c      	movi.n	a4, 0
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:14 (discriminator 4)
+ 388:	c1c9      	s32i.n	a12, a1, 48
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:15 (discriminator 4)
+ 38a:	0998      	l32i.n	a9, a9, 0
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:16 (discriminator 4)
+ 38c:	1921c2        	l32i	a12, a1, 100
+ 38f:	1f0c      	movi.n	a15, 1
+ 391:	401700        	ssl	a7
+ 394:	a13f00        	sll	a3, a15
+ 397:	04fd      	mov.n	a15, a4
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:15 (discriminator 4)
+ 399:	5399e0        	max	a9, a9, a14
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:16 (discriminator 4)
+ 39c:	93f3c0        	movnez	a15, a3, a12
+ 39f:	9334c0        	movnez	a3, a4, a12
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:14 (discriminator 4)
+ 3a2:	c1c8      	l32i.n	a12, a1, 48
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:16 (discriminator 4)
+ 3a4:	1a61f2        	s32i	a15, a1, 104
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:15 (discriminator 4)
+ 3a7:	31ff90        	srai	a15, a9, 31
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:14 (discriminator 4)
+ 3aa:	626c60        	saltu	a6, a12, a6
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:15 (discriminator 4)
+ 3ad:	404a10        	ssai	26
+ 3b0:	81ff90        	src	a15, a15, a9
+ 3b3:	1b21c2        	l32i	a12, a1, 108
+ 3b6:	1199a0        	slli	a9, a9, 6
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:14 (discriminator 4)
+ 3b9:	886a      	add.n	a8, a8, a6
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:15 (discriminator 4)
+ 3bb:	0199      	s32i.n	a9, a1, 0
+ 3bd:	1b2162        	l32i	a6, a1, 108
+ 3c0:	1c2192        	l32i	a9, a1, 112
+ 3c3:	31efc0        	srai	a14, a12, 31
+ 3c6:	6ab8      	l32i.n	a11, a10, 24
+ 3c8:	404a10        	ssai	26
+ 3cb:	81ee60        	src	a14, a14, a6
+ 3ce:	7aa8      	l32i.n	a10, a10, 28
+ 3d0:	1166a0        	slli	a6, a6, 6
+ 3d3:	2199      	s32i.n	a9, a1, 8
+ 3d5:	1d2192        	l32i	a9, a1, 116
+ 3d8:	6169      	s32i.n	a6, a1, 24
+ 3da:	316f50        	srai	a6, a5, 31
+ 3dd:	404a10        	ssai	26
+ 3e0:	816650        	src	a6, a6, a5
+ 3e3:	31dfb0        	srai	a13, a11, 31
+ 3e6:	31cfa0        	srai	a12, a10, 31
+ 3e9:	11f9      	s32i.n	a15, a1, 4
+ 3eb:	3199      	s32i.n	a9, a1, 12
+ 3ed:	1a21f2        	l32i	a15, a1, 104
+ 3f0:	1e2192        	l32i	a9, a1, 120
+ 3f3:	40f340        	nsau	a4, a3
+ 3f6:	404a10        	ssai	26
+ 3f9:	81ddb0        	src	a13, a13, a11
+ 3fc:	b169      	s32i.n	a6, a1, 44
+ 3fe:	11bba0        	slli	a11, a11, 6
+ 401:	1165a0        	slli	a6, a5, 6
+ 404:	404a10        	ssai	26
+ 407:	81cca0        	src	a12, a12, a10
+ 40a:	415540        	srli	a5, a4, 5
+ 40d:	d189      	s32i.n	a8, a1, 52
+ 40f:	11aaa0        	slli	a10, a10, 6
+ 412:	830b      	addi.n	a8, a3, -1
+ 414:	5129      	s32i.n	a2, a1, 20
+ 416:	81b9      	s32i.n	a11, a1, 32
+ 418:	a169      	s32i.n	a6, a1, 40
+ 41a:	1b6182        	s32i	a8, a1, 108
+ 41d:	4199      	s32i.n	a9, a1, 16
+ 41f:	c08f50        	sub	a8, a15, a5
+ 422:	71e9      	s32i.n	a14, a1, 28
+ 424:	91d9      	s32i.n	a13, a1, 36
+ 426:	f1c9      	s32i.n	a12, a1, 60
+ 428:	e1a9      	s32i.n	a10, a1, 56
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:16 (discriminator 3)
+ 42a:	f27c      	movi.n	a2, -1
+ 42c:	1c6182        	s32i	a8, a1, 112
+ 42f:	01bd      	mov.n	a11, a1
+ 431:	40c152        	addi	a5, a1, 64
+ 434:	302720        	xor	a2, a7, a2
+rne():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5 (discriminator 4)
+ 437:	860c      	movi.n	a6, 8
+cp_eval():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:16 (discriminator 4)
+ 439:	1bc8      	l32i.n	a12, a11, 4
+ 43b:	0b88      	l32i.n	a8, a11, 0
+rne():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5
+ 43d:	31afc0        	srai	a10, a12, 31
+ 440:	308a80        	xor	a8, a10, a8
+ 443:	309ac0        	xor	a9, a10, a12
+ 446:	62d8a0        	saltu	a13, a8, a10
+ 449:	c099a0        	sub	a9, a9, a10
+ 44c:	c088a0        	sub	a8, a8, a10
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5 (discriminator 4)
+ 44f:	1b21a2        	l32i	a10, a1, 108
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5
+ 452:	c099d0        	sub	a9, a9, a13
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5 (discriminator 4)
+ 455:	10ea80        	and	a14, a10, a8
+ 458:	1c21a2        	l32i	a10, a1, 112
+ 45b:	d99a      	add.n	a13, a9, a9
+ 45d:	10fa90        	and	a15, a10, a9
+ 460:	1a21a2        	l32i	a10, a1, 104
+ 463:	401200        	ssl	a2
+ 466:	a1dd00        	sll	a13, a13
+ 469:	400700        	ssr	a7
+ 46c:	918080        	srl	a8, a8
+ 46f:	8d8a      	add.n	a8, a13, a8
+ 471:	c0aaf0        	sub	a10, a10, a15
+ 474:	1921d2        	l32i	a13, a1, 100
+ 477:	6243e0        	saltu	a4, a3, a14
+ 47a:	400700        	ssr	a7
+ 47d:	919090        	srl	a9, a9
+ 480:	c0aa40        	sub	a10, a10, a4
+ 483:	9389d0        	movnez	a8, a9, a13
+ 486:	c093e0        	sub	a9, a3, a14
+ 489:	363af7        	bltu	a10, a15, 4c3 <cp_eval+0x4c3>	489: R_XTENSA_SLOT0_OP	.text.cp_eval+0x4c3
+ 48c:	029fa7        	bne	a15, a10, 492 <cp_eval+0x492>	48c: R_XTENSA_SLOT0_OP	.text.cp_eval+0x492
+ 48f:	3039e7        	bltu	a9, a14, 4c3 <cp_eval+0x4c3>	48f: R_XTENSA_SLOT0_OP	.text.cp_eval+0x4c3
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5 (discriminator 6)
+ 492:	0a99e7        	bne	a9, a14, 4a0 <cp_eval+0x4a0>	492: R_XTENSA_SLOT0_OP	.text.cp_eval+0x4a0
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5 (discriminator 12)
+ 495:	049080        	extui	a9, a8, 0, 1
+ 498:	989a      	add.n	a9, a8, a9
+ 49a:	c0aaf0        	sub	a10, a10, a15
+ 49d:	8389a0        	moveqz	a8, a9, a10
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5 (discriminator 13)
+ 4a0:	609080        	neg	a9, a8
+ 4a3:	a389c0        	movltz	a8, a9, a12
+cp_eval():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:16 (discriminator 4)
+ 4a6:	0589      	s32i.n	a8, a5, 0
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:16 (discriminator 3)
+ 4a8:	bb8b      	addi.n	a11, a11, 8
+ 4aa:	554b      	addi.n	a5, a5, 4
+ 4ac:	660b      	addi.n	a6, a6, -1
+ 4ae:	f87656        	bnez	a6, 439 <cp_eval+0x439>	4ae: R_XTENSA_SLOT0_OP	.text.cp_eval+0x439
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:17
+ 4b1:	1821a2        	l32i	a10, a1, 96
+ 4b4:	0c2c      	movi.n	a12, 32
+ 4b6:	40c1b2        	addi	a11, a1, 64
+ 4b9:	000081        	l32r	a8, fffc04bc <cp_eval+0xfffc04bc>	4b9: R_XTENSA_SLOT0_OP	.literal.cp_eval+0x44
+	4b9: R_XTENSA_ASM_EXPAND	memcpy
+ 4bc:	0008e0        	callx8	a8
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:17 (discriminator 1)
+ 4bf:	020c      	movi.n	a2, 0
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:18
+ 4c1:	f01d      	retw.n
+rne():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5 (discriminator 12)
+ 4c3:	881b      	addi.n	a8, a8, 1
+ 4c5:	fff5c6        	j	4a0 <cp_eval+0x4a0>	4c5: R_XTENSA_SLOT0_OP	.text.cp_eval+0x4a0
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5 (discriminator 6)
+ 4c8:	021bd7        	beq	a11, a13, 4ce <cp_eval+0x4ce>	4c8: R_XTENSA_SLOT0_OP	.text.cp_eval+0x4ce
+ 4cb:	ffa246        	j	358 <cp_eval+0x358>	4cb: R_XTENSA_SLOT0_OP	.text.cp_eval+0x358
+ 4ce:	0b0c      	movi.n	a11, 0
+ 4d0:	e84b56        	bnez	a11, 358 <cp_eval+0x358>	4d0: R_XTENSA_SLOT0_OP	.text.cp_eval+0x358
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5 (discriminator 7)
+ 4d3:	04b0c0        	extui	a11, a12, 0, 1
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5 (discriminator 12)
+ 4d6:	bcba      	add.n	a11, a12, a11
+ 4d8:	62cbc0        	saltu	a12, a11, a12
+ 4db:	8c8a      	add.n	a8, a12, a8
+ 4dd:	0bcd      	mov.n	a12, a11
+ 4df:	ff9d46        	j	358 <cp_eval+0x358>	4df: R_XTENSA_SLOT0_OP	.text.cp_eval+0x358
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5 (discriminator 6)
+ 4e2:	021d87        	beq	a13, a8, 4e8 <cp_eval+0x4e8>	4e2: R_XTENSA_SLOT0_OP	.text.cp_eval+0x4e8
+ 4e5:	ff8106        	j	2ed <cp_eval+0x2ed>	4e5: R_XTENSA_SLOT0_OP	.text.cp_eval+0x2ed
+ 4e8:	080c      	movi.n	a8, 0
+ 4ea:	dff856        	bnez	a8, 2ed <cp_eval+0x2ed>	4ea: R_XTENSA_SLOT0_OP	.text.cp_eval+0x2ed
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5 (discriminator 7)
+ 4ed:	04d0c0        	extui	a13, a12, 0, 1
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5 (discriminator 12)
+ 4f0:	dcda      	add.n	a13, a12, a13
+ 4f2:	628dc0        	saltu	a8, a13, a12
+ 4f5:	989a      	add.n	a9, a8, a9
+ 4f7:	0dcd      	mov.n	a12, a13
+ 4f9:	ff7c06        	j	2ed <cp_eval+0x2ed>	4f9: R_XTENSA_SLOT0_OP	.text.cp_eval+0x2ed
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5 (discriminator 6)
+ 4fc:	051cd7        	beq	a12, a13, 505 <cp_eval+0x505>	4fc: R_XTENSA_SLOT0_OP	.text.cp_eval+0x505
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5 (discriminator 12)
+ 4ff:	d8fbd6        	bgez	a11, 292 <cp_eval+0x292>	4ff: R_XTENSA_SLOT0_OP	.text.cp_eval+0x292
+ 502:	ff6046        	j	287 <cp_eval+0x287>	502: R_XTENSA_SLOT0_OP	.text.cp_eval+0x287
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5 (discriminator 6)
+ 505:	f69ef7        	bne	a14, a15, 4ff <cp_eval+0x4ff>	505: R_XTENSA_SLOT0_OP	.text.cp_eval+0x4ff
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5 (discriminator 7)
+ 508:	04c080        	extui	a12, a8, 0, 1
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5 (discriminator 12)
+ 50b:	c8ca      	add.n	a12, a8, a12
+ 50d:	628c80        	saltu	a8, a12, a8
+ 510:	989a      	add.n	a9, a8, a9
+ 512:	0c8d      	mov.n	a8, a12
+ 514:	d7abd6        	bgez	a11, 292 <cp_eval+0x292>	514: R_XTENSA_SLOT0_OP	.text.cp_eval+0x292
+ 517:	ff5b06        	j	287 <cp_eval+0x287>	517: R_XTENSA_SLOT0_OP	.text.cp_eval+0x287
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5 (discriminator 6)
+ 51a:	021eb7        	beq	a14, a11, 520 <cp_eval+0x520>	51a: R_XTENSA_SLOT0_OP	.text.cp_eval+0x520
+ 51d:	ff47c6        	j	240 <cp_eval+0x240>	51d: R_XTENSA_SLOT0_OP	.text.cp_eval+0x240
+ 520:	0b0c      	movi.n	a11, 0
+ 522:	d1ab56        	bnez	a11, 240 <cp_eval+0x240>	522: R_XTENSA_SLOT0_OP	.text.cp_eval+0x240
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5 (discriminator 7)
+ 525:	04b080        	extui	a11, a8, 0, 1
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5 (discriminator 12)
+ 528:	b8ba      	add.n	a11, a8, a11
+ 52a:	628b80        	saltu	a8, a11, a8
+ 52d:	989a      	add.n	a9, a8, a9
+ 52f:	0b8d      	mov.n	a8, a11
+ 531:	ff42c6        	j	240 <cp_eval+0x240>	531: R_XTENSA_SLOT0_OP	.text.cp_eval+0x240
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5 (discriminator 6)
+ 534:	1e2182        	l32i	a8, a1, 120
+ 537:	1f2192        	l32i	a9, a1, 124
+ 53a:	021897        	beq	a8, a9, 540 <cp_eval+0x540>	53a: R_XTENSA_SLOT0_OP	.text.cp_eval+0x540
+ 53d:	ff2a46        	j	1ea <cp_eval+0x1ea>	53d: R_XTENSA_SLOT0_OP	.text.cp_eval+0x1ea
+ 540:	192182        	l32i	a8, a1, 100
+ 543:	0218e7        	beq	a8, a14, 549 <cp_eval+0x549>	543: R_XTENSA_SLOT0_OP	.text.cp_eval+0x549
+ 546:	ff2806        	j	1ea <cp_eval+0x1ea>	546: R_XTENSA_SLOT0_OP	.text.cp_eval+0x1ea
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5 (discriminator 7)
+ 549:	0480b0        	extui	a8, a11, 0, 1
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5 (discriminator 12)
+ 54c:	8b8a      	add.n	a8, a11, a8
+ 54e:	62b8b0        	saltu	a11, a8, a11
+ 551:	2b2a      	add.n	a2, a11, a2
+ 553:	08bd      	mov.n	a11, a8
+ 555:	ff2446        	j	1ea <cp_eval+0x1ea>	555: R_XTENSA_SLOT0_OP	.text.cp_eval+0x1ea
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5 (discriminator 6)
+ 558:	021697        	beq	a6, a9, 55e <cp_eval+0x55e>	558: R_XTENSA_SLOT0_OP	.text.cp_eval+0x55e
+ 55b:	ff18c6        	j	1c2 <cp_eval+0x1c2>	55b: R_XTENSA_SLOT0_OP	.text.cp_eval+0x1c2
+ 55e:	090c      	movi.n	a9, 0
+ 560:	c5e956        	bnez	a9, 1c2 <cp_eval+0x1c2>	560: R_XTENSA_SLOT0_OP	.text.cp_eval+0x1c2
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5 (discriminator 7)
+ 563:	049080        	extui	a9, a8, 0, 1
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5 (discriminator 12)
+ 566:	989a      	add.n	a9, a8, a9
+ 568:	628980        	saltu	a8, a9, a8
+ 56b:	c8ca      	add.n	a12, a8, a12
+ 56d:	098d      	mov.n	a8, a9
+ 56f:	ff13c6        	j	1c2 <cp_eval+0x1c2>	56f: R_XTENSA_SLOT0_OP	.text.cp_eval+0x1c2
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5 (discriminator 6)
+ 572:	0218c7        	beq	a8, a12, 578 <cp_eval+0x578>	572: R_XTENSA_SLOT0_OP	.text.cp_eval+0x578
+ 575:	ff0086        	j	17b <cp_eval+0x17b>	575: R_XTENSA_SLOT0_OP	.text.cp_eval+0x17b
+ 578:	080c      	movi.n	a8, 0
+ 57a:	bfd856        	bnez	a8, 17b <cp_eval+0x17b>	57a: R_XTENSA_SLOT0_OP	.text.cp_eval+0x17b
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5 (discriminator 7)
+ 57d:	0480f0        	extui	a8, a15, 0, 1
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5 (discriminator 12)
+ 580:	8f8a      	add.n	a8, a15, a8
+ 582:	62f8f0        	saltu	a15, a8, a15
+ 585:	9f9a      	add.n	a9, a15, a9
+ 587:	08fd      	mov.n	a15, a8
+ 589:	fefb86        	j	17b <cp_eval+0x17b>	589: R_XTENSA_SLOT0_OP	.text.cp_eval+0x17b
+prod():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:6
+ 58c:	0000b1        	l32r	a11, fffc058c <cp_eval+0xfffc058c>	58c: R_XTENSA_SLOT0_OP	.literal.cp_eval+0x2c
+ 58f:	609090        	neg	a9, a9
+ 592:	62cb80        	saltu	a12, a11, a8
+ 595:	c099c0        	sub	a9, a9, a12
+ 598:	c08b80        	sub	a8, a11, a8
+ 59b:	31bf50        	srai	a11, a5, 31
+ 59e:	82cb80        	mull	a12, a11, a8
+ 5a1:	829950        	mull	a9, a9, a5
+ 5a4:	a2b850        	muluh	a11, a8, a5
+ 5a7:	99ca      	add.n	a9, a9, a12
+ 5a9:	b9ba      	add.n	a11, a9, a11
+ 5ab:	828850        	mull	a8, a8, a5
+rne():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5
+ 5ae:	31cfb0        	srai	a12, a11, 31
+ 5b1:	308c80        	xor	a8, a12, a8
+ 5b4:	309cb0        	xor	a9, a12, a11
+ 5b7:	62d8c0        	saltu	a13, a8, a12
+ 5ba:	c099c0        	sub	a9, a9, a12
+ 5bd:	c088c0        	sub	a8, a8, a12
+ 5c0:	c099d0        	sub	a9, a9, a13
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5 (discriminator 4)
+ 5c3:	11c880        	slli	a12, a8, 8
+ 5c6:	0000d1        	l32r	a13, fffc05c8 <cp_eval+0xfffc05c8>	5c6: R_XTENSA_SLOT0_OP	.literal.cp_eval
+ 5c9:	0e0c      	movi.n	a14, 0
+ 5cb:	41c8c0        	srli	a12, a12, 8
+ 5ce:	404810        	ssai	24
+ 5d1:	818980        	src	a8, a9, a8
+ 5d4:	0efd      	mov.n	a15, a14
+ 5d6:	759890        	extui	a9, a9, 24, 8
+ 5d9:	c0ddc0        	sub	a13, a13, a12
+ 5dc:	021ee7        	beq	a14, a14, 5e2 <cp_eval+0x5e2>	5dc: R_XTENSA_SLOT0_OP	.text.cp_eval+0x5e2
+ 5df:	ffc646        	j	4fc <cp_eval+0x4fc>	5df: R_XTENSA_SLOT0_OP	.text.cp_eval+0x4fc
+ 5e2:	023dc7        	bltu	a13, a12, 5e8 <cp_eval+0x5e8>	5e2: R_XTENSA_SLOT0_OP	.text.cp_eval+0x5e8
+ 5e5:	ffc4c6        	j	4fc <cp_eval+0x4fc>	5e5: R_XTENSA_SLOT0_OP	.text.cp_eval+0x4fc
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5 (discriminator 12)
+ 5e8:	c81b      	addi.n	a12, a8, 1
+ 5ea:	628c80        	saltu	a8, a12, a8
+ 5ed:	989a      	add.n	a9, a8, a9
+ 5ef:	0c8d      	mov.n	a8, a12
+ 5f1:	c9dbd6        	bgez	a11, 292 <cp_eval+0x292>	5f1: R_XTENSA_SLOT0_OP	.text.cp_eval+0x292
+ 5f4:	ff23c6        	j	287 <cp_eval+0x287>	5f4: R_XTENSA_SLOT0_OP	.text.cp_eval+0x287
+prod():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:6
+ 5f7:	0000d1        	l32r	a13, fffc05f8 <cp_eval+0xfffc05f8>	5f7: R_XTENSA_SLOT0_OP	.literal.cp_eval+0x4
+rne():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5 (discriminator 4)
+ 5fa:	1961e2        	s32i	a14, a1, 100
+prod():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:6
+ 5fd:	82b9d0        	mull	a11, a9, a13
+ 600:	b299d0        	mulsh	a9, a9, a13
+rne():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5 (discriminator 4)
+ 603:	11db80        	slli	a13, a11, 8
+ 606:	752890        	extui	a2, a9, 24, 8
+ 609:	404810        	ssai	24
+ 60c:	81b9b0        	src	a11, a9, a11
+ 60f:	000091        	l32r	a9, fffc0610 <cp_eval+0xfffc0610>	60f: R_XTENSA_SLOT0_OP	.literal.cp_eval
+ 612:	41d8d0        	srli	a13, a13, 8
+ 615:	c099d0        	sub	a9, a9, a13
+ 618:	1e61d2        	s32i	a13, a1, 120
+ 61b:	1f6192        	s32i	a9, a1, 124
+cp_eval():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5 (discriminator 4)
+ 61e:	feb5c6        	j	f9 <cp_eval+0xf9>	61e: R_XTENSA_SLOT0_OP	.text.cp_eval+0xf9
+prod():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:6
+ 621:	000091        	l32r	a9, fffc0624 <cp_eval+0xfffc0624>	621: R_XTENSA_SLOT0_OP	.literal.cp_eval+0x14
+rne():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5 (discriminator 4)
+ 624:	0000f1        	l32r	a15, fffc0624 <cp_eval+0xfffc0624>	624: R_XTENSA_SLOT0_OP	.literal.cp_eval
+prod():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:6
+ 627:	82d890        	mull	a13, a8, a9
+ 62a:	b28890        	mulsh	a8, a8, a9
+rne():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5 (discriminator 4)
+ 62d:	119d80        	slli	a9, a13, 8
+ 630:	419890        	srli	a9, a9, 8
+ 633:	070c      	movi.n	a7, 0
+ 635:	404810        	ssai	24
+ 638:	81d8d0        	src	a13, a8, a13
+ 63b:	c0ff90        	sub	a15, a15, a9
+ 63e:	758880        	extui	a8, a8, 24, 8
+ 641:	17dc      	bnez.n	a7, 656 <cp_eval+0x656>	641: R_XTENSA_SLOT0_OP	.text.cp_eval+0x656
+ 643:	0fbf97        	bgeu	a15, a9, 656 <cp_eval+0x656>	643: R_XTENSA_SLOT0_OP	.text.cp_eval+0x656
+cp_eval():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:12 (discriminator 9)
+ 646:	000091        	l32r	a9, fffc0648 <cp_eval+0xfffc0648>	646: R_XTENSA_SLOT0_OP	.literal.cp_eval+0x40
+ 649:	780b      	addi.n	a7, a8, -1
+ 64b:	dd9a      	add.n	a13, a13, a9
+ 64d:	123d97        	bltu	a13, a9, 663 <cp_eval+0x663>	64d: R_XTENSA_SLOT0_OP	.text.cp_eval+0x663
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:12 (discriminator 10)
+ 650:	000091        	l32r	a9, fffc0650 <cp_eval+0xfffc0650>	650: R_XTENSA_SLOT0_OP	.literal.cp_eval+0x10
+ 653:	febc06        	j	147 <cp_eval+0x147>	653: R_XTENSA_SLOT0_OP	.text.cp_eval+0x147
+rne():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5 (discriminator 6)
+ 656:	3019f7        	beq	a9, a15, 68a <cp_eval+0x68a>	656: R_XTENSA_SLOT0_OP	.text.cp_eval+0x68a
+cp_eval():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:12 (discriminator 9)
+ 659:	000091        	l32r	a9, fffc065c <cp_eval+0xfffc065c>	659: R_XTENSA_SLOT0_OP	.literal.cp_eval+0x20
+ 65c:	780b      	addi.n	a7, a8, -1
+ 65e:	dd9a      	add.n	a13, a13, a9
+ 660:	ecbd97        	bgeu	a13, a9, 650 <cp_eval+0x650>	660: R_XTENSA_SLOT0_OP	.text.cp_eval+0x650
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:12 (discriminator 10)
+ 663:	000091        	l32r	a9, fffc0664 <cp_eval+0xfffc0664>	663: R_XTENSA_SLOT0_OP	.literal.cp_eval+0x10
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:12 (discriminator 9)
+ 666:	087d      	mov.n	a7, a8
+ 668:	feb6c6        	j	147 <cp_eval+0x147>	668: R_XTENSA_SLOT0_OP	.text.cp_eval+0x147
+rne():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5 (discriminator 6)
+ 66b:	090c      	movi.n	a9, 0
+ 66d:	ac9956        	bnez	a9, 13a <cp_eval+0x13a>	66d: R_XTENSA_SLOT0_OP	.text.cp_eval+0x13a
+cp_eval():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:12 (discriminator 9)
+ 670:	0000f1        	l32r	a15, fffc0670 <cp_eval+0xfffc0670>	670: R_XTENSA_SLOT0_OP	.literal.cp_eval+0x24
+rne():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5 (discriminator 7)
+ 673:	0490d0        	extui	a9, a13, 0, 1
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5 (discriminator 12)
+ 676:	d9da      	add.n	a13, a9, a13
+ 678:	629d90        	saltu	a9, a13, a9
+cp_eval():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:12 (discriminator 9)
+ 67b:	ddfa      	add.n	a13, a13, a15
+rne():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5 (discriminator 12)
+ 67d:	789a      	add.n	a7, a8, a9
+cp_eval():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:12 (discriminator 9)
+ 67f:	62fdf0        	saltu	a15, a13, a15
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:12 (discriminator 11)
+ 682:	000091        	l32r	a9, fffc0684 <cp_eval+0xfffc0684>	682: R_XTENSA_SLOT0_OP	.literal.cp_eval+0x14
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:12 (discriminator 9)
+ 685:	77fa      	add.n	a7, a7, a15
+ 687:	feaf06        	j	147 <cp_eval+0x147>	687: R_XTENSA_SLOT0_OP	.text.cp_eval+0x147
+rne():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5 (discriminator 6)
+ 68a:	090c      	movi.n	a9, 0
+ 68c:	fc9956        	bnez	a9, 659 <cp_eval+0x659>	68c: R_XTENSA_SLOT0_OP	.text.cp_eval+0x659
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5 (discriminator 7)
+ 68f:	0490d0        	extui	a9, a13, 0, 1
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5 (discriminator 12)
+ 692:	d9da      	add.n	a13, a9, a13
+cp_eval():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:12 (discriminator 9)
+ 694:	0000f1        	l32r	a15, fffc0694 <cp_eval+0xfffc0694>	694: R_XTENSA_SLOT0_OP	.literal.cp_eval+0x20
+rne():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:5 (discriminator 12)
+ 697:	629d90        	saltu	a9, a13, a9
+ 69a:	889a      	add.n	a8, a8, a9
+cp_eval():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:12 (discriminator 9)
+ 69c:	ddfa      	add.n	a13, a13, a15
+ 69e:	780b      	addi.n	a7, a8, -1
+ 6a0:	bf3df7        	bltu	a13, a15, 663 <cp_eval+0x663>	6a0: R_XTENSA_SLOT0_OP	.text.cp_eval+0x663
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:12 (discriminator 10)
+ 6a3:	000091        	l32r	a9, fffc06a4 <cp_eval+0xfffc06a4>	6a3: R_XTENSA_SLOT0_OP	.literal.cp_eval+0x10
+ 6a6:	fea746        	j	147 <cp_eval+0x147>	6a6: R_XTENSA_SLOT0_OP	.text.cp_eval+0x147
+
+Disassembly of section .text.cp_block:
+
+00000000 <cp_block>:
+cp_block():
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:19
+   0:	026136        	entry	a1, 0x130
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:20
+   3:	40f290        	nsau	a9, a2
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:19
+   6:	028d      	mov.n	a8, a2
+   8:	416172        	s32i	a7, a1, 0x104
+   b:	406152        	s32i	a5, a1, 0x100
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:20
+   e:	120c      	movi.n	a2, 1
+  10:	419590        	srli	a9, a9, 5
+  13:	045816        	beqz	a8, 5c <cp_block+0x5c>	13: R_XTENSA_SLOT0_OP	.text.cp_block+0x5c
+  16:	839270        	moveqz	a9, a2, a7
+  19:	f9fc      	bnez.n	a9, 5c <cp_block+0x5c>	19: R_XTENSA_SLOT0_OP	.text.cp_block+0x5c
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:20 (discriminator 2)
+  1b:	fcc692        	addi	a9, a6, -4
+  1e:	ba7c      	movi.n	a10, -5
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:20 (discriminator 3)
+  20:	0409a7        	bnone	a9, a10, 28 <cp_block+0x28>	20: R_XTENSA_SLOT0_OP	.text.cp_block+0x28
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:20 (discriminator 2)
+  23:	960b      	addi.n	a9, a6, -1
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:20 (discriminator 3)
+  25:	313297        	bltu	a2, a9, 5a <cp_block+0x5a>	25: R_XTENSA_SLOT0_OP	.text.cp_block+0x5a
+  28:	085d      	mov.n	a5, a8
+  2a:	070c      	movi.n	a7, 0
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:21 (discriminator 6)
+  2c:	11e7b0        	slli	a14, a7, 5
+  2f:	4021d2        	l32i	a13, a1, 0x100
+  32:	e1ea      	add.n	a14, a1, a14
+  34:	04cd      	mov.n	a12, a4
+  36:	03bd      	mov.n	a11, a3
+  38:	05ad      	mov.n	a10, a5
+  3a:	000081        	l32r	a8, fffc003c <cp_block+0xfffc003c>	3a: R_XTENSA_SLOT0_OP	.literal.cp_block
+	3a: R_XTENSA_ASM_EXPAND	cp_eval
+  3d:	0008e0        	callx8	a8
+  40:	0a2d      	mov.n	a2, a10
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:21 (discriminator 4)
+  42:	771b      	addi.n	a7, a7, 1
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:21 (discriminator 6)
+  44:	2adc      	bnez.n	a10, 5a <cp_block+0x5a>	44: R_XTENSA_SLOT0_OP	.text.cp_block+0x5a
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:21 (discriminator 5)
+  46:	24c552        	addi	a5, a5, 36
+  49:	df3767        	bltu	a7, a6, 2c <cp_block+0x2c>	49: R_XTENSA_SLOT0_OP	.text.cp_block+0x2c
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:21 (discriminator 7)
+  4c:	4121a2        	l32i	a10, a1, 0x104
+  4f:	11c6b0        	slli	a12, a6, 5
+  52:	01bd      	mov.n	a11, a1
+  54:	000081        	l32r	a8, fffc0054 <cp_block+0xfffc0054>	54: R_XTENSA_SLOT0_OP	.literal.cp_block+0x4
+	54: R_XTENSA_ASM_EXPAND	memcpy
+  57:	0008e0        	callx8	a8
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:22
+  5a:	f01d      	retw.n
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:20 (discriminator 4)
+  5c:	120c      	movi.n	a2, 1
+/workspace/ayatsuri-s3-fixed-arithmetic-20261105/source/target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c:22
+  5e:	f01d      	retw.n

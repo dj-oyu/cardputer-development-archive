@@ -1,0 +1,63 @@
+{
+  "off": {
+    "options": {
+      "KASANE_MESH_Q7_CERTIFIED_PROTOTYPE": "OFF",
+      "KASANE_MESH_PREPARED_PROTOTYPE": "OFF",
+      "KASANE_MESH_EDGE4_PROTOTYPE": "OFF"
+    },
+    "undefined": "         U __cxx_fatal_exception\n         U start_app\n         U start_app_other_cores\n",
+    "files": {
+      "cardputer_pocketjs.elf": {
+        "bytes": 21679772,
+        "sha256": "675a36c456fafb6dc383f9f58d7e748ec6d67d0beef6a7f3773682ed9b267592"
+      },
+      "cardputer_pocketjs.bin": {
+        "bytes": 2635696,
+        "sha256": "5b267dc0584b980dcce06cc899ece0a2e5e3ada8094781b8bcb964aad5b643cb"
+      },
+      "cardputer_pocketjs.map": {
+        "bytes": 12125317,
+        "sha256": "1535fff976b86be87ebae4e5d151617563bfe4ced3b0b8721b15abf00ddd747f"
+      },
+      "sdkconfig": {
+        "bytes": 76052,
+        "sha256": "27da218b4eb39e0b7166e5a43b1a9134521146fda4b66c8cc8630f1d9d8955ac"
+      }
+    },
+    "su": {}
+  },
+  "on": {
+    "options": {
+      "KASANE_MESH_Q7_CERTIFIED_PROTOTYPE": "ON",
+      "KASANE_MESH_PREPARED_PROTOTYPE": "ON",
+      "KASANE_MESH_EDGE4_PROTOTYPE": "OFF"
+    },
+    "undefined": "         U __cxx_fatal_exception\n         U start_app\n         U start_app_other_cores\n",
+    "files": {
+      "cardputer_pocketjs.elf": {
+        "bytes": 21758988,
+        "sha256": "cea60750e98bf821e375322c46dcac19606cee51508ed5d46be46ec6ad4837dd"
+      },
+      "cardputer_pocketjs.bin": {
+        "bytes": 2647232,
+        "sha256": "013a7cee457be6a273671d88a8135d15bdc6924076a5813c1821fe5ee96119cc"
+      },
+      "cardputer_pocketjs.map": {
+        "bytes": 12156772,
+        "sha256": "0ea8debbbd3c747032a3ad000d6da5e532030615b7f0c9fb3edbdb208145862e"
+      },
+      "sdkconfig": {
+        "bytes": 76052,
+        "sha256": "27da218b4eb39e0b7166e5a43b1a9134521146fda4b66c8cc8630f1d9d8955ac"
+      }
+    },
+    "su": {
+      "pocket_shiki_frame.c.su": "/workspace/private-q7-certified-full-s3-20261106/source/main/pocket/pocket_shiki_frame.c:218:13:integer\t64\tstatic\n/workspace/private-q7-certified-full-s3-20261106/source/main/ui/kasane/ksn_shiki_frame.h:128:20:ksn_proc_frame_next\t864\tstatic\n/workspace/private-q7-certified-full-s3-20261106/source/main/pocket/pocket_shiki_frame.c:477:13:render_rows\t64\tstatic\n/workspace/private-q7-certified-full-s3-20261106/source/main/pocket/pocket_shiki_frame.c:1164:19:image_rows\t32\tstatic\n/workspace/private-q7-certified-full-s3-20261106/source/main/pocket/pocket_shiki_frame.c:1098:19:image_span\t48\tstatic\n/workspace/private-q7-certified-full-s3-20261106/source/main/pocket/pocket_shiki_frame.c:874:13:segments_option.constprop\t48\tstatic\n/workspace/private-q7-certified-full-s3-20261106/source/main/pocket/pocket_shiki_frame.c:932:16:js_create_surface\t48\tstatic\n/workspace/private-q7-certified-full-s3-20261106/source/main/pocket/pocket_shiki_frame.c:870:16:js_commit\t128\tstatic\n/workspace/private-q7-certified-full-s3-20261106/source/main/pocket/pocket_shiki_frame.c:905:16:js_resource\t48\tstatic\n/workspace/private-q7-certified-full-s3-20261106/source/main/pocket/pocket_shiki_frame.c:552:16:begin_impl\t64\tstatic\n/workspace/private-q7-certified-full-s3-20261106/source/main/pocket/pocket_shiki_frame.c:846:16:js_begin\t48\tstatic\n/workspace/private-q7-certified-full-s3-20261106/source/main/pocket/pocket_shiki_frame.c:849:16:js_begin_mesh\t112\tstatic\n/workspace/private-q7-certified-full-s3-20261106/source/main/pocket/pocket_shiki_frame.c:164:6:pocket_proc_mesh_memory\t32\tstatic\n/workspace/private-q7-certified-full-s3-20261106/source/main/pocket/pocket_shiki_frame.c:495:6:pocket_proc_band_damage\t48\tstatic\n/workspace/private-q7-certified-full-s3-20261106/source/main/pocket/pocket_shiki_frame.c:605:6:pocket_proc_native_mesh_depth\t32\tstatic\n/workspace/private-q7-certified-full-s3-20261106/source/main/pocket/pocket_shiki_frame.c:606:9:pocket_proc_native_mesh\t32\tstatic\n/workspace/private-q7-certified-full-s3-20261106/source/main/pocket/pocket_shiki_frame.c:612:9:pocket_proc_native_sided_mesh\t32\tstatic\n/workspace/private-q7-certified-full-s3-20261106/source/main/pocket/pocket_shiki_frame.c:621:9:pocket_proc_native_begin\t32\tstatic\n/workspace/private-q7-certified-full-s3-20261106/source/main/pocket/pocket_shiki_frame.c:632:9:pocket_proc_native_line\t32\tstatic\n/workspace/private-q7-certified-full-s3-20261106/source/main/pocket/pocket_shiki_frame.c:650:6:pocket_proc_native_rollback\t32\tstatic\n/workspace/private-q7-certified-full-s3-20261106/source/main/pocket/pocket_shiki_frame.c:658:9:pocket_proc_native_ellipsoid\t64\tstatic\n/workspace/private-q7-certified-full-s3-20261106/source/main/pocket/pocket_shiki_frame.c:682:9:pocket_proc_native_clipped_ellipsoid\t64\tstatic\n/workspace/private-q7-certified-full-s3-20261106/source/main/pocket/pocket_shiki_frame.c:703:9:pocket_proc_native_blend_ellipsoids\t64\tstatic\n/workspace/private-q7-certified-full-s3-20261106/source/main/pocket/pocket_shiki_frame.c:724:9:pocket_proc_native_blend_region\t64\tstatic\n/workspace/private-q7-certified-full-s3-20261106/source/main/pocket/pocket_shiki_frame.c:746:9:pocket_proc_native_gouraud\t80\tstatic\n/workspace/private-q7-certified-full-s3-20261106/source/main/pocket/pocket_shiki_frame.c:936:10:pocket_proc_shiki_attach\t32\tstatic\n/workspace/private-q7-certified-full-s3-20261106/source/main/pocket/pocket_shiki_frame.c:944:7:pocket_proc_shiki_plan\t32\tstatic\n/workspace/private-q7-certified-full-s3-20261106/source/main/pocket/pocket_shiki_frame.c:948:6:pocket_proc_shiki_detach\t32\tstatic\n/workspace/private-q7-certified-full-s3-20261106/source/main/pocket/pocket_shiki_frame.c:960:6:pocket_shiki_turn_take\t32\tstatic\n/workspace/private-q7-certified-full-s3-20261106/source/main/pocket/pocket_shiki_frame.c:961:10:pocket_cycles\t32\tstatic\n/workspace/private-q7-certified-full-s3-20261106/source/main/pocket/pocket_shiki_frame.c:971:9:pocket_proc_shiki_draw_inputs\t128\tstatic\n/workspace/private-q7-certified-full-s3-20261106/source/main/pocket/pocket_shiki_frame.c:857:9:pocket_proc_draw_numbers\t32\tstatic\n/workspace/private-q7-certified-full-s3-20261106/source/main/pocket/pocket_shiki_frame.c:968:9:pocket_proc_shiki_draw\t32\tstatic\n/workspace/private-q7-certified-full-s3-20261106/source/main/pocket/pocket_shiki_frame.c:1038:11:pocket_proc_frame_install\t32\tstatic\n/workspace/private-q7-certified-full-s3-20261106/source/main/pocket/pocket_shiki_frame.c:1042:6:pocket_proc_reset\t32\tstatic\n/workspace/private-q7-certified-full-s3-20261106/source/main/pocket/pocket_shiki_frame.c:1074:6:pocket_proc_end_turn\t32\tstatic\n/workspace/private-q7-certified-full-s3-20261106/source/main/pocket/pocket_shiki_frame.c:1082:6:pocket_proc_has_frame\t32\tstatic\n/workspace/private-q7-certified-full-s3-20261106/source/main/pocket/pocket_shiki_frame.c:1086:6:pocket_proc_pending\t32\tstatic\n/workspace/private-q7-certified-full-s3-20261106/source/main/pocket/pocket_shiki_frame.c:1087:6:pocket_proc_backdrop_pending\t32\tstatic\n/workspace/private-q7-certified-full-s3-20261106/source/main/pocket/pocket_shiki_frame.c:1088:6:pocket_proc_is_image_mode\t32\tstatic\n/workspace/private-q7-certified-full-s3-20261106/source/main/pocket/pocket_shiki_frame.c:1089:6:pocket_proc_image_mode_at\t32\tstatic\n/workspace/private-q7-certified-full-s3-20261106/source/main/pocket/pocket_shiki_frame.c:1097:6:pocket_proc_image_mode\t32\tstatic\n/workspace/private-q7-certified-full-s3-20261106/source/main/pocket/pocket_shiki_frame.c:1197:6:pocket_proc_image_port_at\t32\tstatic\n/workspace/private-q7-certified-full-s3-20261106/source/main/pocket/pocket_shiki_frame.c:1203:6:pocket_proc_image_port\t32\tstatic\n/workspace/private-q7-certified-full-s3-20261106/source/main/pocket/pocket_shiki_frame.c:1204:12:pocket_proc_backdrop\t32\tstatic\n/workspace/private-q7-certified-full-s3-20261106/source/main/pocket/pocket_shiki_frame.c:1215:6:pocket_proc_present_result\t96\tstatic\n/workspace/private-q7-certified-full-s3-20261106/source/main/pocket/pocket_shiki_frame.c:1259:6:pocket_proc_overlay_present_result\t32\tstatic\n",
+      "ksn_mesh_prepared.c.su": "/workspace/private-q7-certified-full-s3-20261106/source/main/ui/kasane/ksn_mesh_prepared.c:8:21:gouraud_make_edge\t96\tstatic\n/workspace/private-q7-certified-full-s3-20261106/source/main/ui/kasane/ksn_mesh_prepared.c:22:8:ksn_mesh_prepared_bytes\t48\tstatic\n/workspace/private-q7-certified-full-s3-20261106/source/main/ui/kasane/ksn_mesh_prepared.c:32:6:ksn_mesh_prepare\t176\tstatic\n/workspace/private-q7-certified-full-s3-20261106/source/main/ui/kasane/ksn_mesh_prepared.c:142:6:ksn_mesh_prepared_render\t224\tstatic\n",
+      "ksn_mesh_q7_certified.c.su": "/workspace/private-q7-certified-full-s3-20261106/source/main/ui/kasane/ksn_mesh_q7_certified.c:24:13:ieee_environment\t64\tstatic\n/workspace/private-q7-certified-full-s3-20261106/source/main/ui/kasane/ksn_mesh_q7_certified.c:16:6:ksn_mesh_q7_span\t64\tstatic\n/workspace/private-q7-certified-full-s3-20261106/source/main/ui/kasane/ksn_mesh_q7_certified.c:58:8:ksn_mesh_q7_bytes\t32\tstatic\n/workspace/private-q7-certified-full-s3-20261106/source/main/ui/kasane/ksn_mesh_q7_certified.c:59:6:ksn_mesh_q7_prepare\t368\tstatic\n/workspace/private-q7-certified-full-s3-20261106/source/main/ui/kasane/ksn_mesh_q7_certified.c:102:6:ksn_mesh_q7_render\t304\tstatic\n",
+      "ksn_mesh_depth.c.su": "/workspace/private-q7-certified-full-s3-20261106/source/main/ui/kasane/ksn_mesh_depth.c:57:21:gouraud_make_edge\t96\tstatic\n/workspace/private-q7-certified-full-s3-20261106/source/main/ui/kasane/ksn_mesh_depth.c:9:6:ksn_mesh_sided_run\t48\tstatic\n/workspace/private-q7-certified-full-s3-20261106/source/main/ui/kasane/ksn_mesh_depth.c:28:6:ksn_mesh_append\t720\tstatic\n/workspace/private-q7-certified-full-s3-20261106/source/main/ui/kasane/ksn_mesh_depth.c:42:6:ksn_mesh_append_sided\t720\tstatic\n/workspace/private-q7-certified-full-s3-20261106/source/main/ui/kasane/ksn_mesh_depth.c:115:6:ksn_mesh_render\t384\tstatic\n"
+    }
+  },
+  "config_identical": true,
+  "partitions_identical": true
+}

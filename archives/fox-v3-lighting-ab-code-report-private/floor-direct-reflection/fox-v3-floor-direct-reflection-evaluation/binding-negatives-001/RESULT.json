@@ -1,0 +1,185 @@
+{
+  "status": "ALL20_WRONG_CASE_BINDINGS_REJECT_BEFORE_RENDER",
+  "rows": [
+    {
+      "case": "baseline",
+      "view": "front",
+      "reverse": false,
+      "wrongCase": 1,
+      "exit": 2,
+      "gate": "floor-input-binding",
+      "noOutputFiles": true
+    },
+    {
+      "case": "baseline",
+      "view": "front",
+      "reverse": true,
+      "wrongCase": 1,
+      "exit": 2,
+      "gate": "floor-input-binding",
+      "noOutputFiles": true
+    },
+    {
+      "case": "baseline",
+      "view": "oblique",
+      "reverse": false,
+      "wrongCase": 1,
+      "exit": 2,
+      "gate": "floor-input-binding",
+      "noOutputFiles": true
+    },
+    {
+      "case": "baseline",
+      "view": "oblique",
+      "reverse": true,
+      "wrongCase": 1,
+      "exit": 2,
+      "gate": "floor-input-binding",
+      "noOutputFiles": true
+    },
+    {
+      "case": "direction",
+      "view": "front",
+      "reverse": false,
+      "wrongCase": 2,
+      "exit": 2,
+      "gate": "floor-input-binding",
+      "noOutputFiles": true
+    },
+    {
+      "case": "direction",
+      "view": "front",
+      "reverse": true,
+      "wrongCase": 2,
+      "exit": 2,
+      "gate": "floor-input-binding",
+      "noOutputFiles": true
+    },
+    {
+      "case": "direction",
+      "view": "oblique",
+      "reverse": false,
+      "wrongCase": 2,
+      "exit": 2,
+      "gate": "floor-input-binding",
+      "noOutputFiles": true
+    },
+    {
+      "case": "direction",
+      "view": "oblique",
+      "reverse": true,
+      "wrongCase": 2,
+      "exit": 2,
+      "gate": "floor-input-binding",
+      "noOutputFiles": true
+    },
+    {
+      "case": "intensity",
+      "view": "front",
+      "reverse": false,
+      "wrongCase": 3,
+      "exit": 2,
+      "gate": "floor-input-binding",
+      "noOutputFiles": true
+    },
+    {
+      "case": "intensity",
+      "view": "front",
+      "reverse": true,
+      "wrongCase": 3,
+      "exit": 2,
+      "gate": "floor-input-binding",
+      "noOutputFiles": true
+    },
+    {
+      "case": "intensity",
+      "view": "oblique",
+      "reverse": false,
+      "wrongCase": 3,
+      "exit": 2,
+      "gate": "floor-input-binding",
+      "noOutputFiles": true
+    },
+    {
+      "case": "intensity",
+      "view": "oblique",
+      "reverse": true,
+      "wrongCase": 3,
+      "exit": 2,
+      "gate": "floor-input-binding",
+      "noOutputFiles": true
+    },
+    {
+      "case": "ambient",
+      "view": "front",
+      "reverse": false,
+      "wrongCase": 4,
+      "exit": 2,
+      "gate": "floor-input-binding",
+      "noOutputFiles": true
+    },
+    {
+      "case": "ambient",
+      "view": "front",
+      "reverse": true,
+      "wrongCase": 4,
+      "exit": 2,
+      "gate": "floor-input-binding",
+      "noOutputFiles": true
+    },
+    {
+      "case": "ambient",
+      "view": "oblique",
+      "reverse": false,
+      "wrongCase": 4,
+      "exit": 2,
+      "gate": "floor-input-binding",
+      "noOutputFiles": true
+    },
+    {
+      "case": "ambient",
+      "view": "oblique",
+      "reverse": true,
+      "wrongCase": 4,
+      "exit": 2,
+      "gate": "floor-input-binding",
+      "noOutputFiles": true
+    },
+    {
+      "case": "albedo",
+      "view": "front",
+      "reverse": false,
+      "wrongCase": 0,
+      "exit": 2,
+      "gate": "floor-input-binding",
+      "noOutputFiles": true
+    },
+    {
+      "case": "albedo",
+      "view": "front",
+      "reverse": true,
+      "wrongCase": 0,
+      "exit": 2,
+      "gate": "floor-input-binding",
+      "noOutputFiles": true
+    },
+    {
+      "case": "albedo",
+      "view": "oblique",
+      "reverse": false,
+      "wrongCase": 0,
+      "exit": 2,
+      "gate": "floor-input-binding",
+      "noOutputFiles": true
+    },
+    {
+      "case": "albedo",
+      "view": "oblique",
+      "reverse": true,
+      "wrongCase": 0,
+      "exit": 2,
+      "gate": "floor-input-binding",
+      "noOutputFiles": true
+    }
+  ]
+}

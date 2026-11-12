@@ -1,0 +1,68 @@
+{
+  "request": {
+    "job_id": "derby-controller-native-source-3fafcadb-20261020",
+    "test": "firmware_fetch_source",
+    "project_id": "cardputer-main",
+    "source_commit": "3fafcadbd72ecbd0d799cbe9d29f037ff62c05d5"
+  },
+  "result": {
+    "ok": true,
+    "plan_hash": "4ce5c55866f212c9325cbb05b4a9a4d285aeb5d185ea270f293872e8196f7084",
+    "plan": {
+      "version": 2,
+      "execution_context": "registered_project",
+      "broker_epoch": "51bfd752bc2a460db00a835c45250282",
+      "job_id": "derby-controller-native-source-3fafcadb-20261020",
+      "test": "firmware_fetch_source",
+      "principal_id": "ephemeral:remote_mcp",
+      "origin": "remote_mcp",
+      "registration_sha256": "2e772670cee4380c10a250e35a3aa4fa0189058910a28fcedeee899b5a09f9a2",
+      "execution_seconds": 180,
+      "project_id": "cardputer-main",
+      "source_commit": "3fafcadbd72ecbd0d799cbe9d29f037ff62c05d5",
+      "source_principal": "ephemeral:remote_mcp",
+      "source_repository": "dj-oyu/cardputer-adv-pocketjs",
+      "source_registration_sha256": "1645838f57f903a2d527bfcff9a3e1889a98f2856c6b5985706536e783e1cb15",
+      "limits": {
+        "download_bytes": 67108864,
+        "expanded_bytes": 268435456,
+        "files": 100000,
+        "operation_seconds": 180,
+        "cache_snapshots": 16,
+        "cache_bytes": 2147483648,
+        "submodule_depth": 3,
+        "submodule_count": 16
+      },
+      "stages": [
+        "source_download",
+        "source_validate",
+        "source_publish"
+      ],
+      "effects": [
+        "Fetches a registered public GitHub commit and fixed allowlisted Gitlinks into a private snapshot",
+        "No user worktree overwrite, build, USB, flash, credential or SDK installation",
+        "Reuse verified owned sources; automatically reclaim unreferenced payloads within fixed bounds while retaining receipts and protecting executable plans, unfinished jobs and recovery evidence"
+      ]
+    },
+    "storage": {
+      "source_cache": {
+        "snapshot_entries": 17,
+        "evicted_snapshots": 1,
+        "snapshots": 16,
+        "bytes": 1381751388,
+        "max_snapshots": 16,
+        "max_bytes": 2147483648,
+        "pending_snapshots": 0,
+        "evidence_snapshots": 17,
+        "evidence_bytes": 9886629,
+        "max_evidence_snapshots": 4096,
+        "max_evidence_bytes": 134217728,
+        "remaining_snapshots": 0,
+        "remaining_bytes": 765732260,
+        "scan_entries": 51085,
+        "scan_elapsed_ms": 2181
+      }
+    },
+    "approval_required": false
+  }
+}

@@ -1,0 +1,72 @@
+Executing action: reconfigure
+Running cmake in directory /workspace/scratch/6d8dcdbcdc54/fox-firmware-budget-20261111/build
+Executing "cmake -G Ninja -B /workspace/scratch/6d8dcdbcdc54/fox-firmware-budget-20261111/build -DPYTHON_DEPS_CHECKED=1 -DPYTHON=/workspace/scratch/6d8dcdbcdc54/qemu-esp32s3-20261111/idf-venv/bin/python -DESP_PLATFORM=1 -DSDKCONFIG=/workspace/scratch/6d8dcdbcdc54/fox-firmware-budget-20261111/build/sdkconfig -DCCACHE_ENABLE=False /workspace/scratch/6d8dcdbcdc54/fox-firmware-budget-20261111/source"...
+-- IDF_TARGET is not set, guessed 'esp32s3' from sdkconfig '/workspace/scratch/6d8dcdbcdc54/fox-firmware-budget-20261111/source/sdkconfig.defaults'
+-- Found Git: /usr/local/bin/git (found version "2.52.0")
+-- Component directory /workspace/scratch/6d8dcdbcdc54/qemu-esp32s3-20261111/esp-idf/components/mqtt does not contain a CMakeLists.txt file. No component will be added
+-- Minimal build - ON
+-- The C compiler identification is GNU 15.2.0
+-- The CXX compiler identification is GNU 15.2.0
+-- The ASM compiler identification is GNU
+-- Found assembler: /workspace/scratch/6d8dcdbcdc54/qemu-esp32s3-20261111/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /workspace/scratch/6d8dcdbcdc54/qemu-esp32s3-20261111/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /workspace/scratch/6d8dcdbcdc54/qemu-esp32s3-20261111/xtensa-esp-elf/bin/xtensa-esp32s3-elf-g++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- git rev-parse returned 'fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).'
+-- Could not use 'git describe' to determine PROJECT_VER.
+-- Building ESP-IDF components for target esp32s3
+"idf_component.yml" file was found for components:
+	/workspace/scratch/6d8dcdbcdc54/fox-firmware-budget-20261111/source/main
+	/workspace/scratch/6d8dcdbcdc54/fox-firmware-budget-20261111/source/components/pocketjs_guest
+	/workspace/scratch/6d8dcdbcdc54/fox-firmware-budget-20261111/source/components/quickjs-ng
+However, the component manager is not enabled.
+CMake Error at /workspace/scratch/6d8dcdbcdc54/qemu-esp32s3-20261111/esp-idf/tools/cmake/component.cmake:231 (message):
+  CMake Warning (dev) at build_properties.temp.cmake:8:
+
+    Syntax Warning in cmake code at column 106
+
+  
+
+    Argument not separated from preceding token by whitespace.
+
+  Call Stack (most recent call first):
+
+    /workspace/scratch/6d8dcdbcdc54/qemu-esp32s3-20261111/esp-idf/tools/cmake/scripts/component_get_requirements.cmake:3 (include)
+
+  This warning is for project developers.  Use -Wno-dev to suppress it.
+
+
+
+  CMake Error at
+  /workspace/scratch/6d8dcdbcdc54/fox-firmware-budget-20261111/source/main/CMakeLists.txt:16
+  (message):
+
+    BMI270 Git submodule is missing.  Run git submodule update --init
+    --checkout -- third_party/bmi270 (or python tools/prepare_dependencies.py)
+    before building.  CMake never downloads dependencies.
+
+  Call Stack (most recent call first):
+
+    /workspace/scratch/6d8dcdbcdc54/qemu-esp32s3-20261111/esp-idf/tools/cmake/scripts/component_get_requirements.cmake:107 (include)
+    /workspace/scratch/6d8dcdbcdc54/qemu-esp32s3-20261111/esp-idf/tools/cmake/scripts/component_get_requirements.cmake:160 (__component_get_requirements)
+
+  
+
+
+
+Call Stack (most recent call first):
+  /workspace/scratch/6d8dcdbcdc54/qemu-esp32s3-20261111/esp-idf/tools/cmake/build.cmake:732 (__component_get_requirements)
+  /workspace/scratch/6d8dcdbcdc54/qemu-esp32s3-20261111/esp-idf/tools/cmake/project.cmake:773 (idf_build_process)
+  CMakeLists.txt:9 (project)
+
+
+-- Configuring incomplete, errors occurred!
+cmake failed with exit code 1, output of the command is in the /workspace/scratch/6d8dcdbcdc54/fox-firmware-budget-20261111/build/log/idf_py_stderr_output_13 and /workspace/scratch/6d8dcdbcdc54/fox-firmware-budget-20261111/build/log/idf_py_stdout_output_13

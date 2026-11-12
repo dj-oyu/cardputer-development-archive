@@ -1,0 +1,516 @@
+{
+  "scope": "All quantities retain original fixed-domain/conditional or descriptive meaning; no global acceptance. Area-only is an encoded-reflectance/output diagnostic.",
+  "arms": {
+    "legacy": {
+      "evaluationSHA256": "d3aedb3f1a3c6e8ad55e2062a42d9d7777e541f7b1419a31f17a435551852dd0",
+      "candidateManifestSHA256": "c78a78d137821847c74f3dadaf7f5f453fbe4079206c31fc4b8731bed505a833",
+      "outputHashesValid": true,
+      "outputDirectory": "fox-v3-lighting-ab/score-four-legacy-002",
+      "allConditionMetricsExactlyUnchangedFrom001": true
+    },
+    "linear": {
+      "evaluationSHA256": "2e177261e18b6e2cbb8a789bc27379f3e35871399005cbfa01ddae840f279a6a",
+      "candidateManifestSHA256": "38397975bd58d6cee3ddacbc845c14cf1e37602e1c9e9b7d896d11e6c034b6be",
+      "outputHashesValid": true,
+      "outputDirectory": "fox-v3-lighting-ab/score-four-linear-002",
+      "allConditionMetricsExactlyUnchangedFrom001": true
+    },
+    "area": {
+      "evaluationSHA256": "50367bdd76249ff004ac457d06437657c7b29a30c94c4f581f6d23d23789772d",
+      "candidateManifestSHA256": "e0a9d0b7e1decb333cb3ef971537ea93db08869a2619aba878ffb38aa5e74f45",
+      "outputHashesValid": true,
+      "outputDirectory": "fox-v3-lighting-ab/score-four-area-002",
+      "allConditionMetricsExactlyUnchangedFrom001": true
+    },
+    "both": {
+      "evaluationSHA256": "09438d787a3507599e57fd770b7c39361b63c89e4da1848e8cc737a9b6a09cd5",
+      "candidateManifestSHA256": "aa8a3c1799f432bb7b6e35589118b574297e836ecbe23ab09eb6f4e7f4b9d055",
+      "outputHashesValid": true,
+      "outputDirectory": "fox-v3-lighting-ab/score-four-both-002",
+      "allConditionMetricsExactlyUnchangedFrom001": true
+    }
+  },
+  "conditions": {
+    "front-baseline": {
+      "legacy": {
+        "colorStable": 58.95681969312858,
+        "colorFullSourceDescriptive": 60.459835680494976,
+        "shapeIoU": 0.8813463708160962
+      },
+      "linear": {
+        "colorStable": 66.52514035020867,
+        "colorFullSourceDescriptive": 67.69471053615923,
+        "shapeIoU": 0.8813463708160962
+      },
+      "area": {
+        "colorStable": 74.90459029965324,
+        "colorFullSourceDescriptive": 75.61907277923126,
+        "shapeIoU": 0.8813463708160962
+      },
+      "both": {
+        "colorStable": 75.30968015895697,
+        "colorFullSourceDescriptive": 76.11566157233437,
+        "shapeIoU": 0.8813463708160962
+      }
+    },
+    "front-direction": {
+      "legacy": {
+        "colorStable": 61.57025017874732,
+        "colorFullSourceDescriptive": 63.893165656614734,
+        "shapeIoU": 0.8813463708160962,
+        "responseStable": {
+          "responseMagnitudeAgreementPercent": 95.02103065274166,
+          "directionAgreementPercent": 75.81910475311491,
+          "deltaLumaRMSE": 0.07828432455591813,
+          "deltaRGBRMSE": 0.10520461394864135,
+          "brightIoU": 0.5715789473684211,
+          "darkIoU": 0.7043327556325824
+        }
+      },
+      "linear": {
+        "colorStable": 68.8288394356994,
+        "colorFullSourceDescriptive": 70.92770303002108,
+        "shapeIoU": 0.8813463708160962,
+        "responseStable": {
+          "responseMagnitudeAgreementPercent": 61.23832240296339,
+          "directionAgreementPercent": 76.68513388734995,
+          "deltaLumaRMSE": 0.069301644377226,
+          "deltaRGBRMSE": 0.08730635607149381,
+          "brightIoU": 0.5674646354733406,
+          "darkIoU": 0.6849600555748524
+        }
+      },
+      "area": {
+        "colorStable": 74.24243796078093,
+        "colorFullSourceDescriptive": 75.53498343766756,
+        "shapeIoU": 0.8813463708160962,
+        "responseStable": {
+          "responseMagnitudeAgreementPercent": 69.66674307925646,
+          "directionAgreementPercent": 79.14438502673798,
+          "deltaLumaRMSE": 0.08894946928579774,
+          "deltaRGBRMSE": 0.11563495439540938,
+          "brightIoU": 0.5620084694494858,
+          "darkIoU": 0.7599601593625498
+        }
+      },
+      "both": {
+        "colorStable": 75.79345815619777,
+        "colorFullSourceDescriptive": 77.3445655093949,
+        "shapeIoU": 0.8813463708160962,
+        "responseStable": {
+          "responseMagnitudeAgreementPercent": 82.23319903263167,
+          "directionAgreementPercent": 80.0606343283582,
+          "deltaLumaRMSE": 0.06304708276737038,
+          "deltaRGBRMSE": 0.08562150764386797,
+          "brightIoU": 0.550778816199377,
+          "darkIoU": 0.7687373396353815
+        }
+      }
+    },
+    "front-intensity": {
+      "legacy": {
+        "colorStable": 56.87033845536551,
+        "colorFullSourceDescriptive": 60.27628749637095,
+        "shapeIoU": 0.8813463708160962,
+        "responseStable": {
+          "responseMagnitudeAgreementPercent": 80.79588893698688,
+          "directionAgreementPercent": 90.98850574712644,
+          "deltaLumaRMSE": 0.05797603141010693,
+          "deltaRGBRMSE": 0.08152844132562513,
+          "brightIoU": null,
+          "darkIoU": 0.8652873563218391
+        }
+      },
+      "linear": {
+        "colorStable": 66.99586557650436,
+        "colorFullSourceDescriptive": 69.71919795376982,
+        "shapeIoU": 0.8813463708160962,
+        "responseStable": {
+          "responseMagnitudeAgreementPercent": 73.75537283817452,
+          "directionAgreementPercent": 90.58606368251039,
+          "deltaLumaRMSE": 0.04520283055746084,
+          "deltaRGBRMSE": 0.0662126834849475,
+          "brightIoU": null,
+          "darkIoU": 0.8387171204430087
+        }
+      },
+      "area": {
+        "colorStable": 74.98121053782273,
+        "colorFullSourceDescriptive": 76.59466824578672,
+        "shapeIoU": 0.8813463708160962,
+        "responseStable": {
+          "responseMagnitudeAgreementPercent": 71.03115852663741,
+          "directionAgreementPercent": 90.26915113871635,
+          "deltaLumaRMSE": 0.052680848805878346,
+          "deltaRGBRMSE": 0.07576424481475104,
+          "brightIoU": null,
+          "darkIoU": 0.8592132505175983
+        }
+      },
+      "both": {
+        "colorStable": 76.41304424476144,
+        "colorFullSourceDescriptive": 78.33045790809676,
+        "shapeIoU": 0.8813463708160962,
+        "responseStable": {
+          "responseMagnitudeAgreementPercent": 73.52740277503082,
+          "directionAgreementPercent": 87.66173752310536,
+          "deltaLumaRMSE": 0.038274712408707216,
+          "deltaRGBRMSE": 0.0625045809488252,
+          "brightIoU": null,
+          "darkIoU": 0.8158502772643254
+        }
+      }
+    },
+    "front-ambient": {
+      "legacy": {
+        "colorStable": 69.26930955321197,
+        "colorFullSourceDescriptive": 70.21679445957074,
+        "shapeIoU": 0.8813463708160962,
+        "responseStable": {
+          "responseMagnitudeAgreementPercent": 20.242258750126013,
+          "directionAgreementPercent": 88.19033059430537,
+          "deltaLumaRMSE": 0.15153469394685046,
+          "deltaRGBRMSE": 0.16779624790003916,
+          "brightIoU": 0.8807567360978407,
+          "darkIoU": null
+        }
+      },
+      "linear": {
+        "colorStable": 70.59022626685083,
+        "colorFullSourceDescriptive": 71.53439906381226,
+        "shapeIoU": 0.8813463708160962,
+        "responseStable": {
+          "responseMagnitudeAgreementPercent": 35.407603900884084,
+          "directionAgreementPercent": 88.19033059430537,
+          "deltaLumaRMSE": 0.08030019608201117,
+          "deltaRGBRMSE": 0.08908196473385915,
+          "brightIoU": 0.8807567360978407,
+          "darkIoU": null
+        }
+      },
+      "area": {
+        "colorStable": 74.90271285001455,
+        "colorFullSourceDescriptive": 76.15099658097897,
+        "shapeIoU": 0.8813463708160962,
+        "responseStable": {
+          "responseMagnitudeAgreementPercent": 40.74869936326967,
+          "directionAgreementPercent": 83.98699062559785,
+          "deltaLumaRMSE": 0.06535330761819895,
+          "deltaRGBRMSE": 0.07428534367588516,
+          "brightIoU": 0.8113640711689305,
+          "darkIoU": null
+        }
+      },
+      "both": {
+        "colorStable": 74.62052784411256,
+        "colorFullSourceDescriptive": 75.71050185876331,
+        "shapeIoU": 0.8813463708160962,
+        "responseStable": {
+          "responseMagnitudeAgreementPercent": 70.36124867809765,
+          "directionAgreementPercent": 86.47407690836043,
+          "deltaLumaRMSE": 0.03657163385699752,
+          "deltaRGBRMSE": 0.04781747397372493,
+          "brightIoU": 0.8184427013583317,
+          "darkIoU": null
+        }
+      }
+    },
+    "front-albedo": {
+      "legacy": {
+        "colorStable": 63.277812574134586,
+        "colorFullSourceDescriptive": 65.91402850000388,
+        "shapeIoU": 0.8813463708160962,
+        "responseStable": {
+          "responseMagnitudeAgreementPercent": 59.05529280294809,
+          "directionAgreementPercent": 88.16211121583412,
+          "deltaLumaRMSE": 0.07264564061337564,
+          "deltaRGBRMSE": 0.08838468962125638,
+          "brightIoU": null,
+          "darkIoU": 0.8787935909519321
+        }
+      },
+      "linear": {
+        "colorStable": 68.93847301727205,
+        "colorFullSourceDescriptive": 71.28110865540378,
+        "shapeIoU": 0.8813463708160962,
+        "responseStable": {
+          "responseMagnitudeAgreementPercent": 77.49213759241913,
+          "directionAgreementPercent": 88.3129123468426,
+          "deltaLumaRMSE": 0.06237731224850536,
+          "deltaRGBRMSE": 0.08212269019522053,
+          "brightIoU": null,
+          "darkIoU": 0.883129123468426
+        }
+      },
+      "area": {
+        "colorStable": 77.23387294364493,
+        "colorFullSourceDescriptive": 78.69906876351499,
+        "shapeIoU": 0.8813463708160962,
+        "responseStable": {
+          "responseMagnitudeAgreementPercent": 74.46657346728584,
+          "directionAgreementPercent": 86.35249764373233,
+          "deltaLumaRMSE": 0.06118469764915444,
+          "deltaRGBRMSE": 0.08261459349972415,
+          "brightIoU": null,
+          "darkIoU": 0.8390197926484448
+        }
+      },
+      "both": {
+        "colorStable": 78.47167588535534,
+        "colorFullSourceDescriptive": 79.83622435847022,
+        "shapeIoU": 0.8813463708160962,
+        "responseStable": {
+          "responseMagnitudeAgreementPercent": 78.92737962328755,
+          "directionAgreementPercent": 88.23751178133836,
+          "deltaLumaRMSE": 0.05260457305085569,
+          "deltaRGBRMSE": 0.07840086345296013,
+          "brightIoU": null,
+          "darkIoU": 0.8795475966069746
+        }
+      }
+    },
+    "oblique-baseline": {
+      "legacy": {
+        "colorStable": 60.01008699482392,
+        "colorFullSourceDescriptive": 62.11513028125886,
+        "shapeIoU": 0.8761061946902655
+      },
+      "linear": {
+        "colorStable": 66.93153829163145,
+        "colorFullSourceDescriptive": 68.71981254332255,
+        "shapeIoU": 0.8761061946902655
+      },
+      "area": {
+        "colorStable": 73.77624400444023,
+        "colorFullSourceDescriptive": 75.1337059660595,
+        "shapeIoU": 0.8761061946902655
+      },
+      "both": {
+        "colorStable": 74.63378241098346,
+        "colorFullSourceDescriptive": 76.0974257902715,
+        "shapeIoU": 0.8761061946902655
+      }
+    },
+    "oblique-direction": {
+      "legacy": {
+        "colorStable": 61.36206366700632,
+        "colorFullSourceDescriptive": 65.1272893366214,
+        "shapeIoU": 0.8761061946902655,
+        "responseStable": {
+          "responseMagnitudeAgreementPercent": 83.80799339677607,
+          "directionAgreementPercent": 78.43534657478719,
+          "deltaLumaRMSE": 0.0787223782661843,
+          "deltaRGBRMSE": 0.11024838330369335,
+          "brightIoU": 0.2830349531116795,
+          "darkIoU": 0.8082454458293384
+        }
+      },
+      "linear": {
+        "colorStable": 69.20378962069134,
+        "colorFullSourceDescriptive": 72.66638811706197,
+        "shapeIoU": 0.8761061946902655,
+        "responseStable": {
+          "responseMagnitudeAgreementPercent": 55.1740623105651,
+          "directionAgreementPercent": 78.56997765590087,
+          "deltaLumaRMSE": 0.07612769658282496,
+          "deltaRGBRMSE": 0.09692204368751582,
+          "brightIoU": 0.28902765388046386,
+          "darkIoU": 0.7884753901560624
+        }
+      },
+      "area": {
+        "colorStable": 72.71188733116252,
+        "colorFullSourceDescriptive": 75.34234077316941,
+        "shapeIoU": 0.8761061946902655,
+        "responseStable": {
+          "responseMagnitudeAgreementPercent": 75.05246294543127,
+          "directionAgreementPercent": 82.44789538210054,
+          "deltaLumaRMSE": 0.09203897575449677,
+          "deltaRGBRMSE": 0.12663631806664455,
+          "brightIoU": 0.28778467908902694,
+          "darkIoU": 0.8383008683407651
+        }
+      },
+      "both": {
+        "colorStable": 75.11537606553108,
+        "colorFullSourceDescriptive": 78.10117211683485,
+        "shapeIoU": 0.8761061946902655,
+        "responseStable": {
+          "responseMagnitudeAgreementPercent": 76.19927097945332,
+          "directionAgreementPercent": 81.83865683865685,
+          "deltaLumaRMSE": 0.07116039705782772,
+          "deltaRGBRMSE": 0.09651322719223912,
+          "brightIoU": 0.2972972972972973,
+          "darkIoU": 0.826805096743747
+        }
+      }
+    },
+    "oblique-intensity": {
+      "legacy": {
+        "colorStable": 57.942340066680266,
+        "colorFullSourceDescriptive": 62.429130094156136,
+        "shapeIoU": 0.8761061946902655,
+        "responseStable": {
+          "responseMagnitudeAgreementPercent": 86.5366821787635,
+          "directionAgreementPercent": 92.51567398119123,
+          "deltaLumaRMSE": 0.05801734123532581,
+          "deltaRGBRMSE": 0.083514134862879,
+          "brightIoU": null,
+          "darkIoU": 0.8924373040752351
+        }
+      },
+      "linear": {
+        "colorStable": 67.57194797315672,
+        "colorFullSourceDescriptive": 71.39724056498163,
+        "shapeIoU": 0.8761061946902655,
+        "responseStable": {
+          "responseMagnitudeAgreementPercent": 68.73986819321289,
+          "directionAgreementPercent": 91.3171305370443,
+          "deltaLumaRMSE": 0.04819260853435104,
+          "deltaRGBRMSE": 0.07109335128443786,
+          "brightIoU": null,
+          "darkIoU": 0.8592708741669933
+        }
+      },
+      "area": {
+        "colorStable": 73.81782202878745,
+        "colorFullSourceDescriptive": 76.50487810243341,
+        "shapeIoU": 0.8761061946902655,
+        "responseStable": {
+          "responseMagnitudeAgreementPercent": 75.14031594885623,
+          "directionAgreementPercent": 92.37254901960785,
+          "deltaLumaRMSE": 0.05196008792084892,
+          "deltaRGBRMSE": 0.0801716502304756,
+          "brightIoU": null,
+          "darkIoU": 0.888235294117647
+        }
+      },
+      "both": {
+        "colorStable": 75.63178085038842,
+        "colorFullSourceDescriptive": 78.69747191253845,
+        "shapeIoU": 0.8761061946902655,
+        "responseStable": {
+          "responseMagnitudeAgreementPercent": 69.00091179043547,
+          "directionAgreementPercent": 89.43855516293678,
+          "deltaLumaRMSE": 0.041357525206718294,
+          "deltaRGBRMSE": 0.0663623174115832,
+          "brightIoU": null,
+          "darkIoU": 0.8431488025127601
+        }
+      }
+    },
+    "oblique-ambient": {
+      "legacy": {
+        "colorStable": 69.67632668468924,
+        "colorFullSourceDescriptive": 71.25775566644433,
+        "shapeIoU": 0.8761061946902655,
+        "responseStable": {
+          "responseMagnitudeAgreementPercent": 20.593473215268816,
+          "directionAgreementPercent": 87.65304362821176,
+          "deltaLumaRMSE": 0.14246491128036354,
+          "deltaRGBRMSE": 0.16115958689569646,
+          "brightIoU": 0.873426452836696,
+          "darkIoU": null
+        }
+      },
+      "linear": {
+        "colorStable": 70.5888284862189,
+        "colorFullSourceDescriptive": 72.20822166300827,
+        "shapeIoU": 0.8761061946902655,
+        "responseStable": {
+          "responseMagnitudeAgreementPercent": 36.34082427370523,
+          "directionAgreementPercent": 87.65304362821176,
+          "deltaLumaRMSE": 0.07346408503573994,
+          "deltaRGBRMSE": 0.08337540010130683,
+          "brightIoU": 0.873426452836696,
+          "darkIoU": null
+        }
+      },
+      "area": {
+        "colorStable": 74.11299840414156,
+        "colorFullSourceDescriptive": 75.98696064600048,
+        "shapeIoU": 0.8761061946902655,
+        "responseStable": {
+          "responseMagnitudeAgreementPercent": 39.84218692749921,
+          "directionAgreementPercent": 84.51824943781354,
+          "deltaLumaRMSE": 0.06313810299861838,
+          "deltaRGBRMSE": 0.07401514744609353,
+          "brightIoU": 0.8171596609583117,
+          "darkIoU": null
+        }
+      },
+      "both": {
+        "colorStable": 74.15761478513203,
+        "colorFullSourceDescriptive": 75.94872465518374,
+        "shapeIoU": 0.8761061946902655,
+        "responseStable": {
+          "responseMagnitudeAgreementPercent": 66.37666900021436,
+          "directionAgreementPercent": 86.29687229998272,
+          "deltaLumaRMSE": 0.03482708087033379,
+          "deltaRGBRMSE": 0.04837124416192591,
+          "brightIoU": 0.827026092966995,
+          "darkIoU": null
+        }
+      }
+    },
+    "oblique-albedo": {
+      "legacy": {
+        "colorStable": 64.2849052416874,
+        "colorFullSourceDescriptive": 67.87180313325155,
+        "shapeIoU": 0.8761061946902655,
+        "responseStable": {
+          "responseMagnitudeAgreementPercent": 56.83374298426576,
+          "directionAgreementPercent": 87.62148337595907,
+          "deltaLumaRMSE": 0.07627899653868046,
+          "deltaRGBRMSE": 0.09422674925786392,
+          "brightIoU": null,
+          "darkIoU": 0.8736572890025576
+        }
+      },
+      "linear": {
+        "colorStable": 69.36693580856115,
+        "colorFullSourceDescriptive": 72.78371305264587,
+        "shapeIoU": 0.8761061946902655,
+        "responseStable": {
+          "responseMagnitudeAgreementPercent": 73.0663546183854,
+          "directionAgreementPercent": 87.7237851662404,
+          "deltaLumaRMSE": 0.06619384018534956,
+          "deltaRGBRMSE": 0.08786873997916976,
+          "brightIoU": null,
+          "darkIoU": 0.8772378516624041
+        }
+      },
+      "area": {
+        "colorStable": 76.71415898418077,
+        "colorFullSourceDescriptive": 79.11442474425104,
+        "shapeIoU": 0.8761061946902655,
+        "responseStable": {
+          "responseMagnitudeAgreementPercent": 70.78959233034104,
+          "directionAgreementPercent": 86.39386189258312,
+          "deltaLumaRMSE": 0.06722727324967177,
+          "deltaRGBRMSE": 0.09041126117446897,
+          "brightIoU": null,
+          "darkIoU": 0.8439897698209718
+        }
+      },
+      "both": {
+        "colorStable": 77.69167777885374,
+        "colorFullSourceDescriptive": 80.16015567573547,
+        "shapeIoU": 0.8761061946902655,
+        "responseStable": {
+          "responseMagnitudeAgreementPercent": 72.69501926508764,
+          "directionAgreementPercent": 87.67263427109975,
+          "deltaLumaRMSE": 0.05716009651732084,
+          "deltaRGBRMSE": 0.08435259530926956,
+          "brightIoU": null,
+          "darkIoU": 0.8738277919863597
+        }
+      }
+    }
+  },
+  "legacyMatchesOldBaselineMetrics": true,
+  "linearMatchesPriorLinearMetrics": true,
+  "reviewedRunSuffix": "002",
+  "physicalSourcePinsSHA256": "ef5053676527e3635fbb0d4c4a5e101192e4087d195a8be826e37e9a7eba1e0f",
+  "allFourConditionMetricsUnchangedFrom001": true
+}

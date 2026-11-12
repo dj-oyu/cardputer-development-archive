@@ -1,0 +1,79 @@
+{
+  "status": "PASS_INDEPENDENT_PREACTUAL_REVIEW",
+  "actualFrames": 0,
+  "scope": "Private opt-in streamed center-depth trial, exact cached profile unchanged. No target or fit certification.",
+  "synthetic": {
+    "exactCasesPerBuild": 112,
+    "builds": [
+      "O2",
+      "ASan+UBSan"
+    ],
+    "captureModesBoth": true,
+    "tieAndSignedZeroDepthBitExact": true,
+    "orderedShaderAndSceneQueriesExact": true,
+    "pendingWrapTailNohitEdgesForwardReverse": true,
+    "descriptorMutationDuringOverlapCannotRedirectWrites": true,
+    "coreAdmissionNegativesAtomic": 25,
+    "adapterAliasNegatives": 151,
+    "allocationFailurePositions": 5,
+    "shaderFailures": [
+      "first",
+      "middle",
+      "last"
+    ],
+    "compositionFailures": [
+      "first",
+      "middle",
+      "last"
+    ],
+    "profileFailures": [
+      1,
+      16200,
+      32400
+    ],
+    "lateFailureCompleteFalse": true,
+    "privateScratchMayBePartial": true,
+    "oldFullDepthAPIsUnchanged": true
+  },
+  "ledger": {
+    "productRenderNamedBytes": 373552,
+    "productLifecyclePeakBytes": 442964,
+    "baselineCachedLifecyclePeakBytes": 494608,
+    "lifecycleDeltaBytes": -51644,
+    "peakPhase": "visibilityBuildConservative",
+    "largestAllocationUnchangedBytes": 72512,
+    "pendingCopyBytes": 15360,
+    "diagnosticCaptureAllocationAndCopyBytesEach": 129600,
+    "backgroundNamedStack": 4016,
+    "backgroundCapUnchanged": 4096,
+    "rendererNamedStack": 4944,
+    "admissionCapUnchanged": 1024,
+    "producerCapUnchanged": 637599
+  },
+  "publication": "Core reports guard success; native completion/prediction checks precede final RGB/depth writes. Prefix ownership and exclusive result file creates protect prior results. Diagnostic scratch/reports can remain after failure. No transactional filesystem or device-output claim.",
+  "sourcePins": {
+    "review/INDEPENDENT_SOURCE_STACK_LEDGER.json": "8866678ed34c09995e716905d0f7b0a856347d9295a545f12f5bc9ead1b094bc",
+    "review/INDEPENDENT_SYNTHETIC.json": "d73e0d92291680ed3a3773641e6a3443d09d907adb3e72e9df27e9ebb27ed947",
+    "review/INDEPENDENT_ADMISSION.log": "9b280c53c40edf79d50d7dede0c05899de2f7f4d0d42919b72d3c121e41587ce",
+    "review/RUNNER_REVIEW.json": "46261133bf0a0e88c07130aa52f80cb177991eb7f23a721da63961080ad146e0",
+    "review/independent_exact.c": "3af53bb922be4bb24abd7eac663d21346b64158715da40ad90c3d7074bf3339a",
+    "review/independent_admission.c": "05512937b2a75b835a4b26f30954b1de41b6854edc00ad61da3f7f054d0044bb",
+    "review/independent_generate.py": "0ab449cf94aded2ee34a303b572926635b58ba9a46f44209bb511ef1b56fbc66",
+    "review/independent_run.py": "dee80e2b39481f5e8531d026a405bd5ed69f204fc38800e10b760c079f8f92a2",
+    "review/independent_admission_run.py": "e637f76b761d06a927bc77d0bb358eee30b5d37690fbd271e546e45f3e668f3e",
+    "code/ksn_stream_depth.h": "9f8b2d57da660049e87da6b11c625bda82626078b97d71787635586cc1b4fb2e",
+    "code/ksn_stream_depth_impl.inc": "19f9f2acd32db739117c30cb78005136b473170f0cca1b8b95ba15dbb487b881",
+    "harness/row_transport_bridge.c": "602c74a4f59340c9f85abfe0de615017931d0a98a62edc482e7029aca30a1891",
+    "harness/native_render_row.c": "4461a2cfd0442da2649722ea1c4d0b2c81c10709c5d3c7cd3ed6b79fd71d83fd",
+    "harness/stream_depth_alloc.h": "85d7ab375dfba9734e6d5e53fb3ca390883e4e01f3c0e6b41765a6d88b1962e0",
+    "MEMORY_LEDGER.json": "54e891de775d36070dcb078f875407cb551d45c74e1086e60f377c25eb5128e2",
+    "build-product/BUILD.json": "7b8e6a0fd1a1240a8014c372948018553290d65721b9ff9327d17cdcb46338b7",
+    "build-adapter/BUILD.json": "4d20605604c77f454bf54ddfb0eb26cee1b7a292fd14b6253a73c9f43d372181"
+  },
+  "limitations": [
+    "Actual42 verification not yet run.",
+    "Named payload/stack accounting excludes allocator overhead, fragmentation, libc/libm, unrelated runtime and target placement.",
+    "Private core trusts adapter to admit cache and static profile spans; adapter151 alias tests cover this boundary.",
+    "HDR observer is private malloc-owned with no pointer setter; depth capture is direct admitted storage, not an opaque callback sink."
+  ]
+}

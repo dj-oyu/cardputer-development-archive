@@ -1,0 +1,49 @@
+{
+  "planSHA256": "ed2205819caf79924e8bb85e553a63a00eab851387db431b5ab17d2ff5dd4a65",
+  "triangles": 1166,
+  "vertices": 849,
+  "geometryPackedF32U32Bytes": 24180,
+  "bvhExactAllocationBytes": "not exposed by mathutils; not claimed",
+  "buildAndSetupSeconds": 0.0059583960000964,
+  "totalSeconds": 140.65758782099965,
+  "processPeakRSSKiB": 211448,
+  "hostOnly": true,
+  "records": [
+    {
+      "view": "front",
+      "case": "baseline",
+      "pixels": 4698,
+      "positiveKernelRays": 117019,
+      "blockedRays": 31716,
+      "blockedDistanceBelow1e-4": 188,
+      "seconds": 12.396007847999499
+    },
+    {
+      "view": "front",
+      "case": "direction",
+      "pixels": 4698,
+      "positiveKernelRays": 112782,
+      "blockedRays": 40277,
+      "blockedDistanceBelow1e-4": 180,
+      "seconds": 12.2286431980001
+    },
+    {
+      "view": "oblique",
+      "case": "baseline",
+      "pixels": 5156,
+      "positiveKernelRays": 121769,
+      "blockedRays": 37488,
+      "blockedDistanceBelow1e-4": 164,
+      "seconds": 14.127868289999242
+    },
+    {
+      "view": "oblique",
+      "case": "direction",
+      "pixels": 5156,
+      "positiveKernelRays": 97875,
+      "blockedRays": 45140,
+      "blockedDistanceBelow1e-4": 193,
+      "seconds": 13.834103794999464
+    }
+  ]
+}

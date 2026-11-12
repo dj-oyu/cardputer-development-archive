@@ -1,0 +1,44 @@
+Executing action: size
+Running ninja in directory /workspace/scratch/6d8dcdbcdc54/fox-body-qemu-20261111/build-target
+Executing "ninja all"...
+[1/4] cd /workspace/scratch/6d8dcdbcdc54/fox-body-qemu-20261111/build-target && /workspace/scratch/6d8dcdbcdc54/qemu-esp32s3-20261111/idf-venv/bin/python /workspace/scratch/6d8dcdbcdc54/qemu-esp32s3-20261111/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /workspace/scratch/6d8dcdbcdc54/fox-body-qemu-20261111/build-target/partition_table/partition-table.bin /workspace/scratch/6d8dcdbcdc54/fox-body-qemu-20261111/build-target/fox_body_qemu.bin
+fox_body_qemu.bin binary size 0x37040 bytes. Smallest app partition is 0x177000 bytes. 0x13ffc0 bytes (85%) free.
+[2/4] Performing build step for 'bootloader'
+[1/1] cd /workspace/scratch/6d8dcdbcdc54/fox-body-qemu-20261111/build-target/bootloader && /workspace/scratch/6d8dcdbcdc54/qemu-esp32s3-20261111/idf-venv/bin/python /workspace/scratch/6d8dcdbcdc54/qemu-esp32s3-20261111/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /workspace/scratch/6d8dcdbcdc54/fox-body-qemu-20261111/build-target/bootloader/bootloader.bin
+Bootloader binary size 0x5240 bytes. 0x2dc0 bytes (36%) free.
+[3/4] No install step for 'bootloader'
+[4/4] Completed 'bootloader'
+Running ninja in directory /workspace/scratch/6d8dcdbcdc54/fox-body-qemu-20261111/build-target
+Executing "ninja size"...
+[0/1] cd /workspace/scratch/6d8dcdbcdc54/fox-body-qemu-20261111/build-target && /workspace/scratch/6d8dcdbcdc54/qemu-esp32s3-20261111/idf-venv/lib/python3.12/site-packages/cmake/data/bin/cmake -D "IDF_SIZE_TOOL=/workspace/scratch/6d8dcdbcdc54/qemu-esp32s3-20261111/idf-venv/bin/python;-m;esp_idf_size" -D MAP_FILE=/workspace/scratch/6d8dcdbcdc54/fox-body-qemu-20261111/build-target/fox_body_qemu.map -D OUTPUT_JSON= -P /workspace/scratch/6d8dcdbcdc54/qemu-esp32s3-20261111/esp-idf/tools/cmake/run_size_tool.cmake
+                           Memory Type Usage Summary                            
+┏━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┓
+┃ Memory            ┃              ┃          ┃                ┃               ┃
+┃ Type/Section      ┃ Used [bytes] ┃ Used [%] ┃ Remain [bytes] ┃ Total [bytes] ┃
+┡━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━┩
+│ DIRAM             │       106860 │    31.27 │         234900 │        341760 │
+│    .bss           │        70272 │    20.56 │                │               │
+│    .text          │        25215 │     7.38 │                │               │
+│    .data          │        11373 │     3.33 │                │               │
+│ Flash Code        │        94196 │          │                │               │
+│    .text          │        94196 │          │                │               │
+│ Flash Data        │        75608 │          │                │               │
+│    .rodata        │        75336 │          │                │               │
+│    .appdesc       │          256 │          │                │               │
+│    .tdata         │           16 │          │                │               │
+│ IRAM              │        16384 │    100.0 │              0 │         16384 │
+│    .text          │        15356 │    93.73 │                │               │
+│    .vectors       │         1028 │     6.27 │                │               │
+│ RTC SLOW          │           36 │     0.44 │           8156 │          8192 │
+│    .force_slow    │           36 │     0.44 │                │               │
+│ RTC FAST          │           24 │     0.29 │           8168 │          8192 │
+│    .rtc_reserved  │           24 │     0.29 │                │               │
+└───────────────────┴──────────────┴──────────┴────────────────┴───────────────┘
+Total image size: 222812 bytes (.bin may be padded larger)
+Note: The reported total sizes may be smaller than those in the technical 
+reference manual due to reserved memory and application configuration. The total
+flash size available for the application is not included by default, as it 
+cannot be reliably determined due to the presence of other data like the 
+bootloader, partition table, and application partition size. The total external 
+RAM size is not included either, because the amount of RAM connected to the chip
+is detected at boot and is not known during the build.

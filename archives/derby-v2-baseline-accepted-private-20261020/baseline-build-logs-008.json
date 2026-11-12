@@ -1,0 +1,713 @@
+{
+  "ok": true,
+  "entries": [
+    {
+      "sequence": 811,
+      "text": "[395/1190] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/interrupts.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 812,
+      "text": "[396/1190] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/gpio_periph.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 813,
+      "text": "[397/1190] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/mpi_periph.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 814,
+      "text": "[398/1190] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/lldesc.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 815,
+      "text": "[399/1190] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s3/power_supply_periph.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 816,
+      "text": "[400/1190] Linking C static library esp-idf\\esp_hw_support\\libesp_hw_support.a",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 817,
+      "text": "[401/1190] Building C object esp-idf/heap/CMakeFiles/__idf_heap.dir/heap_caps_base.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 818,
+      "text": "[402/1190] Building C object esp-idf/heap/CMakeFiles/__idf_heap.dir/heap_caps_init.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 819,
+      "text": "[403/1190] Building C object esp-idf/heap/CMakeFiles/__idf_heap.dir/port/esp32s3/memory_layout.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 820,
+      "text": "[404/1190] Building C object esp-idf/heap/CMakeFiles/__idf_heap.dir/port/memory_layout_utils.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 821,
+      "text": "[405/1190] Building C object esp-idf/log/CMakeFiles/__idf_log.dir/src/os/log_timestamp.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 822,
+      "text": "[406/1190] Building C object esp-idf/heap/CMakeFiles/__idf_heap.dir/heap_caps.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 823,
+      "text": "[407/1190] Building C object esp-idf/log/CMakeFiles/__idf_log.dir/src/log_timestamp_common.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 824,
+      "text": "[408/1190] Building C object esp-idf/heap/CMakeFiles/__idf_heap.dir/multi_heap.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 825,
+      "text": "[409/1190] Building C object esp-idf/log/CMakeFiles/__idf_log.dir/src/buffer/log_buffers.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 826,
+      "text": "[410/1190] Linking C static library esp-idf\\esp_hal_i2s\\libesp_hal_i2s.a",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 827,
+      "text": "[411/1190] Building C object esp-idf/log/CMakeFiles/__idf_log.dir/src/util.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 828,
+      "text": "[412/1190] Building C object esp-idf/log/CMakeFiles/__idf_log.dir/src/log_format_text.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 829,
+      "text": "[413/1190] Building C object esp-idf/log/CMakeFiles/__idf_log.dir/src/os/log_lock.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 830,
+      "text": "[414/1190] Building C object esp-idf/log/CMakeFiles/__idf_log.dir/src/log_print.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 831,
+      "text": "[415/1190] Building C object esp-idf/log/CMakeFiles/__idf_log.dir/src/os/util.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 832,
+      "text": "[416/1190] Building C object esp-idf/log/CMakeFiles/__idf_log.dir/src/log.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 833,
+      "text": "[417/1190] Building C object esp-idf/log/CMakeFiles/__idf_log.dir/src/os/log_write.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 834,
+      "text": "[418/1190] Building C object esp-idf/heap/CMakeFiles/__idf_heap.dir/tlsf/tlsf.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 835,
+      "text": "[419/1190] Building C object esp-idf/log/CMakeFiles/__idf_log.dir/src/log_level/log_level.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 836,
+      "text": "[420/1190] Building C object esp-idf/log/CMakeFiles/__idf_log.dir/src/log_level/tag_log_level/tag_log_level.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 837,
+      "text": "[421/1190] Building C object esp-idf/log/CMakeFiles/__idf_log.dir/8f77639f010b93809b5b1f4a7cd7604a/log_linked_list.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 838,
+      "text": "[422/1190] Linking C static library esp-idf\\esp_hal_touch_sens\\libesp_hal_touch_sens.a",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 839,
+      "text": "[423/1190] Building C object esp-idf/hal/CMakeFiles/__idf_hal.dir/hal_utils.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 840,
+      "text": "[424/1190] Building C object esp-idf/log/CMakeFiles/__idf_log.dir/src/log_level/tag_log_level/cache/log_binary_heap.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 841,
+      "text": "[425/1190] Building C object esp-idf/hal/CMakeFiles/__idf_hal.dir/esp32s3/efuse_hal.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 842,
+      "text": "[426/1190] Building C object esp-idf/hal/CMakeFiles/__idf_hal.dir/efuse_hal.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 843,
+      "text": "[427/1190] Building C object esp-idf/hal/CMakeFiles/__idf_hal.dir/color_hal.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 844,
+      "text": "[428/1190] Building C object esp-idf/hal/CMakeFiles/__idf_hal.dir/mmu_hal.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 845,
+      "text": "[429/1190] Building C object esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_sys.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 846,
+      "text": "[430/1190] Building C object esp-idf/hal/CMakeFiles/__idf_hal.dir/systimer_hal.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 847,
+      "text": "[431/1190] Building C object esp-idf/hal/CMakeFiles/__idf_hal.dir/cache_hal.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 848,
+      "text": "[432/1190] Building C object esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_crc.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 849,
+      "text": "[433/1190] Building C object esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_serial_output.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 850,
+      "text": "[434/1190] Building C object esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_efuse.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 851,
+      "text": "[435/1190] Building C object esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_spiflash.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 852,
+      "text": "[436/1190] Building C object esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_print.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 853,
+      "text": "[437/1190] Linking C static library esp-idf\\esp_hal_pmu\\libesp_hal_pmu.a",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 854,
+      "text": "[438/1190] Building C object esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_gpio.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 855,
+      "text": "[439/1190] Building ASM object esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_longjmp.S.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 856,
+      "text": "[440/1190] Building ASM object esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_cache_writeback_esp32s3.S.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 857,
+      "text": "[441/1190] Building C object esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_systimer.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 858,
+      "text": "[442/1190] Building C object esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_cache_esp32s2_esp32s3.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 859,
+      "text": "[443/1190] Building C object esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/esp_err.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 860,
+      "text": "[444/1190] Building C object esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/crosscore_int.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 861,
+      "text": "[445/1190] Building C object esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/esp_ipc.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 862,
+      "text": "[446/1190] Building C object esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/freertos_hooks.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 863,
+      "text": "[447/1190] Building C object esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/int_wdt.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 864,
+      "text": "[448/1190] Linking C static library esp-idf\\esp_hal_usb\\libesp_hal_usb.a",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 865,
+      "text": "[449/1190] Building C object esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/esp_system.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 866,
+      "text": "[450/1190] Building C object esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/panic.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 867,
+      "text": "[451/1190] Building C object esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/startup.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 868,
+      "text": "[452/1190] Building C object esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/stack_check.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 869,
+      "text": "[453/1190] Building C object esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/system_time.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 870,
+      "text": "[454/1190] Building C object esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/startup_funcs.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 871,
+      "text": "[455/1190] Building C object esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/ubsan.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 872,
+      "text": "[456/1190] Linking C static library esp-idf\\esp_hal_gpio\\libesp_hal_gpio.a",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 873,
+      "text": "[457/1190] Building C object esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/src/esp_err_to_name.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 874,
+      "text": "[458/1190] Building C object esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/xt_wdt.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 875,
+      "text": "[459/1190] Building C object esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/port/image_process.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 876,
+      "text": "[460/1190] Building C object esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/task_wdt/task_wdt_impl_timergroup.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 877,
+      "text": "[461/1190] Building C object esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/port/esp_system_chip.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 878,
+      "text": "[462/1190] Building C object esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/port/panic_handler.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 879,
+      "text": "[463/1190] Building C object esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/task_wdt/task_wdt.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 880,
+      "text": "[464/1190] Building C object esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/port/arch/xtensa/esp_ipc_isr_port.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 881,
+      "text": "[465/1190] Building C object esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/port/cpu_start.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 882,
+      "text": "[466/1190] Linking C static library esp-idf\\soc\\libsoc.a",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 883,
+      "text": "[467/1190] Building C object esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/port/esp_ipc_isr.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 884,
+      "text": "[468/1190] Building ASM object esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/port/arch/xtensa/esp_ipc_isr_handler.S.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 885,
+      "text": "[469/1190] Building ASM object esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/port/arch/xtensa/esp_ipc_isr_routines.S.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 886,
+      "text": "[470/1190] Building ASM object esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/port/arch/xtensa/expression_with_stack_asm.S.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 887,
+      "text": "[471/1190] Building ASM object esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/port/arch/xtensa/panic_handler_asm.S.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 888,
+      "text": "[472/1190] Building ASM object esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/port/arch/xtensa/debug_helpers_asm.S.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 889,
+      "text": "[473/1190] Building C object esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/port/arch/xtensa/expression_with_stack.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 890,
+      "text": "[474/1190] Building C object esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/port/arch/xtensa/panic_arch.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 891,
+      "text": "[475/1190] Building ASM object esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/port/soc/esp32s3/highint_hdl.S.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 892,
+      "text": "[476/1190] Building C object esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/port/arch/xtensa/debug_stubs.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 893,
+      "text": "[477/1190] Building C object esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/port/arch/xtensa/debug_helpers.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 894,
+      "text": "[478/1190] Building C object esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/port/arch/xtensa/trax.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 895,
+      "text": "[479/1190] Linking C static library esp-idf\\heap\\libheap.a",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 896,
+      "text": "[480/1190] Building C object esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/port/soc/esp32s3/reset_reason.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 897,
+      "text": "[481/1190] Building C object esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/flash_brownout_hook.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 898,
+      "text": "[482/1190] Building C object esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/esp32s3/spi_flash_oct_flash_init.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 899,
+      "text": "[483/1190] Building C object esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/port/soc/esp32s3/cache_err_int.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 900,
+      "text": "[484/1190] Building C object esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/spi_flash_hpm_enable.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 901,
+      "text": "[485/1190] Building C object esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/port/soc/esp32s3/clk.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 902,
+      "text": "[486/1190] Building C object esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/port/soc/esp32s3/system_internal.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 903,
+      "text": "[487/1190] Building C object esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/port/soc/esp32s3/apb_backup_dma.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 904,
+      "text": "[488/1190] Building C object esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/spi_flash_chip_drivers.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 905,
+      "text": "[489/1190] Building C object esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/spi_flash_chip_issi.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 906,
+      "text": "[490/1190] Linking C static library esp-idf\\log\\liblog.a",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 907,
+      "text": "[491/1190] Building C object esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/spi_flash_chip_boya.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 908,
+      "text": "[492/1190] Building C object esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/spi_flash_chip_mxic.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 909,
+      "text": "[493/1190] Building C object esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/spi_flash_chip_gd.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 910,
+      "text": "[494/1190] Building C object esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/spi_flash_chip_winbond.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    }
+  ],
+  "expired": false,
+  "gap": false,
+  "oldest_sequence": 1,
+  "next_cursor": {
+    "epoch": "679b080a14f74643986be260f20f24cc",
+    "sequence": 910
+  },
+  "has_more": true
+}

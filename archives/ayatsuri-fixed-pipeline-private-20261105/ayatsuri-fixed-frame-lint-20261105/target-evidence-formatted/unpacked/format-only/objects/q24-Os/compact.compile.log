@@ -1,0 +1,10 @@
+In file included from [01m[K/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/normal_bridge.h:3[m[K,
+                 from [01m[K/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/chain.h:4[m[K,
+                 from [01m[K/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.h:3[m[K,
+                 from [01m[K/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:1[m[K:
+[01m[K/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:52:13:[m[K [01;35m[Kwarning: [m[K'[01m[Kil_block[m[K' defined but not used [[01;35m[K-Wunused-function[m[K]
+   52 | static bool [01;35m[Kil_block[m[K(const il_scene *s,const il_pixel *p,unsigned count,uint64_t out[8][3],il_status status[8]){if(count!=1&&count!=2&&count!=4&&count!=8)return false;for(unsigned i=0;i<count;i++)status[i]=il_eval(s,p+i,out[i]);return true;}
+      |             [01;35m[K^~~~~~~~[m[K
+[01m[K/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:51:13:[m[K [01;35m[Kwarning: [m[K'[01m[Kil_hdr19[m[K' defined but not used [[01;35m[K-Wunused-function[m[K]
+   51 | static bool [01;35m[Kil_hdr19[m[K(const uint64_t in[3],uint32_t out[3]){uint64_t q[3];for(unsigned k=0;k<3;k++){q[k]=il_round(in[k],32);if(q[k]>UINT32_MAX)return false;}for(unsigned k=0;k<3;k++)out[k]=(uint32_t)q[k];return true;}
+      |             [01;35m[K^~~~~~~~[m[K

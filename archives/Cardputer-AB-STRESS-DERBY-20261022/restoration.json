@@ -1,0 +1,128 @@
+{
+  "job": {
+    "ok": true,
+    "id": "pr46-after-ab-original-restore-20261022",
+    "plan_hash": "5c0dd5be16493250d9607d7379ecacd792d41e10c9262ab9cfbe2e5df78b8b20",
+    "state": "succeeded",
+    "stage": "flash_boot_observe",
+    "result": "firmware_restore_completed",
+    "diagnostic": null,
+    "reviewed": 0,
+    "created": "2026-10-22 11:10:40",
+    "finished": "2026-10-22 11:13:42",
+    "review": {
+      "historical_failure": false,
+      "uncertainty_resolved": false,
+      "failure_result_preserved": false,
+      "required_action": "consult_current_resource_status",
+      "physical_device_state": "not_inferred_from_job_history"
+    }
+  },
+  "original_receipt": "ac2d2314d19cb45bf1f4903d8142c5be4c4ad575a6a043552f6a48eebe7440f8",
+  "flash_summary": {
+    "boot_log_matches_expected_artifact": true,
+    "boot_observed": true,
+    "boot_text_identity_verified": false,
+    "boot_text_is_cryptographic_proof": false,
+    "idf_version": "6.0.1",
+    "last_known_good_receipt": "ac2d2314d19cb45bf1f4903d8142c5be4c4ad575a6a043552f6a48eebe7440f8",
+    "observed_elf_sha256_prefix": "7fceba264",
+    "observed_idf_version": "6.0.1",
+    "passive_boot_verified": true,
+    "readback_verified": true,
+    "target": "esp32s3",
+    "verification_basis": "full_segment_sha256_readback_and_boot_elf_prefix"
+  },
+  "renewals_confirmed": 6,
+  "monitor_errors": [],
+  "configuration": {
+    "original_bytes_restored": true,
+    "config_sha256": "cd3b6b1d25d91f975494a81ed1dab3163b60c055c7d1afa9a2f8c152f4313d54",
+    "project_id": "cardputer-main",
+    "allow_restore": false,
+    "original_receipt": "ac2d2314d19cb45bf1f4903d8142c5be4c4ad575a6a043552f6a48eebe7440f8",
+    "receipt_unchanged": true,
+    "idle": true,
+    "status": {
+      "ok": true,
+      "backend": "serial",
+      "hardware_connected": false,
+      "ownership_uncertain": false,
+      "device": "configured-cardputer",
+      "broker_epoch": "86ed7f99da3a437cb5973597dc772a06",
+      "active_job": null,
+      "profile_active_job": null,
+      "profile_queue_depth": 0,
+      "profile_uncertain": false,
+      "profile_execution_policy": "registered_project",
+      "owner": null,
+      "lease_remaining_seconds": 0,
+      "queue_depth": 0,
+      "wait_queue_depth": 0,
+      "work_session_count": 0,
+      "history": {
+        "cancelled": 3,
+        "failed": 12,
+        "needs_review": 12,
+        "succeeded": 158
+      },
+      "needs_review": true,
+      "execution_uncertain": false,
+      "safety": {
+        "current_resource_uncertain": false,
+        "owned_work_active": false,
+        "historical_review_pending": true,
+        "physical_device_state": "not_inferred_from_job_history",
+        "required_action": "inspect_job_and_use_explicit_recovery_if_eligible",
+        "authorizes_new_work": false
+      },
+      "execution_policy": "authenticated_explicit_request",
+      "hardware_backend": "serial_operations_opt_in",
+      "tunnel": "external_lifecycle_unknown",
+      "tunnel_ingress_enabled": true
+    },
+    "restoration_job": {
+      "ok": true,
+      "id": "pr46-after-ab-original-restore-20261022",
+      "plan_hash": "5c0dd5be16493250d9607d7379ecacd792d41e10c9262ab9cfbe2e5df78b8b20",
+      "state": "succeeded",
+      "stage": "flash_boot_observe",
+      "result": "firmware_restore_completed",
+      "diagnostic": null,
+      "reviewed": 0,
+      "created": "2026-10-22 11:10:40",
+      "finished": "2026-10-22 11:13:42",
+      "review": {
+        "historical_failure": false,
+        "uncertainty_resolved": false,
+        "failure_result_preserved": false,
+        "required_action": "consult_current_resource_status",
+        "physical_device_state": "not_inferred_from_job_history"
+      }
+    },
+    "listener_proof": {
+      "observed_utc": "2026-10-22T11:15:16.403852+00:00",
+      "listener": [
+        {
+          "pid": 68432,
+          "port": 8765,
+          "address": "127.0.0.1"
+        }
+      ],
+      "image_path": "C:\\Users\\core\\AppData\\Local\\esp-device-broker-mcp\\versions\\v0.12.0-d315e5e6\\cardputer.exe",
+      "image_sha256": "529bcc6e8f822123a5a58958eea7e5be2a146173f0f7ded39cac58944a5cdeb8",
+      "process_start_utc": "2026-10-22T11:14:25.124856+00:00",
+      "process_creation_filetime": 134371412651248568,
+      "process_retained_during_check": true,
+      "hash_scope": "file_at_running_listener_process_image_path",
+      "in_memory_executable_pages_hashed": false,
+      "credentials_read": false,
+      "usb_opened": false
+    },
+    "runtime_source_commit": "d315e5e6a33be1fd4eea786b31f8b1dda31a209c",
+    "authentication_preserved": true,
+    "new_credentials_created": false,
+    "serial_expected_restored_from_original": "06b1c1c8aab37eb78e437304ea5fbe652df339bc73408ba7f9d5f6f9eb2c298d",
+    "note": "Original serial expectation 06b1... differs from restored LKG ELF 7fce...; this pre-existing setting was preserved byte-for-byte, not silently corrected. No post-restore USB app test."
+  }
+}

@@ -1,0 +1,2394 @@
+{
+  "front-Ns": [
+    {
+      "object": "UNASSIGNED_CENTER_RAY",
+      "stablePixels": 400,
+      "brightFP": 8,
+      "brightFN": 74,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Amber iris -1",
+      "stablePixels": 20,
+      "brightFP": 1,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 1,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Amber iris 1",
+      "stablePixels": 22,
+      "brightFP": 0,
+      "brightFN": 9,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 1
+    },
+    {
+      "object": "Anatomy \u2022 unified live sculpt surface",
+      "stablePixels": 1035,
+      "brightFP": 24,
+      "brightFN": 125,
+      "referenceDarkNativeBright": 22,
+      "referenceBrightNativeDark": 38
+    },
+    {
+      "object": "Cheek ruff lock -1 0",
+      "stablePixels": 10,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Cheek ruff lock -1 1",
+      "stablePixels": 11,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Cheek ruff lock -1 2",
+      "stablePixels": 2,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Cheek ruff lock -1 3",
+      "stablePixels": 11,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Cheek ruff lock 1 0",
+      "stablePixels": 10,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Cheek ruff lock 1 1",
+      "stablePixels": 10,
+      "brightFP": 0,
+      "brightFN": 1,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Cheek ruff lock 1 2",
+      "stablePixels": 3,
+      "brightFP": 0,
+      "brightFN": 1,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Cheek ruff lock 1 3",
+      "stablePixels": 10,
+      "brightFP": 0,
+      "brightFN": 5,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Chest ruff -1 0",
+      "stablePixels": 15,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Chest ruff -1 1",
+      "stablePixels": 20,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Chest ruff -1 2",
+      "stablePixels": 27,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Chest ruff 1 0",
+      "stablePixels": 11,
+      "brightFP": 1,
+      "brightFN": 2,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 1
+    },
+    {
+      "object": "Chest ruff 1 1",
+      "stablePixels": 14,
+      "brightFP": 2,
+      "brightFN": 4,
+      "referenceDarkNativeBright": 1,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Chest ruff 1 2",
+      "stablePixels": 24,
+      "brightFP": 0,
+      "brightFN": 14,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 1
+    },
+    {
+      "object": "Cream swept cheek -1",
+      "stablePixels": 56,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Cream swept cheek 1",
+      "stablePixels": 56,
+      "brightFP": 0,
+      "brightFN": 45,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Cream throat bib",
+      "stablePixels": 148,
+      "brightFP": 10,
+      "brightFN": 10,
+      "referenceDarkNativeBright": 3,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Crown lock 0",
+      "stablePixels": 5,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Crown lock 1",
+      "stablePixels": 3,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Crown lock 2",
+      "stablePixels": 5,
+      "brightFP": 1,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Crown lock 3",
+      "stablePixels": 4,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Crown lock 4",
+      "stablePixels": 6,
+      "brightFP": 1,
+      "brightFN": 1,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Ear \u2022 recessed coral concha -1",
+      "stablePixels": 86,
+      "brightFP": 3,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 2,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Ear \u2022 recessed coral concha 1",
+      "stablePixels": 69,
+      "brightFP": 0,
+      "brightFN": 9,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Ear \u2022 solid rim -1",
+      "stablePixels": 87,
+      "brightFP": 0,
+      "brightFN": 5,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 2
+    },
+    {
+      "object": "Ear \u2022 solid rim 1",
+      "stablePixels": 99,
+      "brightFP": 5,
+      "brightFN": 8,
+      "referenceDarkNativeBright": 5,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Expressive brow -1",
+      "stablePixels": 6,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Expressive brow 1",
+      "stablePixels": 5,
+      "brightFP": 0,
+      "brightFN": 1,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Eye glint -1",
+      "stablePixels": 5,
+      "brightFP": 1,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 1,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Eye glint 1",
+      "stablePixels": 4,
+      "brightFP": 0,
+      "brightFN": 2,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 1
+    },
+    {
+      "object": "Eye glint small -1",
+      "stablePixels": 1,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Eye socket -1",
+      "stablePixels": 10,
+      "brightFP": 2,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 2,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Eye socket 1",
+      "stablePixels": 11,
+      "brightFP": 0,
+      "brightFN": 2,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Eye white -1",
+      "stablePixels": 31,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Eye white 1",
+      "stablePixels": 32,
+      "brightFP": 0,
+      "brightFN": 15,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 2
+    },
+    {
+      "object": "Front cocoa sock -1",
+      "stablePixels": 42,
+      "brightFP": 0,
+      "brightFN": 3,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Front cocoa sock 1",
+      "stablePixels": 41,
+      "brightFP": 0,
+      "brightFN": 1,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Front paw -1",
+      "stablePixels": 61,
+      "brightFP": 1,
+      "brightFN": 10,
+      "referenceDarkNativeBright": 1,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Front paw 1",
+      "stablePixels": 56,
+      "brightFP": 0,
+      "brightFN": 14,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Front toe crease.003",
+      "stablePixels": 3,
+      "brightFP": 1,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 1,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Inner ear ivory tuft -1 0",
+      "stablePixels": 12,
+      "brightFP": 1,
+      "brightFN": 4,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Inner ear ivory tuft -1 1",
+      "stablePixels": 6,
+      "brightFP": 0,
+      "brightFN": 3,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Inner ear ivory tuft -1 2",
+      "stablePixels": 12,
+      "brightFP": 0,
+      "brightFN": 2,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Inner ear ivory tuft 1 0",
+      "stablePixels": 10,
+      "brightFP": 0,
+      "brightFN": 2,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Inner ear ivory tuft 1 1",
+      "stablePixels": 8,
+      "brightFP": 1,
+      "brightFN": 2,
+      "referenceDarkNativeBright": 1,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Inner ear ivory tuft 1 2",
+      "stablePixels": 12,
+      "brightFP": 0,
+      "brightFN": 6,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Muzzle pad -1",
+      "stablePixels": 46,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Muzzle pad 1",
+      "stablePixels": 43,
+      "brightFP": 1,
+      "brightFN": 28,
+      "referenceDarkNativeBright": 1,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Muzzle \u2022 ivory chin",
+      "stablePixels": 18,
+      "brightFP": 2,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 1,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Muzzle \u2022 projecting orange bridge",
+      "stablePixels": 68,
+      "brightFP": 0,
+      "brightFN": 2,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 1
+    },
+    {
+      "object": "Nose \u2022 soft triangular leather",
+      "stablePixels": 20,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Pupil -1",
+      "stablePixels": 14,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Pupil 1",
+      "stablePixels": 13,
+      "brightFP": 1,
+      "brightFN": 2,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Rear cocoa sock -1",
+      "stablePixels": 3,
+      "brightFP": 0,
+      "brightFN": 3,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Rear cocoa sock 1",
+      "stablePixels": 23,
+      "brightFP": 0,
+      "brightFN": 1,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Rear paw -1",
+      "stablePixels": 10,
+      "brightFP": 0,
+      "brightFN": 1,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Rear paw 1",
+      "stablePixels": 28,
+      "brightFP": 0,
+      "brightFN": 8,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Smile -1",
+      "stablePixels": 2,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Smile 1",
+      "stablePixels": 2,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Tail silhouette tuft 3",
+      "stablePixels": 13,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Tail silhouette tuft 4",
+      "stablePixels": 18,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Tail silhouette tuft 5",
+      "stablePixels": 19,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Tail silhouette tuft 6",
+      "stablePixels": 11,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Tail tip sweep 0",
+      "stablePixels": 1,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Tail tip sweep 4",
+      "stablePixels": 3,
+      "brightFP": 1,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Tail tip sweep 5",
+      "stablePixels": 21,
+      "brightFP": 0,
+      "brightFN": 2,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Tail \u2022 broad ivory tip",
+      "stablePixels": 305,
+      "brightFP": 1,
+      "brightFN": 17,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 3
+    },
+    {
+      "object": "Tail \u2022 sweeping continuous silhouette",
+      "stablePixels": 1236,
+      "brightFP": 12,
+      "brightFN": 20,
+      "referenceDarkNativeBright": 1,
+      "referenceBrightNativeDark": 13
+    },
+    {
+      "object": "Upper eyelid -1",
+      "stablePixels": 10,
+      "brightFP": 1,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 1,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Upper eyelid 1",
+      "stablePixels": 4,
+      "brightFP": 0,
+      "brightFN": 2,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 1
+    }
+  ],
+  "front-Ng": [
+    {
+      "object": "UNASSIGNED_CENTER_RAY",
+      "stablePixels": 400,
+      "brightFP": 8,
+      "brightFN": 75,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 2
+    },
+    {
+      "object": "Amber iris -1",
+      "stablePixels": 20,
+      "brightFP": 1,
+      "brightFN": 3,
+      "referenceDarkNativeBright": 1,
+      "referenceBrightNativeDark": 2
+    },
+    {
+      "object": "Amber iris 1",
+      "stablePixels": 22,
+      "brightFP": 0,
+      "brightFN": 10,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 6
+    },
+    {
+      "object": "Anatomy \u2022 unified live sculpt surface",
+      "stablePixels": 1035,
+      "brightFP": 40,
+      "brightFN": 85,
+      "referenceDarkNativeBright": 35,
+      "referenceBrightNativeDark": 44
+    },
+    {
+      "object": "Cheek ruff lock -1 0",
+      "stablePixels": 10,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Cheek ruff lock -1 1",
+      "stablePixels": 11,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Cheek ruff lock -1 2",
+      "stablePixels": 2,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Cheek ruff lock -1 3",
+      "stablePixels": 11,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Cheek ruff lock 1 0",
+      "stablePixels": 10,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Cheek ruff lock 1 1",
+      "stablePixels": 10,
+      "brightFP": 0,
+      "brightFN": 2,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Cheek ruff lock 1 2",
+      "stablePixels": 3,
+      "brightFP": 0,
+      "brightFN": 1,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Cheek ruff lock 1 3",
+      "stablePixels": 10,
+      "brightFP": 0,
+      "brightFN": 5,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Chest ruff -1 0",
+      "stablePixels": 15,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Chest ruff -1 1",
+      "stablePixels": 20,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Chest ruff -1 2",
+      "stablePixels": 27,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Chest ruff 1 0",
+      "stablePixels": 11,
+      "brightFP": 0,
+      "brightFN": 1,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 1
+    },
+    {
+      "object": "Chest ruff 1 1",
+      "stablePixels": 14,
+      "brightFP": 0,
+      "brightFN": 4,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 2
+    },
+    {
+      "object": "Chest ruff 1 2",
+      "stablePixels": 24,
+      "brightFP": 0,
+      "brightFN": 13,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Cream swept cheek -1",
+      "stablePixels": 56,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Cream swept cheek 1",
+      "stablePixels": 56,
+      "brightFP": 0,
+      "brightFN": 49,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 1
+    },
+    {
+      "object": "Cream throat bib",
+      "stablePixels": 148,
+      "brightFP": 13,
+      "brightFN": 2,
+      "referenceDarkNativeBright": 2,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Crown lock 0",
+      "stablePixels": 5,
+      "brightFP": 0,
+      "brightFN": 1,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 1
+    },
+    {
+      "object": "Crown lock 1",
+      "stablePixels": 3,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Crown lock 2",
+      "stablePixels": 5,
+      "brightFP": 0,
+      "brightFN": 3,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Crown lock 3",
+      "stablePixels": 4,
+      "brightFP": 0,
+      "brightFN": 2,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 2
+    },
+    {
+      "object": "Crown lock 4",
+      "stablePixels": 6,
+      "brightFP": 1,
+      "brightFN": 3,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Ear \u2022 recessed coral concha -1",
+      "stablePixels": 86,
+      "brightFP": 8,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 7,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Ear \u2022 recessed coral concha 1",
+      "stablePixels": 69,
+      "brightFP": 0,
+      "brightFN": 7,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 1
+    },
+    {
+      "object": "Ear \u2022 solid rim -1",
+      "stablePixels": 87,
+      "brightFP": 0,
+      "brightFN": 9,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 4
+    },
+    {
+      "object": "Ear \u2022 solid rim 1",
+      "stablePixels": 99,
+      "brightFP": 3,
+      "brightFN": 4,
+      "referenceDarkNativeBright": 3,
+      "referenceBrightNativeDark": 1
+    },
+    {
+      "object": "Expressive brow -1",
+      "stablePixels": 6,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Expressive brow 1",
+      "stablePixels": 5,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Eye glint -1",
+      "stablePixels": 5,
+      "brightFP": 1,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 1,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Eye glint 1",
+      "stablePixels": 4,
+      "brightFP": 0,
+      "brightFN": 1,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Eye glint small -1",
+      "stablePixels": 1,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Eye socket -1",
+      "stablePixels": 10,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Eye socket 1",
+      "stablePixels": 11,
+      "brightFP": 0,
+      "brightFN": 2,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 1
+    },
+    {
+      "object": "Eye white -1",
+      "stablePixels": 31,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Eye white 1",
+      "stablePixels": 32,
+      "brightFP": 1,
+      "brightFN": 18,
+      "referenceDarkNativeBright": 1,
+      "referenceBrightNativeDark": 3
+    },
+    {
+      "object": "Front cocoa sock -1",
+      "stablePixels": 42,
+      "brightFP": 0,
+      "brightFN": 11,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Front cocoa sock 1",
+      "stablePixels": 41,
+      "brightFP": 3,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 2,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Front paw -1",
+      "stablePixels": 61,
+      "brightFP": 3,
+      "brightFN": 11,
+      "referenceDarkNativeBright": 3,
+      "referenceBrightNativeDark": 5
+    },
+    {
+      "object": "Front paw 1",
+      "stablePixels": 56,
+      "brightFP": 0,
+      "brightFN": 16,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 3
+    },
+    {
+      "object": "Front toe crease.003",
+      "stablePixels": 3,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Inner ear ivory tuft -1 0",
+      "stablePixels": 12,
+      "brightFP": 0,
+      "brightFN": 5,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 1
+    },
+    {
+      "object": "Inner ear ivory tuft -1 1",
+      "stablePixels": 6,
+      "brightFP": 1,
+      "brightFN": 3,
+      "referenceDarkNativeBright": 1,
+      "referenceBrightNativeDark": 1
+    },
+    {
+      "object": "Inner ear ivory tuft -1 2",
+      "stablePixels": 12,
+      "brightFP": 0,
+      "brightFN": 2,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Inner ear ivory tuft 1 0",
+      "stablePixels": 10,
+      "brightFP": 0,
+      "brightFN": 2,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Inner ear ivory tuft 1 1",
+      "stablePixels": 8,
+      "brightFP": 1,
+      "brightFN": 2,
+      "referenceDarkNativeBright": 1,
+      "referenceBrightNativeDark": 1
+    },
+    {
+      "object": "Inner ear ivory tuft 1 2",
+      "stablePixels": 12,
+      "brightFP": 0,
+      "brightFN": 7,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Muzzle pad -1",
+      "stablePixels": 46,
+      "brightFP": 1,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Muzzle pad 1",
+      "stablePixels": 43,
+      "brightFP": 1,
+      "brightFN": 28,
+      "referenceDarkNativeBright": 1,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Muzzle \u2022 ivory chin",
+      "stablePixels": 18,
+      "brightFP": 3,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 2,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Muzzle \u2022 projecting orange bridge",
+      "stablePixels": 68,
+      "brightFP": 0,
+      "brightFN": 4,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 2
+    },
+    {
+      "object": "Nose \u2022 soft triangular leather",
+      "stablePixels": 20,
+      "brightFP": 2,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 2,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Pupil -1",
+      "stablePixels": 14,
+      "brightFP": 0,
+      "brightFN": 1,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 1
+    },
+    {
+      "object": "Pupil 1",
+      "stablePixels": 13,
+      "brightFP": 0,
+      "brightFN": 5,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Rear cocoa sock -1",
+      "stablePixels": 3,
+      "brightFP": 0,
+      "brightFN": 3,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 1
+    },
+    {
+      "object": "Rear cocoa sock 1",
+      "stablePixels": 23,
+      "brightFP": 0,
+      "brightFN": 1,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Rear paw -1",
+      "stablePixels": 10,
+      "brightFP": 0,
+      "brightFN": 1,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Rear paw 1",
+      "stablePixels": 28,
+      "brightFP": 0,
+      "brightFN": 6,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Smile -1",
+      "stablePixels": 2,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Smile 1",
+      "stablePixels": 2,
+      "brightFP": 1,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 1,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Tail silhouette tuft 3",
+      "stablePixels": 13,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Tail silhouette tuft 4",
+      "stablePixels": 18,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Tail silhouette tuft 5",
+      "stablePixels": 19,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Tail silhouette tuft 6",
+      "stablePixels": 11,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Tail tip sweep 0",
+      "stablePixels": 1,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Tail tip sweep 4",
+      "stablePixels": 3,
+      "brightFP": 0,
+      "brightFN": 1,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Tail tip sweep 5",
+      "stablePixels": 21,
+      "brightFP": 0,
+      "brightFN": 4,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Tail \u2022 broad ivory tip",
+      "stablePixels": 305,
+      "brightFP": 17,
+      "brightFN": 20,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 6
+    },
+    {
+      "object": "Tail \u2022 sweeping continuous silhouette",
+      "stablePixels": 1236,
+      "brightFP": 5,
+      "brightFN": 16,
+      "referenceDarkNativeBright": 1,
+      "referenceBrightNativeDark": 9
+    },
+    {
+      "object": "Upper eyelid -1",
+      "stablePixels": 10,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Upper eyelid 1",
+      "stablePixels": 4,
+      "brightFP": 0,
+      "brightFN": 1,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    }
+  ],
+  "oblique-Ns": [
+    {
+      "object": "UNASSIGNED_CENTER_RAY",
+      "stablePixels": 456,
+      "brightFP": 5,
+      "brightFN": 159,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Amber iris -1",
+      "stablePixels": 22,
+      "brightFP": 2,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 1,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Amber iris 1",
+      "stablePixels": 18,
+      "brightFP": 0,
+      "brightFN": 8,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Anatomy \u2022 unified live sculpt surface",
+      "stablePixels": 1565,
+      "brightFP": 35,
+      "brightFN": 68,
+      "referenceDarkNativeBright": 30,
+      "referenceBrightNativeDark": 17
+    },
+    {
+      "object": "Cheek ruff lock -1 0",
+      "stablePixels": 15,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Cheek ruff lock -1 1",
+      "stablePixels": 12,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Cheek ruff lock -1 2",
+      "stablePixels": 6,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Cheek ruff lock -1 3",
+      "stablePixels": 12,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Cheek ruff lock 1 1",
+      "stablePixels": 2,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Chest ruff -1 0",
+      "stablePixels": 17,
+      "brightFP": 1,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 1,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Chest ruff -1 1",
+      "stablePixels": 17,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Chest ruff -1 2",
+      "stablePixels": 31,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Chest ruff 1 0",
+      "stablePixels": 11,
+      "brightFP": 1,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Chest ruff 1 1",
+      "stablePixels": 10,
+      "brightFP": 2,
+      "brightFN": 4,
+      "referenceDarkNativeBright": 2,
+      "referenceBrightNativeDark": 1
+    },
+    {
+      "object": "Chest ruff 1 2",
+      "stablePixels": 14,
+      "brightFP": 1,
+      "brightFN": 3,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Cream swept cheek -1",
+      "stablePixels": 81,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Cream swept cheek 1",
+      "stablePixels": 25,
+      "brightFP": 0,
+      "brightFN": 20,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Cream throat bib",
+      "stablePixels": 136,
+      "brightFP": 11,
+      "brightFN": 3,
+      "referenceDarkNativeBright": 2,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Crown lock 0",
+      "stablePixels": 5,
+      "brightFP": 1,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Crown lock 1",
+      "stablePixels": 3,
+      "brightFP": 1,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Crown lock 2",
+      "stablePixels": 5,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Crown lock 3",
+      "stablePixels": 3,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Crown lock 4",
+      "stablePixels": 3,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Ear \u2022 recessed coral concha -1",
+      "stablePixels": 84,
+      "brightFP": 3,
+      "brightFN": 1,
+      "referenceDarkNativeBright": 2,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Ear \u2022 recessed coral concha 1",
+      "stablePixels": 51,
+      "brightFP": 1,
+      "brightFN": 11,
+      "referenceDarkNativeBright": 1,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Ear \u2022 solid rim -1",
+      "stablePixels": 90,
+      "brightFP": 0,
+      "brightFN": 7,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 2
+    },
+    {
+      "object": "Ear \u2022 solid rim 1",
+      "stablePixels": 83,
+      "brightFP": 1,
+      "brightFN": 7,
+      "referenceDarkNativeBright": 1,
+      "referenceBrightNativeDark": 2
+    },
+    {
+      "object": "Expressive brow -1",
+      "stablePixels": 4,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Expressive brow 1",
+      "stablePixels": 5,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Eye glint -1",
+      "stablePixels": 3,
+      "brightFP": 1,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 1,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Eye glint 1",
+      "stablePixels": 3,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Eye glint small -1",
+      "stablePixels": 1,
+      "brightFP": 1,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 1,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Eye socket -1",
+      "stablePixels": 14,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Eye socket 1",
+      "stablePixels": 3,
+      "brightFP": 0,
+      "brightFN": 1,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Eye white -1",
+      "stablePixels": 36,
+      "brightFP": 1,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 1,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Eye white 1",
+      "stablePixels": 23,
+      "brightFP": 1,
+      "brightFN": 8,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 1
+    },
+    {
+      "object": "Front cocoa sock -1",
+      "stablePixels": 44,
+      "brightFP": 0,
+      "brightFN": 3,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Front cocoa sock 1",
+      "stablePixels": 44,
+      "brightFP": 0,
+      "brightFN": 7,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 5
+    },
+    {
+      "object": "Front paw -1",
+      "stablePixels": 70,
+      "brightFP": 0,
+      "brightFN": 13,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Front paw 1",
+      "stablePixels": 69,
+      "brightFP": 0,
+      "brightFN": 20,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 7
+    },
+    {
+      "object": "Front toe crease.002",
+      "stablePixels": 1,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Front toe crease.003",
+      "stablePixels": 1,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Front toe crease.005",
+      "stablePixels": 2,
+      "brightFP": 0,
+      "brightFN": 2,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 2
+    },
+    {
+      "object": "Inner ear ivory tuft -1 0",
+      "stablePixels": 8,
+      "brightFP": 1,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Inner ear ivory tuft -1 1",
+      "stablePixels": 5,
+      "brightFP": 1,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 1,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Inner ear ivory tuft -1 2",
+      "stablePixels": 12,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Inner ear ivory tuft 1 0",
+      "stablePixels": 12,
+      "brightFP": 0,
+      "brightFN": 2,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Inner ear ivory tuft 1 1",
+      "stablePixels": 6,
+      "brightFP": 1,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 1,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Inner ear ivory tuft 1 2",
+      "stablePixels": 10,
+      "brightFP": 0,
+      "brightFN": 2,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Muzzle pad -1",
+      "stablePixels": 60,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Muzzle pad 1",
+      "stablePixels": 29,
+      "brightFP": 1,
+      "brightFN": 15,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Muzzle \u2022 ivory chin",
+      "stablePixels": 18,
+      "brightFP": 2,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 2,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Muzzle \u2022 projecting orange bridge",
+      "stablePixels": 63,
+      "brightFP": 0,
+      "brightFN": 5,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 3
+    },
+    {
+      "object": "Nose \u2022 soft triangular leather",
+      "stablePixels": 18,
+      "brightFP": 0,
+      "brightFN": 3,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 2
+    },
+    {
+      "object": "Philtrum",
+      "stablePixels": 1,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Pupil -1",
+      "stablePixels": 8,
+      "brightFP": 2,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 1,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Pupil 1",
+      "stablePixels": 10,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Rear cocoa sock -1",
+      "stablePixels": 57,
+      "brightFP": 0,
+      "brightFN": 3,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Rear cocoa sock 1",
+      "stablePixels": 3,
+      "brightFP": 0,
+      "brightFN": 1,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Rear paw -1",
+      "stablePixels": 74,
+      "brightFP": 0,
+      "brightFN": 2,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 1
+    },
+    {
+      "object": "Rear paw 1",
+      "stablePixels": 15,
+      "brightFP": 0,
+      "brightFN": 7,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 1
+    },
+    {
+      "object": "Rear toe crease",
+      "stablePixels": 3,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Smile -1",
+      "stablePixels": 1,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Smile 1",
+      "stablePixels": 3,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Tail silhouette tuft 3",
+      "stablePixels": 24,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Tail silhouette tuft 4",
+      "stablePixels": 32,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Tail silhouette tuft 5",
+      "stablePixels": 23,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Tail silhouette tuft 6",
+      "stablePixels": 17,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Tail tip sweep 0",
+      "stablePixels": 1,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Tail tip sweep 4",
+      "stablePixels": 2,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Tail tip sweep 5",
+      "stablePixels": 9,
+      "brightFP": 2,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Tail \u2022 broad ivory tip",
+      "stablePixels": 288,
+      "brightFP": 1,
+      "brightFN": 5,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 4
+    },
+    {
+      "object": "Tail \u2022 sweeping continuous silhouette",
+      "stablePixels": 1245,
+      "brightFP": 10,
+      "brightFN": 5,
+      "referenceDarkNativeBright": 1,
+      "referenceBrightNativeDark": 5
+    },
+    {
+      "object": "Upper eyelid -1",
+      "stablePixels": 7,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Upper eyelid 1",
+      "stablePixels": 6,
+      "brightFP": 0,
+      "brightFN": 2,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 1
+    }
+  ],
+  "oblique-Ng": [
+    {
+      "object": "UNASSIGNED_CENTER_RAY",
+      "stablePixels": 456,
+      "brightFP": 3,
+      "brightFN": 160,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 14
+    },
+    {
+      "object": "Amber iris -1",
+      "stablePixels": 22,
+      "brightFP": 0,
+      "brightFN": 2,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 2
+    },
+    {
+      "object": "Amber iris 1",
+      "stablePixels": 18,
+      "brightFP": 0,
+      "brightFN": 8,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 2
+    },
+    {
+      "object": "Anatomy \u2022 unified live sculpt surface",
+      "stablePixels": 1565,
+      "brightFP": 50,
+      "brightFN": 74,
+      "referenceDarkNativeBright": 44,
+      "referenceBrightNativeDark": 31
+    },
+    {
+      "object": "Cheek ruff lock -1 0",
+      "stablePixels": 15,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Cheek ruff lock -1 1",
+      "stablePixels": 12,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Cheek ruff lock -1 2",
+      "stablePixels": 6,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Cheek ruff lock -1 3",
+      "stablePixels": 12,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Cheek ruff lock 1 1",
+      "stablePixels": 2,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Chest ruff -1 0",
+      "stablePixels": 17,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Chest ruff -1 1",
+      "stablePixels": 17,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Chest ruff -1 2",
+      "stablePixels": 31,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Chest ruff 1 0",
+      "stablePixels": 11,
+      "brightFP": 1,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Chest ruff 1 1",
+      "stablePixels": 10,
+      "brightFP": 2,
+      "brightFN": 4,
+      "referenceDarkNativeBright": 1,
+      "referenceBrightNativeDark": 2
+    },
+    {
+      "object": "Chest ruff 1 2",
+      "stablePixels": 14,
+      "brightFP": 1,
+      "brightFN": 5,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Cream swept cheek -1",
+      "stablePixels": 81,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Cream swept cheek 1",
+      "stablePixels": 25,
+      "brightFP": 0,
+      "brightFN": 21,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 1
+    },
+    {
+      "object": "Cream throat bib",
+      "stablePixels": 136,
+      "brightFP": 13,
+      "brightFN": 1,
+      "referenceDarkNativeBright": 2,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Crown lock 0",
+      "stablePixels": 5,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Crown lock 1",
+      "stablePixels": 3,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Crown lock 2",
+      "stablePixels": 5,
+      "brightFP": 0,
+      "brightFN": 2,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Crown lock 3",
+      "stablePixels": 3,
+      "brightFP": 0,
+      "brightFN": 2,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 2
+    },
+    {
+      "object": "Crown lock 4",
+      "stablePixels": 3,
+      "brightFP": 0,
+      "brightFN": 1,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Ear \u2022 recessed coral concha -1",
+      "stablePixels": 84,
+      "brightFP": 7,
+      "brightFN": 2,
+      "referenceDarkNativeBright": 7,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Ear \u2022 recessed coral concha 1",
+      "stablePixels": 51,
+      "brightFP": 0,
+      "brightFN": 14,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 1
+    },
+    {
+      "object": "Ear \u2022 solid rim -1",
+      "stablePixels": 90,
+      "brightFP": 0,
+      "brightFN": 7,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 3
+    },
+    {
+      "object": "Ear \u2022 solid rim 1",
+      "stablePixels": 83,
+      "brightFP": 1,
+      "brightFN": 11,
+      "referenceDarkNativeBright": 1,
+      "referenceBrightNativeDark": 3
+    },
+    {
+      "object": "Expressive brow -1",
+      "stablePixels": 4,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Expressive brow 1",
+      "stablePixels": 5,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Eye glint -1",
+      "stablePixels": 3,
+      "brightFP": 1,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 1,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Eye glint 1",
+      "stablePixels": 3,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Eye glint small -1",
+      "stablePixels": 1,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Eye socket -1",
+      "stablePixels": 14,
+      "brightFP": 0,
+      "brightFN": 1,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 1
+    },
+    {
+      "object": "Eye socket 1",
+      "stablePixels": 3,
+      "brightFP": 0,
+      "brightFN": 1,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Eye white -1",
+      "stablePixels": 36,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Eye white 1",
+      "stablePixels": 23,
+      "brightFP": 0,
+      "brightFN": 11,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 2
+    },
+    {
+      "object": "Front cocoa sock -1",
+      "stablePixels": 44,
+      "brightFP": 0,
+      "brightFN": 7,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 1
+    },
+    {
+      "object": "Front cocoa sock 1",
+      "stablePixels": 44,
+      "brightFP": 1,
+      "brightFN": 6,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 5
+    },
+    {
+      "object": "Front paw -1",
+      "stablePixels": 70,
+      "brightFP": 0,
+      "brightFN": 13,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 10
+    },
+    {
+      "object": "Front paw 1",
+      "stablePixels": 69,
+      "brightFP": 0,
+      "brightFN": 23,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 12
+    },
+    {
+      "object": "Front toe crease.002",
+      "stablePixels": 1,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Front toe crease.003",
+      "stablePixels": 1,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Front toe crease.005",
+      "stablePixels": 2,
+      "brightFP": 0,
+      "brightFN": 2,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 2
+    },
+    {
+      "object": "Inner ear ivory tuft -1 0",
+      "stablePixels": 8,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Inner ear ivory tuft -1 1",
+      "stablePixels": 5,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Inner ear ivory tuft -1 2",
+      "stablePixels": 12,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Inner ear ivory tuft 1 0",
+      "stablePixels": 12,
+      "brightFP": 0,
+      "brightFN": 1,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 1
+    },
+    {
+      "object": "Inner ear ivory tuft 1 1",
+      "stablePixels": 6,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Inner ear ivory tuft 1 2",
+      "stablePixels": 10,
+      "brightFP": 0,
+      "brightFN": 2,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Muzzle pad -1",
+      "stablePixels": 60,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Muzzle pad 1",
+      "stablePixels": 29,
+      "brightFP": 1,
+      "brightFN": 16,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 2
+    },
+    {
+      "object": "Muzzle \u2022 ivory chin",
+      "stablePixels": 18,
+      "brightFP": 1,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 1,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Muzzle \u2022 projecting orange bridge",
+      "stablePixels": 63,
+      "brightFP": 0,
+      "brightFN": 5,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 4
+    },
+    {
+      "object": "Nose \u2022 soft triangular leather",
+      "stablePixels": 18,
+      "brightFP": 0,
+      "brightFN": 2,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Philtrum",
+      "stablePixels": 1,
+      "brightFP": 1,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 1,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Pupil -1",
+      "stablePixels": 8,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Pupil 1",
+      "stablePixels": 10,
+      "brightFP": 0,
+      "brightFN": 5,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 1
+    },
+    {
+      "object": "Rear cocoa sock -1",
+      "stablePixels": 57,
+      "brightFP": 0,
+      "brightFN": 3,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Rear cocoa sock 1",
+      "stablePixels": 3,
+      "brightFP": 0,
+      "brightFN": 1,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Rear paw -1",
+      "stablePixels": 74,
+      "brightFP": 0,
+      "brightFN": 2,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 1
+    },
+    {
+      "object": "Rear paw 1",
+      "stablePixels": 15,
+      "brightFP": 0,
+      "brightFN": 6,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Rear toe crease",
+      "stablePixels": 3,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Smile -1",
+      "stablePixels": 1,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Smile 1",
+      "stablePixels": 3,
+      "brightFP": 1,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 1,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Tail silhouette tuft 3",
+      "stablePixels": 24,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Tail silhouette tuft 4",
+      "stablePixels": 32,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Tail silhouette tuft 5",
+      "stablePixels": 23,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Tail silhouette tuft 6",
+      "stablePixels": 17,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Tail tip sweep 0",
+      "stablePixels": 1,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Tail tip sweep 4",
+      "stablePixels": 2,
+      "brightFP": 0,
+      "brightFN": 1,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Tail tip sweep 5",
+      "stablePixels": 9,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Tail \u2022 broad ivory tip",
+      "stablePixels": 288,
+      "brightFP": 10,
+      "brightFN": 6,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 3
+    },
+    {
+      "object": "Tail \u2022 sweeping continuous silhouette",
+      "stablePixels": 1245,
+      "brightFP": 3,
+      "brightFN": 5,
+      "referenceDarkNativeBright": 2,
+      "referenceBrightNativeDark": 5
+    },
+    {
+      "object": "Upper eyelid -1",
+      "stablePixels": 7,
+      "brightFP": 0,
+      "brightFN": 0,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    },
+    {
+      "object": "Upper eyelid 1",
+      "stablePixels": 6,
+      "brightFP": 0,
+      "brightFN": 2,
+      "referenceDarkNativeBright": 0,
+      "referenceBrightNativeDark": 0
+    }
+  ]
+}

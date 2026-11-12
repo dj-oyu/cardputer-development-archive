@@ -1,0 +1,79 @@
+
+/workspace/ayatsuri-s3-pie-transfer-objects-20261105/ldf128/primary/module.o:     file format elf32-xtensa-le
+
+
+Disassembly of section .text.ay_pie_copy:
+
+00000000 <ay_pie_copy>:
+   0:	entry	a1, 32
+   3:	mov.n	a10, a2
+   5:	beqz	a4, 6c <ay_pie_copy+0x6c>
+   8:	movi.n	a8, 0
+   a:	movi.n	a2, 1
+   c:	movi.n	a9, 1
+   e:	movnez	a2, a8, a10
+  11:	movnez	a9, a8, a3
+  14:	or	a2, a2, a9
+  17:	bnez.n	a2, 31 <ay_pie_copy+0x31>
+  19:	or	a9, a10, a3
+  1c:	extui	a9, a9, 0, 2
+  1f:	movi.n	a8, 1
+  21:	moveqz	a8, a2, a9
+  24:	l32r	a9, fffc0024 <ay_pie_copy+0xfffc0024>
+  27:	saltu	a9, a9, a4
+  2a:	or	a8, a8, a9
+  2d:	beqz.n	a8, 70 <ay_pie_copy+0x70>
+  2f:	retw.n	
+  31:	mov.n	a2, a8
+  33:	retw.n	
+  35:	addi	a8, a4, -4
+  38:	srli	a8, a8, 2
+  3b:	addi.n	a8, a8, 1
+  3d:	bltui	a4, 4, 52 <ay_pie_copy+0x52>
+  40:	ee.ldf.128.ip	f3, f2, f1, f0, a3, 16
+  44:	ee.stf.128.ip	f3, f2, f1, f0, a10, 16
+  48:	addi.n	a8, a8, -1
+  4a:	bnez	a8, 40 <ay_pie_copy+0x40>
+  4d:	extui	a4, a4, 0, 2
+  50:	beqz.n	a4, 6c <ay_pie_copy+0x6c>
+  52:	slli	a9, a4, 2
+  55:	addi	a8, a9, -4
+  58:	srli	a8, a8, 2
+  5b:	addi.n	a8, a8, 1
+  5d:	lsi	f0, a3, 0
+  60:	ssi	f0, a10, 0
+  63:	addi.n	a3, a3, 4
+  65:	addi.n	a10, a10, 4
+  67:	addi.n	a8, a8, -1
+  69:	bnez	a8, 5d <ay_pie_copy+0x5d>
+  6c:	movi.n	a2, 1
+  6e:	retw.n	
+  70:	slli	a9, a4, 2
+  73:	movi.n	a11, -1
+  75:	xor	a11, a9, a11
+  78:	maxu	a12, a10, a3
+  7b:	bltu	a11, a12, 2f <ay_pie_copy+0x2f>
+  7e:	bgeu	a3, a10, b4 <ay_pie_copy+0xb4>
+  81:	sub	a11, a10, a3
+  84:	mov.n	a12, a11
+  86:	beqz.n	a11, 8d <ay_pie_copy+0x8d>
+  88:	mov.n	a2, a8
+  8a:	bltu	a12, a9, 2f <ay_pie_copy+0x2f>
+  8d:	xor	a8, a3, a10
+  90:	extui	a8, a8, 0, 4
+  93:	bnez	a8, 55 <ay_pie_copy+0x55>
+  96:	mov.n	a8, a4
+  98:	extui	a9, a3, 0, 4
+  9b:	beqz	a9, 35 <ay_pie_copy+0x35>
+  9e:	lsi	f0, a3, 0
+  a1:	ssi	f0, a10, 0
+  a4:	addi.n	a3, a3, 4
+  a6:	addi.n	a10, a10, 4
+  a8:	addi.n	a4, a4, -1
+  aa:	addi.n	a8, a8, -1
+  ac:	bnez	a8, 98 <ay_pie_copy+0x98>
+  af:	movi.n	a2, 1
+  b1:	j	6e <ay_pie_copy+0x6e>
+  b4:	sub	a12, a3, a10
+  b7:	sub	a11, a10, a3
+  ba:	j	86 <ay_pie_copy+0x86>

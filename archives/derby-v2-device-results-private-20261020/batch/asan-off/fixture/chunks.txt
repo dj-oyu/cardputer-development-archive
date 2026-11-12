@@ -1,0 +1,8 @@
+app local.derby
+prog /workspace/derby-controller-batch/apps/derby/derby_prog.js
+view /workspace/derby-evidence/controller-split-20261020/batch/asan-off/fixture/derby_view.js
+scene /workspace/derby-controller-batch/apps/derby/derby_scene.js
+pan /workspace/derby-controller-batch/apps/derby/derby_pan.js
+play /workspace/derby-evidence/controller-split-20261020/batch/asan-off/fixture/derby_play.js
+demo /workspace/derby-controller-batch/apps/derby/derby_demo.js
+fixed /workspace/derby-evidence/controller-split-20261020/batch/asan-off/fixture/derby_fixed.js

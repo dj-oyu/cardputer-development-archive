@@ -1,0 +1,70 @@
+
+/workspace/private-q7-certified-full-s3-20261106/build-on/cardputer_pocketjs.elf:     file format elf32-xtensa-le
+
+
+Disassembly of section .iram0.vectors:
+
+Disassembly of section .iram0.text:
+
+Disassembly of section .flash.text:
+
+4206b93c <ieee_environment>:
+4206b93c:	008136        	entry	a1, 64
+4206b93f:	e38e80        	rur.fcr	a8
+4206b942:	148080        	extui	a8, a8, 0, 2
+4206b945:	020c      	movi.n	a2, 0
+4206b947:	089856        	bnez	a8, 4206b9d4 <ieee_environment+0x98>
+4206b94a:	5fa091        	l32r	a9, 420437cc <ksn_proc_frame_next+0xbe4> (100000 <UserFrameTotalSize+0xfff00>)
+4206b94d:	080c      	movi.n	a8, 0
+4206b94f:	0020c0        	memw
+4206b952:	2189      	s32i.n	a8, a1, 8
+4206b954:	0020c0        	memw
+4206b957:	3199      	s32i.n	a9, a1, 12
+4206b959:	080c      	movi.n	a8, 0
+4206b95b:	5efc91        	l32r	a9, 4204354c <ksn_proc_frame_next+0x964> (3fe00000 <ets_ops_table_ptr+0x110004>)
+4206b95e:	0020c0        	memw
+4206b961:	0189      	s32i.n	a8, a1, 0
+4206b963:	0020c0        	memw
+4206b966:	1199      	s32i.n	a9, a1, 4
+4206b968:	180c      	movi.n	a8, 1
+4206b96a:	0020c0        	memw
+4206b96d:	4189      	s32i.n	a8, a1, 16
+4206b96f:	0020c0        	memw
+4206b972:	21a8      	l32i.n	a10, a1, 8
+4206b974:	0020c0        	memw
+4206b977:	31b8      	l32i.n	a11, a1, 12
+4206b979:	0020c0        	memw
+4206b97c:	01c8      	l32i.n	a12, a1, 0
+4206b97e:	0020c0        	memw
+4206b981:	11d8      	l32i.n	a13, a1, 4
+4206b983:	5eca81        	l32r	a8, 420434ac <ksn_proc_frame_next+0x8c4> (40002418 <__muldf3>)
+4206b986:	0008e0        	callx8	a8
+4206b989:	0020c0        	memw
+4206b98c:	040103        	lsi	f0, a1, 16
+4206b98f:	0c0c      	movi.n	a12, 0
+4206b991:	0d0c      	movi.n	a13, 0
+4206b993:	0a6d      	mov.n	a6, a10
+4206b995:	0b7d      	mov.n	a7, a11
+4206b997:	fa5040        	rfr	a5, f0
+4206b99a:	5dbd81        	l32r	a8, 42043090 <ksn_proc_frame_next+0x4a8> (400023a0 <__gtdf2>)
+4206b99d:	0008e0        	callx8	a8
+4206b9a0:	301aa6        	blti	a10, 1, 4206b9d4 <ieee_environment+0x98>
+4206b9a3:	6208d1        	l32r	a13, 420441c4 <ksn_proc_frame_next+0x15dc> (80000 <UserFrameTotalSize+0x7ff00>)
+4206b9a6:	0c0c      	movi.n	a12, 0
+4206b9a8:	07bd      	mov.n	a11, a7
+4206b9aa:	06ad      	mov.n	a10, a6
+4206b9ac:	5ebc81        	l32r	a8, 4204349c <ksn_proc_frame_next+0x8b4> (4000228c <__eqdf2>)
+4206b9af:	0008e0        	callx8	a8
+4206b9b2:	40fa80        	nsau	a8, a10
+4206b9b5:	05ad      	mov.n	a10, a5
+4206b9b7:	412580        	srli	a2, a8, 5
+4206b9ba:	5f8e81        	l32r	a8, 420437f4 <ksn_proc_frame_next+0xc0c> (400022a4 <__extendsfdf2>)
+4206b9bd:	0008e0        	callx8	a8
+4206b9c0:	6202d1        	l32r	a13, 420441c8 <ksn_proc_frame_next+0x15e0> (36a00000 <UserFrameTotalSize+0x369fff00>)
+4206b9c3:	0c0c      	movi.n	a12, 0
+4206b9c5:	5eb581        	l32r	a8, 4204349c <ksn_proc_frame_next+0x8b4> (4000228c <__eqdf2>)
+4206b9c8:	0008e0        	callx8	a8
+4206b9cb:	40faa0        	nsau	a10, a10
+4206b9ce:	41a5a0        	srli	a10, a10, 5
+4206b9d1:	102a20        	and	a2, a10, a2
+4206b9d4:	f01d      	retw.n

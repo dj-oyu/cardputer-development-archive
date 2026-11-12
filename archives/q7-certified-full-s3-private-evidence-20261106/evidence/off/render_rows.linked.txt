@@ -1,0 +1,112 @@
+
+/workspace/private-q7-certified-full-s3-20261106/build-off/cardputer_pocketjs.elf:     file format elf32-xtensa-le
+
+
+Disassembly of section .iram0.vectors:
+
+Disassembly of section .iram0.text:
+
+Disassembly of section .flash.text:
+
+42045328 <render_rows>:
+42045328:	008136        	entry	a1, 64
+4204532b:	fffe81        	l32r	a8, 42045324 <ksn_proc_frame_next+0x273c> (3fc9cd7c <g_pocket_proc_ranges>)
+4204532e:	0888      	l32i.n	a8, a8, 0
+42045330:	d89c      	beqz.n	a8, 42045351 <render_rows+0x29>
+42045332:	080c      	movi.n	a8, 0
+42045334:	19a867        	bge	a8, a6, 42045351 <render_rows+0x29>
+42045337:	0288      	l32i.n	a8, a2, 0
+42045339:	561387        	beq	a3, a8, 42045393 <render_rows+0x6b>
+4204533c:	1288      	l32i.n	a8, a2, 4
+4204533e:	0f9387        	bne	a3, a8, 42045351 <render_rows+0x29>
+42045341:	01d282        	addmi	a8, a2, 0x100
+42045344:	9d0882        	l8ui	a8, a8, 157
+42045347:	688c      	beqz.n	a8, 42045351 <render_rows+0x29>
+42045349:	eca0a2        	movi	a10, 236
+4204534c:	a2aa      	add.n	a10, a2, a10
+4204534e:	001346        	j	4204539f <render_rows+0x77>
+42045351:	20d660        	or	a13, a6, a6
+42045354:	20c550        	or	a12, a5, a5
+42045357:	20b440        	or	a11, a4, a4
+4204535a:	03ad      	mov.n	a10, a3
+4204535c:	1d3365        	call8	42062694 <ksn_proc_render_band>
+4204535f:	0a9c      	beqz.n	a10, 42045373 <render_rows+0x4b>
+42045361:	02b8      	l32i.n	a11, a2, 0
+42045363:	928b      	addi.n	a9, a2, 8
+42045365:	24c282        	addi	a8, a2, 36
+42045368:	c033b0        	sub	a3, a3, a11
+4204536b:	838930        	moveqz	a8, a9, a3
+4204536e:	180892        	l8ui	a9, a8, 24
+42045371:	29cc      	bnez.n	a9, 42045377 <render_rows+0x4f>
+42045373:	0a2d      	mov.n	a2, a10
+42045375:	f01d      	retw.n
+42045377:	f73a91        	l32r	a9, 42043060 <ksn_proc_frame_next+0x478> (3fcabc28 <depth_rows>)
+4204537a:	20d660        	or	a13, a6, a6
+4204537d:	0029f2        	l32i	a15, a9, 0
+42045380:	f73991        	l32r	a9, 42043064 <ksn_proc_frame_next+0x47c> (3fcabc2c <depth_workspace>)
+42045383:	20c550        	or	a12, a5, a5
+42045386:	09e8      	l32i.n	a14, a9, 0
+42045388:	04bd      	mov.n	a11, a4
+4204538a:	08ad      	mov.n	a10, a8
+4204538c:	454325        	call8	4208a7c0 <ksn_mesh_render>
+4204538f:	0a2d      	mov.n	a2, a10
+42045391:	f01d      	retw.n
+42045393:	01d282        	addmi	a8, a2, 0x100
+42045396:	a00882        	l8ui	a8, a8, 160
+42045399:	40c2a2        	addi	a10, a2, 64
+4204539c:	f9c816        	beqz	a8, 4204533c <render_rows+0x14>
+4204539f:	856a      	add.n	a8, a5, a6
+420453a1:	880b      	addi.n	a8, a8, -1
+420453a3:	418380        	srli	a8, a8, 3
+420453a6:	0b1c      	movi.n	a11, 16
+420453a8:	419350        	srli	a9, a5, 3
+420453ab:	6388b0        	minu	a8, a8, a11
+420453ae:	5d3897        	bltu	a8, a9, 4204540f <render_rows+0xe7>
+420453b1:	f49090        	extui	a9, a9, 0, 16
+420453b4:	f48080        	extui	a8, a8, 0, 16
+420453b7:	9099a0        	addx2	a9, a9, a10
+420453ba:	9088a0        	addx2	a8, a8, a10
+420453bd:	c08890        	sub	a8, a8, a9
+420453c0:	418180        	srli	a8, a8, 1
+420453c3:	f712e1        	l32r	a14, 4204300c <ksn_proc_frame_next+0x424> (ffff <UserFrameTotalSize+0xfeff>)
+420453c6:	0f0c      	movi.n	a15, 0
+420453c8:	66c992        	addi	a9, a9, 102
+420453cb:	881b      	addi.n	a8, a8, 1
+420453cd:	128876        	loop	a8, 420453e3 <render_rows+0xbb>
+420453d0:	0019b2        	l16ui	a11, a9, 0
+420453d3:	1119a2        	l16ui	a10, a9, 34
+420453d6:	992b      	addi.n	a9, a9, 2
+420453d8:	053ab7        	bltu	a10, a11, 420453e1 <render_rows+0xb9>
+420453db:	63eeb0        	minu	a14, a14, a11
+420453de:	73ffa0        	maxu	a15, a15, a10
+420453e1:	f03d      	nop.n
+420453e3:	283fe7        	bltu	a15, a14, 4204540f <render_rows+0xe7>
+420453e6:	f70d81        	l32r	a8, 4204301c <ksn_proc_frame_next+0x434> (3fcabc14 <half_carry>)
+420453e9:	08a8      	l32i.n	a10, a8, 0
+420453eb:	dacc      	bnez.n	a10, 420453fc <render_rows+0xd4>
+420453ed:	780c      	movi.n	a8, 7
+420453ef:	728860        	salt	a8, a8, a6
+420453f2:	880b      	addi.n	a8, a8, -1
+420453f4:	608080        	neg	a8, a8
+420453f7:	748080        	extui	a8, a8, 0, 8
+420453fa:	88dc      	bnez.n	a8, 42045416 <render_rows+0xee>
+420453fc:	0061a2        	s32i	a10, a1, 0
+420453ff:	20d660        	or	a13, a6, a6
+42045402:	20c550        	or	a12, a5, a5
+42045405:	04bd      	mov.n	a11, a4
+42045407:	03ad      	mov.n	a10, a3
+42045409:	1d2aa5        	call8	420626b4 <ksn_proc_render_band_carry>
+4204540c:	ffd3c6        	j	4204535f <render_rows+0x37>
+4204540f:	0f0c      	movi.n	a15, 0
+42045411:	0fed      	mov.n	a14, a15
+42045413:	fff3c6        	j	420453e6 <render_rows+0xbe>
+42045416:	90a0b2        	movi	a11, 144
+42045419:	01a0a2        	movi	a10, 1
+4204541c:	0561f2        	s32i	a15, a1, 20
+4204541f:	0461e2        	s32i	a14, a1, 16
+42045422:	0295e5        	call8	42047d80 <shiki_or_sys_calloc>
+42045425:	f6fd81        	l32r	a8, 4204301c <ksn_proc_frame_next+0x434> (3fcabc14 <half_carry>)
+42045428:	51f8      	l32i.n	a15, a1, 20
+4204542a:	41e8      	l32i.n	a14, a1, 16
+4204542c:	08a9      	s32i.n	a10, a8, 0
+4204542e:	fff286        	j	420453fc <render_rows+0xd4>

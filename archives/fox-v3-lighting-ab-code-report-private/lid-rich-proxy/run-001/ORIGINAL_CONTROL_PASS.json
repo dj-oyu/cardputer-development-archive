@@ -1,0 +1,42 @@
+{
+  "seed": 11,
+  "allFourOriginalPNGsExactExceptAllowedVolatileMetadata": true,
+  "controls": [
+    {
+      "PNG": "images/control-seed11-front-baseline.png",
+      "PNGSHA256": "f95c58d3aa85adc6c551df703d2aa6b786ae058e0ef86266b58922f643183bff",
+      "seconds": 7.811283673996513,
+      "view": "front",
+      "case": "baseline",
+      "controlFile": "control-seed11-front-baseline-png-exact.json",
+      "expectedSHA256": "f15ad99e480a3dd7ddb4775cde30c1fc3d92af1cff4a4eef5562758f046ad780"
+    },
+    {
+      "PNG": "images/control-seed11-oblique-baseline.png",
+      "PNGSHA256": "8700de7b366911f19746dff1017cb7ecba422dcc784aff97647511fcd64ae87e",
+      "seconds": 7.185176592000062,
+      "view": "oblique",
+      "case": "baseline",
+      "controlFile": "control-seed11-oblique-baseline-png-exact.json",
+      "expectedSHA256": "75c1f2abd88ba8a4d9ab05986dd179e20b4ae3e572e59865d128bc14401fef1f"
+    },
+    {
+      "PNG": "images/control-seed11-front-direction.png",
+      "PNGSHA256": "58812cd321df68aeaf2a3e1c08d6da6d336e14555b30317da227ac8756f8b44e",
+      "seconds": 6.685747715004254,
+      "view": "front",
+      "case": "direction",
+      "controlFile": "control-seed11-front-direction-png-exact.json",
+      "expectedSHA256": "2d249fc96197e6eb099d5ccbf7d01c224f3740da3b65e3a0626778f1ba6e8a5d"
+    },
+    {
+      "PNG": "images/control-seed11-oblique-direction.png",
+      "PNGSHA256": "b3cc833582dbcc900047f0c69c01974a92288dd3a249a553fa5b32a3a28ad845",
+      "seconds": 6.948236447999079,
+      "view": "oblique",
+      "case": "direction",
+      "controlFile": "control-seed11-oblique-direction-png-exact.json",
+      "expectedSHA256": "98152fddb0b55e348f64c566f50b098b9a428faf673431acb081d2adca4f21ed"
+    }
+  ]
+}

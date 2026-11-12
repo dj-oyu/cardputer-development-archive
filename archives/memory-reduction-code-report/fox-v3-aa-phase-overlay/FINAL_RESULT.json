@@ -1,0 +1,66 @@
+{
+  "status": "COMPLETE_FIXED40_INDEPENDENT_PASS",
+  "baseline": "fox-v3-segmented-model-arena",
+  "comparisons": {
+    "frames": 40,
+    "raw": 200,
+    "reports": 280,
+    "forwardReverse": 80
+  },
+  "onlyNonTimingDifferences": {
+    ".aa.json": {
+      "workspaceBytes": [
+        77312,
+        72512
+      ]
+    }
+  },
+  "timingExceptionsOnly": {
+    ".json": [
+      "transportBuildNs",
+      "visibilityBuildNs",
+      "appendNs",
+      "evaluateNs",
+      "hostRenderNsFirstFrame"
+    ],
+    ".background.json": [
+      "backgroundBuildNs"
+    ],
+    ".row.json": [
+      "backgroundBuildNs"
+    ]
+  },
+  "memory": {
+    "baselineNamedPeak": 496184,
+    "namedPeak": 491384,
+    "delta": -4800,
+    "baselineWorkspace": 77312,
+    "workspace": 72512,
+    "largestNamedHeapAllocation": 72512,
+    "largestNamedHeapOwner": "AA workspace",
+    "mainStack": 83792,
+    "mainIsNotHeap": true,
+    "rendererStack": 5008,
+    "backgroundStack": 4080,
+    "backgroundCap": 4096,
+    "legacyGenericAA": 137312
+  },
+  "sourceFreeze": {
+    "files": 152,
+    "unchanged": true,
+    "sha256": "f08fea4fb0aa67fba4422c919a35ced61484f62218a764b9d367c953b6ef80b6"
+  },
+  "independentReviewSHA256": "ac62f960eca5525afa625277b1fa769b17c996a45a2f206f5c74fbc6b54cea71",
+  "completedManifestSHA256": {
+    "off": "76e251aa19fcfdd7d8a74ab2b93c92dfa293e57b3889acbcb15b0a26bad89f33",
+    "on": "32ecdd60de33aa4cb405a6fa6f5767e5392b0e0cd863387acdbe5d36b3be2f50"
+  },
+  "gateSHA256": "4662fcf8195c7532d1329dcc7517d6577dcae65030ee2183317a069e88d35388",
+  "finalReportSHA256": "bffc8765b66ad2a7bc7435f7ea35f328407cece9afcc46e2e152530245fc893d",
+  "historicalReport": "REPORT.md is frozen prereq evidence; FINAL_REPORT.md is authoritative completed report.",
+  "publication": "Private attempt/completion marker protections unchanged; core scratch may be partial on failure. Not transactional multi-file publication.",
+  "noFirmwareIntegration": true,
+  "noDeviceOrWholeHostFitClaim": true,
+  "noSpeedupClaim": true,
+  "rawAndCompiledOutputsExcludedFromAggregateDelivery": true
+}

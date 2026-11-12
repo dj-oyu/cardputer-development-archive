@@ -1,0 +1,1076 @@
+{
+  "baseline": {
+    "model": {
+      "text_including_literals_rodata": 36790,
+      "data": 0,
+      "bss": 0,
+      "stack": {
+        "md": {
+          "bytes": 48,
+          "kind": "static"
+        },
+        "mf": {
+          "bytes": 48,
+          "kind": "static"
+        },
+        "pack_rgb": {
+          "bytes": 32,
+          "kind": "static"
+        },
+        "slot_bytes": {
+          "bytes": 32,
+          "kind": "static"
+        },
+        "ayatsuri_shade_sample.isra": {
+          "bytes": 64,
+          "kind": "static"
+        },
+        "float_rows_valid": {
+          "bytes": 64,
+          "kind": "static"
+        },
+        "node_slot_bytes": {
+          "bytes": 32,
+          "kind": "static"
+        },
+        "mesh_project": {
+          "bytes": 64,
+          "kind": "static"
+        },
+        "mesh_packet": {
+          "bytes": 1424,
+          "kind": "static"
+        },
+        "ayatsuri_model_open": {
+          "bytes": 352,
+          "kind": "static"
+        },
+        "ayatsuri_model_find_node": {
+          "bytes": 48,
+          "kind": "static"
+        },
+        "ayatsuri_model_instance_bytes": {
+          "bytes": 32,
+          "kind": "static"
+        },
+        "ayatsuri_model_instance_init": {
+          "bytes": 224,
+          "kind": "static"
+        },
+        "ayatsuri_model_instance_dispose": {
+          "bytes": 32,
+          "kind": "static"
+        },
+        "ayatsuri_model_instance_targets": {
+          "bytes": 80,
+          "kind": "static"
+        },
+        "ayatsuri_model_instance_node_kind": {
+          "bytes": 32,
+          "kind": "static"
+        },
+        "ayatsuri_model_instance_read_pose": {
+          "bytes": 48,
+          "kind": "static"
+        },
+        "ayatsuri_model_instance_stats": {
+          "bytes": 48,
+          "kind": "static"
+        },
+        "ayatsuri_model_instance_evaluate": {
+          "bytes": 1072,
+          "kind": "static"
+        },
+        "ayatsuri_model_instance_next": {
+          "bytes": 64,
+          "kind": "static"
+        },
+        "ayatsuri_model_instance_mesh_view": {
+          "bytes": 32,
+          "kind": "static"
+        },
+        "ayatsuri_model_instance_sided_mesh_view": {
+          "bytes": 32,
+          "kind": "static"
+        }
+      },
+      "functions": {
+        ".text.md": {
+          "section_bytes": 85,
+          "static_disassembly_instruction_lines": 31,
+          "call_sites": {
+            "memcpy": 1
+          }
+        },
+        ".text.mf": {
+          "section_bytes": 51,
+          "static_disassembly_instruction_lines": 19,
+          "call_sites": {
+            "memcpy": 1
+          }
+        },
+        ".text.pack_rgb": {
+          "section_bytes": 232,
+          "static_disassembly_instruction_lines": 88,
+          "call_sites": {
+            "__floatunsidf": 3,
+            "__muldf3": 5,
+            "__divdf3": 3,
+            "__adddf3": 5,
+            "floor": 3,
+            "__fixunsdfsi": 1
+          }
+        },
+        ".text.slot_bytes": {
+          "section_bytes": 44,
+          "static_disassembly_instruction_lines": 16,
+          "call_sites": {}
+        },
+        ".text.ayatsuri_shade_sample$isra$0": {
+          "section_bytes": 784,
+          "static_disassembly_instruction_lines": 277,
+          "call_sites": {
+            "fmaxf": 5,
+            "powf": 1,
+            "lroundf": 3,
+            "__divsf3": 6,
+            "sqrtf": 1
+          }
+        },
+        ".text.float_rows_valid": {
+          "section_bytes": 123,
+          "static_disassembly_instruction_lines": 48,
+          "call_sites": {
+            "memcpy": 1
+          }
+        },
+        ".text.node_slot_bytes": {
+          "section_bytes": 191,
+          "static_disassembly_instruction_lines": 69,
+          "call_sites": {}
+        },
+        ".text.mesh_project": {
+          "section_bytes": 325,
+          "static_disassembly_instruction_lines": 114,
+          "call_sites": {
+            "memcpy": 3
+          }
+        },
+        ".text.mesh_packet": {
+          "section_bytes": 7170,
+          "static_disassembly_instruction_lines": 2876,
+          "call_sites": {
+            "__extendsfdf2": 33,
+            "__muldf3": 36,
+            "__subdf3": 21,
+            "__adddf3": 11,
+            "__unorddf2": 2,
+            "__gtdf2": 4,
+            "__eqdf2": 3,
+            "memcpy": 11,
+            "fmaxf": 6,
+            "__divsf3": 18,
+            "sqrtf": 3,
+            "__divdf3": 11,
+            ".text.mesh_project": 2,
+            "hypot": 2,
+            "floor": 2,
+            "fmin": 2,
+            "fmax": 2,
+            "__fixdfsi": 2,
+            ".text.ayatsuri_shade_sample$isra$0": 4,
+            "memset": 3,
+            "__ltdf2": 4,
+            "__ledf2": 1,
+            "ayatsuri_visibility_select": 1
+          }
+        },
+        ".text.ayatsuri_model_open": {
+          "section_bytes": 5615,
+          "static_disassembly_instruction_lines": 2010,
+          "call_sites": {
+            "memcpy": 15,
+            "__subdf3": 11,
+            "__gtdf2": 9,
+            "__extendsfdf2": 17,
+            "__muldf3": 10,
+            "__adddf3": 3,
+            "__eqdf2": 3,
+            ".text.float_rows_valid": 3,
+            ".text.mf": 8,
+            "__unorddf2": 7,
+            ".text.md": 6,
+            "__gedf2": 3,
+            "__ledf2": 3,
+            "__nedf2": 3,
+            "memcmp": 1,
+            ".text.slot_bytes": 1,
+            ".text.node_slot_bytes": 1
+          }
+        },
+        ".text.ayatsuri_model_find_node": {
+          "section_bytes": 229,
+          "static_disassembly_instruction_lines": 86,
+          "call_sites": {
+            "memcmp": 1
+          }
+        },
+        ".text.ayatsuri_model_instance_bytes": {
+          "section_bytes": 35,
+          "static_disassembly_instruction_lines": 15,
+          "call_sites": {}
+        },
+        ".text.ayatsuri_model_instance_init": {
+          "section_bytes": 702,
+          "static_disassembly_instruction_lines": 265,
+          "call_sites": {
+            "memset": 1,
+            "memcpy": 4,
+            ".text.node_slot_bytes": 1,
+            ".text.md": 1
+          }
+        },
+        ".text.ayatsuri_model_instance_dispose": {
+          "section_bytes": 57,
+          "static_disassembly_instruction_lines": 24,
+          "call_sites": {}
+        },
+        ".text.ayatsuri_model_instance_targets": {
+          "section_bytes": 916,
+          "static_disassembly_instruction_lines": 360,
+          "call_sites": {
+            ".text.md": 3,
+            "__unorddf2": 1,
+            "__gtdf2": 1,
+            "__gedf2": 1,
+            "__ledf2": 1,
+            "__nedf2": 2
+          }
+        },
+        ".text.ayatsuri_model_instance_node_kind": {
+          "section_bytes": 175,
+          "static_disassembly_instruction_lines": 68,
+          "call_sites": {}
+        },
+        ".text.ayatsuri_model_instance_read_pose": {
+          "section_bytes": 208,
+          "static_disassembly_instruction_lines": 81,
+          "call_sites": {
+            "memcpy": 1
+          }
+        },
+        ".text.ayatsuri_model_instance_stats": {
+          "section_bytes": 198,
+          "static_disassembly_instruction_lines": 80,
+          "call_sites": {
+            "memcpy": 1
+          }
+        },
+        ".text.ayatsuri_model_instance_evaluate": {
+          "section_bytes": 14289,
+          "static_disassembly_instruction_lines": 5391,
+          "call_sites": {
+            "__extendsfdf2": 82,
+            "__unorddf2": 15,
+            "__gtdf2": 26,
+            "memcmp": 1,
+            "memcpy": 35,
+            "__subdf3": 51,
+            "hypot": 7,
+            "__divdf3": 32,
+            "__ltdf2": 13,
+            "__truncdfsf2": 18,
+            "__muldf3": 211,
+            "cos": 3,
+            "sin": 3,
+            "__adddf3": 70,
+            "__gedf2": 10,
+            ".text.pack_rgb": 4,
+            "floor": 4,
+            ".text.md": 4,
+            "fmin": 2,
+            "__fixunsdfsi": 4,
+            ".text.mesh_packet": 2,
+            "__eqdf2": 1
+          }
+        },
+        ".text.ayatsuri_model_instance_next": {
+          "section_bytes": 627,
+          "static_disassembly_instruction_lines": 239,
+          "call_sites": {
+            ".text.node_slot_bytes": 2,
+            ".text.slot_bytes": 1
+          }
+        },
+        ".text.ayatsuri_model_instance_mesh_view": {
+          "section_bytes": 293,
+          "static_disassembly_instruction_lines": 110,
+          "call_sites": {}
+        },
+        ".text.ayatsuri_model_instance_sided_mesh_view": {
+          "section_bytes": 320,
+          "static_disassembly_instruction_lines": 120,
+          "call_sites": {}
+        }
+      }
+    },
+    "shade_pair": {
+      "text_including_literals_rodata": 942,
+      "data": 0,
+      "bss": 0,
+      "stack": {
+        "ayatsuri_shade_sample": {
+          "bytes": 64,
+          "kind": "static"
+        },
+        "shade_pair": {
+          "bytes": 48,
+          "kind": "static"
+        }
+      },
+      "functions": {
+        ".text.ayatsuri_shade_sample": {
+          "section_bytes": 782,
+          "static_disassembly_instruction_lines": 276,
+          "call_sites": {
+            "fmaxf": 5,
+            "powf": 1,
+            "lroundf": 3,
+            "__divsf3": 6,
+            "sqrtf": 1
+          }
+        },
+        ".text.shade_pair": {
+          "section_bytes": 56,
+          "static_disassembly_instruction_lines": 23,
+          "call_sites": {
+            ".text.ayatsuri_shade_sample": 2
+          }
+        }
+      }
+    }
+  },
+  "candidate": {
+    "model": {
+      "text_including_literals_rodata": 38179,
+      "data": 0,
+      "bss": 0,
+      "stack": {
+        "md": {
+          "bytes": 48,
+          "kind": "static"
+        },
+        "mf": {
+          "bytes": 48,
+          "kind": "static"
+        },
+        "pack_rgb": {
+          "bytes": 32,
+          "kind": "static"
+        },
+        "slot_bytes": {
+          "bytes": 32,
+          "kind": "static"
+        },
+        "ayatsuri_shade_terms_prepare.isra": {
+          "bytes": 80,
+          "kind": "static"
+        },
+        "float_rows_valid": {
+          "bytes": 64,
+          "kind": "static"
+        },
+        "node_slot_bytes": {
+          "bytes": 32,
+          "kind": "static"
+        },
+        "mesh_project": {
+          "bytes": 64,
+          "kind": "static"
+        },
+        "mesh_packet": {
+          "bytes": 1472,
+          "kind": "static"
+        },
+        "ayatsuri_model_open": {
+          "bytes": 352,
+          "kind": "static"
+        },
+        "ayatsuri_model_find_node": {
+          "bytes": 48,
+          "kind": "static"
+        },
+        "ayatsuri_model_instance_bytes": {
+          "bytes": 32,
+          "kind": "static"
+        },
+        "ayatsuri_model_instance_init": {
+          "bytes": 224,
+          "kind": "static"
+        },
+        "ayatsuri_model_instance_dispose": {
+          "bytes": 32,
+          "kind": "static"
+        },
+        "ayatsuri_model_instance_targets": {
+          "bytes": 80,
+          "kind": "static"
+        },
+        "ayatsuri_model_instance_node_kind": {
+          "bytes": 32,
+          "kind": "static"
+        },
+        "ayatsuri_model_instance_read_pose": {
+          "bytes": 48,
+          "kind": "static"
+        },
+        "ayatsuri_model_instance_stats": {
+          "bytes": 48,
+          "kind": "static"
+        },
+        "ayatsuri_model_instance_evaluate": {
+          "bytes": 1072,
+          "kind": "static"
+        },
+        "ayatsuri_model_instance_next": {
+          "bytes": 64,
+          "kind": "static"
+        },
+        "ayatsuri_model_instance_mesh_view": {
+          "bytes": 32,
+          "kind": "static"
+        },
+        "ayatsuri_model_instance_sided_mesh_view": {
+          "bytes": 32,
+          "kind": "static"
+        }
+      },
+      "functions": {
+        ".text.md": {
+          "section_bytes": 85,
+          "static_disassembly_instruction_lines": 31,
+          "call_sites": {
+            "memcpy": 1
+          }
+        },
+        ".text.mf": {
+          "section_bytes": 51,
+          "static_disassembly_instruction_lines": 19,
+          "call_sites": {
+            "memcpy": 1
+          }
+        },
+        ".text.pack_rgb": {
+          "section_bytes": 232,
+          "static_disassembly_instruction_lines": 88,
+          "call_sites": {
+            "__floatunsidf": 3,
+            "__muldf3": 5,
+            "__divdf3": 3,
+            "__adddf3": 5,
+            "floor": 3,
+            "__fixunsdfsi": 1
+          }
+        },
+        ".text.slot_bytes": {
+          "section_bytes": 44,
+          "static_disassembly_instruction_lines": 16,
+          "call_sites": {}
+        },
+        ".text.ayatsuri_shade_terms_prepare$isra$0": {
+          "section_bytes": 439,
+          "static_disassembly_instruction_lines": 161,
+          "call_sites": {
+            "fmaxf": 5,
+            "powf": 1,
+            "__divsf3": 6,
+            "sqrtf": 1
+          }
+        },
+        ".text.float_rows_valid": {
+          "section_bytes": 123,
+          "static_disassembly_instruction_lines": 48,
+          "call_sites": {
+            "memcpy": 1
+          }
+        },
+        ".text.node_slot_bytes": {
+          "section_bytes": 191,
+          "static_disassembly_instruction_lines": 69,
+          "call_sites": {}
+        },
+        ".text.mesh_project": {
+          "section_bytes": 325,
+          "static_disassembly_instruction_lines": 114,
+          "call_sites": {
+            "memcpy": 3
+          }
+        },
+        ".text.mesh_packet": {
+          "section_bytes": 8868,
+          "static_disassembly_instruction_lines": 3486,
+          "call_sites": {
+            "__extendsfdf2": 33,
+            "__muldf3": 36,
+            "__subdf3": 21,
+            "__adddf3": 11,
+            "__unorddf2": 2,
+            "__gtdf2": 4,
+            "__eqdf2": 3,
+            "memcpy": 13,
+            "fmaxf": 6,
+            "__divsf3": 18,
+            "sqrtf": 3,
+            "__divdf3": 11,
+            ".text.mesh_project": 2,
+            "hypot": 2,
+            "floor": 2,
+            "fmin": 2,
+            "fmax": 2,
+            "__fixdfsi": 2,
+            ".text.ayatsuri_shade_terms_prepare$isra$0": 2,
+            "lroundf": 12,
+            "memset": 3,
+            "__ltdf2": 4,
+            "__ledf2": 1,
+            "ayatsuri_visibility_select": 1
+          }
+        },
+        ".text.ayatsuri_model_open": {
+          "section_bytes": 5615,
+          "static_disassembly_instruction_lines": 2010,
+          "call_sites": {
+            "memcpy": 15,
+            "__subdf3": 11,
+            "__gtdf2": 9,
+            "__extendsfdf2": 17,
+            "__muldf3": 10,
+            "__adddf3": 3,
+            "__eqdf2": 3,
+            ".text.float_rows_valid": 3,
+            ".text.mf": 8,
+            "__unorddf2": 7,
+            ".text.md": 6,
+            "__gedf2": 3,
+            "__ledf2": 3,
+            "__nedf2": 3,
+            "memcmp": 1,
+            ".text.slot_bytes": 1,
+            ".text.node_slot_bytes": 1
+          }
+        },
+        ".text.ayatsuri_model_find_node": {
+          "section_bytes": 229,
+          "static_disassembly_instruction_lines": 86,
+          "call_sites": {
+            "memcmp": 1
+          }
+        },
+        ".text.ayatsuri_model_instance_bytes": {
+          "section_bytes": 35,
+          "static_disassembly_instruction_lines": 15,
+          "call_sites": {}
+        },
+        ".text.ayatsuri_model_instance_init": {
+          "section_bytes": 702,
+          "static_disassembly_instruction_lines": 265,
+          "call_sites": {
+            "memset": 1,
+            "memcpy": 4,
+            ".text.node_slot_bytes": 1,
+            ".text.md": 1
+          }
+        },
+        ".text.ayatsuri_model_instance_dispose": {
+          "section_bytes": 57,
+          "static_disassembly_instruction_lines": 24,
+          "call_sites": {}
+        },
+        ".text.ayatsuri_model_instance_targets": {
+          "section_bytes": 916,
+          "static_disassembly_instruction_lines": 360,
+          "call_sites": {
+            ".text.md": 3,
+            "__unorddf2": 1,
+            "__gtdf2": 1,
+            "__gedf2": 1,
+            "__ledf2": 1,
+            "__nedf2": 2
+          }
+        },
+        ".text.ayatsuri_model_instance_node_kind": {
+          "section_bytes": 175,
+          "static_disassembly_instruction_lines": 68,
+          "call_sites": {}
+        },
+        ".text.ayatsuri_model_instance_read_pose": {
+          "section_bytes": 208,
+          "static_disassembly_instruction_lines": 81,
+          "call_sites": {
+            "memcpy": 1
+          }
+        },
+        ".text.ayatsuri_model_instance_stats": {
+          "section_bytes": 198,
+          "static_disassembly_instruction_lines": 80,
+          "call_sites": {
+            "memcpy": 1
+          }
+        },
+        ".text.ayatsuri_model_instance_evaluate": {
+          "section_bytes": 14289,
+          "static_disassembly_instruction_lines": 5391,
+          "call_sites": {
+            "__extendsfdf2": 82,
+            "__unorddf2": 15,
+            "__gtdf2": 26,
+            "memcmp": 1,
+            "memcpy": 35,
+            "__subdf3": 51,
+            "hypot": 7,
+            "__divdf3": 32,
+            "__ltdf2": 13,
+            "__truncdfsf2": 18,
+            "__muldf3": 211,
+            "cos": 3,
+            "sin": 3,
+            "__adddf3": 70,
+            "__gedf2": 10,
+            ".text.pack_rgb": 4,
+            "floor": 4,
+            ".text.md": 4,
+            "fmin": 2,
+            "__fixunsdfsi": 4,
+            ".text.mesh_packet": 2,
+            "__eqdf2": 1
+          }
+        },
+        ".text.ayatsuri_model_instance_next": {
+          "section_bytes": 627,
+          "static_disassembly_instruction_lines": 239,
+          "call_sites": {
+            ".text.node_slot_bytes": 2,
+            ".text.slot_bytes": 1
+          }
+        },
+        ".text.ayatsuri_model_instance_mesh_view": {
+          "section_bytes": 293,
+          "static_disassembly_instruction_lines": 110,
+          "call_sites": {}
+        },
+        ".text.ayatsuri_model_instance_sided_mesh_view": {
+          "section_bytes": 320,
+          "static_disassembly_instruction_lines": 120,
+          "call_sites": {}
+        }
+      }
+    },
+    "shade_pair": {
+      "text_including_literals_rodata": 974,
+      "data": 0,
+      "bss": 0,
+      "stack": {
+        "ayatsuri_shade_from_terms.isra": {
+          "bytes": 64,
+          "kind": "static"
+        },
+        "shade_pair": {
+          "bytes": 80,
+          "kind": "static"
+        }
+      },
+      "functions": {
+        ".text.ayatsuri_shade_from_terms$isra$0": {
+          "section_bytes": 367,
+          "static_disassembly_instruction_lines": 126,
+          "call_sites": {
+            "lroundf": 3
+          }
+        },
+        ".text.shade_pair": {
+          "section_bytes": 495,
+          "static_disassembly_instruction_lines": 183,
+          "call_sites": {
+            "fmaxf": 5,
+            "powf": 1,
+            ".text.ayatsuri_shade_from_terms$isra$0": 2,
+            "memcpy": 1,
+            "__divsf3": 6,
+            "sqrtf": 1
+          }
+        }
+      }
+    }
+  },
+  "candidate-bounded": {
+    "model": {
+      "text_including_literals_rodata": 36896,
+      "data": 0,
+      "bss": 0,
+      "stack": {
+        "md": {
+          "bytes": 48,
+          "kind": "static"
+        },
+        "mf": {
+          "bytes": 48,
+          "kind": "static"
+        },
+        "pack_rgb": {
+          "bytes": 32,
+          "kind": "static"
+        },
+        "slot_bytes": {
+          "bytes": 32,
+          "kind": "static"
+        },
+        "ayatsuri_shade_from_terms.isra": {
+          "bytes": 64,
+          "kind": "static"
+        },
+        "ayatsuri_shade_terms_prepare.isra": {
+          "bytes": 80,
+          "kind": "static"
+        },
+        "float_rows_valid": {
+          "bytes": 64,
+          "kind": "static"
+        },
+        "node_slot_bytes": {
+          "bytes": 32,
+          "kind": "static"
+        },
+        "mesh_project": {
+          "bytes": 64,
+          "kind": "static"
+        },
+        "mesh_packet": {
+          "bytes": 1424,
+          "kind": "static"
+        },
+        "ayatsuri_model_open": {
+          "bytes": 352,
+          "kind": "static"
+        },
+        "ayatsuri_model_find_node": {
+          "bytes": 48,
+          "kind": "static"
+        },
+        "ayatsuri_model_instance_bytes": {
+          "bytes": 32,
+          "kind": "static"
+        },
+        "ayatsuri_model_instance_init": {
+          "bytes": 224,
+          "kind": "static"
+        },
+        "ayatsuri_model_instance_dispose": {
+          "bytes": 32,
+          "kind": "static"
+        },
+        "ayatsuri_model_instance_targets": {
+          "bytes": 80,
+          "kind": "static"
+        },
+        "ayatsuri_model_instance_node_kind": {
+          "bytes": 32,
+          "kind": "static"
+        },
+        "ayatsuri_model_instance_read_pose": {
+          "bytes": 48,
+          "kind": "static"
+        },
+        "ayatsuri_model_instance_stats": {
+          "bytes": 48,
+          "kind": "static"
+        },
+        "ayatsuri_model_instance_evaluate": {
+          "bytes": 1072,
+          "kind": "static"
+        },
+        "ayatsuri_model_instance_next": {
+          "bytes": 64,
+          "kind": "static"
+        },
+        "ayatsuri_model_instance_mesh_view": {
+          "bytes": 32,
+          "kind": "static"
+        },
+        "ayatsuri_model_instance_sided_mesh_view": {
+          "bytes": 32,
+          "kind": "static"
+        }
+      },
+      "functions": {
+        ".text.md": {
+          "section_bytes": 85,
+          "static_disassembly_instruction_lines": 31,
+          "call_sites": {
+            "memcpy": 1
+          }
+        },
+        ".text.mf": {
+          "section_bytes": 51,
+          "static_disassembly_instruction_lines": 19,
+          "call_sites": {
+            "memcpy": 1
+          }
+        },
+        ".text.pack_rgb": {
+          "section_bytes": 232,
+          "static_disassembly_instruction_lines": 88,
+          "call_sites": {
+            "__floatunsidf": 3,
+            "__muldf3": 5,
+            "__divdf3": 3,
+            "__adddf3": 5,
+            "floor": 3,
+            "__fixunsdfsi": 1
+          }
+        },
+        ".text.slot_bytes": {
+          "section_bytes": 44,
+          "static_disassembly_instruction_lines": 16,
+          "call_sites": {}
+        },
+        ".text.ayatsuri_shade_from_terms$isra$0": {
+          "section_bytes": 367,
+          "static_disassembly_instruction_lines": 126,
+          "call_sites": {
+            "lroundf": 3
+          }
+        },
+        ".text.ayatsuri_shade_terms_prepare$isra$0": {
+          "section_bytes": 439,
+          "static_disassembly_instruction_lines": 161,
+          "call_sites": {
+            "fmaxf": 5,
+            "powf": 1,
+            "__divsf3": 6,
+            "sqrtf": 1
+          }
+        },
+        ".text.float_rows_valid": {
+          "section_bytes": 123,
+          "static_disassembly_instruction_lines": 48,
+          "call_sites": {
+            "memcpy": 1
+          }
+        },
+        ".text.node_slot_bytes": {
+          "section_bytes": 191,
+          "static_disassembly_instruction_lines": 69,
+          "call_sites": {}
+        },
+        ".text.mesh_project": {
+          "section_bytes": 325,
+          "static_disassembly_instruction_lines": 114,
+          "call_sites": {
+            "memcpy": 3
+          }
+        },
+        ".text.mesh_packet": {
+          "section_bytes": 7234,
+          "static_disassembly_instruction_lines": 2908,
+          "call_sites": {
+            "__extendsfdf2": 33,
+            "__muldf3": 36,
+            "__subdf3": 21,
+            "__adddf3": 11,
+            "__unorddf2": 2,
+            "__gtdf2": 4,
+            "__eqdf2": 3,
+            "memcpy": 13,
+            "fmaxf": 6,
+            "__divsf3": 18,
+            "sqrtf": 3,
+            "__divdf3": 11,
+            ".text.mesh_project": 2,
+            "hypot": 2,
+            "floor": 2,
+            "fmin": 2,
+            "fmax": 2,
+            "__fixdfsi": 2,
+            ".text.ayatsuri_shade_terms_prepare$isra$0": 2,
+            ".text.ayatsuri_shade_from_terms$isra$0": 4,
+            "memset": 3,
+            "__ltdf2": 4,
+            "__ledf2": 1,
+            "ayatsuri_visibility_select": 1
+          }
+        },
+        ".text.ayatsuri_model_open": {
+          "section_bytes": 5615,
+          "static_disassembly_instruction_lines": 2010,
+          "call_sites": {
+            "memcpy": 15,
+            "__subdf3": 11,
+            "__gtdf2": 9,
+            "__extendsfdf2": 17,
+            "__muldf3": 10,
+            "__adddf3": 3,
+            "__eqdf2": 3,
+            ".text.float_rows_valid": 3,
+            ".text.mf": 8,
+            "__unorddf2": 7,
+            ".text.md": 6,
+            "__gedf2": 3,
+            "__ledf2": 3,
+            "__nedf2": 3,
+            "memcmp": 1,
+            ".text.slot_bytes": 1,
+            ".text.node_slot_bytes": 1
+          }
+        },
+        ".text.ayatsuri_model_find_node": {
+          "section_bytes": 229,
+          "static_disassembly_instruction_lines": 86,
+          "call_sites": {
+            "memcmp": 1
+          }
+        },
+        ".text.ayatsuri_model_instance_bytes": {
+          "section_bytes": 35,
+          "static_disassembly_instruction_lines": 15,
+          "call_sites": {}
+        },
+        ".text.ayatsuri_model_instance_init": {
+          "section_bytes": 702,
+          "static_disassembly_instruction_lines": 265,
+          "call_sites": {
+            "memset": 1,
+            "memcpy": 4,
+            ".text.node_slot_bytes": 1,
+            ".text.md": 1
+          }
+        },
+        ".text.ayatsuri_model_instance_dispose": {
+          "section_bytes": 57,
+          "static_disassembly_instruction_lines": 24,
+          "call_sites": {}
+        },
+        ".text.ayatsuri_model_instance_targets": {
+          "section_bytes": 916,
+          "static_disassembly_instruction_lines": 360,
+          "call_sites": {
+            ".text.md": 3,
+            "__unorddf2": 1,
+            "__gtdf2": 1,
+            "__gedf2": 1,
+            "__ledf2": 1,
+            "__nedf2": 2
+          }
+        },
+        ".text.ayatsuri_model_instance_node_kind": {
+          "section_bytes": 175,
+          "static_disassembly_instruction_lines": 68,
+          "call_sites": {}
+        },
+        ".text.ayatsuri_model_instance_read_pose": {
+          "section_bytes": 208,
+          "static_disassembly_instruction_lines": 81,
+          "call_sites": {
+            "memcpy": 1
+          }
+        },
+        ".text.ayatsuri_model_instance_stats": {
+          "section_bytes": 198,
+          "static_disassembly_instruction_lines": 80,
+          "call_sites": {
+            "memcpy": 1
+          }
+        },
+        ".text.ayatsuri_model_instance_evaluate": {
+          "section_bytes": 14289,
+          "static_disassembly_instruction_lines": 5391,
+          "call_sites": {
+            "__extendsfdf2": 82,
+            "__unorddf2": 15,
+            "__gtdf2": 26,
+            "memcmp": 1,
+            "memcpy": 35,
+            "__subdf3": 51,
+            "hypot": 7,
+            "__divdf3": 32,
+            "__ltdf2": 13,
+            "__truncdfsf2": 18,
+            "__muldf3": 211,
+            "cos": 3,
+            "sin": 3,
+            "__adddf3": 70,
+            "__gedf2": 10,
+            ".text.pack_rgb": 4,
+            "floor": 4,
+            ".text.md": 4,
+            "fmin": 2,
+            "__fixunsdfsi": 4,
+            ".text.mesh_packet": 2,
+            "__eqdf2": 1
+          }
+        },
+        ".text.ayatsuri_model_instance_next": {
+          "section_bytes": 627,
+          "static_disassembly_instruction_lines": 239,
+          "call_sites": {
+            ".text.node_slot_bytes": 2,
+            ".text.slot_bytes": 1
+          }
+        },
+        ".text.ayatsuri_model_instance_mesh_view": {
+          "section_bytes": 293,
+          "static_disassembly_instruction_lines": 110,
+          "call_sites": {}
+        },
+        ".text.ayatsuri_model_instance_sided_mesh_view": {
+          "section_bytes": 320,
+          "static_disassembly_instruction_lines": 120,
+          "call_sites": {}
+        }
+      }
+    },
+    "shade_pair": {
+      "text_including_literals_rodata": 974,
+      "data": 0,
+      "bss": 0,
+      "stack": {
+        "ayatsuri_shade_from_terms.isra": {
+          "bytes": 64,
+          "kind": "static"
+        },
+        "shade_pair": {
+          "bytes": 80,
+          "kind": "static"
+        }
+      },
+      "functions": {
+        ".text.ayatsuri_shade_from_terms$isra$0": {
+          "section_bytes": 367,
+          "static_disassembly_instruction_lines": 126,
+          "call_sites": {
+            "lroundf": 3
+          }
+        },
+        ".text.shade_pair": {
+          "section_bytes": 495,
+          "static_disassembly_instruction_lines": 183,
+          "call_sites": {
+            "fmaxf": 5,
+            "powf": 1,
+            ".text.ayatsuri_shade_from_terms$isra$0": 2,
+            "memcpy": 1,
+            "__divsf3": 6,
+            "sqrtf": 1
+          }
+        }
+      }
+    }
+  },
+  "shade_pair_candidate_bounded_allocated_sections_equal": true,
+  "shade_pair_candidate_bounded_code_relocations_equal": true,
+  "notes": [
+    "Counts are static call sites/instruction lines across all branch paths, not dynamic executions/cycles.",
+    "size text includes literal/rodata allocation; .text section sizes are separate.",
+    "su is each function frame, not total nested stack or runtime register-window spills.",
+    "No numerical execution or S3 hardware/cycle measurements occurred."
+  ]
+}

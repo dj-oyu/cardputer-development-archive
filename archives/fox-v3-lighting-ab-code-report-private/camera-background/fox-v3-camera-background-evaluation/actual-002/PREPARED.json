@@ -1,0 +1,21 @@
+{
+  "coreFreezeSHA256": "018b68998aeb6b91dfb45f859f9ae40e6790f95781d55bb912b40c0535a0851f",
+  "planFreezeSHA256": "94146b98c7818c1f28d318a93f1fad192858db665be581f7c3f90c8e24204e15",
+  "baselineGeometryCertificateSHA256": "a18011982c6e2338368a9e5bafacec6af5a5bad1c1206d05640cb075fcdb62c3",
+  "flags": [
+    "-std=c11",
+    "-O2",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-Wno-misleading-indentation",
+    "-ffp-contract=off",
+    "-fexcess-precision=standard"
+  ],
+  "binarySHA256": "1b6707cc00cefbb525a11e76ba918e732ba53abf151f57ed9d73ea21d53075bc",
+  "inputsSHA256": "c4f5891539ef2efc15517de8b3a5e15d6ee8eba49242a66599bfad71164f5631",
+  "status": "BUILT_NOT_RENDERED",
+  "oldWork8MFit": false,
+  "oldDirect1MFit": false,
+  "geometryAndFormalReferenceUnchanged": true
+}

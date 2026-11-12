@@ -1,0 +1,108 @@
+{
+  "schema": "ayatsuri-fixed-static-input-v1",
+  "coordinate_system": "ayatsuri-native-metres",
+  "source_units": "metres",
+  "geometry_scale": 1,
+  "source_mode": "baked-static",
+  "parts": [
+    {
+      "positions": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          -1,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "normals": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "triangles": [
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "origins": [
+        {
+          "surface": "node/0/mesh/0/primitive/0",
+          "triangle": 0
+        }
+      ],
+      "materialId": "material/0",
+      "scope": "fixed-static-scene",
+      "materialSidedness": "single"
+    }
+  ],
+  "materialTrace": [
+    {
+      "id": "material/0",
+      "scaledLinear": [
+        0.25,
+        0.5,
+        1
+      ]
+    }
+  ],
+  "provenance": {
+    "adapter_schema": "glb-to-fixed-input-adapter-v1",
+    "source_sha256": "303cdb142cd055caeb685c7438c81c101d1fb9c45314c75e78ad232c55eb3169",
+    "source_byte_length": 640,
+    "source_file": "in.glb",
+    "importer_sha256": "c038e9e4f27605cbdf54be461c78602d937450a8093e96fa138dd6ef47a17bee",
+    "batcher_sha256": "700ddafab4ce53c906d11bc641bc2e94d6f802dc8daf03b67213a1e0cd13ebc2",
+    "adapter_sha256": "f4468d80cb5b396d83bae1a12de366b95e83e651646cc770d80fa1951772546b",
+    "scenario_sha256": "383f7aec097e63a85e105c50f4cee67edbeaac9bca503e61696b181d239b6e61",
+    "scenario": {
+      "albedoScale": 1
+    },
+    "imported_source": {
+      "format": "glb2",
+      "sha256": "303cdb142cd055caeb685c7438c81c101d1fb9c45314c75e78ad232c55eb3169",
+      "byteLength": 640,
+      "basis": [
+        1,
+        0,
+        0,
+        0,
+        -1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "units": "metres",
+      "generator": null
+    },
+    "imported_counts": {
+      "vertices": 3,
+      "triangles": 1,
+      "surfaces": 1,
+      "decodedNumericBytes": 368
+    }
+  }
+}

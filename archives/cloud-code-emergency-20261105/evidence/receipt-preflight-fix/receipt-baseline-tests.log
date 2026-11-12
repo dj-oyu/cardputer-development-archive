@@ -1,0 +1,57 @@
+test_later_low_disk_with_available_payload_capacity_preserves_receipts (test_source_rotation_transaction.RotationTransactionTests.test_later_low_disk_with_available_payload_capacity_preserves_receipts) ... [job source-1] started
+[job source-1] succeeded; elapsed 0.0s
+[job source-2] started
+[job source-2] succeeded; elapsed 0.0s
+[job source-3] started
+[job source-3] succeeded; elapsed 0.0s
+[job source-4] started
+FAIL
+test_low_disk_with_full_payload_capacity_preserves_receipts (test_source_rotation_transaction.RotationTransactionTests.test_low_disk_with_full_payload_capacity_preserves_receipts) ... [job source-1] started
+[job source-1] succeeded; elapsed 0.0s
+[job source-2] started
+[job source-2] succeeded; elapsed 0.0s
+[job source-3] started
+[job source-3] succeeded; elapsed 0.0s
+[job source-4] started
+FAIL
+test_protected_payload_capacity_preserves_receipts (test_source_rotation_transaction.RotationTransactionTests.test_protected_payload_capacity_preserves_receipts) ... [job source-1] started
+[job source-1] succeeded; elapsed 0.0s
+[job source-2] started
+[job source-2] succeeded; elapsed 0.0s
+[job source-3] started
+[job source-3] succeeded; elapsed 0.0s
+[job protected-build] started
+[job source-4] started
+FAIL
+
+======================================================================
+FAIL: test_later_low_disk_with_available_payload_capacity_preserves_receipts (test_source_rotation_transaction.RotationTransactionTests.test_later_low_disk_with_available_payload_capacity_preserves_receipts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/6d8dcdbcdc54/receipt-preflight-fix/tests/test_source_rotation_transaction.py", line 43, in test_later_low_disk_with_available_payload_capacity_preserves_receipts
+    self.assertEqual(self.receipts(), before)
+AssertionError: {'e84[1473 chars]91"}'} != {'e84[1473 chars]91"}', '21ae25cd2e29ee46cf1aa1e47ea2c6716d7564[697 chars]b"}'}
+Diff is 21003 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_low_disk_with_full_payload_capacity_preserves_receipts (test_source_rotation_transaction.RotationTransactionTests.test_low_disk_with_full_payload_capacity_preserves_receipts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/6d8dcdbcdc54/receipt-preflight-fix/tests/test_source_rotation_transaction.py", line 33, in test_low_disk_with_full_payload_capacity_preserves_receipts
+    self.assertEqual(self.receipts(), before)
+AssertionError: {'e84[1473 chars]91"}'} != {'e84[1473 chars]91"}', '21ae25cd2e29ee46cf1aa1e47ea2c6716d7564[697 chars]b"}'}
+Diff is 21003 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_protected_payload_capacity_preserves_receipts (test_source_rotation_transaction.RotationTransactionTests.test_protected_payload_capacity_preserves_receipts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/6d8dcdbcdc54/receipt-preflight-fix/tests/test_source_rotation_transaction.py", line 60, in test_protected_payload_capacity_preserves_receipts
+    self.assertEqual(self.receipts(), before)
+AssertionError: {'e84[1473 chars]91"}'} != {'e84[1473 chars]91"}', '21ae25cd2e29ee46cf1aa1e47ea2c6716d7564[697 chars]b"}'}
+Diff is 21003 characters long. Set self.maxDiff to None to see it.
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.081s
+
+FAILED (failures=3)

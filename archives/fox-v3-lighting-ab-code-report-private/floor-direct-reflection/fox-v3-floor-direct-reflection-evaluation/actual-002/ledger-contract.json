@@ -1,0 +1,70 @@
+{
+  "front": {
+    "ledger": {
+      "legacyCenterReservation": 2750272,
+      "centerIDInitialization": 32400,
+      "centerIDUpdateUpper": 56128,
+      "maskBytesClear": 4050,
+      "maskNeighborComparisons": 129600,
+      "bandHDRClear": 97200,
+      "sampleDepthWinnerClear": 259200,
+      "recordVisits": 3672,
+      "faceSetupAndVertexDecodeStages": 1701632,
+      "bboxVisitAndMaskTest": 448136,
+      "targetEdgeDepthWinnerStages": 1246416,
+      "finalSampleScan": 129600,
+      "finalHitShadingAndInterpolationUpper": 583528,
+      "finalPixelAverageEncodeWrite": 19080,
+      "sourceIdentityBindingValidationUpper": 32768,
+      "identityCombinadicMapClear": 9920,
+      "identityTableHashUpper": 8192,
+      "snapshotBindingHashUpper": 65536,
+      "controlUpper": 4160,
+      "counterGuardDispatchUpper": 310000,
+      "finalOutputPixelScan": 32400
+    },
+    "totalUpper": 7923890,
+    "limit": 8000000,
+    "expectedHits": [
+      1922,
+      1920,
+      1933,
+      1903
+    ],
+    "fits": true
+  },
+  "oblique": {
+    "ledger": {
+      "legacyCenterReservation": 2641786,
+      "centerIDInitialization": 32400,
+      "centerIDUpdateUpper": 53914,
+      "maskBytesClear": 4050,
+      "maskNeighborComparisons": 129600,
+      "bandHDRClear": 97200,
+      "sampleDepthWinnerClear": 259200,
+      "recordVisits": 3672,
+      "faceSetupAndVertexDecodeStages": 1701632,
+      "bboxVisitAndMaskTest": 433600,
+      "targetEdgeDepthWinnerStages": 1145136,
+      "finalSampleScan": 129600,
+      "finalHitShadingAndInterpolationUpper": 559740,
+      "finalPixelAverageEncodeWrite": 19128,
+      "sourceIdentityBindingValidationUpper": 32768,
+      "identityCombinadicMapClear": 9920,
+      "identityTableHashUpper": 8192,
+      "snapshotBindingHashUpper": 65536,
+      "controlUpper": 4160,
+      "counterGuardDispatchUpper": 310000,
+      "finalOutputPixelScan": 32400
+    },
+    "totalUpper": 7673634,
+    "limit": 8000000,
+    "expectedHits": [
+      1842,
+      1853,
+      1836,
+      1834
+    ],
+    "fits": true
+  }
+}

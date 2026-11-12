@@ -1,0 +1,232 @@
+{
+  "status": "ALL_FILTERED_DIRECT_COUNTS_MATCH",
+  "numericCountValuesChecked": 120,
+  "finalDirectory": "filtered-direct-003",
+  "summarySHA256": "88656a632dec96a7f8a60dfbc1802b0d224bd57a9d174cffbb2f343e8aa03f44",
+  "legacy002CountTablesExact": true,
+  "legacy002MetadataBug": "filter field was integer0 due variable shadowing; corrected003 metadata equals original frozen filter.json, counts unchanged.",
+  "independentImplementation": "Scalar pointwise nine-neighbor math.fsum convolution per condition, then subtraction; no owner filter/summarizer imported or executed. Raw direct deltas checked against previously independently validated proxy join.",
+  "nativeWinnerCount": {
+    "front": 4698,
+    "oblique": 5157
+  },
+  "allNineWeightsRetainedForNoHitAndOutside": true,
+  "maximumFilterDifferenceCommutationRoundoff": 2.220446049250313e-16,
+  "views": {
+    "front": {
+      "allProxyCorrect": {
+        "rawSignNoThreshold": {
+          "n": 22,
+          "point": {
+            "sameNonzero": 2,
+            "opposite": 18,
+            "eitherSmall": 2
+          },
+          "filtered": {
+            "sameNonzero": 10,
+            "opposite": 12,
+            "eitherSmall": 0
+          },
+          "pointOppositeToFilteredSame": 6,
+          "pointOppositeToFilteredSmall": 0,
+          "pointSameToFilteredOpposite": 0
+        },
+        "existing2over255NumericScale": {
+          "n": 22,
+          "point": {
+            "sameNonzero": 1,
+            "opposite": 9,
+            "eitherSmall": 12
+          },
+          "filtered": {
+            "sameNonzero": 8,
+            "opposite": 5,
+            "eitherSmall": 9
+          },
+          "pointOppositeToFilteredSame": 2,
+          "pointOppositeToFilteredSmall": 2,
+          "pointSameToFilteredOpposite": 0
+        }
+      },
+      "sameObject": {
+        "rawSignNoThreshold": {
+          "n": 14,
+          "point": {
+            "sameNonzero": 2,
+            "opposite": 10,
+            "eitherSmall": 2
+          },
+          "filtered": {
+            "sameNonzero": 5,
+            "opposite": 9,
+            "eitherSmall": 0
+          },
+          "pointOppositeToFilteredSame": 1,
+          "pointOppositeToFilteredSmall": 0,
+          "pointSameToFilteredOpposite": 0
+        },
+        "existing2over255NumericScale": {
+          "n": 14,
+          "point": {
+            "sameNonzero": 1,
+            "opposite": 5,
+            "eitherSmall": 8
+          },
+          "filtered": {
+            "sameNonzero": 4,
+            "opposite": 3,
+            "eitherSmall": 7
+          },
+          "pointOppositeToFilteredSame": 1,
+          "pointOppositeToFilteredSmall": 1,
+          "pointSameToFilteredOpposite": 0
+        }
+      },
+      "differentObject": {
+        "rawSignNoThreshold": {
+          "n": 8,
+          "point": {
+            "sameNonzero": 0,
+            "opposite": 8,
+            "eitherSmall": 0
+          },
+          "filtered": {
+            "sameNonzero": 5,
+            "opposite": 3,
+            "eitherSmall": 0
+          },
+          "pointOppositeToFilteredSame": 5,
+          "pointOppositeToFilteredSmall": 0,
+          "pointSameToFilteredOpposite": 0
+        },
+        "existing2over255NumericScale": {
+          "n": 8,
+          "point": {
+            "sameNonzero": 0,
+            "opposite": 4,
+            "eitherSmall": 4
+          },
+          "filtered": {
+            "sameNonzero": 4,
+            "opposite": 2,
+            "eitherSmall": 2
+          },
+          "pointOppositeToFilteredSame": 1,
+          "pointOppositeToFilteredSmall": 1,
+          "pointSameToFilteredOpposite": 0
+        }
+      }
+    },
+    "oblique": {
+      "allProxyCorrect": {
+        "rawSignNoThreshold": {
+          "n": 41,
+          "point": {
+            "sameNonzero": 11,
+            "opposite": 30,
+            "eitherSmall": 0
+          },
+          "filtered": {
+            "sameNonzero": 18,
+            "opposite": 23,
+            "eitherSmall": 0
+          },
+          "pointOppositeToFilteredSame": 7,
+          "pointOppositeToFilteredSmall": 0,
+          "pointSameToFilteredOpposite": 0
+        },
+        "existing2over255NumericScale": {
+          "n": 41,
+          "point": {
+            "sameNonzero": 4,
+            "opposite": 12,
+            "eitherSmall": 25
+          },
+          "filtered": {
+            "sameNonzero": 7,
+            "opposite": 9,
+            "eitherSmall": 25
+          },
+          "pointOppositeToFilteredSame": 0,
+          "pointOppositeToFilteredSmall": 3,
+          "pointSameToFilteredOpposite": 0
+        }
+      },
+      "sameObject": {
+        "rawSignNoThreshold": {
+          "n": 32,
+          "point": {
+            "sameNonzero": 9,
+            "opposite": 23,
+            "eitherSmall": 0
+          },
+          "filtered": {
+            "sameNonzero": 13,
+            "opposite": 19,
+            "eitherSmall": 0
+          },
+          "pointOppositeToFilteredSame": 4,
+          "pointOppositeToFilteredSmall": 0,
+          "pointSameToFilteredOpposite": 0
+        },
+        "existing2over255NumericScale": {
+          "n": 32,
+          "point": {
+            "sameNonzero": 3,
+            "opposite": 7,
+            "eitherSmall": 22
+          },
+          "filtered": {
+            "sameNonzero": 5,
+            "opposite": 5,
+            "eitherSmall": 22
+          },
+          "pointOppositeToFilteredSame": 0,
+          "pointOppositeToFilteredSmall": 2,
+          "pointSameToFilteredOpposite": 0
+        }
+      },
+      "differentObject": {
+        "rawSignNoThreshold": {
+          "n": 9,
+          "point": {
+            "sameNonzero": 2,
+            "opposite": 7,
+            "eitherSmall": 0
+          },
+          "filtered": {
+            "sameNonzero": 5,
+            "opposite": 4,
+            "eitherSmall": 0
+          },
+          "pointOppositeToFilteredSame": 3,
+          "pointOppositeToFilteredSmall": 0,
+          "pointSameToFilteredOpposite": 0
+        },
+        "existing2over255NumericScale": {
+          "n": 9,
+          "point": {
+            "sameNonzero": 1,
+            "opposite": 5,
+            "eitherSmall": 3
+          },
+          "filtered": {
+            "sameNonzero": 2,
+            "opposite": 4,
+            "eitherSmall": 3
+          },
+          "pointOppositeToFilteredSame": 0,
+          "pointOppositeToFilteredSmall": 1,
+          "pointSameToFilteredOpposite": 0
+        }
+      }
+    }
+  },
+  "limits": [
+    "Post-hoc proxy-correct old inverse-sign cohort only: front22 and oblique41, same-object14/32. Not a full-image accuracy improvement.",
+    "Zero-threshold linear HDR sign is distinct from displayed PNG/565 response sign. Linear2/255 is only a diagnostic magnitude scale, not the formal display threshold.",
+    "Integer-neighbor native direct filtering is not Cycles subpixel filtering or a rerender, and direct diffuse pass versus native direct retains material/normal/visibility/sample differences.",
+    "Whole originalFG inverse counts remain front111 to109 and oblique113 to138, including47/85 newly inverse outside old cohort.",
+    "No source/owner changes or rendering."
+  ]
+}

@@ -1,0 +1,30 @@
+[
+  {
+    "bits": 16,
+    "samples": 7176,
+    "max_rgb_control_only_delta": 0.0,
+    "max_mix_control_only_delta": 0.0,
+    "samples_with_predicate_control_only_delta": 0,
+    "by_kind": {}
+  },
+  {
+    "bits": 20,
+    "samples": 7176,
+    "max_rgb_control_only_delta": 0.9989967346191406,
+    "max_mix_control_only_delta": 0.0,
+    "samples_with_predicate_control_only_delta": 70,
+    "by_kind": {
+      "boundary": 70
+    }
+  },
+  {
+    "bits": 24,
+    "samples": 7176,
+    "max_rgb_control_only_delta": 0.9988279938697815,
+    "max_mix_control_only_delta": 0.0,
+    "samples_with_predicate_control_only_delta": 2,
+    "by_kind": {
+      "boundary": 2
+    }
+  }
+]

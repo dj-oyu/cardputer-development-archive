@@ -1,0 +1,2349 @@
+{
+  "status": "INDEPENDENT_GEOMETRY_AGGREGATION_MATCH",
+  "scope": "Fixed 32x32 eye grids in four already-seen directions; no new holdout, lighting, RGB or formal-v3 acceptance test.",
+  "roleValuesChecked": 1176,
+  "transitionTablesChecked": 24,
+  "samplesChecked": 24576,
+  "eyeBOldEightRowsIncludingSamplesExact": true,
+  "originalSourceSamplesAndBboxesUnchangedAcrossArms": true,
+  "originalSourceSHA256": "9254eaebdfa61143dfdb9480330bc677ae47acfa710715bbfa31ab2943a16806",
+  "files": {
+    "fox-v3-eye-diagnostic/lid-ab/PLAN.json": "5cd6123a198e561f6f8394e1c95d3b7461414b49242e25006d5b3f06535d709f",
+    "fox-v3-eye-diagnostic/lid-ab/compare_geometry.py": "742b3218547f5907f733088c1560575d671a0db7bfa98cc4cdaf73cc02a56d71",
+    "fox-v3-eye-diagnostic/lid-ab/summarize.py": "79d9b04807bed17e12f3554e7f13cad537a44616345ad4f5a142c89877936c38",
+    "fox-v3-eye-diagnostic/lid-ab/summary.json": "97e319125873f5de041c186b61a06fa36ca8c5ec4f3442e871747f8654f90ba6",
+    "fox-v3-eye-diagnostic/lid-ab/eyeB-geometry.json": "86dd3d87b5156436a372f08b8014c032a0fec20bac433990dd38b1e321a0ecab",
+    "fox-v3-eye-diagnostic/lid-ab/lid8-geometry.json": "dc7773b5e1a32bcf1a128ec2e0ba38ae4b432f4967544395da65d1c895ee727e",
+    "fox-v3-eye-diagnostic/lid-ab/lid9-geometry.json": "133e3740a47851136d2fc11f75e4374f07b6a6023fe22e7358e9cfa756f0e180"
+  },
+  "pupilIrisInvariants": [
+    {
+      "view": "front",
+      "side": -1,
+      "role": "Amber iris",
+      "countsAndWinnerMembershipExact": true
+    },
+    {
+      "view": "front",
+      "side": -1,
+      "role": "Pupil",
+      "countsAndWinnerMembershipExact": true
+    },
+    {
+      "view": "front",
+      "side": 1,
+      "role": "Amber iris",
+      "countsAndWinnerMembershipExact": true
+    },
+    {
+      "view": "front",
+      "side": 1,
+      "role": "Pupil",
+      "countsAndWinnerMembershipExact": true
+    },
+    {
+      "view": "oblique",
+      "side": -1,
+      "role": "Amber iris",
+      "countsAndWinnerMembershipExact": true
+    },
+    {
+      "view": "oblique",
+      "side": -1,
+      "role": "Pupil",
+      "countsAndWinnerMembershipExact": true
+    },
+    {
+      "view": "oblique",
+      "side": 1,
+      "role": "Amber iris",
+      "countsAndWinnerMembershipExact": true
+    },
+    {
+      "view": "oblique",
+      "side": 1,
+      "role": "Pupil",
+      "countsAndWinnerMembershipExact": true
+    },
+    {
+      "view": "holdout-247.5-12.5",
+      "side": -1,
+      "role": "Amber iris",
+      "countsAndWinnerMembershipExact": true
+    },
+    {
+      "view": "holdout-247.5-12.5",
+      "side": -1,
+      "role": "Pupil",
+      "countsAndWinnerMembershipExact": true
+    },
+    {
+      "view": "holdout-247.5-12.5",
+      "side": 1,
+      "role": "Amber iris",
+      "countsAndWinnerMembershipExact": true
+    },
+    {
+      "view": "holdout-247.5-12.5",
+      "side": 1,
+      "role": "Pupil",
+      "countsAndWinnerMembershipExact": true
+    },
+    {
+      "view": "holdout-292.5-27.5",
+      "side": -1,
+      "role": "Amber iris",
+      "countsAndWinnerMembershipExact": true
+    },
+    {
+      "view": "holdout-292.5-27.5",
+      "side": -1,
+      "role": "Pupil",
+      "countsAndWinnerMembershipExact": true
+    },
+    {
+      "view": "holdout-292.5-27.5",
+      "side": 1,
+      "role": "Amber iris",
+      "countsAndWinnerMembershipExact": true
+    },
+    {
+      "view": "holdout-292.5-27.5",
+      "side": 1,
+      "role": "Pupil",
+      "countsAndWinnerMembershipExact": true
+    }
+  ],
+  "whiteAndLidComparisons": [
+    {
+      "view": "front",
+      "side": -1,
+      "Eye white": {
+        "eyeB": {
+          "sourceVisible": 192,
+          "sameWinner": 157,
+          "lost": 35,
+          "coarseRayMiss": 23,
+          "coarseRayPresentButOtherNearer": 12,
+          "extraWinner": 50,
+          "diagnosticIoU": 0.6487603305785123
+        },
+        "lid8": {
+          "sourceVisible": 192,
+          "sameWinner": 160,
+          "lost": 32,
+          "coarseRayMiss": 23,
+          "coarseRayPresentButOtherNearer": 9,
+          "extraWinner": 52,
+          "diagnosticIoU": 0.6557377049180327
+        },
+        "lid9": {
+          "sourceVisible": 192,
+          "sameWinner": 160,
+          "lost": 32,
+          "coarseRayMiss": 23,
+          "coarseRayPresentButOtherNearer": 9,
+          "extraWinner": 52,
+          "diagnosticIoU": 0.6557377049180327
+        }
+      },
+      "Upper eyelid": {
+        "eyeB": {
+          "sourceVisible": 46,
+          "sameWinner": 4,
+          "lost": 42,
+          "coarseRayMiss": 33,
+          "coarseRayPresentButOtherNearer": 9,
+          "extraWinner": 27,
+          "diagnosticIoU": 0.0547945205479452
+        },
+        "lid8": {
+          "sourceVisible": 46,
+          "sameWinner": 37,
+          "lost": 9,
+          "coarseRayMiss": 9,
+          "coarseRayPresentButOtherNearer": 0,
+          "extraWinner": 20,
+          "diagnosticIoU": 0.5606060606060606
+        },
+        "lid9": {
+          "sourceVisible": 46,
+          "sameWinner": 42,
+          "lost": 4,
+          "coarseRayMiss": 4,
+          "coarseRayPresentButOtherNearer": 0,
+          "extraWinner": 18,
+          "diagnosticIoU": 0.65625
+        }
+      },
+      "allObjectWinnerMismatches": {
+        "eyeB": 205,
+        "lid8": 169,
+        "lid9": 164
+      }
+    },
+    {
+      "view": "front",
+      "side": 1,
+      "Eye white": {
+        "eyeB": {
+          "sourceVisible": 185,
+          "sameWinner": 139,
+          "lost": 46,
+          "coarseRayMiss": 19,
+          "coarseRayPresentButOtherNearer": 27,
+          "extraWinner": 64,
+          "diagnosticIoU": 0.5582329317269076
+        },
+        "lid8": {
+          "sourceVisible": 185,
+          "sameWinner": 155,
+          "lost": 30,
+          "coarseRayMiss": 19,
+          "coarseRayPresentButOtherNearer": 11,
+          "extraWinner": 72,
+          "diagnosticIoU": 0.603112840466926
+        },
+        "lid9": {
+          "sourceVisible": 185,
+          "sameWinner": 155,
+          "lost": 30,
+          "coarseRayMiss": 19,
+          "coarseRayPresentButOtherNearer": 11,
+          "extraWinner": 72,
+          "diagnosticIoU": 0.603112840466926
+        }
+      },
+      "Upper eyelid": {
+        "eyeB": {
+          "sourceVisible": 42,
+          "sameWinner": 11,
+          "lost": 31,
+          "coarseRayMiss": 28,
+          "coarseRayPresentButOtherNearer": 3,
+          "extraWinner": 84,
+          "diagnosticIoU": 0.0873015873015873
+        },
+        "lid8": {
+          "sourceVisible": 42,
+          "sameWinner": 36,
+          "lost": 6,
+          "coarseRayMiss": 3,
+          "coarseRayPresentButOtherNearer": 3,
+          "extraWinner": 19,
+          "diagnosticIoU": 0.5901639344262295
+        },
+        "lid9": {
+          "sourceVisible": 42,
+          "sameWinner": 36,
+          "lost": 6,
+          "coarseRayMiss": 3,
+          "coarseRayPresentButOtherNearer": 3,
+          "extraWinner": 23,
+          "diagnosticIoU": 0.5538461538461539
+        }
+      },
+      "allObjectWinnerMismatches": {
+        "eyeB": 262,
+        "lid8": 196,
+        "lid9": 199
+      }
+    },
+    {
+      "view": "oblique",
+      "side": -1,
+      "Eye white": {
+        "eyeB": {
+          "sourceVisible": 214,
+          "sameWinner": 179,
+          "lost": 35,
+          "coarseRayMiss": 20,
+          "coarseRayPresentButOtherNearer": 15,
+          "extraWinner": 38,
+          "diagnosticIoU": 0.7103174603174603
+        },
+        "lid8": {
+          "sourceVisible": 214,
+          "sameWinner": 182,
+          "lost": 32,
+          "coarseRayMiss": 20,
+          "coarseRayPresentButOtherNearer": 12,
+          "extraWinner": 39,
+          "diagnosticIoU": 0.7193675889328063
+        },
+        "lid9": {
+          "sourceVisible": 214,
+          "sameWinner": 182,
+          "lost": 32,
+          "coarseRayMiss": 20,
+          "coarseRayPresentButOtherNearer": 12,
+          "extraWinner": 39,
+          "diagnosticIoU": 0.7193675889328063
+        }
+      },
+      "Upper eyelid": {
+        "eyeB": {
+          "sourceVisible": 51,
+          "sameWinner": 5,
+          "lost": 46,
+          "coarseRayMiss": 37,
+          "coarseRayPresentButOtherNearer": 9,
+          "extraWinner": 31,
+          "diagnosticIoU": 0.06097560975609756
+        },
+        "lid8": {
+          "sourceVisible": 51,
+          "sameWinner": 40,
+          "lost": 11,
+          "coarseRayMiss": 10,
+          "coarseRayPresentButOtherNearer": 1,
+          "extraWinner": 19,
+          "diagnosticIoU": 0.5714285714285714
+        },
+        "lid9": {
+          "sourceVisible": 51,
+          "sameWinner": 43,
+          "lost": 8,
+          "coarseRayMiss": 7,
+          "coarseRayPresentButOtherNearer": 1,
+          "extraWinner": 17,
+          "diagnosticIoU": 0.6323529411764706
+        }
+      },
+      "allObjectWinnerMismatches": {
+        "eyeB": 199,
+        "lid8": 161,
+        "lid9": 158
+      }
+    },
+    {
+      "view": "oblique",
+      "side": 1,
+      "Eye white": {
+        "eyeB": {
+          "sourceVisible": 159,
+          "sameWinner": 115,
+          "lost": 44,
+          "coarseRayMiss": 21,
+          "coarseRayPresentButOtherNearer": 23,
+          "extraWinner": 60,
+          "diagnosticIoU": 0.5251141552511416
+        },
+        "lid8": {
+          "sourceVisible": 159,
+          "sameWinner": 132,
+          "lost": 27,
+          "coarseRayMiss": 21,
+          "coarseRayPresentButOtherNearer": 6,
+          "extraWinner": 71,
+          "diagnosticIoU": 0.5739130434782609
+        },
+        "lid9": {
+          "sourceVisible": 159,
+          "sameWinner": 132,
+          "lost": 27,
+          "coarseRayMiss": 21,
+          "coarseRayPresentButOtherNearer": 6,
+          "extraWinner": 71,
+          "diagnosticIoU": 0.5739130434782609
+        }
+      },
+      "Upper eyelid": {
+        "eyeB": {
+          "sourceVisible": 37,
+          "sameWinner": 9,
+          "lost": 28,
+          "coarseRayMiss": 26,
+          "coarseRayPresentButOtherNearer": 2,
+          "extraWinner": 85,
+          "diagnosticIoU": 0.07377049180327869
+        },
+        "lid8": {
+          "sourceVisible": 37,
+          "sameWinner": 29,
+          "lost": 8,
+          "coarseRayMiss": 6,
+          "coarseRayPresentButOtherNearer": 2,
+          "extraWinner": 27,
+          "diagnosticIoU": 0.453125
+        },
+        "lid9": {
+          "sourceVisible": 37,
+          "sameWinner": 29,
+          "lost": 8,
+          "coarseRayMiss": 6,
+          "coarseRayPresentButOtherNearer": 2,
+          "extraWinner": 28,
+          "diagnosticIoU": 0.4461538461538462
+        }
+      },
+      "allObjectWinnerMismatches": {
+        "eyeB": 268,
+        "lid8": 210,
+        "lid9": 212
+      }
+    },
+    {
+      "view": "holdout-247.5-12.5",
+      "side": -1,
+      "Eye white": {
+        "eyeB": {
+          "sourceVisible": 212,
+          "sameWinner": 177,
+          "lost": 35,
+          "coarseRayMiss": 20,
+          "coarseRayPresentButOtherNearer": 15,
+          "extraWinner": 39,
+          "diagnosticIoU": 0.7051792828685259
+        },
+        "lid8": {
+          "sourceVisible": 212,
+          "sameWinner": 181,
+          "lost": 31,
+          "coarseRayMiss": 20,
+          "coarseRayPresentButOtherNearer": 11,
+          "extraWinner": 40,
+          "diagnosticIoU": 0.7182539682539683
+        },
+        "lid9": {
+          "sourceVisible": 212,
+          "sameWinner": 181,
+          "lost": 31,
+          "coarseRayMiss": 20,
+          "coarseRayPresentButOtherNearer": 11,
+          "extraWinner": 40,
+          "diagnosticIoU": 0.7182539682539683
+        }
+      },
+      "Upper eyelid": {
+        "eyeB": {
+          "sourceVisible": 48,
+          "sameWinner": 5,
+          "lost": 43,
+          "coarseRayMiss": 34,
+          "coarseRayPresentButOtherNearer": 9,
+          "extraWinner": 32,
+          "diagnosticIoU": 0.0625
+        },
+        "lid8": {
+          "sourceVisible": 48,
+          "sameWinner": 41,
+          "lost": 7,
+          "coarseRayMiss": 6,
+          "coarseRayPresentButOtherNearer": 1,
+          "extraWinner": 21,
+          "diagnosticIoU": 0.5942028985507246
+        },
+        "lid9": {
+          "sourceVisible": 48,
+          "sameWinner": 45,
+          "lost": 3,
+          "coarseRayMiss": 3,
+          "coarseRayPresentButOtherNearer": 0,
+          "extraWinner": 18,
+          "diagnosticIoU": 0.6818181818181818
+        }
+      },
+      "allObjectWinnerMismatches": {
+        "eyeB": 200,
+        "lid8": 157,
+        "lid9": 153
+      }
+    },
+    {
+      "view": "holdout-247.5-12.5",
+      "side": 1,
+      "Eye white": {
+        "eyeB": {
+          "sourceVisible": 167,
+          "sameWinner": 124,
+          "lost": 43,
+          "coarseRayMiss": 22,
+          "coarseRayPresentButOtherNearer": 21,
+          "extraWinner": 62,
+          "diagnosticIoU": 0.5414847161572053
+        },
+        "lid8": {
+          "sourceVisible": 167,
+          "sameWinner": 138,
+          "lost": 29,
+          "coarseRayMiss": 22,
+          "coarseRayPresentButOtherNearer": 7,
+          "extraWinner": 75,
+          "diagnosticIoU": 0.5702479338842975
+        },
+        "lid9": {
+          "sourceVisible": 167,
+          "sameWinner": 138,
+          "lost": 29,
+          "coarseRayMiss": 22,
+          "coarseRayPresentButOtherNearer": 7,
+          "extraWinner": 76,
+          "diagnosticIoU": 0.5679012345679012
+        }
+      },
+      "Upper eyelid": {
+        "eyeB": {
+          "sourceVisible": 37,
+          "sameWinner": 11,
+          "lost": 26,
+          "coarseRayMiss": 24,
+          "coarseRayPresentButOtherNearer": 2,
+          "extraWinner": 83,
+          "diagnosticIoU": 0.09166666666666666
+        },
+        "lid8": {
+          "sourceVisible": 37,
+          "sameWinner": 34,
+          "lost": 3,
+          "coarseRayMiss": 1,
+          "coarseRayPresentButOtherNearer": 2,
+          "extraWinner": 27,
+          "diagnosticIoU": 0.53125
+        },
+        "lid9": {
+          "sourceVisible": 37,
+          "sameWinner": 34,
+          "lost": 3,
+          "coarseRayMiss": 1,
+          "coarseRayPresentButOtherNearer": 2,
+          "extraWinner": 27,
+          "diagnosticIoU": 0.53125
+        }
+      },
+      "allObjectWinnerMismatches": {
+        "eyeB": 285,
+        "lid8": 228,
+        "lid9": 228
+      }
+    },
+    {
+      "view": "holdout-292.5-27.5",
+      "side": -1,
+      "Eye white": {
+        "eyeB": {
+          "sourceVisible": 168,
+          "sameWinner": 135,
+          "lost": 33,
+          "coarseRayMiss": 21,
+          "coarseRayPresentButOtherNearer": 12,
+          "extraWinner": 67,
+          "diagnosticIoU": 0.574468085106383
+        },
+        "lid8": {
+          "sourceVisible": 168,
+          "sameWinner": 137,
+          "lost": 31,
+          "coarseRayMiss": 21,
+          "coarseRayPresentButOtherNearer": 10,
+          "extraWinner": 64,
+          "diagnosticIoU": 0.5905172413793104
+        },
+        "lid9": {
+          "sourceVisible": 168,
+          "sameWinner": 137,
+          "lost": 31,
+          "coarseRayMiss": 21,
+          "coarseRayPresentButOtherNearer": 10,
+          "extraWinner": 64,
+          "diagnosticIoU": 0.5905172413793104
+        }
+      },
+      "Upper eyelid": {
+        "eyeB": {
+          "sourceVisible": 47,
+          "sameWinner": 4,
+          "lost": 43,
+          "coarseRayMiss": 33,
+          "coarseRayPresentButOtherNearer": 10,
+          "extraWinner": 24,
+          "diagnosticIoU": 0.056338028169014086
+        },
+        "lid8": {
+          "sourceVisible": 47,
+          "sameWinner": 40,
+          "lost": 7,
+          "coarseRayMiss": 6,
+          "coarseRayPresentButOtherNearer": 1,
+          "extraWinner": 22,
+          "diagnosticIoU": 0.5797101449275363
+        },
+        "lid9": {
+          "sourceVisible": 47,
+          "sameWinner": 44,
+          "lost": 3,
+          "coarseRayMiss": 2,
+          "coarseRayPresentButOtherNearer": 1,
+          "extraWinner": 20,
+          "diagnosticIoU": 0.6567164179104478
+        }
+      },
+      "allObjectWinnerMismatches": {
+        "eyeB": 225,
+        "lid8": 194,
+        "lid9": 190
+      }
+    },
+    {
+      "view": "holdout-292.5-27.5",
+      "side": 1,
+      "Eye white": {
+        "eyeB": {
+          "sourceVisible": 200,
+          "sameWinner": 159,
+          "lost": 41,
+          "coarseRayMiss": 13,
+          "coarseRayPresentButOtherNearer": 28,
+          "extraWinner": 44,
+          "diagnosticIoU": 0.6516393442622951
+        },
+        "lid8": {
+          "sourceVisible": 200,
+          "sameWinner": 176,
+          "lost": 24,
+          "coarseRayMiss": 13,
+          "coarseRayPresentButOtherNearer": 11,
+          "extraWinner": 44,
+          "diagnosticIoU": 0.7213114754098361
+        },
+        "lid9": {
+          "sourceVisible": 200,
+          "sameWinner": 176,
+          "lost": 24,
+          "coarseRayMiss": 13,
+          "coarseRayPresentButOtherNearer": 11,
+          "extraWinner": 44,
+          "diagnosticIoU": 0.7213114754098361
+        }
+      },
+      "Upper eyelid": {
+        "eyeB": {
+          "sourceVisible": 52,
+          "sameWinner": 15,
+          "lost": 37,
+          "coarseRayMiss": 30,
+          "coarseRayPresentButOtherNearer": 7,
+          "extraWinner": 75,
+          "diagnosticIoU": 0.11811023622047244
+        },
+        "lid8": {
+          "sourceVisible": 52,
+          "sameWinner": 44,
+          "lost": 8,
+          "coarseRayMiss": 3,
+          "coarseRayPresentButOtherNearer": 5,
+          "extraWinner": 19,
+          "diagnosticIoU": 0.6197183098591549
+        },
+        "lid9": {
+          "sourceVisible": 52,
+          "sameWinner": 44,
+          "lost": 8,
+          "coarseRayMiss": 3,
+          "coarseRayPresentButOtherNearer": 5,
+          "extraWinner": 21,
+          "diagnosticIoU": 0.6027397260273972
+        }
+      },
+      "allObjectWinnerMismatches": {
+        "eyeB": 249,
+        "lid8": 188,
+        "lid9": 189
+      }
+    }
+  ],
+  "allRoles": {
+    "eyeB": [
+      {
+        "view": "front",
+        "side": -1,
+        "roles": {
+          "Eye socket": {
+            "sourceVisible": 35,
+            "sameWinner": 27,
+            "lost": 8,
+            "coarseRayMiss": 5,
+            "coarseRayPresentButOtherNearer": 3,
+            "extraWinner": 74,
+            "diagnosticIoU": 0.24770642201834864
+          },
+          "Eye white": {
+            "sourceVisible": 192,
+            "sameWinner": 157,
+            "lost": 35,
+            "coarseRayMiss": 23,
+            "coarseRayPresentButOtherNearer": 12,
+            "extraWinner": 50,
+            "diagnosticIoU": 0.6487603305785123
+          },
+          "Amber iris": {
+            "sourceVisible": 137,
+            "sameWinner": 121,
+            "lost": 16,
+            "coarseRayMiss": 10,
+            "coarseRayPresentButOtherNearer": 6,
+            "extraWinner": 2,
+            "diagnosticIoU": 0.8705035971223022
+          },
+          "Pupil": {
+            "sourceVisible": 100,
+            "sameWinner": 98,
+            "lost": 2,
+            "coarseRayMiss": 1,
+            "coarseRayPresentButOtherNearer": 1,
+            "extraWinner": 4,
+            "diagnosticIoU": 0.9423076923076923
+          },
+          "Eye glint": {
+            "sourceVisible": 19,
+            "sameWinner": 16,
+            "lost": 3,
+            "coarseRayMiss": 3,
+            "coarseRayPresentButOtherNearer": 0,
+            "extraWinner": 1,
+            "diagnosticIoU": 0.8
+          },
+          "Eye glint small": {
+            "sourceVisible": 3,
+            "sameWinner": 1,
+            "lost": 2,
+            "coarseRayMiss": 2,
+            "coarseRayPresentButOtherNearer": 0,
+            "extraWinner": 1,
+            "diagnosticIoU": 0.25
+          },
+          "Upper eyelid": {
+            "sourceVisible": 46,
+            "sameWinner": 4,
+            "lost": 42,
+            "coarseRayMiss": 33,
+            "coarseRayPresentButOtherNearer": 9,
+            "extraWinner": 27,
+            "diagnosticIoU": 0.0547945205479452
+          }
+        },
+        "allObjectWinnerMismatches": 205
+      },
+      {
+        "view": "front",
+        "side": 1,
+        "roles": {
+          "Eye socket": {
+            "sourceVisible": 50,
+            "sameWinner": 29,
+            "lost": 21,
+            "coarseRayMiss": 21,
+            "coarseRayPresentButOtherNearer": 0,
+            "extraWinner": 60,
+            "diagnosticIoU": 0.2636363636363636
+          },
+          "Eye white": {
+            "sourceVisible": 185,
+            "sameWinner": 139,
+            "lost": 46,
+            "coarseRayMiss": 19,
+            "coarseRayPresentButOtherNearer": 27,
+            "extraWinner": 64,
+            "diagnosticIoU": 0.5582329317269076
+          },
+          "Amber iris": {
+            "sourceVisible": 132,
+            "sameWinner": 114,
+            "lost": 18,
+            "coarseRayMiss": 13,
+            "coarseRayPresentButOtherNearer": 5,
+            "extraWinner": 10,
+            "diagnosticIoU": 0.8028169014084507
+          },
+          "Pupil": {
+            "sourceVisible": 109,
+            "sameWinner": 100,
+            "lost": 9,
+            "coarseRayMiss": 8,
+            "coarseRayPresentButOtherNearer": 1,
+            "extraWinner": 6,
+            "diagnosticIoU": 0.8695652173913043
+          },
+          "Eye glint": {
+            "sourceVisible": 19,
+            "sameWinner": 14,
+            "lost": 5,
+            "coarseRayMiss": 5,
+            "coarseRayPresentButOtherNearer": 0,
+            "extraWinner": 1,
+            "diagnosticIoU": 0.7
+          },
+          "Eye glint small": {
+            "sourceVisible": 3,
+            "sameWinner": 0,
+            "lost": 3,
+            "coarseRayMiss": 3,
+            "coarseRayPresentButOtherNearer": 0,
+            "extraWinner": 0,
+            "diagnosticIoU": 0.0
+          },
+          "Upper eyelid": {
+            "sourceVisible": 42,
+            "sameWinner": 11,
+            "lost": 31,
+            "coarseRayMiss": 28,
+            "coarseRayPresentButOtherNearer": 3,
+            "extraWinner": 84,
+            "diagnosticIoU": 0.0873015873015873
+          }
+        },
+        "allObjectWinnerMismatches": 262
+      },
+      {
+        "view": "oblique",
+        "side": -1,
+        "roles": {
+          "Eye socket": {
+            "sourceVisible": 73,
+            "sameWinner": 46,
+            "lost": 27,
+            "coarseRayMiss": 24,
+            "coarseRayPresentButOtherNearer": 3,
+            "extraWinner": 69,
+            "diagnosticIoU": 0.323943661971831
+          },
+          "Eye white": {
+            "sourceVisible": 214,
+            "sameWinner": 179,
+            "lost": 35,
+            "coarseRayMiss": 20,
+            "coarseRayPresentButOtherNearer": 15,
+            "extraWinner": 38,
+            "diagnosticIoU": 0.7103174603174603
+          },
+          "Amber iris": {
+            "sourceVisible": 135,
+            "sameWinner": 119,
+            "lost": 16,
+            "coarseRayMiss": 12,
+            "coarseRayPresentButOtherNearer": 4,
+            "extraWinner": 5,
+            "diagnosticIoU": 0.85
+          },
+          "Pupil": {
+            "sourceVisible": 102,
+            "sameWinner": 96,
+            "lost": 6,
+            "coarseRayMiss": 5,
+            "coarseRayPresentButOtherNearer": 1,
+            "extraWinner": 6,
+            "diagnosticIoU": 0.8888888888888888
+          },
+          "Eye glint": {
+            "sourceVisible": 19,
+            "sameWinner": 14,
+            "lost": 5,
+            "coarseRayMiss": 5,
+            "coarseRayPresentButOtherNearer": 0,
+            "extraWinner": 1,
+            "diagnosticIoU": 0.7
+          },
+          "Eye glint small": {
+            "sourceVisible": 3,
+            "sameWinner": 2,
+            "lost": 1,
+            "coarseRayMiss": 1,
+            "coarseRayPresentButOtherNearer": 0,
+            "extraWinner": 0,
+            "diagnosticIoU": 0.6666666666666666
+          },
+          "Upper eyelid": {
+            "sourceVisible": 51,
+            "sameWinner": 5,
+            "lost": 46,
+            "coarseRayMiss": 37,
+            "coarseRayPresentButOtherNearer": 9,
+            "extraWinner": 31,
+            "diagnosticIoU": 0.06097560975609756
+          }
+        },
+        "allObjectWinnerMismatches": 199
+      },
+      {
+        "view": "oblique",
+        "side": 1,
+        "roles": {
+          "Eye socket": {
+            "sourceVisible": 24,
+            "sameWinner": 17,
+            "lost": 7,
+            "coarseRayMiss": 6,
+            "coarseRayPresentButOtherNearer": 1,
+            "extraWinner": 48,
+            "diagnosticIoU": 0.2361111111111111
+          },
+          "Eye white": {
+            "sourceVisible": 159,
+            "sameWinner": 115,
+            "lost": 44,
+            "coarseRayMiss": 21,
+            "coarseRayPresentButOtherNearer": 23,
+            "extraWinner": 60,
+            "diagnosticIoU": 0.5251141552511416
+          },
+          "Amber iris": {
+            "sourceVisible": 129,
+            "sameWinner": 111,
+            "lost": 18,
+            "coarseRayMiss": 11,
+            "coarseRayPresentButOtherNearer": 7,
+            "extraWinner": 7,
+            "diagnosticIoU": 0.8161764705882353
+          },
+          "Pupil": {
+            "sourceVisible": 102,
+            "sameWinner": 97,
+            "lost": 5,
+            "coarseRayMiss": 5,
+            "coarseRayPresentButOtherNearer": 0,
+            "extraWinner": 5,
+            "diagnosticIoU": 0.9065420560747663
+          },
+          "Eye glint": {
+            "sourceVisible": 19,
+            "sameWinner": 14,
+            "lost": 5,
+            "coarseRayMiss": 5,
+            "coarseRayPresentButOtherNearer": 0,
+            "extraWinner": 0,
+            "diagnosticIoU": 0.7368421052631579
+          },
+          "Eye glint small": {
+            "sourceVisible": 3,
+            "sameWinner": 1,
+            "lost": 2,
+            "coarseRayMiss": 2,
+            "coarseRayPresentButOtherNearer": 0,
+            "extraWinner": 0,
+            "diagnosticIoU": 0.3333333333333333
+          },
+          "Upper eyelid": {
+            "sourceVisible": 37,
+            "sameWinner": 9,
+            "lost": 28,
+            "coarseRayMiss": 26,
+            "coarseRayPresentButOtherNearer": 2,
+            "extraWinner": 85,
+            "diagnosticIoU": 0.07377049180327869
+          }
+        },
+        "allObjectWinnerMismatches": 268
+      },
+      {
+        "view": "holdout-247.5-12.5",
+        "side": -1,
+        "roles": {
+          "Eye socket": {
+            "sourceVisible": 66,
+            "sameWinner": 43,
+            "lost": 23,
+            "coarseRayMiss": 21,
+            "coarseRayPresentButOtherNearer": 2,
+            "extraWinner": 68,
+            "diagnosticIoU": 0.3208955223880597
+          },
+          "Eye white": {
+            "sourceVisible": 212,
+            "sameWinner": 177,
+            "lost": 35,
+            "coarseRayMiss": 20,
+            "coarseRayPresentButOtherNearer": 15,
+            "extraWinner": 39,
+            "diagnosticIoU": 0.7051792828685259
+          },
+          "Amber iris": {
+            "sourceVisible": 134,
+            "sameWinner": 117,
+            "lost": 17,
+            "coarseRayMiss": 12,
+            "coarseRayPresentButOtherNearer": 5,
+            "extraWinner": 5,
+            "diagnosticIoU": 0.841726618705036
+          },
+          "Pupil": {
+            "sourceVisible": 100,
+            "sameWinner": 94,
+            "lost": 6,
+            "coarseRayMiss": 5,
+            "coarseRayPresentButOtherNearer": 1,
+            "extraWinner": 4,
+            "diagnosticIoU": 0.9038461538461539
+          },
+          "Eye glint": {
+            "sourceVisible": 19,
+            "sameWinner": 16,
+            "lost": 3,
+            "coarseRayMiss": 3,
+            "coarseRayPresentButOtherNearer": 0,
+            "extraWinner": 0,
+            "diagnosticIoU": 0.8421052631578947
+          },
+          "Eye glint small": {
+            "sourceVisible": 3,
+            "sameWinner": 2,
+            "lost": 1,
+            "coarseRayMiss": 1,
+            "coarseRayPresentButOtherNearer": 0,
+            "extraWinner": 1,
+            "diagnosticIoU": 0.5
+          },
+          "Upper eyelid": {
+            "sourceVisible": 48,
+            "sameWinner": 5,
+            "lost": 43,
+            "coarseRayMiss": 34,
+            "coarseRayPresentButOtherNearer": 9,
+            "extraWinner": 32,
+            "diagnosticIoU": 0.0625
+          }
+        },
+        "allObjectWinnerMismatches": 200
+      },
+      {
+        "view": "holdout-247.5-12.5",
+        "side": 1,
+        "roles": {
+          "Eye socket": {
+            "sourceVisible": 35,
+            "sameWinner": 24,
+            "lost": 11,
+            "coarseRayMiss": 11,
+            "coarseRayPresentButOtherNearer": 0,
+            "extraWinner": 49,
+            "diagnosticIoU": 0.2857142857142857
+          },
+          "Eye white": {
+            "sourceVisible": 167,
+            "sameWinner": 124,
+            "lost": 43,
+            "coarseRayMiss": 22,
+            "coarseRayPresentButOtherNearer": 21,
+            "extraWinner": 62,
+            "diagnosticIoU": 0.5414847161572053
+          },
+          "Amber iris": {
+            "sourceVisible": 133,
+            "sameWinner": 114,
+            "lost": 19,
+            "coarseRayMiss": 12,
+            "coarseRayPresentButOtherNearer": 7,
+            "extraWinner": 7,
+            "diagnosticIoU": 0.8142857142857143
+          },
+          "Pupil": {
+            "sourceVisible": 103,
+            "sameWinner": 99,
+            "lost": 4,
+            "coarseRayMiss": 4,
+            "coarseRayPresentButOtherNearer": 0,
+            "extraWinner": 7,
+            "diagnosticIoU": 0.9
+          },
+          "Eye glint": {
+            "sourceVisible": 19,
+            "sameWinner": 12,
+            "lost": 7,
+            "coarseRayMiss": 7,
+            "coarseRayPresentButOtherNearer": 0,
+            "extraWinner": 0,
+            "diagnosticIoU": 0.631578947368421
+          },
+          "Eye glint small": {
+            "sourceVisible": 3,
+            "sameWinner": 0,
+            "lost": 3,
+            "coarseRayMiss": 3,
+            "coarseRayPresentButOtherNearer": 0,
+            "extraWinner": 0,
+            "diagnosticIoU": 0.0
+          },
+          "Upper eyelid": {
+            "sourceVisible": 37,
+            "sameWinner": 11,
+            "lost": 26,
+            "coarseRayMiss": 24,
+            "coarseRayPresentButOtherNearer": 2,
+            "extraWinner": 83,
+            "diagnosticIoU": 0.09166666666666666
+          }
+        },
+        "allObjectWinnerMismatches": 285
+      },
+      {
+        "view": "holdout-292.5-27.5",
+        "side": -1,
+        "roles": {
+          "Eye socket": {
+            "sourceVisible": 35,
+            "sameWinner": 30,
+            "lost": 5,
+            "coarseRayMiss": 5,
+            "coarseRayPresentButOtherNearer": 0,
+            "extraWinner": 60,
+            "diagnosticIoU": 0.3157894736842105
+          },
+          "Eye white": {
+            "sourceVisible": 168,
+            "sameWinner": 135,
+            "lost": 33,
+            "coarseRayMiss": 21,
+            "coarseRayPresentButOtherNearer": 12,
+            "extraWinner": 67,
+            "diagnosticIoU": 0.574468085106383
+          },
+          "Amber iris": {
+            "sourceVisible": 132,
+            "sameWinner": 115,
+            "lost": 17,
+            "coarseRayMiss": 12,
+            "coarseRayPresentButOtherNearer": 5,
+            "extraWinner": 5,
+            "diagnosticIoU": 0.8394160583941606
+          },
+          "Pupil": {
+            "sourceVisible": 97,
+            "sameWinner": 94,
+            "lost": 3,
+            "coarseRayMiss": 3,
+            "coarseRayPresentButOtherNearer": 0,
+            "extraWinner": 6,
+            "diagnosticIoU": 0.912621359223301
+          },
+          "Eye glint": {
+            "sourceVisible": 21,
+            "sameWinner": 15,
+            "lost": 6,
+            "coarseRayMiss": 6,
+            "coarseRayPresentButOtherNearer": 0,
+            "extraWinner": 0,
+            "diagnosticIoU": 0.7142857142857143
+          },
+          "Eye glint small": {
+            "sourceVisible": 4,
+            "sameWinner": 2,
+            "lost": 2,
+            "coarseRayMiss": 2,
+            "coarseRayPresentButOtherNearer": 0,
+            "extraWinner": 0,
+            "diagnosticIoU": 0.5
+          },
+          "Upper eyelid": {
+            "sourceVisible": 47,
+            "sameWinner": 4,
+            "lost": 43,
+            "coarseRayMiss": 33,
+            "coarseRayPresentButOtherNearer": 10,
+            "extraWinner": 24,
+            "diagnosticIoU": 0.056338028169014086
+          }
+        },
+        "allObjectWinnerMismatches": 225
+      },
+      {
+        "view": "holdout-292.5-27.5",
+        "side": 1,
+        "roles": {
+          "Eye socket": {
+            "sourceVisible": 89,
+            "sameWinner": 51,
+            "lost": 38,
+            "coarseRayMiss": 36,
+            "coarseRayPresentButOtherNearer": 2,
+            "extraWinner": 48,
+            "diagnosticIoU": 0.3722627737226277
+          },
+          "Eye white": {
+            "sourceVisible": 200,
+            "sameWinner": 159,
+            "lost": 41,
+            "coarseRayMiss": 13,
+            "coarseRayPresentButOtherNearer": 28,
+            "extraWinner": 44,
+            "diagnosticIoU": 0.6516393442622951
+          },
+          "Amber iris": {
+            "sourceVisible": 124,
+            "sameWinner": 115,
+            "lost": 9,
+            "coarseRayMiss": 7,
+            "coarseRayPresentButOtherNearer": 2,
+            "extraWinner": 7,
+            "diagnosticIoU": 0.8778625954198473
+          },
+          "Pupil": {
+            "sourceVisible": 103,
+            "sameWinner": 99,
+            "lost": 4,
+            "coarseRayMiss": 4,
+            "coarseRayPresentButOtherNearer": 0,
+            "extraWinner": 8,
+            "diagnosticIoU": 0.8918918918918919
+          },
+          "Eye glint": {
+            "sourceVisible": 21,
+            "sameWinner": 14,
+            "lost": 7,
+            "coarseRayMiss": 7,
+            "coarseRayPresentButOtherNearer": 0,
+            "extraWinner": 0,
+            "diagnosticIoU": 0.6666666666666666
+          },
+          "Eye glint small": {
+            "sourceVisible": 4,
+            "sameWinner": 0,
+            "lost": 4,
+            "coarseRayMiss": 4,
+            "coarseRayPresentButOtherNearer": 0,
+            "extraWinner": 0,
+            "diagnosticIoU": 0.0
+          },
+          "Upper eyelid": {
+            "sourceVisible": 52,
+            "sameWinner": 15,
+            "lost": 37,
+            "coarseRayMiss": 30,
+            "coarseRayPresentButOtherNearer": 7,
+            "extraWinner": 75,
+            "diagnosticIoU": 0.11811023622047244
+          }
+        },
+        "allObjectWinnerMismatches": 249
+      }
+    ],
+    "lid8": [
+      {
+        "view": "front",
+        "side": -1,
+        "roles": {
+          "Eye socket": {
+            "sourceVisible": 35,
+            "sameWinner": 29,
+            "lost": 6,
+            "coarseRayMiss": 5,
+            "coarseRayPresentButOtherNearer": 1,
+            "extraWinner": 49,
+            "diagnosticIoU": 0.34523809523809523
+          },
+          "Eye white": {
+            "sourceVisible": 192,
+            "sameWinner": 160,
+            "lost": 32,
+            "coarseRayMiss": 23,
+            "coarseRayPresentButOtherNearer": 9,
+            "extraWinner": 52,
+            "diagnosticIoU": 0.6557377049180327
+          },
+          "Amber iris": {
+            "sourceVisible": 137,
+            "sameWinner": 121,
+            "lost": 16,
+            "coarseRayMiss": 10,
+            "coarseRayPresentButOtherNearer": 6,
+            "extraWinner": 2,
+            "diagnosticIoU": 0.8705035971223022
+          },
+          "Pupil": {
+            "sourceVisible": 100,
+            "sameWinner": 98,
+            "lost": 2,
+            "coarseRayMiss": 1,
+            "coarseRayPresentButOtherNearer": 1,
+            "extraWinner": 4,
+            "diagnosticIoU": 0.9423076923076923
+          },
+          "Eye glint": {
+            "sourceVisible": 19,
+            "sameWinner": 16,
+            "lost": 3,
+            "coarseRayMiss": 3,
+            "coarseRayPresentButOtherNearer": 0,
+            "extraWinner": 1,
+            "diagnosticIoU": 0.8
+          },
+          "Eye glint small": {
+            "sourceVisible": 3,
+            "sameWinner": 1,
+            "lost": 2,
+            "coarseRayMiss": 2,
+            "coarseRayPresentButOtherNearer": 0,
+            "extraWinner": 1,
+            "diagnosticIoU": 0.25
+          },
+          "Upper eyelid": {
+            "sourceVisible": 46,
+            "sameWinner": 37,
+            "lost": 9,
+            "coarseRayMiss": 9,
+            "coarseRayPresentButOtherNearer": 0,
+            "extraWinner": 20,
+            "diagnosticIoU": 0.5606060606060606
+          }
+        },
+        "allObjectWinnerMismatches": 169
+      },
+      {
+        "view": "front",
+        "side": 1,
+        "roles": {
+          "Eye socket": {
+            "sourceVisible": 50,
+            "sameWinner": 29,
+            "lost": 21,
+            "coarseRayMiss": 21,
+            "coarseRayPresentButOtherNearer": 0,
+            "extraWinner": 51,
+            "diagnosticIoU": 0.2871287128712871
+          },
+          "Eye white": {
+            "sourceVisible": 185,
+            "sameWinner": 155,
+            "lost": 30,
+            "coarseRayMiss": 19,
+            "coarseRayPresentButOtherNearer": 11,
+            "extraWinner": 72,
+            "diagnosticIoU": 0.603112840466926
+          },
+          "Amber iris": {
+            "sourceVisible": 132,
+            "sameWinner": 114,
+            "lost": 18,
+            "coarseRayMiss": 13,
+            "coarseRayPresentButOtherNearer": 5,
+            "extraWinner": 10,
+            "diagnosticIoU": 0.8028169014084507
+          },
+          "Pupil": {
+            "sourceVisible": 109,
+            "sameWinner": 100,
+            "lost": 9,
+            "coarseRayMiss": 8,
+            "coarseRayPresentButOtherNearer": 1,
+            "extraWinner": 6,
+            "diagnosticIoU": 0.8695652173913043
+          },
+          "Eye glint": {
+            "sourceVisible": 19,
+            "sameWinner": 14,
+            "lost": 5,
+            "coarseRayMiss": 5,
+            "coarseRayPresentButOtherNearer": 0,
+            "extraWinner": 1,
+            "diagnosticIoU": 0.7
+          },
+          "Eye glint small": {
+            "sourceVisible": 3,
+            "sameWinner": 0,
+            "lost": 3,
+            "coarseRayMiss": 3,
+            "coarseRayPresentButOtherNearer": 0,
+            "extraWinner": 0,
+            "diagnosticIoU": 0.0
+          },
+          "Upper eyelid": {
+            "sourceVisible": 42,
+            "sameWinner": 36,
+            "lost": 6,
+            "coarseRayMiss": 3,
+            "coarseRayPresentButOtherNearer": 3,
+            "extraWinner": 19,
+            "diagnosticIoU": 0.5901639344262295
+          }
+        },
+        "allObjectWinnerMismatches": 196
+      },
+      {
+        "view": "oblique",
+        "side": -1,
+        "roles": {
+          "Eye socket": {
+            "sourceVisible": 73,
+            "sameWinner": 47,
+            "lost": 26,
+            "coarseRayMiss": 24,
+            "coarseRayPresentButOtherNearer": 2,
+            "extraWinner": 39,
+            "diagnosticIoU": 0.41964285714285715
+          },
+          "Eye white": {
+            "sourceVisible": 214,
+            "sameWinner": 182,
+            "lost": 32,
+            "coarseRayMiss": 20,
+            "coarseRayPresentButOtherNearer": 12,
+            "extraWinner": 39,
+            "diagnosticIoU": 0.7193675889328063
+          },
+          "Amber iris": {
+            "sourceVisible": 135,
+            "sameWinner": 119,
+            "lost": 16,
+            "coarseRayMiss": 12,
+            "coarseRayPresentButOtherNearer": 4,
+            "extraWinner": 5,
+            "diagnosticIoU": 0.85
+          },
+          "Pupil": {
+            "sourceVisible": 102,
+            "sameWinner": 96,
+            "lost": 6,
+            "coarseRayMiss": 5,
+            "coarseRayPresentButOtherNearer": 1,
+            "extraWinner": 6,
+            "diagnosticIoU": 0.8888888888888888
+          },
+          "Eye glint": {
+            "sourceVisible": 19,
+            "sameWinner": 14,
+            "lost": 5,
+            "coarseRayMiss": 5,
+            "coarseRayPresentButOtherNearer": 0,
+            "extraWinner": 1,
+            "diagnosticIoU": 0.7
+          },
+          "Eye glint small": {
+            "sourceVisible": 3,
+            "sameWinner": 2,
+            "lost": 1,
+            "coarseRayMiss": 1,
+            "coarseRayPresentButOtherNearer": 0,
+            "extraWinner": 0,
+            "diagnosticIoU": 0.6666666666666666
+          },
+          "Upper eyelid": {
+            "sourceVisible": 51,
+            "sameWinner": 40,
+            "lost": 11,
+            "coarseRayMiss": 10,
+            "coarseRayPresentButOtherNearer": 1,
+            "extraWinner": 19,
+            "diagnosticIoU": 0.5714285714285714
+          }
+        },
+        "allObjectWinnerMismatches": 161
+      },
+      {
+        "view": "oblique",
+        "side": 1,
+        "roles": {
+          "Eye socket": {
+            "sourceVisible": 24,
+            "sameWinner": 18,
+            "lost": 6,
+            "coarseRayMiss": 6,
+            "coarseRayPresentButOtherNearer": 0,
+            "extraWinner": 40,
+            "diagnosticIoU": 0.28125
+          },
+          "Eye white": {
+            "sourceVisible": 159,
+            "sameWinner": 132,
+            "lost": 27,
+            "coarseRayMiss": 21,
+            "coarseRayPresentButOtherNearer": 6,
+            "extraWinner": 71,
+            "diagnosticIoU": 0.5739130434782609
+          },
+          "Amber iris": {
+            "sourceVisible": 129,
+            "sameWinner": 111,
+            "lost": 18,
+            "coarseRayMiss": 11,
+            "coarseRayPresentButOtherNearer": 7,
+            "extraWinner": 7,
+            "diagnosticIoU": 0.8161764705882353
+          },
+          "Pupil": {
+            "sourceVisible": 102,
+            "sameWinner": 97,
+            "lost": 5,
+            "coarseRayMiss": 5,
+            "coarseRayPresentButOtherNearer": 0,
+            "extraWinner": 5,
+            "diagnosticIoU": 0.9065420560747663
+          },
+          "Eye glint": {
+            "sourceVisible": 19,
+            "sameWinner": 14,
+            "lost": 5,
+            "coarseRayMiss": 5,
+            "coarseRayPresentButOtherNearer": 0,
+            "extraWinner": 0,
+            "diagnosticIoU": 0.7368421052631579
+          },
+          "Eye glint small": {
+            "sourceVisible": 3,
+            "sameWinner": 1,
+            "lost": 2,
+            "coarseRayMiss": 2,
+            "coarseRayPresentButOtherNearer": 0,
+            "extraWinner": 0,
+            "diagnosticIoU": 0.3333333333333333
+          },
+          "Upper eyelid": {
+            "sourceVisible": 37,
+            "sameWinner": 29,
+            "lost": 8,
+            "coarseRayMiss": 6,
+            "coarseRayPresentButOtherNearer": 2,
+            "extraWinner": 27,
+            "diagnosticIoU": 0.453125
+          }
+        },
+        "allObjectWinnerMismatches": 210
+      },
+      {
+        "view": "holdout-247.5-12.5",
+        "side": -1,
+        "roles": {
+          "Eye socket": {
+            "sourceVisible": 66,
+            "sameWinner": 44,
+            "lost": 22,
+            "coarseRayMiss": 21,
+            "coarseRayPresentButOtherNearer": 1,
+            "extraWinner": 37,
+            "diagnosticIoU": 0.42718446601941745
+          },
+          "Eye white": {
+            "sourceVisible": 212,
+            "sameWinner": 181,
+            "lost": 31,
+            "coarseRayMiss": 20,
+            "coarseRayPresentButOtherNearer": 11,
+            "extraWinner": 40,
+            "diagnosticIoU": 0.7182539682539683
+          },
+          "Amber iris": {
+            "sourceVisible": 134,
+            "sameWinner": 117,
+            "lost": 17,
+            "coarseRayMiss": 12,
+            "coarseRayPresentButOtherNearer": 5,
+            "extraWinner": 5,
+            "diagnosticIoU": 0.841726618705036
+          },
+          "Pupil": {
+            "sourceVisible": 100,
+            "sameWinner": 94,
+            "lost": 6,
+            "coarseRayMiss": 5,
+            "coarseRayPresentButOtherNearer": 1,
+            "extraWinner": 4,
+            "diagnosticIoU": 0.9038461538461539
+          },
+          "Eye glint": {
+            "sourceVisible": 19,
+            "sameWinner": 16,
+            "lost": 3,
+            "coarseRayMiss": 3,
+            "coarseRayPresentButOtherNearer": 0,
+            "extraWinner": 0,
+            "diagnosticIoU": 0.8421052631578947
+          },
+          "Eye glint small": {
+            "sourceVisible": 3,
+            "sameWinner": 2,
+            "lost": 1,
+            "coarseRayMiss": 1,
+            "coarseRayPresentButOtherNearer": 0,
+            "extraWinner": 1,
+            "diagnosticIoU": 0.5
+          },
+          "Upper eyelid": {
+            "sourceVisible": 48,
+            "sameWinner": 41,
+            "lost": 7,
+            "coarseRayMiss": 6,
+            "coarseRayPresentButOtherNearer": 1,
+            "extraWinner": 21,
+            "diagnosticIoU": 0.5942028985507246
+          }
+        },
+        "allObjectWinnerMismatches": 157
+      },
+      {
+        "view": "holdout-247.5-12.5",
+        "side": 1,
+        "roles": {
+          "Eye socket": {
+            "sourceVisible": 35,
+            "sameWinner": 24,
+            "lost": 11,
+            "coarseRayMiss": 11,
+            "coarseRayPresentButOtherNearer": 0,
+            "extraWinner": 37,
+            "diagnosticIoU": 0.3333333333333333
+          },
+          "Eye white": {
+            "sourceVisible": 167,
+            "sameWinner": 138,
+            "lost": 29,
+            "coarseRayMiss": 22,
+            "coarseRayPresentButOtherNearer": 7,
+            "extraWinner": 75,
+            "diagnosticIoU": 0.5702479338842975
+          },
+          "Amber iris": {
+            "sourceVisible": 133,
+            "sameWinner": 114,
+            "lost": 19,
+            "coarseRayMiss": 12,
+            "coarseRayPresentButOtherNearer": 7,
+            "extraWinner": 7,
+            "diagnosticIoU": 0.8142857142857143
+          },
+          "Pupil": {
+            "sourceVisible": 103,
+            "sameWinner": 99,
+            "lost": 4,
+            "coarseRayMiss": 4,
+            "coarseRayPresentButOtherNearer": 0,
+            "extraWinner": 7,
+            "diagnosticIoU": 0.9
+          },
+          "Eye glint": {
+            "sourceVisible": 19,
+            "sameWinner": 12,
+            "lost": 7,
+            "coarseRayMiss": 7,
+            "coarseRayPresentButOtherNearer": 0,
+            "extraWinner": 0,
+            "diagnosticIoU": 0.631578947368421
+          },
+          "Eye glint small": {
+            "sourceVisible": 3,
+            "sameWinner": 0,
+            "lost": 3,
+            "coarseRayMiss": 3,
+            "coarseRayPresentButOtherNearer": 0,
+            "extraWinner": 0,
+            "diagnosticIoU": 0.0
+          },
+          "Upper eyelid": {
+            "sourceVisible": 37,
+            "sameWinner": 34,
+            "lost": 3,
+            "coarseRayMiss": 1,
+            "coarseRayPresentButOtherNearer": 2,
+            "extraWinner": 27,
+            "diagnosticIoU": 0.53125
+          }
+        },
+        "allObjectWinnerMismatches": 228
+      },
+      {
+        "view": "holdout-292.5-27.5",
+        "side": -1,
+        "roles": {
+          "Eye socket": {
+            "sourceVisible": 35,
+            "sameWinner": 28,
+            "lost": 7,
+            "coarseRayMiss": 5,
+            "coarseRayPresentButOtherNearer": 2,
+            "extraWinner": 33,
+            "diagnosticIoU": 0.4117647058823529
+          },
+          "Eye white": {
+            "sourceVisible": 168,
+            "sameWinner": 137,
+            "lost": 31,
+            "coarseRayMiss": 21,
+            "coarseRayPresentButOtherNearer": 10,
+            "extraWinner": 64,
+            "diagnosticIoU": 0.5905172413793104
+          },
+          "Amber iris": {
+            "sourceVisible": 132,
+            "sameWinner": 115,
+            "lost": 17,
+            "coarseRayMiss": 12,
+            "coarseRayPresentButOtherNearer": 5,
+            "extraWinner": 5,
+            "diagnosticIoU": 0.8394160583941606
+          },
+          "Pupil": {
+            "sourceVisible": 97,
+            "sameWinner": 94,
+            "lost": 3,
+            "coarseRayMiss": 3,
+            "coarseRayPresentButOtherNearer": 0,
+            "extraWinner": 6,
+            "diagnosticIoU": 0.912621359223301
+          },
+          "Eye glint": {
+            "sourceVisible": 21,
+            "sameWinner": 15,
+            "lost": 6,
+            "coarseRayMiss": 6,
+            "coarseRayPresentButOtherNearer": 0,
+            "extraWinner": 0,
+            "diagnosticIoU": 0.7142857142857143
+          },
+          "Eye glint small": {
+            "sourceVisible": 4,
+            "sameWinner": 2,
+            "lost": 2,
+            "coarseRayMiss": 2,
+            "coarseRayPresentButOtherNearer": 0,
+            "extraWinner": 0,
+            "diagnosticIoU": 0.5
+          },
+          "Upper eyelid": {
+            "sourceVisible": 47,
+            "sameWinner": 40,
+            "lost": 7,
+            "coarseRayMiss": 6,
+            "coarseRayPresentButOtherNearer": 1,
+            "extraWinner": 22,
+            "diagnosticIoU": 0.5797101449275363
+          }
+        },
+        "allObjectWinnerMismatches": 194
+      },
+      {
+        "view": "holdout-292.5-27.5",
+        "side": 1,
+        "roles": {
+          "Eye socket": {
+            "sourceVisible": 89,
+            "sameWinner": 51,
+            "lost": 38,
+            "coarseRayMiss": 36,
+            "coarseRayPresentButOtherNearer": 2,
+            "extraWinner": 38,
+            "diagnosticIoU": 0.4015748031496063
+          },
+          "Eye white": {
+            "sourceVisible": 200,
+            "sameWinner": 176,
+            "lost": 24,
+            "coarseRayMiss": 13,
+            "coarseRayPresentButOtherNearer": 11,
+            "extraWinner": 44,
+            "diagnosticIoU": 0.7213114754098361
+          },
+          "Amber iris": {
+            "sourceVisible": 124,
+            "sameWinner": 115,
+            "lost": 9,
+            "coarseRayMiss": 7,
+            "coarseRayPresentButOtherNearer": 2,
+            "extraWinner": 7,
+            "diagnosticIoU": 0.8778625954198473
+          },
+          "Pupil": {
+            "sourceVisible": 103,
+            "sameWinner": 99,
+            "lost": 4,
+            "coarseRayMiss": 4,
+            "coarseRayPresentButOtherNearer": 0,
+            "extraWinner": 8,
+            "diagnosticIoU": 0.8918918918918919
+          },
+          "Eye glint": {
+            "sourceVisible": 21,
+            "sameWinner": 14,
+            "lost": 7,
+            "coarseRayMiss": 7,
+            "coarseRayPresentButOtherNearer": 0,
+            "extraWinner": 0,
+            "diagnosticIoU": 0.6666666666666666
+          },
+          "Eye glint small": {
+            "sourceVisible": 4,
+            "sameWinner": 0,
+            "lost": 4,
+            "coarseRayMiss": 4,
+            "coarseRayPresentButOtherNearer": 0,
+            "extraWinner": 0,
+            "diagnosticIoU": 0.0
+          },
+          "Upper eyelid": {
+            "sourceVisible": 52,
+            "sameWinner": 44,
+            "lost": 8,
+            "coarseRayMiss": 3,
+            "coarseRayPresentButOtherNearer": 5,
+            "extraWinner": 19,
+            "diagnosticIoU": 0.6197183098591549
+          }
+        },
+        "allObjectWinnerMismatches": 188
+      }
+    ],
+    "lid9": [
+      {
+        "view": "front",
+        "side": -1,
+        "roles": {
+          "Eye socket": {
+            "sourceVisible": 35,
+            "sameWinner": 29,
+            "lost": 6,
+            "coarseRayMiss": 5,
+            "coarseRayPresentButOtherNearer": 1,
+            "extraWinner": 47,
+            "diagnosticIoU": 0.35365853658536583
+          },
+          "Eye white": {
+            "sourceVisible": 192,
+            "sameWinner": 160,
+            "lost": 32,
+            "coarseRayMiss": 23,
+            "coarseRayPresentButOtherNearer": 9,
+            "extraWinner": 52,
+            "diagnosticIoU": 0.6557377049180327
+          },
+          "Amber iris": {
+            "sourceVisible": 137,
+            "sameWinner": 121,
+            "lost": 16,
+            "coarseRayMiss": 10,
+            "coarseRayPresentButOtherNearer": 6,
+            "extraWinner": 2,
+            "diagnosticIoU": 0.8705035971223022
+          },
+          "Pupil": {
+            "sourceVisible": 100,
+            "sameWinner": 98,
+            "lost": 2,
+            "coarseRayMiss": 1,
+            "coarseRayPresentButOtherNearer": 1,
+            "extraWinner": 4,
+            "diagnosticIoU": 0.9423076923076923
+          },
+          "Eye glint": {
+            "sourceVisible": 19,
+            "sameWinner": 16,
+            "lost": 3,
+            "coarseRayMiss": 3,
+            "coarseRayPresentButOtherNearer": 0,
+            "extraWinner": 1,
+            "diagnosticIoU": 0.8
+          },
+          "Eye glint small": {
+            "sourceVisible": 3,
+            "sameWinner": 1,
+            "lost": 2,
+            "coarseRayMiss": 2,
+            "coarseRayPresentButOtherNearer": 0,
+            "extraWinner": 1,
+            "diagnosticIoU": 0.25
+          },
+          "Upper eyelid": {
+            "sourceVisible": 46,
+            "sameWinner": 42,
+            "lost": 4,
+            "coarseRayMiss": 4,
+            "coarseRayPresentButOtherNearer": 0,
+            "extraWinner": 18,
+            "diagnosticIoU": 0.65625
+          }
+        },
+        "allObjectWinnerMismatches": 164
+      },
+      {
+        "view": "front",
+        "side": 1,
+        "roles": {
+          "Eye socket": {
+            "sourceVisible": 50,
+            "sameWinner": 29,
+            "lost": 21,
+            "coarseRayMiss": 21,
+            "coarseRayPresentButOtherNearer": 0,
+            "extraWinner": 50,
+            "diagnosticIoU": 0.29
+          },
+          "Eye white": {
+            "sourceVisible": 185,
+            "sameWinner": 155,
+            "lost": 30,
+            "coarseRayMiss": 19,
+            "coarseRayPresentButOtherNearer": 11,
+            "extraWinner": 72,
+            "diagnosticIoU": 0.603112840466926
+          },
+          "Amber iris": {
+            "sourceVisible": 132,
+            "sameWinner": 114,
+            "lost": 18,
+            "coarseRayMiss": 13,
+            "coarseRayPresentButOtherNearer": 5,
+            "extraWinner": 10,
+            "diagnosticIoU": 0.8028169014084507
+          },
+          "Pupil": {
+            "sourceVisible": 109,
+            "sameWinner": 100,
+            "lost": 9,
+            "coarseRayMiss": 8,
+            "coarseRayPresentButOtherNearer": 1,
+            "extraWinner": 6,
+            "diagnosticIoU": 0.8695652173913043
+          },
+          "Eye glint": {
+            "sourceVisible": 19,
+            "sameWinner": 14,
+            "lost": 5,
+            "coarseRayMiss": 5,
+            "coarseRayPresentButOtherNearer": 0,
+            "extraWinner": 1,
+            "diagnosticIoU": 0.7
+          },
+          "Eye glint small": {
+            "sourceVisible": 3,
+            "sameWinner": 0,
+            "lost": 3,
+            "coarseRayMiss": 3,
+            "coarseRayPresentButOtherNearer": 0,
+            "extraWinner": 0,
+            "diagnosticIoU": 0.0
+          },
+          "Upper eyelid": {
+            "sourceVisible": 42,
+            "sameWinner": 36,
+            "lost": 6,
+            "coarseRayMiss": 3,
+            "coarseRayPresentButOtherNearer": 3,
+            "extraWinner": 23,
+            "diagnosticIoU": 0.5538461538461539
+          }
+        },
+        "allObjectWinnerMismatches": 199
+      },
+      {
+        "view": "oblique",
+        "side": -1,
+        "roles": {
+          "Eye socket": {
+            "sourceVisible": 73,
+            "sameWinner": 47,
+            "lost": 26,
+            "coarseRayMiss": 24,
+            "coarseRayPresentButOtherNearer": 2,
+            "extraWinner": 38,
+            "diagnosticIoU": 0.42342342342342343
+          },
+          "Eye white": {
+            "sourceVisible": 214,
+            "sameWinner": 182,
+            "lost": 32,
+            "coarseRayMiss": 20,
+            "coarseRayPresentButOtherNearer": 12,
+            "extraWinner": 39,
+            "diagnosticIoU": 0.7193675889328063
+          },
+          "Amber iris": {
+            "sourceVisible": 135,
+            "sameWinner": 119,
+            "lost": 16,
+            "coarseRayMiss": 12,
+            "coarseRayPresentButOtherNearer": 4,
+            "extraWinner": 5,
+            "diagnosticIoU": 0.85
+          },
+          "Pupil": {
+            "sourceVisible": 102,
+            "sameWinner": 96,
+            "lost": 6,
+            "coarseRayMiss": 5,
+            "coarseRayPresentButOtherNearer": 1,
+            "extraWinner": 6,
+            "diagnosticIoU": 0.8888888888888888
+          },
+          "Eye glint": {
+            "sourceVisible": 19,
+            "sameWinner": 14,
+            "lost": 5,
+            "coarseRayMiss": 5,
+            "coarseRayPresentButOtherNearer": 0,
+            "extraWinner": 1,
+            "diagnosticIoU": 0.7
+          },
+          "Eye glint small": {
+            "sourceVisible": 3,
+            "sameWinner": 2,
+            "lost": 1,
+            "coarseRayMiss": 1,
+            "coarseRayPresentButOtherNearer": 0,
+            "extraWinner": 0,
+            "diagnosticIoU": 0.6666666666666666
+          },
+          "Upper eyelid": {
+            "sourceVisible": 51,
+            "sameWinner": 43,
+            "lost": 8,
+            "coarseRayMiss": 7,
+            "coarseRayPresentButOtherNearer": 1,
+            "extraWinner": 17,
+            "diagnosticIoU": 0.6323529411764706
+          }
+        },
+        "allObjectWinnerMismatches": 158
+      },
+      {
+        "view": "oblique",
+        "side": 1,
+        "roles": {
+          "Eye socket": {
+            "sourceVisible": 24,
+            "sameWinner": 18,
+            "lost": 6,
+            "coarseRayMiss": 6,
+            "coarseRayPresentButOtherNearer": 0,
+            "extraWinner": 41,
+            "diagnosticIoU": 0.27692307692307694
+          },
+          "Eye white": {
+            "sourceVisible": 159,
+            "sameWinner": 132,
+            "lost": 27,
+            "coarseRayMiss": 21,
+            "coarseRayPresentButOtherNearer": 6,
+            "extraWinner": 71,
+            "diagnosticIoU": 0.5739130434782609
+          },
+          "Amber iris": {
+            "sourceVisible": 129,
+            "sameWinner": 111,
+            "lost": 18,
+            "coarseRayMiss": 11,
+            "coarseRayPresentButOtherNearer": 7,
+            "extraWinner": 7,
+            "diagnosticIoU": 0.8161764705882353
+          },
+          "Pupil": {
+            "sourceVisible": 102,
+            "sameWinner": 97,
+            "lost": 5,
+            "coarseRayMiss": 5,
+            "coarseRayPresentButOtherNearer": 0,
+            "extraWinner": 5,
+            "diagnosticIoU": 0.9065420560747663
+          },
+          "Eye glint": {
+            "sourceVisible": 19,
+            "sameWinner": 14,
+            "lost": 5,
+            "coarseRayMiss": 5,
+            "coarseRayPresentButOtherNearer": 0,
+            "extraWinner": 0,
+            "diagnosticIoU": 0.7368421052631579
+          },
+          "Eye glint small": {
+            "sourceVisible": 3,
+            "sameWinner": 1,
+            "lost": 2,
+            "coarseRayMiss": 2,
+            "coarseRayPresentButOtherNearer": 0,
+            "extraWinner": 0,
+            "diagnosticIoU": 0.3333333333333333
+          },
+          "Upper eyelid": {
+            "sourceVisible": 37,
+            "sameWinner": 29,
+            "lost": 8,
+            "coarseRayMiss": 6,
+            "coarseRayPresentButOtherNearer": 2,
+            "extraWinner": 28,
+            "diagnosticIoU": 0.4461538461538462
+          }
+        },
+        "allObjectWinnerMismatches": 212
+      },
+      {
+        "view": "holdout-247.5-12.5",
+        "side": -1,
+        "roles": {
+          "Eye socket": {
+            "sourceVisible": 66,
+            "sameWinner": 44,
+            "lost": 22,
+            "coarseRayMiss": 21,
+            "coarseRayPresentButOtherNearer": 1,
+            "extraWinner": 36,
+            "diagnosticIoU": 0.43137254901960786
+          },
+          "Eye white": {
+            "sourceVisible": 212,
+            "sameWinner": 181,
+            "lost": 31,
+            "coarseRayMiss": 20,
+            "coarseRayPresentButOtherNearer": 11,
+            "extraWinner": 40,
+            "diagnosticIoU": 0.7182539682539683
+          },
+          "Amber iris": {
+            "sourceVisible": 134,
+            "sameWinner": 117,
+            "lost": 17,
+            "coarseRayMiss": 12,
+            "coarseRayPresentButOtherNearer": 5,
+            "extraWinner": 5,
+            "diagnosticIoU": 0.841726618705036
+          },
+          "Pupil": {
+            "sourceVisible": 100,
+            "sameWinner": 94,
+            "lost": 6,
+            "coarseRayMiss": 5,
+            "coarseRayPresentButOtherNearer": 1,
+            "extraWinner": 4,
+            "diagnosticIoU": 0.9038461538461539
+          },
+          "Eye glint": {
+            "sourceVisible": 19,
+            "sameWinner": 16,
+            "lost": 3,
+            "coarseRayMiss": 3,
+            "coarseRayPresentButOtherNearer": 0,
+            "extraWinner": 0,
+            "diagnosticIoU": 0.8421052631578947
+          },
+          "Eye glint small": {
+            "sourceVisible": 3,
+            "sameWinner": 2,
+            "lost": 1,
+            "coarseRayMiss": 1,
+            "coarseRayPresentButOtherNearer": 0,
+            "extraWinner": 1,
+            "diagnosticIoU": 0.5
+          },
+          "Upper eyelid": {
+            "sourceVisible": 48,
+            "sameWinner": 45,
+            "lost": 3,
+            "coarseRayMiss": 3,
+            "coarseRayPresentButOtherNearer": 0,
+            "extraWinner": 18,
+            "diagnosticIoU": 0.6818181818181818
+          }
+        },
+        "allObjectWinnerMismatches": 153
+      },
+      {
+        "view": "holdout-247.5-12.5",
+        "side": 1,
+        "roles": {
+          "Eye socket": {
+            "sourceVisible": 35,
+            "sameWinner": 24,
+            "lost": 11,
+            "coarseRayMiss": 11,
+            "coarseRayPresentButOtherNearer": 0,
+            "extraWinner": 36,
+            "diagnosticIoU": 0.3380281690140845
+          },
+          "Eye white": {
+            "sourceVisible": 167,
+            "sameWinner": 138,
+            "lost": 29,
+            "coarseRayMiss": 22,
+            "coarseRayPresentButOtherNearer": 7,
+            "extraWinner": 76,
+            "diagnosticIoU": 0.5679012345679012
+          },
+          "Amber iris": {
+            "sourceVisible": 133,
+            "sameWinner": 114,
+            "lost": 19,
+            "coarseRayMiss": 12,
+            "coarseRayPresentButOtherNearer": 7,
+            "extraWinner": 7,
+            "diagnosticIoU": 0.8142857142857143
+          },
+          "Pupil": {
+            "sourceVisible": 103,
+            "sameWinner": 99,
+            "lost": 4,
+            "coarseRayMiss": 4,
+            "coarseRayPresentButOtherNearer": 0,
+            "extraWinner": 7,
+            "diagnosticIoU": 0.9
+          },
+          "Eye glint": {
+            "sourceVisible": 19,
+            "sameWinner": 12,
+            "lost": 7,
+            "coarseRayMiss": 7,
+            "coarseRayPresentButOtherNearer": 0,
+            "extraWinner": 0,
+            "diagnosticIoU": 0.631578947368421
+          },
+          "Eye glint small": {
+            "sourceVisible": 3,
+            "sameWinner": 0,
+            "lost": 3,
+            "coarseRayMiss": 3,
+            "coarseRayPresentButOtherNearer": 0,
+            "extraWinner": 0,
+            "diagnosticIoU": 0.0
+          },
+          "Upper eyelid": {
+            "sourceVisible": 37,
+            "sameWinner": 34,
+            "lost": 3,
+            "coarseRayMiss": 1,
+            "coarseRayPresentButOtherNearer": 2,
+            "extraWinner": 27,
+            "diagnosticIoU": 0.53125
+          }
+        },
+        "allObjectWinnerMismatches": 228
+      },
+      {
+        "view": "holdout-292.5-27.5",
+        "side": -1,
+        "roles": {
+          "Eye socket": {
+            "sourceVisible": 35,
+            "sameWinner": 28,
+            "lost": 7,
+            "coarseRayMiss": 5,
+            "coarseRayPresentButOtherNearer": 2,
+            "extraWinner": 31,
+            "diagnosticIoU": 0.42424242424242425
+          },
+          "Eye white": {
+            "sourceVisible": 168,
+            "sameWinner": 137,
+            "lost": 31,
+            "coarseRayMiss": 21,
+            "coarseRayPresentButOtherNearer": 10,
+            "extraWinner": 64,
+            "diagnosticIoU": 0.5905172413793104
+          },
+          "Amber iris": {
+            "sourceVisible": 132,
+            "sameWinner": 115,
+            "lost": 17,
+            "coarseRayMiss": 12,
+            "coarseRayPresentButOtherNearer": 5,
+            "extraWinner": 5,
+            "diagnosticIoU": 0.8394160583941606
+          },
+          "Pupil": {
+            "sourceVisible": 97,
+            "sameWinner": 94,
+            "lost": 3,
+            "coarseRayMiss": 3,
+            "coarseRayPresentButOtherNearer": 0,
+            "extraWinner": 6,
+            "diagnosticIoU": 0.912621359223301
+          },
+          "Eye glint": {
+            "sourceVisible": 21,
+            "sameWinner": 15,
+            "lost": 6,
+            "coarseRayMiss": 6,
+            "coarseRayPresentButOtherNearer": 0,
+            "extraWinner": 0,
+            "diagnosticIoU": 0.7142857142857143
+          },
+          "Eye glint small": {
+            "sourceVisible": 4,
+            "sameWinner": 2,
+            "lost": 2,
+            "coarseRayMiss": 2,
+            "coarseRayPresentButOtherNearer": 0,
+            "extraWinner": 0,
+            "diagnosticIoU": 0.5
+          },
+          "Upper eyelid": {
+            "sourceVisible": 47,
+            "sameWinner": 44,
+            "lost": 3,
+            "coarseRayMiss": 2,
+            "coarseRayPresentButOtherNearer": 1,
+            "extraWinner": 20,
+            "diagnosticIoU": 0.6567164179104478
+          }
+        },
+        "allObjectWinnerMismatches": 190
+      },
+      {
+        "view": "holdout-292.5-27.5",
+        "side": 1,
+        "roles": {
+          "Eye socket": {
+            "sourceVisible": 89,
+            "sameWinner": 51,
+            "lost": 38,
+            "coarseRayMiss": 36,
+            "coarseRayPresentButOtherNearer": 2,
+            "extraWinner": 37,
+            "diagnosticIoU": 0.40476190476190477
+          },
+          "Eye white": {
+            "sourceVisible": 200,
+            "sameWinner": 176,
+            "lost": 24,
+            "coarseRayMiss": 13,
+            "coarseRayPresentButOtherNearer": 11,
+            "extraWinner": 44,
+            "diagnosticIoU": 0.7213114754098361
+          },
+          "Amber iris": {
+            "sourceVisible": 124,
+            "sameWinner": 115,
+            "lost": 9,
+            "coarseRayMiss": 7,
+            "coarseRayPresentButOtherNearer": 2,
+            "extraWinner": 7,
+            "diagnosticIoU": 0.8778625954198473
+          },
+          "Pupil": {
+            "sourceVisible": 103,
+            "sameWinner": 99,
+            "lost": 4,
+            "coarseRayMiss": 4,
+            "coarseRayPresentButOtherNearer": 0,
+            "extraWinner": 8,
+            "diagnosticIoU": 0.8918918918918919
+          },
+          "Eye glint": {
+            "sourceVisible": 21,
+            "sameWinner": 14,
+            "lost": 7,
+            "coarseRayMiss": 7,
+            "coarseRayPresentButOtherNearer": 0,
+            "extraWinner": 0,
+            "diagnosticIoU": 0.6666666666666666
+          },
+          "Eye glint small": {
+            "sourceVisible": 4,
+            "sameWinner": 0,
+            "lost": 4,
+            "coarseRayMiss": 4,
+            "coarseRayPresentButOtherNearer": 0,
+            "extraWinner": 0,
+            "diagnosticIoU": 0.0
+          },
+          "Upper eyelid": {
+            "sourceVisible": 52,
+            "sameWinner": 44,
+            "lost": 8,
+            "coarseRayMiss": 3,
+            "coarseRayPresentButOtherNearer": 5,
+            "extraWinner": 21,
+            "diagnosticIoU": 0.6027397260273972
+          }
+        },
+        "allObjectWinnerMismatches": 189
+      }
+    ]
+  },
+  "limitations": [
+    "Historical holdout labels are retained only as names; all four views are seen validation.",
+    "Diagnostic IoU is role winner TP/(TP+FP+FN) on each original source-component bbox grid; not formal RGB/lighting score or statistical confidence.",
+    "White winner improvements can coexist with false positives; lid9 near/far-view overcoverage and remaining misses must be retained.",
+    "This audit recomputes aggregation from raw recorded BVH intersections, not new independent geometry raycasts."
+  ]
+}

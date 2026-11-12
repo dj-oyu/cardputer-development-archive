@@ -1,0 +1,151 @@
+{
+  "decision": "PASS independent aggregate audit of saved exact-public-head10runs/23jobs,6target proofs,unchanged reviewed source trees and completed local host receipts; CI only, hardware acceptance false",
+  "reviewed_utc": "2026-10-20T02:32:57.125691+00:00",
+  "total_runs": 10,
+  "total_jobs": 23,
+  "all_completed_success": true,
+  "variants": {
+    "baseline": {
+      "head": "dc2c5e044429a4904e91564aa7f9cb30d7d4cbbb",
+      "tree": "d72a737240d48def898899bf6dc71e0ac627c7f8",
+      "pr": 25,
+      "local_clean": true,
+      "reviewed_10_file_hashes_unchanged": true,
+      "run_count": 3,
+      "job_count": 7,
+      "all_completed_success": true,
+      "run_ids": [
+        39357891549,
+        39357891582,
+        39357891548
+      ],
+      "job_ids": [
+        118416859566,
+        118416859761,
+        118416860212,
+        118416860534,
+        118416860637,
+        118416859232,
+        118416859649
+      ],
+      "same_tree_local_16_host_checks_pass": true,
+      "workflow_definitions_unchanged": true,
+      "not_triggered_path_filters": [
+        "session-dispatch.yml",
+        "minimp3-submodule.yml"
+      ],
+      "auxiliary_not_counted_as_PASS": true
+    },
+    "native": {
+      "head": "3fafcadbd72ecbd0d799cbe9d29f037ff62c05d5",
+      "tree": "b3de719ac438d8d3373a2c34786bc35c46e9200e",
+      "pr": 26,
+      "local_clean": true,
+      "reviewed_10_file_hashes_unchanged": true,
+      "run_count": 3,
+      "job_count": 7,
+      "all_completed_success": true,
+      "run_ids": [
+        39357897852,
+        39357897838,
+        39357897943
+      ],
+      "job_ids": [
+        118416879359,
+        118416879551,
+        118416879188,
+        118416879464,
+        118416879479,
+        118416879801,
+        118416879938
+      ],
+      "same_tree_local_16_host_checks_pass": true,
+      "workflow_definitions_unchanged": true,
+      "not_triggered_path_filters": [
+        "session-dispatch.yml",
+        "minimp3-submodule.yml"
+      ],
+      "auxiliary_not_counted_as_PASS": true
+    },
+    "batch": {
+      "head": "711f94fa91c6e0d6ba7bc00def75ad686b724c7d",
+      "tree": "160205ec7e435a6592378d94209a800c02ba2c91",
+      "pr": 27,
+      "local_clean": true,
+      "reviewed_10_file_hashes_unchanged": true,
+      "run_count": 4,
+      "job_count": 9,
+      "all_completed_success": true,
+      "run_ids": [
+        39357903207,
+        39357903225,
+        39357903055,
+        39357903191
+      ],
+      "job_ids": [
+        118416895810,
+        118416896012,
+        118416896089,
+        118416896407,
+        118416896501,
+        118416895801,
+        118416896045,
+        118416895681,
+        118416895939
+      ],
+      "same_tree_local_16_host_checks_pass": true,
+      "workflow_definitions_unchanged": true,
+      "not_triggered_path_filters": [
+        "session-dispatch.yml",
+        "minimp3-submodule.yml"
+      ],
+      "auxiliary_not_counted_as_PASS": true
+    }
+  },
+  "target_proofs_count": 6,
+  "target_log_hashes_match_prior_independent_reparse": true,
+  "latest_and_final_job_metadata_identical": true,
+  "local_host_checks": 48,
+  "extra_batch_normal_runner_oracle_pass": true,
+  "hardware_accepted": false,
+  "prior_pending_status_resolved": true,
+  "metadata_scope": "Saved final run/job metadata, no live API re-query. CI-JOBS-LATEST now mirrors normalized CI-JOBS-FINAL list; it is not described as an unmodified raw API envelope.",
+  "artifact_limits": "Current derby-detail.yml upload excludes build_detail BIN and ELF bodies. Its JSON/map/txt/sdkconfig/SHA/.su archives do not preserve those bodies. Separate fixed-firmware build_fixed archives include BIN/ELF but cannot be assumed byte-identical to build_detail ON.",
+  "remaining_blockers": [
+    {
+      "action": "Download separate fixed-firmware ZIP via tool-issued URL",
+      "target": "baseline artifact12236305882,10422412B",
+      "status": "failed; known no bytes saved; not denied or uncertain",
+      "reason": "CONNECT tunnel proxy503",
+      "completed": "source/patch/bundle,48host checks plus runner oracle,23CI success metadata,6target logs/proofs and archive metadata retained",
+      "remaining": "offline BIN/ELF body verification unavailable;6build_detail bodies excluded from upload paths"
+    },
+    {
+      "action": "establish corrected real-device startup/OOM resolution or performance",
+      "target": "controller-corrected3heads",
+      "status": "unverified; hardware halted; no device action attempted",
+      "reason": "CI/host do not prove actual shared heap/runtime stack behavior",
+      "completed": "host and targetCI verification only; oldbatch failure remains failed",
+      "remaining": "separate parent-authorized device gates; no permission implied by this audit"
+    }
+  ],
+  "resource_scope": "DD static2304B ON/0B OFF; max2992B per-function compiler frame across9C, not call-chain/runtime highwater/physical heap proof.",
+  "operations": {
+    "local_files_and_read_only_Git_only": true,
+    "API_MCP_USB_device_reset_serial_flash": false,
+    "repo_changes": false,
+    "tests_or_rebuilds_repeated": false
+  },
+  "evidence_sha256": {
+    "/workspace/derby-evidence/controller-split-20261020/CI-RUNS-FINAL.json": "050901d099d2ae25e57fcff51d368d9a563387daba180a8eb24c77920ed3fe14",
+    "/workspace/derby-evidence/controller-split-20261020/CI-JOBS-FINAL.json": "767f01cceca86b3cea3a1193c3d7cd69830d01b54f55c4a3c4e727e3f2557be0",
+    "/workspace/derby-evidence/controller-split-20261020/CI-FINAL-SUMMARY.json": "221b2d9a89f994aa6c5c97e15f60a0394c410ad6e90bdfa20d4ca7d48a667bfa",
+    "/workspace/derby-evidence/controller-split-20261020/CI-JOBS-LATEST.json": "767f01cceca86b3cea3a1193c3d7cd69830d01b54f55c4a3c4e727e3f2557be0",
+    "/workspace/derby-evidence/controller-split-20261020/CI-TARGET-PROOFS.json": "173c24dbaf360086e0cfdfc499c2c454d44993288d112ea03a8a82c5a152c235",
+    "/workspace/derby-evidence/controller-split-20261020/PUBLICATION.json": "85e6e8c7aff65e960f89b12e7594c53947a4b8561fb0fc3a89514c73e001b901",
+    "/workspace/derby-evidence/controller-split-20261020/batch/NORMAL-RUNNER-RESULT.json": "914d3201884fd72929f4fd167dd5557c777b7df5707e0838ab4a14fe761e4085",
+    "/workspace/derby-evidence/independent-v2-review/CONTROLLER-SPLIT-REVIEW.json": "fc6bdfdddc9f17cadec13908b9bbfe58e06f3066bc4f2462abf4ac50f31e24f3",
+    "/workspace/derby-evidence/independent-v2-review/CONTROLLER-PUBLICATION-BINDING-REVIEW.json": "aafa6413e1734ddc0a84f50ac71d0fde6942bd008657cd7817cd20e46909a010",
+    "/workspace/derby-evidence/independent-v2-review/CONTROLLER-CI-TARGET-REVIEW.json": "7cba6729a3d4479f8ba5e44bd480e94ec12ebd31e8b0783f1f4434f164ba996d"
+  }
+}

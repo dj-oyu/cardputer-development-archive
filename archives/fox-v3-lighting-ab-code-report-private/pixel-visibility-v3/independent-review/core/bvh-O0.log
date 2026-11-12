@@ -1,0 +1,3 @@
+PASS: ownership, generations, poison, intersections, endpoint/grazing, capacities, overflow and cumulative budgets
+Requested heap bytes: scene=80 triangle=152 node=64; 1166 triangles=326496; 2048 triangles=573456; maximum nodes reserved=4095
+Allocation-failure rollback and zero live allocations: PASS

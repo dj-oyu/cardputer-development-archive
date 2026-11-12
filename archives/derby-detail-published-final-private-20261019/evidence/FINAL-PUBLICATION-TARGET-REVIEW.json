@@ -1,0 +1,125 @@
+{
+  "created_utc": "2026-10-19T22:11:33.293498+00:00",
+  "pass": true,
+  "heads": {
+    "baseline": {
+      "head": "37af4225ad329aac4c5e79c880d7d69760b770be",
+      "tree": "7753c5c8919ee36c24080ce08102438a285da6f2",
+      "reviewed_local_candidate": "c90ee61b392de779e1438d2674087e7ccd9e1824",
+      "clean": true
+    },
+    "native": {
+      "head": "92e70b7fbb2c15d99734a518096dffdf046d2ae3",
+      "tree": "24f0575743c7de7d4873c531221db6e1fcf1f14f",
+      "reviewed_local_candidate": "3d861298f12c4aaf01ac520e0a795231e3135c1d",
+      "clean": true
+    },
+    "batch": {
+      "head": "ea64b0ec9c176f852c853cb10142581ee527d7fc",
+      "tree": "63bf0b2ee03168230de588f2a038e3e694b1d4d4",
+      "reviewed_local_candidate": "826c74a1676261fa9a086271678e61a90d0b88af",
+      "clean": true
+    }
+  },
+  "receipt_sha256": "ef2d2f27e29c83feb7b5e2b31983cfbd7a9ed5186c729ea334274e12e9192b6b",
+  "independently_verified_log_receipts": [
+    {
+      "variant": "baseline",
+      "mode": "OFF",
+      "job_id": 118332337448,
+      "head": "37af4225ad329aac4c5e79c880d7d69760b770be",
+      "log_sha256": "3f03173dd86064e796262fad31494c48b19f082b25259285244d6122461565bf",
+      "EXIT_required_and_present": false,
+      "EXIT_absent_when_OFF": true,
+      "detail_state_bytes": 0,
+      "max_per_function_compiler_stack_bytes": 2992,
+      "stack_translation_units": 9,
+      "proof_and_log_match": true,
+      "bin_sha256": "9443ce8d34ab8d6a16869f6e899a8ae439284039abc7b3b5c41f912021d2f915",
+      "elf_sha256": "2cef4b1005f0394c3130b4bdff107627883a3a551d472c5ee6715a4aa2989788"
+    },
+    {
+      "variant": "baseline",
+      "mode": "ON",
+      "job_id": 118332337203,
+      "head": "37af4225ad329aac4c5e79c880d7d69760b770be",
+      "log_sha256": "6cd1ced6e6b15b6b56bf4903baa39b01ba41a6f9dd41a101daebf1eff1e7c58e",
+      "EXIT_required_and_present": true,
+      "EXIT_absent_when_OFF": false,
+      "detail_state_bytes": 2304,
+      "max_per_function_compiler_stack_bytes": 2992,
+      "stack_translation_units": 9,
+      "proof_and_log_match": true,
+      "bin_sha256": "b734f800e2f9ccf6db71b66587fa08665643cfc9c37d36d99d1c71a0b4338175",
+      "elf_sha256": "a23fef98f0005d6243a0db591fd5131a7ba78311b53515dcf291a3cdf0eca335"
+    },
+    {
+      "variant": "native",
+      "mode": "OFF",
+      "job_id": 118332357934,
+      "head": "92e70b7fbb2c15d99734a518096dffdf046d2ae3",
+      "log_sha256": "ac9226dc6c259baf0d93410237bd9a98d18751c6a9dd543f96549c3282471b13",
+      "EXIT_required_and_present": false,
+      "EXIT_absent_when_OFF": true,
+      "detail_state_bytes": 0,
+      "max_per_function_compiler_stack_bytes": 2992,
+      "stack_translation_units": 9,
+      "proof_and_log_match": true,
+      "bin_sha256": "37a5adcdac8ce83adb6c25ca30a5bd3caef315087a0ef993bbaa768c596db58f",
+      "elf_sha256": "fbeaa2c2dcaabb0494c64ec64147a9d0074626a117f5bf4f2d652a650b829970"
+    },
+    {
+      "variant": "native",
+      "mode": "ON",
+      "job_id": 118332357592,
+      "head": "92e70b7fbb2c15d99734a518096dffdf046d2ae3",
+      "log_sha256": "f50a9c327c4b36c636d36bd2b3a537f404202fce0a5a02a7c7c1725c5d837d48",
+      "EXIT_required_and_present": true,
+      "EXIT_absent_when_OFF": false,
+      "detail_state_bytes": 2304,
+      "max_per_function_compiler_stack_bytes": 2992,
+      "stack_translation_units": 9,
+      "proof_and_log_match": true,
+      "bin_sha256": "0e5fda313c0a1d6243944866eaf78191eb3e3597213ddc86c00bba29b8b236bc",
+      "elf_sha256": "7e6ce0754bbf75ffe974475344ebc45a5b07cad32007311e2e2a81f775830bea"
+    },
+    {
+      "variant": "batch",
+      "mode": "ON",
+      "job_id": 118332383109,
+      "head": "ea64b0ec9c176f852c853cb10142581ee527d7fc",
+      "log_sha256": "604c9db0863881f5b24dfd7a5d51b439699cbe67cb9a30022246144714f6a729",
+      "EXIT_required_and_present": true,
+      "EXIT_absent_when_OFF": false,
+      "detail_state_bytes": 2304,
+      "max_per_function_compiler_stack_bytes": 2992,
+      "stack_translation_units": 9,
+      "proof_and_log_match": true,
+      "bin_sha256": "3a4b7fe28e871e08c9881d35b9761401c879f33ceab59aaf4be581ed7273d25b",
+      "elf_sha256": "2de6bf84bd7322dfa4abf9edb5baefb9b070d313727dd99f7582ab08519d028a"
+    },
+    {
+      "variant": "batch",
+      "mode": "OFF",
+      "job_id": 118332382898,
+      "head": "ea64b0ec9c176f852c853cb10142581ee527d7fc",
+      "log_sha256": "95f27f6610feefd0aab3b237e972f986844154e89d48219576c7f652fdff2809",
+      "EXIT_required_and_present": false,
+      "EXIT_absent_when_OFF": true,
+      "detail_state_bytes": 0,
+      "max_per_function_compiler_stack_bytes": 2992,
+      "stack_translation_units": 9,
+      "proof_and_log_match": true,
+      "bin_sha256": "2a1619cb9c299653c844bf2e12f5c17b5cc0e74f456f1aa57f1c9903df313a5a",
+      "elf_sha256": "e0fd459b452c74ae1ada2124850ef76b8da1429562d234d4dbb557a26b136257"
+    }
+  ],
+  "scope": "Six retained real-target CI logs and mandatory proof receipts verified; linked BIN/ELF not downloaded/rehash locally. No code change, test repeat, target rebuild or remote/hardware/MCP action.",
+  "not_established": [
+    "overall CI completion",
+    "runtime heap/stack high-water",
+    "whole call-chain stack bound",
+    "new device acceptance",
+    "source/flash clearance"
+  ]
+}

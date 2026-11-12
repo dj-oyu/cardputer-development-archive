@@ -1,0 +1,713 @@
+{
+  "ok": true,
+  "entries": [
+    {
+      "sequence": 611,
+      "text": "[195/1190] Building C object esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/netif/ppp/lcp.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 612,
+      "text": "[196/1190] Building C object esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/netif/ppp/magic.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 613,
+      "text": "[197/1190] Building C object esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/netif/ppp/mppe.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 614,
+      "text": "[198/1190] Building C object esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/netif/ppp/multilink.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 615,
+      "text": "[199/1190] Building C object esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/netif/ppp/ppp.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 616,
+      "text": "[200/1190] Building C object esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/netif/ppp/pppcrypt.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 617,
+      "text": "[201/1190] Building C object esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/netif/ppp/pppapi.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 618,
+      "text": "[202/1190] Building C object esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/netif/ppp/pppoe.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 619,
+      "text": "[203/1190] Building C object esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/netif/ppp/pppol2tp.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 620,
+      "text": "[204/1190] Building C object esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/netif/ppp/upap.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 621,
+      "text": "[205/1190] Building C object esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/netif/ppp/utils.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 622,
+      "text": "[206/1190] Building C object esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/netif/ppp/pppos.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 623,
+      "text": "[207/1190] Building C object esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/netif/ppp/vj.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 624,
+      "text": "[208/1190] Building C object esp-idf/lwip/CMakeFiles/__idf_lwip.dir/port/hooks/tcp_isn_default.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 625,
+      "text": "[209/1190] Building C object esp-idf/lwip/CMakeFiles/__idf_lwip.dir/port/hooks/lwip_default_hooks.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 626,
+      "text": "[210/1190] Building C object esp-idf/lwip/CMakeFiles/__idf_lwip.dir/port/sockets_ext.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 627,
+      "text": "[211/1190] Building C object esp-idf/lwip/CMakeFiles/__idf_lwip.dir/port/if_index.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 628,
+      "text": "[212/1190] Building C object esp-idf/lwip/CMakeFiles/__idf_lwip.dir/port/debug/lwip_debug.c.obj",
+      "level": "debug",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 629,
+      "text": "[213/1190] Building C object esp-idf/lwip/CMakeFiles/__idf_lwip.dir/port/acd_dhcp_check.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 630,
+      "text": "[214/1190] Building C object esp-idf/lwip/CMakeFiles/__idf_lwip.dir/port/freertos/sys_arch.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 631,
+      "text": "[215/1190] Building C object esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/netif/ppp/polarssl/des.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 632,
+      "text": "[216/1190] Building C object esp-idf/lwip/CMakeFiles/__idf_lwip.dir/port/esp32xx/vfs_lwip.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 633,
+      "text": "[217/1190] Building C object esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/netif/ppp/polarssl/arc4.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 634,
+      "text": "[218/1190] Building C object esp-idf/lwip/CMakeFiles/__idf_lwip.dir/apps/ping/ping_sock.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 635,
+      "text": "[219/1190] Building C object esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/netif/ppp/polarssl/md4.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 636,
+      "text": "[220/1190] Building C object esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/netif/ppp/polarssl/md5.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 637,
+      "text": "[221/1190] Building C object esp-idf/esp_phy/CMakeFiles/__idf_esp_phy.dir/src/lib_printf.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 638,
+      "text": "[222/1190] Building C object esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/netif/ppp/polarssl/sha1.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 639,
+      "text": "[223/1190] Building C object esp-idf/esp_phy/CMakeFiles/__idf_esp_phy.dir/esp32s3/phy_init_data.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 640,
+      "text": "[224/1190] Building C object esp-idf/esp_phy/CMakeFiles/__idf_esp_phy.dir/src/phy_override.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 641,
+      "text": "[225/1190] Linking C static library esp-idf\\esp_netif\\libesp_netif.a",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 642,
+      "text": "[226/1190] Building C object esp-idf/esp_phy/CMakeFiles/__idf_esp_phy.dir/src/phy_common.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 643,
+      "text": "[227/1190] Building C object esp-idf/esp_phy/CMakeFiles/__idf_esp_phy.dir/src/btbb_init.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 644,
+      "text": "[228/1190] Building C object esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/default_event_loop.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 645,
+      "text": "[229/1190] Building C object esp-idf/esp_phy/CMakeFiles/__idf_esp_phy.dir/src/phy_init.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 646,
+      "text": "[230/1190] Building C object esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/esp_event_private.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 647,
+      "text": "[231/1190] Building C object esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/esp_event.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 648,
+      "text": "[232/1190] Linking C static library esp-idf\\lwip\\liblwip.a",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 649,
+      "text": "[233/1190] Building CXX object esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_partition.cpp.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 650,
+      "text": "[234/1190] Linking C static library esp-idf\\esp_phy\\libesp_phy.a",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 651,
+      "text": "[235/1190] Building CXX object esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_item_hash_list.cpp.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 652,
+      "text": "[236/1190] Building CXX object esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_cxx_api.cpp.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 653,
+      "text": "[237/1190] Building CXX object esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_pagemanager.cpp.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 654,
+      "text": "[238/1190] Building CXX object esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_handle_locked.cpp.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 655,
+      "text": "[239/1190] Building CXX object esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_page.cpp.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 656,
+      "text": "[240/1190] Building CXX object esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_api.cpp.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 657,
+      "text": "[241/1190] Building CXX object esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_platform.cpp.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 658,
+      "text": "[242/1190] Building CXX object esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_handle_simple.cpp.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 659,
+      "text": "[243/1190] Building CXX object esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_storage.cpp.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 660,
+      "text": "[244/1190] Building C object esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_bootloader_aes.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 661,
+      "text": "[245/1190] Building C object esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_bootloader.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 662,
+      "text": "[246/1190] Building C object esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_bootloader_xts_aes.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 663,
+      "text": "[247/1190] Building C object esp-idf/nvs_sec_provider/CMakeFiles/__idf_nvs_sec_provider.dir/nvs_sec_provider.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 664,
+      "text": "[248/1190] Building CXX object esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_partition_lookup.cpp.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 665,
+      "text": "[249/1190] Linking C static library esp-idf\\esp_event\\libesp_event.a",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 666,
+      "text": "[250/1190] Building C object esp-idf/vfs/CMakeFiles/__idf_vfs.dir/vfs_eventfd.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 667,
+      "text": "[251/1190] Building C object esp-idf/vfs/CMakeFiles/__idf_vfs.dir/vfs.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 668,
+      "text": "[252/1190] Building C object esp-idf/vfs/CMakeFiles/__idf_vfs.dir/nullfs.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 669,
+      "text": "[253/1190] Building C object esp-idf/esp_driver_usb_serial_jtag/CMakeFiles/__idf_esp_driver_usb_serial_jtag.dir/src/usb_serial_jtag.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 670,
+      "text": "[254/1190] Building C object esp-idf/vfs/CMakeFiles/__idf_vfs.dir/vfs_calls.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 671,
+      "text": "[255/1190] Building C object esp-idf/esp_driver_usb_serial_jtag/CMakeFiles/__idf_esp_driver_usb_serial_jtag.dir/src/usb_serial_jtag_connection_monitor.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 672,
+      "text": "[256/1190] Building C object esp-idf/vfs/CMakeFiles/__idf_vfs.dir/vfs_semihost.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 673,
+      "text": "[257/1190] Building C object esp-idf/esp_driver_uart/CMakeFiles/__idf_esp_driver_uart.dir/src/uart_wakeup.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 674,
+      "text": "[258/1190] Building C object esp-idf/esp_psram/CMakeFiles/__idf_esp_psram.dir/system_layer/esp_psram_mspi.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 675,
+      "text": "[259/1190] Building CXX object esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_types.cpp.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 676,
+      "text": "[260/1190] Building CXX object esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_partition_manager.cpp.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 677,
+      "text": "[261/1190] Building CXX object esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_encrypted_partition.cpp.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 678,
+      "text": "[262/1190] Building C object esp-idf/esp_driver_usb_serial_jtag/CMakeFiles/__idf_esp_driver_usb_serial_jtag.dir/src/usb_serial_jtag_vfs.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 679,
+      "text": "[263/1190] Building C object esp-idf/esp_driver_uart/CMakeFiles/__idf_esp_driver_uart.dir/src/uhci.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 680,
+      "text": "[264/1190] Building C object esp-idf/esp_ringbuf/CMakeFiles/__idf_esp_ringbuf.dir/ringbuf.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 681,
+      "text": "[265/1190] Building C object esp-idf/esp_driver_uart/CMakeFiles/__idf_esp_driver_uart.dir/src/uart_vfs.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 682,
+      "text": "[266/1190] Building CXX object esp-idf/cxx/CMakeFiles/__idf_cxx.dir/cxx_exception_stubs.cpp.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 683,
+      "text": "[267/1190] Building CXX object esp-idf/cxx/CMakeFiles/__idf_cxx.dir/cxx_init.cpp.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 684,
+      "text": "[268/1190] Building C object esp-idf/pthread/CMakeFiles/__idf_pthread.dir/pthread_cond_var.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 685,
+      "text": "[269/1190] Linking C static library esp-idf\\nvs_flash\\libnvs_flash.a",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 686,
+      "text": "[270/1190] Building C object esp-idf/esp_libc/CMakeFiles/__idf_esp_libc.dir/src/abort.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 687,
+      "text": "[271/1190] Building C object esp-idf/pthread/CMakeFiles/__idf_pthread.dir/pthread.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 688,
+      "text": "[272/1190] Building C object esp-idf/pthread/CMakeFiles/__idf_pthread.dir/pthread_local_storage.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 689,
+      "text": "[273/1190] Building C object esp-idf/esp_libc/CMakeFiles/__idf_esp_libc.dir/src/init.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 690,
+      "text": "[274/1190] Building C object esp-idf/esp_driver_uart/CMakeFiles/__idf_esp_driver_uart.dir/src/uart.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 691,
+      "text": "[275/1190] Building C object esp-idf/pthread/CMakeFiles/__idf_pthread.dir/pthread_rwlock.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 692,
+      "text": "[276/1190] Building C object esp-idf/pthread/CMakeFiles/__idf_pthread.dir/pthread_semaphore.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 693,
+      "text": "[277/1190] Building CXX object esp-idf/cxx/CMakeFiles/__idf_cxx.dir/cxx_guards.cpp.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 694,
+      "text": "[278/1190] Building C object esp-idf/esp_libc/CMakeFiles/__idf_esp_libc.dir/src/assert.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 695,
+      "text": "[279/1190] Building C object esp-idf/esp_libc/CMakeFiles/__idf_esp_libc.dir/src/poll.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 696,
+      "text": "[280/1190] Building C object esp-idf/esp_libc/CMakeFiles/__idf_esp_libc.dir/src/termios.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 697,
+      "text": "[281/1190] Building C object esp-idf/esp_libc/CMakeFiles/__idf_esp_libc.dir/src/heap.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 698,
+      "text": "[282/1190] Building C object esp-idf/esp_libc/CMakeFiles/__idf_esp_libc.dir/src/getentropy.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 699,
+      "text": "[283/1190] Building C object esp-idf/esp_libc/CMakeFiles/__idf_esp_libc.dir/src/random.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 700,
+      "text": "[284/1190] Building C object esp-idf/esp_libc/CMakeFiles/__idf_esp_libc.dir/src/pthread.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 701,
+      "text": "[285/1190] Linking C static library esp-idf\\nvs_sec_provider\\libnvs_sec_provider.a",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 702,
+      "text": "[286/1190] Building C object esp-idf/esp_libc/CMakeFiles/__idf_esp_libc.dir/src/locks.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 703,
+      "text": "[287/1190] Building C object esp-idf/esp_libc/CMakeFiles/__idf_esp_libc.dir/src/stdatomic.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 704,
+      "text": "[288/1190] Building C object esp-idf/esp_libc/CMakeFiles/__idf_esp_libc.dir/src/sysconf.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 705,
+      "text": "[289/1190] Building C object esp-idf/esp_libc/CMakeFiles/__idf_esp_libc.dir/src/realpath.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 706,
+      "text": "[290/1190] Building C object esp-idf/esp_libc/CMakeFiles/__idf_esp_libc.dir/src/scandir.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 707,
+      "text": "[291/1190] Building C object esp-idf/esp_libc/CMakeFiles/__idf_esp_libc.dir/src/port/esp_time_impl.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 708,
+      "text": "[292/1190] Building C object esp-idf/esp_libc/CMakeFiles/__idf_esp_libc.dir/src/syscalls.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 709,
+      "text": "[293/1190] Building C object esp-idf/esp_libc/CMakeFiles/__idf_esp_libc.dir/src/time.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 710,
+      "text": "[294/1190] Building C object esp-idf/esp_libc/CMakeFiles/__idf_esp_libc.dir/src/reent_syscalls.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    }
+  ],
+  "expired": false,
+  "gap": false,
+  "oldest_sequence": 1,
+  "next_cursor": {
+    "epoch": "679b080a14f74643986be260f20f24cc",
+    "sequence": 710
+  },
+  "has_more": true
+}

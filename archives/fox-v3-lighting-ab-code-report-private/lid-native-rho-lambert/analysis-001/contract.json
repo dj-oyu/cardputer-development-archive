@@ -1,0 +1,57 @@
+{
+  "domains": {
+    "originalForeground": 5868,
+    "originalStableForeground": 5170,
+    "originalUncertainForeground": 698,
+    "nativeCovered": 5157,
+    "commonForeground": 5149,
+    "missingNativeForeground": 719,
+    "oldReverse113": 113,
+    "oldReverseSameObject83": 83,
+    "oldReverseDifferentObject30": 30,
+    "priorRichCorrect41": 41,
+    "priorRichCorrectSame32": 32
+  },
+  "primaryWorldDirectionBitExact": true,
+  "primaryGroundDirectionBitExact": true,
+  "directPlusPrimaryDeltaVersusDirectMaxAbsRGB": 6.661338147750939e-16,
+  "componentwiseAddedDeltaWorldGroundExactlyZero": true,
+  "filter": {
+    "offsets": [
+      -1.0,
+      0.0,
+      1.0
+    ],
+    "weights1D": [
+      0.05007243833742771,
+      0.8998551233251446,
+      0.050072438337427805
+    ],
+    "weights2D": [
+      [
+        0.0025072490810555,
+        0.04505794017531671,
+        0.0025072490810555048
+      ],
+      [
+        0.04505794017531671,
+        0.8097392429745112,
+        0.045057940175316794
+      ],
+      [
+        0.0025072490810555048,
+        0.045057940175316794,
+        0.00250724908105551
+      ]
+    ],
+    "summation": "gy outer, gx inner; acc += float(weights[gy]*weights[gx]) * zero-padded sample",
+    "blackOutsideRetainsDenominator": true,
+    "coveredOnlyRenormalization": false,
+    "support": "union of shifted finite-depth masks, not RGB positivity"
+  },
+  "originalWorldFloorGIClampsRetained": true,
+  "BRDFAndRhoJointIntervention": true,
+  "DiffDirNotThreeDiskEquivalent": true,
+  "priorCohortsNotReselected": true,
+  "oneSeedNoStabilityOrGlobalAcceptance": true
+}

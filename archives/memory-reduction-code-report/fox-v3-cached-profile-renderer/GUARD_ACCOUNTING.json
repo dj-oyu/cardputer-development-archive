@@ -1,0 +1,48 @@
+{
+  "status": "SOURCE_BOUNDED_WORK_NOT_CPU_INSTRUCTIONS",
+  "actualFrames": 0,
+  "rendererBudgets": {
+    "coreAdmission": 210,
+    "adapterOff": 406,
+    "adapterOn": 435,
+    "totalAdmissionOff": 616,
+    "totalAdmissionOn": 645,
+    "admissionCap": 1024,
+    "conservativePrerequisiteAdmissionUpper": 1014,
+    "guardCap": 100000,
+    "adapterGuardCharge": 1024,
+    "producerCap": 637599
+  },
+  "spanAccounting": {
+    "oldSpans": 28,
+    "newSpans": 29,
+    "staticEncodedBlobReplacesRawLUTSpan": true,
+    "expandedDescriptorReplacesExistingDescriptorSpan": true,
+    "cacheOnlyNewSpan": true,
+    "additionalPairsOff": 28,
+    "additionalPairsOn": 29,
+    "floorWorldSpanCheckedAgainstCache": true
+  },
+  "setupWork": {
+    "cacheRequestedAllocation": 3224,
+    "initAndBindZeroFillBytes": 6448,
+    "bindIndexEntries": 4914,
+    "bindValidatedRecordRanges": 4913,
+    "bindFullBlobDecode": false,
+    "releaseZeroFillBytes": 3224
+  },
+  "cachePerSuccessfulFrame": {
+    "profileCalls": 32400,
+    "selectedVertexLookups": 129600,
+    "headerValidations": 32400,
+    "selectedOffsetPairs": 129600,
+    "encodedSnapshotCompareBytesUpper": "396 * hits",
+    "encodedRecordDecodeBytesUpper": "396 * misses",
+    "encodedSnapshotCopyBytesUpper": "396 * misses",
+    "decodedScalarWritesUpper": "192 * misses",
+    "fourSlotSearchBound": 4,
+    "fourSlotVictimAndAgeLoopBound": 4,
+    "workScope": "Counts bounds separately from unchanged physical ray/shader counters. hits/misses vary with profile inputs, no free CPU claim. Unselected data not continuously validated. Every selected hit validates offsets and encoded snapshot; misses decode full record."
+  },
+  "capsRaised": false
+}

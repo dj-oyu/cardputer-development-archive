@@ -1,0 +1,713 @@
+{
+  "ok": true,
+  "entries": [
+    {
+      "sequence": 1311,
+      "text": "[895/1190] Linking C static library esp-idf\\esp_driver_sdspi\\libesp_driver_sdspi.a",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1312,
+      "text": "[896/1190] Building C object esp-idf/opus/CMakeFiles/__idf_opus.dir/__/__/third_party/opus/celt/entcode.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1313,
+      "text": "[897/1190] Building C object esp-idf/opus/CMakeFiles/__idf_opus.dir/__/__/third_party/opus/celt/cwrs.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1314,
+      "text": "[898/1190] Building C object esp-idf/opus/CMakeFiles/__idf_opus.dir/__/__/third_party/opus/celt/bands.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1315,
+      "text": "[899/1190] Building C object esp-idf/opus/CMakeFiles/__idf_opus.dir/__/__/third_party/opus/celt/entdec.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1316,
+      "text": "[900/1190] Building C object esp-idf/opus/CMakeFiles/__idf_opus.dir/__/__/third_party/opus/celt/celt_lpc.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1317,
+      "text": "[901/1190] Linking C static library esp-idf\\esp_driver_sdmmc\\libesp_driver_sdmmc.a",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1318,
+      "text": "[902/1190] Building C object esp-idf/opus/CMakeFiles/__idf_opus.dir/__/__/third_party/opus/celt/entenc.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1319,
+      "text": "[903/1190] Building C object esp-idf/opus/CMakeFiles/__idf_opus.dir/__/__/third_party/opus/celt/laplace.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1320,
+      "text": "[904/1190] Building C object esp-idf/opus/CMakeFiles/__idf_opus.dir/__/__/third_party/opus/celt/mathops.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1321,
+      "text": "[905/1190] Building C object esp-idf/opus/CMakeFiles/__idf_opus.dir/__/__/third_party/opus/celt/modes.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1322,
+      "text": "[906/1190] Building C object esp-idf/opus/CMakeFiles/__idf_opus.dir/__/__/third_party/opus/celt/kiss_fft.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1323,
+      "text": "[907/1190] Building C object esp-idf/opus/CMakeFiles/__idf_opus.dir/__/__/third_party/opus/celt/mdct.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1324,
+      "text": "[908/1190] Building C object esp-idf/opus/CMakeFiles/__idf_opus.dir/__/__/third_party/opus/celt/mini_kfft.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1325,
+      "text": "[909/1190] Building C object esp-idf/opus/CMakeFiles/__idf_opus.dir/__/__/third_party/opus/silk/LPC_analysis_filter.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1326,
+      "text": "[910/1190] Building C object esp-idf/opus/CMakeFiles/__idf_opus.dir/__/__/third_party/opus/celt/pitch.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1327,
+      "text": "[911/1190] Building C object esp-idf/opus/CMakeFiles/__idf_opus.dir/__/__/third_party/opus/celt/rate.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1328,
+      "text": "[912/1190] Building C object esp-idf/opus/CMakeFiles/__idf_opus.dir/__/__/third_party/opus/celt/quant_bands.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1329,
+      "text": "[913/1190] Building C object esp-idf/opus/CMakeFiles/__idf_opus.dir/__/__/third_party/opus/silk/LPC_fit.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1330,
+      "text": "[914/1190] Building C object esp-idf/opus/CMakeFiles/__idf_opus.dir/__/__/third_party/opus/silk/CNG.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1331,
+      "text": "[915/1190] Building C object esp-idf/opus/CMakeFiles/__idf_opus.dir/__/__/third_party/opus/silk/LPC_inv_pred_gain.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1332,
+      "text": "[916/1190] Building C object esp-idf/opus/CMakeFiles/__idf_opus.dir/__/__/third_party/opus/celt/vq.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1333,
+      "text": "[917/1190] Building C object esp-idf/opus/CMakeFiles/__idf_opus.dir/__/__/third_party/opus/silk/NLSF_unpack.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1334,
+      "text": "[918/1190] Building C object esp-idf/opus/CMakeFiles/__idf_opus.dir/__/__/third_party/opus/silk/NLSF_decode.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1335,
+      "text": "[919/1190] Building C object esp-idf/opus/CMakeFiles/__idf_opus.dir/__/__/third_party/opus/silk/NLSF_stabilize.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1336,
+      "text": "[920/1190] Building C object esp-idf/opus/CMakeFiles/__idf_opus.dir/__/__/third_party/opus/silk/NLSF2A.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1337,
+      "text": "[921/1190] Building C object esp-idf/opus/CMakeFiles/__idf_opus.dir/__/__/third_party/opus/silk/NLSF_VQ_weights_laroia.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1338,
+      "text": "[922/1190] Building C object esp-idf/opus/CMakeFiles/__idf_opus.dir/__/__/third_party/opus/silk/bwexpander.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1339,
+      "text": "[923/1190] Building C object esp-idf/opus/CMakeFiles/__idf_opus.dir/__/__/third_party/opus/silk/bwexpander_32.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1340,
+      "text": "[924/1190] Building C object esp-idf/opus/CMakeFiles/__idf_opus.dir/__/__/third_party/opus/silk/PLC.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1341,
+      "text": "[925/1190] Building C object esp-idf/opus/CMakeFiles/__idf_opus.dir/__/__/third_party/opus/silk/code_signs.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1342,
+      "text": "[926/1190] Building C object esp-idf/opus/CMakeFiles/__idf_opus.dir/__/__/third_party/opus/silk/control_audio_bandwidth.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1343,
+      "text": "[927/1190] Building C object esp-idf/opus/CMakeFiles/__idf_opus.dir/__/__/third_party/opus/silk/decode_frame.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1344,
+      "text": "[928/1190] Building C object esp-idf/opus/CMakeFiles/__idf_opus.dir/__/__/third_party/opus/silk/decode_indices.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1345,
+      "text": "[929/1190] Building C object esp-idf/opus/CMakeFiles/__idf_opus.dir/__/__/third_party/opus/silk/decode_core.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1346,
+      "text": "[930/1190] Building C object esp-idf/opus/CMakeFiles/__idf_opus.dir/__/__/third_party/opus/silk/dec_API.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1347,
+      "text": "[931/1190] Building C object esp-idf/opus/CMakeFiles/__idf_opus.dir/__/__/third_party/opus/silk/decode_parameters.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1348,
+      "text": "[932/1190] Building C object esp-idf/opus/CMakeFiles/__idf_opus.dir/__/__/third_party/opus/silk/decode_pitch.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1349,
+      "text": "[933/1190] Building C object esp-idf/opus/CMakeFiles/__idf_opus.dir/__/__/third_party/opus/silk/decoder_set_fs.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1350,
+      "text": "[934/1190] Building C object esp-idf/opus/CMakeFiles/__idf_opus.dir/__/__/third_party/opus/silk/decode_pulses.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1351,
+      "text": "[935/1190] Building C object esp-idf/opus/CMakeFiles/__idf_opus.dir/__/__/third_party/opus/silk/gain_quant.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1352,
+      "text": "[936/1190] Building C object esp-idf/opus/CMakeFiles/__idf_opus.dir/__/__/third_party/opus/silk/init_decoder.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1353,
+      "text": "[937/1190] Building C object esp-idf/opus/CMakeFiles/__idf_opus.dir/__/__/third_party/opus/silk/interpolate.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1354,
+      "text": "[938/1190] Building C object esp-idf/opus/CMakeFiles/__idf_opus.dir/__/__/third_party/opus/silk/log2lin.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1355,
+      "text": "[939/1190] Building C object esp-idf/opus/CMakeFiles/__idf_opus.dir/__/__/third_party/opus/silk/lin2log.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1356,
+      "text": "[940/1190] Building C object esp-idf/opus/CMakeFiles/__idf_opus.dir/__/__/third_party/opus/silk/pitch_est_tables.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1357,
+      "text": "[941/1190] Building C object esp-idf/opus/CMakeFiles/__idf_opus.dir/__/__/third_party/opus/silk/resampler.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1358,
+      "text": "[942/1190] Building C object esp-idf/opus/CMakeFiles/__idf_opus.dir/__/__/third_party/opus/silk/resampler_down2.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1359,
+      "text": "[943/1190] Building C object esp-idf/opus/CMakeFiles/__idf_opus.dir/__/__/third_party/opus/silk/resampler_down2_3.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1360,
+      "text": "[944/1190] Building C object esp-idf/opus/CMakeFiles/__idf_opus.dir/__/__/third_party/opus/silk/resampler_private_AR2.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1361,
+      "text": "[945/1190] Building C object esp-idf/opus/CMakeFiles/__idf_opus.dir/__/__/third_party/opus/silk/resampler_private_IIR_FIR.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1362,
+      "text": "[946/1190] Building C object esp-idf/opus/CMakeFiles/__idf_opus.dir/__/__/third_party/opus/silk/resampler_private_up2_HQ.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1363,
+      "text": "[947/1190] Building C object esp-idf/opus/CMakeFiles/__idf_opus.dir/__/__/third_party/opus/silk/resampler_rom.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1364,
+      "text": "[948/1190] Building C object esp-idf/opus/CMakeFiles/__idf_opus.dir/__/__/third_party/opus/silk/resampler_private_down_FIR.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1365,
+      "text": "[949/1190] Building C object esp-idf/opus/CMakeFiles/__idf_opus.dir/__/__/third_party/opus/silk/shell_coder.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1366,
+      "text": "[950/1190] Building C object esp-idf/opus/CMakeFiles/__idf_opus.dir/__/__/third_party/opus/silk/sigm_Q15.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1367,
+      "text": "[951/1190] Building C object esp-idf/opus/CMakeFiles/__idf_opus.dir/__/__/third_party/opus/silk/stereo_MS_to_LR.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1368,
+      "text": "[952/1190] Building C object esp-idf/opus/CMakeFiles/__idf_opus.dir/__/__/third_party/opus/silk/sort.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1369,
+      "text": "[953/1190] Building C object esp-idf/opus/CMakeFiles/__idf_opus.dir/__/__/third_party/opus/silk/stereo_decode_pred.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1370,
+      "text": "[954/1190] Building C object esp-idf/opus/CMakeFiles/__idf_opus.dir/__/__/third_party/opus/silk/stereo_encode_pred.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1371,
+      "text": "[955/1190] Building C object esp-idf/opus/CMakeFiles/__idf_opus.dir/__/__/third_party/opus/silk/stereo_find_predictor.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1372,
+      "text": "[956/1190] Building C object esp-idf/opus/CMakeFiles/__idf_opus.dir/__/__/third_party/opus/silk/table_LSF_cos.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1373,
+      "text": "[957/1190] Building C object esp-idf/opus/CMakeFiles/__idf_opus.dir/__/__/third_party/opus/silk/tables_LTP.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1374,
+      "text": "[958/1190] Building C object esp-idf/opus/CMakeFiles/__idf_opus.dir/__/__/third_party/opus/silk/sum_sqr_shift.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1375,
+      "text": "[959/1190] Building C object esp-idf/opus/CMakeFiles/__idf_opus.dir/__/__/third_party/opus/silk/stereo_quant_pred.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1376,
+      "text": "[960/1190] Building C object esp-idf/opus/CMakeFiles/__idf_opus.dir/__/__/third_party/opus/silk/tables_NLSF_CB_NB_MB.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1377,
+      "text": "[961/1190] Building C object esp-idf/opus/CMakeFiles/__idf_opus.dir/__/__/third_party/opus/silk/tables_NLSF_CB_WB.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1378,
+      "text": "[962/1190] Building C object esp-idf/opus/CMakeFiles/__idf_opus.dir/__/__/third_party/opus/silk/tables_gain.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1379,
+      "text": "[963/1190] Building C object esp-idf/opus/CMakeFiles/__idf_opus.dir/__/__/third_party/opus/silk/tables_other.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1380,
+      "text": "[964/1190] Building C object esp-idf/opus/CMakeFiles/__idf_opus.dir/__/__/third_party/opus/silk/tables_pitch_lag.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1381,
+      "text": "[965/1190] Building C object esp-idf/opus/CMakeFiles/__idf_opus.dir/__/__/third_party/opus/silk/tables_pulses_per_block.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1382,
+      "text": "[966/1190] Building C object esp-idf/opus/CMakeFiles/__idf_opus.dir/__/__/third_party/opus/src/opus.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1383,
+      "text": "[967/1190] Building C object esp-idf/opus/CMakeFiles/__idf_opus.dir/__/__/third_party/opus/src/extensions.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1384,
+      "text": "[968/1190] Linking C static library esp-idf\\ime_core\\libime_core.a",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1385,
+      "text": "[969/1190] Building C object esp-idf/opus/CMakeFiles/__idf_opus.dir/__/__/third_party/opus/src/opus_decoder.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1386,
+      "text": "[970/1190] Linking C static library esp-idf\\esp_driver_i2s\\libesp_driver_i2s.a",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1387,
+      "text": "[971/1190] Linking C static library esp-idf\\esp_driver_i2c\\libesp_driver_i2c.a",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1388,
+      "text": "[972/1190] Linking C static library esp-idf\\esp_driver_rmt\\libesp_driver_rmt.a",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1389,
+      "text": "[973/1190] Linking C static library esp-idf\\esp_adc\\libesp_adc.a",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1390,
+      "text": "[974/1190] Linking C static library esp-idf\\fatfs\\libfatfs.a",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1391,
+      "text": "[975/1190] Linking C static library esp-idf\\opus\\libopus.a",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1392,
+      "text": "[976/1190] Building C object esp-idf/minimp3/CMakeFiles/__idf_minimp3.dir/minimp3.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1393,
+      "text": "[977/1190] Linking C static library esp-idf\\minimp3\\libminimp3.a",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1394,
+      "text": "[978/1190] Performing configure step for 'bootloader'",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1395,
+      "text": "-- Found Git: C:/Program Files/Git/cmd/git.exe (found version \"2.55.0.windows.5\")",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1396,
+      "text": "-- Component directory C:/esp/v6.0.1/esp-idf/components/mqtt does not contain a CMakeLists.txt file. No component will be added",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1397,
+      "text": "-- Minimal build - OFF",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1398,
+      "text": "-- The C compiler identification is GNU 15.2.0",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1399,
+      "text": "-- The CXX compiler identification is GNU 15.2.0",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1400,
+      "text": "-- The ASM compiler identification is GNU",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1401,
+      "text": "-- Found assembler: C:/Espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc.exe",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1402,
+      "text": "-- Detecting C compiler ABI info",
+      "level": "info",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1403,
+      "text": "CMake Warning in C:/Users/core/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/b-c83/o/d9f93962f8ad2d6371497ced2c533c12abf61198e1a7321b07c4a03e0a4269e5/bootloader/CMakeFiles/CMakeScratch/TryCompile-423vrn/CMakeLists.txt:",
+      "level": "warning",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 1404,
+      "text": "  The object file directory",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 1405,
+      "text": "",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 1415,
+      "text": "",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 1416,
+      "text": "",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 1417,
+      "text": "-- Detecting C compiler ABI info - done",
+      "level": "info",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1418,
+      "text": "-- Check for working C compiler: C:/Espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc.exe - skipped",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1419,
+      "text": "-- Detecting C compile features",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    }
+  ],
+  "expired": false,
+  "gap": false,
+  "oldest_sequence": 43,
+  "next_cursor": {
+    "epoch": "679b080a14f74643986be260f20f24cc",
+    "sequence": 1419
+  },
+  "has_more": true
+}

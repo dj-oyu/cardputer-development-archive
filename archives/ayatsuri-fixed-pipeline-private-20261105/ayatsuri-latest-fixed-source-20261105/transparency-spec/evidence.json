@@ -1,0 +1,1657 @@
+{
+  "sources_sha256": {
+    "ayatsuri-latest-fixed-source-20261105/inventory.json": "24272d18b450c05991d443a8f4d9be6c7817e05f463a3f366cf067da1d361e17",
+    "ayatsuri-latest-fixed-source-20261105/material-plan/SOURCE_VERSION.json": "36ac79d62c0c8b5cc2602b34d7770fc606810216cb143daae4370140f548f1dc",
+    "ayatsuri-latest-fixed-source-20261105/material-plan/primary-source-manifest.json": "41133592deeac1f00890096984e2ba53acb9dccbab445bd43938be0aa2661daa",
+    "ayatsuri-latest-fixed-source-20261105/material-plan/primary-source/intern__cycles__kernel__svm__closure.h.txt": "11d41c3e86bd6050afa8c4bb3d081c2f5ef5914c2ad9aa10b4b1df755a8ea18e",
+    "ayatsuri-latest-fixed-source-20261105/material-plan/primary-source/intern__cycles__scene__shader_nodes.cpp.txt": "415f0af74916b28066e164230e0517c7224a3d56c023829443213942d8cd6408"
+  },
+  "graphs": [
+    {
+      "material": "Blink mask Expressive eye white -1",
+      "settings": {
+        "use_nodes": true,
+        "diffuse_color": [
+          1.0,
+          0.9399999976158142,
+          0.7799999713897705,
+          1.0
+        ],
+        "metallic": 0.0,
+        "roughness": 0.4000000059604645,
+        "use_backface_culling": false,
+        "surface_render_method": "DITHERED",
+        "use_transparent_shadow": true
+      },
+      "nodes": [
+        {
+          "name": "Principled BSDF",
+          "type": "ShaderNodeBsdfPrincipled",
+          "label": "",
+          "mute": false,
+          "properties": {
+            "distribution": "MULTI_GGX"
+          },
+          "inputs": [
+            {
+              "name": "Base Color",
+              "identifier": "Base Color",
+              "type": "NodeSocketColor",
+              "linked": true,
+              "default": [
+                1.0,
+                0.9399999976158142,
+                0.7799999713897705,
+                1.0
+              ]
+            },
+            {
+              "name": "Metallic",
+              "identifier": "Metallic",
+              "type": "NodeSocketFloatFactor",
+              "linked": false,
+              "default": 0.0
+            },
+            {
+              "name": "Roughness",
+              "identifier": "Roughness",
+              "type": "NodeSocketFloatFactor",
+              "linked": false,
+              "default": 0.2199999988079071
+            },
+            {
+              "name": "IOR",
+              "identifier": "IOR",
+              "type": "NodeSocketFloat",
+              "linked": false,
+              "default": 1.5
+            },
+            {
+              "name": "Alpha",
+              "identifier": "Alpha",
+              "type": "NodeSocketFloatFactor",
+              "linked": false,
+              "default": 1.0
+            },
+            {
+              "name": "Normal",
+              "identifier": "Normal",
+              "type": "NodeSocketVector",
+              "linked": false,
+              "default": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "name": "Weight",
+              "identifier": "Weight",
+              "type": "NodeSocketFloat",
+              "linked": false,
+              "default": 0.0
+            },
+            {
+              "name": "Diffuse Roughness",
+              "identifier": "Diffuse Roughness",
+              "type": "NodeSocketFloatFactor",
+              "linked": false,
+              "default": 0.0
+            },
+            {
+              "name": "Subsurface Weight",
+              "identifier": "Subsurface Weight",
+              "type": "NodeSocketFloatFactor",
+              "linked": false,
+              "default": 0.0
+            },
+            {
+              "name": "Subsurface Radius",
+              "identifier": "Subsurface Radius",
+              "type": "NodeSocketVector",
+              "linked": false,
+              "default": [
+                1.0,
+                0.20000000298023224,
+                0.10000000149011612
+              ]
+            },
+            {
+              "name": "Subsurface Scale",
+              "identifier": "Subsurface Scale",
+              "type": "NodeSocketFloatDistance",
+              "linked": false,
+              "default": 0.05000000074505806
+            },
+            {
+              "name": "Subsurface IOR",
+              "identifier": "Subsurface IOR",
+              "type": "NodeSocketFloatFactor",
+              "linked": false,
+              "default": 1.399999976158142
+            },
+            {
+              "name": "Subsurface Anisotropy",
+              "identifier": "Subsurface Anisotropy",
+              "type": "NodeSocketFloatFactor",
+              "linked": false,
+              "default": 0.0
+            },
+            {
+              "name": "Specular IOR Level",
+              "identifier": "Specular IOR Level",
+              "type": "NodeSocketFloatFactor",
+              "linked": false,
+              "default": 0.5
+            },
+            {
+              "name": "Specular Tint",
+              "identifier": "Specular Tint",
+              "type": "NodeSocketColor",
+              "linked": false,
+              "default": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "name": "Anisotropic",
+              "identifier": "Anisotropic",
+              "type": "NodeSocketFloatFactor",
+              "linked": false,
+              "default": 0.0
+            },
+            {
+              "name": "Anisotropic Rotation",
+              "identifier": "Anisotropic Rotation",
+              "type": "NodeSocketFloatFactor",
+              "linked": false,
+              "default": 0.0
+            },
+            {
+              "name": "Tangent",
+              "identifier": "Tangent",
+              "type": "NodeSocketVector",
+              "linked": false,
+              "default": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "name": "Transmission Weight",
+              "identifier": "Transmission Weight",
+              "type": "NodeSocketFloatFactor",
+              "linked": false,
+              "default": 0.0
+            },
+            {
+              "name": "Coat Weight",
+              "identifier": "Coat Weight",
+              "type": "NodeSocketFloatFactor",
+              "linked": false,
+              "default": 0.0
+            },
+            {
+              "name": "Coat Roughness",
+              "identifier": "Coat Roughness",
+              "type": "NodeSocketFloatFactor",
+              "linked": false,
+              "default": 0.029999999329447746
+            },
+            {
+              "name": "Coat IOR",
+              "identifier": "Coat IOR",
+              "type": "NodeSocketFloat",
+              "linked": false,
+              "default": 1.5
+            },
+            {
+              "name": "Coat Tint",
+              "identifier": "Coat Tint",
+              "type": "NodeSocketColor",
+              "linked": false,
+              "default": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "name": "Coat Normal",
+              "identifier": "Coat Normal",
+              "type": "NodeSocketVector",
+              "linked": false,
+              "default": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "name": "Sheen Weight",
+              "identifier": "Sheen Weight",
+              "type": "NodeSocketFloatFactor",
+              "linked": false,
+              "default": 0.0
+            },
+            {
+              "name": "Sheen Roughness",
+              "identifier": "Sheen Roughness",
+              "type": "NodeSocketFloatFactor",
+              "linked": false,
+              "default": 0.5
+            },
+            {
+              "name": "Sheen Tint",
+              "identifier": "Sheen Tint",
+              "type": "NodeSocketColor",
+              "linked": false,
+              "default": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "name": "Emission Color",
+              "identifier": "Emission Color",
+              "type": "NodeSocketColor",
+              "linked": false,
+              "default": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "name": "Emission Strength",
+              "identifier": "Emission Strength",
+              "type": "NodeSocketFloat",
+              "linked": false,
+              "default": 0.0
+            },
+            {
+              "name": "Thin Film Thickness",
+              "identifier": "Thin Film Thickness",
+              "type": "NodeSocketFloatWavelength",
+              "linked": false,
+              "default": 0.0
+            },
+            {
+              "name": "Thin Film IOR",
+              "identifier": "Thin Film IOR",
+              "type": "NodeSocketFloat",
+              "linked": false,
+              "default": 1.3300000429153442
+            }
+          ],
+          "outputs": [
+            {
+              "name": "BSDF",
+              "identifier": "BSDF",
+              "type": "NodeSocketShader",
+              "linked": true,
+              "default": null
+            }
+          ]
+        },
+        {
+          "name": "Material Output",
+          "type": "ShaderNodeOutputMaterial",
+          "label": "",
+          "mute": false,
+          "properties": {},
+          "inputs": [
+            {
+              "name": "Surface",
+              "identifier": "Surface",
+              "type": "NodeSocketShader",
+              "linked": true,
+              "default": null
+            },
+            {
+              "name": "Volume",
+              "identifier": "Volume",
+              "type": "NodeSocketShader",
+              "linked": false,
+              "default": null
+            },
+            {
+              "name": "Displacement",
+              "identifier": "Displacement",
+              "type": "NodeSocketVector",
+              "linked": false,
+              "default": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "name": "Thickness",
+              "identifier": "Thickness",
+              "type": "NodeSocketFloat",
+              "linked": false,
+              "default": 0.0
+            }
+          ],
+          "outputs": []
+        },
+        {
+          "name": "Transparent BSDF",
+          "type": "ShaderNodeBsdfTransparent",
+          "label": "",
+          "mute": false,
+          "properties": {},
+          "inputs": [
+            {
+              "name": "Color",
+              "identifier": "Color",
+              "type": "NodeSocketColor",
+              "linked": false,
+              "default": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "name": "Weight",
+              "identifier": "Weight",
+              "type": "NodeSocketFloat",
+              "linked": false,
+              "default": 0.0
+            }
+          ],
+          "outputs": [
+            {
+              "name": "BSDF",
+              "identifier": "BSDF",
+              "type": "NodeSocketShader",
+              "linked": true,
+              "default": null
+            }
+          ]
+        },
+        {
+          "name": "Mix Shader",
+          "type": "ShaderNodeMixShader",
+          "label": "",
+          "mute": false,
+          "properties": {},
+          "inputs": [
+            {
+              "name": "Fac",
+              "identifier": "Fac",
+              "type": "NodeSocketFloatFactor",
+              "linked": true,
+              "default": 0.5
+            },
+            {
+              "name": "Shader",
+              "identifier": "Shader",
+              "type": "NodeSocketShader",
+              "linked": true,
+              "default": null
+            },
+            {
+              "name": "Shader",
+              "identifier": "Shader_001",
+              "type": "NodeSocketShader",
+              "linked": true,
+              "default": null
+            }
+          ],
+          "outputs": [
+            {
+              "name": "Shader",
+              "identifier": "Shader",
+              "type": "NodeSocketShader",
+              "linked": true,
+              "default": null
+            }
+          ]
+        },
+        {
+          "name": "Math.013",
+          "type": "ShaderNodeMath",
+          "label": "",
+          "mute": false,
+          "properties": {
+            "operation": "LESS_THAN",
+            "use_clamp": false
+          },
+          "inputs": [
+            {
+              "name": "Value",
+              "identifier": "Value",
+              "type": "NodeSocketFloat",
+              "linked": true,
+              "default": 0.5
+            },
+            {
+              "name": "Value",
+              "identifier": "Value_001",
+              "type": "NodeSocketFloat",
+              "linked": true,
+              "default": 0.5
+            },
+            {
+              "name": "Value",
+              "identifier": "Value_002",
+              "type": "NodeSocketFloat",
+              "linked": false,
+              "default": 0.5
+            }
+          ],
+          "outputs": [
+            {
+              "name": "Value",
+              "identifier": "Value",
+              "type": "NodeSocketFloat",
+              "linked": true,
+              "default": 0.0
+            }
+          ]
+        },
+        {
+          "name": "Math.014",
+          "type": "ShaderNodeMath",
+          "label": "",
+          "mute": false,
+          "properties": {
+            "operation": "GREATER_THAN",
+            "use_clamp": false
+          },
+          "inputs": [
+            {
+              "name": "Value",
+              "identifier": "Value",
+              "type": "NodeSocketFloat",
+              "linked": true,
+              "default": 0.5
+            },
+            {
+              "name": "Value",
+              "identifier": "Value_001",
+              "type": "NodeSocketFloat",
+              "linked": true,
+              "default": 0.5
+            },
+            {
+              "name": "Value",
+              "identifier": "Value_002",
+              "type": "NodeSocketFloat",
+              "linked": false,
+              "default": 0.5
+            }
+          ],
+          "outputs": [
+            {
+              "name": "Value",
+              "identifier": "Value",
+              "type": "NodeSocketFloat",
+              "linked": true,
+              "default": 0.0
+            }
+          ]
+        },
+        {
+          "name": "Math.015",
+          "type": "ShaderNodeMath",
+          "label": "",
+          "mute": false,
+          "properties": {
+            "operation": "MULTIPLY",
+            "use_clamp": false
+          },
+          "inputs": [
+            {
+              "name": "Value",
+              "identifier": "Value",
+              "type": "NodeSocketFloat",
+              "linked": true,
+              "default": 0.5
+            },
+            {
+              "name": "Value",
+              "identifier": "Value_001",
+              "type": "NodeSocketFloat",
+              "linked": true,
+              "default": 0.5
+            },
+            {
+              "name": "Value",
+              "identifier": "Value_002",
+              "type": "NodeSocketFloat",
+              "linked": false,
+              "default": 0.5
+            }
+          ],
+          "outputs": [
+            {
+              "name": "Value",
+              "identifier": "Value",
+              "type": "NodeSocketFloat",
+              "linked": true,
+              "default": 0.0
+            }
+          ]
+        },
+        {
+          "name": "Math.016",
+          "type": "ShaderNodeMath",
+          "label": "",
+          "mute": false,
+          "properties": {
+            "operation": "MULTIPLY",
+            "use_clamp": false
+          },
+          "inputs": [
+            {
+              "name": "Value",
+              "identifier": "Value",
+              "type": "NodeSocketFloat",
+              "linked": true,
+              "default": 0.5
+            },
+            {
+              "name": "Value",
+              "identifier": "Value_001",
+              "type": "NodeSocketFloat",
+              "linked": false,
+              "default": 50.0
+            },
+            {
+              "name": "Value",
+              "identifier": "Value_002",
+              "type": "NodeSocketFloat",
+              "linked": false,
+              "default": 0.5
+            }
+          ],
+          "outputs": [
+            {
+              "name": "Value",
+              "identifier": "Value",
+              "type": "NodeSocketFloat",
+              "linked": true,
+              "default": 0.0
+            }
+          ]
+        },
+        {
+          "name": "Math.017",
+          "type": "ShaderNodeMath",
+          "label": "",
+          "mute": false,
+          "properties": {
+            "operation": "MINIMUM",
+            "use_clamp": false
+          },
+          "inputs": [
+            {
+              "name": "Value",
+              "identifier": "Value",
+              "type": "NodeSocketFloat",
+              "linked": false,
+              "default": 1.0
+            },
+            {
+              "name": "Value",
+              "identifier": "Value_001",
+              "type": "NodeSocketFloat",
+              "linked": true,
+              "default": 0.5
+            },
+            {
+              "name": "Value",
+              "identifier": "Value_002",
+              "type": "NodeSocketFloat",
+              "linked": false,
+              "default": 0.5
+            }
+          ],
+          "outputs": [
+            {
+              "name": "Value",
+              "identifier": "Value",
+              "type": "NodeSocketFloat",
+              "linked": true,
+              "default": 0.0
+            }
+          ]
+        },
+        {
+          "name": "Math.018",
+          "type": "ShaderNodeMath",
+          "label": "",
+          "mute": false,
+          "properties": {
+            "operation": "SUBTRACT",
+            "use_clamp": false
+          },
+          "inputs": [
+            {
+              "name": "Value",
+              "identifier": "Value",
+              "type": "NodeSocketFloat",
+              "linked": false,
+              "default": 1.0
+            },
+            {
+              "name": "Value",
+              "identifier": "Value_001",
+              "type": "NodeSocketFloat",
+              "linked": true,
+              "default": 0.5
+            },
+            {
+              "name": "Value",
+              "identifier": "Value_002",
+              "type": "NodeSocketFloat",
+              "linked": false,
+              "default": 0.5
+            }
+          ],
+          "outputs": [
+            {
+              "name": "Value",
+              "identifier": "Value",
+              "type": "NodeSocketFloat",
+              "linked": true,
+              "default": 0.0
+            }
+          ]
+        },
+        {
+          "name": "Math.019",
+          "type": "ShaderNodeMath",
+          "label": "",
+          "mute": false,
+          "properties": {
+            "operation": "MAXIMUM",
+            "use_clamp": false
+          },
+          "inputs": [
+            {
+              "name": "Value",
+              "identifier": "Value",
+              "type": "NodeSocketFloat",
+              "linked": true,
+              "default": 0.5
+            },
+            {
+              "name": "Value",
+              "identifier": "Value_001",
+              "type": "NodeSocketFloat",
+              "linked": true,
+              "default": 0.5
+            },
+            {
+              "name": "Value",
+              "identifier": "Value_002",
+              "type": "NodeSocketFloat",
+              "linked": false,
+              "default": 0.5
+            }
+          ],
+          "outputs": [
+            {
+              "name": "Value",
+              "identifier": "Value",
+              "type": "NodeSocketFloat",
+              "linked": true,
+              "default": 0.0
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "from": "Transparent BSDF",
+          "from_socket": "BSDF",
+          "to": "Mix Shader",
+          "to_socket": "Shader",
+          "valid": true
+        },
+        {
+          "from": "Principled BSDF",
+          "from_socket": "BSDF",
+          "to": "Mix Shader",
+          "to_socket": "Shader_001",
+          "valid": true
+        },
+        {
+          "from": "Mix Shader",
+          "from_socket": "Shader",
+          "to": "Material Output",
+          "to_socket": "Surface",
+          "valid": true
+        },
+        {
+          "from": "Separate XYZ",
+          "from_socket": "Z",
+          "to": "Math.013",
+          "to_socket": "Value",
+          "valid": true
+        },
+        {
+          "from": "Math.011",
+          "from_socket": "Value",
+          "to": "Math.013",
+          "to_socket": "Value_001",
+          "valid": true
+        },
+        {
+          "from": "Separate XYZ",
+          "from_socket": "Z",
+          "to": "Math.014",
+          "to_socket": "Value",
+          "valid": true
+        },
+        {
+          "from": "Math.012",
+          "from_socket": "Value",
+          "to": "Math.014",
+          "to_socket": "Value_001",
+          "valid": true
+        },
+        {
+          "from": "Math.013",
+          "from_socket": "Value",
+          "to": "Math.015",
+          "to_socket": "Value",
+          "valid": true
+        },
+        {
+          "from": "Math.014",
+          "from_socket": "Value",
+          "to": "Math.015",
+          "to_socket": "Value_001",
+          "valid": true
+        },
+        {
+          "from": "Blink driver",
+          "from_socket": "Value",
+          "to": "Math.016",
+          "to_socket": "Value",
+          "valid": true
+        },
+        {
+          "from": "Math.016",
+          "from_socket": "Value",
+          "to": "Math.017",
+          "to_socket": "Value_001",
+          "valid": true
+        },
+        {
+          "from": "Math.017",
+          "from_socket": "Value",
+          "to": "Math.018",
+          "to_socket": "Value_001",
+          "valid": true
+        },
+        {
+          "from": "Math.015",
+          "from_socket": "Value",
+          "to": "Math.019",
+          "to_socket": "Value",
+          "valid": true
+        },
+        {
+          "from": "Math.018",
+          "from_socket": "Value",
+          "to": "Math.019",
+          "to_socket": "Value_001",
+          "valid": true
+        },
+        {
+          "from": "Math.019",
+          "from_socket": "Value",
+          "to": "Mix Shader",
+          "to_socket": "Fac",
+          "valid": true
+        },
+        {
+          "from": "Mix (Legacy).002",
+          "from_socket": "Color",
+          "to": "Principled BSDF",
+          "to_socket": "Base Color",
+          "valid": true
+        }
+      ]
+    },
+    {
+      "material": "Blink mask Expressive eye white 1",
+      "settings": {
+        "use_nodes": true,
+        "diffuse_color": [
+          1.0,
+          0.9399999976158142,
+          0.7799999713897705,
+          1.0
+        ],
+        "metallic": 0.0,
+        "roughness": 0.4000000059604645,
+        "use_backface_culling": false,
+        "surface_render_method": "DITHERED",
+        "use_transparent_shadow": true
+      },
+      "nodes": [
+        {
+          "name": "Principled BSDF",
+          "type": "ShaderNodeBsdfPrincipled",
+          "label": "",
+          "mute": false,
+          "properties": {
+            "distribution": "MULTI_GGX"
+          },
+          "inputs": [
+            {
+              "name": "Base Color",
+              "identifier": "Base Color",
+              "type": "NodeSocketColor",
+              "linked": true,
+              "default": [
+                1.0,
+                0.9399999976158142,
+                0.7799999713897705,
+                1.0
+              ]
+            },
+            {
+              "name": "Metallic",
+              "identifier": "Metallic",
+              "type": "NodeSocketFloatFactor",
+              "linked": false,
+              "default": 0.0
+            },
+            {
+              "name": "Roughness",
+              "identifier": "Roughness",
+              "type": "NodeSocketFloatFactor",
+              "linked": false,
+              "default": 0.2199999988079071
+            },
+            {
+              "name": "IOR",
+              "identifier": "IOR",
+              "type": "NodeSocketFloat",
+              "linked": false,
+              "default": 1.5
+            },
+            {
+              "name": "Alpha",
+              "identifier": "Alpha",
+              "type": "NodeSocketFloatFactor",
+              "linked": false,
+              "default": 1.0
+            },
+            {
+              "name": "Normal",
+              "identifier": "Normal",
+              "type": "NodeSocketVector",
+              "linked": false,
+              "default": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "name": "Weight",
+              "identifier": "Weight",
+              "type": "NodeSocketFloat",
+              "linked": false,
+              "default": 0.0
+            },
+            {
+              "name": "Diffuse Roughness",
+              "identifier": "Diffuse Roughness",
+              "type": "NodeSocketFloatFactor",
+              "linked": false,
+              "default": 0.0
+            },
+            {
+              "name": "Subsurface Weight",
+              "identifier": "Subsurface Weight",
+              "type": "NodeSocketFloatFactor",
+              "linked": false,
+              "default": 0.0
+            },
+            {
+              "name": "Subsurface Radius",
+              "identifier": "Subsurface Radius",
+              "type": "NodeSocketVector",
+              "linked": false,
+              "default": [
+                1.0,
+                0.20000000298023224,
+                0.10000000149011612
+              ]
+            },
+            {
+              "name": "Subsurface Scale",
+              "identifier": "Subsurface Scale",
+              "type": "NodeSocketFloatDistance",
+              "linked": false,
+              "default": 0.05000000074505806
+            },
+            {
+              "name": "Subsurface IOR",
+              "identifier": "Subsurface IOR",
+              "type": "NodeSocketFloatFactor",
+              "linked": false,
+              "default": 1.399999976158142
+            },
+            {
+              "name": "Subsurface Anisotropy",
+              "identifier": "Subsurface Anisotropy",
+              "type": "NodeSocketFloatFactor",
+              "linked": false,
+              "default": 0.0
+            },
+            {
+              "name": "Specular IOR Level",
+              "identifier": "Specular IOR Level",
+              "type": "NodeSocketFloatFactor",
+              "linked": false,
+              "default": 0.5
+            },
+            {
+              "name": "Specular Tint",
+              "identifier": "Specular Tint",
+              "type": "NodeSocketColor",
+              "linked": false,
+              "default": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "name": "Anisotropic",
+              "identifier": "Anisotropic",
+              "type": "NodeSocketFloatFactor",
+              "linked": false,
+              "default": 0.0
+            },
+            {
+              "name": "Anisotropic Rotation",
+              "identifier": "Anisotropic Rotation",
+              "type": "NodeSocketFloatFactor",
+              "linked": false,
+              "default": 0.0
+            },
+            {
+              "name": "Tangent",
+              "identifier": "Tangent",
+              "type": "NodeSocketVector",
+              "linked": false,
+              "default": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "name": "Transmission Weight",
+              "identifier": "Transmission Weight",
+              "type": "NodeSocketFloatFactor",
+              "linked": false,
+              "default": 0.0
+            },
+            {
+              "name": "Coat Weight",
+              "identifier": "Coat Weight",
+              "type": "NodeSocketFloatFactor",
+              "linked": false,
+              "default": 0.0
+            },
+            {
+              "name": "Coat Roughness",
+              "identifier": "Coat Roughness",
+              "type": "NodeSocketFloatFactor",
+              "linked": false,
+              "default": 0.029999999329447746
+            },
+            {
+              "name": "Coat IOR",
+              "identifier": "Coat IOR",
+              "type": "NodeSocketFloat",
+              "linked": false,
+              "default": 1.5
+            },
+            {
+              "name": "Coat Tint",
+              "identifier": "Coat Tint",
+              "type": "NodeSocketColor",
+              "linked": false,
+              "default": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "name": "Coat Normal",
+              "identifier": "Coat Normal",
+              "type": "NodeSocketVector",
+              "linked": false,
+              "default": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "name": "Sheen Weight",
+              "identifier": "Sheen Weight",
+              "type": "NodeSocketFloatFactor",
+              "linked": false,
+              "default": 0.0
+            },
+            {
+              "name": "Sheen Roughness",
+              "identifier": "Sheen Roughness",
+              "type": "NodeSocketFloatFactor",
+              "linked": false,
+              "default": 0.5
+            },
+            {
+              "name": "Sheen Tint",
+              "identifier": "Sheen Tint",
+              "type": "NodeSocketColor",
+              "linked": false,
+              "default": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "name": "Emission Color",
+              "identifier": "Emission Color",
+              "type": "NodeSocketColor",
+              "linked": false,
+              "default": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "name": "Emission Strength",
+              "identifier": "Emission Strength",
+              "type": "NodeSocketFloat",
+              "linked": false,
+              "default": 0.0
+            },
+            {
+              "name": "Thin Film Thickness",
+              "identifier": "Thin Film Thickness",
+              "type": "NodeSocketFloatWavelength",
+              "linked": false,
+              "default": 0.0
+            },
+            {
+              "name": "Thin Film IOR",
+              "identifier": "Thin Film IOR",
+              "type": "NodeSocketFloat",
+              "linked": false,
+              "default": 1.3300000429153442
+            }
+          ],
+          "outputs": [
+            {
+              "name": "BSDF",
+              "identifier": "BSDF",
+              "type": "NodeSocketShader",
+              "linked": true,
+              "default": null
+            }
+          ]
+        },
+        {
+          "name": "Material Output",
+          "type": "ShaderNodeOutputMaterial",
+          "label": "",
+          "mute": false,
+          "properties": {},
+          "inputs": [
+            {
+              "name": "Surface",
+              "identifier": "Surface",
+              "type": "NodeSocketShader",
+              "linked": true,
+              "default": null
+            },
+            {
+              "name": "Volume",
+              "identifier": "Volume",
+              "type": "NodeSocketShader",
+              "linked": false,
+              "default": null
+            },
+            {
+              "name": "Displacement",
+              "identifier": "Displacement",
+              "type": "NodeSocketVector",
+              "linked": false,
+              "default": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "name": "Thickness",
+              "identifier": "Thickness",
+              "type": "NodeSocketFloat",
+              "linked": false,
+              "default": 0.0
+            }
+          ],
+          "outputs": []
+        },
+        {
+          "name": "Transparent BSDF",
+          "type": "ShaderNodeBsdfTransparent",
+          "label": "",
+          "mute": false,
+          "properties": {},
+          "inputs": [
+            {
+              "name": "Color",
+              "identifier": "Color",
+              "type": "NodeSocketColor",
+              "linked": false,
+              "default": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "name": "Weight",
+              "identifier": "Weight",
+              "type": "NodeSocketFloat",
+              "linked": false,
+              "default": 0.0
+            }
+          ],
+          "outputs": [
+            {
+              "name": "BSDF",
+              "identifier": "BSDF",
+              "type": "NodeSocketShader",
+              "linked": true,
+              "default": null
+            }
+          ]
+        },
+        {
+          "name": "Mix Shader",
+          "type": "ShaderNodeMixShader",
+          "label": "",
+          "mute": false,
+          "properties": {},
+          "inputs": [
+            {
+              "name": "Fac",
+              "identifier": "Fac",
+              "type": "NodeSocketFloatFactor",
+              "linked": true,
+              "default": 0.5
+            },
+            {
+              "name": "Shader",
+              "identifier": "Shader",
+              "type": "NodeSocketShader",
+              "linked": true,
+              "default": null
+            },
+            {
+              "name": "Shader",
+              "identifier": "Shader_001",
+              "type": "NodeSocketShader",
+              "linked": true,
+              "default": null
+            }
+          ],
+          "outputs": [
+            {
+              "name": "Shader",
+              "identifier": "Shader",
+              "type": "NodeSocketShader",
+              "linked": true,
+              "default": null
+            }
+          ]
+        },
+        {
+          "name": "Math.013",
+          "type": "ShaderNodeMath",
+          "label": "",
+          "mute": false,
+          "properties": {
+            "operation": "LESS_THAN",
+            "use_clamp": false
+          },
+          "inputs": [
+            {
+              "name": "Value",
+              "identifier": "Value",
+              "type": "NodeSocketFloat",
+              "linked": true,
+              "default": 0.5
+            },
+            {
+              "name": "Value",
+              "identifier": "Value_001",
+              "type": "NodeSocketFloat",
+              "linked": true,
+              "default": 0.5
+            },
+            {
+              "name": "Value",
+              "identifier": "Value_002",
+              "type": "NodeSocketFloat",
+              "linked": false,
+              "default": 0.5
+            }
+          ],
+          "outputs": [
+            {
+              "name": "Value",
+              "identifier": "Value",
+              "type": "NodeSocketFloat",
+              "linked": true,
+              "default": 0.0
+            }
+          ]
+        },
+        {
+          "name": "Math.014",
+          "type": "ShaderNodeMath",
+          "label": "",
+          "mute": false,
+          "properties": {
+            "operation": "GREATER_THAN",
+            "use_clamp": false
+          },
+          "inputs": [
+            {
+              "name": "Value",
+              "identifier": "Value",
+              "type": "NodeSocketFloat",
+              "linked": true,
+              "default": 0.5
+            },
+            {
+              "name": "Value",
+              "identifier": "Value_001",
+              "type": "NodeSocketFloat",
+              "linked": true,
+              "default": 0.5
+            },
+            {
+              "name": "Value",
+              "identifier": "Value_002",
+              "type": "NodeSocketFloat",
+              "linked": false,
+              "default": 0.5
+            }
+          ],
+          "outputs": [
+            {
+              "name": "Value",
+              "identifier": "Value",
+              "type": "NodeSocketFloat",
+              "linked": true,
+              "default": 0.0
+            }
+          ]
+        },
+        {
+          "name": "Math.015",
+          "type": "ShaderNodeMath",
+          "label": "",
+          "mute": false,
+          "properties": {
+            "operation": "MULTIPLY",
+            "use_clamp": false
+          },
+          "inputs": [
+            {
+              "name": "Value",
+              "identifier": "Value",
+              "type": "NodeSocketFloat",
+              "linked": true,
+              "default": 0.5
+            },
+            {
+              "name": "Value",
+              "identifier": "Value_001",
+              "type": "NodeSocketFloat",
+              "linked": true,
+              "default": 0.5
+            },
+            {
+              "name": "Value",
+              "identifier": "Value_002",
+              "type": "NodeSocketFloat",
+              "linked": false,
+              "default": 0.5
+            }
+          ],
+          "outputs": [
+            {
+              "name": "Value",
+              "identifier": "Value",
+              "type": "NodeSocketFloat",
+              "linked": true,
+              "default": 0.0
+            }
+          ]
+        },
+        {
+          "name": "Math.016",
+          "type": "ShaderNodeMath",
+          "label": "",
+          "mute": false,
+          "properties": {
+            "operation": "MULTIPLY",
+            "use_clamp": false
+          },
+          "inputs": [
+            {
+              "name": "Value",
+              "identifier": "Value",
+              "type": "NodeSocketFloat",
+              "linked": true,
+              "default": 0.5
+            },
+            {
+              "name": "Value",
+              "identifier": "Value_001",
+              "type": "NodeSocketFloat",
+              "linked": false,
+              "default": 50.0
+            },
+            {
+              "name": "Value",
+              "identifier": "Value_002",
+              "type": "NodeSocketFloat",
+              "linked": false,
+              "default": 0.5
+            }
+          ],
+          "outputs": [
+            {
+              "name": "Value",
+              "identifier": "Value",
+              "type": "NodeSocketFloat",
+              "linked": true,
+              "default": 0.0
+            }
+          ]
+        },
+        {
+          "name": "Math.017",
+          "type": "ShaderNodeMath",
+          "label": "",
+          "mute": false,
+          "properties": {
+            "operation": "MINIMUM",
+            "use_clamp": false
+          },
+          "inputs": [
+            {
+              "name": "Value",
+              "identifier": "Value",
+              "type": "NodeSocketFloat",
+              "linked": false,
+              "default": 1.0
+            },
+            {
+              "name": "Value",
+              "identifier": "Value_001",
+              "type": "NodeSocketFloat",
+              "linked": true,
+              "default": 0.5
+            },
+            {
+              "name": "Value",
+              "identifier": "Value_002",
+              "type": "NodeSocketFloat",
+              "linked": false,
+              "default": 0.5
+            }
+          ],
+          "outputs": [
+            {
+              "name": "Value",
+              "identifier": "Value",
+              "type": "NodeSocketFloat",
+              "linked": true,
+              "default": 0.0
+            }
+          ]
+        },
+        {
+          "name": "Math.018",
+          "type": "ShaderNodeMath",
+          "label": "",
+          "mute": false,
+          "properties": {
+            "operation": "SUBTRACT",
+            "use_clamp": false
+          },
+          "inputs": [
+            {
+              "name": "Value",
+              "identifier": "Value",
+              "type": "NodeSocketFloat",
+              "linked": false,
+              "default": 1.0
+            },
+            {
+              "name": "Value",
+              "identifier": "Value_001",
+              "type": "NodeSocketFloat",
+              "linked": true,
+              "default": 0.5
+            },
+            {
+              "name": "Value",
+              "identifier": "Value_002",
+              "type": "NodeSocketFloat",
+              "linked": false,
+              "default": 0.5
+            }
+          ],
+          "outputs": [
+            {
+              "name": "Value",
+              "identifier": "Value",
+              "type": "NodeSocketFloat",
+              "linked": true,
+              "default": 0.0
+            }
+          ]
+        },
+        {
+          "name": "Math.019",
+          "type": "ShaderNodeMath",
+          "label": "",
+          "mute": false,
+          "properties": {
+            "operation": "MAXIMUM",
+            "use_clamp": false
+          },
+          "inputs": [
+            {
+              "name": "Value",
+              "identifier": "Value",
+              "type": "NodeSocketFloat",
+              "linked": true,
+              "default": 0.5
+            },
+            {
+              "name": "Value",
+              "identifier": "Value_001",
+              "type": "NodeSocketFloat",
+              "linked": true,
+              "default": 0.5
+            },
+            {
+              "name": "Value",
+              "identifier": "Value_002",
+              "type": "NodeSocketFloat",
+              "linked": false,
+              "default": 0.5
+            }
+          ],
+          "outputs": [
+            {
+              "name": "Value",
+              "identifier": "Value",
+              "type": "NodeSocketFloat",
+              "linked": true,
+              "default": 0.0
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "from": "Transparent BSDF",
+          "from_socket": "BSDF",
+          "to": "Mix Shader",
+          "to_socket": "Shader",
+          "valid": true
+        },
+        {
+          "from": "Principled BSDF",
+          "from_socket": "BSDF",
+          "to": "Mix Shader",
+          "to_socket": "Shader_001",
+          "valid": true
+        },
+        {
+          "from": "Mix Shader",
+          "from_socket": "Shader",
+          "to": "Material Output",
+          "to_socket": "Surface",
+          "valid": true
+        },
+        {
+          "from": "Separate XYZ",
+          "from_socket": "Z",
+          "to": "Math.013",
+          "to_socket": "Value",
+          "valid": true
+        },
+        {
+          "from": "Math.011",
+          "from_socket": "Value",
+          "to": "Math.013",
+          "to_socket": "Value_001",
+          "valid": true
+        },
+        {
+          "from": "Separate XYZ",
+          "from_socket": "Z",
+          "to": "Math.014",
+          "to_socket": "Value",
+          "valid": true
+        },
+        {
+          "from": "Math.012",
+          "from_socket": "Value",
+          "to": "Math.014",
+          "to_socket": "Value_001",
+          "valid": true
+        },
+        {
+          "from": "Math.013",
+          "from_socket": "Value",
+          "to": "Math.015",
+          "to_socket": "Value",
+          "valid": true
+        },
+        {
+          "from": "Math.014",
+          "from_socket": "Value",
+          "to": "Math.015",
+          "to_socket": "Value_001",
+          "valid": true
+        },
+        {
+          "from": "Blink driver",
+          "from_socket": "Value",
+          "to": "Math.016",
+          "to_socket": "Value",
+          "valid": true
+        },
+        {
+          "from": "Math.016",
+          "from_socket": "Value",
+          "to": "Math.017",
+          "to_socket": "Value_001",
+          "valid": true
+        },
+        {
+          "from": "Math.017",
+          "from_socket": "Value",
+          "to": "Math.018",
+          "to_socket": "Value_001",
+          "valid": true
+        },
+        {
+          "from": "Math.015",
+          "from_socket": "Value",
+          "to": "Math.019",
+          "to_socket": "Value",
+          "valid": true
+        },
+        {
+          "from": "Math.018",
+          "from_socket": "Value",
+          "to": "Math.019",
+          "to_socket": "Value_001",
+          "valid": true
+        },
+        {
+          "from": "Math.019",
+          "from_socket": "Value",
+          "to": "Mix Shader",
+          "to_socket": "Fac",
+          "valid": true
+        },
+        {
+          "from": "Mix (Legacy).002",
+          "from_socket": "Color",
+          "to": "Principled BSDF",
+          "to_socket": "Base Color",
+          "valid": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "hostABI": "x86_64",
+  "ground": 72,
+  "counters": 112,
+  "result": 256,
+  "workBudget": 232,
+  "context": 576,
+  "sceneHeader": 584,
+  "scene1566": 100808,
+  "scene2048": 131656,
+  "sceneCap": 262144,
+  "AAWorkspace": 137312,
+  "AAStackReserve": 8192,
+  "AAAdditionalBound": 145504,
+  "AAAdditionalCap": 147456,
+  "namedCallChainStackUpper": 4976,
+  "nativeCallerAndObserverExcluded": true,
+  "cross32Verified": false,
+  "cross32Blocker": "Missing multilib libc bits/libc-header-start.h"
+}

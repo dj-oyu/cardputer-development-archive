@@ -1,0 +1,713 @@
+{
+  "ok": true,
+  "entries": [
+    {
+      "sequence": 1074,
+      "text": "[658/1192] Building C object esp-idf/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/CMakeFiles/builtin.dir/src/pem.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1075,
+      "text": "[659/1192] Building C object esp-idf/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/CMakeFiles/builtin.dir/src/oid.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1076,
+      "text": "[660/1192] Building C object esp-idf/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/CMakeFiles/builtin.dir/src/pk_rsa.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1077,
+      "text": "[661/1192] Building C object esp-idf/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/CMakeFiles/builtin.dir/src/pk_ecc.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1078,
+      "text": "[662/1192] Building C object esp-idf/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/CMakeFiles/builtin.dir/src/pk_wrap.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1079,
+      "text": "[663/1192] Building C object esp-idf/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/CMakeFiles/builtin.dir/src/platform.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1080,
+      "text": "[664/1192] Building C object esp-idf/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/CMakeFiles/builtin.dir/src/pkcs5.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1081,
+      "text": "[665/1192] Building C object esp-idf/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/CMakeFiles/builtin.dir/src/pk.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1082,
+      "text": "[666/1192] Building C object esp-idf/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/CMakeFiles/builtin.dir/src/pkwrite.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1083,
+      "text": "[667/1192] Building C object esp-idf/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/CMakeFiles/builtin.dir/src/poly1305.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1084,
+      "text": "[668/1192] Building C object esp-idf/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/CMakeFiles/builtin.dir/src/pkparse.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1085,
+      "text": "[669/1192] Building C object esp-idf/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/CMakeFiles/builtin.dir/src/platform_util.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1086,
+      "text": "[670/1192] Building C object esp-idf/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/CMakeFiles/builtin.dir/src/psa_crypto_ffdh.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1087,
+      "text": "[671/1192] Building C object esp-idf/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/CMakeFiles/builtin.dir/src/psa_crypto_cipher.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1088,
+      "text": "[672/1192] Building C object esp-idf/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/CMakeFiles/builtin.dir/src/psa_crypto_hash.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1089,
+      "text": "[673/1192] Building C object esp-idf/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/CMakeFiles/builtin.dir/src/psa_crypto_aead.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1090,
+      "text": "[674/1192] Building C object esp-idf/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/CMakeFiles/builtin.dir/src/psa_crypto_ecp.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1091,
+      "text": "[675/1192] Building C object esp-idf/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/CMakeFiles/builtin.dir/src/psa_crypto_mac.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1092,
+      "text": "[676/1192] Building C object esp-idf/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/CMakeFiles/builtin.dir/src/ripemd160.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1093,
+      "text": "[677/1192] Building C object esp-idf/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/CMakeFiles/builtin.dir/src/sha1.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1094,
+      "text": "[678/1192] Building C object esp-idf/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/CMakeFiles/builtin.dir/src/psa_crypto_pake.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1095,
+      "text": "[679/1192] Building C object esp-idf/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/CMakeFiles/builtin.dir/src/psa_util.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1096,
+      "text": "[680/1192] Building C object esp-idf/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/CMakeFiles/builtin.dir/src/sha3.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1097,
+      "text": "[681/1192] Building C object esp-idf/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/CMakeFiles/builtin.dir/src/psa_crypto_rsa.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1098,
+      "text": "[682/1192] Building C object esp-idf/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/CMakeFiles/builtin.dir/src/rsa_alt_helpers.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1099,
+      "text": "[683/1192] Building C object esp-idf/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/CMakeFiles/builtin.dir/src/sha256.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1100,
+      "text": "[684/1192] Building C object esp-idf/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/CMakeFiles/builtin.dir/src/threading.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1101,
+      "text": "[685/1192] Building C object esp-idf/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/CMakeFiles/builtin.dir/src/sha512.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1102,
+      "text": "[686/1192] Building C object esp-idf/mbedtls/mbedtls/tf-psa-crypto/drivers/everest/CMakeFiles/everest.dir/library/x25519.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1103,
+      "text": "[687/1192] Building C object esp-idf/mbedtls/mbedtls/tf-psa-crypto/drivers/p256-m/CMakeFiles/p256m.dir/p256-m/p256-m.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1104,
+      "text": "[688/1192] Building C object esp-idf/mbedtls/mbedtls/tf-psa-crypto/drivers/p256-m/CMakeFiles/p256m.dir/p256-m_driver_entrypoints.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1105,
+      "text": "[689/1192] Building C object esp-idf/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/CMakeFiles/builtin.dir/src/rsa.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1106,
+      "text": "[690/1192] Creating directories for 'bootloader'",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1107,
+      "text": "[691/1192] Building C object esp-idf/mbedtls/mbedtls/tf-psa-crypto/drivers/everest/CMakeFiles/everest.dir/library/Hacl_Curve25519_joined.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1108,
+      "text": "[692/1192] Building C object esp-idf/mbedtls/mbedtls/tf-psa-crypto/drivers/everest/CMakeFiles/everest.dir/library/everest.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1109,
+      "text": "[693/1192] Linking CXX static library esp-idf\\mbedtls\\mbedtls\\library\\libmbedx509.a",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1110,
+      "text": "[694/1192] No download step for 'bootloader'",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1111,
+      "text": "[695/1192] No update step for 'bootloader'",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1112,
+      "text": "[696/1192] No patch step for 'bootloader'",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1113,
+      "text": "[697/1192] Linking CXX static library esp-idf\\mbedtls\\mbedtls\\tf-psa-crypto\\drivers\\builtin\\libmbed-builtin.a",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1114,
+      "text": "[698/1192] Linking CXX static library esp-idf\\mbedtls\\mbedtls\\tf-psa-crypto\\drivers\\p256-m\\libp256m.a",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1115,
+      "text": "[699/1192] Linking CXX static library esp-idf\\mbedtls\\mbedtls\\tf-psa-crypto\\drivers\\everest\\libeverest.a",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1116,
+      "text": "[700/1192] Generating x509_crt_bundle",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1117,
+      "text": "[701/1192] Generating ../../x509_crt_bundle.S",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1118,
+      "text": "[702/1192] Building ASM object esp-idf/mbedtls/CMakeFiles/__idf_mbedtls.dir/__/__/x509_crt_bundle.S.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1119,
+      "text": "[703/1192] Building C object esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/port/esp32s3/ext_mem_layout.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1120,
+      "text": "[704/1192] Building C object esp-idf/esp_driver_dma/CMakeFiles/__idf_esp_driver_dma.dir/src/esp_dma_utils.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1121,
+      "text": "[705/1192] Building C object esp-idf/esp_driver_dma/CMakeFiles/__idf_esp_driver_dma.dir/src/esp_async_memcpy.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1122,
+      "text": "[706/1192] Building C object esp-idf/esp_driver_dma/CMakeFiles/__idf_esp_driver_dma.dir/src/gdma_link.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1123,
+      "text": "[707/1192] Building C object esp-idf/esp_driver_dma/CMakeFiles/__idf_esp_driver_dma.dir/src/async_memcpy_gdma.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1124,
+      "text": "[708/1192] Building C object esp-idf/mbedtls/CMakeFiles/__idf_mbedtls.dir/esp_crt_bundle/esp_crt_bundle.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1125,
+      "text": "[709/1192] Building C object esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/esp_mmu_map.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1126,
+      "text": "[710/1192] Building C object esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/esp_cache_msync.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1127,
+      "text": "[711/1192] Building C object esp-idf/esp_driver_dma/CMakeFiles/__idf_esp_driver_dma.dir/src/gdma.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1128,
+      "text": "[712/1192] Building C object esp-idf/esp_pm/CMakeFiles/__idf_esp_pm.dir/pm_locks.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1129,
+      "text": "[713/1192] Building C object esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/esp_cache_utils.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1130,
+      "text": "[714/1192] Building C object esp-idf/esp_hal_uart/CMakeFiles/__idf_esp_hal_uart.dir/uart_hal_iram.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1131,
+      "text": "[715/1192] Building C object esp-idf/esp_pm/CMakeFiles/__idf_esp_pm.dir/pm_trace.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1132,
+      "text": "[716/1192] Building C object esp-idf/esp_pm/CMakeFiles/__idf_esp_pm.dir/pm_impl.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1133,
+      "text": "[717/1192] Building C object esp-idf/esp_hal_uart/CMakeFiles/__idf_esp_hal_uart.dir/uart_hal.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1134,
+      "text": "[718/1192] Building C object esp-idf/esp_hal_uart/CMakeFiles/__idf_esp_hal_uart.dir/esp32s3/uart_periph.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1135,
+      "text": "[719/1192] Building C object esp-idf/esp_hal_uart/CMakeFiles/__idf_esp_hal_uart.dir/uhci_hal.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1136,
+      "text": "[720/1192] Linking C static library esp-idf\\mbedtls\\libmbedtls.a",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1137,
+      "text": "[721/1192] Building C object esp-idf/esp_driver_gpio/CMakeFiles/__idf_esp_driver_gpio.dir/src/gpio_glitch_filter_ops.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1138,
+      "text": "[722/1192] Building C object esp-idf/esp_security/CMakeFiles/__idf_esp_security.dir/src/init.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1139,
+      "text": "[723/1192] Building C object esp-idf/esp_driver_gpio/CMakeFiles/__idf_esp_driver_gpio.dir/src/gpio_pin_glitch_filter.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1140,
+      "text": "[724/1192] Building C object esp-idf/esp_security/CMakeFiles/__idf_esp_security.dir/src/esp_hmac.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1141,
+      "text": "[725/1192] Building C object esp-idf/esp_driver_gpio/CMakeFiles/__idf_esp_driver_gpio.dir/src/dedic_gpio.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1142,
+      "text": "[726/1192] Building C object esp-idf/esp_driver_gpio/CMakeFiles/__idf_esp_driver_gpio.dir/src/rtc_io.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1143,
+      "text": "[727/1192] Building C object esp-idf/esp_security/CMakeFiles/__idf_esp_security.dir/src/esp_ds.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1144,
+      "text": "[728/1192] Building C object esp-idf/esp_security/CMakeFiles/__idf_esp_security.dir/src/esp_crypto_lock.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1145,
+      "text": "[729/1192] Linking C static library esp-idf\\esp_driver_dma\\libesp_driver_dma.a",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1146,
+      "text": "[730/1192] Building C object esp-idf/esp_security/CMakeFiles/__idf_esp_security.dir/src/esp_crypto_periph_clk.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1147,
+      "text": "[731/1192] Building C object esp-idf/esp_driver_gpio/CMakeFiles/__idf_esp_driver_gpio.dir/src/gpio.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1148,
+      "text": "[732/1192] Building C object esp-idf/esp_timer/CMakeFiles/__idf_esp_timer.dir/src/esp_timer_init.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1149,
+      "text": "[733/1192] Building C object esp-idf/esp_timer/CMakeFiles/__idf_esp_timer.dir/src/system_time.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1150,
+      "text": "[734/1192] Building C object esp-idf/esp_timer/CMakeFiles/__idf_esp_timer.dir/src/esp_timer_impl_common.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1151,
+      "text": "[735/1192] Building C object esp-idf/esp_timer/CMakeFiles/__idf_esp_timer.dir/src/ets_timer_legacy.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1152,
+      "text": "[736/1192] Building C object esp-idf/esp_timer/CMakeFiles/__idf_esp_timer.dir/src/esp_timer_impl_systimer.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1153,
+      "text": "[737/1192] Building C object esp-idf/esp_timer/CMakeFiles/__idf_esp_timer.dir/src/esp_timer.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1154,
+      "text": "[738/1192] Building C object esp-idf/esp_hal_timg/CMakeFiles/__idf_esp_hal_timg.dir/timer_hal.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1155,
+      "text": "[739/1192] Building C object esp-idf/esp_hal_timg/CMakeFiles/__idf_esp_hal_timg.dir/esp32s3/timer_periph.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1156,
+      "text": "[740/1192] Building C object esp-idf/efuse/CMakeFiles/__idf_efuse.dir/esp32s3/esp_efuse_table.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1157,
+      "text": "[741/1192] Linking C static library esp-idf\\esp_mm\\libesp_mm.a",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1158,
+      "text": "[742/1192] Building C object esp-idf/efuse/CMakeFiles/__idf_efuse.dir/esp32s3/esp_efuse_fields.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1159,
+      "text": "[743/1192] Building C object esp-idf/efuse/CMakeFiles/__idf_efuse.dir/esp32s3/esp_efuse_rtc_calib.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1160,
+      "text": "[744/1192] Building C object esp-idf/efuse/CMakeFiles/__idf_efuse.dir/esp32s3/esp_efuse_utility.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1161,
+      "text": "[745/1192] Building C object esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp_efuse_fields.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1162,
+      "text": "[746/1192] Building C object esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp_efuse_api.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1163,
+      "text": "[747/1192] Building C object esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp_efuse_startup.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1164,
+      "text": "[748/1192] Building C object esp-idf/efuse/CMakeFiles/__idf_efuse.dir/1abec6c965ee36358969cf4eaf4865b4/esp_efuse_api_key.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1165,
+      "text": "[749/1192] Building C object esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp_efuse_utility.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1166,
+      "text": "[750/1192] Linking C static library esp-idf\\esp_pm\\libesp_pm.a",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1167,
+      "text": "[751/1192] Building C object esp-idf/esp_bootloader_format/CMakeFiles/__idf_esp_bootloader_format.dir/esp_bootloader_desc.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1168,
+      "text": "[752/1192] Building C object esp-idf/esp_partition/CMakeFiles/__idf_esp_partition.dir/partition_target.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1169,
+      "text": "[753/1192] Building C object esp-idf/esp_partition/CMakeFiles/__idf_esp_partition.dir/partition.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1170,
+      "text": "[754/1192] Building C object esp-idf/esp_hal_security/CMakeFiles/__idf_esp_hal_security.dir/mpi_hal.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1171,
+      "text": "[755/1192] Building C object esp-idf/esp_app_format/CMakeFiles/__idf_esp_app_format.dir/esp_app_desc.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1172,
+      "text": "[756/1192] Building C object esp-idf/esp_hal_security/CMakeFiles/__idf_esp_hal_security.dir/sha_hal.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1173,
+      "text": "[757/1192] Building C object esp-idf/esp_hal_security/CMakeFiles/__idf_esp_hal_security.dir/hmac_hal.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    }
+  ],
+  "expired": false,
+  "gap": false,
+  "oldest_sequence": 1,
+  "next_cursor": {
+    "epoch": "4a615944dc57442d9a769ea277df2987",
+    "sequence": 1173
+  },
+  "has_more": true
+}

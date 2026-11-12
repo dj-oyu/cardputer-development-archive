@@ -1,0 +1,54 @@
+{
+  "status": "PASS_RETAINED_OUTPUT_INDEPENDENT_AUDIT",
+  "rerenders": 0,
+  "memoryLedgerAndGuardVerified": true,
+  "namedPeak": 491384,
+  "namedPeakDelta": -4800,
+  "modelPayload": 81796,
+  "modelOwnerControl": 912,
+  "modelAllocationCount": 57,
+  "largestModelAllocation": 1760,
+  "largestNamedGlobalAllocation": 72512,
+  "backgroundStack": 4080,
+  "backgroundCap": 4096,
+  "sourceFreezeSHA256": "f08fea4fb0aa67fba4422c919a35ced61484f62218a764b9d367c953b6ef80b6",
+  "gateSHA256": "4662fcf8195c7532d1329dcc7517d6577dcae65030ee2183317a069e88d35388",
+  "completedManifestSHA256": {
+    "off": "76e251aa19fcfdd7d8a74ab2b93c92dfa293e57b3889acbcb15b0a26bad89f33",
+    "on": "32ecdd60de33aa4cb405a6fa6f5767e5392b0e0cd863387acdbe5d36b3be2f50"
+  },
+  "comparisons": {
+    "frames": 40,
+    "raw": 200,
+    "reports": 280,
+    "forwardReverse": 80
+  },
+  "onlyNonTimingDifferences": {
+    ".aa.json": {
+      "workspaceBytes": [
+        77312,
+        72512
+      ]
+    }
+  },
+  "timingExceptionsOnly": {
+    ".json": [
+      "transportBuildNs",
+      "visibilityBuildNs",
+      "appendNs",
+      "evaluateNs",
+      "hostRenderNsFirstFrame"
+    ],
+    ".background.json": [
+      "backgroundBuildNs"
+    ],
+    ".row.json": [
+      "backgroundBuildNs"
+    ]
+  },
+  "allPinsVerified": true,
+  "maximumObservedAA": 7804336,
+  "maximumProducerWork": 441972,
+  "auditScriptSHA256": "6bf8d11c6fd462ffbc05f1eee83034a0ab7538fc9b449b39a33270e4b0deb7a5",
+  "memoryQualification": "AA requested allocation shrinks77312 to72512, saving4800 in named render peak. Model storage and stack accounting unchanged. Allocator overhead excluded. No device/whole-host fit or speedup claim."
+}

@@ -1,0 +1,18 @@
+{
+  "created_utc": "2026-10-20T01:12:37.889847+00:00",
+  "source_job": "derby-v2-baseline-source-37af4225-20261020",
+  "source": "succeeded",
+  "build_job": "derby-v2-baseline-build-37af4225-20261020",
+  "build": "succeeded / proof verified",
+  "flash_job": "derby-v2-baseline-flash-37af4225-20261020",
+  "flash": "succeeded / readback andboot verified",
+  "measurement_job": "derby-v2-baseline-fixed-37af4225-20261020",
+  "last_measurement": "succeeded / strict pass",
+  "execution_retries": 0,
+  "native_batch_started": false,
+  "private_session_capability": "V8-only; never written to checkpoint",
+  "saved_evidence_files": 58,
+  "external_beforeflash_checkpoint": "libfile_57dced8d764081919da4de1a4b06f8a3",
+  "measurement_finished": "2026-10-20 01:10:30",
+  "lease_released": true
+}

@@ -1,0 +1,48 @@
+{
+  "ok": true,
+  "entries": [
+    {
+      "sequence": 2117,
+      "text": " idf.py -p PORT flash",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2118,
+      "text": "or",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2119,
+      "text": " python -m esptool --chip esp32s3 -b 460800 --before default-reset --after hard-reset write-flash --flash-mode dio --flash-size 8MB --flash-freq 80m 0x0 ..\\..\\..\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\b-c83\\o\\7166b3fd7b7787cef41b88d85729b79c3314071b4b6c5ac6652fe80f5e733c21\\bootloader\\bootloader.bin 0x8000 ..\\..\\..\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\b-c83\\o\\7166b3fd7b7787cef41b88d85729b79c3314071b4b6c5ac6652fe80f5e733c21\\partition_table\\partition-table.bin 0x10000 ..\\..\\..\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\b-c83\\o\\7166b3fd7b7787cef41b88d85729b79c3314071b4b6c5ac6652fe80f5e733c21\\cardputer_pocketjs.bin",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2120,
+      "text": "or from the \"C:\\Users\\core\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\b-c83\\o\\7166b3fd7b7787cef41b88d85729b79c3314071b4b6c5ac6652fe80f5e733c21\" directory",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2121,
+      "text": " python -m esptool --chip esp32s3 -b 460800 --before default-reset --after hard-reset write-flash \"@flash_args\"",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    }
+  ],
+  "expired": false,
+  "gap": false,
+  "oldest_sequence": 74,
+  "next_cursor": {
+    "epoch": "10c4774557254de7b01b399046da2a57",
+    "sequence": 2121
+  },
+  "has_more": false
+}

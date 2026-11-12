@@ -1,0 +1,276 @@
+{
+  "recorded_matrix_checks": [
+    {
+      "suite": "paired-colors",
+      "config": "O0",
+      "fixture": "mixed",
+      "bytes": 6574028,
+      "sha256": "fa6a02b2e4a33bd86721085734e4c83b708d431b6769c7df137e3b1a9f22f2cc"
+    },
+    {
+      "suite": "paired-colors",
+      "config": "O0",
+      "fixture": "mesh_only",
+      "bytes": 6674257,
+      "sha256": "8dd8a880c333d60da7c3c4784ab3a833cc9cef5f66170bef952c82fab2ec5ee1"
+    },
+    {
+      "suite": "paired-colors",
+      "config": "O2",
+      "fixture": "mixed",
+      "bytes": 6574028,
+      "sha256": "fa6a02b2e4a33bd86721085734e4c83b708d431b6769c7df137e3b1a9f22f2cc"
+    },
+    {
+      "suite": "paired-colors",
+      "config": "O2",
+      "fixture": "mesh_only",
+      "bytes": 6674257,
+      "sha256": "8dd8a880c333d60da7c3c4784ab3a833cc9cef5f66170bef952c82fab2ec5ee1"
+    },
+    {
+      "suite": "paired-colors",
+      "config": "asan_ubsan_O0",
+      "fixture": "mixed",
+      "bytes": 6574028,
+      "sha256": "fa6a02b2e4a33bd86721085734e4c83b708d431b6769c7df137e3b1a9f22f2cc"
+    },
+    {
+      "suite": "paired-colors",
+      "config": "asan_ubsan_O0",
+      "fixture": "mesh_only",
+      "bytes": 6674257,
+      "sha256": "8dd8a880c333d60da7c3c4784ab3a833cc9cef5f66170bef952c82fab2ec5ee1"
+    },
+    {
+      "suite": "paired-colors",
+      "config": "asan_ubsan_O2",
+      "fixture": "mixed",
+      "bytes": 6574028,
+      "sha256": "fa6a02b2e4a33bd86721085734e4c83b708d431b6769c7df137e3b1a9f22f2cc"
+    },
+    {
+      "suite": "paired-colors",
+      "config": "asan_ubsan_O2",
+      "fixture": "mesh_only",
+      "bytes": 6674257,
+      "sha256": "8dd8a880c333d60da7c3c4784ab3a833cc9cef5f66170bef952c82fab2ec5ee1"
+    },
+    {
+      "suite": "bounded-colors",
+      "config": "O0",
+      "fixture": "mixed",
+      "bytes": 6574028,
+      "sha256": "fa6a02b2e4a33bd86721085734e4c83b708d431b6769c7df137e3b1a9f22f2cc"
+    },
+    {
+      "suite": "bounded-colors",
+      "config": "O0",
+      "fixture": "mesh_only",
+      "bytes": 6674257,
+      "sha256": "8dd8a880c333d60da7c3c4784ab3a833cc9cef5f66170bef952c82fab2ec5ee1"
+    },
+    {
+      "suite": "bounded-colors",
+      "config": "O2",
+      "fixture": "mixed",
+      "bytes": 6574028,
+      "sha256": "fa6a02b2e4a33bd86721085734e4c83b708d431b6769c7df137e3b1a9f22f2cc"
+    },
+    {
+      "suite": "bounded-colors",
+      "config": "O2",
+      "fixture": "mesh_only",
+      "bytes": 6674257,
+      "sha256": "8dd8a880c333d60da7c3c4784ab3a833cc9cef5f66170bef952c82fab2ec5ee1"
+    },
+    {
+      "suite": "bounded-colors",
+      "config": "asan_ubsan_O0",
+      "fixture": "mixed",
+      "bytes": 6574028,
+      "sha256": "fa6a02b2e4a33bd86721085734e4c83b708d431b6769c7df137e3b1a9f22f2cc"
+    },
+    {
+      "suite": "bounded-colors",
+      "config": "asan_ubsan_O0",
+      "fixture": "mesh_only",
+      "bytes": 6674257,
+      "sha256": "8dd8a880c333d60da7c3c4784ab3a833cc9cef5f66170bef952c82fab2ec5ee1"
+    },
+    {
+      "suite": "bounded-colors",
+      "config": "asan_ubsan_O2",
+      "fixture": "mixed",
+      "bytes": 6574028,
+      "sha256": "fa6a02b2e4a33bd86721085734e4c83b708d431b6769c7df137e3b1a9f22f2cc"
+    },
+    {
+      "suite": "bounded-colors",
+      "config": "asan_ubsan_O2",
+      "fixture": "mesh_only",
+      "bytes": 6674257,
+      "sha256": "8dd8a880c333d60da7c3c4784ab3a833cc9cef5f66170bef952c82fab2ec5ee1"
+    }
+  ],
+  "recorded_stress_checks": {
+    "shade_stress": {
+      "configs": 8,
+      "cases_per_config": 775078,
+      "digest": "292ef07cc5ef172f"
+    },
+    "shade_stress_bounded": {
+      "configs": 8,
+      "cases_per_config": 775078,
+      "digest": "292ef07cc5ef172f"
+    }
+  },
+  "fresh_O2": {
+    "baseline": {
+      "mixed": {
+        "checks": 6005,
+        "records": 86,
+        "raster_frames": 77,
+        "arena_bytes": 4996,
+        "instance_size": 168,
+        "model_size": 128,
+        "api_allocations": 0,
+        "sha256": "fa6a02b2e4a33bd86721085734e4c83b708d431b6769c7df137e3b1a9f22f2cc"
+      },
+      "mesh_only": {
+        "checks": 5700,
+        "records": 83,
+        "raster_frames": 74,
+        "arena_bytes": 7440,
+        "instance_size": 168,
+        "model_size": 128,
+        "api_allocations": 0,
+        "sha256": "8dd8a880c333d60da7c3c4784ab3a833cc9cef5f66170bef952c82fab2ec5ee1"
+      }
+    },
+    "candidate": {
+      "mixed": {
+        "checks": 6005,
+        "records": 86,
+        "raster_frames": 77,
+        "arena_bytes": 4996,
+        "instance_size": 168,
+        "model_size": 128,
+        "api_allocations": 0,
+        "sha256": "fa6a02b2e4a33bd86721085734e4c83b708d431b6769c7df137e3b1a9f22f2cc"
+      },
+      "mesh_only": {
+        "checks": 5700,
+        "records": 83,
+        "raster_frames": 74,
+        "arena_bytes": 7440,
+        "instance_size": 168,
+        "model_size": 128,
+        "api_allocations": 0,
+        "sha256": "8dd8a880c333d60da7c3c4784ab3a833cc9cef5f66170bef952c82fab2ec5ee1"
+      },
+      "stress": {
+        "passed": true,
+        "instrumented": false,
+        "seed": "0x9e3779b9",
+        "cases": 775078,
+        "basis_checks": 5425546,
+        "term_bit_checks": 3100312,
+        "paired_color_checks": 1550156,
+        "wrapper_color_checks": 1550156,
+        "failures": 0,
+        "digest": "292ef07cc5ef172f",
+        "groups": {
+          "directed": 43056,
+          "all_rgb565": 524288,
+          "rgb565_rounding": 282,
+          "quantized_ties": 7452,
+          "randomized": 200000
+        },
+        "coverage": {
+          "no_half_vector": 159740,
+          "front_zero": 389681,
+          "back_zero": 593099,
+          "spec_zero": 572178,
+          "nonzero_spec": 202900,
+          "quantized_tie_pairs": 27,
+          "back_not_negated_front_pairs": 27,
+          "invalid_directions_rejected": 14
+        },
+        "baseline_math_calls": {
+          "sqrtf": 0,
+          "powf": 0,
+          "lroundf": 0
+        },
+        "candidate_math_calls": {
+          "sqrtf": 0,
+          "powf": 0,
+          "lroundf": 0
+        }
+      }
+    },
+    "candidate-bounded": {
+      "mixed": {
+        "checks": 6005,
+        "records": 86,
+        "raster_frames": 77,
+        "arena_bytes": 4996,
+        "instance_size": 168,
+        "model_size": 128,
+        "api_allocations": 0,
+        "sha256": "fa6a02b2e4a33bd86721085734e4c83b708d431b6769c7df137e3b1a9f22f2cc"
+      },
+      "mesh_only": {
+        "checks": 5700,
+        "records": 83,
+        "raster_frames": 74,
+        "arena_bytes": 7440,
+        "instance_size": 168,
+        "model_size": 128,
+        "api_allocations": 0,
+        "sha256": "8dd8a880c333d60da7c3c4784ab3a833cc9cef5f66170bef952c82fab2ec5ee1"
+      },
+      "stress": {
+        "passed": true,
+        "instrumented": false,
+        "seed": "0x9e3779b9",
+        "cases": 775078,
+        "basis_checks": 5425546,
+        "term_bit_checks": 3100312,
+        "paired_color_checks": 1550156,
+        "wrapper_color_checks": 1550156,
+        "failures": 0,
+        "digest": "292ef07cc5ef172f",
+        "groups": {
+          "directed": 43056,
+          "all_rgb565": 524288,
+          "rgb565_rounding": 282,
+          "quantized_ties": 7452,
+          "randomized": 200000
+        },
+        "coverage": {
+          "no_half_vector": 159740,
+          "front_zero": 389681,
+          "back_zero": 593099,
+          "spec_zero": 572178,
+          "nonzero_spec": 202900,
+          "quantized_tie_pairs": 27,
+          "back_not_negated_front_pairs": 27,
+          "invalid_directions_rejected": 14
+        },
+        "baseline_math_calls": {
+          "sqrtf": 0,
+          "powf": 0,
+          "lroundf": 0
+        },
+        "candidate_math_calls": {
+          "sqrtf": 0,
+          "powf": 0,
+          "lroundf": 0
+        }
+      }
+    }
+  },
+  "baseline_freeze_verified": true,
+  "passed": true
+}

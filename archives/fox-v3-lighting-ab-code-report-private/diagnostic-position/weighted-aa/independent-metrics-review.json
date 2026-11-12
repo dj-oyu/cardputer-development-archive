@@ -1,0 +1,277 @@
+{
+  "scope": "Independent Python from original PNG8 and native raw/RGB565. No owner scorer imported or renderer executed. Three-grid primary; five-grid diagnostic only.",
+  "checkedNumericValues": 1116,
+  "referenceMasksRecomputedExact": true,
+  "pointFourRawAndRGBExact": true,
+  "grid3FixedDenominatorConvolutionExact": true,
+  "all12RawHDRReencodeExact": true,
+  "uncertainDescriptiveOnly": true,
+  "inputAndFrozenCodeHashesMatch": true,
+  "results": {
+    "front": {
+      "1": {
+        "brightIoU": 0.6329537843268587,
+        "darkIoU": 0.7768075445337059,
+        "brightFP": 82,
+        "brightFN": 466,
+        "uncertainPixels": 729,
+        "foregroundRGB": {
+          "baseline": 73.73719351061136,
+          "direction": 73.37359550418871
+        },
+        "fullFrameDescriptive": {
+          "baseline": {
+            "fullFrameRGBMAE": 0.6641514964021361,
+            "fullFrameRGBAgreementDescriptive": 33.58485035978639,
+            "outsideForegroundRGBMAE": 0.7441205484196207
+          },
+          "direction": {
+            "fullFrameRGBMAE": 0.6636136949879292,
+            "fullFrameRGBAgreementDescriptive": 33.638630501207075,
+            "outsideForegroundRGBMAE": 0.7440099013757855
+          }
+        },
+        "fullForegroundBrightIoU": 0.5740845070422536,
+        "fullForegroundDarkIoU": 0.7343850611719253,
+        "uncertainBrightIoUDescriptive": 0.2624113475177305,
+        "uncertainDarkIoUDescriptive": 0.2345679012345679,
+        "coverageDescriptive": {
+          "anySamplePixels": 4698,
+          "extraOutsideFormalMask": 11,
+          "missingFormalMask": 620,
+          "weightedCoverageSum": 4698.0,
+          "notFormalShapeRescore": true
+        }
+      },
+      "3": {
+        "brightIoU": 0.6627756160830091,
+        "darkIoU": 0.8155339805825242,
+        "brightFP": 131,
+        "brightFN": 389,
+        "uncertainPixels": 729,
+        "foregroundRGB": {
+          "baseline": 75.61617649808338,
+          "direction": 75.1665285410521
+        },
+        "fullFrameDescriptive": {
+          "baseline": {
+            "fullFrameRGBMAE": 0.6611286899810147,
+            "fullFrameRGBAgreementDescriptive": 33.88713100189853,
+            "outsideForegroundRGBMAE": 0.7439167896578948
+          },
+          "direction": {
+            "fullFrameRGBMAE": 0.6607640340407591,
+            "fullFrameRGBAgreementDescriptive": 33.92359659592409,
+            "outsideForegroundRGBMAE": 0.7438174079479248
+          }
+        },
+        "fullForegroundBrightIoU": 0.6009719222462203,
+        "fullForegroundDarkIoU": 0.7705022250476796,
+        "uncertainBrightIoUDescriptive": 0.29354838709677417,
+        "uncertainDarkIoUDescriptive": 0.2748091603053435,
+        "coverageDescriptive": {
+          "anySamplePixels": 5353,
+          "extraOutsideFormalMask": 121,
+          "missingFormalMask": 75,
+          "weightedCoverageSum": 4698.000000000001,
+          "notFormalShapeRescore": true
+        }
+      },
+      "5": {
+        "brightIoU": 0.6879478827361564,
+        "darkIoU": 0.823733518390007,
+        "brightFP": 124,
+        "brightFN": 355,
+        "uncertainPixels": 729,
+        "foregroundRGB": {
+          "baseline": 76.73487536068262,
+          "direction": 76.25222479969831
+        },
+        "fullFrameDescriptive": {
+          "baseline": {
+            "fullFrameRGBMAE": 0.6594457321879591,
+            "fullFrameRGBAgreementDescriptive": 34.05542678120409,
+            "outsideForegroundRGBMAE": 0.7439026340988666
+          },
+          "direction": {
+            "fullFrameRGBMAE": 0.6591991998279466,
+            "fullFrameRGBAgreementDescriptive": 34.08008001720534,
+            "outsideForegroundRGBMAE": 0.74381129094575
+          }
+        },
+        "fullForegroundBrightIoU": 0.6197636949516648,
+        "fullForegroundDarkIoU": 0.7765416401780039,
+        "uncertainBrightIoUDescriptive": 0.2996941896024465,
+        "uncertainDarkIoUDescriptive": 0.26136363636363635,
+        "coverageDescriptive": {
+          "anySamplePixels": 5465,
+          "extraOutsideFormalMask": 195,
+          "missingFormalMask": 37,
+          "weightedCoverageSum": 4693.495253779783,
+          "notFormalShapeRescore": true
+        }
+      }
+    },
+    "oblique": {
+      "1": {
+        "brightIoU": 0.3904881101376721,
+        "darkIoU": 0.7709335899903753,
+        "brightFP": 90,
+        "brightFN": 397,
+        "uncertainPixels": 698,
+        "foregroundRGB": {
+          "baseline": 72.6084443237873,
+          "direction": 72.52799091905047
+        },
+        "fullFrameDescriptive": {
+          "baseline": {
+            "fullFrameRGBMAE": 0.6624311044553668,
+            "fullFrameRGBAgreementDescriptive": 33.75688955446332,
+            "outsideForegroundRGBMAE": 0.7508848927449119
+          },
+          "direction": {
+            "fullFrameRGBMAE": 0.6608390386067255,
+            "fullFrameRGBAgreementDescriptive": 33.91609613932744,
+            "outsideForegroundRGBMAE": 0.7520538166439352
+          }
+        },
+        "fullForegroundBrightIoU": 0.3391812865497076,
+        "fullForegroundDarkIoU": 0.736151933077097,
+        "uncertainBrightIoUDescriptive": 0.15859030837004406,
+        "uncertainDarkIoUDescriptive": 0.1947565543071161,
+        "coverageDescriptive": {
+          "anySamplePixels": 5156,
+          "extraOutsideFormalMask": 8,
+          "missingFormalMask": 720,
+          "weightedCoverageSum": 5156.0,
+          "notFormalShapeRescore": true
+        }
+      },
+      "3": {
+        "brightIoU": 0.4608904933814681,
+        "darkIoU": 0.7878787878787878,
+        "brightFP": 122,
+        "brightFN": 326,
+        "uncertainPixels": 698,
+        "foregroundRGB": {
+          "baseline": 74.3652538386345,
+          "direction": 74.39025158906075
+        },
+        "fullFrameDescriptive": {
+          "baseline": {
+            "fullFrameRGBMAE": 0.6593508908375509,
+            "fullFrameRGBAgreementDescriptive": 34.064910916244905,
+            "outsideForegroundRGBMAE": 0.7505751366109796
+          },
+          "direction": {
+            "fullFrameRGBMAE": 0.6578398452814463,
+            "fullFrameRGBAgreementDescriptive": 34.216015471855364,
+            "outsideForegroundRGBMAE": 0.7517363866140617
+          }
+        },
+        "fullForegroundBrightIoU": 0.40421631530705776,
+        "fullForegroundDarkIoU": 0.7527939204291462,
+        "uncertainBrightIoUDescriptive": 0.2230769230769231,
+        "uncertainDarkIoUDescriptive": 0.2332155477031802,
+        "coverageDescriptive": {
+          "anySamplePixels": 5899,
+          "extraOutsideFormalMask": 143,
+          "missingFormalMask": 112,
+          "weightedCoverageSum": 5156.0,
+          "notFormalShapeRescore": true
+        }
+      },
+      "5": {
+        "brightIoU": 0.4864864864864865,
+        "darkIoU": 0.797139451728248,
+        "brightFP": 105,
+        "brightFN": 313,
+        "uncertainPixels": 698,
+        "foregroundRGB": {
+          "baseline": 75.35218866998174,
+          "direction": 75.41121895413639
+        },
+        "fullFrameDescriptive": {
+          "baseline": {
+            "fullFrameRGBMAE": 0.6578611965041338,
+            "fullFrameRGBAgreementDescriptive": 34.213880349586624,
+            "outsideForegroundRGBMAE": 0.7505985430805708
+          },
+          "direction": {
+            "fullFrameRGBMAE": 0.6564396798035113,
+            "fullFrameRGBAgreementDescriptive": 34.35603201964887,
+            "outsideForegroundRGBMAE": 0.7517575485517244
+          }
+        },
+        "fullForegroundBrightIoU": 0.42592592592592593,
+        "fullForegroundDarkIoU": 0.7597590898951595,
+        "uncertainBrightIoUDescriptive": 0.24060150375939848,
+        "uncertainDarkIoUDescriptive": 0.2152777777777778,
+        "coverageDescriptive": {
+          "anySamplePixels": 6041,
+          "extraOutsideFormalMask": 235,
+          "missingFormalMask": 62,
+          "weightedCoverageSum": 5151.02851992441,
+          "notFormalShapeRescore": true
+        }
+      }
+    }
+  },
+  "grid3vs5": {
+    "front": {
+      "baseline": {
+        "pixelsDifferent": 2438,
+        "foregroundRGBMAE": 0.022421863866820924,
+        "fullFrameRGBMAE": 0.003784101277131942,
+        "maxRGBDifference": 0.6129032258064516,
+        "foregroundRawMAE": 0.030350022866360134,
+        "maxRawDifference": 2.0480069684926336,
+        "notConvergenceProof": true
+      },
+      "direction": {
+        "pixelsDifferent": 2416,
+        "foregroundRGBMAE": 0.02209839011506924,
+        "fullFrameRGBMAE": 0.003724838225037349,
+        "maxRGBDifference": 0.6129032258064516,
+        "foregroundRawMAE": 0.031236063049688026,
+        "maxRawDifference": 1.974301790757183,
+        "notConvergenceProof": true
+      }
+    },
+    "oblique": {
+      "baseline": {
+        "pixelsDifferent": 2477,
+        "foregroundRGBMAE": 0.019633042017983854,
+        "fullFrameRGBMAE": 0.003737428331215666,
+        "maxRGBDifference": 0.5238095238095237,
+        "foregroundRawMAE": 0.025859709144202755,
+        "maxRawDifference": 1.4656366716046407,
+        "notConvergenceProof": true
+      },
+      "direction": {
+        "pixelsDifferent": 2471,
+        "foregroundRGBMAE": 0.019731818619168267,
+        "fullFrameRGBMAE": 0.0037587577621428676,
+        "maxRGBDifference": 0.5161290322580645,
+        "foregroundRawMAE": 0.026375266877441038,
+        "maxRawDifference": 1.3965173287677564,
+        "notConvergenceProof": true
+      }
+    }
+  },
+  "rawFileHashes": {
+    "grid1-front-baseline.u16le": "3e691787042e4353dd7b63d76b6c96129a536b794179cf4542a0181dd7002717",
+    "grid1-front-direction.u16le": "3ff295fa76b890be9e123f93ee9d02eb687b4483cf264839db6922b6d78b4d1b",
+    "grid3-front-baseline.u16le": "a9c52eb691005e40d2c0908a09f8b5948887895982531460e0787f96ab9fca8e",
+    "grid3-front-direction.u16le": "7f2b1b1f1a871213a0a6683cd37e6d913f85a2df1023a1708381345f1d39a920",
+    "grid5-front-baseline.u16le": "a9ccb07559417697dfd12ab52f31dbed5a3c7d80d5a4a1cd620b2409517e242a",
+    "grid5-front-direction.u16le": "13ce3ebc07e86cfc45a7317e96001e2bad90026508e51e8068665425a533f3c6",
+    "grid1-oblique-baseline.u16le": "e2aa732b33e3b9f324f101bca830aa4b877f1c1937ca4a8bc2be68e971dc0993",
+    "grid1-oblique-direction.u16le": "12cabfad47132b60b32b12677bd0be8f469ff75e5b2e26cf46a7d34d31fbd492",
+    "grid3-oblique-baseline.u16le": "772ed6a071d7fe12d5a66a8fb40dc9ae80f87b7c268c45000dfaa6294fa56537",
+    "grid3-oblique-direction.u16le": "b7bff9aa9d4602b0fac38d0384fb3ef514e4a180cc053b4b1a75c416b304221f",
+    "grid5-oblique-baseline.u16le": "5fb3c43b64ef07381f92173a8d24b69195ae9ccb22354374bb044db67f924aed",
+    "grid5-oblique-direction.u16le": "3d4701503565379679a2cad61c8d665477ea947f39833cd4f54c67bacc54b802"
+  },
+  "aggregateForegroundRGBAgreementRegressions": []
+}

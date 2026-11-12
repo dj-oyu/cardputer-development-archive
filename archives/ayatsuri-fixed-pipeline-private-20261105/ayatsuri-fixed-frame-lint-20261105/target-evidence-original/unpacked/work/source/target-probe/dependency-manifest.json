@@ -1,0 +1,23 @@
+{
+  "upstream_repository": "dj-oyu/cardputer-adv-pocketjs",
+  "branch": "claude/vigilant-einstein-capnag",
+  "revision": "5898ac4e311d2e48d915b89fd11276b586d72447",
+  "inputs_sha256": {
+    "ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/build.sh": "c042f8c81ce927a2b987665e70213f5a2a059be485051ab37bd9bdce5cbea4c9",
+    "ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/SHA256SUMS": "adc1ae83dfd28800dca1ea68c96f5546de0732c1cc1e5f8bda00a984da744cfd",
+    "ayatsuri-latest-fixed-source-20261105/material-c-compact/SHA256SUMS": "e787e1ace149e309164c748373b112c467b405d5bc374f64ec6f8d33b08e7b93",
+    "ayatsuri-latest-fixed-source-20261105/control-prototype/SHA256SUMS": "470f704aece9b7328627dda33e51b96d9b481404eb7df9983ca99ba677f649ac",
+    "ayatsuri-latest-fixed-source-20261105/transparency-chain-prototype/build.sh": "85942d3dd6ad8041fc9a6fd5f3ed8a4acd41ae954700a17c624a9f671dc25880",
+    "ayatsuri-latest-fixed-source-20261105/transparency-chain-prototype/SHA256SUMS": "72db91fef2926f5a9d522043eee2f9c4977f74682ddc1be8591d2200430445f1",
+    "ayatsuri-fixed-frame-lint-20261105/upstream/tools/frame_lint.py": "6be4b15d41f3da5fb4489384d11577ebdc11241447b7521b2635dd1cfdf6aa27",
+    "ayatsuri-fixed-frame-lint-20261105/upstream/docs/perf/o2-machine-code.md": "440b6a19a81526a96d494dce8e1f1398031923b6fd5ebc652616bfa83dbd55ab",
+    "ayatsuri-fixed-frame-lint-20261105/upstream/CMakeLists.txt": "12b9f991f5afb536ffb84df8db73ecd2c60adf8cb98daef18dee6578373a28e1",
+    "ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact-q20.su": "4f2a2dc75c4f6e8626b536ae1b88c81e663a2e7bf36ead7913aa9054c3fb5081"
+  },
+  "target_compilation_performed": false,
+  "target_analysis_performed": false,
+  "source_capsule_complete_for_compile_only": true,
+  "no_private_profile_blob": true,
+  "distribution": "PRIVATE: copied material tables/constants are model-derived; not generic public assets",
+  "scanner_admission": "No gating: independent audit reports heuristic false positives and fail-open --check; wrapper preflight does not establish scanner semantic soundness"
+}

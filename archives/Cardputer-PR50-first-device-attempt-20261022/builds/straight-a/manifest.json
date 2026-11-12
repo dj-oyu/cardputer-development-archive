@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "build_job_id": "pr50-straight-a-build-r2-20261022",
+  "build_plan_hash": "f06df73edc7ba227dab05b3039eba2e0b23c6905a6483a90a44b26cdb73e7b27",
+  "idf_version": "6.0.1",
+  "target": "esp32s3",
+  "fingerprint": "0558c47df82e1bea306a2d13cda3f1f3d6806356fe5472512df964d7396b9578",
+  "environment_fingerprint": "162a24bcbaaa0b32008a3d432d66053137d9adb04b9a1c570d9db97785f12bb2",
+  "compiler_cache": {
+    "contract": "idf-compiler-cache-v1",
+    "enabled": false,
+    "reason": "disabled"
+  },
+  "artifacts": [
+    {
+      "name": "bootloader/bootloader.bin",
+      "bytes": 22528,
+      "sha256": "87b237135da4fa79cd19af3f69416b86a1d7fd8e82c190601fea191613f7db67"
+    },
+    {
+      "name": "bootloader/bootloader.elf",
+      "bytes": 635672,
+      "sha256": "739e88a620f1ed7af28419123a9bf677f13b53071ebf9e2170762e484338a997"
+    },
+    {
+      "name": "bootloader/CMakeFiles/4.0.3/CMakeDetermineCompilerABI_C.bin",
+      "bytes": 9832,
+      "sha256": "2e17a82b1b3d62c0d63d2a940e35310d0f99983f44a2e91f48368edae07f15e9"
+    },
+    {
+      "name": "bootloader/CMakeFiles/4.0.3/CMakeDetermineCompilerABI_CXX.bin",
+      "bytes": 9856,
+      "sha256": "1f2415b09fad4f709656624f0d5e7f9926ce931e2e0e0f7e3f9ba2591373ecef"
+    },
+    {
+      "name": "cardputer_pocketjs.bin",
+      "bytes": 2283648,
+      "sha256": "66c09c7b4c58dcf3cdab21166d5b9814967c34119011bc90ee644bfd6b988d98"
+    },
+    {
+      "name": "cardputer_pocketjs.elf",
+      "bytes": 19885976,
+      "sha256": "4d6c08b4d57b58abebe1949581673263829d81003ab8562c497d3ca0743e85f8"
+    },
+    {
+      "name": "CMakeFiles/4.0.3/CMakeDetermineCompilerABI_C.bin",
+      "bytes": 9832,
+      "sha256": "2e17a82b1b3d62c0d63d2a940e35310d0f99983f44a2e91f48368edae07f15e9"
+    },
+    {
+      "name": "CMakeFiles/4.0.3/CMakeDetermineCompilerABI_CXX.bin",
+      "bytes": 9856,
+      "sha256": "1f2415b09fad4f709656624f0d5e7f9926ce931e2e0e0f7e3f9ba2591373ecef"
+    },
+    {
+      "name": "partition_table/partition-table.bin",
+      "bytes": 3072,
+      "sha256": "5acbaec11eac9d189e0b3312cd7a43fad967b946854e46fbd14ba6ed59d50361"
+    }
+  ],
+  "registered_tool_versions": {
+    "node": {
+      "version": "v24.20.0",
+      "sha256": "5c976096e04e5c2c1f091938926234cc9fbebfe9787ddd149351b3b0ecc707b5"
+    },
+    "git": {
+      "version": "git version 2.55.0.windows.5",
+      "sha256": "78211c7ed73988da93a6d8a33d47ec6187f464d7ea2a9a00c182bbd7a1ecf30f"
+    }
+  },
+  "flash_layout": {
+    "name": "flasher_args.json",
+    "bytes": 951,
+    "sha256": "a81e065167bd74c01d20b6f857994af5e838ed32e265f668106491f445f10372"
+  },
+  "flash_security": {
+    "name": "config/sdkconfig.json",
+    "bytes": 49837,
+    "sha256": "989eda3a17643bcd684a58a1e998780edf3bea46f2ea95eab70b4a835bb81d2d"
+  },
+  "flash_security_summary": {
+    "secure_boot": false,
+    "flash_encryption": false,
+    "anti_rollback": false,
+    "anti_rollback_inferred_disabled": true,
+    "additional_security_enabled": false,
+    "flash_admission": "not_evaluated"
+  },
+  "build_location": {
+    "layout_version": 2,
+    "slot": "b430bab02bbbdd9c26f17befbd887fdc93147f06725146aa9c3485ec79e0d2fe"
+  },
+  "flash_authorized": false
+}

@@ -1,0 +1,41 @@
+test_duplicate_function_names_break_baseline_roundtrip (__main__.CliContract.test_duplicate_function_names_break_baseline_roundtrip) ... ok
+test_empty_input_set_check_passes (__main__.CliContract.test_empty_input_set_check_passes) ... ok
+test_failed_disassembly_check_passes (__main__.CliContract.test_failed_disassembly_check_passes) ... ok
+test_filter_can_skip_every_input_and_pass (__main__.CliContract.test_filter_can_skip_every_input_and_pass) ... ok
+test_frame_growth_alone_does_not_fail_check (__main__.CliContract.test_frame_growth_alone_does_not_fail_check) ... ok
+test_missing_requested_function_is_not_checked (__main__.CliContract.test_missing_requested_function_is_not_checked) ... ok
+test_new_same_named_function_inherits_unrelated_allowance (__main__.CliContract.test_new_same_named_function_inherits_unrelated_allowance) ... ok
+test_no_objdump_check_fails (__main__.CliContract.test_no_objdump_check_fails) ... ok
+test_no_objdump_report_only_succeeds_skipped (__main__.CliContract.test_no_objdump_report_only_succeeds_skipped) ... ok
+test_nonmatching_disassembly_check_passes (__main__.CliContract.test_nonmatching_disassembly_check_passes) ... ok
+test_partial_disassembly_failure_can_still_pass (__main__.CliContract.test_partial_disassembly_failure_can_still_pass) ... ok
+test_process_launch_error_is_not_silently_successful (__main__.CliContract.test_process_launch_error_is_not_silently_successful) ... ok
+test_successful_but_empty_disassembly_check_passes (__main__.CliContract.test_successful_but_empty_disassembly_check_passes) ... ok
+test_addmi_from_derived_base_is_not_tracked (__main__.ScannerContract.test_addmi_from_derived_base_is_not_tracked) ... ok
+test_bare_address_branch_target_is_not_recognized (__main__.ScannerContract.test_bare_address_branch_target_is_not_recognized) ... ok
+test_byte_reach_is_not_the_default_word_reach (__main__.ScannerContract.test_byte_reach_is_not_the_default_word_reach) ... ok
+test_call0_does_not_invalidate_register (__main__.ScannerContract.test_call0_does_not_invalidate_register) ... ok
+test_call8_return_register_is_still_considered_far (__main__.ScannerContract.test_call8_return_register_is_still_considered_far) ... ok
+test_callx8_does_not_invalidate_register (__main__.ScannerContract.test_callx8_does_not_invalidate_register) ... ok
+test_dead_setup_counts_as_extra_with_no_accesses (__main__.ScannerContract.test_dead_setup_counts_as_extra_with_no_accesses) ... ok
+test_deepest_is_start_offset_not_highest_touched_byte (__main__.ScannerContract.test_deepest_is_start_offset_not_highest_touched_byte) ... ok
+test_derived_addi_does_not_increase_extra (__main__.ScannerContract.test_derived_addi_does_not_increase_extra) ... ok
+test_effective_address_can_be_near_but_counted_far (__main__.ScannerContract.test_effective_address_can_be_near_but_counted_far) ... ok
+test_far_site_can_be_emitted_with_no_entry_frame (__main__.ScannerContract.test_far_site_can_be_emitted_with_no_entry_frame) ... ok
+test_frame_is_largest_entry_immediate_only (__main__.ScannerContract.test_frame_is_largest_entry_immediate_only) ... ok
+test_full_call0_counterexample_with_callee_overwrite (__main__.ScannerContract.test_full_call0_counterexample_with_callee_overwrite) ... ok
+test_halfword_reach_is_not_the_default_word_reach (__main__.ScannerContract.test_halfword_reach_is_not_the_default_word_reach) ... ok
+test_loaded_literal_constant_is_not_tracked (__main__.ScannerContract.test_loaded_literal_constant_is_not_tracked) ... ok
+test_near_base_plus_displacement_can_cross_limit_unseen (__main__.ScannerContract.test_near_base_plus_displacement_can_cross_limit_unseen) ... ok
+test_register_move_alias_is_not_tracked (__main__.ScannerContract.test_register_move_alias_is_not_tracked) ... ok
+test_regular_explicit_clobber_is_handled (__main__.ScannerContract.test_regular_explicit_clobber_is_handled) ... ok
+test_reused_movi_is_double_counted_as_extra (__main__.ScannerContract.test_reused_movi_is_double_counted_as_extra) ... ok
+test_stack_pointer_change_leaves_stale_relative_offset (__main__.ScannerContract.test_stack_pointer_change_leaves_stale_relative_offset) ... ok
+test_supported_two_accesses_share_setup (__main__.ScannerContract.test_supported_two_accesses_share_setup) ... ok
+test_symbolic_branch_target_forgets_valid_far_pointer (__main__.ScannerContract.test_symbolic_branch_target_forgets_valid_far_pointer) ... ok
+test_manifest_sources_remain_byte_exact (__main__.SourceIntegrity.test_manifest_sources_remain_byte_exact) ... ok
+
+----------------------------------------------------------------------
+Ran 36 tests in 0.012s
+
+OK

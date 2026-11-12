@@ -1,0 +1,2802 @@
+[
+  {
+    "preDisplayAboveOnePixels": 1509,
+    "preDisplayAboveOneChannels": 2109,
+    "legacySrgbInputClippedPixels": 1509,
+    "clampCountMeaning": "clampedPixels = AgX high-domain flag only; preDisplayAboveOne = source HDR > 1.0 before display; legacySrgbInputClippedPixels applies only to OFF, null for ON",
+    "view": "front",
+    "case": "baseline",
+    "arm": "point-off",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "rawNs": [
+        567789,
+        541109,
+        512044,
+        492705,
+        558464,
+        495159,
+        624845,
+        495890,
+        510903,
+        490902,
+        511544
+      ],
+      "minNs": 490902,
+      "medianNs": 511544.0,
+      "maxNs": 624845
+    },
+    "filterRepeatTimingHostOnly": null,
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "preDisplayAboveOnePixels": 1509,
+    "preDisplayAboveOneChannels": 2109,
+    "legacySrgbInputClippedPixels": null,
+    "clampCountMeaning": "clampedPixels = AgX high-domain flag only; preDisplayAboveOne = source HDR > 1.0 before display; legacySrgbInputClippedPixels applies only to OFF, null for ON",
+    "view": "front",
+    "case": "baseline",
+    "arm": "point-on",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "rawNs": [
+        2258535,
+        1930218,
+        1945081,
+        1927755,
+        1807744,
+        1952673,
+        1868726,
+        2007516,
+        1997660,
+        1872651,
+        1842105
+      ],
+      "minNs": 1807744,
+      "medianNs": 1930218.0,
+      "maxNs": 2258535
+    },
+    "filterRepeatTimingHostOnly": null,
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "preDisplayAboveOnePixels": 1489,
+    "preDisplayAboveOneChannels": 2054,
+    "legacySrgbInputClippedPixels": 1489,
+    "clampCountMeaning": "clampedPixels = AgX high-domain flag only; preDisplayAboveOne = source HDR > 1.0 before display; legacySrgbInputClippedPixels applies only to OFF, null for ON",
+    "view": "front",
+    "case": "baseline",
+    "arm": "filter3-off",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5353,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27047,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "rawNs": [
+        532184,
+        500828,
+        499205,
+        542210,
+        496962,
+        513076,
+        496070,
+        509120,
+        493366,
+        505143,
+        818137
+      ],
+      "minNs": 493366,
+      "medianNs": 505143.0,
+      "maxNs": 818137
+    },
+    "filterRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "rawNs": [
+        1112482,
+        806299,
+        771597,
+        950147,
+        753729,
+        719658,
+        781722,
+        781883,
+        734611,
+        886931,
+        756133
+      ],
+      "minNs": 719658,
+      "medianNs": 781722.0,
+      "maxNs": 1112482
+    },
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "preDisplayAboveOnePixels": 1489,
+    "preDisplayAboveOneChannels": 2054,
+    "legacySrgbInputClippedPixels": null,
+    "clampCountMeaning": "clampedPixels = AgX high-domain flag only; preDisplayAboveOne = source HDR > 1.0 before display; legacySrgbInputClippedPixels applies only to OFF, null for ON",
+    "view": "front",
+    "case": "baseline",
+    "arm": "filter3-on",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5353,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27047,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "rawNs": [
+        1936458,
+        1890859,
+        1876628,
+        1896407,
+        1850709,
+        2426910,
+        1941986,
+        2011942,
+        1870127,
+        1980475,
+        2005853
+      ],
+      "minNs": 1850709,
+      "medianNs": 1936458.0,
+      "maxNs": 2426910
+    },
+    "filterRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "rawNs": [
+        1112482,
+        806299,
+        771597,
+        950147,
+        753729,
+        719658,
+        781722,
+        781883,
+        734611,
+        886931,
+        756133
+      ],
+      "minNs": 719658,
+      "medianNs": 781722.0,
+      "maxNs": 1112482
+    },
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "preDisplayAboveOnePixels": 1130,
+    "preDisplayAboveOneChannels": 1658,
+    "legacySrgbInputClippedPixels": 1130,
+    "clampCountMeaning": "clampedPixels = AgX high-domain flag only; preDisplayAboveOne = source HDR > 1.0 before display; legacySrgbInputClippedPixels applies only to OFF, null for ON",
+    "view": "front",
+    "case": "direction",
+    "arm": "point-off",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "rawNs": [
+        548640,
+        519576,
+        494949,
+        509491,
+        488418,
+        530923,
+        488199,
+        502410,
+        488709,
+        502370,
+        562420
+      ],
+      "minNs": 488199,
+      "medianNs": 502410.0,
+      "maxNs": 562420
+    },
+    "filterRepeatTimingHostOnly": null,
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "preDisplayAboveOnePixels": 1130,
+    "preDisplayAboveOneChannels": 1658,
+    "legacySrgbInputClippedPixels": null,
+    "clampCountMeaning": "clampedPixels = AgX high-domain flag only; preDisplayAboveOne = source HDR > 1.0 before display; legacySrgbInputClippedPixels applies only to OFF, null for ON",
+    "view": "front",
+    "case": "direction",
+    "arm": "point-on",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "rawNs": [
+        2909659,
+        2619561,
+        1987084,
+        1863288,
+        1863238,
+        2077001,
+        2081918,
+        2090651,
+        1967696,
+        1829256,
+        1939883
+      ],
+      "minNs": 1829256,
+      "medianNs": 1987084.0,
+      "maxNs": 2909659
+    },
+    "filterRepeatTimingHostOnly": null,
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "preDisplayAboveOnePixels": 1124,
+    "preDisplayAboveOneChannels": 1622,
+    "legacySrgbInputClippedPixels": 1124,
+    "clampCountMeaning": "clampedPixels = AgX high-domain flag only; preDisplayAboveOne = source HDR > 1.0 before display; legacySrgbInputClippedPixels applies only to OFF, null for ON",
+    "view": "front",
+    "case": "direction",
+    "arm": "filter3-off",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5353,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27047,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "rawNs": [
+        525715,
+        498784,
+        518985,
+        494948,
+        541379,
+        493145,
+        517162,
+        492705,
+        511824,
+        492224,
+        508258
+      ],
+      "minNs": 492224,
+      "medianNs": 508258.0,
+      "maxNs": 541379
+    },
+    "filterRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "rawNs": [
+        1253796,
+        985460,
+        716694,
+        716984,
+        715542,
+        702071,
+        737996,
+        719708,
+        712267,
+        699107,
+        709203
+      ],
+      "minNs": 699107,
+      "medianNs": 716694.0,
+      "maxNs": 1253796
+    },
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "preDisplayAboveOnePixels": 1124,
+    "preDisplayAboveOneChannels": 1622,
+    "legacySrgbInputClippedPixels": null,
+    "clampCountMeaning": "clampedPixels = AgX high-domain flag only; preDisplayAboveOne = source HDR > 1.0 before display; legacySrgbInputClippedPixels applies only to OFF, null for ON",
+    "view": "front",
+    "case": "direction",
+    "arm": "filter3-on",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5353,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27047,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "rawNs": [
+        1962577,
+        1891701,
+        2279257,
+        1888225,
+        2198013,
+        1963790,
+        2029640,
+        1976428,
+        2055377,
+        1962217,
+        1938341
+      ],
+      "minNs": 1888225,
+      "medianNs": 1963790.0,
+      "maxNs": 2279257
+    },
+    "filterRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "rawNs": [
+        1253796,
+        985460,
+        716694,
+        716984,
+        715542,
+        702071,
+        737996,
+        719708,
+        712267,
+        699107,
+        709203
+      ],
+      "minNs": 699107,
+      "medianNs": 716694.0,
+      "maxNs": 1253796
+    },
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "preDisplayAboveOnePixels": 673,
+    "preDisplayAboveOneChannels": 990,
+    "legacySrgbInputClippedPixels": 673,
+    "clampCountMeaning": "clampedPixels = AgX high-domain flag only; preDisplayAboveOne = source HDR > 1.0 before display; legacySrgbInputClippedPixels applies only to OFF, null for ON",
+    "view": "front",
+    "case": "intensity",
+    "arm": "point-off",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "rawNs": [
+        561348,
+        497032,
+        542871,
+        490031,
+        511033,
+        491884,
+        506075,
+        490782,
+        858333,
+        661591,
+        928504
+      ],
+      "minNs": 490031,
+      "medianNs": 511033.0,
+      "maxNs": 928504
+    },
+    "filterRepeatTimingHostOnly": null,
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "preDisplayAboveOnePixels": 673,
+    "preDisplayAboveOneChannels": 990,
+    "legacySrgbInputClippedPixels": null,
+    "clampCountMeaning": "clampedPixels = AgX high-domain flag only; preDisplayAboveOne = source HDR > 1.0 before display; legacySrgbInputClippedPixels applies only to OFF, null for ON",
+    "view": "front",
+    "case": "intensity",
+    "arm": "point-on",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "rawNs": [
+        2318486,
+        2611373,
+        1961737,
+        2079284,
+        2643468,
+        1862186,
+        1857619,
+        1875866,
+        1871931,
+        1971882,
+        1984751
+      ],
+      "minNs": 1857619,
+      "medianNs": 1971882.0,
+      "maxNs": 2643468
+    },
+    "filterRepeatTimingHostOnly": null,
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "preDisplayAboveOnePixels": 642,
+    "preDisplayAboveOneChannels": 926,
+    "legacySrgbInputClippedPixels": 642,
+    "clampCountMeaning": "clampedPixels = AgX high-domain flag only; preDisplayAboveOne = source HDR > 1.0 before display; legacySrgbInputClippedPixels applies only to OFF, null for ON",
+    "view": "front",
+    "case": "intensity",
+    "arm": "filter3-off",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5353,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27047,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "rawNs": [
+        510642,
+        590844,
+        569491,
+        548940,
+        497482,
+        611655,
+        497392,
+        530762,
+        543201,
+        494178,
+        533487
+      ],
+      "minNs": 494178,
+      "medianNs": 533487.0,
+      "maxNs": 611655
+    },
+    "filterRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "rawNs": [
+        1280466,
+        990628,
+        761101,
+        715892,
+        702111,
+        821592,
+        754651,
+        742112,
+        704084,
+        934373,
+        755162
+      ],
+      "minNs": 702111,
+      "medianNs": 755162.0,
+      "maxNs": 1280466
+    },
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "preDisplayAboveOnePixels": 642,
+    "preDisplayAboveOneChannels": 926,
+    "legacySrgbInputClippedPixels": null,
+    "clampCountMeaning": "clampedPixels = AgX high-domain flag only; preDisplayAboveOne = source HDR > 1.0 before display; legacySrgbInputClippedPixels applies only to OFF, null for ON",
+    "view": "front",
+    "case": "intensity",
+    "arm": "filter3-on",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5353,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27047,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "rawNs": [
+        2075288,
+        2105784,
+        1879051,
+        1962167,
+        1860393,
+        1874675,
+        1853382,
+        2094818,
+        2031883,
+        1954055,
+        1864009
+      ],
+      "minNs": 1853382,
+      "medianNs": 1954055.0,
+      "maxNs": 2105784
+    },
+    "filterRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "rawNs": [
+        1280466,
+        990628,
+        761101,
+        715892,
+        702111,
+        821592,
+        754651,
+        742112,
+        704084,
+        934373,
+        755162
+      ],
+      "minNs": 702111,
+      "medianNs": 755162.0,
+      "maxNs": 1280466
+    },
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "preDisplayAboveOnePixels": 1804,
+    "preDisplayAboveOneChannels": 2538,
+    "legacySrgbInputClippedPixels": 1804,
+    "clampCountMeaning": "clampedPixels = AgX high-domain flag only; preDisplayAboveOne = source HDR > 1.0 before display; legacySrgbInputClippedPixels applies only to OFF, null for ON",
+    "view": "front",
+    "case": "ambient",
+    "arm": "point-off",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "rawNs": [
+        803254,
+        498795,
+        786319,
+        531113,
+        492635,
+        565124,
+        549831,
+        704065,
+        550052,
+        492134,
+        507818
+      ],
+      "minNs": 492134,
+      "medianNs": 549831.0,
+      "maxNs": 803254
+    },
+    "filterRepeatTimingHostOnly": null,
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "preDisplayAboveOnePixels": 1804,
+    "preDisplayAboveOneChannels": 2538,
+    "legacySrgbInputClippedPixels": null,
+    "clampCountMeaning": "clampedPixels = AgX high-domain flag only; preDisplayAboveOne = source HDR > 1.0 before display; legacySrgbInputClippedPixels applies only to OFF, null for ON",
+    "view": "front",
+    "case": "ambient",
+    "arm": "point-on",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "rawNs": [
+        1898972,
+        2329973,
+        2272416,
+        2443094,
+        2516595,
+        1958451,
+        2204614,
+        1888265,
+        2152254,
+        2034887,
+        2189851
+      ],
+      "minNs": 1888265,
+      "medianNs": 2189851.0,
+      "maxNs": 2516595
+    },
+    "filterRepeatTimingHostOnly": null,
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "preDisplayAboveOnePixels": 1794,
+    "preDisplayAboveOneChannels": 2486,
+    "legacySrgbInputClippedPixels": 1794,
+    "clampCountMeaning": "clampedPixels = AgX high-domain flag only; preDisplayAboveOne = source HDR > 1.0 before display; legacySrgbInputClippedPixels applies only to OFF, null for ON",
+    "view": "front",
+    "case": "ambient",
+    "arm": "filter3-off",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5353,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27047,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "rawNs": [
+        641210,
+        601299,
+        800991,
+        732006,
+        611444,
+        500837,
+        690784,
+        606978,
+        627218,
+        638756,
+        546216
+      ],
+      "minNs": 500837,
+      "medianNs": 627218.0,
+      "maxNs": 800991
+    },
+    "filterRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "rawNs": [
+        1147104,
+        1028856,
+        857847,
+        730776,
+        793159,
+        4908467,
+        780800,
+        736323,
+        753639,
+        1091200,
+        751166
+      ],
+      "minNs": 730776,
+      "medianNs": 793159.0,
+      "maxNs": 4908467
+    },
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "preDisplayAboveOnePixels": 1794,
+    "preDisplayAboveOneChannels": 2486,
+    "legacySrgbInputClippedPixels": null,
+    "clampCountMeaning": "clampedPixels = AgX high-domain flag only; preDisplayAboveOne = source HDR > 1.0 before display; legacySrgbInputClippedPixels applies only to OFF, null for ON",
+    "view": "front",
+    "case": "ambient",
+    "arm": "filter3-on",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5353,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27047,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "rawNs": [
+        2615365,
+        2267829,
+        2183211,
+        2428002,
+        2340579,
+        2233958,
+        2164223,
+        1961045,
+        2296212,
+        1987516,
+        2376574
+      ],
+      "minNs": 1961045,
+      "medianNs": 2267829.0,
+      "maxNs": 2615365
+    },
+    "filterRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "rawNs": [
+        1147104,
+        1028856,
+        857847,
+        730776,
+        793159,
+        4908467,
+        780800,
+        736323,
+        753639,
+        1091200,
+        751166
+      ],
+      "minNs": 730776,
+      "medianNs": 793159.0,
+      "maxNs": 4908467
+    },
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "preDisplayAboveOnePixels": 348,
+    "preDisplayAboveOneChannels": 489,
+    "legacySrgbInputClippedPixels": 348,
+    "clampCountMeaning": "clampedPixels = AgX high-domain flag only; preDisplayAboveOne = source HDR > 1.0 before display; legacySrgbInputClippedPixels applies only to OFF, null for ON",
+    "view": "front",
+    "case": "albedo",
+    "arm": "point-off",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "rawNs": [
+        584223,
+        598585,
+        699167,
+        682933,
+        590563,
+        537974,
+        496241,
+        508599,
+        491383,
+        582541,
+        491874
+      ],
+      "minNs": 491383,
+      "medianNs": 582541.0,
+      "maxNs": 699167
+    },
+    "filterRepeatTimingHostOnly": null,
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "preDisplayAboveOnePixels": 348,
+    "preDisplayAboveOneChannels": 489,
+    "legacySrgbInputClippedPixels": null,
+    "clampCountMeaning": "clampedPixels = AgX high-domain flag only; preDisplayAboveOne = source HDR > 1.0 before display; legacySrgbInputClippedPixels applies only to OFF, null for ON",
+    "view": "front",
+    "case": "albedo",
+    "arm": "point-on",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "rawNs": [
+        2150652,
+        2109099,
+        2015097,
+        1961636,
+        2223672,
+        2364225,
+        2004191,
+        2264194,
+        1907915,
+        2169210,
+        2093425
+      ],
+      "minNs": 1907915,
+      "medianNs": 2109099.0,
+      "maxNs": 2364225
+    },
+    "filterRepeatTimingHostOnly": null,
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "preDisplayAboveOnePixels": 325,
+    "preDisplayAboveOneChannels": 444,
+    "legacySrgbInputClippedPixels": 325,
+    "clampCountMeaning": "clampedPixels = AgX high-domain flag only; preDisplayAboveOne = source HDR > 1.0 before display; legacySrgbInputClippedPixels applies only to OFF, null for ON",
+    "view": "front",
+    "case": "albedo",
+    "arm": "filter3-off",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5353,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27047,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "rawNs": [
+        804607,
+        548019,
+        508449,
+        571064,
+        496210,
+        548890,
+        495579,
+        600148,
+        549591,
+        554478,
+        552445
+      ],
+      "minNs": 495579,
+      "medianNs": 549591.0,
+      "maxNs": 804607
+    },
+    "filterRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "rawNs": [
+        2040305,
+        1162868,
+        700459,
+        791697,
+        870907,
+        844367,
+        792178,
+        821772,
+        800901,
+        753750,
+        715021
+      ],
+      "minNs": 700459,
+      "medianNs": 800901.0,
+      "maxNs": 2040305
+    },
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "preDisplayAboveOnePixels": 325,
+    "preDisplayAboveOneChannels": 444,
+    "legacySrgbInputClippedPixels": null,
+    "clampCountMeaning": "clampedPixels = AgX high-domain flag only; preDisplayAboveOne = source HDR > 1.0 before display; legacySrgbInputClippedPixels applies only to OFF, null for ON",
+    "view": "front",
+    "case": "albedo",
+    "arm": "filter3-on",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5353,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27047,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "rawNs": [
+        1991862,
+        2051132,
+        2011411,
+        1876307,
+        1877128,
+        2233737,
+        1966543,
+        2147527,
+        1882888,
+        1871690,
+        1979163
+      ],
+      "minNs": 1871690,
+      "medianNs": 1979163.0,
+      "maxNs": 2233737
+    },
+    "filterRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "rawNs": [
+        2040305,
+        1162868,
+        700459,
+        791697,
+        870907,
+        844367,
+        792178,
+        821772,
+        800901,
+        753750,
+        715021
+      ],
+      "minNs": 700459,
+      "medianNs": 800901.0,
+      "maxNs": 2040305
+    },
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "preDisplayAboveOnePixels": 1522,
+    "preDisplayAboveOneChannels": 2081,
+    "legacySrgbInputClippedPixels": 1522,
+    "clampCountMeaning": "clampedPixels = AgX high-domain flag only; preDisplayAboveOne = source HDR > 1.0 before display; legacySrgbInputClippedPixels applies only to OFF, null for ON",
+    "view": "oblique",
+    "case": "baseline",
+    "arm": "point-off",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "rawNs": [
+        588540,
+        507017,
+        536281,
+        511934,
+        524182,
+        556211,
+        498353,
+        537894,
+        496381,
+        541238,
+        496240
+      ],
+      "minNs": 496240,
+      "medianNs": 524182.0,
+      "maxNs": 588540
+    },
+    "filterRepeatTimingHostOnly": null,
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "preDisplayAboveOnePixels": 1522,
+    "preDisplayAboveOneChannels": 2081,
+    "legacySrgbInputClippedPixels": null,
+    "clampCountMeaning": "clampedPixels = AgX high-domain flag only; preDisplayAboveOne = source HDR > 1.0 before display; legacySrgbInputClippedPixels applies only to OFF, null for ON",
+    "view": "oblique",
+    "case": "baseline",
+    "arm": "point-on",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "rawNs": [
+        2049509,
+        1949689,
+        1942146,
+        1850559,
+        1907995,
+        2101999,
+        1960814,
+        1872621,
+        1852541,
+        2188289,
+        2033635
+      ],
+      "minNs": 1850559,
+      "medianNs": 1949689.0,
+      "maxNs": 2188289
+    },
+    "filterRepeatTimingHostOnly": null,
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "preDisplayAboveOnePixels": 1502,
+    "preDisplayAboveOneChannels": 2016,
+    "legacySrgbInputClippedPixels": 1502,
+    "clampCountMeaning": "clampedPixels = AgX high-domain flag only; preDisplayAboveOne = source HDR > 1.0 before display; legacySrgbInputClippedPixels applies only to OFF, null for ON",
+    "view": "oblique",
+    "case": "baseline",
+    "arm": "filter3-off",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5900,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 26500,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "rawNs": [
+        558024,
+        508799,
+        593387,
+        540297,
+        499606,
+        565685,
+        502250,
+        545094,
+        503932,
+        520377,
+        499255
+      ],
+      "minNs": 499255,
+      "medianNs": 520377.0,
+      "maxNs": 593387
+    },
+    "filterRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "rawNs": [
+        872699,
+        748191,
+        782132,
+        742282,
+        723013,
+        782483,
+        761311,
+        854101,
+        742092,
+        741422,
+        922415
+      ],
+      "minNs": 723013,
+      "medianNs": 761311.0,
+      "maxNs": 922415
+    },
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "preDisplayAboveOnePixels": 1502,
+    "preDisplayAboveOneChannels": 2016,
+    "legacySrgbInputClippedPixels": null,
+    "clampCountMeaning": "clampedPixels = AgX high-domain flag only; preDisplayAboveOne = source HDR > 1.0 before display; legacySrgbInputClippedPixels applies only to OFF, null for ON",
+    "view": "oblique",
+    "case": "baseline",
+    "arm": "filter3-on",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5900,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 26500,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "rawNs": [
+        2045323,
+        1901245,
+        1946183,
+        2006333,
+        2082258,
+        2153867,
+        2013644,
+        2081557,
+        1929067,
+        2168719,
+        1980565
+      ],
+      "minNs": 1901245,
+      "medianNs": 2013644.0,
+      "maxNs": 2168719
+    },
+    "filterRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "rawNs": [
+        872699,
+        748191,
+        782132,
+        742282,
+        723013,
+        782483,
+        761311,
+        854101,
+        742092,
+        741422,
+        922415
+      ],
+      "minNs": 723013,
+      "medianNs": 761311.0,
+      "maxNs": 922415
+    },
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "preDisplayAboveOnePixels": 881,
+    "preDisplayAboveOneChannels": 1287,
+    "legacySrgbInputClippedPixels": 881,
+    "clampCountMeaning": "clampedPixels = AgX high-domain flag only; preDisplayAboveOne = source HDR > 1.0 before display; legacySrgbInputClippedPixels applies only to OFF, null for ON",
+    "view": "oblique",
+    "case": "direction",
+    "arm": "point-off",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "rawNs": [
+        522661,
+        573517,
+        548750,
+        612516,
+        643232,
+        558013,
+        616142,
+        495599,
+        559085,
+        596602,
+        491103
+      ],
+      "minNs": 491103,
+      "medianNs": 559085.0,
+      "maxNs": 643232
+    },
+    "filterRepeatTimingHostOnly": null,
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "preDisplayAboveOnePixels": 881,
+    "preDisplayAboveOneChannels": 1287,
+    "legacySrgbInputClippedPixels": null,
+    "clampCountMeaning": "clampedPixels = AgX high-domain flag only; preDisplayAboveOne = source HDR > 1.0 before display; legacySrgbInputClippedPixels applies only to OFF, null for ON",
+    "view": "oblique",
+    "case": "direction",
+    "arm": "point-on",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "rawNs": [
+        1987065,
+        2014666,
+        2309533,
+        1928496,
+        1985462,
+        1911901,
+        2069219,
+        1879472,
+        2136270,
+        1868435,
+        2009990
+      ],
+      "minNs": 1868435,
+      "medianNs": 1987065.0,
+      "maxNs": 2309533
+    },
+    "filterRepeatTimingHostOnly": null,
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "preDisplayAboveOnePixels": 868,
+    "preDisplayAboveOneChannels": 1257,
+    "legacySrgbInputClippedPixels": 868,
+    "clampCountMeaning": "clampedPixels = AgX high-domain flag only; preDisplayAboveOne = source HDR > 1.0 before display; legacySrgbInputClippedPixels applies only to OFF, null for ON",
+    "view": "oblique",
+    "case": "direction",
+    "arm": "filter3-off",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5900,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 26500,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "rawNs": [
+        609091,
+        692628,
+        538154,
+        495810,
+        511073,
+        496341,
+        509590,
+        491613,
+        561559,
+        496320,
+        524894
+      ],
+      "minNs": 491613,
+      "medianNs": 511073.0,
+      "maxNs": 692628
+    },
+    "filterRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "rawNs": [
+        951308,
+        835724,
+        728772,
+        817096,
+        760380,
+        740880,
+        735172,
+        1112382,
+        794281,
+        1027814,
+        759759
+      ],
+      "minNs": 728772,
+      "medianNs": 794281.0,
+      "maxNs": 1112382
+    },
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "preDisplayAboveOnePixels": 868,
+    "preDisplayAboveOneChannels": 1257,
+    "legacySrgbInputClippedPixels": null,
+    "clampCountMeaning": "clampedPixels = AgX high-domain flag only; preDisplayAboveOne = source HDR > 1.0 before display; legacySrgbInputClippedPixels applies only to OFF, null for ON",
+    "view": "oblique",
+    "case": "direction",
+    "arm": "filter3-on",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5900,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 26500,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "rawNs": [
+        2258445,
+        2064161,
+        2202160,
+        1942758,
+        2103451,
+        2117452,
+        1962076,
+        1914896,
+        2006214,
+        1928596,
+        2021277
+      ],
+      "minNs": 1914896,
+      "medianNs": 2021277.0,
+      "maxNs": 2258445
+    },
+    "filterRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "rawNs": [
+        951308,
+        835724,
+        728772,
+        817096,
+        760380,
+        740880,
+        735172,
+        1112382,
+        794281,
+        1027814,
+        759759
+      ],
+      "minNs": 728772,
+      "medianNs": 794281.0,
+      "maxNs": 1112382
+    },
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "preDisplayAboveOnePixels": 708,
+    "preDisplayAboveOneChannels": 972,
+    "legacySrgbInputClippedPixels": 708,
+    "clampCountMeaning": "clampedPixels = AgX high-domain flag only; preDisplayAboveOne = source HDR > 1.0 before display; legacySrgbInputClippedPixels applies only to OFF, null for ON",
+    "view": "oblique",
+    "case": "intensity",
+    "arm": "point-off",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "rawNs": [
+        526235,
+        615541,
+        499495,
+        540998,
+        495559,
+        508840,
+        506847,
+        510552,
+        494247,
+        530793,
+        494708
+      ],
+      "minNs": 494247,
+      "medianNs": 508840.0,
+      "maxNs": 615541
+    },
+    "filterRepeatTimingHostOnly": null,
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "preDisplayAboveOnePixels": 708,
+    "preDisplayAboveOneChannels": 972,
+    "legacySrgbInputClippedPixels": null,
+    "clampCountMeaning": "clampedPixels = AgX high-domain flag only; preDisplayAboveOne = source HDR > 1.0 before display; legacySrgbInputClippedPixels applies only to OFF, null for ON",
+    "view": "oblique",
+    "case": "intensity",
+    "arm": "point-on",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "rawNs": [
+        2446655,
+        2092965,
+        1962728,
+        1986633,
+        2338016,
+        2064642,
+        1912552,
+        1874915,
+        2360329,
+        2041126,
+        1998933
+      ],
+      "minNs": 1874915,
+      "medianNs": 2041126.0,
+      "maxNs": 2446655
+    },
+    "filterRepeatTimingHostOnly": null,
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "preDisplayAboveOnePixels": 665,
+    "preDisplayAboveOneChannels": 904,
+    "legacySrgbInputClippedPixels": 665,
+    "clampCountMeaning": "clampedPixels = AgX high-domain flag only; preDisplayAboveOne = source HDR > 1.0 before display; legacySrgbInputClippedPixels applies only to OFF, null for ON",
+    "view": "oblique",
+    "case": "intensity",
+    "arm": "filter3-off",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5900,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 26500,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "rawNs": [
+        510442,
+        516281,
+        636473,
+        598815,
+        502009,
+        516201,
+        552816,
+        569160,
+        513547,
+        497802,
+        1051470
+      ],
+      "minNs": 497802,
+      "medianNs": 516281.0,
+      "maxNs": 1051470
+    },
+    "filterRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "rawNs": [
+        966060,
+        815292,
+        752928,
+        720229,
+        1114395,
+        820531,
+        779639,
+        733629,
+        1148827,
+        1032020,
+        826970
+      ],
+      "minNs": 720229,
+      "medianNs": 820531.0,
+      "maxNs": 1148827
+    },
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "preDisplayAboveOnePixels": 665,
+    "preDisplayAboveOneChannels": 904,
+    "legacySrgbInputClippedPixels": null,
+    "clampCountMeaning": "clampedPixels = AgX high-domain flag only; preDisplayAboveOne = source HDR > 1.0 before display; legacySrgbInputClippedPixels applies only to OFF, null for ON",
+    "view": "oblique",
+    "case": "intensity",
+    "arm": "filter3-on",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5900,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 26500,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "rawNs": [
+        1959142,
+        2165224,
+        2052894,
+        2017611,
+        1909648,
+        1898801,
+        2044551,
+        2086735,
+        1954175,
+        2427571,
+        1981246
+      ],
+      "minNs": 1898801,
+      "medianNs": 2017611.0,
+      "maxNs": 2427571
+    },
+    "filterRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "rawNs": [
+        966060,
+        815292,
+        752928,
+        720229,
+        1114395,
+        820531,
+        779639,
+        733629,
+        1148827,
+        1032020,
+        826970
+      ],
+      "minNs": 720229,
+      "medianNs": 820531.0,
+      "maxNs": 1148827
+    },
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "preDisplayAboveOnePixels": 1768,
+    "preDisplayAboveOneChannels": 2446,
+    "legacySrgbInputClippedPixels": 1768,
+    "clampCountMeaning": "clampedPixels = AgX high-domain flag only; preDisplayAboveOne = source HDR > 1.0 before display; legacySrgbInputClippedPixels applies only to OFF, null for ON",
+    "view": "oblique",
+    "case": "ambient",
+    "arm": "point-off",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "rawNs": [
+        568239,
+        563792,
+        532365,
+        611765,
+        499785,
+        531133,
+        579286,
+        555560,
+        669312,
+        779990,
+        538875
+      ],
+      "minNs": 499785,
+      "medianNs": 563792.0,
+      "maxNs": 779990
+    },
+    "filterRepeatTimingHostOnly": null,
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "preDisplayAboveOnePixels": 1768,
+    "preDisplayAboveOneChannels": 2446,
+    "legacySrgbInputClippedPixels": null,
+    "clampCountMeaning": "clampedPixels = AgX high-domain flag only; preDisplayAboveOne = source HDR > 1.0 before display; legacySrgbInputClippedPixels applies only to OFF, null for ON",
+    "view": "oblique",
+    "case": "ambient",
+    "arm": "point-on",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "rawNs": [
+        1930569,
+        2078603,
+        1981907,
+        2192305,
+        1893223,
+        1977420,
+        2024941,
+        1935086,
+        1861064,
+        1855035,
+        1943319
+      ],
+      "minNs": 1855035,
+      "medianNs": 1943319.0,
+      "maxNs": 2192305
+    },
+    "filterRepeatTimingHostOnly": null,
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "preDisplayAboveOnePixels": 1765,
+    "preDisplayAboveOneChannels": 2403,
+    "legacySrgbInputClippedPixels": 1765,
+    "clampCountMeaning": "clampedPixels = AgX high-domain flag only; preDisplayAboveOne = source HDR > 1.0 before display; legacySrgbInputClippedPixels applies only to OFF, null for ON",
+    "view": "oblique",
+    "case": "ambient",
+    "arm": "filter3-off",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5900,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 26500,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "rawNs": [
+        512865,
+        520196,
+        513837,
+        514438,
+        500426,
+        513036,
+        501007,
+        530182,
+        498704,
+        616683,
+        548760
+      ],
+      "minNs": 498704,
+      "medianNs": 513837.0,
+      "maxNs": 616683
+    },
+    "filterRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "rawNs": [
+        1409921,
+        1246364,
+        847201,
+        734040,
+        954854,
+        771166,
+        752237,
+        746359,
+        732327,
+        767321,
+        907362
+      ],
+      "minNs": 732327,
+      "medianNs": 771166.0,
+      "maxNs": 1409921
+    },
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "preDisplayAboveOnePixels": 1765,
+    "preDisplayAboveOneChannels": 2403,
+    "legacySrgbInputClippedPixels": null,
+    "clampCountMeaning": "clampedPixels = AgX high-domain flag only; preDisplayAboveOne = source HDR > 1.0 before display; legacySrgbInputClippedPixels applies only to OFF, null for ON",
+    "view": "oblique",
+    "case": "ambient",
+    "arm": "filter3-on",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5900,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 26500,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "rawNs": [
+        2404285,
+        2084182,
+        2049039,
+        1913713,
+        1976299,
+        1907725,
+        2041657,
+        1911540,
+        2043260,
+        2181810,
+        1940624
+      ],
+      "minNs": 1907725,
+      "medianNs": 2041657.0,
+      "maxNs": 2404285
+    },
+    "filterRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "rawNs": [
+        1409921,
+        1246364,
+        847201,
+        734040,
+        954854,
+        771166,
+        752237,
+        746359,
+        732327,
+        767321,
+        907362
+      ],
+      "minNs": 732327,
+      "medianNs": 771166.0,
+      "maxNs": 1409921
+    },
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "preDisplayAboveOnePixels": 431,
+    "preDisplayAboveOneChannels": 570,
+    "legacySrgbInputClippedPixels": 431,
+    "clampCountMeaning": "clampedPixels = AgX high-domain flag only; preDisplayAboveOne = source HDR > 1.0 before display; legacySrgbInputClippedPixels applies only to OFF, null for ON",
+    "view": "oblique",
+    "case": "albedo",
+    "arm": "point-off",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "rawNs": [
+        542200,
+        498754,
+        522100,
+        495479,
+        582281,
+        492795,
+        508449,
+        492544,
+        510883,
+        492134,
+        509160
+      ],
+      "minNs": 492134,
+      "medianNs": 508449.0,
+      "maxNs": 582281
+    },
+    "filterRepeatTimingHostOnly": null,
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "preDisplayAboveOnePixels": 431,
+    "preDisplayAboveOneChannels": 570,
+    "legacySrgbInputClippedPixels": null,
+    "clampCountMeaning": "clampedPixels = AgX high-domain flag only; preDisplayAboveOne = source HDR > 1.0 before display; legacySrgbInputClippedPixels applies only to OFF, null for ON",
+    "view": "oblique",
+    "case": "albedo",
+    "arm": "point-on",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "rawNs": [
+        2033525,
+        1857790,
+        2009439,
+        1961266,
+        2032363,
+        1850989,
+        1849898,
+        2143601,
+        1876657,
+        1911410,
+        1860132
+      ],
+      "minNs": 1849898,
+      "medianNs": 1911410.0,
+      "maxNs": 2143601
+    },
+    "filterRepeatTimingHostOnly": null,
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "preDisplayAboveOnePixels": 401,
+    "preDisplayAboveOneChannels": 520,
+    "legacySrgbInputClippedPixels": 401,
+    "clampCountMeaning": "clampedPixels = AgX high-domain flag only; preDisplayAboveOne = source HDR > 1.0 before display; legacySrgbInputClippedPixels applies only to OFF, null for ON",
+    "view": "oblique",
+    "case": "albedo",
+    "arm": "filter3-off",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5900,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 26500,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "rawNs": [
+        568730,
+        506236,
+        522771,
+        501969,
+        516682,
+        497131,
+        514348,
+        712147,
+        505113,
+        720068,
+        502670
+      ],
+      "minNs": 497131,
+      "medianNs": 514348.0,
+      "maxNs": 720068
+    },
+    "filterRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "rawNs": [
+        878328,
+        793240,
+        726739,
+        744846,
+        881012,
+        839018,
+        727860,
+        744375,
+        742112,
+        792318,
+        725887
+      ],
+      "minNs": 725887,
+      "medianNs": 744846.0,
+      "maxNs": 881012
+    },
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "preDisplayAboveOnePixels": 401,
+    "preDisplayAboveOneChannels": 520,
+    "legacySrgbInputClippedPixels": null,
+    "clampCountMeaning": "clampedPixels = AgX high-domain flag only; preDisplayAboveOne = source HDR > 1.0 before display; legacySrgbInputClippedPixels applies only to OFF, null for ON",
+    "view": "oblique",
+    "case": "albedo",
+    "arm": "filter3-on",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5900,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 26500,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "rawNs": [
+        2057481,
+        2147728,
+        2002237,
+        1895567,
+        1897500,
+        2126996,
+        2049268,
+        2197613,
+        1936057,
+        2367169,
+        2068798
+      ],
+      "minNs": 1895567,
+      "medianNs": 2057481.0,
+      "maxNs": 2367169
+    },
+    "filterRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "rawNs": [
+        878328,
+        793240,
+        726739,
+        744846,
+        881012,
+        839018,
+        727860,
+        744375,
+        742112,
+        792318,
+        725887
+      ],
+      "minNs": 725887,
+      "medianNs": 744846.0,
+      "maxNs": 881012
+    },
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  }
+]

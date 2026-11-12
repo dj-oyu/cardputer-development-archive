@@ -1,0 +1,1411 @@
+{
+  "status": "FROZEN_CONDITIONAL_STATUS_SUMMARY_NOT_GLOBAL_ACCEPTANCE",
+  "sourceAnalysisCompletedSHA256": "80f4def6595e0df805d5c13e1cc01c93740e56e955b626c68473688844a444d4",
+  "sixtyPercentGoal": "NOT_ESTABLISHED_CONDITIONAL_METRICS_ONLY",
+  "globalAcceptance": "NOT_ESTABLISHED",
+  "noNewAcceptanceRule": true,
+  "all10StableAndFullForegroundColor": {
+    "front-baseline": {
+      "legacy": {
+        "stableSubset": {
+          "rgbMAE": 0.1682151182035653,
+          "rgbRMSE": 0.21347226073076309,
+          "valueStatus": "MEETS_60_ON_DECLARED_SUBSET"
+        },
+        "pooledFullForegroundDescriptive": {
+          "rgbMAE": 0.17897267192207747,
+          "rgbRMSE": 0.2225502099310029,
+          "valueStatus": "DESCRIPTIVE_ONLY_NOT_ACCEPTANCE"
+        }
+      },
+      "agx": {
+        "stableSubset": {
+          "rgbMAE": 0.15769045128435868,
+          "rgbRMSE": 0.2184099244329424,
+          "valueStatus": "MEETS_60_ON_DECLARED_SUBSET"
+        },
+        "pooledFullForegroundDescriptive": {
+          "rgbMAE": 0.17658726299429087,
+          "rgbRMSE": 0.2340170600502066,
+          "valueStatus": "DESCRIPTIVE_ONLY_NOT_ACCEPTANCE"
+        }
+      }
+    },
+    "front-direction": {
+      "legacy": {
+        "stableSubset": {
+          "rgbMAE": 0.17455259996524888,
+          "rgbRMSE": 0.22367194277388847,
+          "valueStatus": "MEETS_60_ON_DECLARED_SUBSET"
+        },
+        "pooledFullForegroundDescriptive": {
+          "rgbMAE": 0.1839927894180825,
+          "rgbRMSE": 0.23133160167201325,
+          "valueStatus": "DESCRIPTIVE_ONLY_NOT_ACCEPTANCE"
+        }
+      },
+      "agx": {
+        "stableSubset": {
+          "rgbMAE": 0.16640222195093507,
+          "rgbRMSE": 0.23070173104173514,
+          "valueStatus": "MEETS_60_ON_DECLARED_SUBSET"
+        },
+        "pooledFullForegroundDescriptive": {
+          "rgbMAE": 0.18557704840052203,
+          "rgbRMSE": 0.245739511891288,
+          "valueStatus": "DESCRIPTIVE_ONLY_NOT_ACCEPTANCE"
+        }
+      }
+    },
+    "front-intensity": {
+      "legacy": {
+        "stableSubset": {
+          "rgbMAE": 0.1518871280266301,
+          "rgbRMSE": 0.19852057299816428,
+          "valueStatus": "MEETS_60_ON_DECLARED_SUBSET"
+        },
+        "pooledFullForegroundDescriptive": {
+          "rgbMAE": 0.1619852260619941,
+          "rgbRMSE": 0.2058955559206938,
+          "valueStatus": "DESCRIPTIVE_ONLY_NOT_ACCEPTANCE"
+        }
+      },
+      "agx": {
+        "stableSubset": {
+          "rgbMAE": 0.15311709003896612,
+          "rgbRMSE": 0.21267647093906647,
+          "valueStatus": "MEETS_60_ON_DECLARED_SUBSET"
+        },
+        "pooledFullForegroundDescriptive": {
+          "rgbMAE": 0.171610287849357,
+          "rgbRMSE": 0.22535560799581475,
+          "valueStatus": "DESCRIPTIVE_ONLY_NOT_ACCEPTANCE"
+        }
+      }
+    },
+    "front-ambient": {
+      "legacy": {
+        "stableSubset": {
+          "rgbMAE": 0.18084776981760445,
+          "rgbRMSE": 0.2266218720396837,
+          "valueStatus": "MEETS_60_ON_DECLARED_SUBSET"
+        },
+        "pooledFullForegroundDescriptive": {
+          "rgbMAE": 0.1905305567720394,
+          "rgbRMSE": 0.23439085808726048,
+          "valueStatus": "DESCRIPTIVE_ONLY_NOT_ACCEPTANCE"
+        }
+      },
+      "agx": {
+        "stableSubset": {
+          "rgbMAE": 0.1629539248530954,
+          "rgbRMSE": 0.22601010201334468,
+          "valueStatus": "MEETS_60_ON_DECLARED_SUBSET"
+        },
+        "pooledFullForegroundDescriptive": {
+          "rgbMAE": 0.18093295145246507,
+          "rgbRMSE": 0.24049809320956658,
+          "valueStatus": "DESCRIPTIVE_ONLY_NOT_ACCEPTANCE"
+        }
+      }
+    },
+    "front-albedo": {
+      "legacy": {
+        "stableSubset": {
+          "rgbMAE": 0.13788052694227154,
+          "rgbRMSE": 0.18150272041056859,
+          "valueStatus": "MEETS_60_ON_DECLARED_SUBSET"
+        },
+        "pooledFullForegroundDescriptive": {
+          "rgbMAE": 0.1443707026126812,
+          "rgbRMSE": 0.18740964099700325,
+          "valueStatus": "DESCRIPTIVE_ONLY_NOT_ACCEPTANCE"
+        }
+      },
+      "agx": {
+        "stableSubset": {
+          "rgbMAE": 0.14657715821096354,
+          "rgbRMSE": 0.20226720065500195,
+          "valueStatus": "MEETS_60_ON_DECLARED_SUBSET"
+        },
+        "pooledFullForegroundDescriptive": {
+          "rgbMAE": 0.1584740745708645,
+          "rgbRMSE": 0.21135395889513459,
+          "valueStatus": "DESCRIPTIVE_ONLY_NOT_ACCEPTANCE"
+        }
+      }
+    },
+    "oblique-baseline": {
+      "legacy": {
+        "stableSubset": {
+          "rgbMAE": 0.17634402789718695,
+          "rgbRMSE": 0.22201181983588203,
+          "valueStatus": "MEETS_60_ON_DECLARED_SUBSET"
+        },
+        "pooledFullForegroundDescriptive": {
+          "rgbMAE": 0.1892960268694803,
+          "rgbRMSE": 0.23350286662687483,
+          "valueStatus": "DESCRIPTIVE_ONLY_NOT_ACCEPTANCE"
+        }
+      },
+      "agx": {
+        "stableSubset": {
+          "rgbMAE": 0.1634721891109218,
+          "rgbRMSE": 0.22390916867738236,
+          "valueStatus": "MEETS_60_ON_DECLARED_SUBSET"
+        },
+        "pooledFullForegroundDescriptive": {
+          "rgbMAE": 0.18617718631309862,
+          "rgbRMSE": 0.24295997372825684,
+          "valueStatus": "DESCRIPTIVE_ONLY_NOT_ACCEPTANCE"
+        }
+      }
+    },
+    "oblique-direction": {
+      "legacy": {
+        "stableSubset": {
+          "rgbMAE": 0.1744187887966634,
+          "rgbRMSE": 0.22342971794035785,
+          "valueStatus": "MEETS_60_ON_DECLARED_SUBSET"
+        },
+        "pooledFullForegroundDescriptive": {
+          "rgbMAE": 0.18394903431243714,
+          "rgbRMSE": 0.23230573237909052,
+          "valueStatus": "DESCRIPTIVE_ONLY_NOT_ACCEPTANCE"
+        }
+      },
+      "agx": {
+        "stableSubset": {
+          "rgbMAE": 0.16646777796357845,
+          "rgbRMSE": 0.23052308878339178,
+          "valueStatus": "MEETS_60_ON_DECLARED_SUBSET"
+        },
+        "pooledFullForegroundDescriptive": {
+          "rgbMAE": 0.18763422125305765,
+          "rgbRMSE": 0.24772297433684606,
+          "valueStatus": "DESCRIPTIVE_ONLY_NOT_ACCEPTANCE"
+        }
+      }
+    },
+    "oblique-intensity": {
+      "legacy": {
+        "stableSubset": {
+          "rgbMAE": 0.1555941014669071,
+          "rgbRMSE": 0.20277865509054785,
+          "valueStatus": "MEETS_60_ON_DECLARED_SUBSET"
+        },
+        "pooledFullForegroundDescriptive": {
+          "rgbMAE": 0.1683994625756961,
+          "rgbRMSE": 0.21403423770335023,
+          "valueStatus": "DESCRIPTIVE_ONLY_NOT_ACCEPTANCE"
+        }
+      },
+      "agx": {
+        "stableSubset": {
+          "rgbMAE": 0.1512147323440819,
+          "rgbRMSE": 0.21050999444535878,
+          "valueStatus": "MEETS_60_ON_DECLARED_SUBSET"
+        },
+        "pooledFullForegroundDescriptive": {
+          "rgbMAE": 0.17538727961835343,
+          "rgbRMSE": 0.22960797745937875,
+          "valueStatus": "DESCRIPTIVE_ONLY_NOT_ACCEPTANCE"
+        }
+      }
+    },
+    "oblique-ambient": {
+      "legacy": {
+        "stableSubset": {
+          "rgbMAE": 0.1888317150425293,
+          "rgbRMSE": 0.23440097749719654,
+          "valueStatus": "MEETS_60_ON_DECLARED_SUBSET"
+        },
+        "pooledFullForegroundDescriptive": {
+          "rgbMAE": 0.20102883819417483,
+          "rgbRMSE": 0.24471278957460177,
+          "valueStatus": "DESCRIPTIVE_ONLY_NOT_ACCEPTANCE"
+        }
+      },
+      "agx": {
+        "stableSubset": {
+          "rgbMAE": 0.16970445831956774,
+          "rgbRMSE": 0.23183935453307625,
+          "valueStatus": "MEETS_60_ON_DECLARED_SUBSET"
+        },
+        "pooledFullForegroundDescriptive": {
+          "rgbMAE": 0.19177251116208785,
+          "rgbRMSE": 0.24986267924875952,
+          "valueStatus": "DESCRIPTIVE_ONLY_NOT_ACCEPTANCE"
+        }
+      }
+    },
+    "oblique-albedo": {
+      "legacy": {
+        "stableSubset": {
+          "rgbMAE": 0.13959860258841944,
+          "rgbRMSE": 0.184390641399409,
+          "valueStatus": "MEETS_60_ON_DECLARED_SUBSET"
+        },
+        "pooledFullForegroundDescriptive": {
+          "rgbMAE": 0.14783114976169093,
+          "rgbRMSE": 0.19279425677156084,
+          "valueStatus": "DESCRIPTIVE_ONLY_NOT_ACCEPTANCE"
+        }
+      },
+      "agx": {
+        "stableSubset": {
+          "rgbMAE": 0.1423428015641671,
+          "rgbRMSE": 0.19860687342007258,
+          "valueStatus": "MEETS_60_ON_DECLARED_SUBSET"
+        },
+        "pooledFullForegroundDescriptive": {
+          "rgbMAE": 0.15875062892833836,
+          "rgbRMSE": 0.2127316101932293,
+          "valueStatus": "DESCRIPTIVE_ONLY_NOT_ACCEPTANCE"
+        }
+      }
+    }
+  },
+  "all10All8UnknownScopes": {
+    "front-baseline": {
+      "legacy": {
+        "color": {
+          "counts": {
+            "stable": 4254,
+            "uncertain": 1053
+          },
+          "stableCoverageFraction": 0.8015828151498021,
+          "uncertainCoverageFraction": 0.19841718485019785,
+          "conditionScope": "UNRESOLVED_UNCERTAIN_REMAINDER"
+        }
+      },
+      "agx": {
+        "color": {
+          "counts": {
+            "stable": 4254,
+            "uncertain": 1053
+          },
+          "stableCoverageFraction": 0.8015828151498021,
+          "uncertainCoverageFraction": 0.19841718485019785,
+          "conditionScope": "UNRESOLVED_UNCERTAIN_REMAINDER"
+        }
+      }
+    },
+    "front-direction": {
+      "legacy": {
+        "color": {
+          "counts": {
+            "stable": 4045,
+            "uncertain": 1262
+          },
+          "stableCoverageFraction": 0.7622008667797249,
+          "uncertainCoverageFraction": 0.2377991332202751,
+          "conditionScope": "UNRESOLVED_UNCERTAIN_REMAINDER"
+        },
+        "response": {
+          "counts": {
+            "bright": 1411,
+            "dark": 2773,
+            "inactive": 394,
+            "stable": 4578,
+            "uncertain": 729
+          },
+          "stableCoverageFraction": 0.8626342566421707,
+          "uncertainCoverageFraction": 0.13736574335782928,
+          "conditionScope": "UNRESOLVED_UNCERTAIN_REMAINDER"
+        }
+      },
+      "agx": {
+        "color": {
+          "counts": {
+            "stable": 4045,
+            "uncertain": 1262
+          },
+          "stableCoverageFraction": 0.7622008667797249,
+          "uncertainCoverageFraction": 0.2377991332202751,
+          "conditionScope": "UNRESOLVED_UNCERTAIN_REMAINDER"
+        },
+        "response": {
+          "counts": {
+            "bright": 1411,
+            "dark": 2773,
+            "inactive": 394,
+            "stable": 4578,
+            "uncertain": 729
+          },
+          "stableCoverageFraction": 0.8626342566421707,
+          "uncertainCoverageFraction": 0.13736574335782928,
+          "conditionScope": "UNRESOLVED_UNCERTAIN_REMAINDER"
+        }
+      }
+    },
+    "front-intensity": {
+      "legacy": {
+        "color": {
+          "counts": {
+            "stable": 3864,
+            "uncertain": 1443
+          },
+          "stableCoverageFraction": 0.7280949689089882,
+          "uncertainCoverageFraction": 0.2719050310910119,
+          "conditionScope": "UNRESOLVED_UNCERTAIN_REMAINDER"
+        },
+        "response": {
+          "counts": {
+            "bright": 0,
+            "dark": 4291,
+            "inactive": 320,
+            "stable": 4611,
+            "uncertain": 696
+          },
+          "stableCoverageFraction": 0.8688524590163934,
+          "uncertainCoverageFraction": 0.13114754098360656,
+          "conditionScope": "UNRESOLVED_UNCERTAIN_REMAINDER"
+        }
+      },
+      "agx": {
+        "color": {
+          "counts": {
+            "stable": 3864,
+            "uncertain": 1443
+          },
+          "stableCoverageFraction": 0.7280949689089882,
+          "uncertainCoverageFraction": 0.2719050310910119,
+          "conditionScope": "UNRESOLVED_UNCERTAIN_REMAINDER"
+        },
+        "response": {
+          "counts": {
+            "bright": 0,
+            "dark": 4291,
+            "inactive": 320,
+            "stable": 4611,
+            "uncertain": 696
+          },
+          "stableCoverageFraction": 0.8688524590163934,
+          "uncertainCoverageFraction": 0.13114754098360656,
+          "conditionScope": "UNRESOLVED_UNCERTAIN_REMAINDER"
+        }
+      }
+    },
+    "front-ambient": {
+      "legacy": {
+        "color": {
+          "counts": {
+            "stable": 4375,
+            "uncertain": 932
+          },
+          "stableCoverageFraction": 0.8243828905219521,
+          "uncertainCoverageFraction": 0.17561710947804787,
+          "conditionScope": "UNRESOLVED_UNCERTAIN_REMAINDER"
+        },
+        "response": {
+          "counts": {
+            "bright": 5227,
+            "dark": 0,
+            "inactive": 6,
+            "stable": 5233,
+            "uncertain": 74
+          },
+          "stableCoverageFraction": 0.986056152251743,
+          "uncertainCoverageFraction": 0.01394384774825702,
+          "conditionScope": "UNRESOLVED_UNCERTAIN_REMAINDER"
+        }
+      },
+      "agx": {
+        "color": {
+          "counts": {
+            "stable": 4375,
+            "uncertain": 932
+          },
+          "stableCoverageFraction": 0.8243828905219521,
+          "uncertainCoverageFraction": 0.17561710947804787,
+          "conditionScope": "UNRESOLVED_UNCERTAIN_REMAINDER"
+        },
+        "response": {
+          "counts": {
+            "bright": 5227,
+            "dark": 0,
+            "inactive": 6,
+            "stable": 5233,
+            "uncertain": 74
+          },
+          "stableCoverageFraction": 0.986056152251743,
+          "uncertainCoverageFraction": 0.01394384774825702,
+          "conditionScope": "UNRESOLVED_UNCERTAIN_REMAINDER"
+        }
+      }
+    },
+    "front-albedo": {
+      "legacy": {
+        "color": {
+          "counts": {
+            "stable": 4023,
+            "uncertain": 1284
+          },
+          "stableCoverageFraction": 0.7580553985302431,
+          "uncertainCoverageFraction": 0.24194460146975694,
+          "conditionScope": "UNRESOLVED_UNCERTAIN_REMAINDER"
+        },
+        "response": {
+          "counts": {
+            "bright": 0,
+            "dark": 5305,
+            "inactive": 0,
+            "stable": 5305,
+            "uncertain": 2
+          },
+          "stableCoverageFraction": 0.9996231392500471,
+          "uncertainCoverageFraction": 0.0003768607499528924,
+          "conditionScope": "UNRESOLVED_UNCERTAIN_REMAINDER"
+        }
+      },
+      "agx": {
+        "color": {
+          "counts": {
+            "stable": 4023,
+            "uncertain": 1284
+          },
+          "stableCoverageFraction": 0.7580553985302431,
+          "uncertainCoverageFraction": 0.24194460146975694,
+          "conditionScope": "UNRESOLVED_UNCERTAIN_REMAINDER"
+        },
+        "response": {
+          "counts": {
+            "bright": 0,
+            "dark": 5305,
+            "inactive": 0,
+            "stable": 5305,
+            "uncertain": 2
+          },
+          "stableCoverageFraction": 0.9996231392500471,
+          "uncertainCoverageFraction": 0.0003768607499528924,
+          "conditionScope": "UNRESOLVED_UNCERTAIN_REMAINDER"
+        }
+      }
+    },
+    "oblique-baseline": {
+      "legacy": {
+        "color": {
+          "counts": {
+            "stable": 4491,
+            "uncertain": 1377
+          },
+          "stableCoverageFraction": 0.7653374233128835,
+          "uncertainCoverageFraction": 0.23466257668711657,
+          "conditionScope": "UNRESOLVED_UNCERTAIN_REMAINDER"
+        }
+      },
+      "agx": {
+        "color": {
+          "counts": {
+            "stable": 4491,
+            "uncertain": 1377
+          },
+          "stableCoverageFraction": 0.7653374233128835,
+          "uncertainCoverageFraction": 0.23466257668711657,
+          "conditionScope": "UNRESOLVED_UNCERTAIN_REMAINDER"
+        }
+      }
+    },
+    "oblique-direction": {
+      "legacy": {
+        "color": {
+          "counts": {
+            "stable": 4124,
+            "uncertain": 1744
+          },
+          "stableCoverageFraction": 0.7027948193592365,
+          "uncertainCoverageFraction": 0.29720518064076346,
+          "conditionScope": "UNRESOLVED_UNCERTAIN_REMAINDER"
+        },
+        "response": {
+          "counts": {
+            "bright": 709,
+            "dark": 4073,
+            "inactive": 388,
+            "stable": 5170,
+            "uncertain": 698
+          },
+          "stableCoverageFraction": 0.8810497614178596,
+          "uncertainCoverageFraction": 0.11895023858214042,
+          "conditionScope": "UNRESOLVED_UNCERTAIN_REMAINDER"
+        }
+      },
+      "agx": {
+        "color": {
+          "counts": {
+            "stable": 4124,
+            "uncertain": 1744
+          },
+          "stableCoverageFraction": 0.7027948193592365,
+          "uncertainCoverageFraction": 0.29720518064076346,
+          "conditionScope": "UNRESOLVED_UNCERTAIN_REMAINDER"
+        },
+        "response": {
+          "counts": {
+            "bright": 709,
+            "dark": 4073,
+            "inactive": 388,
+            "stable": 5170,
+            "uncertain": 698
+          },
+          "stableCoverageFraction": 0.8810497614178596,
+          "uncertainCoverageFraction": 0.11895023858214042,
+          "conditionScope": "UNRESOLVED_UNCERTAIN_REMAINDER"
+        }
+      }
+    },
+    "oblique-intensity": {
+      "legacy": {
+        "color": {
+          "counts": {
+            "stable": 3977,
+            "uncertain": 1891
+          },
+          "stableCoverageFraction": 0.6777436946148603,
+          "uncertainCoverageFraction": 0.3222563053851397,
+          "conditionScope": "UNRESOLVED_UNCERTAIN_REMAINDER"
+        },
+        "response": {
+          "counts": {
+            "bright": 0,
+            "dark": 5086,
+            "inactive": 249,
+            "stable": 5335,
+            "uncertain": 533
+          },
+          "stableCoverageFraction": 0.9091683708248125,
+          "uncertainCoverageFraction": 0.09083162917518746,
+          "conditionScope": "UNRESOLVED_UNCERTAIN_REMAINDER"
+        }
+      },
+      "agx": {
+        "color": {
+          "counts": {
+            "stable": 3977,
+            "uncertain": 1891
+          },
+          "stableCoverageFraction": 0.6777436946148603,
+          "uncertainCoverageFraction": 0.3222563053851397,
+          "conditionScope": "UNRESOLVED_UNCERTAIN_REMAINDER"
+        },
+        "response": {
+          "counts": {
+            "bright": 0,
+            "dark": 5086,
+            "inactive": 249,
+            "stable": 5335,
+            "uncertain": 533
+          },
+          "stableCoverageFraction": 0.9091683708248125,
+          "uncertainCoverageFraction": 0.09083162917518746,
+          "conditionScope": "UNRESOLVED_UNCERTAIN_REMAINDER"
+        }
+      }
+    },
+    "oblique-ambient": {
+      "legacy": {
+        "color": {
+          "counts": {
+            "stable": 4611,
+            "uncertain": 1257
+          },
+          "stableCoverageFraction": 0.7857873210633947,
+          "uncertainCoverageFraction": 0.2142126789366053,
+          "conditionScope": "UNRESOLVED_UNCERTAIN_REMAINDER"
+        },
+        "response": {
+          "counts": {
+            "bright": 5781,
+            "dark": 0,
+            "inactive": 18,
+            "stable": 5799,
+            "uncertain": 69
+          },
+          "stableCoverageFraction": 0.9882413087934561,
+          "uncertainCoverageFraction": 0.011758691206543968,
+          "conditionScope": "UNRESOLVED_UNCERTAIN_REMAINDER"
+        }
+      },
+      "agx": {
+        "color": {
+          "counts": {
+            "stable": 4611,
+            "uncertain": 1257
+          },
+          "stableCoverageFraction": 0.7857873210633947,
+          "uncertainCoverageFraction": 0.2142126789366053,
+          "conditionScope": "UNRESOLVED_UNCERTAIN_REMAINDER"
+        },
+        "response": {
+          "counts": {
+            "bright": 5781,
+            "dark": 0,
+            "inactive": 18,
+            "stable": 5799,
+            "uncertain": 69
+          },
+          "stableCoverageFraction": 0.9882413087934561,
+          "uncertainCoverageFraction": 0.011758691206543968,
+          "conditionScope": "UNRESOLVED_UNCERTAIN_REMAINDER"
+        }
+      }
+    },
+    "oblique-albedo": {
+      "legacy": {
+        "color": {
+          "counts": {
+            "stable": 4128,
+            "uncertain": 1740
+          },
+          "stableCoverageFraction": 0.7034764826175869,
+          "uncertainCoverageFraction": 0.2965235173824131,
+          "conditionScope": "UNRESOLVED_UNCERTAIN_REMAINDER"
+        },
+        "response": {
+          "counts": {
+            "bright": 0,
+            "dark": 5865,
+            "inactive": 0,
+            "stable": 5865,
+            "uncertain": 3
+          },
+          "stableCoverageFraction": 0.9994887525562373,
+          "uncertainCoverageFraction": 0.0005112474437627812,
+          "conditionScope": "UNRESOLVED_UNCERTAIN_REMAINDER"
+        }
+      },
+      "agx": {
+        "color": {
+          "counts": {
+            "stable": 4128,
+            "uncertain": 1740
+          },
+          "stableCoverageFraction": 0.7034764826175869,
+          "uncertainCoverageFraction": 0.2965235173824131,
+          "conditionScope": "UNRESOLVED_UNCERTAIN_REMAINDER"
+        },
+        "response": {
+          "counts": {
+            "bright": 0,
+            "dark": 5865,
+            "inactive": 0,
+            "stable": 5865,
+            "uncertain": 3
+          },
+          "stableCoverageFraction": 0.9994887525562373,
+          "uncertainCoverageFraction": 0.0005112474437627812,
+          "conditionScope": "UNRESOLVED_UNCERTAIN_REMAINDER"
+        }
+      }
+    }
+  },
+  "statusCounts": {
+    "legacy": {
+      "MEETS_60_ON_DECLARED_SUBSET": 35,
+      "N/A_NOT_PASS": 6,
+      "BELOW_60_ON_DECLARED_SUBSET": 1
+    },
+    "agx": {
+      "MEETS_60_ON_DECLARED_SUBSET": 36,
+      "N/A_NOT_PASS": 6
+    }
+  },
+  "all42StatusRowsPerArm": [
+    {
+      "arm": "legacy",
+      "condition": "front-baseline",
+      "metric": "color.rgbAgreementPercent",
+      "value": 83.17848817964347,
+      "frozenStatus": "MEETS_60_ON_DECLARED_SUBSET",
+      "displayLabel": "PASS_CONDITIONAL_SUBSET_ONLY"
+    },
+    {
+      "arm": "legacy",
+      "condition": "front-direction",
+      "metric": "color.rgbAgreementPercent",
+      "value": 82.54474000347511,
+      "frozenStatus": "MEETS_60_ON_DECLARED_SUBSET",
+      "displayLabel": "PASS_CONDITIONAL_SUBSET_ONLY"
+    },
+    {
+      "arm": "legacy",
+      "condition": "front-direction",
+      "metric": "response.directionAgreementPercent",
+      "value": 86.18037753437427,
+      "frozenStatus": "MEETS_60_ON_DECLARED_SUBSET",
+      "displayLabel": "PASS_CONDITIONAL_SUBSET_ONLY"
+    },
+    {
+      "arm": "legacy",
+      "condition": "front-direction",
+      "metric": "response.responseMagnitudeAgreementPercent",
+      "value": 68.80963086586154,
+      "frozenStatus": "MEETS_60_ON_DECLARED_SUBSET",
+      "displayLabel": "PASS_CONDITIONAL_SUBSET_ONLY"
+    },
+    {
+      "arm": "legacy",
+      "condition": "front-direction",
+      "metric": "response.brightening.IoU",
+      "value": 0.6752577319587629,
+      "frozenStatus": "MEETS_60_ON_DECLARED_SUBSET",
+      "displayLabel": "PASS_CONDITIONAL_SUBSET_ONLY"
+    },
+    {
+      "arm": "legacy",
+      "condition": "front-direction",
+      "metric": "response.darkening.IoU",
+      "value": 0.8358938547486033,
+      "frozenStatus": "MEETS_60_ON_DECLARED_SUBSET",
+      "displayLabel": "PASS_CONDITIONAL_SUBSET_ONLY"
+    },
+    {
+      "arm": "legacy",
+      "condition": "front-intensity",
+      "metric": "color.rgbAgreementPercent",
+      "value": 84.811287197337,
+      "frozenStatus": "MEETS_60_ON_DECLARED_SUBSET",
+      "displayLabel": "PASS_CONDITIONAL_SUBSET_ONLY"
+    },
+    {
+      "arm": "legacy",
+      "condition": "front-intensity",
+      "metric": "response.directionAgreementPercent",
+      "value": 87.79083160562082,
+      "frozenStatus": "MEETS_60_ON_DECLARED_SUBSET",
+      "displayLabel": "PASS_CONDITIONAL_SUBSET_ONLY"
+    },
+    {
+      "arm": "legacy",
+      "condition": "front-intensity",
+      "metric": "response.responseMagnitudeAgreementPercent",
+      "value": 89.54067225591052,
+      "frozenStatus": "MEETS_60_ON_DECLARED_SUBSET",
+      "displayLabel": "PASS_CONDITIONAL_SUBSET_ONLY"
+    },
+    {
+      "arm": "legacy",
+      "condition": "front-intensity",
+      "metric": "response.brightening.IoU",
+      "value": null,
+      "frozenStatus": "N/A_NOT_PASS",
+      "displayLabel": "UNDEFINED_NOT_PASS"
+    },
+    {
+      "arm": "legacy",
+      "condition": "front-intensity",
+      "metric": "response.darkening.IoU",
+      "value": 0.8099516240497581,
+      "frozenStatus": "MEETS_60_ON_DECLARED_SUBSET",
+      "displayLabel": "PASS_CONDITIONAL_SUBSET_ONLY"
+    },
+    {
+      "arm": "legacy",
+      "condition": "front-ambient",
+      "metric": "color.rgbAgreementPercent",
+      "value": 81.91522301823956,
+      "frozenStatus": "MEETS_60_ON_DECLARED_SUBSET",
+      "displayLabel": "PASS_CONDITIONAL_SUBSET_ONLY"
+    },
+    {
+      "arm": "legacy",
+      "condition": "front-ambient",
+      "metric": "response.directionAgreementPercent",
+      "value": 92.78744977998852,
+      "frozenStatus": "MEETS_60_ON_DECLARED_SUBSET",
+      "displayLabel": "PASS_CONDITIONAL_SUBSET_ONLY"
+    },
+    {
+      "arm": "legacy",
+      "condition": "front-ambient",
+      "metric": "response.responseMagnitudeAgreementPercent",
+      "value": 73.66892992304122,
+      "frozenStatus": "MEETS_60_ON_DECLARED_SUBSET",
+      "displayLabel": "PASS_CONDITIONAL_SUBSET_ONLY"
+    },
+    {
+      "arm": "legacy",
+      "condition": "front-ambient",
+      "metric": "response.brightening.IoU",
+      "value": 0.8146164147694662,
+      "frozenStatus": "MEETS_60_ON_DECLARED_SUBSET",
+      "displayLabel": "PASS_CONDITIONAL_SUBSET_ONLY"
+    },
+    {
+      "arm": "legacy",
+      "condition": "front-ambient",
+      "metric": "response.darkening.IoU",
+      "value": null,
+      "frozenStatus": "N/A_NOT_PASS",
+      "displayLabel": "UNDEFINED_NOT_PASS"
+    },
+    {
+      "arm": "legacy",
+      "condition": "front-albedo",
+      "metric": "color.rgbAgreementPercent",
+      "value": 86.21194730577284,
+      "frozenStatus": "MEETS_60_ON_DECLARED_SUBSET",
+      "displayLabel": "PASS_CONDITIONAL_SUBSET_ONLY"
+    },
+    {
+      "arm": "legacy",
+      "condition": "front-albedo",
+      "metric": "response.directionAgreementPercent",
+      "value": 99.88689915174363,
+      "frozenStatus": "MEETS_60_ON_DECLARED_SUBSET",
+      "displayLabel": "PASS_CONDITIONAL_SUBSET_ONLY"
+    },
+    {
+      "arm": "legacy",
+      "condition": "front-albedo",
+      "metric": "response.responseMagnitudeAgreementPercent",
+      "value": 91.77680533577822,
+      "frozenStatus": "MEETS_60_ON_DECLARED_SUBSET",
+      "displayLabel": "PASS_CONDITIONAL_SUBSET_ONLY"
+    },
+    {
+      "arm": "legacy",
+      "condition": "front-albedo",
+      "metric": "response.brightening.IoU",
+      "value": null,
+      "frozenStatus": "N/A_NOT_PASS",
+      "displayLabel": "UNDEFINED_NOT_PASS"
+    },
+    {
+      "arm": "legacy",
+      "condition": "front-albedo",
+      "metric": "response.darkening.IoU",
+      "value": 0.988124410933082,
+      "frozenStatus": "MEETS_60_ON_DECLARED_SUBSET",
+      "displayLabel": "PASS_CONDITIONAL_SUBSET_ONLY"
+    },
+    {
+      "arm": "legacy",
+      "condition": "oblique-baseline",
+      "metric": "color.rgbAgreementPercent",
+      "value": 82.36559721028131,
+      "frozenStatus": "MEETS_60_ON_DECLARED_SUBSET",
+      "displayLabel": "PASS_CONDITIONAL_SUBSET_ONLY"
+    },
+    {
+      "arm": "legacy",
+      "condition": "oblique-direction",
+      "metric": "color.rgbAgreementPercent",
+      "value": 82.55812112033367,
+      "frozenStatus": "MEETS_60_ON_DECLARED_SUBSET",
+      "displayLabel": "PASS_CONDITIONAL_SUBSET_ONLY"
+    },
+    {
+      "arm": "legacy",
+      "condition": "oblique-direction",
+      "metric": "response.directionAgreementPercent",
+      "value": 84.07798537774167,
+      "frozenStatus": "MEETS_60_ON_DECLARED_SUBSET",
+      "displayLabel": "PASS_CONDITIONAL_SUBSET_ONLY"
+    },
+    {
+      "arm": "legacy",
+      "condition": "oblique-direction",
+      "metric": "response.responseMagnitudeAgreementPercent",
+      "value": 76.59786522591507,
+      "frozenStatus": "MEETS_60_ON_DECLARED_SUBSET",
+      "displayLabel": "PASS_CONDITIONAL_SUBSET_ONLY"
+    },
+    {
+      "arm": "legacy",
+      "condition": "oblique-direction",
+      "metric": "response.brightening.IoU",
+      "value": 0.45556805399325084,
+      "frozenStatus": "BELOW_60_ON_DECLARED_SUBSET",
+      "displayLabel": "FAIL_CONDITIONAL_SUBSET_ONLY"
+    },
+    {
+      "arm": "legacy",
+      "condition": "oblique-direction",
+      "metric": "response.darkening.IoU",
+      "value": 0.8277938342967245,
+      "frozenStatus": "MEETS_60_ON_DECLARED_SUBSET",
+      "displayLabel": "PASS_CONDITIONAL_SUBSET_ONLY"
+    },
+    {
+      "arm": "legacy",
+      "condition": "oblique-intensity",
+      "metric": "color.rgbAgreementPercent",
+      "value": 84.44058985330929,
+      "frozenStatus": "MEETS_60_ON_DECLARED_SUBSET",
+      "displayLabel": "PASS_CONDITIONAL_SUBSET_ONLY"
+    },
+    {
+      "arm": "legacy",
+      "condition": "oblique-intensity",
+      "metric": "response.directionAgreementPercent",
+      "value": 87.38581146744411,
+      "frozenStatus": "MEETS_60_ON_DECLARED_SUBSET",
+      "displayLabel": "PASS_CONDITIONAL_SUBSET_ONLY"
+    },
+    {
+      "arm": "legacy",
+      "condition": "oblique-intensity",
+      "metric": "response.responseMagnitudeAgreementPercent",
+      "value": 96.12250936027647,
+      "frozenStatus": "MEETS_60_ON_DECLARED_SUBSET",
+      "displayLabel": "PASS_CONDITIONAL_SUBSET_ONLY"
+    },
+    {
+      "arm": "legacy",
+      "condition": "oblique-intensity",
+      "metric": "response.brightening.IoU",
+      "value": null,
+      "frozenStatus": "N/A_NOT_PASS",
+      "displayLabel": "UNDEFINED_NOT_PASS"
+    },
+    {
+      "arm": "legacy",
+      "condition": "oblique-intensity",
+      "metric": "response.darkening.IoU",
+      "value": 0.8110787172011662,
+      "frozenStatus": "MEETS_60_ON_DECLARED_SUBSET",
+      "displayLabel": "PASS_CONDITIONAL_SUBSET_ONLY"
+    },
+    {
+      "arm": "legacy",
+      "condition": "oblique-ambient",
+      "metric": "color.rgbAgreementPercent",
+      "value": 81.11682849574707,
+      "frozenStatus": "MEETS_60_ON_DECLARED_SUBSET",
+      "displayLabel": "PASS_CONDITIONAL_SUBSET_ONLY"
+    },
+    {
+      "arm": "legacy",
+      "condition": "oblique-ambient",
+      "metric": "response.directionAgreementPercent",
+      "value": 92.04289915239578,
+      "frozenStatus": "MEETS_60_ON_DECLARED_SUBSET",
+      "displayLabel": "PASS_CONDITIONAL_SUBSET_ONLY"
+    },
+    {
+      "arm": "legacy",
+      "condition": "oblique-ambient",
+      "metric": "response.responseMagnitudeAgreementPercent",
+      "value": 74.39005846625994,
+      "frozenStatus": "MEETS_60_ON_DECLARED_SUBSET",
+      "displayLabel": "PASS_CONDITIONAL_SUBSET_ONLY"
+    },
+    {
+      "arm": "legacy",
+      "condition": "oblique-ambient",
+      "metric": "response.brightening.IoU",
+      "value": 0.8188894654903995,
+      "frozenStatus": "MEETS_60_ON_DECLARED_SUBSET",
+      "displayLabel": "PASS_CONDITIONAL_SUBSET_ONLY"
+    },
+    {
+      "arm": "legacy",
+      "condition": "oblique-ambient",
+      "metric": "response.darkening.IoU",
+      "value": null,
+      "frozenStatus": "N/A_NOT_PASS",
+      "displayLabel": "UNDEFINED_NOT_PASS"
+    },
+    {
+      "arm": "legacy",
+      "condition": "oblique-albedo",
+      "metric": "color.rgbAgreementPercent",
+      "value": 86.04013974115804,
+      "frozenStatus": "MEETS_60_ON_DECLARED_SUBSET",
+      "displayLabel": "PASS_CONDITIONAL_SUBSET_ONLY"
+    },
+    {
+      "arm": "legacy",
+      "condition": "oblique-albedo",
+      "metric": "response.directionAgreementPercent",
+      "value": 99.98294970161979,
+      "frozenStatus": "MEETS_60_ON_DECLARED_SUBSET",
+      "displayLabel": "PASS_CONDITIONAL_SUBSET_ONLY"
+    },
+    {
+      "arm": "legacy",
+      "condition": "oblique-albedo",
+      "metric": "response.responseMagnitudeAgreementPercent",
+      "value": 83.58938861689192,
+      "frozenStatus": "MEETS_60_ON_DECLARED_SUBSET",
+      "displayLabel": "PASS_CONDITIONAL_SUBSET_ONLY"
+    },
+    {
+      "arm": "legacy",
+      "condition": "oblique-albedo",
+      "metric": "response.brightening.IoU",
+      "value": null,
+      "frozenStatus": "N/A_NOT_PASS",
+      "displayLabel": "UNDEFINED_NOT_PASS"
+    },
+    {
+      "arm": "legacy",
+      "condition": "oblique-albedo",
+      "metric": "response.darkening.IoU",
+      "value": 0.9890878090366582,
+      "frozenStatus": "MEETS_60_ON_DECLARED_SUBSET",
+      "displayLabel": "PASS_CONDITIONAL_SUBSET_ONLY"
+    },
+    {
+      "arm": "agx",
+      "condition": "front-baseline",
+      "metric": "color.rgbAgreementPercent",
+      "value": 84.23095487156414,
+      "frozenStatus": "MEETS_60_ON_DECLARED_SUBSET",
+      "displayLabel": "PASS_CONDITIONAL_SUBSET_ONLY"
+    },
+    {
+      "arm": "agx",
+      "condition": "front-direction",
+      "metric": "color.rgbAgreementPercent",
+      "value": 83.35977780490649,
+      "frozenStatus": "MEETS_60_ON_DECLARED_SUBSET",
+      "displayLabel": "PASS_CONDITIONAL_SUBSET_ONLY"
+    },
+    {
+      "arm": "agx",
+      "condition": "front-direction",
+      "metric": "response.directionAgreementPercent",
+      "value": 88.69926199261992,
+      "frozenStatus": "MEETS_60_ON_DECLARED_SUBSET",
+      "displayLabel": "PASS_CONDITIONAL_SUBSET_ONLY"
+    },
+    {
+      "arm": "agx",
+      "condition": "front-direction",
+      "metric": "response.responseMagnitudeAgreementPercent",
+      "value": 72.55635741890346,
+      "frozenStatus": "MEETS_60_ON_DECLARED_SUBSET",
+      "displayLabel": "PASS_CONDITIONAL_SUBSET_ONLY"
+    },
+    {
+      "arm": "agx",
+      "condition": "front-direction",
+      "metric": "response.brightening.IoU",
+      "value": 0.741875,
+      "frozenStatus": "MEETS_60_ON_DECLARED_SUBSET",
+      "displayLabel": "PASS_CONDITIONAL_SUBSET_ONLY"
+    },
+    {
+      "arm": "agx",
+      "condition": "front-direction",
+      "metric": "response.darkening.IoU",
+      "value": 0.852510460251046,
+      "frozenStatus": "MEETS_60_ON_DECLARED_SUBSET",
+      "displayLabel": "PASS_CONDITIONAL_SUBSET_ONLY"
+    },
+    {
+      "arm": "agx",
+      "condition": "front-intensity",
+      "metric": "color.rgbAgreementPercent",
+      "value": 84.68829099610339,
+      "frozenStatus": "MEETS_60_ON_DECLARED_SUBSET",
+      "displayLabel": "PASS_CONDITIONAL_SUBSET_ONLY"
+    },
+    {
+      "arm": "agx",
+      "condition": "front-intensity",
+      "metric": "response.directionAgreementPercent",
+      "value": 88.21100917431193,
+      "frozenStatus": "MEETS_60_ON_DECLARED_SUBSET",
+      "displayLabel": "PASS_CONDITIONAL_SUBSET_ONLY"
+    },
+    {
+      "arm": "agx",
+      "condition": "front-intensity",
+      "metric": "response.responseMagnitudeAgreementPercent",
+      "value": 96.3812220220252,
+      "frozenStatus": "MEETS_60_ON_DECLARED_SUBSET",
+      "displayLabel": "PASS_CONDITIONAL_SUBSET_ONLY"
+    },
+    {
+      "arm": "agx",
+      "condition": "front-intensity",
+      "metric": "response.brightening.IoU",
+      "value": null,
+      "frozenStatus": "N/A_NOT_PASS",
+      "displayLabel": "UNDEFINED_NOT_PASS"
+    },
+    {
+      "arm": "agx",
+      "condition": "front-intensity",
+      "metric": "response.darkening.IoU",
+      "value": 0.8279816513761468,
+      "frozenStatus": "MEETS_60_ON_DECLARED_SUBSET",
+      "displayLabel": "PASS_CONDITIONAL_SUBSET_ONLY"
+    },
+    {
+      "arm": "agx",
+      "condition": "front-ambient",
+      "metric": "color.rgbAgreementPercent",
+      "value": 83.70460751469047,
+      "frozenStatus": "MEETS_60_ON_DECLARED_SUBSET",
+      "displayLabel": "PASS_CONDITIONAL_SUBSET_ONLY"
+    },
+    {
+      "arm": "agx",
+      "condition": "front-ambient",
+      "metric": "response.directionAgreementPercent",
+      "value": 95.10516252390057,
+      "frozenStatus": "MEETS_60_ON_DECLARED_SUBSET",
+      "displayLabel": "PASS_CONDITIONAL_SUBSET_ONLY"
+    },
+    {
+      "arm": "agx",
+      "condition": "front-ambient",
+      "metric": "response.responseMagnitudeAgreementPercent",
+      "value": 95.45259845270611,
+      "frozenStatus": "MEETS_60_ON_DECLARED_SUBSET",
+      "displayLabel": "PASS_CONDITIONAL_SUBSET_ONLY"
+    },
+    {
+      "arm": "agx",
+      "condition": "front-ambient",
+      "metric": "response.brightening.IoU",
+      "value": 0.8950286806883365,
+      "frozenStatus": "MEETS_60_ON_DECLARED_SUBSET",
+      "displayLabel": "PASS_CONDITIONAL_SUBSET_ONLY"
+    },
+    {
+      "arm": "agx",
+      "condition": "front-ambient",
+      "metric": "response.darkening.IoU",
+      "value": null,
+      "frozenStatus": "N/A_NOT_PASS",
+      "displayLabel": "UNDEFINED_NOT_PASS"
+    },
+    {
+      "arm": "agx",
+      "condition": "front-albedo",
+      "metric": "color.rgbAgreementPercent",
+      "value": 85.34228417890365,
+      "frozenStatus": "MEETS_60_ON_DECLARED_SUBSET",
+      "displayLabel": "PASS_CONDITIONAL_SUBSET_ONLY"
+    },
+    {
+      "arm": "agx",
+      "condition": "front-albedo",
+      "metric": "response.directionAgreementPercent",
+      "value": 99.86804901036757,
+      "frozenStatus": "MEETS_60_ON_DECLARED_SUBSET",
+      "displayLabel": "PASS_CONDITIONAL_SUBSET_ONLY"
+    },
+    {
+      "arm": "agx",
+      "condition": "front-albedo",
+      "metric": "response.responseMagnitudeAgreementPercent",
+      "value": 84.85177563033457,
+      "frozenStatus": "MEETS_60_ON_DECLARED_SUBSET",
+      "displayLabel": "PASS_CONDITIONAL_SUBSET_ONLY"
+    },
+    {
+      "arm": "agx",
+      "condition": "front-albedo",
+      "metric": "response.brightening.IoU",
+      "value": null,
+      "frozenStatus": "N/A_NOT_PASS",
+      "displayLabel": "UNDEFINED_NOT_PASS"
+    },
+    {
+      "arm": "agx",
+      "condition": "front-albedo",
+      "metric": "response.darkening.IoU",
+      "value": 0.9943449575871819,
+      "frozenStatus": "MEETS_60_ON_DECLARED_SUBSET",
+      "displayLabel": "PASS_CONDITIONAL_SUBSET_ONLY"
+    },
+    {
+      "arm": "agx",
+      "condition": "oblique-baseline",
+      "metric": "color.rgbAgreementPercent",
+      "value": 83.65278108890783,
+      "frozenStatus": "MEETS_60_ON_DECLARED_SUBSET",
+      "displayLabel": "PASS_CONDITIONAL_SUBSET_ONLY"
+    },
+    {
+      "arm": "agx",
+      "condition": "oblique-direction",
+      "metric": "color.rgbAgreementPercent",
+      "value": 83.35322220364215,
+      "frozenStatus": "MEETS_60_ON_DECLARED_SUBSET",
+      "displayLabel": "PASS_CONDITIONAL_SUBSET_ONLY"
+    },
+    {
+      "arm": "agx",
+      "condition": "oblique-direction",
+      "metric": "response.directionAgreementPercent",
+      "value": 87.01114488348531,
+      "frozenStatus": "MEETS_60_ON_DECLARED_SUBSET",
+      "displayLabel": "PASS_CONDITIONAL_SUBSET_ONLY"
+    },
+    {
+      "arm": "agx",
+      "condition": "oblique-direction",
+      "metric": "response.responseMagnitudeAgreementPercent",
+      "value": 80.06980479364388,
+      "frozenStatus": "MEETS_60_ON_DECLARED_SUBSET",
+      "displayLabel": "PASS_CONDITIONAL_SUBSET_ONLY"
+    },
+    {
+      "arm": "agx",
+      "condition": "oblique-direction",
+      "metric": "response.brightening.IoU",
+      "value": 0.6402234636871509,
+      "frozenStatus": "MEETS_60_ON_DECLARED_SUBSET",
+      "displayLabel": "PASS_CONDITIONAL_SUBSET_ONLY"
+    },
+    {
+      "arm": "agx",
+      "condition": "oblique-direction",
+      "metric": "response.darkening.IoU",
+      "value": 0.8409036289353521,
+      "frozenStatus": "MEETS_60_ON_DECLARED_SUBSET",
+      "displayLabel": "PASS_CONDITIONAL_SUBSET_ONLY"
+    },
+    {
+      "arm": "agx",
+      "condition": "oblique-intensity",
+      "metric": "color.rgbAgreementPercent",
+      "value": 84.87852676559181,
+      "frozenStatus": "MEETS_60_ON_DECLARED_SUBSET",
+      "displayLabel": "PASS_CONDITIONAL_SUBSET_ONLY"
+    },
+    {
+      "arm": "agx",
+      "condition": "oblique-intensity",
+      "metric": "response.directionAgreementPercent",
+      "value": 88.51377570818781,
+      "frozenStatus": "MEETS_60_ON_DECLARED_SUBSET",
+      "displayLabel": "PASS_CONDITIONAL_SUBSET_ONLY"
+    },
+    {
+      "arm": "agx",
+      "condition": "oblique-intensity",
+      "metric": "response.responseMagnitudeAgreementPercent",
+      "value": 97.3867458147492,
+      "frozenStatus": "MEETS_60_ON_DECLARED_SUBSET",
+      "displayLabel": "PASS_CONDITIONAL_SUBSET_ONLY"
+    },
+    {
+      "arm": "agx",
+      "condition": "oblique-intensity",
+      "metric": "response.brightening.IoU",
+      "value": null,
+      "frozenStatus": "N/A_NOT_PASS",
+      "displayLabel": "UNDEFINED_NOT_PASS"
+    },
+    {
+      "arm": "agx",
+      "condition": "oblique-intensity",
+      "metric": "response.darkening.IoU",
+      "value": 0.8265424912689173,
+      "frozenStatus": "MEETS_60_ON_DECLARED_SUBSET",
+      "displayLabel": "PASS_CONDITIONAL_SUBSET_ONLY"
+    },
+    {
+      "arm": "agx",
+      "condition": "oblique-ambient",
+      "metric": "color.rgbAgreementPercent",
+      "value": 83.02955416804323,
+      "frozenStatus": "MEETS_60_ON_DECLARED_SUBSET",
+      "displayLabel": "PASS_CONDITIONAL_SUBSET_ONLY"
+    },
+    {
+      "arm": "agx",
+      "condition": "oblique-ambient",
+      "metric": "response.directionAgreementPercent",
+      "value": 93.50267841714187,
+      "frozenStatus": "MEETS_60_ON_DECLARED_SUBSET",
+      "displayLabel": "PASS_CONDITIONAL_SUBSET_ONLY"
+    },
+    {
+      "arm": "agx",
+      "condition": "oblique-ambient",
+      "metric": "response.responseMagnitudeAgreementPercent",
+      "value": 95.25336726027997,
+      "frozenStatus": "MEETS_60_ON_DECLARED_SUBSET",
+      "displayLabel": "PASS_CONDITIONAL_SUBSET_ONLY"
+    },
+    {
+      "arm": "agx",
+      "condition": "oblique-ambient",
+      "metric": "response.brightening.IoU",
+      "value": 0.8875064800414723,
+      "frozenStatus": "MEETS_60_ON_DECLARED_SUBSET",
+      "displayLabel": "PASS_CONDITIONAL_SUBSET_ONLY"
+    },
+    {
+      "arm": "agx",
+      "condition": "oblique-ambient",
+      "metric": "response.darkening.IoU",
+      "value": null,
+      "frozenStatus": "N/A_NOT_PASS",
+      "displayLabel": "UNDEFINED_NOT_PASS"
+    },
+    {
+      "arm": "agx",
+      "condition": "oblique-albedo",
+      "metric": "color.rgbAgreementPercent",
+      "value": 85.76571984358328,
+      "frozenStatus": "MEETS_60_ON_DECLARED_SUBSET",
+      "displayLabel": "PASS_CONDITIONAL_SUBSET_ONLY"
+    },
+    {
+      "arm": "agx",
+      "condition": "oblique-albedo",
+      "metric": "response.directionAgreementPercent",
+      "value": 99.71014492753623,
+      "frozenStatus": "MEETS_60_ON_DECLARED_SUBSET",
+      "displayLabel": "PASS_CONDITIONAL_SUBSET_ONLY"
+    },
+    {
+      "arm": "agx",
+      "condition": "oblique-albedo",
+      "metric": "response.responseMagnitudeAgreementPercent",
+      "value": 78.54171811310862,
+      "frozenStatus": "MEETS_60_ON_DECLARED_SUBSET",
+      "displayLabel": "PASS_CONDITIONAL_SUBSET_ONLY"
+    },
+    {
+      "arm": "agx",
+      "condition": "oblique-albedo",
+      "metric": "response.brightening.IoU",
+      "value": null,
+      "frozenStatus": "N/A_NOT_PASS",
+      "displayLabel": "UNDEFINED_NOT_PASS"
+    },
+    {
+      "arm": "agx",
+      "condition": "oblique-albedo",
+      "metric": "response.darkening.IoU",
+      "value": 0.9904518329070758,
+      "frozenStatus": "MEETS_60_ON_DECLARED_SUBSET",
+      "displayLabel": "PASS_CONDITIONAL_SUBSET_ONLY"
+    }
+  ],
+  "statusChanges": [
+    {
+      "condition": "oblique-direction",
+      "metric": "response.brightening.IoU",
+      "legacy": "BELOW_60_ON_DECLARED_SUBSET",
+      "agx": "MEETS_60_ON_DECLARED_SUBSET",
+      "legacyValue": 0.45556805399325084,
+      "agxValue": 0.6402234636871509
+    }
+  ],
+  "noFrozenPassFailThresholdFor": [
+    "rgbMAE (reported error; conditional color status uses derived RGB agreement)",
+    "rgbRMSE",
+    "deltaLumaRMSE",
+    "deltaRGBRMSE",
+    "signedCorrelation",
+    "centroidDistanceDiagonal",
+    "FP/FN/reverse/inactive counts",
+    "character shape"
+  ],
+  "fullForegroundUncertainAndPerSeed": "DESCRIPTIVE_ONLY_NOT_ACCEPTANCE",
+  "undefinedNeverPass": true,
+  "unknownRemainderNeverPass": true
+}

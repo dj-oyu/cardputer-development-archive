@@ -1,0 +1,11 @@
+DIFF scenes=165 rows1and8 samples=10692000 fallback_frames=40 coverage=70 owner=76 depth=74 RGB=2430 RGB_gt1=76 maxchannel=44 same_owner_RGB=2354 same_owner_gt1=0
+MEMORY retained_header=152 retained_triangle=184 ksn_mesh_q7_triangle=464 ksn_mesh_q7_snapshot=29848 stripe8_color_z_owner=13440
+SPAN_PASS scenes=1000 general_non_axis_triangles all_135x240_pixel_halfspace_compare_on_admitted plus100_exact_oracle_comparisons
+BENCH rows=1 mode=0 us_median=1712.614 min=1632.828 max=3046.179 full_prepare_render_host_only
+BENCH rows=1 mode=1 us_median=918.815 min=862.735 max=1269.933 full_prepare_render_host_only
+BENCH rows=1 mode=2 us_median=1072.786 min=808.709 max=1532.973 full_prepare_render_host_only
+BENCH rows=8 mode=0 us_median=924.568 min=898.607 max=1470.391 full_prepare_render_host_only
+BENCH rows=8 mode=1 us_median=864.367 min=838.429 max=1492.721 full_prepare_render_host_only
+BENCH rows=8 mode=2 us_median=783.052 min=770.370 max=1457.340 full_prepare_render_host_only
+FINAL_DIFF samples=17172000 coverage=158 owners=164 depth=162 RGB=2518 same_owner_RGB=2354 same_owner_gt1=0
+CERT_PASS scenes=600 rows1and8 partial_failure_bytes_equal rounding_gate depth_fast=10893644 depth_exact=788954 mask_fast=8974958 mask_exact=52766

@@ -1,0 +1,38 @@
+{
+  "additionalCases": 4,
+  "totalAcrossRuns": 64009,
+  "cases": [
+    {
+      "f": 20,
+      "dx": 31,
+      "dz": 3,
+      "status": 2,
+      "nearDistanceTicks": 10.381607668264957,
+      "epsilonTicks": 10.48576
+    },
+    {
+      "f": 20,
+      "dx": 32,
+      "dz": 3,
+      "status": 1,
+      "nearDistanceTicks": 10.713439119992131,
+      "epsilonTicks": 10.48576
+    },
+    {
+      "f": 20,
+      "dx": 30,
+      "dz": 3,
+      "status": 0,
+      "nearDistanceTicks": 10.04987562112089,
+      "epsilonTicks": 10.48576
+    },
+    {
+      "f": 16,
+      "dx": 1,
+      "dz": 3,
+      "status": 1,
+      "nearDistanceTicks": 1.0540925533894598,
+      "epsilonTicks": 0.65536
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+   text	   data	    bss	    dec	    hex	filename
+ 235021	 211568	      0	 446589	  6d07d	/workspace/scratch/6d8dcdbcdc54/ayatsuri-shared-shading-20261104/results/bounded-colors/asan_ubsan_O2/baseline_model.o
+
+/workspace/scratch/6d8dcdbcdc54/ayatsuri-shared-shading-20261104/results/bounded-colors/asan_ubsan_O2/baseline_model.o  :
+section               size   addr
+.text               201526      0
+.data                 3680      0
+.bss                     0      0
+.rodata.str1.1       28598      0
+.rodata.str1.8        1518      0
+.text.unlikely         554      0
+.rodata                576      0
+.data.rel.local     207872      0
+.text.exit              17      0
+.fini_array.00099        8      0
+.text.startup           32      0
+.init_array.00099        8      0
+.rodata.cst8           152      0
+.rodata.cst16           64      0
+.rodata.cst4            56      0
+.debug_info         123523      0
+.debug_abbrev         1335      0
+.debug_loclists      84531      0
+.debug_aranges          96      0
+.debug_rnglists      13787      0
+.debug_line          61729      0
+.debug_str            4534      0
+.debug_line_str        728      0
+.comment                32      0
+.note.GNU-stack          0      0
+.eh_frame             1928      0
+Total               736884
+
+

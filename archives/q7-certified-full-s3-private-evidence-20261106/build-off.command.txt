@@ -1,0 +1,1 @@
+idf.py -C /workspace/private-q7-certified-full-s3-20261106/source -B /workspace/private-q7-certified-full-s3-20261106/build-off -D SDKCONFIG=/workspace/private-q7-certified-full-s3-20261106/build-off/sdkconfig -D PROJECT_VER=q7-cert-e488ab1e -D KASANE_MESH_Q7_CERTIFIED_PROTOTYPE=OFF build size 

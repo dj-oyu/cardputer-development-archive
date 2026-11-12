@@ -1,0 +1,1892 @@
+
+/workspace/ayatsuri-s3-fixed-format-objects-20261105/q16-O2/compact.o:     file format elf32-xtensa-le
+
+
+Disassembly of section .text.il_signed_round:
+
+00000000 <il_signed_round>:
+il_signed_round():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:14
+   0:	006136        	entry	a1, 48
+   3:	05b396        	bltz	a3, 62 <il_signed_round+0x62>	3: R_XTENSA_SLOT0_OP	.text.il_signed_round+0x62
+il_round():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:13
+   6:	04cd      	mov.n	a12, a4
+   8:	05dd      	mov.n	a13, a5
+   a:	02ad      	mov.n	a10, a2
+   c:	03bd      	mov.n	a11, a3
+   e:	000081        	l32r	a8, fffc0010 <il_signed_round+0xfffc0010>	e: R_XTENSA_SLOT0_OP	.literal.il_signed_round
+	e: R_XTENSA_ASM_EXPAND	__udivdi3
+  11:	0008e0        	callx8	a8
+  14:	0a8d      	mov.n	a8, a10
+  16:	0b9d      	mov.n	a9, a11
+  18:	04cd      	mov.n	a12, a4
+  1a:	05dd      	mov.n	a13, a5
+  1c:	02ad      	mov.n	a10, a2
+  1e:	03bd      	mov.n	a11, a3
+  20:	1189      	s32i.n	a8, a1, 4
+  22:	0199      	s32i.n	a9, a1, 0
+  24:	082d      	mov.n	a2, a8
+  26:	093d      	mov.n	a3, a9
+  28:	000081        	l32r	a8, fffc0028 <il_signed_round+0xfffc0028>	28: R_XTENSA_SLOT0_OP	.literal.il_signed_round+0x4
+	28: R_XTENSA_ASM_EXPAND	__umoddi3
+  2b:	0008e0        	callx8	a8
+  2e:	62c4a0        	saltu	a12, a4, a10
+  31:	c055b0        	sub	a5, a5, a11
+  34:	c055c0        	sub	a5, a5, a12
+  37:	c044a0        	sub	a4, a4, a10
+  3a:	039d      	mov.n	a9, a3
+  3c:	028d      	mov.n	a8, a2
+  3e:	08b5b7        	bgeu	a5, a11, 4a <il_signed_round+0x4a>	3e: R_XTENSA_SLOT0_OP	.text.il_signed_round+0x4a
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:13 (discriminator 8)
+  41:	281b      	addi.n	a2, a8, 1
+  43:	623280        	saltu	a3, a2, a8
+  46:	339a      	add.n	a3, a3, a9
+il_signed_round():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:14
+  48:	f01d      	retw.n
+il_round():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:13
+  4a:	029b57        	bne	a11, a5, 50 <il_signed_round+0x50>	4a: R_XTENSA_SLOT0_OP	.text.il_signed_round+0x50
+  4d:	002086        	j	d3 <il_signed_round+0xd3>	4d: R_XTENSA_SLOT0_OP	.text.il_signed_round+0xd3
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:13 (discriminator 2)
+  50:	f49a47        	bne	a10, a4, 48 <il_signed_round+0x48>	50: R_XTENSA_SLOT0_OP	.text.il_signed_round+0x48
+  53:	f19b57        	bne	a11, a5, 48 <il_signed_round+0x48>	53: R_XTENSA_SLOT0_OP	.text.il_signed_round+0x48
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:13 (discriminator 3)
+  56:	042080        	extui	a2, a8, 0, 1
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:13 (discriminator 8)
+  59:	228a      	add.n	a2, a2, a8
+  5b:	628280        	saltu	a8, a2, a8
+  5e:	389a      	add.n	a3, a8, a9
+il_signed_round():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:14
+  60:	f01d      	retw.n
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:14 (discriminator 1)
+  62:	603030        	neg	a3, a3
+  65:	830b      	addi.n	a8, a3, -1
+  67:	933820        	movnez	a3, a8, a2
+  6a:	602020        	neg	a2, a2
+il_round():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:13
+  6d:	04cd      	mov.n	a12, a4
+  6f:	05dd      	mov.n	a13, a5
+  71:	02ad      	mov.n	a10, a2
+  73:	03bd      	mov.n	a11, a3
+  75:	000081        	l32r	a8, fffc0078 <il_signed_round+0xfffc0078>	75: R_XTENSA_SLOT0_OP	.literal.il_signed_round+0x8
+	75: R_XTENSA_ASM_EXPAND	__udivdi3
+  78:	0008e0        	callx8	a8
+  7b:	0a8d      	mov.n	a8, a10
+  7d:	0b9d      	mov.n	a9, a11
+  7f:	04cd      	mov.n	a12, a4
+  81:	05dd      	mov.n	a13, a5
+  83:	02ad      	mov.n	a10, a2
+  85:	03bd      	mov.n	a11, a3
+  87:	1189      	s32i.n	a8, a1, 4
+  89:	0199      	s32i.n	a9, a1, 0
+  8b:	082d      	mov.n	a2, a8
+  8d:	093d      	mov.n	a3, a9
+  8f:	000081        	l32r	a8, fffc0090 <il_signed_round+0xfffc0090>	8f: R_XTENSA_SLOT0_OP	.literal.il_signed_round+0xc
+	8f: R_XTENSA_ASM_EXPAND	__umoddi3
+  92:	0008e0        	callx8	a8
+  95:	62c4a0        	saltu	a12, a4, a10
+  98:	c055b0        	sub	a5, a5, a11
+  9b:	c055c0        	sub	a5, a5, a12
+  9e:	c044a0        	sub	a4, a4, a10
+  a1:	039d      	mov.n	a9, a3
+  a3:	028d      	mov.n	a8, a2
+  a5:	1535b7        	bltu	a5, a11, be <il_signed_round+0xbe>	a5: R_XTENSA_SLOT0_OP	.text.il_signed_round+0xbe
+  a8:	0f1b57        	beq	a11, a5, bb <il_signed_round+0xbb>	a8: R_XTENSA_SLOT0_OP	.text.il_signed_round+0xbb
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:13 (discriminator 2)
+  ab:	2d1a47        	beq	a10, a4, dc <il_signed_round+0xdc>	ab: R_XTENSA_SLOT0_OP	.text.il_signed_round+0xdc
+il_signed_round():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:14 (discriminator 3)
+  ae:	603030        	neg	a3, a3
+  b1:	830b      	addi.n	a8, a3, -1
+  b3:	933820        	movnez	a3, a8, a2
+  b6:	602020        	neg	a2, a2
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:14
+  b9:	f01d      	retw.n
+il_round():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:13
+  bb:	ecb4a7        	bgeu	a4, a10, ab <il_signed_round+0xab>	bb: R_XTENSA_SLOT0_OP	.text.il_signed_round+0xab
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:13 (discriminator 8)
+  be:	281b      	addi.n	a2, a8, 1
+  c0:	623280        	saltu	a3, a2, a8
+  c3:	339a      	add.n	a3, a3, a9
+il_signed_round():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:14 (discriminator 3)
+  c5:	603030        	neg	a3, a3
+  c8:	830b      	addi.n	a8, a3, -1
+  ca:	933820        	movnez	a3, a8, a2
+  cd:	602020        	neg	a2, a2
+  d0:	fff946        	j	b9 <il_signed_round+0xb9>	d0: R_XTENSA_SLOT0_OP	.text.il_signed_round+0xb9
+il_round():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:13
+  d3:	0234a7        	bltu	a4, a10, d9 <il_signed_round+0xd9>	d3: R_XTENSA_SLOT0_OP	.text.il_signed_round+0xd9
+  d6:	ffdd86        	j	50 <il_signed_round+0x50>	d6: R_XTENSA_SLOT0_OP	.text.il_signed_round+0x50
+  d9:	ffd906        	j	41 <il_signed_round+0x41>	d9: R_XTENSA_SLOT0_OP	.text.il_signed_round+0x41
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:13 (discriminator 2)
+  dc:	ce9b57        	bne	a11, a5, ae <il_signed_round+0xae>	dc: R_XTENSA_SLOT0_OP	.text.il_signed_round+0xae
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:13 (discriminator 3)
+  df:	042080        	extui	a2, a8, 0, 1
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:13 (discriminator 8)
+  e2:	228a      	add.n	a2, a2, a8
+  e4:	628280        	saltu	a8, a2, a8
+  e7:	389a      	add.n	a3, a8, a9
+  e9:	fff046        	j	ae <il_signed_round+0xae>	e9: R_XTENSA_SLOT0_OP	.text.il_signed_round+0xae
+
+Disassembly of section .text.il_normal_length:
+
+00000000 <il_normal_length>:
+il_normal_length():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:16
+   0:	004136        	entry	a1, 32
+   3:	080c      	movi.n	a8, 0
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:16 (discriminator 5)
+   5:	0000d1        	l32r	a13, fffc0008 <il_normal_length+0xfffc0008>	5: R_XTENSA_SLOT0_OP	.literal.il_normal_length+0xc
+   8:	e26b      	addi.n	a14, a2, 6
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:16
+   a:	08bd      	mov.n	a11, a8
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:16 (discriminator 5)
+   c:	009292        	l16si	a9, a2, 0
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:16 (discriminator 4)
+   f:	222b      	addi.n	a2, a2, 2
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:16 (discriminator 3)
+  11:	82a990        	mull	a10, a9, a9
+  14:	b2c990        	mulsh	a12, a9, a9
+  17:	a8aa      	add.n	a10, a8, a10
+  19:	628a80        	saltu	a8, a10, a8
+  1c:	bbca      	add.n	a11, a11, a12
+  1e:	c8ba      	add.n	a12, a8, a11
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:16 (discriminator 5)
+  20:	1219d7        	beq	a9, a13, 36 <il_normal_length+0x36>	20: R_XTENSA_SLOT0_OP	.text.il_normal_length+0x36
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:16 (discriminator 3)
+  23:	0a8d      	mov.n	a8, a10
+  25:	0cbd      	mov.n	a11, a12
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:16 (discriminator 4)
+  27:	e19e27        	bne	a14, a2, c <il_normal_length+0xc>	27: R_XTENSA_SLOT0_OP	.text.il_normal_length+0xc
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:16 (discriminator 6)
+  2a:	0000d1        	l32r	a13, fffc002c <il_normal_length+0xfffc002c>	2a: R_XTENSA_SLOT0_OP	.literal.il_normal_length+0x4
+  2d:	9c0b      	addi.n	a9, a12, -1
+  2f:	8ada      	add.n	a8, a10, a13
+  31:	0738d7        	bltu	a8, a13, 3c <il_normal_length+0x3c>	31: R_XTENSA_SLOT0_OP	.text.il_normal_length+0x3c
+  34:	998c      	beqz.n	a9, 41 <il_normal_length+0x41>	34: R_XTENSA_SLOT0_OP	.text.il_normal_length+0x41
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:16 (discriminator 2)
+  36:	020c      	movi.n	a2, 0
+  38:	023d      	mov.n	a3, a2
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:16
+  3a:	f01d      	retw.n
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:16 (discriminator 6)
+  3c:	0c9d      	mov.n	a9, a12
+  3e:	ff4956        	bnez	a9, 36 <il_normal_length+0x36>	3e: R_XTENSA_SLOT0_OP	.text.il_normal_length+0x36
+  41:	0000b1        	l32r	a11, fffc0044 <il_normal_length+0xfffc0044>	41: R_XTENSA_SLOT0_OP	.literal.il_normal_length
+  44:	ee3b87        	bltu	a11, a8, 36 <il_normal_length+0x36>	44: R_XTENSA_SLOT0_OP	.text.il_normal_length+0x36
+il_sqrt():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:12
+  47:	000081        	l32r	a8, fffc0048 <il_normal_length+0xfffc0048>	47: R_XTENSA_SLOT0_OP	.literal.il_normal_length+0x8
+il_normal_length():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:16 (discriminator 8)
+  4a:	404010        	ssai	16
+  4d:	81eca0        	src	a14, a12, a10
+  50:	11ca00        	slli	a12, a10, 16
+il_sqrt():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:12 (discriminator 3)
+  53:	404200        	ssai	2
+  56:	819890        	src	a9, a8, a9
+  59:	418280        	srli	a8, a8, 2
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:12 (discriminator 1)
+  5c:	f33e87        	bltu	a14, a8, 53 <il_normal_length+0x53>	5c: R_XTENSA_SLOT0_OP	.text.il_normal_length+0x53
+  5f:	0298e7        	bne	a8, a14, 65 <il_normal_length+0x65>	5f: R_XTENSA_SLOT0_OP	.text.il_normal_length+0x65
+  62:	ed3c97        	bltu	a12, a9, 53 <il_normal_length+0x53>	62: R_XTENSA_SLOT0_OP	.text.il_normal_length+0x53
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:12
+  65:	020c      	movi.n	a2, 0
+  67:	023d      	mov.n	a3, a2
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:12 (discriminator 9)
+  69:	f92a      	add.n	a15, a9, a2
+  6b:	62df20        	saltu	a13, a15, a2
+  6e:	a83a      	add.n	a10, a8, a3
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:12 (discriminator 4)
+  70:	404100        	ssai	1
+  73:	81b320        	src	a11, a3, a2
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:12 (discriminator 9)
+  76:	aada      	add.n	a10, a10, a13
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:12 (discriminator 4)
+  78:	41d130        	srli	a13, a3, 1
+  7b:	0b2d      	mov.n	a2, a11
+  7d:	0d3d      	mov.n	a3, a13
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:12 (discriminator 9)
+  7f:	1c3ea7        	bltu	a14, a10, 9f <il_normal_length+0x9f>	7f: R_XTENSA_SLOT0_OP	.text.il_normal_length+0x9f
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:12 (discriminator 4)
+  82:	7b9a      	add.n	a7, a11, a9
+  84:	626cf0        	saltu	a6, a12, a15
+  87:	dd8a      	add.n	a13, a13, a8
+  89:	c05ea0        	sub	a5, a14, a10
+  8c:	62b7b0        	saltu	a11, a7, a11
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:12 (discriminator 9)
+  8f:	029ae7        	bne	a10, a14, 95 <il_normal_length+0x95>	8f: R_XTENSA_SLOT0_OP	.text.il_normal_length+0x95
+  92:	093cf7        	bltu	a12, a15, 9f <il_normal_length+0x9f>	92: R_XTENSA_SLOT0_OP	.text.il_normal_length+0x9f
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:12 (discriminator 4)
+  95:	c0ccf0        	sub	a12, a12, a15
+  98:	c0e560        	sub	a14, a5, a6
+  9b:	072d      	mov.n	a2, a7
+  9d:	3bda      	add.n	a3, a11, a13
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:12 (discriminator 7)
+  9f:	404200        	ssai	2
+  a2:	819890        	src	a9, a8, a9
+  a5:	418280        	srli	a8, a8, 2
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:12 (discriminator 8)
+  a8:	20a980        	or	a10, a9, a8
+  ab:	fbaa56        	bnez	a10, 69 <il_normal_length+0x69>	ab: R_XTENSA_SLOT0_OP	.text.il_normal_length+0x69
+il_normal_length():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:16
+  ae:	f01d      	retw.n
+
+Disassembly of section .text.kcc_block:
+
+00000000 <kcc_block>:
+kcc_block():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:34
+   0:	042136        	entry	a1, 0x210
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:35
+   3:	40f280        	nsau	a8, a2
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:34
+   6:	02ad      	mov.n	a10, a2
+   8:	646122        	s32i	a2, a1, 0x190
+   b:	6b6132        	s32i	a3, a1, 0x1ac
+   e:	079d      	mov.n	a9, a7
+  10:	052d      	mov.n	a2, a5
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:35
+  12:	1b0c      	movi.n	a11, 1
+  14:	418580        	srli	a8, a8, 5
+  17:	1acc      	bnez.n	a10, 1c <kcc_block+0x1c>	17: R_XTENSA_SLOT0_OP	.text.kcc_block+0x1c
+  19:	02eec6        	j	bd8 <kcc_block+0xbd8>	19: R_XTENSA_SLOT0_OP	.text.kcc_block+0xbd8
+  1c:	838b30        	moveqz	a8, a11, a3
+  1f:	188c      	beqz.n	a8, 24 <kcc_block+0x24>	1f: R_XTENSA_SLOT0_OP	.text.kcc_block+0x24
+  21:	02ecc6        	j	bd8 <kcc_block+0xbd8>	21: R_XTENSA_SLOT0_OP	.text.kcc_block+0xbd8
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:35 (discriminator 2)
+  24:	08ad      	mov.n	a10, a8
+  26:	83ab40        	moveqz	a10, a11, a4
+  29:	838b60        	moveqz	a8, a11, a6
+  2c:	208a80        	or	a8, a10, a8
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:35 (discriminator 4)
+  2f:	748080        	extui	a8, a8, 0, 8
+  32:	188c      	beqz.n	a8, 37 <kcc_block+0x37>	32: R_XTENSA_SLOT0_OP	.text.kcc_block+0x37
+  34:	02e806        	j	bd8 <kcc_block+0xbd8>	34: R_XTENSA_SLOT0_OP	.text.kcc_block+0xbd8
+  37:	838b70        	moveqz	a8, a11, a7
+  3a:	188c      	beqz.n	a8, 3f <kcc_block+0x3f>	3a: R_XTENSA_SLOT0_OP	.text.kcc_block+0x3f
+  3c:	02e606        	j	bd8 <kcc_block+0xbd8>	3c: R_XTENSA_SLOT0_OP	.text.kcc_block+0xbd8
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:35 (discriminator 6)
+  3f:	fcc5a2        	addi	a10, a5, -4
+  42:	bc7c      	movi.n	a12, -5
+  44:	10aac0        	and	a10, a10, a12
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:35 (discriminator 7)
+  47:	938ba0        	movnez	a8, a11, a10
+  4a:	988c      	beqz.n	a8, 57 <kcc_block+0x57>	4a: R_XTENSA_SLOT0_OP	.text.kcc_block+0x57
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:35 (discriminator 6)
+  4c:	850b      	addi.n	a8, a5, -1
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:35 (discriminator 12)
+  4e:	5d61b2        	s32i	a11, a1, 0x174
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:35 (discriminator 7)
+  51:	02bb87        	bgeu	a11, a8, 57 <kcc_block+0x57>	51: R_XTENSA_SLOT0_OP	.text.kcc_block+0x57
+  54:	02e146        	j	bdd <kcc_block+0xbdd>	54: R_XTENSA_SLOT0_OP	.text.kcc_block+0xbdd
+il_scene_valid():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:17 (discriminator 7)
+  57:	6b2132        	l32i	a3, a1, 0x1ac
+  5a:	0000a1        	l32r	a10, fffc005c <kcc_block+0xfffc005c>	5a: R_XTENSA_SLOT0_OP	.literal.kcc_block
+  5d:	a82382        	l32i	a8, a3, 0x2a0
+  60:	02ba87        	bgeu	a10, a8, 66 <kcc_block+0x66>	60: R_XTENSA_SLOT0_OP	.text.kcc_block+0x66
+  63:	02dc46        	j	bd8 <kcc_block+0xbd8>	63: R_XTENSA_SLOT0_OP	.text.kcc_block+0xbd8
+  66:	a92382        	l32i	a8, a3, 0x2a4
+  69:	02ba87        	bgeu	a10, a8, 6f <kcc_block+0x6f>	69: R_XTENSA_SLOT0_OP	.text.kcc_block+0x6f
+  6c:	02da06        	j	bd8 <kcc_block+0xbd8>	6c: R_XTENSA_SLOT0_OP	.text.kcc_block+0xbd8
+  6f:	aa2382        	l32i	a8, a3, 0x2a8
+  72:	02ba87        	bgeu	a10, a8, 78 <kcc_block+0x78>	72: R_XTENSA_SLOT0_OP	.text.kcc_block+0x78
+  75:	02d7c6        	j	bd8 <kcc_block+0xbd8>	75: R_XTENSA_SLOT0_OP	.text.kcc_block+0xbd8
+  78:	cca082        	movi	a8, 204
+  7b:	538a      	add.n	a5, a3, a8
+  7d:	a0a272        	movi	a7, 0x2a0
+  80:	776152        	s32i	a5, a1, 0x1dc
+  83:	737a      	add.n	a7, a3, a7
+  85:	5c6162        	s32i	a6, a1, 0x170
+  88:	036d      	mov.n	a6, a3
+  8a:	053d      	mov.n	a3, a5
+  8c:	095d      	mov.n	a5, a9
+il_position():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:15 (discriminator 5)
+  8e:	000091        	l32r	a9, fffc0090 <kcc_block+0xfffc0090>	8e: R_XTENSA_SLOT0_OP	.literal.kcc_block+0x4
+  91:	0688      	l32i.n	a8, a6, 0
+  93:	889a      	add.n	a8, a8, a9
+  95:	000091        	l32r	a9, fffc0098 <kcc_block+0xfffc0098>	95: R_XTENSA_SLOT0_OP	.literal.kcc_block+0x8
+  98:	02b987        	bgeu	a9, a8, 9e <kcc_block+0x9e>	98: R_XTENSA_SLOT0_OP	.text.kcc_block+0x9e
+  9b:	02ce46        	j	bd8 <kcc_block+0xbd8>	9b: R_XTENSA_SLOT0_OP	.text.kcc_block+0xbd8
+  9e:	000091        	l32r	a9, fffc00a0 <kcc_block+0xfffc00a0>	9e: R_XTENSA_SLOT0_OP	.literal.kcc_block+0x4
+  a1:	1688      	l32i.n	a8, a6, 4
+  a3:	889a      	add.n	a8, a8, a9
+  a5:	000091        	l32r	a9, fffc00a8 <kcc_block+0xfffc00a8>	a5: R_XTENSA_SLOT0_OP	.literal.kcc_block+0x8
+  a8:	02b987        	bgeu	a9, a8, ae <kcc_block+0xae>	a8: R_XTENSA_SLOT0_OP	.text.kcc_block+0xae
+  ab:	02ca46        	j	bd8 <kcc_block+0xbd8>	ab: R_XTENSA_SLOT0_OP	.text.kcc_block+0xbd8
+  ae:	000091        	l32r	a9, fffc00b0 <kcc_block+0xfffc00b0>	ae: R_XTENSA_SLOT0_OP	.literal.kcc_block+0x4
+  b1:	2688      	l32i.n	a8, a6, 8
+  b3:	889a      	add.n	a8, a8, a9
+  b5:	000091        	l32r	a9, fffc00b8 <kcc_block+0xfffc00b8>	b5: R_XTENSA_SLOT0_OP	.literal.kcc_block+0x8
+  b8:	02b987        	bgeu	a9, a8, be <kcc_block+0xbe>	b8: R_XTENSA_SLOT0_OP	.text.kcc_block+0xbe
+  bb:	02c646        	j	bd8 <kcc_block+0xbd8>	bb: R_XTENSA_SLOT0_OP	.text.kcc_block+0xbd8
+il_scene_valid():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:17 (discriminator 12)
+  be:	03ad      	mov.n	a10, a3
+  c0:	000081        	l32r	a8, fffc00c0 <kcc_block+0xfffc00c0>	c0: R_XTENSA_SLOT0_OP	.literal.kcc_block+0x64
+	c0: R_XTENSA_ASM_EXPAND	.text.il_normal_length
+  c3:	0008e0        	callx8	a8
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:17 (discriminator 13)
+  c6:	20aab0        	or	a10, a10, a11
+  c9:	1acc      	bnez.n	a10, ce <kcc_block+0xce>	c9: R_XTENSA_SLOT0_OP	.text.kcc_block+0xce
+  cb:	02c246        	j	bd8 <kcc_block+0xbd8>	cb: R_XTENSA_SLOT0_OP	.text.kcc_block+0xbd8
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:17 (discriminator 20)
+  ce:	352682        	l32i	a8, a6, 212
+  d1:	000091        	l32r	a9, fffc00d4 <kcc_block+0xfffc00d4>	d1: R_XTENSA_SLOT0_OP	.literal.kcc_block+0xc
+  d4:	02b987        	bgeu	a9, a8, da <kcc_block+0xda>	d4: R_XTENSA_SLOT0_OP	.text.kcc_block+0xda
+  d7:	02bf46        	j	bd8 <kcc_block+0xbd8>	d7: R_XTENSA_SLOT0_OP	.text.kcc_block+0xbd8
+  da:	362682        	l32i	a8, a6, 216
+  dd:	02b987        	bgeu	a9, a8, e3 <kcc_block+0xe3>	dd: R_XTENSA_SLOT0_OP	.text.kcc_block+0xe3
+  e0:	02bd06        	j	bd8 <kcc_block+0xbd8>	e0: R_XTENSA_SLOT0_OP	.text.kcc_block+0xbd8
+  e3:	372682        	l32i	a8, a6, 220
+  e6:	02b987        	bgeu	a9, a8, ec <kcc_block+0xec>	e6: R_XTENSA_SLOT0_OP	.text.kcc_block+0xec
+  e9:	02bac6        	j	bd8 <kcc_block+0xbd8>	e9: R_XTENSA_SLOT0_OP	.text.kcc_block+0xbd8
+  ec:	86cb      	addi.n	a8, a6, 12
+il_position():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:15 (discriminator 5)
+  ee:	0000a1        	l32r	a10, fffc00f0 <kcc_block+0xfffc00f0>	ee: R_XTENSA_SLOT0_OP	.literal.kcc_block+0x4
+  f1:	0898      	l32i.n	a9, a8, 0
+  f3:	99aa      	add.n	a9, a9, a10
+  f5:	0000a1        	l32r	a10, fffc00f8 <kcc_block+0xfffc00f8>	f5: R_XTENSA_SLOT0_OP	.literal.kcc_block+0x8
+  f8:	02ba97        	bgeu	a10, a9, fe <kcc_block+0xfe>	f8: R_XTENSA_SLOT0_OP	.text.kcc_block+0xfe
+  fb:	02b646        	j	bd8 <kcc_block+0xbd8>	fb: R_XTENSA_SLOT0_OP	.text.kcc_block+0xbd8
+  fe:	0000a1        	l32r	a10, fffc0100 <kcc_block+0xfffc0100>	fe: R_XTENSA_SLOT0_OP	.literal.kcc_block+0x4
+ 101:	1898      	l32i.n	a9, a8, 4
+ 103:	99aa      	add.n	a9, a9, a10
+ 105:	0000a1        	l32r	a10, fffc0108 <kcc_block+0xfffc0108>	105: R_XTENSA_SLOT0_OP	.literal.kcc_block+0x8
+ 108:	02ba97        	bgeu	a10, a9, 10e <kcc_block+0x10e>	108: R_XTENSA_SLOT0_OP	.text.kcc_block+0x10e
+ 10b:	02b246        	j	bd8 <kcc_block+0xbd8>	10b: R_XTENSA_SLOT0_OP	.text.kcc_block+0xbd8
+ 10e:	2898      	l32i.n	a9, a8, 8
+ 110:	0000a1        	l32r	a10, fffc0110 <kcc_block+0xfffc0110>	110: R_XTENSA_SLOT0_OP	.literal.kcc_block+0x4
+il_scene_valid():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:17 (discriminator 26)
+ 113:	88cb      	addi.n	a8, a8, 12
+il_position():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:15 (discriminator 5)
+ 115:	99aa      	add.n	a9, a9, a10
+ 117:	0000a1        	l32r	a10, fffc0118 <kcc_block+0xfffc0118>	117: R_XTENSA_SLOT0_OP	.literal.kcc_block+0x8
+ 11a:	02ba97        	bgeu	a10, a9, 120 <kcc_block+0x120>	11a: R_XTENSA_SLOT0_OP	.text.kcc_block+0x120
+ 11d:	02adc6        	j	bd8 <kcc_block+0xbd8>	11d: R_XTENSA_SLOT0_OP	.text.kcc_block+0xbd8
+il_scene_valid():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:17 (discriminator 26)
+ 120:	ca9387        	bne	a3, a8, ee <kcc_block+0xee>	120: R_XTENSA_SLOT0_OP	.text.kcc_block+0xee
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:17 (discriminator 29)
+ 123:	e0a082        	movi	a8, 224
+ 126:	668a      	add.n	a6, a6, a8
+ 128:	338a      	add.n	a3, a3, a8
+ 12a:	021767        	beq	a7, a6, 130 <kcc_block+0x130>	12a: R_XTENSA_SLOT0_OP	.text.kcc_block+0x130
+ 12d:	ffd746        	j	8e <kcc_block+0x8e>	12d: R_XTENSA_SLOT0_OP	.text.kcc_block+0x8e
+il_round():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:13
+ 130:	5c2162        	l32i	a6, a1, 0x170
+kcc_block():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:36
+ 133:	070c      	movi.n	a7, 0
+ 135:	716162        	s32i	a6, a1, 0x1c4
+ 138:	786152        	s32i	a5, a1, 0x1e0
+lane():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:7
+ 13b:	30a1a2        	movi	a10, 0x130
+ 13e:	0c1c      	movi.n	a12, 16
+ 140:	0b0c      	movi.n	a11, 0
+ 142:	aa1a      	add.n	a10, a10, a1
+ 144:	000081        	l32r	a8, fffc0144 <kcc_block+0xfffc0144>	144: R_XTENSA_SLOT0_OP	.literal.kcc_block+0x68
+	144: R_XTENSA_ASM_EXPAND	memset
+ 147:	0008e0        	callx8	a8
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:7 (discriminator 1)
+ 14a:	e0a0a2        	movi	a10, 224
+ 14d:	4b0c      	movi.n	a11, 4
+ 14f:	aa1a      	add.n	a10, a10, a1
+ 151:	000081        	l32r	a8, fffc0154 <kcc_block+0xfffc0154>	151: R_XTENSA_SLOT0_OP	.literal.kcc_block+0x6c
+	151: R_XTENSA_ASM_EXPAND	aa_init
+ 154:	0008e0        	callx8	a8
+ 157:	5e61a2        	s32i	a10, a1, 0x178
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:7 (discriminator 2)
+ 15a:	1a8c      	beqz.n	a10, 15f <kcc_block+0x15f>	15a: R_XTENSA_SLOT0_OP	.text.kcc_block+0x15f
+ 15c:	02ae86        	j	c1a <kcc_block+0xc1a>	15c: R_XTENSA_SLOT0_OP	.text.kcc_block+0xc1a
+ 15f:	5c6142        	s32i	a4, a1, 0x170
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:8
+ 162:	6361a2        	s32i	a10, a1, 0x18c
+ 165:	656172        	s32i	a7, a1, 0x194
+ 168:	666142        	s32i	a4, a1, 0x198
+ 16b:	676122        	s32i	a2, a1, 0x19c
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:10
+ 16e:	5c2192        	l32i	a9, a1, 0x170
+ 171:	0000a1        	l32r	a10, fffc0174 <kcc_block+0xfffc0174>	171: R_XTENSA_SLOT0_OP	.literal.kcc_block+0x10
+ 174:	271952        	l16ui	a5, a9, 78
+ 177:	281962        	l16ui	a6, a9, 80
+ 17a:	291972        	l16ui	a7, a9, 82
+ 17d:	856a      	add.n	a8, a5, a6
+ 17f:	887a      	add.n	a8, a8, a7
+ 181:	0218a7        	beq	a8, a10, 187 <kcc_block+0x187>	181: R_XTENSA_SLOT0_OP	.text.kcc_block+0x187
+ 184:	029406        	j	bd8 <kcc_block+0xbd8>	184: R_XTENSA_SLOT0_OP	.text.kcc_block+0xbd8
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:11
+ 187:	5e21a2        	l32i	a10, a1, 0x178
+ 18a:	098d      	mov.n	a8, a9
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:11 (discriminator 6)
+ 18c:	0000b1        	l32r	a11, fffc018c <kcc_block+0xfffc018c>	18c: R_XTENSA_SLOT0_OP	.literal.kcc_block+0x14
+ 18f:	6898      	l32i.n	a9, a8, 24
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:11 (discriminator 7)
+ 191:	aa1b      	addi.n	a10, a10, 1
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:11 (discriminator 6)
+ 193:	99ba      	add.n	a9, a9, a11
+ 195:	0000b1        	l32r	a11, fffc0198 <kcc_block+0xfffc0198>	195: R_XTENSA_SLOT0_OP	.literal.kcc_block+0xc
+ 198:	02bb97        	bgeu	a11, a9, 19e <kcc_block+0x19e>	198: R_XTENSA_SLOT0_OP	.text.kcc_block+0x19e
+ 19b:	028e46        	j	bd8 <kcc_block+0xbd8>	19b: R_XTENSA_SLOT0_OP	.text.kcc_block+0xbd8
+ 19e:	0000b1        	l32r	a11, fffc01a0 <kcc_block+0xfffc01a0>	19e: R_XTENSA_SLOT0_OP	.literal.kcc_block+0x14
+ 1a1:	7898      	l32i.n	a9, a8, 28
+ 1a3:	99ba      	add.n	a9, a9, a11
+ 1a5:	0000b1        	l32r	a11, fffc01a8 <kcc_block+0xfffc01a8>	1a5: R_XTENSA_SLOT0_OP	.literal.kcc_block+0xc
+ 1a8:	02bb97        	bgeu	a11, a9, 1ae <kcc_block+0x1ae>	1a8: R_XTENSA_SLOT0_OP	.text.kcc_block+0x1ae
+ 1ab:	028a46        	j	bd8 <kcc_block+0xbd8>	1ab: R_XTENSA_SLOT0_OP	.text.kcc_block+0xbd8
+ 1ae:	8898      	l32i.n	a9, a8, 32
+ 1b0:	0000b1        	l32r	a11, fffc01b0 <kcc_block+0xfffc01b0>	1b0: R_XTENSA_SLOT0_OP	.literal.kcc_block+0x14
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:11 (discriminator 8)
+ 1b3:	88cb      	addi.n	a8, a8, 12
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:11 (discriminator 6)
+ 1b5:	99ba      	add.n	a9, a9, a11
+ 1b7:	0000b1        	l32r	a11, fffc01b8 <kcc_block+0xfffc01b8>	1b7: R_XTENSA_SLOT0_OP	.literal.kcc_block+0xc
+ 1ba:	02bb97        	bgeu	a11, a9, 1c0 <kcc_block+0x1c0>	1ba: R_XTENSA_SLOT0_OP	.text.kcc_block+0x1c0
+ 1bd:	0285c6        	j	bd8 <kcc_block+0xbd8>	1bd: R_XTENSA_SLOT0_OP	.text.kcc_block+0xbd8
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:11 (discriminator 8)
+ 1c0:	c83a66        	bnei	a10, 3, 18c <kcc_block+0x18c>	1c0: R_XTENSA_SLOT0_OP	.text.kcc_block+0x18c
+ 1c3:	0000b1        	l32r	a11, fffc01c4 <kcc_block+0xfffc01c4>	1c3: R_XTENSA_SLOT0_OP	.literal.kcc_block+0x18
+ 1c6:	5c2182        	l32i	a8, a1, 0x170
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:12
+ 1c9:	5e21a2        	l32i	a10, a1, 0x178
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:12 (discriminator 6)
+ 1cc:	0898      	l32i.n	a9, a8, 0
+ 1ce:	0000c1        	l32r	a12, fffc01d0 <kcc_block+0xfffc01d0>	1ce: R_XTENSA_SLOT0_OP	.literal.kcc_block
+ 1d1:	99ba      	add.n	a9, a9, a11
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:12 (discriminator 7)
+ 1d3:	aa1b      	addi.n	a10, a10, 1
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:12 (discriminator 6)
+ 1d5:	02bc97        	bgeu	a12, a9, 1db <kcc_block+0x1db>	1d5: R_XTENSA_SLOT0_OP	.text.kcc_block+0x1db
+ 1d8:	027f06        	j	bd8 <kcc_block+0xbd8>	1d8: R_XTENSA_SLOT0_OP	.text.kcc_block+0xbd8
+ 1db:	1898      	l32i.n	a9, a8, 4
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:12 (discriminator 8)
+ 1dd:	888b      	addi.n	a8, a8, 8
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:12 (discriminator 6)
+ 1df:	99ba      	add.n	a9, a9, a11
+ 1e1:	02bc97        	bgeu	a12, a9, 1e7 <kcc_block+0x1e7>	1e1: R_XTENSA_SLOT0_OP	.text.kcc_block+0x1e7
+ 1e4:	027c06        	j	bd8 <kcc_block+0xbd8>	1e4: R_XTENSA_SLOT0_OP	.text.kcc_block+0xbd8
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:12 (discriminator 8)
+ 1e7:	e13a66        	bnei	a10, 3, 1cc <kcc_block+0x1cc>	1e7: R_XTENSA_SLOT0_OP	.text.kcc_block+0x1cc
+ 1ea:	40a182        	movi	a8, 0x140
+ 1ed:	218a      	add.n	a2, a1, a8
+ 1ef:	5aa182        	movi	a8, 0x15a
+ 1f2:	918a      	add.n	a9, a1, a8
+ 1f4:	82cb      	addi.n	a8, a2, 12
+ 1f6:	626182        	s32i	a8, a1, 0x188
+ 1f9:	5c2182        	l32i	a8, a1, 0x170
+ 1fc:	6c6192        	s32i	a9, a1, 0x1b0
+ 1ff:	083d      	mov.n	a3, a8
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:13 (discriminator 6)
+ 201:	686152        	s32i	a5, a1, 0x1a0
+ 204:	696162        	s32i	a6, a1, 0x1a4
+ 207:	6a6172        	s32i	a7, a1, 0x1a8
+ 20a:	5d6182        	s32i	a8, a1, 0x174
+ 20d:	5f6192        	s32i	a9, a1, 0x17c
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:13 (discriminator 10)
+ 210:	060c      	movi.n	a6, 0
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:12
+ 212:	5d2152        	l32i	a5, a1, 0x174
+ 215:	5c21f2        	l32i	a15, a1, 0x170
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:13 (discriminator 10)
+ 218:	5e21e2        	l32i	a14, a1, 0x178
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:12
+ 21b:	034d      	mov.n	a4, a3
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:13 (discriminator 10)
+ 21d:	067d      	mov.n	a7, a6
+ 21f:	06ad      	mov.n	a10, a6
+ 221:	06bd      	mov.n	a11, a6
+ 223:	606132        	s32i	a3, a1, 0x180
+ 226:	616122        	s32i	a2, a1, 0x184
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:13 (discriminator 4)
+ 229:	271f32        	l16ui	a3, a15, 78
+ 22c:	6598      	l32i.n	a9, a5, 24
+ 22e:	1e9482        	l16si	a8, a4, 60
+ 231:	82d930        	mull	a13, a9, a3
+ 234:	82c830        	mull	a12, a8, a3
+ 237:	b29930        	mulsh	a9, a9, a3
+ 23a:	b28830        	mulsh	a8, a8, a3
+ 23d:	dada      	add.n	a13, a10, a13
+ 23f:	c6ca      	add.n	a12, a6, a12
+ 241:	622da0        	saltu	a2, a13, a10
+ 244:	623c60        	saltu	a3, a12, a6
+ 247:	9b9a      	add.n	a9, a11, a9
+ 249:	878a      	add.n	a8, a7, a8
+ 24b:	ee1b      	addi.n	a14, a14, 1
+ 24d:	0dad      	mov.n	a10, a13
+ 24f:	b29a      	add.n	a11, a2, a9
+ 251:	0c6d      	mov.n	a6, a12
+ 253:	738a      	add.n	a7, a3, a8
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:13 (discriminator 2)
+ 255:	ff2b      	addi.n	a15, a15, 2
+ 257:	55cb      	addi.n	a5, a5, 12
+ 259:	446b      	addi.n	a4, a4, 6
+ 25b:	ca3e66        	bnei	a14, 3, 229 <kcc_block+0x229>	25b: R_XTENSA_SLOT0_OP	.text.kcc_block+0x229
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:13 (discriminator 5)
+ 25e:	0000c1        	l32r	a12, fffc0260 <kcc_block+0xfffc0260>	25e: R_XTENSA_SLOT0_OP	.literal.kcc_block+0x10
+ 261:	0d0c      	movi.n	a13, 0
+ 263:	000081        	l32r	a8, fffc0264 <kcc_block+0xfffc0264>	263: R_XTENSA_SLOT0_OP	.literal.kcc_block+0x70
+	263: R_XTENSA_ASM_EXPAND	.text.il_signed_round
+ 266:	0008e0        	callx8	a8
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:13 (discriminator 6)
+ 269:	0c1c      	movi.n	a12, 16
+ 26b:	0d0c      	movi.n	a13, 0
+ 26d:	000081        	l32r	a8, fffc0270 <kcc_block+0xfffc0270>	26d: R_XTENSA_SLOT0_OP	.literal.kcc_block+0x74
+	26d: R_XTENSA_ASM_EXPAND	.text.il_signed_round
+ 270:	0008e0        	callx8	a8
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:13 (discriminator 5)
+ 273:	612122        	l32i	a2, a1, 0x184
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:13 (discriminator 7)
+ 276:	0000c1        	l32r	a12, fffc0278 <kcc_block+0xfffc0278>	276: R_XTENSA_SLOT0_OP	.literal.kcc_block+0x10
+ 279:	02a9      	s32i.n	a10, a2, 0
+ 27b:	0d0c      	movi.n	a13, 0
+ 27d:	06ad      	mov.n	a10, a6
+ 27f:	07bd      	mov.n	a11, a7
+ 281:	000081        	l32r	a8, fffc0284 <kcc_block+0xfffc0284>	281: R_XTENSA_SLOT0_OP	.literal.kcc_block+0x78
+	281: R_XTENSA_ASM_EXPAND	.text.il_signed_round
+ 284:	0008e0        	callx8	a8
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:13 (discriminator 8)
+ 287:	5f2182        	l32i	a8, a1, 0x17c
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:13 (discriminator 5)
+ 28a:	602132        	l32i	a3, a1, 0x180
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:13 (discriminator 8)
+ 28d:	0058a2        	s16i	a10, a8, 0
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:13 (discriminator 9)
+ 290:	882b      	addi.n	a8, a8, 2
+ 292:	5f6182        	s32i	a8, a1, 0x17c
+ 295:	5d2182        	l32i	a8, a1, 0x174
+ 298:	224b      	addi.n	a2, a2, 4
+ 29a:	884b      	addi.n	a8, a8, 4
+ 29c:	5d6182        	s32i	a8, a1, 0x174
+ 29f:	622182        	l32i	a8, a1, 0x188
+ 2a2:	332b      	addi.n	a3, a3, 2
+ 2a4:	021827        	beq	a8, a2, 2aa <kcc_block+0x2aa>	2a4: R_XTENSA_SLOT0_OP	.text.kcc_block+0x2aa
+ 2a7:	ffd946        	j	210 <kcc_block+0x210>	2a7: R_XTENSA_SLOT0_OP	.text.kcc_block+0x210
+ 2aa:	4ca182        	movi	a8, 0x14c
+ 2ad:	318a      	add.n	a3, a1, a8
+ 2af:	838b      	addi.n	a8, a3, 8
+ 2b1:	682152        	l32i	a5, a1, 0x1a0
+ 2b4:	692162        	l32i	a6, a1, 0x1a4
+ 2b7:	6a2172        	l32i	a7, a1, 0x1a8
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:20
+ 2ba:	000041        	l32r	a4, fffc02bc <kcc_block+0xfffc02bc>	2ba: R_XTENSA_SLOT0_OP	.literal.kcc_block+0x58
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:13 (discriminator 9)
+ 2bd:	5c2122        	l32i	a2, a1, 0x170
+ 2c0:	5d6182        	s32i	a8, a1, 0x174
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:14 (discriminator 4)
+ 2c3:	02c8      	l32i.n	a12, a2, 0
+ 2c5:	2288      	l32i.n	a8, a2, 8
+ 2c7:	42b8      	l32i.n	a11, a2, 16
+ 2c9:	82dc50        	mull	a13, a12, a5
+ 2cc:	82a860        	mull	a10, a8, a6
+ 2cf:	b2ec50        	mulsh	a14, a12, a5
+ 2d2:	b28860        	mulsh	a8, a8, a6
+ 2d5:	82cb70        	mull	a12, a11, a7
+ 2d8:	aada      	add.n	a10, a10, a13
+ 2da:	88ea      	add.n	a8, a8, a14
+ 2dc:	62dad0        	saltu	a13, a10, a13
+ 2df:	b2bb70        	mulsh	a11, a11, a7
+ 2e2:	acaa      	add.n	a10, a12, a10
+ 2e4:	88da      	add.n	a8, a8, a13
+ 2e6:	bb8a      	add.n	a11, a11, a8
+ 2e8:	628ac0        	saltu	a8, a10, a12
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:14 (discriminator 5)
+ 2eb:	0000c1        	l32r	a12, fffc02ec <kcc_block+0xfffc02ec>	2eb: R_XTENSA_SLOT0_OP	.literal.kcc_block+0x10
+ 2ee:	bb8a      	add.n	a11, a11, a8
+ 2f0:	0d0c      	movi.n	a13, 0
+ 2f2:	000081        	l32r	a8, fffc02f4 <kcc_block+0xfffc02f4>	2f2: R_XTENSA_SLOT0_OP	.literal.kcc_block+0x7c
+	2f2: R_XTENSA_ASM_EXPAND	.text.il_signed_round
+ 2f5:	0008e0        	callx8	a8
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:16
+ 2f8:	0c1c      	movi.n	a12, 16
+ 2fa:	0d0c      	movi.n	a13, 0
+ 2fc:	000081        	l32r	a8, fffc02fc <kcc_block+0xfffc02fc>	2fc: R_XTENSA_SLOT0_OP	.literal.kcc_block+0x80
+	2fc: R_XTENSA_ASM_EXPAND	.text.il_signed_round
+ 2ff:	0008e0        	callx8	a8
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:20
+ 302:	8a4a      	add.n	a8, a10, a4
+ 304:	628840        	saltu	a8, a8, a4
+ 307:	bb8a      	add.n	a11, a11, a8
+ 309:	1b8c      	beqz.n	a11, 30e <kcc_block+0x30e>	309: R_XTENSA_SLOT0_OP	.text.kcc_block+0x30e
+ 30b:	023246        	j	bd8 <kcc_block+0xbd8>	30b: R_XTENSA_SLOT0_OP	.text.kcc_block+0xbd8
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:14 (discriminator 1)
+ 30e:	5d2182        	l32i	a8, a1, 0x174
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:21
+ 311:	03a9      	s32i.n	a10, a3, 0
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:14 (discriminator 1)
+ 313:	334b      	addi.n	a3, a3, 4
+ 315:	224b      	addi.n	a2, a2, 4
+ 317:	a89837        	bne	a8, a3, 2c3 <kcc_block+0x2c3>	317: R_XTENSA_SLOT0_OP	.text.kcc_block+0x2c3
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:23
+ 31a:	80a082        	movi	a8, 128
+ 31d:	618a      	add.n	a6, a1, a8
+ 31f:	6421a2        	l32i	a10, a1, 0x190
+ 322:	4ca182        	movi	a8, 0x14c
+ 325:	06cd      	mov.n	a12, a6
+ 327:	b18a      	add.n	a11, a1, a8
+ 329:	000081        	l32r	a8, fffc032c <kcc_block+0xfffc032c>	329: R_XTENSA_SLOT0_OP	.literal.kcc_block+0x84
+	329: R_XTENSA_ASM_EXPAND	mc_eval
+ 32c:	0008e0        	callx8	a8
+ 32f:	5d61a2        	s32i	a10, a1, 0x174
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:23 (discriminator 1)
+ 332:	1a8c      	beqz.n	a10, 337 <kcc_block+0x337>	332: R_XTENSA_SLOT0_OP	.text.kcc_block+0x337
+ 334:	025506        	j	c8c <kcc_block+0xc8c>	334: R_XTENSA_SLOT0_OP	.text.kcc_block+0xc8c
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:24
+ 337:	000071        	l32r	a7, fffc0338 <kcc_block+0xfffc0338>	337: R_XTENSA_SLOT0_OP	.literal.kcc_block+0x1c
+ 33a:	262182        	l32i	a8, a1, 152
+ 33d:	021877        	beq	a8, a7, 343 <kcc_block+0x343>	33d: R_XTENSA_SLOT0_OP	.text.kcc_block+0x343
+ 340:	025406        	j	c94 <kcc_block+0xc94>	340: R_XTENSA_SLOT0_OP	.text.kcc_block+0xc94
+ 343:	272182        	l32i	a8, a1, 156
+ 346:	188c      	beqz.n	a8, 34b <kcc_block+0x34b>	346: R_XTENSA_SLOT0_OP	.text.kcc_block+0x34b
+ 348:	025206        	j	c94 <kcc_block+0xc94>	348: R_XTENSA_SLOT0_OP	.text.kcc_block+0xc94
+ 34b:	06cd      	mov.n	a12, a6
+ 34d:	60a182        	movi	a8, 0x160
+compact_rho():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:5 (discriminator 4)
+ 350:	000061        	l32r	a6, fffc0350 <kcc_block+0xfffc0350>	350: R_XTENSA_SLOT0_OP	.literal.kcc_block+0x20
+ 353:	818a      	add.n	a8, a1, a8
+ 355:	18ccf2        	addi	a15, a12, 24
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:5 (discriminator 2)
+ 358:	1ca8      	l32i.n	a10, a12, 4
+ 35a:	0cb8      	l32i.n	a11, a12, 0
+ 35c:	1a8c      	beqz.n	a10, 361 <kcc_block+0x361>	35c: R_XTENSA_SLOT0_OP	.text.kcc_block+0x361
+ 35e:	022746        	j	bff <kcc_block+0xbff>	35e: R_XTENSA_SLOT0_OP	.text.kcc_block+0xbff
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:5 (discriminator 4)
+ 361:	829b60        	mull	a9, a11, a6
+il_round():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:13
+ 364:	0000e1        	l32r	a14, fffc0364 <kcc_block+0xfffc0364>	364: R_XTENSA_SLOT0_OP	.literal.kcc_block+0x1c
+ 367:	f4d090        	extui	a13, a9, 0, 16
+ 36a:	62eed0        	saltu	a14, a14, a13
+compact_rho():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:5 (discriminator 4)
+ 36d:	a25b60        	muluh	a5, a11, a6
+il_round():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:13
+ 370:	60e0e0        	neg	a14, a14
+compact_rho():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:5 (discriminator 2)
+ 373:	02b7b7        	bgeu	a7, a11, 379 <kcc_block+0x379>	373: R_XTENSA_SLOT0_OP	.text.kcc_block+0x379
+ 376:	022146        	j	bff <kcc_block+0xbff>	376: R_XTENSA_SLOT0_OP	.text.kcc_block+0xbff
+il_round():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:13
+ 379:	0000b1        	l32r	a11, fffc037c <kcc_block+0xfffc037c>	379: R_XTENSA_SLOT0_OP	.literal.kcc_block+0x1c
+ 37c:	404010        	ssai	16
+ 37f:	819590        	src	a9, a5, a9
+ 382:	c0bbd0        	sub	a11, a11, a13
+ 385:	021ae7        	beq	a10, a14, 38b <kcc_block+0x38b>	385: R_XTENSA_SLOT0_OP	.text.kcc_block+0x38b
+ 388:	021f46        	j	c09 <kcc_block+0xc09>	388: R_XTENSA_SLOT0_OP	.text.kcc_block+0xc09
+ 38b:	023bd7        	bltu	a11, a13, 391 <kcc_block+0x391>	38b: R_XTENSA_SLOT0_OP	.text.kcc_block+0x391
+ 38e:	021dc6        	j	c09 <kcc_block+0xc09>	38e: R_XTENSA_SLOT0_OP	.text.kcc_block+0xc09
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:13 (discriminator 8)
+ 391:	991b      	addi.n	a9, a9, 1
+compact_rho():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:5 (discriminator 5)
+ 393:	005892        	s16i	a9, a8, 0
+lane():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:25 (discriminator 5)
+ 396:	cc8b      	addi.n	a12, a12, 8
+ 398:	882b      	addi.n	a8, a8, 2
+ 39a:	ba9fc7        	bne	a15, a12, 358 <kcc_block+0x358>	39a: R_XTENSA_SLOT0_OP	.text.kcc_block+0x358
+il_normalize_interpolated():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/normal_bridge.h:9 (discriminator 3)
+ 39d:	ad9192        	l16si	a9, a1, 0x15a
+ 3a0:	ae91c2        	l16si	a12, a1, 0x15c
+ 3a3:	af9182        	l16si	a8, a1, 0x15e
+ 3a6:	82bcc0        	mull	a11, a12, a12
+ 3a9:	82a990        	mull	a10, a9, a9
+ 3ac:	b2ccc0        	mulsh	a12, a12, a12
+ 3af:	b29990        	mulsh	a9, a9, a9
+ 3b2:	82d880        	mull	a13, a8, a8
+ 3b5:	aaba      	add.n	a10, a10, a11
+ 3b7:	62bab0        	saltu	a11, a10, a11
+ 3ba:	b28880        	mulsh	a8, a8, a8
+ 3bd:	99ca      	add.n	a9, a9, a12
+ 3bf:	99ba      	add.n	a9, a9, a11
+ 3c1:	adaa      	add.n	a10, a13, a10
+ 3c3:	889a      	add.n	a8, a8, a9
+ 3c5:	629ad0        	saltu	a9, a10, a13
+ 3c8:	889a      	add.n	a8, a8, a9
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/normal_bridge.h:10
+ 3ca:	78cc      	bnez.n	a8, 3d5 <kcc_block+0x3d5>	3ca: R_XTENSA_SLOT0_OP	.text.kcc_block+0x3d5
+ 3cc:	000091        	l32r	a9, fffc03cc <kcc_block+0xfffc03cc>	3cc: R_XTENSA_SLOT0_OP	.literal.kcc_block+0x24
+ 3cf:	0239a7        	bltu	a9, a10, 3d5 <kcc_block+0x3d5>	3cf: R_XTENSA_SLOT0_OP	.text.kcc_block+0x3d5
+ 3d2:	0207c6        	j	bf5 <kcc_block+0xbf5>	3d2: R_XTENSA_SLOT0_OP	.text.kcc_block+0xbf5
+il_sqrt():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:12
+ 3d5:	000071        	l32r	a7, fffc03d8 <kcc_block+0xfffc03d8>	3d5: R_XTENSA_SLOT0_OP	.literal.kcc_block+0x5c
+il_normalize_interpolated():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/normal_bridge.h:11
+ 3d8:	404010        	ssai	16
+ 3db:	8188a0        	src	a8, a8, a10
+il_sqrt():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:12
+ 3de:	040c      	movi.n	a4, 0
+il_normalize_interpolated():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/normal_bridge.h:11
+ 3e0:	11aa00        	slli	a10, a10, 16
+il_sqrt():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:12 (discriminator 3)
+ 3e3:	404200        	ssai	2
+ 3e6:	814740        	src	a4, a7, a4
+ 3e9:	417270        	srli	a7, a7, 2
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:12 (discriminator 1)
+ 3ec:	f33877        	bltu	a8, a7, 3e3 <kcc_block+0x3e3>	3ec: R_XTENSA_SLOT0_OP	.text.kcc_block+0x3e3
+ 3ef:	029787        	bne	a7, a8, 3f5 <kcc_block+0x3f5>	3ef: R_XTENSA_SLOT0_OP	.text.kcc_block+0x3f5
+ 3f2:	ed3a47        	bltu	a10, a4, 3e3 <kcc_block+0x3e3>	3f2: R_XTENSA_SLOT0_OP	.text.kcc_block+0x3e3
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:12
+ 3f5:	060c      	movi.n	a6, 0
+ 3f7:	065d      	mov.n	a5, a6
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:12 (discriminator 9)
+ 3f9:	d46a      	add.n	a13, a4, a6
+ 3fb:	62cd60        	saltu	a12, a13, a6
+ 3fe:	975a      	add.n	a9, a7, a5
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:12 (discriminator 4)
+ 400:	404100        	ssai	1
+ 403:	81b560        	src	a11, a5, a6
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:12 (discriminator 9)
+ 406:	99ca      	add.n	a9, a9, a12
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:12 (discriminator 4)
+ 408:	41c150        	srli	a12, a5, 1
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:12 (discriminator 7)
+ 40b:	404200        	ssai	2
+ 40e:	81e740        	src	a14, a7, a4
+ 411:	41f270        	srli	a15, a7, 2
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:12 (discriminator 4)
+ 414:	0b6d      	mov.n	a6, a11
+ 416:	0c5d      	mov.n	a5, a12
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:12 (discriminator 9)
+ 418:	1c3897        	bltu	a8, a9, 438 <kcc_block+0x438>	418: R_XTENSA_SLOT0_OP	.text.kcc_block+0x438
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:12 (discriminator 4)
+ 41b:	4b4a      	add.n	a4, a11, a4
+ 41d:	cc7a      	add.n	a12, a12, a7
+ 41f:	623ad0        	saltu	a3, a10, a13
+ 422:	c07890        	sub	a7, a8, a9
+ 425:	62b4b0        	saltu	a11, a4, a11
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:12 (discriminator 9)
+ 428:	029987        	bne	a9, a8, 42e <kcc_block+0x42e>	428: R_XTENSA_SLOT0_OP	.text.kcc_block+0x42e
+ 42b:	093ad7        	bltu	a10, a13, 438 <kcc_block+0x438>	42b: R_XTENSA_SLOT0_OP	.text.kcc_block+0x438
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:12 (discriminator 4)
+ 42e:	c0aad0        	sub	a10, a10, a13
+ 431:	c08730        	sub	a8, a7, a3
+ 434:	046d      	mov.n	a6, a4
+ 436:	5bca      	add.n	a5, a11, a12
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:12 (discriminator 8)
+ 438:	209ef0        	or	a9, a14, a15
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:12 (discriminator 7)
+ 43b:	0e4d      	mov.n	a4, a14
+ 43d:	0f7d      	mov.n	a7, a15
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:12 (discriminator 8)
+ 43f:	fb6956        	bnez	a9, 3f9 <kcc_block+0x3f9>	43f: R_XTENSA_SLOT0_OP	.text.kcc_block+0x3f9
+ 442:	c0a082        	movi	a8, 192
+ 445:	318a      	add.n	a3, a1, a8
+ 447:	6c2182        	l32i	a8, a1, 0x1b0
+ 44a:	000021        	l32r	a2, fffc044c <kcc_block+0xfffc044c>	44a: R_XTENSA_SLOT0_OP	.literal.kcc_block+0x28
+ 44d:	a86b      	addi.n	a10, a8, 6
+il_normalize_interpolated():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/normal_bridge.h:11 (discriminator 1)
+ 44f:	5f6162        	s32i	a6, a1, 0x17c
+ 452:	6861e2        	s32i	a14, a1, 0x1a0
+ 455:	6961f2        	s32i	a15, a1, 0x1a4
+ 458:	6061a2        	s32i	a10, a1, 0x180
+ 45b:	086d      	mov.n	a6, a8
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/normal_bridge.h:13
+ 45d:	0096a2        	l16si	a10, a6, 0
+ 460:	5f21c2        	l32i	a12, a1, 0x17c
+ 463:	318fa0        	srai	a8, a10, 31
+ 466:	828820        	mull	a8, a8, a2
+ 469:	a2ba20        	muluh	a11, a10, a2
+ 46c:	82aa20        	mull	a10, a10, a2
+ 46f:	05dd      	mov.n	a13, a5
+ 471:	b8ba      	add.n	a11, a8, a11
+ 473:	000081        	l32r	a8, fffc0474 <kcc_block+0xfffc0474>	473: R_XTENSA_SLOT0_OP	.literal.kcc_block+0x88
+	473: R_XTENSA_ASM_EXPAND	.text.il_signed_round
+ 476:	0008e0        	callx8	a8
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/normal_bridge.h:14
+ 479:	000091        	l32r	a9, fffc047c <kcc_block+0xfffc047c>	479: R_XTENSA_SLOT0_OP	.literal.kcc_block+0x20
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/normal_bridge.h:15
+ 47c:	a2eaa0        	muluh	a14, a10, a10
+ 47f:	828ba0        	mull	a8, a11, a10
+ 482:	82caa0        	mull	a12, a10, a10
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/normal_bridge.h:14
+ 485:	da9a      	add.n	a13, a10, a9
+ 487:	62fd90        	saltu	a15, a13, a9
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/normal_bridge.h:15
+ 48a:	9088e0        	addx2	a8, a8, a14
+ 48d:	c4ca      	add.n	a12, a4, a12
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/normal_bridge.h:14
+ 48f:	bbfa      	add.n	a11, a11, a15
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/normal_bridge.h:15
+ 491:	62ec40        	saltu	a14, a12, a4
+ 494:	878a      	add.n	a8, a7, a8
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/normal_bridge.h:12 (discriminator 1)
+ 496:	662b      	addi.n	a6, a6, 2
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/normal_bridge.h:14
+ 498:	759b56        	bnez	a11, bf5 <kcc_block+0xbf5>	498: R_XTENSA_SLOT0_OP	.text.kcc_block+0xbf5
+ 49b:	0000b1        	l32r	a11, fffc049c <kcc_block+0xfffc049c>	49b: R_XTENSA_SLOT0_OP	.literal.kcc_block+0x2c
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/normal_bridge.h:15
+ 49e:	0c4d      	mov.n	a4, a12
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/normal_bridge.h:14
+ 4a0:	02bbd7        	bgeu	a11, a13, 4a6 <kcc_block+0x4a6>	4a0: R_XTENSA_SLOT0_OP	.text.kcc_block+0x4a6
+ 4a3:	01d386        	j	bf5 <kcc_block+0xbf5>	4a3: R_XTENSA_SLOT0_OP	.text.kcc_block+0xbf5
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/normal_bridge.h:15
+ 4a6:	7e8a      	add.n	a7, a14, a8
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/normal_bridge.h:12 (discriminator 1)
+ 4a8:	602182        	l32i	a8, a1, 0x180
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/normal_bridge.h:15
+ 4ab:	0053a2        	s16i	a10, a3, 0
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/normal_bridge.h:12 (discriminator 1)
+ 4ae:	332b      	addi.n	a3, a3, 2
+ 4b0:	a99867        	bne	a8, a6, 45d <kcc_block+0x45d>	4b0: R_XTENSA_SLOT0_OP	.text.kcc_block+0x45d
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/normal_bridge.h:17
+ 4b3:	000081        	l32r	a8, fffc04b4 <kcc_block+0xfffc04b4>	4b3: R_XTENSA_SLOT0_OP	.literal.kcc_block+0x60
+ 4b6:	670b      	addi.n	a6, a7, -1
+ 4b8:	4c8a      	add.n	a4, a12, a8
+ 4ba:	01b487        	bgeu	a4, a8, 4bf <kcc_block+0x4bf>	4ba: R_XTENSA_SLOT0_OP	.text.kcc_block+0x4bf
+ 4bd:	076d      	mov.n	a6, a7
+ 4bf:	732656        	bnez	a6, bf5 <kcc_block+0xbf5>	4bf: R_XTENSA_SLOT0_OP	.text.kcc_block+0xbf5
+ 4c2:	000081        	l32r	a8, fffc04c4 <kcc_block+0xfffc04c4>	4c2: R_XTENSA_SLOT0_OP	.literal.kcc_block+0x30
+ 4c5:	02b847        	bgeu	a8, a4, 4cb <kcc_block+0x4cb>	4c5: R_XTENSA_SLOT0_OP	.text.kcc_block+0x4cb
+ 4c8:	01ca46        	j	bf5 <kcc_block+0xbf5>	4c8: R_XTENSA_SLOT0_OP	.text.kcc_block+0xbf5
+lane():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:27
+ 4cb:	40a182        	movi	a8, 0x140
+ 4ce:	b18a      	add.n	a11, a1, a8
+il_normalize_interpolated():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/normal_bridge.h:18 (discriminator 3)
+ 4d0:	302182        	l32i	a8, a1, 192
+lane():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:27
+ 4d3:	c0a0a2        	movi	a10, 192
+il_normalize_interpolated():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/normal_bridge.h:18 (discriminator 3)
+ 4d6:	5a6182        	s32i	a8, a1, 0x168
+ 4d9:	621182        	l16ui	a8, a1, 196
+lane():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:27
+ 4dc:	cc0c      	movi.n	a12, 12
+ 4de:	aa1a      	add.n	a10, a10, a1
+il_normalize_interpolated():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/normal_bridge.h:18 (discriminator 3)
+ 4e0:	b65182        	s16i	a8, a1, 0x16c
+lane():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:27
+ 4e3:	000081        	l32r	a8, fffc04e4 <kcc_block+0xfffc04e4>	4e3: R_XTENSA_SLOT0_OP	.literal.kcc_block+0x8c
+	4e3: R_XTENSA_ASM_EXPAND	memcpy
+ 4e6:	0008e0        	callx8	a8
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:27 (discriminator 1)
+ 4e9:	c0a082        	movi	a8, 192
+ 4ec:	881a      	add.n	a8, a8, a1
+ 4ee:	68a192        	movi	a9, 0x168
+ 4f1:	88cb      	addi.n	a8, a8, 12
+ 4f3:	b19a      	add.n	a11, a1, a9
+ 4f5:	6c0c      	movi.n	a12, 6
+ 4f7:	08ad      	mov.n	a10, a8
+ 4f9:	5f6182        	s32i	a8, a1, 0x17c
+ 4fc:	000081        	l32r	a8, fffc04fc <kcc_block+0xfffc04fc>	4fc: R_XTENSA_SLOT0_OP	.literal.kcc_block+0x90
+	4fc: R_XTENSA_ASM_EXPAND	memcpy
+ 4ff:	0008e0        	callx8	a8
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:27 (discriminator 2)
+ 502:	60a182        	movi	a8, 0x160
+ 505:	b18a      	add.n	a11, a1, a8
+ 507:	c0a082        	movi	a8, 192
+ 50a:	881a      	add.n	a8, a8, a1
+ 50c:	6c0c      	movi.n	a12, 6
+ 50e:	12c8a2        	addi	a10, a8, 18
+ 511:	000081        	l32r	a8, fffc0514 <kcc_block+0xfffc0514>	511: R_XTENSA_SLOT0_OP	.literal.kcc_block+0x94
+	511: R_XTENSA_ASM_EXPAND	memcpy
+ 514:	0008e0        	callx8	a8
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:27 (discriminator 3)
+ 517:	5c2182        	l32i	a8, a1, 0x170
+ 51a:	6c0c      	movi.n	a12, 6
+ 51c:	54c8b2        	addi	a11, a8, 84
+ 51f:	c0a082        	movi	a8, 192
+ 522:	881a      	add.n	a8, a8, a1
+ 524:	18c8a2        	addi	a10, a8, 24
+ 527:	000081        	l32r	a8, fffc0528 <kcc_block+0xfffc0528>	527: R_XTENSA_SLOT0_OP	.literal.kcc_block+0x98
+	527: R_XTENSA_ASM_EXPAND	memcpy
+ 52a:	0008e0        	callx8	a8
+il_position():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:15 (discriminator 5)
+ 52d:	000091        	l32r	a9, fffc0530 <kcc_block+0xfffc0530>	52d: R_XTENSA_SLOT0_OP	.literal.kcc_block+0x4
+ 530:	302182        	l32i	a8, a1, 192
+ 533:	889a      	add.n	a8, a8, a9
+ 535:	000091        	l32r	a9, fffc0538 <kcc_block+0xfffc0538>	535: R_XTENSA_SLOT0_OP	.literal.kcc_block+0x8
+ 538:	02b987        	bgeu	a9, a8, 53e <kcc_block+0x53e>	538: R_XTENSA_SLOT0_OP	.text.kcc_block+0x53e
+ 53b:	01ab06        	j	beb <kcc_block+0xbeb>	53b: R_XTENSA_SLOT0_OP	.text.kcc_block+0xbeb
+ 53e:	000091        	l32r	a9, fffc0540 <kcc_block+0xfffc0540>	53e: R_XTENSA_SLOT0_OP	.literal.kcc_block+0x4
+ 541:	312182        	l32i	a8, a1, 196
+ 544:	889a      	add.n	a8, a8, a9
+ 546:	000091        	l32r	a9, fffc0548 <kcc_block+0xfffc0548>	546: R_XTENSA_SLOT0_OP	.literal.kcc_block+0x8
+ 549:	02b987        	bgeu	a9, a8, 54f <kcc_block+0x54f>	549: R_XTENSA_SLOT0_OP	.text.kcc_block+0x54f
+ 54c:	01a6c6        	j	beb <kcc_block+0xbeb>	54c: R_XTENSA_SLOT0_OP	.text.kcc_block+0xbeb
+ 54f:	000091        	l32r	a9, fffc0550 <kcc_block+0xfffc0550>	54f: R_XTENSA_SLOT0_OP	.literal.kcc_block+0x4
+ 552:	322182        	l32i	a8, a1, 200
+ 555:	889a      	add.n	a8, a8, a9
+ 557:	000091        	l32r	a9, fffc0558 <kcc_block+0xfffc0558>	557: R_XTENSA_SLOT0_OP	.literal.kcc_block+0x8
+ 55a:	02b987        	bgeu	a9, a8, 560 <kcc_block+0x560>	55a: R_XTENSA_SLOT0_OP	.text.kcc_block+0x560
+ 55d:	01a286        	j	beb <kcc_block+0xbeb>	55d: R_XTENSA_SLOT0_OP	.text.kcc_block+0xbeb
+il_eval():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:24
+ 560:	5f21a2        	l32i	a10, a1, 0x17c
+ 563:	000081        	l32r	a8, fffc0564 <kcc_block+0xfffc0564>	563: R_XTENSA_SLOT0_OP	.literal.kcc_block+0x9c
+	563: R_XTENSA_ASM_EXPAND	.text.il_normal_length
+ 566:	0008e0        	callx8	a8
+ 569:	6d61a2        	s32i	a10, a1, 0x1b4
+ 56c:	6e61b2        	s32i	a11, a1, 0x1b8
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:24 (discriminator 1)
+ 56f:	208ab0        	or	a8, a10, a11
+ 572:	675816        	beqz	a8, beb <kcc_block+0xbeb>	572: R_XTENSA_SLOT0_OP	.text.kcc_block+0xbeb
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:25 (discriminator 5)
+ 575:	6a1182        	l16ui	a8, a1, 212
+ 578:	6911a2        	l16ui	a10, a1, 210
+ 57b:	6b1192        	l16ui	a9, a1, 214
+ 57e:	2088a0        	or	a8, a8, a10
+ 581:	208890        	or	a8, a8, a9
+ 584:	0268f7        	bbci	a8, 15, 58a <kcc_block+0x58a>	584: R_XTENSA_SLOT0_OP	.text.kcc_block+0x58a
+ 587:	019806        	j	beb <kcc_block+0xbeb>	587: R_XTENSA_SLOT0_OP	.text.kcc_block+0xbeb
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:26
+ 58a:	6b2152        	l32i	a5, a1, 0x1ac
+ 58d:	7721b2        	l32i	a11, a1, 0x1dc
+ 590:	a82582        	l32i	a8, a5, 0x2a0
+ 593:	a92592        	l32i	a9, a5, 0x2a4
+ 596:	aa25a2        	l32i	a10, a5, 0x2a8
+ 599:	c0a042        	movi	a4, 192
+ 59c:	441a      	add.n	a4, a4, a1
+ 59e:	5e2132        	l32i	a3, a1, 0x178
+ 5a1:	476162        	s32i	a6, a1, 0x11c
+ 5a4:	496162        	s32i	a6, a1, 0x124
+ 5a7:	4b6162        	s32i	a6, a1, 0x12c
+ 5aa:	766142        	s32i	a4, a1, 0x1d8
+ 5ad:	7061b2        	s32i	a11, a1, 0x1c0
+ 5b0:	466182        	s32i	a8, a1, 0x118
+ 5b3:	486192        	s32i	a9, a1, 0x120
+ 5b6:	4a61a2        	s32i	a10, a1, 0x128
+ 5b9:	046d      	mov.n	a6, a4
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:28
+ 5bb:	7021a2        	l32i	a10, a1, 0x1c0
+ 5be:	000081        	l32r	a8, fffc05c0 <kcc_block+0xfffc05c0>	5be: R_XTENSA_SLOT0_OP	.literal.kcc_block+0xa0
+	5be: R_XTENSA_ASM_EXPAND	.text.il_normal_length
+ 5c1:	0008e0        	callx8	a8
+ 5c4:	7261a2        	s32i	a10, a1, 0x1c8
+ 5c7:	7361b2        	s32i	a11, a1, 0x1cc
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:28 (discriminator 1)
+ 5ca:	208ab0        	or	a8, a10, a11
+ 5cd:	61a816        	beqz	a8, beb <kcc_block+0xbeb>	5cd: R_XTENSA_SLOT0_OP	.text.kcc_block+0xbeb
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:29
+ 5d0:	0c0c      	movi.n	a12, 0
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:28 (discriminator 1)
+ 5d2:	c0a0e2        	movi	a14, 192
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:29
+ 5d5:	5f21b2        	l32i	a11, a1, 0x17c
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:28 (discriminator 1)
+ 5d8:	057d      	mov.n	a7, a5
+ 5da:	ee1a      	add.n	a14, a14, a1
+ 5dc:	05fd      	mov.n	a15, a5
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:29
+ 5de:	0c8d      	mov.n	a8, a12
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:29 (discriminator 3)
+ 5e0:	0ed8      	l32i.n	a13, a14, 0
+ 5e2:	0fa8      	l32i.n	a10, a15, 0
+ 5e4:	669742        	l16si	a4, a7, 204
+ 5e7:	312fd0        	srai	a2, a13, 31
+ 5ea:	319fa0        	srai	a9, a10, 31
+ 5ed:	c09920        	sub	a9, a9, a2
+ 5f0:	622ad0        	saltu	a2, a10, a13
+ 5f3:	c09920        	sub	a9, a9, a2
+ 5f6:	c0aad0        	sub	a10, a10, a13
+ 5f9:	312f40        	srai	a2, a4, 31
+ 5fc:	8222a0        	mull	a2, a2, a10
+ 5ff:	829940        	mull	a9, a9, a4
+ 602:	82da40        	mull	a13, a10, a4
+ 605:	a2aa40        	muluh	a10, a10, a4
+ 608:	992a      	add.n	a9, a9, a2
+ 60a:	dcda      	add.n	a13, a12, a13
+ 60c:	99aa      	add.n	a9, a9, a10
+ 60e:	889a      	add.n	a8, a8, a9
+ 610:	62adc0        	saltu	a10, a13, a12
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:29 (discriminator 1)
+ 613:	ee4b      	addi.n	a14, a14, 4
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:29 (discriminator 3)
+ 615:	0dcd      	mov.n	a12, a13
+ 617:	8a8a      	add.n	a8, a10, a8
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:29 (discriminator 1)
+ 619:	ff4b      	addi.n	a15, a15, 4
+ 61b:	772b      	addi.n	a7, a7, 2
+ 61d:	bf9be7        	bne	a11, a14, 5e0 <kcc_block+0x5e0>	61d: R_XTENSA_SLOT0_OP	.text.kcc_block+0x5e0
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:30
+ 620:	319f80        	srai	a9, a8, 31
+ 623:	30c9d0        	xor	a12, a9, a13
+ 626:	308980        	xor	a8, a9, a8
+ 629:	62ac90        	saltu	a10, a12, a9
+ 62c:	c08890        	sub	a8, a8, a9
+ 62f:	c088a0        	sub	a8, a8, a10
+ 632:	c0cc90        	sub	a12, a12, a9
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:32
+ 635:	0218e6        	bgei	a8, 1, 63b <kcc_block+0x63b>	635: R_XTENSA_SLOT0_OP	.text.kcc_block+0x63b
+ 638:	019f46        	j	cb9 <kcc_block+0xcb9>	638: R_XTENSA_SLOT0_OP	.text.kcc_block+0xcb9
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:33
+ 63b:	682182        	l32i	a8, a1, 0x1a0
+ 63e:	606152        	s32i	a5, a1, 0x180
+ 641:	746182        	s32i	a8, a1, 0x1d0
+ 644:	692182        	l32i	a8, a1, 0x1a4
+ 647:	796162        	s32i	a6, a1, 0x1e4
+ 64a:	756182        	s32i	a8, a1, 0x1d4
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:34
+ 64d:	5e2182        	l32i	a8, a1, 0x178
+ 650:	7a6132        	s32i	a3, a1, 0x1e8
+ 653:	6a6182        	s32i	a8, a1, 0x1a8
+ 656:	01d182        	addmi	a8, a1, 0x100
+ 659:	18c882        	addi	a8, a8, 24
+ 65c:	616182        	s32i	a8, a1, 0x184
+ 65f:	c0a082        	movi	a8, 192
+ 662:	881a      	add.n	a8, a8, a1
+ 664:	886b      	addi.n	a8, a8, 6
+ 666:	626182        	s32i	a8, a1, 0x188
+ 669:	7b6152        	s32i	a5, a1, 0x1ec
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:35 (discriminator 5)
+ 66c:	01d152        	addmi	a5, a1, 0x100
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:29
+ 66f:	c0a0d2        	movi	a13, 192
+ 672:	602172        	l32i	a7, a1, 0x180
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:35
+ 675:	6821c2        	l32i	a12, a1, 0x1a0
+ 678:	692192        	l32i	a9, a1, 0x1a4
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:29
+ 67b:	05ed      	mov.n	a14, a5
+ 67d:	dd1a      	add.n	a13, a13, a1
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:35 (discriminator 6)
+ 67f:	0df8      	l32i.n	a15, a13, 0
+ 681:	37b8      	l32i.n	a11, a7, 12
+ 683:	318ff0        	srai	a8, a15, 31
+ 686:	312fb0        	srai	a2, a11, 31
+ 689:	c0abf0        	sub	a10, a11, a15
+ 68c:	c08280        	sub	a8, a2, a8
+ 68f:	62bbf0        	saltu	a11, a11, a15
+ 692:	c088b0        	sub	a8, a8, a11
+ 695:	000061        	l32r	a6, fffc0698 <kcc_block+0xfffc0698>	695: R_XTENSA_SLOT0_OP	.literal.kcc_block+0x8
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:35 (discriminator 3)
+ 698:	a23aa0        	muluh	a3, a10, a10
+ 69b:	82f8a0        	mull	a15, a8, a10
+ 69e:	824aa0        	mull	a4, a10, a10
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:35 (discriminator 6)
+ 6a1:	0000b1        	l32r	a11, fffc06a4 <kcc_block+0xfffc06a4>	6a1: R_XTENSA_SLOT0_OP	.literal.kcc_block+0x8
+ 6a4:	6a6a      	add.n	a6, a10, a6
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:35 (discriminator 3)
+ 6a6:	90ff30        	addx2	a15, a15, a3
+ 6a9:	4c4a      	add.n	a4, a12, a4
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:35 (discriminator 6)
+ 6ab:	62b6b0        	saltu	a11, a6, a11
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:35 (discriminator 3)
+ 6ae:	6234c0        	saltu	a3, a4, a12
+ 6b1:	99fa      	add.n	a9, a9, a15
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:35 (discriminator 6)
+ 6b3:	1e89      	s32i.n	a8, a14, 4
+ 6b5:	0ea9      	s32i.n	a10, a14, 0
+ 6b7:	88ba      	add.n	a8, a8, a11
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:35 (discriminator 3)
+ 6b9:	339a      	add.n	a3, a3, a9
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:35 (discriminator 5)
+ 6bb:	dd4b      	addi.n	a13, a13, 4
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:35 (discriminator 6)
+ 6bd:	52a856        	bnez	a8, beb <kcc_block+0xbeb>	6bd: R_XTENSA_SLOT0_OP	.text.kcc_block+0xbeb
+ 6c0:	000081        	l32r	a8, fffc06c0 <kcc_block+0xfffc06c0>	6c0: R_XTENSA_SLOT0_OP	.literal.kcc_block+0x38
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:35 (discriminator 3)
+ 6c3:	04cd      	mov.n	a12, a4
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:35 (discriminator 6)
+ 6c5:	02b867        	bgeu	a8, a6, 6cb <kcc_block+0x6cb>	6c5: R_XTENSA_SLOT0_OP	.text.kcc_block+0x6cb
+ 6c8:	0147c6        	j	beb <kcc_block+0xbeb>	6c8: R_XTENSA_SLOT0_OP	.text.kcc_block+0xbeb
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:35 (discriminator 5)
+ 6cb:	5f2182        	l32i	a8, a1, 0x17c
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:35 (discriminator 3)
+ 6ce:	039d      	mov.n	a9, a3
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:35 (discriminator 5)
+ 6d0:	774b      	addi.n	a7, a7, 4
+ 6d2:	ee8b      	addi.n	a14, a14, 8
+ 6d4:	a798d7        	bne	a8, a13, 67f <kcc_block+0x67f>	6d4: R_XTENSA_SLOT0_OP	.text.kcc_block+0x67f
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:36
+ 6d7:	507316        	beqz	a3, be2 <kcc_block+0xbe2>	6d7: R_XTENSA_SLOT0_OP	.text.kcc_block+0xbe2
+il_sqrt():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:12 (discriminator 1)
+ 6da:	000081        	l32r	a8, fffc06dc <kcc_block+0xfffc06dc>	6da: R_XTENSA_SLOT0_OP	.literal.kcc_block+0x40
+il_eval():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:37
+ 6dd:	404010        	ssai	16
+ 6e0:	81c340        	src	a12, a3, a4
+ 6e3:	11f400        	slli	a15, a4, 16
+il_sqrt():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:12 (discriminator 1)
+ 6e6:	02b8c7        	bgeu	a8, a12, 6ec <kcc_block+0x6ec>	6e6: R_XTENSA_SLOT0_OP	.text.kcc_block+0x6ec
+ 6e9:	0165c6        	j	c84 <kcc_block+0xc84>	6e9: R_XTENSA_SLOT0_OP	.text.kcc_block+0xc84
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:12
+ 6ec:	000081        	l32r	a8, fffc06ec <kcc_block+0xfffc06ec>	6ec: R_XTENSA_SLOT0_OP	.literal.kcc_block+0x5c
+ 6ef:	090c      	movi.n	a9, 0
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:12 (discriminator 3)
+ 6f1:	404200        	ssai	2
+ 6f4:	817890        	src	a7, a8, a9
+ 6f7:	416280        	srli	a6, a8, 2
+ 6fa:	068d      	mov.n	a8, a6
+ 6fc:	079d      	mov.n	a9, a7
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:12 (discriminator 1)
+ 6fe:	ef3c67        	bltu	a12, a6, 6f1 <kcc_block+0x6f1>	6fe: R_XTENSA_SLOT0_OP	.text.kcc_block+0x6f1
+ 701:	0296c7        	bne	a6, a12, 707 <kcc_block+0x707>	701: R_XTENSA_SLOT0_OP	.text.kcc_block+0x707
+ 704:	e93f77        	bltu	a15, a7, 6f1 <kcc_block+0x6f1>	704: R_XTENSA_SLOT0_OP	.text.kcc_block+0x6f1
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:12 (discriminator 8)
+ 707:	20a760        	or	a10, a7, a6
+ 70a:	056a16        	beqz	a10, 764 <kcc_block+0x764>	70a: R_XTENSA_SLOT0_OP	.text.kcc_block+0x764
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:12
+ 70d:	682172        	l32i	a7, a1, 0x1a0
+ 710:	692162        	l32i	a6, a1, 0x1a4
+ 713:	6c6152        	s32i	a5, a1, 0x1b0
+ 716:	6f6132        	s32i	a3, a1, 0x1bc
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:12 (discriminator 9)
+ 719:	e97a      	add.n	a14, a9, a7
+ 71b:	62de70        	saltu	a13, a14, a7
+ 71e:	a86a      	add.n	a10, a8, a6
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:12 (discriminator 4)
+ 720:	404100        	ssai	1
+ 723:	81b670        	src	a11, a6, a7
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:12 (discriminator 9)
+ 726:	aada      	add.n	a10, a10, a13
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:12 (discriminator 4)
+ 728:	41d160        	srli	a13, a6, 1
+ 72b:	0b7d      	mov.n	a7, a11
+ 72d:	0d6d      	mov.n	a6, a13
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:12 (discriminator 9)
+ 72f:	1c3ca7        	bltu	a12, a10, 74f <kcc_block+0x74f>	72f: R_XTENSA_SLOT0_OP	.text.kcc_block+0x74f
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:12 (discriminator 4)
+ 732:	5b9a      	add.n	a5, a11, a9
+ 734:	623fe0        	saltu	a3, a15, a14
+ 737:	dd8a      	add.n	a13, a13, a8
+ 739:	c02ca0        	sub	a2, a12, a10
+ 73c:	62b5b0        	saltu	a11, a5, a11
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:12 (discriminator 9)
+ 73f:	029ac7        	bne	a10, a12, 745 <kcc_block+0x745>	73f: R_XTENSA_SLOT0_OP	.text.kcc_block+0x745
+ 742:	093fe7        	bltu	a15, a14, 74f <kcc_block+0x74f>	742: R_XTENSA_SLOT0_OP	.text.kcc_block+0x74f
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:12 (discriminator 4)
+ 745:	c0ffe0        	sub	a15, a15, a14
+ 748:	c0c230        	sub	a12, a2, a3
+ 74b:	057d      	mov.n	a7, a5
+ 74d:	6bda      	add.n	a6, a11, a13
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:12 (discriminator 7)
+ 74f:	404200        	ssai	2
+ 752:	819890        	src	a9, a8, a9
+ 755:	418280        	srli	a8, a8, 2
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:12 (discriminator 8)
+ 758:	20a980        	or	a10, a9, a8
+ 75b:	fbaa56        	bnez	a10, 719 <kcc_block+0x719>	75b: R_XTENSA_SLOT0_OP	.text.kcc_block+0x719
+ 75e:	6c2152        	l32i	a5, a1, 0x1b0
+ 761:	6f2132        	l32i	a3, a1, 0x1bc
+il_eval():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:37 (discriminator 4)
+ 764:	54a182        	movi	a8, 0x154
+ 767:	218a      	add.n	a2, a1, a8
+il_sqrt():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:12
+ 769:	6c6142        	s32i	a4, a1, 0x1b0
+ 76c:	054d      	mov.n	a4, a5
+ 76e:	025d      	mov.n	a5, a2
+il_eval():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:37 (discriminator 5)
+ 770:	04b8      	l32i.n	a11, a4, 0
+ 772:	14e8      	l32i.n	a14, a4, 4
+ 774:	01aba0        	slli	a10, a11, 22
+ 777:	07cd      	mov.n	a12, a7
+ 779:	06dd      	mov.n	a13, a6
+ 77b:	404a00        	ssai	10
+ 77e:	81beb0        	src	a11, a14, a11
+ 781:	000081        	l32r	a8, fffc0784 <kcc_block+0xfffc0784>	781: R_XTENSA_SLOT0_OP	.literal.kcc_block+0xa4
+	781: R_XTENSA_ASM_EXPAND	.text.il_signed_round
+ 784:	0008e0        	callx8	a8
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:37 (discriminator 4)
+ 787:	612182        	l32i	a8, a1, 0x184
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:37 (discriminator 5)
+ 78a:	0055a2        	s16i	a10, a5, 0
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:37 (discriminator 4)
+ 78d:	448b      	addi.n	a4, a4, 8
+ 78f:	552b      	addi.n	a5, a5, 2
+ 791:	db9847        	bne	a8, a4, 770 <kcc_block+0x770>	791: R_XTENSA_SLOT0_OP	.text.kcc_block+0x770
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:38
+ 794:	060c      	movi.n	a6, 0
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:37 (discriminator 4)
+ 796:	c0a0d2        	movi	a13, 192
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:38
+ 799:	6c2142        	l32i	a4, a1, 0x1b0
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:37 (discriminator 4)
+ 79c:	7021e2        	l32i	a14, a1, 0x1c0
+ 79f:	dd1a      	add.n	a13, a13, a1
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:38
+ 7a1:	06bd      	mov.n	a11, a6
+ 7a3:	06cd      	mov.n	a12, a6
+ 7a5:	065d      	mov.n	a5, a6
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:38 (discriminator 3)
+ 7a7:	009282        	l16si	a8, a2, 0
+ 7aa:	069d92        	l16si	a9, a13, 12
+ 7ad:	009e72        	l16si	a7, a14, 0
+ 7b0:	82a980        	mull	a10, a9, a8
+ 7b3:	b29980        	mulsh	a9, a9, a8
+ 7b6:	82f780        	mull	a15, a7, a8
+ 7b9:	acaa      	add.n	a10, a12, a10
+ 7bb:	b28780        	mulsh	a8, a7, a8
+ 7be:	959a      	add.n	a9, a5, a9
+ 7c0:	62cac0        	saltu	a12, a10, a12
+ 7c3:	c07b80        	sub	a7, a11, a8
+ 7c6:	62b6f0        	saltu	a11, a6, a15
+ 7c9:	8c9a      	add.n	a8, a12, a9
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:38 (discriminator 1)
+ 7cb:	622192        	l32i	a9, a1, 0x188
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:38 (discriminator 3)
+ 7ce:	c077b0        	sub	a7, a7, a11
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:38 (discriminator 1)
+ 7d1:	dd2b      	addi.n	a13, a13, 2
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:38 (discriminator 3)
+ 7d3:	0acd      	mov.n	a12, a10
+ 7d5:	085d      	mov.n	a5, a8
+ 7d7:	c066f0        	sub	a6, a6, a15
+ 7da:	07bd      	mov.n	a11, a7
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:38 (discriminator 1)
+ 7dc:	222b      	addi.n	a2, a2, 2
+ 7de:	ee2b      	addi.n	a14, a14, 2
+ 7e0:	c39d97        	bne	a13, a9, 7a7 <kcc_block+0x7a7>	7e0: R_XTENSA_SLOT0_OP	.text.kcc_block+0x7a7
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:39
+ 7e3:	ca0b      	addi.n	a12, a10, -1
+ 7e5:	fb7c      	movi.n	a11, -1
+ 7e7:	980b      	addi.n	a9, a8, -1
+ 7e9:	01bcb7        	bgeu	a12, a11, 7ee <kcc_block+0x7ee>	7e9: R_XTENSA_SLOT0_OP	.text.kcc_block+0x7ee
+ 7ec:	089d      	mov.n	a9, a8
+ 7ee:	209890        	or	a9, a8, a9
+ 7f1:	19d996        	bltz	a9, 992 <kcc_block+0x992>	7f1: R_XTENSA_SLOT0_OP	.text.kcc_block+0x992
+ 7f4:	b60b      	addi.n	a11, a6, -1
+ 7f6:	fc7c      	movi.n	a12, -1
+ 7f8:	970b      	addi.n	a9, a7, -1
+ 7fa:	01bbc7        	bgeu	a11, a12, 7ff <kcc_block+0x7ff>	7fa: R_XTENSA_SLOT0_OP	.text.kcc_block+0x7ff
+ 7fd:	079d      	mov.n	a9, a7
+ 7ff:	209790        	or	a9, a7, a9
+ 802:	18c996        	bltz	a9, 992 <kcc_block+0x992>	802: R_XTENSA_SLOT0_OP	.text.kcc_block+0x992
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:39 (discriminator 2)
+ 805:	762192        	l32i	a9, a1, 0x1d8
+ 808:	6a21b2        	l32i	a11, a1, 0x1a8
+ 80b:	0c1992        	l16ui	a9, a9, 24
+ 80e:	02d9b7        	bbs	a9, a11, 814 <kcc_block+0x814>	80e: R_XTENSA_SLOT0_OP	.text.kcc_block+0x814
+ 811:	005f46        	j	992 <kcc_block+0x992>	811: R_XTENSA_SLOT0_OP	.text.kcc_block+0x992
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:40
+ 814:	404810        	ssai	24
+ 817:	8158a0        	src	a5, a8, a10
+ 81a:	112a80        	slli	a2, a10, 8
+il_round():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:13
+ 81d:	6d21c2        	l32i	a12, a1, 0x1b4
+ 820:	6e21d2        	l32i	a13, a1, 0x1b8
+ 823:	02ad      	mov.n	a10, a2
+ 825:	05bd      	mov.n	a11, a5
+ 827:	000081        	l32r	a8, fffc0828 <kcc_block+0xfffc0828>	827: R_XTENSA_SLOT0_OP	.literal.kcc_block+0xa8
+	827: R_XTENSA_ASM_EXPAND	__udivdi3
+ 82a:	0008e0        	callx8	a8
+ 82d:	0a9d      	mov.n	a9, a10
+ 82f:	0bed      	mov.n	a14, a11
+ 831:	6d21c2        	l32i	a12, a1, 0x1b4
+ 834:	6e21d2        	l32i	a13, a1, 0x1b8
+ 837:	02ad      	mov.n	a10, a2
+ 839:	05bd      	mov.n	a11, a5
+ 83b:	6f6192        	s32i	a9, a1, 0x1bc
+ 83e:	6c61e2        	s32i	a14, a1, 0x1b0
+ 841:	095d      	mov.n	a5, a9
+ 843:	0e2d      	mov.n	a2, a14
+ 845:	000081        	l32r	a8, fffc0848 <kcc_block+0xfffc0848>	845: R_XTENSA_SLOT0_OP	.literal.kcc_block+0xac
+	845: R_XTENSA_ASM_EXPAND	__umoddi3
+ 848:	0008e0        	callx8	a8
+ 84b:	6d2192        	l32i	a9, a1, 0x1b4
+ 84e:	6e2182        	l32i	a8, a1, 0x1b8
+ 851:	62c9a0        	saltu	a12, a9, a10
+ 854:	c088b0        	sub	a8, a8, a11
+ 857:	c088c0        	sub	a8, a8, a12
+ 85a:	02ed      	mov.n	a14, a2
+ 85c:	c0c9a0        	sub	a12, a9, a10
+ 85f:	059d      	mov.n	a9, a5
+ 861:	02b8b7        	bgeu	a8, a11, 867 <kcc_block+0x867>	861: R_XTENSA_SLOT0_OP	.text.kcc_block+0x867
+ 864:	00f406        	j	c38 <kcc_block+0xc38>	864: R_XTENSA_SLOT0_OP	.text.kcc_block+0xc38
+ 867:	029b87        	bne	a11, a8, 86d <kcc_block+0x86d>	867: R_XTENSA_SLOT0_OP	.text.kcc_block+0x86d
+ 86a:	00f106        	j	c32 <kcc_block+0xc32>	86a: R_XTENSA_SLOT0_OP	.text.kcc_block+0xc32
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:13 (discriminator 2)
+ 86d:	029ac7        	bne	a10, a12, 873 <kcc_block+0x873>	86d: R_XTENSA_SLOT0_OP	.text.kcc_block+0x873
+ 870:	00f386        	j	c42 <kcc_block+0xc42>	870: R_XTENSA_SLOT0_OP	.text.kcc_block+0xc42
+il_eval():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:40 (discriminator 1)
+ 873:	404810        	ssai	24
+ 876:	819760        	src	a9, a7, a6
+il_round():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:13
+ 879:	7221c2        	l32i	a12, a1, 0x1c8
+il_eval():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:40 (discriminator 1)
+ 87c:	116680        	slli	a6, a6, 8
+il_round():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:13
+ 87f:	7321d2        	l32i	a13, a1, 0x1cc
+ 882:	09bd      	mov.n	a11, a9
+ 884:	6c6192        	s32i	a9, a1, 0x1b0
+ 887:	06ad      	mov.n	a10, a6
+ 889:	000081        	l32r	a8, fffc088c <kcc_block+0xfffc088c>	889: R_XTENSA_SLOT0_OP	.literal.kcc_block+0xb0
+	889: R_XTENSA_ASM_EXPAND	__udivdi3
+ 88c:	0008e0        	callx8	a8
+ 88f:	0b8d      	mov.n	a8, a11
+ 891:	7221c2        	l32i	a12, a1, 0x1c8
+ 894:	7321d2        	l32i	a13, a1, 0x1cc
+ 897:	6c21b2        	l32i	a11, a1, 0x1b0
+ 89a:	0a7d      	mov.n	a7, a10
+ 89c:	6c6182        	s32i	a8, a1, 0x1b0
+ 89f:	06ad      	mov.n	a10, a6
+ 8a1:	6f6182        	s32i	a8, a1, 0x1bc
+ 8a4:	000081        	l32r	a8, fffc08a4 <kcc_block+0xfffc08a4>	8a4: R_XTENSA_SLOT0_OP	.literal.kcc_block+0xb4
+	8a4: R_XTENSA_ASM_EXPAND	__umoddi3
+ 8a7:	0008e0        	callx8	a8
+ 8aa:	722182        	l32i	a8, a1, 0x1c8
+ 8ad:	732192        	l32i	a9, a1, 0x1cc
+ 8b0:	62c8a0        	saltu	a12, a8, a10
+ 8b3:	c0d9b0        	sub	a13, a9, a11
+ 8b6:	c0ddc0        	sub	a13, a13, a12
+ 8b9:	076d      	mov.n	a6, a7
+ 8bb:	c0c8a0        	sub	a12, a8, a10
+ 8be:	6c2182        	l32i	a8, a1, 0x1b0
+ 8c1:	02bdb7        	bgeu	a13, a11, 8c7 <kcc_block+0x8c7>	8c1: R_XTENSA_SLOT0_OP	.text.kcc_block+0x8c7
+ 8c4:	00d806        	j	c28 <kcc_block+0xc28>	8c4: R_XTENSA_SLOT0_OP	.text.kcc_block+0xc28
+ 8c7:	089d      	mov.n	a9, a8
+ 8c9:	029bd7        	bne	a11, a13, 8cf <kcc_block+0x8cf>	8c9: R_XTENSA_SLOT0_OP	.text.kcc_block+0x8cf
+ 8cc:	00d486        	j	c22 <kcc_block+0xc22>	8cc: R_XTENSA_SLOT0_OP	.text.kcc_block+0xc22
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:13 (discriminator 2)
+ 8cf:	029ac7        	bne	a10, a12, 8d5 <kcc_block+0x8d5>	8cf: R_XTENSA_SLOT0_OP	.text.kcc_block+0x8d5
+ 8d2:	00dfc6        	j	c55 <kcc_block+0xc55>	8d2: R_XTENSA_SLOT0_OP	.text.kcc_block+0xc55
+il_eval():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:41
+ 8d5:	312256        	bnez	a2, beb <kcc_block+0xbeb>	8d5: R_XTENSA_SLOT0_OP	.text.kcc_block+0xbeb
+ 8d8:	000081        	l32r	a8, fffc08d8 <kcc_block+0xfffc08d8>	8d8: R_XTENSA_SLOT0_OP	.literal.kcc_block+0x44
+ 8db:	02b857        	bgeu	a8, a5, 8e1 <kcc_block+0x8e1>	8db: R_XTENSA_SLOT0_OP	.text.kcc_block+0x8e1
+ 8de:	00c246        	j	beb <kcc_block+0xbeb>	8de: R_XTENSA_SLOT0_OP	.text.kcc_block+0xbeb
+ 8e1:	306956        	bnez	a9, beb <kcc_block+0xbeb>	8e1: R_XTENSA_SLOT0_OP	.text.kcc_block+0xbeb
+ 8e4:	02b867        	bgeu	a8, a6, 8ea <kcc_block+0x8ea>	8e4: R_XTENSA_SLOT0_OP	.text.kcc_block+0x8ea
+ 8e7:	00c006        	j	beb <kcc_block+0xbeb>	8e7: R_XTENSA_SLOT0_OP	.text.kcc_block+0xbeb
+il_round():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:13
+ 8ea:	0000b1        	l32r	a11, fffc08ec <kcc_block+0xfffc08ec>	8ea: R_XTENSA_SLOT0_OP	.literal.kcc_block+0xc
+ 8ed:	04cd      	mov.n	a12, a4
+ 8ef:	09ad      	mov.n	a10, a9
+ 8f1:	03dd      	mov.n	a13, a3
+ 8f3:	000081        	l32r	a8, fffc08f4 <kcc_block+0xfffc08f4>	8f3: R_XTENSA_SLOT0_OP	.literal.kcc_block+0xb8
+	8f3: R_XTENSA_ASM_EXPAND	__udivdi3
+ 8f6:	0008e0        	callx8	a8
+ 8f9:	0000b1        	l32r	a11, fffc08fc <kcc_block+0xfffc08fc>	8f9: R_XTENSA_SLOT0_OP	.literal.kcc_block+0xc
+ 8fc:	0a2d      	mov.n	a2, a10
+ 8fe:	04cd      	mov.n	a12, a4
+ 900:	03dd      	mov.n	a13, a3
+ 902:	0a0c      	movi.n	a10, 0
+ 904:	000081        	l32r	a8, fffc0904 <kcc_block+0xfffc0904>	904: R_XTENSA_SLOT0_OP	.literal.kcc_block+0xbc
+	904: R_XTENSA_ASM_EXPAND	__umoddi3
+ 907:	0008e0        	callx8	a8
+ 90a:	6294a0        	saltu	a9, a4, a10
+ 90d:	c083b0        	sub	a8, a3, a11
+ 910:	c08890        	sub	a8, a8, a9
+ 913:	027d      	mov.n	a7, a2
+ 915:	c044a0        	sub	a4, a4, a10
+ 918:	02b8b7        	bgeu	a8, a11, 91e <kcc_block+0x91e>	918: R_XTENSA_SLOT0_OP	.text.kcc_block+0x91e
+ 91b:	00d246        	j	c68 <kcc_block+0xc68>	91b: R_XTENSA_SLOT0_OP	.text.kcc_block+0xc68
+ 91e:	059b87        	bne	a11, a8, 927 <kcc_block+0x927>	91e: R_XTENSA_SLOT0_OP	.text.kcc_block+0x927
+ 921:	02b4a7        	bgeu	a4, a10, 927 <kcc_block+0x927>	921: R_XTENSA_SLOT0_OP	.text.kcc_block+0x927
+ 924:	00d006        	j	c68 <kcc_block+0xc68>	924: R_XTENSA_SLOT0_OP	.text.kcc_block+0xc68
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:13 (discriminator 2)
+ 927:	0a9a47        	bne	a10, a4, 935 <kcc_block+0x935>	927: R_XTENSA_SLOT0_OP	.text.kcc_block+0x935
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:13 (discriminator 8)
+ 92a:	047020        	extui	a7, a2, 0, 1
+ 92d:	772a      	add.n	a7, a7, a2
+ 92f:	c0bb80        	sub	a11, a11, a8
+ 932:	9372b0        	movnez	a7, a2, a11
+il_eval():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:43
+ 935:	825560        	mull	a5, a5, a6
+il_round():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:13
+ 938:	0000b1        	l32r	a11, fffc0938 <kcc_block+0xfffc0938>	938: R_XTENSA_SLOT0_OP	.literal.kcc_block
+il_eval():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:43
+ 93b:	829570        	mull	a9, a5, a7
+ 93e:	a25570        	muluh	a5, a5, a7
+il_round():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:13
+ 941:	1189c0        	slli	a8, a9, 4
+ 944:	418480        	srli	a8, a8, 4
+ 947:	404c10        	ssai	28
+ 94a:	819590        	src	a9, a5, a9
+ 94d:	0a0c      	movi.n	a10, 0
+ 94f:	355c50        	extui	a5, a5, 28, 4
+ 952:	01bb87        	bgeu	a11, a8, 957 <kcc_block+0x957>	952: R_XTENSA_SLOT0_OP	.text.kcc_block+0x957
+ 955:	fa7c      	movi.n	a10, -1
+ 957:	0000b1        	l32r	a11, fffc0958 <kcc_block+0xfffc0958>	957: R_XTENSA_SLOT0_OP	.literal.kcc_block
+ 95a:	c0cb80        	sub	a12, a11, a8
+ 95d:	0b0c      	movi.n	a11, 0
+ 95f:	049ba7        	bne	a11, a10, 967 <kcc_block+0x967>	95f: R_XTENSA_SLOT0_OP	.text.kcc_block+0x967
+ 962:	1b0c      	movi.n	a11, 1
+ 964:	0e3c87        	bltu	a12, a8, 976 <kcc_block+0x976>	964: R_XTENSA_SLOT0_OP	.text.kcc_block+0x976
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:13 (discriminator 2)
+ 967:	3088c0        	xor	a8, a8, a12
+ 96a:	2088a0        	or	a8, a8, a10
+ 96d:	40f880        	nsau	a8, a8
+ 970:	418580        	srli	a8, a8, 5
+ 973:	10b980        	and	a11, a9, a8
+ 976:	742182        	l32i	a8, a1, 0x1d0
+ 979:	7521a2        	l32i	a10, a1, 0x1d4
+ 97c:	998a      	add.n	a9, a9, a8
+ 97e:	628980        	saltu	a8, a9, a8
+ 981:	55aa      	add.n	a5, a5, a10
+il_eval():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:43 (discriminator 1)
+ 983:	99ba      	add.n	a9, a9, a11
+ 985:	558a      	add.n	a5, a5, a8
+ 987:	62b9b0        	saltu	a11, a9, a11
+ 98a:	85ba      	add.n	a8, a5, a11
+ 98c:	746192        	s32i	a9, a1, 0x1d0
+ 98f:	756182        	s32i	a8, a1, 0x1d4
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:34 (discriminator 2)
+ 992:	6a2182        	l32i	a8, a1, 0x1a8
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:34 (discriminator 1)
+ 995:	602192        	l32i	a9, a1, 0x180
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:34 (discriminator 2)
+ 998:	881b      	addi.n	a8, a8, 1
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:34 (discriminator 1)
+ 99a:	99cb      	addi.n	a9, a9, 12
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:34 (discriminator 2)
+ 99c:	6a6182        	s32i	a8, a1, 0x1a8
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:34 (discriminator 1)
+ 99f:	606192        	s32i	a9, a1, 0x180
+ 9a2:	02b826        	beqi	a8, 16, 9a8 <kcc_block+0x9a8>	9a2: R_XTENSA_SLOT0_OP	.text.kcc_block+0x9a8
+ 9a5:	ff30c6        	j	66c <kcc_block+0x66c>	9a5: R_XTENSA_SLOT0_OP	.text.kcc_block+0x66c
+il_round():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:13
+ 9a8:	742182        	l32i	a8, a1, 0x1d0
+ 9ab:	7521a2        	l32i	a10, a1, 0x1d4
+ 9ae:	349080        	extui	a9, a8, 0, 4
+ 9b1:	404400        	ssai	4
+ 9b4:	812a80        	src	a2, a10, a8
+ 9b7:	6a2182        	l32i	a8, a1, 0x1a8
+ 9ba:	4144a0        	srli	a4, a10, 4
+ 9bd:	792162        	l32i	a6, a1, 0x1e4
+ 9c0:	7a2132        	l32i	a3, a1, 0x1e8
+ 9c3:	7b2152        	l32i	a5, a1, 0x1ec
+ 9c6:	0a0c      	movi.n	a10, 0
+ 9c8:	01b897        	bgeu	a8, a9, 9cd <kcc_block+0x9cd>	9c8: R_XTENSA_SLOT0_OP	.text.kcc_block+0x9cd
+ 9cb:	fa7c      	movi.n	a10, -1
+ 9cd:	f0c982        	addi	a8, a9, -16
+ 9d0:	0b0c      	movi.n	a11, 0
+ 9d2:	608080        	neg	a8, a8
+ 9d5:	021ba7        	beq	a11, a10, 9db <kcc_block+0x9db>	9d5: R_XTENSA_SLOT0_OP	.text.kcc_block+0x9db
+ 9d8:	00b006        	j	c9c <kcc_block+0xc9c>	9d8: R_XTENSA_SLOT0_OP	.text.kcc_block+0xc9c
+ 9db:	023897        	bltu	a8, a9, 9e1 <kcc_block+0x9e1>	9db: R_XTENSA_SLOT0_OP	.text.kcc_block+0x9e1
+ 9de:	00ae86        	j	c9c <kcc_block+0xc9c>	9de: R_XTENSA_SLOT0_OP	.text.kcc_block+0xc9c
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:13 (discriminator 8)
+ 9e1:	821b      	addi.n	a8, a2, 1
+ 9e3:	629820        	saltu	a9, a8, a2
+ 9e6:	494a      	add.n	a4, a9, a4
+ 9e8:	082d      	mov.n	a2, a8
+il_eval():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:46 (discriminator 3)
+ 9ea:	18a182        	movi	a8, 0x118
+ 9ed:	918a      	add.n	a9, a1, a8
+ 9ef:	18c982        	addi	a8, a9, 24
+il_round():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:13
+ 9f2:	000071        	l32r	a7, fffc09f4 <kcc_block+0xfffc09f4>	9f2: R_XTENSA_SLOT0_OP	.literal.kcc_block+0x1c
+ 9f5:	606182        	s32i	a8, a1, 0x180
+il_eval():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:34
+ 9f8:	09ad      	mov.n	a10, a9
+ 9fa:	05fd      	mov.n	a15, a5
+il_round():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:13
+ 9fc:	0e0c      	movi.n	a14, 0
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:13 (discriminator 2)
+ 9fe:	616162        	s32i	a6, a1, 0x184
+ a01:	626192        	s32i	a9, a1, 0x188
+ a04:	6a6132        	s32i	a3, a1, 0x1a8
+il_eval():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:46 (discriminator 4)
+ a07:	352f82        	l32i	a8, a15, 212
+il_round():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:13
+ a0a:	0edd      	mov.n	a13, a14
+il_eval():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:46 (discriminator 4)
+ a0c:	829820        	mull	a9, a8, a2
+ a0f:	82c480        	mull	a12, a4, a8
+ a12:	a28820        	muluh	a8, a8, a2
+il_round():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:13
+ a15:	f4b090        	extui	a11, a9, 0, 16
+il_eval():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:46 (discriminator 4)
+ a18:	8c8a      	add.n	a8, a12, a8
+il_round():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:13
+ a1a:	404010        	ssai	16
+ a1d:	819890        	src	a9, a8, a9
+ a20:	f58080        	extui	a8, a8, 16, 16
+ a23:	01b7b7        	bgeu	a7, a11, a28 <kcc_block+0xa28>	a23: R_XTENSA_SLOT0_OP	.text.kcc_block+0xa28
+ a26:	fd7c      	movi.n	a13, -1
+ a28:	c067b0        	sub	a6, a7, a11
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:13 (discriminator 2)
+ a2b:	30c6b0        	xor	a12, a6, a11
+ a2e:	20ccd0        	or	a12, a12, a13
+ a31:	130c      	movi.n	a3, 1
+ a33:	933ec0        	movnez	a3, a14, a12
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:13
+ a36:	021ed7        	beq	a14, a13, a3c <kcc_block+0xa3c>	a36: R_XTENSA_SLOT0_OP	.text.kcc_block+0xa3c
+ a39:	008e46        	j	c76 <kcc_block+0xc76>	a39: R_XTENSA_SLOT0_OP	.text.kcc_block+0xc76
+ a3c:	1c0c      	movi.n	a12, 1
+ a3e:	0236b7        	bltu	a6, a11, a44 <kcc_block+0xa44>	a3e: R_XTENSA_SLOT0_OP	.text.kcc_block+0xa44
+ a41:	008c46        	j	c76 <kcc_block+0xc76>	a41: R_XTENSA_SLOT0_OP	.text.kcc_block+0xc76
+il_eval():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:46 (discriminator 4)
+ a44:	0ab8      	l32i.n	a11, a10, 0
+ a46:	1ad8      	l32i.n	a13, a10, 4
+ a48:	99ba      	add.n	a9, a9, a11
+ a4a:	c9ca      	add.n	a12, a9, a12
+ a4c:	62b9b0        	saltu	a11, a9, a11
+ a4f:	88da      	add.n	a8, a8, a13
+ a51:	88ba      	add.n	a8, a8, a11
+ a53:	629c90        	saltu	a9, a12, a9
+ a56:	889a      	add.n	a8, a8, a9
+ a58:	1a89      	s32i.n	a8, a10, 4
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:46 (discriminator 3)
+ a5a:	602182        	l32i	a8, a1, 0x180
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:46 (discriminator 4)
+ a5d:	0ac9      	s32i.n	a12, a10, 0
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:46 (discriminator 3)
+ a5f:	aa8b      	addi.n	a10, a10, 8
+ a61:	ff4b      	addi.n	a15, a15, 4
+ a63:	a098a7        	bne	a8, a10, a07 <kcc_block+0xa07>	a63: R_XTENSA_SLOT0_OP	.text.kcc_block+0xa07
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:27 (discriminator 1)
+ a66:	7021b2        	l32i	a11, a1, 0x1c0
+ a69:	6a2132        	l32i	a3, a1, 0x1a8
+ a6c:	e0a082        	movi	a8, 224
+ a6f:	bb8a      	add.n	a11, a11, a8
+ a71:	338a      	add.n	a3, a3, a8
+ a73:	558a      	add.n	a5, a5, a8
+ a75:	762182        	l32i	a8, a1, 0x1d8
+ a78:	a0a2a2        	movi	a10, 0x2a0
+ a7b:	882b      	addi.n	a8, a8, 2
+ a7d:	7061b2        	s32i	a11, a1, 0x1c0
+ a80:	766182        	s32i	a8, a1, 0x1d8
+ a83:	612162        	l32i	a6, a1, 0x184
+ a86:	622192        	l32i	a9, a1, 0x188
+ a89:	0213a7        	beq	a3, a10, a8f <kcc_block+0xa8f>	a89: R_XTENSA_SLOT0_OP	.text.kcc_block+0xa8f
+ a8c:	fecac6        	j	5bb <kcc_block+0x5bb>	a8c: R_XTENSA_SLOT0_OP	.text.kcc_block+0x5bb
+ a8f:	000031        	l32r	a3, fffc0a90 <kcc_block+0xfffc0a90>	a8f: R_XTENSA_SLOT0_OP	.literal.kcc_block+0x48
+ a92:	0000f1        	l32r	a15, fffc0a94 <kcc_block+0xfffc0a94>	a92: R_XTENSA_SLOT0_OP	.literal.kcc_block+0x4c
+il_round():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:13
+ a95:	000021        	l32r	a2, fffc0a98 <kcc_block+0xfffc0a98>	a95: R_XTENSA_SLOT0_OP	.literal.kcc_block+0x20
+ a98:	064d      	mov.n	a4, a6
+ a9a:	01d1e2        	addmi	a14, a1, 0x100
+il_eval():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:48 (discriminator 4)
+ a9d:	0914b2        	l16ui	a11, a4, 18
+ aa0:	0988      	l32i.n	a8, a9, 0
+ aa2:	19a8      	l32i.n	a10, a9, 4
+ aa4:	82d8b0        	mull	a13, a8, a11
+ aa7:	82aab0        	mull	a10, a10, a11
+ aaa:	a288b0        	muluh	a8, a8, a11
+il_round():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:13
+ aad:	156ed0        	extui	a6, a13, 30, 2
+il_eval():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:48 (discriminator 4)
+ ab0:	8a8a      	add.n	a8, a10, a8
+il_round():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:13
+ ab2:	a0b860        	addx4	a11, a8, a6
+ ab5:	11ade0        	slli	a10, a13, 2
+ ab8:	11bbe0        	slli	a11, a11, 2
+ abb:	41a2a0        	srli	a10, a10, 2
+ abe:	41b2b0        	srli	a11, a11, 2
+ ac1:	357c80        	extui	a7, a8, 28, 4
+ ac4:	baba      	add.n	a11, a10, a11
+ ac6:	bb7a      	add.n	a11, a11, a7
+ ac8:	a25b30        	muluh	a5, a11, a3
+il_eval():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:48 (discriminator 3)
+ acb:	998b      	addi.n	a9, a9, 8
+il_round():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:13
+ acd:	c0cb50        	sub	a12, a11, a5
+ ad0:	41c1c0        	srli	a12, a12, 1
+ ad3:	cc5a      	add.n	a12, a12, a5
+ ad5:	41cec0        	srli	a12, a12, 14
+ ad8:	115c10        	slli	a5, a12, 15
+ adb:	c0c5c0        	sub	a12, a5, a12
+ ade:	c0cbc0        	sub	a12, a11, a12
+ ae1:	11b8e0        	slli	a11, a8, 2
+ ae4:	bb6a      	add.n	a11, a11, a6
+ ae6:	11bbe0        	slli	a11, a11, 2
+ ae9:	41b2b0        	srli	a11, a11, 2
+ aec:	aaba      	add.n	a10, a10, a11
+ aee:	aa7a      	add.n	a10, a10, a7
+ af0:	a27a30        	muluh	a7, a10, a3
+ af3:	050c      	movi.n	a5, 0
+ af5:	01b2c7        	bgeu	a2, a12, afa <kcc_block+0xafa>	af5: R_XTENSA_SLOT0_OP	.text.kcc_block+0xafa
+ af8:	f57c      	movi.n	a5, -1
+ afa:	c0ba70        	sub	a11, a10, a7
+ afd:	41b1b0        	srli	a11, a11, 1
+ b00:	bb7a      	add.n	a11, a11, a7
+ b02:	41beb0        	srli	a11, a11, 14
+ b05:	117b10        	slli	a7, a11, 15
+ b08:	c0b7b0        	sub	a11, a7, a11
+ b0b:	c0aab0        	sub	a10, a10, a11
+ b0e:	62bda0        	saltu	a11, a13, a10
+ b11:	c0ada0        	sub	a10, a13, a10
+ b14:	0000d1        	l32r	a13, fffc0b14 <kcc_block+0xfffc0b14>	b14: R_XTENSA_SLOT0_OP	.literal.kcc_block+0x50
+ b17:	c088b0        	sub	a8, a8, a11
+ b1a:	82dad0        	mull	a13, a10, a13
+ b1d:	8288f0        	mull	a8, a8, a15
+ b20:	82baf0        	mull	a11, a10, a15
+ b23:	a2aaf0        	muluh	a10, a10, a15
+ b26:	88da      	add.n	a8, a8, a13
+ b28:	070c      	movi.n	a7, 0
+ b2a:	88aa      	add.n	a8, a8, a10
+ b2c:	c0d2c0        	sub	a13, a2, a12
+ b2f:	1a0c      	movi.n	a10, 1
+ b31:	029757        	bne	a7, a5, b37 <kcc_block+0xb37>	b31: R_XTENSA_SLOT0_OP	.text.kcc_block+0xb37
+ b34:	004d46        	j	c6d <kcc_block+0xc6d>	b34: R_XTENSA_SLOT0_OP	.text.kcc_block+0xc6d
+ b37:	0a0c      	movi.n	a10, 0
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:13 (discriminator 8)
+ b39:	aaba      	add.n	a10, a10, a11
+ b3b:	62bab0        	saltu	a11, a10, a11
+ b3e:	88ba      	add.n	a8, a8, a11
+il_eval():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:48 (discriminator 4)
+ b40:	1e89      	s32i.n	a8, a14, 4
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:48 (discriminator 3)
+ b42:	602182        	l32i	a8, a1, 0x180
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:48 (discriminator 4)
+ b45:	0ea9      	s32i.n	a10, a14, 0
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:48 (discriminator 3)
+ b47:	442b      	addi.n	a4, a4, 2
+ b49:	ee8b      	addi.n	a14, a14, 8
+ b4b:	021897        	beq	a8, a9, b51 <kcc_block+0xb51>	b4b: R_XTENSA_SLOT0_OP	.text.kcc_block+0xb51
+ b4e:	ffd2c6        	j	a9d <kcc_block+0xa9d>	b4e: R_XTENSA_SLOT0_OP	.text.kcc_block+0xa9d
+lane():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:29
+ b51:	632172        	l32i	a7, a1, 0x18c
+ b54:	0e0c      	movi.n	a14, 0
+ b56:	e0a0a2        	movi	a10, 224
+ b59:	01d1d2        	addmi	a13, a1, 0x100
+ b5c:	0ecd      	mov.n	a12, a14
+ b5e:	07bd      	mov.n	a11, a7
+ b60:	aa1a      	add.n	a10, a10, a1
+ b62:	000081        	l32r	a8, fffc0b64 <kcc_block+0xfffc0b64>	b62: R_XTENSA_SLOT0_OP	.literal.kcc_block+0xc0
+	b62: R_XTENSA_ASM_EXPAND	aa_put
+ b65:	0008e0        	callx8	a8
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:29 (discriminator 1)
+ b68:	0aea56        	bnez	a10, c1a <kcc_block+0xc1a>	b68: R_XTENSA_SLOT0_OP	.text.kcc_block+0xc1a
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:8 (discriminator 1)
+ b6b:	5c2192        	l32i	a9, a1, 0x170
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:8 (discriminator 2)
+ b6e:	871b      	addi.n	a8, a7, 1
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:8 (discriminator 1)
+ b70:	5cc992        	addi	a9, a9, 92
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:8 (discriminator 2)
+ b73:	636182        	s32i	a8, a1, 0x18c
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:8 (discriminator 1)
+ b76:	5c6192        	s32i	a9, a1, 0x170
+ b79:	024826        	beqi	a8, 4, b7f <kcc_block+0xb7f>	b79: R_XTENSA_SLOT0_OP	.text.kcc_block+0xb7f
+ b7c:	fd7b86        	j	16e <kcc_block+0x16e>	b7c: R_XTENSA_SLOT0_OP	.text.kcc_block+0x16e
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:31
+ b7f:	30a1d2        	movi	a13, 0x130
+ b82:	e0a0a2        	movi	a10, 224
+ b85:	0000b1        	l32r	a11, fffc0b88 <kcc_block+0xfffc0b88>	b85: R_XTENSA_SLOT0_OP	.literal.kcc_block+0x54
+ b88:	7121c2        	l32i	a12, a1, 0x1c4
+ b8b:	dd1a      	add.n	a13, a13, a1
+ b8d:	aa1a      	add.n	a10, a10, a1
+ b8f:	652172        	l32i	a7, a1, 0x194
+ b92:	662142        	l32i	a4, a1, 0x198
+ b95:	672122        	l32i	a2, a1, 0x19c
+ b98:	000081        	l32r	a8, fffc0b98 <kcc_block+0xfffc0b98>	b98: R_XTENSA_SLOT0_OP	.literal.kcc_block+0xc4
+	b98: R_XTENSA_ASM_EXPAND	aa_finish
+ b9b:	0008e0        	callx8	a8
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:31 (discriminator 1)
+ b9e:	0daa56        	bnez	a10, c7c <kcc_block+0xc7c>	b9e: R_XTENSA_SLOT0_OP	.text.kcc_block+0xc7c
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:32
+ ba1:	1187c0        	slli	a8, a7, 4
+ ba4:	4c21c2        	l32i	a12, a1, 0x130
+ ba7:	4d21b2        	l32i	a11, a1, 0x134
+ baa:	4e21a2        	l32i	a10, a1, 0x138
+ bad:	4f2192        	l32i	a9, a1, 0x13c
+ bb0:	818a      	add.n	a8, a1, a8
+ bb2:	08c9      	s32i.n	a12, a8, 0
+ bb4:	18b9      	s32i.n	a11, a8, 4
+ bb6:	28a9      	s32i.n	a10, a8, 8
+ bb8:	3899      	s32i.n	a9, a8, 12
+kcc_block():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:36 (discriminator 4)
+ bba:	771b      	addi.n	a7, a7, 1
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:36 (discriminator 5)
+ bbc:	70a182        	movi	a8, 0x170
+ bbf:	448a      	add.n	a4, a4, a8
+ bc1:	02b727        	bgeu	a7, a2, bc7 <kcc_block+0xbc7>	bc1: R_XTENSA_SLOT0_OP	.text.kcc_block+0xbc7
+ bc4:	fd5cc6        	j	13b <kcc_block+0x13b>	bc4: R_XTENSA_SLOT0_OP	.text.kcc_block+0x13b
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:36 (discriminator 7)
+ bc7:	7821a2        	l32i	a10, a1, 0x1e0
+ bca:	11c2c0        	slli	a12, a2, 4
+ bcd:	01bd      	mov.n	a11, a1
+ bcf:	000081        	l32r	a8, fffc0bd0 <kcc_block+0xfffc0bd0>	bcf: R_XTENSA_SLOT0_OP	.literal.kcc_block+0xc8
+	bcf: R_XTENSA_ASM_EXPAND	memcpy
+ bd2:	0008e0        	callx8	a8
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:36
+ bd5:	000106        	j	bdd <kcc_block+0xbdd>	bd5: R_XTENSA_SLOT0_OP	.text.kcc_block+0xbdd
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:35 (discriminator 12)
+ bd8:	180c      	movi.n	a8, 1
+ bda:	5d6182        	s32i	a8, a1, 0x174
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:37
+ bdd:	5d2122        	l32i	a2, a1, 0x174
+ be0:	f01d      	retw.n
+il_eval():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:36
+ be2:	000081        	l32r	a8, fffc0be4 <kcc_block+0xfffc0be4>	be2: R_XTENSA_SLOT0_OP	.literal.kcc_block+0x3c
+ be5:	02b847        	bgeu	a8, a4, beb <kcc_block+0xbeb>	be5: R_XTENSA_SLOT0_OP	.text.kcc_block+0xbeb
+ be8:	febb86        	j	6da <kcc_block+0x6da>	be8: R_XTENSA_SLOT0_OP	.text.kcc_block+0x6da
+lane():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:28 (discriminator 2)
+ beb:	680c      	movi.n	a8, 6
+ bed:	5d6182        	s32i	a8, a1, 0x174
+kcc_block():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:37
+ bf0:	5d2122        	l32i	a2, a1, 0x174
+ bf3:	f01d      	retw.n
+lane():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:26 (discriminator 2)
+ bf5:	580c      	movi.n	a8, 5
+ bf7:	5d6182        	s32i	a8, a1, 0x174
+kcc_block():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:37
+ bfa:	5d2122        	l32i	a2, a1, 0x174
+ bfd:	f01d      	retw.n
+lane():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:25 (discriminator 3)
+ bff:	480c      	movi.n	a8, 4
+ c01:	5d6182        	s32i	a8, a1, 0x174
+kcc_block():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:37
+ c04:	5d2122        	l32i	a2, a1, 0x174
+ c07:	f01d      	retw.n
+il_round():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:13 (discriminator 2)
+ c09:	021db7        	beq	a13, a11, c0f <kcc_block+0xc0f>	c09: R_XTENSA_SLOT0_OP	.text.kcc_block+0xc0f
+ c0c:	fde0c6        	j	393 <kcc_block+0x393>	c0c: R_XTENSA_SLOT0_OP	.text.kcc_block+0x393
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:13 (discriminator 8)
+ c0f:	04a090        	extui	a10, a9, 0, 1
+ c12:	a9aa      	add.n	a10, a9, a10
+ c14:	839ae0        	moveqz	a9, a10, a14
+ c17:	fdde06        	j	393 <kcc_block+0x393>	c17: R_XTENSA_SLOT0_OP	.text.kcc_block+0x393
+kcc_block():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:36 (discriminator 3)
+ c1a:	780c      	movi.n	a8, 7
+ c1c:	5d6182        	s32i	a8, a1, 0x174
+ c1f:	ffee86        	j	bdd <kcc_block+0xbdd>	c1f: R_XTENSA_SLOT0_OP	.text.kcc_block+0xbdd
+il_round():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:13
+ c22:	023ca7        	bltu	a12, a10, c28 <kcc_block+0xc28>	c22: R_XTENSA_SLOT0_OP	.text.kcc_block+0xc28
+ c25:	ff2986        	j	8cf <kcc_block+0x8cf>	c25: R_XTENSA_SLOT0_OP	.text.kcc_block+0x8cf
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:13 (discriminator 8)
+ c28:	671b      	addi.n	a6, a7, 1
+ c2a:	629670        	saltu	a9, a6, a7
+ c2d:	998a      	add.n	a9, a9, a8
+ c2f:	ff2886        	j	8d5 <kcc_block+0x8d5>	c2f: R_XTENSA_SLOT0_OP	.text.kcc_block+0x8d5
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:13
+ c32:	023ca7        	bltu	a12, a10, c38 <kcc_block+0xc38>	c32: R_XTENSA_SLOT0_OP	.text.kcc_block+0xc38
+ c35:	ff0d06        	j	86d <kcc_block+0x86d>	c35: R_XTENSA_SLOT0_OP	.text.kcc_block+0x86d
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:13 (discriminator 8)
+ c38:	591b      	addi.n	a5, a9, 1
+ c3a:	629590        	saltu	a9, a5, a9
+ c3d:	29ea      	add.n	a2, a9, a14
+ c3f:	ff0c06        	j	873 <kcc_block+0x873>	c3f: R_XTENSA_SLOT0_OP	.text.kcc_block+0x873
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:13 (discriminator 2)
+ c42:	021b87        	beq	a11, a8, c48 <kcc_block+0xc48>	c42: R_XTENSA_SLOT0_OP	.text.kcc_block+0xc48
+ c45:	ff0a86        	j	873 <kcc_block+0x873>	c45: R_XTENSA_SLOT0_OP	.text.kcc_block+0x873
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:13 (discriminator 3)
+ c48:	045090        	extui	a5, a9, 0, 1
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:13 (discriminator 8)
+ c4b:	559a      	add.n	a5, a5, a9
+ c4d:	629590        	saltu	a9, a5, a9
+ c50:	29ea      	add.n	a2, a9, a14
+ c52:	ff0746        	j	873 <kcc_block+0x873>	c52: R_XTENSA_SLOT0_OP	.text.kcc_block+0x873
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:13 (discriminator 2)
+ c55:	021bd7        	beq	a11, a13, c5b <kcc_block+0xc5b>	c55: R_XTENSA_SLOT0_OP	.text.kcc_block+0xc5b
+ c58:	ff1e46        	j	8d5 <kcc_block+0x8d5>	c58: R_XTENSA_SLOT0_OP	.text.kcc_block+0x8d5
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:13 (discriminator 3)
+ c5b:	046070        	extui	a6, a7, 0, 1
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:13 (discriminator 8)
+ c5e:	667a      	add.n	a6, a6, a7
+ c60:	627670        	saltu	a7, a6, a7
+ c63:	978a      	add.n	a9, a7, a8
+ c65:	ff1b06        	j	8d5 <kcc_block+0x8d5>	c65: R_XTENSA_SLOT0_OP	.text.kcc_block+0x8d5
+ c68:	721b      	addi.n	a7, a2, 1
+ c6a:	ff31c6        	j	935 <kcc_block+0x935>	c6a: R_XTENSA_SLOT0_OP	.text.kcc_block+0x935
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:13
+ c6d:	02bdc7        	bgeu	a13, a12, c73 <kcc_block+0xc73>	c6d: R_XTENSA_SLOT0_OP	.text.kcc_block+0xc73
+ c70:	ffb146        	j	b39 <kcc_block+0xb39>	c70: R_XTENSA_SLOT0_OP	.text.kcc_block+0xb39
+ c73:	ffb006        	j	b37 <kcc_block+0xb37>	c73: R_XTENSA_SLOT0_OP	.text.kcc_block+0xb37
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:13 (discriminator 2)
+ c76:	10c930        	and	a12, a9, a3
+ c79:	ff71c6        	j	a44 <kcc_block+0xa44>	c79: R_XTENSA_SLOT0_OP	.text.kcc_block+0xa44
+kcc_block():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:36 (discriminator 3)
+ c7c:	880c      	movi.n	a8, 8
+ c7e:	5d6182        	s32i	a8, a1, 0x174
+ c81:	ffd606        	j	bdd <kcc_block+0xbdd>	c81: R_XTENSA_SLOT0_OP	.text.kcc_block+0xbdd
+il_sqrt():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:12
+ c84:	000081        	l32r	a8, fffc0c84 <kcc_block+0xfffc0c84>	c84: R_XTENSA_SLOT0_OP	.literal.kcc_block+0x5c
+ c87:	090c      	movi.n	a9, 0
+ c89:	fea006        	j	70d <kcc_block+0x70d>	c89: R_XTENSA_SLOT0_OP	.text.kcc_block+0x70d
+lane():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:23 (discriminator 2)
+ c8c:	280c      	movi.n	a8, 2
+ c8e:	5d6182        	s32i	a8, a1, 0x174
+ c91:	ffd206        	j	bdd <kcc_block+0xbdd>	c91: R_XTENSA_SLOT0_OP	.text.kcc_block+0xbdd
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c:24 (discriminator 1)
+ c94:	380c      	movi.n	a8, 3
+ c96:	5d6182        	s32i	a8, a1, 0x174
+ c99:	ffd006        	j	bdd <kcc_block+0xbdd>	c99: R_XTENSA_SLOT0_OP	.text.kcc_block+0xbdd
+il_round():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:13 (discriminator 2)
+ c9c:	021987        	beq	a9, a8, ca2 <kcc_block+0xca2>	c9c: R_XTENSA_SLOT0_OP	.text.kcc_block+0xca2
+ c9f:	ff51c6        	j	9ea <kcc_block+0x9ea>	c9f: R_XTENSA_SLOT0_OP	.text.kcc_block+0x9ea
+ ca2:	080c      	movi.n	a8, 0
+ ca4:	0218a7        	beq	a8, a10, caa <kcc_block+0xcaa>	ca4: R_XTENSA_SLOT0_OP	.text.kcc_block+0xcaa
+ ca7:	ff4fc6        	j	9ea <kcc_block+0x9ea>	ca7: R_XTENSA_SLOT0_OP	.text.kcc_block+0x9ea
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:13 (discriminator 3)
+ caa:	048020        	extui	a8, a2, 0, 1
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:13 (discriminator 8)
+ cad:	828a      	add.n	a8, a2, a8
+ caf:	629820        	saltu	a9, a8, a2
+ cb2:	494a      	add.n	a4, a9, a4
+ cb4:	082d      	mov.n	a2, a8
+ cb6:	ff4c06        	j	9ea <kcc_block+0x9ea>	cb6: R_XTENSA_SLOT0_OP	.text.kcc_block+0x9ea
+il_eval():
+/workspace/ayatsuri-s3-fixed-format-20261105/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:32
+ cb9:	f2e856        	bnez	a8, beb <kcc_block+0xbeb>	cb9: R_XTENSA_SLOT0_OP	.text.kcc_block+0xbeb
+ cbc:	000081        	l32r	a8, fffc0cbc <kcc_block+0xfffc0cbc>	cbc: R_XTENSA_SLOT0_OP	.literal.kcc_block+0x34
+ cbf:	02b8c7        	bgeu	a8, a12, cc5 <kcc_block+0xcc5>	cbf: R_XTENSA_SLOT0_OP	.text.kcc_block+0xcc5
+ cc2:	fe5d46        	j	63b <kcc_block+0x63b>	cc2: R_XTENSA_SLOT0_OP	.text.kcc_block+0x63b
+ cc5:	ffc886        	j	beb <kcc_block+0xbeb>	cc5: R_XTENSA_SLOT0_OP	.text.kcc_block+0xbeb

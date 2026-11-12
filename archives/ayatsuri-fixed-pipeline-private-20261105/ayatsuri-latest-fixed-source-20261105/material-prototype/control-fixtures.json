@@ -1,0 +1,170 @@
+[
+  [
+    "saved_neutral",
+    {
+      "Blink Both": 0.0,
+      "Blink -X": 0.0,
+      "Blink +X": 0.0,
+      "Gaze X": 0.0,
+      "Gaze Up": 0.0,
+      "Eye Style": 0.0,
+      "Show Highlights": 1.0,
+      "Environment Reflection": 0.5,
+      "Bubble Pressure": 0.0
+    }
+  ],
+  [
+    "style1",
+    {
+      "Blink Both": 0.0,
+      "Blink -X": 0.0,
+      "Blink +X": 0.0,
+      "Gaze X": 0.0,
+      "Gaze Up": 0.0,
+      "Eye Style": 1,
+      "Show Highlights": 1.0,
+      "Environment Reflection": 0.5,
+      "Bubble Pressure": 0.0
+    }
+  ],
+  [
+    "style2_highlights_off",
+    {
+      "Blink Both": 0.0,
+      "Blink -X": 0.0,
+      "Blink +X": 0.0,
+      "Gaze X": 0.0,
+      "Gaze Up": 0.0,
+      "Eye Style": 2,
+      "Show Highlights": 0,
+      "Environment Reflection": 0.5,
+      "Bubble Pressure": 0.0
+    }
+  ],
+  [
+    "gaze_pressure_min",
+    {
+      "Blink Both": 0.0,
+      "Blink -X": 0.0,
+      "Blink +X": 0.0,
+      "Gaze X": -1,
+      "Gaze Up": -1,
+      "Eye Style": 0.0,
+      "Show Highlights": 1.0,
+      "Environment Reflection": 0.5,
+      "Bubble Pressure": -1
+    }
+  ],
+  [
+    "gaze_pressure_max",
+    {
+      "Blink Both": 0.0,
+      "Blink -X": 0.0,
+      "Blink +X": 0.0,
+      "Gaze X": 1,
+      "Gaze Up": 1,
+      "Eye Style": 0.0,
+      "Show Highlights": 1.0,
+      "Environment Reflection": 0.5,
+      "Bubble Pressure": 1
+    }
+  ],
+  [
+    "blink_just_below_002",
+    {
+      "Blink Both": 0.019999999,
+      "Blink -X": 0.0,
+      "Blink +X": 0.0,
+      "Gaze X": 0.0,
+      "Gaze Up": 0.0,
+      "Eye Style": 0.0,
+      "Show Highlights": 1.0,
+      "Environment Reflection": 0.5,
+      "Bubble Pressure": 0.0
+    }
+  ],
+  [
+    "blink_002",
+    {
+      "Blink Both": 0.02,
+      "Blink -X": 0.0,
+      "Blink +X": 0.0,
+      "Gaze X": 0.0,
+      "Gaze Up": 0.0,
+      "Eye Style": 0.0,
+      "Show Highlights": 1.0,
+      "Environment Reflection": 0.5,
+      "Bubble Pressure": 0.0
+    }
+  ],
+  [
+    "blink_half",
+    {
+      "Blink Both": 0.5,
+      "Blink -X": 0.0,
+      "Blink +X": 0.0,
+      "Gaze X": 0.0,
+      "Gaze Up": 0.0,
+      "Eye Style": 0.0,
+      "Show Highlights": 1.0,
+      "Environment Reflection": 0.5,
+      "Bubble Pressure": 0.0
+    }
+  ],
+  [
+    "blink_hide_threshold",
+    {
+      "Blink Both": 0.98,
+      "Blink -X": 0.0,
+      "Blink +X": 0.0,
+      "Gaze X": 0.0,
+      "Gaze Up": 0.0,
+      "Eye Style": 0.0,
+      "Show Highlights": 1.0,
+      "Environment Reflection": 0.5,
+      "Bubble Pressure": 0.0
+    }
+  ],
+  [
+    "blink_closed",
+    {
+      "Blink Both": 1,
+      "Blink -X": 0.0,
+      "Blink +X": 0.0,
+      "Gaze X": 0.0,
+      "Gaze Up": 0.0,
+      "Eye Style": 0.0,
+      "Show Highlights": 1.0,
+      "Environment Reflection": 0.5,
+      "Bubble Pressure": 0.0
+    }
+  ],
+  [
+    "style_threshold_05",
+    {
+      "Blink Both": 0.0,
+      "Blink -X": 0.0,
+      "Blink +X": 0.0,
+      "Gaze X": 0.0,
+      "Gaze Up": 0.0,
+      "Eye Style": 0.5,
+      "Show Highlights": 1.0,
+      "Environment Reflection": 0.5,
+      "Bubble Pressure": 0.0
+    }
+  ],
+  [
+    "style_threshold_15",
+    {
+      "Blink Both": 0.0,
+      "Blink -X": 0.0,
+      "Blink +X": 0.0,
+      "Gaze X": 0.0,
+      "Gaze Up": 0.0,
+      "Eye Style": 1.5,
+      "Show Highlights": 1.0,
+      "Environment Reflection": 0.5,
+      "Bubble Pressure": 0.0
+    }
+  ]
+]

@@ -1,0 +1,267 @@
+{
+  "dependent_replays": true,
+  "units": "elapsed_us includes preemption, not CPU-exclusive time or pure wire transfer",
+  "logical_bytes_are_not_actual_bus_traffic": true,
+  "stages": [
+    {
+      "stage": "JS_FRAME",
+      "median_inclusive_elapsed_us": 3338728,
+      "median_self_elapsed_us": 962813,
+      "calls": [
+        120,
+        120,
+        120
+      ]
+    },
+    {
+      "stage": "SIMULATION",
+      "median_inclusive_elapsed_us": 199405,
+      "median_self_elapsed_us": 199405,
+      "calls": [
+        120,
+        120,
+        120
+      ]
+    },
+    {
+      "stage": "POSE_PROJECTION",
+      "median_inclusive_elapsed_us": 345736,
+      "median_self_elapsed_us": 345736,
+      "calls": [
+        240,
+        240,
+        240
+      ]
+    },
+    {
+      "stage": "SORT",
+      "median_inclusive_elapsed_us": 48863,
+      "median_self_elapsed_us": 48863,
+      "calls": [
+        120,
+        120,
+        120
+      ]
+    },
+    {
+      "stage": "RUNNER",
+      "median_inclusive_elapsed_us": 483557,
+      "median_self_elapsed_us": 345703,
+      "calls": [
+        120,
+        120,
+        120
+      ]
+    },
+    {
+      "stage": "HUD",
+      "median_inclusive_elapsed_us": 125337,
+      "median_self_elapsed_us": 125337,
+      "calls": [
+        120,
+        120,
+        120
+      ]
+    },
+    {
+      "stage": "NATIVE_SERIES",
+      "median_inclusive_elapsed_us": 1148951,
+      "median_self_elapsed_us": 681282,
+      "calls": [
+        720,
+        720,
+        720
+      ]
+    },
+    {
+      "stage": "PROC_BUILD",
+      "median_inclusive_elapsed_us": 629937,
+      "median_self_elapsed_us": 88050,
+      "calls": [
+        4975,
+        4975,
+        4975
+      ]
+    },
+    {
+      "stage": "VM_SETUP",
+      "median_inclusive_elapsed_us": 148695,
+      "median_self_elapsed_us": 57950,
+      "calls": [
+        4975,
+        4975,
+        4975
+      ]
+    },
+    {
+      "stage": "VM_ZERO",
+      "median_inclusive_elapsed_us": 22036,
+      "median_self_elapsed_us": 22036,
+      "calls": [
+        4975,
+        4975,
+        4975
+      ]
+    },
+    {
+      "stage": "VM_COPY",
+      "median_inclusive_elapsed_us": 19702,
+      "median_self_elapsed_us": 19702,
+      "calls": [
+        4975,
+        4975,
+        4975
+      ]
+    },
+    {
+      "stage": "VM_VALIDATE",
+      "median_inclusive_elapsed_us": 48916,
+      "median_self_elapsed_us": 48916,
+      "calls": [
+        4975,
+        4975,
+        4975
+      ]
+    },
+    {
+      "stage": "VM_MATCH",
+      "median_inclusive_elapsed_us": 119894,
+      "median_self_elapsed_us": 119894,
+      "calls": [
+        4975,
+        4975,
+        4975
+      ]
+    },
+    {
+      "stage": "VM_RUN",
+      "median_inclusive_elapsed_us": 257997,
+      "median_self_elapsed_us": 257997,
+      "calls": [
+        4975,
+        4975,
+        4975
+      ]
+    },
+    {
+      "stage": "SEGMENT_APPEND",
+      "median_inclusive_elapsed_us": 15203,
+      "median_self_elapsed_us": 15203,
+      "calls": [
+        4975,
+        4975,
+        4975
+      ]
+    },
+    {
+      "stage": "RENDER",
+      "median_inclusive_elapsed_us": 3171344,
+      "median_self_elapsed_us": 17760,
+      "calls": [
+        120,
+        120,
+        120
+      ]
+    },
+    {
+      "stage": "RENDER_PREPARE",
+      "median_inclusive_elapsed_us": 35995,
+      "median_self_elapsed_us": 35995,
+      "calls": [
+        120,
+        120,
+        120
+      ]
+    },
+    {
+      "stage": "BACKDROP",
+      "median_inclusive_elapsed_us": 9703,
+      "median_self_elapsed_us": 9703,
+      "calls": [
+        2040,
+        2040,
+        2040
+      ]
+    },
+    {
+      "stage": "COMPOSITE",
+      "median_inclusive_elapsed_us": 2192247,
+      "median_self_elapsed_us": 998086,
+      "calls": [
+        2040,
+        2040,
+        2040
+      ]
+    },
+    {
+      "stage": "IMAGE_SPAN",
+      "median_inclusive_elapsed_us": 1194213,
+      "median_self_elapsed_us": 486560,
+      "calls": [
+        129600,
+        129600,
+        129600
+      ]
+    },
+    {
+      "stage": "BAND_RASTER",
+      "median_inclusive_elapsed_us": 257855,
+      "median_self_elapsed_us": 257855,
+      "calls": [
+        2040,
+        2040,
+        2040
+      ]
+    },
+    {
+      "stage": "SPAN_COPY",
+      "median_inclusive_elapsed_us": 449838,
+      "median_self_elapsed_us": 449838,
+      "calls": [
+        129600,
+        129600,
+        129600
+      ]
+    },
+    {
+      "stage": "TX_SYNC",
+      "median_inclusive_elapsed_us": 915749,
+      "median_self_elapsed_us": 53909,
+      "calls": [
+        2040,
+        2040,
+        2040
+      ]
+    },
+    {
+      "stage": "TX_COPY",
+      "median_inclusive_elapsed_us": 12795,
+      "median_self_elapsed_us": 12795,
+      "calls": [
+        2040,
+        2040,
+        2040
+      ]
+    },
+    {
+      "stage": "TX_SUBMIT",
+      "median_inclusive_elapsed_us": 22184,
+      "median_self_elapsed_us": 22184,
+      "calls": [
+        2040,
+        2040,
+        2040
+      ]
+    },
+    {
+      "stage": "TX_REAP",
+      "median_inclusive_elapsed_us": 826803,
+      "median_self_elapsed_us": 826803,
+      "calls": [
+        2040,
+        2040,
+        2040
+      ]
+    }
+  ]
+}

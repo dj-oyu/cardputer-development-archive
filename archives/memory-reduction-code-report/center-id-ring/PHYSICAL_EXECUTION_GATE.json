@@ -1,0 +1,16 @@
+{
+  "status": "CENTER_ID_RING_FIXED40_APPROVED",
+  "timeUTC": "2026-11-04T10:07:09.619708+00:00",
+  "sourceFreezeSHA256": "63358b04f50a9c2e0757abe36e94c6f64e76daf0b7be4403df5b0e9352f96bd9",
+  "independentReviewSHA256": "8ba6378dd7e6da887ba5df2cec4fd38b4645791b1b4a2ce7f49c5997c63452b3",
+  "scope": "OFF20 and ON20 fixed two views/five conditions/forward reverse; first canary then rest; diagnostic observer only. Outputs must equal completed indexed-floor-world RGB/depth/HDR/mask, same-order counters excluding truthful memory/timing. No quota or reference changes.",
+  "noRejectedCodeUsed": true,
+  "productCandidateActualFramesSeparate": true,
+  "runnerSHA256": "5aa986ae496c267291dad80503b3fd8b277e2786035b30a21380290750e20b69",
+  "runnerReviewSHA256": "1bde5d1c3599f28cf8479545a68e85fe424f148eeb87034ef7f01b69cfa355c1",
+  "baselinePinsSHA256": "bb6019b3edb9a65f44cf16fd28176e6e567f0d55a224a0e93659efce908f4ac9",
+  "observerBuildSHA256": "25fd862402b418216bb4475e55d1f7bfa12f3e03a83634aadc9b0d9cf9053f35",
+  "independentReviewSanitizerConfirmedSHA256": "f0fff78c3450babdc29a5ce98fe4cee2367b7127f781b52d8905bae24f21e105",
+  "approvedUTC": "2026-11-04T10:09:07.196194+00:00",
+  "pythonOptimizations": "Prohibited; use normal python without -O/PYTHONOPTIMIZE"
+}

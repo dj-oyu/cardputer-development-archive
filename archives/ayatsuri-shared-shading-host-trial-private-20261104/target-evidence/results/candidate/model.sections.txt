@@ -1,0 +1,115 @@
+
+/workspace/ayatsuri-s3-reconstructed-20261104/results/candidate/model.o:     file format elf32-xtensa-le
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .literal.md   00000004  00000000  00000000  00000034  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  1 .literal.mf   00000004  00000000  00000000  00000038  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  2 .literal.pack_rgb 00000068  00000000  00000000  0000003c  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  3 .literal.ayatsuri_shade_terms_prepare$isra$0 00000044  00000000  00000000  000000a4  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  4 .literal.float_rows_valid 00000008  00000000  00000000  000000e8  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  5 .literal.node_slot_bytes 00000000  00000000  00000000  000000f0  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  6 .literal.mesh_project 00000014  00000000  00000000  000000f0  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  7 .literal.mesh_packet 00000344  00000000  00000000  00000104  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  8 .literal.ayatsuri_model_open 000001e0  00000000  00000000  00000448  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  9 .literal.ayatsuri_model_find_node 00000004  00000000  00000000  00000628  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 10 .literal.ayatsuri_model_instance_init 00000020  00000000  00000000  0000062c  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 11 .literal.ayatsuri_model_instance_targets 00000038  00000000  00000000  0000064c  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 12 .literal.ayatsuri_model_instance_read_pose 00000004  00000000  00000000  00000684  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 13 .literal.ayatsuri_model_instance_stats 00000004  00000000  00000000  00000688  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 14 .literal.ayatsuri_model_instance_evaluate 000009a0  00000000  00000000  0000068c  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 15 .literal.ayatsuri_model_instance_next 0000000c  00000000  00000000  0000102c  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 16 .text         00000000  00000000  00000000  00001038  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 17 .data         00000000  00000000  00000000  00001038  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+ 18 .bss          00000000  00000000  00000000  00001038  2**0
+                  ALLOC
+ 19 .text.md      00000055  00000000  00000000  00001038  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 20 .text.mf      00000033  00000000  00000000  00001090  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 21 .text.pack_rgb 000000e8  00000000  00000000  000010c4  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 22 .text.slot_bytes 0000002c  00000000  00000000  000011ac  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 23 .text.ayatsuri_shade_terms_prepare$isra$0 000001b7  00000000  00000000  000011d8  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 24 .text.float_rows_valid 0000007b  00000000  00000000  00001390  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 25 .text.node_slot_bytes 000000bf  00000000  00000000  0000140c  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 26 .text.mesh_project 00000145  00000000  00000000  000014cc  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 27 .text.mesh_packet 000022a4  00000000  00000000  00001614  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 28 .rodata.ayatsuri_model_open.str1.4 00000005  00000000  00000000  000038b8  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 29 .text.ayatsuri_model_open 000015ef  00000000  00000000  000038c0  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 30 .text.ayatsuri_model_find_node 000000e5  00000000  00000000  00004eb0  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 31 .text.ayatsuri_model_instance_bytes 00000023  00000000  00000000  00004f98  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 32 .text.ayatsuri_model_instance_init 000002be  00000000  00000000  00004fbc  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 33 .text.ayatsuri_model_instance_dispose 00000039  00000000  00000000  0000527c  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 34 .text.ayatsuri_model_instance_targets 00000394  00000000  00000000  000052b8  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 35 .text.ayatsuri_model_instance_node_kind 000000af  00000000  00000000  0000564c  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 36 .text.ayatsuri_model_instance_read_pose 000000d0  00000000  00000000  000056fc  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 37 .text.ayatsuri_model_instance_stats 000000c6  00000000  00000000  000057cc  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 38 .text.ayatsuri_model_instance_evaluate 000037d1  00000000  00000000  00005894  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 39 .text.ayatsuri_model_instance_next 00000273  00000000  00000000  00009068  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 40 .text.ayatsuri_model_instance_mesh_view 00000125  00000000  00000000  000092dc  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 41 .text.ayatsuri_model_instance_sided_mesh_view 00000140  00000000  00000000  00009404  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+ 42 .rodata.strides$0 00000034  00000000  00000000  00009544  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 43 .debug_frame  00000220  00000000  00000000  00009578  2**2
+                  CONTENTS, RELOC, READONLY, DEBUGGING, OCTETS
+ 44 .debug_info   0000ca2e  00000000  00000000  00009798  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING, OCTETS
+ 45 .debug_abbrev 000005d7  00000000  00000000  000161c6  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 46 .debug_loc    0000dce7  00000000  00000000  0001679d  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING, OCTETS
+ 47 .debug_aranges 000000c8  00000000  00000000  00024484  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING, OCTETS
+ 48 .debug_ranges 00003390  00000000  00000000  0002454c  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING, OCTETS
+ 49 .debug_line   000116e1  00000000  00000000  000278dc  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING, OCTETS
+ 50 .debug_str    00000f98  00000000  00000000  00038fbd  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 51 .comment      00000030  00000000  00000000  00039f55  2**0
+                  CONTENTS, READONLY
+ 52 .xtensa.info  00000038  00000000  00000000  00039f85  2**0
+                  CONTENTS, READONLY
+ 53 .xt.lit       00000078  00000000  00000000  00039fbd  2**0
+                  CONTENTS, RELOC, READONLY
+ 54 .xt.prop      00001734  00000000  00000000  0003a035  2**0
+                  CONTENTS, RELOC, READONLY

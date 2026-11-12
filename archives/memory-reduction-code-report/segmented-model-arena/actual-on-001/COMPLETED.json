@@ -1,0 +1,1509 @@
+{
+  "status": "ALL20_EXACT_COMPLETE",
+  "arm": "on",
+  "frames": [
+    {
+      "name": "native-front-baseline",
+      "view": "front",
+      "case": "baseline",
+      "reverse": false,
+      "arm": "on",
+      "status": "PASS",
+      "elapsedSecondsDescriptiveOnly": 17.47623657999793,
+      "files": {
+        ".u16le": "75150dc3ec5ca2469b5b74d5758060925ba4a536010f82a2a94929aa8d8adb87",
+        ".f32le": "03d9ee4d5a81118e7f2efe2947a64230132aad4daad2a2019d31f9f4959fea3f",
+        ".snapshot": "006cfd92bda231a4ae7922f23aa125176f807967feaf444e2f3f8b19ef72cab0",
+        ".targets.u8": "eebd4a3432074c6e6d84cf7e6a03b34c7dbd9d4309bd3fbd003b7caa47eeb4f6",
+        ".hdr.f64le": "81033b386024e59ec6396572925a736e19a842b8097c0e55651db62df99daff7",
+        ".json": "a0a89d72f743d992853319d3ea600b0104bcec84e34c5b2bb919790ad7982dac",
+        ".aa.json": "57ef93d72bde276d3a6d7f3ec9419d2d9a791f387a20d62a8874be932a117692",
+        ".floor.json": "102ec79849b8b5c882a528f4692774b04e10f186c511df46e0a7299096e10a38",
+        ".background.json": "8e473f7b5901425cc263cf1dc557744c0ffdb86caaf3f4016f9d69cabec79bb5",
+        ".row.json": "910a42e6d26f23bd85b1a4113522c57b1fe24f721b2111a9e98ca42e85a12c05",
+        ".floor-world.json": "4a57ab8d5790216bf6c0d2ea1733065a6e47d0f53128993ca2fc1b693cb0189f",
+        ".hdr-observer.json": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d"
+      },
+      "allRawExact": true,
+      "sameArmSameOrderReportsExact": true,
+      "onlyNontimingDifference": {
+        "arenaBytes64bit": [
+          81356,
+          81796
+        ]
+      },
+      "timingExclusions": {
+        ".json": {
+          "transportBuildNs": {
+            "baseline": 41613719,
+            "candidate": 44914347
+          },
+          "visibilityBuildNs": {
+            "baseline": 2463476,
+            "candidate": 4934811
+          },
+          "appendNs": {
+            "baseline": 44594968,
+            "candidate": 50432210
+          },
+          "evaluateNs": {
+            "baseline": 11008490,
+            "candidate": 10296097
+          },
+          "hostRenderNsFirstFrame": {
+            "baseline": 17193627478,
+            "candidate": 17411612193
+          },
+          "arenaBytes64bit": {
+            "baseline": 81356,
+            "candidate": 81796
+          }
+        },
+        ".aa.json": {},
+        ".floor.json": {},
+        ".background.json": {
+          "backgroundBuildNs": {
+            "baseline": 84338,
+            "candidate": 88033
+          }
+        },
+        ".row.json": {
+          "backgroundBuildNs": {
+            "baseline": 84338,
+            "candidate": 88033
+          }
+        },
+        ".floor-world.json": {},
+        ".hdr-observer.json": {}
+      }
+    },
+    {
+      "name": "native-front-baseline-reverse",
+      "view": "front",
+      "case": "baseline",
+      "reverse": true,
+      "arm": "on",
+      "status": "PASS",
+      "elapsedSecondsDescriptiveOnly": 17.13400603600894,
+      "files": {
+        ".u16le": "75150dc3ec5ca2469b5b74d5758060925ba4a536010f82a2a94929aa8d8adb87",
+        ".f32le": "03d9ee4d5a81118e7f2efe2947a64230132aad4daad2a2019d31f9f4959fea3f",
+        ".snapshot": "ebd69b817beca5c8196350f55afd94dc07e1f4da43dc76c77a0a0f8a32606ee2",
+        ".targets.u8": "eebd4a3432074c6e6d84cf7e6a03b34c7dbd9d4309bd3fbd003b7caa47eeb4f6",
+        ".hdr.f64le": "81033b386024e59ec6396572925a736e19a842b8097c0e55651db62df99daff7",
+        ".json": "e9817fceb48b975f66a7eff9f1dec98d63aef2530a9c5816e10a2b26574c7687",
+        ".aa.json": "26e2b157716b0dad069df13076b72507731cabcb4976abf944e6f1a3b7a9f5a5",
+        ".floor.json": "da9835ab8f31841a0e509a44456086974de852992be9209311139b481a41281d",
+        ".background.json": "8329bea642ba86aa6b07086146c8f65b70c3a429053917651a974c120856cdd4",
+        ".row.json": "7fd305507f7e7668893e00548ae4a594bff3ea9b606a2cce42005798a5976323",
+        ".floor-world.json": "2a1f075f01ce948d0b8391a4c7eaf0addf98037b9d04132bdb1618546290ae7f",
+        ".hdr-observer.json": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d"
+      },
+      "allRawExact": true,
+      "sameArmSameOrderReportsExact": true,
+      "onlyNontimingDifference": {
+        "arenaBytes64bit": [
+          81356,
+          81796
+        ]
+      },
+      "timingExclusions": {
+        ".json": {
+          "transportBuildNs": {
+            "baseline": 35046299,
+            "candidate": 44855398
+          },
+          "visibilityBuildNs": {
+            "baseline": 2189661,
+            "candidate": 3595847
+          },
+          "appendNs": {
+            "baseline": 37959545,
+            "candidate": 49026424
+          },
+          "evaluateNs": {
+            "baseline": 9664308,
+            "candidate": 12039253
+          },
+          "hostRenderNsFirstFrame": {
+            "baseline": 16770039812,
+            "candidate": 17065973466
+          },
+          "arenaBytes64bit": {
+            "baseline": 81356,
+            "candidate": 81796
+          }
+        },
+        ".aa.json": {},
+        ".floor.json": {},
+        ".background.json": {
+          "backgroundBuildNs": {
+            "baseline": 83476,
+            "candidate": 83005
+          }
+        },
+        ".row.json": {
+          "backgroundBuildNs": {
+            "baseline": 83476,
+            "candidate": 83005
+          }
+        },
+        ".floor-world.json": {},
+        ".hdr-observer.json": {}
+      }
+    },
+    {
+      "name": "native-oblique-baseline",
+      "view": "oblique",
+      "case": "baseline",
+      "reverse": false,
+      "arm": "on",
+      "status": "PASS",
+      "elapsedSecondsDescriptiveOnly": 17.083022813982097,
+      "files": {
+        ".u16le": "4c3e57c5d186eed1c7768535bfe1a3ea0f314e44356297c21fd98ecbe52a34f5",
+        ".f32le": "3201f0507c4b7f65911ecea8edf4175d76f2b93cc8d9ca715e10f97cf410e77a",
+        ".snapshot": "510b27afbe66e125c3a39707408ab41b4ca381d6b81c69f6e43025d799852c90",
+        ".targets.u8": "a7b9fb46c60810bb1047503c80b15e7e0cc84d546faadc3f8a2af988bf8550a0",
+        ".hdr.f64le": "76ea261b54e8e93595b5bda351a2251f96610d67346c71b3669b72e1b69a76b0",
+        ".json": "773f9176cf6f87b2f67e1238f6341eeb95b5d61b4a5c89328ee2276a606ed78e",
+        ".aa.json": "6089b2f7ffbb50fd81a59cf9f38f9c7174b5ff3e3a024396e524f7edf8d3d902",
+        ".floor.json": "eeeab6b7c90cb83513d6eaa308e751e42c2fe50d8627c756e18a1760d0a353f7",
+        ".background.json": "6b7a69a258e8c78dd9237c87aef802d6a11abc2bac0850218e076ecb0528b674",
+        ".row.json": "8e4a05fcf34a7a554abf2e8ac6ba8c50602a8e181fdba57e055e74b746d1d92d",
+        ".floor-world.json": "3361577d6319b625f6291014fa6b320d883e3de23b6c38c91174259a185f64e0",
+        ".hdr-observer.json": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d"
+      },
+      "allRawExact": true,
+      "sameArmSameOrderReportsExact": true,
+      "onlyNontimingDifference": {
+        "arenaBytes64bit": [
+          81356,
+          81796
+        ]
+      },
+      "timingExclusions": {
+        ".json": {
+          "transportBuildNs": {
+            "baseline": 36609099,
+            "candidate": 37588319
+          },
+          "visibilityBuildNs": {
+            "baseline": 2667965,
+            "candidate": 2323323
+          },
+          "appendNs": {
+            "baseline": 39776169,
+            "candidate": 40614254
+          },
+          "evaluateNs": {
+            "baseline": 10068357,
+            "candidate": 9749150
+          },
+          "hostRenderNsFirstFrame": {
+            "baseline": 17077062203,
+            "candidate": 17029095122
+          },
+          "arenaBytes64bit": {
+            "baseline": 81356,
+            "candidate": 81796
+          }
+        },
+        ".aa.json": {},
+        ".floor.json": {},
+        ".background.json": {
+          "backgroundBuildNs": {
+            "baseline": 84839,
+            "candidate": 84067
+          }
+        },
+        ".row.json": {
+          "backgroundBuildNs": {
+            "baseline": 84839,
+            "candidate": 84067
+          }
+        },
+        ".floor-world.json": {},
+        ".hdr-observer.json": {}
+      }
+    },
+    {
+      "name": "native-oblique-baseline-reverse",
+      "view": "oblique",
+      "case": "baseline",
+      "reverse": true,
+      "arm": "on",
+      "status": "PASS",
+      "elapsedSecondsDescriptiveOnly": 17.20164714701241,
+      "files": {
+        ".u16le": "4c3e57c5d186eed1c7768535bfe1a3ea0f314e44356297c21fd98ecbe52a34f5",
+        ".f32le": "3201f0507c4b7f65911ecea8edf4175d76f2b93cc8d9ca715e10f97cf410e77a",
+        ".snapshot": "d1bbf051ad2abad9cb95e0ab0d0a9d083a1bf970f7bbe41abf5d819fd7218bc9",
+        ".targets.u8": "a7b9fb46c60810bb1047503c80b15e7e0cc84d546faadc3f8a2af988bf8550a0",
+        ".hdr.f64le": "76ea261b54e8e93595b5bda351a2251f96610d67346c71b3669b72e1b69a76b0",
+        ".json": "213b4b7361bb0429c1f465f643b3c89968ec38eb5968ec4c7f1fb104abeef10b",
+        ".aa.json": "9ef98921e3a21dbb831c5b1bcc56735580b021a00d7020e65368bb920af0934d",
+        ".floor.json": "0bd5ce8057d0094ef0b3f458bd6d22a054f5d88f345a06ae60f342517bf059d2",
+        ".background.json": "e71b06ffe5191b972d5aa17c006424e0b48de95fe0af93b18e40faaf1a35f426",
+        ".row.json": "5c0fbf5873c74ac865d8ae9d18fd138f9507c2d79e86b01e33f9ab1b142f4d4e",
+        ".floor-world.json": "65c97f8a031b823857cbb68dd16f4d5b60c5092a61fbe16cff058d1f7612a173",
+        ".hdr-observer.json": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d"
+      },
+      "allRawExact": true,
+      "sameArmSameOrderReportsExact": true,
+      "onlyNontimingDifference": {
+        "arenaBytes64bit": [
+          81356,
+          81796
+        ]
+      },
+      "timingExclusions": {
+        ".json": {
+          "transportBuildNs": {
+            "baseline": 33656425,
+            "candidate": 39375453
+          },
+          "visibilityBuildNs": {
+            "baseline": 2147979,
+            "candidate": 2865212
+          },
+          "appendNs": {
+            "baseline": 37068486,
+            "candidate": 42879660
+          },
+          "evaluateNs": {
+            "baseline": 8969576,
+            "candidate": 9568547
+          },
+          "hostRenderNsFirstFrame": {
+            "baseline": 17816111396,
+            "candidate": 17145121091
+          },
+          "arenaBytes64bit": {
+            "baseline": 81356,
+            "candidate": 81796
+          }
+        },
+        ".aa.json": {},
+        ".floor.json": {},
+        ".background.json": {
+          "backgroundBuildNs": {
+            "baseline": 82765,
+            "candidate": 83727
+          }
+        },
+        ".row.json": {
+          "backgroundBuildNs": {
+            "baseline": 82765,
+            "candidate": 83727
+          }
+        },
+        ".floor-world.json": {},
+        ".hdr-observer.json": {}
+      }
+    },
+    {
+      "name": "native-front-direction",
+      "view": "front",
+      "case": "direction",
+      "reverse": false,
+      "arm": "on",
+      "status": "PASS",
+      "elapsedSecondsDescriptiveOnly": 16.954114812979242,
+      "files": {
+        ".u16le": "81691f535bf7a6d544bfa57a664106ef8c1301b0e28d8bb1e587a3b7744b3d59",
+        ".f32le": "03d9ee4d5a81118e7f2efe2947a64230132aad4daad2a2019d31f9f4959fea3f",
+        ".snapshot": "c08a551a5aa436e70ff7b9cc02e06757198c83abf202c623e2e20fcad1d1a518",
+        ".targets.u8": "eebd4a3432074c6e6d84cf7e6a03b34c7dbd9d4309bd3fbd003b7caa47eeb4f6",
+        ".hdr.f64le": "7779b38fad9f6decd91676bbab33c289f54b3b37dfe1add315474c848aaba662",
+        ".json": "6bbb33db85f2857bf87851cb027fc90ef718e2b761424040f63b58b94463767d",
+        ".aa.json": "539f310ffd8f063b8150e85eda5c52143e925242bb0901b127aef6dca842b929",
+        ".floor.json": "400fe30bebae4b3386a613daa4bd3f1a5a57fc723c773bdc9ae5d1af32b53c82",
+        ".background.json": "1b69ecfb53fb2b2868222affd50f526dda06c2b264dc2b7a7a3b8f113da78905",
+        ".row.json": "e9754b028a0a35b0418822df818341ea44bb7ce13d9da25cecdd11aa04ea72a6",
+        ".floor-world.json": "4a57ab8d5790216bf6c0d2ea1733065a6e47d0f53128993ca2fc1b693cb0189f",
+        ".hdr-observer.json": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d"
+      },
+      "allRawExact": true,
+      "sameArmSameOrderReportsExact": true,
+      "onlyNontimingDifference": {
+        "arenaBytes64bit": [
+          81356,
+          81796
+        ]
+      },
+      "timingExclusions": {
+        ".json": {
+          "transportBuildNs": {
+            "baseline": 40373718,
+            "candidate": 34888883
+          },
+          "visibilityBuildNs": {
+            "baseline": 2418687,
+            "candidate": 2123791
+          },
+          "appendNs": {
+            "baseline": 43441287,
+            "candidate": 37511869
+          },
+          "evaluateNs": {
+            "baseline": 9623734,
+            "candidate": 9899448
+          },
+          "hostRenderNsFirstFrame": {
+            "baseline": 17347210234,
+            "candidate": 16903230160
+          },
+          "arenaBytes64bit": {
+            "baseline": 81356,
+            "candidate": 81796
+          }
+        },
+        ".aa.json": {},
+        ".floor.json": {},
+        ".background.json": {
+          "backgroundBuildNs": {
+            "baseline": 156186,
+            "candidate": 111860
+          }
+        },
+        ".row.json": {
+          "backgroundBuildNs": {
+            "baseline": 156186,
+            "candidate": 111860
+          }
+        },
+        ".floor-world.json": {},
+        ".hdr-observer.json": {}
+      }
+    },
+    {
+      "name": "native-front-direction-reverse",
+      "view": "front",
+      "case": "direction",
+      "reverse": true,
+      "arm": "on",
+      "status": "PASS",
+      "elapsedSecondsDescriptiveOnly": 16.692599038011394,
+      "files": {
+        ".u16le": "81691f535bf7a6d544bfa57a664106ef8c1301b0e28d8bb1e587a3b7744b3d59",
+        ".f32le": "03d9ee4d5a81118e7f2efe2947a64230132aad4daad2a2019d31f9f4959fea3f",
+        ".snapshot": "d461918555e71adae7ab5d78e3ce6745b7da011613693d2dc196abeb4355cef1",
+        ".targets.u8": "eebd4a3432074c6e6d84cf7e6a03b34c7dbd9d4309bd3fbd003b7caa47eeb4f6",
+        ".hdr.f64le": "7779b38fad9f6decd91676bbab33c289f54b3b37dfe1add315474c848aaba662",
+        ".json": "a366326a2934bc33cba16e48bf352f1607bc3f8fc8951e08d0cfffec0b483a33",
+        ".aa.json": "dfdafa978b6af1118cb7e949ee169aeb7b247b34d3f3f10ffcde573449e66f42",
+        ".floor.json": "d3aeb9613ec11657d1b70dcbc8fcf395fafa30d1c371959ff13f1ee932f7d614",
+        ".background.json": "2260e2413d4e158e4cae4392813692c56de544f91c7235f180ff6e6fd39ba41d",
+        ".row.json": "00ac1b6dec8ee8a01e9b8babf530d646bf7d63dcaeaacb978571958c1b2cb4a4",
+        ".floor-world.json": "2a1f075f01ce948d0b8391a4c7eaf0addf98037b9d04132bdb1618546290ae7f",
+        ".hdr-observer.json": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d"
+      },
+      "allRawExact": true,
+      "sameArmSameOrderReportsExact": true,
+      "onlyNontimingDifference": {
+        "arenaBytes64bit": [
+          81356,
+          81796
+        ]
+      },
+      "timingExclusions": {
+        ".json": {
+          "transportBuildNs": {
+            "baseline": 41915725,
+            "candidate": 34479992
+          },
+          "visibilityBuildNs": {
+            "baseline": 2539059,
+            "candidate": 2251234
+          },
+          "appendNs": {
+            "baseline": 45156945,
+            "candidate": 37297882
+          },
+          "evaluateNs": {
+            "baseline": 11818887,
+            "candidate": 9193021
+          },
+          "hostRenderNsFirstFrame": {
+            "baseline": 17669051187,
+            "candidate": 16642439198
+          },
+          "arenaBytes64bit": {
+            "baseline": 81356,
+            "candidate": 81796
+          }
+        },
+        ".aa.json": {},
+        ".floor.json": {},
+        ".background.json": {
+          "backgroundBuildNs": {
+            "baseline": 173803,
+            "candidate": 135445
+          }
+        },
+        ".row.json": {
+          "backgroundBuildNs": {
+            "baseline": 173803,
+            "candidate": 135445
+          }
+        },
+        ".floor-world.json": {},
+        ".hdr-observer.json": {}
+      }
+    },
+    {
+      "name": "native-oblique-direction",
+      "view": "oblique",
+      "case": "direction",
+      "reverse": false,
+      "arm": "on",
+      "status": "PASS",
+      "elapsedSecondsDescriptiveOnly": 16.66056947299512,
+      "files": {
+        ".u16le": "bded489830b9d2367b42e8fd973a7cdec2388a022ff3d14dd06836ff8348243d",
+        ".f32le": "3201f0507c4b7f65911ecea8edf4175d76f2b93cc8d9ca715e10f97cf410e77a",
+        ".snapshot": "d27aea498e61ddab736ff7b660833c97effa37da0b47da7d37aba513565d6b00",
+        ".targets.u8": "a7b9fb46c60810bb1047503c80b15e7e0cc84d546faadc3f8a2af988bf8550a0",
+        ".hdr.f64le": "2a0cd8c3b60faa0767c130616d08f89a8bd8b947502220e5e486bbfd921ae5e6",
+        ".json": "90c51c64950e426e179c37447ba838a20cafa2b81a3a126dc5a761a76f6652a2",
+        ".aa.json": "3ad74d2e87753b0da4eeea644281a5c0d19ad5242596e3f5cb320a90798b6801",
+        ".floor.json": "1526a0b04bd12642c21f65551d64445c0f549911c43ab7f517ca29dcb9cea1a9",
+        ".background.json": "d1f1f304419801c83fe1a68ec0d46e6fab4d3eb0e2cbb22659df2b46597d941c",
+        ".row.json": "524f6eb63322f7b99def68a312428582b51bba401353e2df4b469d6a2ee9abd0",
+        ".floor-world.json": "3361577d6319b625f6291014fa6b320d883e3de23b6c38c91174259a185f64e0",
+        ".hdr-observer.json": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d"
+      },
+      "allRawExact": true,
+      "sameArmSameOrderReportsExact": true,
+      "onlyNontimingDifference": {
+        "arenaBytes64bit": [
+          81356,
+          81796
+        ]
+      },
+      "timingExclusions": {
+        ".json": {
+          "transportBuildNs": {
+            "baseline": 40217630,
+            "candidate": 37016828
+          },
+          "visibilityBuildNs": {
+            "baseline": 2195921,
+            "candidate": 2600512
+          },
+          "appendNs": {
+            "baseline": 42870872,
+            "candidate": 40166159
+          },
+          "evaluateNs": {
+            "baseline": 8984748,
+            "candidate": 10499436
+          },
+          "hostRenderNsFirstFrame": {
+            "baseline": 17179489234,
+            "candidate": 16606494024
+          },
+          "arenaBytes64bit": {
+            "baseline": 81356,
+            "candidate": 81796
+          }
+        },
+        ".aa.json": {},
+        ".floor.json": {},
+        ".background.json": {
+          "backgroundBuildNs": {
+            "baseline": 83606,
+            "candidate": 83176
+          }
+        },
+        ".row.json": {
+          "backgroundBuildNs": {
+            "baseline": 83606,
+            "candidate": 83176
+          }
+        },
+        ".floor-world.json": {},
+        ".hdr-observer.json": {}
+      }
+    },
+    {
+      "name": "native-oblique-direction-reverse",
+      "view": "oblique",
+      "case": "direction",
+      "reverse": true,
+      "arm": "on",
+      "status": "PASS",
+      "elapsedSecondsDescriptiveOnly": 17.73016885499237,
+      "files": {
+        ".u16le": "bded489830b9d2367b42e8fd973a7cdec2388a022ff3d14dd06836ff8348243d",
+        ".f32le": "3201f0507c4b7f65911ecea8edf4175d76f2b93cc8d9ca715e10f97cf410e77a",
+        ".snapshot": "93a60318a4a187c8ed85f6ac38ea0358083a510c7ea788bcd3daaa1bfb399e0c",
+        ".targets.u8": "a7b9fb46c60810bb1047503c80b15e7e0cc84d546faadc3f8a2af988bf8550a0",
+        ".hdr.f64le": "2a0cd8c3b60faa0767c130616d08f89a8bd8b947502220e5e486bbfd921ae5e6",
+        ".json": "0821432c2d0b3678dbf87f4da1c28bcfce90e027b72cd37df2a755c4724f36c9",
+        ".aa.json": "b3088de0a0988f95271c1626cd6ec8a144bfc3d05175e658be670ad015eb7fcb",
+        ".floor.json": "499be0f73d5fd6a3eae1839cebb668cd541c64a4bcbfbbc5943d454fd1665ac5",
+        ".background.json": "ac0d7ecc286e1c8451ba95eacd3847926f239b6fb4c894600ed17e80865872b4",
+        ".row.json": "2e03c1cb24289ad791f563a7854dfcf2d7b9fb2c532363b026178789c995f93f",
+        ".floor-world.json": "65c97f8a031b823857cbb68dd16f4d5b60c5092a61fbe16cff058d1f7612a173",
+        ".hdr-observer.json": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d"
+      },
+      "allRawExact": true,
+      "sameArmSameOrderReportsExact": true,
+      "onlyNontimingDifference": {
+        "arenaBytes64bit": [
+          81356,
+          81796
+        ]
+      },
+      "timingExclusions": {
+        ".json": {
+          "transportBuildNs": {
+            "baseline": 34423308,
+            "candidate": 35850810
+          },
+          "visibilityBuildNs": {
+            "baseline": 2587714,
+            "candidate": 2171914
+          },
+          "appendNs": {
+            "baseline": 37504227,
+            "candidate": 38830054
+          },
+          "evaluateNs": {
+            "baseline": 9024929,
+            "candidate": 9003443
+          },
+          "hostRenderNsFirstFrame": {
+            "baseline": 17568518556,
+            "candidate": 17678691383
+          },
+          "arenaBytes64bit": {
+            "baseline": 81356,
+            "candidate": 81796
+          }
+        },
+        ".aa.json": {},
+        ".floor.json": {},
+        ".background.json": {
+          "backgroundBuildNs": {
+            "baseline": 83296,
+            "candidate": 155545
+          }
+        },
+        ".row.json": {
+          "backgroundBuildNs": {
+            "baseline": 83296,
+            "candidate": 155545
+          }
+        },
+        ".floor-world.json": {},
+        ".hdr-observer.json": {}
+      }
+    },
+    {
+      "name": "native-front-intensity",
+      "view": "front",
+      "case": "intensity",
+      "reverse": false,
+      "arm": "on",
+      "status": "PASS",
+      "elapsedSecondsDescriptiveOnly": 17.433411730016815,
+      "files": {
+        ".u16le": "0d567db5c523c4d7a876fe03d5faa75e5012f42e11328904520aaedf400bb807",
+        ".f32le": "03d9ee4d5a81118e7f2efe2947a64230132aad4daad2a2019d31f9f4959fea3f",
+        ".snapshot": "585fa6119b767f053899f01ba7148c8a533282ce583a2e3b693d7988fb81bd42",
+        ".targets.u8": "eebd4a3432074c6e6d84cf7e6a03b34c7dbd9d4309bd3fbd003b7caa47eeb4f6",
+        ".hdr.f64le": "0b5880ae3e395d854cef558bfc3e758edb53b59548892dceaad7b11abb3cf646",
+        ".json": "cf199dbd69c800ea560b7d1ebbd1d3c93ed70f78834bb507b76e607a36d5cc38",
+        ".aa.json": "992cbe73545f8978dacc1a2fb54983e17650daeb5f1501d965b38d2a9290df50",
+        ".floor.json": "f702475a5588a737dc69acc8376e11d6f042cd40dee0ef155b344028a493ea39",
+        ".background.json": "4eac48d02172e4fb286dd8222186116164007c877c70ac53846ad19e3bef5c2d",
+        ".row.json": "e8cabca618ca8201ee9edba91982176b40f241b7cce01d96ffa566d44e94c944",
+        ".floor-world.json": "4a57ab8d5790216bf6c0d2ea1733065a6e47d0f53128993ca2fc1b693cb0189f",
+        ".hdr-observer.json": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d"
+      },
+      "allRawExact": true,
+      "sameArmSameOrderReportsExact": true,
+      "onlyNontimingDifference": {
+        "arenaBytes64bit": [
+          81356,
+          81796
+        ]
+      },
+      "timingExclusions": {
+        ".json": {
+          "transportBuildNs": {
+            "baseline": 35209667,
+            "candidate": 36860109
+          },
+          "visibilityBuildNs": {
+            "baseline": 2191534,
+            "candidate": 2629265
+          },
+          "appendNs": {
+            "baseline": 37876890,
+            "candidate": 39968369
+          },
+          "evaluateNs": {
+            "baseline": 9837957,
+            "candidate": 9892227
+          },
+          "hostRenderNsFirstFrame": {
+            "baseline": 16933797545,
+            "candidate": 17379341297
+          },
+          "arenaBytes64bit": {
+            "baseline": 81356,
+            "candidate": 81796
+          }
+        },
+        ".aa.json": {},
+        ".floor.json": {},
+        ".background.json": {
+          "backgroundBuildNs": {
+            "baseline": 85018,
+            "candidate": 83616
+          }
+        },
+        ".row.json": {
+          "backgroundBuildNs": {
+            "baseline": 85018,
+            "candidate": 83616
+          }
+        },
+        ".floor-world.json": {},
+        ".hdr-observer.json": {}
+      }
+    },
+    {
+      "name": "native-front-intensity-reverse",
+      "view": "front",
+      "case": "intensity",
+      "reverse": true,
+      "arm": "on",
+      "status": "PASS",
+      "elapsedSecondsDescriptiveOnly": 16.69940980998217,
+      "files": {
+        ".u16le": "0d567db5c523c4d7a876fe03d5faa75e5012f42e11328904520aaedf400bb807",
+        ".f32le": "03d9ee4d5a81118e7f2efe2947a64230132aad4daad2a2019d31f9f4959fea3f",
+        ".snapshot": "901233a81470a789c376a917ef9594962ad5649f7a5cade45e6662fefec9568e",
+        ".targets.u8": "eebd4a3432074c6e6d84cf7e6a03b34c7dbd9d4309bd3fbd003b7caa47eeb4f6",
+        ".hdr.f64le": "0b5880ae3e395d854cef558bfc3e758edb53b59548892dceaad7b11abb3cf646",
+        ".json": "39a605e179911583dbb7f05a83feed3724fb54a189765ef7826a1f85077efcb4",
+        ".aa.json": "93c99984b726580f45b0648c93ae6a2851badf115ce98c915ea3e9f7303e627a",
+        ".floor.json": "d5b0fbe18640fddd79319bf22fbdab583cff2ee17b21d406c9976c2dba2f4944",
+        ".background.json": "a39efffe099294ea32d3cb3d50dbe6568de75d506a6e215501a23b2739cc2f80",
+        ".row.json": "267444d33be762bdc8700b5b21db9f2de9c751c5cac638d9f4425c21c3db2ef4",
+        ".floor-world.json": "2a1f075f01ce948d0b8391a4c7eaf0addf98037b9d04132bdb1618546290ae7f",
+        ".hdr-observer.json": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d"
+      },
+      "allRawExact": true,
+      "sameArmSameOrderReportsExact": true,
+      "onlyNontimingDifference": {
+        "arenaBytes64bit": [
+          81356,
+          81796
+        ]
+      },
+      "timingExclusions": {
+        ".json": {
+          "transportBuildNs": {
+            "baseline": 36011367,
+            "candidate": 36653570
+          },
+          "visibilityBuildNs": {
+            "baseline": 2079863,
+            "candidate": 2158113
+          },
+          "appendNs": {
+            "baseline": 38586979,
+            "candidate": 39307373
+          },
+          "evaluateNs": {
+            "baseline": 10484250,
+            "candidate": 10290079
+          },
+          "hostRenderNsFirstFrame": {
+            "baseline": 16169706475,
+            "candidate": 16646547341
+          },
+          "arenaBytes64bit": {
+            "baseline": 81356,
+            "candidate": 81796
+          }
+        },
+        ".aa.json": {},
+        ".floor.json": {},
+        ".background.json": {
+          "backgroundBuildNs": {
+            "baseline": 83136,
+            "candidate": 83276
+          }
+        },
+        ".row.json": {
+          "backgroundBuildNs": {
+            "baseline": 83136,
+            "candidate": 83276
+          }
+        },
+        ".floor-world.json": {},
+        ".hdr-observer.json": {}
+      }
+    },
+    {
+      "name": "native-oblique-intensity",
+      "view": "oblique",
+      "case": "intensity",
+      "reverse": false,
+      "arm": "on",
+      "status": "PASS",
+      "elapsedSecondsDescriptiveOnly": 16.81196819699835,
+      "files": {
+        ".u16le": "2764b53322a270c70e8604cd6b10023e3decc43481c53311d6efb36a0e43c3de",
+        ".f32le": "3201f0507c4b7f65911ecea8edf4175d76f2b93cc8d9ca715e10f97cf410e77a",
+        ".snapshot": "d9214929e9f4cedef47635ec07ed4d4abf816b06bbf547cc8425c66f5b82c65d",
+        ".targets.u8": "a7b9fb46c60810bb1047503c80b15e7e0cc84d546faadc3f8a2af988bf8550a0",
+        ".hdr.f64le": "e852c4e5a5bc157696b5afc50b84b063d3080b757f8cb22a0c0fb4e747cfeab5",
+        ".json": "e84a9f304aca147dc28ca3a3fdc0d5474b6d164055ff916a4031f60aee2718d8",
+        ".aa.json": "c0cfd9c1732cd353aeba29840450e98470e4af7185856319e2f275922338b0a6",
+        ".floor.json": "69b4ff76474a6781040b6c071c1f3659b92b92c96350200d94149fba42dd7be5",
+        ".background.json": "9e8ec51ed630a1d16512ce2577496b663cb02c43373406563bb29263093a7587",
+        ".row.json": "e11a52e6958bfd611087dcb06d40f3cc393b5860cc6b1209874d5c647b0707f2",
+        ".floor-world.json": "3361577d6319b625f6291014fa6b320d883e3de23b6c38c91174259a185f64e0",
+        ".hdr-observer.json": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d"
+      },
+      "allRawExact": true,
+      "sameArmSameOrderReportsExact": true,
+      "onlyNontimingDifference": {
+        "arenaBytes64bit": [
+          81356,
+          81796
+        ]
+      },
+      "timingExclusions": {
+        ".json": {
+          "transportBuildNs": {
+            "baseline": 36345785,
+            "candidate": 36146851
+          },
+          "visibilityBuildNs": {
+            "baseline": 2087316,
+            "candidate": 2100737
+          },
+          "appendNs": {
+            "baseline": 39001001,
+            "candidate": 38847314
+          },
+          "evaluateNs": {
+            "baseline": 9572046,
+            "candidate": 11241886
+          },
+          "hostRenderNsFirstFrame": {
+            "baseline": 16202870193,
+            "candidate": 16758192143
+          },
+          "arenaBytes64bit": {
+            "baseline": 81356,
+            "candidate": 81796
+          }
+        },
+        ".aa.json": {},
+        ".floor.json": {},
+        ".background.json": {
+          "backgroundBuildNs": {
+            "baseline": 83486,
+            "candidate": 196988
+          }
+        },
+        ".row.json": {
+          "backgroundBuildNs": {
+            "baseline": 83486,
+            "candidate": 196988
+          }
+        },
+        ".floor-world.json": {},
+        ".hdr-observer.json": {}
+      }
+    },
+    {
+      "name": "native-oblique-intensity-reverse",
+      "view": "oblique",
+      "case": "intensity",
+      "reverse": true,
+      "arm": "on",
+      "status": "PASS",
+      "elapsedSecondsDescriptiveOnly": 17.540579954977147,
+      "files": {
+        ".u16le": "2764b53322a270c70e8604cd6b10023e3decc43481c53311d6efb36a0e43c3de",
+        ".f32le": "3201f0507c4b7f65911ecea8edf4175d76f2b93cc8d9ca715e10f97cf410e77a",
+        ".snapshot": "b29285e31a734a62388918585a4ec2c7bbc87a3a5054ecb047554f96fc4960a7",
+        ".targets.u8": "a7b9fb46c60810bb1047503c80b15e7e0cc84d546faadc3f8a2af988bf8550a0",
+        ".hdr.f64le": "e852c4e5a5bc157696b5afc50b84b063d3080b757f8cb22a0c0fb4e747cfeab5",
+        ".json": "f56db814c4668a24f43b266dc13967753794be3373ea00d22baf6d790ded511a",
+        ".aa.json": "52e2774aadcb8e41f46ba97fce19fbee0a45bea03c9eddff6a0725853e396b01",
+        ".floor.json": "e42897bae6fd106ef6339bb15939644113c0adda1fad58142d1c034ab4f30bff",
+        ".background.json": "93c524e3223b41b54392626824824f2aceddd9c12c0ca84dcc60cf47274135f8",
+        ".row.json": "86d1487cc872773893a8679cff40d7eb4820c3ae872ce7e8e7890f3c895ae452",
+        ".floor-world.json": "65c97f8a031b823857cbb68dd16f4d5b60c5092a61fbe16cff058d1f7612a173",
+        ".hdr-observer.json": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d"
+      },
+      "allRawExact": true,
+      "sameArmSameOrderReportsExact": true,
+      "onlyNontimingDifference": {
+        "arenaBytes64bit": [
+          81356,
+          81796
+        ]
+      },
+      "timingExclusions": {
+        ".json": {
+          "transportBuildNs": {
+            "baseline": 36998828,
+            "candidate": 38962681
+          },
+          "visibilityBuildNs": {
+            "baseline": 2240138,
+            "candidate": 2411976
+          },
+          "appendNs": {
+            "baseline": 39866115,
+            "candidate": 42135418
+          },
+          "evaluateNs": {
+            "baseline": 9410320,
+            "candidate": 10568389
+          },
+          "hostRenderNsFirstFrame": {
+            "baseline": 18049246486,
+            "candidate": 17484401634
+          },
+          "arenaBytes64bit": {
+            "baseline": 81356,
+            "candidate": 81796
+          }
+        },
+        ".aa.json": {},
+        ".floor.json": {},
+        ".background.json": {
+          "backgroundBuildNs": {
+            "baseline": 83275,
+            "candidate": 83416
+          }
+        },
+        ".row.json": {
+          "backgroundBuildNs": {
+            "baseline": 83275,
+            "candidate": 83416
+          }
+        },
+        ".floor-world.json": {},
+        ".hdr-observer.json": {}
+      }
+    },
+    {
+      "name": "native-front-ambient",
+      "view": "front",
+      "case": "ambient",
+      "reverse": false,
+      "arm": "on",
+      "status": "PASS",
+      "elapsedSecondsDescriptiveOnly": 17.102965032012435,
+      "files": {
+        ".u16le": "5be18d01320498387b2b5d202f1cf5364c42e535873a2fc37e45cca5606efbe2",
+        ".f32le": "03d9ee4d5a81118e7f2efe2947a64230132aad4daad2a2019d31f9f4959fea3f",
+        ".snapshot": "f369591a0e5fedd63c059ee50b509bf4b8bd07efca5900b16ddeae9bcf03768b",
+        ".targets.u8": "eebd4a3432074c6e6d84cf7e6a03b34c7dbd9d4309bd3fbd003b7caa47eeb4f6",
+        ".hdr.f64le": "e02c7e5064171a6eb97d87e71a60b78fc94bc41622c7c7cc86c86c95ca1024ba",
+        ".json": "265c28d4371e06013f42ff8484a0138d07bb3c61c2e459dcc7afbb11678df6fd",
+        ".aa.json": "9f5f02621edbb3fc6f74468b212ef5ad85d021f4777d16568a6ebf76bf6b1315",
+        ".floor.json": "306abe4b3543faab08dab113a17d00eeac48585918807ccae19997a87466afab",
+        ".background.json": "769e63d1f5291b739dde54c76da54a036e036276b16120988ff26df8b967bc5a",
+        ".row.json": "059940038d429c54c08863f4ec1c2dbe3a7a7c5b04dc6e07e7b21f5f1ec6c507",
+        ".floor-world.json": "4a57ab8d5790216bf6c0d2ea1733065a6e47d0f53128993ca2fc1b693cb0189f",
+        ".hdr-observer.json": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d"
+      },
+      "allRawExact": true,
+      "sameArmSameOrderReportsExact": true,
+      "onlyNontimingDifference": {
+        "arenaBytes64bit": [
+          81356,
+          81796
+        ]
+      },
+      "timingExclusions": {
+        ".json": {
+          "transportBuildNs": {
+            "baseline": 39386355,
+            "candidate": 38168829
+          },
+          "visibilityBuildNs": {
+            "baseline": 2645521,
+            "candidate": 3009851
+          },
+          "appendNs": {
+            "baseline": 42650070,
+            "candidate": 41657324
+          },
+          "evaluateNs": {
+            "baseline": 9521790,
+            "candidate": 15397140
+          },
+          "hostRenderNsFirstFrame": {
+            "baseline": 17939084966,
+            "candidate": 17042041137
+          },
+          "arenaBytes64bit": {
+            "baseline": 81356,
+            "candidate": 81796
+          }
+        },
+        ".aa.json": {},
+        ".floor.json": {},
+        ".background.json": {
+          "backgroundBuildNs": {
+            "baseline": 83767,
+            "candidate": 83055
+          }
+        },
+        ".row.json": {
+          "backgroundBuildNs": {
+            "baseline": 83767,
+            "candidate": 83055
+          }
+        },
+        ".floor-world.json": {},
+        ".hdr-observer.json": {}
+      }
+    },
+    {
+      "name": "native-front-ambient-reverse",
+      "view": "front",
+      "case": "ambient",
+      "reverse": true,
+      "arm": "on",
+      "status": "PASS",
+      "elapsedSecondsDescriptiveOnly": 17.543277164018946,
+      "files": {
+        ".u16le": "5be18d01320498387b2b5d202f1cf5364c42e535873a2fc37e45cca5606efbe2",
+        ".f32le": "03d9ee4d5a81118e7f2efe2947a64230132aad4daad2a2019d31f9f4959fea3f",
+        ".snapshot": "09f50c68eb3ea5270dbf37fdb29bd30648f13f0d8d67c3c3f3c83eecbc8de981",
+        ".targets.u8": "eebd4a3432074c6e6d84cf7e6a03b34c7dbd9d4309bd3fbd003b7caa47eeb4f6",
+        ".hdr.f64le": "e02c7e5064171a6eb97d87e71a60b78fc94bc41622c7c7cc86c86c95ca1024ba",
+        ".json": "5f5e46398764ed20046fc7e1ca46c0a49ee2353355b02af5ca89cc90f725f0c1",
+        ".aa.json": "e93e22ef066c1beac8827a71693c44f39003e5034cc34f3e933ddef1041d1b61",
+        ".floor.json": "57ea1dc8df1cab31e30af4c939c8e090cd35fa33a0b94c9d49dc2817207a208f",
+        ".background.json": "f6ea6493aba4be8bd69b4d3a4c514a77f6dafd66a0bf1cd70cf1a379ef5f5fc8",
+        ".row.json": "efc93b597f506a11c9dba1abe5f83172f1e456a5dcdc3ff49fd6afd19c5780da",
+        ".floor-world.json": "2a1f075f01ce948d0b8391a4c7eaf0addf98037b9d04132bdb1618546290ae7f",
+        ".hdr-observer.json": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d"
+      },
+      "allRawExact": true,
+      "sameArmSameOrderReportsExact": true,
+      "onlyNontimingDifference": {
+        "arenaBytes64bit": [
+          81356,
+          81796
+        ]
+      },
+      "timingExclusions": {
+        ".json": {
+          "transportBuildNs": {
+            "baseline": 67501997,
+            "candidate": 35605109
+          },
+          "visibilityBuildNs": {
+            "baseline": 4493766,
+            "candidate": 2280408
+          },
+          "appendNs": {
+            "baseline": 72508538,
+            "candidate": 38453005
+          },
+          "evaluateNs": {
+            "baseline": 17746677,
+            "candidate": 10204181
+          },
+          "hostRenderNsFirstFrame": {
+            "baseline": 16383158906,
+            "candidate": 17490958038
+          },
+          "arenaBytes64bit": {
+            "baseline": 81356,
+            "candidate": 81796
+          }
+        },
+        ".aa.json": {},
+        ".floor.json": {},
+        ".background.json": {
+          "backgroundBuildNs": {
+            "baseline": 84387,
+            "candidate": 82926
+          }
+        },
+        ".row.json": {
+          "backgroundBuildNs": {
+            "baseline": 84387,
+            "candidate": 82926
+          }
+        },
+        ".floor-world.json": {},
+        ".hdr-observer.json": {}
+      }
+    },
+    {
+      "name": "native-oblique-ambient",
+      "view": "oblique",
+      "case": "ambient",
+      "reverse": false,
+      "arm": "on",
+      "status": "PASS",
+      "elapsedSecondsDescriptiveOnly": 16.83759805400041,
+      "files": {
+        ".u16le": "76b77b0458bac860b1ffa6cb814e5f40482a279f95a9e311fddd0842b73440f7",
+        ".f32le": "3201f0507c4b7f65911ecea8edf4175d76f2b93cc8d9ca715e10f97cf410e77a",
+        ".snapshot": "9b0a939819e62d7333543c22d23e0d8bb49571994d9ab93f8b59f4b229597801",
+        ".targets.u8": "a7b9fb46c60810bb1047503c80b15e7e0cc84d546faadc3f8a2af988bf8550a0",
+        ".hdr.f64le": "2a6b88df5c3aa68875a2f9f1ff7a2a609c35d5ef6fd71af795d9b165ec32b8a8",
+        ".json": "122331c4cb025a3736f05fb722ab3a1f18cf771be9f88ca5cab336dbdcd4e150",
+        ".aa.json": "24f9df2b65e1f7124c0b068b12ee12519d0f40eb78c50a9fad3682da0ba785ac",
+        ".floor.json": "c3d36c793c14caf7347891ed8c13501696124003d25d7f78554329546ae2b131",
+        ".background.json": "de3bb5cc50f45f319f3b4a8bb88154416e35c51a8b7277bbb734d6fa925de2a2",
+        ".row.json": "9c3815cfcb6d30509e7cbb9c91550968d8d0ac247af1f190197bdac12cc860cc",
+        ".floor-world.json": "3361577d6319b625f6291014fa6b320d883e3de23b6c38c91174259a185f64e0",
+        ".hdr-observer.json": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d"
+      },
+      "allRawExact": true,
+      "sameArmSameOrderReportsExact": true,
+      "onlyNontimingDifference": {
+        "arenaBytes64bit": [
+          81356,
+          81796
+        ]
+      },
+      "timingExclusions": {
+        ".json": {
+          "transportBuildNs": {
+            "baseline": 36646115,
+            "candidate": 43072346
+          },
+          "visibilityBuildNs": {
+            "baseline": 2192175,
+            "candidate": 2686201
+          },
+          "appendNs": {
+            "baseline": 39321280,
+            "candidate": 46564416
+          },
+          "evaluateNs": {
+            "baseline": 9426394,
+            "candidate": 11438025
+          },
+          "hostRenderNsFirstFrame": {
+            "baseline": 17035793410,
+            "candidate": 16775868869
+          },
+          "arenaBytes64bit": {
+            "baseline": 81356,
+            "candidate": 81796
+          }
+        },
+        ".aa.json": {},
+        ".floor.json": {},
+        ".background.json": {
+          "backgroundBuildNs": {
+            "baseline": 83526,
+            "candidate": 144168
+          }
+        },
+        ".row.json": {
+          "backgroundBuildNs": {
+            "baseline": 83526,
+            "candidate": 144168
+          }
+        },
+        ".floor-world.json": {},
+        ".hdr-observer.json": {}
+      }
+    },
+    {
+      "name": "native-oblique-ambient-reverse",
+      "view": "oblique",
+      "case": "ambient",
+      "reverse": true,
+      "arm": "on",
+      "status": "PASS",
+      "elapsedSecondsDescriptiveOnly": 17.648923311993713,
+      "files": {
+        ".u16le": "76b77b0458bac860b1ffa6cb814e5f40482a279f95a9e311fddd0842b73440f7",
+        ".f32le": "3201f0507c4b7f65911ecea8edf4175d76f2b93cc8d9ca715e10f97cf410e77a",
+        ".snapshot": "e039384e55c407e689da01b8c80f59306ca80961419e091d8de44ec551041adf",
+        ".targets.u8": "a7b9fb46c60810bb1047503c80b15e7e0cc84d546faadc3f8a2af988bf8550a0",
+        ".hdr.f64le": "2a6b88df5c3aa68875a2f9f1ff7a2a609c35d5ef6fd71af795d9b165ec32b8a8",
+        ".json": "53c2c739031eff29aabc2f7b9b8718e3564ac092a2a437380eb76fca0fb77300",
+        ".aa.json": "3b78e603e335e8e4907870c497bf407864a7a5009bd8e058f22ebb5b6e7aa764",
+        ".floor.json": "26dc030eac9f0ab1a35b5f98dcd513746e41c477d100325bdd0871507b6aea2f",
+        ".background.json": "967cfe4bc42742781fa70ee116f784d6fd38aae2fdae46551a57a8ad9d347e98",
+        ".row.json": "805a7010f282d30f487cb19c554c98329e8b2949ae02474bc8ddbaaba4007746",
+        ".floor-world.json": "65c97f8a031b823857cbb68dd16f4d5b60c5092a61fbe16cff058d1f7612a173",
+        ".hdr-observer.json": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d"
+      },
+      "allRawExact": true,
+      "sameArmSameOrderReportsExact": true,
+      "onlyNontimingDifference": {
+        "arenaBytes64bit": [
+          81356,
+          81796
+        ]
+      },
+      "timingExclusions": {
+        ".json": {
+          "transportBuildNs": {
+            "baseline": 42573467,
+            "candidate": 34336635
+          },
+          "visibilityBuildNs": {
+            "baseline": 2616097,
+            "candidate": 2112824
+          },
+          "appendNs": {
+            "baseline": 45803973,
+            "candidate": 37077528
+          },
+          "evaluateNs": {
+            "baseline": 10183820,
+            "candidate": 20533230
+          },
+          "hostRenderNsFirstFrame": {
+            "baseline": 17597857396,
+            "candidate": 17588107909
+          },
+          "arenaBytes64bit": {
+            "baseline": 81356,
+            "candidate": 81796
+          }
+        },
+        ".aa.json": {},
+        ".floor.json": {},
+        ".background.json": {
+          "backgroundBuildNs": {
+            "baseline": 83487,
+            "candidate": 83686
+          }
+        },
+        ".row.json": {
+          "backgroundBuildNs": {
+            "baseline": 83487,
+            "candidate": 83686
+          }
+        },
+        ".floor-world.json": {},
+        ".hdr-observer.json": {}
+      }
+    },
+    {
+      "name": "native-front-albedo",
+      "view": "front",
+      "case": "albedo",
+      "reverse": false,
+      "arm": "on",
+      "status": "PASS",
+      "elapsedSecondsDescriptiveOnly": 16.82631866700831,
+      "files": {
+        ".u16le": "a493675a311026600faf352f254ac63639ec1e54949b55a4bac68386a08128a6",
+        ".f32le": "03d9ee4d5a81118e7f2efe2947a64230132aad4daad2a2019d31f9f4959fea3f",
+        ".snapshot": "905d722f231dc03eb24222d9717fa3c0450d0e96189cacad4eac201687b3c21d",
+        ".targets.u8": "eebd4a3432074c6e6d84cf7e6a03b34c7dbd9d4309bd3fbd003b7caa47eeb4f6",
+        ".hdr.f64le": "3f9090d41142f1a22622bdcbd897a3b50453a39885e8314645ba39c70cb1fe47",
+        ".json": "e8d8f40aaa69943d4849cc64725fb83f93d2bb688114d8c56b588de28407e1ac",
+        ".aa.json": "aa31ac44b48c9e3b40ae345172ee6b45b5c5c9a61fee42a118b93be185445f47",
+        ".floor.json": "83eecd446b8d42797fd9d3969cb5962a49560c2d7ad8aaaf58cf696d03c61dbb",
+        ".background.json": "78ee48a610a198a5ca965a6b56bd28ffb1812968595ea76b6b9c17d200c55600",
+        ".row.json": "edaea0cfafb605aab676a3bc39a8f1030eb642431d554620f9ac7c6642f6f8d8",
+        ".floor-world.json": "4a57ab8d5790216bf6c0d2ea1733065a6e47d0f53128993ca2fc1b693cb0189f",
+        ".hdr-observer.json": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d"
+      },
+      "allRawExact": true,
+      "sameArmSameOrderReportsExact": true,
+      "onlyNontimingDifference": {
+        "arenaBytes64bit": [
+          81356,
+          81796
+        ]
+      },
+      "timingExclusions": {
+        ".json": {
+          "transportBuildNs": {
+            "baseline": 36847258,
+            "candidate": 38821168
+          },
+          "visibilityBuildNs": {
+            "baseline": 2242001,
+            "candidate": 2337244
+          },
+          "appendNs": {
+            "baseline": 39671609,
+            "candidate": 41701272
+          },
+          "evaluateNs": {
+            "baseline": 10161436,
+            "candidate": 10272913
+          },
+          "hostRenderNsFirstFrame": {
+            "baseline": 17295806578,
+            "candidate": 16770547916
+          },
+          "arenaBytes64bit": {
+            "baseline": 81356,
+            "candidate": 81796
+          }
+        },
+        ".aa.json": {},
+        ".floor.json": {},
+        ".background.json": {
+          "backgroundBuildNs": {
+            "baseline": 163227,
+            "candidate": 83296
+          }
+        },
+        ".row.json": {
+          "backgroundBuildNs": {
+            "baseline": 163227,
+            "candidate": 83296
+          }
+        },
+        ".floor-world.json": {},
+        ".hdr-observer.json": {}
+      }
+    },
+    {
+      "name": "native-front-albedo-reverse",
+      "view": "front",
+      "case": "albedo",
+      "reverse": true,
+      "arm": "on",
+      "status": "PASS",
+      "elapsedSecondsDescriptiveOnly": 17.667156203009654,
+      "files": {
+        ".u16le": "a493675a311026600faf352f254ac63639ec1e54949b55a4bac68386a08128a6",
+        ".f32le": "03d9ee4d5a81118e7f2efe2947a64230132aad4daad2a2019d31f9f4959fea3f",
+        ".snapshot": "4d250d6606dde93ce133b6dc383c8c3582f4262bc90376dc78f8b1689df90ef6",
+        ".targets.u8": "eebd4a3432074c6e6d84cf7e6a03b34c7dbd9d4309bd3fbd003b7caa47eeb4f6",
+        ".hdr.f64le": "3f9090d41142f1a22622bdcbd897a3b50453a39885e8314645ba39c70cb1fe47",
+        ".json": "339f11f10f44dc73582a56e5e79241a0333a853b5763c8769e0f266952de3825",
+        ".aa.json": "bb0b8e58137a83886e0909f075adec44acb377b85e146752072f74ff14e85c62",
+        ".floor.json": "35aee654a9a42fe4b03cafbf2cb628e1ea955052d07c342a590dee3b994fb57d",
+        ".background.json": "87b989c90687833c6030c8fd32ab6331675c8d6a010000018188cd83690e7d23",
+        ".row.json": "f7b6ab4704828aea28b98cb69d776ebd346ed331b2c93394b51ea2dec57c6e42",
+        ".floor-world.json": "2a1f075f01ce948d0b8391a4c7eaf0addf98037b9d04132bdb1618546290ae7f",
+        ".hdr-observer.json": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d"
+      },
+      "allRawExact": true,
+      "sameArmSameOrderReportsExact": true,
+      "onlyNontimingDifference": {
+        "arenaBytes64bit": [
+          81356,
+          81796
+        ]
+      },
+      "timingExclusions": {
+        ".json": {
+          "transportBuildNs": {
+            "baseline": 40763949,
+            "candidate": 37146424
+          },
+          "visibilityBuildNs": {
+            "baseline": 2930952,
+            "candidate": 2594402
+          },
+          "appendNs": {
+            "baseline": 44369741,
+            "candidate": 40271770
+          },
+          "evaluateNs": {
+            "baseline": 11395160,
+            "candidate": 10509960
+          },
+          "hostRenderNsFirstFrame": {
+            "baseline": 16428378657,
+            "candidate": 17612545403
+          },
+          "arenaBytes64bit": {
+            "baseline": 81356,
+            "candidate": 81796
+          }
+        },
+        ".aa.json": {},
+        ".floor.json": {},
+        ".background.json": {
+          "backgroundBuildNs": {
+            "baseline": 83216,
+            "candidate": 83156
+          }
+        },
+        ".row.json": {
+          "backgroundBuildNs": {
+            "baseline": 83216,
+            "candidate": 83156
+          }
+        },
+        ".floor-world.json": {},
+        ".hdr-observer.json": {}
+      }
+    },
+    {
+      "name": "native-oblique-albedo",
+      "view": "oblique",
+      "case": "albedo",
+      "reverse": false,
+      "arm": "on",
+      "status": "PASS",
+      "elapsedSecondsDescriptiveOnly": 16.85076795599889,
+      "files": {
+        ".u16le": "e086a698382a4a062248d15c9d080140bd02fbdc5143e79dee9b6af593c60092",
+        ".f32le": "3201f0507c4b7f65911ecea8edf4175d76f2b93cc8d9ca715e10f97cf410e77a",
+        ".snapshot": "c4d6fea205a01c2b357a7bce238a43fa4c2ef015f49748dac54499678dab8425",
+        ".targets.u8": "a7b9fb46c60810bb1047503c80b15e7e0cc84d546faadc3f8a2af988bf8550a0",
+        ".hdr.f64le": "c2864abf5a1a458035ab4bb31ca8038b42775053f1824b6fa8edf094c7142f49",
+        ".json": "e7922e8764a93f0299b0718c7a7451370ae0cb3e3e1a5b9ab4d916643e0ff172",
+        ".aa.json": "a38d850176e9161093d7a71700672f7e61db270cb11d53d5cb3bd044587741d6",
+        ".floor.json": "70e2bd73a8c1035231d4720376adfdda14962125988ec9a2f49e89d56cba8f7f",
+        ".background.json": "b15b9444ff2260db48aa3b791ec0625a330927b6e1dd86b3dad66c7de24f60c6",
+        ".row.json": "508cd4a076a610fa5f502e0ead8caaf3fbd236eb56e4e326c4a8ec46676433be",
+        ".floor-world.json": "3361577d6319b625f6291014fa6b320d883e3de23b6c38c91174259a185f64e0",
+        ".hdr-observer.json": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d"
+      },
+      "allRawExact": true,
+      "sameArmSameOrderReportsExact": true,
+      "onlyNontimingDifference": {
+        "arenaBytes64bit": [
+          81356,
+          81796
+        ]
+      },
+      "timingExclusions": {
+        ".json": {
+          "transportBuildNs": {
+            "baseline": 35146136,
+            "candidate": 34548485
+          },
+          "visibilityBuildNs": {
+            "baseline": 2131201,
+            "candidate": 2103070
+          },
+          "appendNs": {
+            "baseline": 37739666,
+            "candidate": 37177079
+          },
+          "evaluateNs": {
+            "baseline": 9753333,
+            "candidate": 9594886
+          },
+          "hostRenderNsFirstFrame": {
+            "baseline": 16332429466,
+            "candidate": 16800840335
+          },
+          "arenaBytes64bit": {
+            "baseline": 81356,
+            "candidate": 81796
+          }
+        },
+        ".aa.json": {},
+        ".floor.json": {},
+        ".background.json": {
+          "backgroundBuildNs": {
+            "baseline": 82966,
+            "candidate": 83526
+          }
+        },
+        ".row.json": {
+          "backgroundBuildNs": {
+            "baseline": 82966,
+            "candidate": 83526
+          }
+        },
+        ".floor-world.json": {},
+        ".hdr-observer.json": {}
+      }
+    },
+    {
+      "name": "native-oblique-albedo-reverse",
+      "view": "oblique",
+      "case": "albedo",
+      "reverse": true,
+      "arm": "on",
+      "status": "PASS",
+      "elapsedSecondsDescriptiveOnly": 17.203283875016496,
+      "files": {
+        ".u16le": "e086a698382a4a062248d15c9d080140bd02fbdc5143e79dee9b6af593c60092",
+        ".f32le": "3201f0507c4b7f65911ecea8edf4175d76f2b93cc8d9ca715e10f97cf410e77a",
+        ".snapshot": "49777072c6c11f9e274be7bb924ed44fa9d68017a58a37a6445c2f949ce36ab4",
+        ".targets.u8": "a7b9fb46c60810bb1047503c80b15e7e0cc84d546faadc3f8a2af988bf8550a0",
+        ".hdr.f64le": "c2864abf5a1a458035ab4bb31ca8038b42775053f1824b6fa8edf094c7142f49",
+        ".json": "1e56c7c9a5b1f945df917fdc358b5d022ba50fbb71de280313b208e70cc34841",
+        ".aa.json": "d53e92c8fe8dd87249494dcec7e14b8c787dc486e200fdb1315b49418d8a0975",
+        ".floor.json": "0fdc73c7e9430b5186f87f18129bc280eea5f6e64216f4d199457b33862b4451",
+        ".background.json": "e829c39318b62cff44f833008dfaca7f7557a2b14a3872c6e1e420f902fe0ee9",
+        ".row.json": "b480e6daeefa7e64bdf16bba00716ae956576a9c1559207d3cd07d28865ff69f",
+        ".floor-world.json": "65c97f8a031b823857cbb68dd16f4d5b60c5092a61fbe16cff058d1f7612a173",
+        ".hdr-observer.json": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d"
+      },
+      "allRawExact": true,
+      "sameArmSameOrderReportsExact": true,
+      "onlyNontimingDifference": {
+        "arenaBytes64bit": [
+          81356,
+          81796
+        ]
+      },
+      "timingExclusions": {
+        ".json": {
+          "transportBuildNs": {
+            "baseline": 38350956,
+            "candidate": 37457300
+          },
+          "visibilityBuildNs": {
+            "baseline": 2249762,
+            "candidate": 2621754
+          },
+          "appendNs": {
+            "baseline": 41090107,
+            "candidate": 40597587
+          },
+          "evaluateNs": {
+            "baseline": 9483347,
+            "candidate": 10414685
+          },
+          "hostRenderNsFirstFrame": {
+            "baseline": 18509863513,
+            "candidate": 17149070497
+          },
+          "arenaBytes64bit": {
+            "baseline": 81356,
+            "candidate": 81796
+          }
+        },
+        ".aa.json": {},
+        ".floor.json": {},
+        ".background.json": {
+          "backgroundBuildNs": {
+            "baseline": 83616,
+            "candidate": 83786
+          }
+        },
+        ".row.json": {
+          "backgroundBuildNs": {
+            "baseline": 83616,
+            "candidate": 83786
+          }
+        },
+        ".floor-world.json": {},
+        ".hdr-observer.json": {}
+      }
+    }
+  ],
+  "allForwardReverseExact": true,
+  "baseline": "fox-v3-indexed-transport-input/actual-on-001",
+  "timingClaim": "Descriptive only, no speedup or device fit claim"
+}

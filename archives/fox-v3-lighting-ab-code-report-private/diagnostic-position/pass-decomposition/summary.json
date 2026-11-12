@@ -1,0 +1,334 @@
+{
+  "front": {
+    "11": {
+      "original-oracle": {
+        "brightIoU": 0.8406169665809768,
+        "darkIoU": 0.8944230094703612,
+        "brightFP": 145,
+        "brightFN": 103,
+        "uncertainPixels": 729,
+        "foregroundRGB": {
+          "baseline": 95.31041142361975,
+          "direction": 94.64305565654362
+        },
+        "fullFrameRGBDescriptive": {
+          "baseline": 99.03791606148631,
+          "direction": 98.92855694747034
+        },
+        "status": "PASS_COMPONENT_ANALYSIS_NOT_NATIVE_ACCEPTANCE"
+      },
+      "redisplayed-control": {
+        "brightIoU": 0.8406169665809768,
+        "darkIoU": 0.8944230094703612,
+        "brightFP": 145,
+        "brightFN": 103,
+        "uncertainPixels": 729,
+        "foregroundRGB": {
+          "baseline": 95.31041142361975,
+          "direction": 94.64305565654362
+        },
+        "fullFrameRGBDescriptive": {
+          "baseline": 99.03791606148631,
+          "direction": 98.92855694747034
+        },
+        "status": "PASS_COMPONENT_ANALYSIS_NOT_NATIVE_ACCEPTANCE"
+      },
+      "profile-native-srgb": {
+        "brightIoU": 0.7318652849740933,
+        "darkIoU": 0.8502636203866433,
+        "brightFP": 133,
+        "brightFN": 281,
+        "uncertainPixels": 729,
+        "foregroundRGB": {
+          "baseline": 90.3564887794955,
+          "direction": 90.30361456490301
+        },
+        "fullFrameRGBDescriptive": {
+          "baseline": 93.0408370652788,
+          "direction": 93.06515422012427
+        },
+        "status": "PASS_COMPONENT_ANALYSIS_NOT_NATIVE_ACCEPTANCE"
+      },
+      "remove-direct-specular": {
+        "brightIoU": 0.8192307692307692,
+        "darkIoU": 0.8854057819575061,
+        "brightFP": 149,
+        "brightFN": 133,
+        "uncertainPixels": 729,
+        "foregroundRGB": {
+          "baseline": 93.0126201867677,
+          "direction": 92.53119319421216
+        },
+        "fullFrameRGBDescriptive": {
+          "baseline": 97.73818133220367,
+          "direction": 97.64236817154845
+        },
+        "status": "PASS_COMPONENT_ANALYSIS_NOT_NATIVE_ACCEPTANCE"
+      },
+      "remove-indirect-diffuse": {
+        "brightIoU": 0.8342857142857143,
+        "darkIoU": 0.8870967741935484,
+        "brightFP": 164,
+        "brightFN": 97,
+        "uncertainPixels": 729,
+        "foregroundRGB": {
+          "baseline": 90.17352372699588,
+          "direction": 88.84232531084128
+        },
+        "fullFrameRGBDescriptive": {
+          "baseline": 98.0727926046962,
+          "direction": 97.83973462841928
+        },
+        "status": "PASS_COMPONENT_ANALYSIS_NOT_NATIVE_ACCEPTANCE"
+      }
+    },
+    "29": {
+      "original-oracle": {
+        "brightIoU": 0.8432883750802826,
+        "darkIoU": 0.8892393971258324,
+        "brightFP": 146,
+        "brightFN": 98,
+        "uncertainPixels": 729,
+        "foregroundRGB": {
+          "baseline": 95.30295208508102,
+          "direction": 94.64098742092635
+        },
+        "fullFrameRGBDescriptive": {
+          "baseline": 99.03499102315824,
+          "direction": 98.92625927943193
+        },
+        "status": "PASS_COMPONENT_ANALYSIS_NOT_NATIVE_ACCEPTANCE"
+      },
+      "redisplayed-control": {
+        "brightIoU": 0.8432883750802826,
+        "darkIoU": 0.8892393971258324,
+        "brightFP": 146,
+        "brightFN": 98,
+        "uncertainPixels": 729,
+        "foregroundRGB": {
+          "baseline": 95.30295208508102,
+          "direction": 94.64098742092635
+        },
+        "fullFrameRGBDescriptive": {
+          "baseline": 99.03499102315824,
+          "direction": 98.92625927943193
+        },
+        "status": "PASS_COMPONENT_ANALYSIS_NOT_NATIVE_ACCEPTANCE"
+      },
+      "profile-native-srgb": {
+        "brightIoU": 0.7344961240310077,
+        "darkIoU": 0.8466666666666667,
+        "brightFP": 137,
+        "brightFN": 274,
+        "uncertainPixels": 729,
+        "foregroundRGB": {
+          "baseline": 90.34491950674644,
+          "direction": 90.29275632791229
+        },
+        "fullFrameRGBDescriptive": {
+          "baseline": 93.0362165133543,
+          "direction": 93.06233307108852
+        },
+        "status": "PASS_COMPONENT_ANALYSIS_NOT_NATIVE_ACCEPTANCE"
+      },
+      "remove-direct-specular": {
+        "brightIoU": 0.8283870967741935,
+        "darkIoU": 0.8781761225200139,
+        "brightFP": 139,
+        "brightFN": 127,
+        "uncertainPixels": 729,
+        "foregroundRGB": {
+          "baseline": 92.99527395976412,
+          "direction": 92.52948043659161
+        },
+        "fullFrameRGBDescriptive": {
+          "baseline": 97.73672083030743,
+          "direction": 97.6413908052933
+        },
+        "status": "PASS_COMPONENT_ANALYSIS_NOT_NATIVE_ACCEPTANCE"
+      },
+      "remove-indirect-diffuse": {
+        "brightIoU": 0.8326972010178118,
+        "darkIoU": 0.8871758934828311,
+        "brightFP": 161,
+        "brightFN": 102,
+        "uncertainPixels": 729,
+        "foregroundRGB": {
+          "baseline": 90.16153193764576,
+          "direction": 88.83826963006051
+        },
+        "fullFrameRGBDescriptive": {
+          "baseline": 98.07247085048012,
+          "direction": 97.83935538207052
+        },
+        "status": "PASS_COMPONENT_ANALYSIS_NOT_NATIVE_ACCEPTANCE"
+      }
+    }
+  },
+  "oblique": {
+    "11": {
+      "original-oracle": {
+        "brightIoU": 0.7190265486725663,
+        "darkIoU": 0.9083434099153567,
+        "brightFP": 195,
+        "brightFN": 59,
+        "uncertainPixels": 698,
+        "foregroundRGB": {
+          "baseline": 95.63661818917429,
+          "direction": 94.8311137419727
+        },
+        "fullFrameRGBDescriptive": {
+          "baseline": 98.97704903978052,
+          "direction": 98.86955942870975
+        },
+        "status": "PASS_COMPONENT_ANALYSIS_NOT_NATIVE_ACCEPTANCE"
+      },
+      "redisplayed-control": {
+        "brightIoU": 0.7190265486725663,
+        "darkIoU": 0.9083434099153567,
+        "brightFP": 195,
+        "brightFN": 59,
+        "uncertainPixels": 698,
+        "foregroundRGB": {
+          "baseline": 95.63661818917429,
+          "direction": 94.8311137419727
+        },
+        "fullFrameRGBDescriptive": {
+          "baseline": 98.97704903978052,
+          "direction": 98.86955942870975
+        },
+        "status": "PASS_COMPONENT_ANALYSIS_NOT_NATIVE_ACCEPTANCE"
+      },
+      "profile-native-srgb": {
+        "brightIoU": 0.5143487858719646,
+        "darkIoU": 0.8752422480620154,
+        "brightFP": 197,
+        "brightFN": 243,
+        "uncertainPixels": 698,
+        "foregroundRGB": {
+          "baseline": 90.68649281133072,
+          "direction": 90.3843395586492
+        },
+        "fullFrameRGBDescriptive": {
+          "baseline": 92.63831144597758,
+          "direction": 92.59652828209472
+        },
+        "status": "PASS_COMPONENT_ANALYSIS_NOT_NATIVE_ACCEPTANCE"
+      },
+      "remove-direct-specular": {
+        "brightIoU": 0.7044167610419027,
+        "darkIoU": 0.9168474331164136,
+        "brightFP": 174,
+        "brightFN": 87,
+        "uncertainPixels": 698,
+        "foregroundRGB": {
+          "baseline": 93.6110783658821,
+          "direction": 93.22003591284557
+        },
+        "fullFrameRGBDescriptive": {
+          "baseline": 97.82403927620432,
+          "direction": 97.80754155571694
+        },
+        "status": "PASS_COMPONENT_ANALYSIS_NOT_NATIVE_ACCEPTANCE"
+      },
+      "remove-indirect-diffuse": {
+        "brightIoU": 0.7068965517241379,
+        "darkIoU": 0.8947878787878788,
+        "brightFP": 219,
+        "brightFN": 53,
+        "uncertainPixels": 698,
+        "foregroundRGB": {
+          "baseline": 90.09351309736392,
+          "direction": 89.1575180832113
+        },
+        "fullFrameRGBDescriptive": {
+          "baseline": 97.79665183974825,
+          "direction": 97.63840978778343
+        },
+        "status": "PASS_COMPONENT_ANALYSIS_NOT_NATIVE_ACCEPTANCE"
+      }
+    },
+    "29": {
+      "original-oracle": {
+        "brightIoU": 0.7323628219484882,
+        "darkIoU": 0.9129172714078374,
+        "brightFP": 184,
+        "brightFN": 55,
+        "uncertainPixels": 698,
+        "foregroundRGB": {
+          "baseline": 95.62524467962795,
+          "direction": 94.8376354259777
+        },
+        "fullFrameRGBDescriptive": {
+          "baseline": 98.9749107358993,
+          "direction": 98.87049039780521
+        },
+        "status": "PASS_COMPONENT_ANALYSIS_NOT_NATIVE_ACCEPTANCE"
+      },
+      "redisplayed-control": {
+        "brightIoU": 0.7323628219484882,
+        "darkIoU": 0.9129172714078374,
+        "brightFP": 184,
+        "brightFN": 55,
+        "uncertainPixels": 698,
+        "foregroundRGB": {
+          "baseline": 95.62524467962795,
+          "direction": 94.8376354259777
+        },
+        "fullFrameRGBDescriptive": {
+          "baseline": 98.9749107358993,
+          "direction": 98.87049039780521
+        },
+        "status": "PASS_COMPONENT_ANALYSIS_NOT_NATIVE_ACCEPTANCE"
+      },
+      "profile-native-srgb": {
+        "brightIoU": 0.5131868131868131,
+        "darkIoU": 0.878963931251513,
+        "brightFP": 201,
+        "brightFN": 242,
+        "uncertainPixels": 698,
+        "foregroundRGB": {
+          "baseline": 90.68406966438324,
+          "direction": 90.39586938881598
+        },
+        "fullFrameRGBDescriptive": {
+          "baseline": 92.64117697490519,
+          "direction": 92.60103990155734
+        },
+        "status": "PASS_COMPONENT_ANALYSIS_NOT_NATIVE_ACCEPTANCE"
+      },
+      "remove-direct-specular": {
+        "brightIoU": 0.7087155963302753,
+        "darkIoU": 0.9210209487117746,
+        "brightFP": 163,
+        "brightFN": 91,
+        "uncertainPixels": 698,
+        "foregroundRGB": {
+          "baseline": 93.5883022399192,
+          "direction": 93.22087588672714
+        },
+        "fullFrameRGBDescriptive": {
+          "baseline": 97.82102648672638,
+          "direction": 97.80699185023803
+        },
+        "status": "PASS_COMPONENT_ANALYSIS_NOT_NATIVE_ACCEPTANCE"
+      },
+      "remove-indirect-diffuse": {
+        "brightIoU": 0.7216721672167217,
+        "darkIoU": 0.8989825581395349,
+        "brightFP": 200,
+        "brightFN": 53,
+        "uncertainPixels": 698,
+        "foregroundRGB": {
+          "baseline": 90.08312922140578,
+          "direction": 89.16265301788351
+        },
+        "fullFrameRGBDescriptive": {
+          "baseline": 97.79392449366577,
+          "direction": 97.6395384491245
+        },
+        "status": "PASS_COMPONENT_ANALYSIS_NOT_NATIVE_ACCEPTANCE"
+      }
+    }
+  }
+}

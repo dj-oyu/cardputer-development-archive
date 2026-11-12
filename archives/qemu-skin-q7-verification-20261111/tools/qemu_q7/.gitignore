@@ -1,0 +1,13 @@
+# Reproducible generated sources and local build/evidence outputs.
+/generated/
+/build*/
+/*-captures/
+/host-profile
+/*.log
+/compile-validation.json
+/symbols.txt
+/disassembly.txt
+/stack-usage.txt
+/SHA256SUMS
+/__pycache__/
+*.pyc

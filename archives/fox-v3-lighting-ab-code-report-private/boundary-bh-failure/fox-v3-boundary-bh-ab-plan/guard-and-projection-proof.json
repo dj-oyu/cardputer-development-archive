@@ -1,0 +1,87 @@
+{
+  "guardDispatch": {
+    "front": {
+      "terms": {
+        "setupBind": 3243,
+        "centerBands": 17,
+        "mask": 2,
+        "sampleBands": 34,
+        "samplePhases": 204,
+        "finalScans": 17,
+        "encodes": 2385,
+        "centerUpdates": 56128,
+        "recordVisits": 3672,
+        "faceVisits": 106352,
+        "bboxGuards": 8961,
+        "targetGeometry": 103913,
+        "sampleShades": 9540
+      },
+      "totalUpper": 294468,
+      "reserved": 310000
+    },
+    "oblique": {
+      "terms": {
+        "setupBind": 3243,
+        "centerBands": 17,
+        "mask": 2,
+        "sampleBands": 34,
+        "samplePhases": 204,
+        "finalScans": 17,
+        "encodes": 2391,
+        "centerUpdates": 53914,
+        "recordVisits": 3672,
+        "faceVisits": 106352,
+        "bboxGuards": 9097,
+        "targetGeometry": 95649,
+        "sampleShades": 9564
+      },
+      "totalUpper": 284156,
+      "reserved": 310000
+    }
+  },
+  "all20ProjectedTriangleMultisetHashes": {
+    "front-ambient-reverse.canonical": "36a3e2356abd131ab875f5d0b3812aa9bce1797c6df2b3a4e4c69000b6fe3081",
+    "front-direction-reverse.canonical": "36a3e2356abd131ab875f5d0b3812aa9bce1797c6df2b3a4e4c69000b6fe3081",
+    "oblique-albedo-reverse.canonical": "887521a207e245d64e0e5a520a363e46706366eb04b754eecf77defb2c00a7fe",
+    "front-baseline.canonical": "36a3e2356abd131ab875f5d0b3812aa9bce1797c6df2b3a4e4c69000b6fe3081",
+    "front-baseline-reverse.canonical": "36a3e2356abd131ab875f5d0b3812aa9bce1797c6df2b3a4e4c69000b6fe3081",
+    "front-intensity.canonical": "36a3e2356abd131ab875f5d0b3812aa9bce1797c6df2b3a4e4c69000b6fe3081",
+    "oblique-intensity-reverse.canonical": "887521a207e245d64e0e5a520a363e46706366eb04b754eecf77defb2c00a7fe",
+    "oblique-intensity.canonical": "887521a207e245d64e0e5a520a363e46706366eb04b754eecf77defb2c00a7fe",
+    "oblique-direction.canonical": "887521a207e245d64e0e5a520a363e46706366eb04b754eecf77defb2c00a7fe",
+    "oblique-ambient-reverse.canonical": "887521a207e245d64e0e5a520a363e46706366eb04b754eecf77defb2c00a7fe",
+    "oblique-direction-reverse.canonical": "887521a207e245d64e0e5a520a363e46706366eb04b754eecf77defb2c00a7fe",
+    "oblique-albedo.canonical": "887521a207e245d64e0e5a520a363e46706366eb04b754eecf77defb2c00a7fe",
+    "front-direction.canonical": "36a3e2356abd131ab875f5d0b3812aa9bce1797c6df2b3a4e4c69000b6fe3081",
+    "front-albedo.canonical": "36a3e2356abd131ab875f5d0b3812aa9bce1797c6df2b3a4e4c69000b6fe3081",
+    "front-intensity-reverse.canonical": "36a3e2356abd131ab875f5d0b3812aa9bce1797c6df2b3a4e4c69000b6fe3081",
+    "oblique-ambient.canonical": "887521a207e245d64e0e5a520a363e46706366eb04b754eecf77defb2c00a7fe",
+    "front-albedo-reverse.canonical": "36a3e2356abd131ab875f5d0b3812aa9bce1797c6df2b3a4e4c69000b6fe3081",
+    "front-ambient.canonical": "36a3e2356abd131ab875f5d0b3812aa9bce1797c6df2b3a4e4c69000b6fe3081",
+    "oblique-baseline-reverse.canonical": "887521a207e245d64e0e5a520a363e46706366eb04b754eecf77defb2c00a7fe",
+    "oblique-baseline.canonical": "887521a207e245d64e0e5a520a363e46706366eb04b754eecf77defb2c00a7fe"
+  },
+  "inputPins": {
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-lid-evaluation/canonical-proof-lid8/private-snapshots/front-ambient-reverse.canonical": "3b3d1640ecb67fb7eeb15029ab94c4cdc68c4896d18bf9634b618de881f163f8",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-lid-evaluation/canonical-proof-lid8/private-snapshots/front-direction-reverse.canonical": "3a2e7ae94fe965fe02b9806d0f0af4577100f1ca9e57730fd65c74ee9e99c49c",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-lid-evaluation/canonical-proof-lid8/private-snapshots/oblique-albedo-reverse.canonical": "d618c94ab89e6c5fd988bde8ec03aa33119649fd66ef131591e1b086d05db884",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-lid-evaluation/canonical-proof-lid8/private-snapshots/front-baseline.canonical": "67808269a5ad19c79010f0522cd83fba5e7577a27565042186450663856d0871",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-lid-evaluation/canonical-proof-lid8/private-snapshots/front-baseline-reverse.canonical": "9883306e7481803996087f28f0d120485503cd0ed89471c9ff63c3d544a07d0d",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-lid-evaluation/canonical-proof-lid8/private-snapshots/front-intensity.canonical": "4dbc38c22216869aa71ae244a88a2b6b48918fd04b840385cc8d7a690ed2b9ce",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-lid-evaluation/canonical-proof-lid8/private-snapshots/oblique-intensity-reverse.canonical": "56390f976e6bb245ed31f9df1a5ef6a12f0844392af127fead3183e7c7960826",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-lid-evaluation/canonical-proof-lid8/private-snapshots/oblique-intensity.canonical": "2e8f0a748d179899cc03b5c75d729723c37d6c64f2c0089d876936f38cce2ced",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-lid-evaluation/canonical-proof-lid8/private-snapshots/oblique-direction.canonical": "6e9f7cf32a03dd6f05c5f249f3d9e1b10921a7a2487494ab37b17af05b73cb42",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-lid-evaluation/canonical-proof-lid8/private-snapshots/oblique-ambient-reverse.canonical": "08a5549e2362e7147f790edbeef4dd96397d9fb4bb902d186968ecbaa02657df",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-lid-evaluation/canonical-proof-lid8/private-snapshots/oblique-direction-reverse.canonical": "862acbbe2b9aff8b3dba9af7963e0f163c4ee36eec77960aeca5a00cc0f59d84",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-lid-evaluation/canonical-proof-lid8/private-snapshots/oblique-albedo.canonical": "12b7cd7488ae66c0032b7bbe5b96dc4e2be234b28b1da3c4d0aeec8136dd3a60",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-lid-evaluation/canonical-proof-lid8/private-snapshots/front-direction.canonical": "d049831a4f40b1d01a395f59312de4c54e9ddfdbdae1d517fb2e228cc0abb41a",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-lid-evaluation/canonical-proof-lid8/private-snapshots/front-albedo.canonical": "a850cfaddb3ada312811573d9e461f93ececb0b2da621e5bcf3e66939dfa106a",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-lid-evaluation/canonical-proof-lid8/private-snapshots/front-intensity-reverse.canonical": "b2201e97dc1b71cb3f2d88be96ad38d8f207dfc1e0ecc362914595e340a2e119",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-lid-evaluation/canonical-proof-lid8/private-snapshots/oblique-ambient.canonical": "2dc9380b9d0e68dbe2c48062b5c085e47c21ca724993aebd41df697ffe53522b",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-lid-evaluation/canonical-proof-lid8/private-snapshots/front-albedo-reverse.canonical": "2e6e5b2a3f1f58b3ca98c9a55e1f9e12279f83e17624d506d3a0aeea095ea07e",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-lid-evaluation/canonical-proof-lid8/private-snapshots/front-ambient.canonical": "8746c6fc9f798379924eba55cfcf37ac6b3ebf7a854275ef3198f3a120c101ab",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-lid-evaluation/canonical-proof-lid8/private-snapshots/oblique-baseline-reverse.canonical": "9f7d9e47493bfc2f70acd9c8975c5e7c1f754675dad1e41945b3219e3ccc2e46",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-lid-evaluation/canonical-proof-lid8/private-snapshots/oblique-baseline.canonical": "90abcd14a44ffbb9e4dd37aa46781d041a55fba97918ae43d89e964610092612"
+  },
+  "scope": "exact xy triangle multiset guarantees identical bbox visits; center target source IDs independently pinned v32 per-frame admission"
+}

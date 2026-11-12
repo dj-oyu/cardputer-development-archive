@@ -1,0 +1,804 @@
+{
+  "source_sha256": "384ada0c37da16d625b1e6612a0d2f7ca538c29fe0d8dff43a929841ec63fba8",
+  "blender_version": "4.3.2",
+  "rows": [
+    {
+      "key": "Blink Both",
+      "input_double": 0.9799999,
+      "stored_control": 0.9799999,
+      "f32": 0.9799998998641968,
+      "runtime_hidden": false,
+      "observed": [
+        {
+          "side": -1,
+          "hidden": false,
+          "shader_blink": 0.9799998998641968
+        },
+        {
+          "side": 1,
+          "hidden": false,
+          "shader_blink": 0.9799998998641968
+        }
+      ]
+    },
+    {
+      "key": "Blink Both",
+      "input_double": 0.97999999,
+      "stored_control": 0.97999999,
+      "f32": 0.9800000190734863,
+      "runtime_hidden": true,
+      "observed": [
+        {
+          "side": -1,
+          "hidden": true,
+          "shader_blink": 0.9800000190734863
+        },
+        {
+          "side": 1,
+          "hidden": true,
+          "shader_blink": 0.9800000190734863
+        }
+      ]
+    },
+    {
+      "key": "Blink Both",
+      "input_double": 0.979999999,
+      "stored_control": 0.979999999,
+      "f32": 0.9800000190734863,
+      "runtime_hidden": true,
+      "observed": [
+        {
+          "side": -1,
+          "hidden": true,
+          "shader_blink": 0.9800000190734863
+        },
+        {
+          "side": 1,
+          "hidden": true,
+          "shader_blink": 0.9800000190734863
+        }
+      ]
+    },
+    {
+      "key": "Blink Both",
+      "input_double": 0.98,
+      "stored_control": 0.98,
+      "f32": 0.9800000190734863,
+      "runtime_hidden": true,
+      "observed": [
+        {
+          "side": -1,
+          "hidden": true,
+          "shader_blink": 0.9800000190734863
+        },
+        {
+          "side": 1,
+          "hidden": true,
+          "shader_blink": 0.9800000190734863
+        }
+      ]
+    },
+    {
+      "key": "Blink Both",
+      "input_double": 0.980000001,
+      "stored_control": 0.980000001,
+      "f32": 0.9800000190734863,
+      "runtime_hidden": true,
+      "observed": [
+        {
+          "side": -1,
+          "hidden": true,
+          "shader_blink": 0.9800000190734863
+        },
+        {
+          "side": 1,
+          "hidden": true,
+          "shader_blink": 0.9800000190734863
+        }
+      ]
+    },
+    {
+      "key": "Blink Both",
+      "input_double": 0.9799999594688416,
+      "stored_control": 0.9799999594688416,
+      "f32": 0.9799999594688416,
+      "runtime_hidden": false,
+      "observed": [
+        {
+          "side": -1,
+          "hidden": false,
+          "shader_blink": 0.9799999594688416
+        },
+        {
+          "side": 1,
+          "hidden": false,
+          "shader_blink": 0.9799999594688416
+        }
+      ]
+    },
+    {
+      "key": "Blink Both",
+      "input_double": 0.9800000190734863,
+      "stored_control": 0.9800000190734863,
+      "f32": 0.9800000190734863,
+      "runtime_hidden": true,
+      "observed": [
+        {
+          "side": -1,
+          "hidden": true,
+          "shader_blink": 0.9800000190734863
+        },
+        {
+          "side": 1,
+          "hidden": true,
+          "shader_blink": 0.9800000190734863
+        }
+      ]
+    },
+    {
+      "key": "Blink Both",
+      "input_double": 0.9800000786781311,
+      "stored_control": 0.9800000786781311,
+      "f32": 0.9800000786781311,
+      "runtime_hidden": true,
+      "observed": [
+        {
+          "side": -1,
+          "hidden": true,
+          "shader_blink": 0.9800000786781311
+        },
+        {
+          "side": 1,
+          "hidden": true,
+          "shader_blink": 0.9800000786781311
+        }
+      ]
+    },
+    {
+      "key": "Blink Both",
+      "input_double": 0.019999999,
+      "stored_control": 0.019999999,
+      "f32": 0.019999999552965164,
+      "runtime_hidden": false,
+      "observed": [
+        {
+          "side": -1,
+          "hidden": false,
+          "shader_blink": 0.019999999552965164
+        },
+        {
+          "side": 1,
+          "hidden": false,
+          "shader_blink": 0.019999999552965164
+        }
+      ]
+    },
+    {
+      "key": "Blink Both",
+      "input_double": 0.02,
+      "stored_control": 0.02,
+      "f32": 0.019999999552965164,
+      "runtime_hidden": false,
+      "observed": [
+        {
+          "side": -1,
+          "hidden": false,
+          "shader_blink": 0.019999999552965164
+        },
+        {
+          "side": 1,
+          "hidden": false,
+          "shader_blink": 0.019999999552965164
+        }
+      ]
+    },
+    {
+      "key": "Blink Both",
+      "input_double": 0.020000001,
+      "stored_control": 0.020000001,
+      "f32": 0.020000001415610313,
+      "runtime_hidden": false,
+      "observed": [
+        {
+          "side": -1,
+          "hidden": false,
+          "shader_blink": 0.020000001415610313
+        },
+        {
+          "side": 1,
+          "hidden": false,
+          "shader_blink": 0.020000001415610313
+        }
+      ]
+    },
+    {
+      "key": "Blink Both",
+      "input_double": 0.019999997690320015,
+      "stored_control": 0.019999997690320015,
+      "f32": 0.019999997690320015,
+      "runtime_hidden": false,
+      "observed": [
+        {
+          "side": -1,
+          "hidden": false,
+          "shader_blink": 0.019999997690320015
+        },
+        {
+          "side": 1,
+          "hidden": false,
+          "shader_blink": 0.019999997690320015
+        }
+      ]
+    },
+    {
+      "key": "Blink Both",
+      "input_double": 0.019999999552965164,
+      "stored_control": 0.019999999552965164,
+      "f32": 0.019999999552965164,
+      "runtime_hidden": false,
+      "observed": [
+        {
+          "side": -1,
+          "hidden": false,
+          "shader_blink": 0.019999999552965164
+        },
+        {
+          "side": 1,
+          "hidden": false,
+          "shader_blink": 0.019999999552965164
+        }
+      ]
+    },
+    {
+      "key": "Blink Both",
+      "input_double": 0.020000001415610313,
+      "stored_control": 0.020000001415610313,
+      "f32": 0.020000001415610313,
+      "runtime_hidden": false,
+      "observed": [
+        {
+          "side": -1,
+          "hidden": false,
+          "shader_blink": 0.020000001415610313
+        },
+        {
+          "side": 1,
+          "hidden": false,
+          "shader_blink": 0.020000001415610313
+        }
+      ]
+    },
+    {
+      "key": "Blink -X",
+      "input_double": 0.9799999,
+      "stored_control": 0.9799999,
+      "f32": 0.9799998998641968,
+      "runtime_hidden": false,
+      "observed": [
+        {
+          "side": -1,
+          "hidden": false,
+          "shader_blink": 0.9799998998641968
+        },
+        {
+          "side": 1,
+          "hidden": false,
+          "shader_blink": 0.0
+        }
+      ]
+    },
+    {
+      "key": "Blink -X",
+      "input_double": 0.97999999,
+      "stored_control": 0.97999999,
+      "f32": 0.9800000190734863,
+      "runtime_hidden": true,
+      "observed": [
+        {
+          "side": -1,
+          "hidden": true,
+          "shader_blink": 0.9800000190734863
+        },
+        {
+          "side": 1,
+          "hidden": false,
+          "shader_blink": 0.0
+        }
+      ]
+    },
+    {
+      "key": "Blink -X",
+      "input_double": 0.979999999,
+      "stored_control": 0.979999999,
+      "f32": 0.9800000190734863,
+      "runtime_hidden": true,
+      "observed": [
+        {
+          "side": -1,
+          "hidden": true,
+          "shader_blink": 0.9800000190734863
+        },
+        {
+          "side": 1,
+          "hidden": false,
+          "shader_blink": 0.0
+        }
+      ]
+    },
+    {
+      "key": "Blink -X",
+      "input_double": 0.98,
+      "stored_control": 0.98,
+      "f32": 0.9800000190734863,
+      "runtime_hidden": true,
+      "observed": [
+        {
+          "side": -1,
+          "hidden": true,
+          "shader_blink": 0.9800000190734863
+        },
+        {
+          "side": 1,
+          "hidden": false,
+          "shader_blink": 0.0
+        }
+      ]
+    },
+    {
+      "key": "Blink -X",
+      "input_double": 0.980000001,
+      "stored_control": 0.980000001,
+      "f32": 0.9800000190734863,
+      "runtime_hidden": true,
+      "observed": [
+        {
+          "side": -1,
+          "hidden": true,
+          "shader_blink": 0.9800000190734863
+        },
+        {
+          "side": 1,
+          "hidden": false,
+          "shader_blink": 0.0
+        }
+      ]
+    },
+    {
+      "key": "Blink -X",
+      "input_double": 0.9799999594688416,
+      "stored_control": 0.9799999594688416,
+      "f32": 0.9799999594688416,
+      "runtime_hidden": false,
+      "observed": [
+        {
+          "side": -1,
+          "hidden": false,
+          "shader_blink": 0.9799999594688416
+        },
+        {
+          "side": 1,
+          "hidden": false,
+          "shader_blink": 0.0
+        }
+      ]
+    },
+    {
+      "key": "Blink -X",
+      "input_double": 0.9800000190734863,
+      "stored_control": 0.9800000190734863,
+      "f32": 0.9800000190734863,
+      "runtime_hidden": true,
+      "observed": [
+        {
+          "side": -1,
+          "hidden": true,
+          "shader_blink": 0.9800000190734863
+        },
+        {
+          "side": 1,
+          "hidden": false,
+          "shader_blink": 0.0
+        }
+      ]
+    },
+    {
+      "key": "Blink -X",
+      "input_double": 0.9800000786781311,
+      "stored_control": 0.9800000786781311,
+      "f32": 0.9800000786781311,
+      "runtime_hidden": true,
+      "observed": [
+        {
+          "side": -1,
+          "hidden": true,
+          "shader_blink": 0.9800000786781311
+        },
+        {
+          "side": 1,
+          "hidden": false,
+          "shader_blink": 0.0
+        }
+      ]
+    },
+    {
+      "key": "Blink -X",
+      "input_double": 0.019999999,
+      "stored_control": 0.019999999,
+      "f32": 0.019999999552965164,
+      "runtime_hidden": false,
+      "observed": [
+        {
+          "side": -1,
+          "hidden": false,
+          "shader_blink": 0.019999999552965164
+        },
+        {
+          "side": 1,
+          "hidden": false,
+          "shader_blink": 0.0
+        }
+      ]
+    },
+    {
+      "key": "Blink -X",
+      "input_double": 0.02,
+      "stored_control": 0.02,
+      "f32": 0.019999999552965164,
+      "runtime_hidden": false,
+      "observed": [
+        {
+          "side": -1,
+          "hidden": false,
+          "shader_blink": 0.019999999552965164
+        },
+        {
+          "side": 1,
+          "hidden": false,
+          "shader_blink": 0.0
+        }
+      ]
+    },
+    {
+      "key": "Blink -X",
+      "input_double": 0.020000001,
+      "stored_control": 0.020000001,
+      "f32": 0.020000001415610313,
+      "runtime_hidden": false,
+      "observed": [
+        {
+          "side": -1,
+          "hidden": false,
+          "shader_blink": 0.020000001415610313
+        },
+        {
+          "side": 1,
+          "hidden": false,
+          "shader_blink": 0.0
+        }
+      ]
+    },
+    {
+      "key": "Blink -X",
+      "input_double": 0.019999997690320015,
+      "stored_control": 0.019999997690320015,
+      "f32": 0.019999997690320015,
+      "runtime_hidden": false,
+      "observed": [
+        {
+          "side": -1,
+          "hidden": false,
+          "shader_blink": 0.019999997690320015
+        },
+        {
+          "side": 1,
+          "hidden": false,
+          "shader_blink": 0.0
+        }
+      ]
+    },
+    {
+      "key": "Blink -X",
+      "input_double": 0.019999999552965164,
+      "stored_control": 0.019999999552965164,
+      "f32": 0.019999999552965164,
+      "runtime_hidden": false,
+      "observed": [
+        {
+          "side": -1,
+          "hidden": false,
+          "shader_blink": 0.019999999552965164
+        },
+        {
+          "side": 1,
+          "hidden": false,
+          "shader_blink": 0.0
+        }
+      ]
+    },
+    {
+      "key": "Blink -X",
+      "input_double": 0.020000001415610313,
+      "stored_control": 0.020000001415610313,
+      "f32": 0.020000001415610313,
+      "runtime_hidden": false,
+      "observed": [
+        {
+          "side": -1,
+          "hidden": false,
+          "shader_blink": 0.020000001415610313
+        },
+        {
+          "side": 1,
+          "hidden": false,
+          "shader_blink": 0.0
+        }
+      ]
+    },
+    {
+      "key": "Blink +X",
+      "input_double": 0.9799999,
+      "stored_control": 0.9799999,
+      "f32": 0.9799998998641968,
+      "runtime_hidden": false,
+      "observed": [
+        {
+          "side": -1,
+          "hidden": false,
+          "shader_blink": 0.0
+        },
+        {
+          "side": 1,
+          "hidden": false,
+          "shader_blink": 0.9799998998641968
+        }
+      ]
+    },
+    {
+      "key": "Blink +X",
+      "input_double": 0.97999999,
+      "stored_control": 0.97999999,
+      "f32": 0.9800000190734863,
+      "runtime_hidden": true,
+      "observed": [
+        {
+          "side": -1,
+          "hidden": false,
+          "shader_blink": 0.0
+        },
+        {
+          "side": 1,
+          "hidden": true,
+          "shader_blink": 0.9800000190734863
+        }
+      ]
+    },
+    {
+      "key": "Blink +X",
+      "input_double": 0.979999999,
+      "stored_control": 0.979999999,
+      "f32": 0.9800000190734863,
+      "runtime_hidden": true,
+      "observed": [
+        {
+          "side": -1,
+          "hidden": false,
+          "shader_blink": 0.0
+        },
+        {
+          "side": 1,
+          "hidden": true,
+          "shader_blink": 0.9800000190734863
+        }
+      ]
+    },
+    {
+      "key": "Blink +X",
+      "input_double": 0.98,
+      "stored_control": 0.98,
+      "f32": 0.9800000190734863,
+      "runtime_hidden": true,
+      "observed": [
+        {
+          "side": -1,
+          "hidden": false,
+          "shader_blink": 0.0
+        },
+        {
+          "side": 1,
+          "hidden": true,
+          "shader_blink": 0.9800000190734863
+        }
+      ]
+    },
+    {
+      "key": "Blink +X",
+      "input_double": 0.980000001,
+      "stored_control": 0.980000001,
+      "f32": 0.9800000190734863,
+      "runtime_hidden": true,
+      "observed": [
+        {
+          "side": -1,
+          "hidden": false,
+          "shader_blink": 0.0
+        },
+        {
+          "side": 1,
+          "hidden": true,
+          "shader_blink": 0.9800000190734863
+        }
+      ]
+    },
+    {
+      "key": "Blink +X",
+      "input_double": 0.9799999594688416,
+      "stored_control": 0.9799999594688416,
+      "f32": 0.9799999594688416,
+      "runtime_hidden": false,
+      "observed": [
+        {
+          "side": -1,
+          "hidden": false,
+          "shader_blink": 0.0
+        },
+        {
+          "side": 1,
+          "hidden": false,
+          "shader_blink": 0.9799999594688416
+        }
+      ]
+    },
+    {
+      "key": "Blink +X",
+      "input_double": 0.9800000190734863,
+      "stored_control": 0.9800000190734863,
+      "f32": 0.9800000190734863,
+      "runtime_hidden": true,
+      "observed": [
+        {
+          "side": -1,
+          "hidden": false,
+          "shader_blink": 0.0
+        },
+        {
+          "side": 1,
+          "hidden": true,
+          "shader_blink": 0.9800000190734863
+        }
+      ]
+    },
+    {
+      "key": "Blink +X",
+      "input_double": 0.9800000786781311,
+      "stored_control": 0.9800000786781311,
+      "f32": 0.9800000786781311,
+      "runtime_hidden": true,
+      "observed": [
+        {
+          "side": -1,
+          "hidden": false,
+          "shader_blink": 0.0
+        },
+        {
+          "side": 1,
+          "hidden": true,
+          "shader_blink": 0.9800000786781311
+        }
+      ]
+    },
+    {
+      "key": "Blink +X",
+      "input_double": 0.019999999,
+      "stored_control": 0.019999999,
+      "f32": 0.019999999552965164,
+      "runtime_hidden": false,
+      "observed": [
+        {
+          "side": -1,
+          "hidden": false,
+          "shader_blink": 0.0
+        },
+        {
+          "side": 1,
+          "hidden": false,
+          "shader_blink": 0.019999999552965164
+        }
+      ]
+    },
+    {
+      "key": "Blink +X",
+      "input_double": 0.02,
+      "stored_control": 0.02,
+      "f32": 0.019999999552965164,
+      "runtime_hidden": false,
+      "observed": [
+        {
+          "side": -1,
+          "hidden": false,
+          "shader_blink": 0.0
+        },
+        {
+          "side": 1,
+          "hidden": false,
+          "shader_blink": 0.019999999552965164
+        }
+      ]
+    },
+    {
+      "key": "Blink +X",
+      "input_double": 0.020000001,
+      "stored_control": 0.020000001,
+      "f32": 0.020000001415610313,
+      "runtime_hidden": false,
+      "observed": [
+        {
+          "side": -1,
+          "hidden": false,
+          "shader_blink": 0.0
+        },
+        {
+          "side": 1,
+          "hidden": false,
+          "shader_blink": 0.020000001415610313
+        }
+      ]
+    },
+    {
+      "key": "Blink +X",
+      "input_double": 0.019999997690320015,
+      "stored_control": 0.019999997690320015,
+      "f32": 0.019999997690320015,
+      "runtime_hidden": false,
+      "observed": [
+        {
+          "side": -1,
+          "hidden": false,
+          "shader_blink": 0.0
+        },
+        {
+          "side": 1,
+          "hidden": false,
+          "shader_blink": 0.019999997690320015
+        }
+      ]
+    },
+    {
+      "key": "Blink +X",
+      "input_double": 0.019999999552965164,
+      "stored_control": 0.019999999552965164,
+      "f32": 0.019999999552965164,
+      "runtime_hidden": false,
+      "observed": [
+        {
+          "side": -1,
+          "hidden": false,
+          "shader_blink": 0.0
+        },
+        {
+          "side": 1,
+          "hidden": false,
+          "shader_blink": 0.019999999552965164
+        }
+      ]
+    },
+    {
+      "key": "Blink +X",
+      "input_double": 0.020000001415610313,
+      "stored_control": 0.020000001415610313,
+      "f32": 0.020000001415610313,
+      "runtime_hidden": false,
+      "observed": [
+        {
+          "side": -1,
+          "hidden": false,
+          "shader_blink": 0.0
+        },
+        {
+          "side": 1,
+          "hidden": false,
+          "shader_blink": 0.020000001415610313
+        }
+      ]
+    }
+  ]
+}

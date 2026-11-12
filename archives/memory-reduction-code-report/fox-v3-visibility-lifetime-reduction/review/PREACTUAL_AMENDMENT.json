@@ -1,0 +1,12 @@
+{
+  "status": "EVIDENCE_ONLY_AMENDMENT_ZERO_ACTUAL",
+  "actualFrames": 0,
+  "reason": "Freeze script previously rewrote SOURCE_DELTA after prerequisite pinning; outer freeze valid but nested prerequisite hash stale. Script no longer mutates SOURCE_DELTA; prerequisite refreshed before replacement freeze.",
+  "superseded": {
+    "SOURCE_FREEZE.json": "59c020ccb0f26f0588887b1efbb26a2df12c4c788432adcee78b19846d78609d",
+    "CHECKPOINT_ALLOWLIST.json": "c44836835ba3415b0078f9f0e1908978314c442d9c2ec82664f45bdb8b2a7f89",
+    "PREREQUISITE_REPORT.json": "90f8a1f510f443446021097d1e59b42354fff088965fad99104504054f8cdc79"
+  },
+  "callerAndKernelBytesUnchanged": true,
+  "historicalCheckpoint": "v29 outer hashes valid, nested evidence incomplete; superseded by this amendment"
+}

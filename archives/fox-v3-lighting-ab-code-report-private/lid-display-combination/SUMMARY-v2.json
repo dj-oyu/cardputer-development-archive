@@ -1,0 +1,1580 @@
+{
+  "scope": "Ten colors/eight responses per arm; stable conditional metrics, not global acceptance",
+  "comparisons": {
+    "profileAtPoint": {
+      "colorAgreementDeltaPP": {
+        "min": -1.3565962139392695,
+        "max": 0.6682078135913798,
+        "positiveCount": 5,
+        "negativeCount": 5
+      },
+      "responseMetricDeltas": {
+        "directionAgreementPercent": {
+          "caseDeltas": {
+            "front/direction": 2.258969239028559,
+            "front/intensity": 1.0764932975575476,
+            "front/ambient": 1.3880641074930509,
+            "front/albedo": -0.20735155513665404,
+            "oblique/direction": 1.3701045107069518,
+            "oblique/intensity": 0.9032004712350101,
+            "oblique/ambient": 0.14929387430765928,
+            "oblique/albedo": -0.40920716112530897
+          },
+          "minimum": -0.40920716112530897,
+          "maximum": 2.258969239028559,
+          "unknownCases": []
+        },
+        "deltaLumaRMSE": {
+          "caseDeltas": {
+            "front/direction": -0.014797129499497227,
+            "front/intensity": -0.009500343530657145,
+            "front/ambient": -0.0014006922866865446,
+            "front/albedo": -0.006116255261058481,
+            "oblique/direction": -0.014429065766309437,
+            "oblique/intensity": -0.008960067323840831,
+            "oblique/ambient": -0.0012982252636517082,
+            "oblique/albedo": -0.004632022186633007
+          },
+          "minimum": -0.014797129499497227,
+          "maximum": -0.0012982252636517082,
+          "unknownCases": []
+        },
+        "deltaRGBRMSE": {
+          "caseDeltas": {
+            "front/direction": -0.007383646216666123,
+            "front/intensity": -0.008729706788286343,
+            "front/ambient": -0.0023602283499023144,
+            "front/albedo": -0.004173086476810292,
+            "oblique/direction": -0.00667909515399151,
+            "oblique/intensity": -0.00865214558638032,
+            "oblique/ambient": -0.0015921574173720782,
+            "oblique/albedo": -0.0017599208995818932
+          },
+          "minimum": -0.008729706788286343,
+          "maximum": -0.0015921574173720782,
+          "unknownCases": []
+        },
+        "responseMagnitudeAgreementPercent": {
+          "caseDeltas": {
+            "front/direction": 3.9563349847704217,
+            "front/intensity": 5.535766538731593,
+            "front/ambient": 2.440285830503292,
+            "front/albedo": -3.153936449444899,
+            "oblique/direction": 3.466121469750803,
+            "oblique/intensity": -1.4067476902399108,
+            "oblique/ambient": 2.208769564227765,
+            "oblique/albedo": -0.5898027813863393
+          },
+          "minimum": -3.153936449444899,
+          "maximum": 5.535766538731593,
+          "unknownCases": []
+        },
+        "signedCorrelation": {
+          "caseDeltas": {
+            "front/direction": 0.08036778810063239,
+            "front/intensity": 0.1329550041303168,
+            "front/ambient": 0.009449592572228493,
+            "front/albedo": 0.10679118439548702,
+            "oblique/direction": 0.09334829146757151,
+            "oblique/intensity": 0.1382486849177491,
+            "oblique/ambient": 0.02188045428973595,
+            "oblique/albedo": 0.08099779338175495
+          },
+          "minimum": 0.009449592572228493,
+          "maximum": 0.1382486849177491,
+          "unknownCases": []
+        }
+      }
+    },
+    "profileAtFilter3": {
+      "colorAgreementDeltaPP": {
+        "min": -1.7633984921630201,
+        "max": 0.26592036671299013,
+        "positiveCount": 3,
+        "negativeCount": 7
+      },
+      "responseMetricDeltas": {
+        "directionAgreementPercent": {
+          "caseDeltas": {
+            "front/direction": 1.8841651321213106,
+            "front/intensity": 0.7106625856625897,
+            "front/ambient": 0.1610954446338866,
+            "front/albedo": -2.940622054665411,
+            "oblique/direction": 0.9607399752976562,
+            "oblique/intensity": 0.6461719208928969,
+            "oblique/ambient": -0.9865535272274855,
+            "oblique/albedo": -2.9156010230179135
+          },
+          "minimum": -2.940622054665411,
+          "maximum": 1.8841651321213106,
+          "unknownCases": []
+        },
+        "deltaLumaRMSE": {
+          "caseDeltas": {
+            "front/direction": -0.014763571313566384,
+            "front/intensity": -0.010096349420858713,
+            "front/ambient": -0.0012669188984341696,
+            "front/albedo": -0.006533433410307703,
+            "oblique/direction": -0.014670073779523493,
+            "oblique/intensity": -0.009591158224494939,
+            "oblique/ambient": -0.0013588013787924867,
+            "oblique/albedo": -0.0047989034299943875
+          },
+          "minimum": -0.014763571313566384,
+          "maximum": -0.0012669188984341696,
+          "unknownCases": []
+        },
+        "deltaRGBRMSE": {
+          "caseDeltas": {
+            "front/direction": -0.008029656043869432,
+            "front/intensity": -0.009357084565739728,
+            "front/ambient": -0.0025261611089928936,
+            "front/albedo": -0.004954371374713537,
+            "oblique/direction": -0.007238182893969269,
+            "oblique/intensity": -0.009227899429652749,
+            "oblique/ambient": -0.001770626290324262,
+            "oblique/albedo": -0.001950029980317916
+          },
+          "minimum": -0.009357084565739728,
+          "maximum": -0.001770626290324262,
+          "unknownCases": []
+        },
+        "responseMagnitudeAgreementPercent": {
+          "caseDeltas": {
+            "front/direction": 3.726641493020395,
+            "front/intensity": 5.514554851428187,
+            "front/ambient": 1.356290322897749,
+            "front/albedo": -3.2024082518728676,
+            "oblique/direction": 3.3657007486311983,
+            "oblique/intensity": 1.0513938491184405,
+            "oblique/ambient": 1.7526851664937482,
+            "oblique/albedo": -0.8375483659117151
+          },
+          "minimum": -3.2024082518728676,
+          "maximum": 5.514554851428187,
+          "unknownCases": []
+        },
+        "signedCorrelation": {
+          "caseDeltas": {
+            "front/direction": 0.08058687389962926,
+            "front/intensity": 0.14288831225306176,
+            "front/ambient": 0.017778205582399537,
+            "front/albedo": 0.12967323384352458,
+            "oblique/direction": 0.09524411177878345,
+            "oblique/intensity": 0.14905359898058856,
+            "oblique/ambient": 0.03652455620863185,
+            "oblique/albedo": 0.09978046985703751
+          },
+          "minimum": 0.017778205582399537,
+          "maximum": 0.14905359898058856,
+          "unknownCases": []
+        }
+      }
+    },
+    "filterAtProfileOff": {
+      "colorAgreementDeltaPP": {
+        "min": 1.3381003154227642,
+        "max": 1.9324198898197125,
+        "positiveCount": 10,
+        "negativeCount": 0
+      },
+      "responseMetricDeltas": {
+        "directionAgreementPercent": {
+          "caseDeltas": {
+            "front/direction": 3.8087655641708835,
+            "front/intensity": 4.139560661299797,
+            "front/ambient": 5.682035584465282,
+            "front/albedo": 7.521206409048077,
+            "oblique/direction": 3.2320818928801742,
+            "oblique/intensity": 3.3760771021829186,
+            "oblique/ambient": 5.39699014011417,
+            "oblique/albedo": 7.178175618073325
+          },
+          "minimum": 3.2320818928801742,
+          "maximum": 7.521206409048077,
+          "unknownCases": []
+        },
+        "deltaLumaRMSE": {
+          "caseDeltas": {
+            "front/direction": -0.003513326432793923,
+            "front/intensity": -0.0010660166151134423,
+            "front/ambient": -0.0013434553615504531,
+            "front/albedo": -0.0020079949413939063,
+            "oblique/direction": -0.002781960163581468,
+            "oblique/intensity": -0.0005553449620253406,
+            "oblique/ambient": -0.0012112328979728172,
+            "oblique/albedo": -0.001659694300767442
+          },
+          "minimum": -0.003513326432793923,
+          "maximum": -0.0005553449620253406,
+          "unknownCases": []
+        },
+        "deltaRGBRMSE": {
+          "caseDeltas": {
+            "front/direction": -0.0029571634436390964,
+            "front/intensity": -0.0008414107355567274,
+            "front/ambient": -0.0007264242071360408,
+            "front/albedo": -0.0017120314422197497,
+            "oblique/direction": -0.0023090998353980097,
+            "oblique/intensity": -0.0005891410110629575,
+            "oblique/ambient": -0.0007073817282423137,
+            "oblique/albedo": -0.001339313151323615
+          },
+          "minimum": -0.0029571634436390964,
+          "maximum": -0.0005891410110629575,
+          "unknownCases": []
+        },
+        "responseMagnitudeAgreementPercent": {
+          "caseDeltas": {
+            "front/direction": 0.7335206978930415,
+            "front/intensity": -1.6037779748961754,
+            "front/ambient": 1.3756332953489832,
+            "front/albedo": 2.0237375687252666,
+            "oblique/direction": 0.6134278221197462,
+            "oblique/intensity": -1.4235406957265013,
+            "oblique/ambient": 0.3320717966260389,
+            "oblique/albedo": 1.827125275141512
+          },
+          "minimum": -1.6037779748961754,
+          "maximum": 2.0237375687252666,
+          "unknownCases": []
+        },
+        "signedCorrelation": {
+          "caseDeltas": {
+            "front/direction": 0.020652955202729695,
+            "front/intensity": 0.00839431944973379,
+            "front/ambient": 0.03798577486678047,
+            "front/albedo": -0.03879377530576672,
+            "oblique/direction": 0.018409450710741293,
+            "oblique/intensity": -0.0009763205164194932,
+            "oblique/ambient": 0.032675223585031714,
+            "oblique/albedo": -0.04685809106319869
+          },
+          "minimum": -0.04685809106319869,
+          "maximum": 0.03798577486678047,
+          "unknownCases": []
+        }
+      }
+    },
+    "filterAtProfileOn": {
+      "colorAgreementDeltaPP": {
+        "min": 0.9144439203677166,
+        "max": 1.5301324429413228,
+        "positiveCount": 10,
+        "negativeCount": 0
+      },
+      "responseMetricDeltas": {
+        "directionAgreementPercent": {
+          "caseDeltas": {
+            "front/direction": 3.433961457263635,
+            "front/intensity": 3.7737299494048386,
+            "front/ambient": 4.455066921606118,
+            "front/albedo": 4.7879359095193195,
+            "oblique/direction": 2.8227173574708786,
+            "oblique/intensity": 3.1190485518408053,
+            "oblique/ambient": 4.261142738579025,
+            "oblique/albedo": 4.671781756180721
+          },
+          "minimum": 2.8227173574708786,
+          "maximum": 4.7879359095193195,
+          "unknownCases": []
+        },
+        "deltaLumaRMSE": {
+          "caseDeltas": {
+            "front/direction": -0.0034797682468630797,
+            "front/intensity": -0.0016620225053150112,
+            "front/ambient": -0.0012096819732980782,
+            "front/albedo": -0.0024251730906431276,
+            "oblique/direction": -0.0030229681767955235,
+            "oblique/intensity": -0.0011864358626794483,
+            "oblique/ambient": -0.0012718090131135958,
+            "oblique/albedo": -0.0018265755441288223
+          },
+          "minimum": -0.0034797682468630797,
+          "maximum": -0.0011864358626794483,
+          "unknownCases": []
+        },
+        "deltaRGBRMSE": {
+          "caseDeltas": {
+            "front/direction": -0.0036031732708424052,
+            "front/intensity": -0.0014687885130101122,
+            "front/ambient": -0.00089235696622662,
+            "front/albedo": -0.0024933163401229946,
+            "oblique/direction": -0.002868187575375769,
+            "oblique/intensity": -0.0011648948543353868,
+            "oblique/ambient": -0.0008858506011944975,
+            "oblique/albedo": -0.001529422232059638
+          },
+          "minimum": -0.0036031732708424052,
+          "maximum": -0.0008858506011944975,
+          "unknownCases": []
+        },
+        "responseMagnitudeAgreementPercent": {
+          "caseDeltas": {
+            "front/direction": 0.5038272061430149,
+            "front/intensity": -1.6249896621995816,
+            "front/ambient": 0.29163778774343996,
+            "front/albedo": 1.9752657662972979,
+            "oblique/direction": 0.5130071010001416,
+            "oblique/intensity": 1.03460084363185,
+            "oblique/ambient": -0.12401260110797807,
+            "oblique/albedo": 1.5793796906161361
+          },
+          "minimum": -1.6249896621995816,
+          "maximum": 1.9752657662972979,
+          "unknownCases": []
+        },
+        "signedCorrelation": {
+          "caseDeltas": {
+            "front/direction": 0.02087204100172657,
+            "front/intensity": 0.018327627572478744,
+            "front/ambient": 0.04631438787695151,
+            "front/albedo": -0.015911725857729153,
+            "oblique/direction": 0.02030527102195323,
+            "oblique/intensity": 0.009828593546419961,
+            "oblique/ambient": 0.04731932550392761,
+            "oblique/albedo": -0.028075414587916125
+          },
+          "minimum": -0.028075414587916125,
+          "maximum": 0.04731932550392761,
+          "unknownCases": []
+        }
+      }
+    }
+  },
+  "timingMilliseconds": {
+    "point-off": {
+      "minimumCaseMedian": 0.50241,
+      "maximumCaseMedian": 0.582541
+    },
+    "point-on": {
+      "minimumCaseMedian": 1.91141,
+      "maximumCaseMedian": 2.189851
+    },
+    "filter3-off": {
+      "minimumCaseMedian": 0.505143,
+      "maximumCaseMedian": 0.627218
+    },
+    "filter3-on": {
+      "minimumCaseMedian": 1.936458,
+      "maximumCaseMedian": 2.267829
+    },
+    "filterOnly": {
+      "minimumCaseMedian": 0.716694,
+      "maximumCaseMedian": 0.820531
+    }
+  },
+  "clamps": {
+    "countAcrossAll40ArmCases": 0,
+    "meaning": "AGX_PROFILE_CLAMP_HIGH only; not old-clamp-at-one or output gamut clipping",
+    "profileDomainMaximum": 5898.240000132513,
+    "blackInputFlag": 0
+  },
+  "allRawAndSourcesUnchanged": true,
+  "pointOffAll10Exact": true,
+  "colorInteractionPP": {
+    "front/baseline": -0.3818757080560431,
+    "front/direction": -0.36072420116019543,
+    "front/intensity": -0.4088869847455925,
+    "front/ambient": -0.4022874468783897,
+    "front/albedo": -0.4068022782237506,
+    "oblique/baseline": -0.41957717764108793,
+    "oblique/direction": -0.3843376901741209,
+    "oblique/intensity": -0.4629538811449976,
+    "oblique/ambient": -0.4015738186521105,
+    "oblique/albedo": -0.4236563950550476
+  },
+  "criticalObliqueDirectionBrighteningIoU": {
+    "point-off": 0.3923739237392374,
+    "point-on": 0.44483985765124556,
+    "filter3-off": 0.45292014302741357,
+    "filter3-on": 0.4929742388758782
+  },
+  "sixtyPercentGoal": "NOT_ESTABLISHED",
+  "domainDescriptiveRanges": {
+    "point-off": {
+      "stableSubset": {
+        "colorAgreementPercent": {
+          "min": 69.99026437494263,
+          "max": 76.58154718003779,
+          "unknownCount": 0,
+          "scoreCount": 10
+        },
+        "responseLumaRMSE": {
+          "min": 0.02411586658772474,
+          "max": 0.08461114439844133,
+          "unknownCount": 0,
+          "scoreCount": 8
+        },
+        "brightIoU": {
+          "min": 0.3923739237392374,
+          "max": 0.6983220896038748,
+          "unknownCount": 4,
+          "scoreCount": 8
+        },
+        "darkIoU": {
+          "min": 0.7630783538711927,
+          "max": 0.8708765315739868,
+          "unknownCount": 2,
+          "scoreCount": 8
+        }
+      },
+      "uncertainSubsetDescriptiveNotAcceptance": {
+        "colorAgreementPercent": {
+          "min": 73.93611410170293,
+          "max": 81.36262355228418,
+          "unknownCount": 0,
+          "scoreCount": 10
+        },
+        "responseLumaRMSE": {
+          "min": 0.009163184778910418,
+          "max": 0.04157930712790576,
+          "unknownCount": 0,
+          "scoreCount": 8
+        },
+        "brightIoU": {
+          "min": 0.18220338983050846,
+          "max": 0.25,
+          "unknownCount": 4,
+          "scoreCount": 8
+        },
+        "darkIoU": {
+          "min": 0.08196721311475409,
+          "max": 1.0,
+          "unknownCount": 2,
+          "scoreCount": 8
+        }
+      },
+      "pooledFullForegroundDescriptive": {
+        "colorAgreementPercent": {
+          "min": 70.83551541559324,
+          "max": 77.60907827345713,
+          "unknownCount": 0,
+          "scoreCount": 10
+        },
+        "responseLumaRMSE": {
+          "min": 0.023994894110925362,
+          "max": 0.08070210707005863,
+          "unknownCount": 0,
+          "scoreCount": 8
+        },
+        "brightIoU": {
+          "min": 0.34509056244041947,
+          "max": 0.6935980828483396,
+          "unknownCount": 4,
+          "scoreCount": 8
+        },
+        "darkIoU": {
+          "min": 0.7096635954574674,
+          "max": 0.8709251931411344,
+          "unknownCount": 2,
+          "scoreCount": 8
+        }
+      },
+      "eachReferenceSeedFullForeground": {
+        "colorAgreementPercent": {
+          "min": 70.82611604744318,
+          "max": 77.60904292963737,
+          "unknownCount": 0,
+          "scoreCount": 80
+        },
+        "responseLumaRMSE": {
+          "min": 0.024049701966706864,
+          "max": 0.08098666672782678,
+          "unknownCount": 0,
+          "scoreCount": 64
+        },
+        "brightIoU": {
+          "min": 0.0,
+          "max": 0.6952119443967736,
+          "unknownCount": 16,
+          "scoreCount": 64
+        },
+        "darkIoU": {
+          "min": 0.0,
+          "max": 0.8709251931411344,
+          "unknownCount": 14,
+          "scoreCount": 64
+        }
+      }
+    },
+    "point-on": {
+      "stableSubset": {
+        "colorAgreementPercent": {
+          "min": 70.64928565994778,
+          "max": 75.22495096609852,
+          "unknownCount": 0,
+          "scoreCount": 10
+        },
+        "responseLumaRMSE": {
+          "min": 0.022817641324073032,
+          "max": 0.0701820786321319,
+          "unknownCount": 0,
+          "scoreCount": 8
+        },
+        "brightIoU": {
+          "min": 0.44483985765124556,
+          "max": 0.7533460803059273,
+          "unknownCount": 4,
+          "scoreCount": 8
+        },
+        "darkIoU": {
+          "min": 0.7861298580404934,
+          "max": 0.8723845428840716,
+          "unknownCount": 2,
+          "scoreCount": 8
+        }
+      },
+      "uncertainSubsetDescriptiveNotAcceptance": {
+        "colorAgreementPercent": {
+          "min": 70.67754800000712,
+          "max": 77.98732747744175,
+          "unknownCount": 0,
+          "scoreCount": 10
+        },
+        "responseLumaRMSE": {
+          "min": 0.0076810040703868005,
+          "max": 0.040415990470744734,
+          "unknownCount": 0,
+          "scoreCount": 8
+        },
+        "brightIoU": {
+          "min": 0.20816326530612245,
+          "max": 0.6119402985074627,
+          "unknownCount": 4,
+          "scoreCount": 8
+        },
+        "darkIoU": {
+          "min": 0.11559139784946236,
+          "max": 1.0,
+          "unknownCount": 2,
+          "scoreCount": 8
+        }
+      },
+      "pooledFullForegroundDescriptive": {
+        "colorAgreementPercent": {
+          "min": 70.66073512851474,
+          "max": 75.75606298421731,
+          "unknownCount": 0,
+          "scoreCount": 10
+        },
+        "responseLumaRMSE": {
+          "min": 0.022701970945945883,
+          "max": 0.0672233085238176,
+          "unknownCount": 0,
+          "scoreCount": 8
+        },
+        "brightIoU": {
+          "min": 0.3915441176470588,
+          "max": 0.7515574853690768,
+          "unknownCount": 4,
+          "scoreCount": 8
+        },
+        "darkIoU": {
+          "min": 0.7327050760334118,
+          "max": 0.8724326361409459,
+          "unknownCount": 2,
+          "scoreCount": 8
+        }
+      },
+      "eachReferenceSeedFullForeground": {
+        "colorAgreementPercent": {
+          "min": 70.65066647925597,
+          "max": 75.7632767226269,
+          "unknownCount": 0,
+          "scoreCount": 80
+        },
+        "responseLumaRMSE": {
+          "min": 0.022775900097156476,
+          "max": 0.06758250833258427,
+          "unknownCount": 0,
+          "scoreCount": 64
+        },
+        "brightIoU": {
+          "min": 0.0,
+          "max": 0.7511808048365766,
+          "unknownCount": 16,
+          "scoreCount": 64
+        },
+        "darkIoU": {
+          "min": 0.0,
+          "max": 0.8724326361409459,
+          "unknownCount": 14,
+          "scoreCount": 64
+        }
+      }
+    },
+    "filter3-off": {
+      "stableSubset": {
+        "colorAgreementPercent": {
+          "min": 71.71481581052663,
+          "max": 78.02764682101639,
+          "unknownCount": 0,
+          "scoreCount": 10
+        },
+        "responseLumaRMSE": {
+          "min": 0.022904633689751923,
+          "max": 0.08182918423485987,
+          "unknownCount": 0,
+          "scoreCount": 8
+        },
+        "brightIoU": {
+          "min": 0.45292014302741357,
+          "max": 0.7495695427587526,
+          "unknownCount": 4,
+          "scoreCount": 8
+        },
+        "darkIoU": {
+          "min": 0.8004158004158004,
+          "max": 0.9293119698397738,
+          "unknownCount": 2,
+          "scoreCount": 8
+        }
+      },
+      "uncertainSubsetDescriptiveNotAcceptance": {
+        "colorAgreementPercent": {
+          "min": 74.88860659475236,
+          "max": 82.12539739663013,
+          "unknownCount": 0,
+          "scoreCount": 10
+        },
+        "responseLumaRMSE": {
+          "min": 0.010106029384935461,
+          "max": 0.03857112299343097,
+          "unknownCount": 0,
+          "scoreCount": 8
+        },
+        "brightIoU": {
+          "min": 0.21666666666666667,
+          "max": 0.2765957446808511,
+          "unknownCount": 4,
+          "scoreCount": 8
+        },
+        "darkIoU": {
+          "min": 0.178117048346056,
+          "max": 1.0,
+          "unknownCount": 2,
+          "scoreCount": 8
+        }
+      },
+      "pooledFullForegroundDescriptive": {
+        "colorAgreementPercent": {
+          "min": 72.39468203679994,
+          "max": 78.9531166401615,
+          "unknownCount": 0,
+          "scoreCount": 10
+        },
+        "responseLumaRMSE": {
+          "min": 0.022797296789157956,
+          "max": 0.07795183631171032,
+          "unknownCount": 0,
+          "scoreCount": 8
+        },
+        "brightIoU": {
+          "min": 0.40253853127833183,
+          "max": 0.7435218460374503,
+          "unknownCount": 4,
+          "scoreCount": 8
+        },
+        "darkIoU": {
+          "min": 0.7486234646336298,
+          "max": 0.9293386093838327,
+          "unknownCount": 2,
+          "scoreCount": 8
+        }
+      },
+      "eachReferenceSeedFullForeground": {
+        "colorAgreementPercent": {
+          "min": 72.38555103980937,
+          "max": 78.95355777813839,
+          "unknownCount": 0,
+          "scoreCount": 80
+        },
+        "responseLumaRMSE": {
+          "min": 0.02285728671471879,
+          "max": 0.07824446902620467,
+          "unknownCount": 0,
+          "scoreCount": 64
+        },
+        "brightIoU": {
+          "min": 0.0,
+          "max": 0.7459654452249858,
+          "unknownCount": 16,
+          "scoreCount": 64
+        },
+        "darkIoU": {
+          "min": 0.0,
+          "max": 0.9293386093838327,
+          "unknownCount": 14,
+          "scoreCount": 64
+        }
+      }
+    },
+    "filter3-on": {
+      "stableSubset": {
+        "colorAgreementPercent": {
+          "min": 71.97912940572293,
+          "max": 76.26424832885337,
+          "unknownCount": 0,
+          "scoreCount": 10
+        },
+        "responseLumaRMSE": {
+          "min": 0.021545832310959436,
+          "max": 0.06715911045533637,
+          "unknownCount": 0,
+          "scoreCount": 8
+        },
+        "brightIoU": {
+          "min": 0.4929742388758782,
+          "max": 0.7923518164435946,
+          "unknownCount": 4,
+          "scoreCount": 8
+        },
+        "darkIoU": {
+          "min": 0.81875,
+          "max": 0.9102733270499529,
+          "unknownCount": 2,
+          "scoreCount": 8
+        }
+      },
+      "uncertainSubsetDescriptiveNotAcceptance": {
+        "colorAgreementPercent": {
+          "min": 71.55189069979338,
+          "max": 78.62446126640002,
+          "unknownCount": 0,
+          "scoreCount": 10
+        },
+        "responseLumaRMSE": {
+          "min": 0.007609126251950268,
+          "max": 0.037209700116789,
+          "unknownCount": 0,
+          "scoreCount": 8
+        },
+        "brightIoU": {
+          "min": 0.2490842490842491,
+          "max": 0.6,
+          "unknownCount": 4,
+          "scoreCount": 8
+        },
+        "darkIoU": {
+          "min": 0.18781725888324874,
+          "max": 1.0,
+          "unknownCount": 2,
+          "scoreCount": 8
+        }
+      },
+      "pooledFullForegroundDescriptive": {
+        "colorAgreementPercent": {
+          "min": 71.88760945798036,
+          "max": 76.74854883800124,
+          "unknownCount": 0,
+          "scoreCount": 10
+        },
+        "responseLumaRMSE": {
+          "min": 0.02143466935820287,
+          "max": 0.06428223496104725,
+          "unknownCount": 0,
+          "scoreCount": 8
+        },
+        "brightIoU": {
+          "min": 0.4338952972493345,
+          "max": 0.7893544733861835,
+          "unknownCount": 4,
+          "scoreCount": 8
+        },
+        "darkIoU": {
+          "min": 0.7660161221892235,
+          "max": 0.9103071415112116,
+          "unknownCount": 2,
+          "scoreCount": 8
+        }
+      },
+      "eachReferenceSeedFullForeground": {
+        "colorAgreementPercent": {
+          "min": 71.87721652369586,
+          "max": 76.75523041852071,
+          "unknownCount": 0,
+          "scoreCount": 80
+        },
+        "responseLumaRMSE": {
+          "min": 0.021527686670144337,
+          "max": 0.06464319994772477,
+          "unknownCount": 0,
+          "scoreCount": 64
+        },
+        "brightIoU": {
+          "min": 0.0,
+          "max": 0.7893544733861835,
+          "unknownCount": 16,
+          "scoreCount": 64
+        },
+        "darkIoU": {
+          "min": 0.0,
+          "max": 0.9103071415112116,
+          "unknownCount": 14,
+          "scoreCount": 64
+        }
+      }
+    }
+  },
+  "v2Proof": {
+    "passed": true,
+    "buffersByteExact": 40,
+    "allMetricsContrastsInteractionsSupportExact": true,
+    "supportArraysExact": 10,
+    "allOldClampsFieldsExact": true,
+    "allNonTimingCostFieldsExact": true,
+    "raw11TimingsReaggregatedEntries": 60,
+    "uniqueFilterTimingSets": 10,
+    "uniqueDisplayTimingSets": 40,
+    "newCountsIndependentlyRecomputedCases": 40,
+    "oldMathHelperASTsExact": true,
+    "inputsAndOutputsAllPinsStillMatch": true,
+    "originalScriptSHA256": "e4d85247d620b94d75c3411ed4dbd917c37ebee8a68f5d2afb2d4c70732cad19",
+    "v2ScriptSHA256": "408caf9652a9365782b2adaae241f8a9269f0b343d5ad2e25180c91286750f6a",
+    "timingChecks": [
+      {
+        "view": "front",
+        "case": "baseline",
+        "arm": "point-off",
+        "timing": "displayRepeatTimingHostOnly",
+        "validated": true
+      },
+      {
+        "view": "front",
+        "case": "baseline",
+        "arm": "point-on",
+        "timing": "displayRepeatTimingHostOnly",
+        "validated": true
+      },
+      {
+        "view": "front",
+        "case": "baseline",
+        "arm": "filter3-off",
+        "timing": "displayRepeatTimingHostOnly",
+        "validated": true
+      },
+      {
+        "view": "front",
+        "case": "baseline",
+        "arm": "filter3-off",
+        "timing": "filterRepeatTimingHostOnly",
+        "validated": true
+      },
+      {
+        "view": "front",
+        "case": "baseline",
+        "arm": "filter3-on",
+        "timing": "displayRepeatTimingHostOnly",
+        "validated": true
+      },
+      {
+        "view": "front",
+        "case": "baseline",
+        "arm": "filter3-on",
+        "timing": "filterRepeatTimingHostOnly",
+        "validated": true
+      },
+      {
+        "view": "front",
+        "case": "direction",
+        "arm": "point-off",
+        "timing": "displayRepeatTimingHostOnly",
+        "validated": true
+      },
+      {
+        "view": "front",
+        "case": "direction",
+        "arm": "point-on",
+        "timing": "displayRepeatTimingHostOnly",
+        "validated": true
+      },
+      {
+        "view": "front",
+        "case": "direction",
+        "arm": "filter3-off",
+        "timing": "displayRepeatTimingHostOnly",
+        "validated": true
+      },
+      {
+        "view": "front",
+        "case": "direction",
+        "arm": "filter3-off",
+        "timing": "filterRepeatTimingHostOnly",
+        "validated": true
+      },
+      {
+        "view": "front",
+        "case": "direction",
+        "arm": "filter3-on",
+        "timing": "displayRepeatTimingHostOnly",
+        "validated": true
+      },
+      {
+        "view": "front",
+        "case": "direction",
+        "arm": "filter3-on",
+        "timing": "filterRepeatTimingHostOnly",
+        "validated": true
+      },
+      {
+        "view": "front",
+        "case": "intensity",
+        "arm": "point-off",
+        "timing": "displayRepeatTimingHostOnly",
+        "validated": true
+      },
+      {
+        "view": "front",
+        "case": "intensity",
+        "arm": "point-on",
+        "timing": "displayRepeatTimingHostOnly",
+        "validated": true
+      },
+      {
+        "view": "front",
+        "case": "intensity",
+        "arm": "filter3-off",
+        "timing": "displayRepeatTimingHostOnly",
+        "validated": true
+      },
+      {
+        "view": "front",
+        "case": "intensity",
+        "arm": "filter3-off",
+        "timing": "filterRepeatTimingHostOnly",
+        "validated": true
+      },
+      {
+        "view": "front",
+        "case": "intensity",
+        "arm": "filter3-on",
+        "timing": "displayRepeatTimingHostOnly",
+        "validated": true
+      },
+      {
+        "view": "front",
+        "case": "intensity",
+        "arm": "filter3-on",
+        "timing": "filterRepeatTimingHostOnly",
+        "validated": true
+      },
+      {
+        "view": "front",
+        "case": "ambient",
+        "arm": "point-off",
+        "timing": "displayRepeatTimingHostOnly",
+        "validated": true
+      },
+      {
+        "view": "front",
+        "case": "ambient",
+        "arm": "point-on",
+        "timing": "displayRepeatTimingHostOnly",
+        "validated": true
+      },
+      {
+        "view": "front",
+        "case": "ambient",
+        "arm": "filter3-off",
+        "timing": "displayRepeatTimingHostOnly",
+        "validated": true
+      },
+      {
+        "view": "front",
+        "case": "ambient",
+        "arm": "filter3-off",
+        "timing": "filterRepeatTimingHostOnly",
+        "validated": true
+      },
+      {
+        "view": "front",
+        "case": "ambient",
+        "arm": "filter3-on",
+        "timing": "displayRepeatTimingHostOnly",
+        "validated": true
+      },
+      {
+        "view": "front",
+        "case": "ambient",
+        "arm": "filter3-on",
+        "timing": "filterRepeatTimingHostOnly",
+        "validated": true
+      },
+      {
+        "view": "front",
+        "case": "albedo",
+        "arm": "point-off",
+        "timing": "displayRepeatTimingHostOnly",
+        "validated": true
+      },
+      {
+        "view": "front",
+        "case": "albedo",
+        "arm": "point-on",
+        "timing": "displayRepeatTimingHostOnly",
+        "validated": true
+      },
+      {
+        "view": "front",
+        "case": "albedo",
+        "arm": "filter3-off",
+        "timing": "displayRepeatTimingHostOnly",
+        "validated": true
+      },
+      {
+        "view": "front",
+        "case": "albedo",
+        "arm": "filter3-off",
+        "timing": "filterRepeatTimingHostOnly",
+        "validated": true
+      },
+      {
+        "view": "front",
+        "case": "albedo",
+        "arm": "filter3-on",
+        "timing": "displayRepeatTimingHostOnly",
+        "validated": true
+      },
+      {
+        "view": "front",
+        "case": "albedo",
+        "arm": "filter3-on",
+        "timing": "filterRepeatTimingHostOnly",
+        "validated": true
+      },
+      {
+        "view": "oblique",
+        "case": "baseline",
+        "arm": "point-off",
+        "timing": "displayRepeatTimingHostOnly",
+        "validated": true
+      },
+      {
+        "view": "oblique",
+        "case": "baseline",
+        "arm": "point-on",
+        "timing": "displayRepeatTimingHostOnly",
+        "validated": true
+      },
+      {
+        "view": "oblique",
+        "case": "baseline",
+        "arm": "filter3-off",
+        "timing": "displayRepeatTimingHostOnly",
+        "validated": true
+      },
+      {
+        "view": "oblique",
+        "case": "baseline",
+        "arm": "filter3-off",
+        "timing": "filterRepeatTimingHostOnly",
+        "validated": true
+      },
+      {
+        "view": "oblique",
+        "case": "baseline",
+        "arm": "filter3-on",
+        "timing": "displayRepeatTimingHostOnly",
+        "validated": true
+      },
+      {
+        "view": "oblique",
+        "case": "baseline",
+        "arm": "filter3-on",
+        "timing": "filterRepeatTimingHostOnly",
+        "validated": true
+      },
+      {
+        "view": "oblique",
+        "case": "direction",
+        "arm": "point-off",
+        "timing": "displayRepeatTimingHostOnly",
+        "validated": true
+      },
+      {
+        "view": "oblique",
+        "case": "direction",
+        "arm": "point-on",
+        "timing": "displayRepeatTimingHostOnly",
+        "validated": true
+      },
+      {
+        "view": "oblique",
+        "case": "direction",
+        "arm": "filter3-off",
+        "timing": "displayRepeatTimingHostOnly",
+        "validated": true
+      },
+      {
+        "view": "oblique",
+        "case": "direction",
+        "arm": "filter3-off",
+        "timing": "filterRepeatTimingHostOnly",
+        "validated": true
+      },
+      {
+        "view": "oblique",
+        "case": "direction",
+        "arm": "filter3-on",
+        "timing": "displayRepeatTimingHostOnly",
+        "validated": true
+      },
+      {
+        "view": "oblique",
+        "case": "direction",
+        "arm": "filter3-on",
+        "timing": "filterRepeatTimingHostOnly",
+        "validated": true
+      },
+      {
+        "view": "oblique",
+        "case": "intensity",
+        "arm": "point-off",
+        "timing": "displayRepeatTimingHostOnly",
+        "validated": true
+      },
+      {
+        "view": "oblique",
+        "case": "intensity",
+        "arm": "point-on",
+        "timing": "displayRepeatTimingHostOnly",
+        "validated": true
+      },
+      {
+        "view": "oblique",
+        "case": "intensity",
+        "arm": "filter3-off",
+        "timing": "displayRepeatTimingHostOnly",
+        "validated": true
+      },
+      {
+        "view": "oblique",
+        "case": "intensity",
+        "arm": "filter3-off",
+        "timing": "filterRepeatTimingHostOnly",
+        "validated": true
+      },
+      {
+        "view": "oblique",
+        "case": "intensity",
+        "arm": "filter3-on",
+        "timing": "displayRepeatTimingHostOnly",
+        "validated": true
+      },
+      {
+        "view": "oblique",
+        "case": "intensity",
+        "arm": "filter3-on",
+        "timing": "filterRepeatTimingHostOnly",
+        "validated": true
+      },
+      {
+        "view": "oblique",
+        "case": "ambient",
+        "arm": "point-off",
+        "timing": "displayRepeatTimingHostOnly",
+        "validated": true
+      },
+      {
+        "view": "oblique",
+        "case": "ambient",
+        "arm": "point-on",
+        "timing": "displayRepeatTimingHostOnly",
+        "validated": true
+      },
+      {
+        "view": "oblique",
+        "case": "ambient",
+        "arm": "filter3-off",
+        "timing": "displayRepeatTimingHostOnly",
+        "validated": true
+      },
+      {
+        "view": "oblique",
+        "case": "ambient",
+        "arm": "filter3-off",
+        "timing": "filterRepeatTimingHostOnly",
+        "validated": true
+      },
+      {
+        "view": "oblique",
+        "case": "ambient",
+        "arm": "filter3-on",
+        "timing": "displayRepeatTimingHostOnly",
+        "validated": true
+      },
+      {
+        "view": "oblique",
+        "case": "ambient",
+        "arm": "filter3-on",
+        "timing": "filterRepeatTimingHostOnly",
+        "validated": true
+      },
+      {
+        "view": "oblique",
+        "case": "albedo",
+        "arm": "point-off",
+        "timing": "displayRepeatTimingHostOnly",
+        "validated": true
+      },
+      {
+        "view": "oblique",
+        "case": "albedo",
+        "arm": "point-on",
+        "timing": "displayRepeatTimingHostOnly",
+        "validated": true
+      },
+      {
+        "view": "oblique",
+        "case": "albedo",
+        "arm": "filter3-off",
+        "timing": "displayRepeatTimingHostOnly",
+        "validated": true
+      },
+      {
+        "view": "oblique",
+        "case": "albedo",
+        "arm": "filter3-off",
+        "timing": "filterRepeatTimingHostOnly",
+        "validated": true
+      },
+      {
+        "view": "oblique",
+        "case": "albedo",
+        "arm": "filter3-on",
+        "timing": "displayRepeatTimingHostOnly",
+        "validated": true
+      },
+      {
+        "view": "oblique",
+        "case": "albedo",
+        "arm": "filter3-on",
+        "timing": "filterRepeatTimingHostOnly",
+        "validated": true
+      }
+    ]
+  },
+  "preDisplayCounts": [
+    {
+      "view": "front",
+      "case": "baseline",
+      "arm": "point-off",
+      "preDisplayAboveOnePixels": 1509,
+      "preDisplayAboveOneChannels": 2109,
+      "legacySrgbInputClippedPixels": 1509
+    },
+    {
+      "view": "front",
+      "case": "baseline",
+      "arm": "point-on",
+      "preDisplayAboveOnePixels": 1509,
+      "preDisplayAboveOneChannels": 2109,
+      "legacySrgbInputClippedPixels": null
+    },
+    {
+      "view": "front",
+      "case": "baseline",
+      "arm": "filter3-off",
+      "preDisplayAboveOnePixels": 1489,
+      "preDisplayAboveOneChannels": 2054,
+      "legacySrgbInputClippedPixels": 1489
+    },
+    {
+      "view": "front",
+      "case": "baseline",
+      "arm": "filter3-on",
+      "preDisplayAboveOnePixels": 1489,
+      "preDisplayAboveOneChannels": 2054,
+      "legacySrgbInputClippedPixels": null
+    },
+    {
+      "view": "front",
+      "case": "direction",
+      "arm": "point-off",
+      "preDisplayAboveOnePixels": 1130,
+      "preDisplayAboveOneChannels": 1658,
+      "legacySrgbInputClippedPixels": 1130
+    },
+    {
+      "view": "front",
+      "case": "direction",
+      "arm": "point-on",
+      "preDisplayAboveOnePixels": 1130,
+      "preDisplayAboveOneChannels": 1658,
+      "legacySrgbInputClippedPixels": null
+    },
+    {
+      "view": "front",
+      "case": "direction",
+      "arm": "filter3-off",
+      "preDisplayAboveOnePixels": 1124,
+      "preDisplayAboveOneChannels": 1622,
+      "legacySrgbInputClippedPixels": 1124
+    },
+    {
+      "view": "front",
+      "case": "direction",
+      "arm": "filter3-on",
+      "preDisplayAboveOnePixels": 1124,
+      "preDisplayAboveOneChannels": 1622,
+      "legacySrgbInputClippedPixels": null
+    },
+    {
+      "view": "front",
+      "case": "intensity",
+      "arm": "point-off",
+      "preDisplayAboveOnePixels": 673,
+      "preDisplayAboveOneChannels": 990,
+      "legacySrgbInputClippedPixels": 673
+    },
+    {
+      "view": "front",
+      "case": "intensity",
+      "arm": "point-on",
+      "preDisplayAboveOnePixels": 673,
+      "preDisplayAboveOneChannels": 990,
+      "legacySrgbInputClippedPixels": null
+    },
+    {
+      "view": "front",
+      "case": "intensity",
+      "arm": "filter3-off",
+      "preDisplayAboveOnePixels": 642,
+      "preDisplayAboveOneChannels": 926,
+      "legacySrgbInputClippedPixels": 642
+    },
+    {
+      "view": "front",
+      "case": "intensity",
+      "arm": "filter3-on",
+      "preDisplayAboveOnePixels": 642,
+      "preDisplayAboveOneChannels": 926,
+      "legacySrgbInputClippedPixels": null
+    },
+    {
+      "view": "front",
+      "case": "ambient",
+      "arm": "point-off",
+      "preDisplayAboveOnePixels": 1804,
+      "preDisplayAboveOneChannels": 2538,
+      "legacySrgbInputClippedPixels": 1804
+    },
+    {
+      "view": "front",
+      "case": "ambient",
+      "arm": "point-on",
+      "preDisplayAboveOnePixels": 1804,
+      "preDisplayAboveOneChannels": 2538,
+      "legacySrgbInputClippedPixels": null
+    },
+    {
+      "view": "front",
+      "case": "ambient",
+      "arm": "filter3-off",
+      "preDisplayAboveOnePixels": 1794,
+      "preDisplayAboveOneChannels": 2486,
+      "legacySrgbInputClippedPixels": 1794
+    },
+    {
+      "view": "front",
+      "case": "ambient",
+      "arm": "filter3-on",
+      "preDisplayAboveOnePixels": 1794,
+      "preDisplayAboveOneChannels": 2486,
+      "legacySrgbInputClippedPixels": null
+    },
+    {
+      "view": "front",
+      "case": "albedo",
+      "arm": "point-off",
+      "preDisplayAboveOnePixels": 348,
+      "preDisplayAboveOneChannels": 489,
+      "legacySrgbInputClippedPixels": 348
+    },
+    {
+      "view": "front",
+      "case": "albedo",
+      "arm": "point-on",
+      "preDisplayAboveOnePixels": 348,
+      "preDisplayAboveOneChannels": 489,
+      "legacySrgbInputClippedPixels": null
+    },
+    {
+      "view": "front",
+      "case": "albedo",
+      "arm": "filter3-off",
+      "preDisplayAboveOnePixels": 325,
+      "preDisplayAboveOneChannels": 444,
+      "legacySrgbInputClippedPixels": 325
+    },
+    {
+      "view": "front",
+      "case": "albedo",
+      "arm": "filter3-on",
+      "preDisplayAboveOnePixels": 325,
+      "preDisplayAboveOneChannels": 444,
+      "legacySrgbInputClippedPixels": null
+    },
+    {
+      "view": "oblique",
+      "case": "baseline",
+      "arm": "point-off",
+      "preDisplayAboveOnePixels": 1522,
+      "preDisplayAboveOneChannels": 2081,
+      "legacySrgbInputClippedPixels": 1522
+    },
+    {
+      "view": "oblique",
+      "case": "baseline",
+      "arm": "point-on",
+      "preDisplayAboveOnePixels": 1522,
+      "preDisplayAboveOneChannels": 2081,
+      "legacySrgbInputClippedPixels": null
+    },
+    {
+      "view": "oblique",
+      "case": "baseline",
+      "arm": "filter3-off",
+      "preDisplayAboveOnePixels": 1502,
+      "preDisplayAboveOneChannels": 2016,
+      "legacySrgbInputClippedPixels": 1502
+    },
+    {
+      "view": "oblique",
+      "case": "baseline",
+      "arm": "filter3-on",
+      "preDisplayAboveOnePixels": 1502,
+      "preDisplayAboveOneChannels": 2016,
+      "legacySrgbInputClippedPixels": null
+    },
+    {
+      "view": "oblique",
+      "case": "direction",
+      "arm": "point-off",
+      "preDisplayAboveOnePixels": 881,
+      "preDisplayAboveOneChannels": 1287,
+      "legacySrgbInputClippedPixels": 881
+    },
+    {
+      "view": "oblique",
+      "case": "direction",
+      "arm": "point-on",
+      "preDisplayAboveOnePixels": 881,
+      "preDisplayAboveOneChannels": 1287,
+      "legacySrgbInputClippedPixels": null
+    },
+    {
+      "view": "oblique",
+      "case": "direction",
+      "arm": "filter3-off",
+      "preDisplayAboveOnePixels": 868,
+      "preDisplayAboveOneChannels": 1257,
+      "legacySrgbInputClippedPixels": 868
+    },
+    {
+      "view": "oblique",
+      "case": "direction",
+      "arm": "filter3-on",
+      "preDisplayAboveOnePixels": 868,
+      "preDisplayAboveOneChannels": 1257,
+      "legacySrgbInputClippedPixels": null
+    },
+    {
+      "view": "oblique",
+      "case": "intensity",
+      "arm": "point-off",
+      "preDisplayAboveOnePixels": 708,
+      "preDisplayAboveOneChannels": 972,
+      "legacySrgbInputClippedPixels": 708
+    },
+    {
+      "view": "oblique",
+      "case": "intensity",
+      "arm": "point-on",
+      "preDisplayAboveOnePixels": 708,
+      "preDisplayAboveOneChannels": 972,
+      "legacySrgbInputClippedPixels": null
+    },
+    {
+      "view": "oblique",
+      "case": "intensity",
+      "arm": "filter3-off",
+      "preDisplayAboveOnePixels": 665,
+      "preDisplayAboveOneChannels": 904,
+      "legacySrgbInputClippedPixels": 665
+    },
+    {
+      "view": "oblique",
+      "case": "intensity",
+      "arm": "filter3-on",
+      "preDisplayAboveOnePixels": 665,
+      "preDisplayAboveOneChannels": 904,
+      "legacySrgbInputClippedPixels": null
+    },
+    {
+      "view": "oblique",
+      "case": "ambient",
+      "arm": "point-off",
+      "preDisplayAboveOnePixels": 1768,
+      "preDisplayAboveOneChannels": 2446,
+      "legacySrgbInputClippedPixels": 1768
+    },
+    {
+      "view": "oblique",
+      "case": "ambient",
+      "arm": "point-on",
+      "preDisplayAboveOnePixels": 1768,
+      "preDisplayAboveOneChannels": 2446,
+      "legacySrgbInputClippedPixels": null
+    },
+    {
+      "view": "oblique",
+      "case": "ambient",
+      "arm": "filter3-off",
+      "preDisplayAboveOnePixels": 1765,
+      "preDisplayAboveOneChannels": 2403,
+      "legacySrgbInputClippedPixels": 1765
+    },
+    {
+      "view": "oblique",
+      "case": "ambient",
+      "arm": "filter3-on",
+      "preDisplayAboveOnePixels": 1765,
+      "preDisplayAboveOneChannels": 2403,
+      "legacySrgbInputClippedPixels": null
+    },
+    {
+      "view": "oblique",
+      "case": "albedo",
+      "arm": "point-off",
+      "preDisplayAboveOnePixels": 431,
+      "preDisplayAboveOneChannels": 570,
+      "legacySrgbInputClippedPixels": 431
+    },
+    {
+      "view": "oblique",
+      "case": "albedo",
+      "arm": "point-on",
+      "preDisplayAboveOnePixels": 431,
+      "preDisplayAboveOneChannels": 570,
+      "legacySrgbInputClippedPixels": null
+    },
+    {
+      "view": "oblique",
+      "case": "albedo",
+      "arm": "filter3-off",
+      "preDisplayAboveOnePixels": 401,
+      "preDisplayAboveOneChannels": 520,
+      "legacySrgbInputClippedPixels": 401
+    },
+    {
+      "view": "oblique",
+      "case": "albedo",
+      "arm": "filter3-on",
+      "preDisplayAboveOnePixels": 401,
+      "preDisplayAboveOneChannels": 520,
+      "legacySrgbInputClippedPixels": null
+    }
+  ]
+}

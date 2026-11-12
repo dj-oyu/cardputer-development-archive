@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "plan_hash": "f1ebd715c34990c29248f5d00613557d2da24fdb6b7b6f5147fb670fe7ac61bb",
+  "current_ON_recovery_receipt": "db1e10643f69ab8510dfd43df9d4649ddf26f91a03c081910cfec15f6de46a18",
+  "ON_recovery_artifacts_revalidated": true,
+  "OFF_manifest_hash": "8d49507f59454e6dc5b57901b47d867231f95a1a673e7d2750905efb0d7bf78e",
+  "only_changed_plan_fields": [
+    "backup_sha256",
+    "build_job_id",
+    "expected_app_bin_sha256",
+    "expected_elf_sha256",
+    "fingerprint",
+    "job_id",
+    "lkg_receipt",
+    "manifest_sha256",
+    "session_id"
+  ],
+  "same_device_registration_backend_stages_effects": true,
+  "no_automatic_restore": true
+}

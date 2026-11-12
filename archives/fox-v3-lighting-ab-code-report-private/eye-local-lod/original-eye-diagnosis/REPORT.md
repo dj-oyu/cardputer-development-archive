@@ -1,0 +1,24 @@
+# Eye contour and pupil diagnostic, stage2
+
+## Findings
+The image was inspected at its delivered nearest-neighbour enlargement. The pupil silhouette is angular and truncated; the far eye's white contour and upper-lid relationship are more disrupted. These are not fixed by the prior muzzle/Smile correction: all eye source mesh/accessor/material data remain unchanged in stage2.
+
+Read-only original .blend evaluation establishes each eye socket/white/iris/pupil/glint is922vertices/1840triangles; upper eyelid is1164vertices/2304triangles. Current reduced counts per eye: socket14, white14, iris10, pupil6, main glint4, smallglint1, upperlid8/10. All14 eye object material names match original, including orange sockets. The alternate build_fox_v3.py is not this original and must not define its facts.
+
+## Geometric diagnostic
+No rendered RGB or candidate result selected the rays. Each eye uses32x32 uniform centre rays on its ORIGINAL seven-component projected bounding rectangle, expanded2% per edge; both formal front/oblique directions. Full visible character geometry is included as occluders, with ground omitted (irrelevant to these upward eye rays). Source first winner and reduced first winner are compared. A separate reduced same-object ray distinguishes absence of that surface from being behind a different surface. Fixed finite-grid diagnostics are not image scores or all-view geometric guarantees. Float32 BVH boundaries remain a numerical limitation.
+
+Oblique pupils: original visible102rays each, reduced loses20/24. Of those19/22 fail to intersect the reduced pupil at all; only1/2 still intersect it but another layer wins. Thus the pupil failure is predominantly reduced silhouette/shape loss, before lighting or quantization. Front gives12/28 lost out of100/109, with12/22 same-object misses.
+
+Oblique far-side white: original159rays,73lose the white winner.23miss the reduced white surface;50still intersect it but meet another object first: upperlid26/socket14/iris10. Near-side white loses31/214 with15surface misses and16occlusions. Front has the same asymmetric pattern: white74/185lost on side1,51occluded. The layer geometry must be handled jointly; simply refining the pupil does not restore the eye contour.
+
+Upperlid original oblique visibility51/37rays, reduced retains5/9. Most lost rays miss the reduced tube (37/26), demonstrating thinning/shape loss as well. Glint loss is predominantly missing reduced silhouette. All source-eye-to-other winners with an existing reduced target intersection have positive depth margins >1e-5source units; minimum over four eye/view groups .000454/.000141/.000828/.0000229, so no measured event is an exact-depth tie.
+
+## Proposed repair and validation, no implementation
+Use source-preserving local eye LOD for the socket/white/iris/pupil/lid/glint assembly rather than independent severe decimation. Preserve original dimensions, centres, materials, gaze and expression; use original surface approximation and inter-layer visibility constraints, not painted pixels or image-fit coefficients. Higher pupil boundary resolution is first priority, but acceptance must include white/lid overlap jointly. No original alteration or deletion of intentional highlights.
+
+Before choosing tessellation, fix a small deterministic budget ladder and inspect actual compiled admission. Stage2 snapshot62104/65536 leaves3432bytes; each added raw pixel vertex is56bytes before index/record/partition costs. A source1840-triangle replacement per eye is not feasible under the existing contract. Do not raise the quota or discard the working muzzle fix silently. Compiler partition splitting can amplify cost, so face counts alone are insufficient.
+
+Compare old stage2 vs each declared candidate with identical actual C renderer/lights/camera: both eyes, front/oblique, fixed density2preview and full10formal cases. Retain uncertain regions, false extra eye coverage and non-eye regressions. Source-geometric ray test must count both missing and extra layer winners, not only recovered pupil pixels; use separate interleaved holdout rays and view directions to avoid camera-specific overfit. Preserve snapshot/work/ray quotas, forward/reverse parity, compile/source provenance, peak scene/scratch budget and controlled CPU. AA-only comparison may quantify residual sampling AFTER geometry; it cannot restore a surface missing from the centre ray and should not conceal a layer-order error.
+
+The diagnosis isolates geometry without illumination or encoding. It does not quantify the remaining specular/shadow/profile contribution to eye brightness, prove that allvisible eye defects are geometric, or promise60% overall reproduction. Existing original-rich zoom image provides appearance context; no new light rendering or image repair was performed here. No publication, PR, device operation or formal threshold/reference change.

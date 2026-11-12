@@ -1,0 +1,56 @@
+There are 47 section headers, starting at offset 0xd198:
+
+Section Headers:
+  [Nr] Name              Type            Addr     Off    Size   ES Flg Lk Inf Al
+  [ 0]                   NULL            00000000 000000 000000 00      0   0  0
+  [ 1] .literal.il_round PROGBITS        00000000 000034 000008 00  AX  0   0  4
+  [ 2] .rela.literal.il_round RELA            00000000 006d44 000018 0c   I 44   1  4
+  [ 3] .literal.il_normal_length PROGBITS        00000000 00003c 00000c 00  AX  0   0  4
+  [ 4] .rela.literal.il_normal_length RELA            00000000 006d5c 00000c 0c   I 44   3  4
+  [ 5] .literal.il_signed_round PROGBITS        00000000 000048 000008 00  AX  0   0  4
+  [ 6] .rela.literal.il_signed_round RELA            00000000 006d68 000018 0c   I 44   5  4
+  [ 7] .literal.kcc_block PROGBITS        00000000 000050 0000b0 00  AX  0   0  4
+  [ 8] .rela.literal.kcc_block RELA            00000000 006d80 00018c 0c   I 44   7  4
+  [ 9] .text             PROGBITS        00000000 000100 000000 00  AX  0   0  1
+  [10] .data             PROGBITS        00000000 000100 000000 00  WA  0   0  1
+  [11] .bss              NOBITS          00000000 000100 000000 00  WA  0   0  1
+  [12] .text.il_sqrt     PROGBITS        00000000 000100 00006d 00  AX  0   0  4
+  [13] .rela.text.il_sqrt RELA            00000000 006f0c 000084 0c   I 44  12  4
+  [14] .text.il_round    PROGBITS        00000000 000170 000054 00  AX  0   0  4
+  [15] .rela.text.il_round RELA            00000000 006f90 000090 0c   I 44  14  4
+  [16] .text.il_position PROGBITS        00000000 0001c4 000030 00  AX  0   0  4
+  [17] .rela.text.il_position RELA            00000000 007020 000018 0c   I 44  16  4
+  [18] .text.il_normal_length PROGBITS        00000000 0001f4 00005c 00  AX  0   0  4
+  [19] .rela.text.il_normal_length RELA            00000000 007038 000078 0c   I 44  18  4
+  [20] .text.il_signed_round PROGBITS        00000000 000250 000037 00  AX  0   0  4
+  [21] .rela.text.il_signed_round RELA            00000000 0070b0 000060 0c   I 44  20  4
+  [22] .text.kcc_block   PROGBITS        00000000 000288 000877 00  AX  0   0  4
+  [23] .rela.text.kcc_block RELA            00000000 007110 0009cc 0c   I 44  22  4
+  [24] .debug_frame      PROGBITS        00000000 000b00 0000a0 00      0   0  4
+  [25] .rela.debug_frame RELA            00000000 007adc 000174 0c   I 44  24  4
+  [26] .debug_info       PROGBITS        00000000 000ba0 00175c 00      0   0  1
+  [27] .rela.debug_info  RELA            00000000 007c50 0012a8 0c   I 44  26  4
+  [28] .debug_abbrev     PROGBITS        00000000 0022fc 00030c 00      0   0  1
+  [29] .debug_loc        PROGBITS        00000000 002608 000f85 00      0   0  1
+  [30] .rela.debug_loc   RELA            00000000 008ef8 001260 0c   I 44  29  4
+  [31] .debug_aranges    PROGBITS        00000000 00358d 000048 00      0   0  1
+  [32] .rela.debug_aranges RELA            00000000 00a158 00009c 0c   I 44  31  4
+  [33] .debug_ranges     PROGBITS        00000000 0035d5 000420 00      0   0  1
+  [34] .rela.debug_ranges RELA            00000000 00a1f4 000948 0c   I 44  33  4
+  [35] .debug_line       PROGBITS        00000000 0039f5 0023b9 00      0   0  1
+  [36] .rela.debug_line  RELA            00000000 00ab3c 001fec 0c   I 44  35  4
+  [37] .debug_str        PROGBITS        00000000 005dae 000758 01  MS  0   0  1
+  [38] .comment          PROGBITS        00000000 006506 000030 01  MS  0   0  1
+  [39] .xtensa.info      NOTE            00000000 006536 000038 00      0   0  1
+  [40] .xt.lit           PROGBITS        00000000 00656e 000020 00      0   0  1
+  [41] .rela.xt.lit      RELA            00000000 00cb28 000030 0c   I 44  40  4
+  [42] .xt.prop          PROGBITS        00000000 00658e 000468 00      0   0  1
+  [43] .rela.xt.prop     RELA            00000000 00cb58 000468 0c   I 44  42  4
+  [44] .symtab           SYMTAB          00000000 0069f8 0002a0 10     45  32  4
+  [45] .strtab           STRTAB          00000000 006c98 0000a9 00      0   0  1
+  [46] .shstrtab         STRTAB          00000000 00cfc0 0001d7 00      0   0  1
+Key to Flags:
+  W (write), A (alloc), X (execute), M (merge), S (strings), I (info),
+  L (link order), O (extra OS processing required), G (group), T (TLS),
+  C (compressed), x (unknown), o (OS specific), E (exclude),
+  D (mbind), p (processor specific)

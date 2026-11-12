@@ -1,0 +1,158 @@
+APP_ID local.derby
+I (pocket.app) APP_LOAD prog bytes=2465 compile_us=0 run_us=0 used=87456>91460>95924
+I (pocket.app) APP_LOAD view bytes=12022 compile_us=0 run_us=0 used=95924>121920>131872
+I (pocket.app) APP_LOAD scene bytes=9497 compile_us=0 run_us=0 used=131872>148492>152164
+I (pocket.app) APP_LOAD pan bytes=2120 compile_us=0 run_us=0 used=152164>155552>155564
+I (pocket.app) APP_LOAD fixed bytes=2667 compile_us=0 run_us=0 used=168816>173800>173868
+DERBY READY tones=true
+I (pocket.app) APP_LOAD play bytes=7055 compile_us=0 run_us=0 used=155564>165516>179000
+ok   eval; source 4561 B
+ser oracle fuzz: 32000 calls, 103315 draws, 0 mismatches
+DEVICE_WINDOW {"rep":1,"contexts":120,"draws":4975,"input_hash":"986b2e6e027af00d","procedural_pixel_hash":"c1b0fdbde748d0de","panel_hash":"cec4b765a2794b14"}
+DEVICE_TRANSFER {"rep":1,"pixels":3888000,"equal_previous_pixels":3499706,"strips":2040,"equal_previous_strips":449}
+DERBY_DETAIL v=1 session=1 rep=1 stage=0 inc_us=129917 self_us=76642 calls=120
+DERBY_DETAIL v=1 session=1 rep=1 stage=1 inc_us=2816 self_us=2816 calls=120
+DERBY_DETAIL v=1 session=1 rep=1 stage=2 inc_us=2749 self_us=2749 calls=240
+DERBY_DETAIL v=1 session=1 rep=1 stage=3 inc_us=366 self_us=366 calls=120
+DERBY_DETAIL v=1 session=1 rep=1 stage=4 inc_us=8454 self_us=5037 calls=120
+DERBY_DETAIL v=1 session=1 rep=1 stage=5 inc_us=1925 self_us=1925 calls=120
+DERBY_DETAIL v=1 session=1 rep=1 stage=6 inc_us=36217 self_us=13258 calls=720
+DERBY_DETAIL v=1 session=1 rep=1 stage=7 inc_us=14107 self_us=1126 calls=4975
+DERBY_DETAIL v=1 session=1 rep=1 stage=8 inc_us=11147 self_us=2579 calls=19900
+DERBY_DETAIL v=1 session=1 rep=1 stage=9 inc_us=4947 self_us=4947 calls=19900
+DERBY_DETAIL v=1 session=1 rep=1 stage=10 inc_us=873 self_us=873 calls=19900
+DERBY_DETAIL v=1 session=1 rep=1 stage=11 inc_us=2748 self_us=2748 calls=19900
+DERBY_DETAIL v=1 session=1 rep=1 stage=12 inc_us=1093 self_us=1093 calls=14925
+DERBY_DETAIL v=1 session=1 rep=1 stage=13 inc_us=13581 self_us=13581 calls=14925
+DERBY_DETAIL v=1 session=1 rep=1 stage=14 inc_us=177 self_us=177 calls=4975
+DERBY_DETAIL v=1 session=1 rep=1 stage=15 inc_us=34695 self_us=205 calls=120
+DERBY_DETAIL v=1 session=1 rep=1 stage=16 inc_us=220 self_us=220 calls=120
+DERBY_DETAIL v=1 session=1 rep=1 stage=17 inc_us=203 self_us=203 calls=2040
+DERBY_DETAIL v=1 session=1 rep=1 stage=18 inc_us=33071 self_us=12602 calls=2040
+DERBY_DETAIL v=1 session=1 rep=1 stage=19 inc_us=20469 self_us=10339 calls=129600
+DERBY_DETAIL v=1 session=1 rep=1 stage=20 inc_us=4918 self_us=4918 calls=2040
+DERBY_DETAIL v=1 session=1 rep=1 stage=21 inc_us=5212 self_us=5212 calls=129600
+DERBY_DETAIL v=1 session=1 rep=1 stage=22 inc_us=996 self_us=996 calls=2040
+DERBY_DETAIL v=1 session=1 rep=1 stage=23 inc_us=0 self_us=0 calls=0
+DERBY_DETAIL v=1 session=1 rep=1 stage=24 inc_us=0 self_us=0 calls=0
+DERBY_DETAIL v=1 session=1 rep=1 stage=25 inc_us=0 self_us=0 calls=0
+DERBY_DETAIL_BYTES v=1 session=1 rep=1 event=0 amount=0
+DERBY_DETAIL_BYTES v=1 session=1 rep=1 event=1 amount=20218400
+DERBY_DETAIL_BYTES v=1 session=1 rep=1 event=2 amount=11418816
+DERBY_DETAIL_BYTES v=1 session=1 rep=1 event=3 amount=498540
+DERBY_DETAIL_BYTES v=1 session=1 rep=1 event=4 amount=7776000
+DERBY_DETAIL_BYTES v=1 session=1 rep=1 event=5 amount=7776000
+DERBY_DETAIL_BYTES v=1 session=1 rep=1 event=6 amount=3888000
+DERBY_DETAIL_BYTES v=1 session=1 rep=1 event=7 amount=7776000
+DERBY_DETAIL_BYTES v=1 session=1 rep=1 event=8 amount=0
+DERBY_DETAIL_BYTES v=1 session=1 rep=1 event=9 amount=0
+DERBY_DETAIL_BYTES v=1 session=1 rep=1 event=10 amount=0
+DERBY_DETAIL_BYTES v=1 session=1 rep=1 event=11 amount=0
+DERBY_DETAIL_BYTES v=1 session=1 rep=1 event=12 amount=0
+DERBY_DETAIL_END v=1 session=1 rep=1 stages=26 events=13 faults=0 pairs=388560 elapsed=1 logical_bytes=1
+DERBY_FIXED v=1 fixture=oval-pan8-390-510-v1 manifest=84e0341ee1ac10c232e3008f28f8aada8823155e19229f926e633d7780a2021d variant=native session=1 rep=1 seq=1 valid=1 quality=0 independent=0 seed=9112A7AB oval=1 tier=1 cam=8 start=390 end=510 contexts=120 done=120 cont=0 capture=0 faults=0 refused=0 tx_fail=0 wall_us=189620 work_us=189555 finish=5DC86E18 p0=0:0:0 p1=0:0:0 p2=0:0:0 c0=0 c1=120 c2=600 c3=7735 c4=120 c5=7735 c6=0 c7=120 c8=0 c9=0 s0=95369:120 s1=735:2086 s2=16376:4569 s3=7229:4975 s4=16049:14925 s5=0:0 s6=33823:120 s7=879:2040 s8=0:0 s9=0:0
+DEVICE_WINDOW {"rep":2,"contexts":120,"draws":4975,"input_hash":"986b2e6e027af00d","procedural_pixel_hash":"c1b0fdbde748d0de","panel_hash":"cec4b765a2794b14"}
+DEVICE_TRANSFER {"rep":2,"pixels":3888000,"equal_previous_pixels":3499706,"strips":2040,"equal_previous_strips":449}
+DERBY_DETAIL v=1 session=1 rep=2 stage=0 inc_us=114776 self_us=68996 calls=120
+DERBY_DETAIL v=1 session=1 rep=2 stage=1 inc_us=2821 self_us=2821 calls=120
+DERBY_DETAIL v=1 session=1 rep=2 stage=2 inc_us=2663 self_us=2663 calls=240
+DERBY_DETAIL v=1 session=1 rep=2 stage=3 inc_us=452 self_us=452 calls=120
+DERBY_DETAIL v=1 session=1 rep=2 stage=4 inc_us=8657 self_us=4804 calls=120
+DERBY_DETAIL v=1 session=1 rep=2 stage=5 inc_us=1280 self_us=1280 calls=120
+DERBY_DETAIL v=1 session=1 rep=2 stage=6 inc_us=29124 self_us=12682 calls=720
+DERBY_DETAIL v=1 session=1 rep=2 stage=7 inc_us=7795 self_us=1114 calls=4975
+DERBY_DETAIL v=1 session=1 rep=2 stage=8 inc_us=7168 self_us=2494 calls=19900
+DERBY_DETAIL v=1 session=1 rep=2 stage=9 inc_us=979 self_us=979 calls=19900
+DERBY_DETAIL v=1 session=1 rep=2 stage=10 inc_us=873 self_us=873 calls=19900
+DERBY_DETAIL v=1 session=1 rep=2 stage=11 inc_us=2822 self_us=2822 calls=19900
+DERBY_DETAIL v=1 session=1 rep=2 stage=12 inc_us=1025 self_us=1025 calls=14925
+DERBY_DETAIL v=1 session=1 rep=2 stage=13 inc_us=11561 self_us=11561 calls=14925
+DERBY_DETAIL v=1 session=1 rep=2 stage=14 inc_us=210 self_us=210 calls=4975
+DERBY_DETAIL v=1 session=1 rep=2 stage=15 inc_us=30261 self_us=191 calls=120
+DERBY_DETAIL v=1 session=1 rep=2 stage=16 inc_us=223 self_us=223 calls=120
+DERBY_DETAIL v=1 session=1 rep=2 stage=17 inc_us=187 self_us=187 calls=2040
+DERBY_DETAIL v=1 session=1 rep=2 stage=18 inc_us=28690 self_us=10779 calls=2040
+DERBY_DETAIL v=1 session=1 rep=2 stage=19 inc_us=17911 self_us=7448 calls=129600
+DERBY_DETAIL v=1 session=1 rep=2 stage=20 inc_us=5199 self_us=5199 calls=2040
+DERBY_DETAIL v=1 session=1 rep=2 stage=21 inc_us=5264 self_us=5264 calls=129600
+DERBY_DETAIL v=1 session=1 rep=2 stage=22 inc_us=970 self_us=970 calls=2040
+DERBY_DETAIL v=1 session=1 rep=2 stage=23 inc_us=0 self_us=0 calls=0
+DERBY_DETAIL v=1 session=1 rep=2 stage=24 inc_us=0 self_us=0 calls=0
+DERBY_DETAIL v=1 session=1 rep=2 stage=25 inc_us=0 self_us=0 calls=0
+DERBY_DETAIL_BYTES v=1 session=1 rep=2 event=0 amount=0
+DERBY_DETAIL_BYTES v=1 session=1 rep=2 event=1 amount=20218400
+DERBY_DETAIL_BYTES v=1 session=1 rep=2 event=2 amount=11418816
+DERBY_DETAIL_BYTES v=1 session=1 rep=2 event=3 amount=498540
+DERBY_DETAIL_BYTES v=1 session=1 rep=2 event=4 amount=7776000
+DERBY_DETAIL_BYTES v=1 session=1 rep=2 event=5 amount=7776000
+DERBY_DETAIL_BYTES v=1 session=1 rep=2 event=6 amount=3888000
+DERBY_DETAIL_BYTES v=1 session=1 rep=2 event=7 amount=7776000
+DERBY_DETAIL_BYTES v=1 session=1 rep=2 event=8 amount=0
+DERBY_DETAIL_BYTES v=1 session=1 rep=2 event=9 amount=0
+DERBY_DETAIL_BYTES v=1 session=1 rep=2 event=10 amount=0
+DERBY_DETAIL_BYTES v=1 session=1 rep=2 event=11 amount=0
+DERBY_DETAIL_BYTES v=1 session=1 rep=2 event=12 amount=0
+DERBY_DETAIL_END v=1 session=1 rep=2 stages=26 events=13 faults=0 pairs=388560 elapsed=1 logical_bytes=1
+DERBY_FIXED v=1 fixture=oval-pan8-390-510-v1 manifest=84e0341ee1ac10c232e3008f28f8aada8823155e19229f926e633d7780a2021d variant=native session=1 rep=2 seq=2 valid=1 quality=0 independent=0 seed=9112A7AB oval=1 tier=1 cam=8 start=390 end=510 contexts=120 done=120 cont=0 capture=0 faults=0 refused=0 tx_fail=0 wall_us=170837 work_us=170771 finish=5DC86E18 p0=0:0:0 p1=0:0:0 p2=0:0:0 c0=0 c1=120 c2=600 c3=7735 c4=120 c5=7735 c6=0 c7=120 c8=0 c9=0 s0=87231:120 s1=812:2086 s2=15608:4569 s3=3238:4975 s4=14004:14925 s5=0:0 s6=29419:120 s7=845:2040 s8=0:0 s9=0:0
+DEVICE_WINDOW {"rep":3,"contexts":120,"draws":4975,"input_hash":"986b2e6e027af00d","procedural_pixel_hash":"c1b0fdbde748d0de","panel_hash":"cec4b765a2794b14"}
+DEVICE_TRANSFER {"rep":3,"pixels":3888000,"equal_previous_pixels":3499706,"strips":2040,"equal_previous_strips":449}
+DERBY_DETAIL v=1 session=1 rep=3 stage=0 inc_us=96431 self_us=58619 calls=120
+DERBY_DETAIL v=1 session=1 rep=3 stage=1 inc_us=2613 self_us=2613 calls=120
+DERBY_DETAIL v=1 session=1 rep=3 stage=2 inc_us=2172 self_us=2172 calls=240
+DERBY_DETAIL v=1 session=1 rep=3 stage=3 inc_us=298 self_us=298 calls=120
+DERBY_DETAIL v=1 session=1 rep=3 stage=4 inc_us=6893 self_us=4165 calls=120
+DERBY_DETAIL v=1 session=1 rep=3 stage=5 inc_us=1084 self_us=1084 calls=120
+DERBY_DETAIL v=1 session=1 rep=3 stage=6 inc_us=24119 self_us=10607 calls=720
+DERBY_DETAIL v=1 session=1 rep=3 stage=7 inc_us=6273 self_us=1003 calls=4975
+DERBY_DETAIL v=1 session=1 rep=3 stage=8 inc_us=6220 self_us=2361 calls=19900
+DERBY_DETAIL v=1 session=1 rep=3 stage=9 inc_us=738 self_us=738 calls=19900
+DERBY_DETAIL v=1 session=1 rep=3 stage=10 inc_us=694 self_us=694 calls=19900
+DERBY_DETAIL v=1 session=1 rep=3 stage=11 inc_us=2427 self_us=2427 calls=19900
+DERBY_DETAIL v=1 session=1 rep=3 stage=12 inc_us=824 self_us=824 calls=14925
+DERBY_DETAIL v=1 session=1 rep=3 stage=13 inc_us=8686 self_us=8686 calls=14925
+DERBY_DETAIL v=1 session=1 rep=3 stage=14 inc_us=140 self_us=140 calls=4975
+DERBY_DETAIL v=1 session=1 rep=3 stage=15 inc_us=27362 self_us=192 calls=120
+DERBY_DETAIL v=1 session=1 rep=3 stage=16 inc_us=193 self_us=193 calls=120
+DERBY_DETAIL v=1 session=1 rep=3 stage=17 inc_us=191 self_us=191 calls=2040
+DERBY_DETAIL v=1 session=1 rep=3 stage=18 inc_us=24483 self_us=8640 calls=2040
+DERBY_DETAIL v=1 session=1 rep=3 stage=19 inc_us=15843 self_us=7313 calls=129600
+DERBY_DETAIL v=1 session=1 rep=3 stage=20 inc_us=4419 self_us=4419 calls=2040
+DERBY_DETAIL v=1 session=1 rep=3 stage=21 inc_us=4111 self_us=4111 calls=129600
+DERBY_DETAIL v=1 session=1 rep=3 stage=22 inc_us=2303 self_us=2303 calls=2040
+DERBY_DETAIL v=1 session=1 rep=3 stage=23 inc_us=0 self_us=0 calls=0
+DERBY_DETAIL v=1 session=1 rep=3 stage=24 inc_us=0 self_us=0 calls=0
+DERBY_DETAIL v=1 session=1 rep=3 stage=25 inc_us=0 self_us=0 calls=0
+DERBY_DETAIL_BYTES v=1 session=1 rep=3 event=0 amount=0
+DERBY_DETAIL_BYTES v=1 session=1 rep=3 event=1 amount=20218400
+DERBY_DETAIL_BYTES v=1 session=1 rep=3 event=2 amount=11418816
+DERBY_DETAIL_BYTES v=1 session=1 rep=3 event=3 amount=498540
+DERBY_DETAIL_BYTES v=1 session=1 rep=3 event=4 amount=7776000
+DERBY_DETAIL_BYTES v=1 session=1 rep=3 event=5 amount=7776000
+DERBY_DETAIL_BYTES v=1 session=1 rep=3 event=6 amount=3888000
+DERBY_DETAIL_BYTES v=1 session=1 rep=3 event=7 amount=7776000
+DERBY_DETAIL_BYTES v=1 session=1 rep=3 event=8 amount=0
+DERBY_DETAIL_BYTES v=1 session=1 rep=3 event=9 amount=0
+DERBY_DETAIL_BYTES v=1 session=1 rep=3 event=10 amount=0
+DERBY_DETAIL_BYTES v=1 session=1 rep=3 event=11 amount=0
+DERBY_DETAIL_BYTES v=1 session=1 rep=3 event=12 amount=0
+DERBY_DETAIL_END v=1 session=1 rep=3 stages=26 events=13 faults=0 pairs=388560 elapsed=1 logical_bytes=1
+DERBY_FIXED v=1 fixture=oval-pan8-390-510-v1 manifest=84e0341ee1ac10c232e3008f28f8aada8823155e19229f926e633d7780a2021d variant=native session=1 rep=3 seq=3 valid=1 quality=0 independent=0 seed=9112A7AB oval=1 tier=1 cam=8 start=390 end=510 contexts=120 done=120 cont=0 capture=0 faults=0 refused=0 tx_fail=0 wall_us=146818 work_us=146764 finish=5DC86E18 p0=0:0:0 p1=0:0:0 p2=0:0:0 c0=0 c1=120 c2=600 c3=7735 c4=120 c5=7735 c6=0 c7=120 c8=0 c9=0 s0=73791:120 s1=709:2086 s2=13253:4569 s3=2772:4975 s4=10762:14925 s5=0:0 s6=25168:120 s7=2197:2040 s8=0:0 s9=0:0
+DERBY_FIXED_END v=1 session=1 reps=3 valid=1 quality=0 independent=0
+DEVICE_TAIL {"rep":1,"steps":735,"turns":92,"max_steps":8,"settles":1,"guest_draws":0}
+DEVICE_TAIL {"rep":2,"steps":735,"turns":92,"max_steps":8,"settles":1,"guest_draws":0}
+DEVICE_TAIL {"rep":3,"steps":735,"turns":92,"max_steps":8,"settles":1,"guest_draws":0}
+DERBY_DETAIL_EXIT v=1 session=1 clean=1
+APP_STOPPED
+HOME_READY
+DEVICE_FIXTURE_HOST PASS
+MEASURE_HOST functional_only=1 faults=0 scalar=41 pie=0
+MEASURE_HOST s0=1189389:919096:2113
+MEASURE_HOST s1=280398:14995:69017
+MEASURE_HOST s2=468838:129660:172459
+MEASURE_HOST s3=69813:22152:38774
+MEASURE_HOST s4=131909:131909:116322
+MEASURE_HOST s5=12:12:82
+MEASURE_HOST s6=249732:243474:1710
+MEASURE_HOST s7=6258:6258:29070
+MEASURE_HOST s8=0:0:0
+MEASURE_HOST s9=0:0:0

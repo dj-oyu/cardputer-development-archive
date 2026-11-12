@@ -1,0 +1,7 @@
+{
+  "content": "\"\"\"Build-only DERBY input control; the shipping view chunk is untouched.\"\"\"\n\nFIXED_SAVED_RACE = 19\n\n\ndef instrument(view: str) -> str:\n    replacements = (\n        ('let sn = 0;', f'let sn = {FIXED_SAVED_RACE};'),\n        (\"function save() { if (dm) return; try { ST.set('derby.v1', {v: 1, pts: pts, race: raceNo}).then(nop, nop); } catch (e) {} }\",\n         'function save() { /* Diagnostic image: never write player storage. */ }'),\n        ('raceNo = sn = v.race | 0;', 'raceNo = v.race | 0;'),\n        (\"v.race > 0 && scene === 'pad')\", \"v.race > 0 && scene === 'pad' && !dm)\"),\n    )\n    for before, after in replacements:\n        if view.count(before) != 1:\n            raise ValueError(f'DERBY diagnostic view source drift: {before}')\n        view = view.replace(before, after)\n    return view\n",
+  "encoding": "utf-8",
+  "sha": "a8b78b2d8e7d9dc0b9b5b8a2e98de5b853beed96",
+  "display_url": "https://github.com/dj-oyu/cardputer-adv-pocketjs/blob/b561aea1c0798feb28055a00d36681fae81ac58a/tools/derby_compare_chunks.py",
+  "display_title": "derby_compare_chunks.py"
+}

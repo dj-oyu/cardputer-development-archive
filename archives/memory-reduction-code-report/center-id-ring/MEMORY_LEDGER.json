@@ -1,0 +1,74 @@
+{
+  "status": "PREREQUISITE_NAMED_HOST_LEDGER",
+  "actualFrames": 0,
+  "legacyWorkspace": 137312,
+  "ringWorkspace": 77312,
+  "workspaceSaved": 60000,
+  "stack": {
+    "oldRendererPeak": 4976,
+    "newRendererPeak": 5664,
+    "increase": 688,
+    "backgroundPeak": 4016,
+    "backgroundCap": 4096,
+    "rendererCap": 8192,
+    "main": 83616
+  },
+  "phases": {
+    "render": {
+      "heap": {
+        "aaWorkspace": 77312,
+        "privateRGB565": 64800,
+        "privateDepth": 129600,
+        "sharedVisibilitySceneOnce": 106104,
+        "transportScene": 100808,
+        "backgroundScene": 976
+      },
+      "mainStack": 83616,
+      "namedChildStack": 5664,
+      "sumExcludingRO": 568880
+    },
+    "visibilityBuildConservative": {
+      "liveModelArena": 129064,
+      "visibilityScene": 106104,
+      "visibilityBuildOnlyTemporary": 125280,
+      "callerGeometryTemporary": 46800,
+      "transportAttributes": 100224,
+      "mainStack": 83616,
+      "namedChildStackUpper": 2096,
+      "sumExcludingRO": 593184
+    },
+    "transportBuildConservative": {
+      "liveModelArena": 129064,
+      "visibilityScene": 106104,
+      "transportScene": 100808,
+      "transportAttributes": 100224,
+      "mainStack": 83616,
+      "namedChildStackUpper": 336,
+      "sumExcludingRO": 520152
+    },
+    "backgroundBuildConservative": {
+      "liveModelArena": 129064,
+      "visibilityScene": 106104,
+      "transportScene": 100808,
+      "backgroundScene": 976,
+      "mainStack": 83616,
+      "namedChildStackUpper": 1184,
+      "sumExcludingRO": 421752
+    }
+  },
+  "oldNamedPeakExcludingRO": 628192,
+  "newNamedPeakExcludingRO": 593184,
+  "trueNamedPeakSaved": 35008,
+  "renderPhaseSaved": 59312,
+  "ROReferenceBytes": 1662416,
+  "ROAccounting": "Original named inputs/profile arrays unchanged; code/helper specialization is additional text, not included as RAM. No complete executable/host/device fit claim.",
+  "exclusions": [
+    "libc/libm and qsort internals",
+    "allocator metadata and fragmentation",
+    "executable and unnamed read-only compiler constants",
+    "test-only oracle buffers",
+    "unrelated caller state"
+  ],
+  "constructionProof": "All private-build files unchanged except ksn_mesh_depth.c appended ring include. Native adapter allocation type only; main frame unchanged. Visibility/build objects retain source and emitted stack values.",
+  "baselineLedgerSHA256": "bbec82b2ddbe3a028cf7031b7cf39e6f68bc7fc3ae5211e074dc1ee7d03731b1"
+}

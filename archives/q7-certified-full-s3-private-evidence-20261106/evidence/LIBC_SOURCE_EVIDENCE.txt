@@ -1,0 +1,595 @@
+/workspace/.setup/esp-idf/components/cxx/CMakeLists.txt SHA256 514a33a89a7ba14d4c1c89a765388bef5e7ce9054a566b5a963a2c5849b5829d
+1: idf_build_get_property(target IDF_TARGET)
+2: idf_build_get_property(esp_tee_build ESP_TEE_BUILD)
+3: 
+4: if(${target} STREQUAL "linux")
+5:     return() # This component is not necessary on the POSIX/Linux simulator
+6: endif()
+7: 
+8: set(srcs "cxx_exception_stubs.cpp")
+9: set(priv_requires esp_system)
+10: 
+11: if(NOT esp_tee_build)
+12:     list(APPEND srcs "cxx_guards.cpp" "cxx_init.cpp")
+13:     # Make sure that pthread is in component list
+14:     list(APPEND priv_requires pthread)
+15: endif()
+16: 
+17: idf_component_register(SRCS ${srcs}
+18:                        PRIV_REQUIRES ${priv_requires})
+19: 
+20: if(esp_tee_build OR NOT CONFIG_CXX_EXCEPTIONS)
+21:     set(WRAP_FUNCTIONS
+22:         __register_frame_info_bases
+23:         __register_frame_info
+24:         __register_frame
+25:         __register_frame_info_table_bases
+26:         __register_frame_info_table
+27:         __register_frame_table
+28:         __deregister_frame_info_bases
+29:         __deregister_frame_info
+30:         _Unwind_Find_FDE
+31:         _Unwind_GetGR
+32:         _Unwind_GetCFA
+33:         _Unwind_GetIP
+34:         _Unwind_GetIPInfo
+35:         _Unwind_GetRegionStart
+36:         _Unwind_GetDataRelBase
+37:         _Unwind_GetTextRelBase
+38:         _Unwind_SetIP
+39:         _Unwind_SetGR
+40:         _Unwind_GetLanguageSpecificData
+41:         _Unwind_FindEnclosingFunction
+42:         _Unwind_Resume
+43:         _Unwind_RaiseException
+44:         _Unwind_DeleteException
+45:         _Unwind_ForcedUnwind
+46:         _Unwind_Resume_or_Rethrow
+47:         _Unwind_Backtrace
+48:         __cxa_call_unexpected
+49:         __gxx_personality_v0
+50:         __cxa_throw
+51:         __cxa_allocate_exception)
+52: 
+53:     foreach(wrap ${WRAP_FUNCTIONS})
+54:         target_link_libraries(${COMPONENT_LIB} INTERFACE "-Wl,--wrap=${wrap}")
+55:     endforeach()
+56: endif()
+57: 
+58: if(CMAKE_C_COMPILER_ID MATCHES "Clang")
+59:     # libstdc++ depends on C library, so it should appear later in link order.
+60:     # Otherwise we get undefined references for esp-clang toolchain.
+61:     target_link_libraries(${COMPONENT_LIB} PUBLIC stdc++ c ${CONFIG_COMPILER_RT_LIB_NAME})
+62: else()
+63:     target_link_libraries(${COMPONENT_LIB} PUBLIC stdc++ gcc)
+64: endif()
+65: 
+66: add_library(stdcpp_deps INTERFACE)
+67: target_link_libraries(${COMPONENT_LIB} PUBLIC stdcpp_deps)
+68: 
+69: if(NOT esp_tee_build)
+70:     target_link_libraries(${COMPONENT_LIB} INTERFACE "-u __cxa_guard_dummy")
+71:     target_link_libraries(${COMPONENT_LIB} INTERFACE "-u __cxx_init_dummy")
+72: 
+73:     # Force libpthread to appear later than libstdc++ in link line since libstdc++ depends on libpthread.
+74:     # Furthermore, force libcxx to appear later than libgcc because some libgcc unwind code is wrapped, if C++
+75:     # exceptions are disabled. libcxx (this component) provides the unwind code wrappers.
+76:     # This is to prevent linking of libgcc's unwind code which considerably increases the binary size.
+77:     # Also force esp_libc to appear later than libstdc++ in link line since libstdc++ depends on
+78:     # some functions in esp_libc, e.g. getentropy().
+79:     idf_component_get_property(pthread pthread COMPONENT_LIB)
+80:     idf_component_get_property(esp_libc esp_libc COMPONENT_LIB)
+81: 
+82:     if(CMAKE_C_COMPILER_ID MATCHES "Clang")
+83:         target_link_libraries(stdcpp_deps INTERFACE stdc++ c $<TARGET_FILE:${pthread}> $<TARGET_FILE:${esp_libc}>)
+84:     else()
+85:         target_link_libraries(stdcpp_deps INTERFACE stdc++ $<TARGET_FILE:${pthread}> $<TARGET_FILE:${esp_libc}>)
+86:     endif()
+87: endif()
+88: 
+89: idf_component_get_property(cxx cxx COMPONENT_LIB)
+90: add_library(libgcc_cxx INTERFACE)
+91: target_link_libraries(libgcc_cxx INTERFACE ${CONFIG_COMPILER_RT_LIB_NAME} $<TARGET_FILE:${cxx}>)
+92: target_link_libraries(${COMPONENT_LIB} PUBLIC libgcc_cxx)
+93: 
+94: if(NOT CONFIG_COMPILER_CXX_EXCEPTIONS)
+95:     target_link_libraries(${COMPONENT_LIB} INTERFACE "-u __cxx_fatal_exception")
+96: endif()
+/workspace/.setup/esp-idf/components/esp_system/CMakeLists.txt SHA256 d0833e6dab58eb9a58ef9c968291ec0d1735704e84d6e7bf1ab4454d89069a7a
+1: idf_build_get_property(target IDF_TARGET)
+2: idf_build_get_property(esp_tee_build ESP_TEE_BUILD)
+3: 
+4: # On Linux, we only support a few features, hence this simple component registration
+5: if(${target} STREQUAL "linux")
+6:     idf_component_register(SRCS "esp_system.c"
+7:                         "esp_err.c"
+8:                         "port/soc/linux/reset_reason.c"
+9:                         "port/soc/linux/system_internal.c"
+10:                         "port/esp_system_linux.c"
+11:                         INCLUDE_DIRS "include"
+12:                         PRIV_REQUIRES spi_flash)
+13:     return()
+14: endif()
+15: 
+16: set(srcs "esp_err.c")
+17: 
+18: if(CONFIG_IDF_ENV_FPGA OR CONFIG_ESP_BRINGUP_BYPASS_CPU_CLK_SETTING)
+19:     list(APPEND srcs "fpga_overrides_clk.c")
+20: endif()
+21: 
+22: if(CONFIG_IDF_ENV_FPGA OR CONFIG_ESP_BRINGUP_BYPASS_RANDOM_SETTING)
+23:     list(APPEND srcs "fpga_overrides_rng.c")
+24: endif()
+25: 
+26: if(BOOTLOADER_BUILD OR esp_tee_build)
+27:     set(include_dirs "include")
+28:     if(esp_tee_build)
+29:         list(APPEND include_dirs "port/include/private")
+30:     endif()
+31:     # "_esp_error_check_failed()" requires spi_flash module
+32:     # Bootloader relies on some Kconfig options defined in esp_system.
+33:     idf_component_register(SRCS "${srcs}" INCLUDE_DIRS "${include_dirs}"
+34:                            REQUIRES spi_flash)
+35: else()
+36:     list(APPEND srcs "crosscore_int.c"
+37:             "esp_ipc.c"
+38:             "esp_err.c"
+39:             "freertos_hooks.c"
+40:             "int_wdt.c"
+41:             "panic.c"
+42:             "esp_system.c"
+43:             "startup.c"
+44:             "startup_funcs.c"
+45:             "system_time.c"
+46:             "stack_check.c"
+47:             "ubsan.c"
+48:             "xt_wdt.c")
+49: 
+50:     if(CONFIG_ESP_TASK_WDT_EN)
+51:         list(APPEND srcs "task_wdt/task_wdt.c")
+52: 
+53:         if(CONFIG_ESP_TASK_WDT_USE_ESP_TIMER)
+54:             list(APPEND srcs "task_wdt/task_wdt_impl_esp_timer.c")
+55:         else()
+56:             list(APPEND srcs "task_wdt/task_wdt_impl_timergroup.c")
+57:         endif()
+58:     endif()
+59: 
+60:     if(CONFIG_ESP_SYSTEM_USE_EH_FRAME)
+61:         list(APPEND srcs "eh_frame_parser.c")
+62:     endif()
+63: 
+64:     if(CONFIG_ESP_SYSTEM_USE_FRAME_POINTER)
+65:         list(APPEND srcs "fp_unwind.c")
+66:     endif()
+67: 
+68:     if(CONFIG_SOC_SYSTIMER_SUPPORT_ETM)
+69:         list(APPEND srcs "systick_etm.c")
+70:     endif()
+71: 
+72:     if(CONFIG_ESP_SYSTEM_HW_STACK_GUARD)
+73:         list(APPEND srcs "hw_stack_guard.c")
+74:     endif()
+75: 
+76:     idf_component_register(SRCS "${srcs}"
+77:                         INCLUDE_DIRS include
+78:                         PRIV_REQUIRES spi_flash esp_timer esp_mm
+79:                                       esp_hal_mspi esp_hal_wdt esp_hal_uart esp_hal_dma esp_hal_clock
+80:                                     # [refactor-todo] requirements due to init code,
+81:                                     # should be removable once using component init functions
+82:                                     # link-time registration is used.
+83:                                     bootloader_support esp_pm esp_usb_cdc_rom_console
+84:                         LDFRAGMENTS "linker.lf" "app.lf")
+85:     add_subdirectory(port)
+86: 
+87:     # After system initialization, `start_app` (and its other cores variant) is called.
+88:     # This is provided by the user or from another component. Since we can't establish
+89:     # dependency on what we don't know, force linker to not drop the symbol regardless
+90:     # of link line order.
+91:     target_link_libraries(${COMPONENT_LIB} INTERFACE "-u start_app")
+92: 
+93:     if(NOT CONFIG_ESP_SYSTEM_SINGLE_CORE_MODE)
+94:         target_link_libraries(${COMPONENT_LIB} INTERFACE "-u start_app_other_cores")
+95:     endif()
+96: 
+97:     # Disable stack protection in files which are involved in initialization of that feature
+98:     set_source_files_properties(
+99:         "startup.c" "stack_check.c" "port/cpu_start.c"
+100:         PROPERTIES COMPILE_FLAGS
+101:         -fno-stack-protector)
+102: 
+103:     target_linker_script(${COMPONENT_LIB} INTERFACE "ld/${target}/memory.ld.in")
+104: 
+105:     # Generate sections.ld.in and pass it through linker script generator
+106:     target_linker_script(${COMPONENT_LIB} INTERFACE "ld/${target}/sections.ld.in"
+107:                         PROCESS "${CMAKE_CURRENT_BINARY_DIR}/ld/sections.ld")
+108: endif()
+109: 
+110: if(CONFIG_IDF_ENV_FPGA OR CONFIG_ESP_BRINGUP_BYPASS_CPU_CLK_SETTING)
+111:     # Forces the linker to include fpga stubs from this component
+112:     target_link_libraries(${COMPONENT_LIB} INTERFACE "-u esp_common_include_fpga_overrides_clk")
+113: endif()
+114: 
+115: if(CONFIG_IDF_ENV_FPGA OR CONFIG_ESP_BRINGUP_BYPASS_RANDOM_SETTING)
+116:     # Forces the linker to include fpga stubs from this component
+117:     target_link_libraries(${COMPONENT_LIB} INTERFACE "-u esp_common_include_fpga_overrides_rng")
+118: endif()
+119: 
+120: # Force linking UBSAN hooks. If UBSAN is not enabled, the hooks will ultimately be removed
+121: # due to -ffunction-sections -Wl,--gc-sections options.
+122: target_link_libraries(${COMPONENT_LIB} INTERFACE "-u __ubsan_include")
+123: 
+124: target_link_libraries(${COMPONENT_LIB} INTERFACE "-u esp_system_include_startup_funcs")
+125: 
+126: # [refactor-todo] requirements due to init code, should be removable
+127: # once link-time registration of component init functions is used.
+128: if(CONFIG_ESP_TRACE_ENABLE)
+129:     idf_component_optional_requires(PRIVATE esp_trace)
+130: endif()
+131: 
+132: if(CONFIG_ESP_COREDUMP_ENABLE)
+133:     idf_component_optional_requires(PRIVATE espcoredump)
+134: endif()
+135: 
+136: # [refactor-todo] requirement from the panic handler,
+137: # need to introduce panic "event" concept to remove this dependency (IDF-2194)
+138: idf_component_optional_requires(PRIVATE esp_gdbstub)
+139: 
+140: if(NOT CONFIG_ESP_SYSTEM_PANIC_SILENT_REBOOT)
+141:     idf_component_optional_requires(PRIVATE esp_app_format)
+142: endif()
+143: 
+144: if(CONFIG_PM_ENABLE)
+145:     idf_component_optional_requires(PRIVATE pm)
+146: endif()
+147: 
+148: if(CONFIG_VFS_SUPPORT_IO)
+149:     idf_component_optional_requires(PRIVATE vfs)
+150: endif()
+151: 
+152: if(NOT BOOTLOADER_BUILD)
+153:     if(CONFIG_SPIRAM)
+154:         idf_component_optional_requires(PRIVATE esp_psram)
+155:     endif()
+156: endif()
+157: 
+158: # For P4, since P4 REV2, the SRAM is contiguous
+159: if(CONFIG_ESP32P4_SELECTS_REV_LESS_V3)
+160:     target_link_options(${COMPONENT_LIB} INTERFACE "-Wl,--enable-non-contiguous-regions")
+161: endif()
+162: 
+163: if(CONFIG_ESP_DEBUG_INCLUDE_OCD_STUB_BINS)
+164:     add_subdirectory(openocd_stub_bins)
+165: endif()
+/workspace/.setup/espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/picolibc/include/fenv.h SHA256 ae4b4dae2656a158386f610c7e272beb1d8034e86d39536516e5e39daf635b00
+1: /* Copyright (c) 2017  SiFive Inc. All rights reserved.
+2: 
+3:    This copyrighted material is made available to anyone wishing to use,
+4:    modify, copy, or redistribute it subject to the terms and conditions
+5:    of the FreeBSD License.   This program is distributed in the hope that
+6:    it will be useful, but WITHOUT ANY WARRANTY expressed or implied,
+7:    including the implied warranties of MERCHANTABILITY or FITNESS FOR
+8:    A PARTICULAR PURPOSE.  A copy of this license is available at
+9:    http://www.opensource.org/licenses.
+10: */
+11: 
+12: #ifndef _FENV_H
+13: #define _FENV_H
+14: 
+15: #include <sys/cdefs.h>
+16: 
+17: _BEGIN_STD_C
+18: 
+19: #include <machine/fenv.h>
+20: 
+21: #ifndef FE_ALL_EXCEPT
+22: #define FE_ALL_EXCEPT	0
+23: #endif
+24: 
+25: /* Exception */
+26: int feclearexcept(int excepts);
+27: int fegetexceptflag(fexcept_t *flagp, int excepts);
+28: int feraiseexcept(int excepts);
+29: int fesetexceptflag(const fexcept_t *flagp, int excepts);
+30: int fetestexcept(int excepts);
+31: 
+32: /* Rounding mode */
+33: int fegetround(void);
+34: int fesetround(int rounding_mode);
+35: 
+36: /* Float environment */
+37: int fegetenv(fenv_t *envp);
+38: int feholdexcept(fenv_t *envp);
+39: int fesetenv(const fenv_t *envp);
+40: int feupdateenv(const fenv_t *envp);
+41: 
+42: #if __GNU_VISIBLE
+43: int feenableexcept(int);
+44: int fedisableexcept(int);
+45: int fegetexcept(void);
+46: #endif
+47: 
+48: /*
+49:  * Lastly, a FE_DFL_ENV macro must be defined, representing a pointer
+50:  * to const fenv_t that contains the value of the default floating point
+51:  * environment.
+52:  *
+53:  * NOTE: The extern'ed variable fe_default_env_p is an implementation
+54:  *       detail of this stub.  FE_DFL_ENV must point to an instance of
+55:  *       fenv_t with the default fenv_t. The format of fenv_t and where
+56:  *       FE_DFL_ENV is are implementation specific.
+57:  */
+58: extern fenv_t _fe_dfl_env;
+59: #define FE_DFL_ENV ((const fenv_t *) &_fe_dfl_env)
+60: 
+61: #ifdef __STDC_WANT_IEC_60559_BFP_EXT__
+62: 
+63: #ifndef FE_DFL_MODE
+64: typedef struct { int round, except; } femode_t;
+65: #define FE_DFL_MODE     ((femode_t *) 0)
+66: #endif
+67: 
+68: int fegetmode(femode_t *modep);
+69: int fesetmode(femode_t *modep);
+70: int fesetexcept(int excepts);
+71: 
+72: #endif
+73: 
+74: _END_STD_C
+75: 
+76: #endif
+/workspace/.setup/espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/picolibc/include/machine/fenv.h SHA256 365704a78a4c71e95eeff765289ca4c165f1236cb337c76026975545db602fd9
+1: /* Copyright (c) 2011 Tensilica Inc.  ALL RIGHTS RESERVED.
+2: 
+3:    Redistribution and use in source and binary forms, with or without
+4:    modification, are permitted provided that the following conditions
+5:    are met:
+6: 
+7:    1. Redistributions of source code must retain the above copyright
+8:       notice, this list of conditions and the following disclaimer.
+9: 
+10:    2. Redistributions in binary form must reproduce the above
+11:       copyright notice, this list of conditions and the following
+12:       disclaimer in the documentation and/or other materials provided
+13:       with the distribution.
+14: 
+15:    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+16:    "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+17:    LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+18:    FOR A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL
+19:    TENSILICA INCORPORATED BE LIABLE FOR ANY DIRECT, INDIRECT,
+20:    INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+21:    (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+22:    SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+23:    HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
+24:    STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+25:    ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
+26:    OF THE POSSIBILITY OF SUCH DAMAGE.  */
+27: 
+28: 
+29: #ifndef _MACHINE_FENV_H
+30: #define _MACHINE_FENV_H
+31: 
+32: #include <sys/cdefs.h>
+33: 
+34: _BEGIN_STD_C
+35: 
+36: typedef unsigned long fenv_t;
+37: typedef unsigned long fexcept_t;
+38: 
+39: #include <machine/core-isa.h>
+40: 
+41: #if XCHAL_HAVE_FP || XCHAL_HAVE_DFP
+42: 
+43: #define FE_DIVBYZERO   0x08
+44: #define FE_INEXACT     0x01
+45: #define FE_INVALID     0x10
+46: #define FE_OVERFLOW    0x04
+47: #define FE_UNDERFLOW   0x02
+48: 
+49: #define FE_ALL_EXCEPT \
+50:   (FE_DIVBYZERO  |		      \
+51:    FE_INEXACT    |		      \
+52:    FE_INVALID    |		      \
+53:    FE_OVERFLOW   |		      \
+54:    FE_UNDERFLOW)
+55: 
+56: #define FE_DOWNWARD   0x3
+57: #define FE_TONEAREST  0x0
+58: #define FE_TOWARDZERO 0x1
+59: #define FE_UPWARD     0x2
+60: 
+61: #define _FE_EXCEPTION_FLAGS_OFFSET 7
+62: #define _FE_EXCEPTION_FLAG_MASK (FE_ALL_EXCEPT << _FE_EXCEPTION_FLAGS_OFFSET)
+63: #define _FE_EXCEPTION_ENABLE_OFFSET 2
+64: #define _FE_EXCEPTION_ENABLE_MASK (FE_ALL_EXCEPT << _FE_EXCEPTION_ENABLE_OFFSET)
+65: #define _FE_ROUND_MODE_OFFSET 0
+66: #define _FE_ROUND_MODE_MASK (0x3 << _FE_ROUND_MODE_OFFSET)
+67: #define _FE_FLOATING_ENV_MASK (_FE_EXCEPTION_FLAG_MASK | _FE_EXCEPTION_ENABLE_MASK | _FE_ROUND_MODE_MASK)
+68: 
+69: #else
+70: #define FE_TONEAREST  0x0
+71: #endif
+72: 
+73: #if !defined(__declare_fenv_inline) && defined(__declare_extern_inline)
+74: #define	__declare_fenv_inline(type) __declare_extern_inline(type)
+75: #endif
+76: 
+77: #ifdef __declare_fenv_inline
+78: #if XCHAL_HAVE_FP || XCHAL_HAVE_DFP
+79: #include <machine/fenv-fp.h>
+80: #else
+81: #include <machine/fenv-softfloat.h>
+82: #endif
+83: #endif
+84: 
+85: _END_STD_C
+86: 
+87: #endif
+/workspace/.setup/espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/picolibc/include/machine/fenv-fp.h SHA256 7f678faa3ea70cff5364c4b8146ed330a2fa03b8bab8a882a104d95739cca2a2
+1: /* Copyright (c) 2011 Tensilica Inc.  ALL RIGHTS RESERVED.
+2: 
+3:    Redistribution and use in source and binary forms, with or without
+4:    modification, are permitted provided that the following conditions
+5:    are met:
+6: 
+7:    1. Redistributions of source code must retain the above copyright
+8:       notice, this list of conditions and the following disclaimer.
+9: 
+10:    2. Redistributions in binary form must reproduce the above
+11:       copyright notice, this list of conditions and the following
+12:       disclaimer in the documentation and/or other materials provided
+13:       with the distribution.
+14: 
+15:    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+16:    "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+17:    LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+18:    FOR A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL
+19:    TENSILICA INCORPORATED BE LIABLE FOR ANY DIRECT, INDIRECT,
+20:    INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+21:    (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+22:    SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+23:    HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
+24:    STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+25:    ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
+26:    OF THE POSSIBILITY OF SUCH DAMAGE.  */
+27: 
+28: __declare_fenv_inline(int) feclearexcept(int except)
+29: {
+30:   unsigned int fsr;
+31: 
+32:   except <<= _FE_EXCEPTION_FLAGS_OFFSET;
+33:   __asm__ volatile ("rur.fsr %0" : "=a"(fsr));
+34:   fsr = fsr & ~except;
+35:   __asm__ volatile ("wur.fsr %0" : : "a"(fsr));
+36:   return 0;
+37: }
+38: 
+39: __declare_fenv_inline(int) fedisableexcept(int excepts)
+40: {
+41:   fexcept_t current;
+42:   __asm__ volatile ("rur.fcr %0" : "=a"(current));
+43:   current &= ~(excepts << _FE_EXCEPTION_ENABLE_OFFSET);
+44:   __asm__ volatile ("wur.fcr %0" : "=a"(current));
+45:   return 0;
+46: }
+47: 
+48: __declare_fenv_inline(int) feenableexcept(int excepts)
+49: {
+50:   fexcept_t current;
+51:   __asm__ volatile ("rur.fcr %0" : "=a"(current));
+52:   current |= excepts << _FE_EXCEPTION_ENABLE_OFFSET;
+53:   __asm__ volatile ("wur.fcr %0" : "=a"(current));
+54:   return 0;
+55: }
+56: 
+57: __declare_fenv_inline(int) fegetenv(fenv_t * env_ptr)
+58: {
+59:   unsigned int fsr;
+60:   unsigned int fcr;
+61:   __asm__ volatile ("rur.fsr %0" : "=a"(fsr));
+62:   __asm__ volatile ("rur.fcr %0" : "=a"(fcr));
+63:   *env_ptr = fsr | fcr;
+64:   return 0;
+65: }
+66: 
+67: __declare_fenv_inline(int) fegetexcept(void)
+68: {
+69:   fexcept_t current;
+70:   __asm__ volatile ("rur.fsr %0" : "=a"(current));
+71:   return (current >> _FE_EXCEPTION_ENABLE_OFFSET) & FE_ALL_EXCEPT;
+72: }
+73: 
+74: __declare_fenv_inline(int) fegetexceptflag(fexcept_t *flagp, int excepts)
+75: {
+76:   unsigned int fsr;
+77:   __asm__ volatile ("rur.fsr %0" : "=a"(fsr));
+78:   fsr >>= _FE_EXCEPTION_FLAGS_OFFSET;
+79:   excepts &= fsr;
+80:   *flagp = excepts;
+81: 
+82:   return 0;
+83: }
+84: 
+85: __declare_fenv_inline(int) fegetround(void)
+86: {
+87:   fexcept_t current;
+88:   __asm__ volatile ("rur.fcr %0" : "=a"(current));
+89:   return (current & _FE_ROUND_MODE_MASK) >> _FE_ROUND_MODE_OFFSET;
+90: }
+91: 
+92: __declare_fenv_inline(int) feholdexcept(fenv_t * envp)
+93: {
+94:   fexcept_t fsr;
+95:   fenv_t fcr;
+96:   /* Get the environment.  */
+97:   __asm__ volatile ("rur.fcr %0" : "=a"(fcr));
+98:   __asm__ volatile ("rur.fsr %0" : "=a"(fsr));
+99:   *envp = fsr | fcr;
+100: 
+101:   /* Clear the exception enable flags.  */
+102:   fcr &= _FE_ROUND_MODE_MASK;
+103:   __asm__ volatile ("wur.fcr %0" : :"a"(fcr));
+104: 
+105:   /* Clear the exception happened flags.  */
+106:   fsr = 0;
+107:   __asm__ volatile ("wur.fsr %0" : :"a"(fsr));
+108: 
+109:   return 0;
+110: }
+111: 
+112: __declare_fenv_inline(int) feraiseexcept(int excepts)
+113: {
+114:   fexcept_t current;
+115: 
+116:   __asm__ volatile ("rur.fsr %0" : "=a"(current));
+117:   current |= excepts << _FE_EXCEPTION_FLAGS_OFFSET;
+118:   __asm__ volatile ("wur.fsr %0" : : "a"(current));
+119:   return 0;
+120: }
+121: 
+122: __declare_fenv_inline(int) fesetexcept(int excepts)
+123: {
+124:   return feraiseexcept(excepts);
+125: }
+126: 
+127: __declare_fenv_inline(int) fesetenv(const fenv_t * env_ptr)
+128: {
+129:   __asm__ volatile ("wur.fsr %0" : : "a"(*env_ptr));
+130:   __asm__ volatile ("wur.fcr %0" : : "a"(*env_ptr));
+131:   return 0;
+132: }
+133: 
+134: __declare_fenv_inline(int) fesetexceptflag(const fexcept_t *flagp, int excepts)
+135: {
+136:   unsigned int fsr;
+137: 
+138:   __asm__ volatile ("rur.fsr %0" : "=a"(fsr));
+139:   fsr &= ~(excepts << _FE_EXCEPTION_FLAGS_OFFSET);
+140:   fsr |= ((*flagp & excepts) << _FE_EXCEPTION_FLAGS_OFFSET);
+141:   __asm__ volatile ("wur.fsr %0" : : "a"(fsr));
+142:   return 0;
+143: }
+144: 
+145: __declare_fenv_inline(int) fesetround(int round)
+146: {
+147:   if (round & ~_FE_ROUND_MODE_MASK)
+148:     return 1;
+149:   __asm__ volatile ("wur.fcr %0" : : "a"(round));
+150:   return 0;
+151: }
+152: 
+153: __declare_fenv_inline(int) fetestexcept(int excepts)
+154: {
+155:   fexcept_t current;
+156:   __asm__ volatile ("rur.fsr %0" : "=a"(current));
+157:   return (current >> _FE_EXCEPTION_FLAGS_OFFSET) & excepts;
+158: }
+159: 
+160: __declare_fenv_inline(int) feupdateenv(const fenv_t * envp)
+161: {
+162:   fenv_t current;
+163:   fegetenv (&current);
+164:   fesetenv (envp);
+165:   return feraiseexcept (current);
+166: }

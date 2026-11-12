@@ -1,0 +1,170 @@
+{
+  "scope": "Actual observed model position/SNORM queries; observation output RGB/depth unchanged; fixed16/64/1024/4096 no pixels or fitting",
+  "queriesPerCase": 1698,
+  "cases": {
+    "baseline": {
+      "lights": [
+        {
+          "name": "Key \u2022 large softbox",
+          "signedHeightOverRadiusMinMax": [
+            2.3886910823764147,
+            4.300613715282965
+          ],
+          "distanceOverRadiusMinMax": [
+            2.43202250217296,
+            4.310470780816396
+          ],
+          "receiverCenterGrazingAbsCosBelowPoint1": 194,
+          "receiverCenterBackFacing": 849,
+          "sourceCenterGrazingAbsCosBelowPoint1": 0
+        },
+        {
+          "name": "Fill",
+          "signedHeightOverRadiusMinMax": [
+            2.261525582439972,
+            4.946761265131015
+          ],
+          "distanceOverRadiusMinMax": [
+            2.422582981043042,
+            5.007264452413189
+          ],
+          "receiverCenterGrazingAbsCosBelowPoint1": 172,
+          "receiverCenterBackFacing": 849,
+          "sourceCenterGrazingAbsCosBelowPoint1": 0
+        },
+        {
+          "name": "Rim",
+          "signedHeightOverRadiusMinMax": [
+            2.060943193825756,
+            4.808834192332558
+          ],
+          "distanceOverRadiusMinMax": [
+            2.145664576585327,
+            4.836533128032502
+          ],
+          "receiverCenterGrazingAbsCosBelowPoint1": 124,
+          "receiverCenterBackFacing": 849,
+          "sourceCenterGrazingAbsCosBelowPoint1": 0
+        }
+      ],
+      "convergence": {
+        "16vs4096": {
+          "relativeL2": 0.0015321333184258813,
+          "activeVertexCount": 1629,
+          "relativePerVertexP50P95Max": [
+            0.0007398248580516691,
+            0.03020183416041383,
+            1.0
+          ],
+          "absoluteMaxRGB": 0.023568706069247047
+        },
+        "64vs4096": {
+          "relativeL2": 0.00039182231922350305,
+          "activeVertexCount": 1629,
+          "relativePerVertexP50P95Max": [
+            0.00018411285473844254,
+            0.008206479310492008,
+            1.0
+          ],
+          "absoluteMaxRGB": 0.006277988069720353
+        },
+        "1024vs4096": {
+          "relativeL2": 2.491282294988808e-05,
+          "activeVertexCount": 1629,
+          "relativePerVertexP50P95Max": [
+            8.401137097339338e-06,
+            0.000504152979083309,
+            1.0
+          ],
+          "absoluteMaxRGB": 0.00048119861633111327
+        }
+      },
+      "missedDirectAt16": {
+        "vertices": 18,
+        "maxReferenceRGB": 0.0012597181108054106
+      }
+    },
+    "direction": {
+      "lights": [
+        {
+          "name": "Key \u2022 large softbox",
+          "signedHeightOverRadiusMinMax": [
+            2.3210061547597562,
+            4.346915936757114
+          ],
+          "distanceOverRadiusMinMax": [
+            2.353674786955141,
+            4.397355500744741
+          ],
+          "receiverCenterGrazingAbsCosBelowPoint1": 156,
+          "receiverCenterBackFacing": 849,
+          "sourceCenterGrazingAbsCosBelowPoint1": 0
+        },
+        {
+          "name": "Fill",
+          "signedHeightOverRadiusMinMax": [
+            2.261525582439972,
+            4.946761265131015
+          ],
+          "distanceOverRadiusMinMax": [
+            2.422582981043042,
+            5.007264452413189
+          ],
+          "receiverCenterGrazingAbsCosBelowPoint1": 172,
+          "receiverCenterBackFacing": 849,
+          "sourceCenterGrazingAbsCosBelowPoint1": 0
+        },
+        {
+          "name": "Rim",
+          "signedHeightOverRadiusMinMax": [
+            2.060943193825756,
+            4.808834192332558
+          ],
+          "distanceOverRadiusMinMax": [
+            2.145664576585327,
+            4.836533128032502
+          ],
+          "receiverCenterGrazingAbsCosBelowPoint1": 124,
+          "receiverCenterBackFacing": 849,
+          "sourceCenterGrazingAbsCosBelowPoint1": 0
+        }
+      ],
+      "convergence": {
+        "16vs4096": {
+          "relativeL2": 0.0014316841049036983,
+          "activeVertexCount": 1571,
+          "relativePerVertexP50P95Max": [
+            0.0007762021862851218,
+            0.04967317634599766,
+            1.0
+          ],
+          "absoluteMaxRGB": 0.02108791947638533
+        },
+        "64vs4096": {
+          "relativeL2": 0.00036101945824980813,
+          "activeVertexCount": 1571,
+          "relativePerVertexP50P95Max": [
+            0.00017979275077663142,
+            0.012187188114382255,
+            1.0
+          ],
+          "absoluteMaxRGB": 0.005507426757846656
+        },
+        "1024vs4096": {
+          "relativeL2": 2.2117453050724423e-05,
+          "activeVertexCount": 1571,
+          "relativePerVertexP50P95Max": [
+            8.452060629643998e-06,
+            0.0006670064395559786,
+            1.0
+          ],
+          "absoluteMaxRGB": 0.000423625955552287
+        }
+      },
+      "missedDirectAt16": {
+        "vertices": 22,
+        "maxReferenceRGB": 0.0012773408619420742
+      }
+    }
+  }
+}

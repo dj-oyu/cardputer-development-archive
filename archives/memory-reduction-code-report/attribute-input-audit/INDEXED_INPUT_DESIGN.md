@@ -1,0 +1,57 @@
+# Read-only indexed attribute input design
+
+Scope: inspected only completed fox-v3-compact-transport baseline and its retained source/reports. No implementation, compilation, render, public action, device action, or access to rejected owned-context / unfinished paged-BVH work. Figures below are design arithmetic, not measured candidate results.
+
+## Recommendation
+
+Add an opt-in indexed-input query and ground constructor that produce exactly the existing compact owned layout. Keep both existing legacy and compact expanded-input APIs unchanged. Public input records can have uint16_t vertex[3], uint8_t double_sided, uint8_t padding, with static sizeof==8; use the existing sizeof==20 bounce_vertex. Accept vertex pointer/count and triangle pointer/count explicitly. Avoid a descriptor object unless needed: direct arguments remove a further alias surface.
+
+The caller owns two separately allocated arrays, 1167 vertices and 1566 records in this ground workload. For every mesh, convert each raw.vertices[j] once, using the exact existing assignments (front/back normals, front.mask, front.color_a, front.color_b). Set each triangle index to nv+v.indices[3*t+j] and its double_sided to v.double_sided. Keep mesh/node traversal, corner order, geometry and visibility arrays unchanged. Distinct raw vertices remain distinct input indices even when world position is identical. Four floor vertices have the exact calloc-zero attributes plus front[2]=32767/back[2]=-32767; floor triangle records have double_sided=1. Check bounded index conversion before casting.
+
+This matches the current harness contract: a corner's attributes are entirely determined by its packet-local raw vertex ID, whereas sidedness belongs to the triangle. Do not use back color/mask fields as a new source or merge by position, normal similarity, numeric float equality, or material label. Both normal triplets, all mask bits including signed zero, and both RGB565 values are retained. No averaging, renormalization or quantization.
+
+## Constructor, query and accessors
+
+An input-only accessor returns &vertices[records[t].vertex[j]] after structural validation. Query scans original triangle/corner order, memcmp20 against earlier referenced corners, just like the existing compact query. Count unique referenced 20-byte values only. Constructor interns in that same order into the same owned compact triangle/pool layout; existing rendering material_vertex and material_double_sided accessors and shading arithmetic need no change. No extra persistent fields or renderer branch are necessary. Exact owned-layout equality is achievable, not merely visual equivalence.
+
+For n<=2048, at most 3*n<=6144 referenced values exist. Required scene bytes remain 584+8*n+20*unique; maximum remains139848. Keep query zero on invalid input and max_bytes/hard262144 acceptance unchanged. A public vertex-count cap6144 is adequate for generic all-distinct6144 tests; do not cap the declared count at3*n, since unused vertices can exist. Alternatively permit larger declared pools with independently checked size products, but that expands API validation scope for no workload benefit. Count-only legacy query retains its legacy semantics131656 maximum. Input arrays for generic6144/2048 occupy139264 versus expanded131072, an8192 increase, so this is workload-specific, not a universal memory win.
+
+Validate the full input spans/alignment/wraparound before dereferencing; counts before byte multiplication; all triangle indices before dereferencing their vertices; side flag in{0,1}; padding zero. Match existing referenced-corner mask finite, each normal triplet nonzero, and no INT16_MIN. Prefer validating only referenced vertices: unused pool entries have no expanded-input equivalent, must not inflate unique count, and rejecting unused invalid values would add an unnecessary semantic restriction. Caller must keep both input arrays stable and readable throughout query/build, just as existing expanded input. Do not treat mutable input or concurrent modification as supported. Preserve defensive second-pass capacity checks and exact final unique-byte equality.
+
+Reject overlap of output slot with either full input span, lights, ground, current scene-owned data, or supplied geometry. If using a descriptor, reject slot overlap with that descriptor too and validate before reading it. Do not inadvertently reject currently allowed read-only aliases between inputs and existing scene-owned attributes: keep old scene alive through complete construction and successful retain. Do not free, poison, or modify borrowed inputs inside builder. Retain geometry only after candidate validation/copy and publish only after successful retain. On invalid/query/size/generation/alloc/retain failure, old slot and refcounts remain unchanged and candidate allocation is freed.
+
+Generation rules remain exact: matching visibility tokens; nonzero required generation components; no regression; not all equal on replacement; emission increase for changed ground mode/identity/range/Le; material increase for changed rho. Indexed topology representation alone is not a generation change. No additional generation or lifecycle mutation is needed.
+
+## Material digest and diagnostic parity
+
+Current native_render_row.c hashes the canonical expanded1566*64 bytes, including three zero padding bytes per triangle. Hashing new input arrays directly would change materialDigest although rendering is identical. Reconstruct one zero-initialized bounce_triangle at a time from indexed references, set sidedness, and feed its64 bytes to digest_bytes in the original order. This uses a bounded64-byte local, not100224 staging. Poison/free both new caller arrays after successful build. Retain existing report semantics or explicitly allow only the truthful temporary-byte field change; do not claim new compact-array bytes equal the old expanded hash input. Measure new stack rather than assuming the local costs exactly64 due to compiler reuse/alignment.
+
+## Memory arithmetic
+
+Completed baseline: caller attributes100224; compact transport28592; visibility-build named505952; transport-build448176; rendering496136; main83744. Model arena81356 and cold47708 are live at construction and must remain counted.
+
+Indexed input: vertices23340 + triangles12528 =35868, saving64356 temporary bytes. Forecast visibility construction441596 and transport construction383820 before changed stack/control accounting. Render stays496136. Therefore initial-lifecycle named peak becomes496136, saving9816 versus completed baseline505952, not64356. Rendering was already higher than the reduced construction phases. Largest new attribute request23340; full-lifecycle largest named request becomes model arena81356, not render AA77312. Generic scene and retained-old bounds do not shrink; old/new compact scene57184 remains, with input35868 additive for actual-workload replacement, plus retained geometry/model/other live state as applicable. Arbitrary outstanding retained scenes remain unbounded by initial-lifecycle ledger.
+
+256-triangle expanded pages:1566 triangles need7 pages, six16384-byte pages and one1920-byte tail. Exact payload remains100224, plus pointer/length/control overhead (at least56 bytes for7 64-bit pointers; fixed8-pointer capacity64 bytes). Always allocating full pages instead uses114688 payload,14464 more than baseline. Maximum attribute request16384, but whole lifecycle still model81356. Visibility named peak stays at least505952 plus new descriptor/stack overhead, so no phase-peak saving. Pages add page-count, last-page length, span/alias validation and more allocation-failure cleanup. Input accessor hides segmentation from interning; persistent scene and render accessors need not change. This is a fallback only if smallest allocation request outranks total/live-byte reduction.
+
+All arithmetic excludes allocator metadata/fragmentation, libc and unnamed state. Neither design establishes complete device fit or timing improvement.
+
+## Required later evidence, not executed
+
+- Existing expanded compact API regression remains unchanged.
+- Indexed vs expanded logical64-byte sequence and owned28592-byte scene parity across retained40 source cases; signed-zero and byte-distinct attribute sharing tests.
+- Generic6144 unique vertices/2048 triangles yields139848, exact max_bytes boundary, unused and repeated vertex indices, shared positions with differing attributes, mixed sidedness and floor placeholder parity.
+- Bad count/null/alignment/address span/index/side/padding/normal/mask, slot aliases for both arrays, retained-old input alias behavior, ground/light/generation rejection and allocation/retain failure atomicity.
+- Poison both caller arrays and source lights/ground after success, retained bindings before replacement, source lifetime/refcount tests.
+- Updated measured named stack, input allocation requests, construction-phase ledger, allowlist/source freeze and independent review before any fixed40 execution gate.
+- Eventual authorized fixed40 must preserve raw RGB565/depth/HDR/snapshot/target buffers, report counters/digests and budgets; only predeclared allocation/timing diagnostics can differ.
+
+Sources: fox-v3-compact-transport/harness/native_render_row.c:103-131; private-build/transport/bounce.h:6-8,54-86; private-build/transport/bounce.c:6-110; REPORT.md; MEMORY_LEDGER.json; MEMORY_SCOPE_ADDENDUM.md. No blockers to the design audit. Candidate benefits and stack remain unmeasured until implementation is separately authorized.
+
+## Explicit alias contract matrix
+
+Recommended constructor arguments are pointers/counts by value, with no callback or mutable descriptor. Output slot must be disjoint from both input spans, lights, optional ground, supplied geometry-owned storage, old scene and its retained geometry. Validate slot span/alignment before reading *slot. Valid old-slot object and ordinary pointed-object lifetime are caller obligations, unchanged from C baseline.
+
+Other pairs are read-only during construction: vertex pool versus triangle records; either input versus lights or ground; either input versus supplied geometry or old scene-owned memory; lights versus ground/geometry/old scene; ground versus geometry/old scene. These pairs do not intrinsically require rejection for failure atomicity because the builder writes only a fresh unpublished candidate and publishes after all reads/copies and successful retain. They remain allowed when they denote valid properly aligned readable C objects whose values satisfy every field validation and remain unchanged throughout the call. Do not broaden this into permission to read arbitrary reinterpret-cast/incompatible object storage. The old scene must not be released before final publication; arrays backed by that old scene may become invalid immediately upon successful replacement, so caller cannot then poison/read them unless separately retained. Tests using old-owned aliases must retain old scene for postcall checks. Any stricter disjoint-input rule would be a new documented contract restriction on the additive API, not a requirement inherited from the existing constructor.
+
+Scene candidate allocations cannot overlap valid live caller objects under normal malloc semantics. Byte ranges and overlap arithmetic must use overflow-safe checks on full lengths. No need to store external input pointers in the published scene. Subsequent material/visibility accessor and overlap-query behavior is unchanged because output representation is unchanged.

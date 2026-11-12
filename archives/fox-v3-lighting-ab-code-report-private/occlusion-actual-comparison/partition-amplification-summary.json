@@ -1,0 +1,237 @@
+[
+  {
+    "stage": "old",
+    "allCompiledVertices": 849,
+    "allParts": 45,
+    "targetSourceVertices": 38,
+    "targetCompiledVertexOccurrences": 38,
+    "otherCompiledVertices": 811,
+    "targetParts": 2,
+    "surfaces": [
+      {
+        "name": "EXPORT Muzzle pad -1",
+        "sourceVertices": 10,
+        "sourceTriangles": 16,
+        "compiledVertexOccurrences": 10,
+        "extraPartitionVertexCopies": 0,
+        "amplification": 1,
+        "parts": 1
+      },
+      {
+        "name": "EXPORT Muzzle pad 1",
+        "sourceVertices": 10,
+        "sourceTriangles": 16,
+        "compiledVertexOccurrences": 10,
+        "extraPartitionVertexCopies": 0,
+        "amplification": 1,
+        "parts": 1
+      },
+      {
+        "name": "EXPORT Smile -1",
+        "sourceVertices": 8,
+        "sourceTriangles": 10,
+        "compiledVertexOccurrences": 8,
+        "extraPartitionVertexCopies": 0,
+        "amplification": 1,
+        "parts": 1
+      },
+      {
+        "name": "EXPORT Smile 1",
+        "sourceVertices": 10,
+        "sourceTriangles": 14,
+        "compiledVertexOccurrences": 10,
+        "extraPartitionVertexCopies": 0,
+        "amplification": 1,
+        "parts": 1
+      }
+    ]
+  },
+  {
+    "stage": "stage-1",
+    "allCompiledVertices": 874,
+    "allParts": 46,
+    "targetSourceVertices": 60,
+    "targetCompiledVertexOccurrences": 63,
+    "otherCompiledVertices": 811,
+    "targetParts": 3,
+    "surfaces": [
+      {
+        "name": "EXPORT Muzzle pad -1",
+        "sourceVertices": 17,
+        "sourceTriangles": 30,
+        "compiledVertexOccurrences": 17,
+        "extraPartitionVertexCopies": 0,
+        "amplification": 1,
+        "parts": 1
+      },
+      {
+        "name": "EXPORT Muzzle pad 1",
+        "sourceVertices": 17,
+        "sourceTriangles": 30,
+        "compiledVertexOccurrences": 20,
+        "extraPartitionVertexCopies": 3,
+        "amplification": 1.1764705882352942,
+        "parts": 2
+      },
+      {
+        "name": "EXPORT Smile -1",
+        "sourceVertices": 13,
+        "sourceTriangles": 20,
+        "compiledVertexOccurrences": 13,
+        "extraPartitionVertexCopies": 0,
+        "amplification": 1,
+        "parts": 1
+      },
+      {
+        "name": "EXPORT Smile 1",
+        "sourceVertices": 13,
+        "sourceTriangles": 20,
+        "compiledVertexOccurrences": 13,
+        "extraPartitionVertexCopies": 0,
+        "amplification": 1,
+        "parts": 1
+      }
+    ]
+  },
+  {
+    "stage": "stage-2",
+    "allCompiledVertices": 1016,
+    "allParts": 51,
+    "targetSourceVertices": 114,
+    "targetCompiledVertexOccurrences": 205,
+    "otherCompiledVertices": 811,
+    "targetParts": 8,
+    "surfaces": [
+      {
+        "name": "EXPORT Muzzle pad -1",
+        "sourceVertices": 33,
+        "sourceTriangles": 62,
+        "compiledVertexOccurrences": 77,
+        "extraPartitionVertexCopies": 44,
+        "amplification": 2.3333333333333335,
+        "parts": 3
+      },
+      {
+        "name": "EXPORT Muzzle pad 1",
+        "sourceVertices": 33,
+        "sourceTriangles": 62,
+        "compiledVertexOccurrences": 80,
+        "extraPartitionVertexCopies": 47,
+        "amplification": 2.4242424242424243,
+        "parts": 4
+      },
+      {
+        "name": "EXPORT Smile -1",
+        "sourceVertices": 24,
+        "sourceTriangles": 40,
+        "compiledVertexOccurrences": 24,
+        "extraPartitionVertexCopies": 0,
+        "amplification": 1,
+        "parts": 1
+      },
+      {
+        "name": "EXPORT Smile 1",
+        "sourceVertices": 24,
+        "sourceTriangles": 40,
+        "compiledVertexOccurrences": 24,
+        "extraPartitionVertexCopies": 0,
+        "amplification": 1,
+        "parts": 1
+      }
+    ]
+  },
+  {
+    "stage": "stage-3",
+    "allCompiledVertices": 1354,
+    "allParts": 62,
+    "targetSourceVertices": 220,
+    "targetCompiledVertexOccurrences": 543,
+    "otherCompiledVertices": 811,
+    "targetParts": 19,
+    "surfaces": [
+      {
+        "name": "EXPORT Muzzle pad -1",
+        "sourceVertices": 65,
+        "sourceTriangles": 126,
+        "compiledVertexOccurrences": 169,
+        "extraPartitionVertexCopies": 104,
+        "amplification": 2.6,
+        "parts": 6
+      },
+      {
+        "name": "EXPORT Muzzle pad 1",
+        "sourceVertices": 65,
+        "sourceTriangles": 126,
+        "compiledVertexOccurrences": 174,
+        "extraPartitionVertexCopies": 109,
+        "amplification": 2.6769230769230767,
+        "parts": 7
+      },
+      {
+        "name": "EXPORT Smile -1",
+        "sourceVertices": 45,
+        "sourceTriangles": 79,
+        "compiledVertexOccurrences": 104,
+        "extraPartitionVertexCopies": 59,
+        "amplification": 2.311111111111111,
+        "parts": 4
+      },
+      {
+        "name": "EXPORT Smile 1",
+        "sourceVertices": 45,
+        "sourceTriangles": 79,
+        "compiledVertexOccurrences": 96,
+        "extraPartitionVertexCopies": 51,
+        "amplification": 2.1333333333333333,
+        "parts": 4
+      }
+    ]
+  },
+  {
+    "stage": "stage-4",
+    "allCompiledVertices": 2035,
+    "allParts": 83,
+    "targetSourceVertices": 434,
+    "targetCompiledVertexOccurrences": 1224,
+    "otherCompiledVertices": 811,
+    "targetParts": 40,
+    "surfaces": [
+      {
+        "name": "EXPORT Muzzle pad -1",
+        "sourceVertices": 129,
+        "sourceTriangles": 254,
+        "compiledVertexOccurrences": 369,
+        "extraPartitionVertexCopies": 240,
+        "amplification": 2.86046511627907,
+        "parts": 12
+      },
+      {
+        "name": "EXPORT Muzzle pad 1",
+        "sourceVertices": 129,
+        "sourceTriangles": 254,
+        "compiledVertexOccurrences": 369,
+        "extraPartitionVertexCopies": 240,
+        "amplification": 2.86046511627907,
+        "parts": 12
+      },
+      {
+        "name": "EXPORT Smile -1",
+        "sourceVertices": 88,
+        "sourceTriangles": 160,
+        "compiledVertexOccurrences": 238,
+        "extraPartitionVertexCopies": 150,
+        "amplification": 2.7045454545454546,
+        "parts": 8
+      },
+      {
+        "name": "EXPORT Smile 1",
+        "sourceVertices": 88,
+        "sourceTriangles": 160,
+        "compiledVertexOccurrences": 248,
+        "extraPartitionVertexCopies": 160,
+        "amplification": 2.8181818181818183,
+        "parts": 9
+      }
+    ]
+  }
+]

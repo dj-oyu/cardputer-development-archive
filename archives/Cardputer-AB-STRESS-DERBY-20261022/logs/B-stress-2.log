@@ -1,0 +1,185 @@
+I (742123) motion: ACC -927 8917 3713 mm/s2 GYR 0 0 0 mrad/s (off) seq=34711 drop=672 TILT -24 0
+I (743307) app: MEM free=176376 largest=45056 js=0 frames=46
+I (743309) app: APP_STOPPED
+I (743310) background: FLOWER_FRAMES_RELEASE bytes=16894
+I (743320) app: APP_ID local.stress
+I (743384) js: STRESS_READY
+I (743391) app: MEM free=134296 largest=45056 js=60300 frames=0
+I (743392) shell: RUN 8287 bytes -> ESP_OK
+I (743409) kasane: KASANE_FRAME_PRESENTED
+I (743444) js: STRESS_NATIVE ok len=414
+I (743723) kasane: KASANE_PAINT turn_ms=6.57 render_ms=6.57 send_ms=1.27 bytes=23168 bands=9 band_runs=1 band_mask=0x1ff00 prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (744127) motion: ACC -932 8919 3706 mm/s2 GYR 0 0 0 mrad/s (off) seq=34806 drop=672 TILT -24 0
+I (744732) kasane: KASANE_PAINT turn_ms=6.23 render_ms=6.49 send_ms=1.42 bytes=28160 bands=11 band_runs=2 band_mask=0x0ff38 prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (745389) js: STRESS f=60 lvl=1 pool=13 peak=18 oom=0 cyc=24 nat=15 natOk=ok err=0 cmds=75 native=13380 pressure=0 pe=0 trim=0
+I (745733) kasane: KASANE_PAINT turn_ms=6.42 render_ms=6.94 send_ms=1.36 bytes=26496 bands=11 band_runs=1 band_mask=0x1ffc0 prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (746145) motion: ACC -921 8913 3712 mm/s2 GYR 0 0 0 mrad/s (off) seq=34902 drop=672 TILT -24 0
+I (746733) kasane: KASANE_PAINT turn_ms=6.21 render_ms=6.19 send_ms=1.20 bytes=20736 bands=10 band_runs=1 band_mask=0x0ffc0 prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (747406) js: STRESS f=120 lvl=1 pool=13 peak=18 oom=0 cyc=48 nat=30 natOk=ok err=0 cmds=75 native=13380 pressure=0 pe=0 trim=0
+I (747742) kasane: KASANE_PAINT turn_ms=6.30 render_ms=7.13 send_ms=1.46 bytes=24672 bands=13 band_runs=2 band_mask=0x1ffb8 prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (748164) motion: ACC -922 8923 3707 mm/s2 GYR 0 0 0 mrad/s (off) seq=34998 drop=672 TILT -24 0
+I (748748) kasane: KASANE_PAINT turn_ms=6.05 render_ms=7.71 send_ms=1.36 bytes=24576 bands=9 band_runs=1 band_mask=0x0ff80 prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (749408) js: STRESS f=180 lvl=1 pool=13 peak=18 oom=0 cyc=72 nat=45 natOk=ok err=0 cmds=75 native=13380 pressure=0 pe=0 trim=0
+I (749755) kasane: KASANE_PAINT turn_ms=6.59 render_ms=7.55 send_ms=1.33 bytes=22240 bands=12 band_runs=1 band_mask=0x1ffe0 prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (750183) motion: ACC -928 8926 3714 mm/s2 GYR 0 0 0 mrad/s (off) seq=35094 drop=672 TILT -24 0
+I (750764) kasane: KASANE_PAINT turn_ms=5.89 render_ms=7.98 send_ms=1.52 bytes=24320 bands=12 band_runs=2 band_mask=0x0ffb8 prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (751429) js: STRESS f=240 lvl=1 pool=13 peak=18 oom=0 cyc=96 nat=60 natOk=ok err=0 cmds=75 native=13380 pressure=0 pe=0 trim=0
+I (751765) kasane: KASANE_PAINT turn_ms=6.48 render_ms=7.72 send_ms=1.44 bytes=22496 bands=10 band_runs=1 band_mask=0x1ff80 prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (752201) motion: ACC -920 8921 3702 mm/s2 GYR 0 0 0 mrad/s (off) seq=35190 drop=672 TILT -24 0
+I (752769) kasane: KASANE_PAINT turn_ms=6.27 render_ms=6.45 send_ms=1.33 bytes=27648 bands=11 band_runs=2 band_mask=0x0ff70 prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (753432) js: STRESS f=300 lvl=1 pool=13 peak=18 oom=0 cyc=120 nat=75 natOk=ok err=0 cmds=75 native=13380 pressure=0 pe=0 trim=0
+I (753777) kasane: KASANE_PAINT turn_ms=6.11 render_ms=6.89 send_ms=1.33 bytes=27104 bands=12 band_runs=2 band_mask=0x1ffb0 prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (754219) motion: ACC -926 8925 3709 mm/s2 GYR 0 0 0 mrad/s (off) seq=35286 drop=672 TILT -24 0
+I (754783) kasane: KASANE_PAINT turn_ms=5.90 render_ms=6.64 send_ms=1.41 bytes=21248 bands=9 band_runs=1 band_mask=0x0ff80 prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (755454) js: STRESS f=360 lvl=1 pool=13 peak=18 oom=0 cyc=144 nat=90 natOk=ok err=0 cmds=75 native=13380 pressure=0 pe=0 trim=0
+I (755792) kasane: KASANE_PAINT turn_ms=6.76 render_ms=6.53 send_ms=1.43 bytes=26336 bands=12 band_runs=2 band_mask=0x1ff70 prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (756237) motion: ACC -933 8930 3712 mm/s2 GYR 0 0 0 mrad/s (off) seq=35382 drop=672 TILT -24 0
+I (756798) kasane: KASANE_PAINT turn_ms=6.06 render_ms=7.13 send_ms=1.32 bytes=34048 bands=12 band_runs=1 band_mask=0x0fff0 prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (757466) js: STRESS f=420 lvl=1 pool=13 peak=18 oom=0 cyc=168 nat=105 natOk=ok err=0 cmds=75 native=13380 pressure=0 pe=0 trim=0
+I (757809) kasane: KASANE_PAINT turn_ms=6.23 render_ms=6.63 send_ms=1.29 bytes=24768 bands=10 band_runs=1 band_mask=0x1ff80 prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (758255) motion: ACC -916 8919 3700 mm/s2 GYR 0 0 0 mrad/s (off) seq=35478 drop=672 TILT -24 0
+I (758816) kasane: KASANE_PAINT turn_ms=6.28 render_ms=6.59 send_ms=1.38 bytes=25344 bands=11 band_runs=2 band_mask=0x0ff38 prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (759484) js: STRESS f=480 lvl=1 pool=13 peak=18 oom=0 cyc=192 nat=120 natOk=ok err=0 cmds=75 native=13380 pressure=0 pe=0 trim=0
+I (759823) kasane: KASANE_PAINT turn_ms=6.45 render_ms=7.82 send_ms=1.40 bytes=25536 bands=12 band_runs=1 band_mask=0x1ffe0 prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (760273) motion: ACC -922 8926 3702 mm/s2 GYR 0 0 0 mrad/s (off) seq=35574 drop=672 TILT -24 0
+I (760832) kasane: KASANE_PAINT turn_ms=5.91 render_ms=7.53 send_ms=1.37 bytes=25088 bands=9 band_runs=1 band_mask=0x0ff80 prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (761493) js: STRESS f=540 lvl=1 pool=13 peak=18 oom=0 cyc=216 nat=135 natOk=ok err=0 cmds=75 native=13380 pressure=0 pe=0 trim=0
+I (761838) kasane: KASANE_PAINT turn_ms=6.30 render_ms=7.90 send_ms=1.42 bytes=26560 bands=12 band_runs=2 band_mask=0x1ff38 prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (762291) motion: ACC -924 8925 3693 mm/s2 GYR 0 0 0 mrad/s (off) seq=35670 drop=672 TILT -24 0
+I (762842) kasane: KASANE_PAINT turn_ms=6.25 render_ms=7.80 send_ms=1.49 bytes=18176 bands=10 band_runs=1 band_mask=0x0ffc0 prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (763500) js: STRESS_LEVEL 2
+I (763516) js: STRESS f=600 lvl=2 pool=13 peak=13 oom=0 cyc=240 nat=150 natOk=ok err=0 cmds=75 native=13380 pressure=0 pe=0 trim=0
+I (763556) sound: SFX 1 played 1440 frames
+I (763819) kasane: KASANE_PAINT turn_ms=6.63 render_ms=6.89 send_ms=1.45 bytes=26048 bands=11 band_runs=1 band_mask=0x1ffc0 prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (764310) motion: ACC -916 8926 3702 mm/s2 GYR 0 0 0 mrad/s (off) seq=35766 drop=672 TILT -24 0
+I (764827) kasane: KASANE_PAINT turn_ms=6.02 render_ms=6.68 send_ms=1.42 bytes=28160 bands=11 band_runs=2 band_mask=0x0ff38 prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (765490) js: STRESS f=660 lvl=2 pool=22 peak=36 oom=0 cyc=264 nat=165 natOk=ok err=0 cmds=75 native=13380 pressure=1 pe=1 trim=0
+I (765833) kasane: KASANE_PAINT turn_ms=6.08 render_ms=6.94 send_ms=1.27 bytes=24768 bands=10 band_runs=1 band_mask=0x1ff80 prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (766311) motion: ACC -921 8924 3711 mm/s2 GYR 0 0 0 mrad/s (off) seq=35861 drop=672 TILT -24 0
+I (766843) kasane: KASANE_PAINT turn_ms=5.90 render_ms=6.24 send_ms=1.36 bytes=16640 bands=10 band_runs=2 band_mask=0x0fee0 prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (767515) js: STRESS f=720 lvl=2 pool=31 peak=36 oom=0 cyc=288 nat=180 natOk=ok err=0 cmds=75 native=13380 pressure=1 pe=1 trim=0
+I (767852) kasane: KASANE_PAINT turn_ms=6.37 render_ms=7.17 send_ms=1.43 bytes=25536 bands=13 band_runs=2 band_mask=0x1ffb8 prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (768329) motion: ACC -921 8919 3697 mm/s2 GYR 0 0 0 mrad/s (off) seq=35957 drop=672 TILT -24 0
+I (768854) kasane: KASANE_PAINT turn_ms=6.03 render_ms=6.87 send_ms=1.27 bytes=27904 bands=9 band_runs=1 band_mask=0x0ff80 prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (769517) js: STRESS f=780 lvl=2 pool=22 peak=36 oom=0 cyc=312 nat=195 natOk=ok err=0 cmds=75 native=13380 pressure=1 pe=1 trim=0
+I (769861) kasane: KASANE_PAINT turn_ms=6.35 render_ms=6.43 send_ms=1.38 bytes=24160 bands=13 band_runs=1 band_mask=0x1fff0 prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (770347) motion: ACC -924 8927 3712 mm/s2 GYR 0 0 0 mrad/s (off) seq=36053 drop=672 TILT -24 0
+I (770872) kasane: KASANE_PAINT turn_ms=6.09 render_ms=7.33 send_ms=1.46 bytes=25600 bands=10 band_runs=2 band_mask=0x0ff30 prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (771543) js: STRESS f=840 lvl=2 pool=31 peak=36 oom=0 cyc=336 nat=210 natOk=ok err=0 cmds=75 native=13380 pressure=1 pe=1 trim=0
+I (771882) kasane: KASANE_PAINT turn_ms=6.44 render_ms=7.83 send_ms=1.37 bytes=21088 bands=10 band_runs=1 band_mask=0x1ff80 prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (772365) motion: ACC -931 8925 3717 mm/s2 GYR 0 0 0 mrad/s (off) seq=36149 drop=672 TILT -24 0
+I (772889) kasane: KASANE_PAINT turn_ms=6.16 render_ms=7.79 send_ms=1.41 bytes=28160 bands=12 band_runs=1 band_mask=0x0fff0 prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (773551) js: STRESS f=900 lvl=2 pool=22 peak=36 oom=0 cyc=360 nat=225 natOk=ok err=0 cmds=75 native=13380 pressure=1 pe=1 trim=0
+I (773896) kasane: KASANE_PAINT turn_ms=6.08 render_ms=8.11 send_ms=1.44 bytes=27488 bands=12 band_runs=2 band_mask=0x1ff70 prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (774383) motion: ACC -935 8932 3699 mm/s2 GYR 0 0 0 mrad/s (off) seq=36245 drop=672 TILT -24 0
+I (774900) kasane: KASANE_PAINT turn_ms=6.07 render_ms=6.97 send_ms=1.48 bytes=24576 bands=9 band_runs=1 band_mask=0x0ff80 prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (775570) js: STRESS f=960 lvl=2 pool=31 peak=36 oom=0 cyc=384 nat=240 natOk=ok err=0 cmds=75 native=13380 pressure=1 pe=1 trim=0
+I (775908) kasane: KASANE_PAINT turn_ms=6.48 render_ms=6.79 send_ms=1.39 bytes=30048 bands=12 band_runs=2 band_mask=0x1ff38 prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (776401) motion: ACC -923 8927 3703 mm/s2 GYR 0 0 0 mrad/s (off) seq=36341 drop=672 TILT -24 0
+I (776914) kasane: KASANE_PAINT turn_ms=6.04 render_ms=7.06 send_ms=1.30 bytes=26880 bands=11 band_runs=1 band_mask=0x0ffe0 prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (777579) js: STRESS f=1020 lvl=2 pool=22 peak=36 oom=0 cyc=408 nat=255 natOk=ok err=0 cmds=75 native=13380 pressure=1 pe=1 trim=0
+I (777923) kasane: KASANE_PAINT turn_ms=6.24 render_ms=6.40 send_ms=1.31 bytes=26976 bands=10 band_runs=1 band_mask=0x1ff80 prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (778420) motion: ACC -919 8930 3716 mm/s2 GYR 0 0 0 mrad/s (off) seq=36437 drop=672 TILT -24 0
+I (778930) kasane: KASANE_PAINT turn_ms=6.11 render_ms=6.68 send_ms=1.49 bytes=24576 bands=11 band_runs=2 band_mask=0x0ff38 prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (779604) js: STRESS f=1080 lvl=2 pool=31 peak=36 oom=0 cyc=432 nat=270 natOk=ok err=0 cmds=75 native=13380 pressure=1 pe=1 trim=0
+I (779946) kasane: KASANE_PAINT turn_ms=6.63 render_ms=7.46 send_ms=1.22 bytes=26720 bands=11 band_runs=1 band_mask=0x1ffc0 prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (780438) motion: ACC -925 8927 3719 mm/s2 GYR 0 0 0 mrad/s (off) seq=36533 drop=672 TILT -24 0
+I (780950) kasane: KASANE_PAINT turn_ms=6.07 render_ms=6.36 send_ms=1.29 bytes=24320 bands=10 band_runs=1 band_mask=0x0ffc0 prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (781611) js: STRESS f=1140 lvl=2 pool=22 peak=36 oom=0 cyc=456 nat=285 natOk=ok err=0 cmds=75 native=13380 pressure=1 pe=1 trim=0
+I (781956) kasane: KASANE_PAINT turn_ms=6.10 render_ms=7.10 send_ms=1.47 bytes=28096 bands=12 band_runs=2 band_mask=0x1ff38 prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (782459) motion: ACC -926 8937 3697 mm/s2 GYR 0 0 0 mrad/s (off) seq=36629 drop=672 TILT -24 0
+I (782967) kasane: KASANE_PAINT turn_ms=6.12 render_ms=7.69 send_ms=1.40 bytes=19456 bands=9 band_runs=1 band_mask=0x0ff80 prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (783640) js: STRESS f=1200 lvl=2 pool=31 peak=36 oom=0 cyc=480 nat=300 natOk=ok err=0 cmds=75 native=13380 pressure=1 pe=1 trim=0
+I (783728) js: STRESS_LEVEL 3
+I (783780) sound: SFX 1 played 1440 frames
+I (783928) kasane: KASANE_PAINT turn_ms=6.46 render_ms=7.79 send_ms=1.34 bytes=23744 bands=12 band_runs=1 band_mask=0x1ffe0 prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (784303) js: STRESS_OOM n=1 at=frame
+E (784304) app: OOM n=2 first_req=48 used=163812
+I (784479) motion: ACC -918 8930 3703 mm/s2 GYR 0 0 0 mrad/s (off) seq=36725 drop=672 TILT -24 0
+I (784966) kasane: KASANE_PAINT turn_ms=6.41 render_ms=8.40 send_ms=1.50 bytes=25600 bands=11 band_runs=2 band_mask=0x0ff38 prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+E (785264) app: OOM n=1 first_req=1312 used=163208
+I (785267) js: STRESS_OOM n=2 at=read
+I (785597) js: STRESS f=1260 lvl=3 pool=25 peak=62 oom=2 cyc=504 nat=316 natOk=ok err=0 cmds=75 native=13380 pressure=9 pe=4 trim=2
+I (785972) kasane: KASANE_PAINT turn_ms=6.48 render_ms=7.55 send_ms=1.33 bytes=23296 bands=8 band_runs=1 band_mask=0x0ff00 prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (786149) js: STRESS_OOM n=3 at=frame
+E (786150) app: OOM n=4 first_req=48 used=163816
+I (786497) motion: ACC -927 8931 3699 mm/s2 GYR 0 0 0 mrad/s (off) seq=36821 drop=672 TILT -24 0
+I (787021) kasane: KASANE_PAINT turn_ms=6.98 render_ms=6.75 send_ms=1.44 bytes=25600 bands=12 band_runs=1 band_mask=0x0fff0 prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (787085) js: STRESS_OOM n=4 at=frame
+E (787087) app: OOM n=1 first_req=1312 used=162832
+I (787620) js: STRESS f=1320 lvl=3 pool=36 peak=62 oom=4 cyc=528 nat=331 natOk=ok err=0 cmds=75 native=13380 pressure=1 pe=9 trim=4
+I (788001) js: STRESS_OOM n=5 at=frame
+E (788003) app: OOM n=6 first_req=80 used=163796
+I (788090) kasane: KASANE_PAINT turn_ms=7.40 render_ms=7.56 send_ms=1.38 bytes=27904 bands=11 band_runs=2 band_mask=0x0ff70 prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (788517) motion: ACC -927 8931 3690 mm/s2 GYR 0 0 0 mrad/s (off) seq=36917 drop=672 TILT -24 0
+I (788933) js: STRESS_OOM n=6 at=frame
+E (788934) app: OOM n=1 first_req=1312 used=163036
+I (789134) kasane: KASANE_PAINT turn_ms=6.60 render_ms=6.74 send_ms=1.37 bytes=23040 bands=8 band_runs=1 band_mask=0x0ff00 prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (789631) js: STRESS f=1380 lvl=3 pool=47 peak=62 oom=6 cyc=552 nat=345 natOk=ok err=0 cmds=75 native=13380 pressure=1 pe=13 trim=6
+I (789877) js: STRESS_OOM n=7 at=frame
+E (789878) app: OOM n=4 first_req=35 used=163828
+I (790174) kasane: KASANE_PAINT turn_ms=6.67 render_ms=6.77 send_ms=1.44 bytes=31840 bands=13 band_runs=2 band_mask=0x1ffb8 prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (790536) motion: ACC -927 8923 3689 mm/s2 GYR 0 0 0 mrad/s (off) seq=37013 drop=672 TILT -24 0
+I (790829) js: STRESS_OOM n=8 at=frame
+E (790830) app: OOM n=4 first_req=48 used=163804
+I (791221) kasane: KASANE_PAINT turn_ms=6.74 render_ms=7.57 send_ms=1.35 bytes=29952 bands=10 band_runs=1 band_mask=0x0ffc0 prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (791656) js: STRESS f=1440 lvl=3 pool=56 peak=62 oom=8 cyc=576 nat=360 natOk=ok err=0 cmds=75 native=13380 pressure=1 pe=17 trim=8
+I (791775) js: STRESS_OOM n=9 at=frame
+E (791777) app: OOM n=4 first_req=48 used=163792
+I (792262) kasane: KASANE_PAINT turn_ms=6.69 render_ms=6.77 send_ms=1.29 bytes=26112 bands=9 band_runs=1 band_mask=0x0ff80 prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (792557) motion: ACC -930 8925 3692 mm/s2 GYR 0 0 0 mrad/s (off) seq=37109 drop=672 TILT -24 0
+I (792710) js: STRESS_OOM n=10 at=read
+E (792716) app: OOM n=2 first_req=48 used=163804
+I (793282) kasane: KASANE_PAINT turn_ms=6.48 render_ms=7.00 send_ms=1.45 bytes=28160 bands=12 band_runs=2 band_mask=0x0ffb8 prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (793600) js: STRESS_OOM n=11 at=frame
+E (793602) app: OOM n=2 first_req=80 used=163772
+I (793678) js: STRESS f=1500 lvl=3 pool=6 peak=62 oom=11 cyc=600 nat=374 natOk=ok err=0 cmds=75 native=13380 pressure=9 pe=22 trim=11
+I (794323) kasane: KASANE_PAINT turn_ms=6.61 render_ms=7.91 send_ms=1.40 bytes=24320 bands=9 band_runs=1 band_mask=0x0ff80 prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (794538) js: STRESS_OOM n=12 at=read
+E (794544) app: OOM n=2 first_req=48 used=163824
+I (794576) motion: ACC -915 8920 3710 mm/s2 GYR 0 0 0 mrad/s (off) seq=37205 drop=672 TILT -24 0
+I (795342) kasane: KASANE_PAINT turn_ms=6.48 render_ms=7.51 send_ms=1.32 bytes=25344 bands=10 band_runs=1 band_mask=0x0ffc0 prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (795482) js: STRESS_OOM n=13 at=read
+E (795487) app: OOM n=2 first_req=16 used=163836
+I (795714) js: STRESS f=1560 lvl=3 pool=16 peak=63 oom=13 cyc=624 nat=389 natOk=ok err=0 cmds=75 native=13380 pressure=9 pe=26 trim=13
+I (796352) kasane: KASANE_PAINT turn_ms=7.15 render_ms=8.41 send_ms=1.47 bytes=31232 bands=12 band_runs=2 band_mask=0x0ffb8 prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (796417) js: STRESS_OOM n=14 at=frame
+E (796418) app: OOM n=1 first_req=1312 used=162540
+I (796594) motion: ACC -921 8922 3717 mm/s2 GYR 0 0 0 mrad/s (off) seq=37301 drop=672 TILT -24 0
+I (797360) js: STRESS_OOM n=15 at=read
+E (797365) app: OOM n=4 first_req=38 used=163840
+I (797389) kasane: KASANE_PAINT turn_ms=7.41 render_ms=7.84 send_ms=1.31 bytes=17408 bands=8 band_runs=1 band_mask=0x0ff00 prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (797717) js: STRESS f=1620 lvl=3 pool=25 peak=63 oom=15 cyc=648 nat=403 natOk=ok err=0 cmds=75 native=13380 pressure=9 pe=30 trim=15
+I (798275) js: STRESS_OOM n=16 at=frame
+E (798276) app: OOM n=4 first_req=80 used=163764
+I (798437) kasane: KASANE_PAINT turn_ms=7.21 render_ms=6.72 send_ms=1.33 bytes=28672 bands=12 band_runs=1 band_mask=0x0fff0 prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (798612) motion: ACC -912 8927 3703 mm/s2 GYR 0 0 0 mrad/s (off) seq=37397 drop=672 TILT -24 0
+I (799183) js: STRESS_OOM n=17 at=read
+E (799188) app: OOM n=2 first_req=48 used=163800
+I (799447) kasane: KASANE_PAINT turn_ms=6.30 render_ms=7.01 send_ms=1.47 bytes=32256 bands=12 band_runs=1 band_mask=0x0fff0 prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (799752) js: STRESS f=1680 lvl=3 pool=38 peak=63 oom=17 cyc=672 nat=417 natOk=ok err=0 cmds=75 native=13380 pressure=1 pe=35 trim=17
+I (800130) js: STRESS_OOM n=18 at=frame
+E (800132) app: OOM n=4 first_req=48 used=163796
+I (800488) kasane: KASANE_PAINT turn_ms=6.96 render_ms=7.14 send_ms=1.32 bytes=20832 bands=10 band_runs=1 band_mask=0x1ff80 prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (800630) motion: ACC -914 8929 3715 mm/s2 GYR 0 0 0 mrad/s (off) seq=37493 drop=672 TILT -24 0
+I (801066) js: STRESS_OOM n=19 at=frame
+E (801067) app: OOM n=6 first_req=80 used=163844
+I (801531) kasane: KASANE_PAINT turn_ms=6.75 render_ms=6.70 send_ms=1.42 bytes=27904 bands=12 band_runs=2 band_mask=0x0ffb8 prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (801757) js: STRESS f=1740 lvl=3 pool=47 peak=63 oom=19 cyc=696 nat=432 natOk=ok err=0 cmds=75 native=13380 pressure=1 pe=39 trim=19
+I (802005) js: STRESS_OOM n=20 at=frame
+E (802007) app: OOM n=4 first_req=80 used=163812
+I (802566) kasane: KASANE_PAINT turn_ms=6.92 render_ms=7.52 send_ms=1.45 bytes=29536 bands=12 band_runs=1 band_mask=0x1ffe0 prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (802648) motion: ACC -934 8929 3704 mm/s2 GYR 0 0 0 mrad/s (off) seq=37589 drop=672 TILT -24 0
+I (802945) js: STRESS_OOM n=21 at=frame
+E (802946) app: OOM n=4 first_req=480 used=163768
+I (803606) kasane: KASANE_PAINT turn_ms=6.72 render_ms=6.69 send_ms=1.18 bytes=24064 bands=9 band_runs=1 band_mask=0x0ff80 prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (803774) js: STRESS f=1800 lvl=3 pool=56 peak=63 oom=21 cyc=720 nat=446 natOk=ok err=0 cmds=75 native=13380 pressure=1 pe=43 trim=21
+I (803852) js: STRESS_OOM n=22 at=frame
+E (803853) app: OOM n=2 first_req=16 used=163824
+I (803902) app: MEM free=210524 largest=31744 js=0 frames=1804
+I (803903) app: APP_STOPPED
+I (803912) app: APP_ID local.player
+I (803945) app: MEM free=150696 largest=31744 js=49384 frames=0
+I (803947) overlay: OVERLAY_COST free_before=210524 free_after=150696 took=59828 floor=57344
+I (803949) overlay: OVERLAY running state=5
+I (803972) background: PERF mode=3 async=1 clock=DEMO fps=0.8 draw=21.90 prep=0.83 loop=18.86 kernel=18.83 hud=0.05 (ovl=0.00 fmt=0.00 fps=0.00 menu=0.01) send=0.52

@@ -1,0 +1,98 @@
+{
+  "host": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "scope": "Host object inspection only; no target memory/performance claim. Stack figures are per-function compiler reports, not measured call-chain peaks.",
+  "objects": {
+    "O0": {
+      "tables": [
+        {
+          "name": "face_compact_blob",
+          "bytes": 7963
+        }
+      ],
+      "sections": {
+        ".text": 1915,
+        ".data": 0,
+        ".bss": 0,
+        ".rodata": 7963,
+        ".comment": 32,
+        ".note.GNU-stack": 0,
+        ".eh_frame": 256
+      },
+      "undefined_symbols": [],
+      "compiler_stack": [
+        {
+          "function": "valid",
+          "reported_bytes": 16,
+          "kind": "static"
+        },
+        {
+          "function": "q16ratio",
+          "reported_bytes": 16,
+          "kind": "static"
+        },
+        {
+          "function": "floordiv",
+          "reported_bytes": 16,
+          "kind": "static"
+        },
+        {
+          "function": "pixel",
+          "reported_bytes": 16,
+          "kind": "static"
+        },
+        {
+          "function": "sample",
+          "reported_bytes": 176,
+          "kind": "static"
+        },
+        {
+          "function": "face_block",
+          "reported_bytes": 72,
+          "kind": "static"
+        },
+        {
+          "function": "face_scalar",
+          "reported_bytes": 32,
+          "kind": "static"
+        }
+      ]
+    },
+    "O2": {
+      "tables": [
+        {
+          "name": "face_compact_blob",
+          "bytes": 7963
+        }
+      ],
+      "sections": {
+        ".text": 1245,
+        ".data": 0,
+        ".bss": 0,
+        ".rodata": 7963,
+        ".comment": 32,
+        ".note.GNU-stack": 0,
+        ".eh_frame": 176
+      },
+      "undefined_symbols": [
+        "                 U memcpy"
+      ],
+      "compiler_stack": [
+        {
+          "function": "pixel",
+          "reported_bytes": 8,
+          "kind": "static"
+        },
+        {
+          "function": "face_block",
+          "reported_bytes": 128,
+          "kind": "static"
+        },
+        {
+          "function": "face_scalar",
+          "reported_bytes": 8,
+          "kind": "static"
+        }
+      ]
+    }
+  }
+}

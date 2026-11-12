@@ -1,0 +1,70 @@
+{
+  "plan": {
+    "ok": true,
+    "plan_hash": "a1c5509173e5b534eff74200717f7ee067f5acf54ce77eb741b926a8df208666",
+    "plan": {
+      "version": 1,
+      "broker_epoch": "a9885f2c085e4727baa5c0e2902f388d",
+      "session_id": "8c96aeda27a340eda2ea40741c2ee903",
+      "device": "configured-cardputer",
+      "backend": "serial",
+      "job_id": "derby-diag-9db14c88-post42-20261018",
+      "test": "derby_smoke",
+      "stages": [
+        "serial_open",
+        "derby_smoke",
+        "serial_close"
+      ],
+      "port": "COM3",
+      "device_fingerprint": "550115278762c26269354dc573729668a6647f42c7c8ffc9eb56967b958e51e5",
+      "protocol": "pocketjs-derby-smoke-v1",
+      "expected_firmware_sha256": "06b1c1c8aab37eb78e437304ea5fbe652df339bc73408ba7f9d5f6f9eb2c298d",
+      "firmware_verification": "configured_expected_hash_only",
+      "observe_seconds": null,
+      "effects": [
+        "Operator verifies HOME and exact normal firmware; no physical input during job",
+        "Opens/closes serial; drivers may glitch control lines or reset device",
+        "Fixed Esc/a/u x16/d x12/e navigation requires local.derby and DERBY READY",
+        "Observe automatic demo up to 120 seconds; whole serial job at most 180 seconds",
+        "One s only at a currently observed photo phase; no timed fallback; no photo before the deadline means no image and an unverified photo result",
+        "Reserve 18 seconds for capture, 12 for exit and 5 seconds margin; record bounded host phase/race/seed and capture timing; pixels may be private",
+        "One explicit q exit requiring fresh HOME_READY; game exit may save player state",
+        "Cancellation/lease loss stops new writes, including q; game may remain running",
+        "Render buffer does not prove LCD transfer; missing phases do not prove a full cycle",
+        "No keytest build, firmware flash, arbitrary keys, retries, or automatic reopen"
+      ],
+      "smoke": {
+        "app_id": "local.derby",
+        "menu_row": 12,
+        "max_operation_seconds": 180,
+        "max_demo_observe_seconds": 120,
+        "demo_idle_seconds": 15,
+        "capture": "one_s_only_at_current_observed_photo_no_fallback_v2",
+        "capture_seconds": 18,
+        "exit_seconds": 12,
+        "reserved_margin_seconds": 5,
+        "observation": "bounded_host_phase_race_seed_and_capture_timing; pixels_not_attested",
+        "commands": [
+          "Esc",
+          "a",
+          "u x16",
+          "d x12",
+          "e",
+          "s",
+          "q"
+        ],
+        "exit": "one_q_then_fresh_HOME_READY; close_even_if_interrupted"
+      }
+    },
+    "approval_required": false
+  },
+  "firmware_outer_evidence": {
+    "build_job": "build-diag-9db14c88-20261018",
+    "flash_job": "flash-diag-9db14c88-post42-20261018",
+    "source_commit": "9db14c8825b389fba98b541b4b7b712574f9346e",
+    "source_tree": "93845b582924da52d34a13c31f2f720b62a9c0a5",
+    "app_bin_sha256": "a87fd9ed448d4771b35866757848e135a4feec7de92da63b073226b68eec4547",
+    "elf_sha256": "4a2a6a430a7c5965e9c6130195cdafac90bdd0d414f5a6953ab6018ae1d27b59",
+    "firmware_identity_basis": "accepted ON build proof plus same-epoch verified flash readback/boot; static smoke configured_expected_hash_only is not refreshed identity attestation"
+  }
+}

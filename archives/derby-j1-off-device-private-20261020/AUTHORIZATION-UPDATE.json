@@ -1,0 +1,22 @@
+{
+  "source": "Trusted top-level parent delegation with transcript_evidence",
+  "source_thread_id": "01a15560-53fc-74be-bdcc-e2ec8c3d200a",
+  "user_message_id": "Sentinel_6d18c7bc522481918690a75d50f0783c",
+  "user_answer": "y",
+  "scope": "Explicitly lift prior MCP build restriction for same J1 OFF build/proof/flash/fixed-workload/r2 strict validation; device restart and retained recovery acknowledged",
+  "head": "b561aea1c0798feb28055a00d36681fae81ac58a",
+  "retry_limit": 1,
+  "prior_rejection_known_not_executed": true,
+  "excluded": [
+    "new head registration",
+    "authorization change",
+    "MCP deployment",
+    "publication",
+    "ON remeasurement"
+  ],
+  "stop_on": [
+    "rejection",
+    "abnormality",
+    "uncertain result"
+  ]
+}

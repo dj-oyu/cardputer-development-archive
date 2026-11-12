@@ -1,0 +1,35 @@
+[
+  {
+    "bits": 16,
+    "floating_arithmetic_instructions": [],
+    "undefined_symbols": "                 w _ITM_deregisterTMCloneTable\n                 w _ITM_registerTMCloneTable\n                 w __cxa_finalize@GLIBC_2.2.5\n                 w __gmon_start__\n                 U memcmp@GLIBC_2.2.5\n",
+    "profile_symbols": {
+      "agx_encoded": 445248,
+      "shape": 25700
+    },
+    "no_material_or_lighting_or_geometry_code_in_runtime": true,
+    "own_stack": "conditional.c:7:5:tc_mix\t8\tstatic\nconditional.c:19:5:tc_block\t304\tstatic\n"
+  },
+  {
+    "bits": 20,
+    "floating_arithmetic_instructions": [],
+    "undefined_symbols": "                 w _ITM_deregisterTMCloneTable\n                 w _ITM_registerTMCloneTable\n                 w __cxa_finalize@GLIBC_2.2.5\n                 w __gmon_start__\n                 U memcmp@GLIBC_2.2.5\n",
+    "profile_symbols": {
+      "agx_encoded": 445248,
+      "shape": 25700
+    },
+    "no_material_or_lighting_or_geometry_code_in_runtime": true,
+    "own_stack": "conditional.c:7:5:tc_mix\t8\tstatic\nconditional.c:19:5:tc_block\t304\tstatic\n"
+  },
+  {
+    "bits": 24,
+    "floating_arithmetic_instructions": [],
+    "undefined_symbols": "                 w _ITM_deregisterTMCloneTable\n                 w _ITM_registerTMCloneTable\n                 w __cxa_finalize@GLIBC_2.2.5\n                 w __gmon_start__\n                 U memcmp@GLIBC_2.2.5\n",
+    "profile_symbols": {
+      "agx_encoded": 445248,
+      "shape": 25700
+    },
+    "no_material_or_lighting_or_geometry_code_in_runtime": true,
+    "own_stack": "conditional.c:7:5:tc_mix\t8\tstatic\nconditional.c:19:5:tc_block\t304\tstatic\n"
+  }
+]

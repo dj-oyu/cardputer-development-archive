@@ -1,0 +1,18 @@
+synthetic accepted=100000 nearzero=0
+same_integer_input n=100000 angular_deg_max=0.00148744850864 rms=0.000713926930441 p95=0.0011032344594 p99=0.00124007197325
+edge in=0,0,0 status=1
+edge in=1,0,0 status=1
+edge in=511,0,0 status=1
+edge in=512,0,0 status=0 out=32767,0,0 angular_deg=0
+edge in=-512,0,0 status=0 out=-32767,0,0 angular_deg=0
+edge in=32767,0,0 status=0 out=32767,0,0 angular_deg=0
+edge in=-32768,0,0 status=0 out=-32767,0,0 angular_deg=0
+edge in=32767,32767,32767 status=0 out=18918,18918,18918 angular_deg=0
+edge in=-32768,-32768,-32768 status=0 out=-18918,-18918,-18918 angular_deg=0
+edge in=512,1,1 status=0 out=32767,64,64 angular_deg=4.82978362388e-06
+edge in=300,300,300 status=0 out=18918,18918,18918 angular_deg=0
+edge in=295,295,295 status=1
+actual accepted=7678 nearzero=0 input_norm_min=0.235194655377
+actual_including_input_quantization n=7678 angular_deg_max=0.00363806471948 rms=0.00114334379557 p95=0.00191847941876 p99=0.00230905333498
+actual_same_integer_input n=7678 angular_deg_max=0.00138228434602 rms=0.000719190728686 p95=0.0011028497967 p99=0.00122304206814
+PASS integer normal bridge, alias safety, magnitude boundary, extreme codes, actual corpus

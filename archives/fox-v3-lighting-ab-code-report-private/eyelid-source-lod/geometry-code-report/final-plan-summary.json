@@ -1,0 +1,237 @@
+{
+  "status": "Plan frozen; no candidate GLB/scene object yet. Await final reviewer and parent generation instruction.",
+  "finalStationCounts": [
+    8,
+    9
+  ],
+  "excludedTenStationReason": "Before image/render candidate generation, fixed source triangle ordering crosses into a third32-vertex packet. Standalone compact cost4180B per lid gives nominal whole snapshot66372B above65536. This is a forecast, not actual compile rejection.",
+  "comparison": [
+    {
+      "side": -1,
+      "stations": 8,
+      "vertices": 48,
+      "triangles": 84,
+      "centerlineMaxChordError": 0.010717155253401459,
+      "centerlineArcWeightedMeanError": 0.0030748621687552704,
+      "sourceSurfaceSampleCount": 3468,
+      "sourceToTemplateMax": 0.013137771791867649,
+      "sourceToTemplateSampleMean": 0.002249232928579695,
+      "templateSurfaceSampleCount": 1260,
+      "templateToSourceMax": 0.011645442218832906,
+      "templateToSourceSampleMean": 0.0015755984253568518,
+      "sampledSymmetricSurfaceHausdorff": 0.013137771791867649,
+      "minimumCrossSectionWidth": 0.02251658213562241,
+      "minimumCrossSectionSupportRadius": 0.011258290542002228,
+      "standalonePartition": [
+        {
+          "vertices": 32,
+          "triangles": 50
+        },
+        {
+          "vertices": 24,
+          "triangles": 34
+        }
+      ],
+      "standalonePartitionVertexTotal": 56,
+      "standaloneCompactBytesAssumingAntipodal": 3092,
+      "standaloneFallbackBytes": 3428
+    },
+    {
+      "side": 1,
+      "stations": 8,
+      "vertices": 48,
+      "triangles": 84,
+      "centerlineMaxChordError": 0.010717170035108987,
+      "centerlineArcWeightedMeanError": 0.003074861360801457,
+      "sourceSurfaceSampleCount": 3468,
+      "sourceToTemplateMax": 0.013137718636236865,
+      "sourceToTemplateSampleMean": 0.002249231925562262,
+      "templateSurfaceSampleCount": 1260,
+      "templateToSourceMax": 0.011645476717188127,
+      "templateToSourceSampleMean": 0.0015755976459717908,
+      "sampledSymmetricSurfaceHausdorff": 0.013137718636236865,
+      "minimumCrossSectionWidth": 0.022516578980768753,
+      "minimumCrossSectionSupportRadius": 0.011258289490384338,
+      "standalonePartition": [
+        {
+          "vertices": 32,
+          "triangles": 50
+        },
+        {
+          "vertices": 24,
+          "triangles": 34
+        }
+      ],
+      "standalonePartitionVertexTotal": 56,
+      "standaloneCompactBytesAssumingAntipodal": 3092,
+      "standaloneFallbackBytes": 3428
+    },
+    {
+      "side": -1,
+      "stations": 9,
+      "vertices": 54,
+      "triangles": 96,
+      "centerlineMaxChordError": 0.004610282902445757,
+      "centerlineArcWeightedMeanError": 0.0019923268741692153,
+      "sourceSurfaceSampleCount": 3468,
+      "sourceToTemplateMax": 0.006627092278971815,
+      "sourceToTemplateSampleMean": 0.0015679439611402076,
+      "templateSurfaceSampleCount": 1440,
+      "templateToSourceMax": 0.006236540119513788,
+      "templateToSourceSampleMean": 0.0012772481310957574,
+      "sampledSymmetricSurfaceHausdorff": 0.006627092278971815,
+      "minimumCrossSectionWidth": 0.02251658213562241,
+      "minimumCrossSectionSupportRadius": 0.011258290542002228,
+      "standalonePartition": [
+        {
+          "vertices": 32,
+          "triangles": 50
+        },
+        {
+          "vertices": 30,
+          "triangles": 46
+        }
+      ],
+      "standalonePartitionVertexTotal": 62,
+      "standaloneCompactBytesAssumingAntipodal": 3428,
+      "standaloneFallbackBytes": 3800
+    },
+    {
+      "side": 1,
+      "stations": 9,
+      "vertices": 54,
+      "triangles": 96,
+      "centerlineMaxChordError": 0.0046102740490025496,
+      "centerlineArcWeightedMeanError": 0.001992328450131408,
+      "sourceSurfaceSampleCount": 3468,
+      "sourceToTemplateMax": 0.006627089497506462,
+      "sourceToTemplateSampleMean": 0.0015679439174582515,
+      "templateSurfaceSampleCount": 1440,
+      "templateToSourceMax": 0.006236537017279043,
+      "templateToSourceSampleMean": 0.0012772479009596886,
+      "sampledSymmetricSurfaceHausdorff": 0.006627089497506462,
+      "minimumCrossSectionWidth": 0.022516578980768753,
+      "minimumCrossSectionSupportRadius": 0.011258289490384338,
+      "standalonePartition": [
+        {
+          "vertices": 32,
+          "triangles": 50
+        },
+        {
+          "vertices": 30,
+          "triangles": 46
+        }
+      ],
+      "standalonePartitionVertexTotal": 62,
+      "standaloneCompactBytesAssumingAntipodal": 3428,
+      "standaloneFallbackBytes": 3800
+    }
+  ],
+  "topology": [
+    {
+      "side": -1,
+      "stations": 8,
+      "vertices": 48,
+      "triangles": 84,
+      "edges": 132,
+      "EulerCharacteristic": 0,
+      "connectedComponents": 1,
+      "boundaryLoopLengths": [
+        6,
+        6
+      ],
+      "boundaryDegreesAllTwo": true,
+      "nonmanifoldEdges": 0,
+      "interiorWindingMismatches": 0,
+      "minimumDoubleArea": 0.0008328544519697965,
+      "minimumGeometricDotSourceNormal": 0.7814245825727433,
+      "maxSourceNormalLengthError": 8.864676814823724e-08,
+      "sourceVertexAndNormalExact": true,
+      "selectedEndpointSourceIDsExact": true,
+      "noGLBOrSceneObjectCreated": true,
+      "pass": true
+    },
+    {
+      "side": -1,
+      "stations": 9,
+      "vertices": 54,
+      "triangles": 96,
+      "edges": 150,
+      "EulerCharacteristic": 0,
+      "connectedComponents": 1,
+      "boundaryLoopLengths": [
+        6,
+        6
+      ],
+      "boundaryDegreesAllTwo": true,
+      "nonmanifoldEdges": 0,
+      "interiorWindingMismatches": 0,
+      "minimumDoubleArea": 0.0005514003266678323,
+      "minimumGeometricDotSourceNormal": 0.8393104711909228,
+      "maxSourceNormalLengthError": 8.864676814823724e-08,
+      "sourceVertexAndNormalExact": true,
+      "selectedEndpointSourceIDsExact": true,
+      "noGLBOrSceneObjectCreated": true,
+      "pass": true
+    },
+    {
+      "side": 1,
+      "stations": 8,
+      "vertices": 48,
+      "triangles": 84,
+      "edges": 132,
+      "EulerCharacteristic": 0,
+      "connectedComponents": 1,
+      "boundaryLoopLengths": [
+        6,
+        6
+      ],
+      "boundaryDegreesAllTwo": true,
+      "nonmanifoldEdges": 0,
+      "interiorWindingMismatches": 0,
+      "minimumDoubleArea": 0.0008328551286852927,
+      "minimumGeometricDotSourceNormal": 0.7814238935050685,
+      "maxSourceNormalLengthError": 9.777210008277137e-08,
+      "sourceVertexAndNormalExact": true,
+      "selectedEndpointSourceIDsExact": true,
+      "noGLBOrSceneObjectCreated": true,
+      "pass": true
+    },
+    {
+      "side": 1,
+      "stations": 9,
+      "vertices": 54,
+      "triangles": 96,
+      "edges": 150,
+      "EulerCharacteristic": 0,
+      "connectedComponents": 1,
+      "boundaryLoopLengths": [
+        6,
+        6
+      ],
+      "boundaryDegreesAllTwo": true,
+      "nonmanifoldEdges": 0,
+      "interiorWindingMismatches": 0,
+      "minimumDoubleArea": 0.0005514005369968979,
+      "minimumGeometricDotSourceNormal": 0.839311962312722,
+      "maxSourceNormalLengthError": 9.777210008277137e-08,
+      "sourceVertexAndNormalExact": true,
+      "selectedEndpointSourceIDsExact": true,
+      "noGLBOrSceneObjectCreated": true,
+      "pass": true
+    }
+  ],
+  "expectedCharacterTriangles": {
+    "eight": 1564,
+    "nine": 1588
+  },
+  "memoryForecastOnly": {
+    "codecBaseline": 58844,
+    "capacity": 65536,
+    "eightCompact": 64196,
+    "eightFallbackNewLidOnly": 64868,
+    "nineCompact": 64868,
+    "nineFallbackNewLidOnly": 65612
+  },
+  "actualCompileRequired": true
+}

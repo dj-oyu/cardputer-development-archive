@@ -1,0 +1,764 @@
+"""Run the project's PIE kernels through the instruction-level model and compare
+them with their scalar definitions.
+
+    python tools/pie/test_kernels.py           (from the repository root)
+
+Each test extracts the inline assembly straight out of the scene sources
+(main/scene/ocean.c, wave.c, solar_sail.c, garden.c, ...), builds the same memory
+the C code would (tables, per-row constants, the 8-column input blocks), executes
+the assembly with `piesim`, and compares every output pixel with a Python
+transcription of the scalar reference next to the kernel (ocean_row_scalar in
+ocean.c, for instance). The legacy renderer's blend/fill kernels
+(render_accel.c) were tested here too; they left with that renderer.
+
+What this catches: a wrong register in a rescheduled kernel, a constant read in
+the wrong order, an off-by-one in a lookup lane, a pointer that does not advance
+by what the caller assumes. What it does not catch: an algorithm that is itself
+wrong for some input — that is the job of the exhaustive C models in models/,
+and of the `__attribute__((unused))` scalar functions they were written from.
+
+The constant arrays of the ocean and wave kernels are evaluated from the C
+initializer text, so reordering k[] in the source is checked automatically.
+"""
+import math
+import os
+import random
+import sys
+import unittest
+
+sys.path.insert(0, os.path.dirname(__file__))
+from piesim import Sim, extract_asm, extract_constants, store16, store32, load16  # noqa: E402
+
+ROOT = os.path.join(os.path.dirname(__file__), '..', '..')
+# The two vector rows left shell.c when each background became its own
+# file; the assembly moved verbatim, so only these paths changed.
+OCEAN = os.path.join(ROOT, 'main', 'scene', 'ocean.c')
+WAVE = os.path.join(ROOT, 'main', 'scene', 'wave.c')
+LCD_W = 240
+
+
+def rgb565(r, g, b):
+    return ((r >> 3) << 11) | ((g >> 2) << 5) | (b >> 3)
+
+
+def cdiv(a, b):
+    """C integer division (truncates toward zero)."""
+    q = abs(a) // abs(b)
+    return q if (a >= 0) == (b > 0) else -q
+
+
+# The tables are built here exactly as shell.c builds them. Python's double
+# precision may differ from sinf/expf by one unit in a few entries; that does
+# not matter because both sides of the comparison use the same table.
+SINE = [int(math.sin(i * 6.2831853 / 256) * 256) for i in range(256)]
+WIDTHS, BRIGHT = (18, 5, 24), (14, 32, 21)
+SOFTNESS = [[int(BRIGHT[l] * math.exp(-d * d / (2 * WIDTHS[l] * WIDTHS[l]))) for d in range(64)]
+            for l in range(3)]
+
+
+class OceanRow(unittest.TestCase):
+    """ocean_row_pie against ocean_row_scalar (scene/ocean.c)."""
+
+    @staticmethod
+    def scalar(depth, cross, span, haze, distortion):
+        out = []
+        for x in range(LCD_W):
+            bend = distortion[x]
+            swell = SINE[(depth + bend) & 255]
+            ripple = SINE[(cross + x * 2 + bend * 2) & 255]
+            crest = max(swell - 180 + cdiv(ripple, 6), 0)
+            dx = abs(x - 160)
+            reflection = (span - dx) * 128 // span if dx < span else 0
+            glint = crest * (40 + reflection) // 128
+            shade = (swell + 256) // 32
+            lift = shade + haze + glint
+            clamp = lambda v: min(max(v, 0), 255)
+            out.append(rgb565(clamp(3 + glint), clamp(20 + lift), clamp(39 + lift)))
+        return out
+
+    def test_rows(self):
+        with open(OCEAN, encoding='utf-8') as f:
+            src = f.read()
+        exact = 'ocean_sine16' in src       # table kernel (bit-exact) or the parabola kernel
+        asm = extract_asm(OCEAN, 'ocean_row_pie(')
+        rng = random.Random(3)
+        moved, worst, total = 0, [0, 0, 0], 0
+        for _ in range(40):
+            y = rng.randint(37, 134)
+            span, haze = 12 + (y - 36) // 3, 24 - (y - 36) // 5
+            depth, cross = rng.randint(0, 200000), rng.randint(0, 200000)
+            distortion = [rng.randint(-28, 28) for _ in range(LCD_W)]
+            mem = bytearray(1 << 17)
+            ROW, COLS, TA, TB, K, KV = 0x1000, 0x2000, 0x4000, 0x4400, 0x5000, 0x5100
+            scale = 1 if exact else 16     # build_columns(): the parabola kernel keeps its phases x16
+            for x in range(LCD_W):        # ocean_cols[b][0..2][i]
+                b, i = x >> 3, x & 7
+                planes = (distortion[x] * scale, (2 * x + 2 * distortion[x]) * scale, abs(x - 160))
+                for l, v in enumerate(planes):
+                    store16(mem, COLS + (b * 3 + l) * 16 + 2 * i, [v & 0xFFFF])
+            store32(mem, TA, [s * 16 for s in SINE])                        # ocean_sine16
+            store32(mem, TB, [cdiv(s, 6) * 16 - 180 * 16 for s in SINE])     # ocean_sine6
+            k = extract_constants(OCEAN, 'ocean_row_pie(', dict(depth=depth, cross=cross, span=span, haze=haze))
+            store16(mem, K, k)
+            sim = Sim(mem)
+            sim.run(asm, {'row': ROW, 'in': COLS, 'k': K, 'kv': KV, 'k8': KV + 16 * (len(k) - 1),
+                          'ta': TA, 'tb': TB, 'zero': 0, 's15': 15, 'nk': len(k),
+                          'blocks': LCD_W // 8, 'sar': 11})
+            got, want = load16(mem, ROW, LCD_W), self.scalar(depth, cross, span, haze, distortion)
+            if exact:
+                self.assertEqual(got, want, f'row y={y} depth={depth} cross={cross}')
+            else:
+                for g, w in zip(got, want):
+                    total += 1
+                    moved += g != w
+                    for c, (sh, m) in enumerate(((11, 31), (5, 63), (0, 31))):
+                        worst[c] = max(worst[c], abs(((g >> sh) & m) - ((w >> sh) & m)))
+            self.assertEqual(sim.ar['row'], ROW + LCD_W * 2)
+        if not exact:
+            # The parabola kernel's own contract (see its comment in shell.c): about one
+            # pixel in ten moves by one RGB565 step, none by more than two in green.
+            self.assertLessEqual(worst[0], 1, 'red moved by more than one step')
+            self.assertLessEqual(worst[1], 2, 'green moved by more than two steps')
+            self.assertLessEqual(worst[2], 1, 'blue moved by more than one step')
+            self.assertLess(moved / total, 0.2, f'{moved}/{total} pixels differ from the scalar row')
+            print(f'ocean (approximate kernel): {moved}/{total} pixels moved, worst step r/g/b = {worst}')
+
+
+class WaveRow(unittest.TestCase):
+    """wave_row_pie against its scalar model (scene/wave.c)."""
+
+    @staticmethod
+    def scalar(y, ribbons):
+        green, blue = 14 + y // 7, 30 + y // 5
+        out = []
+        for x in range(LCD_W):
+            light = []
+            for l in range(3):
+                d = abs(y - ribbons[l][x])
+                light.append(SOFTNESS[l][d] if d < 64 else 0)
+            s = light[0] + light[1]
+            out.append(rgb565(5 + light[0] // 4 + light[1] // 3 + light[2] // 2,
+                              green + s + light[2] // 2, blue + s + light[2]))
+        return out
+
+    def test_rows(self):
+        asm = extract_asm(WAVE, 'wave_row_pie(')
+        rng = random.Random(5)
+        for _ in range(40):
+            y = rng.randint(0, 134)
+            ribbons = [[rng.randint(-40, 200) for _ in range(LCD_W)] for _ in range(3)]
+            mem = bytearray(1 << 16)
+            ROW, COLS, T, K = 0x1000, 0x2000, 0x4000, 0x6000
+            for x in range(LCD_W):
+                for l in range(3):
+                    store16(mem, COLS + ((x >> 3) * 3 + l) * 16 + 2 * (x & 7), [ribbons[l][x] & 0xFFFF])
+            lut = []
+            for l in range(3):                            # wave_lut[l][d] = light | (weighted << 16), [64] = 0
+                for d in range(65):
+                    lo = SOFTNESS[l][d] if d < 64 else 0
+                    hi = (lo // 4, lo // 3, lo // 2)[l]
+                    lut.append(lo | (hi << 16))
+            store32(mem, T, lut)
+            k = extract_constants(WAVE, 'wave_row_pie(', dict(y=y, green=14 + y // 7, blue=30 + y // 5))
+            store16(mem, K, k)
+            sim = Sim(mem)
+            sim.run(asm, {'row': ROW, 'in': COLS, 'k': K, 't0': T, 't1': T + 65 * 4, 't2': T + 130 * 4,
+                          'blocks': LCD_W // 8, 'sar': 11})
+            self.assertEqual(load16(mem, ROW, LCD_W), self.scalar(y, ribbons), f'row y={y}')
+            self.assertEqual(sim.ar['row'], ROW + LCD_W * 2)
+
+
+class SolarFillRow(unittest.TestCase):
+    def test_rows(self):
+        asm = extract_asm(os.path.join(ROOT, 'main', 'scene', 'solar_sail.c'), 'fill_row(')
+        rng = random.Random(19)
+        for color in [0, 0xFFFF, 0xF800, 0x07E0, 0x001F] + [rng.getrandbits(16) for _ in range(128)]:
+            mem = bytearray([0xA5] * 4096)
+            store16(mem, 0x802, [color])  # Scalar broadcast needs only 2-byte alignment.
+            sim = Sim(mem)
+            sim.run(asm, {'out': 0x100, 'c': 0x802, 'n': LCD_W // 8})
+            self.assertEqual(load16(mem, 0x100, LCD_W), [color] * LCD_W)
+            self.assertEqual(sim.ar['out'], 0x100 + LCD_W * 2)
+            self.assertEqual(mem[0xF0:0x100], bytes([0xA5] * 16))
+            self.assertEqual(mem[0x100 + LCD_W * 2:0x110 + LCD_W * 2], bytes([0xA5] * 16))
+
+
+GARDEN = os.path.join(ROOT, 'main', 'scene', 'garden.c')
+# main/scene/garden.c, garden_dither and GARDEN_M3.
+DKX, DKY, DKC, DKM, M3 = 18453, 26253, 17872, 42589, 21846
+
+
+class GardenRow(unittest.TestCase):
+    """The three garden kernels against the lane model beside them in garden.c.
+
+    The reference below is a transcription of garden_octave_lanes and
+    garden_pixels, not of garden_row_scalar: those two are an approximation of
+    the scalar loop by design (reciprocals instead of divisions, two floors
+    where there was one), and the size of that approximation is measured
+    separately, in tools/test_garden.c, against the scalar loop itself. What is
+    checked here is the other half -- that the assembly is that lane model, with
+    those registers, reading those constants in that order.
+
+    Row parameters are drawn at random from the ranges garden_pixels_row can
+    actually produce for y in 0..134, so the kernels are exercised well past the
+    one frame a fixed row would give.
+    """
+
+    @staticmethod
+    def recip(d, sh):
+        return ((1 << sh) + d - 1) // d
+
+    @staticmethod
+    def runs(p, step):
+        """The block runs garden_octave_row cuts the row into."""
+        out, b = [], 0
+        while b < 30:
+            g = b * 8 * step + p
+            n = min((255 - (g & 255)) // (step * 8) + 1, 30 - b)
+            out.append((b, n, g & 255, g >> 8))
+            b += n
+        return out
+
+    @classmethod
+    def dens_ref(cls, vc, vf, p6, p5):
+        dens = [0] * 240
+        for v, mask, p, step, first in ((vc, 3, p6, 4, True), (vf, 7, p5, 8, False)):
+            for b, n, rc0, cc in cls.runs(p, step):
+                a = v[cc & mask]
+                da = v[(cc + 1) & mask] - a
+                ddb = v[(cc + 2) & mask] - v[(cc + 1) & mask] - da
+                for i in range(n):
+                    for l in range(8):
+                        rc = rc0 + step * (i * 8 + l)
+                        t = rc & 255
+                        fx = ((t * t) * (768 - 2 * t)) >> 16
+                        nm = -1 if rc > 255 else 0
+                        lo = a + (da & nm)
+                        hi = lo + da + (ddb & nm)
+                        d = (lo * (256 - fx) + hi * fx) >> 8
+                        x = (b + i) * 8 + l
+                        dens[x] = 3 * d if first else dens[x] + d
+        return dens
+
+    @staticmethod
+    def pixels_ref(dens, r):
+        out = []
+        for x in range(LCD_W):
+            u = max(-r['width'], min(r['width'], x - r['center']))
+            q = 256 - ((((u * u) & 0xFFFF) * r['mww']) >> 14)
+            S = dens[x]
+            amb = r['ay'] + ((S * 1366) >> 16)
+            k = r['kb'] + ((S * 820) >> 16)
+            hz = 320 + S
+            sun = (((q * k) & 0xFFFF) * q) >> 16
+            for at, w, m, gain in ((r['at0'], r['w0'], r['mw0'], 4),
+                                   (r['at1'], r['w1'], r['mw1'], 7)):
+                d = max(-w, min(w, x - at))
+                sh = 256 - ((((d * d) & 0xFFFF) * m) >> 14)
+                sun += (((((sh * gain) & 0xFFFF) * sh) >> 8) * hz) >> 18
+            h = ((x * DKX) ^ r['dy']) & 0xFFFF
+            dd = ((((h * h) >> 17) * DKM) >> 16) & 3
+            cr = ((amb * 128 + sun * 640) >> 8) + dd + 10
+            cg = ((amb * 192 + sun * 384) >> 8) + dd + 22
+            cb = ((amb + ((sun * M3) >> 16) + dd + 28) * 32) >> 8
+            out.append((((cr * 256) & 0xF800) | ((cg * 8) & 0x07E0)) | cb)
+        return out
+
+    KV, RCV, XV, DENS, ROW, K = 0x1000, 0x2000, 0x2100, 0x3000, 0x4000, 0x5000
+
+    def broadcast(self, mem, values):
+        """garden_broadcast, run rather than emulated, so the table the loops
+        walk is the one the device would have."""
+        store16(mem, self.K, values)
+        Sim(mem).run(extract_asm(GARDEN, 'garden_broadcast('),
+                     {'k': self.K, 'kv': self.KV, 'ks': 0, 'kp': 0, 'nk': len(values)})
+
+    def octave(self, mem, name, env, n, rc0, step, a, da, ddb, dens):
+        k = extract_constants(GARDEN, name, dict(env, a=a, da=da, ddb=ddb))
+        self.broadcast(mem, k)
+        store16(mem, self.RCV, [(rc0 + step * i) & 0xFFFF for i in range(8)])
+        ar = {'kp': 0, 'kv': self.KV, 'rp': self.RCV, 'dens': dens, 'dp': dens,
+              'n': n, 'sh8': 8, 'sh16': 16, 'zero': 0}
+        sim = Sim(mem)
+        sim.run(extract_asm(GARDEN, name), ar)
+        self.assertEqual(sim.ar['dens'], dens + n * 16)
+
+    def test_row(self):
+        rng = random.Random(31)
+        for _ in range(24):
+            y = rng.randrange(135)
+            width, w0, w1 = 58 + y // 3, 10 + y // 13, 10 + y // 8
+            r = {'center': rng.randrange(60, 200), 'width': width,
+                 'mww': self.recip(width * width, 22),
+                 'w0': w0, 'mw0': self.recip(w0 * w0, 22),
+                 'w1': w1, 'mw1': self.recip(w1 * w1, 22),
+                 'ay': 20 + y // 15, 'kb': 17 + rng.randint(-5, 5),
+                 'dy': (y * DKY + DKC) & 0xFFFF}
+            r['at0'], r['at1'] = r['center'] - 18, r['center'] + 27
+            vc = [rng.randrange(256) for _ in range(4)]
+            vf = [rng.randrange(256) for _ in range(8)]
+            p6, p5 = rng.randrange(1024), rng.randrange(2048)
+
+            mem = bytearray(1 << 16)
+            env = dict(center=r['center'], width=width, mww=r['mww'],
+                       at0=r['at0'], w0=w0, mw0=r['mw0'],
+                       at1=r['at1'], w1=w1, mw1=r['mw1'],
+                       ay=r['ay'], kb=r['kb'], dy=r['dy'],
+                       GARDEN_DKX=DKX, GARDEN_DKM=DKM, GARDEN_M3=M3)
+            for v, mask, p, step, name in ((vc, 3, p6, 4, 'garden_coarse_pie('),
+                                           (vf, 7, p5, 8, 'garden_fine_pie(')):
+                for b, n, rc0, cc in self.runs(p, step):
+                    a = v[cc & mask]
+                    da = v[(cc + 1) & mask] - a
+                    ddb = v[(cc + 2) & mask] - v[(cc + 1) & mask] - da
+                    self.octave(mem, name, env, n, rc0, step, a, da, ddb,
+                                self.DENS + b * 16)
+            dens = self.dens_ref(vc, vf, p6, p5)
+            self.assertEqual(load16(mem, self.DENS, LCD_W), [d & 0xFFFF for d in dens])
+
+            self.broadcast(mem, extract_constants(GARDEN, 'garden_pixels_pie(', env))
+            store16(mem, self.XV, list(range(8)))
+            # Both spellings of the constant walk, against the same reference.
+            # Fusion changes when a constant is fetched and never which one, so
+            # anything but identical output means the transformation is not the
+            # one GARDEN_PIE_FUSE claims -- and the failure it is most likely to
+            # catch is a load that moved past another and swapped two constants,
+            # which no amount of reading the diff would show.
+            for fuse in (True, False):
+                store16(mem, self.XV, list(range(8)))
+                sim = Sim(mem)
+                sim.run(extract_asm(GARDEN, 'garden_pixels_pie(', fuse),
+                        {'kp': 0, 'kv': self.KV, 'xp': self.XV, 'dens': self.DENS,
+                         'row': self.ROW, 'cnt': 30,
+                         'sh8': 8, 'sh14': 14, 'sh16': 16, 'sh17': 17, 'sh18': 18,
+                         'zero': 0})
+                self.assertEqual(load16(mem, self.ROW, LCD_W), self.pixels_ref(dens, r),
+                                 'fused' if fuse else 'unfused')
+                self.assertEqual((sim.ar['row'], sim.ar['dens'], sim.ar['cnt']),
+                                 (self.ROW + LCD_W * 2, self.DENS + LCD_W * 2, 0))
+
+
+
+CANOPY = os.path.join(ROOT, 'main', 'scene', 'canopy_pie.c')
+
+
+class TestCanopyKernel(unittest.TestCase):
+    """canopy_pie against the scalar blend it replaces.
+
+    The arithmetic of the loop is proven in tools/pie/models/canopy_model.c (the
+    radicand split, the exact reciprocal, q*3/5, the deleted branch, the channel
+    bounds, and eight lanes against the scalar row). This is the other half: that
+    the assembly is that lane model -- that it reads the constants in the order
+    the C initializer declares, unpacks the fields it claims to unpack, and
+    advances the row pointer by exactly one block.
+    """
+
+    KV, XV, ROW, K = 0x1000, 0x2000, 0x4000, 0x5000
+
+    @staticmethod
+    def recip(d, sh):
+        return ((1 << sh) + d - 1) // d
+
+    @staticmethod
+    def blend(word, lr, lg, lb, f):
+        g = 256 - f
+        r = (((word >> 11) & 31) * g + lr * f) >> 8
+        gg = (((word >> 5) & 63) * g + lg * f) >> 8
+        b = ((word & 31) * g + lb * f) >> 8
+        return (r << 11) | (gg << 5) | b
+
+    @classmethod
+    def pixel_ref(cls, x, cx, mrr, qy, lr, lg, lb, word):
+        qbase = 256 - qy
+        dx = x - cx
+        t = (((dx * dx) * 16) * ((mrr >> 8) * 16) + (dx * dx) * (mrr & 255)) >> 18
+        q = max(0, qbase - t)
+        f = (q * 39322) >> 16
+        return cls.blend(word, lr, lg, lb, f)
+
+    def broadcast(self, mem, values):
+        store16(mem, self.K, values)
+        Sim(mem).run(extract_asm(CANOPY, 'canopy_broadcast('),
+                     {'k': self.K, 'kv': self.KV, 'ks': 0, 'kp': 0, 'nk': len(values)})
+
+    def test_block(self):
+        rng = random.Random(7)
+        for _ in range(120):
+            rx = rng.randrange(28, 45)
+            rr = rx * rx
+            mrr = self.recip(rr, 26)
+            cx = rng.randrange(40, 200)
+            cx = max(rx, min(239 - rx, cx))
+            # an interior block: every pixel inside |x - cx| <= rx
+            # More than one block: the first version of this test used a single
+            # block, and the kernel's x vector ran off its own stack array on the
+            # second one exactly as the part did.
+            nblk = rng.randrange(1, 6)
+            k = rng.randrange(0, max(1, (2 * rx + 1) // 8 - nblk))
+            x0 = cx - rx + 8 * k
+            while x0 + 8 * nblk - 1 > cx + rx:
+                x0 -= 8
+            if x0 < cx - rx:
+                x0 = cx - rx
+            qy = rng.randrange(0, 257)
+            leafy = rng.randrange(0, 1 << 16)
+            lr, lg, lb = (leafy >> 11) & 31, (leafy >> 5) & 63, leafy & 31
+            words = [rng.randrange(0, 1 << 16) for _ in range(8 * 6)]
+            mem = bytearray(0x8000)
+            env = {'cx': cx, 'mrr': mrr, 'qy': qy, 'leafy': leafy}
+            self.broadcast(mem, extract_constants(CANOPY, 'canopy_pie(', env))
+            # dx = x - cx for the first block; the kernel moves it on by eight.
+            store16(mem, self.XV, [(x0 + i - cx) & 0xFFFF for i in range(8)])
+            store16(mem, self.ROW, words)
+            sim = Sim(mem)
+            sim.run(extract_asm(CANOPY, 'canopy_pie('),
+                    {'kp': 0, 'xp': self.XV, 'row': self.ROW, 'n': nblk, 'kv': self.KV,
+                     'sh0': 0, 'sh8': 8, 'sh16': 16, 'sh18': 18})
+            got = load16(mem, self.ROW, 8 * nblk)
+            want = [self.pixel_ref(x0 + i, cx, mrr, qy, lr, lg, lb, words[i]) for i in range(8 * nblk)]
+            self.assertEqual(got, want, f'rx={rx} cx={cx} x0={x0} blocks={nblk} mrr={mrr} qy={qy} leafy={leafy}')
+            self.assertEqual(sim.ar['row'], self.ROW + 16 * nblk, 'row advance')
+            # xp is an input-only operand now: the kernel keeps the lanes in q7 and
+            # moves them on by eight, so there is nothing to walk and nothing to
+            # assert about a pointer the assembly does not advance.
+
+
+FIR = os.path.join(ROOT, 'main', 'pocket', 'fir_pie.c')
+
+
+class FirKernel(unittest.TestCase):
+    """fir8_pie against the scalar form it replaces (main/pocket/mp3_decode.c).
+
+    Eight outputs in one pass, one tap at a time, with the window read as the
+    unaligned pair of aligned blocks (EE.LD.128.USAR.IP + EE.SRC.Q). The
+    arithmetic is proven in tools/pie/models/fir_model.c; this checks that the
+    assembly is that arithmetic -- that the taps are walked in the coefficient
+    table's order, that the window pointer moves two bytes per tap, and that the
+    eight lanes come out in time order.
+    """
+
+    RINGBUF, H, OUT = 0x1000, 0x2000, 0x3000
+    TAPS = 32
+
+    @staticmethod
+    def scalar(hist, cursor, h):
+        out = []
+        for j in range(-7, 1):
+            s = sum(hist[(cursor + j - k) % 32] * h[k] for k in range(32))
+            v = s >> 14
+            out.append(max(-32768, min(32767, v)))
+        return [o & 0xFFFF for o in out]
+
+    def test_block(self):
+        asm = extract_asm(FIR, 'fir8_pie(')
+        rng = random.Random(23)
+        for _ in range(200):
+            # The window start must be 16-byte aligned, and the cursor advances by
+            # eight per block, so the caller fixes one phase: cursor = 7 mod 8.
+            cursor = 7 + 8 * rng.randrange(0, 4)
+            hist = [rng.randrange(-32768, 32768) for _ in range(32)]
+            h = [rng.randrange(-16384, 16385) for _ in range(32)]
+            mem = bytearray(0x8000)
+            # the caller's doubled ring: buf[t] and buf[t + 32] hold hist[t % 32]
+            for t in range(64):
+                store16(mem, self.RINGBUF + 2 * t, [hist[t % 32]])
+            store16(mem, self.H, h)
+            base = cursor + 25                      # the model's base; lane 7 is the newest sample
+            window = self.RINGBUF + 2 * base
+            self.assertEqual(window % 16, 0, 'the ring layout must align the window start')
+            sim = Sim(mem)
+            sim.run(asm, {'p': window + 16, 'h': self.H, 'out': self.OUT, 'sh': 0, 'sh14': 14})
+            self.assertEqual(load16(mem, self.OUT, 8), self.scalar(hist, cursor, h),
+                             f'cursor={cursor}')
+            self.assertEqual(sim.ar['p'], window - 64, 'the block pointer walked six blocks')
+            self.assertEqual(sim.ar['h'], self.H + 64, 'the coefficient pointer walked the taps')
+            self.assertEqual(sim.ar['out'], self.OUT + 16, 'one block of eight stored')
+
+
+DECOR = os.path.join(ROOT, 'main', 'scene', 'garden_decor_pie.c')
+
+
+class GardenDecorMix(unittest.TestCase):
+    """garden_decor_mix8 against the folded statement beside it (scene/garden_decor_pie.c).
+
+    One call is eight pixels with the group's light, shadow and d as operands,
+    and the constants come from the C initializer in the source -- which is the
+    load order, so a load moved past another swaps two of them and this notices.
+
+    The arithmetic behind the fold -- red exact in three steps, green's
+    correction floored on its own, the accumulator's range -- is proven in
+    tools/pie/models/garden_model.c over every (light, shadow) the row can hand
+    down. What is checked here is the other half: that the assembly is that
+    arithmetic, with those registers, unpacking those fields, priming the
+    accumulator with the constant it claims and moving the row pointer on by
+    exactly one block.
+    """
+
+    ROW, K = 0x1000, 0x2000
+
+    @staticmethod
+    def folded(p, light, shadow, d):
+        """Transcription of garden_decor_mix_folded next to the kernel."""
+        r, g, b = (p >> 11) & 31, (p >> 5) & 63, p & 31
+        e = 256 - (shadow >> 3)
+        ro = (r * (2 * e + light) + 6 * light + 2 * d) >> 9
+        go = (g * (4 * e + light) + 4 * ((10 * light) >> 2) + 4 * d) >> 10
+        bo = (b * (4 * e + light) + 4 * ((4 * light) >> 2) + 4 * d) >> 10
+        return (min(ro, 31) << 11) | (min(go, 63) << 5) | min(bo, 31)
+
+    @staticmethod
+    def scalar(p, light, shadow, d):
+        """garden_decor_mix in garden.c: the statement the kernel replaces, one
+        step of green away from the folded form and never more (garden_model.c)."""
+        r, g, b = (p >> 11) & 31, (p >> 5) & 63, p & 31
+        ext = shadow >> 3
+        r = (r * (256 - ext) + ((light * (r + 6)) >> 1) + d) >> 8
+        g = (g * (256 - ext) + ((light * (g + 10)) >> 2) + d) >> 8
+        b = (b * (256 - ext) + ((light * (b + 4)) >> 2) + d) >> 8
+        return (min(r, 31) << 11) | (min(g, 63) << 5) | min(b, 31)
+
+    def test_block(self):
+        asm = extract_asm(DECOR, 'garden_decor_mix8(')
+        rng = random.Random(41)
+        # The reachable corners first, then the rectangle light, shadow, d can
+        # each move in (d is one of the four garden_dither values; the extremes
+        # are past it, to hold the arithmetic to the folded line rather than to
+        # the dither's own four values).
+        cases = [(0, 0, 32), (255, 0, 32), (0, 255, 224), (255, 255, 224),
+                 (250, 3, 160), (1, 8, 96), (0, 0, 0), (255, 255, 255)]
+        for _ in range(60):
+            cases.append((rng.randrange(256), rng.randrange(256), rng.choice((32, 96, 160, 224))))
+        worst, moved = [0, 0, 0], 0
+        for light, shadow, d in cases:
+            px = [rng.getrandbits(16) for _ in range(8)]
+            mem = bytearray(0x8000)
+            store16(mem, self.ROW, px)
+            k = extract_constants(DECOR, 'garden_decor_mix8(', dict(light=light, shadow=shadow, d=d))
+            self.assertEqual(len(k), 11, 'the constant walk reads eleven words')
+            store16(mem, self.K, k)
+            sim = Sim(mem)
+            sim.run(asm, {'row': self.ROW, 'kp': 0, 'k': self.K,
+                          'sh0': 0, 'sh9': 9, 'sh10': 10, 'sh16': 16})
+            got = load16(mem, self.ROW, 8)
+            self.assertEqual(got, [self.folded(p, light, shadow, d) for p in px],
+                             f'light={light} shadow={shadow} d={d}')
+            self.assertEqual(sim.ar['row'], self.ROW + 16, 'one block of eight stored')
+            self.assertEqual(sim.ar['kp'] - self.K, 2 * len(k), 'the walk consumed k[]')
+            for p, g in zip(px, got):
+                s = self.scalar(p, light, shadow, d)
+                for c, (sh, m) in enumerate(((11, 31), (5, 63), (0, 31))):
+                    worst[c] = max(worst[c], abs(((g >> sh) & m) - ((s >> sh) & m)))
+                moved += g != s
+        # The fold's own contract: red cannot move, and green and blue move by at
+        # most one step of their fields. Measured over the whole domain in
+        # tools/pie/models/garden_model.c; here it is the assembled kernel.
+        self.assertEqual(worst[0], 0, 'the folded red channel is not exact')
+        self.assertLessEqual(worst[1], 1, 'green moved by more than one step')
+        self.assertLessEqual(worst[2], 1, 'blue moved by more than one step')
+        print(f'decor: {moved}/{len(cases) * 8} pixels differ from the scalar loop, '
+              f'worst step r/g/b = {worst}')
+
+BLENDPIE = os.path.join(ROOT, 'main', 'ui', 'kasane', 'ksn_blend_pie.c')
+# ksn_render.c:43, the table the caller's eight threshold lanes come from.
+BAYER4 = [[0, 8, 2, 10], [12, 4, 14, 6], [3, 11, 1, 9], [15, 7, 13, 5]]
+
+
+def quantize_ref(value, maximum, bayer):
+    q = value * maximum // 255
+    remainder = value * maximum - 255 * q
+    if q < maximum and 32 * remainder > (2 * bayer + 1) * 255:
+        q += 1
+    return q
+
+
+class KasaneBlend8(unittest.TestCase):
+    """ksn_blend8_pie's two arms against the scalar blend they replace.
+
+    The reference below is ksn_render.c:190-199 (blend) with :106-111 (pack565)
+    and :101-105 (quantize) written out again, so nothing here shares a
+    transcription with the kernel: the arithmetic being checked is the
+    renderer's. tools/pie/models/blend_pack_model.c has already checked the
+    kernel's lane arithmetic against the same statement over its whole input
+    space; this is the other half -- that the assembly *is* that arithmetic,
+    with those constants in that order, reading and writing the eight pixels it
+    claims to.
+
+    The two arms are separate instruction streams over one shared unpack and
+    mix, so test_shared_prefix_reads_the_same_unpack() compares their opcode
+    sequences: a fix applied to one copy and not the other fails here.
+    """
+
+    DST, K, ARGS, THR, MASK = 0x1000, 0x2000, 0x3000, 0x4000, 0x5000
+
+    @staticmethod
+    def blend_px(p, color, opacity, bayer, dither):
+        """ksn_render.c:190-199 + :106-111. Unsigned division is floor here."""
+        a = ((color % 256) * opacity + 127) // 255
+        if not a:
+            return p
+        r, g, b = (p >> 11) % 32, (p >> 5) % 64, p % 32
+        dr, dg, db = (r << 3) | (r >> 2), (g << 2) | (g >> 4), (b << 3) | (b >> 2)
+        r = (((color >> 24) * a) + dr * (255 - a) + 127) // 255
+        g = ((((color >> 16) % 256) * a) + dg * (255 - a) + 127) // 255
+        b = ((((color >> 8) % 256) * a) + db * (255 - a) + 127) // 255
+        if not dither:
+            return ((r >> 3) << 11) | ((g >> 2) << 5) | (b >> 3)
+        return ((quantize_ref(r, 31, bayer) << 11) |
+                (quantize_ref(g, 63, bayer) << 5) | quantize_ref(b, 31, bayer))
+
+    @classmethod
+    def run_arm(cls, name, words, blocks, color, opacity, thresholds):
+        """-> (memory, sim, k). The constant table and the argument array are
+        built the way the C wrapper builds them, so the assembly's EE.VLDBC.16
+        reads what the caller would have written."""
+        asm = extract_asm(BLENDPIE, name)
+        k = extract_constants(BLENDPIE, name, {})
+        mem = bytearray(0x8000)
+        # guards either side of the run the kernel is allowed to touch
+        mem[cls.DST - 16:cls.DST] = bytes([0xA5] * 16)
+        mem[cls.DST + 16 * blocks:cls.DST + 16 * (blocks + 1)] = bytes([0xA5] * 16)
+        store16(mem, cls.DST, words)
+        store16(mem, cls.K, k)
+        a = ((color % 256) * opacity + 127) // 255
+        store16(mem, cls.ARGS, [a, color >> 24, (color >> 16) % 256, (color >> 8) % 256])
+        if thresholds is not None:
+            store16(mem, cls.THR, thresholds)
+        sim = Sim(mem)
+        ar = {'dst': cls.DST, 'kp': cls.K, 'blocks': blocks,
+              'kb': cls.K + (8 if thresholds is not None else 0),
+              'pa': cls.ARGS, 'pr': cls.ARGS + 2, 'pg': cls.ARGS + 4, 'pb': cls.ARGS + 6,
+              'sh12': 12, 'sh4': 4, 'sh16': 16}
+        if thresholds is not None:
+            ar.update(thr=cls.THR, sh5=5)
+        sim.run(asm, ar)
+        return mem, sim, k
+
+    def check(self, name, words, blocks, color, opacity, thresholds, dither):
+        mem, sim, k = self.run_arm(name, words, blocks, color, opacity, thresholds)
+        got = load16(mem, self.DST, 8 * blocks)
+        want = []
+        for i, p in enumerate(words):
+            bayer = thresholds[i & 7] if thresholds is not None else 0
+            want.append(self.blend_px(p, color, opacity, bayer, dither))
+        self.assertEqual(got, want,
+                         '%s color=%08x opacity=%d blocks=%d' % (name, color, opacity, blocks))
+        # the pointers the caller hands back: one block of eight pixels each, and
+        # the constant table walked exactly once a block
+        self.assertEqual(sim.ar['dst'], self.DST + 16 * blocks, 'dst advance')
+        self.assertEqual(sim.ar['kp'], self.K + 2 * len(k), 'constant walk')
+        self.assertEqual(mem[self.DST - 16:self.DST], bytes([0xA5] * 16), 'guard below')
+        self.assertEqual(mem[self.DST + 16 * blocks:self.DST + 16 * blocks + 16],
+                         bytes([0xA5] * 16), 'guard above')
+
+    def test_thin(self):
+        rng = random.Random(11)
+        cases = [(0xFFFFFFFF, 255, 1), (0x000000FF, 255, 4), (0x00000000, 255, 2),
+                 (0x80402010, 128, 7), (0x12345678, 200, 1), (0xFFFFFF80, 1, 3),
+                 (0x7F7F7F7F, 254, 5), (0x9ABCDEF0, 0, 2)]
+        for color, opacity, blocks in cases:
+            words = [rng.getrandbits(16) for _ in range(8 * blocks)]
+            if color == 0xFFFFFFFF and opacity == 255:
+                words = list(range(0, 8 * blocks))               # boundary words
+            self.check('ksn_blend8_thin(', words, blocks, color, opacity, None, False)
+        for _ in range(60):
+            blocks = rng.randint(1, 12)
+            words = [rng.getrandbits(16) for _ in range(8 * blocks)]
+            self.check('ksn_blend8_thin(', words, blocks, rng.getrandbits(32),
+                       rng.randrange(256), None, False)
+
+    def test_dither(self):
+        rng = random.Random(13)
+        for y in range(4):
+            for x0 in range(0, 8, 2):
+                thresholds = [BAYER4[y % 4][(x0 + i) % 4] for i in range(8)]
+                for color, opacity in ((0xFFFFFFFF, 255), (0x10204080, 127), (0xAAAAAAAB, 85)):
+                    blocks = rng.randint(1, 5)
+                    words = [rng.getrandbits(16) for _ in range(8 * blocks)]
+                    self.check('ksn_blend8_dither(', words, blocks, color, opacity,
+                               thresholds, True)
+        for _ in range(40):
+            blocks = rng.randint(1, 10)
+            words = [rng.getrandbits(16) for _ in range(8 * blocks)]
+            thresholds = [rng.randrange(16) for _ in range(8)]
+            self.check('ksn_blend8_dither(', words, blocks, rng.getrandbits(32),
+                       rng.randrange(256), thresholds, True)
+
+    def test_binary_mask(self):
+        """The borrowed 0/255 font mask widens in PIE without a scratch copy.
+
+        Exercise every eight-bit ink pattern, then multi-block pointer walks.
+        The general 0..255 coverage port does not opt into this kernel.
+        """
+        name = 'ksn_blend8_mask('
+        asm = extract_asm(BLENDPIE, name)
+        k = extract_constants(BLENDPIE, name, {})
+        rng = random.Random(43)
+        cases = [(0xA15F37B7, 193, 1, bits) for bits in range(256)]
+        cases += [(rng.getrandbits(32), rng.randrange(256), rng.randrange(1, 9),
+                   rng.getrandbits(64)) for _ in range(80)]
+        for color, opacity, blocks, bits in cases:
+            words = [rng.getrandbits(16) for _ in range(8 * blocks)]
+            mask = [255 if (bits >> (i % 64)) & 1 else 0 for i in range(8 * blocks)]
+            mem = bytearray(0x8000)
+            mem[self.DST - 16:self.DST] = bytes([0xA5] * 16)
+            mem[self.DST + 16 * blocks:self.DST + 16 * (blocks + 1)] = bytes([0xA5] * 16)
+            store16(mem, self.DST, words)
+            store16(mem, self.K, k)
+            mem[self.MASK:self.MASK + len(mask)] = bytes(mask)
+            a = ((color & 255) * opacity + 127) // 255
+            store16(mem, self.ARGS, [a, color >> 24, (color >> 16) & 255,
+                                     (color >> 8) & 255])
+            sim = Sim(mem)
+            sim.run(asm, {'dst': self.DST, 'mask': self.MASK, 'blocks': blocks,
+                          'kp': self.K, 'kb': self.K,
+                          'pa': self.ARGS, 'pr': self.ARGS + 2,
+                          'pg': self.ARGS + 4, 'pb': self.ARGS + 6,
+                          'sh12': 12, 'sh4': 4, 'sh16': 16})
+            got = load16(mem, self.DST, 8 * blocks)
+            want = [self.blend_px(p, (color & 0xFFFFFF00) | ((color & 255) if mask[i] else 0),
+                                  opacity, 0, False) for i, p in enumerate(words)]
+            self.assertEqual(got, want, f'color={color:08x} opacity={opacity} bits={bits:x}')
+            self.assertEqual(sim.ar['dst'], self.DST + 16 * blocks)
+            self.assertEqual(sim.ar['mask'], self.MASK + 8 * blocks)
+            self.assertEqual(sim.ar['kp'], self.K + 2 * len(k))
+            self.assertEqual(mem[self.DST - 16:self.DST], bytes([0xA5] * 16))
+            self.assertEqual(mem[self.DST + 16 * blocks:self.DST + 16 * (blocks + 1)],
+                             bytes([0xA5] * 16))
+
+    def test_shared_prefix_reads_the_same_unpack(self):
+        """The two arms must share the unpack and the first channel's mix."""
+        def body_opcodes(text):
+            """The instructions of the per-block body: from its 1: label, so the
+            dither arm's once-a-call prologue is not part of the comparison.
+            The thin arm's body starts at the top of its asm block."""
+            out, started = [], '1:' not in text
+            for raw in text.splitlines():
+                t = raw.split('/*')[0].strip()
+                if not t:
+                    continue
+                if not started:
+                    started = t == '1:'
+                    continue
+                if t.endswith(':'):
+                    continue
+                out.append(t.split()[0])
+            return out
+        thin = body_opcodes(extract_asm(BLENDPIE, 'ksn_blend8_thin('))
+        dith = body_opcodes(extract_asm(BLENDPIE, 'ksn_blend8_dither('))
+        common = 0
+        for a, b in zip(thin, dith):
+            if a != b:
+                break
+            common += 1
+        # the SAR reset, the pointer reset, the eight-pixel load, the fifteen
+        # unpack instructions, the SAR switch and the alpha broadcast. The mix
+        # past that point differs by construction: the dither arm keeps its
+        # per-call preload P in a register and has one register less to
+        # reschedule with, so its loads cannot be put where the thin arm's are.
+        self.assertGreaterEqual(common, 20,
+                                'shared prefix shrank to %d: %s' % (common, thin[:common + 2]))
+        self.assertEqual(thin[:common], dith[:common])
+
+
+if __name__ == '__main__':
+    unittest.main()

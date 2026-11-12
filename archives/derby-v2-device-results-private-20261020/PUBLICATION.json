@@ -1,0 +1,320 @@
+{
+  "baseline": {
+    "root": "/workspace/derby-controller-baseline",
+    "branch": "fix/derby-detail-controller-baseline-20261020",
+    "head": "37af4225ad329aac4c5e79c880d7d69760b770be",
+    "tree": "d72a737240d48def898899bf6dc71e0ac627c7f8",
+    "parent": "37af4225ad329aac4c5e79c880d7d69760b770be",
+    "comparison_base": "0c52600fc34deafbadc53bc48e4fc98931e404e4",
+    "files": {
+      "docs/README.md": "c6ad5bf77d2a908ac584c0b7924468aed68107df59d06cb0b6cbb7b1a24c5530",
+      "docs/apps/derby-fixed-controller.md": "082206af26dc7269ad9340d76a85fd4d2a61adc6162bb7ff813a3a4f5c9bd7d2",
+      "tools/derby_fixed_workload_chunks.py": "c2df2b2fc6a73a9df3334ab0f696cdb11c0cccf83f29e7fc02865ff14245d7ee",
+      "tools/games/derby_fixed_tail_oracle.js": "ca63d93635391ebdd5ebf65b73bd39a9b5e0d93ab98e6f4ce8381f8a4115678e",
+      "tools/games/run_derby_fixed.py": "fee45053b59b90e6cc13468b72205901bc17d64896ff2137e02877359fdaa8cd",
+      "tools/record_verification.py": "4bdff4a386a643ab2f67ef10c228b48c4ffe217ffc7e1114d198b31b4e2cf572",
+      "tools/test_derby_detail_generation.py": "1fa32aef783f7b6f21853f5bf60a8b7fca9e4796d865bdf220f79424cf746915",
+      "tools/test_derby_detail_proof.py": "45fdc56f8ab4143e2e126dbc291a3922057a54108e92ba7b12300807247779cb",
+      "tools/test_derby_fixed_integration.py": "58f0d7e2bff8649610cbde9bc4038d1bc310d23f7c6c3af4f2dcdf83518df3eb",
+      "tools/test_diagnostic_build.py": "0787a8927dcceef1e1f0ce41269dcbdc0adf6a55bc0f6a4c52592beda0cb12d1"
+    },
+    "correction_patch_sha256": "28ae9188226dd5644979a92006f3b74530dcadf98a6b8f532e32d59d665bab91",
+    "complete_patch_sha256": "1ea9f02d59e1125f01f57ee1f7b830d6c647611d7a8419aae46169a3a8801708",
+    "head_is_correction": false,
+    "base_tree": "7753c5c8919ee36c24080ce08102438a285da6f2",
+    "remote_commit": "dc2c5e044429a4904e91564aa7f9cb30d7d4cbbb",
+    "remote_git_commit": {
+      "sha": "dc2c5e044429a4904e91564aa7f9cb30d7d4cbbb",
+      "node_id": "C_kwDOUPhoVdoAKGRjMmM1ZTA0NDQyOWE0OTA0ZTkxNTY0YWE3ZjljYjMwZDdkNGNiYmI",
+      "url": "https://api.github.com/repos/dj-oyu/cardputer-adv-pocketjs/git/commits/dc2c5e044429a4904e91564aa7f9cb30d7d4cbbb",
+      "html_url": "https://github.com/dj-oyu/cardputer-adv-pocketjs/commit/dc2c5e044429a4904e91564aa7f9cb30d7d4cbbb",
+      "author": {
+        "name": "dj-oyu",
+        "email": "68707227+dj-oyu@users.noreply.github.com",
+        "date": "2026-10-20T02:13:05Z"
+      },
+      "committer": {
+        "name": "dj-oyu",
+        "email": "68707227+dj-oyu@users.noreply.github.com",
+        "date": "2026-10-20T02:13:05Z"
+      },
+      "tree": {
+        "sha": "d72a737240d48def898899bf6dc71e0ac627c7f8",
+        "url": "https://api.github.com/repos/dj-oyu/cardputer-adv-pocketjs/git/trees/d72a737240d48def898899bf6dc71e0ac627c7f8"
+      },
+      "message": "fix(derby): compile fixed controller in a strict nested chunk",
+      "parents": [
+        {
+          "sha": "37af4225ad329aac4c5e79c880d7d69760b770be",
+          "url": "https://api.github.com/repos/dj-oyu/cardputer-adv-pocketjs/git/commits/37af4225ad329aac4c5e79c880d7d69760b770be",
+          "html_url": "https://github.com/dj-oyu/cardputer-adv-pocketjs/commit/37af4225ad329aac4c5e79c880d7d69760b770be"
+        }
+      ],
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "local_published_head": "dc2c5e044429a4904e91564aa7f9cb30d7d4cbbb",
+    "commit_raw_sha256": "c7a9c9dc1c794285b80bd40dd908c92e6b22e80de4d279e5de3f09c016ea704e",
+    "branch_create": {
+      "branch": "fix/derby-detail-controller-baseline-20261020"
+    },
+    "pr": 25,
+    "pr_url": "https://github.com/dj-oyu/cardputer-adv-pocketjs/pull/25",
+    "pr_body": "\u56fa\u5b9aDERBY\u8a3a\u65ad\u306ebatch\u7248\u3067play chunk\u306e\u30b3\u30f3\u30d1\u30a4\u30eb\u304cOOM\u306b\u306a\u308a\u3001\u6e2c\u5b9a\u524d\u306b\u8d77\u52d5\u304c\u5931\u6557\u3057\u305f\u305f\u3081\u3001\u751f\u6210controller\u3092strict global\u306e\u5225chunk\u3078\u5206\u3051\u307e\u3059\u3002\u5143\u306e\u6bd4\u8f03head `37af4225ad329aac4c5e79c880d7d69760b770be` \u306f\u4fdd\u6301\u3057\u3001\u3053\u306ePR\u306f\u305d\u306e\u4fee\u6b63branch\u3067\u3059\u3002\n\nplay\u306e\u5143wrapper\u4f4d\u7f6e\u3067 `pocket.app.load('fixed')` \u3092\u540c\u671f\u5b9f\u884c\u3057\u3001controller\u8a2d\u7f6e\u5f8c\u306b\u65e2\u5b58\u306eenter/READY\u3078\u9032\u307f\u307e\u3059\u3002baseline/native/batch\u3068\u8a73\u7d30ON/OFF\u3078\u540c\u305810\u30d5\u30a1\u30a4\u30eb\u306e\u5909\u66f4\u3092\u9069\u7528\u3057\u3001\u56fa\u5b9afixture\u30fbseed\u30fbcamera\u30fb120contexts\u30fb3 dependent reps\u30fbbounded tail\u30fbwatchdog\u30fbheap/stack\u4e88\u7b97\u3092\u7dad\u6301\u3057\u307e\u3059\u3002controller\u3092inline\u3078\u623b\u3059\u3068\u65e7\u751f\u6210play\u3068byte\u4e00\u81f4\u3057\u307e\u3059\u3002C\u306e\u8a08\u6e2c\u30fb\u63cf\u753b\u30fbVM\u30fb\u540c\u671fI/O\u51e6\u7406\u306f\u5909\u66f4\u3057\u3066\u3044\u307e\u305b\u3093\u3002\n\ncontroller\u306e\u6b20\u843d\u30fbsyntax error\u30fbruntime throw\u30fbstrict\u9055\u53cd\u306f\u8d77\u52d5\u5931\u6557\u3068\u3057\u3066\u4f1d\u64ad\u3057\u3001READY/\u8a08\u6e2c\u3078\u9032\u307f\u307e\u305b\u3093\u3002\u8ffd\u52a0chunk\u306efilename/cause\u3068\u5916\u5074play\u306ecompile/run\u30fb\u518d\u8a66\u884c\u5206\u985e\u306f\u5206\u5272\u524d\u3068\u7570\u306a\u308b\u305f\u3081\u3001\u4f8b\u5916\u6587\u8a00\u307e\u3067\u540c\u4e00\u3068\u306f\u4e3b\u5f35\u3057\u307e\u305b\u3093\u3002proof\u306fcontroller\u306e\u751f\u6210file\u3068ELF\u5185\u5b8c\u5168bytes\u3082\u5fc5\u9808\u306b\u3057\u307e\u3059\u3002\n\nValidation: \u5f53\u8a72tree\u306eASan/UBSan\u30fbO2 ON/OFF\u3001\u56fa\u5b9awork/race/pixel hashes\u3001\u7d42\u4e86\u5951\u7d04\u3001\u8d77\u52d5\u8ca0\u4f8b\u3001\u901a\u5e38host\u56de\u5e30\u3001\u72ec\u7acb\u30ec\u30d3\u30e5\u30fc\u3092\u78ba\u8a8d\u6e08\u307f\u30023\u7248\u5408\u8a0812 fixed\u5b9f\u884c/36 dependent windows\u3002exact public head\u306f `dc2c5e044429a4904e91564aa7f9cb30d7d4cbbb`\u3002\u3053\u306eexact head\u306eCI 7/7\u4ef6\u304c\u6210\u529f\u3057\u307e\u3057\u305f\u30023\u7248\u5408\u8a0823/23\u4ef6\u3067\u3001\u540c\u3058DERBY workflows\u306eASan/UBSan\u30fbO2\u30fbm32\u3068target\u8a73\u7d30ON/OFF proof\u8a086\u4ef6\u3092\u78ba\u8a8d\u3057\u3066\u3044\u307e\u3059\u3002\u5909\u66f4\u30d1\u30b9\u306b\u4e00\u81f4\u3057\u306a\u3044\u88dc\u52a9workflow2\u672c\u306f\u8d77\u52d5\u5bfe\u8c61\u5916\u3067\u3001PASS\u4ef6\u6570\u3078\u542b\u3081\u307e\u305b\u3093\u3002\u30ed\u30fc\u30ab\u30ebtarget\u4f9d\u5b58\u53d6\u5f97\u306fproxy503\u3067\u5931\u6557\u3057\u305f\u305f\u3081\u3001\u672a\u5b9f\u884c\u3092PASS\u306b\u3057\u3066\u3044\u307e\u305b\u3093\u3002\n\n\u4fee\u6b63\u7248\u306e\u5b9f\u6a5f\u8d77\u52d5/OOM\u89e3\u6d88\u30fb\u6027\u80fd\u306f\u672a\u691c\u8a3c\u3067\u3059\u3002\u4ee5\u524d\u306ehost payloadpeak\u3092\u4eca\u56de\u306enested load\u3084\u5b9f\u6a5fRAM\u3078\u63db\u7b97\u3057\u307e\u305b\u3093\u3002\u5b9f\u6a5f\u8ffd\u52a0\u63a5\u7d9a/reset/flash/recovery\u306f\u505c\u6b62\u3057\u305f\u307e\u307e\u3001\u65e7\u5931\u6557\u8a3c\u62e0\u3068\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb\u6e08\u307ffirmware\u3092\u4fdd\u5168\u3057\u307e\u3059\u3002merge\u306f\u3053\u306ePR\u306e\u7bc4\u56f2\u5916\u3067\u3059\u3002",
+    "pr_response": {
+      "url": "https://github.com/dj-oyu/cardputer-adv-pocketjs/pull/25",
+      "number": 25,
+      "state": "open",
+      "merged": false,
+      "mergeable": true,
+      "draft": true,
+      "body": "\u56fa\u5b9aDERBY\u8a3a\u65ad\u306ebatch\u7248\u3067play chunk\u306e\u30b3\u30f3\u30d1\u30a4\u30eb\u304cOOM\u306b\u306a\u308a\u3001\u6e2c\u5b9a\u524d\u306b\u8d77\u52d5\u304c\u5931\u6557\u3057\u305f\u305f\u3081\u3001\u751f\u6210controller\u3092strict global\u306e\u5225chunk\u3078\u5206\u3051\u307e\u3059\u3002\u5143\u306e\u6bd4\u8f03head `37af4225ad329aac4c5e79c880d7d69760b770be` \u306f\u4fdd\u6301\u3057\u3001\u3053\u306ePR\u306f\u305d\u306e\u4fee\u6b63branch\u3067\u3059\u3002\n\nplay\u306e\u5143wrapper\u4f4d\u7f6e\u3067 `pocket.app.load('fixed')` \u3092\u540c\u671f\u5b9f\u884c\u3057\u3001controller\u8a2d\u7f6e\u5f8c\u306b\u65e2\u5b58\u306eenter/READY\u3078\u9032\u307f\u307e\u3059\u3002baseline/native/batch\u3068\u8a73\u7d30ON/OFF\u3078\u540c\u305810\u30d5\u30a1\u30a4\u30eb\u306e\u5909\u66f4\u3092\u9069\u7528\u3057\u3001\u56fa\u5b9afixture\u30fbseed\u30fbcamera\u30fb120contexts\u30fb3 dependent reps\u30fbbounded tail\u30fbwatchdog\u30fbheap/stack\u4e88\u7b97\u3092\u7dad\u6301\u3057\u307e\u3059\u3002controller\u3092inline\u3078\u623b\u3059\u3068\u65e7\u751f\u6210play\u3068byte\u4e00\u81f4\u3057\u307e\u3059\u3002C\u306e\u8a08\u6e2c\u30fb\u63cf\u753b\u30fbVM\u30fb\u540c\u671fI/O\u51e6\u7406\u306f\u5909\u66f4\u3057\u3066\u3044\u307e\u305b\u3093\u3002\n\ncontroller\u306e\u6b20\u843d\u30fbsyntax error\u30fbruntime throw\u30fbstrict\u9055\u53cd\u306f\u8d77\u52d5\u5931\u6557\u3068\u3057\u3066\u4f1d\u64ad\u3057\u3001READY/\u8a08\u6e2c\u3078\u9032\u307f\u307e\u305b\u3093\u3002\u8ffd\u52a0chunk\u306efilename/cause\u3068\u5916\u5074play\u306ecompile/run\u30fb\u518d\u8a66\u884c\u5206\u985e\u306f\u5206\u5272\u524d\u3068\u7570\u306a\u308b\u305f\u3081\u3001\u4f8b\u5916\u6587\u8a00\u307e\u3067\u540c\u4e00\u3068\u306f\u4e3b\u5f35\u3057\u307e\u305b\u3093\u3002proof\u306fcontroller\u306e\u751f\u6210file\u3068ELF\u5185\u5b8c\u5168bytes\u3082\u5fc5\u9808\u306b\u3057\u307e\u3059\u3002\n\nValidation: \u5f53\u8a72tree\u306eASan/UBSan\u30fbO2 ON/OFF\u3001\u56fa\u5b9awork/race/pixel hashes\u3001\u7d42\u4e86\u5951\u7d04\u3001\u8d77\u52d5\u8ca0\u4f8b\u3001\u901a\u5e38host\u56de\u5e30\u3001\u72ec\u7acb\u30ec\u30d3\u30e5\u30fc\u3092\u78ba\u8a8d\u6e08\u307f\u30023\u7248\u5408\u8a0812 fixed\u5b9f\u884c/36 dependent windows\u3002exact public head\u306f `dc2c5e044429a4904e91564aa7f9cb30d7d4cbbb`\u3002\u3053\u306eexact head\u306eCI 7/7\u4ef6\u304c\u6210\u529f\u3057\u307e\u3057\u305f\u30023\u7248\u5408\u8a0823/23\u4ef6\u3067\u3001\u540c\u3058DERBY workflows\u306eASan/UBSan\u30fbO2\u30fbm32\u3068target\u8a73\u7d30ON/OFF proof\u8a086\u4ef6\u3092\u78ba\u8a8d\u3057\u3066\u3044\u307e\u3059\u3002\u5909\u66f4\u30d1\u30b9\u306b\u4e00\u81f4\u3057\u306a\u3044\u88dc\u52a9workflow2\u672c\u306f\u8d77\u52d5\u5bfe\u8c61\u5916\u3067\u3001PASS\u4ef6\u6570\u3078\u542b\u3081\u307e\u305b\u3093\u3002\u30ed\u30fc\u30ab\u30ebtarget\u4f9d\u5b58\u53d6\u5f97\u306fproxy503\u3067\u5931\u6557\u3057\u305f\u305f\u3081\u3001\u672a\u5b9f\u884c\u3092PASS\u306b\u3057\u3066\u3044\u307e\u305b\u3093\u3002\n\n\u4fee\u6b63\u7248\u306e\u5b9f\u6a5f\u8d77\u52d5/OOM\u89e3\u6d88\u30fb\u6027\u80fd\u306f\u672a\u691c\u8a3c\u3067\u3059\u3002\u4ee5\u524d\u306ehost payloadpeak\u3092\u4eca\u56de\u306enested load\u3084\u5b9f\u6a5fRAM\u3078\u63db\u7b97\u3057\u307e\u305b\u3093\u3002\u5b9f\u6a5f\u8ffd\u52a0\u63a5\u7d9a/reset/flash/recovery\u306f\u505c\u6b62\u3057\u305f\u307e\u307e\u3001\u65e7\u5931\u6557\u8a3c\u62e0\u3068\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb\u6e08\u307ffirmware\u3092\u4fdd\u5168\u3057\u307e\u3059\u3002merge\u306f\u3053\u306ePR\u306e\u7bc4\u56f2\u5916\u3067\u3059\u3002",
+      "title": "DERBY baseline: split fixed controller compilation",
+      "base": "feature/derby-detail-baseline-20261019",
+      "base_sha": "37af4225ad329aac4c5e79c880d7d69760b770be",
+      "head": "fix/derby-detail-controller-baseline-20261020",
+      "head_sha": "dc2c5e044429a4904e91564aa7f9cb30d7d4cbbb",
+      "head_repo_id": 1358456917,
+      "head_repo_full_name": "dj-oyu/cardputer-adv-pocketjs",
+      "merge_commit_sha": "9799337d9b692b19ecff53d17a5a92de570f8283",
+      "user": {
+        "login": "dj-oyu",
+        "name": "dj-oyu",
+        "email": null,
+        "avatar_url": "https://avatars.githubusercontent.com/u/68707227?v=4",
+        "id": 68707227
+      },
+      "requested_reviewers": null,
+      "requested_team_reviewers": null,
+      "diff": null,
+      "comments": null,
+      "created_at": "2026-10-20T02:15:02Z",
+      "updated_at": "2026-10-20T02:30:31Z",
+      "closed_at": null,
+      "merged_at": null,
+      "commits": 1,
+      "changed_files": 10,
+      "additions": 116,
+      "deletions": 19,
+      "display_url": "https://github.com/dj-oyu/cardputer-adv-pocketjs/pull/25",
+      "display_title": "DERBY baseline: split fixed controller compilation"
+    }
+  },
+  "native": {
+    "root": "/workspace/derby-controller-native",
+    "branch": "fix/derby-detail-controller-native-20261020",
+    "head": "92e70b7fbb2c15d99734a518096dffdf046d2ae3",
+    "tree": "b3de719ac438d8d3373a2c34786bc35c46e9200e",
+    "parent": "92e70b7fbb2c15d99734a518096dffdf046d2ae3",
+    "comparison_base": "44f9c56121b5aab4fb2eca0fcf9fbe54d833a276",
+    "files": {
+      "docs/README.md": "c6ad5bf77d2a908ac584c0b7924468aed68107df59d06cb0b6cbb7b1a24c5530",
+      "docs/apps/derby-fixed-controller.md": "082206af26dc7269ad9340d76a85fd4d2a61adc6162bb7ff813a3a4f5c9bd7d2",
+      "tools/derby_fixed_workload_chunks.py": "c2df2b2fc6a73a9df3334ab0f696cdb11c0cccf83f29e7fc02865ff14245d7ee",
+      "tools/games/derby_fixed_tail_oracle.js": "ca63d93635391ebdd5ebf65b73bd39a9b5e0d93ab98e6f4ce8381f8a4115678e",
+      "tools/games/run_derby_fixed.py": "fee45053b59b90e6cc13468b72205901bc17d64896ff2137e02877359fdaa8cd",
+      "tools/record_verification.py": "4bdff4a386a643ab2f67ef10c228b48c4ffe217ffc7e1114d198b31b4e2cf572",
+      "tools/test_derby_detail_generation.py": "1fa32aef783f7b6f21853f5bf60a8b7fca9e4796d865bdf220f79424cf746915",
+      "tools/test_derby_detail_proof.py": "45fdc56f8ab4143e2e126dbc291a3922057a54108e92ba7b12300807247779cb",
+      "tools/test_derby_fixed_integration.py": "58f0d7e2bff8649610cbde9bc4038d1bc310d23f7c6c3af4f2dcdf83518df3eb",
+      "tools/test_diagnostic_build.py": "0787a8927dcceef1e1f0ce41269dcbdc0adf6a55bc0f6a4c52592beda0cb12d1"
+    },
+    "correction_patch_sha256": "28ae9188226dd5644979a92006f3b74530dcadf98a6b8f532e32d59d665bab91",
+    "complete_patch_sha256": "21d4b27e572998fe49fab2645ecea051e7622da798fda4bde54bcfe43f2e401c",
+    "head_is_correction": false,
+    "base_tree": "24f0575743c7de7d4873c531221db6e1fcf1f14f",
+    "remote_commit": "3fafcadbd72ecbd0d799cbe9d29f037ff62c05d5",
+    "remote_git_commit": {
+      "sha": "3fafcadbd72ecbd0d799cbe9d29f037ff62c05d5",
+      "node_id": "C_kwDOUPhoVdoAKDNmYWZjYWRiZDcyZWNiZDBkNzk5Y2JlOWQyOWYwMzdmZjYyYzA1ZDU",
+      "url": "https://api.github.com/repos/dj-oyu/cardputer-adv-pocketjs/git/commits/3fafcadbd72ecbd0d799cbe9d29f037ff62c05d5",
+      "html_url": "https://github.com/dj-oyu/cardputer-adv-pocketjs/commit/3fafcadbd72ecbd0d799cbe9d29f037ff62c05d5",
+      "author": {
+        "name": "dj-oyu",
+        "email": "68707227+dj-oyu@users.noreply.github.com",
+        "date": "2026-10-20T02:13:16Z"
+      },
+      "committer": {
+        "name": "dj-oyu",
+        "email": "68707227+dj-oyu@users.noreply.github.com",
+        "date": "2026-10-20T02:13:16Z"
+      },
+      "tree": {
+        "sha": "b3de719ac438d8d3373a2c34786bc35c46e9200e",
+        "url": "https://api.github.com/repos/dj-oyu/cardputer-adv-pocketjs/git/trees/b3de719ac438d8d3373a2c34786bc35c46e9200e"
+      },
+      "message": "fix(derby): compile fixed controller in a strict nested chunk",
+      "parents": [
+        {
+          "sha": "92e70b7fbb2c15d99734a518096dffdf046d2ae3",
+          "url": "https://api.github.com/repos/dj-oyu/cardputer-adv-pocketjs/git/commits/92e70b7fbb2c15d99734a518096dffdf046d2ae3",
+          "html_url": "https://github.com/dj-oyu/cardputer-adv-pocketjs/commit/92e70b7fbb2c15d99734a518096dffdf046d2ae3"
+        }
+      ],
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "local_published_head": "3fafcadbd72ecbd0d799cbe9d29f037ff62c05d5",
+    "commit_raw_sha256": "95e0602a6affb875e966143aed8c7135772764e618dc138aaa79094bbc2ddb96",
+    "branch_create": {
+      "branch": "fix/derby-detail-controller-native-20261020"
+    },
+    "pr": 26,
+    "pr_url": "https://github.com/dj-oyu/cardputer-adv-pocketjs/pull/26",
+    "pr_body": "\u56fa\u5b9aDERBY\u8a3a\u65ad\u306ebatch\u7248\u3067play chunk\u306e\u30b3\u30f3\u30d1\u30a4\u30eb\u304cOOM\u306b\u306a\u308a\u3001\u6e2c\u5b9a\u524d\u306b\u8d77\u52d5\u304c\u5931\u6557\u3057\u305f\u305f\u3081\u3001\u751f\u6210controller\u3092strict global\u306e\u5225chunk\u3078\u5206\u3051\u307e\u3059\u3002\u5143\u306e\u6bd4\u8f03head `92e70b7fbb2c15d99734a518096dffdf046d2ae3` \u306f\u4fdd\u6301\u3057\u3001\u3053\u306ePR\u306f\u305d\u306e\u4fee\u6b63branch\u3067\u3059\u3002\n\nplay\u306e\u5143wrapper\u4f4d\u7f6e\u3067 `pocket.app.load('fixed')` \u3092\u540c\u671f\u5b9f\u884c\u3057\u3001controller\u8a2d\u7f6e\u5f8c\u306b\u65e2\u5b58\u306eenter/READY\u3078\u9032\u307f\u307e\u3059\u3002baseline/native/batch\u3068\u8a73\u7d30ON/OFF\u3078\u540c\u305810\u30d5\u30a1\u30a4\u30eb\u306e\u5909\u66f4\u3092\u9069\u7528\u3057\u3001\u56fa\u5b9afixture\u30fbseed\u30fbcamera\u30fb120contexts\u30fb3 dependent reps\u30fbbounded tail\u30fbwatchdog\u30fbheap/stack\u4e88\u7b97\u3092\u7dad\u6301\u3057\u307e\u3059\u3002controller\u3092inline\u3078\u623b\u3059\u3068\u65e7\u751f\u6210play\u3068byte\u4e00\u81f4\u3057\u307e\u3059\u3002C\u306e\u8a08\u6e2c\u30fb\u63cf\u753b\u30fbVM\u30fb\u540c\u671fI/O\u51e6\u7406\u306f\u5909\u66f4\u3057\u3066\u3044\u307e\u305b\u3093\u3002\n\ncontroller\u306e\u6b20\u843d\u30fbsyntax error\u30fbruntime throw\u30fbstrict\u9055\u53cd\u306f\u8d77\u52d5\u5931\u6557\u3068\u3057\u3066\u4f1d\u64ad\u3057\u3001READY/\u8a08\u6e2c\u3078\u9032\u307f\u307e\u305b\u3093\u3002\u8ffd\u52a0chunk\u306efilename/cause\u3068\u5916\u5074play\u306ecompile/run\u30fb\u518d\u8a66\u884c\u5206\u985e\u306f\u5206\u5272\u524d\u3068\u7570\u306a\u308b\u305f\u3081\u3001\u4f8b\u5916\u6587\u8a00\u307e\u3067\u540c\u4e00\u3068\u306f\u4e3b\u5f35\u3057\u307e\u305b\u3093\u3002proof\u306fcontroller\u306e\u751f\u6210file\u3068ELF\u5185\u5b8c\u5168bytes\u3082\u5fc5\u9808\u306b\u3057\u307e\u3059\u3002\n\nValidation: \u5f53\u8a72tree\u306eASan/UBSan\u30fbO2 ON/OFF\u3001\u56fa\u5b9awork/race/pixel hashes\u3001\u7d42\u4e86\u5951\u7d04\u3001\u8d77\u52d5\u8ca0\u4f8b\u3001\u901a\u5e38host\u56de\u5e30\u3001\u72ec\u7acb\u30ec\u30d3\u30e5\u30fc\u3092\u78ba\u8a8d\u6e08\u307f\u30023\u7248\u5408\u8a0812 fixed\u5b9f\u884c/36 dependent windows\u3002exact public head\u306f `3fafcadbd72ecbd0d799cbe9d29f037ff62c05d5`\u3002\u3053\u306eexact head\u306eCI 7/7\u4ef6\u304c\u6210\u529f\u3057\u307e\u3057\u305f\u30023\u7248\u5408\u8a0823/23\u4ef6\u3067\u3001\u540c\u3058DERBY workflows\u306eASan/UBSan\u30fbO2\u30fbm32\u3068target\u8a73\u7d30ON/OFF proof\u8a086\u4ef6\u3092\u78ba\u8a8d\u3057\u3066\u3044\u307e\u3059\u3002\u5909\u66f4\u30d1\u30b9\u306b\u4e00\u81f4\u3057\u306a\u3044\u88dc\u52a9workflow2\u672c\u306f\u8d77\u52d5\u5bfe\u8c61\u5916\u3067\u3001PASS\u4ef6\u6570\u3078\u542b\u3081\u307e\u305b\u3093\u3002\u30ed\u30fc\u30ab\u30ebtarget\u4f9d\u5b58\u53d6\u5f97\u306fproxy503\u3067\u5931\u6557\u3057\u305f\u305f\u3081\u3001\u672a\u5b9f\u884c\u3092PASS\u306b\u3057\u3066\u3044\u307e\u305b\u3093\u3002\n\n\u4fee\u6b63\u7248\u306e\u5b9f\u6a5f\u8d77\u52d5/OOM\u89e3\u6d88\u30fb\u6027\u80fd\u306f\u672a\u691c\u8a3c\u3067\u3059\u3002\u4ee5\u524d\u306ehost payloadpeak\u3092\u4eca\u56de\u306enested load\u3084\u5b9f\u6a5fRAM\u3078\u63db\u7b97\u3057\u307e\u305b\u3093\u3002\u5b9f\u6a5f\u8ffd\u52a0\u63a5\u7d9a/reset/flash/recovery\u306f\u505c\u6b62\u3057\u305f\u307e\u307e\u3001\u65e7\u5931\u6557\u8a3c\u62e0\u3068\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb\u6e08\u307ffirmware\u3092\u4fdd\u5168\u3057\u307e\u3059\u3002merge\u306f\u3053\u306ePR\u306e\u7bc4\u56f2\u5916\u3067\u3059\u3002",
+    "pr_response": {
+      "url": "https://github.com/dj-oyu/cardputer-adv-pocketjs/pull/26",
+      "number": 26,
+      "state": "open",
+      "merged": false,
+      "mergeable": true,
+      "draft": true,
+      "body": "\u56fa\u5b9aDERBY\u8a3a\u65ad\u306ebatch\u7248\u3067play chunk\u306e\u30b3\u30f3\u30d1\u30a4\u30eb\u304cOOM\u306b\u306a\u308a\u3001\u6e2c\u5b9a\u524d\u306b\u8d77\u52d5\u304c\u5931\u6557\u3057\u305f\u305f\u3081\u3001\u751f\u6210controller\u3092strict global\u306e\u5225chunk\u3078\u5206\u3051\u307e\u3059\u3002\u5143\u306e\u6bd4\u8f03head `92e70b7fbb2c15d99734a518096dffdf046d2ae3` \u306f\u4fdd\u6301\u3057\u3001\u3053\u306ePR\u306f\u305d\u306e\u4fee\u6b63branch\u3067\u3059\u3002\n\nplay\u306e\u5143wrapper\u4f4d\u7f6e\u3067 `pocket.app.load('fixed')` \u3092\u540c\u671f\u5b9f\u884c\u3057\u3001controller\u8a2d\u7f6e\u5f8c\u306b\u65e2\u5b58\u306eenter/READY\u3078\u9032\u307f\u307e\u3059\u3002baseline/native/batch\u3068\u8a73\u7d30ON/OFF\u3078\u540c\u305810\u30d5\u30a1\u30a4\u30eb\u306e\u5909\u66f4\u3092\u9069\u7528\u3057\u3001\u56fa\u5b9afixture\u30fbseed\u30fbcamera\u30fb120contexts\u30fb3 dependent reps\u30fbbounded tail\u30fbwatchdog\u30fbheap/stack\u4e88\u7b97\u3092\u7dad\u6301\u3057\u307e\u3059\u3002controller\u3092inline\u3078\u623b\u3059\u3068\u65e7\u751f\u6210play\u3068byte\u4e00\u81f4\u3057\u307e\u3059\u3002C\u306e\u8a08\u6e2c\u30fb\u63cf\u753b\u30fbVM\u30fb\u540c\u671fI/O\u51e6\u7406\u306f\u5909\u66f4\u3057\u3066\u3044\u307e\u305b\u3093\u3002\n\ncontroller\u306e\u6b20\u843d\u30fbsyntax error\u30fbruntime throw\u30fbstrict\u9055\u53cd\u306f\u8d77\u52d5\u5931\u6557\u3068\u3057\u3066\u4f1d\u64ad\u3057\u3001READY/\u8a08\u6e2c\u3078\u9032\u307f\u307e\u305b\u3093\u3002\u8ffd\u52a0chunk\u306efilename/cause\u3068\u5916\u5074play\u306ecompile/run\u30fb\u518d\u8a66\u884c\u5206\u985e\u306f\u5206\u5272\u524d\u3068\u7570\u306a\u308b\u305f\u3081\u3001\u4f8b\u5916\u6587\u8a00\u307e\u3067\u540c\u4e00\u3068\u306f\u4e3b\u5f35\u3057\u307e\u305b\u3093\u3002proof\u306fcontroller\u306e\u751f\u6210file\u3068ELF\u5185\u5b8c\u5168bytes\u3082\u5fc5\u9808\u306b\u3057\u307e\u3059\u3002\n\nValidation: \u5f53\u8a72tree\u306eASan/UBSan\u30fbO2 ON/OFF\u3001\u56fa\u5b9awork/race/pixel hashes\u3001\u7d42\u4e86\u5951\u7d04\u3001\u8d77\u52d5\u8ca0\u4f8b\u3001\u901a\u5e38host\u56de\u5e30\u3001\u72ec\u7acb\u30ec\u30d3\u30e5\u30fc\u3092\u78ba\u8a8d\u6e08\u307f\u30023\u7248\u5408\u8a0812 fixed\u5b9f\u884c/36 dependent windows\u3002exact public head\u306f `3fafcadbd72ecbd0d799cbe9d29f037ff62c05d5`\u3002\u3053\u306eexact head\u306eCI 7/7\u4ef6\u304c\u6210\u529f\u3057\u307e\u3057\u305f\u30023\u7248\u5408\u8a0823/23\u4ef6\u3067\u3001\u540c\u3058DERBY workflows\u306eASan/UBSan\u30fbO2\u30fbm32\u3068target\u8a73\u7d30ON/OFF proof\u8a086\u4ef6\u3092\u78ba\u8a8d\u3057\u3066\u3044\u307e\u3059\u3002\u5909\u66f4\u30d1\u30b9\u306b\u4e00\u81f4\u3057\u306a\u3044\u88dc\u52a9workflow2\u672c\u306f\u8d77\u52d5\u5bfe\u8c61\u5916\u3067\u3001PASS\u4ef6\u6570\u3078\u542b\u3081\u307e\u305b\u3093\u3002\u30ed\u30fc\u30ab\u30ebtarget\u4f9d\u5b58\u53d6\u5f97\u306fproxy503\u3067\u5931\u6557\u3057\u305f\u305f\u3081\u3001\u672a\u5b9f\u884c\u3092PASS\u306b\u3057\u3066\u3044\u307e\u305b\u3093\u3002\n\n\u4fee\u6b63\u7248\u306e\u5b9f\u6a5f\u8d77\u52d5/OOM\u89e3\u6d88\u30fb\u6027\u80fd\u306f\u672a\u691c\u8a3c\u3067\u3059\u3002\u4ee5\u524d\u306ehost payloadpeak\u3092\u4eca\u56de\u306enested load\u3084\u5b9f\u6a5fRAM\u3078\u63db\u7b97\u3057\u307e\u305b\u3093\u3002\u5b9f\u6a5f\u8ffd\u52a0\u63a5\u7d9a/reset/flash/recovery\u306f\u505c\u6b62\u3057\u305f\u307e\u307e\u3001\u65e7\u5931\u6557\u8a3c\u62e0\u3068\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb\u6e08\u307ffirmware\u3092\u4fdd\u5168\u3057\u307e\u3059\u3002merge\u306f\u3053\u306ePR\u306e\u7bc4\u56f2\u5916\u3067\u3059\u3002",
+      "title": "DERBY native: split fixed controller compilation",
+      "base": "feature/derby-detail-native-20261019",
+      "base_sha": "92e70b7fbb2c15d99734a518096dffdf046d2ae3",
+      "head": "fix/derby-detail-controller-native-20261020",
+      "head_sha": "3fafcadbd72ecbd0d799cbe9d29f037ff62c05d5",
+      "head_repo_id": 1358456917,
+      "head_repo_full_name": "dj-oyu/cardputer-adv-pocketjs",
+      "merge_commit_sha": "2786fb37d379b55c6406575acfeef9a81f715e8e",
+      "user": {
+        "login": "dj-oyu",
+        "name": "dj-oyu",
+        "email": null,
+        "avatar_url": "https://avatars.githubusercontent.com/u/68707227?v=4",
+        "id": 68707227
+      },
+      "requested_reviewers": null,
+      "requested_team_reviewers": null,
+      "diff": null,
+      "comments": null,
+      "created_at": "2026-10-20T02:15:06Z",
+      "updated_at": "2026-10-20T02:30:35Z",
+      "closed_at": null,
+      "merged_at": null,
+      "commits": 1,
+      "changed_files": 10,
+      "additions": 116,
+      "deletions": 19,
+      "display_url": "https://github.com/dj-oyu/cardputer-adv-pocketjs/pull/26",
+      "display_title": "DERBY native: split fixed controller compilation"
+    }
+  },
+  "batch": {
+    "root": "/workspace/derby-controller-batch",
+    "branch": "fix/derby-detail-controller-batch-20261020",
+    "head": "ea64b0ec9c176f852c853cb10142581ee527d7fc",
+    "tree": "160205ec7e435a6592378d94209a800c02ba2c91",
+    "parent": "ea64b0ec9c176f852c853cb10142581ee527d7fc",
+    "comparison_base": "3a641d4d996938339b44fe735aba876ad031b3a2",
+    "files": {
+      "docs/README.md": "c6ad5bf77d2a908ac584c0b7924468aed68107df59d06cb0b6cbb7b1a24c5530",
+      "docs/apps/derby-fixed-controller.md": "082206af26dc7269ad9340d76a85fd4d2a61adc6162bb7ff813a3a4f5c9bd7d2",
+      "tools/derby_fixed_workload_chunks.py": "c2df2b2fc6a73a9df3334ab0f696cdb11c0cccf83f29e7fc02865ff14245d7ee",
+      "tools/games/derby_fixed_tail_oracle.js": "ca63d93635391ebdd5ebf65b73bd39a9b5e0d93ab98e6f4ce8381f8a4115678e",
+      "tools/games/run_derby_fixed.py": "fee45053b59b90e6cc13468b72205901bc17d64896ff2137e02877359fdaa8cd",
+      "tools/record_verification.py": "4bdff4a386a643ab2f67ef10c228b48c4ffe217ffc7e1114d198b31b4e2cf572",
+      "tools/test_derby_detail_generation.py": "1fa32aef783f7b6f21853f5bf60a8b7fca9e4796d865bdf220f79424cf746915",
+      "tools/test_derby_detail_proof.py": "45fdc56f8ab4143e2e126dbc291a3922057a54108e92ba7b12300807247779cb",
+      "tools/test_derby_fixed_integration.py": "58f0d7e2bff8649610cbde9bc4038d1bc310d23f7c6c3af4f2dcdf83518df3eb",
+      "tools/test_diagnostic_build.py": "0787a8927dcceef1e1f0ce41269dcbdc0adf6a55bc0f6a4c52592beda0cb12d1"
+    },
+    "correction_patch_sha256": "28ae9188226dd5644979a92006f3b74530dcadf98a6b8f532e32d59d665bab91",
+    "complete_patch_sha256": "ecb23f0bbef5a4914f7f112b6e1e532cc9b3bcdcb4a1add7c2aad6b6b3a7ebe9",
+    "head_is_correction": false,
+    "base_tree": "63bf0b2ee03168230de588f2a038e3e694b1d4d4",
+    "remote_commit": "711f94fa91c6e0d6ba7bc00def75ad686b724c7d",
+    "remote_git_commit": {
+      "sha": "711f94fa91c6e0d6ba7bc00def75ad686b724c7d",
+      "node_id": "C_kwDOUPhoVdoAKDcxMWY5NGZhOTFjNmUwZDZiYTdiYzAwZGVmNzVhZDY4NmI3MjRjN2Q",
+      "url": "https://api.github.com/repos/dj-oyu/cardputer-adv-pocketjs/git/commits/711f94fa91c6e0d6ba7bc00def75ad686b724c7d",
+      "html_url": "https://github.com/dj-oyu/cardputer-adv-pocketjs/commit/711f94fa91c6e0d6ba7bc00def75ad686b724c7d",
+      "author": {
+        "name": "dj-oyu",
+        "email": "68707227+dj-oyu@users.noreply.github.com",
+        "date": "2026-10-20T02:13:33Z"
+      },
+      "committer": {
+        "name": "dj-oyu",
+        "email": "68707227+dj-oyu@users.noreply.github.com",
+        "date": "2026-10-20T02:13:33Z"
+      },
+      "tree": {
+        "sha": "160205ec7e435a6592378d94209a800c02ba2c91",
+        "url": "https://api.github.com/repos/dj-oyu/cardputer-adv-pocketjs/git/trees/160205ec7e435a6592378d94209a800c02ba2c91"
+      },
+      "message": "fix(derby): compile fixed controller in a strict nested chunk",
+      "parents": [
+        {
+          "sha": "ea64b0ec9c176f852c853cb10142581ee527d7fc",
+          "url": "https://api.github.com/repos/dj-oyu/cardputer-adv-pocketjs/git/commits/ea64b0ec9c176f852c853cb10142581ee527d7fc",
+          "html_url": "https://github.com/dj-oyu/cardputer-adv-pocketjs/commit/ea64b0ec9c176f852c853cb10142581ee527d7fc"
+        }
+      ],
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "local_published_head": "711f94fa91c6e0d6ba7bc00def75ad686b724c7d",
+    "commit_raw_sha256": "7854e4a4a4e987a151a28de83f4eddc8bb5f10f7991be861f6c4a811a1e18763",
+    "branch_create": {
+      "branch": "fix/derby-detail-controller-batch-20261020"
+    },
+    "pr": 27,
+    "pr_url": "https://github.com/dj-oyu/cardputer-adv-pocketjs/pull/27",
+    "pr_body": "\u56fa\u5b9aDERBY\u8a3a\u65ad\u306ebatch\u7248\u3067play chunk\u306e\u30b3\u30f3\u30d1\u30a4\u30eb\u304cOOM\u306b\u306a\u308a\u3001\u6e2c\u5b9a\u524d\u306b\u8d77\u52d5\u304c\u5931\u6557\u3057\u305f\u305f\u3081\u3001\u751f\u6210controller\u3092strict global\u306e\u5225chunk\u3078\u5206\u3051\u307e\u3059\u3002\u5143\u306e\u6bd4\u8f03head `ea64b0ec9c176f852c853cb10142581ee527d7fc` \u306f\u4fdd\u6301\u3057\u3001\u3053\u306ePR\u306f\u305d\u306e\u4fee\u6b63branch\u3067\u3059\u3002\n\nplay\u306e\u5143wrapper\u4f4d\u7f6e\u3067 `pocket.app.load('fixed')` \u3092\u540c\u671f\u5b9f\u884c\u3057\u3001controller\u8a2d\u7f6e\u5f8c\u306b\u65e2\u5b58\u306eenter/READY\u3078\u9032\u307f\u307e\u3059\u3002baseline/native/batch\u3068\u8a73\u7d30ON/OFF\u3078\u540c\u305810\u30d5\u30a1\u30a4\u30eb\u306e\u5909\u66f4\u3092\u9069\u7528\u3057\u3001\u56fa\u5b9afixture\u30fbseed\u30fbcamera\u30fb120contexts\u30fb3 dependent reps\u30fbbounded tail\u30fbwatchdog\u30fbheap/stack\u4e88\u7b97\u3092\u7dad\u6301\u3057\u307e\u3059\u3002controller\u3092inline\u3078\u623b\u3059\u3068\u65e7\u751f\u6210play\u3068byte\u4e00\u81f4\u3057\u307e\u3059\u3002C\u306e\u8a08\u6e2c\u30fb\u63cf\u753b\u30fbVM\u30fb\u540c\u671fI/O\u51e6\u7406\u306f\u5909\u66f4\u3057\u3066\u3044\u307e\u305b\u3093\u3002\n\ncontroller\u306e\u6b20\u843d\u30fbsyntax error\u30fbruntime throw\u30fbstrict\u9055\u53cd\u306f\u8d77\u52d5\u5931\u6557\u3068\u3057\u3066\u4f1d\u64ad\u3057\u3001READY/\u8a08\u6e2c\u3078\u9032\u307f\u307e\u305b\u3093\u3002\u8ffd\u52a0chunk\u306efilename/cause\u3068\u5916\u5074play\u306ecompile/run\u30fb\u518d\u8a66\u884c\u5206\u985e\u306f\u5206\u5272\u524d\u3068\u7570\u306a\u308b\u305f\u3081\u3001\u4f8b\u5916\u6587\u8a00\u307e\u3067\u540c\u4e00\u3068\u306f\u4e3b\u5f35\u3057\u307e\u305b\u3093\u3002proof\u306fcontroller\u306e\u751f\u6210file\u3068ELF\u5185\u5b8c\u5168bytes\u3082\u5fc5\u9808\u306b\u3057\u307e\u3059\u3002\n\nValidation: \u5f53\u8a72tree\u306eASan/UBSan\u30fbO2 ON/OFF\u3001\u56fa\u5b9awork/race/pixel hashes\u3001\u7d42\u4e86\u5951\u7d04\u3001\u8d77\u52d5\u8ca0\u4f8b\u3001\u901a\u5e38host\u56de\u5e30\u3001\u72ec\u7acb\u30ec\u30d3\u30e5\u30fc\u3092\u78ba\u8a8d\u6e08\u307f\u30023\u7248\u5408\u8a0812 fixed\u5b9f\u884c/36 dependent windows\u3002exact public head\u306f `711f94fa91c6e0d6ba7bc00def75ad686b724c7d`\u3002\u3053\u306eexact head\u306eCI 9/9\u4ef6\u304c\u6210\u529f\u3057\u307e\u3057\u305f\u30023\u7248\u5408\u8a0823/23\u4ef6\u3067\u3001\u540c\u3058DERBY workflows\u306eASan/UBSan\u30fbO2\u30fbm32\u3068target\u8a73\u7d30ON/OFF proof\u8a086\u4ef6\u3092\u78ba\u8a8d\u3057\u3066\u3044\u307e\u3059\u3002\u5909\u66f4\u30d1\u30b9\u306b\u4e00\u81f4\u3057\u306a\u3044\u88dc\u52a9workflow2\u672c\u306f\u8d77\u52d5\u5bfe\u8c61\u5916\u3067\u3001PASS\u4ef6\u6570\u3078\u542b\u3081\u307e\u305b\u3093\u3002\u30ed\u30fc\u30ab\u30ebtarget\u4f9d\u5b58\u53d6\u5f97\u306fproxy503\u3067\u5931\u6557\u3057\u305f\u305f\u3081\u3001\u672a\u5b9f\u884c\u3092PASS\u306b\u3057\u3066\u3044\u307e\u305b\u3093\u3002\n\n\u4fee\u6b63\u7248\u306e\u5b9f\u6a5f\u8d77\u52d5/OOM\u89e3\u6d88\u30fb\u6027\u80fd\u306f\u672a\u691c\u8a3c\u3067\u3059\u3002\u4ee5\u524d\u306ehost payloadpeak\u3092\u4eca\u56de\u306enested load\u3084\u5b9f\u6a5fRAM\u3078\u63db\u7b97\u3057\u307e\u305b\u3093\u3002\u5b9f\u6a5f\u8ffd\u52a0\u63a5\u7d9a/reset/flash/recovery\u306f\u505c\u6b62\u3057\u305f\u307e\u307e\u3001\u65e7\u5931\u6557\u8a3c\u62e0\u3068\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb\u6e08\u307ffirmware\u3092\u4fdd\u5168\u3057\u307e\u3059\u3002merge\u306f\u3053\u306ePR\u306e\u7bc4\u56f2\u5916\u3067\u3059\u3002",
+    "pr_response": {
+      "url": "https://github.com/dj-oyu/cardputer-adv-pocketjs/pull/27",
+      "number": 27,
+      "state": "open",
+      "merged": false,
+      "mergeable": true,
+      "draft": true,
+      "body": "\u56fa\u5b9aDERBY\u8a3a\u65ad\u306ebatch\u7248\u3067play chunk\u306e\u30b3\u30f3\u30d1\u30a4\u30eb\u304cOOM\u306b\u306a\u308a\u3001\u6e2c\u5b9a\u524d\u306b\u8d77\u52d5\u304c\u5931\u6557\u3057\u305f\u305f\u3081\u3001\u751f\u6210controller\u3092strict global\u306e\u5225chunk\u3078\u5206\u3051\u307e\u3059\u3002\u5143\u306e\u6bd4\u8f03head `ea64b0ec9c176f852c853cb10142581ee527d7fc` \u306f\u4fdd\u6301\u3057\u3001\u3053\u306ePR\u306f\u305d\u306e\u4fee\u6b63branch\u3067\u3059\u3002\n\nplay\u306e\u5143wrapper\u4f4d\u7f6e\u3067 `pocket.app.load('fixed')` \u3092\u540c\u671f\u5b9f\u884c\u3057\u3001controller\u8a2d\u7f6e\u5f8c\u306b\u65e2\u5b58\u306eenter/READY\u3078\u9032\u307f\u307e\u3059\u3002baseline/native/batch\u3068\u8a73\u7d30ON/OFF\u3078\u540c\u305810\u30d5\u30a1\u30a4\u30eb\u306e\u5909\u66f4\u3092\u9069\u7528\u3057\u3001\u56fa\u5b9afixture\u30fbseed\u30fbcamera\u30fb120contexts\u30fb3 dependent reps\u30fbbounded tail\u30fbwatchdog\u30fbheap/stack\u4e88\u7b97\u3092\u7dad\u6301\u3057\u307e\u3059\u3002controller\u3092inline\u3078\u623b\u3059\u3068\u65e7\u751f\u6210play\u3068byte\u4e00\u81f4\u3057\u307e\u3059\u3002C\u306e\u8a08\u6e2c\u30fb\u63cf\u753b\u30fbVM\u30fb\u540c\u671fI/O\u51e6\u7406\u306f\u5909\u66f4\u3057\u3066\u3044\u307e\u305b\u3093\u3002\n\ncontroller\u306e\u6b20\u843d\u30fbsyntax error\u30fbruntime throw\u30fbstrict\u9055\u53cd\u306f\u8d77\u52d5\u5931\u6557\u3068\u3057\u3066\u4f1d\u64ad\u3057\u3001READY/\u8a08\u6e2c\u3078\u9032\u307f\u307e\u305b\u3093\u3002\u8ffd\u52a0chunk\u306efilename/cause\u3068\u5916\u5074play\u306ecompile/run\u30fb\u518d\u8a66\u884c\u5206\u985e\u306f\u5206\u5272\u524d\u3068\u7570\u306a\u308b\u305f\u3081\u3001\u4f8b\u5916\u6587\u8a00\u307e\u3067\u540c\u4e00\u3068\u306f\u4e3b\u5f35\u3057\u307e\u305b\u3093\u3002proof\u306fcontroller\u306e\u751f\u6210file\u3068ELF\u5185\u5b8c\u5168bytes\u3082\u5fc5\u9808\u306b\u3057\u307e\u3059\u3002\n\nValidation: \u5f53\u8a72tree\u306eASan/UBSan\u30fbO2 ON/OFF\u3001\u56fa\u5b9awork/race/pixel hashes\u3001\u7d42\u4e86\u5951\u7d04\u3001\u8d77\u52d5\u8ca0\u4f8b\u3001\u901a\u5e38host\u56de\u5e30\u3001\u72ec\u7acb\u30ec\u30d3\u30e5\u30fc\u3092\u78ba\u8a8d\u6e08\u307f\u30023\u7248\u5408\u8a0812 fixed\u5b9f\u884c/36 dependent windows\u3002exact public head\u306f `711f94fa91c6e0d6ba7bc00def75ad686b724c7d`\u3002\u3053\u306eexact head\u306eCI 9/9\u4ef6\u304c\u6210\u529f\u3057\u307e\u3057\u305f\u30023\u7248\u5408\u8a0823/23\u4ef6\u3067\u3001\u540c\u3058DERBY workflows\u306eASan/UBSan\u30fbO2\u30fbm32\u3068target\u8a73\u7d30ON/OFF proof\u8a086\u4ef6\u3092\u78ba\u8a8d\u3057\u3066\u3044\u307e\u3059\u3002\u5909\u66f4\u30d1\u30b9\u306b\u4e00\u81f4\u3057\u306a\u3044\u88dc\u52a9workflow2\u672c\u306f\u8d77\u52d5\u5bfe\u8c61\u5916\u3067\u3001PASS\u4ef6\u6570\u3078\u542b\u3081\u307e\u305b\u3093\u3002\u30ed\u30fc\u30ab\u30ebtarget\u4f9d\u5b58\u53d6\u5f97\u306fproxy503\u3067\u5931\u6557\u3057\u305f\u305f\u3081\u3001\u672a\u5b9f\u884c\u3092PASS\u306b\u3057\u3066\u3044\u307e\u305b\u3093\u3002\n\n\u4fee\u6b63\u7248\u306e\u5b9f\u6a5f\u8d77\u52d5/OOM\u89e3\u6d88\u30fb\u6027\u80fd\u306f\u672a\u691c\u8a3c\u3067\u3059\u3002\u4ee5\u524d\u306ehost payloadpeak\u3092\u4eca\u56de\u306enested load\u3084\u5b9f\u6a5fRAM\u3078\u63db\u7b97\u3057\u307e\u305b\u3093\u3002\u5b9f\u6a5f\u8ffd\u52a0\u63a5\u7d9a/reset/flash/recovery\u306f\u505c\u6b62\u3057\u305f\u307e\u307e\u3001\u65e7\u5931\u6557\u8a3c\u62e0\u3068\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb\u6e08\u307ffirmware\u3092\u4fdd\u5168\u3057\u307e\u3059\u3002merge\u306f\u3053\u306ePR\u306e\u7bc4\u56f2\u5916\u3067\u3059\u3002",
+      "title": "DERBY batch: split fixed controller compilation",
+      "base": "feature/derby-detail-batch-20261019",
+      "base_sha": "ea64b0ec9c176f852c853cb10142581ee527d7fc",
+      "head": "fix/derby-detail-controller-batch-20261020",
+      "head_sha": "711f94fa91c6e0d6ba7bc00def75ad686b724c7d",
+      "head_repo_id": 1358456917,
+      "head_repo_full_name": "dj-oyu/cardputer-adv-pocketjs",
+      "merge_commit_sha": "8f01332bed21202fbc0858e12ee064eda3896a97",
+      "user": {
+        "login": "dj-oyu",
+        "name": "dj-oyu",
+        "email": null,
+        "avatar_url": "https://avatars.githubusercontent.com/u/68707227?v=4",
+        "id": 68707227
+      },
+      "requested_reviewers": null,
+      "requested_team_reviewers": null,
+      "diff": null,
+      "comments": null,
+      "created_at": "2026-10-20T02:15:10Z",
+      "updated_at": "2026-10-20T02:30:39Z",
+      "closed_at": null,
+      "merged_at": null,
+      "commits": 1,
+      "changed_files": 10,
+      "additions": 116,
+      "deletions": 19,
+      "display_url": "https://github.com/dj-oyu/cardputer-adv-pocketjs/pull/27",
+      "display_title": "DERBY batch: split fixed controller compilation"
+    }
+  }
+}

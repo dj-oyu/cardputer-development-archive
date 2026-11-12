@@ -1,0 +1,19 @@
+{
+  "compiler": "cc (Debian 14.2.0-19) 14.2.0",
+  "architecture": "x86_64",
+  "flags": "-Os -std=c11 -fstack-usage",
+  "sections_bytes": {
+    ".text": 1382,
+    ".rodata": 8,
+    ".eh_frame": 200,
+    ".data": 0,
+    ".bss": 0
+  },
+  "static_stack_bytes": {
+    "lossless_fetch": 208,
+    "lossless_decode_channel": 56,
+    "u32": 8
+  },
+  "conservative_fetch_decoder_stack_bytes": 264,
+  "target_measurement": false
+}

@@ -1,0 +1,44 @@
+{
+  "schema": "latest-fixed-attribute-checkpoint-v1",
+  "status": "verified_offline_attribute_prototype_complete",
+  "authoritative_revision": 2,
+  "authoritative_files": {
+    "attributes-q16-v2.json": "cf4bdf24d363454427544bb3596af15d0b1c8b820137e9f062e6c366023289b9",
+    "attributes-q20-v2.json": "81830dd0d7c363e3f7c6d6b7f4c4147112b0df89d7e28081763a9cfef0c9f536",
+    "results-v2.json": "54c2ee29363e8622edeaa74a037ad98410339f408c39f9af5d88bf26cef69aaf",
+    "material-semantics-binding.json": "ea1e9837ac66b5f666109e6d2066a2992a2288d491499ba6278dab79338b0f21",
+    "README.md": "0dc23e61620c0264ce82b1b2d99c4daaa7b29fadab5c30711ddbec2b1223f69d",
+    "compile_attributes.py": "8c89279e46658f9a5c96f6337271dc9426dc3723c434cb41cdd0046631695754",
+    "finalize_ir.py": "ad2f1c5618973c8b6ecfb70f6ad64f4014906795bf9bbd16a7679432b42319bc",
+    "test_attributes_ir.py": "29f3b7375e4d1bef2e96625bad90d8860e778a20826c696d2fbfe16a1421bb31",
+    "tests.stderr.txt": "1fedd4128f23e603295b257d2b0222e1f1a0012e1450ee8a0bcaf744d4906df5",
+    "source-after.sha256": "c81c33c6533ab3620f34b63afe691b44f0979bd45604efe724e97c9e97c2fb96",
+    "SHA256SUMS": "12c21327bfd4571a253638fe3207a3b1be7fd5d2abb88cae0bf79541a26c50b0"
+  },
+  "historical_superseded": [
+    "attributes-q16-v1.json",
+    "attributes-q20-v1.json",
+    "results-v1.json",
+    "results.stdout.json"
+  ],
+  "input_sidecar_sha256": "00a81fbcd19c79c578bbbbd7ab077ee6f63048a106c5594675ff208670d5e85e",
+  "source_blend_sha256": "d15a3316e1be75a9707a92ac44027f713306011dc3adf3fe7a9cc9a538122c1a",
+  "tests": "six groups passed; deterministic actual roundtrip, independent rational RNE +1/2/4/8, invalid domains/indices/normals, newcollapse rejection, malformedJSON, nooverwrite",
+  "remaining_unimplemented": [
+    "Material procedural color, opacity/transparency, Principled BSDF and runtime parameter evaluation",
+    "Morph/rig/modifier animation evaluation and runtime policy for authored neutral degeneracy",
+    "Packed shipping representation and resource/performance validation",
+    "Any renderer/gate/visibility/frame integration or image equivalence claim"
+  ],
+  "verified_but_optional": [
+    "792corner UV Q20 stream bound through separate loop supplement; no current eye UV consumer"
+  ],
+  "source_degenerate_policy": "All36 intentional-neutral eyelid zero-area faces retained/tagged, not dropped/admitted as oldAYFQ",
+  "memory_reference_only": {
+    "audit_unpadded": 115680,
+    "audit_8lane_padded": 125680,
+    "hypothetical_old_AYFQ_geometry_only": 57864,
+    "optional_UV": 6336
+  },
+  "no_external_state_changes": true
+}

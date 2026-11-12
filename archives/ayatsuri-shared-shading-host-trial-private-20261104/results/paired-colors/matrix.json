@@ -1,0 +1,1247 @@
+{
+  "compiler": "cc (Debian 14.2.0-19) 14.2.0",
+  "scope": "Both variants retain the already-tested light-only optimization. Generic public-derived sources only. Exact host evaluation and real full production ksn_procedural plus ksn_mesh_depth painter raster. No Blender, QuickJS, firmware/device or FPS claim.",
+  "leak_sanitizer": {
+    "enabled": false,
+    "disabled_reason": "Sandbox ptrace environment is incompatible with LSan; ASan and UBSan remain enabled."
+  },
+  "identities_start": {
+    "sources": {
+      "baseline": {
+        "main/ayatsuri/ayatsuri_model.c": "bf1ba06d55f9029b5c95981087cc3ee40651523759d6e044538a5d4f6c999864",
+        "main/ayatsuri/ayatsuri_model.h": "ea8e46de37115ce8f4f6fd611e5ce086fbed690b64e00ff593bf154018ce846a",
+        "main/ayatsuri/ayatsuri_shade.h": "336a54b1e63ce89883db8a280f772c4d15ee6513669df9d07f42471a0caec0a1",
+        "main/ayatsuri/ayatsuri_transform.h": "8983eb55223aa3f0bc65047e9f102ae97775041d6d08a5ff69a48637a7cd34ad",
+        "main/ayatsuri/ayatsuri_visibility.c": "3d4654e35589cdb782ab61a90ca1919b5752a830fa6e4ced5c2844304cd181ca",
+        "main/ayatsuri/ayatsuri_visibility.h": "fa8922ae6ac5b3dd9a76fe32c2a0a4479c14ea58f24ba73bc6d5473269f59a2c",
+        "main/ayatsuri/compact_opaque.c": "2e1759d37728c6c7e3e42798306e851562e73f80b15f586528b62100a92998e4",
+        "main/ayatsuri/compact_opaque.h": "b08a29a99d5565bb18888bbd7205ab35384331ba91be7d78c550d8bdcb9ff0fd",
+        "main/ui/kasane/ksn_mesh_depth.c": "e441de60068f030781c8862095718a2395cd59623837adf60472a353dcf2f498",
+        "main/ui/kasane/ksn_mesh_depth.h": "94ed822b3e713f97ee91129ddb29e9d1155c5aa41098d7b0d2743873c1c4b087",
+        "main/ui/kasane/ksn_procedural.c": "93abc77983aa277c3380932545a9c78ad36c9efeb2a7252c27ea12e1b769284c",
+        "main/ui/kasane/ksn_procedural.h": "ae4608e917835b5aa50a576eb53d7787decd54c80486d5aeec570297a6f95875"
+      },
+      "candidate": {
+        "main/ayatsuri/ayatsuri_model.c": "8e4217e57e12568094c0443e022df74d712ef8bcd215ba7a74bef154bd0c0c89",
+        "main/ayatsuri/ayatsuri_model.h": "ea8e46de37115ce8f4f6fd611e5ce086fbed690b64e00ff593bf154018ce846a",
+        "main/ayatsuri/ayatsuri_shade.h": "f75a8ab6ae6615fb6c3df57a3b800d512923e5a9e388da39865cfd0059691258",
+        "main/ayatsuri/ayatsuri_transform.h": "8983eb55223aa3f0bc65047e9f102ae97775041d6d08a5ff69a48637a7cd34ad",
+        "main/ayatsuri/ayatsuri_visibility.c": "3d4654e35589cdb782ab61a90ca1919b5752a830fa6e4ced5c2844304cd181ca",
+        "main/ayatsuri/ayatsuri_visibility.h": "fa8922ae6ac5b3dd9a76fe32c2a0a4479c14ea58f24ba73bc6d5473269f59a2c",
+        "main/ayatsuri/compact_opaque.c": "2e1759d37728c6c7e3e42798306e851562e73f80b15f586528b62100a92998e4",
+        "main/ayatsuri/compact_opaque.h": "b08a29a99d5565bb18888bbd7205ab35384331ba91be7d78c550d8bdcb9ff0fd",
+        "main/ui/kasane/ksn_mesh_depth.c": "e441de60068f030781c8862095718a2395cd59623837adf60472a353dcf2f498",
+        "main/ui/kasane/ksn_mesh_depth.h": "94ed822b3e713f97ee91129ddb29e9d1155c5aa41098d7b0d2743873c1c4b087",
+        "main/ui/kasane/ksn_procedural.c": "93abc77983aa277c3380932545a9c78ad36c9efeb2a7252c27ea12e1b769284c",
+        "main/ui/kasane/ksn_procedural.h": "ae4608e917835b5aa50a576eb53d7787decd54c80486d5aeec570297a6f95875"
+      }
+    },
+    "harness": {
+      "evaluate_test.c": "0b24de7c9731156847c833252839654a8893b220856b8cee9fde33c59771d0c6",
+      "make_fixtures.py": "f7072e1f1b35e694c45bdf72b97dec23f61c8488999e7d37873bf0eeb0cbfbe2",
+      "run_matrix.py": "420117f028849d11c7c6579b80aaa43711791cbbd1a4aed7491f76307447439e"
+    },
+    "fixtures": {
+      "mixed": "b72d8e447e71a24586c7d7588bf28790c83aeecef147fd1087922dacb3d13f82",
+      "mesh_only": "bf25c4a334f2bf4f139287504988f2201cc65d9baf9fbbd04bbf9618a752c37d"
+    }
+  },
+  "configs": {
+    "O0": {
+      "flags": [
+        "-std=c11",
+        "-ffp-contract=off",
+        "-fexcess-precision=standard",
+        "-fno-fast-math",
+        "-O0"
+      ],
+      "builds": {
+        "baseline": {
+          "status": "passed",
+          "exit_code": 0,
+          "metrics_status": "passed"
+        },
+        "candidate": {
+          "status": "passed",
+          "exit_code": 0,
+          "metrics_status": "passed"
+        }
+      },
+      "fixtures": {
+        "mixed": {
+          "baseline": {
+            "status": "passed",
+            "exit_code": 0,
+            "checks": 6005,
+            "records": 86,
+            "raster_frames": 77,
+            "arena_bytes": 4996,
+            "instance_size": 168,
+            "model_size": 128,
+            "api_allocations": 0,
+            "sha256": "fa6a02b2e4a33bd86721085734e4c83b708d431b6769c7df137e3b1a9f22f2cc"
+          },
+          "candidate": {
+            "status": "passed",
+            "exit_code": 0,
+            "checks": 6005,
+            "records": 86,
+            "raster_frames": 77,
+            "arena_bytes": 4996,
+            "instance_size": 168,
+            "model_size": 128,
+            "api_allocations": 0,
+            "sha256": "fa6a02b2e4a33bd86721085734e4c83b708d431b6769c7df137e3b1a9f22f2cc"
+          },
+          "exact_match": true
+        },
+        "mesh_only": {
+          "baseline": {
+            "status": "passed",
+            "exit_code": 0,
+            "checks": 5700,
+            "records": 83,
+            "raster_frames": 74,
+            "arena_bytes": 7440,
+            "instance_size": 168,
+            "model_size": 128,
+            "api_allocations": 0,
+            "sha256": "8dd8a880c333d60da7c3c4784ab3a833cc9cef5f66170bef952c82fab2ec5ee1"
+          },
+          "candidate": {
+            "status": "passed",
+            "exit_code": 0,
+            "checks": 5700,
+            "records": 83,
+            "raster_frames": 74,
+            "arena_bytes": 7440,
+            "instance_size": 168,
+            "model_size": 128,
+            "api_allocations": 0,
+            "sha256": "8dd8a880c333d60da7c3c4784ab3a833cc9cef5f66170bef952c82fab2ec5ee1"
+          },
+          "exact_match": true
+        }
+      },
+      "identities_start": {
+        "sources": {
+          "baseline": {
+            "main/ayatsuri/ayatsuri_model.c": "bf1ba06d55f9029b5c95981087cc3ee40651523759d6e044538a5d4f6c999864",
+            "main/ayatsuri/ayatsuri_model.h": "ea8e46de37115ce8f4f6fd611e5ce086fbed690b64e00ff593bf154018ce846a",
+            "main/ayatsuri/ayatsuri_shade.h": "336a54b1e63ce89883db8a280f772c4d15ee6513669df9d07f42471a0caec0a1",
+            "main/ayatsuri/ayatsuri_transform.h": "8983eb55223aa3f0bc65047e9f102ae97775041d6d08a5ff69a48637a7cd34ad",
+            "main/ayatsuri/ayatsuri_visibility.c": "3d4654e35589cdb782ab61a90ca1919b5752a830fa6e4ced5c2844304cd181ca",
+            "main/ayatsuri/ayatsuri_visibility.h": "fa8922ae6ac5b3dd9a76fe32c2a0a4479c14ea58f24ba73bc6d5473269f59a2c",
+            "main/ayatsuri/compact_opaque.c": "2e1759d37728c6c7e3e42798306e851562e73f80b15f586528b62100a92998e4",
+            "main/ayatsuri/compact_opaque.h": "b08a29a99d5565bb18888bbd7205ab35384331ba91be7d78c550d8bdcb9ff0fd",
+            "main/ui/kasane/ksn_mesh_depth.c": "e441de60068f030781c8862095718a2395cd59623837adf60472a353dcf2f498",
+            "main/ui/kasane/ksn_mesh_depth.h": "94ed822b3e713f97ee91129ddb29e9d1155c5aa41098d7b0d2743873c1c4b087",
+            "main/ui/kasane/ksn_procedural.c": "93abc77983aa277c3380932545a9c78ad36c9efeb2a7252c27ea12e1b769284c",
+            "main/ui/kasane/ksn_procedural.h": "ae4608e917835b5aa50a576eb53d7787decd54c80486d5aeec570297a6f95875"
+          },
+          "candidate": {
+            "main/ayatsuri/ayatsuri_model.c": "8e4217e57e12568094c0443e022df74d712ef8bcd215ba7a74bef154bd0c0c89",
+            "main/ayatsuri/ayatsuri_model.h": "ea8e46de37115ce8f4f6fd611e5ce086fbed690b64e00ff593bf154018ce846a",
+            "main/ayatsuri/ayatsuri_shade.h": "f75a8ab6ae6615fb6c3df57a3b800d512923e5a9e388da39865cfd0059691258",
+            "main/ayatsuri/ayatsuri_transform.h": "8983eb55223aa3f0bc65047e9f102ae97775041d6d08a5ff69a48637a7cd34ad",
+            "main/ayatsuri/ayatsuri_visibility.c": "3d4654e35589cdb782ab61a90ca1919b5752a830fa6e4ced5c2844304cd181ca",
+            "main/ayatsuri/ayatsuri_visibility.h": "fa8922ae6ac5b3dd9a76fe32c2a0a4479c14ea58f24ba73bc6d5473269f59a2c",
+            "main/ayatsuri/compact_opaque.c": "2e1759d37728c6c7e3e42798306e851562e73f80b15f586528b62100a92998e4",
+            "main/ayatsuri/compact_opaque.h": "b08a29a99d5565bb18888bbd7205ab35384331ba91be7d78c550d8bdcb9ff0fd",
+            "main/ui/kasane/ksn_mesh_depth.c": "e441de60068f030781c8862095718a2395cd59623837adf60472a353dcf2f498",
+            "main/ui/kasane/ksn_mesh_depth.h": "94ed822b3e713f97ee91129ddb29e9d1155c5aa41098d7b0d2743873c1c4b087",
+            "main/ui/kasane/ksn_procedural.c": "93abc77983aa277c3380932545a9c78ad36c9efeb2a7252c27ea12e1b769284c",
+            "main/ui/kasane/ksn_procedural.h": "ae4608e917835b5aa50a576eb53d7787decd54c80486d5aeec570297a6f95875"
+          }
+        },
+        "harness": {
+          "evaluate_test.c": "0b24de7c9731156847c833252839654a8893b220856b8cee9fde33c59771d0c6",
+          "make_fixtures.py": "f7072e1f1b35e694c45bdf72b97dec23f61c8488999e7d37873bf0eeb0cbfbe2",
+          "run_matrix.py": "420117f028849d11c7c6579b80aaa43711791cbbd1a4aed7491f76307447439e"
+        },
+        "fixtures": {
+          "mixed": "b72d8e447e71a24586c7d7588bf28790c83aeecef147fd1087922dacb3d13f82",
+          "mesh_only": "bf25c4a334f2bf4f139287504988f2201cc65d9baf9fbbd04bbf9618a752c37d"
+        }
+      },
+      "status": "passed",
+      "identities_end": {
+        "sources": {
+          "baseline": {
+            "main/ayatsuri/ayatsuri_model.c": "bf1ba06d55f9029b5c95981087cc3ee40651523759d6e044538a5d4f6c999864",
+            "main/ayatsuri/ayatsuri_model.h": "ea8e46de37115ce8f4f6fd611e5ce086fbed690b64e00ff593bf154018ce846a",
+            "main/ayatsuri/ayatsuri_shade.h": "336a54b1e63ce89883db8a280f772c4d15ee6513669df9d07f42471a0caec0a1",
+            "main/ayatsuri/ayatsuri_transform.h": "8983eb55223aa3f0bc65047e9f102ae97775041d6d08a5ff69a48637a7cd34ad",
+            "main/ayatsuri/ayatsuri_visibility.c": "3d4654e35589cdb782ab61a90ca1919b5752a830fa6e4ced5c2844304cd181ca",
+            "main/ayatsuri/ayatsuri_visibility.h": "fa8922ae6ac5b3dd9a76fe32c2a0a4479c14ea58f24ba73bc6d5473269f59a2c",
+            "main/ayatsuri/compact_opaque.c": "2e1759d37728c6c7e3e42798306e851562e73f80b15f586528b62100a92998e4",
+            "main/ayatsuri/compact_opaque.h": "b08a29a99d5565bb18888bbd7205ab35384331ba91be7d78c550d8bdcb9ff0fd",
+            "main/ui/kasane/ksn_mesh_depth.c": "e441de60068f030781c8862095718a2395cd59623837adf60472a353dcf2f498",
+            "main/ui/kasane/ksn_mesh_depth.h": "94ed822b3e713f97ee91129ddb29e9d1155c5aa41098d7b0d2743873c1c4b087",
+            "main/ui/kasane/ksn_procedural.c": "93abc77983aa277c3380932545a9c78ad36c9efeb2a7252c27ea12e1b769284c",
+            "main/ui/kasane/ksn_procedural.h": "ae4608e917835b5aa50a576eb53d7787decd54c80486d5aeec570297a6f95875"
+          },
+          "candidate": {
+            "main/ayatsuri/ayatsuri_model.c": "8e4217e57e12568094c0443e022df74d712ef8bcd215ba7a74bef154bd0c0c89",
+            "main/ayatsuri/ayatsuri_model.h": "ea8e46de37115ce8f4f6fd611e5ce086fbed690b64e00ff593bf154018ce846a",
+            "main/ayatsuri/ayatsuri_shade.h": "f75a8ab6ae6615fb6c3df57a3b800d512923e5a9e388da39865cfd0059691258",
+            "main/ayatsuri/ayatsuri_transform.h": "8983eb55223aa3f0bc65047e9f102ae97775041d6d08a5ff69a48637a7cd34ad",
+            "main/ayatsuri/ayatsuri_visibility.c": "3d4654e35589cdb782ab61a90ca1919b5752a830fa6e4ced5c2844304cd181ca",
+            "main/ayatsuri/ayatsuri_visibility.h": "fa8922ae6ac5b3dd9a76fe32c2a0a4479c14ea58f24ba73bc6d5473269f59a2c",
+            "main/ayatsuri/compact_opaque.c": "2e1759d37728c6c7e3e42798306e851562e73f80b15f586528b62100a92998e4",
+            "main/ayatsuri/compact_opaque.h": "b08a29a99d5565bb18888bbd7205ab35384331ba91be7d78c550d8bdcb9ff0fd",
+            "main/ui/kasane/ksn_mesh_depth.c": "e441de60068f030781c8862095718a2395cd59623837adf60472a353dcf2f498",
+            "main/ui/kasane/ksn_mesh_depth.h": "94ed822b3e713f97ee91129ddb29e9d1155c5aa41098d7b0d2743873c1c4b087",
+            "main/ui/kasane/ksn_procedural.c": "93abc77983aa277c3380932545a9c78ad36c9efeb2a7252c27ea12e1b769284c",
+            "main/ui/kasane/ksn_procedural.h": "ae4608e917835b5aa50a576eb53d7787decd54c80486d5aeec570297a6f95875"
+          }
+        },
+        "harness": {
+          "evaluate_test.c": "0b24de7c9731156847c833252839654a8893b220856b8cee9fde33c59771d0c6",
+          "make_fixtures.py": "f7072e1f1b35e694c45bdf72b97dec23f61c8488999e7d37873bf0eeb0cbfbe2",
+          "run_matrix.py": "420117f028849d11c7c6579b80aaa43711791cbbd1a4aed7491f76307447439e"
+        },
+        "fixtures": {
+          "mixed": "b72d8e447e71a24586c7d7588bf28790c83aeecef147fd1087922dacb3d13f82",
+          "mesh_only": "bf25c4a334f2bf4f139287504988f2201cc65d9baf9fbbd04bbf9618a752c37d"
+        }
+      },
+      "sources_stable": true
+    },
+    "O2": {
+      "flags": [
+        "-std=c11",
+        "-ffp-contract=off",
+        "-fexcess-precision=standard",
+        "-fno-fast-math",
+        "-O2"
+      ],
+      "builds": {
+        "baseline": {
+          "status": "passed",
+          "exit_code": 0,
+          "metrics_status": "passed"
+        },
+        "candidate": {
+          "status": "passed",
+          "exit_code": 0,
+          "metrics_status": "passed"
+        }
+      },
+      "fixtures": {
+        "mixed": {
+          "baseline": {
+            "status": "passed",
+            "exit_code": 0,
+            "checks": 6005,
+            "records": 86,
+            "raster_frames": 77,
+            "arena_bytes": 4996,
+            "instance_size": 168,
+            "model_size": 128,
+            "api_allocations": 0,
+            "sha256": "fa6a02b2e4a33bd86721085734e4c83b708d431b6769c7df137e3b1a9f22f2cc"
+          },
+          "candidate": {
+            "status": "passed",
+            "exit_code": 0,
+            "checks": 6005,
+            "records": 86,
+            "raster_frames": 77,
+            "arena_bytes": 4996,
+            "instance_size": 168,
+            "model_size": 128,
+            "api_allocations": 0,
+            "sha256": "fa6a02b2e4a33bd86721085734e4c83b708d431b6769c7df137e3b1a9f22f2cc"
+          },
+          "exact_match": true
+        },
+        "mesh_only": {
+          "baseline": {
+            "status": "passed",
+            "exit_code": 0,
+            "checks": 5700,
+            "records": 83,
+            "raster_frames": 74,
+            "arena_bytes": 7440,
+            "instance_size": 168,
+            "model_size": 128,
+            "api_allocations": 0,
+            "sha256": "8dd8a880c333d60da7c3c4784ab3a833cc9cef5f66170bef952c82fab2ec5ee1"
+          },
+          "candidate": {
+            "status": "passed",
+            "exit_code": 0,
+            "checks": 5700,
+            "records": 83,
+            "raster_frames": 74,
+            "arena_bytes": 7440,
+            "instance_size": 168,
+            "model_size": 128,
+            "api_allocations": 0,
+            "sha256": "8dd8a880c333d60da7c3c4784ab3a833cc9cef5f66170bef952c82fab2ec5ee1"
+          },
+          "exact_match": true
+        }
+      },
+      "identities_start": {
+        "sources": {
+          "baseline": {
+            "main/ayatsuri/ayatsuri_model.c": "bf1ba06d55f9029b5c95981087cc3ee40651523759d6e044538a5d4f6c999864",
+            "main/ayatsuri/ayatsuri_model.h": "ea8e46de37115ce8f4f6fd611e5ce086fbed690b64e00ff593bf154018ce846a",
+            "main/ayatsuri/ayatsuri_shade.h": "336a54b1e63ce89883db8a280f772c4d15ee6513669df9d07f42471a0caec0a1",
+            "main/ayatsuri/ayatsuri_transform.h": "8983eb55223aa3f0bc65047e9f102ae97775041d6d08a5ff69a48637a7cd34ad",
+            "main/ayatsuri/ayatsuri_visibility.c": "3d4654e35589cdb782ab61a90ca1919b5752a830fa6e4ced5c2844304cd181ca",
+            "main/ayatsuri/ayatsuri_visibility.h": "fa8922ae6ac5b3dd9a76fe32c2a0a4479c14ea58f24ba73bc6d5473269f59a2c",
+            "main/ayatsuri/compact_opaque.c": "2e1759d37728c6c7e3e42798306e851562e73f80b15f586528b62100a92998e4",
+            "main/ayatsuri/compact_opaque.h": "b08a29a99d5565bb18888bbd7205ab35384331ba91be7d78c550d8bdcb9ff0fd",
+            "main/ui/kasane/ksn_mesh_depth.c": "e441de60068f030781c8862095718a2395cd59623837adf60472a353dcf2f498",
+            "main/ui/kasane/ksn_mesh_depth.h": "94ed822b3e713f97ee91129ddb29e9d1155c5aa41098d7b0d2743873c1c4b087",
+            "main/ui/kasane/ksn_procedural.c": "93abc77983aa277c3380932545a9c78ad36c9efeb2a7252c27ea12e1b769284c",
+            "main/ui/kasane/ksn_procedural.h": "ae4608e917835b5aa50a576eb53d7787decd54c80486d5aeec570297a6f95875"
+          },
+          "candidate": {
+            "main/ayatsuri/ayatsuri_model.c": "8e4217e57e12568094c0443e022df74d712ef8bcd215ba7a74bef154bd0c0c89",
+            "main/ayatsuri/ayatsuri_model.h": "ea8e46de37115ce8f4f6fd611e5ce086fbed690b64e00ff593bf154018ce846a",
+            "main/ayatsuri/ayatsuri_shade.h": "f75a8ab6ae6615fb6c3df57a3b800d512923e5a9e388da39865cfd0059691258",
+            "main/ayatsuri/ayatsuri_transform.h": "8983eb55223aa3f0bc65047e9f102ae97775041d6d08a5ff69a48637a7cd34ad",
+            "main/ayatsuri/ayatsuri_visibility.c": "3d4654e35589cdb782ab61a90ca1919b5752a830fa6e4ced5c2844304cd181ca",
+            "main/ayatsuri/ayatsuri_visibility.h": "fa8922ae6ac5b3dd9a76fe32c2a0a4479c14ea58f24ba73bc6d5473269f59a2c",
+            "main/ayatsuri/compact_opaque.c": "2e1759d37728c6c7e3e42798306e851562e73f80b15f586528b62100a92998e4",
+            "main/ayatsuri/compact_opaque.h": "b08a29a99d5565bb18888bbd7205ab35384331ba91be7d78c550d8bdcb9ff0fd",
+            "main/ui/kasane/ksn_mesh_depth.c": "e441de60068f030781c8862095718a2395cd59623837adf60472a353dcf2f498",
+            "main/ui/kasane/ksn_mesh_depth.h": "94ed822b3e713f97ee91129ddb29e9d1155c5aa41098d7b0d2743873c1c4b087",
+            "main/ui/kasane/ksn_procedural.c": "93abc77983aa277c3380932545a9c78ad36c9efeb2a7252c27ea12e1b769284c",
+            "main/ui/kasane/ksn_procedural.h": "ae4608e917835b5aa50a576eb53d7787decd54c80486d5aeec570297a6f95875"
+          }
+        },
+        "harness": {
+          "evaluate_test.c": "0b24de7c9731156847c833252839654a8893b220856b8cee9fde33c59771d0c6",
+          "make_fixtures.py": "f7072e1f1b35e694c45bdf72b97dec23f61c8488999e7d37873bf0eeb0cbfbe2",
+          "run_matrix.py": "420117f028849d11c7c6579b80aaa43711791cbbd1a4aed7491f76307447439e"
+        },
+        "fixtures": {
+          "mixed": "b72d8e447e71a24586c7d7588bf28790c83aeecef147fd1087922dacb3d13f82",
+          "mesh_only": "bf25c4a334f2bf4f139287504988f2201cc65d9baf9fbbd04bbf9618a752c37d"
+        }
+      },
+      "status": "passed",
+      "host_timings": {
+        "mixed": {
+          "baseline": [
+            {
+              "loops": 50000,
+              "light_us": 2.79008736,
+              "full_us": 4.87602364,
+              "arena_bytes": 4996,
+              "instance_size": 168,
+              "model_size": 128,
+              "eval_allocations": 0,
+              "round": 0
+            },
+            {
+              "loops": 50000,
+              "light_us": 2.78542962,
+              "full_us": 4.46049046,
+              "arena_bytes": 4996,
+              "instance_size": 168,
+              "model_size": 128,
+              "eval_allocations": 0,
+              "round": 1
+            },
+            {
+              "loops": 50000,
+              "light_us": 2.27684412,
+              "full_us": 3.76165036,
+              "arena_bytes": 4996,
+              "instance_size": 168,
+              "model_size": 128,
+              "eval_allocations": 0,
+              "round": 2
+            },
+            {
+              "loops": 50000,
+              "light_us": 2.77643812,
+              "full_us": 4.29373392,
+              "arena_bytes": 4996,
+              "instance_size": 168,
+              "model_size": 128,
+              "eval_allocations": 0,
+              "round": 3
+            },
+            {
+              "loops": 50000,
+              "light_us": 2.69611366,
+              "full_us": 4.44212818,
+              "arena_bytes": 4996,
+              "instance_size": 168,
+              "model_size": 128,
+              "eval_allocations": 0,
+              "round": 4
+            },
+            {
+              "loops": 50000,
+              "light_us": 3.04071566,
+              "full_us": 4.85824428,
+              "arena_bytes": 4996,
+              "instance_size": 168,
+              "model_size": 128,
+              "eval_allocations": 0,
+              "round": 5
+            },
+            {
+              "loops": 50000,
+              "light_us": 2.7107681,
+              "full_us": 4.85916838,
+              "arena_bytes": 4996,
+              "instance_size": 168,
+              "model_size": 128,
+              "eval_allocations": 0,
+              "round": 6
+            }
+          ],
+          "candidate": [
+            {
+              "loops": 50000,
+              "light_us": 2.36702458,
+              "full_us": 3.8669928,
+              "arena_bytes": 4996,
+              "instance_size": 168,
+              "model_size": 128,
+              "eval_allocations": 0,
+              "round": 0
+            },
+            {
+              "loops": 50000,
+              "light_us": 2.68719268,
+              "full_us": 4.13958066,
+              "arena_bytes": 4996,
+              "instance_size": 168,
+              "model_size": 128,
+              "eval_allocations": 0,
+              "round": 1
+            },
+            {
+              "loops": 50000,
+              "light_us": 2.46948692,
+              "full_us": 4.28448986,
+              "arena_bytes": 4996,
+              "instance_size": 168,
+              "model_size": 128,
+              "eval_allocations": 0,
+              "round": 2
+            },
+            {
+              "loops": 50000,
+              "light_us": 2.4440897,
+              "full_us": 4.02780596,
+              "arena_bytes": 4996,
+              "instance_size": 168,
+              "model_size": 128,
+              "eval_allocations": 0,
+              "round": 3
+            },
+            {
+              "loops": 50000,
+              "light_us": 2.34523046,
+              "full_us": 4.23269454,
+              "arena_bytes": 4996,
+              "instance_size": 168,
+              "model_size": 128,
+              "eval_allocations": 0,
+              "round": 4
+            },
+            {
+              "loops": 50000,
+              "light_us": 2.66906106,
+              "full_us": 4.24105158,
+              "arena_bytes": 4996,
+              "instance_size": 168,
+              "model_size": 128,
+              "eval_allocations": 0,
+              "round": 5
+            },
+            {
+              "loops": 50000,
+              "light_us": 2.43475168,
+              "full_us": 4.26620932,
+              "arena_bytes": 4996,
+              "instance_size": 168,
+              "model_size": 128,
+              "eval_allocations": 0,
+              "round": 6
+            }
+          ],
+          "summary": {
+            "light_us": {
+              "baseline_median": 2.77643812,
+              "candidate_median": 2.4440897,
+              "paired_ratio_median": 0.8802968387424389,
+              "paired_ratio_min": 0.8483693428151297,
+              "paired_ratio_max": 1.0846095691434512
+            },
+            "full_us": {
+              "baseline_median": 4.46049046,
+              "candidate_median": 4.23269454,
+              "paired_ratio_median": 0.9280550417318907,
+              "paired_ratio_min": 0.7930627670213675,
+              "paired_ratio_max": 1.1389920513505674
+            }
+          }
+        },
+        "mesh_only": {
+          "baseline": [
+            {
+              "loops": 50000,
+              "light_us": 4.5781568,
+              "full_us": 7.0957142,
+              "arena_bytes": 7440,
+              "instance_size": 168,
+              "model_size": 128,
+              "eval_allocations": 0,
+              "round": 0
+            },
+            {
+              "loops": 50000,
+              "light_us": 5.23617064,
+              "full_us": 7.19203452,
+              "arena_bytes": 7440,
+              "instance_size": 168,
+              "model_size": 128,
+              "eval_allocations": 0,
+              "round": 1
+            },
+            {
+              "loops": 50000,
+              "light_us": 5.37458774,
+              "full_us": 7.09676316,
+              "arena_bytes": 7440,
+              "instance_size": 168,
+              "model_size": 128,
+              "eval_allocations": 0,
+              "round": 2
+            },
+            {
+              "loops": 50000,
+              "light_us": 4.60189346,
+              "full_us": 6.0780356,
+              "arena_bytes": 7440,
+              "instance_size": 168,
+              "model_size": 128,
+              "eval_allocations": 0,
+              "round": 3
+            },
+            {
+              "loops": 50000,
+              "light_us": 4.5764667,
+              "full_us": 5.47431726,
+              "arena_bytes": 7440,
+              "instance_size": 168,
+              "model_size": 128,
+              "eval_allocations": 0,
+              "round": 4
+            },
+            {
+              "loops": 50000,
+              "light_us": 5.01545938,
+              "full_us": 6.46942794,
+              "arena_bytes": 7440,
+              "instance_size": 168,
+              "model_size": 128,
+              "eval_allocations": 0,
+              "round": 5
+            },
+            {
+              "loops": 50000,
+              "light_us": 4.58605004,
+              "full_us": 6.07477954,
+              "arena_bytes": 7440,
+              "instance_size": 168,
+              "model_size": 128,
+              "eval_allocations": 0,
+              "round": 6
+            }
+          ],
+          "candidate": [
+            {
+              "loops": 50000,
+              "light_us": 4.23361922,
+              "full_us": 5.6493582,
+              "arena_bytes": 7440,
+              "instance_size": 168,
+              "model_size": 128,
+              "eval_allocations": 0,
+              "round": 0
+            },
+            {
+              "loops": 50000,
+              "light_us": 4.14461384,
+              "full_us": 5.78563678,
+              "arena_bytes": 7440,
+              "instance_size": 168,
+              "model_size": 128,
+              "eval_allocations": 0,
+              "round": 1
+            },
+            {
+              "loops": 50000,
+              "light_us": 4.58845606,
+              "full_us": 5.91643424,
+              "arena_bytes": 7440,
+              "instance_size": 168,
+              "model_size": 128,
+              "eval_allocations": 0,
+              "round": 2
+            },
+            {
+              "loops": 50000,
+              "light_us": 4.29756158,
+              "full_us": 5.8400986,
+              "arena_bytes": 7440,
+              "instance_size": 168,
+              "model_size": 128,
+              "eval_allocations": 0,
+              "round": 3
+            },
+            {
+              "loops": 50000,
+              "light_us": 3.76648064,
+              "full_us": 4.93085356,
+              "arena_bytes": 7440,
+              "instance_size": 168,
+              "model_size": 128,
+              "eval_allocations": 0,
+              "round": 4
+            },
+            {
+              "loops": 50000,
+              "light_us": 3.98581046,
+              "full_us": 5.63461984,
+              "arena_bytes": 7440,
+              "instance_size": 168,
+              "model_size": 128,
+              "eval_allocations": 0,
+              "round": 5
+            },
+            {
+              "loops": 50000,
+              "light_us": 4.08235866,
+              "full_us": 5.06023828,
+              "arena_bytes": 7440,
+              "instance_size": 168,
+              "model_size": 128,
+              "eval_allocations": 0,
+              "round": 6
+            }
+          ],
+          "summary": {
+            "light_us": {
+              "baseline_median": 4.60189346,
+              "candidate_median": 4.14461384,
+              "paired_ratio_median": 0.8537317245471185,
+              "paired_ratio_min": 0.7915352888499447,
+              "paired_ratio_max": 0.9338681169728774
+            },
+            "full_us": {
+              "baseline_median": 6.46942794,
+              "candidate_median": 5.6493582,
+              "paired_ratio_median": 0.8336806663278868,
+              "paired_ratio_min": 0.796164845534506,
+              "paired_ratio_max": 0.9608529769058938
+            }
+          }
+        }
+      },
+      "timing_order": [
+        {
+          "fixture": "mixed",
+          "round": 0,
+          "order": [
+            "baseline",
+            "candidate"
+          ]
+        },
+        {
+          "fixture": "mixed",
+          "round": 1,
+          "order": [
+            "candidate",
+            "baseline"
+          ]
+        },
+        {
+          "fixture": "mixed",
+          "round": 2,
+          "order": [
+            "baseline",
+            "candidate"
+          ]
+        },
+        {
+          "fixture": "mixed",
+          "round": 3,
+          "order": [
+            "candidate",
+            "baseline"
+          ]
+        },
+        {
+          "fixture": "mixed",
+          "round": 4,
+          "order": [
+            "baseline",
+            "candidate"
+          ]
+        },
+        {
+          "fixture": "mixed",
+          "round": 5,
+          "order": [
+            "candidate",
+            "baseline"
+          ]
+        },
+        {
+          "fixture": "mixed",
+          "round": 6,
+          "order": [
+            "baseline",
+            "candidate"
+          ]
+        },
+        {
+          "fixture": "mesh_only",
+          "round": 0,
+          "order": [
+            "baseline",
+            "candidate"
+          ]
+        },
+        {
+          "fixture": "mesh_only",
+          "round": 1,
+          "order": [
+            "candidate",
+            "baseline"
+          ]
+        },
+        {
+          "fixture": "mesh_only",
+          "round": 2,
+          "order": [
+            "baseline",
+            "candidate"
+          ]
+        },
+        {
+          "fixture": "mesh_only",
+          "round": 3,
+          "order": [
+            "candidate",
+            "baseline"
+          ]
+        },
+        {
+          "fixture": "mesh_only",
+          "round": 4,
+          "order": [
+            "baseline",
+            "candidate"
+          ]
+        },
+        {
+          "fixture": "mesh_only",
+          "round": 5,
+          "order": [
+            "candidate",
+            "baseline"
+          ]
+        },
+        {
+          "fixture": "mesh_only",
+          "round": 6,
+          "order": [
+            "baseline",
+            "candidate"
+          ]
+        }
+      ],
+      "identities_end": {
+        "sources": {
+          "baseline": {
+            "main/ayatsuri/ayatsuri_model.c": "bf1ba06d55f9029b5c95981087cc3ee40651523759d6e044538a5d4f6c999864",
+            "main/ayatsuri/ayatsuri_model.h": "ea8e46de37115ce8f4f6fd611e5ce086fbed690b64e00ff593bf154018ce846a",
+            "main/ayatsuri/ayatsuri_shade.h": "336a54b1e63ce89883db8a280f772c4d15ee6513669df9d07f42471a0caec0a1",
+            "main/ayatsuri/ayatsuri_transform.h": "8983eb55223aa3f0bc65047e9f102ae97775041d6d08a5ff69a48637a7cd34ad",
+            "main/ayatsuri/ayatsuri_visibility.c": "3d4654e35589cdb782ab61a90ca1919b5752a830fa6e4ced5c2844304cd181ca",
+            "main/ayatsuri/ayatsuri_visibility.h": "fa8922ae6ac5b3dd9a76fe32c2a0a4479c14ea58f24ba73bc6d5473269f59a2c",
+            "main/ayatsuri/compact_opaque.c": "2e1759d37728c6c7e3e42798306e851562e73f80b15f586528b62100a92998e4",
+            "main/ayatsuri/compact_opaque.h": "b08a29a99d5565bb18888bbd7205ab35384331ba91be7d78c550d8bdcb9ff0fd",
+            "main/ui/kasane/ksn_mesh_depth.c": "e441de60068f030781c8862095718a2395cd59623837adf60472a353dcf2f498",
+            "main/ui/kasane/ksn_mesh_depth.h": "94ed822b3e713f97ee91129ddb29e9d1155c5aa41098d7b0d2743873c1c4b087",
+            "main/ui/kasane/ksn_procedural.c": "93abc77983aa277c3380932545a9c78ad36c9efeb2a7252c27ea12e1b769284c",
+            "main/ui/kasane/ksn_procedural.h": "ae4608e917835b5aa50a576eb53d7787decd54c80486d5aeec570297a6f95875"
+          },
+          "candidate": {
+            "main/ayatsuri/ayatsuri_model.c": "8e4217e57e12568094c0443e022df74d712ef8bcd215ba7a74bef154bd0c0c89",
+            "main/ayatsuri/ayatsuri_model.h": "ea8e46de37115ce8f4f6fd611e5ce086fbed690b64e00ff593bf154018ce846a",
+            "main/ayatsuri/ayatsuri_shade.h": "f75a8ab6ae6615fb6c3df57a3b800d512923e5a9e388da39865cfd0059691258",
+            "main/ayatsuri/ayatsuri_transform.h": "8983eb55223aa3f0bc65047e9f102ae97775041d6d08a5ff69a48637a7cd34ad",
+            "main/ayatsuri/ayatsuri_visibility.c": "3d4654e35589cdb782ab61a90ca1919b5752a830fa6e4ced5c2844304cd181ca",
+            "main/ayatsuri/ayatsuri_visibility.h": "fa8922ae6ac5b3dd9a76fe32c2a0a4479c14ea58f24ba73bc6d5473269f59a2c",
+            "main/ayatsuri/compact_opaque.c": "2e1759d37728c6c7e3e42798306e851562e73f80b15f586528b62100a92998e4",
+            "main/ayatsuri/compact_opaque.h": "b08a29a99d5565bb18888bbd7205ab35384331ba91be7d78c550d8bdcb9ff0fd",
+            "main/ui/kasane/ksn_mesh_depth.c": "e441de60068f030781c8862095718a2395cd59623837adf60472a353dcf2f498",
+            "main/ui/kasane/ksn_mesh_depth.h": "94ed822b3e713f97ee91129ddb29e9d1155c5aa41098d7b0d2743873c1c4b087",
+            "main/ui/kasane/ksn_procedural.c": "93abc77983aa277c3380932545a9c78ad36c9efeb2a7252c27ea12e1b769284c",
+            "main/ui/kasane/ksn_procedural.h": "ae4608e917835b5aa50a576eb53d7787decd54c80486d5aeec570297a6f95875"
+          }
+        },
+        "harness": {
+          "evaluate_test.c": "0b24de7c9731156847c833252839654a8893b220856b8cee9fde33c59771d0c6",
+          "make_fixtures.py": "f7072e1f1b35e694c45bdf72b97dec23f61c8488999e7d37873bf0eeb0cbfbe2",
+          "run_matrix.py": "420117f028849d11c7c6579b80aaa43711791cbbd1a4aed7491f76307447439e"
+        },
+        "fixtures": {
+          "mixed": "b72d8e447e71a24586c7d7588bf28790c83aeecef147fd1087922dacb3d13f82",
+          "mesh_only": "bf25c4a334f2bf4f139287504988f2201cc65d9baf9fbbd04bbf9618a752c37d"
+        }
+      },
+      "sources_stable": true
+    },
+    "asan_ubsan_O0": {
+      "flags": [
+        "-std=c11",
+        "-ffp-contract=off",
+        "-fexcess-precision=standard",
+        "-fno-fast-math",
+        "-O0",
+        "-g",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-no-pie"
+      ],
+      "builds": {
+        "baseline": {
+          "status": "passed",
+          "exit_code": 0,
+          "metrics_status": "passed"
+        },
+        "candidate": {
+          "status": "passed",
+          "exit_code": 0,
+          "metrics_status": "passed"
+        }
+      },
+      "fixtures": {
+        "mixed": {
+          "baseline": {
+            "status": "passed",
+            "exit_code": 0,
+            "checks": 6005,
+            "records": 86,
+            "raster_frames": 77,
+            "arena_bytes": 4996,
+            "instance_size": 168,
+            "model_size": 128,
+            "api_allocations": 0,
+            "sha256": "fa6a02b2e4a33bd86721085734e4c83b708d431b6769c7df137e3b1a9f22f2cc"
+          },
+          "candidate": {
+            "status": "passed",
+            "exit_code": 0,
+            "checks": 6005,
+            "records": 86,
+            "raster_frames": 77,
+            "arena_bytes": 4996,
+            "instance_size": 168,
+            "model_size": 128,
+            "api_allocations": 0,
+            "sha256": "fa6a02b2e4a33bd86721085734e4c83b708d431b6769c7df137e3b1a9f22f2cc"
+          },
+          "exact_match": true
+        },
+        "mesh_only": {
+          "baseline": {
+            "status": "passed",
+            "exit_code": 0,
+            "checks": 5700,
+            "records": 83,
+            "raster_frames": 74,
+            "arena_bytes": 7440,
+            "instance_size": 168,
+            "model_size": 128,
+            "api_allocations": 0,
+            "sha256": "8dd8a880c333d60da7c3c4784ab3a833cc9cef5f66170bef952c82fab2ec5ee1"
+          },
+          "candidate": {
+            "status": "passed",
+            "exit_code": 0,
+            "checks": 5700,
+            "records": 83,
+            "raster_frames": 74,
+            "arena_bytes": 7440,
+            "instance_size": 168,
+            "model_size": 128,
+            "api_allocations": 0,
+            "sha256": "8dd8a880c333d60da7c3c4784ab3a833cc9cef5f66170bef952c82fab2ec5ee1"
+          },
+          "exact_match": true
+        }
+      },
+      "identities_start": {
+        "sources": {
+          "baseline": {
+            "main/ayatsuri/ayatsuri_model.c": "bf1ba06d55f9029b5c95981087cc3ee40651523759d6e044538a5d4f6c999864",
+            "main/ayatsuri/ayatsuri_model.h": "ea8e46de37115ce8f4f6fd611e5ce086fbed690b64e00ff593bf154018ce846a",
+            "main/ayatsuri/ayatsuri_shade.h": "336a54b1e63ce89883db8a280f772c4d15ee6513669df9d07f42471a0caec0a1",
+            "main/ayatsuri/ayatsuri_transform.h": "8983eb55223aa3f0bc65047e9f102ae97775041d6d08a5ff69a48637a7cd34ad",
+            "main/ayatsuri/ayatsuri_visibility.c": "3d4654e35589cdb782ab61a90ca1919b5752a830fa6e4ced5c2844304cd181ca",
+            "main/ayatsuri/ayatsuri_visibility.h": "fa8922ae6ac5b3dd9a76fe32c2a0a4479c14ea58f24ba73bc6d5473269f59a2c",
+            "main/ayatsuri/compact_opaque.c": "2e1759d37728c6c7e3e42798306e851562e73f80b15f586528b62100a92998e4",
+            "main/ayatsuri/compact_opaque.h": "b08a29a99d5565bb18888bbd7205ab35384331ba91be7d78c550d8bdcb9ff0fd",
+            "main/ui/kasane/ksn_mesh_depth.c": "e441de60068f030781c8862095718a2395cd59623837adf60472a353dcf2f498",
+            "main/ui/kasane/ksn_mesh_depth.h": "94ed822b3e713f97ee91129ddb29e9d1155c5aa41098d7b0d2743873c1c4b087",
+            "main/ui/kasane/ksn_procedural.c": "93abc77983aa277c3380932545a9c78ad36c9efeb2a7252c27ea12e1b769284c",
+            "main/ui/kasane/ksn_procedural.h": "ae4608e917835b5aa50a576eb53d7787decd54c80486d5aeec570297a6f95875"
+          },
+          "candidate": {
+            "main/ayatsuri/ayatsuri_model.c": "8e4217e57e12568094c0443e022df74d712ef8bcd215ba7a74bef154bd0c0c89",
+            "main/ayatsuri/ayatsuri_model.h": "ea8e46de37115ce8f4f6fd611e5ce086fbed690b64e00ff593bf154018ce846a",
+            "main/ayatsuri/ayatsuri_shade.h": "f75a8ab6ae6615fb6c3df57a3b800d512923e5a9e388da39865cfd0059691258",
+            "main/ayatsuri/ayatsuri_transform.h": "8983eb55223aa3f0bc65047e9f102ae97775041d6d08a5ff69a48637a7cd34ad",
+            "main/ayatsuri/ayatsuri_visibility.c": "3d4654e35589cdb782ab61a90ca1919b5752a830fa6e4ced5c2844304cd181ca",
+            "main/ayatsuri/ayatsuri_visibility.h": "fa8922ae6ac5b3dd9a76fe32c2a0a4479c14ea58f24ba73bc6d5473269f59a2c",
+            "main/ayatsuri/compact_opaque.c": "2e1759d37728c6c7e3e42798306e851562e73f80b15f586528b62100a92998e4",
+            "main/ayatsuri/compact_opaque.h": "b08a29a99d5565bb18888bbd7205ab35384331ba91be7d78c550d8bdcb9ff0fd",
+            "main/ui/kasane/ksn_mesh_depth.c": "e441de60068f030781c8862095718a2395cd59623837adf60472a353dcf2f498",
+            "main/ui/kasane/ksn_mesh_depth.h": "94ed822b3e713f97ee91129ddb29e9d1155c5aa41098d7b0d2743873c1c4b087",
+            "main/ui/kasane/ksn_procedural.c": "93abc77983aa277c3380932545a9c78ad36c9efeb2a7252c27ea12e1b769284c",
+            "main/ui/kasane/ksn_procedural.h": "ae4608e917835b5aa50a576eb53d7787decd54c80486d5aeec570297a6f95875"
+          }
+        },
+        "harness": {
+          "evaluate_test.c": "0b24de7c9731156847c833252839654a8893b220856b8cee9fde33c59771d0c6",
+          "make_fixtures.py": "f7072e1f1b35e694c45bdf72b97dec23f61c8488999e7d37873bf0eeb0cbfbe2",
+          "run_matrix.py": "420117f028849d11c7c6579b80aaa43711791cbbd1a4aed7491f76307447439e"
+        },
+        "fixtures": {
+          "mixed": "b72d8e447e71a24586c7d7588bf28790c83aeecef147fd1087922dacb3d13f82",
+          "mesh_only": "bf25c4a334f2bf4f139287504988f2201cc65d9baf9fbbd04bbf9618a752c37d"
+        }
+      },
+      "status": "passed",
+      "identities_end": {
+        "sources": {
+          "baseline": {
+            "main/ayatsuri/ayatsuri_model.c": "bf1ba06d55f9029b5c95981087cc3ee40651523759d6e044538a5d4f6c999864",
+            "main/ayatsuri/ayatsuri_model.h": "ea8e46de37115ce8f4f6fd611e5ce086fbed690b64e00ff593bf154018ce846a",
+            "main/ayatsuri/ayatsuri_shade.h": "336a54b1e63ce89883db8a280f772c4d15ee6513669df9d07f42471a0caec0a1",
+            "main/ayatsuri/ayatsuri_transform.h": "8983eb55223aa3f0bc65047e9f102ae97775041d6d08a5ff69a48637a7cd34ad",
+            "main/ayatsuri/ayatsuri_visibility.c": "3d4654e35589cdb782ab61a90ca1919b5752a830fa6e4ced5c2844304cd181ca",
+            "main/ayatsuri/ayatsuri_visibility.h": "fa8922ae6ac5b3dd9a76fe32c2a0a4479c14ea58f24ba73bc6d5473269f59a2c",
+            "main/ayatsuri/compact_opaque.c": "2e1759d37728c6c7e3e42798306e851562e73f80b15f586528b62100a92998e4",
+            "main/ayatsuri/compact_opaque.h": "b08a29a99d5565bb18888bbd7205ab35384331ba91be7d78c550d8bdcb9ff0fd",
+            "main/ui/kasane/ksn_mesh_depth.c": "e441de60068f030781c8862095718a2395cd59623837adf60472a353dcf2f498",
+            "main/ui/kasane/ksn_mesh_depth.h": "94ed822b3e713f97ee91129ddb29e9d1155c5aa41098d7b0d2743873c1c4b087",
+            "main/ui/kasane/ksn_procedural.c": "93abc77983aa277c3380932545a9c78ad36c9efeb2a7252c27ea12e1b769284c",
+            "main/ui/kasane/ksn_procedural.h": "ae4608e917835b5aa50a576eb53d7787decd54c80486d5aeec570297a6f95875"
+          },
+          "candidate": {
+            "main/ayatsuri/ayatsuri_model.c": "8e4217e57e12568094c0443e022df74d712ef8bcd215ba7a74bef154bd0c0c89",
+            "main/ayatsuri/ayatsuri_model.h": "ea8e46de37115ce8f4f6fd611e5ce086fbed690b64e00ff593bf154018ce846a",
+            "main/ayatsuri/ayatsuri_shade.h": "f75a8ab6ae6615fb6c3df57a3b800d512923e5a9e388da39865cfd0059691258",
+            "main/ayatsuri/ayatsuri_transform.h": "8983eb55223aa3f0bc65047e9f102ae97775041d6d08a5ff69a48637a7cd34ad",
+            "main/ayatsuri/ayatsuri_visibility.c": "3d4654e35589cdb782ab61a90ca1919b5752a830fa6e4ced5c2844304cd181ca",
+            "main/ayatsuri/ayatsuri_visibility.h": "fa8922ae6ac5b3dd9a76fe32c2a0a4479c14ea58f24ba73bc6d5473269f59a2c",
+            "main/ayatsuri/compact_opaque.c": "2e1759d37728c6c7e3e42798306e851562e73f80b15f586528b62100a92998e4",
+            "main/ayatsuri/compact_opaque.h": "b08a29a99d5565bb18888bbd7205ab35384331ba91be7d78c550d8bdcb9ff0fd",
+            "main/ui/kasane/ksn_mesh_depth.c": "e441de60068f030781c8862095718a2395cd59623837adf60472a353dcf2f498",
+            "main/ui/kasane/ksn_mesh_depth.h": "94ed822b3e713f97ee91129ddb29e9d1155c5aa41098d7b0d2743873c1c4b087",
+            "main/ui/kasane/ksn_procedural.c": "93abc77983aa277c3380932545a9c78ad36c9efeb2a7252c27ea12e1b769284c",
+            "main/ui/kasane/ksn_procedural.h": "ae4608e917835b5aa50a576eb53d7787decd54c80486d5aeec570297a6f95875"
+          }
+        },
+        "harness": {
+          "evaluate_test.c": "0b24de7c9731156847c833252839654a8893b220856b8cee9fde33c59771d0c6",
+          "make_fixtures.py": "f7072e1f1b35e694c45bdf72b97dec23f61c8488999e7d37873bf0eeb0cbfbe2",
+          "run_matrix.py": "420117f028849d11c7c6579b80aaa43711791cbbd1a4aed7491f76307447439e"
+        },
+        "fixtures": {
+          "mixed": "b72d8e447e71a24586c7d7588bf28790c83aeecef147fd1087922dacb3d13f82",
+          "mesh_only": "bf25c4a334f2bf4f139287504988f2201cc65d9baf9fbbd04bbf9618a752c37d"
+        }
+      },
+      "sources_stable": true
+    },
+    "asan_ubsan_O2": {
+      "flags": [
+        "-std=c11",
+        "-ffp-contract=off",
+        "-fexcess-precision=standard",
+        "-fno-fast-math",
+        "-O2",
+        "-g",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-no-pie"
+      ],
+      "builds": {
+        "baseline": {
+          "status": "passed",
+          "exit_code": 0,
+          "metrics_status": "passed"
+        },
+        "candidate": {
+          "status": "passed",
+          "exit_code": 0,
+          "metrics_status": "passed"
+        }
+      },
+      "fixtures": {
+        "mixed": {
+          "baseline": {
+            "status": "passed",
+            "exit_code": 0,
+            "checks": 6005,
+            "records": 86,
+            "raster_frames": 77,
+            "arena_bytes": 4996,
+            "instance_size": 168,
+            "model_size": 128,
+            "api_allocations": 0,
+            "sha256": "fa6a02b2e4a33bd86721085734e4c83b708d431b6769c7df137e3b1a9f22f2cc"
+          },
+          "candidate": {
+            "status": "passed",
+            "exit_code": 0,
+            "checks": 6005,
+            "records": 86,
+            "raster_frames": 77,
+            "arena_bytes": 4996,
+            "instance_size": 168,
+            "model_size": 128,
+            "api_allocations": 0,
+            "sha256": "fa6a02b2e4a33bd86721085734e4c83b708d431b6769c7df137e3b1a9f22f2cc"
+          },
+          "exact_match": true
+        },
+        "mesh_only": {
+          "baseline": {
+            "status": "passed",
+            "exit_code": 0,
+            "checks": 5700,
+            "records": 83,
+            "raster_frames": 74,
+            "arena_bytes": 7440,
+            "instance_size": 168,
+            "model_size": 128,
+            "api_allocations": 0,
+            "sha256": "8dd8a880c333d60da7c3c4784ab3a833cc9cef5f66170bef952c82fab2ec5ee1"
+          },
+          "candidate": {
+            "status": "passed",
+            "exit_code": 0,
+            "checks": 5700,
+            "records": 83,
+            "raster_frames": 74,
+            "arena_bytes": 7440,
+            "instance_size": 168,
+            "model_size": 128,
+            "api_allocations": 0,
+            "sha256": "8dd8a880c333d60da7c3c4784ab3a833cc9cef5f66170bef952c82fab2ec5ee1"
+          },
+          "exact_match": true
+        }
+      },
+      "identities_start": {
+        "sources": {
+          "baseline": {
+            "main/ayatsuri/ayatsuri_model.c": "bf1ba06d55f9029b5c95981087cc3ee40651523759d6e044538a5d4f6c999864",
+            "main/ayatsuri/ayatsuri_model.h": "ea8e46de37115ce8f4f6fd611e5ce086fbed690b64e00ff593bf154018ce846a",
+            "main/ayatsuri/ayatsuri_shade.h": "336a54b1e63ce89883db8a280f772c4d15ee6513669df9d07f42471a0caec0a1",
+            "main/ayatsuri/ayatsuri_transform.h": "8983eb55223aa3f0bc65047e9f102ae97775041d6d08a5ff69a48637a7cd34ad",
+            "main/ayatsuri/ayatsuri_visibility.c": "3d4654e35589cdb782ab61a90ca1919b5752a830fa6e4ced5c2844304cd181ca",
+            "main/ayatsuri/ayatsuri_visibility.h": "fa8922ae6ac5b3dd9a76fe32c2a0a4479c14ea58f24ba73bc6d5473269f59a2c",
+            "main/ayatsuri/compact_opaque.c": "2e1759d37728c6c7e3e42798306e851562e73f80b15f586528b62100a92998e4",
+            "main/ayatsuri/compact_opaque.h": "b08a29a99d5565bb18888bbd7205ab35384331ba91be7d78c550d8bdcb9ff0fd",
+            "main/ui/kasane/ksn_mesh_depth.c": "e441de60068f030781c8862095718a2395cd59623837adf60472a353dcf2f498",
+            "main/ui/kasane/ksn_mesh_depth.h": "94ed822b3e713f97ee91129ddb29e9d1155c5aa41098d7b0d2743873c1c4b087",
+            "main/ui/kasane/ksn_procedural.c": "93abc77983aa277c3380932545a9c78ad36c9efeb2a7252c27ea12e1b769284c",
+            "main/ui/kasane/ksn_procedural.h": "ae4608e917835b5aa50a576eb53d7787decd54c80486d5aeec570297a6f95875"
+          },
+          "candidate": {
+            "main/ayatsuri/ayatsuri_model.c": "8e4217e57e12568094c0443e022df74d712ef8bcd215ba7a74bef154bd0c0c89",
+            "main/ayatsuri/ayatsuri_model.h": "ea8e46de37115ce8f4f6fd611e5ce086fbed690b64e00ff593bf154018ce846a",
+            "main/ayatsuri/ayatsuri_shade.h": "f75a8ab6ae6615fb6c3df57a3b800d512923e5a9e388da39865cfd0059691258",
+            "main/ayatsuri/ayatsuri_transform.h": "8983eb55223aa3f0bc65047e9f102ae97775041d6d08a5ff69a48637a7cd34ad",
+            "main/ayatsuri/ayatsuri_visibility.c": "3d4654e35589cdb782ab61a90ca1919b5752a830fa6e4ced5c2844304cd181ca",
+            "main/ayatsuri/ayatsuri_visibility.h": "fa8922ae6ac5b3dd9a76fe32c2a0a4479c14ea58f24ba73bc6d5473269f59a2c",
+            "main/ayatsuri/compact_opaque.c": "2e1759d37728c6c7e3e42798306e851562e73f80b15f586528b62100a92998e4",
+            "main/ayatsuri/compact_opaque.h": "b08a29a99d5565bb18888bbd7205ab35384331ba91be7d78c550d8bdcb9ff0fd",
+            "main/ui/kasane/ksn_mesh_depth.c": "e441de60068f030781c8862095718a2395cd59623837adf60472a353dcf2f498",
+            "main/ui/kasane/ksn_mesh_depth.h": "94ed822b3e713f97ee91129ddb29e9d1155c5aa41098d7b0d2743873c1c4b087",
+            "main/ui/kasane/ksn_procedural.c": "93abc77983aa277c3380932545a9c78ad36c9efeb2a7252c27ea12e1b769284c",
+            "main/ui/kasane/ksn_procedural.h": "ae4608e917835b5aa50a576eb53d7787decd54c80486d5aeec570297a6f95875"
+          }
+        },
+        "harness": {
+          "evaluate_test.c": "0b24de7c9731156847c833252839654a8893b220856b8cee9fde33c59771d0c6",
+          "make_fixtures.py": "f7072e1f1b35e694c45bdf72b97dec23f61c8488999e7d37873bf0eeb0cbfbe2",
+          "run_matrix.py": "420117f028849d11c7c6579b80aaa43711791cbbd1a4aed7491f76307447439e"
+        },
+        "fixtures": {
+          "mixed": "b72d8e447e71a24586c7d7588bf28790c83aeecef147fd1087922dacb3d13f82",
+          "mesh_only": "bf25c4a334f2bf4f139287504988f2201cc65d9baf9fbbd04bbf9618a752c37d"
+        }
+      },
+      "status": "passed",
+      "identities_end": {
+        "sources": {
+          "baseline": {
+            "main/ayatsuri/ayatsuri_model.c": "bf1ba06d55f9029b5c95981087cc3ee40651523759d6e044538a5d4f6c999864",
+            "main/ayatsuri/ayatsuri_model.h": "ea8e46de37115ce8f4f6fd611e5ce086fbed690b64e00ff593bf154018ce846a",
+            "main/ayatsuri/ayatsuri_shade.h": "336a54b1e63ce89883db8a280f772c4d15ee6513669df9d07f42471a0caec0a1",
+            "main/ayatsuri/ayatsuri_transform.h": "8983eb55223aa3f0bc65047e9f102ae97775041d6d08a5ff69a48637a7cd34ad",
+            "main/ayatsuri/ayatsuri_visibility.c": "3d4654e35589cdb782ab61a90ca1919b5752a830fa6e4ced5c2844304cd181ca",
+            "main/ayatsuri/ayatsuri_visibility.h": "fa8922ae6ac5b3dd9a76fe32c2a0a4479c14ea58f24ba73bc6d5473269f59a2c",
+            "main/ayatsuri/compact_opaque.c": "2e1759d37728c6c7e3e42798306e851562e73f80b15f586528b62100a92998e4",
+            "main/ayatsuri/compact_opaque.h": "b08a29a99d5565bb18888bbd7205ab35384331ba91be7d78c550d8bdcb9ff0fd",
+            "main/ui/kasane/ksn_mesh_depth.c": "e441de60068f030781c8862095718a2395cd59623837adf60472a353dcf2f498",
+            "main/ui/kasane/ksn_mesh_depth.h": "94ed822b3e713f97ee91129ddb29e9d1155c5aa41098d7b0d2743873c1c4b087",
+            "main/ui/kasane/ksn_procedural.c": "93abc77983aa277c3380932545a9c78ad36c9efeb2a7252c27ea12e1b769284c",
+            "main/ui/kasane/ksn_procedural.h": "ae4608e917835b5aa50a576eb53d7787decd54c80486d5aeec570297a6f95875"
+          },
+          "candidate": {
+            "main/ayatsuri/ayatsuri_model.c": "8e4217e57e12568094c0443e022df74d712ef8bcd215ba7a74bef154bd0c0c89",
+            "main/ayatsuri/ayatsuri_model.h": "ea8e46de37115ce8f4f6fd611e5ce086fbed690b64e00ff593bf154018ce846a",
+            "main/ayatsuri/ayatsuri_shade.h": "f75a8ab6ae6615fb6c3df57a3b800d512923e5a9e388da39865cfd0059691258",
+            "main/ayatsuri/ayatsuri_transform.h": "8983eb55223aa3f0bc65047e9f102ae97775041d6d08a5ff69a48637a7cd34ad",
+            "main/ayatsuri/ayatsuri_visibility.c": "3d4654e35589cdb782ab61a90ca1919b5752a830fa6e4ced5c2844304cd181ca",
+            "main/ayatsuri/ayatsuri_visibility.h": "fa8922ae6ac5b3dd9a76fe32c2a0a4479c14ea58f24ba73bc6d5473269f59a2c",
+            "main/ayatsuri/compact_opaque.c": "2e1759d37728c6c7e3e42798306e851562e73f80b15f586528b62100a92998e4",
+            "main/ayatsuri/compact_opaque.h": "b08a29a99d5565bb18888bbd7205ab35384331ba91be7d78c550d8bdcb9ff0fd",
+            "main/ui/kasane/ksn_mesh_depth.c": "e441de60068f030781c8862095718a2395cd59623837adf60472a353dcf2f498",
+            "main/ui/kasane/ksn_mesh_depth.h": "94ed822b3e713f97ee91129ddb29e9d1155c5aa41098d7b0d2743873c1c4b087",
+            "main/ui/kasane/ksn_procedural.c": "93abc77983aa277c3380932545a9c78ad36c9efeb2a7252c27ea12e1b769284c",
+            "main/ui/kasane/ksn_procedural.h": "ae4608e917835b5aa50a576eb53d7787decd54c80486d5aeec570297a6f95875"
+          }
+        },
+        "harness": {
+          "evaluate_test.c": "0b24de7c9731156847c833252839654a8893b220856b8cee9fde33c59771d0c6",
+          "make_fixtures.py": "f7072e1f1b35e694c45bdf72b97dec23f61c8488999e7d37873bf0eeb0cbfbe2",
+          "run_matrix.py": "420117f028849d11c7c6579b80aaa43711791cbbd1a4aed7491f76307447439e"
+        },
+        "fixtures": {
+          "mixed": "b72d8e447e71a24586c7d7588bf28790c83aeecef147fd1087922dacb3d13f82",
+          "mesh_only": "bf25c4a334f2bf4f139287504988f2201cc65d9baf9fbbd04bbf9618a752c37d"
+        }
+      },
+      "sources_stable": true
+    },
+    "m32": {
+      "flags": [
+        "-std=c11",
+        "-ffp-contract=off",
+        "-fexcess-precision=standard",
+        "-fno-fast-math",
+        "-O2",
+        "-m32",
+        "-msse2",
+        "-mfpmath=sse"
+      ],
+      "builds": {},
+      "fixtures": {},
+      "identities_start": {
+        "sources": {
+          "baseline": {
+            "main/ayatsuri/ayatsuri_model.c": "bf1ba06d55f9029b5c95981087cc3ee40651523759d6e044538a5d4f6c999864",
+            "main/ayatsuri/ayatsuri_model.h": "ea8e46de37115ce8f4f6fd611e5ce086fbed690b64e00ff593bf154018ce846a",
+            "main/ayatsuri/ayatsuri_shade.h": "336a54b1e63ce89883db8a280f772c4d15ee6513669df9d07f42471a0caec0a1",
+            "main/ayatsuri/ayatsuri_transform.h": "8983eb55223aa3f0bc65047e9f102ae97775041d6d08a5ff69a48637a7cd34ad",
+            "main/ayatsuri/ayatsuri_visibility.c": "3d4654e35589cdb782ab61a90ca1919b5752a830fa6e4ced5c2844304cd181ca",
+            "main/ayatsuri/ayatsuri_visibility.h": "fa8922ae6ac5b3dd9a76fe32c2a0a4479c14ea58f24ba73bc6d5473269f59a2c",
+            "main/ayatsuri/compact_opaque.c": "2e1759d37728c6c7e3e42798306e851562e73f80b15f586528b62100a92998e4",
+            "main/ayatsuri/compact_opaque.h": "b08a29a99d5565bb18888bbd7205ab35384331ba91be7d78c550d8bdcb9ff0fd",
+            "main/ui/kasane/ksn_mesh_depth.c": "e441de60068f030781c8862095718a2395cd59623837adf60472a353dcf2f498",
+            "main/ui/kasane/ksn_mesh_depth.h": "94ed822b3e713f97ee91129ddb29e9d1155c5aa41098d7b0d2743873c1c4b087",
+            "main/ui/kasane/ksn_procedural.c": "93abc77983aa277c3380932545a9c78ad36c9efeb2a7252c27ea12e1b769284c",
+            "main/ui/kasane/ksn_procedural.h": "ae4608e917835b5aa50a576eb53d7787decd54c80486d5aeec570297a6f95875"
+          },
+          "candidate": {
+            "main/ayatsuri/ayatsuri_model.c": "8e4217e57e12568094c0443e022df74d712ef8bcd215ba7a74bef154bd0c0c89",
+            "main/ayatsuri/ayatsuri_model.h": "ea8e46de37115ce8f4f6fd611e5ce086fbed690b64e00ff593bf154018ce846a",
+            "main/ayatsuri/ayatsuri_shade.h": "f75a8ab6ae6615fb6c3df57a3b800d512923e5a9e388da39865cfd0059691258",
+            "main/ayatsuri/ayatsuri_transform.h": "8983eb55223aa3f0bc65047e9f102ae97775041d6d08a5ff69a48637a7cd34ad",
+            "main/ayatsuri/ayatsuri_visibility.c": "3d4654e35589cdb782ab61a90ca1919b5752a830fa6e4ced5c2844304cd181ca",
+            "main/ayatsuri/ayatsuri_visibility.h": "fa8922ae6ac5b3dd9a76fe32c2a0a4479c14ea58f24ba73bc6d5473269f59a2c",
+            "main/ayatsuri/compact_opaque.c": "2e1759d37728c6c7e3e42798306e851562e73f80b15f586528b62100a92998e4",
+            "main/ayatsuri/compact_opaque.h": "b08a29a99d5565bb18888bbd7205ab35384331ba91be7d78c550d8bdcb9ff0fd",
+            "main/ui/kasane/ksn_mesh_depth.c": "e441de60068f030781c8862095718a2395cd59623837adf60472a353dcf2f498",
+            "main/ui/kasane/ksn_mesh_depth.h": "94ed822b3e713f97ee91129ddb29e9d1155c5aa41098d7b0d2743873c1c4b087",
+            "main/ui/kasane/ksn_procedural.c": "93abc77983aa277c3380932545a9c78ad36c9efeb2a7252c27ea12e1b769284c",
+            "main/ui/kasane/ksn_procedural.h": "ae4608e917835b5aa50a576eb53d7787decd54c80486d5aeec570297a6f95875"
+          }
+        },
+        "harness": {
+          "evaluate_test.c": "0b24de7c9731156847c833252839654a8893b220856b8cee9fde33c59771d0c6",
+          "make_fixtures.py": "f7072e1f1b35e694c45bdf72b97dec23f61c8488999e7d37873bf0eeb0cbfbe2",
+          "run_matrix.py": "420117f028849d11c7c6579b80aaa43711791cbbd1a4aed7491f76307447439e"
+        },
+        "fixtures": {
+          "mixed": "b72d8e447e71a24586c7d7588bf28790c83aeecef147fd1087922dacb3d13f82",
+          "mesh_only": "bf25c4a334f2bf4f139287504988f2201cc65d9baf9fbbd04bbf9618a752c37d"
+        }
+      },
+      "status": "not_run",
+      "reason": "Separate 32-bit libc/toolchain compile/link probe failed. See m32_probe.log."
+    }
+  },
+  "m32_toolchain_probe": {
+    "available": false,
+    "exit_code": 1
+  },
+  "identities_end": {
+    "sources": {
+      "baseline": {
+        "main/ayatsuri/ayatsuri_model.c": "bf1ba06d55f9029b5c95981087cc3ee40651523759d6e044538a5d4f6c999864",
+        "main/ayatsuri/ayatsuri_model.h": "ea8e46de37115ce8f4f6fd611e5ce086fbed690b64e00ff593bf154018ce846a",
+        "main/ayatsuri/ayatsuri_shade.h": "336a54b1e63ce89883db8a280f772c4d15ee6513669df9d07f42471a0caec0a1",
+        "main/ayatsuri/ayatsuri_transform.h": "8983eb55223aa3f0bc65047e9f102ae97775041d6d08a5ff69a48637a7cd34ad",
+        "main/ayatsuri/ayatsuri_visibility.c": "3d4654e35589cdb782ab61a90ca1919b5752a830fa6e4ced5c2844304cd181ca",
+        "main/ayatsuri/ayatsuri_visibility.h": "fa8922ae6ac5b3dd9a76fe32c2a0a4479c14ea58f24ba73bc6d5473269f59a2c",
+        "main/ayatsuri/compact_opaque.c": "2e1759d37728c6c7e3e42798306e851562e73f80b15f586528b62100a92998e4",
+        "main/ayatsuri/compact_opaque.h": "b08a29a99d5565bb18888bbd7205ab35384331ba91be7d78c550d8bdcb9ff0fd",
+        "main/ui/kasane/ksn_mesh_depth.c": "e441de60068f030781c8862095718a2395cd59623837adf60472a353dcf2f498",
+        "main/ui/kasane/ksn_mesh_depth.h": "94ed822b3e713f97ee91129ddb29e9d1155c5aa41098d7b0d2743873c1c4b087",
+        "main/ui/kasane/ksn_procedural.c": "93abc77983aa277c3380932545a9c78ad36c9efeb2a7252c27ea12e1b769284c",
+        "main/ui/kasane/ksn_procedural.h": "ae4608e917835b5aa50a576eb53d7787decd54c80486d5aeec570297a6f95875"
+      },
+      "candidate": {
+        "main/ayatsuri/ayatsuri_model.c": "8e4217e57e12568094c0443e022df74d712ef8bcd215ba7a74bef154bd0c0c89",
+        "main/ayatsuri/ayatsuri_model.h": "ea8e46de37115ce8f4f6fd611e5ce086fbed690b64e00ff593bf154018ce846a",
+        "main/ayatsuri/ayatsuri_shade.h": "f75a8ab6ae6615fb6c3df57a3b800d512923e5a9e388da39865cfd0059691258",
+        "main/ayatsuri/ayatsuri_transform.h": "8983eb55223aa3f0bc65047e9f102ae97775041d6d08a5ff69a48637a7cd34ad",
+        "main/ayatsuri/ayatsuri_visibility.c": "3d4654e35589cdb782ab61a90ca1919b5752a830fa6e4ced5c2844304cd181ca",
+        "main/ayatsuri/ayatsuri_visibility.h": "fa8922ae6ac5b3dd9a76fe32c2a0a4479c14ea58f24ba73bc6d5473269f59a2c",
+        "main/ayatsuri/compact_opaque.c": "2e1759d37728c6c7e3e42798306e851562e73f80b15f586528b62100a92998e4",
+        "main/ayatsuri/compact_opaque.h": "b08a29a99d5565bb18888bbd7205ab35384331ba91be7d78c550d8bdcb9ff0fd",
+        "main/ui/kasane/ksn_mesh_depth.c": "e441de60068f030781c8862095718a2395cd59623837adf60472a353dcf2f498",
+        "main/ui/kasane/ksn_mesh_depth.h": "94ed822b3e713f97ee91129ddb29e9d1155c5aa41098d7b0d2743873c1c4b087",
+        "main/ui/kasane/ksn_procedural.c": "93abc77983aa277c3380932545a9c78ad36c9efeb2a7252c27ea12e1b769284c",
+        "main/ui/kasane/ksn_procedural.h": "ae4608e917835b5aa50a576eb53d7787decd54c80486d5aeec570297a6f95875"
+      }
+    },
+    "harness": {
+      "evaluate_test.c": "0b24de7c9731156847c833252839654a8893b220856b8cee9fde33c59771d0c6",
+      "make_fixtures.py": "f7072e1f1b35e694c45bdf72b97dec23f61c8488999e7d37873bf0eeb0cbfbe2",
+      "run_matrix.py": "420117f028849d11c7c6579b80aaa43711791cbbd1a4aed7491f76307447439e"
+    },
+    "fixtures": {
+      "mixed": "b72d8e447e71a24586c7d7588bf28790c83aeecef147fd1087922dacb3d13f82",
+      "mesh_only": "bf25c4a334f2bf4f139287504988f2201cc65d9baf9fbbd04bbf9618a752c37d"
+    }
+  },
+  "sources_stable": true,
+  "passed": true
+}

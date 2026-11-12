@@ -1,0 +1,34 @@
+{
+  "scope": "Analytical constant arithmetic only; no driver string or Blender graph evaluated",
+  "pressure_domain_assumption": [
+    -1,
+    1
+  ],
+  "quartic_derivative_upper_bound": -0.01016897,
+  "quartic_endpoint_range": [
+    0.906301094,
+    0.998971302
+  ],
+  "Math124_denominator_conservative_lower": 0.39877248136000004,
+  "coordinate_budget": [
+    {
+      "fraction_bits": 16,
+      "coordinate_half_step": 7.62939453125e-06,
+      "at_radius_0_01_normalized_error": 0.000762939453125,
+      "iris_r2_error_bound_near_r2_1_coordinate_only": 0.00014114606590153882
+    },
+    {
+      "fraction_bits": 20,
+      "coordinate_half_step": 4.76837158203125e-07,
+      "at_radius_0_01_normalized_error": 4.76837158203125e-05,
+      "iris_r2_error_bound_near_r2_1_coordinate_only": 8.821337310163471e-06
+    },
+    {
+      "fraction_bits": 24,
+      "coordinate_half_step": 2.9802322387695312e-08,
+      "at_radius_0_01_normalized_error": 2.9802322387695312e-06,
+      "iris_r2_error_bound_near_r2_1_coordinate_only": 5.513324420075501e-07
+    }
+  ],
+  "warning": "Not an end-to-end image/error bound; transform/interpolation/control/radius errors and strict branch crossings additional."
+}

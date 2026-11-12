@@ -1,0 +1,7 @@
+import bpy,numpy as np,pathlib
+P=pathlib.Path(__file__).resolve().parent
+# Independent synthetic mixture plus black, gray and primaries. No scene pixels.
+rng=np.random.default_rng(92031);rgb=np.exp(rng.uniform(np.log(1e-7),np.log(6000),(32*32,3))).astype(np.float32);rgb[:8]=[[0,0,0],[.18,.18,.18],[1,1,1],[1,0,0],[0,1,0],[0,0,1],[10,.01,.001],[.0001,.0002,.0003]]
+sc=bpy.context.scene;sc.render.resolution_x=32;sc.render.resolution_y=32;sc.render.resolution_percentage=100;sc.display_settings.display_device='sRGB';sc.view_settings.view_transform='AgX';sc.view_settings.look='AgX - Medium High Contrast';sc.view_settings.exposure=0;sc.view_settings.gamma=1;sc.render.dither_intensity=0;sc.render.image_settings.file_format='PNG';sc.render.image_settings.color_depth='16';sc.render.image_settings.color_mode='RGB';sc.render.engine='CYCLES';sc.cycles.device='CPU'
+im=bpy.data.images.new('synthetic_control',32,32,float_buffer=True);im.colorspace_settings.name='Linear Rec.709';im.alpha_mode='STRAIGHT';rgba=np.ones((1024,4),np.float32);rgba[:,:3]=rgb;im.pixels.foreach_set(rgba.ravel());im.update();im.save_render(str(P/'control-save.png'),scene=sc)
+sc.use_nodes=True;sc.node_tree.nodes.clear();inp=sc.node_tree.nodes.new('CompositorNodeImage');inp.image=im;out=sc.node_tree.nodes.new('CompositorNodeComposite');sc.node_tree.links.new(inp.outputs['Image'],out.inputs['Image']);sc.render.filepath=str(P/'control-composite.png');bpy.ops.render.render(write_still=True)

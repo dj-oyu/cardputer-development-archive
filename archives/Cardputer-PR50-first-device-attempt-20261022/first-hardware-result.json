@@ -1,0 +1,12 @@
+{
+  "source_head": "1e68b268a4b91ec54e88f408118de3e39b8b6bc5",
+  "status": "blocked_before_measurement",
+  "completed_builds": 4,
+  "observed_job": "pr50-oval-a1-flash-20261022",
+  "flash_result": "firmware_flash_completed",
+  "measurement": "app_error frames=0",
+  "exception": "InternalError: interrupted at step (user.js:63:61), derby_play.js:152:16",
+  "hypothesis": "Synchronous warmup advance to 390m exceeds product per-turn watchdog; not proven by an explicit watchdog reason log.",
+  "next_source_fix": "Bound unmeasured setup across normal owner turns, keep production guards and workload; rerun host equivalence and CI before hardware.",
+  "further_trials_started": false
+}

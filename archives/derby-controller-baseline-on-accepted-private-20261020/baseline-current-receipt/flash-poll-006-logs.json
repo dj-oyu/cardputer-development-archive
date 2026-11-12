@@ -1,0 +1,83 @@
+{
+  "ok": true,
+  "entries": [
+    {
+      "sequence": 59,
+      "text": "info: ROM read 1727488/2296816 bytes; elapsed 86 s",
+      "level": "info",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 60,
+      "text": "info: ROM read 1818624/2296816 bytes; elapsed 91 s",
+      "level": "info",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 61,
+      "text": "info: ROM read 1906688/2296816 bytes; elapsed 96 s",
+      "level": "info",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 62,
+      "text": "info: ROM read 1997824/2296816 bytes; elapsed 101 s",
+      "level": "info",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 63,
+      "text": "info: ROM read 2093056/2296816 bytes; elapsed 106 s",
+      "level": "info",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 64,
+      "text": "info: ROM read 2187264/2296816 bytes; elapsed 111 s",
+      "level": "info",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 65,
+      "text": "info: ROM read 2281472/2296816 bytes; elapsed 116 s",
+      "level": "info",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 66,
+      "text": "info: ROM read 2296816/2296816 bytes; elapsed 117 s",
+      "level": "info",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 67,
+      "text": "info: ROM read native exit 0; 2296816/2296816 bytes; elapsed 117 s",
+      "level": "info",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 68,
+      "text": "-- flash_boot_observe",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    }
+  ],
+  "expired": false,
+  "gap": false,
+  "oldest_sequence": 1,
+  "next_cursor": {
+    "epoch": "9c5dfba631f4470b8919543c9b26d0f6",
+    "sequence": 68
+  },
+  "has_more": false
+}

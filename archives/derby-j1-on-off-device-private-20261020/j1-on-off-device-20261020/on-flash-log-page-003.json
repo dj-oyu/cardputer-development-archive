@@ -1,0 +1,97 @@
+{
+  "ok": true,
+  "entries": [
+    {
+      "sequence": 24,
+      "text": "info: ROM read 1553408/2298416 bytes; elapsed 76 s",
+      "level": "info",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 25,
+      "text": "info: ROM read 1646592/2298416 bytes; elapsed 81 s",
+      "level": "info",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 26,
+      "text": "info: ROM read 1738752/2298416 bytes; elapsed 86 s",
+      "level": "info",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 27,
+      "text": "info: ROM read 1829888/2298416 bytes; elapsed 91 s",
+      "level": "info",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 28,
+      "text": "info: ROM read 1920000/2298416 bytes; elapsed 96 s",
+      "level": "info",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 29,
+      "text": "info: ROM read 2010112/2298416 bytes; elapsed 101 s",
+      "level": "info",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 30,
+      "text": "info: ROM read 2098176/2298416 bytes; elapsed 106 s",
+      "level": "info",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 31,
+      "text": "info: ROM read 2186240/2298416 bytes; elapsed 111 s",
+      "level": "info",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 32,
+      "text": "info: ROM read 2272256/2298416 bytes; elapsed 116 s",
+      "level": "info",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 33,
+      "text": "info: ROM read 2298416/2298416 bytes; elapsed 117 s",
+      "level": "info",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 34,
+      "text": "info: ROM read native exit 0; 2298416/2298416 bytes; elapsed 117 s",
+      "level": "info",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 35,
+      "text": "-- flash_write",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    }
+  ],
+  "expired": false,
+  "gap": false,
+  "oldest_sequence": 1,
+  "next_cursor": {
+    "epoch": "0f9fc08b48ad418eb7049829145af451",
+    "sequence": 35
+  },
+  "has_more": false
+}

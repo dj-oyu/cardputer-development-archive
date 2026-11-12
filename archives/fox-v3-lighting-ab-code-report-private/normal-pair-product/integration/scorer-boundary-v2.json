@@ -1,0 +1,9 @@
+{
+  "scoreFunctionASTExact": true,
+  "changedExistingFunctions": [
+    "geometry_count",
+    "load_candidate",
+    "main"
+  ],
+  "validator": "strict-integers-v2"
+}

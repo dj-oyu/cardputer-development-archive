@@ -1,0 +1,158 @@
+{
+  "SOURCE_MANIFEST.json": {
+    "bytes": 1842,
+    "sha256": "d9cf4c013196eec279523f35056234e148faa3dd9fdbecfddee3c9d005b3f388"
+  },
+  "audit/AUDIT_SHA256.txt": {
+    "bytes": 371,
+    "sha256": "1590d10bd149b17f6655d40d080b64ab70860d344c05810e687f2944abe30113"
+  },
+  "audit/README.md": {
+    "bytes": 13553,
+    "sha256": "7059ec568cb0adc5afeafdfaf701393a800d55bbeecb184c21101cdbaa5c56c3"
+  },
+  "audit/test_frame_lint_contract.py": {
+    "bytes": 11499,
+    "sha256": "ede86cece63ad1bcb1c0c6a7c8ec58dd288c4680522ad6d9521e59c1edc3e2d9"
+  },
+  "audit/test_results.txt": {
+    "bytes": 4593,
+    "sha256": "c5d2e63b41453647f107fbd63b4e510c9f571b1b62c8d4884c23b2d96d7c4a6f"
+  },
+  "audit/upstream_canned_results.txt": {
+    "bytes": 21,
+    "sha256": "7a2b19df140c2fefcac8c13360cebf1fa9b10011a280d08691b27e8d319778cf"
+  },
+  "audit/upstream_verified_sha256.txt": {
+    "bytes": 494,
+    "sha256": "fc634695898f98015a0a46f878519482c7bf349ac4cf844942c68954b6ca9c8c"
+  },
+  "target-probe/README.md": {
+    "bytes": 7424,
+    "sha256": "df98f1996ff25055d1db8168229058717fd334d62ed0120d723a35543f2c9b31"
+  },
+  "target-probe/SHA256SUMS": {
+    "bytes": 3273,
+    "sha256": "d46ea3ce64285ddf1f93be68f76481439549d777cb336f3919e1ffdcf7af2e8d"
+  },
+  "target-probe/availability.json": {
+    "bytes": 872,
+    "sha256": "51653f512d21c19887e9e80e78de73fdc44128354ee442af8ea09ed0ec5bc2cb"
+  },
+  "target-probe/capsule-manifest.json": {
+    "bytes": 3357,
+    "sha256": "e3cce1c2ae95190187f49a019cdb0cbdfbff747d0ef21357d8c124c09cdc00dd"
+  },
+  "target-probe/capsule/ayatsuri-fixed-frame-stage1-20261105/aa/code/integer_aa.h": {
+    "bytes": 1796,
+    "sha256": "49bc7df89ffa67f5d5f74e76bb6142ba8bc3c7092564b9731f372990db497355"
+  },
+  "target-probe/capsule/ayatsuri-fixed-frame-stage1-20261105/aa/code/profile_adapter.h": {
+    "bytes": 320,
+    "sha256": "b3929a368705f19fae4c59bee46689140794063eb1c1b82f7543b4cda0874b53"
+  },
+  "target-probe/capsule/ayatsuri-fixed-integer-light-20261105/integer_light.h": {
+    "bytes": 4261,
+    "sha256": "8c609d85f35b3cc8ac89bbea99b22338d0debd5ca598cdbde3cb42a2de872a74"
+  },
+  "target-probe/capsule/ayatsuri-fixed-integer-light-20261105/normal_bridge.h": {
+    "bytes": 1051,
+    "sha256": "22c7082c6020c5b3dc5b9819ba5bec74504c0490abb29aaed4da4b40506781e2"
+  },
+  "target-probe/capsule/ayatsuri-fixed-integer-output-20261105/code/block_cache.h": {
+    "bytes": 1187,
+    "sha256": "a76ea0d95784bad525a0553843ebffeb9a3fd38b2a55f9fd0f2e9a1bae3e230f"
+  },
+  "target-probe/capsule/ayatsuri-fixed-integer-output-20261105/code/integer_output.h": {
+    "bytes": 653,
+    "sha256": "ba23c84006607cd061edb2c92f1efaf280b6853b7ed644dd083993c1dd81ce7e"
+  },
+  "target-probe/capsule/ayatsuri-fixed-integer-output-20261105/code/private_adapter_api.h": {
+    "bytes": 333,
+    "sha256": "2b96cd44cf474b5367455532dc700248b9a40a20b66b707188a3853c95921bc7"
+  },
+  "target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.c": {
+    "bytes": 1714,
+    "sha256": "5802202da52a810b0a6d81c32c87688253b452333dd82dd80c3b911c1dfc723e"
+  },
+  "target-probe/capsule/ayatsuri-latest-fixed-source-20261105/control-prototype/control.h": {
+    "bytes": 429,
+    "sha256": "05cd432f8736c73e71e641389ef7949961c23e8ac44825e9fa47410c16e1223a"
+  },
+  "target-probe/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c": {
+    "bytes": 2565,
+    "sha256": "4bf64c1e6c60719de52a055b29ecf828a7b8c50751566412a7e2d4906a3b47f3"
+  },
+  "target-probe/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.h": {
+    "bytes": 361,
+    "sha256": "84ed50dd5eaa61194280621a21ad8af377a4a797d1c8a728d0fb0dce20c92efd"
+  },
+  "target-probe/capsule/ayatsuri-latest-fixed-source-20261105/kernel-chain-prototype/chain.h": {
+    "bytes": 791,
+    "sha256": "e3c1310b08fd283f8f1081b954ac3e68d13a72c45d6a92ac859db8f938fa57ef"
+  },
+  "target-probe/capsule/ayatsuri-latest-fixed-source-20261105/material-c-compact/generated-q16.inc": {
+    "bytes": 12173,
+    "sha256": "5e4c5bd0c564064eb999916aab9a4d3767880ed65e77ed9b62d54bf82c6763cb"
+  },
+  "target-probe/capsule/ayatsuri-latest-fixed-source-20261105/material-c-compact/generated-q20.inc": {
+    "bytes": 13270,
+    "sha256": "45fc2c545d8df6d9041d6594afc6855124b0fbdaf60b7c5f6599fc9bb1bf734d"
+  },
+  "target-probe/capsule/ayatsuri-latest-fixed-source-20261105/material-c-compact/generated-q24.inc": {
+    "bytes": 14263,
+    "sha256": "1c2b884c1f6cb610fd4de3aa8f385f479c36b4de396b6a89321c9876cc20a3cb"
+  },
+  "target-probe/capsule/ayatsuri-latest-fixed-source-20261105/material-c-compact/material.c": {
+    "bytes": 3540,
+    "sha256": "4981230605cfa35aac91dee75c06a602e3f7b65b475aff2e86da2ee444ea0fbf"
+  },
+  "target-probe/capsule/ayatsuri-latest-fixed-source-20261105/material-c-compact/material.h": {
+    "bytes": 588,
+    "sha256": "286f69d09a6a5464427cf9174d52a3258726d22c16319de078ae063cb973b428"
+  },
+  "target-probe/capsule/ayatsuri-latest-fixed-source-20261105/transparency-chain-prototype/conditional.c": {
+    "bytes": 1459,
+    "sha256": "416f0f8e0d5db6ad9220aa53a9dbbb8a41fcb1d864d10152f5946a0cf2622477"
+  },
+  "target-probe/capsule/ayatsuri-latest-fixed-source-20261105/transparency-chain-prototype/conditional.h": {
+    "bytes": 783,
+    "sha256": "6864eb60f90608333e0b9997b5a1119e41fcb1ad5ae60469d73d65931f0abfad"
+  },
+  "target-probe/dependency-manifest.json": {
+    "bytes": 2088,
+    "sha256": "6ca5d7699837f30d302dc5c1f64d19ecfc735e39ba441e7ceea2badd8c1bd6b8"
+  },
+  "target-probe/prepare_capsule.py": {
+    "bytes": 3273,
+    "sha256": "7b42c62dc3542260d7e698fe9fbfaf0bbdf8d631de3d44e4e06eb54b9aafb699"
+  },
+  "target-probe/run_probe.py": {
+    "bytes": 5038,
+    "sha256": "68d13affba5ea925c6c63fdc49da33e65f1cfeb09f77e8a9527d4d387022e17f"
+  },
+  "target-probe/scanner/frame_lint.py": {
+    "bytes": 9218,
+    "sha256": "6be4b15d41f3da5fb4489384d11577ebdc11241447b7521b2635dd1cfdf6aa27"
+  },
+  "upstream/CMakeLists.txt": {
+    "bytes": 1863,
+    "sha256": "12b9f991f5afb536ffb84df8db73ecd2c60adf8cb98daef18dee6578373a28e1"
+  },
+  "upstream/docs/perf/o2-machine-code.md": {
+    "bytes": 13352,
+    "sha256": "440b6a19a81526a96d494dce8e1f1398031923b6fd5ebc652616bfa83dbd55ab"
+  },
+  "upstream/tools/frame_lint.py": {
+    "bytes": 9218,
+    "sha256": "6be4b15d41f3da5fb4489384d11577ebdc11241447b7521b2635dd1cfdf6aa27"
+  },
+  "upstream/tools/frame_lint_baseline.txt": {
+    "bytes": 691,
+    "sha256": "dabb33327c56cb168e853f1517a2d897ab91e341f9cc0cee298cd8be6ba2d566"
+  },
+  "upstream/tools/test_frame_lint.py": {
+    "bytes": 1720,
+    "sha256": "8c4c9521204c62b49ac8801229ad7144f9fd9e98b3a078751fb024a6a1bb7fa1"
+  }
+}

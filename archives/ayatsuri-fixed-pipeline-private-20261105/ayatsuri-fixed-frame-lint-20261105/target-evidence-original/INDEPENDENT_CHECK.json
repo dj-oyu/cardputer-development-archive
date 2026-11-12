@@ -1,0 +1,117 @@
+{
+  "scope": "Independent manifest/hash, ELF-header, saved-prologue and own-stack cross-check. No target execution or disassembler was run here.",
+  "manifest_files": 358,
+  "objects_passed": 18,
+  "objects_failed": 6,
+  "functions_crosschecked": 102,
+  "objects": [
+    {
+      "object": "q16-Os/material",
+      "entry_su_functions": 14,
+      "max_own_frame": 544,
+      "verified_ELF32_Xtensa_REL": true
+    },
+    {
+      "object": "q16-Os/control",
+      "entry_su_functions": 3,
+      "max_own_frame": 304,
+      "verified_ELF32_Xtensa_REL": true
+    },
+    {
+      "object": "q16-Os/conditional",
+      "entry_su_functions": 2,
+      "max_own_frame": 240,
+      "verified_ELF32_Xtensa_REL": true
+    },
+    {
+      "object": "q16-O2/material",
+      "entry_su_functions": 11,
+      "max_own_frame": 560,
+      "verified_ELF32_Xtensa_REL": true
+    },
+    {
+      "object": "q16-O2/control",
+      "entry_su_functions": 2,
+      "max_own_frame": 304,
+      "verified_ELF32_Xtensa_REL": true
+    },
+    {
+      "object": "q16-O2/conditional",
+      "entry_su_functions": 2,
+      "max_own_frame": 240,
+      "verified_ELF32_Xtensa_REL": true
+    },
+    {
+      "object": "q20-Os/material",
+      "entry_su_functions": 14,
+      "max_own_frame": 544,
+      "verified_ELF32_Xtensa_REL": true
+    },
+    {
+      "object": "q20-Os/control",
+      "entry_su_functions": 3,
+      "max_own_frame": 304,
+      "verified_ELF32_Xtensa_REL": true
+    },
+    {
+      "object": "q20-Os/conditional",
+      "entry_su_functions": 2,
+      "max_own_frame": 240,
+      "verified_ELF32_Xtensa_REL": true
+    },
+    {
+      "object": "q20-O2/material",
+      "entry_su_functions": 11,
+      "max_own_frame": 560,
+      "verified_ELF32_Xtensa_REL": true
+    },
+    {
+      "object": "q20-O2/control",
+      "entry_su_functions": 2,
+      "max_own_frame": 304,
+      "verified_ELF32_Xtensa_REL": true
+    },
+    {
+      "object": "q20-O2/conditional",
+      "entry_su_functions": 2,
+      "max_own_frame": 240,
+      "verified_ELF32_Xtensa_REL": true
+    },
+    {
+      "object": "q24-Os/material",
+      "entry_su_functions": 14,
+      "max_own_frame": 544,
+      "verified_ELF32_Xtensa_REL": true
+    },
+    {
+      "object": "q24-Os/control",
+      "entry_su_functions": 3,
+      "max_own_frame": 304,
+      "verified_ELF32_Xtensa_REL": true
+    },
+    {
+      "object": "q24-Os/conditional",
+      "entry_su_functions": 2,
+      "max_own_frame": 240,
+      "verified_ELF32_Xtensa_REL": true
+    },
+    {
+      "object": "q24-O2/material",
+      "entry_su_functions": 11,
+      "max_own_frame": 560,
+      "verified_ELF32_Xtensa_REL": true
+    },
+    {
+      "object": "q24-O2/control",
+      "entry_su_functions": 2,
+      "max_own_frame": 304,
+      "verified_ELF32_Xtensa_REL": true
+    },
+    {
+      "object": "q24-O2/conditional",
+      "entry_su_functions": 2,
+      "max_own_frame": 240,
+      "verified_ELF32_Xtensa_REL": true
+    }
+  ]
+}

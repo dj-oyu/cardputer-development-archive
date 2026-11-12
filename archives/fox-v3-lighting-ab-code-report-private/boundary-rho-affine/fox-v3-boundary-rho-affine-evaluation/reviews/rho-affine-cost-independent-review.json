@@ -1,0 +1,630 @@
+{
+  "status": "ALL12_TIMINGS_AND36_FORMAL_BUFFERS_VERIFIED",
+  "rawTimingRows": [
+    {
+      "repeat": 0,
+      "view": "front",
+      "arm": "A",
+      "wallNs": 14761596210,
+      "evaluateNs": 12163416,
+      "renderNs": 14739287853,
+      "wallMinusEvaluateAndRenderNs": 10144941
+    },
+    {
+      "repeat": 0,
+      "view": "front",
+      "arm": "B",
+      "wallNs": 13774346177,
+      "evaluateNs": 9895593,
+      "renderNs": 13756669735,
+      "wallMinusEvaluateAndRenderNs": 7780849
+    },
+    {
+      "repeat": 0,
+      "view": "oblique",
+      "arm": "A",
+      "wallNs": 13918187384,
+      "evaluateNs": 14370855,
+      "renderNs": 13893813354,
+      "wallMinusEvaluateAndRenderNs": 10003175
+    },
+    {
+      "repeat": 0,
+      "view": "oblique",
+      "arm": "B",
+      "wallNs": 13352917931,
+      "evaluateNs": 9327044,
+      "renderNs": 13331147663,
+      "wallMinusEvaluateAndRenderNs": 12443224
+    },
+    {
+      "repeat": 1,
+      "view": "front",
+      "arm": "A",
+      "wallNs": 14811983102,
+      "evaluateNs": 11376391,
+      "renderNs": 14791926908,
+      "wallMinusEvaluateAndRenderNs": 8679803
+    },
+    {
+      "repeat": 1,
+      "view": "front",
+      "arm": "B",
+      "wallNs": 14530000417,
+      "evaluateNs": 11256931,
+      "renderNs": 14509454856,
+      "wallMinusEvaluateAndRenderNs": 9288630
+    },
+    {
+      "repeat": 1,
+      "view": "oblique",
+      "arm": "A",
+      "wallNs": 14194981064,
+      "evaluateNs": 13945032,
+      "renderNs": 14171790293,
+      "wallMinusEvaluateAndRenderNs": 9245739
+    },
+    {
+      "repeat": 1,
+      "view": "oblique",
+      "arm": "B",
+      "wallNs": 13971586054,
+      "evaluateNs": 12491833,
+      "renderNs": 13945645355,
+      "wallMinusEvaluateAndRenderNs": 13448866
+    },
+    {
+      "repeat": 2,
+      "view": "front",
+      "arm": "A",
+      "wallNs": 13114589041,
+      "evaluateNs": 10430327,
+      "renderNs": 13095486098,
+      "wallMinusEvaluateAndRenderNs": 8672616
+    },
+    {
+      "repeat": 2,
+      "view": "front",
+      "arm": "B",
+      "wallNs": 13003563149,
+      "evaluateNs": 9645090,
+      "renderNs": 12986519415,
+      "wallMinusEvaluateAndRenderNs": 7398644
+    },
+    {
+      "repeat": 2,
+      "view": "oblique",
+      "arm": "A",
+      "wallNs": 12567798800,
+      "evaluateNs": 8977475,
+      "renderNs": 12551497132,
+      "wallMinusEvaluateAndRenderNs": 7324193
+    },
+    {
+      "repeat": 2,
+      "view": "oblique",
+      "arm": "B",
+      "wallNs": 12409518316,
+      "evaluateNs": 11406376,
+      "renderNs": 12390200156,
+      "wallMinusEvaluateAndRenderNs": 7911784
+    }
+  ],
+  "metadataTimingRawValuesMatched": 24,
+  "wallRawValuesAvailability": "12 wallNs values retained only in RESULT rows, not separately logged external timestamps.",
+  "minMedianMaxAndRawValuesMatched": 72,
+  "summary": {
+    "A-front": {
+      "wallNs": {
+        "rawNs": [
+          14761596210,
+          14811983102,
+          13114589041
+        ],
+        "min": 13114589041,
+        "median": 14761596210,
+        "max": 14811983102
+      },
+      "evaluateNs": {
+        "rawNs": [
+          12163416,
+          11376391,
+          10430327
+        ],
+        "min": 10430327,
+        "median": 11376391,
+        "max": 12163416
+      },
+      "renderNs": {
+        "rawNs": [
+          14739287853,
+          14791926908,
+          13095486098
+        ],
+        "min": 13095486098,
+        "median": 14739287853,
+        "max": 14791926908
+      }
+    },
+    "A-oblique": {
+      "wallNs": {
+        "rawNs": [
+          13918187384,
+          14194981064,
+          12567798800
+        ],
+        "min": 12567798800,
+        "median": 13918187384,
+        "max": 14194981064
+      },
+      "evaluateNs": {
+        "rawNs": [
+          14370855,
+          13945032,
+          8977475
+        ],
+        "min": 8977475,
+        "median": 13945032,
+        "max": 14370855
+      },
+      "renderNs": {
+        "rawNs": [
+          13893813354,
+          14171790293,
+          12551497132
+        ],
+        "min": 12551497132,
+        "median": 13893813354,
+        "max": 14171790293
+      }
+    },
+    "B-front": {
+      "wallNs": {
+        "rawNs": [
+          13774346177,
+          14530000417,
+          13003563149
+        ],
+        "min": 13003563149,
+        "median": 13774346177,
+        "max": 14530000417
+      },
+      "evaluateNs": {
+        "rawNs": [
+          9895593,
+          11256931,
+          9645090
+        ],
+        "min": 9645090,
+        "median": 9895593,
+        "max": 11256931
+      },
+      "renderNs": {
+        "rawNs": [
+          13756669735,
+          14509454856,
+          12986519415
+        ],
+        "min": 12986519415,
+        "median": 13756669735,
+        "max": 14509454856
+      }
+    },
+    "B-oblique": {
+      "wallNs": {
+        "rawNs": [
+          13352917931,
+          13971586054,
+          12409518316
+        ],
+        "min": 12409518316,
+        "median": 13352917931,
+        "max": 13971586054
+      },
+      "evaluateNs": {
+        "rawNs": [
+          9327044,
+          12491833,
+          11406376
+        ],
+        "min": 9327044,
+        "median": 11406376,
+        "max": 12491833
+      },
+      "renderNs": {
+        "rawNs": [
+          13331147663,
+          13945645355,
+          12390200156
+        ],
+        "min": 12390200156,
+        "median": 13331147663,
+        "max": 13945645355
+      }
+    }
+  },
+  "ratios": {
+    "front": {
+      "wallNs": {
+        "BmedianDividedByAmedian": 0.9331203740465951,
+        "medianReductionFraction": 0.06687962595340491,
+        "pairedBOverA": [
+          0.9331203740465951,
+          0.9809625299287625,
+          0.9915341691872387
+        ],
+        "pairedRatioMedian": 0.9809625299287625,
+        "allThreeBLowerThanA": true
+      },
+      "evaluateNs": {
+        "BmedianDividedByAmedian": 0.8698358732571692,
+        "medianReductionFraction": 0.13016412674283084,
+        "pairedBOverA": [
+          0.8135537746961873,
+          0.9894993060628806,
+          0.9247159748682855
+        ],
+        "pairedRatioMedian": 0.9247159748682855,
+        "allThreeBLowerThanA": true
+      },
+      "renderNs": {
+        "BmedianDividedByAmedian": 0.9333334060776891,
+        "medianReductionFraction": 0.06666659392231089,
+        "pairedBOverA": [
+          0.9333334060776891,
+          0.9809036338702276,
+          0.9916790654287632
+        ],
+        "pairedRatioMedian": 0.9809036338702276,
+        "allThreeBLowerThanA": true
+      }
+    },
+    "oblique": {
+      "wallNs": {
+        "BmedianDividedByAmedian": 0.9593862737004231,
+        "medianReductionFraction": 0.040613726299576935,
+        "pairedBOverA": [
+          0.9593862737004231,
+          0.9842623946454881,
+          0.9874058706286737
+        ],
+        "pairedRatioMedian": 0.9842623946454881,
+        "allThreeBLowerThanA": true
+      },
+      "evaluateNs": {
+        "BmedianDividedByAmedian": 0.8179526586959428,
+        "medianReductionFraction": 0.1820473413040572,
+        "pairedBOverA": [
+          0.6490249884227487,
+          0.8957909167938805,
+          1.270555028000635
+        ],
+        "pairedRatioMedian": 0.8957909167938805,
+        "allThreeBLowerThanA": false
+      },
+      "renderNs": {
+        "BmedianDividedByAmedian": 0.9595024291269891,
+        "medianReductionFraction": 0.04049757087301087,
+        "pairedBOverA": [
+          0.9595024291269891,
+          0.9840425991829909,
+          0.9871491843320608
+        ],
+        "pairedRatioMedian": 0.9840425991829909,
+        "allThreeBLowerThanA": true
+      }
+    }
+  },
+  "formalOutputBuffersByteExact": 36,
+  "additionalSampleTargetAAReportsExact": 12,
+  "nonTimingMetadataValuesExactFormalBaseline": 972,
+  "bufferPins": [
+    {
+      "repeat": 0,
+      "view": "front",
+      "arm": "A",
+      "extension": ".u16le",
+      "sha256": "7293177b7ef0b5571a5f967026ea4e5d4e74dd2eefe6ab5cdab545a933de36df"
+    },
+    {
+      "repeat": 0,
+      "view": "front",
+      "arm": "A",
+      "extension": ".f32le",
+      "sha256": "03d9ee4d5a81118e7f2efe2947a64230132aad4daad2a2019d31f9f4959fea3f"
+    },
+    {
+      "repeat": 0,
+      "view": "front",
+      "arm": "A",
+      "extension": ".snapshot",
+      "sha256": "006cfd92bda231a4ae7922f23aa125176f807967feaf444e2f3f8b19ef72cab0"
+    },
+    {
+      "repeat": 0,
+      "view": "front",
+      "arm": "B",
+      "extension": ".u16le",
+      "sha256": "9baddbf14bb636c1899af914580cca896080ffa78ad897f87508d4d8aac9cc0e"
+    },
+    {
+      "repeat": 0,
+      "view": "front",
+      "arm": "B",
+      "extension": ".f32le",
+      "sha256": "03d9ee4d5a81118e7f2efe2947a64230132aad4daad2a2019d31f9f4959fea3f"
+    },
+    {
+      "repeat": 0,
+      "view": "front",
+      "arm": "B",
+      "extension": ".snapshot",
+      "sha256": "006cfd92bda231a4ae7922f23aa125176f807967feaf444e2f3f8b19ef72cab0"
+    },
+    {
+      "repeat": 0,
+      "view": "oblique",
+      "arm": "A",
+      "extension": ".u16le",
+      "sha256": "c04979f7692e671bad1de6e8f5774f424239d8e5f6b129c8d18b20837c4efced"
+    },
+    {
+      "repeat": 0,
+      "view": "oblique",
+      "arm": "A",
+      "extension": ".f32le",
+      "sha256": "3201f0507c4b7f65911ecea8edf4175d76f2b93cc8d9ca715e10f97cf410e77a"
+    },
+    {
+      "repeat": 0,
+      "view": "oblique",
+      "arm": "A",
+      "extension": ".snapshot",
+      "sha256": "510b27afbe66e125c3a39707408ab41b4ca381d6b81c69f6e43025d799852c90"
+    },
+    {
+      "repeat": 0,
+      "view": "oblique",
+      "arm": "B",
+      "extension": ".u16le",
+      "sha256": "aa4cfa4e71a7d50e21e3f0ebc60b461bfc08d6072e14ab29418d83bb7d2c24c8"
+    },
+    {
+      "repeat": 0,
+      "view": "oblique",
+      "arm": "B",
+      "extension": ".f32le",
+      "sha256": "3201f0507c4b7f65911ecea8edf4175d76f2b93cc8d9ca715e10f97cf410e77a"
+    },
+    {
+      "repeat": 0,
+      "view": "oblique",
+      "arm": "B",
+      "extension": ".snapshot",
+      "sha256": "510b27afbe66e125c3a39707408ab41b4ca381d6b81c69f6e43025d799852c90"
+    },
+    {
+      "repeat": 1,
+      "view": "front",
+      "arm": "A",
+      "extension": ".u16le",
+      "sha256": "7293177b7ef0b5571a5f967026ea4e5d4e74dd2eefe6ab5cdab545a933de36df"
+    },
+    {
+      "repeat": 1,
+      "view": "front",
+      "arm": "A",
+      "extension": ".f32le",
+      "sha256": "03d9ee4d5a81118e7f2efe2947a64230132aad4daad2a2019d31f9f4959fea3f"
+    },
+    {
+      "repeat": 1,
+      "view": "front",
+      "arm": "A",
+      "extension": ".snapshot",
+      "sha256": "006cfd92bda231a4ae7922f23aa125176f807967feaf444e2f3f8b19ef72cab0"
+    },
+    {
+      "repeat": 1,
+      "view": "front",
+      "arm": "B",
+      "extension": ".u16le",
+      "sha256": "9baddbf14bb636c1899af914580cca896080ffa78ad897f87508d4d8aac9cc0e"
+    },
+    {
+      "repeat": 1,
+      "view": "front",
+      "arm": "B",
+      "extension": ".f32le",
+      "sha256": "03d9ee4d5a81118e7f2efe2947a64230132aad4daad2a2019d31f9f4959fea3f"
+    },
+    {
+      "repeat": 1,
+      "view": "front",
+      "arm": "B",
+      "extension": ".snapshot",
+      "sha256": "006cfd92bda231a4ae7922f23aa125176f807967feaf444e2f3f8b19ef72cab0"
+    },
+    {
+      "repeat": 1,
+      "view": "oblique",
+      "arm": "A",
+      "extension": ".u16le",
+      "sha256": "c04979f7692e671bad1de6e8f5774f424239d8e5f6b129c8d18b20837c4efced"
+    },
+    {
+      "repeat": 1,
+      "view": "oblique",
+      "arm": "A",
+      "extension": ".f32le",
+      "sha256": "3201f0507c4b7f65911ecea8edf4175d76f2b93cc8d9ca715e10f97cf410e77a"
+    },
+    {
+      "repeat": 1,
+      "view": "oblique",
+      "arm": "A",
+      "extension": ".snapshot",
+      "sha256": "510b27afbe66e125c3a39707408ab41b4ca381d6b81c69f6e43025d799852c90"
+    },
+    {
+      "repeat": 1,
+      "view": "oblique",
+      "arm": "B",
+      "extension": ".u16le",
+      "sha256": "aa4cfa4e71a7d50e21e3f0ebc60b461bfc08d6072e14ab29418d83bb7d2c24c8"
+    },
+    {
+      "repeat": 1,
+      "view": "oblique",
+      "arm": "B",
+      "extension": ".f32le",
+      "sha256": "3201f0507c4b7f65911ecea8edf4175d76f2b93cc8d9ca715e10f97cf410e77a"
+    },
+    {
+      "repeat": 1,
+      "view": "oblique",
+      "arm": "B",
+      "extension": ".snapshot",
+      "sha256": "510b27afbe66e125c3a39707408ab41b4ca381d6b81c69f6e43025d799852c90"
+    },
+    {
+      "repeat": 2,
+      "view": "front",
+      "arm": "A",
+      "extension": ".u16le",
+      "sha256": "7293177b7ef0b5571a5f967026ea4e5d4e74dd2eefe6ab5cdab545a933de36df"
+    },
+    {
+      "repeat": 2,
+      "view": "front",
+      "arm": "A",
+      "extension": ".f32le",
+      "sha256": "03d9ee4d5a81118e7f2efe2947a64230132aad4daad2a2019d31f9f4959fea3f"
+    },
+    {
+      "repeat": 2,
+      "view": "front",
+      "arm": "A",
+      "extension": ".snapshot",
+      "sha256": "006cfd92bda231a4ae7922f23aa125176f807967feaf444e2f3f8b19ef72cab0"
+    },
+    {
+      "repeat": 2,
+      "view": "front",
+      "arm": "B",
+      "extension": ".u16le",
+      "sha256": "9baddbf14bb636c1899af914580cca896080ffa78ad897f87508d4d8aac9cc0e"
+    },
+    {
+      "repeat": 2,
+      "view": "front",
+      "arm": "B",
+      "extension": ".f32le",
+      "sha256": "03d9ee4d5a81118e7f2efe2947a64230132aad4daad2a2019d31f9f4959fea3f"
+    },
+    {
+      "repeat": 2,
+      "view": "front",
+      "arm": "B",
+      "extension": ".snapshot",
+      "sha256": "006cfd92bda231a4ae7922f23aa125176f807967feaf444e2f3f8b19ef72cab0"
+    },
+    {
+      "repeat": 2,
+      "view": "oblique",
+      "arm": "A",
+      "extension": ".u16le",
+      "sha256": "c04979f7692e671bad1de6e8f5774f424239d8e5f6b129c8d18b20837c4efced"
+    },
+    {
+      "repeat": 2,
+      "view": "oblique",
+      "arm": "A",
+      "extension": ".f32le",
+      "sha256": "3201f0507c4b7f65911ecea8edf4175d76f2b93cc8d9ca715e10f97cf410e77a"
+    },
+    {
+      "repeat": 2,
+      "view": "oblique",
+      "arm": "A",
+      "extension": ".snapshot",
+      "sha256": "510b27afbe66e125c3a39707408ab41b4ca381d6b81c69f6e43025d799852c90"
+    },
+    {
+      "repeat": 2,
+      "view": "oblique",
+      "arm": "B",
+      "extension": ".u16le",
+      "sha256": "aa4cfa4e71a7d50e21e3f0ebc60b461bfc08d6072e14ab29418d83bb7d2c24c8"
+    },
+    {
+      "repeat": 2,
+      "view": "oblique",
+      "arm": "B",
+      "extension": ".f32le",
+      "sha256": "3201f0507c4b7f65911ecea8edf4175d76f2b93cc8d9ca715e10f97cf410e77a"
+    },
+    {
+      "repeat": 2,
+      "view": "oblique",
+      "arm": "B",
+      "extension": ".snapshot",
+      "sha256": "510b27afbe66e125c3a39707408ab41b4ca381d6b81c69f6e43025d799852c90"
+    }
+  ],
+  "sourcePins": {
+    "A": {
+      "manifestSHA256": "fa6cca7d1cb32ba01a1066fed81df7c02a1d6e13b92db1bd0b9f53880c385a1d",
+      "binarySHA256": "3e0a53e1f7754ff4b1c8419eaa287ec994cbecabc3f1457e93fff32ccd8b6107",
+      "pinnedFiles": 188,
+      "allCurrentFilesMatchFrozenInputs": true,
+      "beforeAfterEvidence": "benchmark_ab.py verifies every input before first run and after last run, and binary at end; RESULT records successful assertion. Separate raw before/after per-file hash lists are not retained."
+    },
+    "B": {
+      "manifestSHA256": "d0f021640611fc53eaf9a486a1edbb0c9ac1b7fc424306bb777e23d9ca75996c",
+      "binarySHA256": "b0b40de74df8a1e4abdb9e88c8f1377dba8aa651a578a967e97195bc7e930b01",
+      "pinnedFiles": 188,
+      "allCurrentFilesMatchFrozenInputs": true,
+      "beforeAfterEvidence": "benchmark_ab.py verifies every input before first run and after last run, and binary at end; RESULT records successful assertion. Separate raw before/after per-file hash lists are not retained."
+    }
+  },
+  "cpuContext": {
+    "beforePath": "/workspace/scratch/6d8dcdbcdc54/fox-v3-boundary-rho-affine-evaluation/cpu-context/before.json",
+    "afterPath": "/workspace/scratch/6d8dcdbcdc54/fox-v3-boundary-rho-affine-evaluation/cpu-context/after.json",
+    "beforeUtc": "2026-11-03T13:11:02.597616+00:00",
+    "afterUtc": "2026-11-03T13:15:50.640779+00:00",
+    "bracketSeconds": 288.04316329956055,
+    "beforeBusyFractionRecomputedFromRawJiffies": 0.0033333333333332993,
+    "afterReportedBusyFraction": 0.0011111111111110628,
+    "afterBusyFractionIndependentlyRecomputable": false,
+    "reason": "After context retains only aggregated busy fraction, no raw jiffy delta.",
+    "beforeLoadAverage": "0.20 0.77 1.28 1/593 7",
+    "afterLoadAverage": "0.13 0.59 1.08 1/593 5",
+    "visibleProcessCountBeforeAfter": [
+      3,
+      3
+    ],
+    "allCostArtifactModificationTimesWithinContextBracket": true,
+    "resultMtimeUtc": "2026-11-03T13:13:48.133590+00:00",
+    "scope": "Two roughly 1-second namespace-visible endpoint observations, not continuous CPU utilization or proof of globally idle host. Heavy-worker stop is parent-reported, not inferred from low endpoints."
+  },
+  "totalRecordedProcessWallSeconds": 164.411067645,
+  "inputHashes": {
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-boundary-rho-affine-evaluation/cost-001/RESULT.json": "ce8994a4f8d9530d067e17d547a24d535452edd43ea9b66502bbb4a7d51ca792",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-boundary-rho-affine-evaluation/cpu-context/before.json": "012ab63cba941df12075448f8084b0b5cd55045d1a1273c3b8352619a5d0a476",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-boundary-rho-affine-evaluation/cpu-context/after.json": "b73c46dc34065ba4828c733502df457900c2351272467fa046b8753af831d2d5",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-boundary-rho-affine-evaluation/code/benchmark_ab.py": "969b520555abbc45dc57ad4cd3ce636379a5427dee0f09bde6d54f53e24f9235",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-boundary-rho-affine-evaluation/actual-A2/input-hashes.json": "fa6cca7d1cb32ba01a1066fed81df7c02a1d6e13b92db1bd0b9f53880c385a1d",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-boundary-rho-affine-evaluation/actual-B2/input-hashes.json": "d0f021640611fc53eaf9a486a1edbb0c9ac1b7fc424306bb777e23d9ca75996c"
+  },
+  "limitations": [
+    "CLOCK_MONOTONIC and perf_counter_ns measure elapsed time, not process CPU time.",
+    "Both render timings include per-sample unbuffered observer JSON I/O. Cannot claim pure shader speed or device speed.",
+    "Only baseline front and oblique were timed, 3 repeats each arm. No all-five-condition speed claim.",
+    "Fixed serial A-then-B ordering and temporal spread are not randomized or controlled performance evidence. Ratios are descriptive, not a statistical superiority test.",
+    "No warmup exclusion or repeated benchmark was added by this audit.",
+    "Separate geometry-preflight CPU cost and immutable table remain outside these render medians.",
+    "Current source/binary hashes match the frozen manifests. Historical before/after checks are supported by retained runner assertions and completion result, not independently captured raw hash time series.",
+    "Original reproduction acceptance remains NOT_ESTABLISHED; timing does not override visual regressions or one-shot stop."
+  ]
+}

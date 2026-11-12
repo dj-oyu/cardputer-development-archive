@@ -1,0 +1,24 @@
+test_duplicate_domain_rejected (test_display_score.AdmissionTests.test_duplicate_domain_rejected) ... ok
+test_exact_ten_domain (test_display_score.AdmissionTests.test_exact_ten_domain) ... ok
+test_incomplete_domain_rejected (test_display_score.AdmissionTests.test_incomplete_domain_rejected) ... ok
+test_unknown_domain_rejected (test_display_score.AdmissionTests.test_unknown_domain_rejected) ... ok
+test_unpublished_gate_stops_before_any_rgb_decode (test_display_score.AdmissionTests.test_unpublished_gate_stops_before_any_rgb_decode) ... ok
+test_actual_float32_boundary_is_used (test_display_score.ClampTests.test_actual_float32_boundary_is_used) ... ok
+test_clipping_and_endpoints_are_different (test_display_score.ClampTests.test_clipping_and_endpoints_are_different) ... ok
+test_large_finite_cast_remains_scored (test_display_score.ClampTests.test_large_finite_cast_remains_scored) ... ok
+test_negative_nonfinite_and_true_cast_overflow_rejected (test_display_score.ClampTests.test_negative_nonfinite_and_true_cast_overflow_rejected) ... ok
+test_all_seed_scalar_leaves_retained (test_display_score.ScalarAuditTests.test_all_seed_scalar_leaves_retained) ... ok
+test_boolean_unresponsive_regression (test_display_score.ScalarAuditTests.test_boolean_unresponsive_regression) ... ok
+test_confusion_count_regressions (test_display_score.ScalarAuditTests.test_confusion_count_regressions) ... ok
+test_coordinate_arrays_not_counted_as_metrics (test_display_score.ScalarAuditTests.test_coordinate_arrays_not_counted_as_metrics) ... ok
+test_error_and_agreement_regressions (test_display_score.ScalarAuditTests.test_error_and_agreement_regressions) ... ok
+test_null_never_improvement_or_zero (test_display_score.ScalarAuditTests.test_null_never_improvement_or_zero) ... ok
+test_reference_counts_are_neutral (test_display_score.ScalarAuditTests.test_reference_counts_are_neutral) ... ok
+test_schema_mismatch_rejected (test_display_score.ScalarAuditTests.test_schema_mismatch_rejected) ... ok
+test_signed_bias_uses_absolute_error (test_display_score.ScalarAuditTests.test_signed_bias_uses_absolute_error) ... ok
+test_unknown_not_pass (test_display_score.ScalarAuditTests.test_unknown_not_pass) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 0.018s
+
+OK

@@ -1,0 +1,99 @@
+{
+  "root": "fox-v3-camera-background-core",
+  "audited_files_sha256": {
+    "background/background.c": "d6e3983c3bb244a281e85c28d586bd1bfb7278bc879c13638c2b19458bc6961d",
+    "background/background.h": "b758eeffe6e4e7f2de708386b8eb7a80bcd0dd28ab6b1ba7d3bc7027e5a1c301",
+    "background/REPORT.md": "522f617d5c5dc70edab3dbe6968415142d89cc6259d5b327e4b319268bb5f5db",
+    "CORE_REPORT.md": "a28ec22aade1be270fb6156138f66d23d5d8bde7d3c882a246fd07cb83174a52",
+    "CORE_SOURCE_FREEZE.json": "5b0e787226a8de30c647ac8dbf356984ec5566134c34dd6d4e3f922aa7fdf390",
+    "product/main/ui/kasane/ksn_scene_composition.h": "a6c8a646b314efd9429a8b3d60d8bf5c3dd381fc0a929a99054b39ad647e52b9",
+    "product/main/ui/kasane/ksn_scene_composition_impl.inc": "048aa007d936ca839e7c1e644f8df3bdf30f6654c915af30dce90c9d9b4444bd",
+    "product/main/ui/kasane/ksn_mesh_depth.c": "1e7bed3e2e0d028c24bf9f21bef5ab62f01699f12018b6e795eadc397a0c7f38",
+    "product/main/ui/kasane/ksn_boundary_aa.h": "4680b99560f17bedf633b548e81178cf7fda3cba927252919f1b7f5f1e30036d",
+    "product/main/ui/kasane/ksn_boundary_aa_impl.inc": "9a5ebadefc4558d389da47b4a929ac1842de82cc374fce843549e4c2ab008058",
+    "product/main/ayatsuri/ayatsuri_shade.h": "8e83a2573fbe17a3bb74589ed3713554cdfe2078790962d68a525b86dbab977e",
+    "product/tools/ayatsuri/asset/import_glb.cjs": "c038e9e4f27605cbdf54be461c78602d937450a8093e96fa138dd6ef47a17bee",
+    "product/tools/ayatsuri/asset/compile_static.cjs": "543adbb7b7eb9c1170865592e6768b66319c53db2c6968dd28227b1f79a43212",
+    "background/BYTE_PROOF.json": "63ecbfd786cc1ea9b819f48f1a522abea1e0840fb67d2f695997f23140573300",
+    "background/SOURCE_FREEZE.json": "21521c0d4554828e939129b9bc2e92488c5fa7a4bab32ee85328bd38630026d5",
+    "tests/source-preservation.json": "49f690bbd4cefc859914b7217be1d82fb64bb0889295abb04c3d64f9e00dfea5"
+  },
+  "manifest_matches": [
+    {
+      "manifest": "CORE_SOURCE_FREEZE.json",
+      "path": "product/main/ui/kasane/ksn_scene_composition.h",
+      "match": true
+    },
+    {
+      "manifest": "CORE_SOURCE_FREEZE.json",
+      "path": "product/main/ui/kasane/ksn_scene_composition_impl.inc",
+      "match": true
+    },
+    {
+      "manifest": "CORE_SOURCE_FREEZE.json",
+      "path": "product/main/ui/kasane/ksn_mesh_depth.c",
+      "match": true
+    },
+    {
+      "manifest": "background/SOURCE_FREEZE.json",
+      "path": "background/background.c",
+      "match": true
+    },
+    {
+      "manifest": "background/SOURCE_FREEZE.json",
+      "path": "background/background.h",
+      "match": true
+    },
+    {
+      "manifest": "background/SOURCE_FREEZE.json",
+      "path": "product/main/ui/kasane/ksn_scene_composition.h",
+      "match": true
+    },
+    {
+      "manifest": "background/SOURCE_FREEZE.json",
+      "path": "background/REPORT.md",
+      "match": true
+    },
+    {
+      "manifest": "background/SOURCE_FREEZE.json",
+      "path": "background/BYTE_PROOF.json",
+      "match": true
+    },
+    {
+      "manifest": "tests/source-preservation.json",
+      "path": "product/main/ayatsuri/ayatsuri_shade.h",
+      "match": true
+    },
+    {
+      "manifest": "tests/source-preservation.json",
+      "path": "product/main/ui/kasane/ksn_boundary_aa.h",
+      "match": true
+    },
+    {
+      "manifest": "tests/source-preservation.json",
+      "path": "product/main/ui/kasane/ksn_boundary_aa_impl.inc",
+      "match": true
+    },
+    {
+      "manifest": "tests/source-preservation.json",
+      "path": "product/main/ui/kasane/ksn_mesh_depth.c",
+      "match": true
+    },
+    {
+      "manifest": "tests/source-preservation.json",
+      "path": "product/tools/ayatsuri/asset/compile_static.cjs",
+      "match": true
+    },
+    {
+      "manifest": "tests/source-preservation.json",
+      "path": "product/tools/ayatsuri/asset/import_glb.cjs",
+      "match": true
+    }
+  ],
+  "latest_assets_separate_no_binding_proven": {
+    "latest-fox-source-readonly/fox-bubble-bold.blend": "d15a3316e1be75a9707a92ac44027f713306011dc3adf3fe7a9cc9a538122c1a",
+    "fox-cardputer-latest-private/fox-cardputer-2k-v2.blend": "384ada0c37da16d625b1e6612a0d2f7ca538c29fe0d8dff43a929841ec63fba8"
+  },
+  "historical_asset_sha": "Not established by inspected source files/manifests",
+  "execution": "No existing renderer/importer/background/visibility function executed. Only read-only source/hash audit and independent scalar arithmetic."
+}

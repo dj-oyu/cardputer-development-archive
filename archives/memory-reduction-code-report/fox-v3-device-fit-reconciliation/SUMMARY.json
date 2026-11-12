@@ -1,0 +1,62 @@
+{
+  "status": "READ_ONLY_DESIGN_NOT_IMPLEMENTED",
+  "baseline": "fox-v3-aa-phase-overlay",
+  "renderHeap": {
+    "aaWorkspace": 72512,
+    "privateRGB565": 64800,
+    "privateDepth": 129600,
+    "sharedVisibilitySceneOnce": 106104,
+    "transportScene": 28592,
+    "backgroundScene": 976
+  },
+  "renderHeapTotal": 402584,
+  "compiledMainStack": 83792,
+  "compiledNamedChildStack": 5008,
+  "derivedRenderPeak": 491384,
+  "phases": {
+    "render": 491384,
+    "visibilityBuildConservative": 442996,
+    "transportBuildConservative": 385236,
+    "backgroundBuildConservative": 351064
+  },
+  "namedRO": 1662416,
+  "lutRO": 1647750,
+  "otherNamedRO": 14666,
+  "proposal": {
+    "name": "Opt-in bounded center-depth scratch",
+    "oldDepth": 129600,
+    "newDepthDesign": 8640,
+    "renderGrossPotential": 120960,
+    "renderConditional": 370424,
+    "remainingBuildFloor": 442996,
+    "wholePeakMaximumSavingBeforeNewCosts": 48388,
+    "largestAllocationUnchanged": 72512,
+    "status": "NOT_IMPLEMENTED_OR_VALIDATED"
+  },
+  "oldFirmware": {
+    "applicationBytes": 2601680,
+    "factoryCapacity": 3145728,
+    "factoryRemainder": 544048,
+    "PSRAM": false,
+    "staticDIRAMRemainder": 160548,
+    "currentCandidateIntegrated": false,
+    "mapElfBinLocallyAvailable": false
+  },
+  "historicalLoadedHeap": {
+    "free": 36872,
+    "largest": 23552,
+    "currentAdmissionCap": false
+  },
+  "exclusions": [
+    "allocator metadata/fragmentation",
+    "unnamed library/runtime stacks",
+    "unrelated firmware and display/DMA buffers",
+    "unnamed RO/constants",
+    "target32 ABI not measured"
+  ],
+  "sourcePins": {
+    "fox-v3-aa-phase-overlay/MEMORY_LEDGER.json": "b4ffe508104c8d405797d1e7deec2b95a964cc60e921b078c41fd0a3a7ed4f67",
+    "fox-v3-aa-phase-overlay/FINAL_RESULT.json": "0de7cb6da7ffdc26d98848e8172092fb5ac4627572c485852f48dd6f8ac6c95f",
+    "fox-v3-aa-phase-overlay/PRODUCT_NAMED_STACK.json": "2a03794f06d1351c9a5c6430c7b4d1c62121d7ce9b66a5998e3f4934c2b6c276"
+  }
+}

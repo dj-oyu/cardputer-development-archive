@@ -1,0 +1,130 @@
+{
+  "status": "FORMAL_METRICS_SAMPLE_WORK_AND_CORRECTED_V2_SUMMARIES_INDEPENDENTLY_VERIFIED",
+  "formalNumericValues": 4050,
+  "comparisonScalars": 2333,
+  "changedScalars": 1296,
+  "regressingMetricScalars": 153,
+  "sampleRows": 573120,
+  "targetPixel565EncodesExact": 143280,
+  "geometryAndControlRawFileComparisons": 220,
+  "positiveAdmissionFrames": 60,
+  "strictMutantsRejected": 7168,
+  "runtimeSummaryValues": 920,
+  "v2SupplementValuesVerified": 794,
+  "historicalV1SummaryDefect": {
+    "cause": "sample-major log adjacency incorrectly treated as four samples of a single pixel",
+    "independentMismatchedFields": 230,
+    "correction": "All V2 values match independent xy/sample grouped calculation saved before correction. Old V1 outputs retained and superseded.",
+    "formalScoringAffected": false
+  },
+  "summary": {
+    "fullForegroundColorGainsPercentagePoints": [
+      2.7422612259080097,
+      6.5894203686659125
+    ],
+    "directionBrightIoUPercentOffOn": {
+      "front": [
+        68.77887788778878,
+        71.43808255659121
+      ],
+      "oblique": [
+        44.44444444444444,
+        43.01470588235294
+      ]
+    },
+    "directionInverseOffOn": {
+      "front": [
+        110,
+        108
+      ],
+      "oblique": [
+        111,
+        127
+      ]
+    },
+    "ambientBrightIoUPercentOffOn": {
+      "front": [
+        73.1777310120528,
+        63.726803137555
+      ],
+      "oblique": [
+        73.74156720290607,
+        62.39404947240962
+      ]
+    },
+    "baselineTargetAnyChannelMeanHDRAboveOneOffOn": {
+      "front": [
+        616,
+        852
+      ],
+      "oblique": [
+        607,
+        803
+      ]
+    },
+    "floorAmbientComponentDeltaExactZero": true,
+    "ambientTotalLinearResponseDifferenceMax": 8.881784197001252e-16,
+    "maxSeparateFloorReservedWork": 875940192
+  },
+  "sourceRhoAndGenerationsVerified": true,
+  "originalReferenceAndThresholdsUnchanged": true,
+  "offZeroAllFormalMetricsOldA2Exact": true,
+  "globalAcceptance": "NOT_ESTABLISHED",
+  "limitations": [
+    "Full-foreground color improvements coexist with direction/ambient regressions. Keep all153 scalar regressions, not independent statistical tests.",
+    "Subpixel component/clip counts refer only to fixed AA targets, not all foreground or whole frame.",
+    "Old four HDR components are exact across arms; new floor component has zero ambient delta. Nonlinear display/clamping can change display response even when raw linear delta is retained.",
+    "No claim that the new separate floor work contract fits combined old8M.",
+    "Native first-floor Lambert direct term is not full original rough Principled floor transport.",
+    "No new render, benchmark, source edits, upload or device action by this audit."
+  ],
+  "outputFreezeSHA256": "94fce652dc754dffee78a2436c92a6481effc3ff99af39baae456f5215b5387c",
+  "supplementFreezeSHA256": "dad5992f1e57bb7f54488103d251b528658930df70897347e05338c28d7be428",
+  "artifacts": [
+    {
+      "path": "/tmp/floor-direct-metrics-independent-review.json",
+      "sha256": "4900f7cd3eedbc601352d283659c9de965b4ec8d82e555597b202b9c24d2bf34"
+    },
+    {
+      "path": "/tmp/floor-direct-samples-work-independent-review.json",
+      "sha256": "09dfeaaf1e11390e58135beff463e3f70908e1f6e5c4df6e20fd8dbf3aa55b16"
+    },
+    {
+      "path": "/tmp/floor-direct-runtime-summary-independent.json",
+      "sha256": "cd8c19d2f6b2192ff2a4411a07a13a978136567516afeb3ac14802f66c905bf8"
+    },
+    {
+      "path": "/tmp/floor-direct-summary-v2-independent-review.json",
+      "sha256": "818dc89098c103ddafd031fbd8ed0a8dfb377fc07456461f3a7ba3387b92ffbe"
+    }
+  ],
+  "timingReview": {
+    "path": "/tmp/floor-direct-cost-independent-review.json",
+    "sha256": "2f89ac0d811dec952010043ad7fd078a30fe26e92693b00a99046e4d37c6bab5",
+    "status": "ALL12_TIMINGS_AND36_FORMAL_BUFFERS_VERIFIED",
+    "rawRuns": 12,
+    "formalBuffersByteExact": 36,
+    "nonTimingMetadataFieldsMatched": 1044,
+    "uniqueFrozenInputFiles": 212,
+    "beforeAfterRawJiffiesRecomputed": true,
+    "renderMedianSecondsOffOn": {
+      "front": [
+        12.568924381,
+        15.178181794
+      ],
+      "oblique": [
+        11.695400223,
+        14.489749698
+      ]
+    },
+    "renderMedianRatioOnOverOff": {
+      "front": 1.2075959194204655,
+      "oblique": 1.238927221105668
+    },
+    "renderPairedRatioMedianOnOverOff": {
+      "front": 1.2075959194204655,
+      "oblique": 1.2712076192235646
+    },
+    "scope": "Host elapsed time including per-sample observer I/O; 3 serial fixed-order repetitions of baseline in each view. Not pure process CPU, all-condition performance, device result, or statistical causal overhead."
+  }
+}

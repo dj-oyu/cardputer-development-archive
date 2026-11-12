@@ -1,0 +1,356 @@
+[
+  {
+    "ok": true,
+    "entries": [
+      {
+        "sequence": 1,
+        "time": "2026-10-18T22:34:18.159742+00:00",
+        "event": "broker_started",
+        "stage": null
+      },
+      {
+        "sequence": 2,
+        "time": "2026-10-18T22:36:45.799679+00:00",
+        "event": "session_acquired",
+        "stage": null
+      },
+      {
+        "sequence": 3,
+        "time": "2026-10-18T22:36:56.860408+00:00",
+        "event": "job_queued",
+        "stage": null
+      },
+      {
+        "sequence": 4,
+        "time": "2026-10-18T22:36:56.866528+00:00",
+        "event": "stage_started",
+        "stage": "serial_open"
+      },
+      {
+        "sequence": 5,
+        "time": "2026-10-18T22:36:56.872040+00:00",
+        "event": "stage_started",
+        "stage": "derby_smoke"
+      },
+      {
+        "sequence": 6,
+        "time": "2026-10-18T22:36:56.937829+00:00",
+        "event": "stage_started",
+        "stage": "serial_wait_capture_home"
+      },
+      {
+        "sequence": 7,
+        "time": "2026-10-18T22:36:57.000668+00:00",
+        "event": "stage_started",
+        "stage": "serial_app_stopped"
+      },
+      {
+        "sequence": 8,
+        "time": "2026-10-18T22:36:57.001174+00:00",
+        "event": "stage_started",
+        "stage": "serial_home_ready"
+      },
+      {
+        "sequence": 9,
+        "time": "2026-10-18T22:36:57.125526+00:00",
+        "event": "stage_started",
+        "stage": "serial_wait_command"
+      },
+      {
+        "sequence": 10,
+        "time": "2026-10-18T22:36:57.186036+00:00",
+        "event": "stage_started",
+        "stage": "serial_category_apps"
+      },
+      {
+        "sequence": 11,
+        "time": "2026-10-18T22:36:57.249439+00:00",
+        "event": "stage_started",
+        "stage": "serial_wait_command"
+      },
+      {
+        "sequence": 12,
+        "time": "2026-10-18T22:36:57.372006+00:00",
+        "event": "stage_started",
+        "stage": "serial_wait_command"
+      },
+      {
+        "sequence": 13,
+        "time": "2026-10-18T22:36:57.496214+00:00",
+        "event": "stage_started",
+        "stage": "serial_wait_command"
+      },
+      {
+        "sequence": 14,
+        "time": "2026-10-18T22:36:57.623843+00:00",
+        "event": "stage_started",
+        "stage": "serial_wait_command"
+      },
+      {
+        "sequence": 15,
+        "time": "2026-10-18T22:36:57.752017+00:00",
+        "event": "stage_started",
+        "stage": "serial_wait_command"
+      },
+      {
+        "sequence": 16,
+        "time": "2026-10-18T22:36:57.939480+00:00",
+        "event": "stage_started",
+        "stage": "serial_wait_command"
+      },
+      {
+        "sequence": 17,
+        "time": "2026-10-18T22:36:58.063357+00:00",
+        "event": "stage_started",
+        "stage": "serial_wait_command"
+      },
+      {
+        "sequence": 18,
+        "time": "2026-10-18T22:36:58.189158+00:00",
+        "event": "stage_started",
+        "stage": "serial_wait_command"
+      },
+      {
+        "sequence": 19,
+        "time": "2026-10-18T22:36:58.314564+00:00",
+        "event": "stage_started",
+        "stage": "serial_wait_command"
+      },
+      {
+        "sequence": 20,
+        "time": "2026-10-18T22:36:58.502994+00:00",
+        "event": "stage_started",
+        "stage": "serial_wait_command"
+      },
+      {
+        "sequence": 21,
+        "time": "2026-10-18T22:36:58.627803+00:00",
+        "event": "stage_started",
+        "stage": "serial_wait_command"
+      },
+      {
+        "sequence": 22,
+        "time": "2026-10-18T22:36:58.750066+00:00",
+        "event": "stage_started",
+        "stage": "serial_wait_command"
+      },
+      {
+        "sequence": 23,
+        "time": "2026-10-18T22:36:58.813630+00:00",
+        "event": "stage_started",
+        "stage": "serial_row_hello"
+      },
+      {
+        "sequence": 24,
+        "time": "2026-10-18T22:36:58.875061+00:00",
+        "event": "stage_started",
+        "stage": "serial_wait_command"
+      },
+      {
+        "sequence": 25,
+        "time": "2026-10-18T22:36:58.936154+00:00",
+        "event": "stage_started",
+        "stage": "serial_row_hello"
+      },
+      {
+        "sequence": 26,
+        "time": "2026-10-18T22:36:58.999205+00:00",
+        "event": "stage_started",
+        "stage": "serial_wait_command"
+      },
+      {
+        "sequence": 27,
+        "time": "2026-10-18T22:36:59.061217+00:00",
+        "event": "stage_started",
+        "stage": "serial_row_hello"
+      },
+      {
+        "sequence": 28,
+        "time": "2026-10-18T22:36:59.186785+00:00",
+        "event": "stage_started",
+        "stage": "serial_wait_command"
+      },
+      {
+        "sequence": 29,
+        "time": "2026-10-18T22:36:59.248891+00:00",
+        "event": "stage_started",
+        "stage": "serial_row_hello"
+      },
+      {
+        "sequence": 30,
+        "time": "2026-10-18T22:36:59.311957+00:00",
+        "event": "stage_started",
+        "stage": "serial_wait_command"
+      },
+      {
+        "sequence": 31,
+        "time": "2026-10-18T22:36:59.373413+00:00",
+        "event": "stage_started",
+        "stage": "serial_row_hello"
+      },
+      {
+        "sequence": 32,
+        "time": "2026-10-18T22:36:59.436068+00:00",
+        "event": "stage_started",
+        "stage": "serial_wait_command"
+      },
+      {
+        "sequence": 33,
+        "time": "2026-10-18T22:36:59.622005+00:00",
+        "event": "stage_started",
+        "stage": "serial_wait_command"
+      },
+      {
+        "sequence": 34,
+        "time": "2026-10-18T22:36:59.750877+00:00",
+        "event": "stage_started",
+        "stage": "serial_wait_command"
+      },
+      {
+        "sequence": 35,
+        "time": "2026-10-18T22:36:59.940099+00:00",
+        "event": "stage_started",
+        "stage": "serial_wait_command"
+      },
+      {
+        "sequence": 36,
+        "time": "2026-10-18T22:37:00.063929+00:00",
+        "event": "stage_started",
+        "stage": "serial_wait_command"
+      },
+      {
+        "sequence": 37,
+        "time": "2026-10-18T22:37:00.189237+00:00",
+        "event": "stage_started",
+        "stage": "serial_wait_command"
+      },
+      {
+        "sequence": 38,
+        "time": "2026-10-18T22:37:00.314979+00:00",
+        "event": "stage_started",
+        "stage": "serial_wait_command"
+      },
+      {
+        "sequence": 39,
+        "time": "2026-10-18T22:37:00.438296+00:00",
+        "event": "stage_started",
+        "stage": "serial_wait_command"
+      },
+      {
+        "sequence": 40,
+        "time": "2026-10-18T22:37:00.563545+00:00",
+        "event": "stage_started",
+        "stage": "serial_wait_command"
+      },
+      {
+        "sequence": 41,
+        "time": "2026-10-18T22:37:00.689049+00:00",
+        "event": "stage_started",
+        "stage": "serial_wait_command"
+      },
+      {
+        "sequence": 42,
+        "time": "2026-10-18T22:37:00.814007+00:00",
+        "event": "stage_started",
+        "stage": "serial_wait_command"
+      },
+      {
+        "sequence": 43,
+        "time": "2026-10-18T22:37:00.940084+00:00",
+        "event": "stage_started",
+        "stage": "serial_wait_command"
+      },
+      {
+        "sequence": 44,
+        "time": "2026-10-18T22:37:01.065546+00:00",
+        "event": "stage_started",
+        "stage": "serial_wait_command"
+      },
+      {
+        "sequence": 45,
+        "time": "2026-10-18T22:37:01.443378+00:00",
+        "event": "stage_started",
+        "stage": "serial_frame_presented"
+      },
+      {
+        "sequence": 46,
+        "time": "2026-10-18T22:37:16.405976+00:00",
+        "event": "stage_started",
+        "stage": "derby_demo_start_observed"
+      },
+      {
+        "sequence": 47,
+        "time": "2026-10-18T22:37:16.406431+00:00",
+        "event": "stage_started",
+        "stage": "derby_scene_pad_observed"
+      },
+      {
+        "sequence": 48,
+        "time": "2026-10-18T22:37:18.465365+00:00",
+        "event": "stage_started",
+        "stage": "derby_scene_gate_observed"
+      },
+      {
+        "sequence": 49,
+        "time": "2026-10-18T22:37:19.857074+00:00",
+        "event": "stage_started",
+        "stage": "derby_scene_race_observed"
+      },
+      {
+        "sequence": 50,
+        "time": "2026-10-18T22:38:05.196155+00:00",
+        "event": "stage_started",
+        "stage": "derby_scene_photo_observed"
+      },
+      {
+        "sequence": 51,
+        "time": "2026-10-18T22:38:12.519785+00:00",
+        "event": "stage_started",
+        "stage": "derby_scene_res_observed"
+      },
+      {
+        "sequence": 52,
+        "time": "2026-10-18T22:38:17.583030+00:00",
+        "event": "stage_started",
+        "stage": "derby_demo_end_observed"
+      },
+      {
+        "sequence": 53,
+        "time": "2026-10-18T22:38:17.637117+00:00",
+        "event": "stage_started",
+        "stage": "serial_wait_command"
+      },
+      {
+        "sequence": 54,
+        "time": "2026-10-18T22:38:17.699609+00:00",
+        "event": "stage_started",
+        "stage": "serial_app_stopped"
+      },
+      {
+        "sequence": 55,
+        "time": "2026-10-18T22:38:17.700194+00:00",
+        "event": "stage_started",
+        "stage": "serial_home_ready"
+      },
+      {
+        "sequence": 56,
+        "time": "2026-10-18T22:38:17.700690+00:00",
+        "event": "stage_started",
+        "stage": "serial_close"
+      },
+      {
+        "sequence": 57,
+        "time": "2026-10-18T22:38:17.701597+00:00",
+        "event": "job_passed",
+        "stage": null
+      }
+    ],
+    "next_cursor": {
+      "epoch": "342be4ab240545338701d99630c41a74",
+      "sequence": 57
+    },
+    "gap": false,
+    "oldest_sequence": 1,
+    "has_more": false
+  }
+]

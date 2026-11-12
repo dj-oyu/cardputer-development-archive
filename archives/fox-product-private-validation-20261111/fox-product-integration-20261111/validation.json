@@ -1,0 +1,9 @@
+{
+  "baseline": "828baa3af69c55e7884c53557ea39f91190010a0",
+  "old_vs_companion_ordered_records_equal": true,
+  "records": 43,
+  "commit_records": 34,
+  "generic_sha256": "206b1881c891dd2542ac609ed043dcb4f3ebddc1a815c4d558016d4777c99b35",
+  "sanitizers": "ASan/UBSan passed, leak detection disabled",
+  "o2_vs_sanitized_records_equal": true
+}

@@ -1,0 +1,68 @@
+{
+  "job": {
+    "ok": true,
+    "id": "flash-diag-9db14c88-post42-20261018",
+    "plan_hash": "cdf0376b59ec0151c21c23ec81de0e9f6af911dc16c9517c51249bb4357d711a",
+    "state": "succeeded",
+    "stage": "flash_boot_observe",
+    "result": "firmware_flash_completed",
+    "diagnostic": null,
+    "reviewed": 0,
+    "created": "2026-10-18 23:21:27",
+    "finished": "2026-10-18 23:26:15"
+  },
+  "cursor": {
+    "epoch": "01372e4d27c74bdca41b06da6e0721b2",
+    "sequence": 231
+  },
+  "batches": [
+    "/workspace/pr-validation/diag-post42-flash-log-0000.json",
+    "/workspace/pr-validation/diag-post42-flash-log-0001.json",
+    "/workspace/pr-validation/diag-post42-flash-log-0002.json",
+    "/workspace/pr-validation/diag-post42-flash-log-0003.json",
+    "/workspace/pr-validation/diag-post42-flash-log-0004.json",
+    "/workspace/pr-validation/diag-post42-flash-log-0005.json",
+    "/workspace/pr-validation/diag-post42-flash-log-0006.json",
+    "/workspace/pr-validation/diag-post42-flash-log-0007.json",
+    "/workspace/pr-validation/diag-post42-flash-log-0008.json",
+    "/workspace/pr-validation/diag-post42-flash-log-0009.json",
+    "/workspace/pr-validation/diag-post42-flash-log-0010.json",
+    "/workspace/pr-validation/diag-post42-flash-log-0011.json",
+    "/workspace/pr-validation/diag-post42-flash-log-0012.json",
+    "/workspace/pr-validation/diag-post42-flash-log-0013.json"
+  ],
+  "renewals": [
+    {
+      "utc": "2026-10-18 23:22:50 UTC",
+      "result": {
+        "ok": true,
+        "renewed": true,
+        "lease_seconds": 300
+      }
+    },
+    {
+      "utc": "2026-10-18 23:23:55 UTC",
+      "result": {
+        "ok": true,
+        "renewed": true,
+        "lease_seconds": 300
+      }
+    },
+    {
+      "utc": "2026-10-18 23:24:59 UTC",
+      "result": {
+        "ok": true,
+        "renewed": true,
+        "lease_seconds": 300
+      }
+    },
+    {
+      "utc": "2026-10-18 23:26:04 UTC",
+      "result": {
+        "ok": true,
+        "renewed": true,
+        "lease_seconds": 300
+      }
+    }
+  ]
+}

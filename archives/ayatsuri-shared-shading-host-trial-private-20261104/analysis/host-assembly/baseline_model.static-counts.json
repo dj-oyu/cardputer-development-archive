@@ -1,0 +1,215 @@
+{
+  "interpretation": "Static instruction-site counts across whole functions, including branches. %rbp is not assumed to be a frame pointer. %rsp operands may be deliberate arrays, arguments or spills; these counts alone cannot distinguish them. Does not count implicit call/return memory operations as explicit rsp operands. Not dynamic frequency or cycles.",
+  "functions": {
+    "md": {
+      "instructions": 3,
+      "rsp_memory_operand_instructions": 0,
+      "push_pop_instructions": 0,
+      "call_instructions": []
+    },
+    "float_rows_valid": {
+      "instructions": 36,
+      "rsp_memory_operand_instructions": 0,
+      "push_pop_instructions": 0,
+      "call_instructions": []
+    },
+    "mesh_project": {
+      "instructions": 51,
+      "rsp_memory_operand_instructions": 0,
+      "push_pop_instructions": 0,
+      "call_instructions": []
+    },
+    "pack_rgb": {
+      "instructions": 79,
+      "rsp_memory_operand_instructions": 0,
+      "push_pop_instructions": 0,
+      "call_instructions": []
+    },
+    "slot_bytes": {
+      "instructions": 13,
+      "rsp_memory_operand_instructions": 0,
+      "push_pop_instructions": 0,
+      "call_instructions": []
+    },
+    "ayatsuri_shade_sample.isra.0": {
+      "instructions": 236,
+      "rsp_memory_operand_instructions": 48,
+      "push_pop_instructions": 12,
+      "call_instructions": [
+        "3a6:\te8 00 00 00 00       \tcall   3ab <ayatsuri_shade_sample.isra.0+0xab>",
+        "3bc:\te8 00 00 00 00       \tcall   3c1 <ayatsuri_shade_sample.isra.0+0xc1>",
+        "414:\te8 00 00 00 00       \tcall   419 <ayatsuri_shade_sample.isra.0+0x119>",
+        "432:\te8 00 00 00 00       \tcall   437 <ayatsuri_shade_sample.isra.0+0x137>",
+        "488:\te8 00 00 00 00       \tcall   48d <ayatsuri_shade_sample.isra.0+0x18d>",
+        "4a7:\te8 00 00 00 00       \tcall   4ac <ayatsuri_shade_sample.isra.0+0x1ac>",
+        "581:\te8 00 00 00 00       \tcall   586 <ayatsuri_shade_sample.isra.0+0x286>",
+        "612:\te8 00 00 00 00       \tcall   617 <ayatsuri_shade_sample.isra.0+0x317>",
+        "68d:\te8 00 00 00 00       \tcall   692 <ayatsuri_shade_sample.isra.0+0x392>"
+      ]
+    },
+    "node_slot_bytes": {
+      "instructions": 63,
+      "rsp_memory_operand_instructions": 0,
+      "push_pop_instructions": 0,
+      "call_instructions": []
+    },
+    "mesh_packet": {
+      "instructions": 1027,
+      "rsp_memory_operand_instructions": 210,
+      "push_pop_instructions": 15,
+      "call_instructions": [
+        "bf9:\te8 00 00 00 00       \tcall   bfe <mesh_packet+0x41e>",
+        "c0e:\te8 00 00 00 00       \tcall   c13 <mesh_packet+0x433>",
+        "cc2:\te8 00 00 00 00       \tcall   cc7 <mesh_packet+0x4e7>",
+        "cdd:\te8 00 00 00 00       \tcall   ce2 <mesh_packet+0x502>",
+        "e0f:\te8 00 00 00 00       \tcall   e14 <mesh_packet+0x634>",
+        "e24:\te8 00 00 00 00       \tcall   e29 <mesh_packet+0x649>",
+        "10aa:\te8 e1 ef ff ff       \tcall   90 <mesh_project>",
+        "1164:\te8 00 00 00 00       \tcall   1169 <mesh_packet+0x989>",
+        "116e:\te8 00 00 00 00       \tcall   1173 <mesh_packet+0x993>",
+        "123d:\te8 00 00 00 00       \tcall   1242 <mesh_packet+0xa62>",
+        "124a:\te8 00 00 00 00       \tcall   124f <mesh_packet+0xa6f>",
+        "12ca:\te8 31 f0 ff ff       \tcall   300 <ayatsuri_shade_sample.isra.0>",
+        "1312:\te8 e9 ef ff ff       \tcall   300 <ayatsuri_shade_sample.isra.0>",
+        "16dd:\te8 00 00 00 00       \tcall   16e2 <mesh_packet+0xf02>",
+        "16ea:\te8 00 00 00 00       \tcall   16ef <mesh_packet+0xf0f>",
+        "1779:\te8 82 eb ff ff       \tcall   300 <ayatsuri_shade_sample.isra.0>",
+        "17bf:\te8 3c eb ff ff       \tcall   300 <ayatsuri_shade_sample.isra.0>",
+        "1a10:\te8 00 00 00 00       \tcall   1a15 <mesh_packet+0x1235>",
+        "1aac:\te8 df e5 ff ff       \tcall   90 <mesh_project>"
+      ]
+    },
+    "ayatsuri_model_open": {
+      "instructions": 984,
+      "rsp_memory_operand_instructions": 123,
+      "push_pop_instructions": 12,
+      "call_instructions": [
+        "23b8:\te8 53 dc ff ff       \tcall   10 <float_rows_valid>",
+        "23da:\te8 31 dc ff ff       \tcall   10 <float_rows_valid>",
+        "23ff:\te8 0c dc ff ff       \tcall   10 <float_rows_valid>",
+        "24a3:\te8 58 db ff ff       \tcall   0 <md>",
+        "24de:\te8 1d db ff ff       \tcall   0 <md>",
+        "2511:\te8 ea da ff ff       \tcall   0 <md>",
+        "2872:\te8 89 d7 ff ff       \tcall   0 <md>",
+        "288f:\te8 6c d7 ff ff       \tcall   0 <md>",
+        "28b0:\te8 4b d7 ff ff       \tcall   0 <md>",
+        "2920:\te8 00 00 00 00       \tcall   2925 <ayatsuri_model_open+0xdc5>",
+        "296b:\te8 60 d9 ff ff       \tcall   2d0 <slot_bytes>",
+        "2b89:\te8 92 db ff ff       \tcall   720 <node_slot_bytes>"
+      ]
+    },
+    "ayatsuri_model_find_node": {
+      "instructions": 101,
+      "rsp_memory_operand_instructions": 2,
+      "push_pop_instructions": 12,
+      "call_instructions": [
+        "2ca9:\te8 00 00 00 00       \tcall   2cae <ayatsuri_model_find_node+0xde>"
+      ]
+    },
+    "ayatsuri_model_instance_bytes": {
+      "instructions": 11,
+      "rsp_memory_operand_instructions": 0,
+      "push_pop_instructions": 0,
+      "call_instructions": []
+    },
+    "ayatsuri_model_instance_init": {
+      "instructions": 269,
+      "rsp_memory_operand_instructions": 24,
+      "push_pop_instructions": 12,
+      "call_instructions": [
+        "2ea9:\te8 00 00 00 00       \tcall   2eae <ayatsuri_model_instance_init+0x15e>",
+        "2f1e:\te8 fd d7 ff ff       \tcall   720 <node_slot_bytes>",
+        "2fcf:\te8 2c d0 ff ff       \tcall   0 <md>"
+      ]
+    },
+    "ayatsuri_model_instance_dispose": {
+      "instructions": 22,
+      "rsp_memory_operand_instructions": 0,
+      "push_pop_instructions": 0,
+      "call_instructions": []
+    },
+    "ayatsuri_model_instance_targets": {
+      "instructions": 341,
+      "rsp_memory_operand_instructions": 12,
+      "push_pop_instructions": 12,
+      "call_instructions": [
+        "34b2:\te8 49 cb ff ff       \tcall   0 <md>",
+        "360e:\te8 ed c9 ff ff       \tcall   0 <md>",
+        "3713:\te8 e8 c8 ff ff       \tcall   0 <md>"
+      ]
+    },
+    "ayatsuri_model_instance_node_kind": {
+      "instructions": 86,
+      "rsp_memory_operand_instructions": 0,
+      "push_pop_instructions": 0,
+      "call_instructions": []
+    },
+    "ayatsuri_model_instance_read_pose": {
+      "instructions": 96,
+      "rsp_memory_operand_instructions": 0,
+      "push_pop_instructions": 0,
+      "call_instructions": []
+    },
+    "ayatsuri_model_instance_stats": {
+      "instructions": 95,
+      "rsp_memory_operand_instructions": 0,
+      "push_pop_instructions": 0,
+      "call_instructions": []
+    },
+    "ayatsuri_model_instance_evaluate": {
+      "instructions": 1903,
+      "rsp_memory_operand_instructions": 350,
+      "push_pop_instructions": 12,
+      "call_instructions": [
+        "3d96:\te8 00 00 00 00       \tcall   3d9b <ayatsuri_model_instance_evaluate+0x25b>",
+        "3da0:\te8 00 00 00 00       \tcall   3da5 <ayatsuri_model_instance_evaluate+0x265>",
+        "3e0f:\te8 00 00 00 00       \tcall   3e14 <ayatsuri_model_instance_evaluate+0x2d4>",
+        "4141:\te8 00 00 00 00       \tcall   4146 <ayatsuri_model_instance_evaluate+0x606>",
+        "4179:\te8 00 00 00 00       \tcall   417e <ayatsuri_model_instance_evaluate+0x63e>",
+        "41ae:\te8 00 00 00 00       \tcall   41b3 <ayatsuri_model_instance_evaluate+0x673>",
+        "4c2b:\te8 30 b5 ff ff       \tcall   160 <pack_rgb>",
+        "4c49:\te8 00 00 00 00       \tcall   4c4e <ayatsuri_model_instance_evaluate+0x110e>",
+        "4c5c:\te8 9f b3 ff ff       \tcall   0 <md>",
+        "4c73:\te8 00 00 00 00       \tcall   4c78 <ayatsuri_model_instance_evaluate+0x1138>",
+        "4c7e:\te8 00 00 00 00       \tcall   4c83 <ayatsuri_model_instance_evaluate+0x1143>",
+        "4c91:\te8 00 00 00 00       \tcall   4c96 <ayatsuri_model_instance_evaluate+0x1156>",
+        "4ca6:\te8 00 00 00 00       \tcall   4cab <ayatsuri_model_instance_evaluate+0x116b>",
+        "4d0a:\te8 f1 b2 ff ff       \tcall   0 <md>",
+        "4e0b:\te8 d0 b9 ff ff       \tcall   7e0 <mesh_packet>",
+        "588e:\te8 cd a8 ff ff       \tcall   160 <pack_rgb>",
+        "58b4:\te8 00 00 00 00       \tcall   58b9 <ayatsuri_model_instance_evaluate+0x1d79>",
+        "58c8:\te8 33 a7 ff ff       \tcall   0 <md>",
+        "58de:\te8 00 00 00 00       \tcall   58e3 <ayatsuri_model_instance_evaluate+0x1da3>",
+        "58e9:\te8 00 00 00 00       \tcall   58ee <ayatsuri_model_instance_evaluate+0x1dae>",
+        "58fb:\te8 00 00 00 00       \tcall   5900 <ayatsuri_model_instance_evaluate+0x1dc0>",
+        "5910:\te8 00 00 00 00       \tcall   5915 <ayatsuri_model_instance_evaluate+0x1dd5>",
+        "5924:\te8 d7 a6 ff ff       \tcall   0 <md>",
+        "5c66:\te8 75 ab ff ff       \tcall   7e0 <mesh_packet>",
+        "60a5:\te8 b6 a0 ff ff       \tcall   160 <pack_rgb>",
+        "6197:\te8 c4 9f ff ff       \tcall   160 <pack_rgb>"
+      ]
+    },
+    "ayatsuri_model_instance_next": {
+      "instructions": 259,
+      "rsp_memory_operand_instructions": 10,
+      "push_pop_instructions": 15,
+      "call_instructions": [
+        "63fd:\te8 1e a3 ff ff       \tcall   720 <node_slot_bytes>",
+        "655b:\te8 c0 a1 ff ff       \tcall   720 <node_slot_bytes>",
+        "6581:\te8 4a 9d ff ff       \tcall   2d0 <slot_bytes>"
+      ]
+    },
+    "ayatsuri_model_instance_mesh_view": {
+      "instructions": 127,
+      "rsp_memory_operand_instructions": 0,
+      "push_pop_instructions": 0,
+      "call_instructions": []
+    },
+    "ayatsuri_model_instance_sided_mesh_view": {
+      "instructions": 135,
+      "rsp_memory_operand_instructions": 0,
+      "push_pop_instructions": 0,
+      "call_instructions": []
+    }
+  }
+}

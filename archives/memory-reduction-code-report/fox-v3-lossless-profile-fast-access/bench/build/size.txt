@@ -1,0 +1,136 @@
+baseline_decoder.o  :
+section           size   addr
+.text             1619      0
+.data                0      0
+.bss                 0      0
+.rodata              8      0
+.comment            32      0
+.note.GNU-stack      0      0
+.eh_frame          208      0
+Total             1867
+
+
+gather_profile.o  :
+section             size   addr
+.text                976      0
+.data                  0      0
+.bss                   0      0
+.rodata           445248      0
+.rodata.cst16         48      0
+.rodata.cst4           4      0
+.rodata.cst8          72      0
+.comment              32      0
+.note.GNU-stack        0      0
+.eh_frame            104      0
+Total             446484
+
+
+batch.o  :
+section           size   addr
+.text              405      0
+.data                0      0
+.bss                 0      0
+.rodata.cst8         8      0
+.rodata.cst4         8      0
+.comment            32      0
+.note.GNU-stack      0      0
+.eh_frame          176      0
+Total              629
+
+
+raw_profile.o  :
+section              size   addr
+.text                 848      0
+.data                   0      0
+.bss                    0      0
+.rodata           1647750      0
+.rodata.cst4           12      0
+.rodata.cst16          32      0
+.rodata.cst8           72      0
+.comment               32      0
+.note.GNU-stack         0      0
+.eh_frame             104      0
+Total             1648850
+
+
+baseline_profile.o  :
+section             size   addr
+.text                963      0
+.data                  0      0
+.bss                   0      0
+.rodata           445248      0
+.rodata.cst16         48      0
+.rodata.cst4           4      0
+.rodata.cst8          72      0
+.comment              32      0
+.note.GNU-stack        0      0
+.eh_frame            104      0
+Total             446471
+
+
+gather_fast_bits_profile.o  :
+section             size   addr
+.text                976      0
+.data                  0      0
+.bss                   0      0
+.rodata           445248      0
+.rodata.cst16         48      0
+.rodata.cst4           4      0
+.rodata.cst8          72      0
+.comment              32      0
+.note.GNU-stack        0      0
+.eh_frame            104      0
+Total             446484
+
+
+fast_bits_profile.o  :
+section             size   addr
+.text                963      0
+.data                  0      0
+.bss                   0      0
+.rodata           445248      0
+.rodata.cst16         48      0
+.rodata.cst4           4      0
+.rodata.cst8          72      0
+.comment              32      0
+.note.GNU-stack        0      0
+.eh_frame            104      0
+Total             446471
+
+
+gather_decoder.o  :
+section           size   addr
+.text             2658      0
+.data                0      0
+.bss                 0      0
+.rodata              8      0
+.comment            32      0
+.note.GNU-stack      0      0
+.eh_frame          312      0
+Total             3010
+
+
+fast_bits_decoder.o  :
+section           size   addr
+.text             2978      0
+.data                0      0
+.bss                 0      0
+.rodata              8      0
+.comment            32      0
+.note.GNU-stack      0      0
+.eh_frame          344      0
+Total             3362
+
+
+gather_fast_bits_decoder.o  :
+section           size   addr
+.text             2978      0
+.data                0      0
+.bss                 0      0
+.rodata              8      0
+.comment            32      0
+.note.GNU-stack      0      0
+.eh_frame          344      0
+Total             3362
+
+

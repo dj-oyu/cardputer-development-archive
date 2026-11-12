@@ -1,0 +1,795 @@
+diff --git a/main/CMakeLists.txt b/main/CMakeLists.txt
+index ccf82dfa4d2ef3c94ae2c9d3a922ed429134662d..18a5f081a7a4e154670722a3d618c22ee5e3e76b 100644
+--- a/main/CMakeLists.txt
++++ b/main/CMakeLists.txt
+@@ -47,6 +47,13 @@ list(APPEND KASANE_SOURCES
+ # Private mesh architecture experiments; never implicitly enabled.
+ option(KASANE_MESH_PREPARED_PROTOTYPE "Retain bounded mesh triangle setup (private experiment)" OFF)
+ option(KASANE_MESH_EDGE4_PROTOTYPE "Use conservative S3 PIE edge classifier (private experiment)" OFF)
++option(KASANE_MESH_Q7_CERTIFIED_PROTOTYPE "Approximate Q7 coverage/color with certified original depth/mask (private experiment)" OFF)
++if(KASANE_MESH_Q7_CERTIFIED_PROTOTYPE)
++    if(NOT KASANE_MESH_PREPARED_PROTOTYPE OR KASANE_MESH_EDGE4_PROTOTYPE)
++        message(FATAL_ERROR "Q7 certified requires prepared ON and edge4 OFF")
++    endif()
++    list(APPEND KASANE_SOURCES "ui/kasane/ksn_mesh_q7_certified.c")
++endif()
+ if(KASANE_MESH_EDGE4_PROTOTYPE AND NOT KASANE_MESH_PREPARED_PROTOTYPE)
+     message(FATAL_ERROR "Mesh edge4 requires KASANE_MESH_PREPARED_PROTOTYPE=ON")
+ endif()
+@@ -623,3 +630,10 @@ if(KASANE_MESH_EDGE4_PROTOTYPE)
+     set_source_files_properties(ui/kasane/pie_edge4.c ui/kasane/pie_edge4_raw.c PROPERTIES
+         COMPILE_OPTIONS "-O2;-ffp-contract=off;-fno-lto;-fstack-usage")
+ endif()
++
++# Default-OFF Q7 experiment: no PIE leaf, strict arithmetic required for certification.
++if(KASANE_MESH_Q7_CERTIFIED_PROTOTYPE)
++    target_compile_definitions(${COMPONENT_LIB} PRIVATE KSN_MESH_Q7_CERTIFIED_PROTOTYPE=1)
++    set_source_files_properties(ui/kasane/ksn_mesh_q7_certified.c ui/kasane/ksn_mesh_prepared.c ui/kasane/ksn_mesh_depth.c PROPERTIES
++        COMPILE_OPTIONS "-O2;-fno-fast-math;-fno-associative-math;-fno-reciprocal-math;-ffp-contract=off;-frounding-math;-fno-lto;-fstack-usage")
++endif()
+diff --git a/main/pocket/pocket_shiki_frame.c b/main/pocket/pocket_shiki_frame.c
+index 07e04f9ba841141a55c1ee700bf0adfc83d34ed4..29a908b1a17bcb363f137b259a3554f44f761331 100644
+--- a/main/pocket/pocket_shiki_frame.c
++++ b/main/pocket/pocket_shiki_frame.c
+@@ -1,3 +1,6 @@
++#ifdef KSN_MESH_Q7_CERTIFIED_PROTOTYPE
++#include "ui/kasane/ksn_mesh_q7_certified.h"
++#endif
+ #ifdef KSN_MESH_PREPARED_PROTOTYPE
+ #include "ui/kasane/ksn_mesh_prepared.h"
+ #endif
+@@ -119,6 +122,10 @@ typedef struct {
+ #ifdef KSN_MESH_PREPARED_PROTOTYPE
+     ksn_mesh_prepared *prepared_candidate,*prepared_committed;
+     size_t prepared_candidate_bytes,prepared_committed_bytes;
++#endif
++#ifdef KSN_MESH_Q7_CERTIFIED_PROTOTYPE
++    ksn_mesh_q7_snapshot *q7_candidate,*q7_committed;
++    size_t q7_candidate_bytes,q7_committed_bytes;
+ #endif
+     proc_band_sig candidate_sig,committed_sig;
+     uint16_t candidate_color,committed_color;
+@@ -132,6 +139,17 @@ static proc_surface surfaces[PROC_SURFACES];
+ /* Native heap, separately accounted from guest and Shiki heaps. */
+ static float *depth_workspace;
+ static unsigned depth_rows;
++#ifdef KSN_MESH_Q7_CERTIFIED_PROTOTYPE
++/* Shared by the same serialized renderer as depth_workspace, never a DMA loan. */
++static uint8_t *q7_owner_workspace;
++static ksn_mesh_q7_stats q7_backend_stats;
++#ifdef KSN_PROC_HOST_TEST
++const ksn_mesh_q7_snapshot *pocket_proc_q7_host_snapshot(unsigned index,bool committed){
++    if(index>=PROC_SURFACES)return NULL;
++    return committed?surfaces[index].q7_committed:surfaces[index].q7_candidate;
++}
++#endif
++#endif
+ #ifdef KSN_PROC_HOST_TEST
+ static int depth_fail_after=-1;
+ void pocket_proc_mesh_fail_after(int n){depth_fail_after=n;}
+@@ -146,9 +164,16 @@ static void *depth_calloc(size_t n,size_t size){
+ void pocket_proc_mesh_memory(pocket_proc_mesh_bytes *out){
+     if(!out)return;
+     *out=(pocket_proc_mesh_bytes){.workspace=depth_rows*KSN_PROC_W*sizeof(float),.metadata=sizeof(ksn_mesh_snapshot)*2*PROC_SURFACES+sizeof depth_workspace+sizeof depth_rows};
++#ifdef KSN_MESH_Q7_CERTIFIED_PROTOTYPE
++    if(q7_owner_workspace)out->workspace+=KSN_PROC_W*8;
++    out->metadata+=sizeof q7_owner_workspace+sizeof q7_backend_stats;
++#endif
+     for(unsigned i=0;i<PROC_SURFACES;i++){
+         out->candidate+=surfaces[i].depth_candidate.packets.capacity;
+         out->committed+=surfaces[i].depth_committed.packets.capacity;
++#ifdef KSN_MESH_Q7_CERTIFIED_PROTOTYPE
++        out->metadata+=surfaces[i].q7_candidate_bytes+surfaces[i].q7_committed_bytes+2*sizeof(void*)+2*sizeof(size_t);
++#endif
+ #ifdef KSN_MESH_PREPARED_PROTOTYPE
+         out->metadata+=surfaces[i].prepared_candidate_bytes+surfaces[i].prepared_committed_bytes+
+             2*sizeof(void *)+2*sizeof(size_t);
+@@ -455,6 +480,11 @@ static bool render_rows(const proc_surface *surface,const ksn_proc_frame *frame,
+     const ksn_mesh_snapshot *mesh=frame==surface->candidate?
+         &surface->depth_candidate:&surface->depth_committed;
+ #ifdef KSN_MESH_PREPARED_PROTOTYPE
++#ifdef KSN_MESH_Q7_CERTIFIED_PROTOTYPE
++    const ksn_mesh_q7_snapshot *q7=frame==surface->candidate?surface->q7_candidate:surface->q7_committed;
++    if(mesh->enabled&&q7&&q7->valid&&q7_owner_workspace)
++        return ksn_mesh_q7_render(q7,pixels,y,rows,depth_workspace,q7_owner_workspace,depth_rows,&q7_backend_stats);
++#endif
+     const ksn_mesh_prepared *prepared=frame==surface->candidate?
+         surface->prepared_candidate:surface->prepared_committed;
+     if(mesh->enabled&&prepared&&prepared->valid)
+@@ -758,6 +788,27 @@ static JSValue commit_impl(JSContext *ctx,JSValueConst self,int argc,JSValueCons
+         if(need&&need<=surface->prepared_candidate_bytes)
+             (void)ksn_mesh_prepare(&surface->depth_candidate,surface->prepared_candidate,surface->prepared_candidate_bytes);
+     }
++#endif
++#ifdef KSN_MESH_Q7_CERTIFIED_PROTOTYPE
++    /* Candidate cannot be a submitted loan while building. Reclaim only this
++     * slot before size replacement: committed repair storage is never touched. */
++    if(surface->q7_candidate)surface->q7_candidate->valid=false;
++    ksn_mesh_prepared *q7_source=surface->prepared_candidate;
++    if(surface->depth_candidate.enabled&&q7_source&&q7_source->valid){
++        size_t need=ksn_mesh_q7_bytes(q7_source);
++        if(!q7_owner_workspace)q7_owner_workspace=depth_calloc(KSN_PROC_W*8,1);
++        if(need&&q7_owner_workspace){
++            if(need!=surface->q7_candidate_bytes){
++                free(surface->q7_candidate);surface->q7_candidate=NULL;surface->q7_candidate_bytes=0;
++                surface->q7_candidate=depth_calloc(1,need);
++                if(surface->q7_candidate)surface->q7_candidate_bytes=need;
++            }
++            if(surface->q7_candidate&&ksn_mesh_q7_prepare(q7_source,surface->q7_candidate,surface->q7_candidate_bytes)){
++                /* Q7 owns all reconstruction geometry, including exact fallback. */
++                free(surface->prepared_candidate);surface->prepared_candidate=NULL;surface->prepared_candidate_bytes=0;
++            }
++        }
++    }
+ #endif
+     surface->damage=frame_damage(surface);
+     band_signature(surface->candidate,&surface->candidate_sig);
+@@ -998,9 +1049,15 @@ void pocket_proc_reset(void){
+         free(surfaces[i].depth_candidate.packets.data);free(surfaces[i].depth_committed.packets.data);
+ #ifdef KSN_MESH_PREPARED_PROTOTYPE
+         free(surfaces[i].prepared_candidate);free(surfaces[i].prepared_committed);
++#endif
++#ifdef KSN_MESH_Q7_CERTIFIED_PROTOTYPE
++        free(surfaces[i].q7_candidate);free(surfaces[i].q7_committed);
+ #endif
+         surfaces[i]=(proc_surface){0};
+     }
++#ifdef KSN_MESH_Q7_CERTIFIED_PROTOTYPE
++    free(q7_owner_workspace);q7_owner_workspace=NULL;memset(&q7_backend_stats,0,sizeof q7_backend_stats);
++#endif
+     free(depth_workspace);depth_workspace=NULL;depth_rows=0;
+     shiki_or_sys_free(image_band_buf);image_band_buf=NULL;
+     shiki_or_sys_free(half_carry);half_carry=NULL;
+@@ -1172,6 +1229,12 @@ void pocket_proc_present_result(ksn_result result){
+             surface->prepared_committed=surface->prepared_candidate;surface->prepared_candidate=old_prepared;
+             size_t old_bytes=surface->prepared_committed_bytes;
+             surface->prepared_committed_bytes=surface->prepared_candidate_bytes;surface->prepared_candidate_bytes=old_bytes;
++#endif
++#ifdef KSN_MESH_Q7_CERTIFIED_PROTOTYPE
++            ksn_mesh_q7_snapshot *old_q7=surface->q7_committed;
++            surface->q7_committed=surface->q7_candidate;surface->q7_candidate=old_q7;
++            size_t old_q7_bytes=surface->q7_committed_bytes;
++            surface->q7_committed_bytes=surface->q7_candidate_bytes;surface->q7_candidate_bytes=old_q7_bytes;
+ #endif
+             surface->committed_color=surface->candidate_color;
+             surface->committed_sig=surface->candidate_sig;
+diff --git a/main/ui/kasane/ksn_mesh_q7_certified.c b/main/ui/kasane/ksn_mesh_q7_certified.c
+new file mode 100644
+index 0000000000000000000000000000000000000000..c0679129f5bb4743dcb81b8e0ac78f9afe59e0f4
+--- /dev/null
++++ b/main/ui/kasane/ksn_mesh_q7_certified.c
+@@ -0,0 +1,133 @@
++#include "ksn_mesh_q7_certified.h"
++#include <math.h>
++#include <limits.h>
++#include <string.h>
++#include <float.h>
++#include <fenv.h>
++#if defined(__FAST_MATH__) || FLT_RADIX != 2 || DBL_MANT_DIG != 53 || FLT_MANT_DIG != 24 || FLT_EVAL_METHOD != 0 || FLT_MAX_EXP != 128 || FLT_MIN_EXP != -125 || DBL_MAX_EXP != 1024 || DBL_MIN_EXP != -1021
++#error Certified path requires strict IEEE binary32/binary64 arithmetic
++#endif
++_Static_assert(sizeof(float)==4 && sizeof(double)==8,"IEEE storage required");
++#ifndef Q7_CERT_MODE
++#define Q7_CERT_MODE 3
++#endif
++static int64_t fld(int64_t n,int64_t d){int64_t q=n/d,r=n%d;return q-((r!=0)&&((r<0)!=(d<0)));}
++static int64_t cld(int64_t n,int64_t d){return -fld(-n,d);}
++bool ksn_mesh_q7_span(const ksn_mesh_q7_extra *t,int y,int *lo,int *hi){
++ int64_t l=0,r=239;
++ for(unsigned k=0;k<3;k++) {int64_t a=t->abc[k][0],v=(int64_t)t->abc[k][1]*y+t->abc[k][2];
++  if(a>0){int64_t z=cld(-v,a);if(z>l)l=z;}else if(a<0){int64_t z=fld(-v,a);if(z<r)r=z;}else if(v<0)return false;
++ }
++ if(l>r)return false;
++ *lo=(int)l;*hi=(int)r;return true;
++}
++static bool ieee_environment(void){
++ if(fegetround()!=FE_TONEAREST)return false;
++ volatile double normal=DBL_MIN,half=.5;volatile float tiny=FLT_TRUE_MIN;
++ double sub=normal*half,converted=tiny;
++ return sub>0 && sub==0x1p-1023 && converted==0x1p-149;
++}
++static double upadd(double a,double b){return nextafter(a+b,INFINITY);}
++static double upmul(double a,double b){return nextafter(a*b,INFINITY);}
++static void make_certificate(ksn_mesh_q7_triangle *t){
++ ksn_mesh_q7_certificate *c=&t->cert;memset(c,0,sizeof *c);if(!ieee_environment())return;const ksn_prepared_triangle *o=&t->original;
++ if(!(o->inverse>0&&o->inverse<=100001))return;
++ for(unsigned k=0;k<3;k++){const ksn_prepared_edge*e=&o->edge[k];if((e->sign!=1&&e->sign!=-1)||!isfinite(e->a)||!isfinite(e->b)||!isfinite(e->c)||fabs(e->a)>8192||fabs(e->b)>8192||fabs(e->c)>67108864)return;}
++ for(unsigned attr=0;attr<2;attr++){double magnitude=0;
++  for(unsigned k=0;k<3;k++){double value=attr?o->v[k].mask:o->v[k].depth;if(!isfinite(value)||fabs(value)>FLT_MAX)return;const ksn_prepared_edge*e=&o->edge[k];double coeff[3]={e->a,e->b,e->c};
++   for(unsigned j=0;j<3;j++)c->p[attr][j]+=e->sign*coeff[j]*o->inverse*value;
++   double edgeabs=upadd(upadd(upmul(fabs(e->a),239),upmul(fabs(e->b),134)),fabs(e->c));
++   magnitude=upadd(magnitude,upmul(upmul(edgeabs,o->inverse),fabs(value)));
++  }
++  c->error[attr]=upadd(upmul(128*DBL_EPSILON,magnitude),1e-250);
++  if(!isfinite(c->error[attr]))return;
++  for(unsigned j=0;j<3;j++)if(!isfinite(c->p[attr][j]))return;
++ }
++ c->valid=true;
++}
++static bool certified_depth(const ksn_mesh_q7_certificate*c,int x,int y,float *out){
++ double v=c->p[0][0]*x+c->p[0][1]*y+c->p[0][2],err=c->error[0];
++ float lo=(float)(v-err),hi=(float)(v+err);uint32_t a,b;memcpy(&a,&lo,4);memcpy(&b,&hi,4);
++ if(a!=b||!isfinite(lo)||(lo!=0&&fabsf(lo)<FLT_MIN))return false;
++ *out=lo;return true;
++}
++static bool certified_mask(const ksn_mesh_q7_certificate*c,int x,int y,bool *out){
++ double v=c->p[1][0]*x+c->p[1][1]*y+c->p[1][2],err=c->error[1];
++ if(v-err>=0){*out=true;return true;}if(v+err<0){*out=false;return true;}return false;
++}
++size_t ksn_mesh_q7_bytes(const ksn_mesh_prepared *p){return !p||!p->valid||p->capacity>64||p->count>p->capacity||p->count>64?0:sizeof(ksn_mesh_q7_snapshot)+p->count*sizeof(ksn_mesh_q7_triangle);}
++bool ksn_mesh_q7_prepare(const ksn_mesh_prepared *p,ksn_mesh_q7_snapshot *out,size_t bytes){
++ if(!out||bytes<sizeof *out)return false;
++ size_t need=ksn_mesh_q7_bytes(p);
++ if(p){size_t src=sizeof *p;if(p->count<=64)src+=p->count*sizeof p->triangles[0];uintptr_t a=(uintptr_t)p,b=(uintptr_t)out;
++  // Reject any source/output overlap before invalidating output/source.
++  if(a>UINTPTR_MAX-src||b>UINTPTR_MAX-bytes|| (a<b+bytes&&b<a+src))return false;
++ }
++ out->valid=false;out->count=0;out->capacity=0;
++ if(!need||bytes<need)return false;
++ size_t capacity=(bytes-sizeof *out)/sizeof(ksn_mesh_q7_triangle);out->capacity=(unsigned)(capacity>64?64:capacity);
++ out->count=p->count;out->fallback=false;memset(out->bands,0,sizeof out->bands);
++ for(unsigned f=0;f<p->count;f++){
++  ksn_mesh_q7_triangle *t=&out->triangles[f];t->original=p->triangles[f];const co_vertex *v=t->original.v;int64_t q[3][2];bool ok=true;
++  memset(&t->fixed,0,sizeof t->fixed);
++  for(unsigned k=0;k<3;k++)for(unsigned j=0;j<2;j++){double val=(j?v[k].y:v[k].x)*128.;if(!isfinite(val)||fabs(val)>524288)ok=false;q[k][j]=ok?(int64_t)floor(val+.5):0;}
++  int64_t area=(q[1][0]-q[0][0])*(q[2][1]-q[0][1])-(q[1][1]-q[0][1])*(q[2][0]-q[0][0]);if(area<=0)ok=false;
++  for(unsigned k=0;k<3;k++){
++   unsigned u=(k+1)%3,w=(k+2)%3;int64_t dx=q[w][0]-q[u][0],dy=q[w][1]-q[u][1];int64_t a=-dy*128,b=dx*128,c=dy*q[u][0]-dx*q[u][1]-!(dy<0||(dy==0&&dx>0));
++   if(a<INT32_MIN||a>INT32_MAX||b<INT32_MIN||b>INT32_MAX||c<INT32_MIN||c>INT32_MAX)ok=false;
++   for(int x=0;x<=243;x+=243)for(int y=0;y<=134;y+=134){int64_t z=a*x+b*y+c;if(z<INT32_MIN||z>INT32_MAX)ok=false;}
++   if(ok){t->fixed.abc[k][0]=(int32_t)a;t->fixed.abc[k][1]=(int32_t)b;t->fixed.abc[k][2]=(int32_t)c;}
++  }
++  for(unsigned pal=0;pal<2;pal++)for(unsigned ch=0;ch<3;ch++){
++   double *plane=t->fixed.rgb[pal][ch];unsigned shift=ch==0?11:ch==1?5:0,mask=ch==1?63:31;
++   for(unsigned k=0;k<3;k++){unsigned color=pal?v[k].color_b:v[k].color_a;double n=(color>>shift)&mask;const ksn_prepared_edge *e=&t->original.edge[k];plane[0]+=n*e->sign*e->a*t->original.inverse;plane[1]+=n*e->sign*e->b*t->original.inverse;plane[2]+=n*e->sign*e->c*t->original.inverse;}
++   double dx=round(plane[0]*65536.);if(!isfinite(dx)||fabs(dx)>INT32_MAX/4)ok=false;else t->fixed.dx[pal][ch]=(int32_t)dx;
++   for(int x=0;x<=239;x+=239)for(int y=0;y<=134;y+=134){double n=(plane[0]*x+plane[1]*y+plane[2])*65536.;if(!isfinite(n)||fabs(n)>INT32_MAX-16777216.)ok=false;}
++  }
++  make_certificate(t);
++  if(!ok)out->fallback=true;
++  int top=t->original.top-1,bottom=t->original.bottom+1;if(top<0)top=0;if(bottom>134)bottom=134;
++  if(top<=bottom)for(unsigned b=(unsigned)top/8;b<=(unsigned)bottom/8;b++)out->bands[b]|=UINT64_C(1)<<f;
++ }
++ // A whole-frame fallback avoids mixing coverage conventions on shared edges.
++
++ out->valid=true;return true;
++}
++static double edge(const ksn_prepared_edge *e,int x,int y){return e->sign*(e->a*x+e->b*y+e->c);}
++static uint16_t original_color(const co_vertex*v,const double*w,bool second){
++ uint16_t a=second?v[0].color_b:v[0].color_a,b=second?v[1].color_b:v[1].color_a,c=second?v[2].color_b:v[2].color_a;
++ const float cw[3]={(float)w[0],(float)w[1],(float)w[2]};
++ unsigned r=(unsigned)lroundf(fmaxf(0,fminf(31,cw[0]*(a>>11)+cw[1]*(b>>11)+cw[2]*(c>>11)))),g=(unsigned)lroundf(fmaxf(0,fminf(63,cw[0]*((a>>5)&63)+cw[1]*((b>>5)&63)+cw[2]*((c>>5)&63)))),bl=(unsigned)lroundf(fmaxf(0,fminf(31,cw[0]*(a&31)+cw[1]*(b&31)+cw[2]*(c&31))));return (uint16_t)((r<<11)|(g<<5)|bl);
++}
++bool ksn_mesh_q7_render(const ksn_mesh_q7_snapshot*s,uint16_t*pixels,unsigned y,unsigned height,float*z,uint8_t*owner,unsigned rows,ksn_mesh_q7_stats*stats){
++ if(!s||!s->valid||s->count>s->capacity||s->capacity>64||!pixels||!z||!owner||!stats||(rows!=1&&rows!=8)||y>135||height>135-y)return false;
++ bool rounding=ieee_environment();
++ for(unsigned strip=0;strip<height;strip+=rows){unsigned n=height-strip;if(n>rows)n=rows;unsigned sy=y+strip;float *zz=z;uint8_t *oo=owner;uint16_t*pp=pixels+strip*240;
++  for(unsigned i=0;i<n*240;i++){zz[i]=-INFINITY;oo[i]=255;}
++  if(s->fallback)stats->frame_fallback++;
++  for(unsigned f=0;f<s->count;f++){uint64_t bands=0;for(unsigned band=sy/8;band<=(sy+n-1)/8;band++)bands|=s->bands[band];if(!(bands&(UINT64_C(1)<<f)))continue;const ksn_mesh_q7_triangle*t=&s->triangles[f];const ksn_prepared_triangle*o=&t->original;const co_vertex*v=o->v;
++   for(int yy=(int)sy;yy<(int)(sy+n);yy++){int lo,hi;bool original=s->fallback;
++    if(original){if(yy<o->top||yy>o->bottom)continue;lo=o->left;hi=o->right;}else if(!ksn_mesh_q7_span(&t->fixed,yy,&lo,&hi))continue;
++    stats->rows++;int64_t color[2][3];for(unsigned pal=0;pal<2;pal++)for(unsigned ch=0;ch<3;ch++){const double *pl=t->fixed.rgb[pal][ch];color[pal][ch]=original?0:llround((pl[0]*lo+pl[1]*yy+pl[2])*65536.);}
++    for(int x=lo;x<=hi;x++){
++     double w[3]={0};bool have_weights=false,inside=true;float d=0;bool fast=!original&&rounding&&t->cert.valid;
++     if((Q7_CERT_MODE&1)&&fast&&certified_depth(&t->cert,x,yy,&d)){stats->depth_fast++;}else{
++      stats->depth_exact++;for(unsigned k=0;k<3;k++){w[k]=edge(&o->edge[k],x,yy);if(w[k]<0||(w[k]==0&&!o->edge[k].closed))inside=false;w[k]*=o->inverse;}have_weights=true;
++      if(original){stats->original_pixels++;if(!inside)continue;}
++      d=(float)(w[0]*v[0].depth+w[1]*v[1].depth+w[2]*v[2].depth);
++     }
++     if(!original)stats->span_pixels++;
++     if(!isfinite(d))return false;
++     unsigned at=(unsigned)(yy-(int)sy)*240+(unsigned)x;
++     if(d<=zz[at])stats->depth_reject++;else{zz[at]=d;oo[at]=(uint8_t)f;stats->mask_evals++;bool second;
++      if((Q7_CERT_MODE&2)&&fast&&certified_mask(&t->cert,x,yy,&second))stats->mask_fast++;
++      else{stats->mask_exact++;if(!have_weights)for(unsigned k=0;k<3;k++)w[k]=edge(&o->edge[k],x,yy)*o->inverse;second=w[0]*v[0].mask+w[1]*v[1].mask+w[2]*v[2].mask>=0;}
++      if(original){pp[at]=original_color(v,w,second);stats->color_fallback++;}else{unsigned c[3];for(unsigned ch=0;ch<3;ch++){int64_t a=color[second][ch],max=ch==1?63:31;if(a<0)a=0;if(a>max*65536)a=max*65536;c[ch]=(unsigned)((a+32768)>>16);}pp[at]=(uint16_t)((c[0]<<11)|(c[1]<<5)|c[2]);}
++     }
++     if(!original)for(unsigned pal=0;pal<2;pal++)for(unsigned ch=0;ch<3;ch++)color[pal][ch]+=t->fixed.dx[pal][ch];
++    }
++   }
++  }
++ }
++ return true;
++}
+diff --git a/main/ui/kasane/ksn_mesh_q7_certified.h b/main/ui/kasane/ksn_mesh_q7_certified.h
+new file mode 100644
+index 0000000000000000000000000000000000000000..816f10617713ec77164668a4045d03cefd4a671f
+--- /dev/null
++++ b/main/ui/kasane/ksn_mesh_q7_certified.h
+@@ -0,0 +1,19 @@
++#ifndef KSN_MESH_Q7_CERTIFIED_H
++#define KSN_MESH_Q7_CERTIFIED_H
++#include "ksn_mesh_prepared.h"
++/* Default-OFF bounded experiment. Q7 coverage/Q16 RGB are approximate; depth
++ * and mask retain original arithmetic through certified planes or fallback.
++ * Output owns all copied geometry. Caller provides disjoint valid allocations,
++ * serializes prepare/render/ACK and holds snapshots alive through render.
++ * Float environment must not change during either operation. */
++_Static_assert(KSN_PROC_W==240 && KSN_PROC_H==135,"Q7 certificate bounds require 240x135");
++typedef struct { double p[2][3],error[2]; bool valid; } ksn_mesh_q7_certificate;
++typedef struct { int32_t abc[3][3]; double rgb[2][3][3]; int32_t dx[2][3]; } ksn_mesh_q7_extra;
++typedef struct { ksn_prepared_triangle original; ksn_mesh_q7_extra fixed; ksn_mesh_q7_certificate cert; } ksn_mesh_q7_triangle;
++typedef struct { uint64_t bands[17]; unsigned count,capacity; bool valid, fallback; ksn_mesh_q7_triangle triangles[]; } ksn_mesh_q7_snapshot;
++typedef struct {uint64_t rows,span_pixels,original_pixels,depth_reject,mask_evals,color_fallback,frame_fallback,depth_fast,depth_exact,mask_fast,mask_exact;} ksn_mesh_q7_stats;
++size_t ksn_mesh_q7_bytes(const ksn_mesh_prepared *);
++bool ksn_mesh_q7_prepare(const ksn_mesh_prepared *,ksn_mesh_q7_snapshot *,size_t);
++bool ksn_mesh_q7_render(const ksn_mesh_q7_snapshot *,uint16_t *,unsigned,unsigned,float *,uint8_t *,unsigned,ksn_mesh_q7_stats *);
++bool ksn_mesh_q7_span(const ksn_mesh_q7_extra *,int,int *,int *);
++#endif
+diff --git a/docs/perf/mesh-q7-certified-experiment.md b/docs/perf/mesh-q7-certified-experiment.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..641753cd3effbe888f468d7903d0d7014b29d00f
+--- /dev/null
++++ b/docs/perf/mesh-q7-certified-experiment.md
+@@ -0,0 +1,35 @@
++# Default-OFF Q7 certified scalar experiment
++
++This opt-in renderer changes coverage to Q7 and colors to Q16 affine increments. It is not image-identical to the original float renderer. Its depth/mask optimization certifies original F32 depth bits and original mask sign, falling back to original equations near ambiguous boundaries. No PIE leaf, private model or asset is included.
++
++## Build selection
++
++Default: `KASANE_MESH_Q7_CERTIFIED_PROTOTYPE=OFF` (no added source, global state or behavior).
++
++Opt-in requires `KASANE_MESH_PREPARED_PROTOTYPE=ON` and `KASANE_MESH_EDGE4_PROTOTYPE=OFF`. CMake rejects incompatible combinations. Do not change default sdkconfig or existing benchmark fixture to enable it. The experiment is not a device-performance claim.
++
++Q7, prepared setup and original depth source compile with strict, noncontracting, nonreassociating, nonreciprocal-approximating arithmetic. Compile guards require binary32/binary64 size, mantissa, exponent and evaluation properties. Both certificate preparation and render check nearest rounding and gradual-underflow probes. A failed environment/certificate check uses original depth/mask, not an unchecked approximation. No floating-point control register is changed by production code. Arithmetic environment and snapshot must remain stable throughout each call.
++
++For attribute plane P, setup computes outward nonnegative M=sum((abs(a)*239+abs(b)*134+abs(c))*inverse*abs(attribute)). It uses E>=128*DBL_EPSILON*M+1e-250. The original edge/barycentric and regrouped-plane forward errors are conservatively below32*DBL_EPSILON*M+1e-260; slack also covers inward rounding of P±E endpoints. Depth accepts only identical finite, nonsubnormal F32 endpoint bits; mask accepts only an unambiguous sign. Original signed-zero, near-tie and palette-boundary cases otherwise use original expressions. This reasoning assumes strict IEEE behavior and the asserted240x135 coordinate domain; compilation alone does not prove target runtime/libc/FPU assumptions.
++
++## Ownership and fallback
++
++Q7 owns a count-sized copy of the original retained triangle data plus integer/color/certificate setup, bounded to64 faces. Candidate and committed snapshots follow the existing frame ACK swap. Failed publication, backdrop repair and image retry retain the corresponding original lifetime; no new ACK/token protocol is introduced.
++
++On candidate size change, only unsubmitted candidate Q7 storage is freed before replacement allocation, preventing a third Q7 snapshot. Committed storage is never mutated. Failed Q7 allocation/preparation keeps the original prepared or packet fallback. Successful Q7 preparation frees its now-duplicated prepared candidate. Any unsafe snapped geometry makes the Q7 snapshot use exact original geometry/color for the whole frame. More than64 faces falls back without dropping faces.
++
++Owner scratch is lazily allocated once as1920 bytes, reused by the serialized renderer and freed at reset. It is not a DMA loan. Statistics are native fixed storage. Memory reporting includes live Q7 capacities, scratch and metadata. Temporary retained preparation can coexist with the two Q7 slots; packet, VM/model, task stack, allocator and display costs remain additional. Target ABI and peak memory must be measured, not inferred from host sizes.
++
++## Host verification commands
++
++- `python tools/kasane_contract/run_mesh_q7.py --plain`
++- `python tools/kasane_contract/run_mesh_q7.py` (ASan/UBSan; LSan disabled for host compatibility)
++- `python tools/kasane_contract/run_mesh_q7_lifecycle.py` (generic product QJS lifecycle/OOM/repair/retry plus existing Gouraud/proc suites)
++
++Numeric tests compare the certificate backend byte-for-byte against frozen scalar Q7 for RGB, depth, owner and partial failure outputs. Original float rendering remains a separate oracle with explicit Q7 differences. Tests cover rounding-midpoint/F32-adjacent depths, signed zero/subnormals/extremes, cancellation, masks, overflow, arbitrary spans and preparation under DAZ followed by normal rendering. The DAZ test is host-SSE-specific; target environment behavior remains a separate gate.
++
++Lifecycle tests cover allocation failures in prepared/scratch/Q7 setup, committed-byte immutability, count64/65 fallback, backdrop repair, blocked pending mutations, image IO retry, ACK swap, count-sized replacement and reset. Existing default tests are not weakened to accept approximate pixels. The opt-in lifecycle fixture uses exact flat-color geometry; approximate numerical error reporting is in the independent numeric suite.
++
++## S3 full-build handoff gate
++
++Use the same base toolchain/configuration for default OFF and explicit ON, with separate build directories. Verify emitted flags for all three arithmetic TUs, newlib fenv/libm resolution, no unwanted PIE references, firmware/map size, `.su` stack reports and target structure sizes. Confirm default OFF omits Q7 definitions/symbols. Recheck dependency rejection for prepared OFF/edge4 ON. Preserve normal application entry and assets. Build success does not authorize flashing, monitoring the device or publication, and is not evidence of runtime20fps or image acceptance.
+diff --git a/tools/kasane_contract/run_mesh_q7.py b/tools/kasane_contract/run_mesh_q7.py
+new file mode 100644
+index 0000000000000000000000000000000000000000..d2950aae9256e6047e0202518aedb8a515268ce9
+--- /dev/null
++++ b/tools/kasane_contract/run_mesh_q7.py
+@@ -0,0 +1,14 @@
++"""Synthetic exact-Q7 certification tests. No device or private model inputs."""
++import argparse,os,subprocess,tempfile
++from pathlib import Path
++ROOT=Path(__file__).resolve().parents[2]
++a=argparse.ArgumentParser();a.add_argument('--plain',action='store_true');args=a.parse_args()
++flags=['-std=gnu11','-O2','-g','-fno-fast-math','-fno-associative-math','-fno-reciprocal-math','-ffp-contract=off','-frounding-math','-Wall','-Wextra','-Werror','-I'+str(ROOT/'main')]
++if not args.plain:flags+=['-fsanitize=address,undefined','-fno-omit-frame-pointer']
++shared=['main/ayatsuri/compact_opaque.c','main/ui/kasane/ksn_mesh_depth.c','main/ui/kasane/ksn_shiki_frame.c','main/ui/kasane/ksn_mesh_q7_certified.c','tools/kasane_contract/q7/oracle_prepared.c','tools/kasane_contract/q7/baseline_q7.c']
++env=dict(os.environ,ASAN_OPTIONS='detect_leaks=0:abort_on_error=1',UBSAN_OPTIONS='halt_on_error=1')
++with tempfile.TemporaryDirectory(prefix='q7-host-') as directory:
++ for test in ['test_numeric','test_certificate']:
++  binary=Path(directory)/test
++  subprocess.run(['cc',*flags,*[str(ROOT/p) for p in shared],str(ROOT/'tools/kasane_contract/q7'/(test+'.c')),'-lm','-o',str(binary)],check=True)
++  subprocess.run([str(binary)],check=True,env=env)
+diff --git a/tools/kasane_contract/run_mesh_q7_lifecycle.py b/tools/kasane_contract/run_mesh_q7_lifecycle.py
+new file mode 100644
+index 0000000000000000000000000000000000000000..552e201e48d05b962bab8e53e84ed19c92ec0cfa
+--- /dev/null
++++ b/tools/kasane_contract/run_mesh_q7_lifecycle.py
+@@ -0,0 +1,19 @@
++"""Opt-in Q7 product lifecycle test; original default runner remains unchanged."""
++import os,runpy,subprocess,sys
++from pathlib import Path
++ROOT=Path(__file__).resolve().parents[2]
++out=ROOT/'.cache/q7-lifecycle';out.mkdir(parents=True,exist_ok=True)
++(out/'original_q7_helpers.inc').write_text((ROOT/'tools/kasane_contract/test_mesh_depth_qjs.c').read_text().replace('int main(void){','int q7_inherited_depth_suite(void){'))
++original=subprocess.run
++sys.argv=[sys.argv[0]]
++def run(cmd,*args,**kwargs):
++ cmd=list(map(str,cmd))
++ if cmd and cmd[0]=='cc':
++  cmd+=['-I'+str(out),'-DKSN_MESH_PREPARED_PROTOTYPE=1','-DKSN_MESH_Q7_CERTIFIED_PROTOTYPE=1','-fno-fast-math','-fno-associative-math','-fno-reciprocal-math','-ffp-contract=off','-frounding-math']
++  if any(x.endswith('/pocket_shiki_frame.c') for x in cmd):
++   cmd+=[str(ROOT/'main/ui/kasane/ksn_mesh_prepared.c'),str(ROOT/'main/ui/kasane/ksn_mesh_q7_certified.c')]
++  cmd=[x.replace('/test_mesh_depth_qjs.c','/test_mesh_q7_lifecycle.c') for x in cmd]
++ if 'env' in kwargs:kwargs['env']=dict(kwargs['env'],ASAN_OPTIONS='detect_leaks=0:abort_on_error=1')
++ return original(cmd,*args,**kwargs)
++subprocess.run=run
++runpy.run_path(str(ROOT/'tools/kasane_contract/run_mesh_depth.py'),run_name='__main__')
+diff --git a/tools/kasane_contract/test_mesh_q7_lifecycle.c b/tools/kasane_contract/test_mesh_q7_lifecycle.c
+new file mode 100644
+index 0000000000000000000000000000000000000000..60c5087a1c600f12f74ff91f6618efdaf0e65b46
+--- /dev/null
++++ b/tools/kasane_contract/test_mesh_q7_lifecycle.c
+@@ -0,0 +1,18 @@
++#include "original_q7_helpers.inc"
++#include "ui/kasane/ksn_mesh_q7_certified.h"
++extern const ksn_mesh_q7_snapshot *pocket_proc_q7_host_snapshot(unsigned,bool);
++int main(void){
++ JSRuntime*rt=JS_NewRuntime();REQUIRE(rt);JSContext*ctx=JS_NewContext(rt);REQUIRE(ctx);JSValue g=JS_GetGlobalObject(ctx),p=JS_NewObject(ctx);REQUIRE(pocket_shiki_api_install(ctx,p)==ESP_OK);REQUIRE(JS_SetPropertyStr(ctx,g,"K",p)>=0);JS_FreeValue(ctx,g);eval_ok(ctx,"globalThis.P=K.shiki;globalThis.pocket={kasane:K}");
++ ksn_proc_gouraud_patch red=triangle(63488),blue=triangle(31);float z[3]={0,0,0};
++ // Fail each first-time derived allocation; valid packet rendering still succeeds.
++ for(int fail=0;fail<3;fail++){pocket_proc_reset();eval_ok(ctx,"P.beginMeshFrame(0,65536,8000000,1)");append(ctx,&red,z);pocket_proc_mesh_fail_after(fail);eval_ok(ctx,"P.commit()");pocket_proc_mesh_fail_after(-1);REQUIRE(pocket_proc_backdrop(NULL,0,135,actual)==KSN_OK&&actual[2892]==63488);pocket_proc_present_result(KSN_OK);}
++ pocket_proc_reset();eval_ok(ctx,"P.beginMeshFrame(0,65536,8000000,8)");append(ctx,&red,z);eval_ok(ctx,"P.commit()");REQUIRE(pocket_proc_q7_host_snapshot(0,false)&&pocket_proc_q7_host_snapshot(0,false)->valid);pocket_proc_present_result(KSN_OK);
++ const ksn_mesh_q7_snapshot*committed=pocket_proc_q7_host_snapshot(0,true);size_t committed_bytes=sizeof(*committed)+committed->count*sizeof committed->triangles[0];unsigned char*saved=malloc(committed_bytes);REQUIRE(saved);memcpy(saved,committed,committed_bytes);
++ for(int fail=0;fail<3;fail++){eval_ok(ctx,"P.beginMeshFrame(0,65536,8000000,1)");append(ctx,&blue,z);pocket_proc_mesh_fail_after(fail);eval_ok(ctx,"P.commit()");pocket_proc_mesh_fail_after(-1);REQUIRE(pocket_proc_q7_host_snapshot(0,true)==committed&&!memcmp(saved,committed,committed_bytes));REQUIRE(pocket_proc_backdrop(NULL,0,135,actual)==KSN_OK&&actual[2892]==31);pocket_proc_present_result(KSN_IO);REQUIRE(pocket_proc_backdrop(NULL,0,135,actual)==KSN_OK&&actual[2892]==63488);REQUIRE(!memcmp(saved,committed,committed_bytes));eval_error(ctx,"P.beginFrame(0)");pocket_proc_present_result(KSN_OK);REQUIRE(pocket_proc_q7_host_snapshot(0,true)==committed);}
++ // Count64 fits;65 faces must use original/retained admission fallback without dropping last.
++ eval_ok(ctx,"P.beginMeshFrame(0,65536,8000000,8)");for(unsigned i=0;i<64;i++)append(ctx,&red,z);eval_ok(ctx,"P.commit()");REQUIRE(pocket_proc_q7_host_snapshot(0,false)->count==64);pocket_proc_present_result(KSN_IO);pocket_proc_present_result(KSN_OK);
++ eval_ok(ctx,"P.beginMeshFrame(0,65536,8000000,8)");for(unsigned i=0;i<64;i++)append(ctx,&red,z);z[0]=z[1]=z[2]=1;append(ctx,&blue,z);eval_ok(ctx,"P.commit()");REQUIRE(!pocket_proc_q7_host_snapshot(0,false)->valid);REQUIRE(pocket_proc_backdrop(NULL,0,135,actual)==KSN_OK&&actual[2892]==31);pocket_proc_present_result(KSN_IO);pocket_proc_present_result(KSN_OK);REQUIRE(!memcmp(saved,committed,committed_bytes));free(saved);
++ // Image IO keeps the submitted candidate intact until its eventual ACK.
++ pocket_proc_image_mode();eval_ok(ctx,"P.beginMeshFrame(0,65536,8000000,1)");append(ctx,&blue,z);eval_ok(ctx,"P.commit()");const ksn_mesh_q7_snapshot*candidate=pocket_proc_q7_host_snapshot(0,false);REQUIRE(candidate&&candidate->valid&&candidate->count==1);pocket_proc_present_result(KSN_IO);REQUIRE(pocket_proc_pending()&&pocket_proc_q7_host_snapshot(0,false)==candidate);eval_error(ctx,"P.beginFrame(0)");ksn_image_port port;pocket_proc_image_port(&port);REQUIRE(pocket_proc_backdrop(NULL,0,135,expected)==KSN_OK);for(unsigned y=0;y<135;y+=4){unsigned n=135-y;if(n>4)n=4;REQUIRE(port.read_rows(port.ctx,0,0,y,n,0,240,actual+y*240,240)==KSN_OK);}REQUIRE(!memcmp(actual,expected,sizeof actual));pocket_proc_present_result(KSN_OK);REQUIRE(pocket_proc_q7_host_snapshot(0,true)==candidate&&!pocket_proc_pending());
++ pocket_proc_mesh_bytes bytes;pocket_proc_mesh_memory(&bytes);printf("Q7_LIFECYCLE_PASS initial_OOM3 committed_immutable OOM_backdrop_repair count64 face65_fallback image_retry_ACK metadata=%zu workspace=%zu\n",bytes.metadata,bytes.workspace);pocket_proc_reset();pocket_proc_mesh_memory(&bytes);REQUIRE(!bytes.candidate&&!bytes.committed&&!bytes.workspace);REQUIRE(!pocket_proc_q7_host_snapshot(0,true)&&!pocket_proc_q7_host_snapshot(0,false));JS_FreeContext(ctx);JS_FreeRuntime(rt);return 0;
++}
+diff --git a/tools/kasane_contract/q7/baseline_q7.c b/tools/kasane_contract/q7/baseline_q7.c
+new file mode 100644
+index 0000000000000000000000000000000000000000..937288a985e76f8de29bc30699061fdecb79d96f
+--- /dev/null
++++ b/tools/kasane_contract/q7/baseline_q7.c
+@@ -0,0 +1,80 @@
++#include "ui/kasane/ksn_mesh_q7_certified.h"
++#include <math.h>
++#include <limits.h>
++#include <string.h>
++static int64_t fld(int64_t n,int64_t d){int64_t q=n/d,r=n%d;return q-((r!=0)&&((r<0)!=(d<0)));}
++static int64_t cld(int64_t n,int64_t d){return -fld(-n,d);}
++bool baseline_ksn_mesh_q7_span(const ksn_mesh_q7_extra *t,int y,int *lo,int *hi){
++ int64_t l=0,r=239;
++ for(unsigned k=0;k<3;k++) {int64_t a=t->abc[k][0],v=(int64_t)t->abc[k][1]*y+t->abc[k][2];
++  if(a>0){int64_t z=cld(-v,a);if(z>l)l=z;}else if(a<0){int64_t z=fld(-v,a);if(z<r)r=z;}else if(v<0)return false;
++ }
++ if(l>r)return false;
++ *lo=(int)l;*hi=(int)r;return true;
++}
++size_t baseline_ksn_mesh_q7_bytes(const ksn_mesh_prepared *p){return !p||!p->valid||p->capacity>64||p->count>p->capacity||p->count>64?0:sizeof(ksn_mesh_q7_snapshot)+p->count*sizeof(ksn_mesh_q7_triangle);}
++bool baseline_ksn_mesh_q7_prepare(const ksn_mesh_prepared *p,ksn_mesh_q7_snapshot *out,size_t bytes){
++ if(!out||bytes<sizeof *out)return false;
++ size_t need=baseline_ksn_mesh_q7_bytes(p);
++ if(p){size_t src=sizeof *p;if(p->count<=64)src+=p->count*sizeof p->triangles[0];uintptr_t a=(uintptr_t)p,b=(uintptr_t)out;
++  // Reject any source/output overlap before invalidating output/source.
++  if(a>UINTPTR_MAX-src||b>UINTPTR_MAX-bytes|| (a<b+bytes&&b<a+src))return false;
++ }
++ out->valid=false;out->count=0;out->capacity=0;
++ if(!need||bytes<need)return false;
++ size_t capacity=(bytes-sizeof *out)/sizeof(ksn_mesh_q7_triangle);out->capacity=(unsigned)(capacity>64?64:capacity);
++ out->count=p->count;out->fallback=false;memset(out->bands,0,sizeof out->bands);
++ for(unsigned f=0;f<p->count;f++){
++  ksn_mesh_q7_triangle *t=&out->triangles[f];t->original=p->triangles[f];const co_vertex *v=t->original.v;int64_t q[3][2];bool ok=true;
++  memset(&t->fixed,0,sizeof t->fixed);
++  for(unsigned k=0;k<3;k++)for(unsigned j=0;j<2;j++){double val=(j?v[k].y:v[k].x)*128.;if(!isfinite(val)||fabs(val)>524288)ok=false;q[k][j]=ok?(int64_t)floor(val+.5):0;}
++  int64_t area=(q[1][0]-q[0][0])*(q[2][1]-q[0][1])-(q[1][1]-q[0][1])*(q[2][0]-q[0][0]);if(area<=0)ok=false;
++  for(unsigned k=0;k<3;k++){
++   unsigned u=(k+1)%3,w=(k+2)%3;int64_t dx=q[w][0]-q[u][0],dy=q[w][1]-q[u][1];int64_t a=-dy*128,b=dx*128,c=dy*q[u][0]-dx*q[u][1]-!(dy<0||(dy==0&&dx>0));
++   if(a<INT32_MIN||a>INT32_MAX||b<INT32_MIN||b>INT32_MAX||c<INT32_MIN||c>INT32_MAX)ok=false;
++   for(int x=0;x<=243;x+=243)for(int y=0;y<=134;y+=134){int64_t z=a*x+b*y+c;if(z<INT32_MIN||z>INT32_MAX)ok=false;}
++   if(ok){t->fixed.abc[k][0]=(int32_t)a;t->fixed.abc[k][1]=(int32_t)b;t->fixed.abc[k][2]=(int32_t)c;}
++  }
++  for(unsigned pal=0;pal<2;pal++)for(unsigned ch=0;ch<3;ch++){
++   double *plane=t->fixed.rgb[pal][ch];unsigned shift=ch==0?11:ch==1?5:0,mask=ch==1?63:31;
++   for(unsigned k=0;k<3;k++){unsigned color=pal?v[k].color_b:v[k].color_a;double n=(color>>shift)&mask;const ksn_prepared_edge *e=&t->original.edge[k];plane[0]+=n*e->sign*e->a*t->original.inverse;plane[1]+=n*e->sign*e->b*t->original.inverse;plane[2]+=n*e->sign*e->c*t->original.inverse;}
++   double dx=round(plane[0]*65536.);if(!isfinite(dx)||fabs(dx)>INT32_MAX/4)ok=false;else t->fixed.dx[pal][ch]=(int32_t)dx;
++   for(int x=0;x<=239;x+=239)for(int y=0;y<=134;y+=134){double n=(plane[0]*x+plane[1]*y+plane[2])*65536.;if(!isfinite(n)||fabs(n)>INT32_MAX-16777216.)ok=false;}
++  }
++  if(!ok)out->fallback=true;
++  int top=t->original.top-1,bottom=t->original.bottom+1;if(top<0)top=0;if(bottom>134)bottom=134;
++  if(top<=bottom)for(unsigned b=(unsigned)top/8;b<=(unsigned)bottom/8;b++)out->bands[b]|=UINT64_C(1)<<f;
++ }
++ // A whole-frame fallback avoids mixing coverage conventions on shared edges.
++
++ out->valid=true;return true;
++}
++static double edge(const ksn_prepared_edge *e,int x,int y){return e->sign*(e->a*x+e->b*y+e->c);}
++static uint16_t original_color(const co_vertex*v,const double*w,bool second){
++ uint16_t a=second?v[0].color_b:v[0].color_a,b=second?v[1].color_b:v[1].color_a,c=second?v[2].color_b:v[2].color_a;
++ const float cw[3]={(float)w[0],(float)w[1],(float)w[2]};
++ unsigned r=(unsigned)lroundf(fmaxf(0,fminf(31,cw[0]*(a>>11)+cw[1]*(b>>11)+cw[2]*(c>>11)))),g=(unsigned)lroundf(fmaxf(0,fminf(63,cw[0]*((a>>5)&63)+cw[1]*((b>>5)&63)+cw[2]*((c>>5)&63)))),bl=(unsigned)lroundf(fmaxf(0,fminf(31,cw[0]*(a&31)+cw[1]*(b&31)+cw[2]*(c&31))));return (uint16_t)((r<<11)|(g<<5)|bl);
++}
++bool baseline_ksn_mesh_q7_render(const ksn_mesh_q7_snapshot*s,uint16_t*pixels,unsigned y,unsigned height,float*z,uint8_t*owner,unsigned rows,ksn_mesh_q7_stats*stats){
++ if(!s||!s->valid||s->count>s->capacity||s->capacity>64||!pixels||!z||!owner||!stats||(rows!=1&&rows!=8)||y>135||height>135-y)return false;
++ for(unsigned strip=0;strip<height;strip+=rows){unsigned n=height-strip;if(n>rows)n=rows;unsigned sy=y+strip;float *zz=z;uint8_t *oo=owner;uint16_t*pp=pixels+strip*240;
++  for(unsigned i=0;i<n*240;i++){zz[i]=-INFINITY;oo[i]=255;}
++  if(s->fallback)stats->frame_fallback++;
++  for(unsigned f=0;f<s->count;f++){uint64_t bands=0;for(unsigned band=sy/8;band<=(sy+n-1)/8;band++)bands|=s->bands[band];if(!(bands&(UINT64_C(1)<<f)))continue;const ksn_mesh_q7_triangle*t=&s->triangles[f];const ksn_prepared_triangle*o=&t->original;const co_vertex*v=o->v;
++   for(int yy=(int)sy;yy<(int)(sy+n);yy++){int lo,hi;bool original=s->fallback;
++    if(original){if(yy<o->top||yy>o->bottom)continue;lo=o->left;hi=o->right;}else if(!baseline_ksn_mesh_q7_span(&t->fixed,yy,&lo,&hi))continue;
++    stats->rows++;int64_t color[2][3];for(unsigned pal=0;pal<2;pal++)for(unsigned ch=0;ch<3;ch++){const double *pl=t->fixed.rgb[pal][ch];color[pal][ch]=original?0:llround((pl[0]*lo+pl[1]*yy+pl[2])*65536.);}
++    for(int x=lo;x<=hi;x++){
++     double w[3];bool inside=true;for(unsigned k=0;k<3;k++){w[k]=edge(&o->edge[k],x,yy);if(w[k]<0||(w[k]==0&&!o->edge[k].closed))inside=false;w[k]*=o->inverse;}
++     if(original){stats->original_pixels++;if(!inside)continue;}else stats->span_pixels++;
++     float d=(float)(w[0]*v[0].depth+w[1]*v[1].depth+w[2]*v[2].depth);if(!isfinite(d))return false;unsigned at=(unsigned)(yy-(int)sy)*240+(unsigned)x;
++     if(d<=zz[at])stats->depth_reject++;else{zz[at]=d;oo[at]=(uint8_t)f;stats->mask_evals++;bool second=w[0]*v[0].mask+w[1]*v[1].mask+w[2]*v[2].mask>=0;
++      if(original){pp[at]=original_color(v,w,second);stats->color_fallback++;}else{unsigned c[3];for(unsigned ch=0;ch<3;ch++){int64_t a=color[second][ch],max=ch==1?63:31;if(a<0)a=0;if(a>max*65536)a=max*65536;c[ch]=(unsigned)((a+32768)>>16);}pp[at]=(uint16_t)((c[0]<<11)|(c[1]<<5)|c[2]);}
++     }
++     if(!original)for(unsigned pal=0;pal<2;pal++)for(unsigned ch=0;ch<3;ch++)color[pal][ch]+=t->fixed.dx[pal][ch];
++    }
++   }
++  }
++ }
++ return true;
++}
+diff --git a/tools/kasane_contract/q7/oracle_prepared.c b/tools/kasane_contract/q7/oracle_prepared.c
+new file mode 100644
+index 0000000000000000000000000000000000000000..6ff3b7883643c3f9f3d4055362299b8a5d14fe24
+--- /dev/null
++++ b/tools/kasane_contract/q7/oracle_prepared.c
+@@ -0,0 +1,148 @@
++#include "ui/kasane/ksn_mesh_prepared.h"
++uint8_t *test_owner;
++#include <math.h>
++#include <string.h>
++#ifdef KSN_MESH_EDGE4_HOST_STATS
++uint64_t ksn_mesh_prepared_edge4_stats[4];
++#endif
++typedef ksn_prepared_edge gouraud_edge;
++static gouraud_edge gouraud_make_edge(const co_vertex *a,const co_vertex *b){
++    const double dx=(double)b->x-a->x,dy=(double)b->y-a->y;
++    gouraud_edge edge={.sign=1,.closed=dy<0||(dy==0&&dx>0)};
++    /* Both triangles evaluate a shared edge in the same canonical direction.
++     * Reversing it only negates the result, including exact zero at ties. */
++    if(a->x>b->x||(a->x==b->x&&a->y>b->y)){
++        const co_vertex *swap=a;a=b;b=swap;edge.sign=-1;
++    }
++    edge.a=(double)a->y-b->y;edge.b=(double)b->x-a->x;
++    edge.c=((double)b->y-a->y)*a->x-((double)b->x-a->x)*a->y;return edge;
++}
++static double gouraud_edge_value(const gouraud_edge *e,int x,int y){return e->sign*(e->a*x+e->b*y+e->c);}
++
++
++size_t ksn_mesh_prepared_bytes(const ksn_mesh_snapshot *s){
++    if(!s||!s->enabled)return 0;
++    size_t off=0;unsigned count=0;
++    while(off<s->packets.size){
++        co_view view;if(!co_read(s->packets.data+off,s->packets.size-off,&view))return 0;
++        count+=view.triangle_count;if(count>KSN_PREPARED_MAX_TRIANGLES)return 0;
++        off+=view.size;
++    }
++    return sizeof(ksn_mesh_prepared)+count*sizeof(ksn_prepared_triangle);
++}
++bool ksn_mesh_prepare(const ksn_mesh_snapshot *s,ksn_mesh_prepared *out,size_t bytes){
++    if(!out||bytes<sizeof *out)return false;
++    out->valid=false;out->count=0;memset(out->bands,0,sizeof out->bands);
++    size_t cap=(bytes-sizeof *out)/sizeof out->triangles[0];
++    out->capacity=(unsigned)(cap>KSN_PREPARED_MAX_TRIANGLES?KSN_PREPARED_MAX_TRIANGLES:cap);
++    if(!s||!s->enabled)return false;
++    size_t offset=0;
++    while(offset<s->packets.size){
++        co_view view;if(!co_read(s->packets.data+offset,s->packets.size-offset,&view))return false;
++        for(unsigned face=0;face<view.triangle_count;face++){
++            if(out->count==out->capacity)return false;
++            ksn_prepared_triangle *t=&out->triangles[out->count];
++            co_vertex *v=t->v;uint8_t indices[3];bool back;
++            if(!co_triangle_at(&view,face,indices)||!co_triangle_side(&view,face,&back))return false;
++            for(unsigned j=0;j<3;j++)if(!co_vertex_at_side(&view,indices[j],back,v+j))return false;
++            double area=((double)v[1].x-v[0].x)*((double)v[2].y-v[0].y)-((double)v[1].y-v[0].y)*((double)v[2].x-v[0].x);
++            if(!(area>1e-5))return false;
++            t->inverse=1/area;
++            t->left=(int)ceil(fmin(v[0].x,fmin(v[1].x,v[2].x)));
++            t->right=(int)floor(fmax(v[0].x,fmax(v[1].x,v[2].x)));
++            t->top=(int)ceil(fmin(v[0].y,fmin(v[1].y,v[2].y)));
++            t->bottom=(int)floor(fmax(v[0].y,fmax(v[1].y,v[2].y)));
++            if(t->left<0)t->left=0;
++            if(t->right>=KSN_PROC_W)t->right=KSN_PROC_W-1;
++            if(t->top<0)t->top=0;
++            if(t->bottom>=KSN_PROC_H)t->bottom=KSN_PROC_H-1;
++            t->edge[0]=gouraud_make_edge(v+1,v+2);t->edge[1]=gouraud_make_edge(v+2,v);t->edge[2]=gouraud_make_edge(v,v+1);
++#ifdef KSN_MESH_PREPARED_EDGE4
++            double abc[3][3];
++            for(unsigned k=0;k<3;k++){
++                abc[k][0]=t->edge[k].sign*t->edge[k].a;
++                abc[k][1]=t->edge[k].sign*t->edge[k].b;
++                abc[k][2]=t->edge[k].sign*t->edge[k].c;
++            }
++            t->classify_valid=pie_edge4_prepare(abc,&t->classify);
++#endif
++            if(t->left<=t->right&&t->top<=t->bottom)
++                for(unsigned band=(unsigned)t->top/8;band<=(unsigned)t->bottom/8;band++)out->bands[band]|=UINT64_C(1)<<out->count;
++            out->count++;
++        }
++        offset+=view.size;
++    }
++    out->valid=true;return true;
++}
++static bool prepared_strip(const ksn_mesh_prepared *s,uint16_t *pixels,unsigned y,unsigned height,float *z){
++    for(unsigned j=0;j<height*KSN_PROC_W;j++)z[j]=-INFINITY;
++    uint64_t pending=0;
++    for(unsigned b=y/8;b<=(y+height-1)/8;b++)pending|=s->bands[b];
++    while(pending){
++        unsigned face=(unsigned)__builtin_ctzll(pending);pending&=pending-1;
++        const ksn_prepared_triangle *t=&s->triangles[face];
++        const co_vertex *v=t->v;const gouraud_edge *edge=t->edge;const double inverse=t->inverse;
++        int left=t->left,right=t->right,top=t->top,bottom=t->bottom;
++        if(top<(int)y)top=(int)y;
++        if(bottom>=(int)(y+height))bottom=(int)(y+height)-1;
++            for(int yy=top;yy<=bottom;yy++){
++#ifdef KSN_MESH_PREPARED_EDGE4
++                pie_edge4_lanes lanes;pie_edge4_mask rejects;
++                bool classify=t->classify_valid&&left<=right&&pie_edge4_init(&t->classify,(unsigned)left,(unsigned)yy,&lanes);
++#endif
++                for(int base=left;base<=right;base+=4){
++#ifdef KSN_MESH_PREPARED_EDGE4
++                    if(classify){
++                        pie_edge4_reject_raw(&lanes,&rejects);
++#ifdef KSN_MESH_EDGE4_HOST_STATS
++                        ++ksn_mesh_prepared_edge4_stats[0];
++                        if(rejects.v[0]&&rejects.v[1]&&rejects.v[2]&&rejects.v[3])++ksn_mesh_prepared_edge4_stats[1];
++#endif
++                    }
++#endif
++                    for(int lane=0;lane<4&&base+lane<=right;lane++){
++                        int x=base+lane;
++#ifdef KSN_MESH_PREPARED_EDGE4
++#ifdef KSN_MESH_EDGE4_HOST_STATS
++                        ++ksn_mesh_prepared_edge4_stats[2];
++#endif
++                        if(classify&&rejects.v[lane]){
++#ifdef KSN_MESH_EDGE4_HOST_STATS
++                            ++ksn_mesh_prepared_edge4_stats[3];
++#endif
++                            continue;
++                        }
++#endif
++
++                double w[3];bool inside=true;
++                for(unsigned k=0;k<3;k++){w[k]=gouraud_edge_value(edge+k,x,yy);if(w[k]<0||(w[k]==0&&!edge[k].closed))inside=false;}
++                if(!inside)continue;
++                for(unsigned k=0;k<3;k++)w[k]*=inverse;
++                const float depth=(float)(w[0]*v[0].depth+w[1]*v[1].depth+w[2]*v[2].depth);
++                if(!isfinite(depth))return false;
++                const unsigned at=(unsigned)(yy-(int)y)*KSN_PROC_W+(unsigned)x;
++                if(depth<=z[at])continue;
++                z[at]=depth; if(test_owner) test_owner[at]=(uint8_t)face;
++                const bool second=w[0]*v[0].mask+w[1]*v[1].mask+w[2]*v[2].mask>=0;
++                const uint16_t a=second?v[0].color_b:v[0].color_a,b=second?v[1].color_b:v[1].color_a,c=second?v[2].color_b:v[2].color_a;
++                const float cw[3]={(float)w[0],(float)w[1],(float)w[2]};
++                const unsigned red=(unsigned)lroundf(fmaxf(0,fminf(31,cw[0]*(a>>11)+cw[1]*(b>>11)+cw[2]*(c>>11)))),
++                    green=(unsigned)lroundf(fmaxf(0,fminf(63,cw[0]*((a>>5)&63)+cw[1]*((b>>5)&63)+cw[2]*((c>>5)&63)))),
++                    blue=(unsigned)lroundf(fmaxf(0,fminf(31,cw[0]*(a&31)+cw[1]*(b&31)+cw[2]*(c&31))));
++                pixels[at]=(uint16_t)((red<<11)|(green<<5)|blue);
++                    }
++#ifdef KSN_MESH_PREPARED_EDGE4
++                    if(classify&&base+4<=right)pie_edge4_advance(&t->classify,&lanes);
++#endif
++                }
++            }
++
++    }
++    return true;
++}
++bool ksn_mesh_prepared_render(const ksn_mesh_prepared *s,uint16_t *pixels,unsigned y,unsigned height,float *scratch,unsigned rows){
++    if(!s||!s->valid||!pixels||!scratch||(rows!=1&&rows!=8)||y>KSN_PROC_H||height>KSN_PROC_H-y)return false;
++    for(unsigned at=0;at<height;at+=rows){unsigned n=height-at;if(n>rows)n=rows;
++        if(!prepared_strip(s,pixels+at*KSN_PROC_W,y+at,n,scratch))return false;}
++    return true;
++}
+diff --git a/tools/kasane_contract/q7/test_certificate.c b/tools/kasane_contract/q7/test_certificate.c
+new file mode 100644
+index 0000000000000000000000000000000000000000..a01ba0c603099ede5e93f446cc3a17eb66a7c56c
+--- /dev/null
++++ b/tools/kasane_contract/q7/test_certificate.c
+@@ -0,0 +1,47 @@
++#include "ui/kasane/ksn_mesh_q7_certified.h"
++#include <math.h>
++#include <assert.h>
++#include <stdio.h>
++#include <stdlib.h>
++#include <string.h>
++#include <float.h>
++#include <fenv.h>
++#if defined(__SSE__)
++#include <xmmintrin.h>
++#endif
++extern bool baseline_ksn_mesh_q7_render(const ksn_mesh_q7_snapshot*,uint16_t*,unsigned,unsigned,float*,uint8_t*,unsigned,ksn_mesh_q7_stats*);
++static unsigned rng=17;static unsigned rnd(void){return rng=rng*1664525+1013904223;}
++static float bits(uint32_t u){float f;memcpy(&f,&u,4);return f;}
++static void compare(ksn_mesh_q7_snapshot*q,ksn_mesh_q7_stats*stats){
++ uint16_t a[1920],b[1920];float za[1920],zb[1920];uint8_t oa[1920],ob[1920];ksn_mesh_q7_stats base={0};
++ for(unsigned rows=1;rows<=8;rows*=8)for(unsigned y=0;y<135;y+=rows){unsigned n=135-y;if(n>rows)n=rows;memset(a,0x35,sizeof a);memset(b,0x35,sizeof b);memset(za,0,sizeof za);memset(zb,0,sizeof zb);memset(oa,255,sizeof oa);memset(ob,255,sizeof ob);
++  bool ar=ksn_mesh_q7_render(q,a,y,n,za,oa,rows,stats),br=baseline_ksn_mesh_q7_render(q,b,y,n,zb,ob,rows,&base);assert(ar==br);assert(!memcmp(a,b,n*240*2));assert(!memcmp(za,zb,n*240*4));assert(!memcmp(oa,ob,n*240));
++ }
++}
++int main(void){
++ uint8_t packets[65536];ksn_mesh_snapshot s={.packets={packets,sizeof packets,0,0},.enabled=true};size_t pb=sizeof(ksn_mesh_prepared)+64*sizeof(ksn_prepared_triangle),qb=sizeof(ksn_mesh_q7_snapshot)+64*sizeof(ksn_mesh_q7_triangle);ksn_mesh_prepared*p=malloc(pb);ksn_mesh_q7_snapshot*q=malloc(qb);assert(p&&q);ksn_mesh_q7_stats stats={0};
++ const float special[]={0.f,-0.f,FLT_TRUE_MIN,-FLT_TRUE_MIN,FLT_MIN,-FLT_MIN,FLT_MAX,-FLT_MAX,1.f,-1.f,.5f,0x1.000002p0f,0x1.fffffep-1f,1e-30f,1e30f};
++ for(unsigned scene=0;scene<600;scene++){s.packets.size=s.packets.packets=0;
++  for(unsigned face=0;face<2;face++){co_vertex v[3];float x=scene%5?10.001f:0,y=scene%5?10.002f:0,w=scene%5?120.1f:2,h=scene%5?90.2f:2;
++   for(unsigned k=0;k<3;k++){float d=special[(scene+k)%15],m=special[(scene*3+k)%15];if(scene>=200){d=bits(rnd()&0xfeffffffu);m=bits(rnd()&0xfeffffffu);}if(face&&isfinite(d))d=nextafterf(d,0);
++    v[k]=(co_vertex){x+(k==1?w:0),y+(k==2?h:0),m,d,63488,2016};}
++   if(scene>=400){for(unsigned k=0;k<3;k++){v[k].x=((int)(rnd()%44000)-10000)/100.f;v[k].y=((int)(rnd()%32000)-10000)/100.f;}
++    double area=((double)v[1].x-v[0].x)*((double)v[2].y-v[0].y)-((double)v[1].y-v[0].y)*((double)v[2].x-v[0].x);if(area<0){co_vertex z=v[1];v[1]=v[2];v[2]=z;}}
++   if(scene%11==0){v[0].depth=1;v[1].depth=nextafterf(1,2);v[2].depth=1;}
++   if(scene%13==0){v[0].mask=-1;v[1].mask=1;v[2].mask=0;}
++   uint16_t ix[3]={0,1,2};co_input in={v,ix,0,3,1};assert(co_append(&s.packets,&in));
++  }
++  assert(ksn_mesh_prepare(&s,p,pb)&&ksn_mesh_q7_prepare(p,q,qb));compare(q,&stats);
++ }
++ // Non-nearest rounding disables certification and preserves the baseline path.
++ assert(fesetround(FE_DOWNWARD)==0);ksn_mesh_q7_stats before=stats;compare(q,&stats);assert(stats.depth_fast==before.depth_fast&&stats.mask_fast==before.mask_fast);assert(fesetround(FE_TONEAREST)==0);
++#if defined(__SSE__)
++ // Certificate preparation under DAZ must not survive after DAZ is cleared.
++ s.packets.size=s.packets.packets=0;co_vertex transition[3]={{0,0,-nextafterf(FLT_MIN,0),1,63488,2016},{4,0,FLT_MIN,1,63488,2016},{0,4,0,1,63488,2016}};uint16_t ti[3]={0,1,2};co_input tin={transition,ti,0,3,1};assert(co_append(&s.packets,&tin));assert(ksn_mesh_prepare(&s,p,pb));
++ unsigned csr=_mm_getcsr();_mm_setcsr(csr|0x8040u);assert(ksn_mesh_q7_prepare(p,q,qb));_mm_setcsr(csr);assert(!q->triangles[0].cert.valid);before=stats;compare(q,&stats);assert(stats.depth_fast==before.depth_fast&&stats.mask_fast==before.mask_fast);
++ assert(ksn_mesh_q7_prepare(p,q,qb));compare(q,&stats);
++ csr=_mm_getcsr();_mm_setcsr(csr|0x8040u);before=stats;compare(q,&stats);assert(stats.depth_fast==before.depth_fast&&stats.mask_fast==before.mask_fast);_mm_setcsr(csr);
++#endif
++ printf("CERT_PASS scenes=600 rows1and8 partial_failure_bytes_equal rounding_gate depth_fast=%llu depth_exact=%llu mask_fast=%llu mask_exact=%llu\n",(unsigned long long)stats.depth_fast,(unsigned long long)stats.depth_exact,(unsigned long long)stats.mask_fast,(unsigned long long)stats.mask_exact);
++ free(p);free(q);return 0;
++}
+diff --git a/tools/kasane_contract/q7/test_numeric.c b/tools/kasane_contract/q7/test_numeric.c
+new file mode 100644
+index 0000000000000000000000000000000000000000..d4927856d405bec23ee4341ff6dfa2e408fca9fc
+--- /dev/null
++++ b/tools/kasane_contract/q7/test_numeric.c
+@@ -0,0 +1,67 @@
++#define _POSIX_C_SOURCE 200809L
++#include "ui/kasane/ksn_mesh_q7_certified.h"
++#include <stdio.h>
++#include <stdlib.h>
++#include <assert.h>
++#include <math.h>
++#include <string.h>
++#include <time.h>
++extern uint8_t *test_owner;
++extern bool baseline_ksn_mesh_q7_render(const ksn_mesh_q7_snapshot*,uint16_t*,unsigned,unsigned,float*,uint8_t*,unsigned,ksn_mesh_q7_stats*);
++static unsigned seed=72;static unsigned rnd(void){return seed=seed*1664525+1013904223;}
++static void append(ksn_mesh_snapshot*s,float x,float y,float w,float h,unsigned mode){
++ co_vertex v[3]={{x,y,-1,0,63488,31},{x+w,y,1,0,2016,65535},{x,y+h,0,0,31,0}};
++ for(unsigned k=0;k<3;k++)v[k].depth=mode==1?1:mode==2?nextafterf(1,2):mode==3?(float)((int)(rnd()%200)-100)/13:0;
++ uint16_t ix[3]={0,1,2};co_input in={v,ix,0,3,1};assert(co_append(&s->packets,&in));
++}
++static uint64_t samples,coverage,owners,depths,colors,color_gt1,shared_colors,shared_gt1;static unsigned maxcolor;static ksn_mesh_q7_stats stats;
++static void compare(ksn_mesh_snapshot*s,ksn_mesh_prepared*p,ksn_mesh_q7_snapshot*q){
++ uint16_t a[1920],b[1920],ref[1920];float za[1920],zb[1920],zr[1920];uint8_t oa[1920],ob[1920],oc[1920];uint16_t c[1920];float zc[1920];ksn_mesh_q7_stats baseline_stats={0};
++ for(unsigned rows=1;rows<=8;rows*=8)for(unsigned y=0;y<135;y+=rows){unsigned n=rows;if(n>135-y)n=135-y;for(unsigned i=0;i<1920;i++)a[i]=b[i]=c[i]=ref[i]=0x1234;memset(oa,255,sizeof oa);test_owner=oa;
++  assert(ksn_mesh_prepared_render(p,a,y,n,za,rows));test_owner=NULL;assert(ksn_mesh_render(s,ref,y,n,zr,rows));assert(!memcmp(a,ref,n*240*2));assert(!memcmp(za,zr,n*240*4));assert(ksn_mesh_q7_render(q,b,y,n,zb,ob,rows,&stats));assert(baseline_ksn_mesh_q7_render(q,c,y,n,zc,oc,rows,&baseline_stats));assert(!memcmp(b,c,n*240*2)&&!memcmp(zb,zc,n*240*4)&&!memcmp(ob,oc,n*240));
++  for(unsigned i=0;i<n*240;i++){samples++;coverage+=(oa[i]==255)!=(ob[i]==255);owners+=oa[i]!=ob[i];depths+=memcmp(za+i,zb+i,4)!=0;colors+=a[i]!=b[i];
++   unsigned delta=0;for(unsigned ch=0;ch<3;ch++){int shift=ch==0?11:ch==1?5:0,mask=ch==1?63:31;unsigned d=abs(((a[i]>>shift)&mask)-((b[i]>>shift)&mask));if(d>delta)delta=d;}
++   if(delta>maxcolor)maxcolor=delta;
++   color_gt1+=delta>1;
++   if(oa[i]==ob[i]){shared_colors+=a[i]!=b[i];shared_gt1+=delta>1;assert(!memcmp(za+i,zb+i,4));}
++   if(q->fallback){assert(a[i]==b[i]);assert(oa[i]==ob[i]);assert(!memcmp(za+i,zb+i,4));}
++  }
++ }
++}
++static void arbitrary(ksn_mesh_snapshot*s){
++ co_vertex v[3];for(unsigned k=0;k<3;k++)v[k]=(co_vertex){((int)(rnd()%60000)-20000)/128.f+.001f,((int)(rnd()%40000)-10000)/128.f+.002f,(float)((int)k-1),(float)k,63488,2016};
++ double ar=((double)v[1].x-v[0].x)*((double)v[2].y-v[0].y)-((double)v[1].y-v[0].y)*((double)v[2].x-v[0].x);if(ar<0){co_vertex tmp=v[1];v[1]=v[2];v[2]=tmp;}if(fabs(ar)<1e-5)return;
++ uint16_t ix[3]={0,1,2};co_input in={v,ix,0,3,1};assert(co_append(&s->packets,&in));
++}
++static int cmp(const void*a,const void*b){double x=*(const double*)a,y=*(const double*)b;return (x>y)-(x<y);}
++static double now(void){struct timespec t;clock_gettime(CLOCK_MONOTONIC,&t);return t.tv_sec+t.tv_nsec*1e-9;}
++int main(void){uint8_t data[65536];ksn_mesh_snapshot s={.packets={data,sizeof data,0,0},.enabled=true};size_t bytes=sizeof(ksn_mesh_prepared)+64*sizeof(ksn_prepared_triangle);ksn_mesh_prepared*p=malloc(bytes);size_t qbytes=sizeof(ksn_mesh_q7_snapshot)+64*sizeof(ksn_mesh_q7_triangle);ksn_mesh_q7_snapshot*q=malloc(qbytes);assert(p&&q);unsigned fallback=0;
++ for(unsigned scene=0;scene<160;scene++){s.packets.size=s.packets.packets=0;
++  for(unsigned i=0;i<1+scene%12;i++){float x=(int)(rnd()%280)-20+.12345f,y=(int)(rnd()%160)-15+.10001f,w=1+rnd()%120,h=1+rnd()%90;
++   if(scene%8==0){x=0;y=0;w=239;h=134;}if(scene%8==1){x=-4096;y=-4096;w=4200;h=4200;}if(scene%8==2){w=.0001f;h=90;}if(scene%8==3){x=20.0f;y=10.0f;w=80;h=80;}
++   append(&s,x,y,w,h,scene%4);
++  }
++  assert(ksn_mesh_prepare(&s,p,bytes));assert(ksn_mesh_q7_prepare(p,q,qbytes));fallback+=q->fallback;compare(&s,p,q);
++ }
++ // Shared diagonal and adjacent-F32 depths in both submission orders.
++ for(unsigned mode=0;mode<4;mode++){s.packets.size=s.packets.packets=0;append(&s,20,20,80,80,mode%2?2:1);append(&s,20,20,80,80,mode%2?1:2);assert(ksn_mesh_prepare(&s,p,bytes)&&ksn_mesh_q7_prepare(p,q,qbytes));compare(&s,p,q);}
++ s.packets.size=s.packets.packets=0;append(&s,20,20,80,80,1);co_vertex diagonal[3]={{100,100,0,1,65535,31},{20,100,0,1,65535,31},{100,20,0,1,65535,31}};uint16_t dix[3]={0,1,2};co_input din={diagonal,dix,0,3,1};assert(co_append(&s.packets,&din));assert(ksn_mesh_prepare(&s,p,bytes)&&ksn_mesh_q7_prepare(p,q,qbytes));compare(&s,p,q);
++ printf("DIFF scenes=165 rows1and8 samples=%llu fallback_frames=%u coverage=%llu owner=%llu depth=%llu RGB=%llu RGB_gt1=%llu maxchannel=%u same_owner_RGB=%llu same_owner_gt1=%llu\n",(unsigned long long)samples,fallback,(unsigned long long)coverage,(unsigned long long)owners,(unsigned long long)depths,(unsigned long long)colors,(unsigned long long)color_gt1,maxcolor,(unsigned long long)shared_colors,(unsigned long long)shared_gt1);
++ printf("MEMORY retained_header=%zu retained_triangle=%zu ksn_mesh_q7_triangle=%zu ksn_mesh_q7_snapshot=%zu stripe8_color_z_owner=13440\n",sizeof *p,sizeof p->triangles[0],sizeof(ksn_mesh_q7_triangle),qbytes);
++ assert(shared_gt1==0);
++ // Brute-force halfspaces independently check all row spans, including negative divisions.
++ for(unsigned scene=0;scene<1000;scene++){s.packets.size=s.packets.packets=0;arbitrary(&s);assert(ksn_mesh_prepare(&s,p,bytes));assert(ksn_mesh_q7_prepare(p,q,qbytes));if(q->fallback||!q->count)continue;
++  if(scene<100)compare(&s,p,q);
++  for(int y=0;y<135;y++){int lo=0,hi=-1;bool yes=ksn_mesh_q7_span(&q->triangles[0].fixed,y,&lo,&hi);for(int x=0;x<240;x++){bool inside=true;for(unsigned k=0;k<3;k++){int32_t*a=q->triangles[0].fixed.abc[k];if((int64_t)a[0]*x+(int64_t)a[1]*y+a[2]<0)inside=false;}assert(inside==(yes&&x>=lo&&x<=hi));}}
++ }
++ puts("SPAN_PASS scenes=1000 general_non_axis_triangles all_135x240_pixel_halfspace_compare_on_admitted plus100_exact_oracle_comparisons");
++ uint16_t pixels[1920];float z[1920];uint8_t owner[1920];s.packets.size=s.packets.packets=0;for(unsigned i=0;i<8;i++)append(&s,(i%4)*40+.1f,10+(i/4)*45+.1f,60,65,3);
++ for(unsigned rows=1;rows<=8;rows*=8){double times[3][9];for(unsigned rep=0;rep<9;rep++)for(unsigned order=0;order<3;order++){unsigned mode=(order+rep)%3;double start=now();for(unsigned frame=0;frame<100;frame++){if(mode)assert(ksn_mesh_prepare(&s,p,bytes));if(mode==2)assert(ksn_mesh_q7_prepare(p,q,qbytes));for(unsigned y=0;y<135;y+=rows){unsigned n=rows;if(n>135-y)n=135-y;memset(pixels,0,sizeof pixels);if(mode==0)assert(ksn_mesh_render(&s,pixels,y,n,z,rows));else if(mode==1)assert(ksn_mesh_prepared_render(p,pixels,y,n,z,rows));else assert(ksn_mesh_q7_render(q,pixels,y,n,z,owner,rows,&stats));}}times[mode][rep]=(now()-start)*1e6/100;}
++ for(unsigned mode=0;mode<3;mode++){qsort(times[mode],9,sizeof(double),cmp);printf("BENCH rows=%u mode=%u us_median=%.3f min=%.3f max=%.3f full_prepare_render_host_only\n",rows,mode,times[mode][4],times[mode][0],times[mode][8]);}}
++ // Empty and invalid rendering never dereference caller output.
++ s.packets.size=s.packets.packets=0;assert(ksn_mesh_prepare(&s,p,bytes)&&ksn_mesh_q7_prepare(p,q,qbytes));uint16_t sentinel=0xbeef;float zv=77;uint8_t own=99;
++ assert(ksn_mesh_q7_render(q,&sentinel,135,0,&zv,&own,1,&stats));assert(sentinel==0xbeef&&zv==77&&own==99);assert(!ksn_mesh_q7_render(q,&sentinel,136,0,&zv,&own,1,&stats));assert(!ksn_mesh_q7_render(q,&sentinel,135,1,&zv,&own,1,&stats));
++ printf("FINAL_DIFF samples=%llu coverage=%llu owners=%llu depth=%llu RGB=%llu same_owner_RGB=%llu same_owner_gt1=%llu\n",(unsigned long long)samples,(unsigned long long)coverage,(unsigned long long)owners,(unsigned long long)depths,(unsigned long long)colors,(unsigned long long)shared_colors,(unsigned long long)shared_gt1);assert(shared_gt1==0);
++
++ free(p);free(q);return 0;
++}

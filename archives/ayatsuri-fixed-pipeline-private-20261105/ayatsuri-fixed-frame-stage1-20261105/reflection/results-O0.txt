@@ -1,0 +1,17 @@
+actual normals=7678 ok=7678 ambiguous=0 failure=0 source_basis_changes=0 unflagged_changes=0 widths_mismatch=0
+actual_all_candidates n=122848 angle_deg_max=0.00689222572122 rms=0.00207939148529 p95=0.00350099336156 p99=0.00425191779076
+actual_same_basis n=122848 angle_deg_max=0.00689222572122 rms=0.00207939148529 p95=0.00350099336156 p99=0.00425191779076
+boundary 0 status=3 integer_basis=0 max_angle_deg=0.0020820424228
+boundary 1 status=3 integer_basis=0 max_angle_deg=0.0020820424228
+boundary 2 status=3 integer_basis=1 max_angle_deg=0.0020820424228
+boundary 3 status=3 integer_basis=0 max_angle_deg=0.0020820424228
+boundary 4 status=3 integer_basis=0 max_angle_deg=0.00247878206808
+boundary 5 status=3 integer_basis=0 max_angle_deg=0.00247891711842
+boundary 6 status=3 integer_basis=0 max_angle_deg=97.18206423
+boundary 7 status=1 integer_basis=99 max_angle_deg=0
+boundary 8 status=1 integer_basis=99 max_angle_deg=0
+boundary 9 status=3 integer_basis=1 max_angle_deg=0.00208247068163
+boundary 10 status=3 integer_basis=0 max_angle_deg=0.00305965362803
+boundary 11 status=3 integer_basis=0 max_angle_deg=77.6031270393
+synthetic_fixed_reduction components=30000 abs_max=1.39193753057e-06 rms=5.62064540622e-07
+PASS independent arithmetic only; no visibility/ray/hit queries

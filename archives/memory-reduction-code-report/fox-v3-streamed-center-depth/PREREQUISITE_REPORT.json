@@ -1,0 +1,41 @@
+{
+  "status": "PASS_SYNTHETIC_ONLY",
+  "actualFrames": 0,
+  "strictBuilds": [
+    "build-product/BUILD.json",
+    "build-adapter/BUILD.json"
+  ],
+  "legacyRing": {
+    "exactCasesPerTraversalSuite": 80,
+    "suites": [
+      "full ring",
+      "depth bands"
+    ],
+    "negativeCasesPerSuite": [
+      63,
+      72,
+      72
+    ],
+    "normalAndASanUBSan": true
+  },
+  "cachedLegacy": "80 exact synthetic cases plus cache lifetime/contract, normal and ASan/UBSan",
+  "adapter": {
+    "legacyNegativeCases": 94,
+    "cachedNegativeCases": 120,
+    "newStreamAliasCases": 253,
+    "inheritedNegativesInStreamTest": 120,
+    "prefixPreservationCases": 4,
+    "normalAndASanUBSan": true,
+    "physicalShaderCalls": 0
+  },
+  "independent": "review/INDEPENDENT_SYNTHETIC.json and INDEPENDENT_SOURCE_STACK_LEDGER.json;112 exact cases in both normal/sanitized runs, no physical frames",
+  "leakSanitizer": "Initial invocation unavailable under ptrace; retained adapter-lsan-unavailable.log. ASan/UBSan pass with detect_leaks=0. No general leak-clean claim.",
+  "logs": {
+    "legacy-tests.log": "9d1ac33032ec4b555d31585e994a954e3df442a8e7f34a2b98a9907a9b0d99af",
+    "legacy-san.log": "9d1ac33032ec4b555d31585e994a954e3df442a8e7f34a2b98a9907a9b0d99af",
+    "cached-tests.log": "59a7c510bc8e7a9043a3da3bee3c5b5e699475d7c364d0467e3ad39723eb4cfd",
+    "adapter-tests.log": "769d871e955367aafe6e9b13a96a59d6ced3db46fcb28309e8731e60b4b31bcc",
+    "adapter-san.log": "769d871e955367aafe6e9b13a96a59d6ced3db46fcb28309e8731e60b4b31bcc",
+    "adapter-lsan-unavailable.log": "96947f04b6048ed1673484ca35e216b644033a929b4de8629628075df7419970"
+  }
+}

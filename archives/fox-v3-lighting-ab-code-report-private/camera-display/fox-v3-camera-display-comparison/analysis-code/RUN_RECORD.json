@@ -1,0 +1,17 @@
+{
+  "status": "FINAL_EXTERNAL_ANALYSIS_COMPLETE",
+  "inputPins": {
+    "path": "fox-v3-camera-display-comparison/run-001/POSTPROCESS_INPUT_PINS.json",
+    "sha256": "0eb8502724ba3aaaf9499595178e39bc959bebd7af436e65ccfc44a62bc7fcb0"
+  },
+  "outputPins": {
+    "path": "fox-v3-camera-display-comparison/OUTPUT_PINS.json",
+    "sha256": "b8e93b7b1de305a433d79ce0eb43027bb3f00816cf0c086e3b8a7237f382fdbb"
+  },
+  "analysisCompletionSHA256": "80f4def6595e0df805d5c13e1cc01c93740e56e955b626c68473688844a444d4",
+  "loaderSHA256": "0c3171e85f648c1e5442de44c99e3ed6c94636a3a47fb5c22fc79965a87916c8",
+  "comparisonCodeSHA256": "43994484796b53800d13ca6f828def3ce40efab1a6519ee27846f36e5331a3d5",
+  "syntheticTestsPassed": 19,
+  "newDisplayFramesOnlyAfterPublishedAll10LegacyGate": true,
+  "rendererOrReferenceRendererExecuted": false
+}

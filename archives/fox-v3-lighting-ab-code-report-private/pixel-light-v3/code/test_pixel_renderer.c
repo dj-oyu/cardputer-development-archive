@@ -1,0 +1,26 @@
+#include "ui/kasane/ksn_mesh_depth.h"
+#include "ayatsuri/ayatsuri_shade.h"
+#include <assert.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <math.h>
+static void setup(ksn_proc_gouraud_patch *p,co_pixel_vertex v[3]){memset(p,0,sizeof *p);memset(v,0,3*sizeof*v);p->header.vertices=3;p->header.triangles=1;p->indices[0]=0;p->indices[1]=1;p->indices[2]=2;const float xy[3][2]={{10,10},{14,10},{10,14}};for(unsigned j=0;j<3;j++){v[j].front=(co_vertex){xy[j][0],xy[j][1],j==1?1:-1,1,(uint16_t)(j==0?0xf800:j==1?0x07e0:0x001f),(uint16_t)(j==0?0xffff:j==1?0xf81f:0x07ff)};v[j].world[1]=-38;v[j].normal_front[1]=-32767;v[j].normal_back[1]=32767;p->vertices[j]=(ksn_proc_gouraud_vertex){v[j].front.x,v[j].front.y,v[j].front.mask,0,0};}}
+static FoxDiskScene scene(double power){FoxDiskLightInput l[3]={0};for(unsigned j=0;j<3;j++){l[j].shape=FOX_DISK_SHAPE_DISK;l[j].center[2]=4;l[j].diameter=1;l[j].power=power;for(unsigned k=0;k<3;k++)l[j].color[k]=1;}double w[3]={0,0,0};FoxDiskScene s;assert(fox_disk_scene_init(&s,l,w,0)==FOX_DISK_OK);return s;}
+static uint16_t expected(const FoxDiskScene *s,const co_pixel_vertex v[3],unsigned x,unsigned y){double w[3]={1-(x-10)/4.0-(y-10)/4.0,(x-10)/4.0,(y-10)/4.0},rho[3]={0};bool b=w[0]*v[0].front.mask+w[1]*v[1].front.mask+w[2]*v[2].front.mask>=0;for(unsigned j=0;j<3;j++){unsigned c=b?v[j].front.color_b:v[j].front.color_a;rho[0]+=w[j]*ayatsuri_srgb_decode((c>>11)/31.0f);rho[1]+=w[j]*ayatsuri_srgb_decode(((c>>5)&63)/63.0f);rho[2]+=w[j]*ayatsuri_srgb_decode((c&31)/31.0f);}double p[3]={0,0,1},n[3]={0,0,1},raw[3];assert(fox_disk_eval16(s,p,n,rho,raw)==FOX_DISK_OK);unsigned q[3];for(unsigned k=0;k<3;k++)q[k]=(unsigned)lroundf(ayatsuri_srgb_encode((float)fmin(1,raw[k]))*(k==1?63:31));return (q[0]<<11)|(q[1]<<5)|q[2];}
+int main(void){uint8_t storage[65536],save[65536],other[65536];memset(storage,0xa7,sizeof storage);ksn_mesh_pixel_snapshot s;FoxDiskScene l=scene(1),original=l;assert(ksn_mesh_pixel_begin(&s,storage,sizeof storage,&l,8000000));assert(s.mesh.packets.capacity==65536-416);ksn_mesh_pixel_snapshot old=s;memcpy(save,storage,sizeof storage);FoxDiskScene bad=l;bad.world_radiance[0]=NAN;assert(!ksn_mesh_pixel_begin(&s,storage,sizeof storage,&bad,8000000)&&!memcmp(&s,&old,sizeof s)&&!memcmp(storage,save,sizeof storage));assert(!ksn_mesh_pixel_begin(&s,storage,415,&l,8000000));assert(!ksn_mesh_pixel_begin(&s,storage,sizeof storage,&l,8000001));
+ksn_proc_gouraud_patch p;co_pixel_vertex v[3],vv[3];setup(&p,v);memcpy(vv,v,sizeof v);uint8_t bits[8]={0};assert(ksn_mesh_pixel_append(&s,&p,v,bits,1));assert(s.mesh.work==49*25);memcpy(save,storage,sizeof storage);old=s;v[0].world[0]=NAN;assert(!ksn_mesh_pixel_append(&s,&p,v,bits,1)&&!memcmp(&s,&old,sizeof s)&&!memcmp(storage,save,sizeof storage));memcpy(v,vv,sizeof v);s.mesh.work_limit=s.mesh.work;old=s;assert(!ksn_mesh_pixel_append(&s,&p,v,bits,1)&&!memcmp(&s,&old,sizeof s));s.mesh.work_limit=8000000;
+memset(v,0xa5,sizeof v);memset(&p,0xa5,sizeof p);memset(&l,0xa5,sizeof l);
+uint16_t pixels[240*16]={0};float z[240*8];ksn_mesh_pixel_stats stats={0};assert(ksn_mesh_pixel_render(&s,pixels,0,16,z,8,&stats));assert(stats.shade_updates>0&&stats.disk_samples==48*stats.shade_updates);for(unsigned y=10;y<14;y++)for(unsigned x=10;x<14;x++)if(pixels[y*240+x])assert(pixels[y*240+x]==expected(&original,vv,x,y));assert(!memcmp(storage,save,sizeof storage));
+assert(!ksn_mesh_render(&s.mesh,pixels,0,16,z,8));
+assert(!ksn_mesh_pixel_render(&s,pixels,0,16,z,8,(ksn_mesh_pixel_stats*)pixels));
+assert(!ksn_mesh_pixel_render(&s,pixels,0,16,z,8,(ksn_mesh_pixel_stats*)z));
+assert(!ksn_mesh_pixel_render(&s,pixels,0,16,z,8,(ksn_mesh_pixel_stats*)&s));
+assert(!ksn_mesh_pixel_render(&s,(uint16_t*)&s,0,1,z,8,&stats));
+assert(!ksn_mesh_pixel_render(&s,pixels,0,1,(float*)&s,8,&stats));
+ksn_mesh_pixel_snapshot second;FoxDiskScene dark=scene(.1);assert(ksn_mesh_pixel_begin(&second,other,sizeof other,&dark,8000000));setup(&p,v);assert(ksn_mesh_pixel_append(&second,&p,v,bits,1));uint16_t p2[240*16]={0};ksn_mesh_pixel_stats st2={0};assert(ksn_mesh_pixel_render(&second,p2,0,16,z,8,&st2));assert(memcmp(pixels,p2,sizeof p2));uint16_t again[240*16]={0};ksn_mesh_pixel_stats st3={0};assert(ksn_mesh_pixel_render(&s,again,0,16,z,8,&st3));assert(!memcmp(pixels,again,sizeof pixels));
+/* Back side uses separately stored normal; all direct light vanishes. */
+assert(ksn_mesh_pixel_begin(&second,other,sizeof other,&original,8000000));bits[0]=1;assert(ksn_mesh_pixel_append(&second,&p,v,bits,1));memset(p2,0,sizeof p2);st2=(ksn_mesh_pixel_stats){0};assert(ksn_mesh_pixel_render(&second,p2,0,16,z,8,&st2)&&st2.shade_updates>0);for(unsigned j=0;j<240*16;j++)assert(!p2[j]);
+/* Invalid interpolated normal is a failed non-published band, not fallback. */
+assert(ksn_mesh_pixel_begin(&second,other,sizeof other,&original,8000000));bits[0]=0;v[1].normal_front[1]=32767;v[2].normal_front[1]=32767;assert(ksn_mesh_pixel_append(&second,&p,v,bits,1));memcpy(save,other,sizeof other);st2=(ksn_mesh_pixel_stats){0};assert(!ksn_mesh_pixel_render(&second,p2,0,16,z,8,&st2)&&!st2.shade_updates&&!st2.disk_samples&&!memcmp(save,other,sizeof other));
+printf("PIXEL_RENDER_PASS varying rho A/B mask sides ownedscene independent snapshots invalid rollback budget no fallback controls=%zu rawRecord=%zu\n",sizeof s,sizeof(co_pixel_vertex));return 0;}

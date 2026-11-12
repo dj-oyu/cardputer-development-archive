@@ -1,0 +1,338 @@
+{
+  "baseline": {
+    "directDiffuse": {
+      "nativeCoverage": {
+        "meanY": 0.3454219457260846,
+        "RGBL2": 78.64176074945298
+      },
+      "interiorChebyshev2": {
+        "meanY": 0.33095895100871886,
+        "RGBL2": 62.23509074619933
+      },
+      "boundary": {
+        "meanY": 0.384186075036369,
+        "RGBL2": 48.07618967416759
+      },
+      "originalForeground": {
+        "meanY": 0.37356724757152787,
+        "RGBL2": 84.830199666563
+      },
+      "missingOriginal": {
+        "meanY": 0.573323953579608,
+        "RGBL2": 31.84024682702825
+      }
+    },
+    "indirectDiffuse": {
+      "nativeCoverage": {
+        "meanY": 0.14443716842388532,
+        "RGBL2": 34.51718590097066
+      },
+      "interiorChebyshev2": {
+        "meanY": 0.15986444188222,
+        "RGBL2": 30.972762412742988
+      },
+      "boundary": {
+        "meanY": 0.10308855183855573,
+        "RGBL2": 15.23561981167629
+      },
+      "originalForeground": {
+        "meanY": 0.12984039312593965,
+        "RGBL2": 34.62619116172325
+      },
+      "missingOriginal": {
+        "meanY": 0.02487644176052407,
+        "RGBL2": 2.8810483504157607
+      }
+    },
+    "directGloss": {
+      "nativeCoverage": {
+        "meanY": 0.04319671166543041,
+        "RGBL2": 9.508449463293864
+      },
+      "interiorChebyshev2": {
+        "meanY": 0.035909570862216966,
+        "RGBL2": 6.306237394960449
+      },
+      "boundary": {
+        "meanY": 0.06272791346133796,
+        "RGBL2": 7.116317946411321
+      },
+      "originalForeground": {
+        "meanY": 0.04330297737796429,
+        "RGBL2": 9.764180799127251
+      },
+      "missingOriginal": {
+        "meanY": 0.043720892300605434,
+        "RGBL2": 2.2212723844489606
+      }
+    },
+    "indirectGloss": {
+      "nativeCoverage": {
+        "meanY": 0.025612862209807064,
+        "RGBL2": 4.425426686058824
+      },
+      "interiorChebyshev2": {
+        "meanY": 0.024317763428444664,
+        "RGBL2": 3.3452426367401644
+      },
+      "boundary": {
+        "meanY": 0.02908402275514311,
+        "RGBL2": 2.8971974484003153
+      },
+      "originalForeground": {
+        "meanY": 0.023154847649699637,
+        "RGBL2": 4.458516582482554
+      },
+      "missingOriginal": {
+        "meanY": 0.00546138670594346,
+        "RGBL2": 0.5475508654356737
+      }
+    },
+    "combined": {
+      "nativeCoverage": {
+        "meanY": 0.5627238391399165,
+        "RGBL2": 109.8825318893363
+      },
+      "interiorChebyshev2": {
+        "meanY": 0.5510507974720122,
+        "RGBL2": 90.11120398097036
+      },
+      "boundary": {
+        "meanY": 0.5940102570292674,
+        "RGBL2": 62.88196666382946
+      },
+      "originalForeground": {
+        "meanY": 0.5942759792411844,
+        "RGBL2": 117.69616081417075
+      },
+      "missingOriginal": {
+        "meanY": 0.8176403559644809,
+        "RGBL2": 42.23461631457255
+      }
+    }
+  },
+  "direction": {
+    "directDiffuse": {
+      "nativeCoverage": {
+        "meanY": 0.25924192388018646,
+        "RGBL2": 67.28411041756718
+      },
+      "interiorChebyshev2": {
+        "meanY": 0.21029772154341794,
+        "RGBL2": 46.89369389314648
+      },
+      "boundary": {
+        "meanY": 0.3904235654037877,
+        "RGBL2": 48.25073043736486
+      },
+      "originalForeground": {
+        "meanY": 0.30569182057540273,
+        "RGBL2": 76.51543772138643
+      },
+      "missingOriginal": {
+        "meanY": 0.6376592767857492,
+        "RGBL2": 36.475104066997694
+      }
+    },
+    "indirectDiffuse": {
+      "nativeCoverage": {
+        "meanY": 0.12595542361259773,
+        "RGBL2": 29.990492431861696
+      },
+      "interiorChebyshev2": {
+        "meanY": 0.1367887554970403,
+        "RGBL2": 26.522146855653887
+      },
+      "boundary": {
+        "meanY": 0.09691961973959147,
+        "RGBL2": 14.000191515571569
+      },
+      "originalForeground": {
+        "meanY": 0.11362226392223963,
+        "RGBL2": 30.10970698439751
+      },
+      "missingOriginal": {
+        "meanY": 0.02501436772968842,
+        "RGBL2": 2.806850750859655
+      }
+    },
+    "directGloss": {
+      "nativeCoverage": {
+        "meanY": 0.041150916157261824,
+        "RGBL2": 9.724546666602537
+      },
+      "interiorChebyshev2": {
+        "meanY": 0.0321929644576157,
+        "RGBL2": 6.46474368940837
+      },
+      "boundary": {
+        "meanY": 0.06516027278265168,
+        "RGBL2": 7.264564467412014
+      },
+      "originalForeground": {
+        "meanY": 0.041702665897884836,
+        "RGBL2": 9.992469419839448
+      },
+      "missingOriginal": {
+        "meanY": 0.04534433108412307,
+        "RGBL2": 2.299753598881174
+      }
+    },
+    "indirectGloss": {
+      "nativeCoverage": {
+        "meanY": 0.02269216421330221,
+        "RGBL2": 4.019839686917311
+      },
+      "interiorChebyshev2": {
+        "meanY": 0.020755248455631408,
+        "RGBL2": 2.918762870922132
+      },
+      "boundary": {
+        "meanY": 0.02788354085145629,
+        "RGBL2": 2.764043127710177
+      },
+      "originalForeground": {
+        "meanY": 0.020599202975895046,
+        "RGBL2": 4.058339775507421
+      },
+      "missingOriginal": {
+        "meanY": 0.00554449017856835,
+        "RGBL2": 0.5627291545985117
+      }
+    },
+    "combined": {
+      "nativeCoverage": {
+        "meanY": 0.4530990119928358,
+        "RGBL2": 93.74550355668445
+      },
+      "interiorChebyshev2": {
+        "meanY": 0.40003481435143523,
+        "RGBL2": 69.66207155378099
+      },
+      "boundary": {
+        "meanY": 0.595323181973892,
+        "RGBL2": 62.73288789727632
+      },
+      "originalForeground": {
+        "meanY": 0.5060259767540033,
+        "RGBL2": 104.72078646301395
+      },
+      "missingOriginal": {
+        "meanY": 0.8837917099505745,
+        "RGBL2": 46.74188979985836
+      }
+    }
+  },
+  "response": {
+    "directDiffuse": {
+      "nativeCoverage": {
+        "meanDeltaY": -0.08618002184589818,
+        "RGBDeltaL2": 30.368432408011472
+      },
+      "interiorChebyshev2": {
+        "meanDeltaY": -0.12066122946530088,
+        "RGBDeltaL2": 28.22622965271317
+      },
+      "boundary": {
+        "meanDeltaY": 0.006237490367418837,
+        "RGBDeltaL2": 11.203644340671351
+      },
+      "originalForeground": {
+        "meanDeltaY": -0.06787542699612512,
+        "RGBDeltaL2": 31.043417724890983
+      },
+      "missingOriginal": {
+        "meanDeltaY": 0.0643353232061411,
+        "RGBDeltaL2": 6.443480777383703
+      }
+    },
+    "indirectDiffuse": {
+      "nativeCoverage": {
+        "meanDeltaY": -0.018481744811287563,
+        "RGBDeltaL2": 6.490845316312139
+      },
+      "interiorChebyshev2": {
+        "meanDeltaY": -0.023075686385179688,
+        "RGBDeltaL2": 6.0141548552572806
+      },
+      "boundary": {
+        "meanDeltaY": -0.006168932098964258,
+        "RGBDeltaL2": 2.441518850485599
+      },
+      "originalForeground": {
+        "meanDeltaY": -0.01621812920369999,
+        "RGBDeltaL2": 6.504373734238247
+      },
+      "missingOriginal": {
+        "meanDeltaY": 0.00013792596916435397,
+        "RGBDeltaL2": 0.4210873933584503
+      }
+    },
+    "directGloss": {
+      "nativeCoverage": {
+        "meanDeltaY": -0.002045795508168585,
+        "RGBDeltaL2": 2.0296247083558754
+      },
+      "interiorChebyshev2": {
+        "meanDeltaY": -0.0037166064046012647,
+        "RGBDeltaL2": 1.8099478451749136
+      },
+      "boundary": {
+        "meanDeltaY": 0.0024323593213137233,
+        "RGBDeltaL2": 0.9184036446548762
+      },
+      "originalForeground": {
+        "meanDeltaY": -0.0016003114800794635,
+        "RGBDeltaL2": 2.0376699246493417
+      },
+      "missingOriginal": {
+        "meanDeltaY": 0.0016234387835176336,
+        "RGBDeltaL2": 0.18109834576511655
+      }
+    },
+    "indirectGloss": {
+      "nativeCoverage": {
+        "meanDeltaY": -0.002920697996504851,
+        "RGBDeltaL2": 0.8172204161504231
+      },
+      "interiorChebyshev2": {
+        "meanDeltaY": -0.0035625149728132546,
+        "RGBDeltaL2": 0.7115616729613026
+      },
+      "boundary": {
+        "meanDeltaY": -0.001200481903686823,
+        "RGBDeltaL2": 0.4019069471228171
+      },
+      "originalForeground": {
+        "meanDeltaY": -0.00255564467380459,
+        "RGBDeltaL2": 0.8228693309812707
+      },
+      "missingOriginal": {
+        "meanDeltaY": 8.310347262488978e-05,
+        "RGBDeltaL2": 0.0963477956533727
+      }
+    },
+    "combined": {
+      "nativeCoverage": {
+        "meanDeltaY": -0.10962482714708059,
+        "RGBDeltaL2": 35.49550418564645
+      },
+      "interiorChebyshev2": {
+        "meanDeltaY": -0.15101598312057699,
+        "RGBDeltaL2": 33.185177149389204
+      },
+      "boundary": {
+        "meanDeltaY": 0.001312924944624625,
+        "RGBDeltaL2": 12.596619981443492
+      },
+      "originalForeground": {
+        "meanDeltaY": -0.08825000248718094,
+        "RGBDeltaL2": 36.127762456674475
+      },
+      "missingOriginal": {
+        "meanDeltaY": 0.06615135398609355,
+        "RGBDeltaL2": 6.733926747547512
+      }
+    }
+  }
+}

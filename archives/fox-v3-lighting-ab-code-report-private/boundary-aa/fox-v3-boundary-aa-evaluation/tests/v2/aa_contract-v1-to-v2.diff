@@ -1,0 +1,19 @@
+--- frozen-v1/aa_contract.py
++++ mutable-v2/aa_contract.py
+@@ -4,12 +4,15 @@
+  assert a['version']=='host-final-visible-boundary-aa-v2' and a['complete'] is True
+  fields=['reservedTotal','observedTotal','targets','coveredTargets','nohitTargets','centerShades','sampleShades','workspaceBytes','newStackReserve','retainedOutputBytes','identityBytes','observerSamples','observerHits','failedCategory']
+  for k in fields:assert type(a[k]) is int and a[k]>=0,k
+- assert set(a['categories'])==set(KEYS) and len(reserved)==len(KEYS)
++ assert len(reserved)==len(KEYS) and all(type(v) is int and v>=0 for v in reserved), 'expected reservations'
++ assert set(a['categories'])==set(KEYS)
++ assert a['failedCategory']==len(KEYS), 'success failure-category sentinel'
+  for k,expected in zip(KEYS,reserved):
+   z=a['categories'][k];assert set(z)=={'reserved','observed'}
+   assert type(z['reserved']) is int and type(z['observed']) is int and 0<=z['observed']<=z['reserved']==expected
+  assert a['reservedTotal']==sum(reserved)<=8000000 and a['observedTotal']==sum(z['observed'] for z in a['categories'].values())<=a['reservedTotal']
+  assert a['targets']==targets and a['coveredTargets']+a['nohitTargets']==targets
++ assert a['workspaceBytes']==137312 and a['newStackReserve']==8192, 'frozen workspace and stack accounting'
+  assert a['workspaceBytes']+a['newStackReserve']<=147456 and a['retainedOutputBytes']==194400 and a['identityBytes']==7930 and a['identityFNV']==identity
+  assert a['observerSamples']==4*targets and a['observerHits']==a['sampleShades']
+  for k in ['sampleHits','sampleNohits']:assert len(a[k])==4 and all(type(v)is int and v>=0 for v in a[k])

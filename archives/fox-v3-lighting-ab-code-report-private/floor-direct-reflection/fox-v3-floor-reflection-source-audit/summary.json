@@ -1,0 +1,373 @@
+{
+  "sourceSHA256": "9254eaebdfa61143dfdb9480330bc677ae47acfa710715bbfa31ab2943a16806",
+  "referenceConfigSHA256": "4a9d836a4dae2fc570f5f0fb99690ab0f13fbe394589f785b56e891e0573dc40",
+  "sourceGroundMaterialState": {
+    "flags": {
+      "use_nodes": true,
+      "use_backface_culling": false,
+      "surface_render_method": "DITHERED",
+      "use_transparent_shadow": true
+    },
+    "nodes": {
+      "Principled BSDF": {
+        "type": "ShaderNodeBsdfPrincipled",
+        "inputs": {
+          "Base Color": [
+            0.8399999737739563,
+            0.7799999713897705,
+            0.6499999761581421,
+            1.0
+          ],
+          "Metallic": 0.0,
+          "Roughness": 0.6499999761581421,
+          "IOR": 1.5,
+          "Alpha": 1.0,
+          "Normal": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "Weight": 0.0,
+          "Diffuse Roughness": 0.0,
+          "Subsurface Weight": 0.0,
+          "Subsurface Radius": [
+            1.0,
+            0.20000000298023224,
+            0.10000000149011612
+          ],
+          "Subsurface Scale": 0.05000000074505806,
+          "Subsurface IOR": 1.399999976158142,
+          "Subsurface Anisotropy": 0.0,
+          "Specular IOR Level": 0.5,
+          "Specular Tint": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "Anisotropic": 0.0,
+          "Anisotropic Rotation": 0.0,
+          "Tangent": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "Transmission Weight": 0.0,
+          "Coat Weight": 0.0,
+          "Coat Roughness": 0.029999999329447746,
+          "Coat IOR": 1.5,
+          "Coat Tint": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "Coat Normal": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "Sheen Weight": 0.0,
+          "Sheen Roughness": 0.5,
+          "Sheen Tint": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "Emission Color": [
+            0.8399999737739563,
+            0.7799999713897705,
+            0.6499999761581421,
+            1.0
+          ],
+          "Emission Strength": 0.25,
+          "Thin Film Thickness": 0.0,
+          "Thin Film IOR": 1.3300000429153442
+        }
+      },
+      "Material Output": {
+        "type": "ShaderNodeOutputMaterial",
+        "inputs": {
+          "Displacement": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "Thickness": 0.0
+        }
+      }
+    },
+    "links": [
+      [
+        "Principled BSDF",
+        "BSDF",
+        "Material Output",
+        "Surface"
+      ]
+    ]
+  },
+  "sourceGroundVisibility": {
+    "hide_render": false,
+    "visible_camera": true,
+    "visible_diffuse": true,
+    "visible_glossy": true,
+    "visible_transmission": true,
+    "visible_volume_scatter": true,
+    "visible_shadow": true
+  },
+  "linearLe": [
+    0.20999999344348907,
+    0.19499999284744263,
+    0.16249999403953552
+  ],
+  "scenarioMaterialValues": [
+    {
+      "name": "baseline",
+      "albedoScale": 1,
+      "actualGroundBaseColor": [
+        0.8399999737739563,
+        0.7799999713897705,
+        0.6499999761581421,
+        1.0
+      ],
+      "emissionColor": [
+        0.8399999737739563,
+        0.7799999713897705,
+        0.6499999761581421,
+        1.0
+      ],
+      "emissionStrength": 0.25,
+      "linearLe": [
+        0.20999999344348907,
+        0.19499999284744263,
+        0.16249999403953552
+      ],
+      "emissionUnchanged": true,
+      "richEnergyScale": 1,
+      "richWorldScale": 1
+    },
+    {
+      "name": "direction",
+      "albedoScale": 1,
+      "actualGroundBaseColor": [
+        0.8399999737739563,
+        0.7799999713897705,
+        0.6499999761581421,
+        1.0
+      ],
+      "emissionColor": [
+        0.8399999737739563,
+        0.7799999713897705,
+        0.6499999761581421,
+        1.0
+      ],
+      "emissionStrength": 0.25,
+      "linearLe": [
+        0.20999999344348907,
+        0.19499999284744263,
+        0.16249999403953552
+      ],
+      "emissionUnchanged": true,
+      "richEnergyScale": 1,
+      "richWorldScale": 1
+    },
+    {
+      "name": "intensity",
+      "albedoScale": 1,
+      "actualGroundBaseColor": [
+        0.8399999737739563,
+        0.7799999713897705,
+        0.6499999761581421,
+        1.0
+      ],
+      "emissionColor": [
+        0.8399999737739563,
+        0.7799999713897705,
+        0.6499999761581421,
+        1.0
+      ],
+      "emissionStrength": 0.25,
+      "linearLe": [
+        0.20999999344348907,
+        0.19499999284744263,
+        0.16249999403953552
+      ],
+      "emissionUnchanged": true,
+      "richEnergyScale": 0.45,
+      "richWorldScale": 1
+    },
+    {
+      "name": "ambient",
+      "albedoScale": 1,
+      "actualGroundBaseColor": [
+        0.8399999737739563,
+        0.7799999713897705,
+        0.6499999761581421,
+        1.0
+      ],
+      "emissionColor": [
+        0.8399999737739563,
+        0.7799999713897705,
+        0.6499999761581421,
+        1.0
+      ],
+      "emissionStrength": 0.25,
+      "linearLe": [
+        0.20999999344348907,
+        0.19499999284744263,
+        0.16249999403953552
+      ],
+      "emissionUnchanged": true,
+      "richEnergyScale": 1,
+      "richWorldScale": 2
+    },
+    {
+      "name": "albedo",
+      "albedoScale": 0.6,
+      "actualGroundBaseColor": [
+        0.5040000081062317,
+        0.46799999475479126,
+        0.38999998569488525,
+        1.0
+      ],
+      "emissionColor": [
+        0.8399999737739563,
+        0.7799999713897705,
+        0.6499999761581421,
+        1.0
+      ],
+      "emissionStrength": 0.25,
+      "linearLe": [
+        0.20999999344348907,
+        0.19499999284744263,
+        0.16249999403953552
+      ],
+      "emissionUnchanged": true,
+      "richEnergyScale": 1,
+      "richWorldScale": 1
+    }
+  ],
+  "albedoMetadataChecks": [
+    {
+      "view": "front",
+      "seed": 101,
+      "scale": 0.6,
+      "groundIncluded": true
+    },
+    {
+      "view": "oblique",
+      "seed": 101,
+      "scale": 0.6,
+      "groundIncluded": true
+    },
+    {
+      "view": "front",
+      "seed": 11,
+      "scale": 0.6,
+      "groundIncluded": true
+    },
+    {
+      "view": "oblique",
+      "seed": 11,
+      "scale": 0.6,
+      "groundIncluded": true
+    },
+    {
+      "view": "front",
+      "seed": 131,
+      "scale": 0.6,
+      "groundIncluded": true
+    },
+    {
+      "view": "oblique",
+      "seed": 131,
+      "scale": 0.6,
+      "groundIncluded": true
+    },
+    {
+      "view": "front",
+      "seed": 173,
+      "scale": 0.6,
+      "groundIncluded": true
+    },
+    {
+      "view": "oblique",
+      "seed": 173,
+      "scale": 0.6,
+      "groundIncluded": true
+    },
+    {
+      "view": "front",
+      "seed": 211,
+      "scale": 0.6,
+      "groundIncluded": true
+    },
+    {
+      "view": "oblique",
+      "seed": 211,
+      "scale": 0.6,
+      "groundIncluded": true
+    },
+    {
+      "view": "front",
+      "seed": 29,
+      "scale": 0.6,
+      "groundIncluded": true
+    },
+    {
+      "view": "oblique",
+      "seed": 29,
+      "scale": 0.6,
+      "groundIncluded": true
+    },
+    {
+      "view": "front",
+      "seed": 47,
+      "scale": 0.6,
+      "groundIncluded": true
+    },
+    {
+      "view": "oblique",
+      "seed": 47,
+      "scale": 0.6,
+      "groundIncluded": true
+    },
+    {
+      "view": "front",
+      "seed": 71,
+      "scale": 0.6,
+      "groundIncluded": true
+    },
+    {
+      "view": "oblique",
+      "seed": 71,
+      "scale": 0.6,
+      "groundIncluded": true
+    }
+  ],
+  "originalSourceAndConfigHashesMatchPreviousAudit": true,
+  "pins": {
+    "fox-v3-ground-transport/ground-source-metadata.json": "e21e5f82c6eb690191cbce0e3691ee0abd52438169f9a8cbb253805edf98502d",
+    "fox-reference-sculpt-private/fox-reference-standing-editable.blend": "9254eaebdfa61143dfdb9480330bc677ae47acfa710715bbfa31ab2943a16806",
+    "fox-reference-uncertainty-v3/input/config.json": "4a9d836a4dae2fc570f5f0fb99690ab0f13fbe394589f785b56e891e0573dc40",
+    "fox-reference-uncertainty-v3/code/render_reference.py": "4f7cf88aa043ff49d1138204ae29689640d3582e32ecb709c52c59187e92d99c",
+    "fox-reference-uncertainty-v3/images/seed-101-front-albedo.json": "ce69724510d4372e24ebff0d87061d0a4c063df1ed3a7a8a5232083ec2e37521",
+    "fox-reference-uncertainty-v3/images/seed-101-oblique-albedo.json": "198aea053efe62e8a7db447121de1baf8c25b7c7c10c0094e398a76ba23b1072",
+    "fox-reference-uncertainty-v3/images/seed-11-front-albedo.json": "a0d92327551168f098ae2e3b730225d106bcc1682868a688bc5a70bed8db050e",
+    "fox-reference-uncertainty-v3/images/seed-11-oblique-albedo.json": "d1368a0118ad2873f8311835aa0cb2a14e33c72e31f8621ab6dd0c40af3929c2",
+    "fox-reference-uncertainty-v3/images/seed-131-front-albedo.json": "295e521fec512c7f3bd81326a976047ed63375f70afab499a790fd6d810d13fe",
+    "fox-reference-uncertainty-v3/images/seed-131-oblique-albedo.json": "c6b7c228a2f98a2e7fd789725117273fb8014e17aeb3ea55df361a51a12527fb",
+    "fox-reference-uncertainty-v3/images/seed-173-front-albedo.json": "cd409c3f6b7b41b4992b79f699148d17e15a705ab1a658b7f5690fb6d2484935",
+    "fox-reference-uncertainty-v3/images/seed-173-oblique-albedo.json": "771250dedb907339fd33a7fed9c27217783650c105072aa70651688949404418",
+    "fox-reference-uncertainty-v3/images/seed-211-front-albedo.json": "bdc38dd953f911d0f96257d2970706d898b657bfefdcafe40335c33636b3e1a9",
+    "fox-reference-uncertainty-v3/images/seed-211-oblique-albedo.json": "9d1a1ddc8bb5cbc9729e320580e5e0669e19104464d615abc6fd61122093bd57",
+    "fox-reference-uncertainty-v3/images/seed-29-front-albedo.json": "67015ef135038cc54acb79a444a9d111263ccf42de5e497fddd65c3560c13a29",
+    "fox-reference-uncertainty-v3/images/seed-29-oblique-albedo.json": "cbc5aa4ca86b34f155827396c6ef281112c83c68ed6011dbbcd6333426ccbb3f",
+    "fox-reference-uncertainty-v3/images/seed-47-front-albedo.json": "4b9ee3d307d1ca19faa5a893280fefdd8c71a696c35ca642b1abecb7a23e3766",
+    "fox-reference-uncertainty-v3/images/seed-47-oblique-albedo.json": "8282d1cba38e668d4a576f87aec9a52aba8ab46c9d445ca548e8eceb4cbcd652",
+    "fox-reference-uncertainty-v3/images/seed-71-front-albedo.json": "439472d16e02af2fbecf092db469e8661b1a0849ab4cb7a7819f5933abb365dc",
+    "fox-reference-uncertainty-v3/images/seed-71-oblique-albedo.json": "f5d9f0950f49439cd6db871f64442dd27af78d9705cab96487bc523605c0c2e4"
+  },
+  "scope": "Existing stored material/scenario evidence only; no scene rerender/edit. No geometry arrays included. Internal socket Weight is preserved evidence, not interpreted as surface diffuse BSDF strength."
+}

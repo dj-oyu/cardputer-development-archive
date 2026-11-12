@@ -1,0 +1,28 @@
+from pathlib import Path
+import json,hashlib,numpy as np
+R=Path(__file__).resolve().parent;W=R.parent;D=R/'replay-001';done=json.loads((D/'COMPLETED.json').read_text());assert done['status']=='COMPLETE';selection=json.loads((W/'fox-v3-transport-point-selection/selection.json').read_text());Y=np.array([.2126,.7152,.0722]);components=['direct','world','bounce','ground','combined'];comparisons={'outer16_to64_inner16':(0,1),'inner16_to64_outer64':(1,2),'outer64_to256_inner64':(2,3),'phase256_shift':(3,4),'baseline16_to256phase0':(0,3),'baseline16_to256shift':(0,4)}
+def aggregate(a):
+ return {'count':len(a),'mean':float(np.mean(a)) if len(a) else None,'median':float(np.median(a)) if len(a) else None,'max':float(np.max(a)) if len(a) else None,'p95':float(np.quantile(a,.95)) if len(a) else None}
+def metrics(a,b):
+ delta=b-a;lum_a=a@Y;lum_b=b@Y;abs_y=np.abs(lum_b-lum_a);denom=np.abs(lum_a);valid=denom>1e-4;norm=np.linalg.norm(delta,axis=1);result={'absoluteRGBL1':aggregate(np.abs(delta).sum(1)),'absoluteRGBL2':aggregate(norm),'absoluteMaxChannel':aggregate(np.abs(delta).max(1)),'absoluteLuminance':aggregate(abs_y),'signedLuminanceChange':{'mean':float(np.mean(lum_b-lum_a)) if len(a) else None,'min':float(np.min(lum_b-lum_a)) if len(a) else None,'max':float(np.max(lum_b-lum_a)) if len(a) else None},'relativeLuminance':{'definition':'abs(Y_to-Y_from)/abs(Y_from), only denominator>1e-4','applicable':int(valid.sum()),'notApplicableLowDenominator':int((~valid).sum()),'stats':aggregate(abs_y[valid]/denom[valid])},'lowLuminanceBins':{}}
+ for name,mask in [('le1e-6',denom<=1e-6),('1e-6to1e-4',(denom>1e-6)&(denom<=1e-4)),('1e-4to1e-2',(denom>1e-4)&(denom<=1e-2)),('gt1e-2',denom>1e-2)]:result['lowLuminanceBins'][name]={'count':int(mask.sum()),'fractionOfSelected':float(mask.mean()) if len(a) else None,'absoluteRGBL2':aggregate(norm[mask]),'absoluteLuminance':aggregate(abs_y[mask])}
+ return result
+arrays={};out={'scope':'Sparse selected-point diagnostic, not weighted population, full-image convergence or truth. Higher density and phase shifts are finite comparisons only. All changes linear HDR before profile/clamp.','selectionSHA256':done['selectionSHA256'],'fixedLuminanceCoefficients':Y.tolist(),'relativeErrorExcludesDenominatorAtMost':1e-4,'budgetCompletion':done['frames'],'frames':{},'pairedDirectionResponses':{}}
+for view in ['front','oblique']:
+ points=[q for q in selection['points'] if q['view']==view];groups={'all':np.ones(56,dtype=bool)}
+ for g in sorted({q['group'] for q in points}):groups['group:'+g]=np.array([q['group']==g for q in points])
+ for s in ['interior','boundary']:groups['stratum:'+s]=np.array([q['stratum']==s for q in points])
+ for g in sorted({q['group'] for q in points}):
+  for s in ['interior','boundary']:groups['group:'+g+'/'+s]=np.array([q['group']==g and q['stratum']==s for q in points])
+ for case in ['baseline','direction']:
+  key=view+'-'+case;r=json.loads((D/f'native-{key}-point-results.json').read_text());assert r['complete'] and r['completeQueries']==280 and r['failedQueries']==r['unattemptedQueries']==0;rows=r['rows'];arrays[key]={c:np.array([x[c] for x in rows]).reshape(56,5,3) for c in components};a=arrays[key];assert np.isfinite(a['combined']).all();assert np.array_equal(a['direct'],np.repeat(a['direct'][:,0:1,:],5,axis=1));assert np.allclose(a['combined'],sum(a[c] for c in ['direct','world','bounce','ground']),rtol=0,atol=1e-15)
+  result={'all56DirectComponentsBitExactAcrossArms':True,'comparisons':{},'selectedMeanComponentRGB':{c:a[c].mean(0).tolist() for c in components},'phaseVsBaselineChange':{}}
+  for name,(i,j) in comparisons.items():result['comparisons'][name]={c:{g:metrics(a[c][mask,i],a[c][mask,j]) for g,mask in groups.items()} for c in components}
+  phase=np.linalg.norm(a['combined'][:,4]-a['combined'][:,3],axis=1);coarse=np.linalg.norm(a['combined'][:,3]-a['combined'][:,0],axis=1)
+  result['phaseVsBaselineChange']={g:{'points':int(mask.sum()),'phaseL2GreaterThan16to256Phase0L2':int((phase[mask]>coarse[mask]).sum()),'phaseAbsoluteRGBL2':aggregate(phase[mask]),'baseline16to256AbsoluteRGBL2':aggregate(coarse[mask])} for g,mask in groups.items()};out['frames'][key]=result
+ response={c:arrays[view+'-direction'][c]-arrays[view+'-baseline'][c] for c in components};rr={}
+ for name,(i,j) in comparisons.items():
+  rr[name]={c:{g:metrics(a[mask,i],a[mask,j]) for g,mask in groups.items()} for c,a in response.items()};ya=response['combined'][:,i]@Y;yb=response['combined'][:,j]@Y;rr[name]['combinedResponseSigns']={'signChangedIncludingExactZero':int((np.sign(ya)!=np.sign(yb)).sum()),'bothNonzeroSignFlips':int(((ya*yb)<0).sum()),'fromLowAmplitudeAtMost1e-4':int((np.abs(ya)<=1e-4).sum()),'toLowAmplitudeAtMost1e-4':int((np.abs(yb)<=1e-4).sum()),'noReferenceCorrectnessClaim':True}
+ out['pairedDirectionResponses'][view]=rr
+(R/'point-summary.json').write_text(json.dumps(out,indent=2,allow_nan=False))
+brief={k:{name:{'combined':v['comparisons'][name]['combined']['all'],'world':v['comparisons'][name]['world']['all']['absoluteRGBL2'],'bounce':v['comparisons'][name]['bounce']['all']['absoluteRGBL2'],'ground':v['comparisons'][name]['ground']['all']['absoluteRGBL2']} for name in ['baseline16_to256phase0','phase256_shift']} for k,v in out['frames'].items()};(R/'point-brief.json').write_text(json.dumps(brief,indent=2));print(json.dumps({k:{n:{'meanRGBL2':z['combined']['absoluteRGBL2']['mean'],'maxRGBL2':z['combined']['absoluteRGBL2']['max'],'meanAbsY':z['combined']['absoluteLuminance']['mean'],'componentMeanL2':{c:z[c]['mean'] for c in ['world','bounce','ground']}} for n,z in v.items()} for k,v in brief.items()},indent=2))

@@ -1,0 +1,42 @@
+fox-v3-lossless-profile-lut/review/profile_old.o  :
+section              size   addr
+.text                 848      0
+.data                   0      0
+.bss                    0      0
+.rodata           1647750      0
+.rodata.cst4           12      0
+.rodata.cst16          32      0
+.rodata.cst8           72      0
+.comment               32      0
+.note.GNU-stack         0      0
+.eh_frame             104      0
+Total             1648850
+
+
+fox-v3-lossless-profile-lut/review/profile_new.o  :
+section             size   addr
+.text                963      0
+.data                  0      0
+.bss                   0      0
+.rodata           445248      0
+.rodata.cst16         48      0
+.rodata.cst4           4      0
+.rodata.cst8          72      0
+.comment              32      0
+.note.GNU-stack        0      0
+.eh_frame            104      0
+Total             446471
+
+
+fox-v3-lossless-profile-lut/review/profile_decoder.o  :
+section           size   addr
+.text             1619      0
+.data                0      0
+.bss                 0      0
+.rodata              8      0
+.comment            32      0
+.note.GNU-stack      0      0
+.eh_frame          208      0
+Total             1867
+
+

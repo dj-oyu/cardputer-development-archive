@@ -1,0 +1,17 @@
+{
+ "status":"MECHANICAL_LIFETIME_CHANGE_ONLY",
+ "actualFrames":0,
+ "genericWorkspaceAndAPIsUnchanged":true,
+ "newOptInAPI":"ksn_mesh_pixel_render_bounded_ring_experimental",
+ "newType":"ksn_bounded_ring_workspace",
+ "sourceIDs":"Unchanged original binder accepts 0..91, 65535 is nohit sentinel; 92 and 65535 identity table entries reject. Faces cap1564 is not source-ID max.",
+ "centerStorage":"32400 uint16 -> 2400 uint16. Current band rows initialized individually before shader work, preserving preceding2 rows across each8-row strip.",
+ "logicalCenterInitialization":32400,
+ "allOperationLimitsAndReportChargesUnchanged":true,
+ "f64MathShaderAndProfileOrderUnchanged":true,
+ "specializedHelpers":["aa_guard","aa_charge","aa_bind","aa_target","aa_geometry","sc_mask","sc_shade_final"],
+ "helperChanges":"Verbatim function bodies with workspace type and internal helper-name substitution only. No noinline annotation remains.",
+ "compilerEffect":"ring_sc_shade_final, ring_aa_bind and ring_aa_geometry inlined into ring entry1552 B; shared identical encode emitted as rh_encode. Do not add legacy1072 B shade frame again.",
+ "newPhysicalWork":"Modulo10 addressing and17 row-group clears instead of one full-frame clear. Same32400 uint16 initialization writes. No speedup claim; semantic counters do not measure modulo/index/cache costs.",
+ "failureContract":"Malformed admission preserves declared outputs and reports in tested cases. Runtime failures consume work and may leave private candidates partial exactly as legacy; publish only true. No blanket failure atomicity claim."
+}

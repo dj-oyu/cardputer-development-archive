@@ -1,0 +1,18 @@
+[
+  {
+    "path": "ayatsuri-fixed-integer-light-20261105/normal_bridge.h",
+    "exact_old": " for(unsigned k=0;k<3;k++)out[k]=result[k];return IL_NORMAL_OK;",
+    "exact_new": " for(unsigned k=0;k<3;k++)out[k]=result[k];\n return IL_NORMAL_OK;",
+    "before_sha256": "22c7082c6020c5b3dc5b9819ba5bec74504c0490abb29aaed4da4b40506781e2",
+    "after_sha256": "06ab979ded0f86ed49ee14d010b3426f7488c6725155ffdad1a108556d52c768",
+    "non_whitespace_identical": true
+  },
+  {
+    "path": "ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c",
+    "exact_old": "if(q20<INT32_MIN||q20>INT32_MAX)return KC_INVALID;local[k]=(int32_t)q20;}",
+    "exact_new": "if(q20<INT32_MIN||q20>INT32_MAX)return KC_INVALID;\n  local[k]=(int32_t)q20;\n }",
+    "before_sha256": "4bf64c1e6c60719de52a055b29ecf828a7b8c50751566412a7e2d4906a3b47f3",
+    "after_sha256": "58ca24f9d6717def97ec97a07ab0eb4719455228bddc7c4dd30c808aff8e5358",
+    "non_whitespace_identical": true
+  }
+]

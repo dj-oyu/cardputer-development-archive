@@ -1,0 +1,226 @@
+{
+  "sourceSHA256": "20c426527199e399a5f544183012a4e45d2227345584e758da1c635fe6c9e504",
+  "scope": "Complete unchanged geometry/camera/order A2 workload upper bounds, externally pinned; future excess or changed inputs reject",
+  "rows": [
+    {
+      "view": "front",
+      "case": "baseline",
+      "reverse": false,
+      "shadeUpdates": 17070,
+      "primary_ground_hits": 70342,
+      "transportRays": 4557877,
+      "transportNodeVisits": 321144551,
+      "transportTriangleTests": 112171671,
+      "visibilitySnapshotFingerprint": "017e6671f56c3bd8"
+    },
+    {
+      "view": "front",
+      "case": "baseline",
+      "reverse": true,
+      "shadeUpdates": 16930,
+      "primary_ground_hits": 69822,
+      "transportRays": 4491963,
+      "transportNodeVisits": 305993842,
+      "transportTriangleTests": 109524258,
+      "visibilitySnapshotFingerprint": "5a13ce5ed58ad33e"
+    },
+    {
+      "view": "oblique",
+      "case": "baseline",
+      "reverse": false,
+      "shadeUpdates": 17001,
+      "primary_ground_hits": 71667,
+      "transportRays": 4585402,
+      "transportNodeVisits": 307400972,
+      "transportTriangleTests": 109056190,
+      "visibilitySnapshotFingerprint": "ca2671fb76b7a28c"
+    },
+    {
+      "view": "oblique",
+      "case": "baseline",
+      "reverse": true,
+      "shadeUpdates": 17241,
+      "primary_ground_hits": 70443,
+      "transportRays": 4776789,
+      "transportNodeVisits": 323353531,
+      "transportTriangleTests": 114219203,
+      "visibilitySnapshotFingerprint": "16a5cafb1e38eb8a"
+    },
+    {
+      "view": "front",
+      "case": "direction",
+      "reverse": false,
+      "shadeUpdates": 17070,
+      "primary_ground_hits": 70342,
+      "transportRays": 4539955,
+      "transportNodeVisits": 322638142,
+      "transportTriangleTests": 113520496,
+      "visibilitySnapshotFingerprint": "e9b9aaa945a95ee1"
+    },
+    {
+      "view": "front",
+      "case": "direction",
+      "reverse": true,
+      "shadeUpdates": 16930,
+      "primary_ground_hits": 69822,
+      "transportRays": 4453064,
+      "transportNodeVisits": 305951495,
+      "transportTriangleTests": 110476959,
+      "visibilitySnapshotFingerprint": "ed2c24b19b7b760f"
+    },
+    {
+      "view": "oblique",
+      "case": "direction",
+      "reverse": false,
+      "shadeUpdates": 17001,
+      "primary_ground_hits": 71667,
+      "transportRays": 4621324,
+      "transportNodeVisits": 311704413,
+      "transportTriangleTests": 111391352,
+      "visibilitySnapshotFingerprint": "3f377d53c4178e6d"
+    },
+    {
+      "view": "oblique",
+      "case": "direction",
+      "reverse": true,
+      "shadeUpdates": 17241,
+      "primary_ground_hits": 70443,
+      "transportRays": 4808773,
+      "transportNodeVisits": 329358214,
+      "transportTriangleTests": 117192737,
+      "visibilitySnapshotFingerprint": "afc8510bf97b8917"
+    },
+    {
+      "view": "front",
+      "case": "intensity",
+      "reverse": false,
+      "shadeUpdates": 17070,
+      "primary_ground_hits": 70342,
+      "transportRays": 4557877,
+      "transportNodeVisits": 321144551,
+      "transportTriangleTests": 112171671,
+      "visibilitySnapshotFingerprint": "750e5cf096aa40fd"
+    },
+    {
+      "view": "front",
+      "case": "intensity",
+      "reverse": true,
+      "shadeUpdates": 16930,
+      "primary_ground_hits": 69822,
+      "transportRays": 4491963,
+      "transportNodeVisits": 305993842,
+      "transportTriangleTests": 109524258,
+      "visibilitySnapshotFingerprint": "00593adac8e78aab"
+    },
+    {
+      "view": "oblique",
+      "case": "intensity",
+      "reverse": false,
+      "shadeUpdates": 17001,
+      "primary_ground_hits": 71667,
+      "transportRays": 4585402,
+      "transportNodeVisits": 307400972,
+      "transportTriangleTests": 109056190,
+      "visibilitySnapshotFingerprint": "cb568337d9bcec59"
+    },
+    {
+      "view": "oblique",
+      "case": "intensity",
+      "reverse": true,
+      "shadeUpdates": 17241,
+      "primary_ground_hits": 70443,
+      "transportRays": 4776789,
+      "transportNodeVisits": 323353531,
+      "transportTriangleTests": 114219203,
+      "visibilitySnapshotFingerprint": "4461ebdd1ccceb6b"
+    },
+    {
+      "view": "front",
+      "case": "ambient",
+      "reverse": false,
+      "shadeUpdates": 17070,
+      "primary_ground_hits": 70342,
+      "transportRays": 4557877,
+      "transportNodeVisits": 321144551,
+      "transportTriangleTests": 112171671,
+      "visibilitySnapshotFingerprint": "fb48014ff3fcf9c8"
+    },
+    {
+      "view": "front",
+      "case": "ambient",
+      "reverse": true,
+      "shadeUpdates": 16930,
+      "primary_ground_hits": 69822,
+      "transportRays": 4491963,
+      "transportNodeVisits": 305993842,
+      "transportTriangleTests": 109524258,
+      "visibilitySnapshotFingerprint": "dce979160c5b88ae"
+    },
+    {
+      "view": "oblique",
+      "case": "ambient",
+      "reverse": false,
+      "shadeUpdates": 17001,
+      "primary_ground_hits": 71667,
+      "transportRays": 4585402,
+      "transportNodeVisits": 307400972,
+      "transportTriangleTests": 109056190,
+      "visibilitySnapshotFingerprint": "2b169d60dffce95c"
+    },
+    {
+      "view": "oblique",
+      "case": "ambient",
+      "reverse": true,
+      "shadeUpdates": 17241,
+      "primary_ground_hits": 70443,
+      "transportRays": 4776789,
+      "transportNodeVisits": 323353531,
+      "transportTriangleTests": 114219203,
+      "visibilitySnapshotFingerprint": "81c2d4aca5a4a09a"
+    },
+    {
+      "view": "front",
+      "case": "albedo",
+      "reverse": false,
+      "shadeUpdates": 17070,
+      "primary_ground_hits": 70342,
+      "transportRays": 4557877,
+      "transportNodeVisits": 321144551,
+      "transportTriangleTests": 112171671,
+      "visibilitySnapshotFingerprint": "54445c4c61aa80a4"
+    },
+    {
+      "view": "front",
+      "case": "albedo",
+      "reverse": true,
+      "shadeUpdates": 16930,
+      "primary_ground_hits": 69822,
+      "transportRays": 4491963,
+      "transportNodeVisits": 305993842,
+      "transportTriangleTests": 109524258,
+      "visibilitySnapshotFingerprint": "ab99985faeeb4f82"
+    },
+    {
+      "view": "oblique",
+      "case": "albedo",
+      "reverse": false,
+      "shadeUpdates": 17001,
+      "primary_ground_hits": 71667,
+      "transportRays": 4585402,
+      "transportNodeVisits": 307400972,
+      "transportTriangleTests": 109056190,
+      "visibilitySnapshotFingerprint": "9fa01b79d8cc3e60"
+    },
+    {
+      "view": "oblique",
+      "case": "albedo",
+      "reverse": true,
+      "shadeUpdates": 17241,
+      "primary_ground_hits": 70443,
+      "transportRays": 4776789,
+      "transportNodeVisits": 323353531,
+      "transportTriangleTests": 114219203,
+      "visibilitySnapshotFingerprint": "e9dbf963029f2066"
+    }
+  ]
+}

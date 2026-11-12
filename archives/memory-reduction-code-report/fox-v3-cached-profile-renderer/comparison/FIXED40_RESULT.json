@@ -1,0 +1,29 @@
+{
+  "status": "PASS_RETAINED_FIXED40_COMPARISON",
+  "comparisons": {
+    "frames": 40,
+    "raw": 200,
+    "reports": 280,
+    "forwardReverse": 80
+  },
+  "observations": {
+    "off": {
+      "wallSeconds": 348.00247343996307,
+      "userCPUSeconds": 347.708369,
+      "systemCPUSeconds": 0.120485,
+      "maximumProcessPeakRSSKiB": 25452,
+      "historicalBaselineWallSeconds": 309.5525298700668
+    },
+    "on": {
+      "wallSeconds": 351.5613047549559,
+      "userCPUSeconds": 351.329434,
+      "systemCPUSeconds": 0.076,
+      "maximumProcessPeakRSSKiB": 25576,
+      "historicalBaselineWallSeconds": 335.65622713402263
+    }
+  },
+  "timingClaim": "Historical descriptive observations only; not controlled performance, device speed or fit claims.",
+  "gateSHA256": "e45a2b8bf310c50e3f44c6e7710ffe6c755c15d7b8f5c6ce7f9d7cf4d965e864",
+  "auditSHA256": "ca525ead0702721f827d087e8de8e14026e468eae532378f1e0f53c5b1b49736",
+  "rerenders": 0
+}

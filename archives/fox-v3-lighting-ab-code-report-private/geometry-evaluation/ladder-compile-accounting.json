@@ -1,0 +1,54 @@
+[
+  {
+    "stage": "stage-1",
+    "vertices": 874,
+    "triangles": 1210,
+    "records": 46,
+    "snapshotBytes": 53760,
+    "coldBytes": 36700,
+    "arenaBytes64bit": 67452,
+    "compileSnapshotEstimateFits65536": true,
+    "prepareAccepted": true,
+    "actualAppendExecuted": false,
+    "actualRenderExecuted": false
+  },
+  {
+    "stage": "stage-2",
+    "vertices": 1016,
+    "triangles": 1314,
+    "records": 51,
+    "snapshotBytes": 62104,
+    "coldBytes": 41788,
+    "arenaBytes64bit": 75524,
+    "compileSnapshotEstimateFits65536": true,
+    "prepareAccepted": true,
+    "actualAppendExecuted": false,
+    "actualRenderExecuted": false
+  },
+  {
+    "stage": "stage-3",
+    "vertices": 1354,
+    "triangles": 1520,
+    "records": 62,
+    "snapshotBytes": 81832,
+    "coldBytes": 53580,
+    "arenaBytes64bit": 93692,
+    "compileSnapshotEstimateFits65536": false,
+    "prepareAccepted": false,
+    "actualAppendExecuted": false,
+    "actualRenderExecuted": false
+  },
+  {
+    "stage": "stage-4",
+    "vertices": 2035,
+    "triangles": 1938,
+    "records": 83,
+    "snapshotBytes": 121564,
+    "coldBytes": 77236,
+    "arenaBytes64bit": 128948,
+    "compileSnapshotEstimateFits65536": false,
+    "prepareAccepted": false,
+    "actualAppendExecuted": false,
+    "actualRenderExecuted": false
+  }
+]

@@ -1,0 +1,958 @@
+{
+  "status": "EXISTING_INPUT_CORPUS_INVENTORY_ONLY",
+  "newFrames": 0,
+  "newSceneQueries": 0,
+  "realRendererIntegrationAuthorized": false,
+  "finalHDRCorpus": {
+    "frames": 40,
+    "pixels": 1296000,
+    "rows": [
+      {
+        "key": "actual-on-001/native-front-albedo-reverse",
+        "pixels": 32400,
+        "files": [
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-on-001/native-front-albedo-reverse.hdr.f64le",
+            "bytes": 777600,
+            "sha256": "3f9090d41142f1a22622bdcbd897a3b50453a39885e8314645ba39c70cb1fe47"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-on-001/native-front-albedo-reverse.u16le",
+            "bytes": 64800,
+            "sha256": "a493675a311026600faf352f254ac63639ec1e54949b55a4bac68386a08128a6"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-on-001/native-front-albedo-reverse.hdr-observer.json",
+            "bytes": 219,
+            "sha256": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d"
+          }
+        ]
+      },
+      {
+        "key": "actual-on-001/native-front-albedo",
+        "pixels": 32400,
+        "files": [
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-on-001/native-front-albedo.hdr.f64le",
+            "bytes": 777600,
+            "sha256": "3f9090d41142f1a22622bdcbd897a3b50453a39885e8314645ba39c70cb1fe47"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-on-001/native-front-albedo.u16le",
+            "bytes": 64800,
+            "sha256": "a493675a311026600faf352f254ac63639ec1e54949b55a4bac68386a08128a6"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-on-001/native-front-albedo.hdr-observer.json",
+            "bytes": 219,
+            "sha256": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d"
+          }
+        ]
+      },
+      {
+        "key": "actual-on-001/native-front-ambient-reverse",
+        "pixels": 32400,
+        "files": [
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-on-001/native-front-ambient-reverse.hdr.f64le",
+            "bytes": 777600,
+            "sha256": "e02c7e5064171a6eb97d87e71a60b78fc94bc41622c7c7cc86c86c95ca1024ba"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-on-001/native-front-ambient-reverse.u16le",
+            "bytes": 64800,
+            "sha256": "5be18d01320498387b2b5d202f1cf5364c42e535873a2fc37e45cca5606efbe2"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-on-001/native-front-ambient-reverse.hdr-observer.json",
+            "bytes": 219,
+            "sha256": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d"
+          }
+        ]
+      },
+      {
+        "key": "actual-on-001/native-front-ambient",
+        "pixels": 32400,
+        "files": [
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-on-001/native-front-ambient.hdr.f64le",
+            "bytes": 777600,
+            "sha256": "e02c7e5064171a6eb97d87e71a60b78fc94bc41622c7c7cc86c86c95ca1024ba"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-on-001/native-front-ambient.u16le",
+            "bytes": 64800,
+            "sha256": "5be18d01320498387b2b5d202f1cf5364c42e535873a2fc37e45cca5606efbe2"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-on-001/native-front-ambient.hdr-observer.json",
+            "bytes": 219,
+            "sha256": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d"
+          }
+        ]
+      },
+      {
+        "key": "actual-on-001/native-front-baseline-reverse",
+        "pixels": 32400,
+        "files": [
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-on-001/native-front-baseline-reverse.hdr.f64le",
+            "bytes": 777600,
+            "sha256": "81033b386024e59ec6396572925a736e19a842b8097c0e55651db62df99daff7"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-on-001/native-front-baseline-reverse.u16le",
+            "bytes": 64800,
+            "sha256": "75150dc3ec5ca2469b5b74d5758060925ba4a536010f82a2a94929aa8d8adb87"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-on-001/native-front-baseline-reverse.hdr-observer.json",
+            "bytes": 219,
+            "sha256": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d"
+          }
+        ]
+      },
+      {
+        "key": "actual-on-001/native-front-baseline",
+        "pixels": 32400,
+        "files": [
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-on-001/native-front-baseline.hdr.f64le",
+            "bytes": 777600,
+            "sha256": "81033b386024e59ec6396572925a736e19a842b8097c0e55651db62df99daff7"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-on-001/native-front-baseline.u16le",
+            "bytes": 64800,
+            "sha256": "75150dc3ec5ca2469b5b74d5758060925ba4a536010f82a2a94929aa8d8adb87"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-on-001/native-front-baseline.hdr-observer.json",
+            "bytes": 219,
+            "sha256": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d"
+          }
+        ]
+      },
+      {
+        "key": "actual-on-001/native-front-direction-reverse",
+        "pixels": 32400,
+        "files": [
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-on-001/native-front-direction-reverse.hdr.f64le",
+            "bytes": 777600,
+            "sha256": "7779b38fad9f6decd91676bbab33c289f54b3b37dfe1add315474c848aaba662"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-on-001/native-front-direction-reverse.u16le",
+            "bytes": 64800,
+            "sha256": "81691f535bf7a6d544bfa57a664106ef8c1301b0e28d8bb1e587a3b7744b3d59"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-on-001/native-front-direction-reverse.hdr-observer.json",
+            "bytes": 219,
+            "sha256": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d"
+          }
+        ]
+      },
+      {
+        "key": "actual-on-001/native-front-direction",
+        "pixels": 32400,
+        "files": [
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-on-001/native-front-direction.hdr.f64le",
+            "bytes": 777600,
+            "sha256": "7779b38fad9f6decd91676bbab33c289f54b3b37dfe1add315474c848aaba662"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-on-001/native-front-direction.u16le",
+            "bytes": 64800,
+            "sha256": "81691f535bf7a6d544bfa57a664106ef8c1301b0e28d8bb1e587a3b7744b3d59"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-on-001/native-front-direction.hdr-observer.json",
+            "bytes": 219,
+            "sha256": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d"
+          }
+        ]
+      },
+      {
+        "key": "actual-on-001/native-front-intensity-reverse",
+        "pixels": 32400,
+        "files": [
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-on-001/native-front-intensity-reverse.hdr.f64le",
+            "bytes": 777600,
+            "sha256": "0b5880ae3e395d854cef558bfc3e758edb53b59548892dceaad7b11abb3cf646"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-on-001/native-front-intensity-reverse.u16le",
+            "bytes": 64800,
+            "sha256": "0d567db5c523c4d7a876fe03d5faa75e5012f42e11328904520aaedf400bb807"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-on-001/native-front-intensity-reverse.hdr-observer.json",
+            "bytes": 219,
+            "sha256": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d"
+          }
+        ]
+      },
+      {
+        "key": "actual-on-001/native-front-intensity",
+        "pixels": 32400,
+        "files": [
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-on-001/native-front-intensity.hdr.f64le",
+            "bytes": 777600,
+            "sha256": "0b5880ae3e395d854cef558bfc3e758edb53b59548892dceaad7b11abb3cf646"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-on-001/native-front-intensity.u16le",
+            "bytes": 64800,
+            "sha256": "0d567db5c523c4d7a876fe03d5faa75e5012f42e11328904520aaedf400bb807"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-on-001/native-front-intensity.hdr-observer.json",
+            "bytes": 219,
+            "sha256": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d"
+          }
+        ]
+      },
+      {
+        "key": "actual-on-001/native-oblique-albedo-reverse",
+        "pixels": 32400,
+        "files": [
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-on-001/native-oblique-albedo-reverse.hdr.f64le",
+            "bytes": 777600,
+            "sha256": "c2864abf5a1a458035ab4bb31ca8038b42775053f1824b6fa8edf094c7142f49"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-on-001/native-oblique-albedo-reverse.u16le",
+            "bytes": 64800,
+            "sha256": "e086a698382a4a062248d15c9d080140bd02fbdc5143e79dee9b6af593c60092"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-on-001/native-oblique-albedo-reverse.hdr-observer.json",
+            "bytes": 219,
+            "sha256": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d"
+          }
+        ]
+      },
+      {
+        "key": "actual-on-001/native-oblique-albedo",
+        "pixels": 32400,
+        "files": [
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-on-001/native-oblique-albedo.hdr.f64le",
+            "bytes": 777600,
+            "sha256": "c2864abf5a1a458035ab4bb31ca8038b42775053f1824b6fa8edf094c7142f49"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-on-001/native-oblique-albedo.u16le",
+            "bytes": 64800,
+            "sha256": "e086a698382a4a062248d15c9d080140bd02fbdc5143e79dee9b6af593c60092"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-on-001/native-oblique-albedo.hdr-observer.json",
+            "bytes": 219,
+            "sha256": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d"
+          }
+        ]
+      },
+      {
+        "key": "actual-on-001/native-oblique-ambient-reverse",
+        "pixels": 32400,
+        "files": [
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-on-001/native-oblique-ambient-reverse.hdr.f64le",
+            "bytes": 777600,
+            "sha256": "2a6b88df5c3aa68875a2f9f1ff7a2a609c35d5ef6fd71af795d9b165ec32b8a8"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-on-001/native-oblique-ambient-reverse.u16le",
+            "bytes": 64800,
+            "sha256": "76b77b0458bac860b1ffa6cb814e5f40482a279f95a9e311fddd0842b73440f7"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-on-001/native-oblique-ambient-reverse.hdr-observer.json",
+            "bytes": 219,
+            "sha256": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d"
+          }
+        ]
+      },
+      {
+        "key": "actual-on-001/native-oblique-ambient",
+        "pixels": 32400,
+        "files": [
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-on-001/native-oblique-ambient.hdr.f64le",
+            "bytes": 777600,
+            "sha256": "2a6b88df5c3aa68875a2f9f1ff7a2a609c35d5ef6fd71af795d9b165ec32b8a8"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-on-001/native-oblique-ambient.u16le",
+            "bytes": 64800,
+            "sha256": "76b77b0458bac860b1ffa6cb814e5f40482a279f95a9e311fddd0842b73440f7"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-on-001/native-oblique-ambient.hdr-observer.json",
+            "bytes": 219,
+            "sha256": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d"
+          }
+        ]
+      },
+      {
+        "key": "actual-on-001/native-oblique-baseline-reverse",
+        "pixels": 32400,
+        "files": [
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-on-001/native-oblique-baseline-reverse.hdr.f64le",
+            "bytes": 777600,
+            "sha256": "76ea261b54e8e93595b5bda351a2251f96610d67346c71b3669b72e1b69a76b0"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-on-001/native-oblique-baseline-reverse.u16le",
+            "bytes": 64800,
+            "sha256": "4c3e57c5d186eed1c7768535bfe1a3ea0f314e44356297c21fd98ecbe52a34f5"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-on-001/native-oblique-baseline-reverse.hdr-observer.json",
+            "bytes": 219,
+            "sha256": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d"
+          }
+        ]
+      },
+      {
+        "key": "actual-on-001/native-oblique-baseline",
+        "pixels": 32400,
+        "files": [
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-on-001/native-oblique-baseline.hdr.f64le",
+            "bytes": 777600,
+            "sha256": "76ea261b54e8e93595b5bda351a2251f96610d67346c71b3669b72e1b69a76b0"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-on-001/native-oblique-baseline.u16le",
+            "bytes": 64800,
+            "sha256": "4c3e57c5d186eed1c7768535bfe1a3ea0f314e44356297c21fd98ecbe52a34f5"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-on-001/native-oblique-baseline.hdr-observer.json",
+            "bytes": 219,
+            "sha256": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d"
+          }
+        ]
+      },
+      {
+        "key": "actual-on-001/native-oblique-direction-reverse",
+        "pixels": 32400,
+        "files": [
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-on-001/native-oblique-direction-reverse.hdr.f64le",
+            "bytes": 777600,
+            "sha256": "2a0cd8c3b60faa0767c130616d08f89a8bd8b947502220e5e486bbfd921ae5e6"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-on-001/native-oblique-direction-reverse.u16le",
+            "bytes": 64800,
+            "sha256": "bded489830b9d2367b42e8fd973a7cdec2388a022ff3d14dd06836ff8348243d"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-on-001/native-oblique-direction-reverse.hdr-observer.json",
+            "bytes": 219,
+            "sha256": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d"
+          }
+        ]
+      },
+      {
+        "key": "actual-on-001/native-oblique-direction",
+        "pixels": 32400,
+        "files": [
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-on-001/native-oblique-direction.hdr.f64le",
+            "bytes": 777600,
+            "sha256": "2a0cd8c3b60faa0767c130616d08f89a8bd8b947502220e5e486bbfd921ae5e6"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-on-001/native-oblique-direction.u16le",
+            "bytes": 64800,
+            "sha256": "bded489830b9d2367b42e8fd973a7cdec2388a022ff3d14dd06836ff8348243d"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-on-001/native-oblique-direction.hdr-observer.json",
+            "bytes": 219,
+            "sha256": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d"
+          }
+        ]
+      },
+      {
+        "key": "actual-on-001/native-oblique-intensity-reverse",
+        "pixels": 32400,
+        "files": [
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-on-001/native-oblique-intensity-reverse.hdr.f64le",
+            "bytes": 777600,
+            "sha256": "e852c4e5a5bc157696b5afc50b84b063d3080b757f8cb22a0c0fb4e747cfeab5"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-on-001/native-oblique-intensity-reverse.u16le",
+            "bytes": 64800,
+            "sha256": "2764b53322a270c70e8604cd6b10023e3decc43481c53311d6efb36a0e43c3de"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-on-001/native-oblique-intensity-reverse.hdr-observer.json",
+            "bytes": 219,
+            "sha256": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d"
+          }
+        ]
+      },
+      {
+        "key": "actual-on-001/native-oblique-intensity",
+        "pixels": 32400,
+        "files": [
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-on-001/native-oblique-intensity.hdr.f64le",
+            "bytes": 777600,
+            "sha256": "e852c4e5a5bc157696b5afc50b84b063d3080b757f8cb22a0c0fb4e747cfeab5"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-on-001/native-oblique-intensity.u16le",
+            "bytes": 64800,
+            "sha256": "2764b53322a270c70e8604cd6b10023e3decc43481c53311d6efb36a0e43c3de"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-on-001/native-oblique-intensity.hdr-observer.json",
+            "bytes": 219,
+            "sha256": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d"
+          }
+        ]
+      },
+      {
+        "key": "actual-off-001/native-front-albedo-reverse",
+        "pixels": 32400,
+        "files": [
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-off-001/native-front-albedo-reverse.hdr.f64le",
+            "bytes": 777600,
+            "sha256": "3fdd676dc32783834fca8a39b8316ad1f15105ab6f44d524ee0395d5bb6a6cf1"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-off-001/native-front-albedo-reverse.u16le",
+            "bytes": 64800,
+            "sha256": "4abc755fc1e6b24d426681f90138495f40b5c8a9d6fa2d4a33a4114fd0ab321b"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-off-001/native-front-albedo-reverse.hdr-observer.json",
+            "bytes": 219,
+            "sha256": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d"
+          }
+        ]
+      },
+      {
+        "key": "actual-off-001/native-front-albedo",
+        "pixels": 32400,
+        "files": [
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-off-001/native-front-albedo.hdr.f64le",
+            "bytes": 777600,
+            "sha256": "3fdd676dc32783834fca8a39b8316ad1f15105ab6f44d524ee0395d5bb6a6cf1"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-off-001/native-front-albedo.u16le",
+            "bytes": 64800,
+            "sha256": "4abc755fc1e6b24d426681f90138495f40b5c8a9d6fa2d4a33a4114fd0ab321b"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-off-001/native-front-albedo.hdr-observer.json",
+            "bytes": 219,
+            "sha256": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d"
+          }
+        ]
+      },
+      {
+        "key": "actual-off-001/native-front-ambient-reverse",
+        "pixels": 32400,
+        "files": [
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-off-001/native-front-ambient-reverse.hdr.f64le",
+            "bytes": 777600,
+            "sha256": "caf53a239c455b8908b1280689681a510f614261708c3448384069e12879853e"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-off-001/native-front-ambient-reverse.u16le",
+            "bytes": 64800,
+            "sha256": "f32979b3f3c032641af22be363b3525b9557c5e34ee46b57266ecd7ef7a5d784"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-off-001/native-front-ambient-reverse.hdr-observer.json",
+            "bytes": 219,
+            "sha256": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d"
+          }
+        ]
+      },
+      {
+        "key": "actual-off-001/native-front-ambient",
+        "pixels": 32400,
+        "files": [
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-off-001/native-front-ambient.hdr.f64le",
+            "bytes": 777600,
+            "sha256": "caf53a239c455b8908b1280689681a510f614261708c3448384069e12879853e"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-off-001/native-front-ambient.u16le",
+            "bytes": 64800,
+            "sha256": "f32979b3f3c032641af22be363b3525b9557c5e34ee46b57266ecd7ef7a5d784"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-off-001/native-front-ambient.hdr-observer.json",
+            "bytes": 219,
+            "sha256": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d"
+          }
+        ]
+      },
+      {
+        "key": "actual-off-001/native-front-baseline-reverse",
+        "pixels": 32400,
+        "files": [
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-off-001/native-front-baseline-reverse.hdr.f64le",
+            "bytes": 777600,
+            "sha256": "7b5a6dfa3cdcd2cd7f3427f366723aa2635d4d56998b06fd9f549aef7dba870d"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-off-001/native-front-baseline-reverse.u16le",
+            "bytes": 64800,
+            "sha256": "fb373165478a9984e5be41ffd88c73df34be4480fdf6480bc2fe24f796123b9e"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-off-001/native-front-baseline-reverse.hdr-observer.json",
+            "bytes": 219,
+            "sha256": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d"
+          }
+        ]
+      },
+      {
+        "key": "actual-off-001/native-front-baseline",
+        "pixels": 32400,
+        "files": [
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-off-001/native-front-baseline.hdr.f64le",
+            "bytes": 777600,
+            "sha256": "7b5a6dfa3cdcd2cd7f3427f366723aa2635d4d56998b06fd9f549aef7dba870d"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-off-001/native-front-baseline.u16le",
+            "bytes": 64800,
+            "sha256": "fb373165478a9984e5be41ffd88c73df34be4480fdf6480bc2fe24f796123b9e"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-off-001/native-front-baseline.hdr-observer.json",
+            "bytes": 219,
+            "sha256": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d"
+          }
+        ]
+      },
+      {
+        "key": "actual-off-001/native-front-direction-reverse",
+        "pixels": 32400,
+        "files": [
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-off-001/native-front-direction-reverse.hdr.f64le",
+            "bytes": 777600,
+            "sha256": "a8c6998b38b0116232afcb18731e679336db1e3e777c9aa1b7864a5571b7c5e1"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-off-001/native-front-direction-reverse.u16le",
+            "bytes": 64800,
+            "sha256": "3787d423c9b7ba324fde1db14c56877a9dbbb09b130e6a0464b4d03cfb54e26a"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-off-001/native-front-direction-reverse.hdr-observer.json",
+            "bytes": 219,
+            "sha256": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d"
+          }
+        ]
+      },
+      {
+        "key": "actual-off-001/native-front-direction",
+        "pixels": 32400,
+        "files": [
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-off-001/native-front-direction.hdr.f64le",
+            "bytes": 777600,
+            "sha256": "a8c6998b38b0116232afcb18731e679336db1e3e777c9aa1b7864a5571b7c5e1"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-off-001/native-front-direction.u16le",
+            "bytes": 64800,
+            "sha256": "3787d423c9b7ba324fde1db14c56877a9dbbb09b130e6a0464b4d03cfb54e26a"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-off-001/native-front-direction.hdr-observer.json",
+            "bytes": 219,
+            "sha256": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d"
+          }
+        ]
+      },
+      {
+        "key": "actual-off-001/native-front-intensity-reverse",
+        "pixels": 32400,
+        "files": [
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-off-001/native-front-intensity-reverse.hdr.f64le",
+            "bytes": 777600,
+            "sha256": "b99fb124af4ec7bbe6ba5874532e56c0ae53c92ffa6a1b58807a16cbbaaf4796"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-off-001/native-front-intensity-reverse.u16le",
+            "bytes": 64800,
+            "sha256": "0c99538b5a9a4647f7371146358d3888501aa5c896f3e29b8b48c7fc0118c73b"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-off-001/native-front-intensity-reverse.hdr-observer.json",
+            "bytes": 219,
+            "sha256": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d"
+          }
+        ]
+      },
+      {
+        "key": "actual-off-001/native-front-intensity",
+        "pixels": 32400,
+        "files": [
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-off-001/native-front-intensity.hdr.f64le",
+            "bytes": 777600,
+            "sha256": "b99fb124af4ec7bbe6ba5874532e56c0ae53c92ffa6a1b58807a16cbbaaf4796"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-off-001/native-front-intensity.u16le",
+            "bytes": 64800,
+            "sha256": "0c99538b5a9a4647f7371146358d3888501aa5c896f3e29b8b48c7fc0118c73b"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-off-001/native-front-intensity.hdr-observer.json",
+            "bytes": 219,
+            "sha256": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d"
+          }
+        ]
+      },
+      {
+        "key": "actual-off-001/native-oblique-albedo-reverse",
+        "pixels": 32400,
+        "files": [
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-off-001/native-oblique-albedo-reverse.hdr.f64le",
+            "bytes": 777600,
+            "sha256": "1cc9f47fd08d3cf497d5199416a9199c71a152dbe50edef6ff11d36083443b56"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-off-001/native-oblique-albedo-reverse.u16le",
+            "bytes": 64800,
+            "sha256": "006b7ded88c4e6ceeae9ae6f0e96285389af6215d526aee442d97ebe8e002638"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-off-001/native-oblique-albedo-reverse.hdr-observer.json",
+            "bytes": 219,
+            "sha256": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d"
+          }
+        ]
+      },
+      {
+        "key": "actual-off-001/native-oblique-albedo",
+        "pixels": 32400,
+        "files": [
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-off-001/native-oblique-albedo.hdr.f64le",
+            "bytes": 777600,
+            "sha256": "1cc9f47fd08d3cf497d5199416a9199c71a152dbe50edef6ff11d36083443b56"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-off-001/native-oblique-albedo.u16le",
+            "bytes": 64800,
+            "sha256": "006b7ded88c4e6ceeae9ae6f0e96285389af6215d526aee442d97ebe8e002638"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-off-001/native-oblique-albedo.hdr-observer.json",
+            "bytes": 219,
+            "sha256": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d"
+          }
+        ]
+      },
+      {
+        "key": "actual-off-001/native-oblique-ambient-reverse",
+        "pixels": 32400,
+        "files": [
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-off-001/native-oblique-ambient-reverse.hdr.f64le",
+            "bytes": 777600,
+            "sha256": "dd3b45f908a7061ce54ea6d129bfddb0a9df29a5e3498bf8e5eececaf3b75946"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-off-001/native-oblique-ambient-reverse.u16le",
+            "bytes": 64800,
+            "sha256": "be50fc2cc12b50dcb6070d4f90e63bdc79833601cd5f2c665f81553106e98272"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-off-001/native-oblique-ambient-reverse.hdr-observer.json",
+            "bytes": 219,
+            "sha256": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d"
+          }
+        ]
+      },
+      {
+        "key": "actual-off-001/native-oblique-ambient",
+        "pixels": 32400,
+        "files": [
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-off-001/native-oblique-ambient.hdr.f64le",
+            "bytes": 777600,
+            "sha256": "dd3b45f908a7061ce54ea6d129bfddb0a9df29a5e3498bf8e5eececaf3b75946"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-off-001/native-oblique-ambient.u16le",
+            "bytes": 64800,
+            "sha256": "be50fc2cc12b50dcb6070d4f90e63bdc79833601cd5f2c665f81553106e98272"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-off-001/native-oblique-ambient.hdr-observer.json",
+            "bytes": 219,
+            "sha256": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d"
+          }
+        ]
+      },
+      {
+        "key": "actual-off-001/native-oblique-baseline-reverse",
+        "pixels": 32400,
+        "files": [
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-off-001/native-oblique-baseline-reverse.hdr.f64le",
+            "bytes": 777600,
+            "sha256": "9ba1a905b2629040d9b74a0441ca996de722607d222660e01ae20c3f743f6aac"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-off-001/native-oblique-baseline-reverse.u16le",
+            "bytes": 64800,
+            "sha256": "b09f23436d6cf4e83557e8f929fa90e98d703c6fb98ace972c844108604fcd27"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-off-001/native-oblique-baseline-reverse.hdr-observer.json",
+            "bytes": 219,
+            "sha256": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d"
+          }
+        ]
+      },
+      {
+        "key": "actual-off-001/native-oblique-baseline",
+        "pixels": 32400,
+        "files": [
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-off-001/native-oblique-baseline.hdr.f64le",
+            "bytes": 777600,
+            "sha256": "9ba1a905b2629040d9b74a0441ca996de722607d222660e01ae20c3f743f6aac"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-off-001/native-oblique-baseline.u16le",
+            "bytes": 64800,
+            "sha256": "b09f23436d6cf4e83557e8f929fa90e98d703c6fb98ace972c844108604fcd27"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-off-001/native-oblique-baseline.hdr-observer.json",
+            "bytes": 219,
+            "sha256": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d"
+          }
+        ]
+      },
+      {
+        "key": "actual-off-001/native-oblique-direction-reverse",
+        "pixels": 32400,
+        "files": [
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-off-001/native-oblique-direction-reverse.hdr.f64le",
+            "bytes": 777600,
+            "sha256": "c8f4a8a06f04ef68060bd91d94c26644503e769bb8eba49e504982bfc527be7d"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-off-001/native-oblique-direction-reverse.u16le",
+            "bytes": 64800,
+            "sha256": "ab251f9baa17f74f0417e9c0cd05fe6f6a54adf0f4273a51baa7fa4c94c4e06c"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-off-001/native-oblique-direction-reverse.hdr-observer.json",
+            "bytes": 219,
+            "sha256": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d"
+          }
+        ]
+      },
+      {
+        "key": "actual-off-001/native-oblique-direction",
+        "pixels": 32400,
+        "files": [
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-off-001/native-oblique-direction.hdr.f64le",
+            "bytes": 777600,
+            "sha256": "c8f4a8a06f04ef68060bd91d94c26644503e769bb8eba49e504982bfc527be7d"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-off-001/native-oblique-direction.u16le",
+            "bytes": 64800,
+            "sha256": "ab251f9baa17f74f0417e9c0cd05fe6f6a54adf0f4273a51baa7fa4c94c4e06c"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-off-001/native-oblique-direction.hdr-observer.json",
+            "bytes": 219,
+            "sha256": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d"
+          }
+        ]
+      },
+      {
+        "key": "actual-off-001/native-oblique-intensity-reverse",
+        "pixels": 32400,
+        "files": [
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-off-001/native-oblique-intensity-reverse.hdr.f64le",
+            "bytes": 777600,
+            "sha256": "0614cf498e9f2517743a6b61323f9d976dcb8dc6a48c23dd0bb34fb5ab64a8cb"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-off-001/native-oblique-intensity-reverse.u16le",
+            "bytes": 64800,
+            "sha256": "5dcde81b6908f91176f435dfa682f78ad90351dab00aade660b55fa187b11fe5"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-off-001/native-oblique-intensity-reverse.hdr-observer.json",
+            "bytes": 219,
+            "sha256": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d"
+          }
+        ]
+      },
+      {
+        "key": "actual-off-001/native-oblique-intensity",
+        "pixels": 32400,
+        "files": [
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-off-001/native-oblique-intensity.hdr.f64le",
+            "bytes": 777600,
+            "sha256": "0614cf498e9f2517743a6b61323f9d976dcb8dc6a48c23dd0bb34fb5ab64a8cb"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-off-001/native-oblique-intensity.u16le",
+            "bytes": 64800,
+            "sha256": "5dcde81b6908f91176f435dfa682f78ad90351dab00aade660b55fa187b11fe5"
+          },
+          {
+            "path": "fox-v3-indexed-bvh-bounds/actual-off-001/native-oblique-intensity.hdr-observer.json",
+            "bytes": 219,
+            "sha256": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d"
+          }
+        ]
+      }
+    ]
+  },
+  "fixedInputSources": [
+    {
+      "path": "fox-v3-floor-world-reflection/capture/on/native-front-baseline.samples.jsonl",
+      "bytes": 6845587,
+      "sha256": "6ac953d6f49bb807555838bfc9aa35a49567f893bd4f3c0238f377a81ee629e3"
+    },
+    {
+      "path": "fox-v3-floor-world-reflection/capture/on/native-front-baseline.snapshot",
+      "bytes": 64208,
+      "sha256": "006cfd92bda231a4ae7922f23aa125176f807967feaf444e2f3f8b19ef72cab0"
+    },
+    {
+      "path": "fox-v3-floor-world-reflection/capture/on/native-front-baseline.targets.u8",
+      "bytes": 32400,
+      "sha256": "eebd4a3432074c6e6d84cf7e6a03b34c7dbd9d4309bd3fbd003b7caa47eeb4f6"
+    },
+    {
+      "path": "fox-v3-indexed-bvh-bounds/actual-on-001/native-front-baseline.snapshot",
+      "bytes": 64208,
+      "sha256": "006cfd92bda231a4ae7922f23aa125176f807967feaf444e2f3f8b19ef72cab0"
+    },
+    {
+      "path": "fox-v3-indexed-bvh-bounds/actual-on-001/native-front-baseline.targets.u8",
+      "bytes": 32400,
+      "sha256": "eebd4a3432074c6e6d84cf7e6a03b34c7dbd9d4309bd3fbd003b7caa47eeb4f6"
+    },
+    {
+      "path": "ayatsuri-fixed-integer-light-20261105/actual-input.bin",
+      "bytes": 552816,
+      "sha256": "6fd6e21183eb2498a5f3b95dc2caad30748c4aea6cda8f838e62ef0a064fbc9c"
+    },
+    {
+      "path": "ayatsuri-fixed-integer-light-20261105/actual-provenance.json",
+      "bytes": 481,
+      "sha256": "ae98f9eff34099772e647619d4277cae390d192e65a7aeaf7cbcf2bc0b41a929"
+    },
+    {
+      "path": "ayatsuri-fixed-integer-chain-20261105/private/SOURCE_PINS.json",
+      "bytes": 3052,
+      "sha256": "475e063f2be42aa37b759cdab495776c29622235ac2aa616e048c17f22245293"
+    },
+    {
+      "path": "ayatsuri-fixed-integer-chain-20261105/private/RAW_RESULTS.json",
+      "bytes": 64594,
+      "sha256": "5c32498d2e529a334629ff535107690303fd6b6200908d7d9abe0527b4b5bfb9"
+    },
+    {
+      "path": "ayatsuri-fixed-integer-chain-20261105/tests/test_native_geometry.c",
+      "bytes": 4556,
+      "sha256": "13d8f81ecf1137a0a057390e16670b2a91b22a4d2e50eda512a11253f9a7497e"
+    },
+    {
+      "path": "ayatsuri-fixed-render-20261105/plan/canary-output/RESULT.json",
+      "bytes": 24118,
+      "sha256": "2fb83dfb660826cbd955f204a2adfe3326125a8bb117c9d01d2160b9a8fd0fea"
+    },
+    {
+      "path": "ayatsuri-fixed-render-20261105/visibility-trace/REPORT.md",
+      "bytes": 4776,
+      "sha256": "08f3a8a8e7dbd840e41e82e377548a690ba227eebb73685a33ded5979210ce11"
+    },
+    {
+      "path": "ayatsuri-fixed-render-20261105/visibility-trace/RESULT.json",
+      "bytes": 2383,
+      "sha256": "542837433e34a52502c2b7b699882ab3201eef75dbabf7c48a20abbb357e236f"
+    },
+    {
+      "path": "ayatsuri-fixed-render-20261105/visibility-trace/OUTPUT_FREEZE.json",
+      "bytes": 2760,
+      "sha256": "e63232585246398537862c3a3066da3d115b8445c5576f6ecb3e4ceb63ae3725"
+    }
+  ],
+  "quarterCorpus": {
+    "slots": 9540,
+    "pixels": 2385,
+    "hits": 7678,
+    "misses": 1862,
+    "admittedAggregateParityPixels": 1746,
+    "excludedPixels": 639,
+    "postResolverSlotIdentityAvailable": false
+  },
+  "directionCorpus": {
+    "rawNormals": 7678,
+    "oldQueryMasksValidForNewDirections": false
+  },
+  "reflectionContributionCorpus": {
+    "realPerSampleRadiancesAvailable": false,
+    "allowedEvidence": "Synthetic fixed arithmetic only; no real reflection-quality claim"
+  },
+  "laneLayout": {
+    "widths": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "records7678TailAt8": [
+      4,
+      2
+    ],
+    "admittedPixels1746TailAt8": [
+      2
+    ],
+    "fullFrame32400TailAt8": []
+  },
+  "scriptSHA256": "3c020200953d62f94b096eb844d7ff944855f5f6cf604b0aca8d52833991e604"
+}

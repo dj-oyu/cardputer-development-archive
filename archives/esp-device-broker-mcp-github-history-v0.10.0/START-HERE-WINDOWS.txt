@@ -1,0 +1,69 @@
+esp-device-broker-mcp: GitHub への初回 push
+
+この ZIP は v0.10.0 のソースと Git 履歴を含む bundle です。
+既存の MCP フォルダーや設定は上書きせず、新しいフォルダーへ clone します。
+公開先: dj-oyu/esp-device-broker-mcp
+確定コミット: 7d869909cf52baf962d933e9733015d5d380781b
+
+1. GitHub で空の公開リポジトリを作成します
+
+   Owner: dj-oyu
+   Repository name: esp-device-broker-mcp
+   Visibility: Public
+   README、.gitignore、License の自動追加はすべてオフにします。
+   既存の MIT LICENSE と NOTICE は bundle 内に含まれています。
+
+2. ZIP を展開し、そのフォルダーで PowerShell を開きます
+
+   Git が使える環境で、次のコマンドを順番に実行します。
+   途中でエラーになったら、その先には進まないでください。
+   esp-device-broker-mcp フォルダーがすでにある場合は削除・上書きせず、
+   この ZIP を別の空のフォルダーへ展開してから実行してください。
+
+   git clone --branch master .\esp-device-broker-mcp.bundle esp-device-broker-mcp
+   cd .\esp-device-broker-mcp
+   git rev-parse HEAD
+
+   表示が 7d869909cf52baf962d933e9733015d5d380781b と一致することを確認します。
+
+   git branch -m main
+   git remote set-url origin https://github.com/dj-oyu/esp-device-broker-mcp.git
+   git remote -v
+
+   origin の fetch / push がどちらも上記の公開先であることを確認します。
+
+   git push -u origin main
+
+   GitHub の認証画面が出たら、自分のアカウントで認証してください。
+   パスワードやトークンをチャットやコマンドに貼り付ける必要はありません。
+   リモートにすでに別の履歴がある、権限がない、認証に失敗するなどの
+   エラーが出たら止めてください。--force は使わないでください。
+
+3. リモートの確定コミットを確認します
+
+   git ls-remote --heads origin main
+
+   7d869909cf52baf962d933e9733015d5d380781b    refs/heads/main
+
+   この SHA が一致すれば、この版の main の push を確認できています。
+
+補足
+
+- bundle は元のコミット ID を保ち、6 ブランチ・合計20コミットを含みます。
+  main にする履歴は18コミットです。上の手順で公開するのは main だけです。
+- 最初のコミットは配布済み v0.5 のソース復元です。
+  v0.1〜v0.4 の開発途中のコミットを後から作り直したものではありません。
+- タグや GitHub Release は作成していません。
+- リポジトリ名と既存の Python パッケージ／cardputer CLI 名は別です。
+  この手順ではパッケージ名、CLI、設定形式を変更しません。
+- 新しいフォルダーは Git 管理用のソースです。この手順だけで既存の
+  broker を停止・再起動したり、USB デバイスを操作したりはしません。
+- 実キー、private 設定、実行時 DB・ログ・画像は bundle に含めていません。
+  今後もそれらを新しいリポジトリへコピー・commit しないでください。
+- VERIFY/テスト: 実装側で2652テスト、Ruff lint/format、strict mypyを通過。
+  この bundle は別フォルダーへ復元し、全 refs・HEAD・tree の一致と
+  git fsck --full の成功を確認済みです。詳細は VERIFICATION.json を参照。
+
+SHA256SUMS.txt には bundle 自体の SHA-256 を記載しています。
+PowerShell の Get-FileHash .\esp-device-broker-mcp.bundle -Algorithm SHA256
+で照合できます。

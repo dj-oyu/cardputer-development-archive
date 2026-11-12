@@ -1,0 +1,194 @@
+[
+  {
+    "view": "front",
+    "side": -1,
+    "roles": {
+      "Eye white": {
+        "sourceVisible": 192,
+        "sameWinner": 164,
+        "lost": 28,
+        "coarseRayMiss": 14,
+        "coarseRayPresentButOtherNearer": 14
+      },
+      "Amber iris": {
+        "sourceVisible": 137,
+        "sameWinner": 108,
+        "lost": 29,
+        "coarseRayMiss": 21,
+        "coarseRayPresentButOtherNearer": 8
+      },
+      "Pupil": {
+        "sourceVisible": 100,
+        "sameWinner": 88,
+        "lost": 12,
+        "coarseRayMiss": 12,
+        "coarseRayPresentButOtherNearer": 0
+      },
+      "Eye glint": {
+        "sourceVisible": 19,
+        "sameWinner": 16,
+        "lost": 3,
+        "coarseRayMiss": 3,
+        "coarseRayPresentButOtherNearer": 0
+      },
+      "Eye glint small": {
+        "sourceVisible": 3,
+        "sameWinner": 1,
+        "lost": 2,
+        "coarseRayMiss": 2,
+        "coarseRayPresentButOtherNearer": 0
+      },
+      "Upper eyelid": {
+        "sourceVisible": 46,
+        "sameWinner": 4,
+        "lost": 42,
+        "coarseRayMiss": 33,
+        "coarseRayPresentButOtherNearer": 9
+      }
+    }
+  },
+  {
+    "view": "front",
+    "side": 1,
+    "roles": {
+      "Eye white": {
+        "sourceVisible": 185,
+        "sameWinner": 111,
+        "lost": 74,
+        "coarseRayMiss": 23,
+        "coarseRayPresentButOtherNearer": 51
+      },
+      "Amber iris": {
+        "sourceVisible": 132,
+        "sameWinner": 78,
+        "lost": 54,
+        "coarseRayMiss": 33,
+        "coarseRayPresentButOtherNearer": 21
+      },
+      "Pupil": {
+        "sourceVisible": 109,
+        "sameWinner": 81,
+        "lost": 28,
+        "coarseRayMiss": 22,
+        "coarseRayPresentButOtherNearer": 6
+      },
+      "Eye glint": {
+        "sourceVisible": 19,
+        "sameWinner": 14,
+        "lost": 5,
+        "coarseRayMiss": 5,
+        "coarseRayPresentButOtherNearer": 0
+      },
+      "Eye glint small": {
+        "sourceVisible": 3,
+        "sameWinner": 0,
+        "lost": 3,
+        "coarseRayMiss": 3,
+        "coarseRayPresentButOtherNearer": 0
+      },
+      "Upper eyelid": {
+        "sourceVisible": 42,
+        "sameWinner": 11,
+        "lost": 31,
+        "coarseRayMiss": 28,
+        "coarseRayPresentButOtherNearer": 3
+      }
+    }
+  },
+  {
+    "view": "oblique",
+    "side": -1,
+    "roles": {
+      "Eye white": {
+        "sourceVisible": 214,
+        "sameWinner": 183,
+        "lost": 31,
+        "coarseRayMiss": 15,
+        "coarseRayPresentButOtherNearer": 16
+      },
+      "Amber iris": {
+        "sourceVisible": 135,
+        "sameWinner": 104,
+        "lost": 31,
+        "coarseRayMiss": 24,
+        "coarseRayPresentButOtherNearer": 7
+      },
+      "Pupil": {
+        "sourceVisible": 102,
+        "sameWinner": 82,
+        "lost": 20,
+        "coarseRayMiss": 19,
+        "coarseRayPresentButOtherNearer": 1
+      },
+      "Eye glint": {
+        "sourceVisible": 19,
+        "sameWinner": 14,
+        "lost": 5,
+        "coarseRayMiss": 5,
+        "coarseRayPresentButOtherNearer": 0
+      },
+      "Eye glint small": {
+        "sourceVisible": 3,
+        "sameWinner": 2,
+        "lost": 1,
+        "coarseRayMiss": 1,
+        "coarseRayPresentButOtherNearer": 0
+      },
+      "Upper eyelid": {
+        "sourceVisible": 51,
+        "sameWinner": 5,
+        "lost": 46,
+        "coarseRayMiss": 37,
+        "coarseRayPresentButOtherNearer": 9
+      }
+    }
+  },
+  {
+    "view": "oblique",
+    "side": 1,
+    "roles": {
+      "Eye white": {
+        "sourceVisible": 159,
+        "sameWinner": 86,
+        "lost": 73,
+        "coarseRayMiss": 23,
+        "coarseRayPresentButOtherNearer": 50
+      },
+      "Amber iris": {
+        "sourceVisible": 129,
+        "sameWinner": 74,
+        "lost": 55,
+        "coarseRayMiss": 28,
+        "coarseRayPresentButOtherNearer": 27
+      },
+      "Pupil": {
+        "sourceVisible": 102,
+        "sameWinner": 78,
+        "lost": 24,
+        "coarseRayMiss": 22,
+        "coarseRayPresentButOtherNearer": 2
+      },
+      "Eye glint": {
+        "sourceVisible": 19,
+        "sameWinner": 14,
+        "lost": 5,
+        "coarseRayMiss": 5,
+        "coarseRayPresentButOtherNearer": 0
+      },
+      "Eye glint small": {
+        "sourceVisible": 3,
+        "sameWinner": 1,
+        "lost": 2,
+        "coarseRayMiss": 2,
+        "coarseRayPresentButOtherNearer": 0
+      },
+      "Upper eyelid": {
+        "sourceVisible": 37,
+        "sameWinner": 9,
+        "lost": 28,
+        "coarseRayMiss": 26,
+        "coarseRayPresentButOtherNearer": 2
+      }
+    }
+  }
+]

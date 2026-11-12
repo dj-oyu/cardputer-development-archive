@@ -1,0 +1,50 @@
+{
+  "status": "SCORING_COMPLETE_NOT_GLOBAL_ACCEPTANCE",
+  "candidateManifestSHA256": "38397975bd58d6cee3ddacbc845c14cf1e37602e1c9e9b7d896d11e6c034b6be",
+  "files": {
+    "evaluation.json": {
+      "bytes": 1944548,
+      "sha256": "2e177261e18b6e2cbb8a789bc27379f3e35871399005cbfa01ddae840f279a6a"
+    },
+    "front-baseline-masks.npz": {
+      "bytes": 6382,
+      "sha256": "21c1c911a2adc4375910a7ec8f7afabea4e22be19ad27c6c73c61f73da1d2010"
+    },
+    "front-direction-masks.npz": {
+      "bytes": 11215,
+      "sha256": "b515000c8375e165c30c167133abd2b14a288a929e2cf56933e655e205e53b09"
+    },
+    "front-intensity-masks.npz": {
+      "bytes": 10330,
+      "sha256": "155ccbc033fff0664e7c202959762fad99b12e1ccdc3b5c7673e6ddebbac4e4e"
+    },
+    "front-ambient-masks.npz": {
+      "bytes": 8767,
+      "sha256": "c3a293bf8bc88f014e6826c434f75775bfde18d1631fe16b43fe1d56ddefdc34"
+    },
+    "front-albedo-masks.npz": {
+      "bytes": 8700,
+      "sha256": "98af2de7989e0bd45d7a0e79ff36b8a168faff116acaf23f3fce2a47ea9f1927"
+    },
+    "oblique-baseline-masks.npz": {
+      "bytes": 6812,
+      "sha256": "b28c58c6671e742632dd247c26b8b2145ba6e41fdfe1d1f1803c3db525856d8c"
+    },
+    "oblique-direction-masks.npz": {
+      "bytes": 11790,
+      "sha256": "f066d677ea806289ff27aaa5061009fc52a5729ea80ecf0926609a4013cd38c0"
+    },
+    "oblique-intensity-masks.npz": {
+      "bytes": 10619,
+      "sha256": "5c1652c730bf7878e961c1c649c347dc161eaaf8d2e16fe6e2172a4833a1eadf"
+    },
+    "oblique-ambient-masks.npz": {
+      "bytes": 9353,
+      "sha256": "125de5efc8032accd3dca1e5b1fbab301487c4c890b233b93d5c9fe4d672cf52"
+    },
+    "oblique-albedo-masks.npz": {
+      "bytes": 9262,
+      "sha256": "56ba03ad7cb9db05009fbee06fb3979be11dcf67331603eb06c7b8c8b8d23070"
+    }
+  }
+}

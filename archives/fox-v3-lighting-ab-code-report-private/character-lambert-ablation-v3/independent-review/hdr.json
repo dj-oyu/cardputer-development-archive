@@ -1,0 +1,1808 @@
+{
+  "output": "/workspace/scratch/6d8dcdbcdc54/fox-v3-character-lambert-ablation/analysis-001",
+  "analysisSHA256": "2749eb1fa83fceddcc71e2fa6dd9617db2b47e65414f60093a5d3d25a9c60a53",
+  "codeSHA256AtAnalysis": "7ec0bc34adc5cf17811cb225bc0d127c45b8c2f81d8fccbd5196c3383c0f7a9b",
+  "numericChecks": 31422,
+  "spreadScalarChecks": 23256,
+  "numericStatsChecks": 8166,
+  "independentEXRFiles": 16,
+  "signedArraysAndMasksExact": 144,
+  "referenceDomainsRecomputed": true,
+  "noAcceptanceOrNewStability": true,
+  "sourceAndRenderProvenance": "Parent audit; this review independently checks signed component extraction, saved arrays, integer PNG classes and all numeric reductions.",
+  "declaredInputHashSnapshotsEqual": true,
+  "outputHashesVerified": true,
+  "displayFloatSignVsInteger": [
+    {
+      "view": "front",
+      "seed": 11,
+      "case": "baseline",
+      "wholeFrameExactSignDisagreements": 0,
+      "originalForegroundExactSignDisagreements": 0
+    },
+    {
+      "view": "front",
+      "seed": 11,
+      "case": "direction",
+      "wholeFrameExactSignDisagreements": 0,
+      "originalForegroundExactSignDisagreements": 0
+    },
+    {
+      "view": "front",
+      "seed": 29,
+      "case": "baseline",
+      "wholeFrameExactSignDisagreements": 0,
+      "originalForegroundExactSignDisagreements": 0
+    },
+    {
+      "view": "front",
+      "seed": 29,
+      "case": "direction",
+      "wholeFrameExactSignDisagreements": 0,
+      "originalForegroundExactSignDisagreements": 0
+    },
+    {
+      "view": "oblique",
+      "seed": 11,
+      "case": "baseline",
+      "wholeFrameExactSignDisagreements": 0,
+      "originalForegroundExactSignDisagreements": 0
+    },
+    {
+      "view": "oblique",
+      "seed": 11,
+      "case": "direction",
+      "wholeFrameExactSignDisagreements": 0,
+      "originalForegroundExactSignDisagreements": 0
+    },
+    {
+      "view": "oblique",
+      "seed": 29,
+      "case": "baseline",
+      "wholeFrameExactSignDisagreements": 0,
+      "originalForegroundExactSignDisagreements": 0
+    },
+    {
+      "view": "oblique",
+      "seed": 29,
+      "case": "direction",
+      "wholeFrameExactSignDisagreements": 0,
+      "originalForegroundExactSignDisagreements": 0
+    }
+  ],
+  "summary": {
+    "front": {
+      "11": {
+        "baseline": {
+          "Combined": {
+            "originalV3Foreground": {
+              "pixels": 5307,
+              "meanSignedY": 0.03848051729394691,
+              "meanAbsY": 0.041384792582472824,
+              "rmsY": 0.07387598108533505,
+              "minY": -0.10038002705574035,
+              "maxY": 1.0290971340179442,
+              "meanSignedRGB": [
+                0.02816356144356221,
+                0.04166055483919389,
+                0.03735893781238383
+              ],
+              "meanAbsRGB": [
+                0.03749286714591688,
+                0.044183640679741495,
+                0.03821586515343026
+              ],
+              "negativeYPixels": 453,
+              "positiveYPixels": 4836,
+              "nonzeroYPixels": 5289,
+              "negativeYFraction": 0.08535895986433013,
+              "nonzeroYFraction": 0.996608253250424,
+              "anyNegativeChannelPixels": 1335,
+              "anyChangedChannelPixels": 5289,
+              "areaDefinition": "exact sign/nonzero of computed float64 differences; no denoising, clipping, threshold fit or energy rescale"
+            },
+            "commonNativeFiniteDepth": {
+              "pixels": 4687,
+              "meanSignedY": 0.041583652555769575,
+              "meanAbsY": 0.04471954117236245,
+              "rmsY": 0.0779879949850336,
+              "minY": -0.10038002705574035,
+              "maxY": 1.0290971340179442,
+              "meanSignedRGB": [
+                0.030032274808837186,
+                0.045102805530496226,
+                0.04073773429362735
+              ],
+              "meanAbsRGB": [
+                0.04003632787483122,
+                0.047837446361870775,
+                0.04165836146521315
+              ],
+              "negativeYPixels": 377,
+              "positiveYPixels": 4310,
+              "nonzeroYPixels": 4687,
+              "negativeYFraction": 0.08043524642628547,
+              "nonzeroYFraction": 1.0,
+              "anyNegativeChannelPixels": 1166,
+              "anyChangedChannelPixels": 4687,
+              "areaDefinition": "exact sign/nonzero of computed float64 differences; no denoising, clipping, threshold fit or energy rescale"
+            },
+            "chebyshev2InteriorCommon": {
+              "pixels": 3424,
+              "meanSignedY": 0.032644281913705955,
+              "meanAbsY": 0.03650194548398773,
+              "rmsY": 0.04809996034660878,
+              "minY": -0.10038002705574035,
+              "maxY": 0.68782073867321,
+              "meanSignedRGB": [
+                0.019253480167913676,
+                0.03632258741994537,
+                0.035638192621365444
+              ],
+              "meanAbsRGB": [
+                0.030106277037770968,
+                0.03972225507207772,
+                0.036844388229982435
+              ],
+              "negativeYPixels": 332,
+              "positiveYPixels": 3092,
+              "nonzeroYPixels": 3424,
+              "negativeYFraction": 0.0969626168224299,
+              "nonzeroYFraction": 1.0,
+              "anyNegativeChannelPixels": 912,
+              "anyChangedChannelPixels": 3424,
+              "areaDefinition": "exact sign/nonzero of computed float64 differences; no denoising, clipping, threshold fit or energy rescale"
+            }
+          },
+          "interiorComponentsMeanSignedY": {
+            "Combined": 0.032644281913705955,
+            "DirectDiffuse": -0.017680654752565292,
+            "IndirectDiffuse": -0.005079721936887069,
+            "DirectGloss": 0.03459472956368227,
+            "IndirectGloss": 0.020809809695045995,
+            "Emit": 0.0,
+            "Env": 0.0,
+            "RemainingResidual": 1.1934443004484834e-07,
+            "TransmissionAndVolume": 0.0,
+            "FullRecompositionResidual": 1.1934443004484834e-07
+          },
+          "foregroundEmitMeanSignedY": 4.8983677545618455e-06,
+          "interiorEmitMeanSignedY": 0.0
+        },
+        "direction": {
+          "Combined": {
+            "originalV3Foreground": {
+              "pixels": 5307,
+              "meanSignedY": 0.03849785485658534,
+              "meanAbsY": 0.04086272852026268,
+              "rmsY": 0.07580319036363894,
+              "minY": -0.1199212644815445,
+              "maxY": 1.0232735954284669,
+              "meanSignedRGB": [
+                0.029967305956986445,
+                0.04122662115227013,
+                0.03658623493111401
+              ],
+              "meanAbsRGB": [
+                0.03828078739900322,
+                0.04328054203172759,
+                0.03727775483001013
+              ],
+              "negativeYPixels": 412,
+              "positiveYPixels": 4882,
+              "nonzeroYPixels": 5294,
+              "negativeYFraction": 0.07763331449029584,
+              "nonzeroYFraction": 0.9975504051253062,
+              "anyNegativeChannelPixels": 1218,
+              "anyChangedChannelPixels": 5294,
+              "areaDefinition": "exact sign/nonzero of computed float64 differences; no denoising, clipping, threshold fit or energy rescale"
+            },
+            "commonNativeFiniteDepth": {
+              "pixels": 4687,
+              "meanSignedY": 0.04159985962839658,
+              "meanAbsY": 0.04410244476455291,
+              "rmsY": 0.08004749134549362,
+              "minY": -0.1199212644815445,
+              "maxY": 1.0232735954284669,
+              "meanSignedRGB": [
+                0.03202983215455214,
+                0.04461868171554702,
+                0.03987584694431539
+              ],
+              "meanAbsRGB": [
+                0.040850518918106406,
+                0.04679722447501281,
+                0.04059379111720297
+              ],
+              "negativeYPixels": 322,
+              "positiveYPixels": 4365,
+              "nonzeroYPixels": 4687,
+              "negativeYFraction": 0.06870066140388308,
+              "nonzeroYFraction": 1.0,
+              "anyNegativeChannelPixels": 1040,
+              "anyChangedChannelPixels": 4687,
+              "areaDefinition": "exact sign/nonzero of computed float64 differences; no denoising, clipping, threshold fit or energy rescale"
+            },
+            "chebyshev2InteriorCommon": {
+              "pixels": 3424,
+              "meanSignedY": 0.03204918663308703,
+              "meanAbsY": 0.03503513624033055,
+              "rmsY": 0.04903213660020072,
+              "minY": -0.1199212644815445,
+              "maxY": 0.6987224686741829,
+              "meanSignedRGB": [
+                0.02100514471732193,
+                0.03512468044535925,
+                0.034104174676779106
+              ],
+              "meanAbsRGB": [
+                0.029706313640638648,
+                0.037761643442102796,
+                0.035032722547686516
+              ],
+              "negativeYPixels": 275,
+              "positiveYPixels": 3149,
+              "nonzeroYPixels": 3424,
+              "negativeYFraction": 0.08031542056074767,
+              "nonzeroYFraction": 1.0,
+              "anyNegativeChannelPixels": 790,
+              "anyChangedChannelPixels": 3424,
+              "areaDefinition": "exact sign/nonzero of computed float64 differences; no denoising, clipping, threshold fit or energy rescale"
+            }
+          },
+          "interiorComponentsMeanSignedY": {
+            "Combined": 0.03204918663308703,
+            "DirectDiffuse": -0.015258308195457955,
+            "IndirectDiffuse": -0.0045611431954975185,
+            "DirectGloss": 0.03246636907336554,
+            "IndirectGloss": 0.019402076766143556,
+            "Emit": 0.0,
+            "Env": 0.0,
+            "RemainingResidual": 1.9218453340713938e-07,
+            "TransmissionAndVolume": 0.0,
+            "FullRecompositionResidual": 1.9218453340713938e-07
+          },
+          "foregroundEmitMeanSignedY": -6.095575737107114e-06,
+          "interiorEmitMeanSignedY": 0.0
+        },
+        "interactionCombined": {
+          "originalV3Foreground": {
+            "pixels": 5307,
+            "meanSignedY": 1.7337562638441744e-05,
+            "meanAbsY": 0.012275002096141614,
+            "rmsY": 0.01751212932298847,
+            "minY": -0.2136210371732712,
+            "maxY": 0.13466635649669914,
+            "meanSignedRGB": [
+              0.0018037445134242332,
+              -0.0004339336869237544,
+              -0.0007727028812698224
+            ],
+            "meanAbsRGB": [
+              0.018734675498136316,
+              0.012366435124521465,
+              0.009481702853373788
+            ],
+            "negativeYPixels": 2798,
+            "positiveYPixels": 2500,
+            "nonzeroYPixels": 5298,
+            "negativeYFraction": 0.5272281891840965,
+            "nonzeroYFraction": 0.998304126625212,
+            "anyNegativeChannelPixels": 3580,
+            "anyChangedChannelPixels": 5298,
+            "areaDefinition": "exact sign/nonzero of computed float64 differences; no denoising, clipping, threshold fit or energy rescale"
+          },
+          "commonNativeFiniteDepth": {
+            "pixels": 4687,
+            "meanSignedY": 1.6207072627005436e-05,
+            "meanAbsY": 0.013130100290500818,
+            "rmsY": 0.018344539975026875,
+            "minY": -0.2136210371732712,
+            "maxY": 0.13466635649669914,
+            "meanSignedRGB": [
+              0.0019975573457149598,
+              -0.00048412381494920506,
+              -0.000861887349311961
+            ],
+            "meanAbsRGB": [
+              0.019957467144248276,
+              0.013288793631793356,
+              0.01024176129879633
+            ],
+            "negativeYPixels": 2492,
+            "positiveYPixels": 2195,
+            "nonzeroYPixels": 4687,
+            "negativeYFraction": 0.5316833795604865,
+            "nonzeroYFraction": 1.0,
+            "anyNegativeChannelPixels": 3185,
+            "anyChangedChannelPixels": 4687,
+            "areaDefinition": "exact sign/nonzero of computed float64 differences; no denoising, clipping, threshold fit or energy rescale"
+          },
+          "chebyshev2InteriorCommon": {
+            "pixels": 3424,
+            "meanSignedY": -0.0005950952806189276,
+            "meanAbsY": 0.013503558758787438,
+            "rmsY": 0.018783916840960757,
+            "minY": -0.2136210371732712,
+            "maxY": 0.13466635649669914,
+            "meanSignedRGB": [
+              0.0017516645494082541,
+              -0.0011979069745861142,
+              -0.0015340179445863392
+            ],
+            "meanAbsRGB": [
+              0.020062421446352778,
+              0.01372880946033445,
+              0.010705403671712804
+            ],
+            "negativeYPixels": 1849,
+            "positiveYPixels": 1575,
+            "nonzeroYPixels": 3424,
+            "negativeYFraction": 0.5400116822429907,
+            "nonzeroYFraction": 1.0,
+            "anyNegativeChannelPixels": 2364,
+            "anyChangedChannelPixels": 3424,
+            "areaDefinition": "exact sign/nonzero of computed float64 differences; no denoising, clipping, threshold fit or energy rescale"
+          }
+        },
+        "directionPNG": {
+          "originalV3Foreground": {
+            "pixels": 5307,
+            "thresholdNumerator": 20000,
+            "denominator": 2550000,
+            "equalityInactive": true,
+            "ONcounts": {
+              "-1": 2774,
+              "0": 782,
+              "1": 1751
+            },
+            "OFFcounts": {
+              "-1": 2804,
+              "0": 811,
+              "1": 1692
+            },
+            "classTransitionCounts": {
+              "ON-1_OFF-1": 2711,
+              "ON-1_OFF0": 57,
+              "ON-1_OFF1": 6,
+              "ON0_OFF-1": 84,
+              "ON0_OFF0": 642,
+              "ON0_OFF1": 56,
+              "ON1_OFF-1": 9,
+              "ON1_OFF0": 112,
+              "ON1_OFF1": 1630
+            },
+            "changedClassPixels": 324,
+            "significantPixels": 4665,
+            "classAgreementAmongEitherActivePercent": 93.05466237942123,
+            "directionEffectMeanSignedY": 0.0008991142294490813,
+            "directionEffectMeanAbsY": 0.009119360519033315,
+            "directionEffectRMSEY": 0.015578397357988527,
+            "status": "PAIRED_TWO_SEED_DESCRIPTIVE_NOT_REFERENCE_STABILITY_OR_ACCEPTANCE",
+            "bright": {
+              "onPixels": 1751,
+              "offPixels": 1692,
+              "intersection": 1630,
+              "union": 1813,
+              "IoU": 0.8990623276337562,
+              "lostWhenOff": 121,
+              "gainedWhenOff": 62
+            },
+            "dark": {
+              "onPixels": 2774,
+              "offPixels": 2804,
+              "intersection": 2711,
+              "union": 2867,
+              "IoU": 0.9455877223578654,
+              "lostWhenOff": 63,
+              "gainedWhenOff": 93
+            }
+          },
+          "commonNativeFiniteDepth": {
+            "pixels": 4687,
+            "thresholdNumerator": 20000,
+            "denominator": 2550000,
+            "equalityInactive": true,
+            "ONcounts": {
+              "-1": 2692,
+              "0": 399,
+              "1": 1596
+            },
+            "OFFcounts": {
+              "-1": 2725,
+              "0": 422,
+              "1": 1540
+            },
+            "classTransitionCounts": {
+              "ON-1_OFF-1": 2639,
+              "ON-1_OFF0": 47,
+              "ON-1_OFF1": 6,
+              "ON0_OFF-1": 77,
+              "ON0_OFF0": 281,
+              "ON0_OFF1": 41,
+              "ON1_OFF-1": 9,
+              "ON1_OFF0": 94,
+              "ON1_OFF1": 1493
+            },
+            "changedClassPixels": 274,
+            "significantPixels": 4406,
+            "classAgreementAmongEitherActivePercent": 93.78120744439401,
+            "directionEffectMeanSignedY": 0.0010102059513799116,
+            "directionEffectMeanAbsY": 0.01005874889661433,
+            "directionEffectRMSEY": 0.016537958322506884,
+            "status": "PAIRED_TWO_SEED_DESCRIPTIVE_NOT_REFERENCE_STABILITY_OR_ACCEPTANCE",
+            "bright": {
+              "onPixels": 1596,
+              "offPixels": 1540,
+              "intersection": 1493,
+              "union": 1643,
+              "IoU": 0.9087035909920876,
+              "lostWhenOff": 103,
+              "gainedWhenOff": 47
+            },
+            "dark": {
+              "onPixels": 2692,
+              "offPixels": 2725,
+              "intersection": 2639,
+              "union": 2778,
+              "IoU": 0.9499640028797696,
+              "lostWhenOff": 53,
+              "gainedWhenOff": 86
+            }
+          },
+          "chebyshev2InteriorCommon": {
+            "pixels": 3424,
+            "thresholdNumerator": 20000,
+            "denominator": 2550000,
+            "equalityInactive": true,
+            "ONcounts": {
+              "-1": 2113,
+              "0": 287,
+              "1": 1024
+            },
+            "OFFcounts": {
+              "-1": 2167,
+              "0": 283,
+              "1": 974
+            },
+            "classTransitionCounts": {
+              "ON-1_OFF-1": 2088,
+              "ON-1_OFF0": 24,
+              "ON-1_OFF1": 1,
+              "ON0_OFF-1": 71,
+              "ON0_OFF0": 190,
+              "ON0_OFF1": 26,
+              "ON1_OFF-1": 8,
+              "ON1_OFF0": 69,
+              "ON1_OFF1": 947
+            },
+            "changedClassPixels": 199,
+            "significantPixels": 3234,
+            "classAgreementAmongEitherActivePercent": 93.84662956091528,
+            "directionEffectMeanSignedY": 0.0007333413505589151,
+            "directionEffectMeanAbsY": 0.00941591373465274,
+            "directionEffectRMSEY": 0.015412135096338354,
+            "status": "PAIRED_TWO_SEED_DESCRIPTIVE_NOT_REFERENCE_STABILITY_OR_ACCEPTANCE",
+            "bright": {
+              "onPixels": 1024,
+              "offPixels": 974,
+              "intersection": 947,
+              "union": 1051,
+              "IoU": 0.90104662226451,
+              "lostWhenOff": 77,
+              "gainedWhenOff": 27
+            },
+            "dark": {
+              "onPixels": 2113,
+              "offPixels": 2167,
+              "intersection": 2088,
+              "union": 2192,
+              "IoU": 0.9525547445255474,
+              "lostWhenOff": 25,
+              "gainedWhenOff": 79
+            }
+          }
+        }
+      },
+      "29": {
+        "baseline": {
+          "Combined": {
+            "originalV3Foreground": {
+              "pixels": 5307,
+              "meanSignedY": 0.038434224071804725,
+              "meanAbsY": 0.041436767479858694,
+              "rmsY": 0.07409768415658703,
+              "minY": -0.10275937044620513,
+              "maxY": 1.0140497647762299,
+              "meanSignedRGB": [
+                0.02816077359568237,
+                0.04160213922844494,
+                0.03730462090275386
+              ],
+              "meanAbsRGB": [
+                0.03766117126924665,
+                0.044178817523420504,
+                0.038133054530887354
+              ],
+              "negativeYPixels": 475,
+              "positiveYPixels": 4821,
+              "nonzeroYPixels": 5296,
+              "negativeYFraction": 0.08950442811381194,
+              "nonzeroYFraction": 0.997927265875259,
+              "anyNegativeChannelPixels": 1341,
+              "anyChangedChannelPixels": 5296,
+              "areaDefinition": "exact sign/nonzero of computed float64 differences; no denoising, clipping, threshold fit or energy rescale"
+            },
+            "commonNativeFiniteDepth": {
+              "pixels": 4687,
+              "meanSignedY": 0.04156524152086628,
+              "meanAbsY": 0.04477860387311615,
+              "rmsY": 0.07824946125164686,
+              "minY": -0.10275937044620513,
+              "maxY": 1.0140497647762299,
+              "meanSignedRGB": [
+                0.030078473298428714,
+                0.04506599263808485,
+                0.04071135959642734
+              ],
+              "meanAbsRGB": [
+                0.04017256732560346,
+                0.047834459143520476,
+                0.04159612826336253
+              ],
+              "negativeYPixels": 385,
+              "positiveYPixels": 4302,
+              "nonzeroYPixels": 4687,
+              "negativeYFraction": 0.08214209515681672,
+              "nonzeroYFraction": 1.0,
+              "anyNegativeChannelPixels": 1158,
+              "anyChangedChannelPixels": 4687,
+              "areaDefinition": "exact sign/nonzero of computed float64 differences; no denoising, clipping, threshold fit or energy rescale"
+            },
+            "chebyshev2InteriorCommon": {
+              "pixels": 3424,
+              "meanSignedY": 0.03277353454005229,
+              "meanAbsY": 0.03668296451993754,
+              "rmsY": 0.048350141127203074,
+              "minY": -0.10275937044620513,
+              "maxY": 0.6974847200870514,
+              "meanSignedRGB": [
+                0.019531027039634847,
+                0.036417785644771695,
+                0.03566811493469813
+              ],
+              "meanAbsRGB": [
+                0.03028572716306303,
+                0.039827976014740356,
+                0.036841839907767585
+              ],
+              "negativeYPixels": 334,
+              "positiveYPixels": 3090,
+              "nonzeroYPixels": 3424,
+              "negativeYFraction": 0.09754672897196262,
+              "nonzeroYFraction": 1.0,
+              "anyNegativeChannelPixels": 883,
+              "anyChangedChannelPixels": 3424,
+              "areaDefinition": "exact sign/nonzero of computed float64 differences; no denoising, clipping, threshold fit or energy rescale"
+            }
+          },
+          "interiorComponentsMeanSignedY": {
+            "Combined": 0.03277353454005229,
+            "DirectDiffuse": -0.017570140914662507,
+            "IndirectDiffuse": -0.005056603724809463,
+            "DirectGloss": 0.03460673014705688,
+            "IndirectGloss": 0.02079339744562827,
+            "Emit": 0.0,
+            "Env": 0.0,
+            "RemainingResidual": 1.5158683911185344e-07,
+            "TransmissionAndVolume": 0.0,
+            "FullRecompositionResidual": 1.5158683911185344e-07
+          },
+          "foregroundEmitMeanSignedY": -2.187482075232373e-06,
+          "interiorEmitMeanSignedY": 0.0
+        },
+        "direction": {
+          "Combined": {
+            "originalV3Foreground": {
+              "pixels": 5307,
+              "meanSignedY": 0.0383843815661432,
+              "meanAbsY": 0.04082935254445834,
+              "rmsY": 0.07582642066200761,
+              "minY": -0.17214590625762938,
+              "maxY": 1.0296056529045103,
+              "meanSignedRGB": [
+                0.02973142647015435,
+                0.041142750915054975,
+                0.036539956290042426
+              ],
+              "meanAbsRGB": [
+                0.0381611450785002,
+                0.0432734217597212,
+                0.03727834113129773
+              ],
+              "negativeYPixels": 416,
+              "positiveYPixels": 4879,
+              "nonzeroYPixels": 5295,
+              "negativeYFraction": 0.07838703599020162,
+              "nonzeroYFraction": 0.9977388355002826,
+              "anyNegativeChannelPixels": 1213,
+              "anyChangedChannelPixels": 5295,
+              "areaDefinition": "exact sign/nonzero of computed float64 differences; no denoising, clipping, threshold fit or energy rescale"
+            },
+            "commonNativeFiniteDepth": {
+              "pixels": 4687,
+              "meanSignedY": 0.04151304504159535,
+              "meanAbsY": 0.04411669377033443,
+              "rmsY": 0.08011609378991996,
+              "minY": -0.17214590625762938,
+              "maxY": 1.0296056529045103,
+              "meanSignedRGB": [
+                0.03186850296184405,
+                0.04454943267276846,
+                0.039834446874560926
+              ],
+              "meanAbsRGB": [
+                0.04084474972209011,
+                0.046828186246764186,
+                0.040626772622497274
+              ],
+              "negativeYPixels": 329,
+              "positiveYPixels": 4358,
+              "nonzeroYPixels": 4687,
+              "negativeYFraction": 0.07019415404309794,
+              "nonzeroYFraction": 1.0,
+              "anyNegativeChannelPixels": 1035,
+              "anyChangedChannelPixels": 4687,
+              "areaDefinition": "exact sign/nonzero of computed float64 differences; no denoising, clipping, threshold fit or energy rescale"
+            },
+            "chebyshev2InteriorCommon": {
+              "pixels": 3424,
+              "meanSignedY": 0.03204346167744123,
+              "meanAbsY": 0.03513820807606618,
+              "rmsY": 0.04946561746807352,
+              "minY": -0.17214590625762938,
+              "maxY": 0.7071190283417702,
+              "meanSignedRGB": [
+                0.020972247726706108,
+                0.035124599795041074,
+                0.034122548993492215
+              ],
+              "meanAbsRGB": [
+                0.02991488053208809,
+                0.0378718998759961,
+                0.035148792326126395
+              ],
+              "negativeYPixels": 283,
+              "positiveYPixels": 3141,
+              "nonzeroYPixels": 3424,
+              "negativeYFraction": 0.08265186915887851,
+              "nonzeroYFraction": 1.0,
+              "anyNegativeChannelPixels": 775,
+              "anyChangedChannelPixels": 3424,
+              "areaDefinition": "exact sign/nonzero of computed float64 differences; no denoising, clipping, threshold fit or energy rescale"
+            }
+          },
+          "interiorComponentsMeanSignedY": {
+            "Combined": 0.03204346167744123,
+            "DirectDiffuse": -0.015265377402995491,
+            "IndirectDiffuse": -0.00458979025667505,
+            "DirectGloss": 0.032500930290463984,
+            "IndirectGloss": 0.019397524560421216,
+            "Emit": 0.0,
+            "Env": 0.0,
+            "RemainingResidual": 1.7448622657128854e-07,
+            "TransmissionAndVolume": 0.0,
+            "FullRecompositionResidual": 1.7448622657128854e-07
+          },
+          "foregroundEmitMeanSignedY": -3.921356939981741e-06,
+          "interiorEmitMeanSignedY": 0.0
+        },
+        "interactionCombined": {
+          "originalV3Foreground": {
+            "pixels": 5307,
+            "meanSignedY": -4.98425056615237e-05,
+            "meanAbsY": 0.012186228415642309,
+            "rmsY": 0.017357013212602544,
+            "minY": -0.13318383901119232,
+            "maxY": 0.13561952130794525,
+            "meanSignedRGB": [
+              0.0015706528744719808,
+              -0.0004593883133899622,
+              -0.0007646646127114411
+            ],
+            "meanAbsRGB": [
+              0.01846078043866398,
+              0.012285903441650042,
+              0.009288505169853694
+            ],
+            "negativeYPixels": 2802,
+            "positiveYPixels": 2500,
+            "nonzeroYPixels": 5302,
+            "negativeYFraction": 0.5279819106840022,
+            "nonzeroYFraction": 0.9990578481251178,
+            "anyNegativeChannelPixels": 3545,
+            "anyChangedChannelPixels": 5302,
+            "areaDefinition": "exact sign/nonzero of computed float64 differences; no denoising, clipping, threshold fit or energy rescale"
+          },
+          "commonNativeFiniteDepth": {
+            "pixels": 4687,
+            "meanSignedY": -5.219647927093837e-05,
+            "meanAbsY": 0.013105082181505521,
+            "rmsY": 0.018230000091263254,
+            "minY": -0.13318383901119232,
+            "maxY": 0.13561952130794525,
+            "meanSignedRGB": [
+              0.0017900296634153336,
+              -0.0005165599653163914,
+              -0.0008769127218664155
+            ],
+            "meanAbsRGB": [
+              0.019749539704996943,
+              0.013272046105066247,
+              0.010102983325880683
+            ],
+            "negativeYPixels": 2500,
+            "positiveYPixels": 2187,
+            "nonzeroYPixels": 4687,
+            "negativeYFraction": 0.5333902282910177,
+            "nonzeroYFraction": 1.0,
+            "anyNegativeChannelPixels": 3155,
+            "anyChangedChannelPixels": 4687,
+            "areaDefinition": "exact sign/nonzero of computed float64 differences; no denoising, clipping, threshold fit or energy rescale"
+          },
+          "chebyshev2InteriorCommon": {
+            "pixels": 3424,
+            "meanSignedY": -0.0007300728626110578,
+            "meanAbsY": 0.013371173719283517,
+            "rmsY": 0.018473816247916008,
+            "minY": -0.13318383901119232,
+            "maxY": 0.13561952130794525,
+            "meanSignedRGB": [
+              0.0014412206870712619,
+              -0.0012931858497306217,
+              -0.0015455659412059205
+            ],
+            "meanAbsRGB": [
+              0.019739718828676703,
+              0.013617533186742184,
+              0.010531290235368059
+            ],
+            "negativeYPixels": 1869,
+            "positiveYPixels": 1555,
+            "nonzeroYPixels": 3424,
+            "negativeYFraction": 0.5458528037383178,
+            "nonzeroYFraction": 1.0,
+            "anyNegativeChannelPixels": 2360,
+            "anyChangedChannelPixels": 3424,
+            "areaDefinition": "exact sign/nonzero of computed float64 differences; no denoising, clipping, threshold fit or energy rescale"
+          }
+        },
+        "directionPNG": {
+          "originalV3Foreground": {
+            "pixels": 5307,
+            "thresholdNumerator": 20000,
+            "denominator": 2550000,
+            "equalityInactive": true,
+            "ONcounts": {
+              "-1": 2764,
+              "0": 779,
+              "1": 1764
+            },
+            "OFFcounts": {
+              "-1": 2785,
+              "0": 837,
+              "1": 1685
+            },
+            "classTransitionCounts": {
+              "ON-1_OFF-1": 2698,
+              "ON-1_OFF0": 65,
+              "ON-1_OFF1": 1,
+              "ON0_OFF-1": 78,
+              "ON0_OFF0": 649,
+              "ON0_OFF1": 52,
+              "ON1_OFF-1": 9,
+              "ON1_OFF0": 123,
+              "ON1_OFF1": 1632
+            },
+            "changedClassPixels": 328,
+            "significantPixels": 4658,
+            "classAgreementAmongEitherActivePercent": 92.95835122370116,
+            "directionEffectMeanSignedY": 0.0009245209989026702,
+            "directionEffectMeanAbsY": 0.009035923696782275,
+            "directionEffectRMSEY": 0.015524761700383848,
+            "status": "PAIRED_TWO_SEED_DESCRIPTIVE_NOT_REFERENCE_STABILITY_OR_ACCEPTANCE",
+            "bright": {
+              "onPixels": 1764,
+              "offPixels": 1685,
+              "intersection": 1632,
+              "union": 1817,
+              "IoU": 0.8981838194826637,
+              "lostWhenOff": 132,
+              "gainedWhenOff": 53
+            },
+            "dark": {
+              "onPixels": 2764,
+              "offPixels": 2785,
+              "intersection": 2698,
+              "union": 2851,
+              "IoU": 0.9463346194317783,
+              "lostWhenOff": 66,
+              "gainedWhenOff": 87
+            }
+          },
+          "commonNativeFiniteDepth": {
+            "pixels": 4687,
+            "thresholdNumerator": 20000,
+            "denominator": 2550000,
+            "equalityInactive": true,
+            "ONcounts": {
+              "-1": 2681,
+              "0": 391,
+              "1": 1615
+            },
+            "OFFcounts": {
+              "-1": 2705,
+              "0": 434,
+              "1": 1548
+            },
+            "classTransitionCounts": {
+              "ON-1_OFF-1": 2625,
+              "ON-1_OFF0": 55,
+              "ON-1_OFF1": 1,
+              "ON0_OFF-1": 71,
+              "ON0_OFF0": 283,
+              "ON0_OFF1": 37,
+              "ON1_OFF-1": 9,
+              "ON1_OFF0": 96,
+              "ON1_OFF1": 1510
+            },
+            "changedClassPixels": 269,
+            "significantPixels": 4404,
+            "classAgreementAmongEitherActivePercent": 93.89191643960037,
+            "directionEffectMeanSignedY": 0.0010257344260511973,
+            "directionEffectMeanAbsY": 0.00998912636955785,
+            "directionEffectRMSEY": 0.01648740149278409,
+            "status": "PAIRED_TWO_SEED_DESCRIPTIVE_NOT_REFERENCE_STABILITY_OR_ACCEPTANCE",
+            "bright": {
+              "onPixels": 1615,
+              "offPixels": 1548,
+              "intersection": 1510,
+              "union": 1653,
+              "IoU": 0.9134906231094979,
+              "lostWhenOff": 105,
+              "gainedWhenOff": 38
+            },
+            "dark": {
+              "onPixels": 2681,
+              "offPixels": 2705,
+              "intersection": 2625,
+              "union": 2761,
+              "IoU": 0.9507424846070265,
+              "lostWhenOff": 56,
+              "gainedWhenOff": 80
+            }
+          },
+          "chebyshev2InteriorCommon": {
+            "pixels": 3424,
+            "thresholdNumerator": 20000,
+            "denominator": 2550000,
+            "equalityInactive": true,
+            "ONcounts": {
+              "-1": 2112,
+              "0": 288,
+              "1": 1024
+            },
+            "OFFcounts": {
+              "-1": 2149,
+              "0": 300,
+              "1": 975
+            },
+            "classTransitionCounts": {
+              "ON-1_OFF-1": 2085,
+              "ON-1_OFF0": 26,
+              "ON-1_OFF1": 1,
+              "ON0_OFF-1": 57,
+              "ON0_OFF0": 208,
+              "ON0_OFF1": 23,
+              "ON1_OFF-1": 7,
+              "ON1_OFF0": 66,
+              "ON1_OFF1": 951
+            },
+            "changedClassPixels": 180,
+            "significantPixels": 3216,
+            "classAgreementAmongEitherActivePercent": 94.40298507462687,
+            "directionEffectMeanSignedY": 0.0007329498808869344,
+            "directionEffectMeanAbsY": 0.009375535092541689,
+            "directionEffectRMSEY": 0.015413754070253676,
+            "status": "PAIRED_TWO_SEED_DESCRIPTIVE_NOT_REFERENCE_STABILITY_OR_ACCEPTANCE",
+            "bright": {
+              "onPixels": 1024,
+              "offPixels": 975,
+              "intersection": 951,
+              "union": 1048,
+              "IoU": 0.9074427480916031,
+              "lostWhenOff": 73,
+              "gainedWhenOff": 24
+            },
+            "dark": {
+              "onPixels": 2112,
+              "offPixels": 2149,
+              "intersection": 2085,
+              "union": 2176,
+              "IoU": 0.9581801470588235,
+              "lostWhenOff": 27,
+              "gainedWhenOff": 64
+            }
+          }
+        }
+      }
+    },
+    "oblique": {
+      "11": {
+        "baseline": {
+          "Combined": {
+            "originalV3Foreground": {
+              "pixels": 5868,
+              "meanSignedY": 0.040907071094512575,
+              "meanAbsY": 0.04334134736959233,
+              "rmsY": 0.061903232119804245,
+              "minY": -0.11595293996334075,
+              "maxY": 0.6366077040433883,
+              "meanSignedRGB": [
+                0.030741938106695364,
+                0.044249482301458073,
+                0.03772999045742839
+              ],
+              "meanAbsRGB": [
+                0.03839946554271579,
+                0.0463415918793674,
+                0.038364178225148565
+              ],
+              "negativeYPixels": 446,
+              "positiveYPixels": 5404,
+              "nonzeroYPixels": 5850,
+              "negativeYFraction": 0.0760054533060668,
+              "nonzeroYFraction": 0.9969325153374233,
+              "anyNegativeChannelPixels": 1140,
+              "anyChangedChannelPixels": 5850,
+              "areaDefinition": "exact sign/nonzero of computed float64 differences; no denoising, clipping, threshold fit or energy rescale"
+            },
+            "commonNativeFiniteDepth": {
+              "pixels": 5148,
+              "meanSignedY": 0.0448545246971582,
+              "meanAbsY": 0.04739481778490075,
+              "rmsY": 0.06552800135935055,
+              "minY": -0.11595293996334075,
+              "maxY": 0.6366077040433883,
+              "meanSignedRGB": [
+                0.03355579677731864,
+                0.04855491982616641,
+                0.0414693025294467
+              ],
+              "meanAbsRGB": [
+                0.04156000564625977,
+                0.050737786072392446,
+                0.04209722663073641
+              ],
+              "negativeYPixels": 330,
+              "positiveYPixels": 4818,
+              "nonzeroYPixels": 5148,
+              "negativeYFraction": 0.0641025641025641,
+              "nonzeroYFraction": 1.0,
+              "anyNegativeChannelPixels": 915,
+              "anyChangedChannelPixels": 5148,
+              "areaDefinition": "exact sign/nonzero of computed float64 differences; no denoising, clipping, threshold fit or energy rescale"
+            },
+            "chebyshev2InteriorCommon": {
+              "pixels": 3743,
+              "meanSignedY": 0.0397645545667509,
+              "meanAbsY": 0.04167442099776639,
+              "rmsY": 0.05548387343505903,
+              "minY": -0.10373919336795806,
+              "maxY": 0.6366077040433883,
+              "meanSignedRGB": [
+                0.02897774559653939,
+                0.04325442701441788,
+                0.036957335903254174
+              ],
+              "meanAbsRGB": [
+                0.03501058041585613,
+                0.044894605725476155,
+                0.03749937427663059
+              ],
+              "negativeYPixels": 234,
+              "positiveYPixels": 3509,
+              "nonzeroYPixels": 3743,
+              "negativeYFraction": 0.06251669783596046,
+              "nonzeroYFraction": 1.0,
+              "anyNegativeChannelPixels": 648,
+              "anyChangedChannelPixels": 3743,
+              "areaDefinition": "exact sign/nonzero of computed float64 differences; no denoising, clipping, threshold fit or energy rescale"
+            }
+          },
+          "interiorComponentsMeanSignedY": {
+            "Combined": 0.0397645545667509,
+            "DirectDiffuse": -0.015507905408452585,
+            "IndirectDiffuse": -0.005075060336282248,
+            "DirectGloss": 0.03601118437887197,
+            "IndirectGloss": 0.024336269042429363,
+            "Emit": -1.4368823537695207e-07,
+            "Env": 0.0,
+            "RemainingResidual": 2.1057841976821916e-07,
+            "TransmissionAndVolume": 0.0,
+            "FullRecompositionResidual": 2.1057841976821916e-07
+          },
+          "foregroundEmitMeanSignedY": 2.4056037773558965e-06,
+          "interiorEmitMeanSignedY": -1.4368823537695207e-07
+        },
+        "direction": {
+          "Combined": {
+            "originalV3Foreground": {
+              "pixels": 5868,
+              "meanSignedY": 0.0394792567023758,
+              "meanAbsY": 0.04174495475436619,
+              "rmsY": 0.06367816765794257,
+              "minY": -0.15970724301338196,
+              "maxY": 0.6743933804750443,
+              "meanSignedRGB": [
+                0.031990586230074246,
+                0.04209390163751593,
+                0.03563018862480087
+              ],
+              "meanAbsRGB": [
+                0.03899890940554501,
+                0.04407885347869299,
+                0.03624467725549547
+              ],
+              "negativeYPixels": 355,
+              "positiveYPixels": 5495,
+              "nonzeroYPixels": 5850,
+              "negativeYFraction": 0.060497614178595775,
+              "nonzeroYFraction": 0.9969325153374233,
+              "anyNegativeChannelPixels": 937,
+              "anyChangedChannelPixels": 5850,
+              "areaDefinition": "exact sign/nonzero of computed float64 differences; no denoising, clipping, threshold fit or energy rescale"
+            },
+            "commonNativeFiniteDepth": {
+              "pixels": 5148,
+              "meanSignedY": 0.043193662999956584,
+              "meanAbsY": 0.0455353373329898,
+              "rmsY": 0.06739950380004735,
+              "minY": -0.15970724301338196,
+              "maxY": 0.6743933804750443,
+              "meanSignedRGB": [
+                0.034988735689403146,
+                0.04605295267074587,
+                0.03903027759379546
+              ],
+              "meanAbsRGB": [
+                0.04217996071027657,
+                0.048104147668795845,
+                0.03963567040414349
+              ],
+              "negativeYPixels": 241,
+              "positiveYPixels": 4907,
+              "nonzeroYPixels": 5148,
+              "negativeYFraction": 0.046814296814296816,
+              "nonzeroYFraction": 1.0,
+              "anyNegativeChannelPixels": 725,
+              "anyChangedChannelPixels": 5148,
+              "areaDefinition": "exact sign/nonzero of computed float64 differences; no denoising, clipping, threshold fit or energy rescale"
+            },
+            "chebyshev2InteriorCommon": {
+              "pixels": 3743,
+              "meanSignedY": 0.03725530212570077,
+              "meanAbsY": 0.038669940140302964,
+              "rmsY": 0.056721754866188745,
+              "minY": -0.15970724301338196,
+              "maxY": 0.6743933804750443,
+              "meanSignedRGB": [
+                0.030678594628243946,
+                0.03960353984261609,
+                0.033359850585832206
+              ],
+              "meanAbsRGB": [
+                0.03489813111989201,
+                0.04087344564243926,
+                0.0338189389044534
+              ],
+              "negativeYPixels": 144,
+              "positiveYPixels": 3599,
+              "nonzeroYPixels": 3743,
+              "negativeYFraction": 0.03847181405289874,
+              "nonzeroYFraction": 1.0,
+              "anyNegativeChannelPixels": 465,
+              "anyChangedChannelPixels": 3743,
+              "areaDefinition": "exact sign/nonzero of computed float64 differences; no denoising, clipping, threshold fit or energy rescale"
+            }
+          },
+          "interiorComponentsMeanSignedY": {
+            "Combined": 0.03725530212570077,
+            "DirectDiffuse": -0.011114994068623887,
+            "IndirectDiffuse": -0.004674182653772822,
+            "DirectGloss": 0.032281966148368625,
+            "IndirectGloss": 0.020762253276660037,
+            "Emit": 0.0,
+            "Env": 0.0,
+            "RemainingResidual": 2.5942306882019274e-07,
+            "TransmissionAndVolume": 0.0,
+            "FullRecompositionResidual": 2.5942306882019274e-07
+          },
+          "foregroundEmitMeanSignedY": -1.6508919397644816e-07,
+          "interiorEmitMeanSignedY": 0.0
+        },
+        "interactionCombined": {
+          "originalV3Foreground": {
+            "pixels": 5868,
+            "meanSignedY": -0.0014278143921367776,
+            "meanAbsY": 0.01181659013551593,
+            "rmsY": 0.0175220113431151,
+            "minY": -0.13169700589179992,
+            "maxY": 0.17427300386428832,
+            "meanSignedRGB": [
+              0.00124864812337888,
+              -0.0021555806639421433,
+              -0.002099801832627525
+            ],
+            "meanAbsRGB": [
+              0.017850069984147388,
+              0.011748595252382647,
+              0.008933739737727684
+            ],
+            "negativeYPixels": 3543,
+            "positiveYPixels": 2313,
+            "nonzeroYPixels": 5856,
+            "negativeYFraction": 0.6037832310838446,
+            "nonzeroYFraction": 0.9979550102249489,
+            "anyNegativeChannelPixels": 4363,
+            "anyChangedChannelPixels": 5856,
+            "areaDefinition": "exact sign/nonzero of computed float64 differences; no denoising, clipping, threshold fit or energy rescale"
+          },
+          "commonNativeFiniteDepth": {
+            "pixels": 5148,
+            "meanSignedY": -0.001660861697201622,
+            "meanAbsY": 0.012756034031632892,
+            "rmsY": 0.018452074209696842,
+            "minY": -0.13169700589179992,
+            "maxY": 0.17427300386428832,
+            "meanSignedRGB": [
+              0.0014329389120845042,
+              -0.0025019671554205375,
+              -0.0024390249356512407
+            ],
+            "meanAbsRGB": [
+              0.01916020346618031,
+              0.01273082963366636,
+              0.009675031039895846
+            ],
+            "negativeYPixels": 3202,
+            "positiveYPixels": 1946,
+            "nonzeroYPixels": 5148,
+            "negativeYFraction": 0.621989121989122,
+            "nonzeroYFraction": 1.0,
+            "anyNegativeChannelPixels": 3914,
+            "anyChangedChannelPixels": 5148,
+            "areaDefinition": "exact sign/nonzero of computed float64 differences; no denoising, clipping, threshold fit or energy rescale"
+          },
+          "chebyshev2InteriorCommon": {
+            "pixels": 3743,
+            "meanSignedY": -0.0025092524410501218,
+            "meanAbsY": 0.01281123053155372,
+            "rmsY": 0.01864029723339132,
+            "minY": -0.13169700589179992,
+            "maxY": 0.17427300386428832,
+            "meanSignedRGB": [
+              0.0017008490317045543,
+              -0.0036508871718017957,
+              -0.003597485317421964
+            ],
+            "meanAbsRGB": [
+              0.019143179316305554,
+              0.01291187393024709,
+              0.009934811709343757
+            ],
+            "negativeYPixels": 2461,
+            "positiveYPixels": 1282,
+            "nonzeroYPixels": 3743,
+            "negativeYFraction": 0.6574939887790542,
+            "nonzeroYFraction": 1.0,
+            "anyNegativeChannelPixels": 2980,
+            "anyChangedChannelPixels": 3743,
+            "areaDefinition": "exact sign/nonzero of computed float64 differences; no denoising, clipping, threshold fit or energy rescale"
+          }
+        },
+        "directionPNG": {
+          "originalV3Foreground": {
+            "pixels": 5868,
+            "thresholdNumerator": 20000,
+            "denominator": 2550000,
+            "equalityInactive": true,
+            "ONcounts": {
+              "-1": 3968,
+              "0": 775,
+              "1": 1125
+            },
+            "OFFcounts": {
+              "-1": 4059,
+              "0": 805,
+              "1": 1004
+            },
+            "classTransitionCounts": {
+              "ON-1_OFF-1": 3917,
+              "ON-1_OFF0": 47,
+              "ON-1_OFF1": 4,
+              "ON0_OFF-1": 106,
+              "ON0_OFF0": 631,
+              "ON0_OFF1": 38,
+              "ON1_OFF-1": 36,
+              "ON1_OFF0": 127,
+              "ON1_OFF1": 962
+            },
+            "changedClassPixels": 358,
+            "significantPixels": 5237,
+            "classAgreementAmongEitherActivePercent": 93.16402520527019,
+            "directionEffectMeanSignedY": 0.0007742935429113704,
+            "directionEffectMeanAbsY": 0.01064414611652432,
+            "directionEffectRMSEY": 0.017988073452043687,
+            "status": "PAIRED_TWO_SEED_DESCRIPTIVE_NOT_REFERENCE_STABILITY_OR_ACCEPTANCE",
+            "bright": {
+              "onPixels": 1125,
+              "offPixels": 1004,
+              "intersection": 962,
+              "union": 1167,
+              "IoU": 0.8243359040274207,
+              "lostWhenOff": 163,
+              "gainedWhenOff": 42
+            },
+            "dark": {
+              "onPixels": 3968,
+              "offPixels": 4059,
+              "intersection": 3917,
+              "union": 4110,
+              "IoU": 0.9530413625304136,
+              "lostWhenOff": 51,
+              "gainedWhenOff": 142
+            }
+          },
+          "commonNativeFiniteDepth": {
+            "pixels": 5148,
+            "thresholdNumerator": 20000,
+            "denominator": 2550000,
+            "equalityInactive": true,
+            "ONcounts": {
+              "-1": 3897,
+              "0": 413,
+              "1": 838
+            },
+            "OFFcounts": {
+              "-1": 3994,
+              "0": 425,
+              "1": 729
+            },
+            "classTransitionCounts": {
+              "ON-1_OFF-1": 3856,
+              "ON-1_OFF0": 37,
+              "ON-1_OFF1": 4,
+              "ON0_OFF-1": 102,
+              "ON0_OFF0": 283,
+              "ON0_OFF1": 28,
+              "ON1_OFF-1": 36,
+              "ON1_OFF0": 105,
+              "ON1_OFF1": 697
+            },
+            "changedClassPixels": 312,
+            "significantPixels": 4865,
+            "classAgreementAmongEitherActivePercent": 93.58684480986639,
+            "directionEffectMeanSignedY": 0.0008877080000609415,
+            "directionEffectMeanAbsY": 0.011917479927479926,
+            "directionEffectRMSEY": 0.019181896705315973,
+            "status": "PAIRED_TWO_SEED_DESCRIPTIVE_NOT_REFERENCE_STABILITY_OR_ACCEPTANCE",
+            "bright": {
+              "onPixels": 838,
+              "offPixels": 729,
+              "intersection": 697,
+              "union": 870,
+              "IoU": 0.8011494252873563,
+              "lostWhenOff": 141,
+              "gainedWhenOff": 32
+            },
+            "dark": {
+              "onPixels": 3897,
+              "offPixels": 3994,
+              "intersection": 3856,
+              "union": 4035,
+              "IoU": 0.955638166047088,
+              "lostWhenOff": 41,
+              "gainedWhenOff": 138
+            }
+          },
+          "chebyshev2InteriorCommon": {
+            "pixels": 3743,
+            "thresholdNumerator": 20000,
+            "denominator": 2550000,
+            "equalityInactive": true,
+            "ONcounts": {
+              "-1": 3218,
+              "0": 166,
+              "1": 359
+            },
+            "OFFcounts": {
+              "-1": 3282,
+              "0": 163,
+              "1": 298
+            },
+            "classTransitionCounts": {
+              "ON-1_OFF-1": 3206,
+              "ON-1_OFF0": 11,
+              "ON-1_OFF1": 1,
+              "ON0_OFF-1": 47,
+              "ON0_OFF0": 107,
+              "ON0_OFF1": 12,
+              "ON1_OFF-1": 29,
+              "ON1_OFF0": 45,
+              "ON1_OFF1": 285
+            },
+            "changedClassPixels": 145,
+            "significantPixels": 3636,
+            "classAgreementAmongEitherActivePercent": 96.01210121012102,
+            "directionEffectMeanSignedY": 0.0011187922029618686,
+            "directionEffectMeanAbsY": 0.011616814445789003,
+            "directionEffectRMSEY": 0.018348941605526692,
+            "status": "PAIRED_TWO_SEED_DESCRIPTIVE_NOT_REFERENCE_STABILITY_OR_ACCEPTANCE",
+            "bright": {
+              "onPixels": 359,
+              "offPixels": 298,
+              "intersection": 285,
+              "union": 372,
+              "IoU": 0.7661290322580645,
+              "lostWhenOff": 74,
+              "gainedWhenOff": 13
+            },
+            "dark": {
+              "onPixels": 3218,
+              "offPixels": 3282,
+              "intersection": 3206,
+              "union": 3294,
+              "IoU": 0.9732847601700061,
+              "lostWhenOff": 12,
+              "gainedWhenOff": 76
+            }
+          }
+        }
+      },
+      "29": {
+        "baseline": {
+          "Combined": {
+            "originalV3Foreground": {
+              "pixels": 5868,
+              "meanSignedY": 0.04096645607237151,
+              "meanAbsY": 0.04332331097579726,
+              "rmsY": 0.061734483086230425,
+              "minY": -0.12387062213420867,
+              "maxY": 0.6313324772834776,
+              "meanSignedRGB": [
+                0.03074830381076557,
+                0.04432625412135039,
+                0.03777326502234016
+              ],
+              "meanAbsRGB": [
+                0.038260850729071615,
+                0.04632695640610936,
+                0.03841454696169749
+              ],
+              "negativeYPixels": 450,
+              "positiveYPixels": 5393,
+              "nonzeroYPixels": 5843,
+              "negativeYFraction": 0.07668711656441718,
+              "nonzeroYFraction": 0.9957396046353102,
+              "anyNegativeChannelPixels": 1139,
+              "anyChangedChannelPixels": 5843,
+              "areaDefinition": "exact sign/nonzero of computed float64 differences; no denoising, clipping, threshold fit or energy rescale"
+            },
+            "commonNativeFiniteDepth": {
+              "pixels": 5148,
+              "meanSignedY": 0.044816469826595665,
+              "meanAbsY": 0.04728660215017882,
+              "rmsY": 0.06528401498945328,
+              "minY": -0.12387062213420867,
+              "maxY": 0.6313324772834776,
+              "meanSignedRGB": [
+                0.03339096200279747,
+                0.04855061761527261,
+                0.04147021587753407
+              ],
+              "meanAbsRGB": [
+                0.04134647593787917,
+                0.05063423510576094,
+                0.04210493278951504
+              ],
+              "negativeYPixels": 340,
+              "positiveYPixels": 4808,
+              "nonzeroYPixels": 5148,
+              "negativeYFraction": 0.06604506604506605,
+              "nonzeroYFraction": 1.0,
+              "anyNegativeChannelPixels": 932,
+              "anyChangedChannelPixels": 5148,
+              "areaDefinition": "exact sign/nonzero of computed float64 differences; no denoising, clipping, threshold fit or energy rescale"
+            },
+            "chebyshev2InteriorCommon": {
+              "pixels": 3743,
+              "meanSignedY": 0.0397333430421879,
+              "meanAbsY": 0.041679514053558166,
+              "rmsY": 0.05518903045253409,
+              "minY": -0.12066206414699554,
+              "maxY": 0.5405980962276459,
+              "meanSignedRGB": [
+                0.02884400340064369,
+                0.043249653707174554,
+                0.03696614387589777
+              ],
+              "meanAbsRGB": [
+                0.034806349429453945,
+                0.04487896119506899,
+                0.03753553766006382
+              ],
+              "negativeYPixels": 244,
+              "positiveYPixels": 3499,
+              "nonzeroYPixels": 3743,
+              "negativeYFraction": 0.06518835158963399,
+              "nonzeroYFraction": 1.0,
+              "anyNegativeChannelPixels": 641,
+              "anyChangedChannelPixels": 3743,
+              "areaDefinition": "exact sign/nonzero of computed float64 differences; no denoising, clipping, threshold fit or energy rescale"
+            }
+          },
+          "interiorComponentsMeanSignedY": {
+            "Combined": 0.0397333430421879,
+            "DirectDiffuse": -0.015387825062393631,
+            "IndirectDiffuse": -0.0052163601616727435,
+            "DirectGloss": 0.036008383112287976,
+            "IndirectGloss": 0.02432898526653413,
+            "Emit": -1.8990331490452206e-09,
+            "Env": 0.0,
+            "RemainingResidual": 1.6178646533094004e-07,
+            "TransmissionAndVolume": 0.0,
+            "FullRecompositionResidual": 1.6178646533094004e-07
+          },
+          "foregroundEmitMeanSignedY": -4.450218475956292e-06,
+          "interiorEmitMeanSignedY": -1.8990331490452206e-09
+        },
+        "direction": {
+          "Combined": {
+            "originalV3Foreground": {
+              "pixels": 5868,
+              "meanSignedY": 0.0395634473862701,
+              "meanAbsY": 0.04175411052260223,
+              "rmsY": 0.06325861637598625,
+              "minY": -0.17319168314933778,
+              "maxY": 0.5938073082208634,
+              "meanSignedRGB": [
+                0.032031051271205264,
+                0.042191928971861,
+                0.035706070434028826
+              ],
+              "meanAbsRGB": [
+                0.03912103086484288,
+                0.044077356617666666,
+                0.03625774974849152
+              ],
+              "negativeYPixels": 338,
+              "positiveYPixels": 5505,
+              "nonzeroYPixels": 5843,
+              "negativeYFraction": 0.05760054533060668,
+              "nonzeroYFraction": 0.9957396046353102,
+              "anyNegativeChannelPixels": 924,
+              "anyChangedChannelPixels": 5843,
+              "areaDefinition": "exact sign/nonzero of computed float64 differences; no denoising, clipping, threshold fit or energy rescale"
+            },
+            "commonNativeFiniteDepth": {
+              "pixels": 5148,
+              "meanSignedY": 0.04315471250844017,
+              "meanAbsY": 0.045450217446077246,
+              "rmsY": 0.06690046984006537,
+              "minY": -0.17319168314933778,
+              "maxY": 0.5938073082208634,
+              "meanSignedRGB": [
+                0.034811436470106635,
+                0.04605043941360508,
+                0.03903776795408789
+              ],
+              "meanAbsRGB": [
+                0.042237146701913385,
+                0.04802734765391319,
+                0.03960973207890325
+              ],
+              "negativeYPixels": 245,
+              "positiveYPixels": 4903,
+              "nonzeroYPixels": 5148,
+              "negativeYFraction": 0.04759129759129759,
+              "nonzeroYFraction": 1.0,
+              "anyNegativeChannelPixels": 729,
+              "anyChangedChannelPixels": 5148,
+              "areaDefinition": "exact sign/nonzero of computed float64 differences; no denoising, clipping, threshold fit or energy rescale"
+            },
+            "chebyshev2InteriorCommon": {
+              "pixels": 3743,
+              "meanSignedY": 0.03740466983308776,
+              "meanAbsY": 0.03868929904365003,
+              "rmsY": 0.056198935404520416,
+              "minY": -0.10777547090053559,
+              "maxY": 0.5917422013759612,
+              "meanSignedRGB": [
+                0.030973423062991664,
+                0.03971878064774184,
+                0.033418949731728126
+              ],
+              "meanAbsRGB": [
+                0.03496234893717714,
+                0.040847812947759174,
+                0.033839363016051546
+              ],
+              "negativeYPixels": 148,
+              "positiveYPixels": 3595,
+              "nonzeroYPixels": 3743,
+              "negativeYFraction": 0.039540475554368154,
+              "nonzeroYFraction": 1.0,
+              "anyNegativeChannelPixels": 448,
+              "anyChangedChannelPixels": 3743,
+              "areaDefinition": "exact sign/nonzero of computed float64 differences; no denoising, clipping, threshold fit or energy rescale"
+            }
+          },
+          "interiorComponentsMeanSignedY": {
+            "Combined": 0.03740466983308776,
+            "DirectDiffuse": -0.011139920206348696,
+            "IndirectDiffuse": -0.004501094180352753,
+            "DirectGloss": 0.03228055362968361,
+            "IndirectGloss": 0.020764859637976682,
+            "Emit": -3.6873744588165895e-08,
+            "Env": 0.0,
+            "RemainingResidual": 3.0782587350434373e-07,
+            "TransmissionAndVolume": 0.0,
+            "FullRecompositionResidual": 3.0782587350434373e-07
+          },
+          "foregroundEmitMeanSignedY": -1.2603155315113895e-06,
+          "interiorEmitMeanSignedY": -3.6873744588165895e-08
+        },
+        "interactionCombined": {
+          "originalV3Foreground": {
+            "pixels": 5868,
+            "meanSignedY": -0.0014030086861014123,
+            "meanAbsY": 0.011829718673638799,
+            "rmsY": 0.01747612904052032,
+            "minY": -0.13790409081578256,
+            "maxY": 0.16111027631014585,
+            "meanSignedRGB": [
+              0.0012827474604396945,
+              -0.002134325149489393,
+              -0.002067194588311328
+            ],
+            "meanAbsRGB": [
+              0.017970111779662276,
+              0.011809201463126915,
+              0.008963008570322653
+            ],
+            "negativeYPixels": 3586,
+            "positiveYPixels": 2265,
+            "nonzeroYPixels": 5851,
+            "negativeYFraction": 0.6111111111111112,
+            "nonzeroYFraction": 0.9971029311520109,
+            "anyNegativeChannelPixels": 4366,
+            "anyChangedChannelPixels": 5851,
+            "areaDefinition": "exact sign/nonzero of computed float64 differences; no denoising, clipping, threshold fit or energy rescale"
+          },
+          "commonNativeFiniteDepth": {
+            "pixels": 5148,
+            "meanSignedY": -0.0016617573181554996,
+            "meanAbsY": 0.012704154770315048,
+            "rmsY": 0.018374592699705088,
+            "minY": -0.13790409081578256,
+            "maxY": 0.16111027631014585,
+            "meanSignedRGB": [
+              0.0014204744673091644,
+              -0.0025001782016675243,
+              -0.0024324479234461758
+            ],
+            "meanAbsRGB": [
+              0.019271712376708605,
+              0.012719112381367295,
+              0.009657877607803357
+            ],
+            "negativeYPixels": 3245,
+            "positiveYPixels": 1903,
+            "nonzeroYPixels": 5148,
+            "negativeYFraction": 0.6303418803418803,
+            "nonzeroYFraction": 1.0,
+            "anyNegativeChannelPixels": 3927,
+            "anyChangedChannelPixels": 5148,
+            "areaDefinition": "exact sign/nonzero of computed float64 differences; no denoising, clipping, threshold fit or energy rescale"
+          },
+          "chebyshev2InteriorCommon": {
+            "pixels": 3743,
+            "meanSignedY": -0.0023286732091001446,
+            "meanAbsY": 0.01258726933875856,
+            "rmsY": 0.01831126028140742,
+            "minY": -0.13790409081578256,
+            "maxY": 0.16111027631014585,
+            "meanSignedRGB": [
+              0.0021294196623479764,
+              -0.003530873059432714,
+              -0.0035471941441696385
+            ],
+            "meanAbsRGB": [
+              0.018973557761094762,
+              0.012742631582318323,
+              0.009840950159631065
+            ],
+            "negativeYPixels": 2466,
+            "positiveYPixels": 1277,
+            "nonzeroYPixels": 3743,
+            "negativeYFraction": 0.658829815655891,
+            "nonzeroYFraction": 1.0,
+            "anyNegativeChannelPixels": 2967,
+            "anyChangedChannelPixels": 3743,
+            "areaDefinition": "exact sign/nonzero of computed float64 differences; no denoising, clipping, threshold fit or energy rescale"
+          }
+        },
+        "directionPNG": {
+          "originalV3Foreground": {
+            "pixels": 5868,
+            "thresholdNumerator": 20000,
+            "denominator": 2550000,
+            "equalityInactive": true,
+            "ONcounts": {
+              "-1": 3995,
+              "0": 765,
+              "1": 1108
+            },
+            "OFFcounts": {
+              "-1": 4053,
+              "0": 827,
+              "1": 988
+            },
+            "classTransitionCounts": {
+              "ON-1_OFF-1": 3921,
+              "ON-1_OFF0": 72,
+              "ON-1_OFF1": 2,
+              "ON0_OFF-1": 99,
+              "ON0_OFF0": 620,
+              "ON0_OFF1": 46,
+              "ON1_OFF-1": 33,
+              "ON1_OFF0": 135,
+              "ON1_OFF1": 940
+            },
+            "changedClassPixels": 387,
+            "significantPixels": 5248,
+            "classAgreementAmongEitherActivePercent": 92.62576219512195,
+            "directionEffectMeanSignedY": 0.0007773205287568333,
+            "directionEffectMeanAbsY": 0.010619982223291498,
+            "directionEffectRMSEY": 0.017940846171495026,
+            "status": "PAIRED_TWO_SEED_DESCRIPTIVE_NOT_REFERENCE_STABILITY_OR_ACCEPTANCE",
+            "bright": {
+              "onPixels": 1108,
+              "offPixels": 988,
+              "intersection": 940,
+              "union": 1156,
+              "IoU": 0.8131487889273357,
+              "lostWhenOff": 168,
+              "gainedWhenOff": 48
+            },
+            "dark": {
+              "onPixels": 3995,
+              "offPixels": 4053,
+              "intersection": 3921,
+              "union": 4127,
+              "IoU": 0.9500848073661255,
+              "lostWhenOff": 74,
+              "gainedWhenOff": 132
+            }
+          },
+          "commonNativeFiniteDepth": {
+            "pixels": 5148,
+            "thresholdNumerator": 20000,
+            "denominator": 2550000,
+            "equalityInactive": true,
+            "ONcounts": {
+              "-1": 3924,
+              "0": 405,
+              "1": 819
+            },
+            "OFFcounts": {
+              "-1": 3983,
+              "0": 459,
+              "1": 706
+            },
+            "classTransitionCounts": {
+              "ON-1_OFF-1": 3854,
+              "ON-1_OFF0": 68,
+              "ON-1_OFF1": 2,
+              "ON0_OFF-1": 96,
+              "ON0_OFF0": 280,
+              "ON0_OFF1": 29,
+              "ON1_OFF-1": 33,
+              "ON1_OFF0": 111,
+              "ON1_OFF1": 675
+            },
+            "changedClassPixels": 339,
+            "significantPixels": 4868,
+            "classAgreementAmongEitherActivePercent": 93.03615447822514,
+            "directionEffectMeanSignedY": 0.0008981678016972137,
+            "directionEffectMeanAbsY": 0.011859907978731507,
+            "directionEffectRMSEY": 0.019125647531929826,
+            "status": "PAIRED_TWO_SEED_DESCRIPTIVE_NOT_REFERENCE_STABILITY_OR_ACCEPTANCE",
+            "bright": {
+              "onPixels": 819,
+              "offPixels": 706,
+              "intersection": 675,
+              "union": 850,
+              "IoU": 0.7941176470588235,
+              "lostWhenOff": 144,
+              "gainedWhenOff": 31
+            },
+            "dark": {
+              "onPixels": 3924,
+              "offPixels": 3983,
+              "intersection": 3854,
+              "union": 4053,
+              "IoU": 0.9509005674808784,
+              "lostWhenOff": 70,
+              "gainedWhenOff": 129
+            }
+          },
+          "chebyshev2InteriorCommon": {
+            "pixels": 3743,
+            "thresholdNumerator": 20000,
+            "denominator": 2550000,
+            "equalityInactive": true,
+            "ONcounts": {
+              "-1": 3225,
+              "0": 159,
+              "1": 359
+            },
+            "OFFcounts": {
+              "-1": 3280,
+              "0": 171,
+              "1": 292
+            },
+            "classTransitionCounts": {
+              "ON-1_OFF-1": 3208,
+              "ON-1_OFF0": 17,
+              "ON-1_OFF1": 0,
+              "ON0_OFF-1": 48,
+              "ON0_OFF0": 102,
+              "ON0_OFF1": 9,
+              "ON1_OFF-1": 24,
+              "ON1_OFF0": 52,
+              "ON1_OFF1": 283
+            },
+            "changedClassPixels": 150,
+            "significantPixels": 3641,
+            "classAgreementAmongEitherActivePercent": 95.88025267783577,
+            "directionEffectMeanSignedY": 0.0012237569738020775,
+            "directionEffectMeanAbsY": 0.01153758597748477,
+            "directionEffectRMSEY": 0.018220589286609648,
+            "status": "PAIRED_TWO_SEED_DESCRIPTIVE_NOT_REFERENCE_STABILITY_OR_ACCEPTANCE",
+            "bright": {
+              "onPixels": 359,
+              "offPixels": 292,
+              "intersection": 283,
+              "union": 368,
+              "IoU": 0.7690217391304348,
+              "lostWhenOff": 76,
+              "gainedWhenOff": 9
+            },
+            "dark": {
+              "onPixels": 3225,
+              "offPixels": 3280,
+              "intersection": 3208,
+              "union": 3297,
+              "IoU": 0.97300576281468,
+              "lostWhenOff": 17,
+              "gainedWhenOff": 72
+            }
+          }
+        }
+      }
+    }
+  },
+  "interpretationCaveat": "Rich-minus-Lambert is a whole-character BSDF substitution, including diffuse weight and direct/indirect/specular paths, not isolated specular removal or native implementation evidence. Fixed indirect clamp10 and finite MC/MIS/adaptive differences remain inseparable. Two seeds are descriptive, no new stability or acceptance."
+}

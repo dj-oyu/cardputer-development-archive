@@ -1,0 +1,90 @@
+{
+  "ok": true,
+  "entries": [
+    {
+      "sequence": 23,
+      "text": "info: ROM read 1613824/2296944 bytes; elapsed 71 s",
+      "level": "info",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 24,
+      "text": "info: ROM read 1712128/2296944 bytes; elapsed 76 s",
+      "level": "info",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 25,
+      "text": "info: ROM read 1809408/2296944 bytes; elapsed 81 s",
+      "level": "info",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 26,
+      "text": "info: ROM read 1908736/2296944 bytes; elapsed 86 s",
+      "level": "info",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 27,
+      "text": "info: ROM read 2007040/2296944 bytes; elapsed 91 s",
+      "level": "info",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 28,
+      "text": "info: ROM read 2102272/2296944 bytes; elapsed 96 s",
+      "level": "info",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 29,
+      "text": "info: ROM read 2198528/2296944 bytes; elapsed 101 s",
+      "level": "info",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 30,
+      "text": "info: ROM read 2294784/2296944 bytes; elapsed 106 s",
+      "level": "info",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 31,
+      "text": "info: ROM read 2296944/2296944 bytes; elapsed 106 s",
+      "level": "info",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 32,
+      "text": "info: ROM read native exit 0; 2296944/2296944 bytes; elapsed 106 s",
+      "level": "info",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 33,
+      "text": "-- flash_write",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    }
+  ],
+  "expired": false,
+  "gap": false,
+  "oldest_sequence": 1,
+  "next_cursor": {
+    "epoch": "e138c2920e444a919344e255dcc92bfc",
+    "sequence": 33
+  },
+  "has_more": false
+}

@@ -1,0 +1,11 @@
+qemu-esp32s3-20261111/qemu/bin/qemu-system-xtensa: error while loading shared libraries: libslirp.so.0: cannot open shared object file: No such file or directory
+Traceback (most recent call last):
+  File "/workspace/scratch/6d8dcdbcdc54/fox-eye-runtime-qemu-20261111/run_qemu.py", line 33, in <module>
+    meta={'command':command,'reason':reason,'timeout_seconds':a.seconds,'elapsed_host_seconds':time.monotonic()-started,'returncode_after_stop':proc.returncode,'physical_device':False,'profile':'private_source_eye_alpha_local_coordinate_diagnostic','qemu_version':subprocess.check_output([str(a.qemu),'--version'],text=True),'build_segments_sha256':hashes,'sha256':{x.name:hashlib.sha256(x.read_bytes()).hexdigest() for x in [image,log,b/'fox_eye_qemu.elf',b/'sdkconfig'] if x.exists()}}
+                                                                                                                                                                                                                                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['qemu-esp32s3-20261111/qemu/bin/qemu-system-xtensa', '--version']' returned non-zero exit status 127.

@@ -1,0 +1,2334 @@
+{
+  "status": "EXACT_OR_REVIEW_REQUIRED",
+  "functionsGrowingOrNew": [],
+  "files": {
+    "block_cache.su": {
+      "old": {
+        "header": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "remove_entry": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "agx_cache_init": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "agx_cache_clear": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "agx_cache_bind": {
+          "bytes": 16,
+          "kind": "static"
+        },
+        "agx_cache_fetch4": {
+          "bytes": 304,
+          "kind": "static"
+        }
+      },
+      "new": {
+        "header": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "remove_entry": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "agx_cache_init": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "agx_cache_clear": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "agx_cache_bind": {
+          "bytes": 16,
+          "kind": "static"
+        },
+        "agx_cache_fetch4": {
+          "bytes": 304,
+          "kind": "static"
+        }
+      },
+      "exact": true
+    },
+    "profile_bridge.su": {
+      "old": {
+        "agx_cache_bind_profile": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "agx_cache_profile_eval": {
+          "bytes": 208,
+          "kind": "static"
+        },
+        "agx_profile_eval": {
+          "bytes": 192,
+          "kind": "static"
+        },
+        "row_profile_storage": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "row_profile_is_bound": {
+          "bytes": 8,
+          "kind": "static"
+        }
+      },
+      "new": {
+        "agx_cache_bind_profile": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "agx_cache_profile_eval": {
+          "bytes": 208,
+          "kind": "static"
+        },
+        "agx_profile_eval": {
+          "bytes": 192,
+          "kind": "static"
+        },
+        "row_profile_storage": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "row_profile_is_bound": {
+          "bytes": 8,
+          "kind": "static"
+        }
+      },
+      "exact": true
+    },
+    "bounce.su": {
+      "old": {
+        "fw_pay": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "visible": {
+          "bytes": 80,
+          "kind": "dynamic,bounded"
+        },
+        "norm": {
+          "bytes": 64,
+          "kind": "static"
+        },
+        "overlap": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "direction": {
+          "bytes": 256,
+          "kind": "static"
+        },
+        "indexed_spans_valid": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "owned": {
+          "bytes": 16,
+          "kind": "static"
+        },
+        "bounce_eval_impl": {
+          "bytes": 1440,
+          "kind": "dynamic,bounded"
+        },
+        "bounce_scene_required_bytes": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "bounce_scene_bytes": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "bounce_scene_compact_required_bytes": {
+          "bytes": 24,
+          "kind": "static"
+        },
+        "bounce_scene_retain": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "bounce_scene_release": {
+          "bytes": 16,
+          "kind": "static"
+        },
+        "build_ground_impl": {
+          "bytes": 304,
+          "kind": "dynamic,bounded"
+        },
+        "bounce_scene_build": {
+          "bytes": 128,
+          "kind": "dynamic,bounded"
+        },
+        "bounce_scene_build_ground": {
+          "bytes": 80,
+          "kind": "dynamic,bounded"
+        },
+        "bounce_scene_build_ground_compact": {
+          "bytes": 80,
+          "kind": "dynamic,bounded"
+        },
+        "bounce_scene_indexed_required_bytes": {
+          "bytes": 32,
+          "kind": "static"
+        },
+        "bounce_scene_build_ground_indexed": {
+          "bytes": 400,
+          "kind": "dynamic,bounded"
+        },
+        "bounce_binding_set": {
+          "bytes": 32,
+          "kind": "static"
+        },
+        "bounce_binding_clear": {
+          "bytes": 32,
+          "kind": "static"
+        },
+        "bounce_floor_work_category_name": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "bounce_floor_work_bytes": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "bounce_floor_work_init": {
+          "bytes": 152,
+          "kind": "static"
+        },
+        "bounce_floor_world_work_init": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "bounce_eval": {
+          "bytes": 128,
+          "kind": "dynamic,bounded"
+        },
+        "bounce_eval_floor_experimental": {
+          "bytes": 128,
+          "kind": "dynamic,bounded"
+        },
+        "bounce_status_string": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "bounce_scene_overlaps": {
+          "bytes": 16,
+          "kind": "static"
+        },
+        "bounce_scene_matches_lights": {
+          "bytes": 32,
+          "kind": "static"
+        },
+        "bounce_scene_matches_ground": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "bounce_eval_floor_world_experimental": {
+          "bytes": 128,
+          "kind": "dynamic,bounded"
+        }
+      },
+      "new": {
+        "fw_pay": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "visible": {
+          "bytes": 80,
+          "kind": "dynamic,bounded"
+        },
+        "norm": {
+          "bytes": 64,
+          "kind": "static"
+        },
+        "overlap": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "direction": {
+          "bytes": 256,
+          "kind": "static"
+        },
+        "indexed_spans_valid": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "owned": {
+          "bytes": 16,
+          "kind": "static"
+        },
+        "bounce_eval_impl": {
+          "bytes": 1440,
+          "kind": "dynamic,bounded"
+        },
+        "bounce_scene_required_bytes": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "bounce_scene_bytes": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "bounce_scene_compact_required_bytes": {
+          "bytes": 24,
+          "kind": "static"
+        },
+        "bounce_scene_retain": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "bounce_scene_release": {
+          "bytes": 16,
+          "kind": "static"
+        },
+        "build_ground_impl": {
+          "bytes": 304,
+          "kind": "dynamic,bounded"
+        },
+        "bounce_scene_build": {
+          "bytes": 128,
+          "kind": "dynamic,bounded"
+        },
+        "bounce_scene_build_ground": {
+          "bytes": 80,
+          "kind": "dynamic,bounded"
+        },
+        "bounce_scene_build_ground_compact": {
+          "bytes": 80,
+          "kind": "dynamic,bounded"
+        },
+        "bounce_scene_indexed_required_bytes": {
+          "bytes": 32,
+          "kind": "static"
+        },
+        "bounce_scene_build_ground_indexed": {
+          "bytes": 400,
+          "kind": "dynamic,bounded"
+        },
+        "bounce_binding_set": {
+          "bytes": 32,
+          "kind": "static"
+        },
+        "bounce_binding_clear": {
+          "bytes": 32,
+          "kind": "static"
+        },
+        "bounce_floor_work_category_name": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "bounce_floor_work_bytes": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "bounce_floor_work_init": {
+          "bytes": 152,
+          "kind": "static"
+        },
+        "bounce_floor_world_work_init": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "bounce_eval": {
+          "bytes": 128,
+          "kind": "dynamic,bounded"
+        },
+        "bounce_eval_floor_experimental": {
+          "bytes": 128,
+          "kind": "dynamic,bounded"
+        },
+        "bounce_status_string": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "bounce_scene_overlaps": {
+          "bytes": 16,
+          "kind": "static"
+        },
+        "bounce_scene_matches_lights": {
+          "bytes": 32,
+          "kind": "static"
+        },
+        "bounce_scene_matches_ground": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "bounce_eval_floor_world_experimental": {
+          "bytes": 128,
+          "kind": "dynamic,bounded"
+        }
+      },
+      "exact": true
+    },
+    "row_transport_bridge.su": {
+      "old": {
+        "overlap": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "shade": {
+          "bytes": 480,
+          "kind": "dynamic,bounded"
+        },
+        "row_validate": {
+          "bytes": 544,
+          "kind": "static"
+        },
+        "row_bands_validate_depth": {
+          "bytes": 608,
+          "kind": "static"
+        },
+        "row_cached_validate_depth": {
+          "bytes": 656,
+          "kind": "static"
+        },
+        "row_stream_validate_depth": {
+          "bytes": 624,
+          "kind": "static"
+        },
+        "row_stream_finish": {
+          "bytes": 128,
+          "kind": "dynamic,bounded"
+        },
+        "row_finish": {
+          "bytes": 128,
+          "kind": "dynamic,bounded"
+        },
+        "row_bands_finish": {
+          "bytes": 128,
+          "kind": "dynamic,bounded"
+        },
+        "row_cached_finish": {
+          "bytes": 128,
+          "kind": "dynamic,bounded"
+        },
+        "fox_transport_render": {
+          "bytes": 320,
+          "kind": "dynamic,bounded"
+        },
+        "fox_transport_render_boundary_experimental": {
+          "bytes": 480,
+          "kind": "dynamic,bounded"
+        },
+        "row_transport_render": {
+          "bytes": 112,
+          "kind": "dynamic,bounded"
+        },
+        "row_transport_render_bands": {
+          "bytes": 192,
+          "kind": "dynamic,bounded"
+        },
+        "row_transport_render_cached_bands": {
+          "bytes": 192,
+          "kind": "dynamic,bounded"
+        },
+        "row_transport_render_stream_depth": {
+          "bytes": 176,
+          "kind": "dynamic,bounded"
+        }
+      },
+      "new": {
+        "overlap": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "shade": {
+          "bytes": 480,
+          "kind": "dynamic,bounded"
+        },
+        "row_validate": {
+          "bytes": 544,
+          "kind": "static"
+        },
+        "row_bands_validate_depth": {
+          "bytes": 608,
+          "kind": "static"
+        },
+        "row_cached_validate_depth": {
+          "bytes": 656,
+          "kind": "static"
+        },
+        "row_stream_validate_depth": {
+          "bytes": 624,
+          "kind": "static"
+        },
+        "row_stream_finish": {
+          "bytes": 128,
+          "kind": "dynamic,bounded"
+        },
+        "row_finish": {
+          "bytes": 128,
+          "kind": "dynamic,bounded"
+        },
+        "row_bands_finish": {
+          "bytes": 128,
+          "kind": "dynamic,bounded"
+        },
+        "row_cached_finish": {
+          "bytes": 128,
+          "kind": "dynamic,bounded"
+        },
+        "fox_transport_render": {
+          "bytes": 320,
+          "kind": "dynamic,bounded"
+        },
+        "fox_transport_render_boundary_experimental": {
+          "bytes": 480,
+          "kind": "dynamic,bounded"
+        },
+        "row_transport_render": {
+          "bytes": 112,
+          "kind": "dynamic,bounded"
+        },
+        "row_transport_render_bands": {
+          "bytes": 192,
+          "kind": "dynamic,bounded"
+        },
+        "row_transport_render_cached_bands": {
+          "bytes": 192,
+          "kind": "dynamic,bounded"
+        },
+        "row_transport_render_stream_depth": {
+          "bytes": 176,
+          "kind": "dynamic,bounded"
+        }
+      },
+      "exact": true
+    },
+    "background.su": {
+      "old": {
+        "finite3": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "pay": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "visible": {
+          "bytes": 80,
+          "kind": "dynamic,bounded"
+        },
+        "overlap": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "work_valid": {
+          "bytes": 56,
+          "kind": "static"
+        },
+        "fox_bg_work_category_name": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "fox_bg_scene_required_bytes": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "fox_bg_scene_bytes": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "fox_bg_scene_overlaps": {
+          "bytes": 16,
+          "kind": "static"
+        },
+        "resolve_impl": {
+          "bytes": 1024,
+          "kind": "dynamic,bounded"
+        },
+        "fox_bg_scene_generation": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "fox_bg_scene_retain": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "fox_bg_scene_release": {
+          "bytes": 16,
+          "kind": "static"
+        },
+        "fox_bg_binding_set": {
+          "bytes": 32,
+          "kind": "static"
+        },
+        "fox_bg_binding_clear": {
+          "bytes": 32,
+          "kind": "static"
+        },
+        "fox_bg_fingerprint": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "fox_bg_work_init": {
+          "bytes": 200,
+          "kind": "static"
+        },
+        "fox_bg_scene_build": {
+          "bytes": 592,
+          "kind": "dynamic,bounded"
+        },
+        "fox_bg_context_begin": {
+          "bytes": 816,
+          "kind": "dynamic,bounded"
+        },
+        "fox_bg_context_clear": {
+          "bytes": 32,
+          "kind": "static"
+        },
+        "fox_bg_resolve": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "fox_bg_compose": {
+          "bytes": 16,
+          "kind": "static"
+        },
+        "fox_bg_status_string": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "fox_bg_context_overlaps": {
+          "bytes": 16,
+          "kind": "static"
+        },
+        "fox_bg_context_owned_bytes": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "fox_bg_context_finish": {
+          "bytes": 80,
+          "kind": "static"
+        }
+      },
+      "new": {
+        "finite3": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "pay": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "visible": {
+          "bytes": 80,
+          "kind": "dynamic,bounded"
+        },
+        "overlap": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "work_valid": {
+          "bytes": 56,
+          "kind": "static"
+        },
+        "fox_bg_work_category_name": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "fox_bg_scene_required_bytes": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "fox_bg_scene_bytes": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "fox_bg_scene_overlaps": {
+          "bytes": 16,
+          "kind": "static"
+        },
+        "resolve_impl": {
+          "bytes": 1024,
+          "kind": "dynamic,bounded"
+        },
+        "fox_bg_scene_generation": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "fox_bg_scene_retain": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "fox_bg_scene_release": {
+          "bytes": 16,
+          "kind": "static"
+        },
+        "fox_bg_binding_set": {
+          "bytes": 32,
+          "kind": "static"
+        },
+        "fox_bg_binding_clear": {
+          "bytes": 32,
+          "kind": "static"
+        },
+        "fox_bg_fingerprint": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "fox_bg_work_init": {
+          "bytes": 200,
+          "kind": "static"
+        },
+        "fox_bg_scene_build": {
+          "bytes": 592,
+          "kind": "dynamic,bounded"
+        },
+        "fox_bg_context_begin": {
+          "bytes": 816,
+          "kind": "dynamic,bounded"
+        },
+        "fox_bg_context_clear": {
+          "bytes": 32,
+          "kind": "static"
+        },
+        "fox_bg_resolve": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "fox_bg_compose": {
+          "bytes": 16,
+          "kind": "static"
+        },
+        "fox_bg_status_string": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "fox_bg_context_overlaps": {
+          "bytes": 16,
+          "kind": "static"
+        },
+        "fox_bg_context_owned_bytes": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "fox_bg_context_finish": {
+          "bytes": 80,
+          "kind": "static"
+        }
+      },
+      "exact": true
+    },
+    "ksn_mesh_depth.su": {
+      "old": {
+        "gouraud_make_edge": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "aa_guard": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "aa_key": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "sc_guard": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "rh_charge": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "ring_aa_guard": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "pixel_scene": {
+          "bytes": 432,
+          "kind": "static"
+        },
+        "sc_complete.isra": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "sc_encode": {
+          "bytes": 48,
+          "kind": "static"
+        },
+        "strip": {
+          "bytes": 912,
+          "kind": "dynamic,bounded"
+        },
+        "ring_aa_charge": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "aa_charge": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "aa_select": {
+          "bytes": 48,
+          "kind": "static"
+        },
+        "aa_center_strip.constprop": {
+          "bytes": 896,
+          "kind": "static"
+        },
+        "sc_mask": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "ring_sc_mask": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "sc_charge": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "sc_begin": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "sc_resolve": {
+          "bytes": 80,
+          "kind": "static"
+        },
+        "ring_sc_shade_final.constprop": {
+          "bytes": 960,
+          "kind": "dynamic,bounded"
+        },
+        "sc_shade_final": {
+          "bytes": 1072,
+          "kind": "dynamic,bounded"
+        },
+        "aa_geometry": {
+          "bytes": 384,
+          "kind": "static"
+        },
+        "ring_aa_geometry": {
+          "bytes": 384,
+          "kind": "static"
+        },
+        "pixel_render_extended": {
+          "bytes": 592,
+          "kind": "dynamic,bounded"
+        },
+        "cached_encode": {
+          "bytes": 80,
+          "kind": "static"
+        },
+        "rh_encode": {
+          "bytes": 80,
+          "kind": "static"
+        },
+        "rh_finish_row": {
+          "bytes": 160,
+          "kind": "dynamic,bounded"
+        },
+        "rrh_finish_row": {
+          "bytes": 176,
+          "kind": "dynamic,bounded"
+        },
+        "stream_finish_row": {
+          "bytes": 176,
+          "kind": "dynamic,bounded"
+        },
+        "db_finish_row": {
+          "bytes": 192,
+          "kind": "dynamic,bounded"
+        },
+        "cached_finish_row": {
+          "bytes": 192,
+          "kind": "dynamic,bounded"
+        },
+        "rh_center_strip.constprop": {
+          "bytes": 896,
+          "kind": "static"
+        },
+        "rrh_center_strip.constprop": {
+          "bytes": 896,
+          "kind": "static"
+        },
+        "pixel_append": {
+          "bytes": 560,
+          "kind": "static"
+        },
+        "aa_bind": {
+          "bytes": 224,
+          "kind": "static"
+        },
+        "ring_aa_bind": {
+          "bytes": 224,
+          "kind": "static"
+        },
+        "sc_binding_spans": {
+          "bytes": 224,
+          "kind": "static"
+        },
+        "sc_composite_admission": {
+          "bytes": 480,
+          "kind": "dynamic,bounded"
+        },
+        "rh_admission": {
+          "bytes": 256,
+          "kind": "dynamic,bounded"
+        },
+        "rrh_admission": {
+          "bytes": 256,
+          "kind": "dynamic,bounded"
+        },
+        "db_admission": {
+          "bytes": 368,
+          "kind": "dynamic,bounded"
+        },
+        "stream_admission": {
+          "bytes": 336,
+          "kind": "dynamic,bounded"
+        },
+        "ksn_mesh_sided_run": {
+          "bytes": 64,
+          "kind": "static"
+        },
+        "ksn_mesh_append": {
+          "bytes": 752,
+          "kind": "static"
+        },
+        "ksn_mesh_append_sided": {
+          "bytes": 784,
+          "kind": "static"
+        },
+        "ksn_mesh_pixel_begin": {
+          "bytes": 896,
+          "kind": "static"
+        },
+        "ksn_mesh_pixel_append": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "ksn_mesh_pixel_append_normal_pair": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "ksn_mesh_render": {
+          "bytes": 128,
+          "kind": "dynamic,bounded"
+        },
+        "ksn_mesh_pixel_render": {
+          "bytes": 64,
+          "kind": "dynamic,bounded"
+        },
+        "ksn_mesh_pixel_render_visible": {
+          "bytes": 64,
+          "kind": "dynamic,bounded"
+        },
+        "ksn_mesh_pixel_render_shaded": {
+          "bytes": 64,
+          "kind": "dynamic,bounded"
+        },
+        "ksn_aa_category_name": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "ksn_aa_workspace_bytes": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "ksn_mesh_pixel_render_boundary_experimental": {
+          "bytes": 1680,
+          "kind": "dynamic,bounded"
+        },
+        "ksn_scene_category_name": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "ksn_mesh_pixel_render_scene_composition_experimental": {
+          "bytes": 736,
+          "kind": "dynamic,bounded"
+        },
+        "ksn_mesh_pixel_render_background_control_experimental": {
+          "bytes": 256,
+          "kind": "dynamic,bounded"
+        },
+        "ksn_mesh_pixel_render_bounded_hdr_experimental": {
+          "bytes": 688,
+          "kind": "dynamic,bounded"
+        },
+        "ksn_mesh_pixel_render_bounded_ring_experimental": {
+          "bytes": 688,
+          "kind": "dynamic,bounded"
+        },
+        "ksn_mesh_pixel_render_depth_bands_experimental": {
+          "bytes": 752,
+          "kind": "dynamic,bounded"
+        },
+        "ksn_mesh_pixel_render_cached_depth_bands_private": {
+          "bytes": 752,
+          "kind": "dynamic,bounded"
+        },
+        "ksn_mesh_pixel_render_stream_depth_private": {
+          "bytes": 704,
+          "kind": "dynamic,bounded"
+        }
+      },
+      "new": {
+        "gouraud_make_edge": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "aa_guard": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "aa_key": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "sc_guard": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "rh_charge": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "ring_aa_guard": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "pixel_scene": {
+          "bytes": 432,
+          "kind": "static"
+        },
+        "sc_complete.isra": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "sc_encode": {
+          "bytes": 48,
+          "kind": "static"
+        },
+        "strip": {
+          "bytes": 912,
+          "kind": "dynamic,bounded"
+        },
+        "ring_aa_charge": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "aa_charge": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "aa_select": {
+          "bytes": 48,
+          "kind": "static"
+        },
+        "aa_center_strip.constprop": {
+          "bytes": 896,
+          "kind": "static"
+        },
+        "sc_mask": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "ring_sc_mask": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "sc_charge": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "sc_begin": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "sc_resolve": {
+          "bytes": 80,
+          "kind": "static"
+        },
+        "ring_sc_shade_final.constprop": {
+          "bytes": 960,
+          "kind": "dynamic,bounded"
+        },
+        "sc_shade_final": {
+          "bytes": 1072,
+          "kind": "dynamic,bounded"
+        },
+        "aa_geometry": {
+          "bytes": 384,
+          "kind": "static"
+        },
+        "ring_aa_geometry": {
+          "bytes": 384,
+          "kind": "static"
+        },
+        "pixel_render_extended": {
+          "bytes": 592,
+          "kind": "dynamic,bounded"
+        },
+        "cached_encode": {
+          "bytes": 80,
+          "kind": "static"
+        },
+        "rh_encode": {
+          "bytes": 80,
+          "kind": "static"
+        },
+        "rh_finish_row": {
+          "bytes": 160,
+          "kind": "dynamic,bounded"
+        },
+        "rrh_finish_row": {
+          "bytes": 176,
+          "kind": "dynamic,bounded"
+        },
+        "stream_finish_row": {
+          "bytes": 176,
+          "kind": "dynamic,bounded"
+        },
+        "db_finish_row": {
+          "bytes": 192,
+          "kind": "dynamic,bounded"
+        },
+        "cached_finish_row": {
+          "bytes": 192,
+          "kind": "dynamic,bounded"
+        },
+        "rh_center_strip.constprop": {
+          "bytes": 896,
+          "kind": "static"
+        },
+        "rrh_center_strip.constprop": {
+          "bytes": 896,
+          "kind": "static"
+        },
+        "pixel_append": {
+          "bytes": 560,
+          "kind": "static"
+        },
+        "aa_bind": {
+          "bytes": 224,
+          "kind": "static"
+        },
+        "ring_aa_bind": {
+          "bytes": 224,
+          "kind": "static"
+        },
+        "sc_binding_spans": {
+          "bytes": 224,
+          "kind": "static"
+        },
+        "sc_composite_admission": {
+          "bytes": 480,
+          "kind": "dynamic,bounded"
+        },
+        "rh_admission": {
+          "bytes": 256,
+          "kind": "dynamic,bounded"
+        },
+        "rrh_admission": {
+          "bytes": 256,
+          "kind": "dynamic,bounded"
+        },
+        "db_admission": {
+          "bytes": 368,
+          "kind": "dynamic,bounded"
+        },
+        "stream_admission": {
+          "bytes": 336,
+          "kind": "dynamic,bounded"
+        },
+        "ksn_mesh_sided_run": {
+          "bytes": 64,
+          "kind": "static"
+        },
+        "ksn_mesh_append": {
+          "bytes": 752,
+          "kind": "static"
+        },
+        "ksn_mesh_append_sided": {
+          "bytes": 784,
+          "kind": "static"
+        },
+        "ksn_mesh_pixel_begin": {
+          "bytes": 896,
+          "kind": "static"
+        },
+        "ksn_mesh_pixel_append": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "ksn_mesh_pixel_append_normal_pair": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "ksn_mesh_render": {
+          "bytes": 128,
+          "kind": "dynamic,bounded"
+        },
+        "ksn_mesh_pixel_render": {
+          "bytes": 64,
+          "kind": "dynamic,bounded"
+        },
+        "ksn_mesh_pixel_render_visible": {
+          "bytes": 64,
+          "kind": "dynamic,bounded"
+        },
+        "ksn_mesh_pixel_render_shaded": {
+          "bytes": 64,
+          "kind": "dynamic,bounded"
+        },
+        "ksn_aa_category_name": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "ksn_aa_workspace_bytes": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "ksn_mesh_pixel_render_boundary_experimental": {
+          "bytes": 1680,
+          "kind": "dynamic,bounded"
+        },
+        "ksn_scene_category_name": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "ksn_mesh_pixel_render_scene_composition_experimental": {
+          "bytes": 736,
+          "kind": "dynamic,bounded"
+        },
+        "ksn_mesh_pixel_render_background_control_experimental": {
+          "bytes": 256,
+          "kind": "dynamic,bounded"
+        },
+        "ksn_mesh_pixel_render_bounded_hdr_experimental": {
+          "bytes": 688,
+          "kind": "dynamic,bounded"
+        },
+        "ksn_mesh_pixel_render_bounded_ring_experimental": {
+          "bytes": 688,
+          "kind": "dynamic,bounded"
+        },
+        "ksn_mesh_pixel_render_depth_bands_experimental": {
+          "bytes": 752,
+          "kind": "dynamic,bounded"
+        },
+        "ksn_mesh_pixel_render_cached_depth_bands_private": {
+          "bytes": 752,
+          "kind": "dynamic,bounded"
+        },
+        "ksn_mesh_pixel_render_stream_depth_private": {
+          "bytes": 704,
+          "kind": "dynamic,bounded"
+        }
+      },
+      "exact": true
+    },
+    "ayatsuri_visibility.su": {
+      "old": {
+        "ayatsuri_visibility_select": {
+          "bytes": 664,
+          "kind": "static"
+        }
+      },
+      "new": {
+        "ayatsuri_visibility_select": {
+          "bytes": 664,
+          "kind": "static"
+        }
+      },
+      "exact": true
+    },
+    "ksn_procedural.su": {
+      "old": {
+        "clip_prepare": {
+          "bytes": 32,
+          "kind": "static"
+        },
+        "clip_contains": {
+          "bytes": 16,
+          "kind": "static"
+        },
+        "gouraud_make_edge": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "ell_unit": {
+          "bytes": 32,
+          "kind": "static"
+        },
+        "clip_span": {
+          "bytes": 112,
+          "kind": "static"
+        },
+        "gouraud_box.isra": {
+          "bytes": 96,
+          "kind": "static"
+        },
+        "gouraud_band": {
+          "bytes": 448,
+          "kind": "static"
+        },
+        "emit.isra": {
+          "bytes": 24,
+          "kind": "static"
+        },
+        "ksn_proc_state_reset": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "ksn_proc_apply_binding": {
+          "bytes": 32,
+          "kind": "static"
+        },
+        "begin_core": {
+          "bytes": 96,
+          "kind": "static"
+        },
+        "ksn_proc_begin_state": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "ksn_proc_begin_bound": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "ksn_proc_begin": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "ksn_proc_capture_state": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "ksn_proc_step": {
+          "bytes": 304,
+          "kind": "static"
+        },
+        "ksn_proc_run": {
+          "bytes": 16,
+          "kind": "static"
+        },
+        "ksn_proc_ellipsoid_bounds": {
+          "bytes": 112,
+          "kind": "static"
+        },
+        "ellipsoid_band": {
+          "bytes": 416,
+          "kind": "static"
+        },
+        "ksn_proc_clipped_ellipsoid_read": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "ksn_proc_clipped_ellipsoid_bounds": {
+          "bytes": 144,
+          "kind": "static"
+        },
+        "ksn_proc_gouraud_read": {
+          "bytes": 40,
+          "kind": "static"
+        },
+        "ksn_proc_gouraud_bounds": {
+          "bytes": 144,
+          "kind": "static"
+        },
+        "gouraud_render_entry": {
+          "bytes": 1136,
+          "kind": "static"
+        },
+        "ksn_proc_gouraud_frame_next": {
+          "bytes": 1120,
+          "kind": "static"
+        },
+        "ksn_proc_blend_read": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "ksn_proc_blend_region_read": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "ksn_proc_blend_bounds": {
+          "bytes": 304,
+          "kind": "static"
+        },
+        "blend_ellipsoids_band": {
+          "bytes": 768,
+          "kind": "static"
+        },
+        "ksn_proc_blend_region_bounds": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "render_band_ext": {
+          "bytes": 976,
+          "kind": "static"
+        },
+        "ksn_proc_render_band": {
+          "bytes": 96,
+          "kind": "static"
+        }
+      },
+      "new": {
+        "clip_prepare": {
+          "bytes": 32,
+          "kind": "static"
+        },
+        "clip_contains": {
+          "bytes": 16,
+          "kind": "static"
+        },
+        "gouraud_make_edge": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "ell_unit": {
+          "bytes": 32,
+          "kind": "static"
+        },
+        "clip_span": {
+          "bytes": 112,
+          "kind": "static"
+        },
+        "gouraud_box.isra": {
+          "bytes": 96,
+          "kind": "static"
+        },
+        "gouraud_band": {
+          "bytes": 448,
+          "kind": "static"
+        },
+        "emit.isra": {
+          "bytes": 24,
+          "kind": "static"
+        },
+        "ksn_proc_state_reset": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "ksn_proc_apply_binding": {
+          "bytes": 32,
+          "kind": "static"
+        },
+        "begin_core": {
+          "bytes": 96,
+          "kind": "static"
+        },
+        "ksn_proc_begin_state": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "ksn_proc_begin_bound": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "ksn_proc_begin": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "ksn_proc_capture_state": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "ksn_proc_step": {
+          "bytes": 304,
+          "kind": "static"
+        },
+        "ksn_proc_run": {
+          "bytes": 16,
+          "kind": "static"
+        },
+        "ksn_proc_ellipsoid_bounds": {
+          "bytes": 112,
+          "kind": "static"
+        },
+        "ellipsoid_band": {
+          "bytes": 416,
+          "kind": "static"
+        },
+        "ksn_proc_clipped_ellipsoid_read": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "ksn_proc_clipped_ellipsoid_bounds": {
+          "bytes": 144,
+          "kind": "static"
+        },
+        "ksn_proc_gouraud_read": {
+          "bytes": 40,
+          "kind": "static"
+        },
+        "ksn_proc_gouraud_bounds": {
+          "bytes": 144,
+          "kind": "static"
+        },
+        "gouraud_render_entry": {
+          "bytes": 1136,
+          "kind": "static"
+        },
+        "ksn_proc_gouraud_frame_next": {
+          "bytes": 1120,
+          "kind": "static"
+        },
+        "ksn_proc_blend_read": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "ksn_proc_blend_region_read": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "ksn_proc_blend_bounds": {
+          "bytes": 304,
+          "kind": "static"
+        },
+        "blend_ellipsoids_band": {
+          "bytes": 768,
+          "kind": "static"
+        },
+        "ksn_proc_blend_region_bounds": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "render_band_ext": {
+          "bytes": 976,
+          "kind": "static"
+        },
+        "ksn_proc_render_band": {
+          "bytes": 96,
+          "kind": "static"
+        }
+      },
+      "exact": true
+    },
+    "visibility.su": {
+      "old": {
+        "required_nodes_valid": {
+          "bytes": 32,
+          "kind": "static"
+        },
+        "build_bounds": {
+          "bytes": 176,
+          "kind": "static"
+        },
+        "build_node": {
+          "bytes": 192,
+          "kind": "static"
+        },
+        "spans_overlap": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "box_hit.constprop": {
+          "bytes": 80,
+          "kind": "static"
+        },
+        "vis_scene_required_nodes": {
+          "bytes": 16,
+          "kind": "static"
+        },
+        "vis_scene_required_bytes_v3": {
+          "bytes": 16,
+          "kind": "static"
+        },
+        "vis_scene_build_temporary_bytes_v3": {
+          "bytes": 16,
+          "kind": "static"
+        },
+        "vis_scene_overlaps": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "vis_scene_bytes": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "vis_scene_triangle_count": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "vis_scene_node_count": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "vis_scene_generation": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "vis_scene_retain": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "vis_scene_release": {
+          "bytes": 16,
+          "kind": "static"
+        },
+        "vis_scene_build": {
+          "bytes": 368,
+          "kind": "static"
+        },
+        "vis_binding_set": {
+          "bytes": 32,
+          "kind": "static"
+        },
+        "vis_binding_clear": {
+          "bytes": 32,
+          "kind": "static"
+        },
+        "vis_segment_occluded": {
+          "bytes": 496,
+          "kind": "static"
+        },
+        "vis_ray_nearest": {
+          "bytes": 688,
+          "kind": "static"
+        }
+      },
+      "new": {
+        "required_nodes_valid": {
+          "bytes": 32,
+          "kind": "static"
+        },
+        "build_bounds": {
+          "bytes": 176,
+          "kind": "static"
+        },
+        "build_node": {
+          "bytes": 192,
+          "kind": "static"
+        },
+        "spans_overlap": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "box_hit.constprop": {
+          "bytes": 80,
+          "kind": "static"
+        },
+        "vis_scene_required_nodes": {
+          "bytes": 16,
+          "kind": "static"
+        },
+        "vis_scene_required_bytes_v3": {
+          "bytes": 16,
+          "kind": "static"
+        },
+        "vis_scene_build_temporary_bytes_v3": {
+          "bytes": 16,
+          "kind": "static"
+        },
+        "vis_scene_overlaps": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "vis_scene_bytes": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "vis_scene_triangle_count": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "vis_scene_node_count": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "vis_scene_generation": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "vis_scene_retain": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "vis_scene_release": {
+          "bytes": 16,
+          "kind": "static"
+        },
+        "vis_scene_build": {
+          "bytes": 368,
+          "kind": "static"
+        },
+        "vis_binding_set": {
+          "bytes": 32,
+          "kind": "static"
+        },
+        "vis_binding_clear": {
+          "bytes": 32,
+          "kind": "static"
+        },
+        "vis_segment_occluded": {
+          "bytes": 496,
+          "kind": "static"
+        },
+        "vis_ray_nearest": {
+          "bytes": 688,
+          "kind": "static"
+        }
+      },
+      "exact": true
+    },
+    "block_decoder.su": {
+      "old": {
+        "lossless_decode_channel": {
+          "bytes": 56,
+          "kind": "static"
+        },
+        "lossless_fetch": {
+          "bytes": 224,
+          "kind": "static"
+        },
+        "lossless_fetch4": {
+          "bytes": 400,
+          "kind": "static"
+        }
+      },
+      "new": {
+        "lossless_decode_channel": {
+          "bytes": 56,
+          "kind": "static"
+        },
+        "lossless_fetch": {
+          "bytes": 224,
+          "kind": "static"
+        },
+        "lossless_fetch4": {
+          "bytes": 400,
+          "kind": "static"
+        }
+      },
+      "exact": true
+    },
+    "compact_opaque.su": {
+      "old": {
+        "vertex_valid": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "pixel_valid": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "append_pixel": {
+          "bytes": 320,
+          "kind": "static"
+        },
+        "co_append": {
+          "bytes": 160,
+          "kind": "static"
+        },
+        "append_back_only": {
+          "bytes": 688,
+          "kind": "static"
+        },
+        "co_append_sided": {
+          "bytes": 176,
+          "kind": "static"
+        },
+        "co_append_pixel": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "co_append_pixel_normal_pair": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "co_vertex_at": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "co_pixel_vertex_at": {
+          "bytes": 128,
+          "kind": "static"
+        },
+        "co_triangle_at": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "co_vertex_at_side": {
+          "bytes": 64,
+          "kind": "static"
+        },
+        "co_triangle_side": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "co_read": {
+          "bytes": 224,
+          "kind": "static"
+        }
+      },
+      "new": {
+        "vertex_valid": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "pixel_valid": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "append_pixel": {
+          "bytes": 320,
+          "kind": "static"
+        },
+        "co_append": {
+          "bytes": 160,
+          "kind": "static"
+        },
+        "append_back_only": {
+          "bytes": 688,
+          "kind": "static"
+        },
+        "co_append_sided": {
+          "bytes": 176,
+          "kind": "static"
+        },
+        "co_append_pixel": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "co_append_pixel_normal_pair": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "co_vertex_at": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "co_pixel_vertex_at": {
+          "bytes": 128,
+          "kind": "static"
+        },
+        "co_triangle_at": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "co_vertex_at_side": {
+          "bytes": 64,
+          "kind": "static"
+        },
+        "co_triangle_side": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "co_read": {
+          "bytes": 224,
+          "kind": "static"
+        }
+      },
+      "exact": true
+    },
+    "pixel_binding.su": {
+      "old": {
+        "visible": {
+          "bytes": 64,
+          "kind": "dynamic,bounded"
+        },
+        "fox_pixel_bind": {
+          "bytes": 80,
+          "kind": "dynamic,bounded"
+        },
+        "fox_pixel_unbind": {
+          "bytes": 16,
+          "kind": "static"
+        },
+        "fox_pixel_render_bound": {
+          "bytes": 272,
+          "kind": "dynamic,bounded"
+        },
+        "fox_pixel_binding_matches": {
+          "bytes": 8,
+          "kind": "static"
+        }
+      },
+      "new": {
+        "visible": {
+          "bytes": 64,
+          "kind": "dynamic,bounded"
+        },
+        "fox_pixel_bind": {
+          "bytes": 80,
+          "kind": "dynamic,bounded"
+        },
+        "fox_pixel_unbind": {
+          "bytes": 16,
+          "kind": "static"
+        },
+        "fox_pixel_render_bound": {
+          "bytes": 272,
+          "kind": "dynamic,bounded"
+        },
+        "fox_pixel_binding_matches": {
+          "bytes": 8,
+          "kind": "static"
+        }
+      },
+      "exact": true
+    },
+    "ayatsuri_model.su": {
+      "old": {
+        "md": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "overlaps": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "mesh_double": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "float_rows_valid": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "mesh_project": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "pack_rgb": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "slot_bytes": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "experimental_mesh_color": {
+          "bytes": 192,
+          "kind": "static"
+        },
+        "work": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "ayatsuri_shade_sample": {
+          "bytes": 96,
+          "kind": "static"
+        },
+        "ayatsuri_shade_linear_sample": {
+          "bytes": 96,
+          "kind": "static"
+        },
+        "node_slot_bytes": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "storage_overlap": {
+          "bytes": 64,
+          "kind": "static"
+        },
+        "mesh_packet": {
+          "bytes": 1520,
+          "kind": "dynamic,bounded"
+        },
+        "ayatsuri_model_open": {
+          "bytes": 336,
+          "kind": "static"
+        },
+        "ayatsuri_model_find_node": {
+          "bytes": 80,
+          "kind": "static"
+        },
+        "ayatsuri_model_instance_bytes": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "ayatsuri_model_instance_metadata_bytes": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "ayatsuri_model_instance_node_bytes": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "ayatsuri_model_instance_linear_light": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "ayatsuri_model_instance_disk_scene": {
+          "bytes": 448,
+          "kind": "static"
+        },
+        "ayatsuri_model_instance_init": {
+          "bytes": 688,
+          "kind": "static"
+        },
+        "ayatsuri_model_instance_init_segmented": {
+          "bytes": 736,
+          "kind": "static"
+        },
+        "ayatsuri_model_instance_dispose": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "ayatsuri_model_instance_targets": {
+          "bytes": 88,
+          "kind": "static"
+        },
+        "ayatsuri_model_instance_node_kind": {
+          "bytes": 40,
+          "kind": "static"
+        },
+        "ayatsuri_model_instance_read_pose": {
+          "bytes": 64,
+          "kind": "static"
+        },
+        "ayatsuri_model_instance_stats": {
+          "bytes": 32,
+          "kind": "static"
+        },
+        "ayatsuri_model_instance_evaluate": {
+          "bytes": 1120,
+          "kind": "static"
+        },
+        "ayatsuri_model_instance_next": {
+          "bytes": 96,
+          "kind": "static"
+        },
+        "ayatsuri_model_instance_mesh_view": {
+          "bytes": 48,
+          "kind": "static"
+        },
+        "ayatsuri_model_instance_sided_mesh_view": {
+          "bytes": 48,
+          "kind": "static"
+        },
+        "ayatsuri_model_instance_pixel_mesh_view": {
+          "bytes": 2384,
+          "kind": "static"
+        },
+        "ayatsuri_model_instance_world_mesh_view": {
+          "bytes": 1264,
+          "kind": "static"
+        }
+      },
+      "new": {
+        "md": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "overlaps": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "mesh_double": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "float_rows_valid": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "mesh_project": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "pack_rgb": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "slot_bytes": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "experimental_mesh_color": {
+          "bytes": 192,
+          "kind": "static"
+        },
+        "work": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "ayatsuri_shade_sample": {
+          "bytes": 96,
+          "kind": "static"
+        },
+        "ayatsuri_shade_linear_sample": {
+          "bytes": 96,
+          "kind": "static"
+        },
+        "node_slot_bytes": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "storage_overlap": {
+          "bytes": 64,
+          "kind": "static"
+        },
+        "mesh_packet": {
+          "bytes": 1520,
+          "kind": "dynamic,bounded"
+        },
+        "ayatsuri_model_open": {
+          "bytes": 336,
+          "kind": "static"
+        },
+        "ayatsuri_model_find_node": {
+          "bytes": 80,
+          "kind": "static"
+        },
+        "ayatsuri_model_instance_bytes": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "ayatsuri_model_instance_metadata_bytes": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "ayatsuri_model_instance_node_bytes": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "ayatsuri_model_instance_linear_light": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "ayatsuri_model_instance_disk_scene": {
+          "bytes": 448,
+          "kind": "static"
+        },
+        "ayatsuri_model_instance_init": {
+          "bytes": 688,
+          "kind": "static"
+        },
+        "ayatsuri_model_instance_init_segmented": {
+          "bytes": 736,
+          "kind": "static"
+        },
+        "ayatsuri_model_instance_dispose": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "ayatsuri_model_instance_targets": {
+          "bytes": 88,
+          "kind": "static"
+        },
+        "ayatsuri_model_instance_node_kind": {
+          "bytes": 40,
+          "kind": "static"
+        },
+        "ayatsuri_model_instance_read_pose": {
+          "bytes": 64,
+          "kind": "static"
+        },
+        "ayatsuri_model_instance_stats": {
+          "bytes": 32,
+          "kind": "static"
+        },
+        "ayatsuri_model_instance_evaluate": {
+          "bytes": 1120,
+          "kind": "static"
+        },
+        "ayatsuri_model_instance_next": {
+          "bytes": 96,
+          "kind": "static"
+        },
+        "ayatsuri_model_instance_mesh_view": {
+          "bytes": 48,
+          "kind": "static"
+        },
+        "ayatsuri_model_instance_sided_mesh_view": {
+          "bytes": 48,
+          "kind": "static"
+        },
+        "ayatsuri_model_instance_pixel_mesh_view": {
+          "bytes": 2384,
+          "kind": "static"
+        },
+        "ayatsuri_model_instance_world_mesh_view": {
+          "bytes": 1264,
+          "kind": "static"
+        }
+      },
+      "exact": true
+    },
+    "fox_disk_lighting.su": {
+      "old": {
+        "nonnegative3": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "fox_disk_scene_validate": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "eval.part.0": {
+          "bytes": 352,
+          "kind": "static"
+        },
+        "fox_disk_scene_init": {
+          "bytes": 560,
+          "kind": "static"
+        },
+        "fox_disk_eval16": {
+          "bytes": 48,
+          "kind": "dynamic,bounded"
+        },
+        "fox_disk_eval16_visible": {
+          "bytes": 48,
+          "kind": "dynamic,bounded"
+        },
+        "fox_disk_eval_diagnostic": {
+          "bytes": 48,
+          "kind": "dynamic,bounded"
+        },
+        "fox_disk_status_string": {
+          "bytes": 8,
+          "kind": "static"
+        }
+      },
+      "new": {
+        "nonnegative3": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "fox_disk_scene_validate": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "eval.part.0": {
+          "bytes": 352,
+          "kind": "static"
+        },
+        "fox_disk_scene_init": {
+          "bytes": 560,
+          "kind": "static"
+        },
+        "fox_disk_eval16": {
+          "bytes": 48,
+          "kind": "dynamic,bounded"
+        },
+        "fox_disk_eval16_visible": {
+          "bytes": 48,
+          "kind": "dynamic,bounded"
+        },
+        "fox_disk_eval_diagnostic": {
+          "bytes": 48,
+          "kind": "dynamic,bounded"
+        },
+        "fox_disk_status_string": {
+          "bytes": 8,
+          "kind": "static"
+        }
+      },
+      "exact": true
+    },
+    "hdr_observer.su": {
+      "old": {
+        "row_hdr_observer_begin": {
+          "bytes": 16,
+          "kind": "static"
+        },
+        "row_hdr_observe": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "row_hdr_observer_write": {
+          "bytes": 4144,
+          "kind": "static"
+        },
+        "row_hdr_observer_clear": {
+          "bytes": 16,
+          "kind": "static"
+        }
+      },
+      "new": {
+        "row_hdr_observer_begin": {
+          "bytes": 16,
+          "kind": "static"
+        },
+        "row_hdr_observe": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "row_hdr_observer_write": {
+          "bytes": 4144,
+          "kind": "static"
+        },
+        "row_hdr_observer_clear": {
+          "bytes": 16,
+          "kind": "static"
+        }
+      },
+      "exact": true
+    },
+    "native_render_row.su": {
+      "old": {
+        "row_cache_report": {
+          "bytes": 4176,
+          "kind": "dynamic,bounded"
+        },
+        "stream_depth_report": {
+          "bytes": 4192,
+          "kind": "dynamic,bounded"
+        },
+        "ground_token": {
+          "bytes": 48,
+          "kind": "static"
+        },
+        "ground_double": {
+          "bytes": 192,
+          "kind": "static"
+        },
+        "ns": {
+          "bytes": 32,
+          "kind": "static"
+        },
+        "aa_preflight_actual_matches": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "model_arena_owner_release.constprop": {
+          "bytes": 32,
+          "kind": "static"
+        },
+        "main": {
+          "bytes": 83760,
+          "kind": "dynamic,bounded"
+        }
+      },
+      "new": {
+        "row_cache_report": {
+          "bytes": 4176,
+          "kind": "dynamic,bounded"
+        },
+        "stream_depth_report": {
+          "bytes": 4192,
+          "kind": "dynamic,bounded"
+        },
+        "ground_token": {
+          "bytes": 48,
+          "kind": "static"
+        },
+        "ground_double": {
+          "bytes": 192,
+          "kind": "static"
+        },
+        "ns": {
+          "bytes": 32,
+          "kind": "static"
+        },
+        "aa_preflight_actual_matches": {
+          "bytes": 8,
+          "kind": "static"
+        },
+        "model_arena_owner_release.constprop": {
+          "bytes": 32,
+          "kind": "static"
+        },
+        "main": {
+          "bytes": 83760,
+          "kind": "dynamic,bounded"
+        }
+      },
+      "exact": true
+    }
+  }
+}

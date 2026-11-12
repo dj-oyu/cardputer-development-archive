@@ -1,0 +1,135 @@
+[
+  {
+    "name": "native-front-baseline",
+    "view": "front",
+    "case": "baseline",
+    "reverse": false,
+    "arm": "on",
+    "mode": "production",
+    "status": "PASS",
+    "files": {
+      ".u16le": "75150dc3ec5ca2469b5b74d5758060925ba4a536010f82a2a94929aa8d8adb87",
+      ".snapshot": "006cfd92bda231a4ae7922f23aa125176f807967feaf444e2f3f8b19ef72cab0",
+      ".targets.u8": "eebd4a3432074c6e6d84cf7e6a03b34c7dbd9d4309bd3fbd003b7caa47eeb4f6",
+      ".hdr.f64le": "81033b386024e59ec6396572925a736e19a842b8097c0e55651db62df99daff7",
+      ".json": "daa015dd04c2c6bb4921987ba54f31e790e012f0ddcacdf2afc803f39cf4550b",
+      ".aa.json": "b024ec623f7c0e140443c2cf9ca0a5a01712409fccb3d6c08ca49d3fcfde15bf",
+      ".floor.json": "102ec79849b8b5c882a528f4692774b04e10f186c511df46e0a7299096e10a38",
+      ".background.json": "2eadc591e6f55acd91648db77ce77adc8bbaa04ef02d17da1e36e3dcf06c5e49",
+      ".row.json": "0a87f81e04d141e38e360fac396ad18bfdcda99c31bcd6d64438167d9078d9cb",
+      ".floor-world.json": "4a57ab8d5790216bf6c0d2ea1733065a6e47d0f53128993ca2fc1b693cb0189f",
+      ".hdr-observer.json": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d",
+      ".cache.json": "28bc9cd299893fc131e996ffe04830403e44c883f5f6c8b2dcd72eb5b91f90b6",
+      ".depth-stream.json": "46209e9405e5d4f444bb982130b981a1709ea24a954270b254f32a98d18e5c4b"
+    },
+    "reportObservations": {
+      ".json": {
+        "descriptiveTiming": {
+          "transportBuildNs": {
+            "baseline": 41937208,
+            "candidate": 37940670
+          },
+          "visibilityBuildNs": {
+            "baseline": 6033283,
+            "candidate": 2401200
+          },
+          "appendNs": {
+            "baseline": 48705532,
+            "candidate": 40838100
+          },
+          "evaluateNs": {
+            "baseline": 9955901,
+            "candidate": 9604228
+          },
+          "hostRenderNsFirstFrame": {
+            "baseline": 17241423437,
+            "candidate": 18210108397
+          }
+        },
+        "declaredNonTiming": [
+          {
+            "path": [
+              "depthScratchBytes"
+            ],
+            "baseline": 7680,
+            "candidate": 8640
+          }
+        ]
+      },
+      ".aa.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": [
+          {
+            "path": [
+              "retainedOutputBytes"
+            ],
+            "baseline": 194400,
+            "candidate": 64800
+          }
+        ]
+      },
+      ".floor.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".background.json": {
+        "descriptiveTiming": {
+          "backgroundBuildNs": {
+            "baseline": 84408,
+            "candidate": 83467
+          }
+        },
+        "declaredNonTiming": []
+      },
+      ".row.json": {
+        "descriptiveTiming": {
+          "backgroundBuildNs": {
+            "baseline": 84408,
+            "candidate": 83467
+          }
+        },
+        "declaredNonTiming": [
+          {
+            "path": [
+              "adapterSpanPairs"
+            ],
+            "baseline": 435,
+            "candidate": 378
+          },
+          {
+            "path": [
+              "producerUsed",
+              9
+            ],
+            "baseline": 43087,
+            "candidate": 43103
+          },
+          {
+            "path": [
+              "producerUsed",
+              10
+            ],
+            "baseline": 645,
+            "candidate": 548
+          }
+        ]
+      },
+      ".floor-world.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".hdr-observer.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".cache.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      }
+    },
+    "elapsedSecondsDescriptiveOnly": 18.265536999009782,
+    "hostUserCPUSeconds": 18.255055,
+    "hostSystemCPUSeconds": 0.0,
+    "hostPeakRSSKiB": 24520
+  }
+]

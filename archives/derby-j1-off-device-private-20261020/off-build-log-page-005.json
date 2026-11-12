@@ -1,0 +1,713 @@
+{
+  "ok": true,
+  "entries": [
+    {
+      "sequence": 321,
+      "text": "",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 322,
+      "text": "  has 215 characters.  The maximum full path to an object file is 250",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 323,
+      "text": "  characters (see CMAKE_OBJECT_PATH_MAX).  Object file",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 324,
+      "text": "",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 325,
+      "text": "    port/esp32s3/cpu_region_protect.c.obj",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 326,
+      "text": "",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 327,
+      "text": "  cannot be safely placed under this directory.  The build may not work",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 328,
+      "text": "  correctly.",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 329,
+      "text": "",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 330,
+      "text": "",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 331,
+      "text": "CMake Warning in C:/esp/v6.0.1/esp-idf/components/freertos/CMakeLists.txt:",
+      "level": "warning",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 332,
+      "text": "  The object file directory",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 333,
+      "text": "",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 334,
+      "text": "    C:/Users/core/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/b-c83/o/a238220c7ba22358bda4c655b0e4debc82a02f6f666347bfdba8cdf03d4f8481/esp-idf/freertos/CMakeFiles/__idf_freertos.dir/./",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 335,
+      "text": "",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 336,
+      "text": "  has 203 characters.  The maximum full path to an object file is 250",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 337,
+      "text": "  characters (see CMAKE_OBJECT_PATH_MAX).  Object file",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 338,
+      "text": "",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 339,
+      "text": "    FreeRTOS-Kernel/portable/xtensa/xtensa_init.c.obj",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 340,
+      "text": "",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 341,
+      "text": "  cannot be safely placed under this directory.  The build may not work",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 342,
+      "text": "  correctly.",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 343,
+      "text": "",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 344,
+      "text": "",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 345,
+      "text": "CMake Warning in C:/esp/v6.0.1/esp-idf/components/esp_driver_usb_serial_jtag/CMakeLists.txt:",
+      "level": "warning",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 346,
+      "text": "  The object file directory",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 347,
+      "text": "",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 348,
+      "text": "    C:/Users/core/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/b-c83/o/a238220c7ba22358bda4c655b0e4debc82a02f6f666347bfdba8cdf03d4f8481/esp-idf/esp_driver_usb_serial_jtag/CMakeFiles/__idf_esp_driver_usb_serial_jtag.dir/./",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 349,
+      "text": "",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 350,
+      "text": "  has 239 characters.  The maximum full path to an object file is 250",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 351,
+      "text": "  characters (see CMAKE_OBJECT_PATH_MAX).  Object file",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 352,
+      "text": "",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 353,
+      "text": "    src/usb_serial_jtag.c.obj",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 354,
+      "text": "",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 355,
+      "text": "  cannot be safely placed under this directory.  The build may not work",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 356,
+      "text": "  correctly.",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 357,
+      "text": "",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 358,
+      "text": "",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 359,
+      "text": "CMake Warning in C:/esp/v6.0.1/esp-idf/components/wpa_supplicant/CMakeLists.txt:",
+      "level": "warning",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 360,
+      "text": "  The object file directory",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 361,
+      "text": "",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 362,
+      "text": "    C:/Users/core/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/b-c83/o/a238220c7ba22358bda4c655b0e4debc82a02f6f666347bfdba8cdf03d4f8481/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/./",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 363,
+      "text": "",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 364,
+      "text": "  has 215 characters.  The maximum full path to an object file is 250",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 365,
+      "text": "  characters (see CMAKE_OBJECT_PATH_MAX).  Object file",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 366,
+      "text": "",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 367,
+      "text": "    esp_supplicant/src/crypto/crypto_mbedtls-bignum.c.obj",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 368,
+      "text": "",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 369,
+      "text": "  cannot be safely placed under this directory.  The build may not work",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 370,
+      "text": "  correctly.",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 371,
+      "text": "",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 372,
+      "text": "",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 373,
+      "text": "CMake Warning in C:/esp/v6.0.1/esp-idf/components/esp_driver_sdmmc/CMakeLists.txt:",
+      "level": "warning",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 374,
+      "text": "  The object file directory",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 375,
+      "text": "",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 376,
+      "text": "    C:/Users/core/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/b-c83/o/a238220c7ba22358bda4c655b0e4debc82a02f6f666347bfdba8cdf03d4f8481/esp-idf/esp_driver_sdmmc/CMakeFiles/__idf_esp_driver_sdmmc.dir/./",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 377,
+      "text": "",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 378,
+      "text": "  has 219 characters.  The maximum full path to an object file is 250",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 379,
+      "text": "  characters (see CMAKE_OBJECT_PATH_MAX).  Object file",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 380,
+      "text": "",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 381,
+      "text": "    legacy/src/sdmmc_transaction.c.obj",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 382,
+      "text": "",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 383,
+      "text": "  cannot be safely placed under this directory.  The build may not work",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 384,
+      "text": "  correctly.",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 385,
+      "text": "",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 386,
+      "text": "",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 387,
+      "text": "CMake Warning in components/opus/CMakeLists.txt:",
+      "level": "warning",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 388,
+      "text": "  The object file directory",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 389,
+      "text": "",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 390,
+      "text": "    C:/Users/core/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/b-c83/o/a238220c7ba22358bda4c655b0e4debc82a02f6f666347bfdba8cdf03d4f8481/esp-idf/opus/CMakeFiles/__idf_opus.dir/./",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 391,
+      "text": "",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 392,
+      "text": "  has 195 characters.  The maximum full path to an object file is 250",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 393,
+      "text": "  characters (see CMAKE_OBJECT_PATH_MAX).  Object file",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 394,
+      "text": "",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 395,
+      "text": "    __/__/third_party/opus/silk/resampler_private_up2_HQ.c.obj",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 396,
+      "text": "",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 397,
+      "text": "  cannot be safely placed under this directory.  The build may not work",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 398,
+      "text": "  correctly.",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 399,
+      "text": "",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 400,
+      "text": "",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 401,
+      "text": "-- Generating done (5.3s)",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 402,
+      "text": "-- Build files have been written to: C:/Users/core/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/b-c83/o/a238220c7ba22358bda4c655b0e4debc82a02f6f666347bfdba8cdf03d4f8481",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 403,
+      "text": "Running ninja in directory C:\\Users\\core\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\b-c83\\o\\a238220c7ba22358bda4c655b0e4debc82a02f6f666347bfdba8cdf03d4f8481",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 404,
+      "text": "Executing \"ninja all\"...",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 405,
+      "text": "[0/2] Re-checking globbed directories...",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 406,
+      "text": "[1/1192] Generating project_elf_src_esp32s3.c",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 407,
+      "text": "[2/1192] Preprocessing linker script C:/esp/v6.0.1/esp-idf/components/esp_system/ld/esp32s3/memory.ld.in -> C:/Users/core/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/b-c83/o/a238220c7ba22358bda4c655b0e4debc82a02f6f666347bfdba8cdf03d4f8481/esp-idf/esp_system/ld/memory.ld",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 408,
+      "text": "[3/1192] Preprocessing linker script C:/esp/v6.0.1/esp-idf/components/esp_system/ld/esp32s3/sections.ld.in -> C:/Users/core/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/b-c83/o/a238220c7ba22358bda4c655b0e4debc82a02f6f666347bfdba8cdf03d4f8481/esp-idf/esp_system/ld/sections.ld.in",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 409,
+      "text": "[4/1192] Building C object esp-idf/esp_http_client/CMakeFiles/__idf_esp_http_client.dir/lib/http_header.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 410,
+      "text": "[5/1192] Building C object esp-idf/esp_http_client/CMakeFiles/__idf_esp_http_client.dir/lib/http_utils.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 411,
+      "text": "[6/1192] Generating ../../partition_table/partition-table.bin",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 412,
+      "text": "Partition table binary generated. Contents:",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 413,
+      "text": "*******************************************************************************",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 414,
+      "text": "# ESP-IDF Partition Table",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 415,
+      "text": "# Name, Type, SubType, Offset, Size, Flags",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 416,
+      "text": "nvs,data,nvs,0x9000,24K,",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 417,
+      "text": "phy_init,data,phy,0xf000,4K,",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 418,
+      "text": "factory,app,factory,0x10000,3M,",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 419,
+      "text": "skk_dict,data,64,0x310000,2M,",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 420,
+      "text": "jp_font,data,65,0x510000,512K,",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    }
+  ],
+  "expired": false,
+  "gap": false,
+  "oldest_sequence": 1,
+  "next_cursor": {
+    "epoch": "4a615944dc57442d9a769ea277df2987",
+    "sequence": 420
+  },
+  "has_more": true
+}

@@ -1,0 +1,675 @@
+{
+  "status": "FROZEN_REVIEWED_REPORT_CONTRACT",
+  "timing": {
+    ".json": [
+      "transportBuildNs",
+      "visibilityBuildNs",
+      "appendNs",
+      "evaluateNs",
+      "hostRenderNsFirstFrame"
+    ],
+    ".background.json": [
+      "backgroundBuildNs"
+    ],
+    ".row.json": [
+      "backgroundBuildNs"
+    ]
+  },
+  "sidecarExtension": null,
+  "environmentByMode": {
+    "diagnostic": {},
+    "production": {}
+  },
+  "memoryDeclarations": {
+    "status": "COMPILED_REVIEWED_INDEXED_BOUNDS_LEDGER",
+    "baselineNodeBytes": 64,
+    "candidateNodeBytes": 28,
+    "sceneHeaderBytes": 96,
+    "xyzBytesPerVertex": 24,
+    "triangleBytes": 8,
+    "nodeBytesSaved": 36,
+    "ledgerPath": "MEMORY_LEDGER.json",
+    "ledgerSHA256": "a63c5d402acfe5a70b33589ef79192d853304082a6d9116d1c577db3782774f3",
+    "baselineNamedPeak": 373552,
+    "namedPeak": 336724,
+    "namedPeakDelta": -36828,
+    "productMainStack": 83760,
+    "diagnosticMainStack": 83760,
+    "phases": {
+      "render": 336724,
+      "visibilityBuildConservative": 312580,
+      "transportBuildConservative": 217960,
+      "backgroundBuildConservative": 183788,
+      "preExtractionAndAppendConservative": 237304,
+      "geometryExtractionConservative": 299316,
+      "earlyDisposeConservative": 296876,
+      "visibilityCompactTransition": 301544
+    },
+    "diagnosticMaximumNamedExcludingRO": {
+      "withDepthCapture": 1243948,
+      "withoutDepthCapture": 1114348
+    },
+    "builderInternalTemporaryBytes": 74412,
+    "callerGeometryTemporaryBytesUnchanged": 46800,
+    "noInheritedLifetimeReductionClaim": true,
+    "noWholeHostOrDeviceFitClaim": true
+  },
+  "workDeclarations": {
+    "producerWorkIncludingDepthCap": 637599,
+    "allExistingCountersExact": true,
+    "logicalBoundsBitwiseEqual": true,
+    "sameTreeAndSortedTriangleIDs": true,
+    "noQuantization": true
+  },
+  "observerDeclarations": {
+    "diagnosticFullDepthCaptureBytes": 129600,
+    "productionFullDepthCaptureBytes": 0,
+    "HDRObserverBytes": 777600,
+    "HDRRetainedInBothReplayModes": true,
+    "fullDiagnosticActualCases": 40,
+    "noFullDepthActualCases": 2,
+    "fullNoDepthCaptureActual40Claim": false
+  },
+  "cases": {
+    "diagnostic": {
+      "off": {
+        "native-front-baseline": {
+          "changes": {
+            ".json": [
+              {
+                "path": [
+                  "visibilitySceneBytes"
+                ],
+                "baseline": 106104,
+                "candidate": 69276
+              }
+            ]
+          },
+          "sidecar": null
+        },
+        "native-front-baseline-reverse": {
+          "changes": {
+            ".json": [
+              {
+                "path": [
+                  "visibilitySceneBytes"
+                ],
+                "baseline": 106104,
+                "candidate": 69276
+              }
+            ]
+          },
+          "sidecar": null
+        },
+        "native-oblique-baseline": {
+          "changes": {
+            ".json": [
+              {
+                "path": [
+                  "visibilitySceneBytes"
+                ],
+                "baseline": 106104,
+                "candidate": 69276
+              }
+            ]
+          },
+          "sidecar": null
+        },
+        "native-oblique-baseline-reverse": {
+          "changes": {
+            ".json": [
+              {
+                "path": [
+                  "visibilitySceneBytes"
+                ],
+                "baseline": 106104,
+                "candidate": 69276
+              }
+            ]
+          },
+          "sidecar": null
+        },
+        "native-front-direction": {
+          "changes": {
+            ".json": [
+              {
+                "path": [
+                  "visibilitySceneBytes"
+                ],
+                "baseline": 106104,
+                "candidate": 69276
+              }
+            ]
+          },
+          "sidecar": null
+        },
+        "native-front-direction-reverse": {
+          "changes": {
+            ".json": [
+              {
+                "path": [
+                  "visibilitySceneBytes"
+                ],
+                "baseline": 106104,
+                "candidate": 69276
+              }
+            ]
+          },
+          "sidecar": null
+        },
+        "native-oblique-direction": {
+          "changes": {
+            ".json": [
+              {
+                "path": [
+                  "visibilitySceneBytes"
+                ],
+                "baseline": 106104,
+                "candidate": 69276
+              }
+            ]
+          },
+          "sidecar": null
+        },
+        "native-oblique-direction-reverse": {
+          "changes": {
+            ".json": [
+              {
+                "path": [
+                  "visibilitySceneBytes"
+                ],
+                "baseline": 106104,
+                "candidate": 69276
+              }
+            ]
+          },
+          "sidecar": null
+        },
+        "native-front-intensity": {
+          "changes": {
+            ".json": [
+              {
+                "path": [
+                  "visibilitySceneBytes"
+                ],
+                "baseline": 106104,
+                "candidate": 69276
+              }
+            ]
+          },
+          "sidecar": null
+        },
+        "native-front-intensity-reverse": {
+          "changes": {
+            ".json": [
+              {
+                "path": [
+                  "visibilitySceneBytes"
+                ],
+                "baseline": 106104,
+                "candidate": 69276
+              }
+            ]
+          },
+          "sidecar": null
+        },
+        "native-oblique-intensity": {
+          "changes": {
+            ".json": [
+              {
+                "path": [
+                  "visibilitySceneBytes"
+                ],
+                "baseline": 106104,
+                "candidate": 69276
+              }
+            ]
+          },
+          "sidecar": null
+        },
+        "native-oblique-intensity-reverse": {
+          "changes": {
+            ".json": [
+              {
+                "path": [
+                  "visibilitySceneBytes"
+                ],
+                "baseline": 106104,
+                "candidate": 69276
+              }
+            ]
+          },
+          "sidecar": null
+        },
+        "native-front-ambient": {
+          "changes": {
+            ".json": [
+              {
+                "path": [
+                  "visibilitySceneBytes"
+                ],
+                "baseline": 106104,
+                "candidate": 69276
+              }
+            ]
+          },
+          "sidecar": null
+        },
+        "native-front-ambient-reverse": {
+          "changes": {
+            ".json": [
+              {
+                "path": [
+                  "visibilitySceneBytes"
+                ],
+                "baseline": 106104,
+                "candidate": 69276
+              }
+            ]
+          },
+          "sidecar": null
+        },
+        "native-oblique-ambient": {
+          "changes": {
+            ".json": [
+              {
+                "path": [
+                  "visibilitySceneBytes"
+                ],
+                "baseline": 106104,
+                "candidate": 69276
+              }
+            ]
+          },
+          "sidecar": null
+        },
+        "native-oblique-ambient-reverse": {
+          "changes": {
+            ".json": [
+              {
+                "path": [
+                  "visibilitySceneBytes"
+                ],
+                "baseline": 106104,
+                "candidate": 69276
+              }
+            ]
+          },
+          "sidecar": null
+        },
+        "native-front-albedo": {
+          "changes": {
+            ".json": [
+              {
+                "path": [
+                  "visibilitySceneBytes"
+                ],
+                "baseline": 106104,
+                "candidate": 69276
+              }
+            ]
+          },
+          "sidecar": null
+        },
+        "native-front-albedo-reverse": {
+          "changes": {
+            ".json": [
+              {
+                "path": [
+                  "visibilitySceneBytes"
+                ],
+                "baseline": 106104,
+                "candidate": 69276
+              }
+            ]
+          },
+          "sidecar": null
+        },
+        "native-oblique-albedo": {
+          "changes": {
+            ".json": [
+              {
+                "path": [
+                  "visibilitySceneBytes"
+                ],
+                "baseline": 106104,
+                "candidate": 69276
+              }
+            ]
+          },
+          "sidecar": null
+        },
+        "native-oblique-albedo-reverse": {
+          "changes": {
+            ".json": [
+              {
+                "path": [
+                  "visibilitySceneBytes"
+                ],
+                "baseline": 106104,
+                "candidate": 69276
+              }
+            ]
+          },
+          "sidecar": null
+        }
+      },
+      "on": {
+        "native-front-baseline": {
+          "changes": {
+            ".json": [
+              {
+                "path": [
+                  "visibilitySceneBytes"
+                ],
+                "baseline": 106104,
+                "candidate": 69276
+              }
+            ]
+          },
+          "sidecar": null
+        },
+        "native-front-baseline-reverse": {
+          "changes": {
+            ".json": [
+              {
+                "path": [
+                  "visibilitySceneBytes"
+                ],
+                "baseline": 106104,
+                "candidate": 69276
+              }
+            ]
+          },
+          "sidecar": null
+        },
+        "native-oblique-baseline": {
+          "changes": {
+            ".json": [
+              {
+                "path": [
+                  "visibilitySceneBytes"
+                ],
+                "baseline": 106104,
+                "candidate": 69276
+              }
+            ]
+          },
+          "sidecar": null
+        },
+        "native-oblique-baseline-reverse": {
+          "changes": {
+            ".json": [
+              {
+                "path": [
+                  "visibilitySceneBytes"
+                ],
+                "baseline": 106104,
+                "candidate": 69276
+              }
+            ]
+          },
+          "sidecar": null
+        },
+        "native-front-direction": {
+          "changes": {
+            ".json": [
+              {
+                "path": [
+                  "visibilitySceneBytes"
+                ],
+                "baseline": 106104,
+                "candidate": 69276
+              }
+            ]
+          },
+          "sidecar": null
+        },
+        "native-front-direction-reverse": {
+          "changes": {
+            ".json": [
+              {
+                "path": [
+                  "visibilitySceneBytes"
+                ],
+                "baseline": 106104,
+                "candidate": 69276
+              }
+            ]
+          },
+          "sidecar": null
+        },
+        "native-oblique-direction": {
+          "changes": {
+            ".json": [
+              {
+                "path": [
+                  "visibilitySceneBytes"
+                ],
+                "baseline": 106104,
+                "candidate": 69276
+              }
+            ]
+          },
+          "sidecar": null
+        },
+        "native-oblique-direction-reverse": {
+          "changes": {
+            ".json": [
+              {
+                "path": [
+                  "visibilitySceneBytes"
+                ],
+                "baseline": 106104,
+                "candidate": 69276
+              }
+            ]
+          },
+          "sidecar": null
+        },
+        "native-front-intensity": {
+          "changes": {
+            ".json": [
+              {
+                "path": [
+                  "visibilitySceneBytes"
+                ],
+                "baseline": 106104,
+                "candidate": 69276
+              }
+            ]
+          },
+          "sidecar": null
+        },
+        "native-front-intensity-reverse": {
+          "changes": {
+            ".json": [
+              {
+                "path": [
+                  "visibilitySceneBytes"
+                ],
+                "baseline": 106104,
+                "candidate": 69276
+              }
+            ]
+          },
+          "sidecar": null
+        },
+        "native-oblique-intensity": {
+          "changes": {
+            ".json": [
+              {
+                "path": [
+                  "visibilitySceneBytes"
+                ],
+                "baseline": 106104,
+                "candidate": 69276
+              }
+            ]
+          },
+          "sidecar": null
+        },
+        "native-oblique-intensity-reverse": {
+          "changes": {
+            ".json": [
+              {
+                "path": [
+                  "visibilitySceneBytes"
+                ],
+                "baseline": 106104,
+                "candidate": 69276
+              }
+            ]
+          },
+          "sidecar": null
+        },
+        "native-front-ambient": {
+          "changes": {
+            ".json": [
+              {
+                "path": [
+                  "visibilitySceneBytes"
+                ],
+                "baseline": 106104,
+                "candidate": 69276
+              }
+            ]
+          },
+          "sidecar": null
+        },
+        "native-front-ambient-reverse": {
+          "changes": {
+            ".json": [
+              {
+                "path": [
+                  "visibilitySceneBytes"
+                ],
+                "baseline": 106104,
+                "candidate": 69276
+              }
+            ]
+          },
+          "sidecar": null
+        },
+        "native-oblique-ambient": {
+          "changes": {
+            ".json": [
+              {
+                "path": [
+                  "visibilitySceneBytes"
+                ],
+                "baseline": 106104,
+                "candidate": 69276
+              }
+            ]
+          },
+          "sidecar": null
+        },
+        "native-oblique-ambient-reverse": {
+          "changes": {
+            ".json": [
+              {
+                "path": [
+                  "visibilitySceneBytes"
+                ],
+                "baseline": 106104,
+                "candidate": 69276
+              }
+            ]
+          },
+          "sidecar": null
+        },
+        "native-front-albedo": {
+          "changes": {
+            ".json": [
+              {
+                "path": [
+                  "visibilitySceneBytes"
+                ],
+                "baseline": 106104,
+                "candidate": 69276
+              }
+            ]
+          },
+          "sidecar": null
+        },
+        "native-front-albedo-reverse": {
+          "changes": {
+            ".json": [
+              {
+                "path": [
+                  "visibilitySceneBytes"
+                ],
+                "baseline": 106104,
+                "candidate": 69276
+              }
+            ]
+          },
+          "sidecar": null
+        },
+        "native-oblique-albedo": {
+          "changes": {
+            ".json": [
+              {
+                "path": [
+                  "visibilitySceneBytes"
+                ],
+                "baseline": 106104,
+                "candidate": 69276
+              }
+            ]
+          },
+          "sidecar": null
+        },
+        "native-oblique-albedo-reverse": {
+          "changes": {
+            ".json": [
+              {
+                "path": [
+                  "visibilitySceneBytes"
+                ],
+                "baseline": 106104,
+                "candidate": 69276
+              }
+            ]
+          },
+          "sidecar": null
+        }
+      }
+    },
+    "production": {
+      "off": {
+        "native-front-baseline": {
+          "changes": {
+            ".json": [
+              {
+                "path": [
+                  "visibilitySceneBytes"
+                ],
+                "baseline": 106104,
+                "candidate": 69276
+              }
+            ]
+          },
+          "sidecar": null
+        }
+      },
+      "on": {
+        "native-front-baseline": {
+          "changes": {
+            ".json": [
+              {
+                "path": [
+                  "visibilitySceneBytes"
+                ],
+                "baseline": 106104,
+                "candidate": 69276
+              }
+            ]
+          },
+          "sidecar": null
+        }
+      }
+    }
+  }
+}

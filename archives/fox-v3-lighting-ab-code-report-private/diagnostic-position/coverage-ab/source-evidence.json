@@ -1,0 +1,21 @@
+{
+  "officialTag": "v4.3.2",
+  "originalMetadata": "fox-reference-uncertainty-v3/images/seed-101-front-baseline.json",
+  "originalMetadataSHA256": "5f6b9819a62d0f5a86acd8e03589a60e5b2efe6be9cf4778bcbdc7119a15e029",
+  "primarySourceFiles": {
+    "math_cdf.cpp": "b6116f9fb348e0745834f8640d0c8b6b62cf57c8911676f79d8fa717626d73e0",
+    "math_cdf.h": "923a37182e579ad79ca71d893737864aeece01c6ce7be30b4215a40fa28a44ac",
+    "camera.h": "aa4e8b5c5b7c38be466359c49f6b9f3256427a02ef47135f1cae17981ed71e15",
+    "film.cpp": "a2a751576c62a32cfbb951e977dc498c8fb7e03e5e6e059511aaae1b53a8c7b8"
+  },
+  "sourceDeliveredBy": "independent verifier via official GitHub connector",
+  "nominalSupportPixels": [
+    -1.5,
+    1.5
+  ],
+  "uniformDiagnosticGridExtremaPixels": [
+    -1.44,
+    1.44
+  ],
+  "filterWeightsEmulated": false
+}

@@ -1,0 +1,44 @@
+[
+  {
+    "bits": 16,
+    "table_symbols": {
+      "lut_shared": 3084,
+      "agx_encoded": 445248,
+      "shape": 25700
+    },
+    "no_new_chain_readonly_data": true,
+    "no_audit_or_test_helpers_in_runtime": true,
+    "no_float_arithmetic": true,
+    "no_libm_or_heap_dependency": true,
+    "undefined_symbols": "                 w _ITM_deregisterTMCloneTable\n                 w _ITM_registerTMCloneTable\n                 w __cxa_finalize@GLIBC_2.2.5\n                 w __gmon_start__\n                 U memcmp@GLIBC_2.2.5\n",
+    "host_own_stack": "../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:16:17:il_normal_length\t8\tstatic\n../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:14:16:il_signed_round\t8\tstatic\ncompact.c:32:5:kcc_block\t592\tstatic\n"
+  },
+  {
+    "bits": 20,
+    "table_symbols": {
+      "lut_shared": 3084,
+      "agx_encoded": 445248,
+      "shape": 25700
+    },
+    "no_new_chain_readonly_data": true,
+    "no_audit_or_test_helpers_in_runtime": true,
+    "no_float_arithmetic": true,
+    "no_libm_or_heap_dependency": true,
+    "undefined_symbols": "                 w _ITM_deregisterTMCloneTable\n                 w _ITM_registerTMCloneTable\n                 w __cxa_finalize@GLIBC_2.2.5\n                 w __gmon_start__\n                 U memcmp@GLIBC_2.2.5\n",
+    "host_own_stack": "../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:16:17:il_normal_length\t8\tstatic\n../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:14:16:il_signed_round\t8\tstatic\ncompact.c:32:5:kcc_block\t592\tstatic\n"
+  },
+  {
+    "bits": 24,
+    "table_symbols": {
+      "lut_shared": 3084,
+      "agx_encoded": 445248,
+      "shape": 25700
+    },
+    "no_new_chain_readonly_data": true,
+    "no_audit_or_test_helpers_in_runtime": true,
+    "no_float_arithmetic": true,
+    "no_libm_or_heap_dependency": true,
+    "undefined_symbols": "                 w _ITM_deregisterTMCloneTable\n                 w _ITM_registerTMCloneTable\n                 w __cxa_finalize@GLIBC_2.2.5\n                 w __gmon_start__\n                 U memcmp@GLIBC_2.2.5\n",
+    "host_own_stack": "../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:16:17:il_normal_length\t8\tstatic\n../kernel-chain-prototype/../../ayatsuri-fixed-integer-light-20261105/integer_light.h:14:16:il_signed_round\t8\tstatic\ncompact.c:32:5:kcc_block\t592\tstatic\n"
+  }
+]

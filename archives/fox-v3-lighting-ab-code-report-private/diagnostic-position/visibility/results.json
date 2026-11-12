@@ -1,0 +1,72 @@
+{
+  "front": {
+    "vertex": {
+      "brightTP": 884,
+      "brightFP": 194,
+      "brightFN": 527,
+      "brightIoU": 0.550778816199377,
+      "darkIoU": 0.7687373396353815,
+      "referenceDarkNativeBright": 149,
+      "referenceBrightNativeDark": 130,
+      "baselineStableRGB": 75.30968015895697,
+      "directionStableRGB": 75.79345815619777
+    },
+    "off": {
+      "brightTP": 938,
+      "brightFP": 151,
+      "brightFN": 473,
+      "brightIoU": 0.6005121638924455,
+      "darkIoU": 0.7195249738037024,
+      "referenceDarkNativeBright": 110,
+      "referenceBrightNativeDark": 68,
+      "baselineStableRGB": 74.26645646167802,
+      "directionStableRGB": 74.37974190788357
+    },
+    "on": {
+      "brightTP": 945,
+      "brightFP": 82,
+      "brightFN": 466,
+      "brightIoU": 0.6329537843268587,
+      "darkIoU": 0.7768075445337059,
+      "referenceDarkNativeBright": 44,
+      "referenceBrightNativeDark": 64,
+      "baselineStableRGB": 73.73719351061136,
+      "directionStableRGB": 73.37359550418871
+    }
+  },
+  "oblique": {
+    "vertex": {
+      "brightTP": 275,
+      "brightFP": 216,
+      "brightFN": 434,
+      "brightIoU": 0.2972972972972973,
+      "darkIoU": 0.826805096743747,
+      "referenceDarkNativeBright": 178,
+      "referenceBrightNativeDark": 101,
+      "baselineStableRGB": 74.63378241098346,
+      "directionStableRGB": 75.11537606553108
+    },
+    "off": {
+      "brightTP": 293,
+      "brightFP": 157,
+      "brightFN": 416,
+      "brightIoU": 0.33833718244803695,
+      "darkIoU": 0.7395180722891567,
+      "referenceDarkNativeBright": 119,
+      "referenceBrightNativeDark": 50,
+      "baselineStableRGB": 73.41207388925216,
+      "directionStableRGB": 73.53693800055474
+    },
+    "on": {
+      "brightTP": 312,
+      "brightFP": 90,
+      "brightFN": 397,
+      "brightIoU": 0.3904881101376721,
+      "darkIoU": 0.7709335899903753,
+      "referenceDarkNativeBright": 49,
+      "referenceBrightNativeDark": 54,
+      "baselineStableRGB": 72.6084443237873,
+      "directionStableRGB": 72.52799091905047
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "baseline": "828baa3af69c55e7884c53557ea39f91190010a0",
+  "idf": "v6.0.1",
+  "gcc": "15.2.0 esp-15.2.0_20251204",
+  "dependencies": {
+    "bmi270": "41129fcfe39c583ee5462d79195741945d51c1fe",
+    "minimp3": "ea99364f61c14656440e8d77e9c233ccf3124633",
+    "opus": "22244de5a79bd1d6d623c32e72bf1954b56235be"
+  },
+  "sha256": {
+    "build/cardputer_pocketjs.elf": "213a5391dafb7afa707041ccbc09a43044557a4998e6d925d0012179e096e785",
+    "build/cardputer_pocketjs.bin": "40ff714ed42b98a17586c7efbb74e6123b6585b627f044d170cd5ac0ba129224",
+    "build/cardputer_pocketjs.map": "d5552825fe071c747a8a5da9c6af4d0efdf58c6400c961b2fb716febb2715b80",
+    "build/sdkconfig": "27da218b4eb39e0b7166e5a43b1a9134521146fda4b66c8cc8630f1d9d8955ac",
+    "composite-cutout.c": "85659361857d10d0ccd00cc489fd48f2ec878301d32bb021ca0f2931c86b12dd"
+  }
+}

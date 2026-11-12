@@ -1,0 +1,18 @@
+[
+  "cc",
+  "-std=c11",
+  "-O2",
+  "-shared",
+  "-fPIC",
+  "-ffp-contract=off",
+  "-fexcess-precision=standard",
+  "-I",
+  "/workspace/scratch/6d8dcdbcdc54/fox-v3-agx-profile/profile",
+  "-I",
+  "/workspace/scratch/6d8dcdbcdc54/fox-v3-lid-display-combination/product/main",
+  "/workspace/scratch/6d8dcdbcdc54/fox-v3-agx-profile/code/profile_buffer.c",
+  "/workspace/scratch/6d8dcdbcdc54/fox-v3-agx-profile/profile/agx_profile.c",
+  "-lm",
+  "-o",
+  "/workspace/scratch/6d8dcdbcdc54/fox-v3-lid-display-combination/postprocess-001/profile-buffer.so"
+]

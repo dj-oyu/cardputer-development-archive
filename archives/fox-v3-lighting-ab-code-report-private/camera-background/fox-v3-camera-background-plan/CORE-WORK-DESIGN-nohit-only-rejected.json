@@ -1,0 +1,131 @@
+{
+  "status": "DESIGN_ONLY_NOT_ADMITTED",
+  "coreEdits": false,
+  "renderExecuted": false,
+  "old8MLimitUnchanged": true,
+  "views": {
+    "front": {
+      "oldA2Reservation": 7923890,
+      "old8MHeadroom": 76110,
+      "nonTargetCount": 30015,
+      "nonTargetCenterMisses": 27236,
+      "selectedSampleMisses": 1862,
+      "combinedBackgroundCalls": 29098,
+      "preflightOrderingPositions": 41940,
+      "backgroundOnlyCalls": 39555,
+      "combinedCoreOnlyAdditionalLedger": {
+        "bindingValidation": 512,
+        "targetMaskFingerprintBytes": 4050,
+        "nonTargetCenterClassification": 30015,
+        "queryPreparation": 116392,
+        "localRGBZero": 87294,
+        "callbackDispatch": 29098,
+        "returnedRGBValidation": 87294,
+        "resolverEventCounters": 58196,
+        "selectedMissHDRAccumulation": 11172,
+        "nonTargetCenterEncodeWrite": 217888,
+        "coreGuardDispatches": 174607
+      },
+      "combinedCoreOnlyAdditionalTotal": 816518,
+      "oldPlusCoreOnlyAddition": 8740408,
+      "fitsOld8MBeforeResolver": false,
+      "controlCoreOnlyLedger": {
+        "bindingValidation": 512,
+        "targetMaskCopyAndFingerprintUpper": 8100,
+        "bandHDRClear": 97200,
+        "sampleEnumeration": 129600,
+        "finalOutputScan": 32400,
+        "queryPreparation": 158220,
+        "localRGBZero": 118665,
+        "callbackDispatch": 39555,
+        "returnedRGBValidation": 118665,
+        "resolverEventCounters": 79110,
+        "selectedSampleHDRAccumulation": 57240,
+        "allOutputEncode": 259200,
+        "coreGuardDispatches": 239820
+      },
+      "controlCoreOnlyTotal": 1338287,
+      "resolverAndPreflightStages": "not included, must be admitted separately",
+      "proposedDescriptorFingerprintBytesAdditional": 848
+    },
+    "oblique": {
+      "oldA2Reservation": 7673634,
+      "old8MHeadroom": 326366,
+      "nonTargetCount": 30009,
+      "nonTargetCenterMisses": 26703,
+      "selectedSampleMisses": 2199,
+      "combinedBackgroundCalls": 28902,
+      "preflightOrderingPositions": 41964,
+      "backgroundOnlyCalls": 39573,
+      "combinedCoreOnlyAdditionalLedger": {
+        "bindingValidation": 512,
+        "targetMaskFingerprintBytes": 4050,
+        "nonTargetCenterClassification": 30009,
+        "queryPreparation": 115608,
+        "localRGBZero": 86706,
+        "callbackDispatch": 28902,
+        "returnedRGBValidation": 86706,
+        "resolverEventCounters": 57804,
+        "selectedMissHDRAccumulation": 13194,
+        "nonTargetCenterEncodeWrite": 213624,
+        "coreGuardDispatches": 173431
+      },
+      "combinedCoreOnlyAdditionalTotal": 810546,
+      "oldPlusCoreOnlyAddition": 8484180,
+      "fitsOld8MBeforeResolver": false,
+      "controlCoreOnlyLedger": {
+        "bindingValidation": 512,
+        "targetMaskCopyAndFingerprintUpper": 8100,
+        "bandHDRClear": 97200,
+        "sampleEnumeration": 129600,
+        "finalOutputScan": 32400,
+        "queryPreparation": 158292,
+        "localRGBZero": 118719,
+        "callbackDispatch": 39573,
+        "returnedRGBValidation": 118719,
+        "resolverEventCounters": 79146,
+        "selectedSampleHDRAccumulation": 57384,
+        "allOutputEncode": 259200,
+        "coreGuardDispatches": 239934
+      },
+      "controlCoreOnlyTotal": 1338779,
+      "resolverAndPreflightStages": "not included, must be admitted separately",
+      "proposedDescriptorFingerprintBytesAdditional": 848
+    }
+  },
+  "readOnlyInputPins": {
+    "fox-v3-camera-background-plan/PLAN.md": "25dd2fb83db92181f18120e40073e8cc23f7f02ee1937025f030b1c2f05db269",
+    "fox-v3-boundary-rho-affine-evaluation/actual-A2/ledger-contract.json": "e80fef9113a1c380846a2a3fd7605a17d30aa8dd5ae0d9ad5d3c90c7640137b7",
+    "fox-v3-boundary-rho-affine-evaluation/actual-A2/product/main/ui/kasane/ksn_boundary_aa_impl.inc": "9a5ebadefc4558d389da47b4a929ac1842de82cc374fce843549e4c2ab008058",
+    "fox-v3-boundary-rho-affine-evaluation/actual-A2/product/main/ui/kasane/ksn_boundary_aa.h": "4680b99560f17bedf633b548e81178cf7fda3cba927252919f1b7f5f1e30036d",
+    "fox-v3-boundary-rho-affine-evaluation/actual-A2/physical/fox_disk_lighting.c": "c8bd5a8fbb006050628c4a5349fffef91155a36ee436a0ede541569b008573ac"
+  },
+  "proposedMemory": {
+    "originalWorkspaceAndStack": 145504,
+    "descriptor": 448,
+    "directOnlyPreparedScene": 408,
+    "context": 248,
+    "newLedger": 536,
+    "additionalOwned": 1640,
+    "withinOriginalStackReserveIfProven": 147144,
+    "plusConservativeAdditionalStack512": 147656,
+    "oldCap": 147456,
+    "measuredAdmission": false
+  },
+  "parentReportedStopGates": {
+    "directQuota": "FAIL",
+    "combinedAddedDirectRays": {
+      "front": 1118832,
+      "oblique": 1203920
+    },
+    "combinedMaximumDirectRays": 1642832,
+    "backgroundOnlyDirectRays": {
+      "front": 1486704,
+      "oblique": 1656192
+    },
+    "frontFloorInFrontSlots": 3,
+    "orderingGate": "FAIL pending diagnosis",
+    "implementationStatus": "STOPPED",
+    "newBudgetAssigned": false
+  }
+}

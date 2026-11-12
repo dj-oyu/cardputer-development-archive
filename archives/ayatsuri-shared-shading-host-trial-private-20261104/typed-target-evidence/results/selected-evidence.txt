@@ -1,0 +1,221 @@
+
+control model second-color call and subsequent stores
+    10f0:	991a      	add.n	a9, a9, a1
+    10f2:	09b8      	l32i.n	a11, a9, 0
+    10f4:	118880        	slli	a8, a8, 8
+    10f7:	06cd      	mov.n	a12, a6
+    10f9:	20a8a0        	or	a10, a8, a10
+    10fc:	000081        	l32r	a8, fffc10fc <mesh_packet+0xfffc10fc>	10fc: R_XTENSA_SLOT0_OP	.literal.mesh_packet+0x214
+	10fc: R_XTENSA_ASM_EXPAND	.text.ayatsuri_shade_from_terms$isra$0
+    10ff:	0008e0        	callx8	a8
+    1102:	68a492        	movi	a9, 0x468
+    1105:	991a      	add.n	a9, a9, a1
+    1107:	0998      	l32i.n	a9, a9, 0
+    1109:	0a8d      	mov.n	a8, a10
+    110b:	c0a3b2        	movi	a11, 0x3c0
+    110e:	615782        	s16i	a8, a7, 194
+    1111:	4c0c      	movi.n	a12, 4
+    1113:	b2ba      	add.n	a11, a2, a11
+    1115:	a9cb      	addi.n	a10, a9, 12
+    1117:	000081        	l32r	a8, fffc1118 <mesh_packet+0xfffc1118>	1117: R_XTENSA_SLOT0_OP	.literal.mesh_packet+0x218
+	1117: R_XTENSA_ASM_EXPAND	memcpy
+    111a:	0008e0        	callx8	a8
+    111d:	c0a482        	movi	a8, 0x4c0
+    1120:	881a      	add.n	a8, a8, a1
+    1122:	0888      	l32i.n	a8, a8, 0
+
+control model second-color call and subsequent stores
+    136c:	118880        	slli	a8, a8, 8
+    136f:	07cd      	mov.n	a12, a7
+    1371:	04fd      	mov.n	a15, a4
+    1373:	05ed      	mov.n	a14, a5
+    1375:	20a8a0        	or	a10, a8, a10
+    1378:	000081        	l32r	a8, fffc1378 <mesh_packet+0xfffc1378>	1378: R_XTENSA_SLOT0_OP	.literal.mesh_packet+0x240
+	1378: R_XTENSA_ASM_EXPAND	.text.ayatsuri_shade_from_terms$isra$0
+    137b:	0008e0        	callx8	a8
+    137e:	60a492        	movi	a9, 0x460
+    1381:	991a      	add.n	a9, a9, a1
+    1383:	0a8d      	mov.n	a8, a10
+    1385:	c0a3b2        	movi	a11, 0x3c0
+    1388:	09a8      	l32i.n	a10, a9, 0
+    138a:	4c0c      	movi.n	a12, 4
+    138c:	b2ba      	add.n	a11, a2, a11
+    138e:	615682        	s16i	a8, a6, 194
+    1391:	000081        	l32r	a8, fffc1394 <mesh_packet+0xfffc1394>	1391: R_XTENSA_SLOT0_OP	.literal.mesh_packet+0x244
+	1391: R_XTENSA_ASM_EXPAND	memcpy
+    1394:	0008e0        	callx8	a8
+    1397:	ff6306        	j	1127 <mesh_packet+0x1127>	1397: R_XTENSA_SLOT0_OP	.text.mesh_packet+0x1127
+    139a:	b0a482        	movi	a8, 0x4b0
+    139d:	881a      	add.n	a8, a8, a1
+    139f:	08b8      	l32i.n	a11, a8, 0
+
+control shade_pair second-color call and subsequent stores
+ 150:	06cd      	mov.n	a12, a6
+ 152:	05bd      	mov.n	a11, a5
+ 154:	004103        	ssi	f0, a1, 0
+ 157:	02dd      	mov.n	a13, a2
+ 159:	085182        	s16i	a8, a1, 16
+ 15c:	000081        	l32r	a8, fffc015c <shade_pair+0xfffc015c>	15c: R_XTENSA_SLOT0_OP	.literal.shade_pair+0x2c
+	15c: R_XTENSA_ASM_EXPAND	.text.ayatsuri_shade_from_terms$isra$0
+ 15f:	0008e0        	callx8	a8
+ 162:	0a8d      	mov.n	a8, a10
+ 164:	1421a2        	l32i	a10, a1, 80
+ 167:	4c0c      	movi.n	a12, 4
+ 169:	10c1b2        	addi	a11, a1, 16
+ 16c:	095182        	s16i	a8, a1, 18
+ 16f:	000081        	l32r	a8, fffc0170 <shade_pair+0xfffc0170>	16f: R_XTENSA_SLOT0_OP	.literal.shade_pair+0x30
+	16f: R_XTENSA_ASM_EXPAND	memcpy
+ 172:	0008e0        	callx8	a8
+ 175:	f01d      	retw.n
+ 177:	0abd      	mov.n	a11, a10
+ 179:	b1a9      	s32i.n	a10, a1, 44
+ 17b:	81a8      	l32i.n	a10, a1, 32
+ 17d:	000081        	l32r	a8, fffc0180 <shade_pair+0xfffc0180>	17d: R_XTENSA_SLOT0_OP	.literal.shade_pair+0x34
+	17d: R_XTENSA_ASM_EXPAND	__divsf3
+ 180:	0008e0        	callx8	a8
+
+control final external copy
+ 15c:	000081        	l32r	a8, fffc015c <shade_pair+0xfffc015c>	15c: R_XTENSA_SLOT0_OP	.literal.shade_pair+0x2c
+	15c: R_XTENSA_ASM_EXPAND	.text.ayatsuri_shade_from_terms$isra$0
+ 15f:	0008e0        	callx8	a8
+ 162:	0a8d      	mov.n	a8, a10
+ 164:	1421a2        	l32i	a10, a1, 80
+ 167:	4c0c      	movi.n	a12, 4
+ 169:	10c1b2        	addi	a11, a1, 16
+ 16c:	095182        	s16i	a8, a1, 18
+ 16f:	000081        	l32r	a8, fffc0170 <shade_pair+0xfffc0170>	16f: R_XTENSA_SLOT0_OP	.literal.shade_pair+0x30
+	16f: R_XTENSA_ASM_EXPAND	memcpy
+ 172:	0008e0        	callx8	a8
+ 175:	f01d      	retw.n
+ 177:	0abd      	mov.n	a11, a10
+
+control actual reload scalar preservation, not ABI argument slots
+     (nil))
+(insn 375 223 230 9 (set (mem/c:SF (plus:SI (reg/f:SI 1 sp)
+                (const_int 32 [0x20])) [7 %sfp+32 S4 A32])
+        (reg/v:SF 19 f0 [orig:83 thin ] [83])) "/workspace/ayatsuri-s3-typed-stores-20261104/shade_pair.c":7:31 65 {movsf_internal}
+     (nil))
+
+control actual reload scalar preservation, not ABI argument slots
+(insn 376 242 236 9 (set (reg/v:SF 19 f0 [orig:83 thin ] [83])
+        (mem/c:SF (plus:SI (reg/f:SI 1 sp)
+                (const_int 32 [0x20])) [7 %sfp+32 S4 A32])) "/workspace/ayatsuri-s3-typed-stores-20261104/shade_pair.c":8:29 65 {movsf_internal}
+     (nil))
+(insn 236 376 380 9 (set (mem:SF (reg/f:SI 1 sp) [0  S4 A32])
+
+control actual reload scalar preservation, not ABI argument slots
+(insn 380 236 378 9 (set (reg:SI 15 a15 [orig:79 spec ] [79])
+        (mem/c:SI (plus:SI (reg/f:SI 1 sp)
+                (const_int 40 [0x28])) [7 %sfp+40 S4 A32])) "/workspace/ayatsuri-s3-typed-stores-20261104/shade_pair.c":8:29 62 {movsi_internal}
+     (nil))
+(insn 378 380 239 9 (set (reg:SI 14 a14 [orig:67 back ] [67])
+
+control actual reload scalar preservation, not ABI argument slots
+(insn 378 380 239 9 (set (reg:SI 14 a14 [orig:67 back ] [67])
+        (mem/c:SI (plus:SI (reg/f:SI 1 sp)
+                (const_int 36 [0x24])) [7 %sfp+36 S4 A32])) "/workspace/ayatsuri-s3-typed-stores-20261104/shade_pair.c":8:29 62 {movsi_internal}
+     (nil))
+(insn 239 378 240 9 (set (reg:SF 13 a13)
+
+candidate-typed-stores model second-color call and subsequent stores
+    10b6:	119980        	slli	a9, a9, 8
+    10b9:	0bb8      	l32i.n	a11, a11, 0
+    10bb:	07cd      	mov.n	a12, a7
+    10bd:	20a9a0        	or	a10, a9, a10
+    10c0:	087d      	mov.n	a7, a8
+    10c2:	000081        	l32r	a8, fffc10c4 <mesh_packet+0xfffc10c4>	10c2: R_XTENSA_SLOT0_OP	.literal.mesh_packet+0x214
+	10c2: R_XTENSA_ASM_EXPAND	.text.ayatsuri_shade_from_terms$isra$0
+    10c5:	0008e0        	callx8	a8
+    10c8:	68a492        	movi	a9, 0x468
+    10cb:	991a      	add.n	a9, a9, a1
+    10cd:	0998      	l32i.n	a9, a9, 0
+    10cf:	11aa00        	slli	a10, a10, 16
+    10d2:	f48070        	extui	a8, a7, 0, 16
+    10d5:	2088a0        	or	a8, a8, a10
+    10d8:	3989      	s32i.n	a8, a9, 12
+    10da:	b0a482        	movi	a8, 0x4b0
+    10dd:	881a      	add.n	a8, a8, a1
+    10df:	0888      	l32i.n	a8, a8, 0
+    10e1:	0ca856        	bnez	a8, 11af <mesh_packet+0x11af>	10e1: R_XTENSA_SLOT0_OP	.text.mesh_packet+0x11af
+    10e4:	70a482        	movi	a8, 0x470
+    10e7:	881a      	add.n	a8, a8, a1
+    10e9:	0888      	l32i.n	a8, a8, 0
+    10eb:	70a492        	movi	a9, 0x470
+
+candidate-typed-stores model second-color call and subsequent stores
+    131d:	0bb8      	l32i.n	a11, a11, 0
+    131f:	06cd      	mov.n	a12, a6
+    1321:	04fd      	mov.n	a15, a4
+    1323:	20a9a0        	or	a10, a9, a10
+    1326:	086d      	mov.n	a6, a8
+    1328:	000081        	l32r	a8, fffc1328 <mesh_packet+0xfffc1328>	1328: R_XTENSA_SLOT0_OP	.literal.mesh_packet+0x23c
+	1328: R_XTENSA_ASM_EXPAND	.text.ayatsuri_shade_from_terms$isra$0
+    132b:	0008e0        	callx8	a8
+    132e:	0157a2        	s16i	a10, a7, 2
+    1331:	005762        	s16i	a6, a7, 0
+    1334:	ff6b06        	j	10e4 <mesh_packet+0x10e4>	1334: R_XTENSA_SLOT0_OP	.text.mesh_packet+0x10e4
+    1337:	a8a482        	movi	a8, 0x4a8
+    133a:	881a      	add.n	a8, a8, a1
+    133c:	08b8      	l32i.n	a11, a8, 0
+    133e:	38a582        	movi	a8, 0x538
+    1341:	881a      	add.n	a8, a8, a1
+    1343:	0878      	l32i.n	a7, a8, 0
+    1345:	10a4c2        	movi	a12, 0x410
+    1348:	54c7a2        	addi	a10, a7, 84
+    134b:	000081        	l32r	a8, fffc134c <mesh_packet+0xfffc134c>	134b: R_XTENSA_SLOT0_OP	.literal.mesh_packet+0x240
+	134b: R_XTENSA_ASM_EXPAND	memset
+    134e:	0008e0        	callx8	a8
+    1351:	d8a482        	movi	a8, 0x4d8
+
+candidate-typed-stores shade_pair second-color call and subsequent stores
+ 14a:	02ed      	mov.n	a14, a2
+ 14c:	004103        	ssi	f0, a1, 0
+ 14f:	04dd      	mov.n	a13, a4
+ 151:	06cd      	mov.n	a12, a6
+ 153:	05bd      	mov.n	a11, a5
+ 155:	000081        	l32r	a8, fffc0158 <shade_pair+0xfffc0158>	155: R_XTENSA_SLOT0_OP	.literal.shade_pair+0x2c
+	155: R_XTENSA_ASM_EXPAND	.text.ayatsuri_shade_from_terms$isra$0
+ 158:	0008e0        	callx8	a8
+ 15b:	142182        	l32i	a8, a1, 80
+ 15e:	005872        	s16i	a7, a8, 0
+ 161:	0158a2        	s16i	a10, a8, 2
+ 164:	f01d      	retw.n
+ 166:	0abd      	mov.n	a11, a10
+ 168:	71a9      	s32i.n	a10, a1, 28
+ 16a:	41a8      	l32i.n	a10, a1, 16
+ 16c:	000081        	l32r	a8, fffc016c <shade_pair+0xfffc016c>	16c: R_XTENSA_SLOT0_OP	.literal.shade_pair+0x30
+	16c: R_XTENSA_ASM_EXPAND	__divsf3
+ 16f:	0008e0        	callx8	a8
+ 172:	0a9d      	mov.n	a9, a10
+ 174:	71b8      	l32i.n	a11, a1, 28
+ 176:	51a8      	l32i.n	a10, a1, 20
+ 178:	4199      	s32i.n	a9, a1, 16
+ 17a:	000081        	l32r	a8, fffc017c <shade_pair+0xfffc017c>	17a: R_XTENSA_SLOT0_OP	.literal.shade_pair+0x34
+
+candidate-typed-stores actual reload scalar preservation, not ABI argument slots
+     (nil))
+(insn 375 229 225 9 (set (mem/c:SI (plus:SI (reg/f:SI 1 sp)
+                (const_int 20 [0x14])) [7 %sfp+20 S4 A32])
+        (reg:SI 15 a15 [orig:79 spec ] [79])) "/workspace/ayatsuri-s3-typed-stores-20261104/shade_pair.c":7:31 62 {movsi_internal}
+     (nil))
+
+candidate-typed-stores actual reload scalar preservation, not ABI argument slots
+     (nil))
+(insn 373 223 230 9 (set (mem/c:SF (plus:SI (reg/f:SI 1 sp)
+                (const_int 16 [0x10])) [7 %sfp+16 S4 A32])
+        (reg/v:SF 19 f0 [orig:83 thin ] [83])) "/workspace/ayatsuri-s3-typed-stores-20261104/shade_pair.c":7:31 65 {movsf_internal}
+     (nil))
+
+candidate-typed-stores actual reload scalar preservation, not ABI argument slots
+(insn 374 242 236 9 (set (reg/v:SF 19 f0 [orig:83 thin ] [83])
+        (mem/c:SF (plus:SI (reg/f:SI 1 sp)
+                (const_int 16 [0x10])) [7 %sfp+16 S4 A32])) "/workspace/ayatsuri-s3-typed-stores-20261104/shade_pair.c":8:29 65 {movsf_internal}
+     (nil))
+(insn 236 374 376 9 (set (mem:SF (reg/f:SI 1 sp) [0  S4 A32])
+
+candidate-typed-stores actual reload scalar preservation, not ABI argument slots
+(insn 376 236 238 9 (set (reg:SI 15 a15 [orig:79 spec ] [79])
+        (mem/c:SI (plus:SI (reg/f:SI 1 sp)
+                (const_int 20 [0x14])) [7 %sfp+20 S4 A32])) "/workspace/ayatsuri-s3-typed-stores-20261104/shade_pair.c":8:29 62 {movsi_internal}
+     (nil))
+(insn 238 376 239 9 (set (reg:SF 14 a14)

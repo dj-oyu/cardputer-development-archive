@@ -1,0 +1,11 @@
+{
+  "reason": "Outer admission v2 fixes exact64bit size validation. Native/core/geometry unchanged; original integration freeze preserved. Actual execution entrypoints run_floor_v2.py and score_floor_v2.py.",
+  "files": {
+    "code/floor_contract_v2.py": "0bbed91b709452e5b1ae6bedab560c0da8aa1b07d58a0314c734ed5bf61b9c62",
+    "code/run_floor_v2.py": "98e1dfab7a3914a41286b4389043f41a9bf686325c985d8ef2cc9c6a93e8738c",
+    "code/score_floor_v2.py": "3cd45a7c641345a96ccd3b1822feb7e4bd546e42d540de2add063aa9b6901630",
+    "code/test_floor_contract_v2.py": "23c9e45c4fe53eef6b43b10dab1c3903e0758de6170206ad41d6dfd0660f31e3",
+    "code/test_floor_input_binding.py": "fac98a8111d42e15b2f9254a6f2d4d51a78156ac6a47203961b2fc555bd8d53b",
+    "binding-negatives-001/RESULT.json": "273e78876e51a12936b0eeb929c8c3f7b5b50d20d94b0e1124f445b8de8a0e8c"
+  }
+}

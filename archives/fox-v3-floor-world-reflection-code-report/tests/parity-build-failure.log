@@ -1,0 +1,11 @@
+tests/test_off_parity.c: In function ‘main’:
+tests/test_off_parity.c:22:36: error: implicit declaration of function ‘fox_pixel_binding_clear’; did you mean ‘fox_pixel_binding_matches’? [-Wimplicit-function-declaration]
+   22 |  bounce_binding_clear(&tx.binding);fox_pixel_binding_clear(&pb);bounce_scene_release(s);vis_scene_release(v);done(&f);return 0;
+      |                                    ^~~~~~~~~~~~~~~~~~~~~~~
+      |                                    fox_pixel_binding_matches
+In file included from tests/test_off_parity.c:3:
+tests/../capture/tests/test_boundary_aa.c: In function ‘boundary_fixture_main’:
+tests/../capture/tests/test_boundary_aa.c:68:1: error: control reaches end of non-void function [-Werror=return-type]
+   68 | }
+      | ^
+cc1: all warnings being treated as errors

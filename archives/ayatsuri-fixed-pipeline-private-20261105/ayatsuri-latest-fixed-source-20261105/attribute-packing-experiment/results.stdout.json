@@ -1,0 +1,182 @@
+[
+  {
+    "fraction_bits": 16,
+    "input_sha256": "cf4bdf24d363454427544bb3596af15d0b1c8b820137e9f062e6c366023289b9",
+    "baseline": {
+      "parts": 120,
+      "partition_vertices": 2302,
+      "triangles": 1982,
+      "unique_source_vertices": 1322,
+      "duplicated_records": 980,
+      "padded_blocks8": 319,
+      "padded_vertex_records": 2552,
+      "max_vertices_per_part": 32,
+      "max_triangles_per_part": 44,
+      "cross_part_source_vertices": 559,
+      "cross_part_source_edges": 972,
+      "hypothetical_old_AYFQ_geometry_only_bytes": 57864,
+      "audit_layout_unpadded_bytes": 115680,
+      "audit_layout_padded8_bytes": 125680
+    },
+    "candidates": {
+      "min_id": {
+        "parts": 99,
+        "partition_vertices": 1645,
+        "triangles": 1982,
+        "unique_source_vertices": 1322,
+        "duplicated_records": 323,
+        "padded_blocks8": 235,
+        "padded_vertex_records": 1880,
+        "max_vertices_per_part": 32,
+        "max_triangles_per_part": 49,
+        "cross_part_source_vertices": 255,
+        "cross_part_source_edges": 283,
+        "hypothetical_old_AYFQ_geometry_only_bytes": 45096,
+        "audit_layout_unpadded_bytes": 88056,
+        "audit_layout_padded8_bytes": 97456,
+        "verification": {
+          "all_1982_triangles_exactly_once": true,
+          "ordered_corner_attributes_identical": true,
+          "source_winding_corner_order_identical": true,
+          "material_identity_identical": true,
+          "all_source_triangle_metadata_identical": true,
+          "shared_world_edge_values_identical": true,
+          "neutral_degenerate_tags_preserved": 36,
+          "deterministic": true
+        },
+        "versus_baseline": {
+          "parts": -21,
+          "partition_vertices": -657,
+          "padded_blocks8": -84,
+          "hypothetical_old_AYFQ_geometry_only_bytes": -12768,
+          "audit_layout_unpadded_bytes": -27624,
+          "audit_layout_padded8_bytes": -28224
+        }
+      },
+      "max_remaining_degree": {
+        "parts": 99,
+        "partition_vertices": 1651,
+        "triangles": 1982,
+        "unique_source_vertices": 1322,
+        "duplicated_records": 329,
+        "padded_blocks8": 235,
+        "padded_vertex_records": 1880,
+        "max_vertices_per_part": 32,
+        "max_triangles_per_part": 49,
+        "cross_part_source_vertices": 255,
+        "cross_part_source_edges": 286,
+        "hypothetical_old_AYFQ_geometry_only_bytes": 45096,
+        "audit_layout_unpadded_bytes": 88296,
+        "audit_layout_padded8_bytes": 97456,
+        "verification": {
+          "all_1982_triangles_exactly_once": true,
+          "ordered_corner_attributes_identical": true,
+          "source_winding_corner_order_identical": true,
+          "material_identity_identical": true,
+          "all_source_triangle_metadata_identical": true,
+          "shared_world_edge_values_identical": true,
+          "neutral_degenerate_tags_preserved": 36,
+          "deterministic": true
+        },
+        "versus_baseline": {
+          "parts": -21,
+          "partition_vertices": -651,
+          "padded_blocks8": -84,
+          "hypothetical_old_AYFQ_geometry_only_bytes": -12768,
+          "audit_layout_unpadded_bytes": -27384,
+          "audit_layout_padded8_bytes": -28224
+        }
+      }
+    }
+  },
+  {
+    "fraction_bits": 20,
+    "input_sha256": "81830dd0d7c363e3f7c6d6b7f4c4147112b0df89d7e28081763a9cfef0c9f536",
+    "baseline": {
+      "parts": 120,
+      "partition_vertices": 2302,
+      "triangles": 1982,
+      "unique_source_vertices": 1322,
+      "duplicated_records": 980,
+      "padded_blocks8": 319,
+      "padded_vertex_records": 2552,
+      "max_vertices_per_part": 32,
+      "max_triangles_per_part": 44,
+      "cross_part_source_vertices": 559,
+      "cross_part_source_edges": 972,
+      "hypothetical_old_AYFQ_geometry_only_bytes": 57864,
+      "audit_layout_unpadded_bytes": 115680,
+      "audit_layout_padded8_bytes": 125680
+    },
+    "candidates": {
+      "min_id": {
+        "parts": 99,
+        "partition_vertices": 1645,
+        "triangles": 1982,
+        "unique_source_vertices": 1322,
+        "duplicated_records": 323,
+        "padded_blocks8": 235,
+        "padded_vertex_records": 1880,
+        "max_vertices_per_part": 32,
+        "max_triangles_per_part": 49,
+        "cross_part_source_vertices": 255,
+        "cross_part_source_edges": 283,
+        "hypothetical_old_AYFQ_geometry_only_bytes": 45096,
+        "audit_layout_unpadded_bytes": 88056,
+        "audit_layout_padded8_bytes": 97456,
+        "verification": {
+          "all_1982_triangles_exactly_once": true,
+          "ordered_corner_attributes_identical": true,
+          "source_winding_corner_order_identical": true,
+          "material_identity_identical": true,
+          "all_source_triangle_metadata_identical": true,
+          "shared_world_edge_values_identical": true,
+          "neutral_degenerate_tags_preserved": 36,
+          "deterministic": true
+        },
+        "versus_baseline": {
+          "parts": -21,
+          "partition_vertices": -657,
+          "padded_blocks8": -84,
+          "hypothetical_old_AYFQ_geometry_only_bytes": -12768,
+          "audit_layout_unpadded_bytes": -27624,
+          "audit_layout_padded8_bytes": -28224
+        }
+      },
+      "max_remaining_degree": {
+        "parts": 99,
+        "partition_vertices": 1651,
+        "triangles": 1982,
+        "unique_source_vertices": 1322,
+        "duplicated_records": 329,
+        "padded_blocks8": 235,
+        "padded_vertex_records": 1880,
+        "max_vertices_per_part": 32,
+        "max_triangles_per_part": 49,
+        "cross_part_source_vertices": 255,
+        "cross_part_source_edges": 286,
+        "hypothetical_old_AYFQ_geometry_only_bytes": 45096,
+        "audit_layout_unpadded_bytes": 88296,
+        "audit_layout_padded8_bytes": 97456,
+        "verification": {
+          "all_1982_triangles_exactly_once": true,
+          "ordered_corner_attributes_identical": true,
+          "source_winding_corner_order_identical": true,
+          "material_identity_identical": true,
+          "all_source_triangle_metadata_identical": true,
+          "shared_world_edge_values_identical": true,
+          "neutral_degenerate_tags_preserved": 36,
+          "deterministic": true
+        },
+        "versus_baseline": {
+          "parts": -21,
+          "partition_vertices": -651,
+          "padded_blocks8": -84,
+          "hypothetical_old_AYFQ_geometry_only_bytes": -12768,
+          "audit_layout_unpadded_bytes": -27384,
+          "audit_layout_padded8_bytes": -28224
+        }
+      }
+    }
+  }
+]

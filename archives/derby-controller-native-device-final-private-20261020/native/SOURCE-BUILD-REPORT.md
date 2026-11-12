@@ -1,0 +1,19 @@
+# Native exact source/build success — no device operation yet
+
+Native PR26 head3fafcadbd72ecbd0d799cbe9d29f037ff62c05d5 / treeb3de719ac438d8d3373a2c34786bc35c46e9200eを正規登録project cardputer-mainから取得・buildした。新OFF/DMA変更を混ぜず、local checkoutはexacthead clean、AGENTS.md/.agentsは当該checkoutに存在しない。
+
+- source job derby-controller-native-source-3fafcadb-20261020：06:04:31→06:05:00 UTC succeeded。receipt bbf729af426e3110943d2fcad025311b1d088b773c0cecdbb53b4fde92e16679、source SHA256 2b6f8223ef87de643e976686905f7fe75346f39143ea5cbdd3e00210e1200e3d。fixed allowlisted submodulesはbaselineと同一。
+- build job derby-controller-native-build-3fafcadb-20261020：06:06:29→06:09:32 UTC succeeded / firmware_build_succeeded_no_flash。
+- build plan5278da581c85332db700e92a166db9b27476099ff192fd1fb6654335b5e5102d、fingerprintc865a87d3da53999be572a9b12db9403672dbd1e00bab1724facfef049564676。1800秒のfresh期限内に実行。profile/registration/IDF6.0.1/esp32s3はbaselineと同一。
+- BIN2296944B SHA256 aeb601df47809fb6b651ee265a41dcbf727520dd0678c1030bd8e3c1ffd892b1。
+- ELF20046164B SHA256 0e8abb684ab242633288861488a969f15f91bfb004dd37708d2a793c8f0e80d4。
+- durable artifact_status=verified、2120連続provider-decoded entries（gap/expired=false）、mandatory linked image proof1件。telemetry/measure/fixed/detailの4ON、hardware seed2545F491、fixtureseed9112A7AB/race1000001/cam8/390→510の120contexts/3dependent replays、owner EXIT symbolと生成play bytesの証明を検証した。
+- verify_source_build.pyは保存済みreceipt/log/manifest/proofを検証してPASS。BIN/ELF本体をローカルへmaterializeしていない。build proofのhardware_tested=falseを実機PASSへ読み替えない。
+
+正規automatic reclamationで旧source50c43dfの85684739B payloadだけ回収し、579784Bのreceipt evidenceを保持。旧17receiptを全保持して計18entries、payload16、保護12payloadは不変、固定16/2GiB上限不変。unknown/unclassifiedは0。aggregateとowned行の既知64B scope差は前後不変で、その原因を断定しない。手動削除・上限緩和・旧担当WIP操作はしていない。
+
+current比較元は成功済み新baselineの完全receipt e40bf864bafa4a3fdb94b418416ee90bda54801bfa4b0887c19e73d4a3889615。旧正常baseline rollback receipt e9a33d3e3d0a9c1809a4238efc42c85cf440837ec62466c5c52326ddd69c761a、旧batch OOM失敗raw902Bとresultを別保持し、用途や成否を上書きしない。baseline accepted private Library v2のactual ID/hashも保存。
+
+このsource/build checkpoint時点ではphysical operation0、device idle/unowned/current uncertaintyなし。次は同じ正式guardでcurrent対象bytes一致を確認するnative flash/bootとON固定計測1回だけ。異常・安全拒否・不一致・fatal/OOMで停止し、batchへ進めない。独立source/build reviewは別ファイルとして後続packetに含める。
+
+再現：exact checkoutと保存ファイルに対しpython3 verify_source_build.py。実機/MCPを呼ばない。実行中native appの正常性・OFF overhead・性能改善・物理LCDはまだ未評価。SOURCE-BUILD-PROOF.jsonに完全provenance/artifact hashesとlinked proofを収録した。

@@ -1,0 +1,67 @@
+# Private camera-background resolver: design-only work contract
+
+Version 1, 2026-11-03. No renderer, shadow trace, or production implementation is authorized by this artifact. The existing all-20 geometry/count preflight and frozen roots remain unchanged. This contract proposes a separate host background experiment; original direct, transport, and AA failures remain visible.
+
+## Scope and domains
+
+The active character path stays A2 affine baseline, with floor-reflection OFF. Keep its character coverage, native depth, shaders, and old budgets separately. New full-scene composition selects finite source-floor hits strictly in front of the retained character depth, keeps the character on an exact native-float depth tie, and uses source world radiance on a true floor miss when no retained character wins. Background-only is a separate character-camera-hidden counterfactual, but retains character geometry as shadow occluders.
+
+Runtime retained composition slots Q are 39,555 front and 39,573 oblique: 32,400 centers plus three additional slots per AA target. Selected target centers are overwritten and must not be shaded by the background resolver. The earlier all-center plus all-quarter ordering audit has 41,940/41,964 probes. It is a separate geometry-only preflight, not 41,964 runtime shading calls. The global work cap below conservatively reserves the larger 41,964 geometry-slot bound; unused target-center allowance is explicit over-reservation, not an instruction to execute it. Runtime category/count limits should use the actual per-case Q.
+
+Current composite shading requires combined-empty 29,098/28,902 slots plus two retained front quarter replacements, giving 29,100/28,902 possible floor evaluations. The rear-paw target center is an ordering-audit failure but is overwritten, not a third final replacement. Baseline additions at the two quarters are 48 positive kernels each. Exact all-condition replacement callback counts must be independently captured before physical runs; the coarse 48-per-evaluation guarantee does not depend on them.
+
+On success: Q = KEEP + FLOOR + WORLD; WORLD = exact-parallel + negative-t + outside-finite-floor + source-clip-outside. Nonfinite calculations fail rather than become a miss. Each FLOOR evaluation executes the unchanged 48 sample kernels; only positive geometric kernels invoke visibility. Kernel callbacks are not removed by black rho, zero light energy, or future occlusion. No floor higher-bounce or floor-reflection path is introduced.
+
+## Independent traversal contract
+
+A new cumulative `vis_budget` is dedicated to background shadows only: 2,000,000 rays, 200,000,000 node visits, 100,000,000 triangle tests. The old direct 1M/100M/50M and transport 20M/800M/300M remain separate and unchanged. The original combined-primary-direct 1M failure remains a failed historical constraint, not retrospectively fixed by relabeling it.
+
+One complete background-only frame has at most 39,573 × 48 = 1,899,504 rays, strictly below 2M. Composite coarse maximum is 29,100 × 48 = 1,396,800. This proves the ray count only. Existing owned 1,566-triangle geometry has 1,023 built nodes. The complete-frame brute envelope is 1,943,192,592 node visits and 2,974,623,264 triangle tests. Consequently 200M/100M are actual-run abort gates, not established fits; no adjustment after results.
+
+`vis_segment_occluded` remains unchanged. Its two-sided segment excludes exactly `VIS_SEGMENT_EPSILON=1e-5` at both ray endpoints, rejects length <= 2 epsilon, and does not offset P along the normal. The lighting receiver admission remains the distinct disk-surface `FOX_DISK_ENDPOINT_EPSILON=1e-9`. Visibility failure is never interpreted as visible or black success.
+
+## Work unit and call-site table
+
+A fee is a conservative reservation for the named, bounded source-semantic work at that call site. It is not a machine-instruction count, CPU timing claim, or a traversal-work replacement. Scalar arithmetic/finite checks, branches, fixed-loop control, helper calls, source-level loads/stores, reservation guards, and result/counter bookkeeping are included in the identified categories. libm internals, allocator internals, and compiler expansion are not claimed instruction-bounded by these fees. This is a fresh table, not reuse of the earlier floor-reflection 12,000 allowance.
+
+| Category | Prepayment | Covered work and concrete source |
+| --- | ---: | --- |
+| construct | 8,192 once per new owned generation | Input validation, bounded owned-field comparison, canonical copies, camera basis/Q32/inverse setup, floor admission, light validation, retain/replacement commit; one new generation maximum in a case ledger. |
+| frameAdmission | 4,096 + 8 × (snapshot bytes + identity bytes) | Once per frame: fixed pointer/span/generation/limit checks, mode/slot-bound setup, whole snapshot and identity bounded-byte fingerprint/check work, dispatch, final frame guard/report/counter merge. Max bytes 65,536 + 8,192; max fee 593,920. Reserve both entry and frame-end work at entry. |
+| slotAdmission | 512 per Q | Argument/range/generation checks, fixed alias and owned-scene-overlap checks, mode dispatch, category/total/count quota guards, overflow checks, all per-slot ledger-update work and failure propagation. |
+| cameraRay | 256 per Q | Q32/t32 inverse affine point, native/world conversion, finite/unit ray checks. Exact preflight ray convention. |
+| floorTriangles | 384 per triangle, exactly two reserved per Q | Two finite-floor triangle intersections, plane normal/denominator, signed t, inside barycentric checks, finite arithmetic, nearest and shared-diagonal ordinal selection. No BVH traversal. |
+| clipDepthOrder | 256 per Q | Source axial near/far, raw geometric face orientation, float-native reprojection, exact depth selection, miss classification. |
+| resultCounterCommit | 256 per Q | Component/result initialization and copy, candidate counter sums/overflow guards, selection counters, success-only local result and aggregate counter merge. |
+| diskAdmission | 768 per FLOOR | Unchanged evaluator arguments, full scene validation, position/rho/normal admission and normalization. `physical/fox_disk_lighting.c:54-68,163-170`. |
+| diskReceiver | 128 × 3 per FLOOR | Whole emitting-disk proximity admission and receiver deltas, including hypot/finite/epsilon handling. `physical/fox_disk_lighting.c:121-134,171-177`. |
+| diskKernel | 160 × 48 per FLOOR | All fixed kernel geometry, distance, cosine, reciprocal, multiply, finite/endpoint handling. `physical/fox_disk_lighting.c:137-153,178-188`. |
+| diskSampleControl | 64 × 48 per FLOOR | Fixed table access, light/sample loop steps, positive test, status branches, sum and finite check. `physical/fox_disk_lighting.c:178-201`. |
+| shadowBridgeAdmission | 512 × 48 per FLOOR | Light endpoint construction and finite check (`physical:189-197`); callback/context dispatch; original segment pointer/owned-span/generation checks, endpoint finite/range checks, direction/length normalization and epsilon-length admission, ray-counter admission and initial traversal-stack setup (`visibility/visibility.c:117-131`); callback error/visible handling and per-query diagnostic counter preparation. All 48 allowances prepaid even when fewer callbacks occur. Node-pop/box/triangle traversal operations from `visibility:132-139` belong exclusively to separate cumulative traversal quotas, not this fee. |
+| diskReduction | 128 per FLOOR | Three-light means/weighted sums, rho multiplication, finite checks and evaluator output commit. `physical:202-213`. |
+| floorComposition | 128 per FLOOR | Separate rho × source-world Lambert term, Le exactly once, direct + world + Le, component finite/nonnegative checks. |
+| worldMiss | 64 per WORLD | Copy owned source world radiance without rho or Le, finite checks and component selection. |
+
+Per geometry slot: 2,048. Per selected floor evaluator: 36,736. World miss costs 64 instead of a floor evaluator. Every evaluator prepays all six disk categories plus floor composition as one atomic reservation before invoking the unchanged helper; no branch-based refund.
+
+Global limits: one construction; one frame admission; at most 41,964 reserved geometry slots (actual runtime per-case bound <=39,573); FLOOR+WORLD <=39,573. Every category has its own immutable limit, including independent worldMiss <=39,573 × 64 and disk-related limits <=39,573 times their individual fees. Also enforce total limit:
+
+8,192 + 593,920 + 41,964 × 2,048 + 39,573 × 36,736 = **1,540,298,112**.
+
+The total proof uses FLOOR+WORLD <=39,573 and 64 <=36,736; independent category caps alone do not establish the total proof. Add the separately proposed core-integration work cap 1,280,000, yielding **1,541,578,112 new host work units**. Existing A2 AA work 7,923,890 front / 7,673,634 oblique remains separately reported, not overwritten or declared within an old 8M budget by this new contract. Traversal counters remain separate dimensions.
+
+Work reservation and traversal consumption survive failure. Successful-result/aggregate semantic counters and local radiance commit only on success. If a category/total/count reservation cannot be prepaid, do not enter the covered work; prior accepted reservations remain consumed. Any evaluation/traversal/numeric failure aborts the frame and keeps the caller result/radiance unchanged; partially rendered private frame buffers must not be published. Frame-end work is already reserved in frameAdmission. An invalid or overlapping budget object must be rejected before attempting to mutate it.
+
+## Owned descriptor, API, and generations
+
+Suggested opaque API: `fox_bg_scene_build/retain/release/bytes/overlaps`, `fox_bg_binding_set/clear`, `fox_bg_work_init`, `fox_bg_resolve`. `fox_bg_generation` contains existing `vis_generation` plus camera/material/emission tokens. The frame binding retains the scene. `resolve` receives screen position, character-hit/native-depth, declared mode, work ledger, separate background-shadow budget and output result. Runtime loops only retained final slots; existing preflight owns discarded-center audits.
+
+The descriptor owns camera9 F32, derived exact Q32/t32/inverse/dCamera, source origin/unit view and clip, the four finite source floor vertices/six indices, source rho and Le, prepared direct light data with world zero, and separate source world radiance. It retains the original owned visibility BVH, including character occluders and floor. No borrowed input arrays or new BVH survive build. Result components are direct, rho-world, emission, combined, plus selected kind/miss reason/floor hit geometry and local query counters. True world misses set only world/combined. Character keep does not reevaluate or alter the old shader output.
+
+Generation mapping is explicit. Existing geometry/pose/light exactly match the retained BVH binding. Floor vertices/indices require geometry increment. Native camera9 or source origin/view/clip require camera increment. Source rho requires material increment, including the albedo condition. Le requires emission increment. Prepared disk values or source world radiance require light increment, including ambient and direction/intensity conditions. Snapshot/identity fingerprint changes invalidate the frame binding; hashes cannot substitute for their field-group generation checks. All tokens nonzero and monotonic; changed owned group with unchanged corresponding token rejects. Retained old generations remain valid until released. Build/rebind failure leaves previous ownership intact. Actual all-20 source hashes, source-camera metadata and field values are pinned externally; generation numbers are caller change tokens, not self-verifying evidence.
+
+Host64 proposed layout, to measure before source freeze: input 744 B; owned scene 968 B; 15-category work 296 B; result 184 B; context (binding, budget pointers, 10 counters, last result) 336 B; VIS budget 48 B. Total new live state about 1,648 B excluding optional caller input 744 B. One old + one new descriptor replacement peak adds 968 B. Existing retained BVH bytes and potentially retained BVH generations are separately itemized. Fixed authorized cap is 16 KiB new-owned state per instance, with two-generation peak separately bounded; no post-result increase. New named call chain must measure <=4 KiB, including unchanged disk evaluator, bridge, and segment function; this is a pending compile/fixture gate, not a current proof.
+
+## Frozen evidence and remaining gates
+
+The original all-20 count source/results and three-slot diagnostic are retained. Source actual-geometry camera-ray comparison is independent evidence, not supplied by this fee design. Before rendering: review exact API/layout, check field ownership/lifetime/generation/aliases and failure fixtures, freeze new code and evidence, demonstrate named stack <=4KiB/new owned <=16KiB, independently confirm per-case retained selection/queries and old character captures, then obtain separate execution approval. Node/triangle quota fit is measured only in an authorized run and aborts on exhaustion.

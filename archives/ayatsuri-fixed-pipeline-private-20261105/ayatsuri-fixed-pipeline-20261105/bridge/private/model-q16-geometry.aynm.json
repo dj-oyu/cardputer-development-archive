@@ -1,0 +1,22 @@
+{
+  "mode": "geometry-only diagnostic bridge, not fixed runtime",
+  "unquantized_bridge_control": "exact original XYZ and normal bytes",
+  "fraction_bits": 16,
+  "vertices": 1163,
+  "normal_components_verified": 3489,
+  "changed_xyz_components": 3466,
+  "total_xyz_components": 3489,
+  "max_position_change_vs_legacy_m": 7.62939453125e-06,
+  "rms_position_change_vs_legacy_m": 4.422632008502397e-06,
+  "nonposition_byte_changes": 0,
+  "triangle_collapses_or_orientation_changes": 0,
+  "partition_seam_divergences": 0,
+  "rendered": false,
+  "hashes": {
+    "source": "81a174a5237d17863d60baff9463c411309f57e3e2cee236254cf6a74c22063b",
+    "baseline": "68985ce128275a4b50c9bbad791bcd9eff8a41e788e4b5672d65c80755aade9f",
+    "ayfq": "65fa175e6cd1f24c063482654ab4355e8cccb224ee3cde401aa4a80c4a2ea9b2",
+    "output": "6cad146f8ccd816f967f92d7a177e488fdfe430848a4b2750b1e111b085bbf59",
+    "bridge": "ac5536f96999f5b3822b20151c615755567673d0903f1edf0f5833693eedc643"
+  }
+}

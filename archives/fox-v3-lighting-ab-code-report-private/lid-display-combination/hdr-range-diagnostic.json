@@ -1,0 +1,85 @@
+{
+  "scope": "Descriptive preclamp HDR range; above1 is legacy sRGB input clipping, distinct from fixed LUT domain high-clamp flags",
+  "frames": [
+    {
+      "frame": "front-intensity",
+      "maximumHDR": 5.282083967600976,
+      "aboveOnePixelsAnyChannel": 673,
+      "aboveOneChannelValues": 990,
+      "nativeCoveredPixels": 4698,
+      "backgroundNonzeroValues": 0
+    },
+    {
+      "frame": "oblique-albedo",
+      "maximumHDR": 3.4043205394197957,
+      "aboveOnePixelsAnyChannel": 431,
+      "aboveOneChannelValues": 570,
+      "nativeCoveredPixels": 5157,
+      "backgroundNonzeroValues": 0
+    },
+    {
+      "frame": "oblique-intensity",
+      "maximumHDR": 5.395400206382374,
+      "aboveOnePixelsAnyChannel": 708,
+      "aboveOneChannelValues": 972,
+      "nativeCoveredPixels": 5157,
+      "backgroundNonzeroValues": 0
+    },
+    {
+      "frame": "front-baseline",
+      "maximumHDR": 5.538150110182871,
+      "aboveOnePixelsAnyChannel": 1509,
+      "aboveOneChannelValues": 2109,
+      "nativeCoveredPixels": 4698,
+      "backgroundNonzeroValues": 0
+    },
+    {
+      "frame": "front-ambient",
+      "maximumHDR": 5.863013452061637,
+      "aboveOnePixelsAnyChannel": 1804,
+      "aboveOneChannelValues": 2538,
+      "nativeCoveredPixels": 4698,
+      "backgroundNonzeroValues": 0
+    },
+    {
+      "frame": "front-direction",
+      "maximumHDR": 5.219917544114247,
+      "aboveOnePixelsAnyChannel": 1130,
+      "aboveOneChannelValues": 1658,
+      "nativeCoveredPixels": 4698,
+      "backgroundNonzeroValues": 0
+    },
+    {
+      "frame": "oblique-baseline",
+      "maximumHDR": 5.6324166239572495,
+      "aboveOnePixelsAnyChannel": 1522,
+      "aboveOneChannelValues": 2081,
+      "nativeCoveredPixels": 5157,
+      "backgroundNonzeroValues": 0
+    },
+    {
+      "frame": "oblique-ambient",
+      "maximumHDR": 5.957279965836015,
+      "aboveOnePixelsAnyChannel": 1768,
+      "aboveOneChannelValues": 2446,
+      "nativeCoveredPixels": 5157,
+      "backgroundNonzeroValues": 0
+    },
+    {
+      "frame": "front-albedo",
+      "maximumHDR": 3.3473443868289836,
+      "aboveOnePixelsAnyChannel": 348,
+      "aboveOneChannelValues": 489,
+      "nativeCoveredPixels": 4698,
+      "backgroundNonzeroValues": 0
+    },
+    {
+      "frame": "oblique-direction",
+      "maximumHDR": 5.330115306737837,
+      "aboveOnePixelsAnyChannel": 881,
+      "aboveOneChannelValues": 1287,
+      "nativeCoveredPixels": 5157,
+      "backgroundNonzeroValues": 0
+    }
+  ]
+}

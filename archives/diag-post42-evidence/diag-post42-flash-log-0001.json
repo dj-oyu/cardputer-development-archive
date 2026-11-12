@@ -1,0 +1,51 @@
+{
+  "utc": "2026-10-18 23:22:08 UTC",
+  "logs": {
+    "ok": true,
+    "entries": [
+      {
+        "sequence": 11,
+        "text": "info: ROM read 250880/2282272 bytes; elapsed 10 s",
+        "level": "info",
+        "stream": "stdout",
+        "progress": true
+      },
+      {
+        "sequence": 12,
+        "text": "info: ROM read 376832/2282272 bytes; elapsed 15 s",
+        "level": "info",
+        "stream": "stdout",
+        "progress": true
+      },
+      {
+        "sequence": 13,
+        "text": "info: ROM read 501760/2282272 bytes; elapsed 20 s",
+        "level": "info",
+        "stream": "stdout",
+        "progress": true
+      },
+      {
+        "sequence": 14,
+        "text": "info: ROM read 623616/2282272 bytes; elapsed 25 s",
+        "level": "info",
+        "stream": "stdout",
+        "progress": true
+      },
+      {
+        "sequence": 15,
+        "text": "info: ROM read 744448/2282272 bytes; elapsed 30 s",
+        "level": "info",
+        "stream": "stdout",
+        "progress": true
+      }
+    ],
+    "expired": false,
+    "gap": false,
+    "oldest_sequence": 1,
+    "next_cursor": {
+      "epoch": "01372e4d27c74bdca41b06da6e0721b2",
+      "sequence": 15
+    },
+    "has_more": false
+  }
+}

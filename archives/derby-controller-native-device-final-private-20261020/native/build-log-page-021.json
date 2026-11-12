@@ -1,0 +1,837 @@
+{
+  "ok": true,
+  "entries": [
+    {
+      "sequence": 1950,
+      "text": "[1110/1192] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/pocket/pocket_video.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1951,
+      "text": "[1111/1192] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/pocket/pocket_video_sd_stream.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1952,
+      "text": "[1112/1192] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/pocket/pocket_grid.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1953,
+      "text": "[1113/1192] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/kasane/ksn_proc_grid_image.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1954,
+      "text": "[1114/1192] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/kasane/ksn_proc_grid_resize.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1955,
+      "text": "[1115/1192] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/pocket/pocket_kasane.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1956,
+      "text": "[1116/1192] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/kasane/ksn_proc_grid.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1957,
+      "text": "[1117/1192] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/kasane/ksn_render.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1958,
+      "text": "[1118/1192] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/kasane/ksn_proc_grid_pie.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1959,
+      "text": "[1119/1192] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/kasane/ksn_pixel_function.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1960,
+      "text": "[1120/1192] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/kasane/ksn_pixel_span.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1961,
+      "text": "[1121/1192] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/kasane/ksn_proc_plan_points.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1962,
+      "text": "[1122/1192] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/kasane/ksn_procedural.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1963,
+      "text": "[1123/1192] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/kasane/ksn_proc_points.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1964,
+      "text": "[1124/1192] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/kasane/ksn_proc_points_dispatch.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1965,
+      "text": "[1125/1192] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/kasane/ksn_proc_plan.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1966,
+      "text": "[1126/1192] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/kasane/ksn_proc_analysis.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1967,
+      "text": "[1127/1192] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/kasane/ksn_proc_points_pie.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1968,
+      "text": "[1128/1192] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/kasane/ksn_source_pool.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1969,
+      "text": "[1129/1192] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/pocket/derby_telemetry.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1970,
+      "text": "[1130/1192] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/kasane/ksn_source_pool_adapter.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1971,
+      "text": "[1131/1192] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/pet/ksn_pet_builtin.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1972,
+      "text": "[1132/1192] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/pet/ksn_pet.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1973,
+      "text": "[1133/1192] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/kasane/ksn_depth_lines.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1974,
+      "text": "[1134/1192] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/kasane/ksn_video_frames.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1975,
+      "text": "[1135/1192] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/system/sys_state.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1976,
+      "text": "[1136/1192] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/text/ksn_font.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1977,
+      "text": "[1137/1192] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/system/sys_device.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1978,
+      "text": "[1138/1192] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/system/sys_ringer.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1979,
+      "text": "[1139/1192] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/system/sys_notify.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1980,
+      "text": "[1140/1192] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/system/sys_timer.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1981,
+      "text": "[1141/1192] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/system/sys_wall.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1982,
+      "text": "[1142/1192] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/pocket/pocket_power.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1983,
+      "text": "[1143/1192] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/system/sys_clock.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1984,
+      "text": "[1144/1192] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/pocket/pocket_clock_source.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1985,
+      "text": "[1145/1192] Building ASM object esp-idf/main/CMakeFiles/__idf_main.dir/__/__/demo.js.S.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1986,
+      "text": "[1146/1192] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/pocket/pocket_clock.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1987,
+      "text": "[1147/1192] Building ASM object esp-idf/main/CMakeFiles/__idf_main.dir/__/__/main.js.S.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1988,
+      "text": "[1148/1192] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/pocket/pocket_mutex_arena.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1989,
+      "text": "[1149/1192] Building ASM object esp-idf/main/CMakeFiles/__idf_main.dir/__/__/pets-compact.bin.S.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1990,
+      "text": "[1150/1192] Building ASM object esp-idf/main/CMakeFiles/__idf_main.dir/__/__/proc_news_zoom.js.S.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1991,
+      "text": "[1151/1192] Building ASM object esp-idf/main/CMakeFiles/__idf_main.dir/__/__/proc_megademo.js.S.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1992,
+      "text": "[1152/1192] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/pocket/pocket_av_output_source.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1993,
+      "text": "[1153/1192] Building ASM object esp-idf/main/CMakeFiles/__idf_main.dir/__/__/grid_fold.js.S.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1994,
+      "text": "[1154/1192] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/pocket/pocket_av_playback_source.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1995,
+      "text": "[1155/1192] Building ASM object esp-idf/main/CMakeFiles/__idf_main.dir/__/__/imucal.js.S.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1996,
+      "text": "[1156/1192] Building ASM object esp-idf/main/CMakeFiles/__idf_main.dir/__/__/deskclock.js.S.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1997,
+      "text": "[1157/1192] Building ASM object esp-idf/main/CMakeFiles/__idf_main.dir/__/__/video_lab.js.S.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1998,
+      "text": "[1158/1192] Building ASM object esp-idf/main/CMakeFiles/__idf_main.dir/__/__/player.js.S.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1999,
+      "text": "[1159/1192] Building ASM object esp-idf/main/CMakeFiles/__idf_main.dir/__/__/pet.js.S.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 2000,
+      "text": "[1160/1192] Building ASM object esp-idf/main/CMakeFiles/__idf_main.dir/__/__/companion.js.S.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 2001,
+      "text": "[1161/1192] Building ASM object esp-idf/main/CMakeFiles/__idf_main.dir/__/__/lcd_catch.js.S.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 2002,
+      "text": "[1162/1192] Building ASM object esp-idf/main/CMakeFiles/__idf_main.dir/__/__/grid_lab.js.S.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 2003,
+      "text": "[1163/1192] Building ASM object esp-idf/main/CMakeFiles/__idf_main.dir/__/__/stress.js.S.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 2004,
+      "text": "[1164/1192] Building ASM object esp-idf/main/CMakeFiles/__idf_main.dir/__/__/derby_watch.js.S.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 2005,
+      "text": "[1165/1192] Building ASM object esp-idf/main/CMakeFiles/__idf_main.dir/__/__/derby_prog.js.S.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 2006,
+      "text": "[1166/1192] Building ASM object esp-idf/main/CMakeFiles/__idf_main.dir/__/__/big_wave.js.S.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 2007,
+      "text": "[1167/1192] Building ASM object esp-idf/main/CMakeFiles/__idf_main.dir/__/__/derby_view.js.S.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 2008,
+      "text": "[1168/1192] Building ASM object esp-idf/main/CMakeFiles/__idf_main.dir/__/__/derby_scene.js.S.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 2009,
+      "text": "[1169/1192] Building ASM object esp-idf/main/CMakeFiles/__idf_main.dir/__/__/derby_play.js.S.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 2010,
+      "text": "[1170/1192] Building ASM object esp-idf/main/CMakeFiles/__idf_main.dir/__/__/derby_demo.js.S.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 2011,
+      "text": "[1171/1192] Building ASM object esp-idf/main/CMakeFiles/__idf_main.dir/__/__/derby_pan.js.S.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 2012,
+      "text": "[1172/1192] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/__/__/generated/ksn_proc_rom_plans.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 2013,
+      "text": "[1173/1192] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/__/__/generated/app_chunks.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 2014,
+      "text": "[1174/1192] Building ASM object esp-idf/main/CMakeFiles/__idf_main.dir/__/__/derby_fixed.js.S.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 2015,
+      "text": "[1175/1192] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/scene/garden_decor_pie.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 2016,
+      "text": "[1176/1192] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/scene/canopy_pie.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 2017,
+      "text": "[1177/1192] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/scene/glass_rain.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 2018,
+      "text": "[1178/1192] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/scene/wave.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 2019,
+      "text": "[1179/1192] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/scene/ocean.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 2020,
+      "text": "[1180/1192] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/scene/flower_species.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 2021,
+      "text": "[1181/1192] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/scene/flower.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 2022,
+      "text": "C:/Users/core/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/esp-src/bbf729af426e3110943d2fcad025311b1d088b773c0cecdbb53b4fde92e16679/source/main/scene/flower.c:62:29: warning: 'prof_horrorn' defined but not used [-Wunused-variable]",
+      "level": "warning",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2023,
+      "text": "   62 | static uint32_t prof_horror,prof_horrorn;",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2024,
+      "text": "      |                             ^~~~~~~~~~~~",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2025,
+      "text": "C:/Users/core/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/esp-src/bbf729af426e3110943d2fcad025311b1d088b773c0cecdbb53b4fde92e16679/source/main/scene/flower.c:62:17: warning: 'prof_horror' defined but not used [-Wunused-variable]",
+      "level": "warning",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2026,
+      "text": "   62 | static uint32_t prof_horror,prof_horrorn;",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2027,
+      "text": "      |                 ^~~~~~~~~~~",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2028,
+      "text": "C:/Users/core/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/esp-src/bbf729af426e3110943d2fcad025311b1d088b773c0cecdbb53b4fde92e16679/source/main/scene/flower.c:56:66: warning: 'prof_ppetaln' defined but not used [-Wunused-variable]",
+      "level": "warning",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2029,
+      "text": "   56 | static uint32_t prof_pgarden,prof_pseeds,prof_pbuild,prof_ppetal,prof_ppetaln;",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2030,
+      "text": "      |                                                                  ^~~~~~~~~~~~",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2031,
+      "text": "C:/Users/core/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/esp-src/bbf729af426e3110943d2fcad025311b1d088b773c0cecdbb53b4fde92e16679/source/main/scene/flower.c:56:54: warning: 'prof_ppetal' defined but not used [-Wunused-variable]",
+      "level": "warning",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2032,
+      "text": "   56 | static uint32_t prof_pgarden,prof_pseeds,prof_pbuild,prof_ppetal,prof_ppetaln;",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2033,
+      "text": "      |                                                      ^~~~~~~~~~~",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2034,
+      "text": "C:/Users/core/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/esp-src/bbf729af426e3110943d2fcad025311b1d088b773c0cecdbb53b4fde92e16679/source/main/scene/flower.c:56:42: warning: 'prof_pbuild' defined but not used [-Wunused-variable]",
+      "level": "warning",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2035,
+      "text": "   56 | static uint32_t prof_pgarden,prof_pseeds,prof_pbuild,prof_ppetal,prof_ppetaln;",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2036,
+      "text": "      |                                          ^~~~~~~~~~~",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2037,
+      "text": "C:/Users/core/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/esp-src/bbf729af426e3110943d2fcad025311b1d088b773c0cecdbb53b4fde92e16679/source/main/scene/flower.c:56:30: warning: 'prof_pseeds' defined but not used [-Wunused-variable]",
+      "level": "warning",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2038,
+      "text": "   56 | static uint32_t prof_pgarden,prof_pseeds,prof_pbuild,prof_ppetal,prof_ppetaln;",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2039,
+      "text": "      |                              ^~~~~~~~~~~",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2040,
+      "text": "C:/Users/core/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/esp-src/bbf729af426e3110943d2fcad025311b1d088b773c0cecdbb53b4fde92e16679/source/main/scene/flower.c:56:17: warning: 'prof_pgarden' defined but not used [-Wunused-variable]",
+      "level": "warning",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2041,
+      "text": "   56 | static uint32_t prof_pgarden,prof_pseeds,prof_pbuild,prof_ppetal,prof_ppetaln;",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2042,
+      "text": "      |                 ^~~~~~~~~~~~",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2043,
+      "text": "C:/Users/core/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/esp-src/bbf729af426e3110943d2fcad025311b1d088b773c0cecdbb53b4fde92e16679/source/main/scene/flower.c:47:67: warning: 'prof_pre' defined but not used [-Wunused-variable]",
+      "level": "warning",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2044,
+      "text": "   47 | static uint32_t prof_span,prof_spann,prof_div,prof_divn,prof_scan,prof_pre;",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2045,
+      "text": "      |                                                                   ^~~~~~~~",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2046,
+      "text": "C:/Users/core/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/esp-src/bbf729af426e3110943d2fcad025311b1d088b773c0cecdbb53b4fde92e16679/source/main/scene/flower.c:47:57: warning: 'prof_scan' defined but not used [-Wunused-variable]",
+      "level": "warning",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2047,
+      "text": "   47 | static uint32_t prof_span,prof_spann,prof_div,prof_divn,prof_scan,prof_pre;",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2048,
+      "text": "      |                                                         ^~~~~~~~~",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2049,
+      "text": "C:/Users/core/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/esp-src/bbf729af426e3110943d2fcad025311b1d088b773c0cecdbb53b4fde92e16679/source/main/scene/flower.c:47:47: warning: 'prof_divn' defined but not used [-Wunused-variable]",
+      "level": "warning",
+      "stream": "stdout",
+      "progress": false
+    }
+  ],
+  "expired": false,
+  "gap": false,
+  "oldest_sequence": 73,
+  "next_cursor": {
+    "epoch": "cc597111a365466da1601ff4bffc51ff",
+    "sequence": 2049
+  },
+  "has_more": true,
+  "manifest": {
+    "schema_version": 1,
+    "source_provenance": {
+      "source_receipt": "bbf729af426e3110943d2fcad025311b1d088b773c0cecdbb53b4fde92e16679",
+      "repository": "dj-oyu/cardputer-adv-pocketjs",
+      "commit": "3fafcadbd72ecbd0d799cbe9d29f037ff62c05d5",
+      "tree_sha1": "b3de719ac438d8d3373a2c34786bc35c46e9200e",
+      "source_sha256": "2b6f8223ef87de643e976686905f7fe75346f39143ea5cbdd3e00210e1200e3d",
+      "dependency_policy": "gitlinks_fixed_commits_no_fetch",
+      "submodules": [
+        {
+          "archive_sha256": "4916d6c23c0068555e272f5d90f6db95be36acae2ad4c824945c98690b4b23f3",
+          "commit": "41129fcfe39c583ee5462d79195741945d51c1fe",
+          "path": "third_party/bmi270",
+          "repository": "boschsensortec/BMI270_SensorAPI",
+          "source_sha256": "c31ac3c3a66fa9d694ff19e8117b559336d75417d2ff8ae6b0d830a1b6611184",
+          "tree_sha1": "d92e2a136c4beee1ebed056a383952621d1867fa"
+        },
+        {
+          "archive_sha256": "5f966027ddc3dee3306c71829bdd59276673a2516f72aadde14adab75a851fc2",
+          "commit": "ea99364f61c14656440e8d77e9c233ccf3124633",
+          "path": "third_party/minimp3",
+          "repository": "lieff/minimp3",
+          "source_sha256": "a412c3127cab86430395c329e17811eb4d705f9d197a9e56193b138e8bf97d63",
+          "tree_sha1": "9560d2efb899d694f331f93bb8c9cebf2928a194"
+        },
+        {
+          "archive_sha256": "f5b624fdcd9e0e99254f8a3c9cac9f2d2830ba2a2a3c77955ac7acd0d069df5e",
+          "commit": "22244de5a79bd1d6d623c32e72bf1954b56235be",
+          "path": "third_party/opus",
+          "repository": "xiph/opus",
+          "source_sha256": "bd9b409b79aaf9f2bfff88c1fcf09e98a99194f56a928b34ca429719902b9d57",
+          "tree_sha1": "a5e21b6751d8f187b83ad9d5f3a57aab801cf722"
+        }
+      ]
+    },
+    "build_job_id": "derby-controller-native-build-3fafcadb-20261020",
+    "build_plan_hash": "5278da581c85332db700e92a166db9b27476099ff192fd1fb6654335b5e5102d",
+    "idf_version": "6.0.1",
+    "target": "esp32s3",
+    "fingerprint": "c865a87d3da53999be572a9b12db9403672dbd1e00bab1724facfef049564676",
+    "environment_fingerprint": "557872838c96cc685605a315a1a9933083adfaa86fb8111f3bdb60455451c076",
+    "artifacts": [
+      {
+        "name": "bootloader/bootloader.bin",
+        "bytes": 22528,
+        "sha256": "8be65a915ba824649f907add2af990d6c3d8223381cdc47146e89106790b93be"
+      },
+      {
+        "name": "bootloader/bootloader.elf",
+        "bytes": 635720,
+        "sha256": "99e51c1d4e3925e499484164977edacb98e8ca66c73494c91e01b79e6b9bd710"
+      },
+      {
+        "name": "bootloader/CMakeFiles/4.0.3/CMakeDetermineCompilerABI_C.bin",
+        "bytes": 9832,
+        "sha256": "2e17a82b1b3d62c0d63d2a940e35310d0f99983f44a2e91f48368edae07f15e9"
+      },
+      {
+        "name": "bootloader/CMakeFiles/4.0.3/CMakeDetermineCompilerABI_CXX.bin",
+        "bytes": 9856,
+        "sha256": "1f2415b09fad4f709656624f0d5e7f9926ce931e2e0e0f7e3f9ba2591373ecef"
+      },
+      {
+        "name": "cardputer_pocketjs.bin",
+        "bytes": 2296944,
+        "sha256": "aeb601df47809fb6b651ee265a41dcbf727520dd0678c1030bd8e3c1ffd892b1"
+      },
+      {
+        "name": "cardputer_pocketjs.elf",
+        "bytes": 20046164,
+        "sha256": "0e8abb684ab242633288861488a969f15f91bfb004dd37708d2a793c8f0e80d4"
+      },
+      {
+        "name": "CMakeFiles/4.0.3/CMakeDetermineCompilerABI_C.bin",
+        "bytes": 9832,
+        "sha256": "2e17a82b1b3d62c0d63d2a940e35310d0f99983f44a2e91f48368edae07f15e9"
+      },
+      {
+        "name": "CMakeFiles/4.0.3/CMakeDetermineCompilerABI_CXX.bin",
+        "bytes": 9856,
+        "sha256": "1f2415b09fad4f709656624f0d5e7f9926ce931e2e0e0f7e3f9ba2591373ecef"
+      },
+      {
+        "name": "partition_table/partition-table.bin",
+        "bytes": 3072,
+        "sha256": "5acbaec11eac9d189e0b3312cd7a43fad967b946854e46fbd14ba6ed59d50361"
+      }
+    ],
+    "registered_tool_versions": {
+      "node": {
+        "version": "v24.20.0",
+        "sha256": "5c976096e04e5c2c1f091938926234cc9fbebfe9787ddd149351b3b0ecc707b5"
+      },
+      "git": {
+        "version": "git version 2.55.0.windows.5",
+        "sha256": "78211c7ed73988da93a6d8a33d47ec6187f464d7ea2a9a00c182bbd7a1ecf30f"
+      }
+    },
+    "flash_layout": {
+      "name": "flasher_args.json",
+      "bytes": 951,
+      "sha256": "a81e065167bd74c01d20b6f857994af5e838ed32e265f668106491f445f10372"
+    },
+    "flash_security": {
+      "name": "config/sdkconfig.json",
+      "bytes": 49837,
+      "sha256": "989eda3a17643bcd684a58a1e998780edf3bea46f2ea95eab70b4a835bb81d2d"
+    },
+    "flash_security_summary": {
+      "secure_boot": false,
+      "flash_encryption": false,
+      "anti_rollback": false,
+      "anti_rollback_inferred_disabled": true,
+      "additional_security_enabled": false,
+      "flash_admission": "not_evaluated"
+    },
+    "build_location": {
+      "layout_version": 2,
+      "slot": "94af1548543e95fd1f64f387e9fad45e2628338208b6c26523babf651fd90a19"
+    },
+    "flash_authorized": false
+  },
+  "artifact_status": "verified"
+}

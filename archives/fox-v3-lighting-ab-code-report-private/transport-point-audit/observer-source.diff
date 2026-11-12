@@ -1,0 +1,60 @@
+--- baseline/code/native_render.c
++++ observer/code/native_render.c
+@@ -6,6 +6,7 @@
+ #include <string.h>
+ #include <math.h>
+ #include <time.h>
++#include "point_observer.h"
+ static unsigned long long ns(void){struct timespec t;clock_gettime(CLOCK_MONOTONIC,&t);return (unsigned long long)t.tv_sec*1000000000ull+t.tv_nsec;}
+ #include "ayatsuri/ayatsuri_model.h"
+ #include "ui/kasane/ksn_mesh_depth.h"
+@@ -95,6 +96,7 @@
+   else if(kinds[index]==5){ayatsuri_model_sided_mesh_view v;if(ayatsuri_model_instance_sided_mesh_view(&ins,&owner,1,ids[index],&v))return fail("sided-view");memcpy(&patch,v.patch,sizeof patch);depth=v.depth;back=v.back_colors;memcpy(bits,v.back_faces,8);}
+   else{ayatsuri_model_mesh_view v;if(ayatsuri_model_instance_mesh_view(&ins,&owner,1,ids[index],&v))return fail("view");memcpy(&patch,v.patch,sizeof patch);depth=v.depth;}
+   if(reverse){uint8_t rb[8]={0};for(unsigned t=0;t<patch.header.triangles;t++)if(bits[t/8]&(1u<<(t%8))){unsigned q=patch.header.triangles-1-t;rb[q/8]|=1u<<(q%8);}memcpy(bits,rb,8);for(unsigned a=0,b=patch.header.triangles?patch.header.triangles-1:0;a<b;a++,b--)for(unsigned k=0;k<3;k++){uint16_t q=patch.indices[3*a+k];patch.indices[3*a+k]=patch.indices[3*b+k];patch.indices[3*b+k]=q;}}
++  if(pixel){ayatsuri_model_world_mesh_view wv;if(ayatsuri_model_instance_world_mesh_view(&ins,&owner,1,ids[index],epoch,&wv)||!point_map(ids[index],&patch,&wv))return fail("observer-map");}
+   bool ok=pixel?(normal_pair?ksn_mesh_pixel_append_normal_pair(&px,&patch,raw.vertices,bits,ids[index]):ksn_mesh_pixel_append(&px,&patch,raw.vertices,bits,ids[index])):back?ksn_mesh_append_sided(s,&patch,depth,back,bits,ids[index]):ksn_mesh_append(s,&patch,depth,ids[index]);if(!ok)return fail("append");
+  }
+  unsigned codec_mode4=0,codec_mode5=0;size_t canonical_snapshot_bytes=416;
+@@ -109,6 +111,7 @@
+  char path[4096];snprintf(path,sizeof path,"%s.u16le",argv[2]);FILE *c=fopen(path,"wb");snprintf(path,sizeof path,"%s.f32le",argv[2]);FILE *d=fopen(path,"wb");if(!c||!d)return fail("output");
+  uint16_t color[240*8];float z[240*8];unsigned long long render_ns=0;ksn_mesh_pixel_stats stats={0};
+  for(unsigned y=0;y<135;y+=8){unsigned h=135-y<8?135-y:8;memset(color,0,sizeof color);unsigned long long begin=ns();if(!(transportmode?fox_transport_render(&tx,&px,color,y,h,z,8,&stats):visibility?fox_pixel_render_bound(&binding,generation,&px,color,y,h,z,8,&stats,&budget):pixel?ksn_mesh_pixel_render(&px,color,y,h,z,8,&stats):ksn_mesh_render(s,color,y,h,z,8)))return fail_render(&budget,&transport_budget,&tx.counters);render_ns+=ns()-begin;for(unsigned j=0;j<240*h;j++)if(isnan(z[j])||z[j]==INFINITY)return fail("nonfinite-depth");if(fwrite(color,2,240*h,c)!=240*h||fwrite(z,4,240*h,d)!=240*h)return fail("write");}fclose(c);fclose(d);
++ if(!point_dump(argv[2]))return fail("observer-dump");
+  printf("{\"normalPairCodecEnabled\":%s,\"normalPairMode4Records\":%u,\"normalPairMode5Records\":%u,\"normalPairSavedBytes\":%zu,",normal_pair?"true":"false",codec_mode4,codec_mode5,canonical_snapshot_bytes-(416+s->packets.size));
+  printf("\"transportMode\":%u,\"transportComplete\":true,\"outerSamples\":%u,\"innerSamples\":%u,\"materialGeneration\":%u,\"materialFingerprint\":\"%016llx\",\"transportSceneBytes\":%zu,\"transportTemporaryBytes\":%zu,\"transportContextBytes\":%zu,\"transportBudgetBytes\":%zu,\"transportBuildNs\":%llu,\"transportRays\":%llu,\"transportNodeVisits\":%llu,\"transportTriangleTests\":%llu,\"transportRayLimit\":20000000,\"transportNodeLimit\":800000000,\"transportTriangleLimit\":300000000,\"transportSceneLimit\":262144,",transportmode,outer,inner,transportmode?1:0,(unsigned long long)material_digest,transport_bytes,transport_temp,sizeof tx,sizeof transport_budget,transport_build_ns,(unsigned long long)transport_budget.used.rays,(unsigned long long)transport_budget.used.node_visits,(unsigned long long)transport_budget.used.triangle_tests);
+ #define COUNT(name) printf("\"" #name "\":%llu,",(unsigned long long)tx.counters.name);
+--- baseline/product/main/ui/kasane/ksn_mesh_depth.c
++++ observer/product/main/ui/kasane/ksn_mesh_depth.c
+@@ -4,6 +4,7 @@
+ #include <math.h>
+ #include <string.h>
+ #include <limits.h>
++#include "point_observer.h"
+ static bool mesh_span_valid(const void *p,size_t n){return p&&n<=UINTPTR_MAX-(uintptr_t)p;}
+ static bool mesh_overlap(const void *a,size_t an,const void *b,size_t bn){
+     uintptr_t x=(uintptr_t)a,y=(uintptr_t)b;
+@@ -144,6 +145,7 @@
+                     for(unsigned k=0;k<3;k++){if(!isfinite(rho[k])||rho[k]<-64*DBL_EPSILON||rho[k]>1+64*DBL_EPSILON)return false;rho[k]=fmax(0,fmin(1,rho[k]));}
+                     const double position[3]={world[0]/38,-world[2]/38,-world[1]/38},nn[3]={normal[0],-normal[2],-normal[1]};double rgb[3];
+                     if(shader){if(!shader(shader_context,scene,position,nn,rho,rgb))return false;}else if((visibility?fox_disk_eval16_visible(scene,position,nn,rho,visibility,visibility_context,rgb):fox_disk_eval16(scene,position,nn,rho,rgb))!=FOX_DISK_OK)return false;
++                    if(shader&&!point_capture((unsigned)x,(unsigned)yy,view.node,face,back,second,indices,w,position,nn,rho,rgb,fields))return false;
+                     unsigned q[3];for(unsigned k=0;k<3;k++){float value=ayatsuri_srgb_encode((float)fmin(1,rgb[k]));q[k]=(unsigned)lroundf(value*(k==1?63:31));}
+                     if(stats->shade_updates==UINT64_MAX||stats->disk_samples>UINT64_MAX-48)return false;
+                     pixels[at]=(uint16_t)((q[0]<<11)|(q[1]<<5)|q[2]);stats->shade_updates++;stats->disk_samples+=48;continue;
+--- baseline/transport/pixel_transport.c
++++ observer/transport/pixel_transport.c
+@@ -1,10 +1,13 @@
+ #include "pixel_transport.h"
+ #include <string.h>
+ #include <stdint.h>
++#include "point_observer.h"
+ static bool overlap(const void *a,size_t an,const void *b,size_t bn){uintptr_t x=(uintptr_t)a,y=(uintptr_t)b;return an&&bn&&(x>UINTPTR_MAX-an||y>UINTPTR_MAX-bn||(x<y+bn&&y<x+an));}
+ static bool shade(void *opaque,const FoxDiskScene *lights,const double p[3],const double n[3],const double rho[3],double rgb[3]){
+  fox_transport_context *c=opaque;if(!bounce_scene_matches_lights(c->binding.scene,lights)||!bounce_scene_matches_ground(c->binding.scene,&c->ground))return false;bounce_result r;
++ vis_counters dbefore=c->direct_budget->used,tbefore=c->transport_budget->used;
+  if(bounce_eval(&c->binding,c->expected,p,n,rho,c->mode,c->outer,c->inner,c->direct_budget,c->transport_budget,&r)!=BOUNCE_OK)return false;
++ point_last_result=r;point_last_direct=(vis_counters){c->direct_budget->used.rays-dbefore.rays,c->direct_budget->used.node_visits-dbefore.node_visits,c->direct_budget->used.triangle_tests-dbefore.triangle_tests};point_last_transport=(vis_counters){c->transport_budget->used.rays-tbefore.rays,c->transport_budget->used.node_visits-tbefore.node_visits,c->transport_budget->used.triangle_tests-tbefore.triangle_tests};
+  bounce_counters sum=c->counters;
+ #define ADD(field) if(sum.field>UINT64_MAX-r.counters.field)return false;sum.field+=r.counters.field;
+  ADD(primary_ground_hits) ADD(primary_ground_emission_hits) ADD(secondary_ground_hits)

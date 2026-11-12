@@ -1,0 +1,11 @@
+{"variant": "baseline", "check": "lint", "exit_code": 0}
+{"variant": "baseline", "check": "fixed-integration", "exit_code": 0}
+{"variant": "baseline", "check": "generation", "exit_code": 0}
+{"variant": "baseline", "check": "detail-accounting", "exit_code": 0}
+{"variant": "baseline", "check": "detail-board", "exit_code": 0}
+{"variant": "baseline", "check": "detail-proof", "exit_code": 0}
+{"variant": "baseline", "check": "diagnostic-proof", "exit_code": 0}
+{"variant": "baseline", "check": "fixed-protocol", "exit_code": 0}
+{"variant": "baseline", "check": "fixed-controller", "exit_code": 0}
+{"variant": "baseline", "check": "fast-off", "exit_code": 0}
+{"variant": "baseline", "check": "fast-on", "exit_code": 1}

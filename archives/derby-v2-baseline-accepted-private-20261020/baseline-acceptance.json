@@ -1,0 +1,51 @@
+{
+  "accepted_scope": "baseline fixed diagnostic trial on one fresh flash boot; 3 dependent replays",
+  "strict_pass": true,
+  "source_commit": "37af4225ad329aac4c5e79c880d7d69760b770be",
+  "source_tree": "7753c5c8919ee36c24080ce08102438a285da6f2",
+  "measurement_job": "derby-v2-baseline-fixed-37af4225-20261020",
+  "finished_utc": "2026-10-20 01:10:30",
+  "protocol": "pocketjs-derby-fixed-v2",
+  "plan_terminal_contract": "end_owner_exit_stop_home_v2",
+  "readback_terminal_contract": "owner_exit_v2",
+  "terminal_success_verified": true,
+  "raw_sha256": "8dca87258c207e6aceb2f373f8ef99cf59e5c81a6576ecca1c99d7686463662a",
+  "raw_bytes": 30931,
+  "markers_lines_1based": {
+    "DERBY_FIXED_END": [
+      237
+    ],
+    "DERBY_DETAIL_EXIT": [
+      238
+    ],
+    "APP_STOPPED": [
+      240
+    ],
+    "HOME_READY": [
+      241
+    ]
+  },
+  "valid": [
+    "1",
+    "1",
+    "1"
+  ],
+  "quality": [
+    "0",
+    "0",
+    "0"
+  ],
+  "work_us": [
+    6775160,
+    6772381,
+    6767447
+  ],
+  "work_median_us": 6772381,
+  "device_boots": 1,
+  "dependent_replays": 3,
+  "independent_replay_trials": false,
+  "quiet_close_basis": "v2 broker collected after quiet boundary and succeeded committed after confirmed serial close; complete transport plus terminal_success_verified",
+  "physical_lcd_attested": false,
+  "target_off_overhead_control": false,
+  "old_90b9_failure_preserved": true
+}

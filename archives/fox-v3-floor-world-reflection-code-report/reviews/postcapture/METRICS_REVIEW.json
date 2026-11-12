@@ -1,0 +1,221 @@
+{
+  "status": "INDEPENDENT_LIMITED_METRICS_PASS",
+  "scope": "All10 full-reference-foreground RGB MAE/RMSE, both arms; two ambient stable bright IoUs and full-foreground stable-label FN/FP, both arms. No other scalar recomputed.",
+  "analysisCompletionSHA256": "d0f74a1e16b756d8494f4a801da10d42e689c55b5a9828e454e3e338a7820f03",
+  "referencePinsSHA256": "f6eb532400cab10bdfcd72b48d53df8f7fd468896ad8acb7a3b358c7d736d2bf",
+  "referenceAndThresholdUnchanged": true,
+  "formalScorerExecuted": false,
+  "method": "Reference PNG8 integer sum /2040 then scalar math.fsum errors; response reference integer luma with second-moment Student-t interval and candidate exact rational RGB565 threshold. Independently reconstructed masks equal frozen masks.",
+  "maximumColorDifferenceFromSavedFormal": 2.7755575615628914e-17,
+  "all10FullForegroundMAEAndRMSEImprove": true,
+  "ambient": [
+    {
+      "arm": "off",
+      "view": "front",
+      "brightIoU": 0.8292543021032505,
+      "brightTP": 4337,
+      "brightFN": 890,
+      "brightFP": 3,
+      "brightUnion": 5230,
+      "referenceUncertainPixels": 74
+    },
+    {
+      "arm": "on",
+      "view": "front",
+      "brightIoU": 0.9458891013384321,
+      "brightTP": 4947,
+      "brightFN": 280,
+      "brightFP": 3,
+      "brightUnion": 5230,
+      "referenceUncertainPixels": 74
+    },
+    {
+      "arm": "off",
+      "view": "oblique",
+      "brightIoU": 0.8268532918610679,
+      "brightTP": 4785,
+      "brightFN": 996,
+      "brightFP": 6,
+      "brightUnion": 5787,
+      "referenceUncertainPixels": 69
+    },
+    {
+      "arm": "on",
+      "view": "oblique",
+      "brightIoU": 0.9455770559778853,
+      "brightTP": 5473,
+      "brightFN": 308,
+      "brightFP": 7,
+      "brightUnion": 5788,
+      "referenceUncertainPixels": 69
+    }
+  ],
+  "colorRows": [
+    {
+      "arm": "off",
+      "condition": "front-baseline",
+      "pixels": 5307,
+      "rgbMAE": 0.11919819019930077,
+      "rgbRMSE": 0.17306105665360205,
+      "maxAbsoluteDifferenceFromFormal": 2.7755575615628914e-17
+    },
+    {
+      "arm": "off",
+      "condition": "front-direction",
+      "pixels": 5307,
+      "rgbMAE": 0.12065823005668665,
+      "rgbRMSE": 0.17450385335459181,
+      "maxAbsoluteDifferenceFromFormal": 0.0
+    },
+    {
+      "arm": "off",
+      "condition": "front-intensity",
+      "pixels": 5307,
+      "rgbMAE": 0.12209806973632562,
+      "rgbRMSE": 0.1742147829998702,
+      "maxAbsoluteDifferenceFromFormal": 0.0
+    },
+    {
+      "arm": "off",
+      "condition": "front-ambient",
+      "pixels": 5307,
+      "rgbMAE": 0.12629497830714298,
+      "rgbRMSE": 0.18152641595763103,
+      "maxAbsoluteDifferenceFromFormal": 2.7755575615628914e-17
+    },
+    {
+      "arm": "off",
+      "condition": "front-albedo",
+      "pixels": 5307,
+      "rgbMAE": 0.1261943839692912,
+      "rgbRMSE": 0.17758710015722873,
+      "maxAbsoluteDifferenceFromFormal": 0.0
+    },
+    {
+      "arm": "on",
+      "condition": "front-baseline",
+      "pixels": 5307,
+      "rgbMAE": 0.10910303536659154,
+      "rgbRMSE": 0.16424420572315795,
+      "maxAbsoluteDifferenceFromFormal": 1.3877787807814457e-17
+    },
+    {
+      "arm": "on",
+      "condition": "front-direction",
+      "pixels": 5307,
+      "rgbMAE": 0.10983602177827057,
+      "rgbRMSE": 0.16649040954434888,
+      "maxAbsoluteDifferenceFromFormal": 1.3877787807814457e-17
+    },
+    {
+      "arm": "on",
+      "condition": "front-intensity",
+      "pixels": 5307,
+      "rgbMAE": 0.11164629722829858,
+      "rgbRMSE": 0.16651159565284357,
+      "maxAbsoluteDifferenceFromFormal": 1.3877787807814457e-17
+    },
+    {
+      "arm": "on",
+      "condition": "front-ambient",
+      "pixels": 5307,
+      "rgbMAE": 0.10786916663260929,
+      "rgbRMSE": 0.16465757569320078,
+      "maxAbsoluteDifferenceFromFormal": 2.7755575615628914e-17
+    },
+    {
+      "arm": "on",
+      "condition": "front-albedo",
+      "pixels": 5307,
+      "rgbMAE": 0.12071872606718996,
+      "rgbRMSE": 0.1736176825942674,
+      "maxAbsoluteDifferenceFromFormal": 0.0
+    },
+    {
+      "arm": "off",
+      "condition": "oblique-baseline",
+      "pixels": 5868,
+      "rgbMAE": 0.11850147462727642,
+      "rgbRMSE": 0.16725386278981563,
+      "maxAbsoluteDifferenceFromFormal": 2.7755575615628914e-17
+    },
+    {
+      "arm": "off",
+      "condition": "oblique-direction",
+      "pixels": 5868,
+      "rgbMAE": 0.11378935040139346,
+      "rgbRMSE": 0.16352286107382902,
+      "maxAbsoluteDifferenceFromFormal": 0.0
+    },
+    {
+      "arm": "off",
+      "condition": "oblique-intensity",
+      "pixels": 5868,
+      "rgbMAE": 0.11689154601744385,
+      "rgbRMSE": 0.16404744201596097,
+      "maxAbsoluteDifferenceFromFormal": 0.0
+    },
+    {
+      "arm": "off",
+      "condition": "oblique-ambient",
+      "pixels": 5868,
+      "rgbMAE": 0.12757684386530546,
+      "rgbRMSE": 0.17773838427399324,
+      "maxAbsoluteDifferenceFromFormal": 0.0
+    },
+    {
+      "arm": "off",
+      "condition": "oblique-albedo",
+      "pixels": 5868,
+      "rgbMAE": 0.12105152166952153,
+      "rgbRMSE": 0.16976924187130182,
+      "maxAbsoluteDifferenceFromFormal": 2.7755575615628914e-17
+    },
+    {
+      "arm": "on",
+      "condition": "oblique-baseline",
+      "pixels": 5868,
+      "rgbMAE": 0.10722220358996998,
+      "rgbRMSE": 0.15751158360757506,
+      "maxAbsoluteDifferenceFromFormal": 1.3877787807814457e-17
+    },
+    {
+      "arm": "on",
+      "condition": "oblique-direction",
+      "pixels": 5868,
+      "rgbMAE": 0.10144138170938079,
+      "rgbRMSE": 0.1542865032059488,
+      "maxAbsoluteDifferenceFromFormal": 0.0
+    },
+    {
+      "arm": "on",
+      "condition": "oblique-intensity",
+      "pixels": 5868,
+      "rgbMAE": 0.10536433103120821,
+      "rgbRMSE": 0.15554634960033079,
+      "maxAbsoluteDifferenceFromFormal": 1.3877787807814457e-17
+    },
+    {
+      "arm": "on",
+      "condition": "oblique-ambient",
+      "pixels": 5868,
+      "rgbMAE": 0.1067223073197732,
+      "rgbRMSE": 0.15871321082705517,
+      "maxAbsoluteDifferenceFromFormal": 2.7755575615628914e-17
+    },
+    {
+      "arm": "on",
+      "condition": "oblique-albedo",
+      "pixels": 5868,
+      "rgbMAE": 0.11497037021056758,
+      "rgbRMSE": 0.16512493725750876,
+      "maxAbsoluteDifferenceFromFormal": 0.0
+    }
+  ],
+  "limitations": [
+    "Metrics are fixed reference-foreground/descriptive and stable-subset conditional scores, not global acceptance.",
+    "No rerender, display re-encoding, source adjustment, threshold adjustment or exclusions.",
+    "No revalidation of all13 domains, all8 responses or exhaustive scalar audit.",
+    "Oblique ambient brightFP rises6 to7; all10 color improvement is not universal response-metric improvement."
+  ]
+}

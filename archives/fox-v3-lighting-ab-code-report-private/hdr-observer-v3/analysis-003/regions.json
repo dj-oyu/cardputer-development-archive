@@ -1,0 +1,20 @@
+{
+  "front": {
+    "foreground": 5307,
+    "nativeCoverage": 4698,
+    "missing": 620,
+    "extra": 11,
+    "common": 4687,
+    "interior2": 3424,
+    "erosion": "Chebyshev radius2; outside image false"
+  },
+  "oblique": {
+    "foreground": 5868,
+    "nativeCoverage": 5156,
+    "missing": 720,
+    "extra": 8,
+    "common": 5148,
+    "interior2": 3743,
+    "erosion": "Chebyshev radius2; outside image false"
+  }
+}

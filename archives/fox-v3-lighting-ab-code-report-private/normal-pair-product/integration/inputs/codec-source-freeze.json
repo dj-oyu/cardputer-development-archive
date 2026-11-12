@@ -1,0 +1,33 @@
+{
+  "schema": "normal-pair-codec-source-freeze-v1",
+  "scope": "private host-only, no actual assets or snapshot dumps",
+  "baseline": "fox-v3-eye-evaluation/actual-eyeB",
+  "mode": 5,
+  "legacy_default": 4,
+  "legacy_stride": 56,
+  "normal_pair_stride": 50,
+  "snapshot_header": 416,
+  "snapshot_capacity": 65536,
+  "product_files": {
+    "product/main/ayatsuri/compact_opaque.c": {
+      "baseline_sha256": "cfd92d0a54f104a39b2c9770f34efe43c71e202fa1ff1090c1e473b713d4ef5f",
+      "sha256": "daa6e537d00ce085ca431fd749badc93ff8f91eee9d32aae9e2c5020321124cf"
+    },
+    "product/main/ayatsuri/compact_opaque.h": {
+      "baseline_sha256": "710799e81d0b2a40ba1c6bec54d47fb6718870cda7586a51d168ea6b0bafe474",
+      "sha256": "dfdd96112c7371cf6d38d024148a8577ddbdd5025abbd375d4385ccfab69fdfa"
+    },
+    "product/main/ui/kasane/ksn_mesh_depth.c": {
+      "baseline_sha256": "74506ed55a7cc427d801cf95e81741b71bfd5d95d1fe52f356a7aa65d5d1ff07",
+      "sha256": "d38a8ee51c6167945f97608fa3dedb4c57a0869cf24a5d76b98fcbe1fbdfdd7a"
+    },
+    "product/main/ui/kasane/ksn_mesh_depth.h": {
+      "baseline_sha256": "25e02faa8b8718c31a1d921d680aeec4c462846ea012d6ab9fd043866d27d1cb",
+      "sha256": "883715d956ef7d2e52c517c45a62de80050f65d339d5817213b9c93c363d4f92"
+    }
+  },
+  "apis": [
+    "bool co_append_pixel_normal_pair(co_buffer *, const co_pixel_input *);",
+    "bool ksn_mesh_pixel_append_normal_pair(ksn_mesh_pixel_snapshot *, const ksn_proc_gouraud_patch *, const co_pixel_vertex *, const uint8_t[8], uint16_t);"
+  ]
+}

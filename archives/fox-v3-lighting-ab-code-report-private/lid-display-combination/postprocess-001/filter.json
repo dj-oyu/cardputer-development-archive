@@ -1,0 +1,33 @@
+{
+  "offsets": [
+    -1.0,
+    0.0,
+    1.0
+  ],
+  "weights1D": [
+    0.05007243833742771,
+    0.8998551233251446,
+    0.050072438337427805
+  ],
+  "weights2D": [
+    [
+      0.0025072490810555,
+      0.04505794017531671,
+      0.0025072490810555048
+    ],
+    [
+      0.04505794017531671,
+      0.8097392429745112,
+      0.045057940175316794
+    ],
+    [
+      0.0025072490810555048,
+      0.045057940175316794,
+      0.00250724908105551
+    ]
+  ],
+  "summation": "gy outer, gx inner; acc += float(weights[gy]*weights[gx]) * zero-padded sample",
+  "blackOutsideRetainsDenominator": true,
+  "coveredOnlyRenormalization": false,
+  "support": "union of shifted finite-depth masks, not RGB positivity"
+}

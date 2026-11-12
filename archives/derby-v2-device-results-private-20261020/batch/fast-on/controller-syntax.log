@@ -1,0 +1,23 @@
+APP_ID local.derby
+I (pocket.app) APP_LOAD prog bytes=2465 compile_us=0 run_us=0 used=87468>91472>95936
+I (pocket.app) APP_LOAD view bytes=12022 compile_us=0 run_us=0 used=95936>121932>131884
+I (pocket.app) APP_LOAD scene bytes=9497 compile_us=0 run_us=0 used=131884>148504>152176
+I (pocket.app) APP_LOAD pan bytes=2302 compile_us=0 run_us=0 used=152176>156012>157408
+W (pocket.app) APP_LOAD fixed failed chunk 'fixed' did not compile: SyntaxError: unexpected token in expression: 'const' at derby_fixed.js:5:1
+W (pocket.app) APP_LOAD play failed chunk 'play' threw while it ran: Error: chunk 'fixed' did not compile: SyntaxError: unexpected token in expression: 'const' at derby_fixed.js:5:1 at load (native)
+  /workspace/derby-evidence/controller-split-20261020/batch/fast-on/controller-syntax/derby_watch.js threw: Error: chunk 'play' threw while it ran: Error: chunk 'fixed' did not compile: SyntaxError: unexpected token in expression: 'const' at derby_fixed.js:5:1 at load (native)
+    at load (native)
+    at <eval> (/workspace/derby-evidence/controller-split-20261020/batch/fast-on/controller-syntax/derby_watch.js:82:114)
+
+FAIL eval; source 4561 B
+MEASURE_HOST functional_only=1 faults=0 scalar=0 pie=0
+MEASURE_HOST s0=0:0:0
+MEASURE_HOST s1=8:8:1
+MEASURE_HOST s2=0:0:0
+MEASURE_HOST s3=0:0:0
+MEASURE_HOST s4=0:0:0
+MEASURE_HOST s5=0:0:0
+MEASURE_HOST s6=0:0:0
+MEASURE_HOST s7=0:0:0
+MEASURE_HOST s8=0:0:0
+MEASURE_HOST s9=0:0:0

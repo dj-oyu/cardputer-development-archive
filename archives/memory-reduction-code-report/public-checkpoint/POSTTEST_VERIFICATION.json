@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "exact_allowlist": true,
+  "source_hashes_unchanged": true,
+  "forbidden_strings_absent": true,
+  "changed_files": [
+    "tools/renderer_experiments/indexed_visibility/README.md",
+    "tools/renderer_experiments/indexed_visibility/test_storage.c",
+    "tools/renderer_experiments/indexed_visibility/visibility.c"
+  ],
+  "publication_gate": "HOLD",
+  "final_test_results": "validation/test-run-003/RESULTS.json",
+  "final_test_status": "PASS",
+  "test_executions": 16,
+  "leak_sanitizer": "NOT_TESTED_HOST_PTRACE_LIMITATION",
+  "baseline_all_ten_hashes_match_published_readback": true
+}

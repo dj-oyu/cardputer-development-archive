@@ -1,0 +1,230 @@
+{
+  "boxTopology": {
+    "weldedVertices": 8,
+    "nonTwoIncidentEdges": 0,
+    "windingMismatches": 0,
+    "signedVolume": 8.0,
+    "valid": true
+  },
+  "fixtures": [
+    {
+      "point": [
+        0,
+        0,
+        0
+      ],
+      "expected": "inside",
+      "actual": "inside",
+      "pass": true
+    },
+    {
+      "point": [
+        0.9,
+        0.9,
+        0.9
+      ],
+      "expected": "inside",
+      "actual": "inside",
+      "pass": true
+    },
+    {
+      "point": [
+        2,
+        0,
+        0
+      ],
+      "expected": "outside",
+      "actual": "outside",
+      "pass": true
+    },
+    {
+      "point": [
+        -2,
+        -2,
+        -2
+      ],
+      "expected": "outside",
+      "actual": "outside",
+      "pass": true
+    },
+    {
+      "point": [
+        1,
+        0,
+        0
+      ],
+      "expected": "band",
+      "actual": "band",
+      "pass": true
+    },
+    {
+      "point": [
+        1,
+        1,
+        1
+      ],
+      "expected": "band",
+      "actual": "band",
+      "pass": true
+    },
+    {
+      "point": [
+        1.000018905856619,
+        0,
+        0
+      ],
+      "expected": "outside",
+      "actual": "outside",
+      "pass": true
+    },
+    {
+      "point": [
+        0.9999810941433811,
+        0,
+        0
+      ],
+      "expected": "inside",
+      "actual": "inside",
+      "pass": true
+    },
+    {
+      "point": [
+        1.000009462381238,
+        0,
+        0
+      ],
+      "expected": "outside",
+      "actual": "outside",
+      "pass": true
+    },
+    {
+      "point": [
+        0.9999905376187622,
+        0,
+        0
+      ],
+      "expected": "inside",
+      "actual": "inside",
+      "pass": true
+    },
+    {
+      "point": [
+        1.0000094434753812,
+        0,
+        0
+      ],
+      "expected": "band",
+      "actual": "band",
+      "pass": true
+    },
+    {
+      "point": [
+        0.9999905565246189,
+        0,
+        0
+      ],
+      "expected": "band",
+      "actual": "band",
+      "pass": true
+    }
+  ],
+  "independentDoubleRayChecks": [
+    {
+      "stage": "source",
+      "side": -1,
+      "counts": {
+        "outside->outside": 89,
+        "inside->inside": 111
+      }
+    },
+    {
+      "stage": "source",
+      "side": 1,
+      "counts": {
+        "outside->outside": 94,
+        "inside->inside": 106
+      }
+    },
+    {
+      "stage": "baseline",
+      "side": -1,
+      "counts": {
+        "outside->outside": 148,
+        "inside->inside": 52
+      }
+    },
+    {
+      "stage": "baseline",
+      "side": 1,
+      "counts": {
+        "outside->outside": 190,
+        "inside->inside": 10
+      }
+    },
+    {
+      "stage": "stage-1",
+      "side": -1,
+      "counts": {
+        "outside->outside": 134,
+        "inside->inside": 66
+      }
+    },
+    {
+      "stage": "stage-1",
+      "side": 1,
+      "counts": {
+        "outside->outside": 143,
+        "inside->inside": 57
+      }
+    },
+    {
+      "stage": "stage-2",
+      "side": -1,
+      "counts": {
+        "outside->outside": 96,
+        "inside->inside": 104
+      }
+    },
+    {
+      "stage": "stage-2",
+      "side": 1,
+      "counts": {
+        "outside->outside": 104,
+        "inside->inside": 96
+      }
+    },
+    {
+      "stage": "stage-3",
+      "side": -1,
+      "counts": {
+        "outside->outside": 101,
+        "inside->inside": 99
+      }
+    },
+    {
+      "stage": "stage-3",
+      "side": 1,
+      "counts": {
+        "outside->outside": 101,
+        "inside->inside": 99
+      }
+    },
+    {
+      "stage": "stage-4",
+      "side": -1,
+      "counts": {
+        "outside->outside": 93,
+        "inside->inside": 107
+      }
+    },
+    {
+      "stage": "stage-4",
+      "side": 1,
+      "counts": {
+        "outside->outside": 96,
+        "inside->inside": 104
+      }
+    }
+  ],
+  "pass": true
+}

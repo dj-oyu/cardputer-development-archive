@@ -1,0 +1,43 @@
+{
+  "status": "OFF_BUILD_PROVIDER_PROOF_ACCEPTED",
+  "checks": {
+    "successful_exact_build": true,
+    "durable_artifacts_verified": true,
+    "source_receipt_full_provenance_identical_to_ON": true,
+    "same_allowed_J1_head": true,
+    "explicit_OFF_mode_everywhere": true,
+    "OFF_native_detail_symbols_absent": true,
+    "same_IDF_target_tools_environment": true,
+    "OFF_fingerprint_separate": true,
+    "proof_canonical_digest_matches": true,
+    "proof_schema_and_scope": true,
+    "telemetry_measurement_stay_ON": true,
+    "expected_cache_and_detail_call_generated_play_difference": true,
+    "fixed_fixture_and_owner_same_except_detail": true,
+    "actual_linked_ELF_seed_and_generated_view_verified": true,
+    "OFF_generated_view_differs_from_instrumented_ON": true,
+    "unique_artifact_names": true,
+    "actual_BIN_ELF_manifest_and_proof_match": true,
+    "OFF_BIN_ELF_distinct_from_ON": true,
+    "same_flash_security": true
+  },
+  "passed": 19,
+  "build_job_id": "derby-j1-off-build-b561aea1-20261020",
+  "build_plan_hash": "b036edfb81a512c3ec7f0852ed696a9763a98357fb8e1767ff5dff19e3e4449b",
+  "source_commit": "b561aea1c0798feb28055a00d36681fae81ac58a",
+  "manifest_sha256": "8d49507f59454e6dc5b57901b47d867231f95a1a673e7d2750905efb0d7bf78e",
+  "modeproof_sha256": "a4a7f87ed5ea75ba99a857dbe2c6f9aba50707a75fadee1425cf98f97dc2ff9b",
+  "artifacts": {
+    "cardputer_pocketjs.bin": {
+      "bytes": 2293600,
+      "sha256": "83d8b1f110f4d0626be4784c08fe2acdb116c835aa4055ce108761ab5b7af48a"
+    },
+    "cardputer_pocketjs.elf": {
+      "bytes": 20027092,
+      "sha256": "082b86ab9c0663fb60128d47d1442056855a4a4679739c8cfc8a7e02f024e5fc"
+    }
+  },
+  "local_actual_BIN_ELF_prove_recomputed": false,
+  "physical_flash_or_measurement_started": false,
+  "scope": "Provider durable manifest revalidates actual build proof; independent Windows/full r2 CLI remains separately reportable."
+}

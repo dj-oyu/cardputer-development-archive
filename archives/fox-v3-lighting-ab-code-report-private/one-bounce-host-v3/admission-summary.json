@@ -1,0 +1,152 @@
+{
+  "off": {
+    "frames": 20,
+    "scope": "all10conditions forward/reverse, first-run time is not controlled benchmark",
+    "ranges": {
+      "transportRays": {
+        "min": 0,
+        "max": 0
+      },
+      "transportNodeVisits": {
+        "min": 0,
+        "max": 0
+      },
+      "transportTriangleTests": {
+        "min": 0,
+        "max": 0
+      },
+      "zero_reflection_ns_v": {
+        "min": 0,
+        "max": 0
+      },
+      "primary_hits": {
+        "min": 0,
+        "max": 0
+      },
+      "shadeUpdates": {
+        "min": 9289,
+        "max": 9899
+      },
+      "diskSamples": {
+        "min": 445872,
+        "max": 475152
+      },
+      "visibilityRays": {
+        "min": 210740,
+        "max": 258311
+      },
+      "hostRenderNsFirstFrame": {
+        "min": 284149314,
+        "max": 348824388
+      },
+      "snapshotBytes": {
+        "min": 52212,
+        "max": 52212
+      },
+      "work": {
+        "min": 2655947,
+        "max": 2766638
+      }
+    }
+  },
+  "world": {
+    "frames": 20,
+    "scope": "all10conditions forward/reverse, first-run time is not controlled benchmark",
+    "ranges": {
+      "transportRays": {
+        "min": 148624,
+        "max": 158384
+      },
+      "transportNodeVisits": {
+        "min": 9426186,
+        "max": 9895186
+      },
+      "transportTriangleTests": {
+        "min": 3965027,
+        "max": 4188751
+      },
+      "zero_reflection_ns_v": {
+        "min": 0,
+        "max": 0
+      },
+      "primary_hits": {
+        "min": 83944,
+        "max": 90152
+      },
+      "shadeUpdates": {
+        "min": 9289,
+        "max": 9899
+      },
+      "diskSamples": {
+        "min": 445872,
+        "max": 475152
+      },
+      "visibilityRays": {
+        "min": 210740,
+        "max": 258311
+      },
+      "hostRenderNsFirstFrame": {
+        "min": 651248076,
+        "max": 773584565
+      },
+      "snapshotBytes": {
+        "min": 52212,
+        "max": 52212
+      },
+      "work": {
+        "min": 2655947,
+        "max": 2766638
+      }
+    }
+  },
+  "bounce": {
+    "frames": 20,
+    "scope": "all10conditions forward/reverse, first-run time is not controlled benchmark",
+    "ranges": {
+      "transportRays": {
+        "min": 3184962,
+        "max": 3537352
+      },
+      "transportNodeVisits": {
+        "min": 173970208,
+        "max": 192415637
+      },
+      "transportTriangleTests": {
+        "min": 72486698,
+        "max": 79591151
+      },
+      "zero_reflection_ns_v": {
+        "min": 7511,
+        "max": 8849
+      },
+      "primary_hits": {
+        "min": 83944,
+        "max": 90152
+      },
+      "shadeUpdates": {
+        "min": 9289,
+        "max": 9899
+      },
+      "diskSamples": {
+        "min": 445872,
+        "max": 475152
+      },
+      "visibilityRays": {
+        "min": 210740,
+        "max": 258311
+      },
+      "hostRenderNsFirstFrame": {
+        "min": 6338922314,
+        "max": 7545478233
+      },
+      "snapshotBytes": {
+        "min": 52212,
+        "max": 52212
+      },
+      "work": {
+        "min": 2655947,
+        "max": 2766638
+      }
+    }
+  }
+}

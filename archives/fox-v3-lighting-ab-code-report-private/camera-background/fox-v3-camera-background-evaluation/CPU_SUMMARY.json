@@ -1,0 +1,31 @@
+{
+  "primaryRun": "cost-002",
+  "priorRun": "cost-001 retained only; known short compile overlap at start",
+  "views": {
+    "front": {
+      "offSeconds": 12.974028645,
+      "onSeconds": 14.115180991,
+      "ratioOfMedians": 1.0879566692216132,
+      "pairedRatios": [
+        1.1227703144439471,
+        1.000861363003418,
+        1.08018961052633
+      ],
+      "medianPairedRatio": 1.08018961052633
+    },
+    "oblique": {
+      "offSeconds": 12.546249088,
+      "onSeconds": 13.698088085,
+      "ratioOfMedians": 1.091807438934214,
+      "pairedRatios": [
+        1.08747137265005,
+        1.0866499121250737,
+        1.1329277126814845
+      ],
+      "medianPairedRatio": 1.08747137265005
+    }
+  },
+  "threeSamplesFixedOrder": true,
+  "observerIOIncluded": true,
+  "devicePerformanceMeasured": false
+}

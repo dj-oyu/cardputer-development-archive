@@ -1,0 +1,81 @@
+{
+  "denied_action": "github_create_blob",
+  "target": "dj-oyu/cardputer-adv-pocketjs/main/main.c",
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "This action was rejected due to unacceptable risk.\nReason: This creates and uploads a large source blob to the GitHub repository, violating the user's explicit prohibition on push/PR/publication actions; the blob is not merely local preparation.\nDo not bypass this rejection through a workaround or indirect execution. Continue with a safer alternative, or carry out checks to prove that the action is authorized or low risk before trying again. Complete unaffected work without asking for confirmation. Report anything that remains blocked, clarify why it was blocked by auto-review, inform the user of the risk and ask for approval."
+      }
+    ],
+    "isError": true
+  },
+  "uploaded_blobs": {
+    "docs/platform/derby-detail-measure.md": "3636a059605920db4b3e7de621f3aee39e5feab0",
+    "main/app_session.c": "92df1a379c38882b518418a6f45d89de70244963",
+    "main/app_session.h": "c4cf6f834168c2d3172ed31cb7f2bfc040c8e689"
+  },
+  "ref_readback": [
+    {
+      "v": "baseline",
+      "expected": "90b9f686e7c6897bc53e26e3b82fbe5569b968fd",
+      "isError": false,
+      "response": {
+        "ref": "refs/heads/feature/derby-detail-baseline-20261019",
+        "node_id": "REF_kwDOUPhoVdoAMXJlZnMvaGVhZHMvZmVhdHVyZS9kZXJieS1kZXRhaWwtYmFzZWxpbmUtMjAyNjEwMTk",
+        "url": "https://api.github.com/repos/dj-oyu/cardputer-adv-pocketjs/git/refs/heads/feature/derby-detail-baseline-20261019",
+        "object": {
+          "sha": "90b9f686e7c6897bc53e26e3b82fbe5569b968fd",
+          "type": "commit",
+          "url": "https://api.github.com/repos/dj-oyu/cardputer-adv-pocketjs/git/commits/90b9f686e7c6897bc53e26e3b82fbe5569b968fd"
+        }
+      }
+    },
+    {
+      "v": "native",
+      "expected": "baa41e984339436dca6157a29326d3b863825761",
+      "isError": false,
+      "response": {
+        "ref": "refs/heads/feature/derby-detail-native-20261019",
+        "node_id": "REF_kwDOUPhoVdoAL3JlZnMvaGVhZHMvZmVhdHVyZS9kZXJieS1kZXRhaWwtbmF0aXZlLTIwMjYxMDE5",
+        "url": "https://api.github.com/repos/dj-oyu/cardputer-adv-pocketjs/git/refs/heads/feature/derby-detail-native-20261019",
+        "object": {
+          "sha": "baa41e984339436dca6157a29326d3b863825761",
+          "type": "commit",
+          "url": "https://api.github.com/repos/dj-oyu/cardputer-adv-pocketjs/git/commits/baa41e984339436dca6157a29326d3b863825761"
+        }
+      }
+    },
+    {
+      "v": "batch",
+      "expected": "fded982793d0b99246a7335fe22d791985fd6e96",
+      "isError": false,
+      "response": {
+        "ref": "refs/heads/feature/derby-detail-batch-20261019",
+        "node_id": "REF_kwDOUPhoVdoALnJlZnMvaGVhZHMvZmVhdHVyZS9kZXJieS1kZXRhaWwtYmF0Y2gtMjAyNjEwMTk",
+        "url": "https://api.github.com/repos/dj-oyu/cardputer-adv-pocketjs/git/refs/heads/feature/derby-detail-batch-20261019",
+        "object": {
+          "sha": "fded982793d0b99246a7335fe22d791985fd6e96",
+          "type": "commit",
+          "url": "https://api.github.com/repos/dj-oyu/cardputer-adv-pocketjs/git/commits/fded982793d0b99246a7335fe22d791985fd6e96"
+        }
+      }
+    },
+    {
+      "v": "denied-main-blob",
+      "isError": true,
+      "response": {
+        "error": "GitHub API error 404: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/git/blobs#get-a-blob\",\"status\":\"404\"}",
+        "error_code": "NOT_FOUND",
+        "error_data": {
+          "message": "Not Found",
+          "documentation_url": "https://docs.github.com/rest/git/blobs#get-a-blob",
+          "status": "404"
+        }
+      }
+    }
+  ],
+  "retry_attempted": false,
+  "new_head_ci_started": false,
+  "status": "denied; permission evidence/parent resolution pending"
+}

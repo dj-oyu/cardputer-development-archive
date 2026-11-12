@@ -1,0 +1,713 @@
+{
+  "ok": true,
+  "entries": [
+    {
+      "sequence": 1,
+      "text": "WARNING: Git version unavailable, reading from source",
+      "level": "warning",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 2,
+      "text": "ESP-IDF v6.0.1",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 3,
+      "text": "Python 3.11.7",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 4,
+      "text": "xtensa-esp-elf-gcc.exe (crosstool-NG esp-15.2.0_20251204) 15.2.0",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 5,
+      "text": "Copyright (C) 2025 Free Software Foundation, Inc.",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 6,
+      "text": "This is free software; see the source for copying conditions.  There is NO",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 7,
+      "text": "warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 8,
+      "text": "",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 9,
+      "text": "v24.20.0",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 10,
+      "text": "-- Registered node version: v24.20.0 (SHA-256 verified)",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 11,
+      "text": "git version 2.55.0.windows.5",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 12,
+      "text": "-- Registered git version: git version 2.55.0.windows.5 (SHA-256 verified)",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 13,
+      "text": "-- External Python, toolchain and ESP-IDF 6.0.1 diagnostics passed",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 14,
+      "text": "Executing action: all (aliases: build)",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 15,
+      "text": "Running cmake in directory C:\\Users\\core\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\b-c83\\o\\94af1548543e95fd1f64f387e9fad45e2628338208b6c26523babf651fd90a19",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 16,
+      "text": "Executing \"cmake -G Ninja -B C:\\Users\\core\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\b-c83\\o\\94af1548543e95fd1f64f387e9fad45e2628338208b6c26523babf651fd90a19 -DPYTHON_DEPS_CHECKED=1 -DPYTHON=[REDACTED]\\Scripts\\python.exe -DESP_PLATFORM=1 -DSDKCONFIG=C:\\Users\\core\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\b-c83\\o\\94af1548543e95fd1f64f387e9fad45e2628338208b6c26523babf651fd90a19\\sdkconfig -DCCACHE_ENABLE=False C:\\Users\\core\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\esp-src\\bbf729af426e3110943d2fcad025311b1d088b773c0cecdbb53b4fde92e16679\\source\"...",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 17,
+      "text": "-- Found Git: C:/Program Files/Git/cmd/git.exe (found version \"2.55.0.windows.5\")",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 18,
+      "text": "-- Component directory C:/esp/v6.0.1/esp-idf/components/mqtt does not contain a CMakeLists.txt file. No component will be added",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 19,
+      "text": "-- Minimal build - ON",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 20,
+      "text": "-- The C compiler identification is GNU 15.2.0",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 21,
+      "text": "-- The CXX compiler identification is GNU 15.2.0",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 22,
+      "text": "-- The ASM compiler identification is GNU",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 23,
+      "text": "-- Found assembler: C:/Espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc.exe",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 24,
+      "text": "-- Detecting C compiler ABI info",
+      "level": "info",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 25,
+      "text": "-- Detecting C compiler ABI info - done",
+      "level": "info",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 26,
+      "text": "-- Check for working C compiler: C:/Espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc.exe - skipped",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 27,
+      "text": "-- Detecting C compile features",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 28,
+      "text": "-- Detecting C compile features - done",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 29,
+      "text": "-- Detecting CXX compiler ABI info",
+      "level": "info",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 30,
+      "text": "CMake Warning in C:/Users/core/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/b-c83/o/94af1548543e95fd1f64f387e9fad45e2628338208b6c26523babf651fd90a19/CMakeFiles/CMakeScratch/TryCompile-5urir1/CMakeLists.txt:",
+      "level": "warning",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 31,
+      "text": "  The object file directory",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 32,
+      "text": "",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 33,
+      "text": "    C:/Users/core/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/b-c83/o/94af1548543e95fd1f64f387e9fad45e2628338208b6c26523babf651fd90a19/CMakeFiles/CMakeScratch/TryCompile-5urir1/CMakeFiles/cmTC_a31aa.dir/./",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 34,
+      "text": "",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 35,
+      "text": "  has 224 characters.  The maximum full path to an object file is 250",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 36,
+      "text": "  characters (see CMAKE_OBJECT_PATH_MAX).  Object file",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 37,
+      "text": "",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 38,
+      "text": "    CMakeCXXCompilerABI.cpp.obj",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 39,
+      "text": "",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 40,
+      "text": "  cannot be safely placed under this directory.  The build may not work",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 41,
+      "text": "  correctly.",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 42,
+      "text": "",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 43,
+      "text": "",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 44,
+      "text": "-- Detecting CXX compiler ABI info - done",
+      "level": "info",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 45,
+      "text": "-- Check for working CXX compiler: C:/Espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/bin/xtensa-esp32s3-elf-g++.exe - skipped",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 46,
+      "text": "-- Detecting CXX compile features",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 47,
+      "text": "-- Detecting CXX compile features - done",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 48,
+      "text": "-- git rev-parse returned 'fatal: not a git repository (or any of the parent directories): .git'",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 49,
+      "text": "-- Could not use 'git describe' to determine PROJECT_VER.",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 50,
+      "text": "-- Building ESP-IDF components for target esp32s3",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 51,
+      "text": "\"idf_component.yml\" file was found for components:",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 52,
+      "text": "\tC:/Users/core/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/esp-src/bbf729af426e3110943d2fcad025311b1d088b773c0cecdbb53b4fde92e16679/source/main",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 53,
+      "text": "\tC:/Users/core/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/esp-src/bbf729af426e3110943d2fcad025311b1d088b773c0cecdbb53b4fde92e16679/source/components/pocketjs_guest",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 54,
+      "text": "\tC:/Users/core/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/esp-src/bbf729af426e3110943d2fcad025311b1d088b773c0cecdbb53b4fde92e16679/source/components/quickjs-ng",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 55,
+      "text": "However, the component manager is not enabled.",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 56,
+      "text": "-- ESP-TEE is currently supported only on the esp32c6;esp32h2;esp32c5;esp32c61 SoCs",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 57,
+      "text": "-- KCONFIG_REPORT_VERBOSITY not set, using default",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 58,
+      "text": "-- Project sdkconfig file C:/Users/core/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/b-c83/o/94af1548543e95fd1f64f387e9fad45e2628338208b6c26523babf651fd90a19/sdkconfig",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 59,
+      "text": "Loading defaults file C:/Users/core/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/esp-src/bbf729af426e3110943d2fcad025311b1d088b773c0cecdbb53b4fde92e16679/source/sdkconfig.defaults...",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 60,
+      "text": "Configuration Report                                                           ",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 61,
+      "text": " ───────────────────────────────────────────────────────────────────────────── ",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 62,
+      "text": "   Parser Version: 1                                                           ",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 63,
+      "text": "   Verbosity: default                                                          ",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 64,
+      "text": "   Defaults policy: sdkconfig                                                  ",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 65,
+      "text": "   Status: Finished with notifications                                         ",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 66,
+      "text": "                                                                               ",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 67,
+      "text": "  Miscellaneous                                                                ",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 68,
+      "text": "   ─────────────────────────────────────────────────────────────────────────   ",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 69,
+      "text": "    * FATFS_PRINT_LLI (defined at                                              ",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 70,
+      "text": "    C:/esp/v6.0.1/esp-idf/components/fatfs/Kconfig:230): 'default 0' is not    ",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 71,
+      "text": "    a valid bool value (only 'y' and 'n' are allowed). Value is treated as     ",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 72,
+      "text": "    'n'.                                                                       ",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 73,
+      "text": "    * FATFS_PRINT_FLOAT (defined at                                            ",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 74,
+      "text": "    C:/esp/v6.0.1/esp-idf/components/fatfs/Kconfig:235): 'default 0' is not    ",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 75,
+      "text": "    a valid bool value (only 'y' and 'n' are allowed). Value is treated as     ",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 76,
+      "text": "    'n'.                                                                       ",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 77,
+      "text": "   ─────────────────────────────────────────────────────────────────────────   ",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 78,
+      "text": " ───────────────────────────────────────────────────────────────────────────── ",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 79,
+      "text": "-- Compiler supported targets: xtensa-esp-elf",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 80,
+      "text": "-- Detecting C compiler ABI info",
+      "level": "info",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 81,
+      "text": "-- Detecting C compiler ABI info - done",
+      "level": "info",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 82,
+      "text": "-- Detecting CXX compiler ABI info",
+      "level": "info",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 83,
+      "text": "CMake Warning in C:/Users/core/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/b-c83/o/94af1548543e95fd1f64f387e9fad45e2628338208b6c26523babf651fd90a19/CMakeFiles/CMakeScratch/TryCompile-pe4ltx/CMakeLists.txt:",
+      "level": "warning",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 84,
+      "text": "  The object file directory",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 85,
+      "text": "",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 86,
+      "text": "    C:/Users/core/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/b-c83/o/94af1548543e95fd1f64f387e9fad45e2628338208b6c26523babf651fd90a19/CMakeFiles/CMakeScratch/TryCompile-pe4ltx/CMakeFiles/cmTC_088dd.dir/./",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 87,
+      "text": "",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 88,
+      "text": "  has 224 characters.  The maximum full path to an object file is 250",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 89,
+      "text": "  characters (see CMAKE_OBJECT_PATH_MAX).  Object file",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 90,
+      "text": "",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 91,
+      "text": "    CMakeCXXCompilerABI.cpp.obj",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 92,
+      "text": "",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 93,
+      "text": "  cannot be safely placed under this directory.  The build may not work",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 94,
+      "text": "  correctly.",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 95,
+      "text": "",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 96,
+      "text": "",
+      "level": "unknown",
+      "stream": "stderr",
+      "progress": false
+    },
+    {
+      "sequence": 97,
+      "text": "-- Detecting CXX compiler ABI info - done",
+      "level": "info",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 98,
+      "text": "-- Detecting C compiler ABI info",
+      "level": "info",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 99,
+      "text": "-- Detecting C compiler ABI info - done",
+      "level": "info",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 100,
+      "text": "-- Detecting CXX compiler ABI info",
+      "level": "info",
+      "stream": "stdout",
+      "progress": true
+    }
+  ],
+  "expired": false,
+  "gap": false,
+  "oldest_sequence": 1,
+  "next_cursor": {
+    "epoch": "cc597111a365466da1601ff4bffc51ff",
+    "sequence": 100
+  },
+  "has_more": true
+}

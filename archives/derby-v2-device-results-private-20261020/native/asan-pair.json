@@ -1,0 +1,17 @@
+{
+  "pass": true,
+  "variant": "native",
+  "hardware_tested": false,
+  "scope": "host functional overhead control; dependent replay and oracle work; not target timing",
+  "off_work_us": [
+    814751,
+    756034,
+    751324
+  ],
+  "on_work_us": [
+    773019,
+    1088856,
+    1070673
+  ],
+  "median_ratio": 1.4161704367792982
+}

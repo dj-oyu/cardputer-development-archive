@@ -1,0 +1,236 @@
+{
+  "front": {
+    "baseline": {
+      "original": {
+        "sourcePixels": 5307,
+        "supportPixels": 4698,
+        "intersection": 4687,
+        "union": 5318,
+        "missingPixels": 620,
+        "extraPixels": 11,
+        "IoU": 0.8813463708160962,
+        "status": "DESCRIPTIVE_SUPPORT_NOT_GEOMETRY_IMPROVEMENT"
+      },
+      "filtered": {
+        "sourcePixels": 5307,
+        "supportPixels": 5353,
+        "intersection": 5232,
+        "union": 5428,
+        "missingPixels": 75,
+        "extraPixels": 121,
+        "IoU": 0.9638909358879882,
+        "status": "DESCRIPTIVE_SUPPORT_NOT_GEOMETRY_IMPROVEMENT"
+      },
+      "expandedSupportPixels": 655
+    },
+    "direction": {
+      "original": {
+        "sourcePixels": 5307,
+        "supportPixels": 4698,
+        "intersection": 4687,
+        "union": 5318,
+        "missingPixels": 620,
+        "extraPixels": 11,
+        "IoU": 0.8813463708160962,
+        "status": "DESCRIPTIVE_SUPPORT_NOT_GEOMETRY_IMPROVEMENT"
+      },
+      "filtered": {
+        "sourcePixels": 5307,
+        "supportPixels": 5353,
+        "intersection": 5232,
+        "union": 5428,
+        "missingPixels": 75,
+        "extraPixels": 121,
+        "IoU": 0.9638909358879882,
+        "status": "DESCRIPTIVE_SUPPORT_NOT_GEOMETRY_IMPROVEMENT"
+      },
+      "expandedSupportPixels": 655
+    },
+    "intensity": {
+      "original": {
+        "sourcePixels": 5307,
+        "supportPixels": 4698,
+        "intersection": 4687,
+        "union": 5318,
+        "missingPixels": 620,
+        "extraPixels": 11,
+        "IoU": 0.8813463708160962,
+        "status": "DESCRIPTIVE_SUPPORT_NOT_GEOMETRY_IMPROVEMENT"
+      },
+      "filtered": {
+        "sourcePixels": 5307,
+        "supportPixels": 5353,
+        "intersection": 5232,
+        "union": 5428,
+        "missingPixels": 75,
+        "extraPixels": 121,
+        "IoU": 0.9638909358879882,
+        "status": "DESCRIPTIVE_SUPPORT_NOT_GEOMETRY_IMPROVEMENT"
+      },
+      "expandedSupportPixels": 655
+    },
+    "ambient": {
+      "original": {
+        "sourcePixels": 5307,
+        "supportPixels": 4698,
+        "intersection": 4687,
+        "union": 5318,
+        "missingPixels": 620,
+        "extraPixels": 11,
+        "IoU": 0.8813463708160962,
+        "status": "DESCRIPTIVE_SUPPORT_NOT_GEOMETRY_IMPROVEMENT"
+      },
+      "filtered": {
+        "sourcePixels": 5307,
+        "supportPixels": 5353,
+        "intersection": 5232,
+        "union": 5428,
+        "missingPixels": 75,
+        "extraPixels": 121,
+        "IoU": 0.9638909358879882,
+        "status": "DESCRIPTIVE_SUPPORT_NOT_GEOMETRY_IMPROVEMENT"
+      },
+      "expandedSupportPixels": 655
+    },
+    "albedo": {
+      "original": {
+        "sourcePixels": 5307,
+        "supportPixels": 4698,
+        "intersection": 4687,
+        "union": 5318,
+        "missingPixels": 620,
+        "extraPixels": 11,
+        "IoU": 0.8813463708160962,
+        "status": "DESCRIPTIVE_SUPPORT_NOT_GEOMETRY_IMPROVEMENT"
+      },
+      "filtered": {
+        "sourcePixels": 5307,
+        "supportPixels": 5353,
+        "intersection": 5232,
+        "union": 5428,
+        "missingPixels": 75,
+        "extraPixels": 121,
+        "IoU": 0.9638909358879882,
+        "status": "DESCRIPTIVE_SUPPORT_NOT_GEOMETRY_IMPROVEMENT"
+      },
+      "expandedSupportPixels": 655
+    }
+  },
+  "oblique": {
+    "baseline": {
+      "original": {
+        "sourcePixels": 5868,
+        "supportPixels": 5157,
+        "intersection": 5149,
+        "union": 5876,
+        "missingPixels": 719,
+        "extraPixels": 8,
+        "IoU": 0.8762763784887678,
+        "status": "DESCRIPTIVE_SUPPORT_NOT_GEOMETRY_IMPROVEMENT"
+      },
+      "filtered": {
+        "sourcePixels": 5868,
+        "supportPixels": 5900,
+        "intersection": 5756,
+        "union": 6012,
+        "missingPixels": 112,
+        "extraPixels": 144,
+        "IoU": 0.957418496340652,
+        "status": "DESCRIPTIVE_SUPPORT_NOT_GEOMETRY_IMPROVEMENT"
+      },
+      "expandedSupportPixels": 743
+    },
+    "direction": {
+      "original": {
+        "sourcePixels": 5868,
+        "supportPixels": 5157,
+        "intersection": 5149,
+        "union": 5876,
+        "missingPixels": 719,
+        "extraPixels": 8,
+        "IoU": 0.8762763784887678,
+        "status": "DESCRIPTIVE_SUPPORT_NOT_GEOMETRY_IMPROVEMENT"
+      },
+      "filtered": {
+        "sourcePixels": 5868,
+        "supportPixels": 5900,
+        "intersection": 5756,
+        "union": 6012,
+        "missingPixels": 112,
+        "extraPixels": 144,
+        "IoU": 0.957418496340652,
+        "status": "DESCRIPTIVE_SUPPORT_NOT_GEOMETRY_IMPROVEMENT"
+      },
+      "expandedSupportPixels": 743
+    },
+    "intensity": {
+      "original": {
+        "sourcePixels": 5868,
+        "supportPixels": 5157,
+        "intersection": 5149,
+        "union": 5876,
+        "missingPixels": 719,
+        "extraPixels": 8,
+        "IoU": 0.8762763784887678,
+        "status": "DESCRIPTIVE_SUPPORT_NOT_GEOMETRY_IMPROVEMENT"
+      },
+      "filtered": {
+        "sourcePixels": 5868,
+        "supportPixels": 5900,
+        "intersection": 5756,
+        "union": 6012,
+        "missingPixels": 112,
+        "extraPixels": 144,
+        "IoU": 0.957418496340652,
+        "status": "DESCRIPTIVE_SUPPORT_NOT_GEOMETRY_IMPROVEMENT"
+      },
+      "expandedSupportPixels": 743
+    },
+    "ambient": {
+      "original": {
+        "sourcePixels": 5868,
+        "supportPixels": 5157,
+        "intersection": 5149,
+        "union": 5876,
+        "missingPixels": 719,
+        "extraPixels": 8,
+        "IoU": 0.8762763784887678,
+        "status": "DESCRIPTIVE_SUPPORT_NOT_GEOMETRY_IMPROVEMENT"
+      },
+      "filtered": {
+        "sourcePixels": 5868,
+        "supportPixels": 5900,
+        "intersection": 5756,
+        "union": 6012,
+        "missingPixels": 112,
+        "extraPixels": 144,
+        "IoU": 0.957418496340652,
+        "status": "DESCRIPTIVE_SUPPORT_NOT_GEOMETRY_IMPROVEMENT"
+      },
+      "expandedSupportPixels": 743
+    },
+    "albedo": {
+      "original": {
+        "sourcePixels": 5868,
+        "supportPixels": 5157,
+        "intersection": 5149,
+        "union": 5876,
+        "missingPixels": 719,
+        "extraPixels": 8,
+        "IoU": 0.8762763784887678,
+        "status": "DESCRIPTIVE_SUPPORT_NOT_GEOMETRY_IMPROVEMENT"
+      },
+      "filtered": {
+        "sourcePixels": 5868,
+        "supportPixels": 5900,
+        "intersection": 5756,
+        "union": 6012,
+        "missingPixels": 112,
+        "extraPixels": 144,
+        "IoU": 0.957418496340652,
+        "status": "DESCRIPTIVE_SUPPORT_NOT_GEOMETRY_IMPROVEMENT"
+      },
+      "expandedSupportPixels": 743
+    }
+  }
+}

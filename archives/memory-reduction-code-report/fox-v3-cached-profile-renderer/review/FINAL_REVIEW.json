@@ -1,0 +1,40 @@
+{
+  "status": "PASS_INDEPENDENT_RETAINED_FIXED40",
+  "comparisons": {
+    "frames": 40,
+    "raw": 200,
+    "reports": 280,
+    "reverse": 80,
+    "cache": 40
+  },
+  "cacheHits": 5050454,
+  "cacheMisses": 133546,
+  "selectedVertexLookups": 5184000,
+  "invalidations": 0,
+  "maxObservedAA": 7804336,
+  "maxProducerWork": 442001,
+  "observations": {
+    "off": {
+      "wallSeconds": 348.00247343996307,
+      "userCPUSeconds": 347.708369,
+      "systemCPUSeconds": 0.120485,
+      "maximumProcessPeakRSSKiB": 25452,
+      "historicalBaselineWallSeconds": 309.5525298700668,
+      "completionSHA256": "66d81de1a50c25abd0a85a7cea447eebe412202ca5037b562e7ecc1347e33a49"
+    },
+    "on": {
+      "wallSeconds": 351.5613047549559,
+      "userCPUSeconds": 351.329434,
+      "systemCPUSeconds": 0.076,
+      "maximumProcessPeakRSSKiB": 25576,
+      "historicalBaselineWallSeconds": 335.65622713402263,
+      "completionSHA256": "c1afe56cdda036bbef4745e771f98039fcef7cbb9d1a5a08dc9c16077af9c680"
+    }
+  },
+  "allFrozenPinsVerified": true,
+  "gateSHA256": "e45a2b8bf310c50e3f44c6e7710ffe6c755c15d7b8f5c6ce7f9d7cf4d965e864",
+  "sourceFreezeSHA256": "3d7f18436a0a076d2a1e6f6a79e70e8a5179f77ba8c8ad2361d8afaf64129430",
+  "auditSHA256": "680efdd48f03376d20b963a7581f1139df92eb2d9a1476ea18c02c55655a68a2",
+  "rerenders": 0,
+  "qualification": "Descriptive historical host wall/CPU/RSS only. No controlled same-host speedup, target performance, whole-process or device fit claim. Completion markers certify accepted frames, not atomic multi-file publication."
+}

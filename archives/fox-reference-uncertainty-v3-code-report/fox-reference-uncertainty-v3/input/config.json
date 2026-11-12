@@ -1,0 +1,307 @@
+{
+  "version": "new-reference-uncertainty-v3",
+  "source": "/workspace/scratch/6d8dcdbcdc54/fox-reference-sculpt-private/fox-reference-standing-editable.blend",
+  "sourceSHA256": "9254eaebdfa61143dfdb9480330bc677ae47acfa710715bbfa31ab2943a16806",
+  "cameraProvenance": {
+    "file": "fox-native-private/cameras.json",
+    "sha256": "be0ed60c540fe713431eaa7bad46ec65cba3a926894d1303ef1dcf3a3c83b215",
+    "lateVersionIdentityClaim": false
+  },
+  "resolution": [
+    240,
+    135
+  ],
+  "seeds": [
+    11,
+    29,
+    47,
+    71,
+    101,
+    131,
+    173,
+    211
+  ],
+  "samplesMaximum": 2048,
+  "threads": 8,
+  "expectedRenderInvariantSettings": {
+    "engine": "CYCLES",
+    "display": {
+      "view_transform": "AgX",
+      "look": "AgX - Medium High Contrast",
+      "exposure": 0.0,
+      "gamma": 1.0
+    },
+    "cycles": {
+      "use_denoising": false,
+      "use_adaptive_sampling": true,
+      "adaptive_threshold": 0.009999999776482582,
+      "adaptive_min_samples": 0,
+      "sample_clamp_direct": 0.0,
+      "sample_clamp_indirect": 10.0,
+      "blur_glossy": 1.0,
+      "pixel_filter_type": "BLACKMAN_HARRIS",
+      "filter_width": 1.5,
+      "use_animated_seed": false
+    },
+    "frame": 1,
+    "dither": 1.0,
+    "filmTransparent": false,
+    "colorDepth": "8",
+    "colorMode": "RGBA"
+  },
+  "cameras": [
+    {
+      "name": "front",
+      "blenderLocation": [
+        -0.1,
+        -8,
+        3.0
+      ],
+      "blenderTarget": [
+        -0.4,
+        0.18,
+        1.82
+      ],
+      "verticalOrtho": 4.8,
+      "nativeCamera": [
+        -3.8000000000000003,
+        -114.0,
+        304,
+        -15.200000000000001,
+        -69.16,
+        -6.84,
+        0.7401315789473685,
+        119.5,
+        67
+      ],
+      "pixelConvention": "Blender samples pixel centers at i+0.5; native samples integer i. Subtract 0.5 from screen center for equivalent projection."
+    },
+    {
+      "name": "oblique",
+      "blenderLocation": [
+        -5,
+        -8,
+        3.4
+      ],
+      "blenderTarget": [
+        -0.28,
+        0.25,
+        1.8
+      ],
+      "verticalOrtho": 4.8,
+      "nativeCamera": [
+        -190,
+        -129.2,
+        304,
+        -10.64,
+        -68.4,
+        -9.5,
+        0.7401315789473685,
+        119.5,
+        67
+      ],
+      "pixelConvention": "Blender samples pixel centers at i+0.5; native samples integer i. Subtract 0.5 from screen center for equivalent projection."
+    }
+  ],
+  "keyLightName": "Key \u2022 large softbox",
+  "keyTarget": [
+    0,
+    0,
+    1.7
+  ],
+  "scenarioProvenance": "New predeclared v3 values, NOT recovered missing late-stage manifest values. Target from preserved authoring script. Baseline retains original scene. Each nonbaseline changes one named factor only.",
+  "scenarios": [
+    {
+      "name": "baseline",
+      "albedoScale": 1
+    },
+    {
+      "name": "direction",
+      "albedoScale": 1,
+      "blenderLight": [
+        3,
+        -4,
+        6
+      ]
+    },
+    {
+      "name": "intensity",
+      "albedoScale": 1,
+      "richEnergyScale": 0.45
+    },
+    {
+      "name": "ambient",
+      "albedoScale": 1,
+      "richWorldScale": 2
+    },
+    {
+      "name": "albedo",
+      "albedoScale": 0.6
+    }
+  ],
+  "mask": {
+    "samples": 128,
+    "seed": 0,
+    "adaptive": false,
+    "alpha": "8-bit alpha>0",
+    "groundHidden": true,
+    "filmTransparent": true
+  },
+  "frozenCode": {
+    "code/evaluate_pack.py": "6f6b9b451cf79c588221e8f994d829320fd16eb0f3383ec7d72bc144689a7049",
+    "code/evaluator.py": "3d6f84131f6ec15df8c77ebdc965784556cf17f6683949d81d3c7fcc970dba17",
+    "code/inspect_source.py": "61051b47d3683a6bb729042f8084417e95b4554ae4e3497f422a37fc14afff6d",
+    "code/render_reference.py": "4f7cf88aa043ff49d1138204ae29689640d3582e32ecb709c52c59187e92d99c",
+    "code/test_evaluator.py": "71467a8bf3dee6e79d271bb72e8d70b8859ac9d32e54a55eaa0e8c04ae8be9c6",
+    "code/test_pack_validation.py": "55b970ffee00e1a68624320dc0bbdd22bc2cf189681d640e522328533d6fe24c",
+    "PLAN.md": "002488b3a2634cb145caafc48c6b3349cd2f32d3855b99e6eab02217510bd765",
+    "plan.json": "213afe17a9512803f3d964b46a95db2d9a9df813a96fe1a7f49836da6474b79a",
+    "plan-freeze.json": "1f4a8ded0137eb8633e6516d1f7b847b29b34cfd4c0f82a18c9784c295c19ab9",
+    "NUMERIC_ADDENDUM.md": "84d8b2f5afef016b048a4e0da3d4f47a38d5baf6cd55b5370bf8fa0e9c7670c6",
+    "numeric-freeze.json": "832a726c261dddc54148aee06fd1a0d1904e1830009514f35546ba3357351c4f"
+  },
+  "albedoScope": "All source materials with Principled BSDF, including ground if Principled. Multiply Base Color RGB only; alpha and emission unchanged.",
+  "expectedCaseMetadata": {
+    "baseline": {
+      "keyEnergy": 650.0,
+      "keyLocation": [
+        -3.0,
+        -4.0,
+        6.0
+      ],
+      "worldStrength": 0.3499999940395355,
+      "albedoScale": 1,
+      "keyTarget": [
+        0,
+        0,
+        1.7
+      ],
+      "sourceKeyTargetDistance": 6.594694837519019,
+      "actualKeyTargetDistance": 6.594694837519019,
+      "albedoTargetMaterials": [
+        "Coat \u2022 burnt tangerine",
+        "Coat \u2022 warm brow",
+        "Deep cocoa \u2022 socks and ear rims",
+        "Ear interior \u2022 warm coral",
+        "Iris \u2022 warm amber",
+        "Ivory \u2022 muzzle chest tail",
+        "Pupil and nose",
+        "Warm eye white",
+        "Warm studio backdrop"
+      ]
+    },
+    "direction": {
+      "keyEnergy": 650.0,
+      "keyLocation": [
+        2.533092453316535,
+        -3.377456604422046,
+        6.76618490663307
+      ],
+      "worldStrength": 0.3499999940395355,
+      "albedoScale": 1,
+      "keyTarget": [
+        0,
+        0,
+        1.7
+      ],
+      "sourceKeyTargetDistance": 6.594694837519019,
+      "actualKeyTargetDistance": 6.594694837519019,
+      "albedoTargetMaterials": [
+        "Coat \u2022 burnt tangerine",
+        "Coat \u2022 warm brow",
+        "Deep cocoa \u2022 socks and ear rims",
+        "Ear interior \u2022 warm coral",
+        "Iris \u2022 warm amber",
+        "Ivory \u2022 muzzle chest tail",
+        "Pupil and nose",
+        "Warm eye white",
+        "Warm studio backdrop"
+      ]
+    },
+    "intensity": {
+      "keyEnergy": 292.5,
+      "keyLocation": [
+        -3.0,
+        -4.0,
+        6.0
+      ],
+      "worldStrength": 0.3499999940395355,
+      "albedoScale": 1,
+      "keyTarget": [
+        0,
+        0,
+        1.7
+      ],
+      "sourceKeyTargetDistance": 6.594694837519019,
+      "actualKeyTargetDistance": 6.594694837519019,
+      "albedoTargetMaterials": [
+        "Coat \u2022 burnt tangerine",
+        "Coat \u2022 warm brow",
+        "Deep cocoa \u2022 socks and ear rims",
+        "Ear interior \u2022 warm coral",
+        "Iris \u2022 warm amber",
+        "Ivory \u2022 muzzle chest tail",
+        "Pupil and nose",
+        "Warm eye white",
+        "Warm studio backdrop"
+      ]
+    },
+    "ambient": {
+      "keyEnergy": 650.0,
+      "keyLocation": [
+        -3.0,
+        -4.0,
+        6.0
+      ],
+      "worldStrength": 0.699999988079071,
+      "albedoScale": 1,
+      "keyTarget": [
+        0,
+        0,
+        1.7
+      ],
+      "sourceKeyTargetDistance": 6.594694837519019,
+      "actualKeyTargetDistance": 6.594694837519019,
+      "albedoTargetMaterials": [
+        "Coat \u2022 burnt tangerine",
+        "Coat \u2022 warm brow",
+        "Deep cocoa \u2022 socks and ear rims",
+        "Ear interior \u2022 warm coral",
+        "Iris \u2022 warm amber",
+        "Ivory \u2022 muzzle chest tail",
+        "Pupil and nose",
+        "Warm eye white",
+        "Warm studio backdrop"
+      ]
+    },
+    "albedo": {
+      "keyEnergy": 650.0,
+      "keyLocation": [
+        -3.0,
+        -4.0,
+        6.0
+      ],
+      "worldStrength": 0.3499999940395355,
+      "albedoScale": 0.6,
+      "keyTarget": [
+        0,
+        0,
+        1.7
+      ],
+      "sourceKeyTargetDistance": 6.594694837519019,
+      "actualKeyTargetDistance": 6.594694837519019,
+      "albedoTargetMaterials": [
+        "Coat \u2022 burnt tangerine",
+        "Coat \u2022 warm brow",
+        "Deep cocoa \u2022 socks and ear rims",
+        "Ear interior \u2022 warm coral",
+        "Iris \u2022 warm amber",
+        "Ivory \u2022 muzzle chest tail",
+        "Pupil and nose",
+        "Warm eye white",
+        "Warm studio backdrop"
+      ]
+    }
+  },
+  "metadataFloatTolerance": 1e-05
+}

@@ -1,0 +1,2115 @@
+#include "garden.h"
+#include "canopy_pie.h"
+#include "garden_decor_pie.h"
+#include <math.h>
+#include <stdlib.h>
+#include <string.h>
+// The other half of flower.c's FLOWER_HOT_IRAM probe: the garden's per-row
+// functions. Together with shade/bell_span/ray_row this is essentially the
+// whole row loop, which is what decides whether "make it fit in 16 KB" is a
+// target with a number or a target with no number at all.
+#if defined(ESP_PLATFORM) && defined(FLOWER_HOT_IRAM)
+#define GARDEN_HOT IRAM_ATTR
+#else
+#define GARDEN_HOT
+#endif
+#ifdef ESP_PLATFORM
+#include "esp_cpu.h"
+#include "esp_attr.h"
+#if GARDEN_MOTE_ONLY
+#include "esp_log.h"
+#endif
+// TEMPORARY (see garden.h). One rsr.ccount either side of the vector half,
+// twice a row; the fences stop the compiler moving work across them.
+// The scene's own cycle brackets, and until 2026-09-22 they were in the
+// SHIPPING build: 14 counter reads in this file, around every row pass,
+// each pair wrapped in a "memory" clobber that also forbids the compiler from
+// scheduling across it. That is instructions and spills in the hottest loop of
+// a scene whose largest single cost turned out to be its code not fitting in a
+// 16 KB instruction cache (docs/perf/ray-stall-census.md 2.5) -- so measuring
+// the scene was making the scene the thing it was measuring.
+//
+// SCENE_PROF brings back SPLIT / SPLIT2 / SPLIT3 and everything that reads
+// them (tools/flower_instrument_capture.py, tools/flower_instrument_summary.py).
+// Without it the counters are dead stores and the compiler removes them.
+#if defined(ESP_PLATFORM) && defined(SCENE_PROF)
+#define PROF_ON 1
+#define GARDEN_FENCE __asm__ __volatile__("":::"memory")
+#define PROF_CC()  esp_cpu_get_cycle_count()
+#else
+#define PROF_ON 0
+#define GARDEN_FENCE do{}while(0)
+#define PROF_CC()  0u
+#endif
+static uint32_t garden_pixel_cycles;
+uint32_t garden_prof_pixels(void) {
+    uint32_t v=garden_pixel_cycles;garden_pixel_cycles=0;return v;
+}
+// TEMPORARY, and the reason it exists is that three builds could not answer
+// what one counter can.
+//
+// GARDEN_NO_MOTES, GARDEN_MOTE_HUSH and the shipping build gave 5.790, 6.161
+// and 6.634 ms with sample bands of 0.7 ms each -- overlapping bands being
+// subtracted to produce differences of 0.37 and 0.47. That is the same method
+// that produced the 1.0 ms which turned out to be alignment noise, applied to
+// a smaller quantity. Two rsr.ccount either side of the mote pass measure it
+// INSIDE one binary, where there is no layout difference to subtract and no
+// second sample to overlap with.
+//
+// It counts rows entered as well as cycles, because cycles per mote-row is the
+// number in dispute: the disassembly says 118 instructions a drawn pixel, and
+// 81 pixels of that is 0.07 ms against a measured 0.47.
+static uint32_t garden_mote_cycles,garden_mote_rows;
+uint32_t garden_prof_motes(uint32_t *rows) {
+    uint32_t v=garden_mote_cycles;
+    if(rows)*rows=garden_mote_rows;
+    garden_mote_cycles=0;garden_mote_rows=0;
+    return v;
+}
+// TEMPORARY, and it exists because `decor` is four jobs added together. SPLIT
+// subtracts the vector kernel from garden_row_blend and calls the remainder
+// decor -- 14 to 16 ms of trunks, canopy, grass, decorative rays, the dissolve
+// between two layouts and the row scaffolding, with no way to say which. The
+// instruction-count floor can only explain 6.3 ms of it (rays 3.9 + canopy 2.0 +
+// trunks 0.30 + grass 0.12), so the missing 8 to 10 ms is either one of those
+// jobs being far more expensive than its instruction count or the scaffolding
+// nobody counted. Two counters inside the shipping binary answer that; the row
+// counts are printed rather than assumed, because the last two attributions in
+// flower.c both divided by a number nobody had counted.
+//
+// `garden_dissolve_rows` is the third number and it is not optional: during a
+// layout cross-fade (FLOWER_GARDEN_FADE_S = 3 s out of a 40 s hold) every row
+// runs the vegetation pass twice and then blends, so a 60-frame average of
+// vegetation is the average of two different amounts of work unless the reader
+// knows how many rows were in each state.
+static uint32_t garden_veg_cycles,garden_veg_rows,garden_veg_passes;
+static uint32_t garden_ray_cycles,garden_ray_rows;
+static uint32_t garden_dissolve_rows;
+uint32_t garden_prof_vegetation(uint32_t *rows,uint32_t *passes) {
+    uint32_t v=garden_veg_cycles;
+    if(rows)*rows=garden_veg_rows;
+    if(passes)*passes=garden_veg_passes;
+    garden_veg_cycles=0;garden_veg_rows=0;garden_veg_passes=0;
+    return v;
+}
+uint32_t garden_prof_rays(uint32_t *rows) {
+    uint32_t v=garden_ray_cycles;
+    if(rows)*rows=garden_ray_rows;
+    garden_ray_cycles=0;garden_ray_rows=0;
+    return v;
+}
+uint32_t garden_prof_dissolve(void) {
+    uint32_t v=garden_dissolve_rows;garden_dissolve_rows=0;return v;
+}
+#ifdef GARDEN_RAY_PERF
+// Why the decorative rays cost what they cost, from the hardware's own
+// counters rather than from an instruction count.
+//
+// The standing claim is that rays has no headroom, and it rests on three
+// failed attempts. Three failures are not a floor -- the kernel runs at 2.4 to
+// 3.5 times its static instruction count and nobody has said where the
+// difference goes. XTPERF answers exactly that: PM0 counts cycles and PM1
+// counts one chosen event, so the ratio says what fraction of a ray row is
+// retiring instructions, waiting on a register, or waiting on memory.
+//
+// Two counters is the whole budget (XCHAL_NUM_PERF_COUNTERS), so the second
+// selector rotates one per SPLIT window, and PM0 stays on CYCLES so that every
+// fraction has a denominator measured through the same brackets as its
+// numerator. Reading them costs 16.12 cycles each (main/hal/fpu_latency.c,
+// FPU_ERI) and there are four reads a row against ~6,000 cycles a row, so the
+// instrument is ~1% of what it measures and it is inside both terms of every
+// ratio. Diagnostic build only.
+//
+// PM1's ERI address is documented in ESP-IDF as "used in apptrace module to
+// store CRC16". Apptrace is not enabled here; if it ever is, this reads its
+// scratch instead of a counter and the numbers become fiction.
+#include "eri.h"
+#include "xtensa-debug-module.h"
+#include "xtensa/xt_perf_consts.h"
+static uint32_t garden_ray_pm0,garden_ray_pm1;
+// The same two counters around the PIXEL pass as well. The counters free-run,
+// so a second pair of accumulators costs two more reads a row and answers the
+// question the ray numbers cannot: whether a stall fraction belongs to this
+// kernel or to the machine it is running on. Two kernels of completely
+// different shape showing the same fraction is not a property of either.
+static uint32_t garden_pix_pm0,garden_pix_pm1;
+// The same event split by row index. If a frame's once-per-frame preparation
+// (flower_build_botanicals is 9,725 bytes on its own, flower_prepare 3,135,
+// garden_prepare_layout 1,916) evicts the row loop from a 16 KB cache, the
+// first rows of every frame pay to pull it back and the rest run warm. If
+// instead the row loop simply does not fit, every row pays the same. The two
+// have completely different answers, and one bucket boundary separates them.
+#ifndef GARDEN_EARLY_ROWS
+#define GARDEN_EARLY_ROWS 16
+#endif
+static uint32_t garden_early_pm0,garden_early_pm1,garden_early_rows;
+static uint32_t garden_late_pm0,garden_late_pm1,garden_late_rows;
+static unsigned garden_ray_sel;
+// PM0 is always cycles; PM1 is the question of the window.
+static const struct {const char *name;uint16_t select,mask;} garden_ray_events[]={
+    {"insn",      XTPERF_CNT_INSN,    XTPERF_MASK_INSN_ALL},
+    {"bubbles",   XTPERF_CNT_BUBBLES, XTPERF_MASK_BUBBLES_ALL},
+    {"regdep",    XTPERF_CNT_BUBBLES, XTPERF_MASK_BUBBLES_R_HOLD_REG_DEP},
+    {"dstall",    XTPERF_CNT_D_STALL, XTPERF_MASK_D_STALL_ALL},
+    {"istall",    XTPERF_CNT_I_STALL, XTPERF_MASK_I_STALL_ALL},
+    // I_STALL is the largest term and it is NOT the instruction cache -- the
+    // cache-miss mask reads a flat zero, which is credible for a kernel this
+    // small run 8,100 times a window. These five are what is left in the
+    // selector, and two of them are arithmetic the compiler cannot avoid
+    // emitting: this core's integer divide and multiply are iterative and
+    // stall the fetch while they run.
+    {"istall_idiv",XTPERF_CNT_I_STALL,XTPERF_MASK_I_STALL_ITERATIVE_DIV},
+    {"istall_imul",XTPERF_CNT_I_STALL,XTPERF_MASK_I_STALL_ITERATIVE_MUL},
+    {"istall_busy",XTPERF_CNT_I_STALL,XTPERF_MASK_I_STALL_BUSY},
+    {"istall_l32r",XTPERF_CNT_I_STALL,XTPERF_MASK_I_STALL_FAST_L32R},
+    {"istall_run", XTPERF_CNT_I_STALL,XTPERF_MASK_I_STALL_EXTERNAL_SIGNAL},
+    {"icachemiss",XTPERF_CNT_I_MEM,   XTPERF_MASK_I_MEM_CACHE_MISSES},
+};
+#define GARDEN_RAY_EVENTS (sizeof garden_ray_events/sizeof*garden_ray_events)
+static void garden_ray_perf_arm(unsigned sel) {
+    // The six lines of components/perfmon/xtensa_perfmon_access.c, inlined so
+    // that this file needs no new component dependency for a build that never
+    // ships.
+    //
+    // kernelcnt 0 with tracelevel 0, and the first attempt had it the other way
+    // round on a misreading that cost a whole run. PMCTRL_KRNLCNT means "count
+    // when CINTLEVEL > TRACELEVEL", so kernelcnt 1 counts ONLY inside
+    // interrupts -- which is why that build reported 195,000 cycles for a
+    // region ccount put at 48,700,000, and zero instruction-cache misses
+    // forever. kernelcnt 0 counts CINTLEVEL <= TRACELEVEL, i.e. ordinary task
+    // code, which is the thing being measured; ISR time inside the bracket is
+    // then excluded, which is what anyone wants anyway.
+    //
+    // The disagreement is why `pm0_cy` and the `rays` ccount are both printed.
+    // A ratio like "IPC 0.55" looked entirely plausible while the counter was
+    // measuring the wrong thing, and would have been believed without the
+    // second number standing next to it.
+    const uint16_t sels[2]={XTPERF_CNT_CYCLES,garden_ray_events[sel].select};
+    const uint16_t masks[2]={XTPERF_MASK_CYCLES,garden_ray_events[sel].mask};
+    for(int id=0;id<2;id++) {
+        uint32_t pmc=((uint32_t)(sels[id]&PMCTRL_SELECT_MASK)<<PMCTRL_SELECT_SHIFT)
+                    |((uint32_t)(masks[id]&PMCTRL_MASK_MASK)<<PMCTRL_MASK_SHIFT)
+                    |(0u<<PMCTRL_KRNLCNT_SHIFT);
+        eri_write(ERI_PERFMON_PM0+id*4,0);
+        eri_write(ERI_PERFMON_PMCTRL0+id*4,pmc);
+    }
+    eri_write(ERI_PERFMON_PGM,PGM_PMEN);
+}
+// The row-index split of the pixel pass; see GARDEN_EARLY_ROWS above.
+void garden_prof_row_split(uint32_t *e0,uint32_t *e1,uint32_t *en,
+                           uint32_t *l0,uint32_t *l1,uint32_t *ln) {
+    *e0=garden_early_pm0;*e1=garden_early_pm1;*en=garden_early_rows;
+    *l0=garden_late_pm0;*l1=garden_late_pm1;*ln=garden_late_rows;
+    garden_early_pm0=garden_early_pm1=garden_early_rows=0;
+    garden_late_pm0=garden_late_pm1=garden_late_rows=0;
+}
+uint32_t garden_prof_ray_perf(uint32_t *pm1,const char **name,
+                              uint32_t *pix_pm0,uint32_t *pix_pm1) {
+    uint32_t v=garden_ray_pm0;
+    if(pm1)*pm1=garden_ray_pm1;
+    if(name)*name=garden_ray_events[garden_ray_sel].name;
+    if(pix_pm0)*pix_pm0=garden_pix_pm0;
+    if(pix_pm1)*pix_pm1=garden_pix_pm1;
+    garden_ray_pm0=0;garden_ray_pm1=0;garden_pix_pm0=0;garden_pix_pm1=0;
+    garden_ray_sel=(garden_ray_sel+1)%GARDEN_RAY_EVENTS;
+    garden_ray_perf_arm(garden_ray_sel);
+    return v;
+}
+#endif
+#endif
+
+// No writable statics, LUTs, images or vertex lists. A broad warm scattering
+// lobe sits in cool mist, broken by drifting density and canopy silhouettes.
+//
+// One exception, and it is deliberate rather than a lapse: garden_pixel_cycles
+// below is four bytes of writable DIRAM under ESP_PLATFORM. It is a profiling
+// counter, not scene state -- nothing drawn depends on it, the host build does
+// not have it, and it goes when flower.c's TEMPORARY counters go. The claim
+// above is about what the scene needs to draw itself, which is still nothing.
+static unsigned garden_hash(unsigned v) {
+    v^=v>>16;v*=0x7feb352du;v^=v>>15;v*=0x846ca68bu;return v^(v>>16);
+}
+// Q8 smoothstep/value noise. Lattice values come from hashes, never a LUT.
+static int garden_smooth(int t) { return t*t*(768-2*t)/65536; }
+static int garden_noise(unsigned p,unsigned seed) {
+    unsigned c=(p>>8)&255;
+    int a=(int)(garden_hash(c+seed)&255);
+    int b=(int)(garden_hash(((c+1)&255)+seed)&255);
+    return a+(b-a)*garden_smooth((int)(p&255))/256;
+}
+// A four-second lattice spacing for wind/warping; same 128-second period as
+// advection. Adjacent plants sample nearby positions in this shared field.
+static int garden_motion(unsigned p,unsigned seed) {
+    unsigned c=(p>>11)&31;
+    int a=(int)(garden_hash(c+seed)&255);
+    int b=(int)(garden_hash(((c+1)&31)+seed)&255);
+    return a+(b-a)*garden_smooth((int)((p>>3)&255))/256;
+}
+typedef struct { int cell,left,right; } GardenSpan;
+// The scalar field, kept because garden_row_scalar below is the only readable
+// statement of what the lane code computes.
+static int __attribute__((unused))
+garden_density(GardenSpan *s,int px,int y,int shift) {
+    int c=px>>(shift+8),mask=(256>>shift)-1;
+    if(c!=s->cell) {
+        s->cell=c;unsigned cy=(unsigned)(y>>shift);
+        int fy=garden_smooth((y&((1<<shift)-1))*256/(1<<shift));
+        int a=(int)(garden_hash((c&mask)+cy*19)&255);
+        int b=(int)(garden_hash((c&mask)+(cy+1)*19)&255);
+        int aa=(int)(garden_hash(((c+1)&mask)+cy*19)&255);
+        int bb=(int)(garden_hash(((c+1)&mask)+(cy+1)*19)&255);
+        s->left=a+(b-a)*fy/256;s->right=aa+(bb-aa)*fy/256;
+    }
+    int fx=garden_smooth((px>>shift)&255);
+    return s->left+(s->right-s->left)*fx/256;
+}
+// A cell's corner, which is all garden_density ever reads out of the lattice:
+// its `left` for cell c and its `right` for cell c+1 are the same function, so
+// one array of (mask+1) corners per row describes the whole octave.
+static int garden_corner(int c,int mask,int y,int shift) {
+    unsigned cy=(unsigned)(y>>shift);
+    // *256/(1<<shift) is <<(8-shift), and `shift` is a parameter so the
+    // compiler could not see that: it emitted a real hardware divide, twelve
+    // times a row. Exact, not an approximation -- the divisor is a power of two
+    // and the numerator is non-negative.
+    int fy=garden_smooth((y&((1<<shift)-1))<<(8-shift));
+    int a=(int)(garden_hash((unsigned)(c&mask)+cy*19)&255);
+    int b=(int)(garden_hash((unsigned)(c&mask)+(cy+1)*19)&255);
+    return a+(b-a)*fy/256;
+}
+// Stable one-bit spatial dither softens RGB565 steps without flicker. It is a
+// function rather than an expression because tools/test_garden.c holds it to a
+// contract -- uniform over the four values, uncorrelated with either neighbour
+// -- and a test can only hold what it can call. Whatever hash this uses has to
+// keep passing that, which is what stops "the noise does not matter" from
+// becoming "nobody checked the noise".
+//
+// This is the second hash to hold that contract. The 32-bit one it replaces
+// cannot be done in 16-bit lanes, so it was searched for among the shapes that
+// can: one multiply, one XOR against a per-row scalar, and two squarings whose
+// full 32-bit products come back out of QACC shifted. The XOR is not
+// decoration -- EE.VADDS.S16 saturates, so there is no modular add in the
+// instruction set and the row term cannot be added. Constants were chosen by
+// sweeping 40,000 quadruples against the statistics below rather than picked;
+// the obvious shapes fail loudly (a single multiply is linear in x, so
+// neighbours differ by a constant and P(same as left) collapses to 0, and one
+// squaring alone leaves a 7% imbalance between the four values).
+// The shifts are 17 and 16 rather than the 8 that would mix best, because
+// EE.SRCMB.S16.QACC *saturates* on its way out of the accumulator. h*h reaches
+// 2^32, and taken out at a shift of 8 every large lane would come back as
+// 32767 -- the same value -- and the dither would collapse. 17 is the smallest
+// shift that keeps the square inside a signed lane, and the second product is
+// taken at 16 for the same reason. Nothing else in these kernels saturates;
+// this is the one place the bound is tight, and it is what the sweep in
+// tools/pie/models/garden_model.c is checking when it prints the four counts.
+static uint16_t garden_rgb(int r,int g,int b) {
+    return (uint16_t)((r>>3)<<11|(g>>2)<<5|(b>>3));
+}
+// Nine multiplies and three shifts, called a few hundred times a row by the
+// trunks, the grass and the dissolve. Forced inline for the call and nothing
+// else: unlike rgbd in flower.c there are no floating-point stalls here for
+// the surrounding code to fill, so what this can win is the l32r, the callx8,
+// the entry and the retw -- and that is why it carries a switch instead of an
+// argument. GARDEN_NO_MIX_INLINE prices it.
+#ifdef GARDEN_NO_MIX_INLINE
+static uint16_t __attribute__((noinline)) garden_mix(uint16_t a,uint16_t b,unsigned f) {
+#else
+static inline __attribute__((always_inline)) uint16_t garden_mix(uint16_t a,uint16_t b,unsigned f) {
+#endif
+    unsigned r=(((a>>11)&31)*(256-f)+((b>>11)&31)*f)>>8;
+    unsigned g=(((a>>5)&63)*(256-f)+((b>>5)&63)*f)>>8;
+    unsigned blue=((a&31)*(256-f)+(b&31)*f)>>8;
+    return (uint16_t)(r<<11|g<<5|blue);
+}
+// ---------------------------------------------------------------------------
+// The pixel loop, in eight-pixel lanes.
+//
+// Three passes over the row replace one scalar loop: two that lay the noise
+// field down in `dens` and one that turns it into pixels. This shape is forced
+// by what PIE cannot do rather than chosen. The lattice corners change part way
+// through a block, and the only way to hold two cells' corners in lanes at once
+// is a compare and a mask; doing that inline would need six live vectors that
+// the pixel pass does not have to spare, on a machine with eight. Split out, no
+// pass needs more than eight, no value spills, and the store pointer stays
+// 16-byte aligned across the whole row -- which matters because a 128-bit store
+// to a misaligned address does not fault, it silently rounds down (TRM 1.7, and
+// docs/perf/pie-simd.md 1.3).
+//
+// The row's constants -- forty in the pixel pass, seven or eight in each
+// octave -- never take a register at all. They are broadcast once into a table
+// that the loop walks in issue order, and the pass reads each one where it is
+// used. In the octaves that walk is free: docs/perf/pie-simd.md 2.1 swept the
+// count of fused loads from 0 to 32 per block and measured the coefficient at
+// zero, so every constant there rides an arithmetic instruction that was
+// happening anyway. The pixel pass has 28 instructions with a .LD.INCP form
+// against 40 constants, so it pays a plain load for each instead; fusing what
+// can be fused would take its block from 135 instructions to about 107 and is
+// deliberately left for after the device has spoken.
+//
+// Holding constants in registers instead was never an option: there is no
+// instruction that distributes one element of a vector register to all lanes
+// (docs/perf/pie-simd.md 1.1), so a constant either comes from memory or is
+// built. What the table buys is the eight registers -- only the x ramp, the
+// ambient, the haze and the accumulating sunlight live across more than a few
+// instructions, and nothing spills.
+//
+// Every division in the scalar loop becomes a multiply by a rounded-up
+// reciprocal, proven over its whole domain in tools/pie/models/garden_model.c.
+// The rounding is up rather than nearest on purpose: it makes the lobe exactly
+// zero at its own clamped edge, which is what lets the kernel drop the
+// out-of-range test the scalar code needs and clamp instead.
+#define GARDEN_M48 1366                 /* ceil(2^16/48): density/12 undivided */
+#define GARDEN_M80 820                  /* ceil(2^16/80): density/20 undivided */
+#define GARDEN_M3  21846                /* ceil(2^16/3)  */
+typedef struct {
+    int center,width,mww;
+    int at0,w0,mw0,at1,w1,mw1;
+    int ambient_y,kbase,dy;
+    int p5,p6;
+    int vc[4],vf[8];
+} GardenRow;
+static int garden_recip(int d,int sh) { return (int)((((long)1<<sh)+d-1)/d); }
+
+// One octave of the field across the row. `step` is how far the lattice
+// coordinate moves per pixel -- 4 for the 64-pixel octave, 8 for the 32-pixel
+// one -- and `v` holds that octave's (mask+1) corners for this row.
+//
+// The row is cut into runs of blocks that start in the same cell. A run never
+// splits a block: the block straddling a cell edge stays in the run it began
+// in, and the lanes past the edge are moved to the next cell by ANDing the
+// corner deltas with EE.VCMP.LT.S16's mask. That is the whole reason the
+// destination stays aligned; cutting at the true edge instead would start most
+// runs at an odd pixel.
+static void __attribute__((unused))
+garden_octave_lanes(int16_t *dens,int n,int rc0,int step,
+                                int a,int da,int ddb,int first) {
+    for(int i=0;i<n;i++)for(int l=0;l<8;l++) {
+        int rc=rc0+step*(i*8+l);
+        // t*t peaks at 65025 and stays inside a lane; the cubic's product does
+        // not, so it comes back out of QACC shifted by 16.
+        int t=rc&255,w=768-2*t,fx=((t*t)*w)>>16;
+        int nm=rc>255?-1:0;
+        int lo=a+(da&nm),qd=da+(ddb&nm),hi=lo+qd;
+        // a+(b-a)*f/256 rewritten so both terms are non-negative and one QACC
+        // pass carries them; the two differ by at most one step, and only
+        // where C truncates a negative product toward zero.
+        int d=(lo*(256-fx)+hi*fx)>>8;
+        int x=i*8+l;
+        // Undivided on purpose: dens holds 3Dc+Df, and the pixel pass folds
+        // the quarter into its own reciprocals.
+        dens[x]=(int16_t)(first?3*d:dens[x]+d);
+    }
+}
+// The canopy's span, written as lanes.
+//
+// It is 8,299 of the 16,218 blends garden_row's scalar decorations make in a
+// frame -- more than the trunks and the grass together -- and it makes them in
+// 154 runs of about 54 contiguous pixels, one per ellipse-row, which is the
+// shape a vector unit wants. The trunks are 405 spans of fifteen and the grass
+// is spans of four; neither is worth eight lanes.
+//
+// Three things had to be true for this to be expressible without moving a
+// pixel, and all three are swept in tools/pie/models/garden_model.c:
+//
+//   mrr = ceil(2^26/rr) reaches 85,598 and does not fit a 16-bit lane. Split it
+//   as hi*256+lo and take dx2*hi*256 as (dx2*16)*(hi*16), which does fit,
+//   because dx2 <= 1936 and hi <= 334.
+//
+//   q*3/5 is (q*39322)>>16 exactly over q in 0..256.
+//
+//   The `if(q>0)` disappears rather than becoming a mask: clamping q to zero
+//   gives f=0, and (A*256 + B*0)>>8 is A. Blending with zero alpha is the
+//   identity, so the branch is free to go.
+// TEMPORARY A/B switch for the exact scalar tweak below -- the canopy's f == 0
+// short circuit. Both arms have to run in one binary: the same kernel moves 15%
+// between builds from instruction-cache alignment alone (CLAUDE.md), and this
+// change is smaller than that. 1 is the shipping arm.
+// The other half of the change this was ported with, the unsigned support test in
+// the decor loop, is the one below: this file ported the canopy tweak first, when
+// the decorative light here was the grouped-by-four revision and the two reaches
+// were never formed (so there was no test to rewrite). The reaches came in with
+// the support gate, so the test has been applied to the group loop's gate.
+int g_garden_scalar_tweaks=1;
+// The canopy blend on the PIE unit (scene/canopy_pie.c). Exact, so the picture
+// cannot move: the scalar tweak above skips work, this one changes which unit
+// does it. 0 selects the scalar statement below, and both arms live in one binary
+// for the same reason.
+int g_garden_canopy_pie=1;
+// TEMPORARY A/B switch for the row-invariant hoist; see GardenVeg in garden.h
+// and the SPLIT3 rotation in flower.c. 1 = the shipping path, the invariants
+// taken once a frame. 0 = every row derives them again, which is where they ran
+// until 2026-09-20.
+int g_garden_veg_hoist=1;
+// One pixel of the canopy blend: the statement the kernel in scene/canopy_pie.c is
+// the lane version of. It is its own function because the kernel only takes whole
+// eight-pixel interiors, so the clipped span's head and tail come through here.
+static inline void garden_canopy_pixel(uint16_t *row,int x,int cx,int mhi,int mlo,
+                                       int qbase,int lr,int lg,int lb) {
+    int dx=x-cx,dx2=dx*dx;
+    int t=((dx2*16)*mhi+dx2*mlo)>>18;
+    int q=qbase-t;
+    if(q<0)q=0;
+    int f=(q*39322)>>16,g=256-f;
+    // f == 0 is the identity: with g == 256 every channel comes back unchanged
+    // (r*256>>8 == r), so this pixel's blend and store were a no-op. Rows near an
+    // ellipse's vertical edge spend most of their clipped span here, and the
+    // compare is one instruction against a load, ~20 instructions of blend and a
+    // store. The kernel has no branch to spend on it and stores the identity
+    // instead, which is the same bytes (canopy_model.c D).
+    if(g_garden_scalar_tweaks&&!f)return;
+    unsigned a=row[x];
+    row[x]=(uint16_t)(((((a>>11)&31)*g+lr*f)>>8)*2048
+                     +((((a>>5)&63)*g+lg*f)>>8)*32
+                     +(((a&31)*g+lb*f)>>8));
+}
+// Not done here, and measured: cutting the span to the pixels with f != 0 is
+// exact (21.3% of the span is the identity, swept over every reachable
+// ellipse-row) and was SLOWER on the part, +102 cycles per ellipse-row in 26 of
+// 26 same-binary pairs. The kernel passes an identity pixel for a few cycles; the
+// cut paid a divide and a count-down per row. docs/perf/pie-simd.md 7.
+static void garden_canopy_row_body(uint16_t *row,int lo,int hi,int cx,int mrr,int qy,
+                                   uint16_t leafy);
+#ifdef ESP_PLATFORM
+// TEMPORARY (see garden.h). The canopy on its own, because `decor` holds it
+// together with the trunks, the grass and the light, and the last canopy A/B
+// could not see past that: its difference was smaller than the drift of the
+// terms it was averaged with. Two cycle reads per ellipse-row, 154 a frame.
+static uint32_t garden_canopy_cycles,garden_canopy_rows;
+uint32_t garden_prof_canopy(uint32_t *rows) {
+    uint32_t v=garden_canopy_cycles;
+    if(rows)*rows=garden_canopy_rows;
+    garden_canopy_cycles=garden_canopy_rows=0;
+    return v;
+}
+#endif
+static inline void garden_canopy_row(uint16_t *row,int lo,int hi,int cx,int mrr,int qy,
+                                     uint16_t leafy) {
+#if PROF_ON
+    GARDEN_FENCE;uint32_t c0=PROF_CC();GARDEN_FENCE;
+    garden_canopy_row_body(row,lo,hi,cx,mrr,qy,leafy);
+    GARDEN_FENCE;garden_canopy_cycles+=PROF_CC()-c0;
+    garden_canopy_rows++;GARDEN_FENCE;
+#else
+    garden_canopy_row_body(row,lo,hi,cx,mrr,qy,leafy);
+#endif
+}
+static void garden_canopy_row_body(uint16_t *row,int lo,int hi,int cx,int mrr,int qy,
+                                   uint16_t leafy) {
+    int mhi=(mrr>>8)*16,mlo=mrr&255,qbase=256-qy;
+    int lr=(leafy>>11)&31,lg=(leafy>>5)&63,lb=leafy&31;
+    if(g_garden_canopy_pie) {
+        // Where the ellipse was clipped is not where eight divides the row, so the
+        // kernel takes the first whole block that starts on an eight boundary and
+        // what is left at either end goes through the scalar statement above. The
+        // kernel asks nothing of the row pointer beyond x being a multiple of
+        // eight; every pixel it touches is inside |x - cx| <= rx, which is what
+        // tools/pie/models/canopy_model.c sweeps.
+        int s=(lo+7)&~7,e=(hi+1)&~7;
+        if(e>s) {
+            canopy_pie(row+s,(e-s)>>3,cx,mrr,qy,leafy,s);
+            for(int x=lo;x<s;x++)garden_canopy_pixel(row,x,cx,mhi,mlo,qbase,lr,lg,lb);
+            for(int x=e;x<=hi;x++)garden_canopy_pixel(row,x,cx,mhi,mlo,qbase,lr,lg,lb);
+            return;
+        }
+    }
+    for(int x=lo;x<=hi;x++)garden_canopy_pixel(row,x,cx,mhi,mlo,qbase,lr,lg,lb);
+}
+// One sunlight shoulder. The clamp replaces the scalar `if`: at |d| == w the
+// rounded-up reciprocal makes s exactly 0, so an out-of-band column adds
+// nothing without being tested. s can be 256, so s*s leaves a lane -- it is
+// regrouped as (s*gain)*s, which does not.
+static int garden_shoulder(int x,int at,int w,int m,int gain,int haze4) {
+    int d=x-at;
+    if(d<-w)d=-w;
+    if(d>w)d=w;
+    int s=256-((((d*d)&0xffff)*m)>>14);
+    int t=(((s*gain)&0xffff)*s)>>8;
+    return (t*haze4)>>18;
+}
+// The pixel pass. Everything here is a lane operation: the C is the statement
+// of what the assembly does, in the order it does it.
+// One pixel of the light, with `extra` added to the sunlight before the
+// channels are formed. It exists so that the mote touch-up and the pixel pass
+// are the same arithmetic rather than two copies of it -- the approximations in
+// here (the combined shifts, the two-step shoulder) are exactly the ones the
+// PIE kernel makes, and a second copy would drift away from them silently.
+static inline uint16_t garden_shade_pixel(int x,int dn,const GardenRow *r,int extra) {
+    int u=x-r->center;
+    if(u<-r->width)u=-r->width;
+    if(u>r->width)u=r->width;
+    int q=256-((((u*u)&0xffff)*r->mww)>>14);
+    int ambient=r->ambient_y+((dn*GARDEN_M48)>>16);
+    int k=r->kbase+((dn*GARDEN_M80)>>16),haze=320+dn;
+    int sun=(((q*k)&0xffff)*q)>>16;
+    sun+=garden_shoulder(x,r->at0,r->w0,r->mw0,4,haze);
+    sun+=garden_shoulder(x,r->at1,r->w1,r->mw1,7,haze);
+    unsigned h=((unsigned)(x*GARDEN_DKX)^(unsigned)r->dy)&0xffffu;
+    int d=(int)((((h*h)>>17)*GARDEN_DKM>>16)&3u);
+    int fr=10,fg=22,fb=28;      /* the channel floors, named so the switch can drop them */
+#if GARDEN_MOTE_ONLY
+    // Everything the BACKGROUND writes, dropped -- and nothing else. See the
+    // switch in garden.h: `q` is computed above and survives untouched, because
+    // the mote is gated by it and zeroing the shaft by zeroing its lobe would
+    // take the motes with it and prove nothing. The line below is the whole of
+    // the blanking, and it is placed after q and before the mote's term on
+    // purpose. Do not move it up.
+    ambient=0;sun=0;d=0;fr=fg=fb=0;
+#endif
+    // The mote's own light, gated by the shaft it sits in. Adding it flat would
+    // make a mote just as bright over the woodland as inside the beam; scaling
+    // by q means it only exists where the light does, which is both what dust
+    // does and what the effect is for. q is already here, so it is one multiply.
+    sun+=(extra*q)>>8;
+    int cr=((ambient+5*sun)>>1)+d+fr;
+    int cg=((3*ambient+6*sun)>>2)+d+fg;
+    int cb=(ambient+((sun*GARDEN_M3)>>16)+d+fb)>>3;
+    return (uint16_t)((((cr*256)&0xF800)|((cg*8)&0x07E0))|cb);
+}
+static void __attribute__((unused))
+garden_pixels(uint16_t *row,const int16_t *dens,const GardenRow *r) {
+    for(int x=0;x<240;x++)row[x]=garden_shade_pixel(x,dens[x],r,0);
+}
+// Where the light is, at this row. The one definition of it.
+//
+// Two places need it and they must not disagree. The renderer treats a column
+// as lit when |x-center| < half, because that is exactly where the lobe
+// q = 256 - u*u*256/(half*half) is positive; garden_motes uses the same test to
+// decide whether a particle is still alive. If those two drifted apart, midges
+// would either die a few pixels inside the visible edge -- a band where the
+// swarm mysteriously thins -- or be tracked a few pixels outside it, which is
+// merely wasteful. The warp term is per-row and comes from the phase, so a
+// version of this that left it out would be wrong in the first way.
+static void garden_shaft(int y,const GardenFrame *f,int *center,int *half) {
+    *center=200-(y+40)*3/4+f->sun+(garden_motion((unsigned)(f->phase+y*64),419)-128)/16
+        +(y-67)*f->slant/128;
+    *half=58+y/3+f->spread;
+}
+// The only place a mote's heading is written after it is seeded.
+//
+// The dying latch lives in the sign of that byte, so an assignment made without
+// thinking anywhere else would silently resurrect a dying particle -- and the
+// symptom is subtle enough to go unnoticed for a long time. That is the same
+// shape as petal_reciprocals being forgettable in flower.c, and it gets the
+// same fix: one greppable function, and the invariant holds because there is
+// one place rather than because anybody remembered.
+static void garden_mote_turn(GardenMote *m,int turn) {
+    int dying=m->dir<0,h=(dying?-m->dir:m->dir)-1;   /* 0..126 */
+    h+=turn;
+    if(h<0)h+=127;else if(h>=127)h-=127;
+    m->dir=(int8_t)(dying?-(h+1):h+1);
+}
+// The heading in 256ths of a turn, reversed while dying -- which is the whole
+// of the outward nudge, and costs nothing because it is the latch.
+static int garden_mote_dir(const GardenMote *m) {
+    int h=((m->dir<0?-m->dir:m->dir)-1)*2;
+    return m->dir<0?h+128:h;
+}
+// A whole turn in 256, to about 5%: the parabola the ocean kernel uses, which
+// is plenty for something nobody measures the trajectory of, and keeps the
+// swarm out of libm. Derived rather than tabulated, so the file's opening claim
+// about LUTs stays true -- a 64-entry quarter table would have been smaller to
+// read and a promise to break.
+static int garden_sin(unsigned a) {
+    int u=(int)(a&255)-128,v=u<0?-u:u;
+    return (u*(128-v))>>4;                  /* -256..256 */
+}
+// One mote, seeded into the swarm rather than at a home of its own: near the
+// centroid, inside the dead zone, so a newcomer joins the group instead of
+// flying across the beam to it. On the very first frame the centroid is the
+// anchor, which is how a zeroed GardenFrame becomes a swarm with no separate
+// initialisation to forget.
+static void garden_seed(GardenFrame *f,GardenMote *m,unsigned g,int cx,int cy) {
+    int center,half;
+    int off=(int)((g>>8)&127)-64;
+    off=off*(off<0?-off:off)/64;                 /* biased to the middle */
+    int nx=cx+off*GARDEN_COHERE_R/8;
+    int ny=(cy+((int)((g>>16)&63)-32)*GARDEN_COHERE_R/4)>>4;
+    if(ny<GARDEN_BORN_LO)ny=GARDEN_BORN_LO;
+    if(ny>GARDEN_BORN_HI)ny=GARDEN_BORN_HI;
+    garden_shaft(ny,f,&center,&half);
+    // Never outside the light it needs, whatever the centroid was doing.
+    if(nx<(center-half+2)*16)nx=(center-half+2)*16;
+    if(nx>(center+half-2)*16)nx=(center+half-2)*16;
+    m->x=(int16_t)nx;m->y=(int16_t)(ny*16);
+    m->dir=(int8_t)(1+(int)((g>>1)&126));       /* 1..127: alive, never zero */
+    m->speed=(uint8_t)(10+((g>>24)&11));
+    m->glow=(uint8_t)(GARDEN_GLOW_BASE+((g>>20)&31));
+#if GARDEN_MOTE_HUSH
+    m->glow=0;      /* present, moved, indexed -- and drawing nothing */
+#endif
+    m->age=0;m->dim=0;
+}
+
+// Births and deaths, as two rates against a carrying capacity.
+//
+// The population is not set anywhere. It is what a birth rate and a cap leave
+// behind, which is why a mote that dies because the swarm is over capacity
+// reads as a lifespan without being one -- and why there are no clocks to
+// synchronise. A per-mote lifetime would have given sixteen parallel timers
+// started at boot, ringing together on the first cycle and never again, which
+// is the worst shape a bug can have.
+//
+// Three things this has to get right.
+//
+// BIRTHS ARE IRREGULAR ON PURPOSE. A smooth birth rate against a smoothly
+// drifting cap crosses at a regular interval, and the trace of it becomes a
+// metronome -- the same failure the cohesion loop could have had, and it is
+// tested the same way: the spread of the intervals, not their mean. So the
+// noise lives here, in whether a birth happens at all, rather than in the cap.
+// The chance scales with the deficit, which also means a swarm starting from
+// nothing fills in half a second and a swarm one short takes its time.
+//
+// THE STRAGGLER IS THE ONE THAT DIES. Furthest from the centroid, which costs
+// nothing because cohesion has already computed that distance for every mote,
+// needs no age field and no lottery, and tells a better story than an invisible
+// clock: the one that drifted out of the group is the one that does not make it.
+//
+// IT MUST NOT LOOK LIKE CULLING. An over-capacity death goes through the same
+// latch as a bottom-fifth one -- fade, turn, withdraw -- so the two are
+// indistinguishable on the glass. One dying animation, three causes.
+static void garden_capacity(GardenFrame *f,int cx,int cy,int wake) {
+    // A dying mote does not count toward the population, and getting that
+    // wrong cost a factor of ten. It fades for a second -- twenty-four frames
+    // -- and while it fades it still has a speed, so counting it as live left
+    // the swarm over capacity for the whole fade and the rule killed another
+    // one on every one of those frames. One step down in the cap took out two
+    // dozen midges: 216 deaths in two minutes against 39.
+    //
+    // THE SHAPE IS WORTH MORE THAN THE FIX. A rule that fires every frame on a
+    // condition that takes time to clear will fire for the whole of that time,
+    // once per frame, and the effect is the duration in frames -- twenty-four
+    // here, and it would be sixty on a faster panel. It is the same class as a
+    // latch that can be un-set: the state that says "this is being dealt with"
+    // has to be visible to the rule that would deal with it again. Anything
+    // added here that acts on a count, a distance or a threshold should be
+    // asked what it does on the second frame of a response, not the first.
+    //
+    // Excluding them also means the replacement arrives while the old one is
+    // still fading, which is the overlap a swarm should have -- and it is why
+    // GARDEN_LIVE_FIXED shows the population sitting slightly ABOVE its cap.
+    int live=0,worst=-1,worstd=-1;
+    for(int i=0;i<GARDEN_MOTES;i++) {
+        const GardenMote *m=&f->mote[i];
+        if(!m->speed||m->dir<0)continue;
+        live++;
+        int ox=cx-m->x,oy=cy-m->y;
+        int d1=(ox<0?-ox:ox)+(oy<0?-oy:oy);
+        if(d1>worstd) { worstd=d1;worst=i; }
+    }
+    unsigned h=garden_hash((unsigned)f->phase*0x27220A95u+f->seed*747796405u+13u);
+    if(live>wake&&worst>=0) {
+        // Over capacity: the straggler leaves, through the latch.
+        GardenMote *m=&f->mote[worst];
+        m->dir=(int8_t)-m->dir;
+        m->dim=GARDEN_DYING;
+    } else if(live<wake) {
+        // Under capacity: a birth, with a chance that grows with the deficit.
+        // At a deficit of one this is about one frame in eight, so the swarm
+        // does not snap back to the cap the instant it drops below it -- which
+        // is what would make the trace regular.
+        // The floor is not negotiable and the cap already respects it, but
+        // natural deaths do not: a run of them with a slow birth rate walked
+        // the population down to one, which is a swarm of one and a diameter of
+        // zero. Below the floor a birth is certain. That is regular, and
+        // regularity there does not show because it is an emergency rather than
+        // the regime -- above the floor the chance is what makes the trace
+        // irregular, and that is where the swarm spends its time.
+        int deficit=wake-live;
+        if(live<GARDEN_LIVE_LO||(int)(h&31u)<deficit*GARDEN_BIRTH_RATE) {
+            for(int i=0;i<GARDEN_MOTES;i++)
+                if(!f->mote[i].speed) {
+                    garden_seed(f,&f->mote[i],garden_hash(h^(unsigned)i*2654435761u),cx,cy);
+                    if(f->born<255)f->born++;
+                    break;
+                }
+        }
+    }
+}
+// The swarm, advanced one frame.
+//
+// Everything random here is a function of (phase, particle), so the same
+// sequence of times produces the same swarm -- the positions integrate, but the
+// draws that move them do not carry anything. That is what makes a swarm
+// testable at all.
+static void garden_motes(GardenFrame *f) {
+    f->born=0;f->died=0;
+    // The centroid, and it is the reason the swarm is sixteen rather than
+    // fourteen: a sum of fourteen divided by sixteen is not the centroid scaled
+    // down, it is the centroid TRANSLATED one eighth of the way to the top-left
+    // corner of the screen -- about 16 px left and 9 up for a swarm in the
+    // middle of the beam. That is a bug that would have looked like a tuning
+    // problem. Sixteen makes the shift exact, and it fills the row mask's
+    // sixteen bits exactly too; the eye cannot tell fourteen midges from
+    // sixteen, and nothing else in the file cared about the number.
+    int sx=0,sy=0,live=0;
+    for(int i=0;i<GARDEN_MOTES;i++)
+        if(f->mote[i].speed) { sx+=f->mote[i].x;sy+=f->mote[i].y;live++; }
+    // How many are awake this frame, and the shape of that number.
+    //
+    // A bell without a transcendental: three samples of the same integer value
+    // noise the wind and the warp ride, summed. Value noise already leans to
+    // the middle -- it is interpolated between lattice values, not drawn flat
+    // -- and three of them measure as mean 376, sd 117 over the whole phase
+    // period, which at this resolution is a bell nobody can distinguish from a
+    // real one when the outcome is an integer between six and sixteen. A
+    // Box-Muller would have been the most expensive line in the swarm by an
+    // order of magnitude: sinf here is a 2.3 KB Rust routine behind a thunk.
+    //
+    // Sampled on a SLOWED phase. The noise moves about 20 lattice units a frame
+    // at full rate, which is enough to move the count by two between frames --
+    // sixteen midges flickering to fourteen and back at 25 Hz reads as a
+    // rendering fault, not as variation. Shifted down it drifts like weather,
+    // which is what the anchor already does and needs no timer and no state.
+    //
+    // The floor is deliberate and it is not zero. A god ray with nothing in it
+    // reads as the feature having broken, so the tail that would empty the beam
+    // is cut off well above the point where anyone would wonder.
+    int wake=GARDEN_LIVE_MODE;
+#if !GARDEN_LIVE_FIXED
+    {
+        unsigned q=(unsigned)f->phase>>GARDEN_LIVE_SLOW;
+        int bell=garden_motion(q,401)+garden_motion(q,613)+garden_motion(q,829);
+        wake+=((bell-376)*GARDEN_LIVE_SPREAD)>>8;
+        if(wake<GARDEN_LIVE_LO)wake=GARDEN_LIVE_LO;
+        if(wake>GARDEN_MOTES)wake=GARDEN_MOTES;
+    }
+#endif
+    // Before the first cull there is nobody to average. The anchor stands in,
+    // so the first frame's tether pulls toward where the swarm is about to be
+    // rather than toward the corner.
+    int anchor_y=GARDEN_SWARM_Y*16
+        +((garden_motion((unsigned)f->phase,311)-128)*GARDEN_SWARM_DY>>3);
+    int ac,ah;garden_shaft(anchor_y>>4,f,&ac,&ah);
+    int anchor_x=(ac+((garden_motion((unsigned)f->phase,577)-128)*ah>>9))*16;
+    // And here the shift goes. Dividing a sum of sixteen by sixteen was exact,
+    // which was the whole argument for sixteen -- but the count varies now, and
+    // dividing a sum of ten by sixteen is the same defect this file removed a
+    // day ago: not a scaled centroid, a centroid dragged an eighth of the way
+    // to the corner of the screen. Two integer divisions a frame is about 32
+    // cycles on this part; the swarm's drawing is 280,000. Correct beats clever
+    // at that price, and keeping the shift would have been clever.
+    int cx=live?sx/live:anchor_x;
+    int cy=live?sy/live:anchor_y;
+    // Phototaxis, applied once to the group rather than fourteen times to its
+    // members. `q` peaks on the axis, so "toward the light" is "toward offset
+    // zero" and no gradient has to be sampled: the whole of it is pulling the
+    // centroid's own home onto the axis, and cohesion carries everyone else
+    // there. The anchor drifts on garden_motion -- the same integer lattice the
+    // wind and the shaft's warp already ride -- so the swarm wanders the beam
+    // slowly instead of being pinned to one point, with no state and no
+    // trigonometry.
+    int gx=(anchor_x-cx)>>GARDEN_PHOTO_SH;
+    int gy=(anchor_y-cy)>>GARDEN_PHOTO_SH;
+    // One shared excitation. A swarm that is disturbed dashes together, and
+    // that is the whole of the reverberation: one sample of the same noise
+    // field a frame, read by every mote, so the surge passes through the group
+    // at once instead of fourteen independent coincidences.
+    int surge=garden_motion((unsigned)f->phase*3u,929);
+    surge=surge>GARDEN_SURGE_ON?(surge-GARDEN_SURGE_ON):0;
+    for(int i=0;i<GARDEN_MOTES;i++) {
+        GardenMote *m=&f->mote[i];
+        unsigned h=garden_hash((unsigned)f->phase*2654435761u
+                               +(unsigned)i*0x9E3779B9u+f->seed);
+        // Move first, then cull, so that when this returns every particle is
+        // inside the shaft. Culling first would leave one outside for the frame
+        // it dies on -- harmless, because the gate by q makes it invisible
+        // there, but it would mean the invariant is only nearly true, and a
+        // nearly-true invariant is not one anything can be checked against.
+        if(m->speed) {
+            // Heading, not position. A small turn most frames and a sharp one
+            // about one frame in eight is what makes it dart rather than
+            // wander; random-walking the position gives noise instead.
+            int turn=(int)(h&15)-8;
+            if(((h>>8)&7)==0)turn=(int)((h>>16)&63)-32;
+            garden_mote_turn(m,turn);
+            // Speed, re-drawn occasionally: mostly a cruise, sometimes a hover
+            // of very nearly nothing. The pauses are most of what reads as
+            // alive. Never zero -- zero is the marker for a particle that has
+            // never been seeded, and a hover that drew it used to kill one
+            // every sixty-fourth particle-frame.
+            if(((h>>12)&15)==0)m->speed=(uint8_t)(1+((h>>26)&3));
+            else if(((h>>12)&3)==0)m->speed=(uint8_t)(10+((h>>24)&11));
+            // The surge rides ON TOP of the speed rather than replacing it, so
+            // a mote that is hovering when the swarm is disturbed still dashes.
+            // Overwriting the speed here would have quietly deleted the hover,
+            // which is most of what makes them read as alive.
+            int sp=m->speed+(surge*GARDEN_SURGE_GAIN>>5);
+            if(sp>63)sp=63;
+            // Vertical travel is scaled up by half: they bob more than they
+            // wander sideways.
+            int a=garden_mote_dir(m);
+            int dx=(garden_sin((unsigned)a+64u)*sp)>>8;
+            int dy=(garden_sin((unsigned)a)*sp*3)>>9;
+            // Cohesion, and it is not a force added to the tether -- it IS
+            // the tether, moved from a stored home to the swarm's own centre.
+            // Two springs pulling a mote toward two different points is what
+            // makes a swarm either collapse or wobble, and the cheapest way not
+            // to tune one against the other is not to have two.
+            //
+            // The gain is the same sixteenth and eighth the per-mote home used,
+            // for the same reason: a step of about a pixel with a heading that
+            // persists some eight frames is a random walk of ~9 px per
+            // correlation time. What is new is that the target moves, so this
+            // is a feedback loop -- everything pulls toward the average of
+            // everything -- and a gain that looks small can still breathe. The
+            // test measures the diameter every frame and asserts a floor as
+            // well as a ceiling, because a collapse and a dispersal both look
+            // like "the number changed".
+            int ox=cx-m->x,oy=cy-m->y;
+            // The dead zone, which is the whole answer to collapse. Inside it
+            // there is no pull at all, so the swarm holds a size instead of
+            // converging on a point, and it costs one L1 distance rather than
+            // the pairwise repulsion that would make this O(N^2).
+            int d1=(ox<0?-ox:ox)+(oy<0?-oy:oy);
+            int px=0,py=0;
+            if(d1>GARDEN_COHERE_R*16) { px=ox>>4;py=oy>>3; }
+            // Phototaxis at the individual as well: a mote moving away from the
+            // axis is pulled back harder than one moving toward it. A sign test
+            // and a shift, and it reads as reluctance to leave the light rather
+            // than as a rubber band, because it does nothing at all to a mote
+            // heading in.
+            int sc,sh;garden_shaft(m->y>>4,f,&sc,&sh);
+            int u=m->x-sc*16;
+            if((u<0)==(dx<0)&&u)px-=u>>GARDEN_PHOTO_ASYM;
+            m->x=(int16_t)(m->x+dx+px+gx);
+            m->y=(int16_t)(m->y+dy+py+gy);
+            if(m->age<255)m->age++;
+            // The latch. Set once, never cleared: coming back above the line
+            // does not cancel it, which is what stops a particle sitting on the
+            // line from flickering between fading and not.
+            if(m->dir>0&&(m->y>>4)>GARDEN_DOOM) {
+                m->dir=(int8_t)-m->dir;
+                m->dim=GARDEN_DYING;
+            } else if(m->dir<0&&m->dim) m->dim--;
+        }
+        int y=m->y>>4,center,half;
+        int alive=0;
+        if(m->speed&&m->dir&&!(m->dir<0&&!m->dim)&&y>=0&&y<135) {
+            garden_shaft(y,f,&center,&half);
+            int u=(m->x>>4)-center;
+            alive=u>-half&&u<half;
+        }
+        if(alive)continue;
+        // Death, and this is now the only place it happens. Whatever ended it
+        // -- the shaft, the bottom fifth, or the capacity rule -- it ends the
+        // same way: asleep, and therefore out of the centroid, out of the row
+        // index and out of every count, by the speed==0 tests that were
+        // already in the file. Rebirth belongs to the capacity rule and not to
+        // the cull, which is what makes the population a consequence of two
+        // rates rather than a number anybody sets.
+        if(m->speed&&f->died<255)f->died++;
+        m->speed=0;m->glow=0;m->dim=0;m->dir=0;
+    }
+    garden_capacity(f,cx,cy,wake);
+}
+#if GARDEN_MOTE_INDEX && !GARDEN_NO_MOTES
+// The scan, hoisted out of the row loop. Written here and nowhere else, and
+// read-only from garden_row -- which is what makes it legal at all, given that
+// garden_row takes a const GardenFrame *.
+//
+// The membership rule has to be the same one the row uses, so it is stated in
+// the same terms: a mote lies across rows top and top+1, and the second gets a
+// share of zero when the position is exactly on a row boundary. Get this wrong
+// in the generous direction and the index costs a little; wrong in the mean
+// direction and a mote flickers.
+static void garden_mote_index(GardenFrame *f) {
+    for(int y=0;y<GARDEN_ROWS;y++)f->rowmask[y]=0;
+    for(int i=0;i<GARDEN_MOTES;i++) {
+        const GardenMote *m=&f->mote[i];
+        if(!m->glow)continue;
+        int top=m->y>>4,frac=m->y&15;
+        if(top>=0&&top<GARDEN_ROWS)f->rowmask[top]|=(uint16_t)(1u<<i);
+        if(frac&&top+1>=0&&top+1<GARDEN_ROWS)f->rowmask[top+1]|=(uint16_t)(1u<<i);
+    }
+}
+#endif
+static int garden_layout_shape(unsigned seed,int component) {
+    if(!seed)return 0;
+    unsigned h=garden_hash(seed+811u+(unsigned)component*193u);
+    int range=component==1?5:8;
+    return (int)(h%(unsigned)(range*2+1))-range;
+}
+void garden_random_init(GardenFrame *f,uint32_t seed) {
+    pocket_random_init(&f->decor_rng,seed);
+    f->decor_ready=false;
+}
+static void garden_decor_prepare(GardenFrame *f) {
+    if(!f->decor_rng.state)return;
+    for(int slot=0;slot<4;slot++) {
+        unsigned cycle=(((unsigned)f->phase+(unsigned)slot*4317u)&65535u)>>14;
+        if(!f->decor_ready||f->decor_cycle[slot]!=cycle) {
+            f->decor_seed[slot]=pocket_random_next(&f->decor_rng);
+            f->decor_cycle[slot]=(uint8_t)cycle;
+        }
+    }
+    f->decor_ready=true;
+}
+// Defined with the vegetation row it feeds, called from here; see GardenVeg.
+static void garden_veg_derive(GardenVeg *v,unsigned seed,int phase);
+void garden_prepare_layout(GardenFrame *f,float time,unsigned old_seed,unsigned new_seed,unsigned mix) {
+    // Fractional advection avoids whole-pixel jumps. All noise is periodic at
+    // this wrap, including wind, so long-running animation has no reset seam.
+    f->phase=(int)(fmodf(fmaxf(time,0),128.0f)*512);
+    garden_decor_prepare(f);
+#ifdef GARDEN_RAY_PERF
+    // Once. Before this the counters are stopped and every delta is zero, so
+    // the first window would otherwise print a row of nothing.
+    {static bool armed;if(!armed){armed=true;garden_ray_perf_arm(garden_ray_sel);}}
+#endif
+    // Keep the four-second weather cadence; increase displacement instead of
+    // speeding it up. The same cloud field opens/closes the main light volume.
+    int opening=garden_motion((unsigned)f->phase,193)-128;
+    f->sun=(garden_motion((unsigned)f->phase,83)-128)/12;
+    f->breath=opening/24;
+    if(mix>256)mix=256;
+    int shape[3];
+    for(int i=0;i<3;i++) {
+        int a=garden_layout_shape(old_seed,i),b=garden_layout_shape(new_seed,i);
+        shape[i]=(a*(int)(256-mix)+b*(int)mix)/256;
+    }
+    f->sun+=shape[0];f->spread=shape[1]+opening/20;f->slant=shape[2];
+    f->seed=new_seed;
+    // The A/B arm needs no second copy of the code: leave both slots unready
+    // and every row misses and derives on the stack, which is where all of it
+    // ran before. The picture is the same either way -- proved over 15.5M
+    // pixels including crossfades -- so this prices the hoist and nothing else.
+#ifdef GARDEN_NO_VEG_HOIST
+    f->veg[0].ready=f->veg[1].ready=false;
+#else
+    if(!g_garden_veg_hoist)f->veg[0].ready=f->veg[1].ready=false;
+    else {
+        garden_veg_derive(&f->veg[0],old_seed,f->phase);
+        garden_veg_derive(&f->veg[1],new_seed,f->phase);
+    }
+#endif
+#if GARDEN_NO_MOTES
+    // The whole feature, gone: no motion, no index, no touch-up. Nothing else
+    // in the frame changes, which is the entire point -- see garden.h.
+    (void)garden_motes;
+#else
+    garden_motes(f);
+#if GARDEN_MOTE_INDEX
+    garden_mote_index(f);
+#endif
+#endif
+#if GARDEN_MOTE_ONLY && !GARDEN_NO_MOTES && defined(ESP_PLATFORM)
+    // Where they are, once a second, so a capture can be checked against
+    // arithmetic instead of against an impression. Positions in whole pixels
+    // and the three things that decide whether anything is written: glow, the
+    // birth ramp, and the dying fade. A writable static, which the rest of this
+    // file does not permit -- it is here only in the diagnostic build.
+    {
+        static unsigned tick;
+        if(tick++%25u==0)
+            for(int i=0;i<GARDEN_MOTES;i++) {
+                const GardenMote *m=&f->mote[i];
+                ESP_LOGI("garden","MOTE %d x=%d y=%d frac=%d glow=%u age=%u dim=%u dir=%d",
+                         i,m->x>>4,m->y>>4,m->y&15,m->glow,m->age,m->dim,m->dir);
+            }
+    }
+#endif
+}
+void garden_prepare(GardenFrame *f,float time) {
+    garden_prepare_layout(f,time,0,0,256);
+}
+// The pixel loop the three lane passes above replace, kept because it is the
+// only readable statement of what they compute. It is not called: anything
+// that changes here has to change there, and tools/test_garden.c holds the
+// pair to a contract -- same per-channel range and mean, same dither
+// statistics -- rather than to bit equality, which the reciprocals give up.
+static void __attribute__((unused))
+garden_row_scalar(uint16_t *row,int y,const GardenFrame *f) {
+    int center,width;garden_shaft(y,f,&center,&width);
+    int ambient_y=20+y/15,ww=width*width;
+    int at0=center-18,w0=10+y/13,ww0=w0*w0;
+    int at1=center+27,w1=10+y/8,ww1=w1*w1;
+    GardenSpan fine={-1,0,0},coarse={-1,0,0};
+    for(int x=0;x<240;x++) {
+        // Two octaves, 64/32 px; cache lattice corners on the stack per row.
+        // The broad field dominates, retaining directional shafts, not smoke.
+        int px=x*256+f->phase;
+        int density=(3*garden_density(&coarse,px,y,6)
+                       +garden_density(&fine,px,y,5))/4;
+        int ambient=ambient_y+density/12;
+        // |u| >= width makes q non-positive, so the division is skipped rather
+        // than performed and thrown away; the same holds for both shoulders.
+        int u=x-center,q=(u>-width&&u<width)?256-u*u*256/ww:0;
+        int sun=q>0?q*q*(17+f->breath+density/20)/65536:0,haze=80+density;
+        int d0=x-at0;
+        if(d0>-w0&&d0<w0) {
+            int shoulder=256-d0*d0*256/ww0;
+            if(shoulder>0)sun+=shoulder*shoulder*4*haze/(65536*256);
+        }
+        int d1=x-at1;
+        if(d1>-w1&&d1<w1) {
+            int shoulder=256-d1*d1*256/ww1;
+            if(shoulder>0)sun+=shoulder*shoulder*7*haze/(65536*256);
+        }
+        int d=garden_dither(x,y);
+        row[x]=garden_rgb(10+ambient/2+sun*5/2+d,22+ambient*3/4+sun*3/2+d,28+ambient+sun/3+d);
+    }
+}
+// ---------------------------------------------------------------------------
+// The same three passes on the PIE unit. Everything above is the statement of
+// what these compute; tools/pie/test_kernels.py runs the assembly below through
+// an instruction-level model and compares all 240 pixels of a row against it,
+// and tools/pie/run_models.py proves the arithmetic those two share.
+//
+// SAR is 0 for all three. Every right shift therefore costs a QACC round trip
+// (EE.ZERO.QACC / EE.VMULAS.U16.QACC / EE.SRCMB.S16.QACC), which looks
+// expensive until you count the alternative: SAR=11 gives shifts for one
+// multiply each but takes exact low-16 multiplies away, and this kernel needs
+// six of those (u*u, d0*d0, d1*d1, q*k, and t*t in each octave) which would
+// then cost a QACC round trip apiece. Recounted at the instruction level the
+// two settings come out within two instructions of each other per block, so
+// SAR=0 stands -- not because it is better, but because the difference is
+// below the 15% that instruction-cache alignment moves between builds.
+//
+// WARNING, and it is the reason this paragraph is here rather than in a commit
+// message: tools/pie/stalls.py models neither QACC nor SAR dependencies (see
+// tools/pie/README.md, its "assumptions and limits" section). The pixel pass
+// takes the single accumulator twenty-two times a block, and every one of them
+// is followed by an EE.SRCMB.S16.QACC that reads it back. If stalls.py reports
+// zero stalls for this file, that number is silent about all of them. Read it
+// as "no QR hazard", never as "runs at the issue-rate floor"; the accumulator
+// question can only be settled on the device.
+#ifdef ESP_PLATFORM
+#define GARDEN_PIE 1
+#else
+#define GARDEN_PIE 0
+#endif
+
+#if GARDEN_PIE
+// Broadcast each constant to sixteen bytes, once per row (or per run), so the
+// loops below can walk them with plain 128-bit loads. Its own function and not
+// a prologue inside each kernel, because tools/pie/stalls.py and
+// tools/pie/piesim.py both read the *first* __asm__ block after a function
+// name: a prologue there would be the only thing they ever analysed.
+static void __attribute__((noinline))
+garden_broadcast(const int16_t *k,int16_t *kv,int nk) {
+    const int16_t *ks;
+    int16_t *kp;
+    __asm__ volatile(
+        "mov            %[ks], %[k]\n"
+        "mov            %[kp], %[kv]\n"
+        "loopgtz        %[nk], 0f\n"
+        "  ee.vldbc.16.ip  q0, %[ks], 2\n"
+        "  ee.vst.128.ip   q0, %[kp], 16\n"
+        "0:\n"
+        : [ks]"=&a"(ks), [kp]"=&a"(kp)
+        : [k]"a"(k), [kv]"a"(kv), [nk]"a"(nk)
+        : "memory");
+}
+// The 64-pixel octave for one run of blocks: `n` blocks that begin in the same
+// lattice cell, whose three corner terms arrive already differenced. Writes
+// 3*D, which the 32-pixel pass below folds into.
+//
+// The register plan is the whole difficulty. q0 carries the lattice coordinate
+// across blocks and q1/q4 carry the two constants the next block wants first;
+// nothing else survives a block, because a, da and ddb ride the constant walk
+// like every other constant instead of sitting in registers. That is what
+// brings the live set inside eight, and it costs nothing: the sweep at
+// docs/perf/pie-simd.md 2.1 measured a fused load at zero cycles over 0..32 of
+// them per block.
+static void __attribute__((noinline))
+garden_coarse_pie(int16_t *dens,int n,int rc0,int a,int da,int ddb) {
+    int16_t k[8] __attribute__((aligned(4))) = {
+        255,                      /* the cell mask, and the compare that finds the edge */
+        768,                      /* smoothstep's 768-2t, taken as two subtractions */
+        (int16_t)a,               /* this run's corner */
+        (int16_t)da,              /* and the two differences that reach the next two */
+        (int16_t)ddb,
+        256,
+        3,                        /* the 64-pixel octave carries three quarters of the weight */
+        32                        /* 4 lattice units a pixel, eight pixels a block */
+    };
+    int16_t kv[8][8] __attribute__((aligned(16)));
+    int16_t rcv[8] __attribute__((aligned(16)));
+    for(int i=0;i<8;i++)rcv[i]=(int16_t)(rc0+4*i);
+    const int16_t *kp;
+    const int16_t *rp=rcv;
+    int nk=8,sh8=8,sh16=16,zero=0;
+    garden_broadcast(k,&kv[0][0],nk);
+    __asm__ volatile(
+        "wsr.sar        %[zero]\n"
+        "mov            %[kp], %[kv]\n"
+        "ee.vld.128.ip  q0, %[rp], 16\n"              /* the lattice coordinate, per lane */
+        "ee.vld.128.ip  q4, %[kp], 16\n"              /* 255 */
+        "ee.vld.128.ip  q1, %[kp], 16\n"              /* 768 */
+        "loopgtz        %[n], 1f\n"
+        "  ee.andq                q2, q0, q4\n"              /* t = rc & 255 */
+        "  ee.vcmp.lt.s16         q3, q4, q0\n"              /* the lanes past the cell edge */
+        "  ee.vsubs.s16.ld.incp   q1, %[kp], q4, q1, q2\n"   /* 768 - t;  load a */
+        "  ee.vsubs.s16.ld.incp   q5, %[kp], q4, q4, q2\n"   /* 768 - 2t; load da */
+        "  ee.vmul.s16.ld.incp    q6, %[kp], q2, q2, q2\n"   /* t*t, 65025 at its peak; load ddb */
+        "  ee.zero.qacc\n"
+        "  ee.vmulas.u16.qacc     q2, q4\n"                  /* t*t*(768-2t), too wide for a lane */
+        "  ee.srcmb.s16.qacc      q2, %[sh16], 0\n"          /* f = smoothstep */
+        "  ee.andq                q4, q5, q3\n"
+        "  ee.vadds.s16.ld.incp   q7, %[kp], q4, q4, q1\n"   /* L = a + (da & edge); load 256 */
+        "  ee.andq                q3, q6, q3\n"
+        "  ee.vadds.s16           q3, q3, q5\n"              /* Q = da + (ddb & edge) */
+        "  ee.vadds.s16.ld.incp   q1, %[kp], q3, q3, q4\n"   /* R = L + Q; load 3 */
+        "  ee.vsubs.s16.ld.incp   q7, %[kp], q6, q7, q2\n"   /* 256 - f;  load 32 */
+        "  ee.zero.qacc\n"
+        "  ee.vmulas.u16.qacc     q4, q6\n"                  /* L*(256-f) */
+        "  ee.vmulas.u16.qacc     q3, q2\n"                  /* + R*f, both non-negative */
+        "  ee.srcmb.s16.qacc      q5, %[sh8], 0\n"           /* D */
+        "  mov                    %[kp], %[kv]\n"            /* rewind, and fill the gap after SRCMB */
+        "  ee.vmul.s16.ld.incp    q4, %[kp], q5, q5, q1\n"   /* 3D; load 255 for the next block */
+        "  ee.vadds.s16.ld.incp   q1, %[kp], q0, q0, q7\n"   /* rc += 32; load 768 */
+        "  ee.vst.128.ip          q5, %[dens], 16\n"
+        "1:\n"
+        : [kp]"=&a"(kp), [rp]"+a"(rp), [dens]"+a"(dens)
+        : [kv]"a"(kv), [n]"a"(n), [sh8]"a"(sh8), [sh16]"a"(sh16), [zero]"a"(zero)
+        : "memory");
+}
+// The 32-pixel octave. Identical but for the step, and for the tail: it reads
+// the coarse pass's 3D back and stores the sum. The sum is left undivided --
+// dens holds 3Dc+Df, not (3Dc+Df)/4 -- because the pixel pass wants
+// density/12 and density/20 anyway, and floor(S/48) is floor((S/4)/12)
+// exactly. That takes a whole QACC round trip out of this loop and puts
+// nothing back; the only place the quarter still has to appear is the haze,
+// which the pixel pass carries as 4*haze and shifts by 18 instead of 16.
+static void __attribute__((noinline))
+garden_fine_pie(int16_t *dens,int n,int rc0,int a,int da,int ddb) {
+    int16_t k[7] __attribute__((aligned(4))) = {
+        255, 768, (int16_t)a, (int16_t)da, (int16_t)ddb, 256,
+        64                        /* 8 lattice units a pixel */
+    };
+    int16_t kv[7][8] __attribute__((aligned(16)));
+    int16_t rcv[8] __attribute__((aligned(16)));
+    for(int i=0;i<8;i++)rcv[i]=(int16_t)(rc0+8*i);
+    const int16_t *kp;
+    const int16_t *rp=rcv,*dp=dens;
+    int nk=7,sh8=8,sh16=16,zero=0;
+    garden_broadcast(k,&kv[0][0],nk);
+    __asm__ volatile(
+        "wsr.sar        %[zero]\n"
+        "mov            %[kp], %[kv]\n"
+        "ee.vld.128.ip  q0, %[rp], 16\n"
+        "ee.vld.128.ip  q4, %[kp], 16\n"
+        "ee.vld.128.ip  q1, %[kp], 16\n"
+        "loopgtz        %[n], 1f\n"
+        "  ee.andq                q2, q0, q4\n"
+        "  ee.vcmp.lt.s16         q3, q4, q0\n"
+        "  ee.vsubs.s16.ld.incp   q1, %[kp], q4, q1, q2\n"
+        "  ee.vsubs.s16.ld.incp   q5, %[kp], q4, q4, q2\n"
+        "  ee.vmul.s16.ld.incp    q6, %[kp], q2, q2, q2\n"
+        "  ee.zero.qacc\n"
+        "  ee.vmulas.u16.qacc     q2, q4\n"
+        "  ee.srcmb.s16.qacc      q2, %[sh16], 0\n"
+        "  ee.andq                q4, q5, q3\n"
+        "  ee.vadds.s16.ld.incp   q7, %[kp], q4, q4, q1\n"
+        "  ee.andq                q3, q6, q3\n"
+        "  ee.vadds.s16           q3, q3, q5\n"
+        "  ee.vadds.s16.ld.incp   q1, %[kp], q3, q3, q4\n"   /* R; load 64 */
+        "  ee.vsubs.s16.ld.incp   q7, %[dp], q6, q7, q2\n"   /* 256-f; load the coarse pass's 3D */
+        "  ee.zero.qacc\n"
+        "  ee.vmulas.u16.qacc     q4, q6\n"
+        "  ee.vmulas.u16.qacc     q3, q2\n"
+        "  ee.srcmb.s16.qacc      q5, %[sh8], 0\n"
+        "  mov                    %[kp], %[kv]\n"
+        "  ee.vadds.s16.ld.incp   q4, %[kp], q5, q5, q7\n"   /* S = 3Dc + Df; load 255 */
+        "  ee.vadds.s16.ld.incp   q1, %[kp], q0, q0, q1\n"   /* rc += 64; load 768 */
+        "  ee.vst.128.ip          q5, %[dens], 16\n"
+        "1:\n"
+        : [kp]"=&a"(kp), [rp]"+a"(rp), [dp]"+a"(dp), [dens]"+a"(dens)
+        : [kv]"a"(kv), [n]"a"(n), [sh8]"a"(sh8), [sh16]"a"(sh16), [zero]"a"(zero)
+        : "memory");
+}
+// The pixel pass. Forty constants, each loaded where it is used and nowhere
+// held: the walk is monotone, so the table below is in issue order and reading
+// the two side by side is the only way to check either. Repeats are repeats on
+// purpose -- 256 appears four times because it is wanted four times, and a
+// register kept for it would have to come out of the seven the arithmetic uses.
+//
+// Twenty-one of the forty now ride a .LD.INCP form (see the macros below and
+// GARDEN_PIE_FUSE); the other nineteen are plain, because only
+// EE.VADDS/VSUBS/VMUL have that form, the host has to be free at the right
+// point in the walk, and a fusion that would put a stage-2 load next to its
+// consumer is refused. 135 instructions a block, 114 fused. The estimate from
+// counting the arithmetic was ~107; 114 is what the register allocation, the
+// walk order and the stall check actually allow.
+//
+// tools/pie/fuse_pixels.py generated this and can regenerate it. Edit the
+// arithmetic here; do not hand-edit which load rides which instruction.
+//
+// The body is ~470 bytes, well past loopgtz's 256, so it closes with addi/bnez
+// (docs/perf/pie-simd.md 1.3). Two instructions a block.
+// The fusion, as one spelling with a switch under it.
+//
+// EE.VADDS/VSUBS/VMUL have a .LD.INCP form that loads a vector and advances the
+// pointer in the same slot, and 3.4 measures that load as free -- so a fused
+// load is an instruction that has stopped existing. Twenty-one of the pixel
+// pass's forty constants can ride one: 135 instructions a block become 114.
+//
+// The unfused expansion is the same instruction in the same place followed by
+// the plain load, so the two builds issue identical work in identical order and
+// differ only by the twenty-two slots. That is what makes the switch a control
+// rather than a second kernel: comparing across two builds is exactly how a
+// 1.0 ms figure got produced that turned out to be inside the i-cache
+// alignment envelope.
+//
+// The one invariant that is not local: the constant walk is the PROGRAM ORDER
+// of the loads. A fused load moves to its host instruction, and if that move
+// crossed another load the two would silently swap constants -- a defect that
+// compiles, runs, and shows up as a wrong colour somewhere. The generator that
+// produced this body checked the order of all forty against the original;
+// tools/pie/test_kernels.py checks the result against the scalar loop, which is
+// what would actually catch it.
+#if GARDEN_PIE_FUSE
+#define P_ADD(z,x,y,ld) "  ee.vadds.s16.ld.incp " ld ", %[kp], " z ", " x ", " y "\n"
+#define P_SUB(z,x,y,ld) "  ee.vsubs.s16.ld.incp " ld ", %[kp], " z ", " x ", " y "\n"
+#define P_MUL(z,x,y,ld) "  ee.vmul.s16.ld.incp " ld ", %[kp], " z ", " x ", " y "\n"
+#else
+#define P_ADD(z,x,y,ld) "  ee.vadds.s16 " z ", " x ", " y "\n" \
+                        "  ee.vld.128.ip " ld ", %[kp], 16\n"
+#define P_SUB(z,x,y,ld) "  ee.vsubs.s16 " z ", " x ", " y "\n" \
+                        "  ee.vld.128.ip " ld ", %[kp], 16\n"
+#define P_MUL(z,x,y,ld) "  ee.vmul.s16 " z ", " x ", " y "\n" \
+                        "  ee.vld.128.ip " ld ", %[kp], 16\n"
+#endif
+static void __attribute__((noinline))
+garden_pixels_pie(uint16_t *row,const int16_t *dens,const GardenRow *r) {
+    int center=r->center,width=r->width,mww=r->mww;
+    int at0=r->at0,w0=r->w0,mw0=r->mw0;
+    int at1=r->at1,w1=r->w1,mw1=r->mw1;
+    int ay=r->ambient_y,kb=r->kbase,dy=r->dy;
+    int16_t k[40] __attribute__((aligned(4))) = {
+        (int16_t)(-center), (int16_t)width, (int16_t)(-width),
+        (int16_t)mww,                        /* ceil(2^22/ww), with a shift of 14 */
+        256,
+        (int16_t)((65536+47)/48),            /* density/12, taken on the undivided sum */
+        (int16_t)ay,
+        (int16_t)((65536+79)/80),            /* density/20, likewise */
+        (int16_t)kb,
+        320,                                 /* 4*haze, so the shoulder shifts by 18 */
+        (int16_t)(-at0), (int16_t)w0, (int16_t)(-w0), (int16_t)mw0, 256, 4,
+        (int16_t)(-at1), (int16_t)w1, (int16_t)(-w1), (int16_t)mw1, 256, 7,
+        GARDEN_DKX, (int16_t)dy, GARDEN_DKM, 3,
+        128, 640, 10, 256, (int16_t)0xF800,  /* red: (ambient + 5 sun) >> 1, then placed */
+        192, 384, 22, 8, 0x07E0,             /* green: (3 ambient + 6 sun) >> 2 */
+        GARDEN_M3, 28, 32,                   /* blue: no left shift to hide the >>3 in */
+        8                                    /* eight pixels on */
+    };
+    int16_t kv[40][8] __attribute__((aligned(16)));
+    int16_t xv[8] __attribute__((aligned(16)))={0,1,2,3,4,5,6,7};
+    const int16_t *kp;
+    const int16_t *xp=xv;
+    int nk=40,cnt=30,sh8=8,sh14=14,sh16=16,sh17=17,sh18=18,zero=0;
+    garden_broadcast(k,&kv[0][0],nk);
+    __asm__ volatile(
+        "wsr.sar        %[zero]\n"
+        "mov            %[kp], %[kv]\n"
+        "ee.vld.128.ip  q0, %[xp], 16\n"                     /* x, per lane */
+        "1:\n"
+        "  ee.vld.128.ip        q1, %[kp], 16\n"             /* -center */
+        "  ee.vld.128.ip        q2, %[kp], 16\n"             /* width */
+        P_ADD("q3","q0","q1","q1")                  /* u = x - center; load -width */
+        "  ee.vmin.s16          q3, q3, q2\n"
+        "  ee.vmax.s16          q3, q3, q1\n"                /* clamped, so the lobe needs no test */
+        P_MUL("q3","q3","q3","q2")                  /* u*u, at most 10404; load ceil(2^22/ww) */
+        "  ee.zero.qacc\n"
+        "  ee.vmulas.u16.qacc   q3, q2\n"
+        "  ee.vld.128.ip        q2, %[kp], 16\n"             /* 256 */
+        "  ee.srcmb.s16.qacc    q3, %[sh14], 0\n"
+        P_SUB("q3","q2","q3","q4")                  /* q, exactly 0 at the clamp; load ceil(2^16/48) */
+        "  ee.vld.128.ip        q5, %[dens], 16\n"           /* S = 3Dc + Df */
+        "  ee.zero.qacc\n"
+        "  ee.vmulas.u16.qacc   q5, q4\n"
+        "  ee.vld.128.ip        q4, %[kp], 16\n"             /* ambient_y */
+        "  ee.srcmb.s16.qacc    q1, %[sh16], 0\n"
+        P_ADD("q1","q1","q4","q2")                  /* ambient; load ceil(2^16/80) */
+        "  ee.zero.qacc\n"
+        "  ee.vmulas.u16.qacc   q5, q2\n"
+        "  ee.vld.128.ip        q4, %[kp], 16\n"             /* 17 + breath */
+        "  ee.srcmb.s16.qacc    q2, %[sh16], 0\n"
+        "  ee.vld.128.ip        q6, %[kp], 16\n"             /* 320 */
+        "  ee.vadds.s16         q2, q2, q4\n"                /* k */
+        "  ee.vadds.s16         q5, q5, q6\n"                /* 4*haze */
+        P_MUL("q4","q3","q2","q2")                  /* q*k, at most 8704; load -at0 */
+        "  ee.zero.qacc\n"
+        "  ee.vmulas.u16.qacc   q4, q3\n"
+        "  ee.srcmb.s16.qacc    q4, %[sh16], 0\n"            /* sun */
+        P_ADD("q3","q0","q2","q6")                  /* load w0 */
+        "  ee.vld.128.ip        q2, %[kp], 16\n"             /* -w0 */
+        "  ee.vmin.s16          q3, q3, q6\n"
+        "  ee.vmax.s16          q3, q3, q2\n"
+        P_MUL("q3","q3","q3","q6")                  /* load ceil(2^22/ww0) */
+        "  ee.zero.qacc\n"
+        "  ee.vmulas.u16.qacc   q3, q6\n"
+        "  ee.vld.128.ip        q6, %[kp], 16\n"             /* 256 */
+        "  ee.srcmb.s16.qacc    q3, %[sh14], 0\n"
+        P_SUB("q3","q6","q3","q7")                  /* the shoulder, 0..256; load 4 */
+        "  ee.vld.128.ip        q2, %[kp], 16\n"            /* -at1 */
+        P_MUL("q6","q3","q7","q7")                  /* s*4 keeps s*s inside a lane; load w1 */
+        "  ee.zero.qacc\n"
+        "  ee.vmulas.u16.qacc   q6, q3\n"
+        "  ee.srcmb.s16.qacc    q6, %[sh8], 0\n"
+        "  ee.zero.qacc\n"
+        "  ee.vmulas.u16.qacc   q6, q5\n"
+        "  ee.srcmb.s16.qacc    q6, %[sh18], 0\n"
+        P_ADD("q4","q4","q6","q3")                  /* sun += the first shoulder; load -w1 */
+        "  ee.vadds.s16         q6, q0, q2\n"
+        "  ee.vmin.s16          q6, q6, q7\n"
+        "  ee.vmax.s16          q6, q6, q3\n"
+        P_MUL("q6","q6","q6","q7")                  /* load ceil(2^22/ww1) */
+        "  ee.zero.qacc\n"
+        "  ee.vmulas.u16.qacc   q6, q7\n"
+        "  ee.vld.128.ip        q7, %[kp], 16\n"             /* 256 */
+        "  ee.srcmb.s16.qacc    q6, %[sh14], 0\n"
+        P_SUB("q6","q7","q6","q3")                  /* load the dither's x multiplier; load 7 */
+        "  ee.vld.128.ip        q2, %[kp], 16\n"
+        P_MUL("q7","q6","q3","q3")                  /* load its row term */
+        "  ee.zero.qacc\n"
+        "  ee.vmulas.u16.qacc   q7, q6\n"
+        "  ee.srcmb.s16.qacc    q7, %[sh8], 0\n"
+        "  ee.zero.qacc\n"
+        "  ee.vmulas.u16.qacc   q7, q5\n"
+        "  ee.srcmb.s16.qacc    q7, %[sh18], 0\n"
+        P_MUL("q5","q0","q2","q6")                  /* 4*haze is finished with; load the dither's second multiplier */
+        "  ee.vadds.s16         q4, q4, q7\n"                /* sun += the second shoulder */
+        "  ee.xorq              q5, q5, q3\n"                /* XOR, because EE.VADDS saturates */
+        "  ee.zero.qacc\n"
+        "  ee.vmulas.u16.qacc   q5, q5\n"                    /* the full 32-bit square */
+        "  ee.srcmb.s16.qacc    q5, %[sh17], 0\n"   /* 17: SRCMB saturates, h*h reaches 2^32 */
+        "  ee.zero.qacc\n"
+        "  ee.vmulas.u16.qacc   q5, q6\n"
+        "  ee.vld.128.ip        q6, %[kp], 16\n"             /* 3 */
+        "  ee.srcmb.s16.qacc    q5, %[sh16], 0\n"
+        "  ee.vld.128.ip        q7, %[kp], 16\n"             /* 128 */
+        "  ee.andq              q3, q5, q6\n"                /* the dither, 0..3 */
+        "  ee.vld.128.ip        q6, %[kp], 16\n"             /* 640 */
+        "  ee.zero.qacc\n"
+        "  ee.vmulas.u16.qacc   q1, q7\n"                    /* 128*ambient */
+        "  ee.vmulas.u16.qacc   q4, q6\n"                    /* + 640*sun, so >>8 is (a+5s)>>1 */
+        "  ee.srcmb.s16.qacc    q2, %[sh8], 0\n"
+        P_ADD("q2","q2","q3","q7")                  /* load 256; load 10 */
+        "  ee.vld.128.ip        q6, %[kp], 16\n"
+        P_ADD("q2","q2","q7","q7")                  /* load 0xF800 */
+        "  ee.vmul.s16          q2, q2, q6\n"                /* (v>>3)<<11 is (v<<8) masked */
+        "  ee.vld.128.ip        q5, %[kp], 16\n"             /* 192 */
+        "  ee.andq              q2, q2, q7\n"
+        "  ee.vld.128.ip        q6, %[kp], 16\n"             /* 384 */
+        "  ee.zero.qacc\n"
+        "  ee.vmulas.u16.qacc   q1, q5\n"
+        "  ee.vmulas.u16.qacc   q4, q6\n"
+        "  ee.srcmb.s16.qacc    q5, %[sh8], 0\n"
+        P_ADD("q5","q5","q3","q7")                  /* load 8; load 22 */
+        "  ee.vld.128.ip        q6, %[kp], 16\n"
+        P_ADD("q5","q5","q7","q7")                  /* load 0x07E0 */
+        "  ee.vmul.s16          q5, q5, q6\n"
+        "  ee.vld.128.ip        q6, %[kp], 16\n"             /* ceil(2^16/3) */
+        "  ee.andq              q5, q5, q7\n"
+        "  ee.zero.qacc\n"
+        "  ee.vmulas.u16.qacc   q4, q6\n"                    /* sun/3 */
+        "  ee.srcmb.s16.qacc    q7, %[sh16], 0\n"
+        P_ADD("q7","q7","q1","q6")                  /* load 28 */
+        P_ADD("q7","q7","q3","q1")                  /* load 32 */
+        P_ADD("q7","q7","q6","q6")                  /* load 8 */
+        "  ee.zero.qacc\n"
+        "  ee.vmulas.u16.qacc   q7, q1\n"                    /* 32*v >> 8 is v >> 3 */
+        "  ee.srcmb.s16.qacc    q7, %[sh8], 0\n"
+        "  ee.orq               q2, q2, q5\n"
+        "  ee.orq               q2, q2, q7\n"
+        "  ee.vst.128.ip        q2, %[row], 16\n"
+        "  ee.vadds.s16         q0, q0, q6\n"                /* eight pixels on */
+        "  mov                  %[kp], %[kv]\n"
+        "  addi                 %[cnt], %[cnt], -1\n"
+        "  bnez                 %[cnt], 1b\n"
+        : [kp]"=&a"(kp), [xp]"+a"(xp), [dens]"+a"(dens), [row]"+a"(row), [cnt]"+a"(cnt)
+        : [kv]"a"(kv), [sh8]"a"(sh8), [sh14]"a"(sh14), [sh16]"a"(sh16),
+          [sh17]"a"(sh17), [sh18]"a"(sh18), [zero]"a"(zero)
+        : "memory");
+}
+#undef P_ADD
+#undef P_SUB
+#undef P_MUL
+#endif
+
+// The run structure both spellings share: blocks that begin in the same
+// lattice cell, handed over with their three corner terms already differenced.
+// A run never splits a block -- the one that straddles a cell edge stays in the
+// run it began in, and its far lanes are switched over by the compare-and-mask
+// inside the loop -- which is what keeps every store 16-byte aligned. Cutting
+// at the true edge instead would start most runs at an odd pixel, and a
+// misaligned 128-bit store does not fault, it silently rounds the address down.
+static void garden_octave_row(int16_t *dens,const int *v,int mask,int p,int step,
+                              int first) {
+    for(int b=0;b<30;) {
+        int g=b*8*step+p,cc=g>>8,rc0=g&255;
+        int n=(255-rc0)/(step*8)+1;
+        if(b+n>30)n=30-b;
+        int a=v[cc&mask],da=v[(cc+1)&mask]-a;
+        int ddb=v[(cc+2)&mask]-v[(cc+1)&mask]-da;
+#if GARDEN_PIE
+        if(first)garden_coarse_pie(dens+b*8,n,rc0,a,da,ddb);
+        else garden_fine_pie(dens+b*8,n,rc0,a,da,ddb);
+#else
+        garden_octave_lanes(dens+b*8,n,rc0,step,a,da,ddb,first);
+#endif
+        b+=n;
+    }
+}
+// The row's whole share of the lane pipeline: fill in the constants, lay the
+// two noise octaves into `dens`, then turn them into pixels. `dens` is 16-byte
+// aligned because the vector store rounds a misaligned address down instead of
+// faulting (docs/perf/pie-simd.md 1.3), and it is on the stack rather than in the
+// scene block because it lives for one row and the ui task has 32 KB to spare.
+//
+// Split out of garden_row so that tools/test_garden.c can hold it against
+// garden_row_scalar pixel for pixel, which it cannot do through the trunks and
+// the canopy drawn on top.
+// One mote, on one row, gated and drawn.
+//
+// Split out so that the two ways of reaching it -- the index, and the scan it
+// replaced -- draw identically by construction. Two copies of this that had to
+// stay in step would be exactly the kind of switch that quietly stops
+// describing the thing it is meant to subtract.
+static inline void garden_mote_touch(uint16_t *row,int y,const GardenMote *m,
+                                     const int16_t *dens,const GardenRow *r) {
+    if(!m->glow)return;
+    // Split between the two rows it lies across, by the sixteenths of its
+    // position. That is what turns a quarter-pixel-a-frame climb into a
+    // drift instead of a stutter: the mote dims on one row as it brightens
+    // on the next, and never sits still.
+    int top=m->y>>4,frac=m->y&15,share;
+    if(top==y)share=16-frac;
+    else if(top+1==y)share=frac;
+    else return;
+    if(!share)return;
+    int glow=m->glow*share>>4;
+    // The ramp still earns its place: deaths are visible now, but a birth
+    // is still a particle appearing where there was none, and a replacement
+    // that blinks on is the one thing left that would read as a glitch.
+    if(m->age<8)glow=glow*(m->age+1)>>3;
+    // And the dying fade, through the same term that gives it the shaft's
+    // colour -- so it dims into the light rather than needing a second
+    // blend path.
+    if(m->dir<0)glow=glow*m->dim/GARDEN_DYING;
+    if(!glow)return;
+    int mx=m->x>>4;
+    // The point and its two neighbours at half. Three across is what a mote
+    // is -- one pixel alone flickers as it crosses a column boundary, and
+    // anything wider stops reading as a point of light.
+    for(int k=-1;k<=1;k++) {
+        int x=mx+k;
+        if(x<0||x>=240)continue;
+#if GARDEN_MOTE_MAGENTA
+        // Straight to the panel, past everything. See the switch in garden.h
+        // for what this can and cannot establish: it is the coordinates and the
+        // write, not the arithmetic.
+        (void)dens;(void)r;(void)glow;
+        row[x]=0xF81Fu;
+#else
+        row[x]=garden_shade_pixel(x,dens[x],r,k?glow/2:glow);
+#endif
+    }
+}
+
+// The row's whole mote pass, so that GARDEN_MOTE_OUTLINE can decide whether it
+// is inlined into garden_pixels_row or called. Nothing else changes: same
+// order, same arithmetic, same pixels.
+#if !GARDEN_NO_MOTES
+#if GARDEN_MOTE_OUTLINE
+static void __attribute__((noinline))
+garden_mote_rowpass(uint16_t *row,int y,const GardenFrame *f,
+                    const int16_t *dens,const GardenRow *r) {
+#if GARDEN_MOTE_INDEX
+    for(unsigned mask=f->rowmask[y];mask;mask&=mask-1)
+        garden_mote_touch(row,y,&f->mote[__builtin_ctz(mask)],dens,r);
+#else
+    for(int i=0;i<GARDEN_MOTES;i++)
+        garden_mote_touch(row,y,&f->mote[i],dens,r);
+#endif
+}
+#else
+static inline void garden_mote_rowpass(uint16_t *row,int y,const GardenFrame *f,
+                                       const int16_t *dens,const GardenRow *r) {
+#if GARDEN_MOTE_INDEX
+    for(unsigned mask=f->rowmask[y];mask;mask&=mask-1)
+        garden_mote_touch(row,y,&f->mote[__builtin_ctz(mask)],dens,r);
+#else
+    for(int i=0;i<GARDEN_MOTES;i++)
+        garden_mote_touch(row,y,&f->mote[i],dens,r);
+#endif
+}
+#endif
+#endif
+static GARDEN_HOT void garden_pixels_row(uint16_t *row,int y,const GardenFrame *f) {
+    int center,width;garden_shaft(y,f,&center,&width);
+    // Everything below is invariant across the row. It used to be recomputed
+    // 240 times per row because it sat inside the pixel loop: the trunk hashes
+    // and their three integer divisions alone were nine divide instructions per
+    // pixel. The divisor of every remaining per-pixel division is hoisted too,
+    // and then replaced by a reciprocal, so the loop does not divide at all.
+    int ambient_y=20+y/15,ww=width*width;
+    // Two faint, unequal openings inside the same sunlight volume. Their
+    // shoulders dissolve into the haze; no repeated luminous stripes.
+    int at0=center-18,w0=10+y/13,ww0=w0*w0;
+    int at1=center+27,w1=10+y/8,ww1=w1*w1;
+    GardenRow r;
+    r.center=center;r.width=width;r.mww=garden_recip(ww,22);
+    r.at0=at0;r.w0=w0;r.mw0=garden_recip(ww0,22);
+    r.at1=at1;r.w1=w1;r.mw1=garden_recip(ww1,22);
+    r.ambient_y=ambient_y;r.kbase=17+f->breath;
+    r.dy=(y*GARDEN_DKY+GARDEN_DKC)&0xffff;
+    // px>>5 and px>>6 are 8x+(phase>>5) and 4x+(phase>>6) exactly: x*256 is a
+    // multiple of 64, so the shift never mixes x with the phase's low bits.
+    r.p5=f->phase>>5;r.p6=f->phase>>6;
+    for(int i=0;i<4;i++)r.vc[i]=garden_corner(i,3,y,6);
+    for(int i=0;i<8;i++)r.vf[i]=garden_corner(i,7,y,5);
+    int16_t dens[240] __attribute__((aligned(16)));
+    garden_octave_row(dens,r.vc,3,r.p6,4,1);
+    garden_octave_row(dens,r.vf,7,r.p5,8,0);
+#if GARDEN_PIE
+    garden_pixels_pie(row,dens,&r);
+#else
+    garden_pixels(row,dens,&r);
+#endif
+#if GARDEN_MOTE_ONLY
+    // The blanking, and it is deliberately here rather than in place of the
+    // kernel call above: the kernel still runs, `dens` and `r` are still what
+    // they always were, and the mote touch-up below reads exactly what it reads
+    // in a shipping build. Only the background's pixels are thrown away.
+    for(int x=0;x<240;x++)row[x]=0;
+#endif
+    // Dust in the shaft, after the light and before the trunks -- so the motes
+    // are in the beam and the trunks and canopy occlude them, which is the
+    // order they should be in. This is where it belongs because `dens` and `r`
+    // are still alive: a mote's pixel is rebuilt from them in about thirty
+    // operations, and storing all 240 lanes of `sun` to avoid that would cost
+    // one extra vector store per block, about 27 us a frame, against roughly
+    // five for the few dozen pixels the motes actually touch.
+    //
+    // That last number is the drawing, and the drawing was never the cost.
+    // The first version tested all fourteen particles on all 135 rows and cost
+    // 1.0 ms of a 41 ms frame -- measured on the board, against 4.6 us
+    // predicted from the pixels touched, which is wrong by a factor of two
+    // hundred. 1,890 tests to find 28 hits: the decision, not the draw. The
+    // index in garden.h is that decision moved into the frame; what is left
+    // here is a bitmask load and the hits.
+#if GARDEN_NO_MOTES
+    /* nothing: garden_mote_touch is a static inline and simply goes away */
+#elif GARDEN_MOTE_INDEX
+    // The guard is the whole of the row's cost when nothing is here, and with
+    // GARDEN_MOTE_OUTLINE that is a load and a branch rather than 401 bytes of
+    // code the instruction cache has to walk past.
+    if(f->rowmask[y]) {
+#if PROF_ON
+        GARDEN_FENCE;uint32_t m0=PROF_CC();GARDEN_FENCE;
+        garden_mote_rowpass(row,y,f,dens,&r);
+        GARDEN_FENCE;garden_mote_cycles+=PROF_CC()-m0;
+        garden_mote_rows++;GARDEN_FENCE;
+#else
+        garden_mote_rowpass(row,y,f,dens,&r);
+#endif
+    }
+#else
+    garden_mote_rowpass(row,y,f,dens,&r);
+#endif
+    // Adding something to the light afterwards, per pixel: this is where it
+    // goes, and this is why `dens` and `r` are still in scope at the end of a
+    // function that has finished drawing.
+    //
+    // The packing is the last thing that happens to `sun` -- it is in a lane
+    // register, it is turned into RGB565, and the block moves on -- so nothing
+    // downstream can add to it. But it is not lost either. `sun` is a function
+    // of dens[x] and this row's constants and nothing else, so one pixel's
+    // worth can be rebuilt here in about thirty scalar operations without
+    // touching the packed colour: the expensive input, the two octaves of
+    // noise, is the array sitting right there. Rebuilding a handful of pixels
+    // costs less than storing all 240 lanes of `sun` would have -- one extra
+    // EE.VST.128.IP a block is 1.6 cycles x 30 x 135, about 27 us a frame,
+    // against roughly 5 us to rebuild the few dozen pixels anything sparse
+    // would actually touch. So the kernel does not store it, on purpose.
+    //
+    // Both halves of that comparison are pixel counts, and pixel counts turned
+    // out to be the wrong unit for the sparse side: the first swarm cost 1.0 ms
+    // rather than the 5 us this arithmetic gives, because none of it was in the
+    // rebuilding. It was in finding out which pixels to rebuild. The 27 us
+    // stands -- it is a fixed store on every block and nothing decides anything
+    // -- and the choice not to store `sun` still holds, but only once the
+    // deciding is somewhere other than the row.
+    //
+    // Two scales to get right, because both are four times what the scalar
+    // reference above calls by the same name, and a wrong power of two here
+    // looks plausible rather than broken -- the same shape of defect as the
+    // reciprocal that dropped a factor of 256 and inverted the lobe at its own
+    // edge. `dens` holds 3Dc+Df, four times `density`. `haze` is carried as
+    // 320+dens, four times `80+density`. `sun` itself is unscaled: it is the
+    // same 0..48 the scalar loop produces, so a term added to it is in the
+    // units where the lobe peaks near 34, and it reaches the three channels
+    // through the same >>1, >>2 and /3 as everything else.
+}
+// Visual-only side openings in a nearer cloud layer. Never feed this field
+// back into garden_shaft, density or the swarm's phototaxis. A shared advected
+// density field gives weather-like flow without per-pixel noise or raymarching.
+// Both density and hidden opening renewal preserve the 128-second wrap.
+#ifndef GARDEN_DECOR_RAYS
+#define GARDEN_DECOR_RAYS 1
+#endif
+#ifndef GARDEN_DECOR_EVENTS
+#define GARDEN_DECOR_EVENTS 1
+#endif
+typedef struct { unsigned seed,phase,tick; int side,slope,radius,fade; } GardenDecor;
+// Four opportunities, not four permanent beams. Every opportunity gets a new
+// opening, angle and lifetime only while invisible. The seed is cached at
+// prepare time; drawing strips never advances the random stream.
+static GardenDecor garden_decor_seeded(unsigned phase,int slot,unsigned h) {
+    unsigned p=(phase+(unsigned)slot*4317u)&65535u;
+    unsigned tick=p&16383u;
+    GardenDecor d={.seed=h,.phase=phase,.tick=tick,
+        .side=(h&2u)?1:-1,.radius=18+(int)((h>>8)&7u)};
+    unsigned life=9216u+((h>>12)&4095u); // 18..26 seconds, then a dark gap
+    if((h&12u)==0||tick>=life)return d;
+    unsigned edge=tick<life-tick?tick:life-tick;
+    d.fade=garden_smooth((int)(edge<2048u?edge/8u:255u));
+    d.slope=d.side>0?24+(int)((h>>17)&63u):336+(int)((h>>17)&95u);
+    return d;
+}
+static GardenDecor garden_decor(unsigned phase,int slot) {
+    unsigned p=(phase+(unsigned)slot*4317u)&65535u;
+    return garden_decor_seeded(phase,slot,garden_hash((p>>14)+1709u+(unsigned)slot*313u));
+}
+// Q8 soft volume profile, with zero slope at both the axis and the edge.
+static int garden_decor_profile(int distance,int inv) {
+#ifdef GARDEN_COUNT_PROFILE
+    extern unsigned long g_profile_calls;
+    g_profile_calls++;
+#endif
+    int q=256-((abs(distance)*inv)>>16);
+    if(q<=0)return 0;
+    if(q>255)q=255;
+    return garden_smooth(q);
+}
+// The decor loop's group width, in pixels: the profile evaluation, `gain` and the
+// dither are done once per group and shared by every pixel in it, so the width is the
+// single biggest lever on this loop (~8.5 instructions a pixel of prologue at 4,
+// ~4.3 at 8) and it is also exactly the approximation: `light` and `shadow` come from
+// the group's first column, so widening the group doubles how far a pixel's profile is
+// from its own column. Eight is the default; four is the old behaviour, and the way
+// back if the wider group reads as banding on the device.
+int g_garden_decor_group=8;
+// The decor mix on the PIE unit (scene/garden_decor_pie.c) instead of the scalar
+// statement garden_decor_mix below: 0 selects the scalar statement, and both arms
+// live in one binary for the reason g_garden_canopy_pie does -- this loop's own
+// share of the frame is smaller than the 15% that two builds of the same code
+// move apart from instruction-cache alignment alone (CLAUDE.md).
+//
+// The kernel takes the group's light, shadow and d -- the same three values the
+// group's scalar mixes use, evaluated once at its first column -- and its
+// contract is a FULL group of eight pixels from a 16-byte-aligned pointer. Both
+// EE.VLD.128 and EE.VST.128 force the low four address bits of the pointer to
+// zero (TRM 1.8.88, 1.8.192), so a group starting anywhere else would read and
+// write its neighbour. garden_decor_row therefore walks its span on the row's
+// own alignment phase -- x == ((-(uintptr_t)row)/2)&7 (mod 8), which exists for
+// every row -- instead of from lo: every full group is then aligned by
+// construction, and only a leading partial group of at most seven columns, the
+// group the core clip cuts, and the tail stay on the scalar statement. With the
+// groups started at lo, an arbitrary column, 58% of the mixed pixels fell back
+// to it (4,339 scalar groups against 3,016 kernel ones, of the 7,355 groups that
+// blend at all over four frames).
+int g_garden_decor_pie=1;
+
+static uint16_t garden_decor_mix(uint16_t p,int light,int shadow,int d) {
+    int r=(p>>11)&31,g=(p>>5)&63,b=p&31;
+    int extinction=shadow>>3;
+    // The incident colour is the local, already main-lit air plus a small
+    // warm bias. Each channel follows that pixel, including previous layers.
+    r=(r*(256-extinction)+((light*(r+6))>>1)+d)>>8;
+    g=(g*(256-extinction)+((light*(g+10))>>2)+d)>>8;
+    b=(b*(256-extinction)+((light*(b+4))>>2)+d)>>8;
+    if(r>31)r=31;
+    if(g>63)g=63;
+    if(b>31)b=31;
+    return (uint16_t)(r<<11|g<<5|b);
+}
+// Thin openings more often reveal from above. A soft front crosses the
+// volume in 4..6 seconds; unopened rows skip all profiles and pixel blends.
+static int garden_decor_arrival(const GardenDecor *d,int y,int end) {
+    unsigned h=garden_hash(d->seed+2909u);
+    if((h&255u)>=(unsigned)(26-d->radius)*24u)return 256;
+    unsigned duration=2048u+((h>>8)&1023u);
+    if(d->tick>=duration)return 256;
+    int front=(int)(d->tick*(unsigned)(end+24)*256u/duration);
+    int reach=front-y*256;
+    if(reach<=0)return 0;
+    if(reach>=24*256)return 256;
+    return garden_smooth(reach/24);
+}
+// TEMPORARY A/B switch, and it exists because this board cannot measure a change
+// like the gate below any other way: two builds of the same function differ by up
+// to 15% from code placement (docs/perf/pie-simd.md 3.13), and the decorative rays'
+// own workload varies with the scene's phase, so the only honest comparison is
+// one binary alternating the two paths inside one run. flower.c's SPLIT3 report
+// flips it once per 60-frame window and prints which way that window ran.
+//   1 = the gated path (the shipping one)   0 = the pre-2026-09-15 path
+int g_garden_decor_gate=1;
+static void __attribute__((unused))
+GARDEN_HOT garden_decor_row(uint16_t *row,int y,const GardenFrame *f) {
+    int center,half;garden_shaft(y,f,&center,&half);
+    for(int layer=0;layer<4;layer++) {
+        GardenDecor decor=f->decor_ready
+            ?garden_decor_seeded((unsigned)f->phase,layer,f->decor_seed[layer])
+            :garden_decor((unsigned)f->phase,layer);
+        if(!decor.fade)continue;
+        int end=70+(int)((decor.seed>>24)&31u);
+        if(y>=end)continue;
+        int arrival=256;
+#if GARDEN_DECOR_EVENTS
+        arrival=garden_decor_arrival(&decor,y,end);
+        if(!arrival)continue;
+#endif
+        int remaining=end-y;
+        int depth=garden_smooth(remaining<48?remaining*255/48:255);
+        depth=depth*arrival>>8;
+        // One advected weather field shared by all openings. Density moves
+        // down the shaft; it modulates opacity, never the direction of travel.
+        int cloud=garden_motion(decor.phase-(unsigned)y*24u,1726u);
+        int strength=(((128+cloud/2)*decor.fade)>>8)*depth>>8;
+        // All openings travel right at 0.5 pixel/sec under the same wind.
+        // Q8 centres avoid whole-pixel stepping. No sun/warp oscillation is
+        // inherited from the main beam, and renewal is hidden by the fade.
+        int side=decor.side;
+        int cx=240*256-(y+90)*decor.slope+(int)decor.tick/4;
+        // Broad, breathing cross-section carried by the same advected field.
+        // Q8 widths change continuously; the centre still never reverses.
+        int radius=(decor.radius+y/8)*256+(cloud-128)*6;
+        int shadow_radius=radius+radius/2;
+        int shadow_cx=cx-side*radius;
+        int extent=(radius+shadow_radius+255)>>8;
+        int lo=(cx>>8)-extent,hi=(cx>>8)+extent;
+        if(lo<0)lo=0;
+        if(hi>239)hi=239;
+        int inv=garden_recip(radius,24),shadow_inv=garden_recip(shadow_radius,24);
+        // profile() returns exactly 0 once |distance| >= its radius (the
+        // reciprocal rounds up, so the reach is never more than radius), which
+        // makes each of the two profiles a compact support: outside it the term
+        // is a literal 0 and identity to the mix below. Both used to be
+        // evaluated across their whole union -- the span above -- and that
+        // union is much wider than either support, because the shadow reaches
+        // 1.5 radii to one side of a centre that is itself one radius off the
+        // light's: for one side the union is 3.5 radii where each profile owns
+        // 2.0 and 3.0 of it. Evaluating a profile only where it can be non-zero
+        // is exact, and a pixel outside both is skipped for the price of two
+        // comparisons instead of two profiles (~14 instructions each).
+        //
+        // `rays` is 7.6..13.7 ms/frame of the 14..16 ms `decor` (SPLIT3), so
+        // this is the largest single scalar term in the frame; the gate removes
+        // one of the two profile evaluations on the ~55% of visited pixels that
+        // only one of them can reach.
+        //
+        // +2 on each reach, because the reach is Q8 and the shift floors: a
+        // bound one pixel too wide only evaluates a profile that returns 0, one
+        // too narrow changes the picture.
+        int lreach=(radius>0?radius>>8:0)+2,sreach=(shadow_radius>0?shadow_radius>>8:0)+2;
+        int l0=(cx>>8)-lreach,l1=(cx>>8)+lreach;
+        int s0=(shadow_cx>>8)-sreach,s1=(shadow_cx>>8)+sreach;
+        // Four columns at a time. Everything in this block except the mix is a
+        // function of x alone -- the protection ramp, the two profiles and the
+        // dither -- so it is evaluated once for the group and shared. The light is
+        // an effect and not geometry, so this changes its slope, not its shape:
+        // 13.6% of pixels move, 94% of those by one RGB565 level, the worst single
+        // pixel by four. Measured on the part, rays -5.0 ms/frame (median -4.7)
+        // against a control band of +-1.3, and the frame 39.2 -> 32.2 ms, 25.5 ->
+        // 31.0 fps.
+        //
+        // The group grid is the row's own alignment phase, so a full group can take
+        // the kernel. The kernel's load and store force the low four address bits of
+        // the pointer to zero (TRM 1.8.88/1.8.192), i.e. a full group is only legal
+        // when (row+x) is 16-byte aligned; with row an int16_t pointer that is
+        // x == phase (mod 8) for this row's phase, ((-(uintptr_t)row)/2)&7, which
+        // exists for every even row address. The span starts at lo, an arbitrary
+        // column, so walking it from lo throws away every full group whose start is
+        // off the phase (58% of the mixed pixels). Starting from `grid`, the first
+        // aligned column at or after lo, leaves only the leading partial group of at
+        // most seven columns off the grid -- and, where the clip below cuts a group,
+        // the cut itself -- and both are shorter than eight, so both stay scalar. The
+        // clip's cut column is arbitrary, so after it the loop snaps back onto the
+        // phase rather than drifting: otherwise no following group would be aligned
+        // and the kernel would never run again in that row.
+        int phase=(int)(((-(uintptr_t)row)/2)&7u);
+        int grid=lo+(int)((phase-(unsigned)lo)&7u);
+        for(int x=lo;x<=hi;) {
+            // On the grid: the group width, so every full group is aligned. Left of
+            // it: the leading (or post-clip) partial group, up to the grid.
+            int nx;
+            if(x<grid)nx=grid;
+            else nx=x+g_garden_decor_group;
+            if(nx>hi+1)nx=hi+1;                     /* the group, clipped to the span */
+            // A group must not straddle the beam's core. Every pixel in the group uses
+            // the profile evaluated at the group's first column, so a group that reached
+            // into the core would light the core with a value from outside it -- and the
+            // core staying untouched is an invariant, not a preference
+            // (tools/test_garden_decor.c asserts it over 256 frames). This clip is what
+            // makes a wider group safe: the group stops at the core's near edge and the
+            // next one starts after it.
+            {int cl=center-(half/2-6);if(x<cl&&nx>cl)nx=cl;}
+            int n=nx-x;
+            // The support gate, evaluated at the group's first column because this
+            // loop forms the two profiles once per group (above). Exact: a column
+            // outside a profile's reach makes it literally 0, so a group whose own
+            // column is outside both is the identity the `!light && !shadow` test
+            // below already skips -- all the gate saves is evaluating them.
+            // One unsigned compare per support instead of two signed ones each.
+            // The signed form was compiled to a salt/neg/and/extui chain of
+            // about twenty instructions, which is what the single profile
+            // evaluation it saves costs. l1 >= l0 always, because the reach adds
+            // +2 to both sides, so the wrap is a range test.
+            int inl,ins;
+            if(g_garden_scalar_tweaks) {
+                inl=(unsigned)(x-l0)<=(unsigned)(l1-l0);
+                ins=(unsigned)(x-s0)<=(unsigned)(s1-s0);
+            } else {
+                inl=(x>=l0&&x<=l1);ins=(x>=s0&&x<=s1);
+            }
+            if(g_garden_decor_gate&&!inl&&!ins)goto grp;
+            // Let only the soft fringe graze six pixels further into the
+            // main beam; a smooth ramp keeps its bright core undisturbed.
+            // Attenuate the existing channels, never paint a coloured outline.
+            // Q8 arithmetic approximates transmission plus warm in-scattering;
+            // one final spatially dithered pack avoids repeated RGB565 rounding.
+            int gap=abs(x-center)-(half/2-6);
+            if(gap<=0)goto grp;
+            int protect=gap<24?garden_smooth(gap*255/24):255;
+            int gain=strength*protect>>8;
+            // gain == 0 makes both terms 0 whatever the profiles say, and it is
+            // the common case at the far end of the fade and for a layer that
+            // is still arriving.
+            if(g_garden_decor_gate&&!gain)goto grp;
+            int light,shadow;
+            if(g_garden_decor_gate) {
+                light=inl?garden_decor_profile(x*256-cx,inv)*gain>>8:0;
+                shadow=ins?garden_decor_profile(x*256-shadow_cx,shadow_inv)*gain>>8:0;
+            } else {
+                // The pre-2026-09-15 path, kept call for call so the A/B is a
+                // measurement of the gate and not of a rewrite.
+                light=garden_decor_profile(x*256-cx,inv)*gain>>8;
+                shadow=garden_decor_profile(x*256-shadow_cx,shadow_inv)*gain>>8;
+            }
+            if(!light&&!shadow)goto grp;
+            int d= garden_dither(x,y)*64+32;
+            /* Only the mix is per pixel: it is the one term that reads the row. A
+               full group of eight is exactly one kernel block, and it is handed the
+               same light, shadow and d the scalar statement would be -- but only when
+               the pointer is 16-byte aligned, because the kernel's load and store
+               force the low four address bits to zero and would otherwise read and
+               write the neighbouring eight pixels. On this grid every full group is
+               aligned, so the test is a guard and not a filter; it keeps a group whose
+               start the clip moved off the phase (see below) scalar. Clipped and tail
+               groups of fewer pixels and a narrower g_garden_decor_group keep the
+               scalar statement, so the two arms differ in nothing but the mix. */
+            if(g_garden_decor_pie&&n==8&&!((uintptr_t)(row+x)&15u)) {
+                garden_decor_mix8(row+x,light,shadow,d);
+            } else {
+                for(int j=0;j<n;j++)row[x+j]=garden_decor_mix(row[x+j],light,shadow,d);
+            }
+        grp:
+            x=nx;
+            // Back onto the phase after a clip (or a skip) that left x off it, so the
+            // groups after the core are aligned again. On the grid this is a no-op:
+            // nx is x plus the group width.
+            if(x>=grid){int off=(x-phase)&7;if(off)x+=8-off;}
+        }
+    }
+}
+// Everything a vegetation row needs that does not depend on y. Twenty-eight
+// hashes, eighteen noise samples, twenty-five motion samples and seven
+// reciprocal divisions -- all of it was inside the row loop, all of it
+// producing the same answer 135 times a frame. See GardenVeg in garden.h.
+static void garden_veg_derive(GardenVeg *v,unsigned seed,int phase) {
+    v->seed=seed;v->phase=phase;v->ready=true;
+    for(int i=0;i<3;i++) {
+        unsigned h=garden_hash((unsigned)i+901+seed);
+        v->trunk_base[i]=(int16_t)(16+i*86+(int)(h%37));
+        v->trunk_slope[i]=(int8_t)((int)((h>>8)%5)-2);
+    }
+    for(int i=0;i<7;i++) {
+        unsigned h=garden_hash((unsigned)i+301+seed);
+        int cx=i*40-15+(int)((h>>20)%23)
+            +(garden_motion((unsigned)(phase+i*180),613)-128)/48;
+        int rx=28+(int)((h>>16)%17);
+        int lo=cx-rx,hi=cx+rx;
+        if(lo<0)lo=0;
+        if(hi>239)hi=239;
+        v->can_cy[i]=(int16_t)(-9+(int)(h%17));
+        v->can_ry[i]=(int16_t)(15+(int)((h>>8)%16));
+        v->can_cx[i]=(int16_t)cx;v->can_rx[i]=(int16_t)rx;
+        v->can_lo[i]=(int16_t)lo;v->can_hi[i]=(int16_t)hi;
+        v->can_mrr[i]=garden_recip(rx*rx,26);
+    }
+    v->grass_live=v->grass_fern=v->grass_wide=0;
+    for(int i=0;i<18;i++) {
+        unsigned h=garden_hash((unsigned)i+71+seed);
+        int root=(i/2)*30-15+(int)((h>>16)%27);
+        int layer=i&1;
+        v->grass_root[i]=(int16_t)root;
+        v->grass_height[i]=(int16_t)(23+(int)(h%63));
+        v->grass_base[i]=(int16_t)(142+layer*7);
+        v->grass_lean[i]=(int16_t)((int)((h>>8)%31)-15);
+        v->grass_wind[i]=(int16_t)((garden_motion((unsigned)(phase+(root+32)*48),557)-128)/12);
+        v->grass_green[i]=garden_rgb(layer?16:26,layer?59:67,layer?39:53);
+        v->grass_spacing[i]=(int8_t)(8+(int)((h>>12)%5));
+        // Static density makes clumps and gaps; only the wind evolves in time.
+        if((int)((h>>24)&255)<=70+garden_noise((unsigned)(root+32)*5,727+seed)*3/4)
+            v->grass_live|=1u<<i;
+        if((h&3)==0)v->grass_fern|=1u<<i;
+        if((h>>14)&1)v->grass_wide|=1u<<i;
+    }
+}
+static GARDEN_HOT void garden_vegetation_row(uint16_t *row,int y,const GardenFrame *f,unsigned seed) {
+    // The slot the layout was prepared into, or the old cost on the stack if
+    // this seed was never prepared -- garden_row_blend takes old_seed from its
+    // caller and nothing makes that agree with garden_prepare_layout's.
+    GardenVeg scratch;const GardenVeg *v;
+    if(f->veg[1].ready&&f->veg[1].seed==seed&&f->veg[1].phase==f->phase)v=&f->veg[1];
+    else if(f->veg[0].ready&&f->veg[0].seed==seed&&f->veg[0].phase==f->phase)v=&f->veg[0];
+    else {garden_veg_derive(&scratch,seed,f->phase);v=&scratch;}
+    // Distant trunks disappear into the air rather than reading as sharp
+    // cutouts. Near vegetation below is darker and has greater contrast.
+    int trunk[3];
+    for(int i=0;i<3;i++)
+        trunk[i]=v->trunk_base[i]+(y-70)*v->trunk_slope[i]/19;
+    const uint16_t bark=garden_rgb(18,36,39),leafy=garden_rgb(9,29,25);
+    // The trunks blend each pixel independently and in the same i order, so
+    // running them as three short passes after the row is written produces the
+    // identical image while touching the fifteen columns where 70-9*dist>0
+    // instead of testing all 240 three times.
+    for(int i=0;i<3;i++) {
+        int lo=trunk[i]-7,hi=trunk[i]+7;
+        if(lo<0)lo=0;
+        if(hi>239)hi=239;
+        for(int x=lo;x<=hi;x++) {
+            int opacity=70-abs(x-trunk[i])*9;
+            if(opacity>0)row[x]=garden_mix(row[x],bark,(unsigned)opacity);
+        }
+    }
+    // Out-of-focus canopy at the top: broad soft ellipses break up the light.
+    for(int i=0;i<7;i++) {
+        int dy=y-v->can_cy[i],ry=v->can_ry[i];
+        if(abs(dy)>=ry)continue;
+        // Secondary PIE candidate: contiguous ellipse coverage + RGB565 blend.
+        // Clip once, process aligned 8-pixel interiors, retain scalar tails;
+        // do not assume the caller's row pointer is 16-byte aligned.
+        // The vertical term does not depend on x; clipping once also drops the
+        // per-pixel bounds test.
+        // The one per-pixel division left in this file, and the only one that
+        // was never hoisted: rr is invariant for the whole ellipse-row and the
+        // divide ran on all ~10,450 pixels the canopy touches in a frame.
+        //
+        // Exactly, not approximately. The lobe's reciprocals rounded up at 2^22
+        // and moved the picture by a step; here the domain is small enough
+        // (rr = rx*rx for rx in 28..44, and |dx| <= rx so the numerator never
+        // exceeds rr) that ceil(2^26/rr) with a shift of 18 reproduces
+        // dx*dx*256/rr for every reachable pair. garden_model.c sweeps it.
+        int qy=dy*dy*256/(ry*ry);
+        garden_canopy_row(row,v->can_lo[i],v->can_hi[i],v->can_cx[i],
+                          v->can_mrr[i],qy,leafy);
+    }
+    // Curved grass and paired fern leaflets. Hashes describe plants, not stored
+    // geometry. Each row intersects only a few spans, never a screen buffer.
+    for(int i=0;i<18;i++) {
+        if(!(v->grass_live&(1u<<i)))continue;
+        int layer=i&1,height=v->grass_height[i];
+        int up=v->grass_base[i]-y;if(up<0||up>height)continue;
+        int t=up*256/height;
+        int cx=v->grass_root[i]
+            +(v->grass_lean[i]+v->grass_wind[i]*(layer+1)/2)*t*t/65536;
+        int radius=1+(256-t)*(1+((v->grass_wide>>i)&1))/220;
+        uint16_t green=v->grass_green[i];
+        for(int x=cx-radius;x<=cx+radius;x++)if(x>=0&&x<240)
+            row[x]=garden_mix(row[x],green,layer?220:130);
+        if((v->grass_fern&(1u<<i))&&t>40&&t<220) {
+            int spacing=v->grass_spacing[i];
+            int band=up%spacing,leaf=spacing-abs(band-spacing/2)*2;
+            int reach=leaf*(256-t)/220;
+            for(int dx=-reach;dx<=reach;dx++) {
+                int x=cx+dx;if(x<0||x>=240)continue;
+                row[x]=garden_mix(row[x],green,layer?180:110);
+            }
+        }
+    }
+}
+static GARDEN_HOT void garden_atmosphere_row(uint16_t *row,int y,const GardenFrame *f) {
+#if PROF_ON
+    GARDEN_FENCE;uint32_t pt0=PROF_CC();
+#ifdef GARDEN_RAY_PERF
+    uint32_t w0=eri_read(ERI_PERFMON_PM0),w1=eri_read(ERI_PERFMON_PM1);
+#endif
+    GARDEN_FENCE;
+    garden_pixels_row(row,y,f);
+    GARDEN_FENCE;
+#ifdef GARDEN_RAY_PERF
+    {
+        uint32_t d0=eri_read(ERI_PERFMON_PM0)-w0,d1=eri_read(ERI_PERFMON_PM1)-w1;
+        garden_pix_pm0+=d0;garden_pix_pm1+=d1;
+        if(y<GARDEN_EARLY_ROWS){garden_early_pm0+=d0;garden_early_pm1+=d1;garden_early_rows++;}
+        else{garden_late_pm0+=d0;garden_late_pm1+=d1;garden_late_rows++;}
+    }
+#endif
+    garden_pixel_cycles+=PROF_CC()-pt0;GARDEN_FENCE;
+#else
+    garden_pixels_row(row,y,f);
+#endif
+#if GARDEN_DECOR_RAYS && !GARDEN_MOTE_ONLY
+#if PROF_ON
+    GARDEN_FENCE;uint32_t rt0=PROF_CC();
+#ifdef GARDEN_RAY_PERF
+    uint32_t q0=eri_read(ERI_PERFMON_PM0),q1=eri_read(ERI_PERFMON_PM1);
+#endif
+    GARDEN_FENCE;
+#endif
+    garden_decor_row(row,y,f);
+#if PROF_ON
+    GARDEN_FENCE;
+#ifdef GARDEN_RAY_PERF
+    garden_ray_pm0+=eri_read(ERI_PERFMON_PM0)-q0;
+    garden_ray_pm1+=eri_read(ERI_PERFMON_PM1)-q1;
+#endif
+    garden_ray_cycles+=PROF_CC()-rt0;garden_ray_rows++;GARDEN_FENCE;
+#endif
+#endif
+}
+void garden_row(uint16_t *row,int y,const GardenFrame *f) {
+    garden_atmosphere_row(row,y,f);
+#if PROF_ON
+    GARDEN_FENCE;uint32_t vt0=PROF_CC();GARDEN_FENCE;
+#endif
+    garden_vegetation_row(row,y,f,f->seed);
+#if PROF_ON
+    GARDEN_FENCE;garden_veg_cycles+=PROF_CC()-vt0;
+    garden_veg_rows++;garden_veg_passes++;GARDEN_FENCE;
+#endif
+}
+void garden_row_blend(uint16_t *row,int y,const GardenFrame *f,unsigned old_seed,unsigned mix) {
+    if(mix>=256||old_seed==f->seed) {garden_row(row,y,f);return;}
+    garden_atmosphere_row(row,y,f);
+    if(!mix) {
+#if PROF_ON
+        GARDEN_FENCE;uint32_t vt1=PROF_CC();GARDEN_FENCE;
+#endif
+        garden_vegetation_row(row,y,f,old_seed);
+#if PROF_ON
+        GARDEN_FENCE;garden_veg_cycles+=PROF_CC()-vt1;
+        garden_veg_rows++;garden_veg_passes++;GARDEN_FENCE;
+#endif
+        return;
+    }
+    // The atmosphere and swarm are evaluated once. Both vegetation layouts
+    // occlude the SAME lit row, then dissolve between those two results.
+    // One 480-byte temporary row, no retained frame or second flower trace.
+    uint16_t next[240];memcpy(next,row,sizeof next);
+#if PROF_ON
+    GARDEN_FENCE;uint32_t vt2=PROF_CC();GARDEN_FENCE;
+    garden_dissolve_rows++;
+#endif
+    garden_vegetation_row(row,y,f,old_seed);
+    garden_vegetation_row(next,y,f,f->seed);
+#if PROF_ON
+    GARDEN_FENCE;garden_veg_cycles+=PROF_CC()-vt2;
+    garden_veg_rows++;garden_veg_passes+=2;GARDEN_FENCE;
+#endif
+    for(int x=0;x<240;x++)row[x]=garden_mix(row[x],next[x],mix);
+}

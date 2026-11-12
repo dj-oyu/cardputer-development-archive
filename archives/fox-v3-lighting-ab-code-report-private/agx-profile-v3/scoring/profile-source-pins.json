@@ -1,0 +1,27 @@
+{
+  "version": "source-agx-profile-pin-v1",
+  "profile": "source-agx-medium-high-contrast-v1",
+  "scope": "vertex shading before interpolation and RGB565 quantization; not post-pixel conversion",
+  "files": {
+    "profile/agx_profile.c": {
+      "sha256": "98b0c01d4fa5c3d93411dd6de9fdd11ca8b730d8824fe3aba2507adb0fb5e0bb",
+      "bytes": 1003
+    },
+    "profile/agx_profile.h": {
+      "sha256": "aac146c66df64ad4241de5d34b2fa72f0109fcd0fc99a2214d2214c42da4f894",
+      "bytes": 425
+    },
+    "profile/agx_lut.inc": {
+      "sha256": "45c14b7074198b3ebde1767417354c929afb294d85ce051dd84b588e37a0bd6f",
+      "bytes": 6514236
+    },
+    "profile/frozen.json": {
+      "sha256": "3b35307ab38ad34b0be4d10e8cbcc50c8b4263b4b40c0605e1cbe461b6a281bd",
+      "bytes": 362
+    },
+    "profile/generate.py": {
+      "sha256": "bd936775605498d7ece5177e85a993727ed3db54bdf7d8d91b0d3ca747c592a5",
+      "bytes": 2144
+    }
+  }
+}

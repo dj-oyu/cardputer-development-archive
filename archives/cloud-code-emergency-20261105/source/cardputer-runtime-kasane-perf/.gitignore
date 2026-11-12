@@ -1,0 +1,40 @@
+# Build outputs and fetched dependencies
+build/
+build_*/
+dist/
+managed_components/
+node_modules/
+.pio/
+target/
+dependencies.lock.*.tmp
+sdkconfig
+sdkconfig.old
+sdkconfig.*.old
+
+# Local settings and credentials
+.env
+.env.*
+!.env.example
+.vscode/*
+!.vscode/settings.json
+!.vscode/c_cpp_properties.json
+.idea/
+
+# OS and Python caches
+.DS_Store
+Thumbs.db
+__pycache__/
+*.pyc
+
+# Local tooling and temporary captures
+.venv/
+venv/
+.cache/
+*.log
+*.tmp
+
+# Keep sdkconfig.defaults*, dependency lockfiles, and test fixtures tracked.
+
+# Host-side lazy-namespace test: objects and binary, built by tools/build_lazy_test.sh
+tools/.lazytest/
+tools/test_lazy_namespace

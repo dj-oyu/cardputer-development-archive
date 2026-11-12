@@ -1,0 +1,134 @@
+{
+  "front": {
+    "11": {
+      "rich": {
+        "brightIoU": 0.8406169665809768,
+        "darkIoU": 0.8944230094703612,
+        "brightFP": 145,
+        "brightFN": 103,
+        "deltaRGBRMSE": 0.04545471324395455,
+        "responseMagnitudeAgreementPercent": 99.55713644842074,
+        "directionAgreementPercent": 94.75646702400373,
+        "signedCorrelation": 0.8784275174059315,
+        "RGB": {
+          "baseline": 95.31041142361975,
+          "direction": 94.64305565654362
+        },
+        "uncertainPixels": 729
+      },
+      "lambert": {
+        "brightIoU": 0.8156711624919717,
+        "darkIoU": 0.8833971458405847,
+        "brightFP": 146,
+        "brightFN": 141,
+        "deltaRGBRMSE": 0.05380212898370875,
+        "responseMagnitudeAgreementPercent": 98.56771100815374,
+        "directionAgreementPercent": 93.81996268656717,
+        "signedCorrelation": 0.8601072236138794,
+        "RGB": {
+          "baseline": 92.20861718766804,
+          "direction": 91.90547920857671
+        },
+        "uncertainPixels": 729
+      }
+    },
+    "29": {
+      "rich": {
+        "brightIoU": 0.8432883750802826,
+        "darkIoU": 0.8892393971258324,
+        "brightFP": 146,
+        "brightFN": 98,
+        "deltaRGBRMSE": 0.04544378961190498,
+        "responseMagnitudeAgreementPercent": 99.83076771748892,
+        "directionAgreementPercent": 94.40689815893731,
+        "signedCorrelation": 0.878597394611891,
+        "RGB": {
+          "baseline": 95.30295208508102,
+          "direction": 94.64098742092635
+        },
+        "uncertainPixels": 729
+      },
+      "lambert": {
+        "brightIoU": 0.8218649517684887,
+        "darkIoU": 0.8814918089926804,
+        "brightFP": 144,
+        "brightFN": 133,
+        "deltaRGBRMSE": 0.0537624536364081,
+        "responseMagnitudeAgreementPercent": 98.76407497152522,
+        "directionAgreementPercent": 93.65227537922988,
+        "signedCorrelation": 0.8601115718626147,
+        "RGB": {
+          "baseline": 92.20433056469727,
+          "direction": 91.90357255386704
+        },
+        "uncertainPixels": 729
+      }
+    }
+  },
+  "oblique": {
+    "11": {
+      "rich": {
+        "brightIoU": 0.7190265486725663,
+        "darkIoU": 0.9083434099153567,
+        "brightFP": 195,
+        "brightFN": 59,
+        "deltaRGBRMSE": 0.048736516161635324,
+        "responseMagnitudeAgreementPercent": 93.68149247220222,
+        "directionAgreementPercent": 94.36389626301818,
+        "signedCorrelation": 0.8497798448599739,
+        "RGB": {
+          "baseline": 95.63661818917429,
+          "direction": 94.8311137419727
+        },
+        "uncertainPixels": 698
+      },
+      "lambert": {
+        "brightIoU": 0.7055427251732102,
+        "darkIoU": 0.9163855421686747,
+        "brightFP": 157,
+        "brightFN": 98,
+        "deltaRGBRMSE": 0.058333851230764476,
+        "responseMagnitudeAgreementPercent": 93.42083826233943,
+        "directionAgreementPercent": 94.45354072861237,
+        "signedCorrelation": 0.8259963650772989,
+        "RGB": {
+          "baseline": 92.47488440934156,
+          "direction": 92.47585075090495
+        },
+        "uncertainPixels": 698
+      }
+    },
+    "29": {
+      "rich": {
+        "brightIoU": 0.7323628219484882,
+        "darkIoU": 0.9129172714078374,
+        "brightFP": 184,
+        "brightFN": 55,
+        "deltaRGBRMSE": 0.04862437377631914,
+        "responseMagnitudeAgreementPercent": 93.65087807790324,
+        "directionAgreementPercent": 94.54322501532802,
+        "signedCorrelation": 0.8507521056524265,
+        "RGB": {
+          "baseline": 95.62524467962795,
+          "direction": 94.8376354259777
+        },
+        "uncertainPixels": 698
+      },
+      "lambert": {
+        "brightIoU": 0.7119628339140535,
+        "darkIoU": 0.9168874969886774,
+        "brightFP": 152,
+        "brightFN": 96,
+        "deltaRGBRMSE": 0.058265027783479216,
+        "responseMagnitudeAgreementPercent": 93.34794449501034,
+        "directionAgreementPercent": 94.61727384363488,
+        "signedCorrelation": 0.8268273439067799,
+        "RGB": {
+          "baseline": 92.46110230628287,
+          "direction": 92.4720787927198
+        },
+        "uncertainPixels": 698
+      }
+    }
+  }
+}

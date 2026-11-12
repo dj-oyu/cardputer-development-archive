@@ -1,0 +1,82 @@
+{
+  "front": {
+    "targets": 2385,
+    "centerShades": 9392,
+    "sampleShades": 7678,
+    "stageReservation": 7950858,
+    "stageObserved": 7712002,
+    "stageReservationHeadroom": 49142,
+    "maxCounters": {
+      "visibilityRays": {
+        "used": 441552,
+        "cap": 1000000,
+        "headroom": 558448
+      },
+      "visibilityNodeVisits": {
+        "used": 27515446,
+        "cap": 100000000,
+        "headroom": 72484554
+      },
+      "visibilityTriangleTests": {
+        "used": 8855248,
+        "cap": 50000000,
+        "headroom": 41144752
+      },
+      "transportRays": {
+        "used": 4557877,
+        "cap": 20000000,
+        "headroom": 15442123
+      },
+      "transportNodeVisits": {
+        "used": 322638142,
+        "cap": 800000000,
+        "headroom": 477361858
+      },
+      "transportTriangleTests": {
+        "used": 113520496,
+        "cap": 300000000,
+        "headroom": 186479504
+      }
+    }
+  },
+  "oblique": {
+    "targets": 2391,
+    "centerShades": 9636,
+    "sampleShades": 7365,
+    "stageReservation": 7725926,
+    "stageObserved": 7459590,
+    "stageReservationHeadroom": 274074,
+    "maxCounters": {
+      "visibilityRays": {
+        "used": 438912,
+        "cap": 1000000,
+        "headroom": 561088
+      },
+      "visibilityNodeVisits": {
+        "used": 26017506,
+        "cap": 100000000,
+        "headroom": 73982494
+      },
+      "visibilityTriangleTests": {
+        "used": 8199423,
+        "cap": 50000000,
+        "headroom": 41800577
+      },
+      "transportRays": {
+        "used": 4808773,
+        "cap": 20000000,
+        "headroom": 15191227
+      },
+      "transportNodeVisits": {
+        "used": 329358214,
+        "cap": 800000000,
+        "headroom": 470641786
+      },
+      "transportTriangleTests": {
+        "used": 117192737,
+        "cap": 300000000,
+        "headroom": 182807263
+      }
+    }
+  }
+}

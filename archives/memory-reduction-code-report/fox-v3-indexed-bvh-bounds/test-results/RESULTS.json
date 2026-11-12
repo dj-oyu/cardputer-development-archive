@@ -1,0 +1,310 @@
+{
+  "status": "PASS",
+  "actualFrames": 0,
+  "results": [
+    {
+      "mode": "O0",
+      "test": "capacity",
+      "status": "PASS",
+      "command": [
+        "cc",
+        "-std=c11",
+        "-O0",
+        "-g",
+        "-ffp-contract=off",
+        "-fexcess-precision=standard",
+        "/workspace/scratch/6d8dcdbcdc54/fox-v3-indexed-bvh-bounds/tests/test_capacity.c",
+        "-lm",
+        "-o",
+        "/workspace/scratch/6d8dcdbcdc54/fox-v3-indexed-bvh-bounds/test-results/O0/capacity"
+      ]
+    },
+    {
+      "mode": "O0",
+      "test": "visibility",
+      "status": "PASS",
+      "command": [
+        "cc",
+        "-std=c11",
+        "-O0",
+        "-g",
+        "-ffp-contract=off",
+        "-fexcess-precision=standard",
+        "/workspace/scratch/6d8dcdbcdc54/fox-v3-indexed-bvh-bounds/private-build/visibility/test_visibility.c",
+        "-lm",
+        "-o",
+        "/workspace/scratch/6d8dcdbcdc54/fox-v3-indexed-bvh-bounds/test-results/O0/visibility"
+      ]
+    },
+    {
+      "mode": "O0",
+      "test": "nearest",
+      "status": "PASS",
+      "command": [
+        "cc",
+        "-std=c11",
+        "-O0",
+        "-g",
+        "-ffp-contract=off",
+        "-fexcess-precision=standard",
+        "/workspace/scratch/6d8dcdbcdc54/fox-v3-indexed-bvh-bounds/private-build/visibility/test_nearest.c",
+        "/workspace/scratch/6d8dcdbcdc54/fox-v3-indexed-bvh-bounds/private-build/visibility/visibility.c",
+        "-lm",
+        "-o",
+        "/workspace/scratch/6d8dcdbcdc54/fox-v3-indexed-bvh-bounds/test-results/O0/nearest"
+      ]
+    },
+    {
+      "mode": "O0",
+      "test": "bruteforce",
+      "status": "PASS",
+      "command": [
+        "cc",
+        "-std=c11",
+        "-O0",
+        "-g",
+        "-ffp-contract=off",
+        "-fexcess-precision=standard",
+        "/workspace/scratch/6d8dcdbcdc54/fox-v3-indexed-bvh-bounds/private-build/visibility/test_bruteforce.c",
+        "/workspace/scratch/6d8dcdbcdc54/fox-v3-indexed-bvh-bounds/private-build/visibility/visibility.c",
+        "-lm",
+        "-o",
+        "/workspace/scratch/6d8dcdbcdc54/fox-v3-indexed-bvh-bounds/test-results/O0/bruteforce"
+      ]
+    },
+    {
+      "mode": "O0-asan-ubsan",
+      "test": "capacity",
+      "status": "PASS",
+      "command": [
+        "cc",
+        "-std=c11",
+        "-O0",
+        "-g",
+        "-ffp-contract=off",
+        "-fexcess-precision=standard",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "/workspace/scratch/6d8dcdbcdc54/fox-v3-indexed-bvh-bounds/tests/test_capacity.c",
+        "-lm",
+        "-o",
+        "/workspace/scratch/6d8dcdbcdc54/fox-v3-indexed-bvh-bounds/test-results/O0-asan-ubsan/capacity"
+      ]
+    },
+    {
+      "mode": "O0-asan-ubsan",
+      "test": "visibility",
+      "status": "PASS",
+      "command": [
+        "cc",
+        "-std=c11",
+        "-O0",
+        "-g",
+        "-ffp-contract=off",
+        "-fexcess-precision=standard",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "/workspace/scratch/6d8dcdbcdc54/fox-v3-indexed-bvh-bounds/private-build/visibility/test_visibility.c",
+        "-lm",
+        "-o",
+        "/workspace/scratch/6d8dcdbcdc54/fox-v3-indexed-bvh-bounds/test-results/O0-asan-ubsan/visibility"
+      ]
+    },
+    {
+      "mode": "O0-asan-ubsan",
+      "test": "nearest",
+      "status": "PASS",
+      "command": [
+        "cc",
+        "-std=c11",
+        "-O0",
+        "-g",
+        "-ffp-contract=off",
+        "-fexcess-precision=standard",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "/workspace/scratch/6d8dcdbcdc54/fox-v3-indexed-bvh-bounds/private-build/visibility/test_nearest.c",
+        "/workspace/scratch/6d8dcdbcdc54/fox-v3-indexed-bvh-bounds/private-build/visibility/visibility.c",
+        "-lm",
+        "-o",
+        "/workspace/scratch/6d8dcdbcdc54/fox-v3-indexed-bvh-bounds/test-results/O0-asan-ubsan/nearest"
+      ]
+    },
+    {
+      "mode": "O0-asan-ubsan",
+      "test": "bruteforce",
+      "status": "PASS",
+      "command": [
+        "cc",
+        "-std=c11",
+        "-O0",
+        "-g",
+        "-ffp-contract=off",
+        "-fexcess-precision=standard",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "/workspace/scratch/6d8dcdbcdc54/fox-v3-indexed-bvh-bounds/private-build/visibility/test_bruteforce.c",
+        "/workspace/scratch/6d8dcdbcdc54/fox-v3-indexed-bvh-bounds/private-build/visibility/visibility.c",
+        "-lm",
+        "-o",
+        "/workspace/scratch/6d8dcdbcdc54/fox-v3-indexed-bvh-bounds/test-results/O0-asan-ubsan/bruteforce"
+      ]
+    },
+    {
+      "mode": "O2",
+      "test": "capacity",
+      "status": "PASS",
+      "command": [
+        "cc",
+        "-std=c11",
+        "-O2",
+        "-g",
+        "-ffp-contract=off",
+        "-fexcess-precision=standard",
+        "/workspace/scratch/6d8dcdbcdc54/fox-v3-indexed-bvh-bounds/tests/test_capacity.c",
+        "-lm",
+        "-o",
+        "/workspace/scratch/6d8dcdbcdc54/fox-v3-indexed-bvh-bounds/test-results/O2/capacity"
+      ]
+    },
+    {
+      "mode": "O2",
+      "test": "visibility",
+      "status": "PASS",
+      "command": [
+        "cc",
+        "-std=c11",
+        "-O2",
+        "-g",
+        "-ffp-contract=off",
+        "-fexcess-precision=standard",
+        "/workspace/scratch/6d8dcdbcdc54/fox-v3-indexed-bvh-bounds/private-build/visibility/test_visibility.c",
+        "-lm",
+        "-o",
+        "/workspace/scratch/6d8dcdbcdc54/fox-v3-indexed-bvh-bounds/test-results/O2/visibility"
+      ]
+    },
+    {
+      "mode": "O2",
+      "test": "nearest",
+      "status": "PASS",
+      "command": [
+        "cc",
+        "-std=c11",
+        "-O2",
+        "-g",
+        "-ffp-contract=off",
+        "-fexcess-precision=standard",
+        "/workspace/scratch/6d8dcdbcdc54/fox-v3-indexed-bvh-bounds/private-build/visibility/test_nearest.c",
+        "/workspace/scratch/6d8dcdbcdc54/fox-v3-indexed-bvh-bounds/private-build/visibility/visibility.c",
+        "-lm",
+        "-o",
+        "/workspace/scratch/6d8dcdbcdc54/fox-v3-indexed-bvh-bounds/test-results/O2/nearest"
+      ]
+    },
+    {
+      "mode": "O2",
+      "test": "bruteforce",
+      "status": "PASS",
+      "command": [
+        "cc",
+        "-std=c11",
+        "-O2",
+        "-g",
+        "-ffp-contract=off",
+        "-fexcess-precision=standard",
+        "/workspace/scratch/6d8dcdbcdc54/fox-v3-indexed-bvh-bounds/private-build/visibility/test_bruteforce.c",
+        "/workspace/scratch/6d8dcdbcdc54/fox-v3-indexed-bvh-bounds/private-build/visibility/visibility.c",
+        "-lm",
+        "-o",
+        "/workspace/scratch/6d8dcdbcdc54/fox-v3-indexed-bvh-bounds/test-results/O2/bruteforce"
+      ]
+    },
+    {
+      "mode": "O2-asan-ubsan",
+      "test": "capacity",
+      "status": "PASS",
+      "command": [
+        "cc",
+        "-std=c11",
+        "-O2",
+        "-g",
+        "-ffp-contract=off",
+        "-fexcess-precision=standard",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "/workspace/scratch/6d8dcdbcdc54/fox-v3-indexed-bvh-bounds/tests/test_capacity.c",
+        "-lm",
+        "-o",
+        "/workspace/scratch/6d8dcdbcdc54/fox-v3-indexed-bvh-bounds/test-results/O2-asan-ubsan/capacity"
+      ]
+    },
+    {
+      "mode": "O2-asan-ubsan",
+      "test": "visibility",
+      "status": "PASS",
+      "command": [
+        "cc",
+        "-std=c11",
+        "-O2",
+        "-g",
+        "-ffp-contract=off",
+        "-fexcess-precision=standard",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "/workspace/scratch/6d8dcdbcdc54/fox-v3-indexed-bvh-bounds/private-build/visibility/test_visibility.c",
+        "-lm",
+        "-o",
+        "/workspace/scratch/6d8dcdbcdc54/fox-v3-indexed-bvh-bounds/test-results/O2-asan-ubsan/visibility"
+      ]
+    },
+    {
+      "mode": "O2-asan-ubsan",
+      "test": "nearest",
+      "status": "PASS",
+      "command": [
+        "cc",
+        "-std=c11",
+        "-O2",
+        "-g",
+        "-ffp-contract=off",
+        "-fexcess-precision=standard",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "/workspace/scratch/6d8dcdbcdc54/fox-v3-indexed-bvh-bounds/private-build/visibility/test_nearest.c",
+        "/workspace/scratch/6d8dcdbcdc54/fox-v3-indexed-bvh-bounds/private-build/visibility/visibility.c",
+        "-lm",
+        "-o",
+        "/workspace/scratch/6d8dcdbcdc54/fox-v3-indexed-bvh-bounds/test-results/O2-asan-ubsan/nearest"
+      ]
+    },
+    {
+      "mode": "O2-asan-ubsan",
+      "test": "bruteforce",
+      "status": "PASS",
+      "command": [
+        "cc",
+        "-std=c11",
+        "-O2",
+        "-g",
+        "-ffp-contract=off",
+        "-fexcess-precision=standard",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "/workspace/scratch/6d8dcdbcdc54/fox-v3-indexed-bvh-bounds/private-build/visibility/test_bruteforce.c",
+        "/workspace/scratch/6d8dcdbcdc54/fox-v3-indexed-bvh-bounds/private-build/visibility/visibility.c",
+        "-lm",
+        "-o",
+        "/workspace/scratch/6d8dcdbcdc54/fox-v3-indexed-bvh-bounds/test-results/O2-asan-ubsan/bruteforce"
+      ]
+    }
+  ],
+  "LSAN": "Disabled due unsupported ptrace environment; explicit allocation/poison/free accounting remains active.",
+  "sourceHashes": {
+    "private-build/visibility/visibility.c": "a516325cb207a50e4dd34d0fa4e28d321499b2c43d2ad617587ca00bed037b88",
+    "private-build/visibility/visibility.h": "5744b70731fa86fdce43d9d6092c4b7cb759a4a96056fd1a2be2eb8b07e8d1ce",
+    "tests/bench_build.c": "bd456278710f0d848c68efd61e3e6ade179d43c5c75a0542549838f59a45b665",
+    "tests/run_tests.py": "991af9498f5754073494bd5d331b1524fdc5b479eae188f1d74bb88064759293",
+    "tests/test_capacity.c": "626f0de715d317f6781f5f7d6c99ab952f9d261c971eaef7eb6b52732bf0fbe6"
+  }
+}

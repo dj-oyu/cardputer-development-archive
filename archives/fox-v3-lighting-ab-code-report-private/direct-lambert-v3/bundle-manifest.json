@@ -1,0 +1,86 @@
+{
+  "PLAN.md": {
+    "bytes": 2200,
+    "sha256": "9a1703d7afadb4c84ef75b7a738e2e567f96bd59bf60648b49c64fcbe8b26de6"
+  },
+  "REPORT.md": {
+    "bytes": 7751,
+    "sha256": "e4c227a03b4a17f7d3093948439def99c6a92918b7bc99772758dbecfa93bea5"
+  },
+  "write_report.py": {
+    "bytes": 7564,
+    "sha256": "82854a68a744ba699ec81baaf6b1e0819fa5ae274aed58de47807a707c281b8d"
+  },
+  "analyze.py": {
+    "bytes": 4452,
+    "sha256": "96b1f3f42aa5dae2aabec2e9102a9647e744fc61dc2499b4fd78efc06baf97f5"
+  },
+  "package.py": {
+    "bytes": 1925,
+    "sha256": "e21276c9762bf98f8fc771a8cf4de7e0cab7da60487bc6dace1a0caed6dbd960"
+  },
+  "independent-review.json": {
+    "bytes": 138330,
+    "sha256": "daae618de60b7cdefaf8ec6524ed7204236479093731b7c7f46baad1baa1f91e"
+  },
+  "native/shader.c": {
+    "bytes": 4583,
+    "sha256": "6aa3a7f485bf1e8ff9d5660f56c72c2ab22eb49352cfb28ac4fe12819c0565f8"
+  },
+  "native/run.py": {
+    "bytes": 5651,
+    "sha256": "f98ce80e7280a69fda861357b7f7d931002270d45653bd65e448fe2a1a14b7fa"
+  },
+  "native/test_direct.c": {
+    "bytes": 833,
+    "sha256": "2d8d4bf2f8513feeb26d47d1cf362430593a56059e7e4692ba81beec140b0cd3"
+  },
+  "native/test.log": {
+    "bytes": 82,
+    "sha256": "c729d4af4bae94fbca74a335cb2477af79863b9528ebd7976de4801147925d28"
+  },
+  "native/build-command.txt": {
+    "bytes": 226,
+    "sha256": "caceeaac92b5a1a108b33512703f1c4b4e9e33200b2c26c22737f33fc2e7d599"
+  },
+  "native/run-001/COMPLETED.json": {
+    "bytes": 784,
+    "sha256": "655d739217a72a16ee99e2067e4f30540e75fa973777a5184f493f91f927dcbb"
+  },
+  "native/run-001/input-hashes.json": {
+    "bytes": 3269,
+    "sha256": "bbd9d1475eb44a2c7a692a5293bb94fe26a0b69b2140d58f4a5d1f91f70bcfb6"
+  },
+  "blender/run.py": {
+    "bytes": 7085,
+    "sha256": "fb4c0a5e73894207c8aeacddb000bb2636d69f066ef24ca2cad259bef77873fc"
+  },
+  "blender/PLAN.md": {
+    "bytes": 831,
+    "sha256": "fa0b759d01265393199553428f7522c74c540495d024a24363c885e01d005803"
+  },
+  "blender/freeze.json": {
+    "bytes": 1329,
+    "sha256": "1c6f97776908d8f49537e5508199c463c05cdd69ffc3d0141e95cd227078ae3a"
+  },
+  "blender/COMPLETED.json": {
+    "bytes": 643851,
+    "sha256": "b7c45752a4e82a74a0c5d8c74c27922482228077397c62a15463d336645e182c"
+  },
+  "analysis-002/metrics.json": {
+    "bytes": 96016,
+    "sha256": "0bbcbb803e8ea3b94ecd9230e01846fa1bccd1174e6c54a5bf4a778b429b089a"
+  },
+  "analysis-002/rich-context.json": {
+    "bytes": 8933,
+    "sha256": "1b6959262b9e23dcd9e5cc67dd8e81cf0cc29d26445fc81c4fb2c938184e742c"
+  },
+  "analysis-002/input-hashes.json": {
+    "bytes": 2333,
+    "sha256": "ae714a1d6b917ecd5e360ff5bbaec7fa074311d8578bcc6f560531bfa46ec3e5"
+  },
+  "analysis-002/regions.json": {
+    "bytes": 325,
+    "sha256": "3433c314f1e220f7fedd9c884b13aa15da45d1f1c383a9516f265f422cd94ae1"
+  }
+}

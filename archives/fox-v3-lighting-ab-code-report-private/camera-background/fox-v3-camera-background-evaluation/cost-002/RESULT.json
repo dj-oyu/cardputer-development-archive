@@ -1,0 +1,532 @@
+{
+  "status": "ALL12_BYTEEXACT_AND_PINS_PASS",
+  "observerIO": "Both arms include original quarter-sample JSON observer I/O; ON additionally includes all background-composition event JSON I/O. Host elapsed reference only, not pure shader or device comparison.",
+  "schedule": "repeat then front/oblique then A/B, 3 repeats, serial",
+  "rows": [
+    {
+      "repeat": 0,
+      "view": "front",
+      "arm": "A",
+      "wallNs": 12607011131,
+      "evaluateNs": 9507586,
+      "renderNs": 12590069505,
+      "transportBuildNs": 188354,
+      "visibilityBuildNs": 4002379,
+      "backgroundBuildNs": 0,
+      "appendNs": 4617737,
+      "nonTimingMetadataExact": true,
+      "outputsSHA256": {
+        ".u16le": "7293177b7ef0b5571a5f967026ea4e5d4e74dd2eefe6ab5cdab545a933de36df",
+        ".f32le": "03d9ee4d5a81118e7f2efe2947a64230132aad4daad2a2019d31f9f4959fea3f",
+        ".snapshot": "006cfd92bda231a4ae7922f23aa125176f807967feaf444e2f3f8b19ef72cab0"
+      }
+    },
+    {
+      "repeat": 0,
+      "view": "front",
+      "arm": "B",
+      "wallNs": 14154333062,
+      "evaluateNs": 10145337,
+      "renderNs": 14135756297,
+      "transportBuildNs": 186092,
+      "visibilityBuildNs": 4515436,
+      "backgroundBuildNs": 83416,
+      "appendNs": 5176425,
+      "nonTimingMetadataExact": true,
+      "outputsSHA256": {
+        ".u16le": "52a5331e53e983877b0626b2c8ead88dd167032fd3b10c734f669130b41264df",
+        ".f32le": "03d9ee4d5a81118e7f2efe2947a64230132aad4daad2a2019d31f9f4959fea3f",
+        ".snapshot": "006cfd92bda231a4ae7922f23aa125176f807967feaf444e2f3f8b19ef72cab0"
+      }
+    },
+    {
+      "repeat": 0,
+      "view": "oblique",
+      "arm": "A",
+      "wallNs": 12613805170,
+      "evaluateNs": 10206238,
+      "renderNs": 12596274651,
+      "transportBuildNs": 205882,
+      "visibilityBuildNs": 3984628,
+      "backgroundBuildNs": 0,
+      "appendNs": 4602903,
+      "nonTimingMetadataExact": true,
+      "outputsSHA256": {
+        ".u16le": "c04979f7692e671bad1de6e8f5774f424239d8e5f6b129c8d18b20837c4efced",
+        ".f32le": "3201f0507c4b7f65911ecea8edf4175d76f2b93cc8d9ca715e10f97cf410e77a",
+        ".snapshot": "510b27afbe66e125c3a39707408ab41b4ca381d6b81c69f6e43025d799852c90"
+      }
+    },
+    {
+      "repeat": 0,
+      "view": "oblique",
+      "arm": "B",
+      "wallNs": 13715555031,
+      "evaluateNs": 9913009,
+      "renderNs": 13698088085,
+      "transportBuildNs": 182716,
+      "visibilityBuildNs": 4129404,
+      "backgroundBuildNs": 82725,
+      "appendNs": 4743082,
+      "nonTimingMetadataExact": true,
+      "outputsSHA256": {
+        ".u16le": "8b275853db3d2ccf1816e9130c352777a0138fda6505b694ea0306a00c8046d3",
+        ".f32le": "3201f0507c4b7f65911ecea8edf4175d76f2b93cc8d9ca715e10f97cf410e77a",
+        ".snapshot": "510b27afbe66e125c3a39707408ab41b4ca381d6b81c69f6e43025d799852c90"
+      }
+    },
+    {
+      "repeat": 1,
+      "view": "front",
+      "arm": "A",
+      "wallNs": 14130705377,
+      "evaluateNs": 11500190,
+      "renderNs": 14103033160,
+      "transportBuildNs": 302608,
+      "visibilityBuildNs": 11806081,
+      "backgroundBuildNs": 0,
+      "appendNs": 12667314,
+      "nonTimingMetadataExact": true,
+      "outputsSHA256": {
+        ".u16le": "7293177b7ef0b5571a5f967026ea4e5d4e74dd2eefe6ab5cdab545a933de36df",
+        ".f32le": "03d9ee4d5a81118e7f2efe2947a64230132aad4daad2a2019d31f9f4959fea3f",
+        ".snapshot": "006cfd92bda231a4ae7922f23aa125176f807967feaf444e2f3f8b19ef72cab0"
+      }
+    },
+    {
+      "repeat": 1,
+      "view": "front",
+      "arm": "B",
+      "wallNs": 14134357248,
+      "evaluateNs": 10997917,
+      "renderNs": 14115180991,
+      "transportBuildNs": 183698,
+      "visibilityBuildNs": 3918646,
+      "backgroundBuildNs": 83566,
+      "appendNs": 4561508,
+      "nonTimingMetadataExact": true,
+      "outputsSHA256": {
+        ".u16le": "52a5331e53e983877b0626b2c8ead88dd167032fd3b10c734f669130b41264df",
+        ".f32le": "03d9ee4d5a81118e7f2efe2947a64230132aad4daad2a2019d31f9f4959fea3f",
+        ".snapshot": "006cfd92bda231a4ae7922f23aa125176f807967feaf444e2f3f8b19ef72cab0"
+      }
+    },
+    {
+      "repeat": 1,
+      "view": "oblique",
+      "arm": "A",
+      "wallNs": 12050962004,
+      "evaluateNs": 10758168,
+      "renderNs": 12031994164,
+      "transportBuildNs": 185831,
+      "visibilityBuildNs": 4378924,
+      "backgroundBuildNs": 0,
+      "appendNs": 4912681,
+      "nonTimingMetadataExact": true,
+      "outputsSHA256": {
+        ".u16le": "c04979f7692e671bad1de6e8f5774f424239d8e5f6b129c8d18b20837c4efced",
+        ".f32le": "3201f0507c4b7f65911ecea8edf4175d76f2b93cc8d9ca715e10f97cf410e77a",
+        ".snapshot": "510b27afbe66e125c3a39707408ab41b4ca381d6b81c69f6e43025d799852c90"
+      }
+    },
+    {
+      "repeat": 1,
+      "view": "oblique",
+      "arm": "B",
+      "wallNs": 13095310920,
+      "evaluateNs": 10731590,
+      "renderNs": 13074565401,
+      "transportBuildNs": 408999,
+      "visibilityBuildNs": 5129056,
+      "backgroundBuildNs": 84688,
+      "appendNs": 6307469,
+      "nonTimingMetadataExact": true,
+      "outputsSHA256": {
+        ".u16le": "8b275853db3d2ccf1816e9130c352777a0138fda6505b694ea0306a00c8046d3",
+        ".f32le": "3201f0507c4b7f65911ecea8edf4175d76f2b93cc8d9ca715e10f97cf410e77a",
+        ".snapshot": "510b27afbe66e125c3a39707408ab41b4ca381d6b81c69f6e43025d799852c90"
+      }
+    },
+    {
+      "repeat": 2,
+      "view": "front",
+      "arm": "A",
+      "wallNs": 12990728726,
+      "evaluateNs": 9414400,
+      "renderNs": 12974028645,
+      "transportBuildNs": 182206,
+      "visibilityBuildNs": 3885868,
+      "backgroundBuildNs": 0,
+      "appendNs": 4431733,
+      "nonTimingMetadataExact": true,
+      "outputsSHA256": {
+        ".u16le": "7293177b7ef0b5571a5f967026ea4e5d4e74dd2eefe6ab5cdab545a933de36df",
+        ".f32le": "03d9ee4d5a81118e7f2efe2947a64230132aad4daad2a2019d31f9f4959fea3f",
+        ".snapshot": "006cfd92bda231a4ae7922f23aa125176f807967feaf444e2f3f8b19ef72cab0"
+      }
+    },
+    {
+      "repeat": 2,
+      "view": "front",
+      "arm": "B",
+      "wallNs": 14032763133,
+      "evaluateNs": 9911949,
+      "renderNs": 14014410949,
+      "transportBuildNs": 183818,
+      "visibilityBuildNs": 3972803,
+      "backgroundBuildNs": 83286,
+      "appendNs": 4603968,
+      "nonTimingMetadataExact": true,
+      "outputsSHA256": {
+        ".u16le": "52a5331e53e983877b0626b2c8ead88dd167032fd3b10c734f669130b41264df",
+        ".f32le": "03d9ee4d5a81118e7f2efe2947a64230132aad4daad2a2019d31f9f4959fea3f",
+        ".snapshot": "006cfd92bda231a4ae7922f23aa125176f807967feaf444e2f3f8b19ef72cab0"
+      }
+    },
+    {
+      "repeat": 2,
+      "view": "oblique",
+      "arm": "A",
+      "wallNs": 12570455016,
+      "evaluateNs": 12478762,
+      "renderNs": 12546249088,
+      "transportBuildNs": 270099,
+      "visibilityBuildNs": 5265122,
+      "backgroundBuildNs": 0,
+      "appendNs": 6051012,
+      "nonTimingMetadataExact": true,
+      "outputsSHA256": {
+        ".u16le": "c04979f7692e671bad1de6e8f5774f424239d8e5f6b129c8d18b20837c4efced",
+        ".f32le": "3201f0507c4b7f65911ecea8edf4175d76f2b93cc8d9ca715e10f97cf410e77a",
+        ".snapshot": "510b27afbe66e125c3a39707408ab41b4ca381d6b81c69f6e43025d799852c90"
+      }
+    },
+    {
+      "repeat": 2,
+      "view": "oblique",
+      "arm": "B",
+      "wallNs": 14237304770,
+      "evaluateNs": 14466328,
+      "renderNs": 14213993282,
+      "transportBuildNs": 220703,
+      "visibilityBuildNs": 4257408,
+      "backgroundBuildNs": 82735,
+      "appendNs": 4904416,
+      "nonTimingMetadataExact": true,
+      "outputsSHA256": {
+        ".u16le": "8b275853db3d2ccf1816e9130c352777a0138fda6505b694ea0306a00c8046d3",
+        ".f32le": "3201f0507c4b7f65911ecea8edf4175d76f2b93cc8d9ca715e10f97cf410e77a",
+        ".snapshot": "510b27afbe66e125c3a39707408ab41b4ca381d6b81c69f6e43025d799852c90"
+      }
+    }
+  ],
+  "summary": {
+    "A-front": {
+      "wallNs": {
+        "rawNs": [
+          12607011131,
+          14130705377,
+          12990728726
+        ],
+        "min": 12607011131,
+        "median": 12990728726,
+        "max": 14130705377
+      },
+      "evaluateNs": {
+        "rawNs": [
+          9507586,
+          11500190,
+          9414400
+        ],
+        "min": 9414400,
+        "median": 9507586,
+        "max": 11500190
+      },
+      "renderNs": {
+        "rawNs": [
+          12590069505,
+          14103033160,
+          12974028645
+        ],
+        "min": 12590069505,
+        "median": 12974028645,
+        "max": 14103033160
+      },
+      "transportBuildNs": {
+        "rawNs": [
+          188354,
+          302608,
+          182206
+        ],
+        "min": 182206,
+        "median": 188354,
+        "max": 302608
+      },
+      "visibilityBuildNs": {
+        "rawNs": [
+          4002379,
+          11806081,
+          3885868
+        ],
+        "min": 3885868,
+        "median": 4002379,
+        "max": 11806081
+      },
+      "appendNs": {
+        "rawNs": [
+          4617737,
+          12667314,
+          4431733
+        ],
+        "min": 4431733,
+        "median": 4617737,
+        "max": 12667314
+      },
+      "backgroundBuildNs": {
+        "rawNs": [
+          0,
+          0,
+          0
+        ],
+        "min": 0,
+        "median": 0,
+        "max": 0
+      }
+    },
+    "A-oblique": {
+      "wallNs": {
+        "rawNs": [
+          12613805170,
+          12050962004,
+          12570455016
+        ],
+        "min": 12050962004,
+        "median": 12570455016,
+        "max": 12613805170
+      },
+      "evaluateNs": {
+        "rawNs": [
+          10206238,
+          10758168,
+          12478762
+        ],
+        "min": 10206238,
+        "median": 10758168,
+        "max": 12478762
+      },
+      "renderNs": {
+        "rawNs": [
+          12596274651,
+          12031994164,
+          12546249088
+        ],
+        "min": 12031994164,
+        "median": 12546249088,
+        "max": 12596274651
+      },
+      "transportBuildNs": {
+        "rawNs": [
+          205882,
+          185831,
+          270099
+        ],
+        "min": 185831,
+        "median": 205882,
+        "max": 270099
+      },
+      "visibilityBuildNs": {
+        "rawNs": [
+          3984628,
+          4378924,
+          5265122
+        ],
+        "min": 3984628,
+        "median": 4378924,
+        "max": 5265122
+      },
+      "appendNs": {
+        "rawNs": [
+          4602903,
+          4912681,
+          6051012
+        ],
+        "min": 4602903,
+        "median": 4912681,
+        "max": 6051012
+      },
+      "backgroundBuildNs": {
+        "rawNs": [
+          0,
+          0,
+          0
+        ],
+        "min": 0,
+        "median": 0,
+        "max": 0
+      }
+    },
+    "B-front": {
+      "wallNs": {
+        "rawNs": [
+          14154333062,
+          14134357248,
+          14032763133
+        ],
+        "min": 14032763133,
+        "median": 14134357248,
+        "max": 14154333062
+      },
+      "evaluateNs": {
+        "rawNs": [
+          10145337,
+          10997917,
+          9911949
+        ],
+        "min": 9911949,
+        "median": 10145337,
+        "max": 10997917
+      },
+      "renderNs": {
+        "rawNs": [
+          14135756297,
+          14115180991,
+          14014410949
+        ],
+        "min": 14014410949,
+        "median": 14115180991,
+        "max": 14135756297
+      },
+      "transportBuildNs": {
+        "rawNs": [
+          186092,
+          183698,
+          183818
+        ],
+        "min": 183698,
+        "median": 183818,
+        "max": 186092
+      },
+      "visibilityBuildNs": {
+        "rawNs": [
+          4515436,
+          3918646,
+          3972803
+        ],
+        "min": 3918646,
+        "median": 3972803,
+        "max": 4515436
+      },
+      "appendNs": {
+        "rawNs": [
+          5176425,
+          4561508,
+          4603968
+        ],
+        "min": 4561508,
+        "median": 4603968,
+        "max": 5176425
+      },
+      "backgroundBuildNs": {
+        "rawNs": [
+          83416,
+          83566,
+          83286
+        ],
+        "min": 83286,
+        "median": 83416,
+        "max": 83566
+      }
+    },
+    "B-oblique": {
+      "wallNs": {
+        "rawNs": [
+          13715555031,
+          13095310920,
+          14237304770
+        ],
+        "min": 13095310920,
+        "median": 13715555031,
+        "max": 14237304770
+      },
+      "evaluateNs": {
+        "rawNs": [
+          9913009,
+          10731590,
+          14466328
+        ],
+        "min": 9913009,
+        "median": 10731590,
+        "max": 14466328
+      },
+      "renderNs": {
+        "rawNs": [
+          13698088085,
+          13074565401,
+          14213993282
+        ],
+        "min": 13074565401,
+        "median": 13698088085,
+        "max": 14213993282
+      },
+      "transportBuildNs": {
+        "rawNs": [
+          182716,
+          408999,
+          220703
+        ],
+        "min": 182716,
+        "median": 220703,
+        "max": 408999
+      },
+      "visibilityBuildNs": {
+        "rawNs": [
+          4129404,
+          5129056,
+          4257408
+        ],
+        "min": 4129404,
+        "median": 4257408,
+        "max": 5129056
+      },
+      "appendNs": {
+        "rawNs": [
+          4743082,
+          6307469,
+          4904416
+        ],
+        "min": 4743082,
+        "median": 4904416,
+        "max": 6307469
+      },
+      "backgroundBuildNs": {
+        "rawNs": [
+          82725,
+          84688,
+          82735
+        ],
+        "min": 82725,
+        "median": 82735,
+        "max": 84688
+      }
+    }
+  },
+  "binarySHA256": {
+    "A": "1b6707cc00cefbb525a11e76ba918e732ba53abf151f57ed9d73ea21d53075bc",
+    "B": "1b6707cc00cefbb525a11e76ba918e732ba53abf151f57ed9d73ea21d53075bc"
+  },
+  "inputHashesSHA256": {
+    "A": "c4f5891539ef2efc15517de8b3a5e15d6ee8eba49242a66599bfad71164f5631",
+    "B": "c4f5891539ef2efc15517de8b3a5e15d6ee8eba49242a66599bfad71164f5631"
+  },
+  "allInputPinsBeforeAfterExact": true,
+  "compilerFlags": [
+    "-std=c11",
+    "-O2",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-Wno-misleading-indentation",
+    "-ffp-contract=off",
+    "-fexcess-precision=standard"
+  ]
+}

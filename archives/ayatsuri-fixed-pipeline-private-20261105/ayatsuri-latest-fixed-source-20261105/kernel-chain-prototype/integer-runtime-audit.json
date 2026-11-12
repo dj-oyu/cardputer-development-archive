@@ -1,0 +1,32 @@
+[
+  {
+    "bits": 16,
+    "floating_arithmetic_instructions": [],
+    "undefined_symbols": "                 w _ITM_deregisterTMCloneTable\n                 w _ITM_registerTMCloneTable\n                 w __cxa_finalize@GLIBC_2.2.5\n                 w __gmon_start__\n                 U free@GLIBC_2.2.5\n                 U malloc@GLIBC_2.2.5\n                 U memcmp@GLIBC_2.2.5\n",
+    "profile_numeric_static": {
+      "encoded": 445248,
+      "shaper": 25700
+    },
+    "material_lut": 3084
+  },
+  {
+    "bits": 20,
+    "floating_arithmetic_instructions": [],
+    "undefined_symbols": "                 w _ITM_deregisterTMCloneTable\n                 w _ITM_registerTMCloneTable\n                 w __cxa_finalize@GLIBC_2.2.5\n                 w __gmon_start__\n                 U free@GLIBC_2.2.5\n                 U malloc@GLIBC_2.2.5\n                 U memcmp@GLIBC_2.2.5\n",
+    "profile_numeric_static": {
+      "encoded": 445248,
+      "shaper": 25700
+    },
+    "material_lut": 3084
+  },
+  {
+    "bits": 24,
+    "floating_arithmetic_instructions": [],
+    "undefined_symbols": "                 w _ITM_deregisterTMCloneTable\n                 w _ITM_registerTMCloneTable\n                 w __cxa_finalize@GLIBC_2.2.5\n                 w __gmon_start__\n                 U free@GLIBC_2.2.5\n                 U malloc@GLIBC_2.2.5\n                 U memcmp@GLIBC_2.2.5\n",
+    "profile_numeric_static": {
+      "encoded": 445248,
+      "shaper": 25700
+    },
+    "material_lut": 3084
+  }
+]

@@ -1,0 +1,25 @@
+# Private product-boundary validation, 2026-11-11
+
+This archive contains private diagnostic character data and derived source. Do not publish it with reusable code. The separate generic-candidates archive contains only asset-independent controls and lifetime primitives. No production branch, CI, physical device or parallel QuickJS two-core branch was changed. The original character and diagnostic derivative remain distinct. The historical integration identity 52b119ca is still unproven.
+
+## Completed
+1. Real QuickJS and unchanged AyatsuriMotion control the validated private backend, immutable leased snapshots, source-faithful alpha renderer and separately leased strips. Nine 240x135 RGB565 motion captures match host, QEMU and prior references byte for byte. Host O2 and ASan/UBSan pass 1,230 exact completions plus 1,230 duplicate rejections. QEMU passes 306 plus 306. The transport is a mock, not LCD/SPI/DMA.
+2. Separate two-core FreeRTOS/QEMU lifetime testing observes producer core 0 and consumer core 1 and completes 2,000 handoffs. Host tests include 60,000 pin attempts and 10,000 producer/consumer generations. Exact tickets prevent stale completion from releasing reused snapshots. Teardown must join callback sources as well as drain readers.
+3. A private cutout compositor preserves fractional-alpha fallback, depth/tie semantics, all topology, full-frame preflight and original colors. All 91 baseline frames and 2,565 rows match. Three thousand randomized differential cases and independent review pass. The measured binary-alpha workload uses 68 instead of 136 band passes. This is not a universal 2x bound: fractional fallback incurs a speculative pass, and the pass counter does not include an aborted speculative traversal. No physical FPS claim.
+4. Frozen public baseline 828baa3af69c55e7884c53557ea39f91190010a0 builds as a complete firmware with exact pinned official dependencies. Its map reports DIRAM 181,120 B. This does not include the candidate renderer, and is not a runtime fit test.
+
+## Memory and integration limits
+The target rendering candidate subtotal is 123,320 B: two snapshots 31,952; frame/workspace/compositor 86,840; two independent strips 3,856; pool bookkeeping 496; two mutexes 176. Private backend/SPI descriptor overhead is additional. The product board's existing 3,840-byte buffer is already part of the baseline static map and must not be counted twice. Test-only full-frame captures, mock saved-strip copies and diagnostic state are not a proposed production footprint.
+
+No-PSRAM production firmware also needs QuickJS, UI/task stacks, drivers, Kasane, optional audio/SD/Wi-Fi/TLS, fragmentation headroom and overlapping asset lifetimes. Full-product minimum free heap/largest block and stack high-water have not been measured. Minimal guest free heap and linker remainder are not product headroom. An explicit feature envelope and phase-by-phase runtime budget remain required.
+
+The current scene facade has no automatic skin control, while lower-level native evaluateSkin/evaluateSkins already exist. Current AYNM packing/import validation is unchanged and rejects this transparent, retained-degenerate asset path. The private synchronous companion is not a persisted skin table, scene importer or new asynchronous product API. A formal format extension versus an external sidecar/companion remains a product design choice.
+
+The isolated SPI adapter is target-compiled and queue/reap-mock tested, but not wired into board.c. board_present_frame_end is not a drain. Errors after accepted queueing retain storage until exact completion. Raw descriptor reuse depends on SDK exactly-once queue return and exclusive owner-task reaping. No device DMA/ISR/cache timing is proven. Already submitted display pixels cannot be rolled back even when logical state/hash stays unchanged after failure.
+
+ASan/UBSan passed with LeakSanitizer disabled: this environment's ptrace prevents a leak proof. The existing #127 CI and physical 20-FPS gate remain unchanged. No current work is running in the guest after the bounded completed tests.
+
+## Reproduction and provenance
+Run `python3 replay_composed.py` from this unpacked archive. It creates a fresh relocation copy, builds the host composition using bundled public QuickJS sources and private dependencies, checks all nine images against archived host, QEMU and prior references, and preserves logs. C compiler, Python 3, Node and POSIX pthreads are required. The packaged generic candidate has its own smaller checks.
+
+Original commands/logs/manifests retain their original absolute workspace paths as evidence, not instructions to overwrite that location. The replay script rewrites paths only in its new copy. QEMU artifacts require the separately installed official ESP-IDF 6.0.1 / GCC 15.2 / ESP QEMU 9.2.2 toolchain; this archive does not include a toolchain or virtual flash image. The target commands and exact binary hashes are included. Full firmware build outputs and dependency provenance are under fox-firmware-budget-20261111. The nine images are unchanged from the prior visual delivery, so no redundant preview is included.

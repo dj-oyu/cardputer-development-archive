@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "compiler": "cc (Debian 14.2.0-19) 14.2.0",
+  "original_build_script_unchanged": true,
+  "original_test_and_verifier_unchanged": true,
+  "original_host_flags_preserved": true,
+  "full_oracle_results_and_admissions_byte_identical": true,
+  "all_three_standalone_runtime_libraries_byte_identical": true,
+  "six_O0_O2_sanitizers_pass": true,
+  "additional_warning_probe": "cc -std=c11 -O2 -DMBITS=16/20/24 -Wall -Werror=misleading-indentation -fsyntax-only compact.c; all pass; separate from unchanged runtime build flags",
+  "original_frozen_artifacts": {
+    "kernel-chain-prototype": {
+      "files": 111,
+      "sha256sums": "3bc58c09097c3302140de2db925c59735aa9860a2680ae98cbb24603fcef6e7d",
+      "unchanged": true
+    },
+    "kernel-chain-compact": {
+      "files": 50,
+      "sha256sums": "adc1ae83dfd28800dca1ea68c96f5546de0732c1cc1e5f8bda00a984da744cfd",
+      "unchanged": true
+    }
+  },
+  "scope": "Host formatting-only equivalence; no target ABI, frame, speed, layout or admission claim."
+}

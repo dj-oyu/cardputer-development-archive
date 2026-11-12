@@ -1,0 +1,836 @@
+
+MATERIAL Blink mask Expressive eye white -1 source /materials/4/node_tree
+Value.002 [ShaderNodeValue {}] deps=['control'] reachable=True ()
+Math.030 [ShaderNodeMath {'operation': 'GREATER_THAN', 'use_clamp': False}] deps=['control'] reachable=True (Value=Value.002.Value, Value_001=0.5, Value_002=0.5)
+Math.031 [ShaderNodeMath {'operation': 'LESS_THAN', 'use_clamp': False}] deps=['control'] reachable=True (Value=Value.002.Value, Value_001=1.5, Value_002=0.5)
+Math.032 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control'] reachable=True (Value=Math.030.Value, Value_001=Math.031.Value, Value_002=0.5)
+Math.033 [ShaderNodeMath {'operation': 'SUBTRACT', 'use_clamp': False}] deps=['control'] reachable=True (Value=1.0, Value_001=Math.032.Value, Value_002=0.5)
+Head-local eye coordinates [ShaderNodeTexCoord {'object': None}] deps=['spatial_or_attribute'] reachable=True ()
+Separate XYZ.001 [ShaderNodeSeparateXYZ {}] deps=['spatial_or_attribute'] reachable=True (Vector=Head-local eye coordinates.Object)
+Value [ShaderNodeValue {}] deps=['control'] reachable=True ()
+Math.060 [ShaderNodeMath {'operation': 'ADD', 'use_clamp': False}] deps=['control'] reachable=True (Value=Value.Value, Value_001=-0.035999998450279236, Value_002=0.5)
+Math.061 [ShaderNodeMath {'operation': 'SUBTRACT', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Separate XYZ.001.X, Value_001=Math.060.Value, Value_002=0.5)
+Math.062 [ShaderNodeMath {'operation': 'DIVIDE', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.061.Value, Value_001=0.009999999776482582, Value_002=0.5)
+Math.066 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.062.Value, Value_001=Math.062.Value, Value_002=0.5)
+Value.001 [ShaderNodeValue {}] deps=['control'] reachable=True ()
+Math.063 [ShaderNodeMath {'operation': 'ADD', 'use_clamp': False}] deps=['control'] reachable=True (Value=Value.001.Value, Value_001=-0.052000001072883606, Value_002=0.5)
+Math.064 [ShaderNodeMath {'operation': 'SUBTRACT', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Separate XYZ.001.Z, Value_001=Math.063.Value, Value_002=0.5)
+Math.065 [ShaderNodeMath {'operation': 'DIVIDE', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.064.Value, Value_001=0.014000000432133675, Value_002=0.5)
+Math.067 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.065.Value, Value_001=Math.065.Value, Value_002=0.5)
+Math.068 [ShaderNodeMath {'operation': 'ADD', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.066.Value, Value_001=Math.067.Value, Value_002=0.5)
+Math.069 [ShaderNodeMath {'operation': 'LESS_THAN', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.068.Value, Value_001=1.0, Value_002=0.5)
+Math.080 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.033.Value, Value_001=Math.069.Value, Value_002=0.5)
+Math.113 [ShaderNodeMath {'operation': 'SUBTRACT', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Separate XYZ.001.X, Value_001=Value.Value, Value_002=0.5)
+Math.114 [ShaderNodeMath {'operation': 'DIVIDE', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.113.Value, Value_001=0.10019999742507935, Value_002=0.5)
+Value.004 [ShaderNodeValue {}] deps=['control'] reachable=True ()
+Math.117 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control'] reachable=True (Value=0.10999999940395355, Value_001=Value.004.Value, Value_002=0.5)
+Math.118 [ShaderNodeMath {'operation': 'ADD', 'use_clamp': False}] deps=['control'] reachable=True (Value=1.0, Value_001=Math.117.Value, Value_002=0.5)
+Value.005 [ShaderNodeValue {}] deps=['control'] reachable=True ()
+Math.119 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control'] reachable=True (Value=Math.118.Value, Value_001=Value.005.Value, Value_002=0.5)
+Math.120 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control'] reachable=True (Value=0.8999999761581421, Value_001=Math.119.Value, Value_002=0.5)
+Math.125 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control'] reachable=True (Value=Math.120.Value, Value_001=Math.120.Value, Value_002=0.5)
+Math.121 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control'] reachable=True (Value=0.20000000298023224, Value_001=Value.004.Value, Value_002=0.5)
+Math.122 [ShaderNodeMath {'operation': 'SUBTRACT', 'use_clamp': False}] deps=['control'] reachable=True (Value=1.0, Value_001=Math.121.Value, Value_002=0.5)
+Math.123 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control'] reachable=True (Value=Math.122.Value, Value_001=Value.005.Value, Value_002=0.5)
+Math.124 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control'] reachable=True (Value=0.550000011920929, Value_001=Math.123.Value, Value_002=0.5)
+Math.126 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control'] reachable=True (Value=Math.124.Value, Value_001=Math.124.Value, Value_002=0.5)
+Math.127 [ShaderNodeMath {'operation': 'ADD', 'use_clamp': False}] deps=['control'] reachable=True (Value=Math.125.Value, Value_001=Math.126.Value, Value_002=0.5)
+Math.128 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control'] reachable=True (Value=Math.120.Value, Value_001=Math.124.Value, Value_002=0.5)
+Math.129 [ShaderNodeMath {'operation': 'SUBTRACT', 'use_clamp': False}] deps=['control'] reachable=True (Value=Math.127.Value, Value_001=Math.128.Value, Value_002=0.5)
+Math.130 [ShaderNodeMath {'operation': 'SQRT', 'use_clamp': False}] deps=['control'] reachable=True (Value=Math.129.Value, Value_001=0.0, Value_002=0.5)
+Math.131 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control'] reachable=True (Value=Math.130.Value, Value_001=0.3655276298522949, Value_002=0.5)
+Math.133 [ShaderNodeMath {'operation': 'SUBTRACT', 'use_clamp': False}] deps=['control'] reachable=True (Value=0.10000000149011612, Value_001=Math.131.Value, Value_002=0.5)
+Math.137 [ShaderNodeMath {'operation': 'SUBTRACT', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.114.Value, Value_001=Math.133.Value, Value_002=0.5)
+Math.138 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.137.Value, Value_001=Math.137.Value, Value_002=0.5)
+Math.115 [ShaderNodeMath {'operation': 'SUBTRACT', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Separate XYZ.001.Z, Value_001=Value.001.Value, Value_002=0.5)
+Math.116 [ShaderNodeMath {'operation': 'DIVIDE', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.115.Value, Value_001=0.12399999797344208, Value_002=0.5)
+Math.132 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control'] reachable=True (Value=Math.130.Value, Value_001=-0.3411591351032257, Value_002=0.5)
+Math.134 [ShaderNodeMath {'operation': 'SUBTRACT', 'use_clamp': False}] deps=['control'] reachable=True (Value=-0.11999999731779099, Value_001=Math.132.Value, Value_002=0.5)
+Math.139 [ShaderNodeMath {'operation': 'SUBTRACT', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.116.Value, Value_001=Math.134.Value, Value_002=0.5)
+Math.140 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.139.Value, Value_001=Math.139.Value, Value_002=0.5)
+Math.141 [ShaderNodeMath {'operation': 'ADD', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.138.Value, Value_001=Math.140.Value, Value_002=0.5)
+Math.142 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control'] reachable=True (Value=Math.120.Value, Value_001=Math.120.Value, Value_002=0.5)
+Math.143 [ShaderNodeMath {'operation': 'SUBTRACT', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.141.Value, Value_001=Math.142.Value, Value_002=0.5)
+Math.154 [ShaderNodeMath {'operation': 'LESS_THAN', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.143.Value, Value_001=0.0, Value_002=0.5)
+Math.135 [ShaderNodeMath {'operation': 'ADD', 'use_clamp': False}] deps=['control'] reachable=True (Value=0.10000000149011612, Value_001=Math.131.Value, Value_002=0.5)
+Math.144 [ShaderNodeMath {'operation': 'SUBTRACT', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.114.Value, Value_001=Math.135.Value, Value_002=0.5)
+Math.145 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.144.Value, Value_001=Math.144.Value, Value_002=0.5)
+Math.136 [ShaderNodeMath {'operation': 'ADD', 'use_clamp': False}] deps=['control'] reachable=True (Value=-0.11999999731779099, Value_001=Math.132.Value, Value_002=0.5)
+Math.146 [ShaderNodeMath {'operation': 'SUBTRACT', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.116.Value, Value_001=Math.136.Value, Value_002=0.5)
+Math.147 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.146.Value, Value_001=Math.146.Value, Value_002=0.5)
+Math.148 [ShaderNodeMath {'operation': 'ADD', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.145.Value, Value_001=Math.147.Value, Value_002=0.5)
+Math.149 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control'] reachable=True (Value=Math.124.Value, Value_001=Math.124.Value, Value_002=0.5)
+Math.150 [ShaderNodeMath {'operation': 'SUBTRACT', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.148.Value, Value_001=Math.149.Value, Value_002=0.5)
+Math.155 [ShaderNodeMath {'operation': 'LESS_THAN', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.150.Value, Value_001=0.0, Value_002=0.5)
+Math.156 [ShaderNodeMath {'operation': 'MAXIMUM', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.154.Value, Value_001=Math.155.Value, Value_002=0.5)
+Math.151 [ShaderNodeMath {'operation': 'DIVIDE', 'use_clamp': False}] deps=['control'] reachable=True (Value=Math.120.Value, Value_001=Math.124.Value, Value_002=0.5)
+Math.152 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.151.Value, Value_001=Math.150.Value, Value_002=0.5)
+Math.153 [ShaderNodeMath {'operation': 'SUBTRACT', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.143.Value, Value_001=Math.152.Value, Value_002=0.5)
+Math.165 [ShaderNodeMath {'operation': 'ADD', 'use_clamp': False}] deps=[] reachable=True (Value=0.0, Value_001=0.03500000014901161, Value_002=0.5)
+Math.166 [ShaderNodeMath {'operation': 'GREATER_THAN', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.153.Value, Value_001=Math.165.Value, Value_002=0.5)
+Math.167 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.156.Value, Value_001=Math.166.Value, Value_002=0.5)
+Math.157 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.114.Value, Value_001=Math.114.Value, Value_002=0.5)
+Math.158 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.116.Value, Value_001=Math.116.Value, Value_002=0.5)
+Math.159 [ShaderNodeMath {'operation': 'ADD', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.157.Value, Value_001=Math.158.Value, Value_002=0.5)
+Math.160 [ShaderNodeMath {'operation': 'LESS_THAN', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.159.Value, Value_001=1.0, Value_002=0.5)
+Math.168 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.167.Value, Value_001=Math.160.Value, Value_002=0.5)
+Math.081 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.032.Value, Value_001=Math.168.Value, Value_002=0.5)
+Math.082 [ShaderNodeMath {'operation': 'ADD', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.080.Value, Value_001=Math.081.Value, Value_002=0.5)
+Value.003 [ShaderNodeValue {}] deps=['control'] reachable=True ()
+Math.083 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.082.Value, Value_001=Value.003.Value, Value_002=0.5)
+Math.034 [ShaderNodeMath {'operation': 'ADD', 'use_clamp': False}] deps=['control'] reachable=True (Value=Value.Value, Value_001=0.03500000014901161, Value_002=0.5)
+Math.035 [ShaderNodeMath {'operation': 'SUBTRACT', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Separate XYZ.001.X, Value_001=Math.034.Value, Value_002=0.5)
+Math.036 [ShaderNodeMath {'operation': 'DIVIDE', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.035.Value, Value_001=0.02500000037252903, Value_002=0.5)
+Math.040 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.036.Value, Value_001=Math.036.Value, Value_002=0.5)
+Math.037 [ShaderNodeMath {'operation': 'ADD', 'use_clamp': False}] deps=['control'] reachable=True (Value=Value.001.Value, Value_001=0.08500000089406967, Value_002=0.5)
+Math.038 [ShaderNodeMath {'operation': 'SUBTRACT', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Separate XYZ.001.Z, Value_001=Math.037.Value, Value_002=0.5)
+Math.039 [ShaderNodeMath {'operation': 'DIVIDE', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.038.Value, Value_001=0.03099999949336052, Value_002=0.5)
+Math.041 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.039.Value, Value_001=Math.039.Value, Value_002=0.5)
+Math.042 [ShaderNodeMath {'operation': 'ADD', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.040.Value, Value_001=Math.041.Value, Value_002=0.5)
+Math.043 [ShaderNodeMath {'operation': 'LESS_THAN', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.042.Value, Value_001=1.0, Value_002=0.5)
+Math.056 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.033.Value, Value_001=Math.043.Value, Value_002=0.5)
+Math.161 [ShaderNodeMath {'operation': 'SUBTRACT', 'use_clamp': False}] deps=[] reachable=True (Value=0.0, Value_001=0.03500000014901161, Value_002=0.5)
+Math.162 [ShaderNodeMath {'operation': 'LESS_THAN', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.153.Value, Value_001=Math.161.Value, Value_002=0.5)
+Math.163 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.156.Value, Value_001=Math.162.Value, Value_002=0.5)
+Math.164 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.163.Value, Value_001=Math.160.Value, Value_002=0.5)
+Math.057 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.032.Value, Value_001=Math.164.Value, Value_002=0.5)
+Math.058 [ShaderNodeMath {'operation': 'ADD', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.056.Value, Value_001=Math.057.Value, Value_002=0.5)
+Math.059 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.058.Value, Value_001=Value.003.Value, Value_002=0.5)
+Math.029 [ShaderNodeMath {'operation': 'LESS_THAN', 'use_clamp': False}] deps=['control'] reachable=True (Value=Value.002.Value, Value_001=1.5, Value_002=0.5)
+Math.020 [ShaderNodeMath {'operation': 'ADD', 'use_clamp': False}] deps=['control'] reachable=True (Value=Value.Value, Value_001=0.0, Value_002=0.5)
+Math.021 [ShaderNodeMath {'operation': 'SUBTRACT', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Separate XYZ.001.X, Value_001=Math.020.Value, Value_002=0.5)
+Math.022 [ShaderNodeMath {'operation': 'DIVIDE', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.021.Value, Value_001=0.13899999856948853, Value_002=0.5)
+Math.026 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.022.Value, Value_001=Math.022.Value, Value_002=0.5)
+Math.023 [ShaderNodeMath {'operation': 'ADD', 'use_clamp': False}] deps=['control'] reachable=True (Value=Value.001.Value, Value_001=0.0, Value_002=0.5)
+Math.024 [ShaderNodeMath {'operation': 'SUBTRACT', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Separate XYZ.001.Z, Value_001=Math.023.Value, Value_002=0.5)
+Math.025 [ShaderNodeMath {'operation': 'DIVIDE', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.024.Value, Value_001=0.1720000058412552, Value_002=0.5)
+Math.027 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.025.Value, Value_001=Math.025.Value, Value_002=0.5)
+Math.028 [ShaderNodeMath {'operation': 'ADD', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.026.Value, Value_001=Math.027.Value, Value_002=0.5)
+Color Ramp [ShaderNodeValToRGB {}] deps=['control', 'spatial_or_attribute'] reachable=True (Fac=Math.028.Value)
+Mix (Legacy) [ShaderNodeMixRGB {'blend_type': 'MIX', 'use_clamp': False, 'use_alpha': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Fac=Math.029.Value, Color1=[0.9399999976158142, 0.9200000166893005, 0.8500000238418579, 1.0], Color2=Color Ramp.Color)
+Mix (Legacy).001 [ShaderNodeMixRGB {'blend_type': 'MIX', 'use_clamp': False, 'use_alpha': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Fac=Math.059.Value, Color1=Mix (Legacy).Color, Color2=[1.0, 1.0, 1.0, 1.0])
+Mix (Legacy).002 [ShaderNodeMixRGB {'blend_type': 'MIX', 'use_clamp': False, 'use_alpha': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Fac=Math.083.Value, Color1=Mix (Legacy).001.Color, Color2=[1.0, 1.0, 1.0, 1.0])
+Principled BSDF [ShaderNodeBsdfPrincipled {'distribution': 'MULTI_GGX'}] deps=['control', 'spatial_or_attribute'] reachable=True (Base Color=Mix (Legacy).002.Color, Metallic=0.0, Roughness=0.2199999988079071, IOR=1.5, Alpha=1.0, Normal=[0.0, 0.0, 0.0], Weight=0.0, Diffuse Roughness=0.0, Subsurface Weight=0.0, Subsurface Radius=[1.0, 0.20000000298023224, 0.10000000149011612], Subsurface Scale=0.05000000074505806, Subsurface IOR=1.399999976158142, Subsurface Anisotropy=0.0, Specular IOR Level=0.5, Specular Tint=[1.0, 1.0, 1.0, 1.0], Anisotropic=0.0, Anisotropic Rotation=0.0, Tangent=[0.0, 0.0, 0.0], Transmission Weight=0.0, Coat Weight=0.0, Coat Roughness=0.029999999329447746, Coat IOR=1.5, Coat Tint=[1.0, 1.0, 1.0, 1.0], Coat Normal=[0.0, 0.0, 0.0], Sheen Weight=0.0, Sheen Roughness=0.5, Sheen Tint=[1.0, 1.0, 1.0, 1.0], Emission Color=[1.0, 1.0, 1.0, 1.0], Emission Strength=0.0, Thin Film Thickness=0.0, Thin Film IOR=1.3300000429153442)
+Transparent BSDF [ShaderNodeBsdfTransparent {}] deps=[] reachable=True (Color=[1.0, 1.0, 1.0, 1.0], Weight=0.0)
+Separate XYZ [ShaderNodeSeparateXYZ {}] deps=['spatial_or_attribute'] reachable=True (Vector=Head-local eye coordinates.Object)
+Math [ShaderNodeMath {'operation': 'SUBTRACT', 'use_clamp': False}] deps=['spatial_or_attribute'] reachable=True (Value=Separate XYZ.X, Value_001=-0.2849999964237213, Value_002=0.5)
+Math.001 [ShaderNodeMath {'operation': 'DIVIDE', 'use_clamp': False}] deps=['spatial_or_attribute'] reachable=True (Value=Math.Value, Value_001=0.2549999952316284, Value_002=0.5)
+Math.006 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['spatial_or_attribute'] reachable=True (Value=Math.001.Value, Value_001=-0.03999999910593033, Value_002=0.5)
+Math.007 [ShaderNodeMath {'operation': 'ADD', 'use_clamp': False}] deps=['spatial_or_attribute'] reachable=True (Value=2.549999952316284, Value_001=Math.006.Value, Value_002=0.5)
+Blink driver [ShaderNodeValue {}] deps=['control'] reachable=True ()
+Math.008 [ShaderNodeMath {'operation': 'SUBTRACT', 'use_clamp': False}] deps=['control'] reachable=True (Value=1.0, Value_001=Blink driver.Value, Value_002=0.5)
+Math.009 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control'] reachable=True (Value=0.3100000023841858, Value_001=Math.008.Value, Value_002=0.5)
+Math.002 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['spatial_or_attribute'] reachable=True (Value=Math.001.Value, Value_001=Math.001.Value, Value_002=0.5)
+Math.003 [ShaderNodeMath {'operation': 'SUBTRACT', 'use_clamp': False}] deps=['spatial_or_attribute'] reachable=True (Value=1.0, Value_001=Math.002.Value, Value_002=0.5)
+Math.004 [ShaderNodeMath {'operation': 'MAXIMUM', 'use_clamp': False}] deps=['spatial_or_attribute'] reachable=True (Value=Math.003.Value, Value_001=0.0, Value_002=0.5)
+Math.005 [ShaderNodeMath {'operation': 'SQRT', 'use_clamp': False}] deps=['spatial_or_attribute'] reachable=True (Value=Math.004.Value, Value_001=0.5, Value_002=0.5)
+Math.010 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.009.Value, Value_001=Math.005.Value, Value_002=0.5)
+Math.011 [ShaderNodeMath {'operation': 'ADD', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.007.Value, Value_001=Math.010.Value, Value_002=0.5)
+Math.013 [ShaderNodeMath {'operation': 'LESS_THAN', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Separate XYZ.Z, Value_001=Math.011.Value, Value_002=0.5)
+Math.012 [ShaderNodeMath {'operation': 'SUBTRACT', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.007.Value, Value_001=Math.010.Value, Value_002=0.5)
+Math.014 [ShaderNodeMath {'operation': 'GREATER_THAN', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Separate XYZ.Z, Value_001=Math.012.Value, Value_002=0.5)
+Math.015 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.013.Value, Value_001=Math.014.Value, Value_002=0.5)
+Math.016 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control'] reachable=True (Value=Blink driver.Value, Value_001=50.0, Value_002=0.5)
+Math.017 [ShaderNodeMath {'operation': 'MINIMUM', 'use_clamp': False}] deps=['control'] reachable=True (Value=1.0, Value_001=Math.016.Value, Value_002=0.5)
+Math.018 [ShaderNodeMath {'operation': 'SUBTRACT', 'use_clamp': False}] deps=['control'] reachable=True (Value=1.0, Value_001=Math.017.Value, Value_002=0.5)
+Math.019 [ShaderNodeMath {'operation': 'MAXIMUM', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.015.Value, Value_001=Math.018.Value, Value_002=0.5)
+Mix Shader [ShaderNodeMixShader {}] deps=['control', 'spatial_or_attribute'] reachable=True (Fac=Math.019.Value, Shader=Transparent BSDF.BSDF, Shader_001=Principled BSDF.BSDF)
+Material Output [ShaderNodeOutputMaterial {}] deps=['control', 'spatial_or_attribute'] reachable=True (Surface=Mix Shader.Shader, Volume=None, Displacement=[0.0, 0.0, 0.0], Thickness=0.0)
+Geometry [ShaderNodeNewGeometry {}] deps=['spatial_or_attribute'] reachable=False ()
+Math.044 [ShaderNodeMath {'operation': 'ADD', 'use_clamp': False}] deps=['control'] reachable=False (Value=Value.Value, Value_001=-0.025750000029802322, Value_002=0.5)
+Math.045 [ShaderNodeMath {'operation': 'SUBTRACT', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Separate XYZ.001.X, Value_001=Math.044.Value, Value_002=0.5)
+Math.046 [ShaderNodeMath {'operation': 'DIVIDE', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Math.045.Value, Value_001=0.10300000011920929, Value_002=0.5)
+Math.047 [ShaderNodeMath {'operation': 'ADD', 'use_clamp': False}] deps=['control'] reachable=False (Value=Value.001.Value, Value_001=0.03424999862909317, Value_002=0.5)
+Math.048 [ShaderNodeMath {'operation': 'SUBTRACT', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Separate XYZ.001.Z, Value_001=Math.047.Value, Value_002=0.5)
+Math.049 [ShaderNodeMath {'operation': 'DIVIDE', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Math.048.Value, Value_001=0.13699999451637268, Value_002=0.5)
+Math.050 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Math.046.Value, Value_001=Math.046.Value, Value_002=0.5)
+Math.051 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Math.049.Value, Value_001=Math.049.Value, Value_002=0.5)
+Math.052 [ShaderNodeMath {'operation': 'ADD', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Math.050.Value, Value_001=Math.051.Value, Value_002=0.5)
+Math.053 [ShaderNodeMath {'operation': 'LESS_THAN', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Math.052.Value, Value_001=1.0, Value_002=0.5)
+Math.054 [ShaderNodeMath {'operation': 'LESS_THAN', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Math.028.Value, Value_001=0.5199999809265137, Value_002=0.5)
+Math.055 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Math.053.Value, Value_001=Math.054.Value, Value_002=0.5)
+Math.070 [ShaderNodeMath {'operation': 'ADD', 'use_clamp': False}] deps=['control'] reachable=False (Value=Value.Value, Value_001=0.03999999910593033, Value_002=0.5)
+Math.071 [ShaderNodeMath {'operation': 'SUBTRACT', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Separate XYZ.001.X, Value_001=Math.070.Value, Value_002=0.5)
+Math.072 [ShaderNodeMath {'operation': 'DIVIDE', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Math.071.Value, Value_001=0.009999999776482582, Value_002=0.5)
+Math.073 [ShaderNodeMath {'operation': 'ADD', 'use_clamp': False}] deps=['control'] reachable=False (Value=Value.001.Value, Value_001=-0.10000000149011612, Value_002=0.5)
+Math.074 [ShaderNodeMath {'operation': 'SUBTRACT', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Separate XYZ.001.Z, Value_001=Math.073.Value, Value_002=0.5)
+Math.075 [ShaderNodeMath {'operation': 'DIVIDE', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Math.074.Value, Value_001=0.014000000432133675, Value_002=0.5)
+Math.076 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Math.072.Value, Value_001=Math.072.Value, Value_002=0.5)
+Math.077 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Math.075.Value, Value_001=Math.075.Value, Value_002=0.5)
+Math.078 [ShaderNodeMath {'operation': 'ADD', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Math.076.Value, Value_001=Math.077.Value, Value_002=0.5)
+Math.079 [ShaderNodeMath {'operation': 'LESS_THAN', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Math.078.Value, Value_001=1.0, Value_002=0.5)
+Math.084 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control'] reachable=False (Value=Value.004.Value, Value_001=0.2199999988079071, Value_002=0.5)
+Math.085 [ShaderNodeMath {'operation': 'ADD', 'use_clamp': False}] deps=['control'] reachable=False (Value=1.0, Value_001=Math.084.Value, Value_002=0.5)
+Math.086 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control'] reachable=False (Value=0.020999999716877937, Value_001=Math.085.Value, Value_002=0.5)
+Math.087 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control'] reachable=False (Value=0.02800000086426735, Value_001=Math.085.Value, Value_002=0.5)
+Math.088 [ShaderNodeMath {'operation': 'ADD', 'use_clamp': False}] deps=['control'] reachable=False (Value=Value.Value, Value_001=0.04500000178813934, Value_002=0.5)
+Math.089 [ShaderNodeMath {'operation': 'SUBTRACT', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Separate XYZ.001.X, Value_001=Math.088.Value, Value_002=0.5)
+Math.090 [ShaderNodeMath {'operation': 'DIVIDE', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Math.089.Value, Value_001=Math.086.Value, Value_002=0.5)
+Math.091 [ShaderNodeMath {'operation': 'SUBTRACT', 'use_clamp': False}] deps=['control'] reachable=False (Value=Value.001.Value, Value_001=0.06800000369548798, Value_002=0.5)
+Math.092 [ShaderNodeMath {'operation': 'SUBTRACT', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Separate XYZ.001.Z, Value_001=Math.091.Value, Value_002=0.5)
+Math.093 [ShaderNodeMath {'operation': 'DIVIDE', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Math.092.Value, Value_001=Math.087.Value, Value_002=0.5)
+Math.094 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Math.090.Value, Value_001=Math.090.Value, Value_002=0.5)
+Math.095 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Math.093.Value, Value_001=Math.093.Value, Value_002=0.5)
+Math.096 [ShaderNodeMath {'operation': 'ADD', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Math.094.Value, Value_001=Math.095.Value, Value_002=0.5)
+Math.097 [ShaderNodeMath {'operation': 'LESS_THAN', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Math.096.Value, Value_001=1.0, Value_002=0.5)
+Math.098 [ShaderNodeMath {'operation': 'LESS_THAN', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Math.028.Value, Value_001=0.5199999809265137, Value_002=0.5)
+Math.099 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Math.097.Value, Value_001=Math.098.Value, Value_002=0.5)
+Math.100 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control'] reachable=False (Value=0.023000000044703484, Value_001=Math.085.Value, Value_002=0.5)
+Math.101 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control'] reachable=False (Value=0.030500000342726707, Value_001=Math.085.Value, Value_002=0.5)
+Math.102 [ShaderNodeMath {'operation': 'ADD', 'use_clamp': False}] deps=['control'] reachable=False (Value=Value.Value, Value_001=0.04500000178813934, Value_002=0.5)
+Math.103 [ShaderNodeMath {'operation': 'SUBTRACT', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Separate XYZ.001.X, Value_001=Math.102.Value, Value_002=0.5)
+Math.104 [ShaderNodeMath {'operation': 'DIVIDE', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Math.103.Value, Value_001=Math.100.Value, Value_002=0.5)
+Math.105 [ShaderNodeMath {'operation': 'SUBTRACT', 'use_clamp': False}] deps=['control'] reachable=False (Value=Value.001.Value, Value_001=0.06800000369548798, Value_002=0.5)
+Math.106 [ShaderNodeMath {'operation': 'SUBTRACT', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Separate XYZ.001.Z, Value_001=Math.105.Value, Value_002=0.5)
+Math.107 [ShaderNodeMath {'operation': 'DIVIDE', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Math.106.Value, Value_001=Math.101.Value, Value_002=0.5)
+Math.108 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Math.104.Value, Value_001=Math.104.Value, Value_002=0.5)
+Math.109 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Math.107.Value, Value_001=Math.107.Value, Value_002=0.5)
+Math.110 [ShaderNodeMath {'operation': 'ADD', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Math.108.Value, Value_001=Math.109.Value, Value_002=0.5)
+Math.111 [ShaderNodeMath {'operation': 'GREATER_THAN', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Math.110.Value, Value_001=1.0, Value_002=0.5)
+Math.112 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Math.055.Value, Value_001=Math.111.Value, Value_002=0.5)
+DRIVERS (data, not executed):
+[
+  {
+    "data_path": "nodes[\"Blink driver\"].outputs[0].default_value",
+    "array_index": 0,
+    "type": "SCRIPTED",
+    "expression": "max(a,b)",
+    "use_self": false,
+    "variables": [
+      {
+        "name": "a",
+        "type": "SINGLE_PROP",
+        "targets": [
+          {
+            "id": {
+              "id": "Expression Controls",
+              "type": "Object"
+            },
+            "data_path": "[\"Blink Both\"]",
+            "bone_target": "",
+            "transform_type": "LOC_X",
+            "transform_space": "WORLD_SPACE",
+            "rotation_mode": "AUTO"
+          }
+        ]
+      },
+      {
+        "name": "b",
+        "type": "SINGLE_PROP",
+        "targets": [
+          {
+            "id": {
+              "id": "Expression Controls",
+              "type": "Object"
+            },
+            "data_path": "[\"Blink -X\"]",
+            "bone_target": "",
+            "transform_type": "LOC_X",
+            "transform_space": "WORLD_SPACE",
+            "rotation_mode": "AUTO"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data_path": "nodes[\"Value\"].outputs[0].default_value",
+    "array_index": 0,
+    "type": "SCRIPTED",
+    "expression": "-0.277144+(0.026299)*max(0,a)+(-0.024018)*max(0,-a)",
+    "use_self": false,
+    "variables": [
+      {
+        "name": "a",
+        "type": "SINGLE_PROP",
+        "targets": [
+          {
+            "id": {
+              "id": "Expression Controls",
+              "type": "Object"
+            },
+            "data_path": "[\"Gaze X\"]",
+            "bone_target": "",
+            "transform_type": "LOC_X",
+            "transform_space": "WORLD_SPACE",
+            "rotation_mode": "AUTO"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data_path": "nodes[\"Value.001\"].outputs[0].default_value",
+    "array_index": 0,
+    "type": "SCRIPTED",
+    "expression": "2.540277+0.015008*max(0,b)-0.015285*max(0,-b)",
+    "use_self": false,
+    "variables": [
+      {
+        "name": "b",
+        "type": "SINGLE_PROP",
+        "targets": [
+          {
+            "id": {
+              "id": "Expression Controls",
+              "type": "Object"
+            },
+            "data_path": "[\"Gaze Up\"]",
+            "bone_target": "",
+            "transform_type": "LOC_X",
+            "transform_space": "WORLD_SPACE",
+            "rotation_mode": "AUTO"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data_path": "nodes[\"Value.002\"].outputs[0].default_value",
+    "array_index": 0,
+    "type": "SCRIPTED",
+    "expression": "a",
+    "use_self": false,
+    "variables": [
+      {
+        "name": "a",
+        "type": "SINGLE_PROP",
+        "targets": [
+          {
+            "id": {
+              "id": "Expression Controls",
+              "type": "Object"
+            },
+            "data_path": "[\"Eye Style\"]",
+            "bone_target": "",
+            "transform_type": "LOC_X",
+            "transform_space": "WORLD_SPACE",
+            "rotation_mode": "AUTO"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data_path": "nodes[\"Value.003\"].outputs[0].default_value",
+    "array_index": 0,
+    "type": "SCRIPTED",
+    "expression": "a",
+    "use_self": false,
+    "variables": [
+      {
+        "name": "a",
+        "type": "SINGLE_PROP",
+        "targets": [
+          {
+            "id": {
+              "id": "Expression Controls",
+              "type": "Object"
+            },
+            "data_path": "[\"Show Highlights\"]",
+            "bone_target": "",
+            "transform_type": "LOC_X",
+            "transform_space": "WORLD_SPACE",
+            "rotation_mode": "AUTO"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data_path": "nodes[\"Principled BSDF\"].inputs[13].default_value",
+    "array_index": 0,
+    "type": "SCRIPTED",
+    "expression": "a",
+    "use_self": false,
+    "variables": [
+      {
+        "name": "a",
+        "type": "SINGLE_PROP",
+        "targets": [
+          {
+            "id": {
+              "id": "Expression Controls",
+              "type": "Object"
+            },
+            "data_path": "[\"Environment Reflection\"]",
+            "bone_target": "",
+            "transform_type": "LOC_X",
+            "transform_space": "WORLD_SPACE",
+            "rotation_mode": "AUTO"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data_path": "nodes[\"Value.004\"].outputs[0].default_value",
+    "array_index": 0,
+    "type": "SCRIPTED",
+    "expression": "max(-1,min(1,p))",
+    "use_self": false,
+    "variables": [
+      {
+        "name": "p",
+        "type": "SINGLE_PROP",
+        "targets": [
+          {
+            "id": {
+              "id": "Expression Controls",
+              "type": "Object"
+            },
+            "data_path": "[\"Bubble Pressure\"]",
+            "bone_target": "",
+            "transform_type": "LOC_X",
+            "transform_space": "WORLD_SPACE",
+            "rotation_mode": "AUTO"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data_path": "nodes[\"Value.005\"].outputs[0].default_value",
+    "array_index": 0,
+    "type": "SCRIPTED",
+    "expression": "-0.003268858*p**4+0.000369206*p**3+0.011176145*p**2-0.04670431*p+0.944728911",
+    "use_self": false,
+    "variables": [
+      {
+        "name": "p",
+        "type": "SINGLE_PROP",
+        "targets": [
+          {
+            "id": {
+              "id": "Expression Controls",
+              "type": "Object"
+            },
+            "data_path": "[\"Bubble Pressure\"]",
+            "bone_target": "",
+            "transform_type": "LOC_X",
+            "transform_space": "WORLD_SPACE",
+            "rotation_mode": "AUTO"
+          }
+        ]
+      }
+    ]
+  }
+]
+
+MATERIAL Blink mask Expressive eye white 1 source /materials/5/node_tree
+Value.002 [ShaderNodeValue {}] deps=['control'] reachable=True ()
+Math.030 [ShaderNodeMath {'operation': 'GREATER_THAN', 'use_clamp': False}] deps=['control'] reachable=True (Value=Value.002.Value, Value_001=0.5, Value_002=0.5)
+Math.031 [ShaderNodeMath {'operation': 'LESS_THAN', 'use_clamp': False}] deps=['control'] reachable=True (Value=Value.002.Value, Value_001=1.5, Value_002=0.5)
+Math.032 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control'] reachable=True (Value=Math.030.Value, Value_001=Math.031.Value, Value_002=0.5)
+Math.033 [ShaderNodeMath {'operation': 'SUBTRACT', 'use_clamp': False}] deps=['control'] reachable=True (Value=1.0, Value_001=Math.032.Value, Value_002=0.5)
+Head-local eye coordinates [ShaderNodeTexCoord {'object': None}] deps=['spatial_or_attribute'] reachable=True ()
+Separate XYZ.001 [ShaderNodeSeparateXYZ {}] deps=['spatial_or_attribute'] reachable=True (Vector=Head-local eye coordinates.Object)
+Value [ShaderNodeValue {}] deps=['control'] reachable=True ()
+Math.060 [ShaderNodeMath {'operation': 'ADD', 'use_clamp': False}] deps=['control'] reachable=True (Value=Value.Value, Value_001=-0.035999998450279236, Value_002=0.5)
+Math.061 [ShaderNodeMath {'operation': 'SUBTRACT', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Separate XYZ.001.X, Value_001=Math.060.Value, Value_002=0.5)
+Math.062 [ShaderNodeMath {'operation': 'DIVIDE', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.061.Value, Value_001=0.009999999776482582, Value_002=0.5)
+Math.066 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.062.Value, Value_001=Math.062.Value, Value_002=0.5)
+Value.001 [ShaderNodeValue {}] deps=['control'] reachable=True ()
+Math.063 [ShaderNodeMath {'operation': 'ADD', 'use_clamp': False}] deps=['control'] reachable=True (Value=Value.001.Value, Value_001=-0.052000001072883606, Value_002=0.5)
+Math.064 [ShaderNodeMath {'operation': 'SUBTRACT', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Separate XYZ.001.Z, Value_001=Math.063.Value, Value_002=0.5)
+Math.065 [ShaderNodeMath {'operation': 'DIVIDE', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.064.Value, Value_001=0.014000000432133675, Value_002=0.5)
+Math.067 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.065.Value, Value_001=Math.065.Value, Value_002=0.5)
+Math.068 [ShaderNodeMath {'operation': 'ADD', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.066.Value, Value_001=Math.067.Value, Value_002=0.5)
+Math.069 [ShaderNodeMath {'operation': 'LESS_THAN', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.068.Value, Value_001=1.0, Value_002=0.5)
+Math.080 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.033.Value, Value_001=Math.069.Value, Value_002=0.5)
+Math.113 [ShaderNodeMath {'operation': 'SUBTRACT', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Separate XYZ.001.X, Value_001=Value.Value, Value_002=0.5)
+Math.114 [ShaderNodeMath {'operation': 'DIVIDE', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.113.Value, Value_001=0.10019999742507935, Value_002=0.5)
+Value.004 [ShaderNodeValue {}] deps=['control'] reachable=True ()
+Math.117 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control'] reachable=True (Value=0.10999999940395355, Value_001=Value.004.Value, Value_002=0.5)
+Math.118 [ShaderNodeMath {'operation': 'ADD', 'use_clamp': False}] deps=['control'] reachable=True (Value=1.0, Value_001=Math.117.Value, Value_002=0.5)
+Value.005 [ShaderNodeValue {}] deps=['control'] reachable=True ()
+Math.119 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control'] reachable=True (Value=Math.118.Value, Value_001=Value.005.Value, Value_002=0.5)
+Math.120 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control'] reachable=True (Value=0.8999999761581421, Value_001=Math.119.Value, Value_002=0.5)
+Math.125 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control'] reachable=True (Value=Math.120.Value, Value_001=Math.120.Value, Value_002=0.5)
+Math.121 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control'] reachable=True (Value=0.20000000298023224, Value_001=Value.004.Value, Value_002=0.5)
+Math.122 [ShaderNodeMath {'operation': 'SUBTRACT', 'use_clamp': False}] deps=['control'] reachable=True (Value=1.0, Value_001=Math.121.Value, Value_002=0.5)
+Math.123 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control'] reachable=True (Value=Math.122.Value, Value_001=Value.005.Value, Value_002=0.5)
+Math.124 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control'] reachable=True (Value=0.550000011920929, Value_001=Math.123.Value, Value_002=0.5)
+Math.126 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control'] reachable=True (Value=Math.124.Value, Value_001=Math.124.Value, Value_002=0.5)
+Math.127 [ShaderNodeMath {'operation': 'ADD', 'use_clamp': False}] deps=['control'] reachable=True (Value=Math.125.Value, Value_001=Math.126.Value, Value_002=0.5)
+Math.128 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control'] reachable=True (Value=Math.120.Value, Value_001=Math.124.Value, Value_002=0.5)
+Math.129 [ShaderNodeMath {'operation': 'SUBTRACT', 'use_clamp': False}] deps=['control'] reachable=True (Value=Math.127.Value, Value_001=Math.128.Value, Value_002=0.5)
+Math.130 [ShaderNodeMath {'operation': 'SQRT', 'use_clamp': False}] deps=['control'] reachable=True (Value=Math.129.Value, Value_001=0.0, Value_002=0.5)
+Math.131 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control'] reachable=True (Value=Math.130.Value, Value_001=0.3655276298522949, Value_002=0.5)
+Math.133 [ShaderNodeMath {'operation': 'SUBTRACT', 'use_clamp': False}] deps=['control'] reachable=True (Value=0.10000000149011612, Value_001=Math.131.Value, Value_002=0.5)
+Math.137 [ShaderNodeMath {'operation': 'SUBTRACT', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.114.Value, Value_001=Math.133.Value, Value_002=0.5)
+Math.138 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.137.Value, Value_001=Math.137.Value, Value_002=0.5)
+Math.115 [ShaderNodeMath {'operation': 'SUBTRACT', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Separate XYZ.001.Z, Value_001=Value.001.Value, Value_002=0.5)
+Math.116 [ShaderNodeMath {'operation': 'DIVIDE', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.115.Value, Value_001=0.12399999797344208, Value_002=0.5)
+Math.132 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control'] reachable=True (Value=Math.130.Value, Value_001=-0.3411591351032257, Value_002=0.5)
+Math.134 [ShaderNodeMath {'operation': 'SUBTRACT', 'use_clamp': False}] deps=['control'] reachable=True (Value=-0.11999999731779099, Value_001=Math.132.Value, Value_002=0.5)
+Math.139 [ShaderNodeMath {'operation': 'SUBTRACT', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.116.Value, Value_001=Math.134.Value, Value_002=0.5)
+Math.140 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.139.Value, Value_001=Math.139.Value, Value_002=0.5)
+Math.141 [ShaderNodeMath {'operation': 'ADD', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.138.Value, Value_001=Math.140.Value, Value_002=0.5)
+Math.142 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control'] reachable=True (Value=Math.120.Value, Value_001=Math.120.Value, Value_002=0.5)
+Math.143 [ShaderNodeMath {'operation': 'SUBTRACT', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.141.Value, Value_001=Math.142.Value, Value_002=0.5)
+Math.154 [ShaderNodeMath {'operation': 'LESS_THAN', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.143.Value, Value_001=0.0, Value_002=0.5)
+Math.135 [ShaderNodeMath {'operation': 'ADD', 'use_clamp': False}] deps=['control'] reachable=True (Value=0.10000000149011612, Value_001=Math.131.Value, Value_002=0.5)
+Math.144 [ShaderNodeMath {'operation': 'SUBTRACT', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.114.Value, Value_001=Math.135.Value, Value_002=0.5)
+Math.145 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.144.Value, Value_001=Math.144.Value, Value_002=0.5)
+Math.136 [ShaderNodeMath {'operation': 'ADD', 'use_clamp': False}] deps=['control'] reachable=True (Value=-0.11999999731779099, Value_001=Math.132.Value, Value_002=0.5)
+Math.146 [ShaderNodeMath {'operation': 'SUBTRACT', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.116.Value, Value_001=Math.136.Value, Value_002=0.5)
+Math.147 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.146.Value, Value_001=Math.146.Value, Value_002=0.5)
+Math.148 [ShaderNodeMath {'operation': 'ADD', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.145.Value, Value_001=Math.147.Value, Value_002=0.5)
+Math.149 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control'] reachable=True (Value=Math.124.Value, Value_001=Math.124.Value, Value_002=0.5)
+Math.150 [ShaderNodeMath {'operation': 'SUBTRACT', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.148.Value, Value_001=Math.149.Value, Value_002=0.5)
+Math.155 [ShaderNodeMath {'operation': 'LESS_THAN', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.150.Value, Value_001=0.0, Value_002=0.5)
+Math.156 [ShaderNodeMath {'operation': 'MAXIMUM', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.154.Value, Value_001=Math.155.Value, Value_002=0.5)
+Math.151 [ShaderNodeMath {'operation': 'DIVIDE', 'use_clamp': False}] deps=['control'] reachable=True (Value=Math.120.Value, Value_001=Math.124.Value, Value_002=0.5)
+Math.152 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.151.Value, Value_001=Math.150.Value, Value_002=0.5)
+Math.153 [ShaderNodeMath {'operation': 'SUBTRACT', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.143.Value, Value_001=Math.152.Value, Value_002=0.5)
+Math.165 [ShaderNodeMath {'operation': 'ADD', 'use_clamp': False}] deps=[] reachable=True (Value=0.0, Value_001=0.03500000014901161, Value_002=0.5)
+Math.166 [ShaderNodeMath {'operation': 'GREATER_THAN', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.153.Value, Value_001=Math.165.Value, Value_002=0.5)
+Math.167 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.156.Value, Value_001=Math.166.Value, Value_002=0.5)
+Math.157 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.114.Value, Value_001=Math.114.Value, Value_002=0.5)
+Math.158 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.116.Value, Value_001=Math.116.Value, Value_002=0.5)
+Math.159 [ShaderNodeMath {'operation': 'ADD', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.157.Value, Value_001=Math.158.Value, Value_002=0.5)
+Math.160 [ShaderNodeMath {'operation': 'LESS_THAN', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.159.Value, Value_001=1.0, Value_002=0.5)
+Math.168 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.167.Value, Value_001=Math.160.Value, Value_002=0.5)
+Math.081 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.032.Value, Value_001=Math.168.Value, Value_002=0.5)
+Math.082 [ShaderNodeMath {'operation': 'ADD', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.080.Value, Value_001=Math.081.Value, Value_002=0.5)
+Value.003 [ShaderNodeValue {}] deps=['control'] reachable=True ()
+Math.083 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.082.Value, Value_001=Value.003.Value, Value_002=0.5)
+Math.034 [ShaderNodeMath {'operation': 'ADD', 'use_clamp': False}] deps=['control'] reachable=True (Value=Value.Value, Value_001=0.03500000014901161, Value_002=0.5)
+Math.035 [ShaderNodeMath {'operation': 'SUBTRACT', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Separate XYZ.001.X, Value_001=Math.034.Value, Value_002=0.5)
+Math.036 [ShaderNodeMath {'operation': 'DIVIDE', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.035.Value, Value_001=0.02500000037252903, Value_002=0.5)
+Math.040 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.036.Value, Value_001=Math.036.Value, Value_002=0.5)
+Math.037 [ShaderNodeMath {'operation': 'ADD', 'use_clamp': False}] deps=['control'] reachable=True (Value=Value.001.Value, Value_001=0.08500000089406967, Value_002=0.5)
+Math.038 [ShaderNodeMath {'operation': 'SUBTRACT', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Separate XYZ.001.Z, Value_001=Math.037.Value, Value_002=0.5)
+Math.039 [ShaderNodeMath {'operation': 'DIVIDE', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.038.Value, Value_001=0.03099999949336052, Value_002=0.5)
+Math.041 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.039.Value, Value_001=Math.039.Value, Value_002=0.5)
+Math.042 [ShaderNodeMath {'operation': 'ADD', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.040.Value, Value_001=Math.041.Value, Value_002=0.5)
+Math.043 [ShaderNodeMath {'operation': 'LESS_THAN', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.042.Value, Value_001=1.0, Value_002=0.5)
+Math.056 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.033.Value, Value_001=Math.043.Value, Value_002=0.5)
+Math.161 [ShaderNodeMath {'operation': 'SUBTRACT', 'use_clamp': False}] deps=[] reachable=True (Value=0.0, Value_001=0.03500000014901161, Value_002=0.5)
+Math.162 [ShaderNodeMath {'operation': 'LESS_THAN', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.153.Value, Value_001=Math.161.Value, Value_002=0.5)
+Math.163 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.156.Value, Value_001=Math.162.Value, Value_002=0.5)
+Math.164 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.163.Value, Value_001=Math.160.Value, Value_002=0.5)
+Math.057 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.032.Value, Value_001=Math.164.Value, Value_002=0.5)
+Math.058 [ShaderNodeMath {'operation': 'ADD', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.056.Value, Value_001=Math.057.Value, Value_002=0.5)
+Math.059 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.058.Value, Value_001=Value.003.Value, Value_002=0.5)
+Math.029 [ShaderNodeMath {'operation': 'LESS_THAN', 'use_clamp': False}] deps=['control'] reachable=True (Value=Value.002.Value, Value_001=1.5, Value_002=0.5)
+Math.020 [ShaderNodeMath {'operation': 'ADD', 'use_clamp': False}] deps=['control'] reachable=True (Value=Value.Value, Value_001=0.0, Value_002=0.5)
+Math.021 [ShaderNodeMath {'operation': 'SUBTRACT', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Separate XYZ.001.X, Value_001=Math.020.Value, Value_002=0.5)
+Math.022 [ShaderNodeMath {'operation': 'DIVIDE', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.021.Value, Value_001=0.13899999856948853, Value_002=0.5)
+Math.026 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.022.Value, Value_001=Math.022.Value, Value_002=0.5)
+Math.023 [ShaderNodeMath {'operation': 'ADD', 'use_clamp': False}] deps=['control'] reachable=True (Value=Value.001.Value, Value_001=0.0, Value_002=0.5)
+Math.024 [ShaderNodeMath {'operation': 'SUBTRACT', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Separate XYZ.001.Z, Value_001=Math.023.Value, Value_002=0.5)
+Math.025 [ShaderNodeMath {'operation': 'DIVIDE', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.024.Value, Value_001=0.1720000058412552, Value_002=0.5)
+Math.027 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.025.Value, Value_001=Math.025.Value, Value_002=0.5)
+Math.028 [ShaderNodeMath {'operation': 'ADD', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.026.Value, Value_001=Math.027.Value, Value_002=0.5)
+Color Ramp [ShaderNodeValToRGB {}] deps=['control', 'spatial_or_attribute'] reachable=True (Fac=Math.028.Value)
+Mix (Legacy) [ShaderNodeMixRGB {'blend_type': 'MIX', 'use_clamp': False, 'use_alpha': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Fac=Math.029.Value, Color1=[0.9399999976158142, 0.9200000166893005, 0.8500000238418579, 1.0], Color2=Color Ramp.Color)
+Mix (Legacy).001 [ShaderNodeMixRGB {'blend_type': 'MIX', 'use_clamp': False, 'use_alpha': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Fac=Math.059.Value, Color1=Mix (Legacy).Color, Color2=[1.0, 1.0, 1.0, 1.0])
+Mix (Legacy).002 [ShaderNodeMixRGB {'blend_type': 'MIX', 'use_clamp': False, 'use_alpha': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Fac=Math.083.Value, Color1=Mix (Legacy).001.Color, Color2=[1.0, 1.0, 1.0, 1.0])
+Principled BSDF [ShaderNodeBsdfPrincipled {'distribution': 'MULTI_GGX'}] deps=['control', 'spatial_or_attribute'] reachable=True (Base Color=Mix (Legacy).002.Color, Metallic=0.0, Roughness=0.2199999988079071, IOR=1.5, Alpha=1.0, Normal=[0.0, 0.0, 0.0], Weight=0.0, Diffuse Roughness=0.0, Subsurface Weight=0.0, Subsurface Radius=[1.0, 0.20000000298023224, 0.10000000149011612], Subsurface Scale=0.05000000074505806, Subsurface IOR=1.399999976158142, Subsurface Anisotropy=0.0, Specular IOR Level=0.5, Specular Tint=[1.0, 1.0, 1.0, 1.0], Anisotropic=0.0, Anisotropic Rotation=0.0, Tangent=[0.0, 0.0, 0.0], Transmission Weight=0.0, Coat Weight=0.0, Coat Roughness=0.029999999329447746, Coat IOR=1.5, Coat Tint=[1.0, 1.0, 1.0, 1.0], Coat Normal=[0.0, 0.0, 0.0], Sheen Weight=0.0, Sheen Roughness=0.5, Sheen Tint=[1.0, 1.0, 1.0, 1.0], Emission Color=[1.0, 1.0, 1.0, 1.0], Emission Strength=0.0, Thin Film Thickness=0.0, Thin Film IOR=1.3300000429153442)
+Transparent BSDF [ShaderNodeBsdfTransparent {}] deps=[] reachable=True (Color=[1.0, 1.0, 1.0, 1.0], Weight=0.0)
+Separate XYZ [ShaderNodeSeparateXYZ {}] deps=['spatial_or_attribute'] reachable=True (Vector=Head-local eye coordinates.Object)
+Math [ShaderNodeMath {'operation': 'SUBTRACT', 'use_clamp': False}] deps=['spatial_or_attribute'] reachable=True (Value=Separate XYZ.X, Value_001=0.2849999964237213, Value_002=0.5)
+Math.001 [ShaderNodeMath {'operation': 'DIVIDE', 'use_clamp': False}] deps=['spatial_or_attribute'] reachable=True (Value=Math.Value, Value_001=0.2549999952316284, Value_002=0.5)
+Math.006 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['spatial_or_attribute'] reachable=True (Value=Math.001.Value, Value_001=0.03999999910593033, Value_002=0.5)
+Math.007 [ShaderNodeMath {'operation': 'ADD', 'use_clamp': False}] deps=['spatial_or_attribute'] reachable=True (Value=2.549999952316284, Value_001=Math.006.Value, Value_002=0.5)
+Blink driver [ShaderNodeValue {}] deps=['control'] reachable=True ()
+Math.008 [ShaderNodeMath {'operation': 'SUBTRACT', 'use_clamp': False}] deps=['control'] reachable=True (Value=1.0, Value_001=Blink driver.Value, Value_002=0.5)
+Math.009 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control'] reachable=True (Value=0.3100000023841858, Value_001=Math.008.Value, Value_002=0.5)
+Math.002 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['spatial_or_attribute'] reachable=True (Value=Math.001.Value, Value_001=Math.001.Value, Value_002=0.5)
+Math.003 [ShaderNodeMath {'operation': 'SUBTRACT', 'use_clamp': False}] deps=['spatial_or_attribute'] reachable=True (Value=1.0, Value_001=Math.002.Value, Value_002=0.5)
+Math.004 [ShaderNodeMath {'operation': 'MAXIMUM', 'use_clamp': False}] deps=['spatial_or_attribute'] reachable=True (Value=Math.003.Value, Value_001=0.0, Value_002=0.5)
+Math.005 [ShaderNodeMath {'operation': 'SQRT', 'use_clamp': False}] deps=['spatial_or_attribute'] reachable=True (Value=Math.004.Value, Value_001=0.5, Value_002=0.5)
+Math.010 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.009.Value, Value_001=Math.005.Value, Value_002=0.5)
+Math.011 [ShaderNodeMath {'operation': 'ADD', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.007.Value, Value_001=Math.010.Value, Value_002=0.5)
+Math.013 [ShaderNodeMath {'operation': 'LESS_THAN', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Separate XYZ.Z, Value_001=Math.011.Value, Value_002=0.5)
+Math.012 [ShaderNodeMath {'operation': 'SUBTRACT', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.007.Value, Value_001=Math.010.Value, Value_002=0.5)
+Math.014 [ShaderNodeMath {'operation': 'GREATER_THAN', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Separate XYZ.Z, Value_001=Math.012.Value, Value_002=0.5)
+Math.015 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.013.Value, Value_001=Math.014.Value, Value_002=0.5)
+Math.016 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control'] reachable=True (Value=Blink driver.Value, Value_001=50.0, Value_002=0.5)
+Math.017 [ShaderNodeMath {'operation': 'MINIMUM', 'use_clamp': False}] deps=['control'] reachable=True (Value=1.0, Value_001=Math.016.Value, Value_002=0.5)
+Math.018 [ShaderNodeMath {'operation': 'SUBTRACT', 'use_clamp': False}] deps=['control'] reachable=True (Value=1.0, Value_001=Math.017.Value, Value_002=0.5)
+Math.019 [ShaderNodeMath {'operation': 'MAXIMUM', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=True (Value=Math.015.Value, Value_001=Math.018.Value, Value_002=0.5)
+Mix Shader [ShaderNodeMixShader {}] deps=['control', 'spatial_or_attribute'] reachable=True (Fac=Math.019.Value, Shader=Transparent BSDF.BSDF, Shader_001=Principled BSDF.BSDF)
+Material Output [ShaderNodeOutputMaterial {}] deps=['control', 'spatial_or_attribute'] reachable=True (Surface=Mix Shader.Shader, Volume=None, Displacement=[0.0, 0.0, 0.0], Thickness=0.0)
+Geometry [ShaderNodeNewGeometry {}] deps=['spatial_or_attribute'] reachable=False ()
+Math.044 [ShaderNodeMath {'operation': 'ADD', 'use_clamp': False}] deps=['control'] reachable=False (Value=Value.Value, Value_001=-0.025750000029802322, Value_002=0.5)
+Math.045 [ShaderNodeMath {'operation': 'SUBTRACT', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Separate XYZ.001.X, Value_001=Math.044.Value, Value_002=0.5)
+Math.046 [ShaderNodeMath {'operation': 'DIVIDE', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Math.045.Value, Value_001=0.10300000011920929, Value_002=0.5)
+Math.047 [ShaderNodeMath {'operation': 'ADD', 'use_clamp': False}] deps=['control'] reachable=False (Value=Value.001.Value, Value_001=0.03424999862909317, Value_002=0.5)
+Math.048 [ShaderNodeMath {'operation': 'SUBTRACT', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Separate XYZ.001.Z, Value_001=Math.047.Value, Value_002=0.5)
+Math.049 [ShaderNodeMath {'operation': 'DIVIDE', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Math.048.Value, Value_001=0.13699999451637268, Value_002=0.5)
+Math.050 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Math.046.Value, Value_001=Math.046.Value, Value_002=0.5)
+Math.051 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Math.049.Value, Value_001=Math.049.Value, Value_002=0.5)
+Math.052 [ShaderNodeMath {'operation': 'ADD', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Math.050.Value, Value_001=Math.051.Value, Value_002=0.5)
+Math.053 [ShaderNodeMath {'operation': 'LESS_THAN', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Math.052.Value, Value_001=1.0, Value_002=0.5)
+Math.054 [ShaderNodeMath {'operation': 'LESS_THAN', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Math.028.Value, Value_001=0.5199999809265137, Value_002=0.5)
+Math.055 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Math.053.Value, Value_001=Math.054.Value, Value_002=0.5)
+Math.070 [ShaderNodeMath {'operation': 'ADD', 'use_clamp': False}] deps=['control'] reachable=False (Value=Value.Value, Value_001=0.03999999910593033, Value_002=0.5)
+Math.071 [ShaderNodeMath {'operation': 'SUBTRACT', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Separate XYZ.001.X, Value_001=Math.070.Value, Value_002=0.5)
+Math.072 [ShaderNodeMath {'operation': 'DIVIDE', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Math.071.Value, Value_001=0.009999999776482582, Value_002=0.5)
+Math.073 [ShaderNodeMath {'operation': 'ADD', 'use_clamp': False}] deps=['control'] reachable=False (Value=Value.001.Value, Value_001=-0.10000000149011612, Value_002=0.5)
+Math.074 [ShaderNodeMath {'operation': 'SUBTRACT', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Separate XYZ.001.Z, Value_001=Math.073.Value, Value_002=0.5)
+Math.075 [ShaderNodeMath {'operation': 'DIVIDE', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Math.074.Value, Value_001=0.014000000432133675, Value_002=0.5)
+Math.076 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Math.072.Value, Value_001=Math.072.Value, Value_002=0.5)
+Math.077 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Math.075.Value, Value_001=Math.075.Value, Value_002=0.5)
+Math.078 [ShaderNodeMath {'operation': 'ADD', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Math.076.Value, Value_001=Math.077.Value, Value_002=0.5)
+Math.079 [ShaderNodeMath {'operation': 'LESS_THAN', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Math.078.Value, Value_001=1.0, Value_002=0.5)
+Math.084 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control'] reachable=False (Value=Value.004.Value, Value_001=0.2199999988079071, Value_002=0.5)
+Math.085 [ShaderNodeMath {'operation': 'ADD', 'use_clamp': False}] deps=['control'] reachable=False (Value=1.0, Value_001=Math.084.Value, Value_002=0.5)
+Math.086 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control'] reachable=False (Value=0.020999999716877937, Value_001=Math.085.Value, Value_002=0.5)
+Math.087 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control'] reachable=False (Value=0.02800000086426735, Value_001=Math.085.Value, Value_002=0.5)
+Math.088 [ShaderNodeMath {'operation': 'ADD', 'use_clamp': False}] deps=['control'] reachable=False (Value=Value.Value, Value_001=0.04500000178813934, Value_002=0.5)
+Math.089 [ShaderNodeMath {'operation': 'SUBTRACT', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Separate XYZ.001.X, Value_001=Math.088.Value, Value_002=0.5)
+Math.090 [ShaderNodeMath {'operation': 'DIVIDE', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Math.089.Value, Value_001=Math.086.Value, Value_002=0.5)
+Math.091 [ShaderNodeMath {'operation': 'SUBTRACT', 'use_clamp': False}] deps=['control'] reachable=False (Value=Value.001.Value, Value_001=0.06800000369548798, Value_002=0.5)
+Math.092 [ShaderNodeMath {'operation': 'SUBTRACT', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Separate XYZ.001.Z, Value_001=Math.091.Value, Value_002=0.5)
+Math.093 [ShaderNodeMath {'operation': 'DIVIDE', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Math.092.Value, Value_001=Math.087.Value, Value_002=0.5)
+Math.094 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Math.090.Value, Value_001=Math.090.Value, Value_002=0.5)
+Math.095 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Math.093.Value, Value_001=Math.093.Value, Value_002=0.5)
+Math.096 [ShaderNodeMath {'operation': 'ADD', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Math.094.Value, Value_001=Math.095.Value, Value_002=0.5)
+Math.097 [ShaderNodeMath {'operation': 'LESS_THAN', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Math.096.Value, Value_001=1.0, Value_002=0.5)
+Math.098 [ShaderNodeMath {'operation': 'LESS_THAN', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Math.028.Value, Value_001=0.5199999809265137, Value_002=0.5)
+Math.099 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Math.097.Value, Value_001=Math.098.Value, Value_002=0.5)
+Math.100 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control'] reachable=False (Value=0.023000000044703484, Value_001=Math.085.Value, Value_002=0.5)
+Math.101 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control'] reachable=False (Value=0.030500000342726707, Value_001=Math.085.Value, Value_002=0.5)
+Math.102 [ShaderNodeMath {'operation': 'ADD', 'use_clamp': False}] deps=['control'] reachable=False (Value=Value.Value, Value_001=0.04500000178813934, Value_002=0.5)
+Math.103 [ShaderNodeMath {'operation': 'SUBTRACT', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Separate XYZ.001.X, Value_001=Math.102.Value, Value_002=0.5)
+Math.104 [ShaderNodeMath {'operation': 'DIVIDE', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Math.103.Value, Value_001=Math.100.Value, Value_002=0.5)
+Math.105 [ShaderNodeMath {'operation': 'SUBTRACT', 'use_clamp': False}] deps=['control'] reachable=False (Value=Value.001.Value, Value_001=0.06800000369548798, Value_002=0.5)
+Math.106 [ShaderNodeMath {'operation': 'SUBTRACT', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Separate XYZ.001.Z, Value_001=Math.105.Value, Value_002=0.5)
+Math.107 [ShaderNodeMath {'operation': 'DIVIDE', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Math.106.Value, Value_001=Math.101.Value, Value_002=0.5)
+Math.108 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Math.104.Value, Value_001=Math.104.Value, Value_002=0.5)
+Math.109 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Math.107.Value, Value_001=Math.107.Value, Value_002=0.5)
+Math.110 [ShaderNodeMath {'operation': 'ADD', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Math.108.Value, Value_001=Math.109.Value, Value_002=0.5)
+Math.111 [ShaderNodeMath {'operation': 'GREATER_THAN', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Math.110.Value, Value_001=1.0, Value_002=0.5)
+Math.112 [ShaderNodeMath {'operation': 'MULTIPLY', 'use_clamp': False}] deps=['control', 'spatial_or_attribute'] reachable=False (Value=Math.055.Value, Value_001=Math.111.Value, Value_002=0.5)
+DRIVERS (data, not executed):
+[
+  {
+    "data_path": "nodes[\"Blink driver\"].outputs[0].default_value",
+    "array_index": 0,
+    "type": "SCRIPTED",
+    "expression": "max(a,b)",
+    "use_self": false,
+    "variables": [
+      {
+        "name": "a",
+        "type": "SINGLE_PROP",
+        "targets": [
+          {
+            "id": {
+              "id": "Expression Controls",
+              "type": "Object"
+            },
+            "data_path": "[\"Blink Both\"]",
+            "bone_target": "",
+            "transform_type": "LOC_X",
+            "transform_space": "WORLD_SPACE",
+            "rotation_mode": "AUTO"
+          }
+        ]
+      },
+      {
+        "name": "b",
+        "type": "SINGLE_PROP",
+        "targets": [
+          {
+            "id": {
+              "id": "Expression Controls",
+              "type": "Object"
+            },
+            "data_path": "[\"Blink +X\"]",
+            "bone_target": "",
+            "transform_type": "LOC_X",
+            "transform_space": "WORLD_SPACE",
+            "rotation_mode": "AUTO"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data_path": "nodes[\"Value\"].outputs[0].default_value",
+    "array_index": 0,
+    "type": "SCRIPTED",
+    "expression": "0.277144+(0.024018)*max(0,a)+(-0.026299)*max(0,-a)",
+    "use_self": false,
+    "variables": [
+      {
+        "name": "a",
+        "type": "SINGLE_PROP",
+        "targets": [
+          {
+            "id": {
+              "id": "Expression Controls",
+              "type": "Object"
+            },
+            "data_path": "[\"Gaze X\"]",
+            "bone_target": "",
+            "transform_type": "LOC_X",
+            "transform_space": "WORLD_SPACE",
+            "rotation_mode": "AUTO"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data_path": "nodes[\"Value.001\"].outputs[0].default_value",
+    "array_index": 0,
+    "type": "SCRIPTED",
+    "expression": "2.540277+0.015008*max(0,b)-0.015285*max(0,-b)",
+    "use_self": false,
+    "variables": [
+      {
+        "name": "b",
+        "type": "SINGLE_PROP",
+        "targets": [
+          {
+            "id": {
+              "id": "Expression Controls",
+              "type": "Object"
+            },
+            "data_path": "[\"Gaze Up\"]",
+            "bone_target": "",
+            "transform_type": "LOC_X",
+            "transform_space": "WORLD_SPACE",
+            "rotation_mode": "AUTO"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data_path": "nodes[\"Value.002\"].outputs[0].default_value",
+    "array_index": 0,
+    "type": "SCRIPTED",
+    "expression": "a",
+    "use_self": false,
+    "variables": [
+      {
+        "name": "a",
+        "type": "SINGLE_PROP",
+        "targets": [
+          {
+            "id": {
+              "id": "Expression Controls",
+              "type": "Object"
+            },
+            "data_path": "[\"Eye Style\"]",
+            "bone_target": "",
+            "transform_type": "LOC_X",
+            "transform_space": "WORLD_SPACE",
+            "rotation_mode": "AUTO"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data_path": "nodes[\"Value.003\"].outputs[0].default_value",
+    "array_index": 0,
+    "type": "SCRIPTED",
+    "expression": "a",
+    "use_self": false,
+    "variables": [
+      {
+        "name": "a",
+        "type": "SINGLE_PROP",
+        "targets": [
+          {
+            "id": {
+              "id": "Expression Controls",
+              "type": "Object"
+            },
+            "data_path": "[\"Show Highlights\"]",
+            "bone_target": "",
+            "transform_type": "LOC_X",
+            "transform_space": "WORLD_SPACE",
+            "rotation_mode": "AUTO"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data_path": "nodes[\"Principled BSDF\"].inputs[13].default_value",
+    "array_index": 0,
+    "type": "SCRIPTED",
+    "expression": "a",
+    "use_self": false,
+    "variables": [
+      {
+        "name": "a",
+        "type": "SINGLE_PROP",
+        "targets": [
+          {
+            "id": {
+              "id": "Expression Controls",
+              "type": "Object"
+            },
+            "data_path": "[\"Environment Reflection\"]",
+            "bone_target": "",
+            "transform_type": "LOC_X",
+            "transform_space": "WORLD_SPACE",
+            "rotation_mode": "AUTO"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data_path": "nodes[\"Value.004\"].outputs[0].default_value",
+    "array_index": 0,
+    "type": "SCRIPTED",
+    "expression": "max(-1,min(1,p))",
+    "use_self": false,
+    "variables": [
+      {
+        "name": "p",
+        "type": "SINGLE_PROP",
+        "targets": [
+          {
+            "id": {
+              "id": "Expression Controls",
+              "type": "Object"
+            },
+            "data_path": "[\"Bubble Pressure\"]",
+            "bone_target": "",
+            "transform_type": "LOC_X",
+            "transform_space": "WORLD_SPACE",
+            "rotation_mode": "AUTO"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "data_path": "nodes[\"Value.005\"].outputs[0].default_value",
+    "array_index": 0,
+    "type": "SCRIPTED",
+    "expression": "-0.003268858*p**4+0.000369206*p**3+0.011176145*p**2-0.04670431*p+0.944728911",
+    "use_self": false,
+    "variables": [
+      {
+        "name": "p",
+        "type": "SINGLE_PROP",
+        "targets": [
+          {
+            "id": {
+              "id": "Expression Controls",
+              "type": "Object"
+            },
+            "data_path": "[\"Bubble Pressure\"]",
+            "bone_target": "",
+            "transform_type": "LOC_X",
+            "transform_space": "WORLD_SPACE",
+            "rotation_mode": "AUTO"
+          }
+        ]
+      }
+    ]
+  }
+]

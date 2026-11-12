@@ -1,0 +1,9 @@
+SIDED_CORE name=legacy64 cold=968 arena=1292 eval100_us=1244
+SIDED_CORE name=sided64 cold=988 arena=1316 eval100_us=5403
+SIDED_CORE name=backfirst cold=988 arena=1316 eval100_us=971
+SIDED_CORE name=back cold=612 arena=1316 eval100_us=651
+SIDED_CORE name=front cold=612 arena=1316 eval100_us=441
+SIDED_CORE name=single32 cold=1576 arena=1644 eval100_us=1581
+SIDED_CORE name=sided32 cold=1596 arena=1780 eval100_us=2188
+SIDED_NORMAL_SORT_RUN_PASS prequant_inverse_scale AB_lighting global_centroid_order positive_run overlap_atomic
+SIDED_CORE_PASS required_section reserved_zero mirrored_state winding side_normals old_view_refusal arena_bounds

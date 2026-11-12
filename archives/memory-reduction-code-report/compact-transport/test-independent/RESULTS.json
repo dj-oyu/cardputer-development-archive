@@ -1,0 +1,71 @@
+{
+  "status": "PASS",
+  "observedUTC": "2026-11-04T11:36:37.472561+00:00",
+  "results": [
+    {
+      "mode": "O2",
+      "command": [
+        "cc",
+        "-std=c11",
+        "-O2",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-Wno-misleading-indentation",
+        "-ffp-contract=off",
+        "-fexcess-precision=standard",
+        "/workspace/scratch/6d8dcdbcdc54/fox-v3-compact-transport/test-independent/negative.c",
+        "/workspace/scratch/6d8dcdbcdc54/fox-v3-compact-transport/test-independent/visibility_probe.c",
+        "/workspace/scratch/6d8dcdbcdc54/fox-v3-compact-transport/private-build/physical/fox_disk_lighting.c",
+        "-Wl,--wrap=calloc",
+        "-Wl,--wrap=free",
+        "-lm",
+        "-o",
+        "/workspace/scratch/6d8dcdbcdc54/fox-v3-compact-transport/test-independent/negative-o2"
+      ],
+      "output": "PASS checks=1116 evaluations=316 rejected_cases=21 calloc_failure_sites=1 synthetic_variants=15 parity_pairs=157 calloc_live=0",
+      "exit": 0
+    },
+    {
+      "mode": "O2-asan-ubsan",
+      "command": [
+        "cc",
+        "-std=c11",
+        "-O2",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-Wno-misleading-indentation",
+        "-ffp-contract=off",
+        "-fexcess-precision=standard",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "/workspace/scratch/6d8dcdbcdc54/fox-v3-compact-transport/test-independent/negative.c",
+        "/workspace/scratch/6d8dcdbcdc54/fox-v3-compact-transport/test-independent/visibility_probe.c",
+        "/workspace/scratch/6d8dcdbcdc54/fox-v3-compact-transport/private-build/physical/fox_disk_lighting.c",
+        "-Wl,--wrap=calloc",
+        "-Wl,--wrap=free",
+        "-lm",
+        "-o",
+        "/workspace/scratch/6d8dcdbcdc54/fox-v3-compact-transport/test-independent/negative-o2-asan-ubsan"
+      ],
+      "output": "PASS checks=1116 evaluations=316 rejected_cases=21 calloc_failure_sites=1 synthetic_variants=15 parity_pairs=157 calloc_live=0",
+      "exit": 0
+    }
+  ],
+  "LSan": "Disabled. ASan and UBSan enabled in sanitizer arm; no claim of LeakSanitizer coverage.",
+  "scope": "Synthetic only; no actual renders/assets/models/original/reference/public/device edits. Legacy and compact builders in current candidate evaluated at identical O2 flags.",
+  "sha256": {
+    "test-independent/negative.c": "cf5a4551950870b9c54cd82fd1b4a17559c365fd4b53c3d25987f2c568d83518",
+    "test-independent/visibility_probe.c": "4435b0b2045b16a3b13e71a3e0a7c0bb92d8f7ca18d3db2daeaa46d8948b7782",
+    "private-build/physical/fox_disk_lighting.c": "c8bd5a8fbb006050628c4a5349fffef91155a36ee436a0ede541569b008573ac",
+    "private-build/transport/bounce.c": "d423bfed9ca33ddcb8aaa07c15dfce148073c6ce4778dfe6a9c4d9d459dca5b6",
+    "private-build/transport/bounce.h": "63f8805c95fdbd2abf3e406c5871ca0219ec7189617e2b03bc1572d7e1c5b6d7",
+    "private-build/visibility/visibility.c": "8eb08314bd75441c1f77699a7b56a30a71986d8112dec0cf39e56be770dd42f8",
+    "private-build/visibility/visibility.h": "95d106ba97255313b78985789687764eb1ce1a36dbe79a3bd5450eb4efe70ee0",
+    "private-build/physical/fox_disk_lighting.h": "86ece65f6742e510f7b536d7e2c948cff9e1b2e555a204a86017dae1473ed0a7",
+    "test-independent/run.py": "b49c3721c3feb795526b665caa457d0333bcaf6600b105fd952317a402fc27dc"
+  }
+}

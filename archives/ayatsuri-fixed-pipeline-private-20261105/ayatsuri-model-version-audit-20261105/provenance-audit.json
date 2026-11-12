@@ -1,0 +1,267 @@
+{
+  "status": "Read-only provenance audit complete; no source alteration, export, render, hardware, or publication.",
+  "latestIntendedSource": {
+    "path": "fox-bubble-bold-private/fox-bubble-bold.blend",
+    "sha256": "d15a3316e1be75a9707a92ac44027f713306011dc3adf3fe7a9cc9a538122c1a",
+    "bytes": 24187852,
+    "library_file_id": "libfile_4dee400f3a7c819184d5fcc2a4953de9",
+    "file_id": "file_00000000aae8820c8ffa757c84f7de2a",
+    "saveReceipt": "fox-bubble-bold-private/checkpoint-result.json",
+    "userAcceptanceMessageId": "Sentinel_5e948ebc456c8191a296bb6a555797b6",
+    "acceptedAt": "2026-11-04T09:01:23.027424+00:00",
+    "gitCommit": null,
+    "gitCommitNote": "No model Git commit established. Private source identity is Library receipt and exact SHA256, not renderer-code HEAD."
+  },
+  "oldFixture": {
+    "sourceBlend": "fox-reference-sculpt-private/fox-reference-standing-editable.blend",
+    "sourceSHA256": "9254eaebdfa61143dfdb9480330bc677ae47acfa710715bbfa31ab2943a16806",
+    "version": "new-candidate-v3-rebuilt-4a4d",
+    "geometryScope": "Preserved earlier 1200-budget reduced mesh. Not lost 2400/2048 candidate. Only authored material sidedness restored.",
+    "actualSourceGLB": "fox-v3-floor-direct-reflection-evaluation/actual-002/inputs/geometry-source-sided.glb",
+    "actualSourceGLBEquals": "fox-v3-lid-source-lod/lid-8.glb",
+    "actualCharacterTriangles": 1564,
+    "nativeModel": "fox-v3-floor-direct-reflection-evaluation/actual-002/compiled/model-baseline/model.aynm",
+    "ancestralExportCodeCommit": "76796a5c5ae53505de7de4f79b8e205ea1dc9c19",
+    "ancestralExportCodeCommitScope": "fox-native-private/reference-provenance.json pins importer/render code, not latest model source."
+  },
+  "previewProvenance": {
+    "path": "fox-bubble-bold-private/bold-still-01.png",
+    "library_file_id": "libfile_f2cc687bbd148191ab8392cf8450ef16",
+    "script": "fox-bubble-bold-private/still.py",
+    "log": "fox-bubble-bold-private/still.log",
+    "sourceReadLine": 3,
+    "imageSavedLine": 130,
+    "historicallyHashBound": false,
+    "limitation": "Existing preview is path-and-log bound to fox-bubble-bold.blend. No historical input SHA manifest was found. Current local source equals official saved source hash verified by parent. Preview uses watery eyes/worried brows, frame1, face-close camera, environment eye reflection disabled."
+  },
+  "nativeExportAudit": {
+    "searchedFolders": [
+      "fox-brow-surface-private",
+      "fox-bubble-algebra-private",
+      "fox-bubble-bold-private",
+      "fox-bubble-frontier-private",
+      "fox-bubble-glint-private",
+      "fox-bubble-volume-private",
+      "fox-continuous-tail-private",
+      "fox-continuous-tail-v2-private",
+      "fox-continuous-tail-v3-private",
+      "fox-expressions-final-private",
+      "fox-expressions-private",
+      "fox-expressions-shadow-test-private",
+      "fox-expressions-v2-private",
+      "fox-expressions-v3-private",
+      "fox-expressions-v4-private",
+      "fox-expressions-v5-private",
+      "fox-expressions-v6-private",
+      "fox-expressions-v7-private",
+      "fox-expressions-v8-private",
+      "fox-expressions-v9-private",
+      "fox-expressive-eyes-private",
+      "fox-expressive-eyes-v2-private",
+      "fox-expressive-eyes-v3-private",
+      "fox-expressive-eyes-v4-private",
+      "fox-expressive-eyes-v5-private",
+      "fox-face-parts-private",
+      "fox-friendly-clean-private",
+      "fox-friendly-grounded-private",
+      "fox-friendly-refine-private",
+      "fox-friendly-sitting-private",
+      "fox-gaze-cap-test-private",
+      "fox-gaze-expressive-final-private",
+      "fox-gaze-motion-private",
+      "fox-gaze-motion-v2-private",
+      "fox-gaze-normal-test-private",
+      "fox-gaze-target-private",
+      "fox-head-gaze-final-private",
+      "fox-head-gaze-private",
+      "fox-head-gaze-v2-private",
+      "fox-head-gaze-v3-private",
+      "fox-komainu-anatomy-private",
+      "fox-komainu-anatomy-v2-private",
+      "fox-komainu-anatomy-v3-private",
+      "fox-komainu-curved-private",
+      "fox-komainu-curved-v2-private",
+      "fox-komainu-depth-private",
+      "fox-komainu-neck-private",
+      "fox-komainu-neck-v2-private",
+      "fox-komainu-private",
+      "fox-komainu-relief-private",
+      "fox-komainu-sculpt-fur-private",
+      "fox-komainu-sculpt-fur-v2-private",
+      "fox-komainu-sculpt-neck-private",
+      "fox-komainu-sculpt-neck-v2-private",
+      "fox-komainu-soft-refine-private",
+      "fox-mouth-clean-private",
+      "fox-native-private",
+      "fox-packet-private",
+      "fox-reference-sculpt-private",
+      "fox-reference-uncertainty-v3-transfer-private",
+      "fox-surface-refine-private",
+      "fox-v16-aligned-background-private",
+      "fox-v16-preview-private",
+      "fox-watery-highlight-private",
+      "fox-watery80-private"
+    ],
+    "excludedSubfolders": [
+      "helpers",
+      "library-helpers",
+      "node_modules",
+      ".git",
+      "__pycache__",
+      "any name containing owned-ray-context"
+    ],
+    "foundAssets": [
+      "fox-native-private/fox-evaluated-full.glb",
+      "fox-native-private/fox-auto1200.glb",
+      "fox-native-private/compiled1200/model.aynm",
+      "fox-native-private/depth-input/unpacked/results-v3/after-neutral-compile/model.aynm",
+      "fox-native-private/depth-input/unpacked/results-v3/before-combined-compile/model.aynm",
+      "fox-native-private/depth-input/unpacked/results-v3/before-jaw-half-compile/model.aynm",
+      "fox-native-private/depth-input/unpacked/results-v3/before-jaw-compile/model.aynm",
+      "fox-native-private/depth-input/unpacked/results-v3/after-blink-compile/model.aynm",
+      "fox-native-private/depth-input/unpacked/results-v3/before-blink-half-compile/model.aynm",
+      "fox-native-private/depth-input/unpacked/results-v3/after-blink-half-compile/model.aynm",
+      "fox-native-private/depth-input/unpacked/results-v3/after-jaw-compile/model.aynm",
+      "fox-native-private/depth-input/unpacked/results-v3/after-jaw-half-compile/model.aynm",
+      "fox-native-private/depth-input/unpacked/results-v3/before-blink-compile/model.aynm",
+      "fox-native-private/depth-input/unpacked/results-v3/after-combined-compile/model.aynm",
+      "fox-native-private/depth-input/unpacked/results-v3/before-neutral-compile/model.aynm",
+      "fox-native-private/depth-input/unpacked/exports-before-v2/with-morph.glb",
+      "fox-native-private/depth-input/unpacked/exports-before-v2/jaw-half.glb",
+      "fox-native-private/depth-input/unpacked/exports-before-v2/blink-half.glb",
+      "fox-native-private/depth-input/unpacked/exports-before-v2/combined.glb",
+      "fox-native-private/depth-input/unpacked/exports-before-v2/neutral.glb",
+      "fox-native-private/depth-input/unpacked/exports-before-v2/jaw.glb",
+      "fox-native-private/depth-input/unpacked/exports-before-v2/blink.glb",
+      "fox-native-private/depth-input/unpacked/replay/before-exports/with-morph.glb",
+      "fox-native-private/depth-input/unpacked/replay/before-exports/jaw-half.glb",
+      "fox-native-private/depth-input/unpacked/replay/before-exports/blink-half.glb",
+      "fox-native-private/depth-input/unpacked/replay/before-exports/combined.glb",
+      "fox-native-private/depth-input/unpacked/replay/before-exports/neutral.glb",
+      "fox-native-private/depth-input/unpacked/replay/before-exports/jaw.glb",
+      "fox-native-private/depth-input/unpacked/replay/before-exports/blink.glb",
+      "fox-native-private/depth-input/unpacked/replay/after-compile/model.aynm",
+      "fox-native-private/depth-input/unpacked/replay/before-compile/model.aynm",
+      "fox-native-private/depth-input/unpacked/replay/after-exports/with-morph.glb",
+      "fox-native-private/depth-input/unpacked/replay/after-exports/jaw-half.glb",
+      "fox-native-private/depth-input/unpacked/replay/after-exports/blink-half.glb",
+      "fox-native-private/depth-input/unpacked/replay/after-exports/combined.glb",
+      "fox-native-private/depth-input/unpacked/replay/after-exports/neutral.glb",
+      "fox-native-private/depth-input/unpacked/replay/after-exports/jaw.glb",
+      "fox-native-private/depth-input/unpacked/replay/after-exports/blink.glb",
+      "fox-native-private/depth-input/unpacked/exports-after/with-morph.glb",
+      "fox-native-private/depth-input/unpacked/exports-after/jaw-half.glb",
+      "fox-native-private/depth-input/unpacked/exports-after/blink-half.glb",
+      "fox-native-private/depth-input/unpacked/exports-after/combined.glb",
+      "fox-native-private/depth-input/unpacked/exports-after/neutral.glb",
+      "fox-native-private/depth-input/unpacked/exports-after/jaw.glb",
+      "fox-native-private/depth-input/unpacked/exports-after/blink.glb",
+      "fox-packet-private/synthetic.aynm",
+      "fox-packet-private/batched/model.aynm"
+    ],
+    "latestCompatibleNativeAsset": null,
+    "conclusion": "No native GLB/AYNM/bin found in newer model authoring folders. Found fox-native-private/fox-auto1200.glb explicitly derives from older standing source hash 9254eaeb..., not the latest bold source. No verified compatible native representation of latest source established; this is a scoped inventory, not a proof about uninspected storage."
+  },
+  "sourceManifest": {
+    "fox-bubble-bold-private/fox-bubble-bold.blend": {
+      "sha256": "d15a3316e1be75a9707a92ac44027f713306011dc3adf3fe7a9cc9a538122c1a",
+      "bytes": 24187852
+    },
+    "fox-bubble-algebra-private/fox-bubble-algebra120.blend": {
+      "sha256": "169d33a90b2ec469e308abcf21bee2d03e3e53e073af58ad810d9ec373ffa98e",
+      "bytes": 24187472
+    },
+    "fox-head-gaze-final-private/fox-head-gaze-controls.blend": {
+      "sha256": "50717e44b2bea1e0a8b25ab9213785fe18876aaec38da007b897909640537cce",
+      "bytes": 22378928
+    },
+    "fox-face-parts-private/fox-surface-eye-parts.blend": {
+      "sha256": "d4c66baf005b7e4e8e24c1cad1b8e8a7a00126a54665448bfa7a8c7eeaf7209e",
+      "bytes": 23682880
+    },
+    "fox-bubble-bold-private/bold-still-01.png": {
+      "sha256": "fff05e2253f1a1d795f98923958fbc29c3d89e2ce3fb7c75ed38277e5098952b",
+      "bytes": 1343699
+    },
+    "fox-bubble-bold-private/bold-still-13.png": {
+      "sha256": "d0f3ea9470f03d4fa919055aa3cb0b43743310ebc22dc8847caff335ecedc5b9",
+      "bytes": 1343655
+    },
+    "fox-bubble-bold-private/bold-still-37.png": {
+      "sha256": "b5d335290efc097b987b621e9ea0d5af81d59df19349ffc207ba4f2747cc8c0d",
+      "bytes": 1344232
+    },
+    "fox-bubble-bold-private/bold-before-after.png": {
+      "sha256": "990f2a64579954496700b7f16406c83aed8d4e23eecc52fa49b2326601d89ac9",
+      "bytes": 265803
+    },
+    "fox-bubble-bold-private/bold-loop.gif": {
+      "sha256": "e447a353109d1a3fc187f656dcb18aa71c215f0f9d240d9117caf97b9d389cd7",
+      "bytes": 4531763
+    },
+    "fox-bubble-bold-private/bold-loop.mp4": {
+      "sha256": "5b397ec2a194e4bc83470549d5a86308d4d4cbba382b5c626a5dd076c645ca5a",
+      "bytes": 63720
+    },
+    "fox-bubble-bold-private/build.py": {
+      "sha256": "da2833fef266ae41d0aa4ae47e7c99fa8bd4c70e215b23d12eddc3af332aa57f",
+      "bytes": 1022
+    },
+    "fox-bubble-bold-private/still.py": {
+      "sha256": "a14f2d19549dbc38da65738fd065463e9d24b8b1adb5a9cf75667f9add1a7a99",
+      "bytes": 810
+    },
+    "fox-bubble-bold-private/still.log": {
+      "sha256": "7fcb8e00520aead11e5604a0a63d4e18efee13ac7e19665cd680e8c19d1c3cc1",
+      "bytes": 48503
+    },
+    "fox-bubble-bold-private/render.py": {
+      "sha256": "558f1e8b1249a4a00dce42de740efcd98da4cf2aed4c154718d1aca394cdc8f9",
+      "bytes": 814
+    },
+    "fox-bubble-bold-private/render.log": {
+      "sha256": "33dbfb26a334e21b2a0187f1c2cae192144b4ff009414f3b8d5b13583284b2fb",
+      "bytes": 384115
+    },
+    "fox-bubble-bold-private/checkpoint-result.json": {
+      "sha256": "9363bb083c37286b220a7d9521126d81e0267e5cda0a5ccda969463231110932",
+      "bytes": 1514
+    },
+    "fox-bubble-bold-private/final-result.json": {
+      "sha256": "1c420c828ecaaabe841809b4c9a1a103abc8667503382012985c06492a4828ff",
+      "bytes": 1118
+    },
+    "fox-v3-lid-source-lod/lid-8.glb": {
+      "sha256": "833ac7683872375f9e63f819618e0e25ed40e0ac761a35f7604cd45501207a8e",
+      "bytes": 104156
+    },
+    "fox-v3-lid-source-lod/REPORT.md": {
+      "sha256": "ef0341b9d85b7865d36ffa56cab4a5382b92aa7abf40279c25ab3fda11bdb29f",
+      "bytes": 3691
+    },
+    "fox-v3-floor-direct-reflection-evaluation/actual-002/inputs/geometry-source-sided.glb": {
+      "sha256": "833ac7683872375f9e63f819618e0e25ed40e0ac761a35f7604cd45501207a8e",
+      "bytes": 104156
+    },
+    "fox-v3-floor-direct-reflection-evaluation/actual-002/compiled/model-baseline/model.aynm": {
+      "sha256": "68985ce128275a4b50c9bbad791bcd9eff8a41e788e4b5672d65c80755aade9f",
+      "bytes": 47708
+    },
+    "fox-v3-floor-direct-reflection-evaluation/actual-002/inputs/candidate-config.json": {
+      "sha256": "d48a1a03221c6d99a0ad8076e5d2f4dd1f90ed6f25b574e00dcbdab06c494a30",
+      "bytes": 26865
+    },
+    "fox-native-private/export-report.json": {
+      "sha256": "f9f6b092e966e88d3263e99929f4c7f25ad7562704cac33706988aff3eff43e0",
+      "bytes": 21544
+    },
+    "fox-native-private/reference-provenance.json": {
+      "sha256": "b2ff3f5edeb0283edce4f9a1a9bc3186414191c08ad512196e7b766063412282",
+      "bytes": 3278
+    },
+    "fox-reference-sculpt-private/fox-reference-standing-editable.blend": {
+      "sha256": "9254eaebdfa61143dfdb9480330bc677ae47acfa710715bbfa31ab2943a16806",
+      "bytes": 5204452
+    }
+  }
+}

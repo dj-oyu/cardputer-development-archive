@@ -1,0 +1,24 @@
+{
+  "source_route": "official Library text-read patch plus authorized public equal-tree reconstruction",
+  "unavailable_local_base_commit": "31572d5fe5e9aa752ab890e4dfe833c0db740327",
+  "public_equal_tree_commit": "724d97ade710c90ffbf219bf4589210f039ec1e3",
+  "public_commit_verified_tree": "a4322fb9455d449fbe1eab8d8a6ef983761c14b8",
+  "base_blob_count": 1871,
+  "candidate_tree": "e488ab1ed190111a7bacd380c89841c47e756cb8",
+  "manifest_files_verified": 12,
+  "git_provenance": "Fresh private Git index; no claim to have fetched either unavailable commit object; exact tree content independently reproduced",
+  "gitlinks": [
+    {
+      "path": "third_party/bmi270",
+      "sha": "41129fcfe39c583ee5462d79195741945d51c1fe"
+    },
+    {
+      "path": "third_party/minimp3",
+      "sha": "ea99364f61c14656440e8d77e9c233ccf3124633"
+    },
+    {
+      "path": "third_party/opus",
+      "sha": "22244de5a79bd1d6d623c32e72bf1954b56235be"
+    }
+  ]
+}

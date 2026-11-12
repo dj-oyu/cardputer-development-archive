@@ -1,0 +1,10 @@
+{
+  "reason": "v1 incorrectly compared zero stats before report transfer. v2 directly compares completed aw.report shade total, preserves all quota and output gates. v1 results retained unscored.",
+  "files": {
+    "code/native_render_v2.c": "e05f31a8b62763a76439aeade97a6ab8230d1d7d1b26600025d569ad1755a621",
+    "code/prepare_floor_v2.py": "6a4c8f8329070642e876769408961ded95ef7e1760ad92ba7471411041432ecb",
+    "actual-002/PREPARED.json": "bf200e2f54fb6348e689484eaa1ca92cf91b99f9a013025148448cd52d5bc2b6",
+    "actual-002/input-hashes.json": "3c264dc5fb17d774613997c5d82c84b3b69a4dd50af085258ca55fbc9dbfae3b",
+    "actual-002/native-render": "4a49600ff89eb42f80488dda111f09260fcccf88b5b0c9b9be72fdc37f8f7dc4"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "status": "FIXED40_AND_INDEPENDENT_RETAINED_AUDIT_PASS",
+  "actualFrames": 40,
+  "comparisons": {
+    "frames": 40,
+    "raw": 200,
+    "reports": 280,
+    "forwardReverse": 80
+  },
+  "onlyNonTimingDifference": {
+    ".json": {
+      "transportTemporaryBytes": [
+        100224,
+        35868
+      ]
+    }
+  },
+  "callerVertexCount": 1167,
+  "callerTriangleCount": 1566,
+  "callerVertexBytes": 23340,
+  "callerTriangleBytes": 12528,
+  "callerTemporaryBytes": 35868,
+  "callerTemporarySaved": 64356,
+  "transportSceneBytes": 28592,
+  "transportUniqueVertices": 774,
+  "namedInitialLifecyclePeak": 496152,
+  "previousNamedPeak": 505952,
+  "namedPeakSaved": 9800,
+  "largestNamedConstructionAllocation": 81356,
+  "largestNamedRenderAllocation": 77312,
+  "namedStacks": {
+    "background": 4080,
+    "renderer": 5008,
+    "main": 83760,
+    "mainDelta": 16,
+    "indexedConstructorUpper": 464
+  },
+  "independentRetainedReviewSHA256": "6e77ffb88e84c24858e6b1977af90c611fb571dc652095c0588766c64c33cb22",
+  "sourceFreezeSHA256": "42adcf46e7e46960351c43e09ffa41ee2c4bb68085cad6a23481f9c36781a9c2",
+  "physicalGateSHA256": "316018305f9f65f6d327662495ef5531c8958db9c4f9b7bbc40c996ff5192065",
+  "completedManifestSHA256": {
+    "off": "d48c73d9bfae677bf2f7ed61faac65d93f5a53278ece87291c4f10aa18678a5b",
+    "on": "6171f6f8fb975c72d01824c059e6dba385272d1016d3aad3fc9085bd96428526"
+  },
+  "rerenders": 0,
+  "retries": 0,
+  "sourceChangesAfterGate": 0,
+  "publicExport": false,
+  "qualification": "Named initial lifecycle only; MEMORY_LEDGER exclusions apply. Persistent28592 unchanged. Two temporary inputs35868 total. Generic compact may grow8192 vslegacy. No device/whole-host fit or speedup claim."
+}

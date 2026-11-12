@@ -1,0 +1,30 @@
+{
+  "revision": "before",
+  "pose": "jaw-half",
+  "yaw": 0,
+  "sourceToExportDifferentPixels": 0,
+  "nativeDifferentPixels": 524,
+  "interiorWrongPartPixels": 401,
+  "wrongPartByExpected": {
+    "eye_L": 163,
+    "eye_R": 163,
+    "head": 0,
+    "lid_L": 0,
+    "lid_R": 0,
+    "lower_jaw": 75,
+    "mouth_cavity": 0,
+    "upper_muzzle": 0
+  },
+  "coldBytes": 12224,
+  "instanceArenaBytes64bit": 18572,
+  "frameSegments": 629,
+  "rasterCost": 18368,
+  "compileWallMs": 52.25607199986371,
+  "compilerInternalMs": 16.958916000000002,
+  "nativeHostProcessWallMsIncludingDiagnosticPasses": 27.855169999838836,
+  "nativeHostMaxRssKiB": 9088,
+  "sourceVertices": 216,
+  "partitionVertices": 291,
+  "sourceTriangles": 400,
+  "output": "results-v3/before-jaw-half-yaw0"
+}

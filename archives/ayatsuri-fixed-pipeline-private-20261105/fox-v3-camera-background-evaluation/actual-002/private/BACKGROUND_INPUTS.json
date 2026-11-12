@@ -1,0 +1,1857 @@
+{
+  "version": "camera-composition-inputs-v1",
+  "pins": {
+    "fox-v3-camera-source-audit/summary.json": "97ad99ed02297b3c8cc4b0fa0c425c74196cdcf5478a3e21c35323d6ba283d1b",
+    "fox-v3-floor-direct-reflection-plan/SOURCE_RHO.json": "d2d1eb732bbf4981a351b57c27dd08588cbb391deba43db21dce861c8899db68",
+    "fox-v3-boundary-rho-affine-evaluation/actual-A2/inputs/candidate-config.json": "d48a1a03221c6d99a0ad8076e5d2f4dd1f90ed6f25b574e00dcbdab06c494a30",
+    "fox-v3-ground-transport/inputs/ground-source.json": "6320121022bc7ab8f23300b45181d58ed09e1bdffd7e2239fbd5194e9521be9b",
+    "fox-v3-camera-background-plan/preflight/counts-001/COMPLETED.json": "82f6c16ed1fc2bc05aedc09292ab153632bd85b991de679f0ecaa83b2411b9aa",
+    "fox-v3-camera-background-plan/preflight/counts-001/INPUT_FREEZE.json": "9c712f2ba9b82a47971bce061f4ca8ea7942c659284077fda63d507a972201a8",
+    "fox-v3-camera-background-plan/preflight/SOURCE_FREEZE.json": "5f282d4fb21370487a2d991dd8cf7eaaa32e3febe7697122646b70fcea063ab9",
+    "fox-v3-boundary-rho-affine-evaluation/actual-A2/identity-proof.json": "fbd0c19d43b846ecacd3b06750b977fe844b106c75d92451ba70401bd746be5e",
+    "fox-v3-camera-background-plan/preflight/final-overrides-001/SUMMARY.json": "75996a95355cbd744c0c66cef7e43b0638312e916d7c4c97e7b30cfb5324ffd6"
+  },
+  "rows": [
+    {
+      "name": "native-front-baseline",
+      "case": "baseline",
+      "caseIndex": 0,
+      "view": "front",
+      "viewIndex": 0,
+      "reverse": false,
+      "snapshotFNV": "017e6671f56c3bd8",
+      "nativeCameraF32": [
+        -3.799999952316284,
+        -114.0,
+        304.0,
+        -15.199999809265137,
+        -69.16000366210938,
+        -6.840000152587891,
+        0.7401315569877625,
+        119.5,
+        67.0
+      ],
+      "sourceOrigin": [
+        -0.10000000149011612,
+        -8.0,
+        3.0
+      ],
+      "sourceUnitView": [
+        -0.0362752010448412,
+        0.9891035692868403,
+        -0.14268230098084736
+      ],
+      "near": 0.10000000149011612,
+      "far": 1000.0,
+      "rho": [
+        0.8399999737739563,
+        0.7799999713897705,
+        0.6499999761581421
+      ],
+      "floorWorld": [
+        [
+          -100.0,
+          -100.0,
+          0.0
+        ],
+        [
+          100.0,
+          -100.0,
+          0.0
+        ],
+        [
+          -100.0,
+          100.0,
+          0.0
+        ],
+        [
+          100.0,
+          100.0,
+          0.0
+        ]
+      ],
+      "floorTriangles": [
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          3,
+          2
+        ]
+      ],
+      "le": [
+        0.20999999344348907,
+        0.19499999284744263,
+        0.16249999403953552
+      ],
+      "worldRGB": [
+        1.0,
+        0.8799999952316284,
+        0.6899999976158142
+      ],
+      "worldStrength": 0.3499999940395355,
+      "runtimeSlots": 39555,
+      "combinedEmptySlots": 29098,
+      "backgroundOnlyPositiveQueries": 1486704,
+      "combinedEmptyPositiveQueries": 1118832,
+      "expectedOrderingFailures": 3,
+      "expectedFinalFloorOverrides": 2,
+      "extraFinalQueriesBaseline": 96,
+      "preflightConfigSHA256": "dd33701eeda24bb5a65f642b7bae2002ccc590c97ea504047a486a2508104310",
+      "extraFinalQueriesAllCasesVerified": true,
+      "extraFinalQueries": 96
+    },
+    {
+      "name": "native-front-baseline-reverse",
+      "case": "baseline",
+      "caseIndex": 0,
+      "view": "front",
+      "viewIndex": 0,
+      "reverse": true,
+      "snapshotFNV": "5a13ce5ed58ad33e",
+      "nativeCameraF32": [
+        -3.799999952316284,
+        -114.0,
+        304.0,
+        -15.199999809265137,
+        -69.16000366210938,
+        -6.840000152587891,
+        0.7401315569877625,
+        119.5,
+        67.0
+      ],
+      "sourceOrigin": [
+        -0.10000000149011612,
+        -8.0,
+        3.0
+      ],
+      "sourceUnitView": [
+        -0.0362752010448412,
+        0.9891035692868403,
+        -0.14268230098084736
+      ],
+      "near": 0.10000000149011612,
+      "far": 1000.0,
+      "rho": [
+        0.8399999737739563,
+        0.7799999713897705,
+        0.6499999761581421
+      ],
+      "floorWorld": [
+        [
+          -100.0,
+          -100.0,
+          0.0
+        ],
+        [
+          100.0,
+          -100.0,
+          0.0
+        ],
+        [
+          -100.0,
+          100.0,
+          0.0
+        ],
+        [
+          100.0,
+          100.0,
+          0.0
+        ]
+      ],
+      "floorTriangles": [
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          3,
+          2
+        ]
+      ],
+      "le": [
+        0.20999999344348907,
+        0.19499999284744263,
+        0.16249999403953552
+      ],
+      "worldRGB": [
+        1.0,
+        0.8799999952316284,
+        0.6899999976158142
+      ],
+      "worldStrength": 0.3499999940395355,
+      "runtimeSlots": 39555,
+      "combinedEmptySlots": 29098,
+      "backgroundOnlyPositiveQueries": 1486704,
+      "combinedEmptyPositiveQueries": 1118832,
+      "expectedOrderingFailures": 3,
+      "expectedFinalFloorOverrides": 2,
+      "extraFinalQueriesBaseline": 96,
+      "preflightConfigSHA256": "bfc7439ddd7aaf155e9792752d90f31d4609acb3a6bcfa5710413bf54fe9aa5e",
+      "extraFinalQueriesAllCasesVerified": true,
+      "extraFinalQueries": 96
+    },
+    {
+      "name": "native-oblique-baseline",
+      "case": "baseline",
+      "caseIndex": 0,
+      "view": "oblique",
+      "viewIndex": 1,
+      "reverse": false,
+      "snapshotFNV": "ca2671fb76b7a28c",
+      "nativeCameraF32": [
+        -190.0,
+        -129.1999969482422,
+        304.0,
+        -10.640000343322754,
+        -68.4000015258789,
+        -9.5,
+        0.7401315569877625,
+        119.5,
+        67.0
+      ],
+      "sourceOrigin": [
+        -5.0,
+        -8.0,
+        3.4000000953674316
+      ],
+      "sourceUnitView": [
+        0.48970220307142526,
+        0.855941309855557,
+        -0.16600068189542397
+      ],
+      "near": 0.10000000149011612,
+      "far": 1000.0,
+      "rho": [
+        0.8399999737739563,
+        0.7799999713897705,
+        0.6499999761581421
+      ],
+      "floorWorld": [
+        [
+          -100.0,
+          -100.0,
+          0.0
+        ],
+        [
+          100.0,
+          -100.0,
+          0.0
+        ],
+        [
+          -100.0,
+          100.0,
+          0.0
+        ],
+        [
+          100.0,
+          100.0,
+          0.0
+        ]
+      ],
+      "floorTriangles": [
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          3,
+          2
+        ]
+      ],
+      "le": [
+        0.20999999344348907,
+        0.19499999284744263,
+        0.16249999403953552
+      ],
+      "worldRGB": [
+        1.0,
+        0.8799999952316284,
+        0.6899999976158142
+      ],
+      "worldStrength": 0.3499999940395355,
+      "runtimeSlots": 39573,
+      "combinedEmptySlots": 28902,
+      "backgroundOnlyPositiveQueries": 1656192,
+      "combinedEmptyPositiveQueries": 1203920,
+      "expectedOrderingFailures": 0,
+      "expectedFinalFloorOverrides": 0,
+      "extraFinalQueriesBaseline": 0,
+      "preflightConfigSHA256": "851c5a1a4ac609badc16d30edc6675643efb01ef9870537553fb21c0bd24ee1b",
+      "extraFinalQueriesAllCasesVerified": true,
+      "extraFinalQueries": 0
+    },
+    {
+      "name": "native-oblique-baseline-reverse",
+      "case": "baseline",
+      "caseIndex": 0,
+      "view": "oblique",
+      "viewIndex": 1,
+      "reverse": true,
+      "snapshotFNV": "16a5cafb1e38eb8a",
+      "nativeCameraF32": [
+        -190.0,
+        -129.1999969482422,
+        304.0,
+        -10.640000343322754,
+        -68.4000015258789,
+        -9.5,
+        0.7401315569877625,
+        119.5,
+        67.0
+      ],
+      "sourceOrigin": [
+        -5.0,
+        -8.0,
+        3.4000000953674316
+      ],
+      "sourceUnitView": [
+        0.48970220307142526,
+        0.855941309855557,
+        -0.16600068189542397
+      ],
+      "near": 0.10000000149011612,
+      "far": 1000.0,
+      "rho": [
+        0.8399999737739563,
+        0.7799999713897705,
+        0.6499999761581421
+      ],
+      "floorWorld": [
+        [
+          -100.0,
+          -100.0,
+          0.0
+        ],
+        [
+          100.0,
+          -100.0,
+          0.0
+        ],
+        [
+          -100.0,
+          100.0,
+          0.0
+        ],
+        [
+          100.0,
+          100.0,
+          0.0
+        ]
+      ],
+      "floorTriangles": [
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          3,
+          2
+        ]
+      ],
+      "le": [
+        0.20999999344348907,
+        0.19499999284744263,
+        0.16249999403953552
+      ],
+      "worldRGB": [
+        1.0,
+        0.8799999952316284,
+        0.6899999976158142
+      ],
+      "worldStrength": 0.3499999940395355,
+      "runtimeSlots": 39573,
+      "combinedEmptySlots": 28902,
+      "backgroundOnlyPositiveQueries": 1656192,
+      "combinedEmptyPositiveQueries": 1203920,
+      "expectedOrderingFailures": 0,
+      "expectedFinalFloorOverrides": 0,
+      "extraFinalQueriesBaseline": 0,
+      "preflightConfigSHA256": "4372205341674678455ed289dda2f48e545f8ca13d4cba6f6a4cd624a38225e6",
+      "extraFinalQueriesAllCasesVerified": true,
+      "extraFinalQueries": 0
+    },
+    {
+      "name": "native-front-direction",
+      "case": "direction",
+      "caseIndex": 1,
+      "view": "front",
+      "viewIndex": 0,
+      "reverse": false,
+      "snapshotFNV": "e9b9aaa945a95ee1",
+      "nativeCameraF32": [
+        -3.799999952316284,
+        -114.0,
+        304.0,
+        -15.199999809265137,
+        -69.16000366210938,
+        -6.840000152587891,
+        0.7401315569877625,
+        119.5,
+        67.0
+      ],
+      "sourceOrigin": [
+        -0.10000000149011612,
+        -8.0,
+        3.0
+      ],
+      "sourceUnitView": [
+        -0.0362752010448412,
+        0.9891035692868403,
+        -0.14268230098084736
+      ],
+      "near": 0.10000000149011612,
+      "far": 1000.0,
+      "rho": [
+        0.8399999737739563,
+        0.7799999713897705,
+        0.6499999761581421
+      ],
+      "floorWorld": [
+        [
+          -100.0,
+          -100.0,
+          0.0
+        ],
+        [
+          100.0,
+          -100.0,
+          0.0
+        ],
+        [
+          -100.0,
+          100.0,
+          0.0
+        ],
+        [
+          100.0,
+          100.0,
+          0.0
+        ]
+      ],
+      "floorTriangles": [
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          3,
+          2
+        ]
+      ],
+      "le": [
+        0.20999999344348907,
+        0.19499999284744263,
+        0.16249999403953552
+      ],
+      "worldRGB": [
+        1.0,
+        0.8799999952316284,
+        0.6899999976158142
+      ],
+      "worldStrength": 0.3499999940395355,
+      "runtimeSlots": 39555,
+      "combinedEmptySlots": 29098,
+      "backgroundOnlyPositiveQueries": 1486704,
+      "combinedEmptyPositiveQueries": 1118832,
+      "expectedOrderingFailures": 3,
+      "expectedFinalFloorOverrides": 2,
+      "extraFinalQueriesBaseline": 96,
+      "preflightConfigSHA256": "e9d88ae3135b2a5733755e1ded588a8101e8b97bcf2997f3fa6dd36391f00b3e",
+      "extraFinalQueriesAllCasesVerified": true,
+      "extraFinalQueries": 96
+    },
+    {
+      "name": "native-front-direction-reverse",
+      "case": "direction",
+      "caseIndex": 1,
+      "view": "front",
+      "viewIndex": 0,
+      "reverse": true,
+      "snapshotFNV": "ed2c24b19b7b760f",
+      "nativeCameraF32": [
+        -3.799999952316284,
+        -114.0,
+        304.0,
+        -15.199999809265137,
+        -69.16000366210938,
+        -6.840000152587891,
+        0.7401315569877625,
+        119.5,
+        67.0
+      ],
+      "sourceOrigin": [
+        -0.10000000149011612,
+        -8.0,
+        3.0
+      ],
+      "sourceUnitView": [
+        -0.0362752010448412,
+        0.9891035692868403,
+        -0.14268230098084736
+      ],
+      "near": 0.10000000149011612,
+      "far": 1000.0,
+      "rho": [
+        0.8399999737739563,
+        0.7799999713897705,
+        0.6499999761581421
+      ],
+      "floorWorld": [
+        [
+          -100.0,
+          -100.0,
+          0.0
+        ],
+        [
+          100.0,
+          -100.0,
+          0.0
+        ],
+        [
+          -100.0,
+          100.0,
+          0.0
+        ],
+        [
+          100.0,
+          100.0,
+          0.0
+        ]
+      ],
+      "floorTriangles": [
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          3,
+          2
+        ]
+      ],
+      "le": [
+        0.20999999344348907,
+        0.19499999284744263,
+        0.16249999403953552
+      ],
+      "worldRGB": [
+        1.0,
+        0.8799999952316284,
+        0.6899999976158142
+      ],
+      "worldStrength": 0.3499999940395355,
+      "runtimeSlots": 39555,
+      "combinedEmptySlots": 29098,
+      "backgroundOnlyPositiveQueries": 1486704,
+      "combinedEmptyPositiveQueries": 1118832,
+      "expectedOrderingFailures": 3,
+      "expectedFinalFloorOverrides": 2,
+      "extraFinalQueriesBaseline": 96,
+      "preflightConfigSHA256": "b7ddd02ef0ee2aceb5d154c0827d15cbbf98a042ff5094d252782680a09a494e",
+      "extraFinalQueriesAllCasesVerified": true,
+      "extraFinalQueries": 96
+    },
+    {
+      "name": "native-oblique-direction",
+      "case": "direction",
+      "caseIndex": 1,
+      "view": "oblique",
+      "viewIndex": 1,
+      "reverse": false,
+      "snapshotFNV": "3f377d53c4178e6d",
+      "nativeCameraF32": [
+        -190.0,
+        -129.1999969482422,
+        304.0,
+        -10.640000343322754,
+        -68.4000015258789,
+        -9.5,
+        0.7401315569877625,
+        119.5,
+        67.0
+      ],
+      "sourceOrigin": [
+        -5.0,
+        -8.0,
+        3.4000000953674316
+      ],
+      "sourceUnitView": [
+        0.48970220307142526,
+        0.855941309855557,
+        -0.16600068189542397
+      ],
+      "near": 0.10000000149011612,
+      "far": 1000.0,
+      "rho": [
+        0.8399999737739563,
+        0.7799999713897705,
+        0.6499999761581421
+      ],
+      "floorWorld": [
+        [
+          -100.0,
+          -100.0,
+          0.0
+        ],
+        [
+          100.0,
+          -100.0,
+          0.0
+        ],
+        [
+          -100.0,
+          100.0,
+          0.0
+        ],
+        [
+          100.0,
+          100.0,
+          0.0
+        ]
+      ],
+      "floorTriangles": [
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          3,
+          2
+        ]
+      ],
+      "le": [
+        0.20999999344348907,
+        0.19499999284744263,
+        0.16249999403953552
+      ],
+      "worldRGB": [
+        1.0,
+        0.8799999952316284,
+        0.6899999976158142
+      ],
+      "worldStrength": 0.3499999940395355,
+      "runtimeSlots": 39573,
+      "combinedEmptySlots": 28902,
+      "backgroundOnlyPositiveQueries": 1656192,
+      "combinedEmptyPositiveQueries": 1203920,
+      "expectedOrderingFailures": 0,
+      "expectedFinalFloorOverrides": 0,
+      "extraFinalQueriesBaseline": 0,
+      "preflightConfigSHA256": "50ed29716150902da10f60cffec14e5987ea56a0a5053f088ff506cf5ee0b0c7",
+      "extraFinalQueriesAllCasesVerified": true,
+      "extraFinalQueries": 0
+    },
+    {
+      "name": "native-oblique-direction-reverse",
+      "case": "direction",
+      "caseIndex": 1,
+      "view": "oblique",
+      "viewIndex": 1,
+      "reverse": true,
+      "snapshotFNV": "afc8510bf97b8917",
+      "nativeCameraF32": [
+        -190.0,
+        -129.1999969482422,
+        304.0,
+        -10.640000343322754,
+        -68.4000015258789,
+        -9.5,
+        0.7401315569877625,
+        119.5,
+        67.0
+      ],
+      "sourceOrigin": [
+        -5.0,
+        -8.0,
+        3.4000000953674316
+      ],
+      "sourceUnitView": [
+        0.48970220307142526,
+        0.855941309855557,
+        -0.16600068189542397
+      ],
+      "near": 0.10000000149011612,
+      "far": 1000.0,
+      "rho": [
+        0.8399999737739563,
+        0.7799999713897705,
+        0.6499999761581421
+      ],
+      "floorWorld": [
+        [
+          -100.0,
+          -100.0,
+          0.0
+        ],
+        [
+          100.0,
+          -100.0,
+          0.0
+        ],
+        [
+          -100.0,
+          100.0,
+          0.0
+        ],
+        [
+          100.0,
+          100.0,
+          0.0
+        ]
+      ],
+      "floorTriangles": [
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          3,
+          2
+        ]
+      ],
+      "le": [
+        0.20999999344348907,
+        0.19499999284744263,
+        0.16249999403953552
+      ],
+      "worldRGB": [
+        1.0,
+        0.8799999952316284,
+        0.6899999976158142
+      ],
+      "worldStrength": 0.3499999940395355,
+      "runtimeSlots": 39573,
+      "combinedEmptySlots": 28902,
+      "backgroundOnlyPositiveQueries": 1656192,
+      "combinedEmptyPositiveQueries": 1203920,
+      "expectedOrderingFailures": 0,
+      "expectedFinalFloorOverrides": 0,
+      "extraFinalQueriesBaseline": 0,
+      "preflightConfigSHA256": "9e9f3d6fc44afcd22c83440be6676b00b4d9d41ced4683cb9bbcd408e317f28c",
+      "extraFinalQueriesAllCasesVerified": true,
+      "extraFinalQueries": 0
+    },
+    {
+      "name": "native-front-intensity",
+      "case": "intensity",
+      "caseIndex": 2,
+      "view": "front",
+      "viewIndex": 0,
+      "reverse": false,
+      "snapshotFNV": "750e5cf096aa40fd",
+      "nativeCameraF32": [
+        -3.799999952316284,
+        -114.0,
+        304.0,
+        -15.199999809265137,
+        -69.16000366210938,
+        -6.840000152587891,
+        0.7401315569877625,
+        119.5,
+        67.0
+      ],
+      "sourceOrigin": [
+        -0.10000000149011612,
+        -8.0,
+        3.0
+      ],
+      "sourceUnitView": [
+        -0.0362752010448412,
+        0.9891035692868403,
+        -0.14268230098084736
+      ],
+      "near": 0.10000000149011612,
+      "far": 1000.0,
+      "rho": [
+        0.8399999737739563,
+        0.7799999713897705,
+        0.6499999761581421
+      ],
+      "floorWorld": [
+        [
+          -100.0,
+          -100.0,
+          0.0
+        ],
+        [
+          100.0,
+          -100.0,
+          0.0
+        ],
+        [
+          -100.0,
+          100.0,
+          0.0
+        ],
+        [
+          100.0,
+          100.0,
+          0.0
+        ]
+      ],
+      "floorTriangles": [
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          3,
+          2
+        ]
+      ],
+      "le": [
+        0.20999999344348907,
+        0.19499999284744263,
+        0.16249999403953552
+      ],
+      "worldRGB": [
+        1.0,
+        0.8799999952316284,
+        0.6899999976158142
+      ],
+      "worldStrength": 0.3499999940395355,
+      "runtimeSlots": 39555,
+      "combinedEmptySlots": 29098,
+      "backgroundOnlyPositiveQueries": 1486704,
+      "combinedEmptyPositiveQueries": 1118832,
+      "expectedOrderingFailures": 3,
+      "expectedFinalFloorOverrides": 2,
+      "extraFinalQueriesBaseline": 96,
+      "preflightConfigSHA256": "dd33701eeda24bb5a65f642b7bae2002ccc590c97ea504047a486a2508104310",
+      "extraFinalQueriesAllCasesVerified": true,
+      "extraFinalQueries": 96
+    },
+    {
+      "name": "native-front-intensity-reverse",
+      "case": "intensity",
+      "caseIndex": 2,
+      "view": "front",
+      "viewIndex": 0,
+      "reverse": true,
+      "snapshotFNV": "00593adac8e78aab",
+      "nativeCameraF32": [
+        -3.799999952316284,
+        -114.0,
+        304.0,
+        -15.199999809265137,
+        -69.16000366210938,
+        -6.840000152587891,
+        0.7401315569877625,
+        119.5,
+        67.0
+      ],
+      "sourceOrigin": [
+        -0.10000000149011612,
+        -8.0,
+        3.0
+      ],
+      "sourceUnitView": [
+        -0.0362752010448412,
+        0.9891035692868403,
+        -0.14268230098084736
+      ],
+      "near": 0.10000000149011612,
+      "far": 1000.0,
+      "rho": [
+        0.8399999737739563,
+        0.7799999713897705,
+        0.6499999761581421
+      ],
+      "floorWorld": [
+        [
+          -100.0,
+          -100.0,
+          0.0
+        ],
+        [
+          100.0,
+          -100.0,
+          0.0
+        ],
+        [
+          -100.0,
+          100.0,
+          0.0
+        ],
+        [
+          100.0,
+          100.0,
+          0.0
+        ]
+      ],
+      "floorTriangles": [
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          3,
+          2
+        ]
+      ],
+      "le": [
+        0.20999999344348907,
+        0.19499999284744263,
+        0.16249999403953552
+      ],
+      "worldRGB": [
+        1.0,
+        0.8799999952316284,
+        0.6899999976158142
+      ],
+      "worldStrength": 0.3499999940395355,
+      "runtimeSlots": 39555,
+      "combinedEmptySlots": 29098,
+      "backgroundOnlyPositiveQueries": 1486704,
+      "combinedEmptyPositiveQueries": 1118832,
+      "expectedOrderingFailures": 3,
+      "expectedFinalFloorOverrides": 2,
+      "extraFinalQueriesBaseline": 96,
+      "preflightConfigSHA256": "bfc7439ddd7aaf155e9792752d90f31d4609acb3a6bcfa5710413bf54fe9aa5e",
+      "extraFinalQueriesAllCasesVerified": true,
+      "extraFinalQueries": 96
+    },
+    {
+      "name": "native-oblique-intensity",
+      "case": "intensity",
+      "caseIndex": 2,
+      "view": "oblique",
+      "viewIndex": 1,
+      "reverse": false,
+      "snapshotFNV": "cb568337d9bcec59",
+      "nativeCameraF32": [
+        -190.0,
+        -129.1999969482422,
+        304.0,
+        -10.640000343322754,
+        -68.4000015258789,
+        -9.5,
+        0.7401315569877625,
+        119.5,
+        67.0
+      ],
+      "sourceOrigin": [
+        -5.0,
+        -8.0,
+        3.4000000953674316
+      ],
+      "sourceUnitView": [
+        0.48970220307142526,
+        0.855941309855557,
+        -0.16600068189542397
+      ],
+      "near": 0.10000000149011612,
+      "far": 1000.0,
+      "rho": [
+        0.8399999737739563,
+        0.7799999713897705,
+        0.6499999761581421
+      ],
+      "floorWorld": [
+        [
+          -100.0,
+          -100.0,
+          0.0
+        ],
+        [
+          100.0,
+          -100.0,
+          0.0
+        ],
+        [
+          -100.0,
+          100.0,
+          0.0
+        ],
+        [
+          100.0,
+          100.0,
+          0.0
+        ]
+      ],
+      "floorTriangles": [
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          3,
+          2
+        ]
+      ],
+      "le": [
+        0.20999999344348907,
+        0.19499999284744263,
+        0.16249999403953552
+      ],
+      "worldRGB": [
+        1.0,
+        0.8799999952316284,
+        0.6899999976158142
+      ],
+      "worldStrength": 0.3499999940395355,
+      "runtimeSlots": 39573,
+      "combinedEmptySlots": 28902,
+      "backgroundOnlyPositiveQueries": 1656192,
+      "combinedEmptyPositiveQueries": 1203920,
+      "expectedOrderingFailures": 0,
+      "expectedFinalFloorOverrides": 0,
+      "extraFinalQueriesBaseline": 0,
+      "preflightConfigSHA256": "851c5a1a4ac609badc16d30edc6675643efb01ef9870537553fb21c0bd24ee1b",
+      "extraFinalQueriesAllCasesVerified": true,
+      "extraFinalQueries": 0
+    },
+    {
+      "name": "native-oblique-intensity-reverse",
+      "case": "intensity",
+      "caseIndex": 2,
+      "view": "oblique",
+      "viewIndex": 1,
+      "reverse": true,
+      "snapshotFNV": "4461ebdd1ccceb6b",
+      "nativeCameraF32": [
+        -190.0,
+        -129.1999969482422,
+        304.0,
+        -10.640000343322754,
+        -68.4000015258789,
+        -9.5,
+        0.7401315569877625,
+        119.5,
+        67.0
+      ],
+      "sourceOrigin": [
+        -5.0,
+        -8.0,
+        3.4000000953674316
+      ],
+      "sourceUnitView": [
+        0.48970220307142526,
+        0.855941309855557,
+        -0.16600068189542397
+      ],
+      "near": 0.10000000149011612,
+      "far": 1000.0,
+      "rho": [
+        0.8399999737739563,
+        0.7799999713897705,
+        0.6499999761581421
+      ],
+      "floorWorld": [
+        [
+          -100.0,
+          -100.0,
+          0.0
+        ],
+        [
+          100.0,
+          -100.0,
+          0.0
+        ],
+        [
+          -100.0,
+          100.0,
+          0.0
+        ],
+        [
+          100.0,
+          100.0,
+          0.0
+        ]
+      ],
+      "floorTriangles": [
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          3,
+          2
+        ]
+      ],
+      "le": [
+        0.20999999344348907,
+        0.19499999284744263,
+        0.16249999403953552
+      ],
+      "worldRGB": [
+        1.0,
+        0.8799999952316284,
+        0.6899999976158142
+      ],
+      "worldStrength": 0.3499999940395355,
+      "runtimeSlots": 39573,
+      "combinedEmptySlots": 28902,
+      "backgroundOnlyPositiveQueries": 1656192,
+      "combinedEmptyPositiveQueries": 1203920,
+      "expectedOrderingFailures": 0,
+      "expectedFinalFloorOverrides": 0,
+      "extraFinalQueriesBaseline": 0,
+      "preflightConfigSHA256": "4372205341674678455ed289dda2f48e545f8ca13d4cba6f6a4cd624a38225e6",
+      "extraFinalQueriesAllCasesVerified": true,
+      "extraFinalQueries": 0
+    },
+    {
+      "name": "native-front-ambient",
+      "case": "ambient",
+      "caseIndex": 3,
+      "view": "front",
+      "viewIndex": 0,
+      "reverse": false,
+      "snapshotFNV": "fb48014ff3fcf9c8",
+      "nativeCameraF32": [
+        -3.799999952316284,
+        -114.0,
+        304.0,
+        -15.199999809265137,
+        -69.16000366210938,
+        -6.840000152587891,
+        0.7401315569877625,
+        119.5,
+        67.0
+      ],
+      "sourceOrigin": [
+        -0.10000000149011612,
+        -8.0,
+        3.0
+      ],
+      "sourceUnitView": [
+        -0.0362752010448412,
+        0.9891035692868403,
+        -0.14268230098084736
+      ],
+      "near": 0.10000000149011612,
+      "far": 1000.0,
+      "rho": [
+        0.8399999737739563,
+        0.7799999713897705,
+        0.6499999761581421
+      ],
+      "floorWorld": [
+        [
+          -100.0,
+          -100.0,
+          0.0
+        ],
+        [
+          100.0,
+          -100.0,
+          0.0
+        ],
+        [
+          -100.0,
+          100.0,
+          0.0
+        ],
+        [
+          100.0,
+          100.0,
+          0.0
+        ]
+      ],
+      "floorTriangles": [
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          3,
+          2
+        ]
+      ],
+      "le": [
+        0.20999999344348907,
+        0.19499999284744263,
+        0.16249999403953552
+      ],
+      "worldRGB": [
+        1.0,
+        0.8799999952316284,
+        0.6899999976158142
+      ],
+      "worldStrength": 0.699999988079071,
+      "runtimeSlots": 39555,
+      "combinedEmptySlots": 29098,
+      "backgroundOnlyPositiveQueries": 1486704,
+      "combinedEmptyPositiveQueries": 1118832,
+      "expectedOrderingFailures": 3,
+      "expectedFinalFloorOverrides": 2,
+      "extraFinalQueriesBaseline": 96,
+      "preflightConfigSHA256": "dd33701eeda24bb5a65f642b7bae2002ccc590c97ea504047a486a2508104310",
+      "extraFinalQueriesAllCasesVerified": true,
+      "extraFinalQueries": 96
+    },
+    {
+      "name": "native-front-ambient-reverse",
+      "case": "ambient",
+      "caseIndex": 3,
+      "view": "front",
+      "viewIndex": 0,
+      "reverse": true,
+      "snapshotFNV": "dce979160c5b88ae",
+      "nativeCameraF32": [
+        -3.799999952316284,
+        -114.0,
+        304.0,
+        -15.199999809265137,
+        -69.16000366210938,
+        -6.840000152587891,
+        0.7401315569877625,
+        119.5,
+        67.0
+      ],
+      "sourceOrigin": [
+        -0.10000000149011612,
+        -8.0,
+        3.0
+      ],
+      "sourceUnitView": [
+        -0.0362752010448412,
+        0.9891035692868403,
+        -0.14268230098084736
+      ],
+      "near": 0.10000000149011612,
+      "far": 1000.0,
+      "rho": [
+        0.8399999737739563,
+        0.7799999713897705,
+        0.6499999761581421
+      ],
+      "floorWorld": [
+        [
+          -100.0,
+          -100.0,
+          0.0
+        ],
+        [
+          100.0,
+          -100.0,
+          0.0
+        ],
+        [
+          -100.0,
+          100.0,
+          0.0
+        ],
+        [
+          100.0,
+          100.0,
+          0.0
+        ]
+      ],
+      "floorTriangles": [
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          3,
+          2
+        ]
+      ],
+      "le": [
+        0.20999999344348907,
+        0.19499999284744263,
+        0.16249999403953552
+      ],
+      "worldRGB": [
+        1.0,
+        0.8799999952316284,
+        0.6899999976158142
+      ],
+      "worldStrength": 0.699999988079071,
+      "runtimeSlots": 39555,
+      "combinedEmptySlots": 29098,
+      "backgroundOnlyPositiveQueries": 1486704,
+      "combinedEmptyPositiveQueries": 1118832,
+      "expectedOrderingFailures": 3,
+      "expectedFinalFloorOverrides": 2,
+      "extraFinalQueriesBaseline": 96,
+      "preflightConfigSHA256": "bfc7439ddd7aaf155e9792752d90f31d4609acb3a6bcfa5710413bf54fe9aa5e",
+      "extraFinalQueriesAllCasesVerified": true,
+      "extraFinalQueries": 96
+    },
+    {
+      "name": "native-oblique-ambient",
+      "case": "ambient",
+      "caseIndex": 3,
+      "view": "oblique",
+      "viewIndex": 1,
+      "reverse": false,
+      "snapshotFNV": "2b169d60dffce95c",
+      "nativeCameraF32": [
+        -190.0,
+        -129.1999969482422,
+        304.0,
+        -10.640000343322754,
+        -68.4000015258789,
+        -9.5,
+        0.7401315569877625,
+        119.5,
+        67.0
+      ],
+      "sourceOrigin": [
+        -5.0,
+        -8.0,
+        3.4000000953674316
+      ],
+      "sourceUnitView": [
+        0.48970220307142526,
+        0.855941309855557,
+        -0.16600068189542397
+      ],
+      "near": 0.10000000149011612,
+      "far": 1000.0,
+      "rho": [
+        0.8399999737739563,
+        0.7799999713897705,
+        0.6499999761581421
+      ],
+      "floorWorld": [
+        [
+          -100.0,
+          -100.0,
+          0.0
+        ],
+        [
+          100.0,
+          -100.0,
+          0.0
+        ],
+        [
+          -100.0,
+          100.0,
+          0.0
+        ],
+        [
+          100.0,
+          100.0,
+          0.0
+        ]
+      ],
+      "floorTriangles": [
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          3,
+          2
+        ]
+      ],
+      "le": [
+        0.20999999344348907,
+        0.19499999284744263,
+        0.16249999403953552
+      ],
+      "worldRGB": [
+        1.0,
+        0.8799999952316284,
+        0.6899999976158142
+      ],
+      "worldStrength": 0.699999988079071,
+      "runtimeSlots": 39573,
+      "combinedEmptySlots": 28902,
+      "backgroundOnlyPositiveQueries": 1656192,
+      "combinedEmptyPositiveQueries": 1203920,
+      "expectedOrderingFailures": 0,
+      "expectedFinalFloorOverrides": 0,
+      "extraFinalQueriesBaseline": 0,
+      "preflightConfigSHA256": "851c5a1a4ac609badc16d30edc6675643efb01ef9870537553fb21c0bd24ee1b",
+      "extraFinalQueriesAllCasesVerified": true,
+      "extraFinalQueries": 0
+    },
+    {
+      "name": "native-oblique-ambient-reverse",
+      "case": "ambient",
+      "caseIndex": 3,
+      "view": "oblique",
+      "viewIndex": 1,
+      "reverse": true,
+      "snapshotFNV": "81c2d4aca5a4a09a",
+      "nativeCameraF32": [
+        -190.0,
+        -129.1999969482422,
+        304.0,
+        -10.640000343322754,
+        -68.4000015258789,
+        -9.5,
+        0.7401315569877625,
+        119.5,
+        67.0
+      ],
+      "sourceOrigin": [
+        -5.0,
+        -8.0,
+        3.4000000953674316
+      ],
+      "sourceUnitView": [
+        0.48970220307142526,
+        0.855941309855557,
+        -0.16600068189542397
+      ],
+      "near": 0.10000000149011612,
+      "far": 1000.0,
+      "rho": [
+        0.8399999737739563,
+        0.7799999713897705,
+        0.6499999761581421
+      ],
+      "floorWorld": [
+        [
+          -100.0,
+          -100.0,
+          0.0
+        ],
+        [
+          100.0,
+          -100.0,
+          0.0
+        ],
+        [
+          -100.0,
+          100.0,
+          0.0
+        ],
+        [
+          100.0,
+          100.0,
+          0.0
+        ]
+      ],
+      "floorTriangles": [
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          3,
+          2
+        ]
+      ],
+      "le": [
+        0.20999999344348907,
+        0.19499999284744263,
+        0.16249999403953552
+      ],
+      "worldRGB": [
+        1.0,
+        0.8799999952316284,
+        0.6899999976158142
+      ],
+      "worldStrength": 0.699999988079071,
+      "runtimeSlots": 39573,
+      "combinedEmptySlots": 28902,
+      "backgroundOnlyPositiveQueries": 1656192,
+      "combinedEmptyPositiveQueries": 1203920,
+      "expectedOrderingFailures": 0,
+      "expectedFinalFloorOverrides": 0,
+      "extraFinalQueriesBaseline": 0,
+      "preflightConfigSHA256": "4372205341674678455ed289dda2f48e545f8ca13d4cba6f6a4cd624a38225e6",
+      "extraFinalQueriesAllCasesVerified": true,
+      "extraFinalQueries": 0
+    },
+    {
+      "name": "native-front-albedo",
+      "case": "albedo",
+      "caseIndex": 4,
+      "view": "front",
+      "viewIndex": 0,
+      "reverse": false,
+      "snapshotFNV": "54445c4c61aa80a4",
+      "nativeCameraF32": [
+        -3.799999952316284,
+        -114.0,
+        304.0,
+        -15.199999809265137,
+        -69.16000366210938,
+        -6.840000152587891,
+        0.7401315569877625,
+        119.5,
+        67.0
+      ],
+      "sourceOrigin": [
+        -0.10000000149011612,
+        -8.0,
+        3.0
+      ],
+      "sourceUnitView": [
+        -0.0362752010448412,
+        0.9891035692868403,
+        -0.14268230098084736
+      ],
+      "near": 0.10000000149011612,
+      "far": 1000.0,
+      "rho": [
+        0.5040000081062317,
+        0.46799999475479126,
+        0.38999998569488525
+      ],
+      "floorWorld": [
+        [
+          -100.0,
+          -100.0,
+          0.0
+        ],
+        [
+          100.0,
+          -100.0,
+          0.0
+        ],
+        [
+          -100.0,
+          100.0,
+          0.0
+        ],
+        [
+          100.0,
+          100.0,
+          0.0
+        ]
+      ],
+      "floorTriangles": [
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          3,
+          2
+        ]
+      ],
+      "le": [
+        0.20999999344348907,
+        0.19499999284744263,
+        0.16249999403953552
+      ],
+      "worldRGB": [
+        1.0,
+        0.8799999952316284,
+        0.6899999976158142
+      ],
+      "worldStrength": 0.3499999940395355,
+      "runtimeSlots": 39555,
+      "combinedEmptySlots": 29098,
+      "backgroundOnlyPositiveQueries": 1486704,
+      "combinedEmptyPositiveQueries": 1118832,
+      "expectedOrderingFailures": 3,
+      "expectedFinalFloorOverrides": 2,
+      "extraFinalQueriesBaseline": 96,
+      "preflightConfigSHA256": "f5ebfafd4008014f5afa69d9e5487ad5926b3c065917e8b3e24cad66bb634c24",
+      "extraFinalQueriesAllCasesVerified": true,
+      "extraFinalQueries": 96
+    },
+    {
+      "name": "native-front-albedo-reverse",
+      "case": "albedo",
+      "caseIndex": 4,
+      "view": "front",
+      "viewIndex": 0,
+      "reverse": true,
+      "snapshotFNV": "ab99985faeeb4f82",
+      "nativeCameraF32": [
+        -3.799999952316284,
+        -114.0,
+        304.0,
+        -15.199999809265137,
+        -69.16000366210938,
+        -6.840000152587891,
+        0.7401315569877625,
+        119.5,
+        67.0
+      ],
+      "sourceOrigin": [
+        -0.10000000149011612,
+        -8.0,
+        3.0
+      ],
+      "sourceUnitView": [
+        -0.0362752010448412,
+        0.9891035692868403,
+        -0.14268230098084736
+      ],
+      "near": 0.10000000149011612,
+      "far": 1000.0,
+      "rho": [
+        0.5040000081062317,
+        0.46799999475479126,
+        0.38999998569488525
+      ],
+      "floorWorld": [
+        [
+          -100.0,
+          -100.0,
+          0.0
+        ],
+        [
+          100.0,
+          -100.0,
+          0.0
+        ],
+        [
+          -100.0,
+          100.0,
+          0.0
+        ],
+        [
+          100.0,
+          100.0,
+          0.0
+        ]
+      ],
+      "floorTriangles": [
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          3,
+          2
+        ]
+      ],
+      "le": [
+        0.20999999344348907,
+        0.19499999284744263,
+        0.16249999403953552
+      ],
+      "worldRGB": [
+        1.0,
+        0.8799999952316284,
+        0.6899999976158142
+      ],
+      "worldStrength": 0.3499999940395355,
+      "runtimeSlots": 39555,
+      "combinedEmptySlots": 29098,
+      "backgroundOnlyPositiveQueries": 1486704,
+      "combinedEmptyPositiveQueries": 1118832,
+      "expectedOrderingFailures": 3,
+      "expectedFinalFloorOverrides": 2,
+      "extraFinalQueriesBaseline": 96,
+      "preflightConfigSHA256": "eac1701ef440cd588227b06bd3b3ce9ab12e7753cb6016c3a33fe5e5646b7ff3",
+      "extraFinalQueriesAllCasesVerified": true,
+      "extraFinalQueries": 96
+    },
+    {
+      "name": "native-oblique-albedo",
+      "case": "albedo",
+      "caseIndex": 4,
+      "view": "oblique",
+      "viewIndex": 1,
+      "reverse": false,
+      "snapshotFNV": "9fa01b79d8cc3e60",
+      "nativeCameraF32": [
+        -190.0,
+        -129.1999969482422,
+        304.0,
+        -10.640000343322754,
+        -68.4000015258789,
+        -9.5,
+        0.7401315569877625,
+        119.5,
+        67.0
+      ],
+      "sourceOrigin": [
+        -5.0,
+        -8.0,
+        3.4000000953674316
+      ],
+      "sourceUnitView": [
+        0.48970220307142526,
+        0.855941309855557,
+        -0.16600068189542397
+      ],
+      "near": 0.10000000149011612,
+      "far": 1000.0,
+      "rho": [
+        0.5040000081062317,
+        0.46799999475479126,
+        0.38999998569488525
+      ],
+      "floorWorld": [
+        [
+          -100.0,
+          -100.0,
+          0.0
+        ],
+        [
+          100.0,
+          -100.0,
+          0.0
+        ],
+        [
+          -100.0,
+          100.0,
+          0.0
+        ],
+        [
+          100.0,
+          100.0,
+          0.0
+        ]
+      ],
+      "floorTriangles": [
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          3,
+          2
+        ]
+      ],
+      "le": [
+        0.20999999344348907,
+        0.19499999284744263,
+        0.16249999403953552
+      ],
+      "worldRGB": [
+        1.0,
+        0.8799999952316284,
+        0.6899999976158142
+      ],
+      "worldStrength": 0.3499999940395355,
+      "runtimeSlots": 39573,
+      "combinedEmptySlots": 28902,
+      "backgroundOnlyPositiveQueries": 1656192,
+      "combinedEmptyPositiveQueries": 1203920,
+      "expectedOrderingFailures": 0,
+      "expectedFinalFloorOverrides": 0,
+      "extraFinalQueriesBaseline": 0,
+      "preflightConfigSHA256": "e4e4f40590d883f008ce238ba593a900ee9bcec10685cc620e47416a108fa5ee",
+      "extraFinalQueriesAllCasesVerified": true,
+      "extraFinalQueries": 0
+    },
+    {
+      "name": "native-oblique-albedo-reverse",
+      "case": "albedo",
+      "caseIndex": 4,
+      "view": "oblique",
+      "viewIndex": 1,
+      "reverse": true,
+      "snapshotFNV": "e9dbf963029f2066",
+      "nativeCameraF32": [
+        -190.0,
+        -129.1999969482422,
+        304.0,
+        -10.640000343322754,
+        -68.4000015258789,
+        -9.5,
+        0.7401315569877625,
+        119.5,
+        67.0
+      ],
+      "sourceOrigin": [
+        -5.0,
+        -8.0,
+        3.4000000953674316
+      ],
+      "sourceUnitView": [
+        0.48970220307142526,
+        0.855941309855557,
+        -0.16600068189542397
+      ],
+      "near": 0.10000000149011612,
+      "far": 1000.0,
+      "rho": [
+        0.5040000081062317,
+        0.46799999475479126,
+        0.38999998569488525
+      ],
+      "floorWorld": [
+        [
+          -100.0,
+          -100.0,
+          0.0
+        ],
+        [
+          100.0,
+          -100.0,
+          0.0
+        ],
+        [
+          -100.0,
+          100.0,
+          0.0
+        ],
+        [
+          100.0,
+          100.0,
+          0.0
+        ]
+      ],
+      "floorTriangles": [
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          3,
+          2
+        ]
+      ],
+      "le": [
+        0.20999999344348907,
+        0.19499999284744263,
+        0.16249999403953552
+      ],
+      "worldRGB": [
+        1.0,
+        0.8799999952316284,
+        0.6899999976158142
+      ],
+      "worldStrength": 0.3499999940395355,
+      "runtimeSlots": 39573,
+      "combinedEmptySlots": 28902,
+      "backgroundOnlyPositiveQueries": 1656192,
+      "combinedEmptyPositiveQueries": 1203920,
+      "expectedOrderingFailures": 0,
+      "expectedFinalFloorOverrides": 0,
+      "extraFinalQueriesBaseline": 0,
+      "preflightConfigSHA256": "bbd5940bdc536ee062aa2ac38a8b8abf1c0b065e2243006fe1a568da9cd20bd3",
+      "extraFinalQueriesAllCasesVerified": true,
+      "extraFinalQueries": 0
+    }
+  ],
+  "note": "extra final positive queries verified across allfive frontconditions and bothorders by pinned final-overrides-001; oblique has no retained overrides"
+}

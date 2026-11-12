@@ -1,0 +1,80 @@
+There are 71 section headers, starting at offset 0x57580:
+
+Section Headers:
+  [Nr] Name              Type            Addr     Off    Size   ES Flg Lk Inf Al
+  [ 0]                   NULL            00000000 000000 000000 00      0   0  0
+  [ 1] .literal.rawmul   PROGBITS        00000000 000034 00000c 00  AX  0   0  4
+  [ 2] .rela.literal.rawmul RELA            00000000 026c00 00000c 0c   I 68   1  4
+  [ 3] .literal.sq       PROGBITS        00000000 000040 000010 00  AX  0   0  4
+  [ 4] .rela.literal.sq  RELA            00000000 026c0c 00000c 0c   I 68   3  4
+  [ 5] .literal.roundiv$part$0 PROGBITS        00000000 000050 000008 00  AX  0   0  4
+  [ 6] .rela.literal.roundiv$part$0 RELA            00000000 026c18 000018 0c   I 68   5  4
+  [ 7] .literal.ramp$constprop$0 PROGBITS        00000000 000058 000020 00  AX  0   0  4
+  [ 8] .rela.literal.ramp$constprop$0 RELA            00000000 026c30 00003c 0c   I 68   7  4
+  [ 9] .literal.di       PROGBITS        00000000 000078 000010 00  AX  0   0  4
+  [10] .rela.literal.di  RELA            00000000 026c6c 00000c 0c   I 68   9  4
+  [11] .literal.uniform_left$constprop$0 PROGBITS        00000000 000088 0000ec 00  AX  0   0  4
+  [12] .rela.literal.uniform_left$constprop$0 RELA            00000000 026c78 000198 0c   I 68  11  4
+  [13] .literal.mc_eval$part$0 PROGBITS        00000000 000174 000384 00  AX  0   0  4
+  [14] .rela.literal.mc_eval$part$0 RELA            00000000 026e10 000948 0c   I 68  13  4
+  [15] .literal.mc_prepare PROGBITS        00000000 0004f8 000018 00  AX  0   0  4
+  [16] .rela.literal.mc_prepare RELA            00000000 027758 000024 0c   I 68  15  4
+  [17] .literal.mc_eval  PROGBITS        00000000 000510 000008 00  AX  0   0  4
+  [18] .rela.literal.mc_eval RELA            00000000 02777c 00000c 0c   I 68  17  4
+  [19] .literal.mc_block PROGBITS        00000000 000518 00000c 00  AX  0   0  4
+  [20] .rela.literal.mc_block RELA            00000000 027788 000018 0c   I 68  19  4
+  [21] .text             PROGBITS        00000000 000524 000000 00  AX  0   0  1
+  [22] .data             PROGBITS        00000000 000524 000000 00  WA  0   0  1
+  [23] .bss              NOBITS          00000000 000524 000000 00  WA  0   0  1
+  [24] .text.rawmul      PROGBITS        00000000 000524 0000e2 00  AX  0   0  4
+  [25] .rela.text.rawmul RELA            00000000 0277a0 00012c 0c   I 68  24  4
+  [26] .text.sq          PROGBITS        00000000 000608 0000dd 00  AX  0   0  4
+  [27] .rela.text.sq     RELA            00000000 0278cc 000114 0c   I 68  26  4
+  [28] .text.roundiv$part$0 PROGBITS        00000000 0006e8 0000e0 00  AX  0   0  4
+  [29] .rela.text.roundiv$part$0 RELA            00000000 0279e0 0000fc 0c   I 68  28  4
+  [30] .text.ramp$constprop$0 PROGBITS        00000000 0007c8 0000e4 00  AX  0   0  4
+  [31] .rela.text.ramp$constprop$0 RELA            00000000 027adc 000198 0c   I 68  30  4
+  [32] .text.di          PROGBITS        00000000 0008ac 000087 00  AX  0   0  4
+  [33] .rela.text.di     RELA            00000000 027c74 0000c0 0c   I 68  32  4
+  [34] .text.uniform_left$constprop$0 PROGBITS        00000000 000934 000617 00  AX  0   0  4
+  [35] .rela.text.uniform_left$constprop$0 RELA            00000000 027d34 0009fc 0c   I 68  34  4
+  [36] .text.mc_eval$part$0 PROGBITS        00000000 000f4c 0031c7 00  AX  0   0  4
+  [37] .rela.text.mc_eval$part$0 RELA            00000000 028730 006180 0c   I 68  36  4
+  [38] .text.mc_bits     PROGBITS        00000000 004114 000007 00  AX  0   0  4
+  [39] .text.mc_prepare  PROGBITS        00000000 00411c 000063 00  AX  0   0  4
+  [40] .rela.text.mc_prepare RELA            00000000 02e8b0 000090 0c   I 68  39  4
+  [41] .text.mc_eval     PROGBITS        00000000 004180 000044 00  AX  0   0  4
+  [42] .rela.text.mc_eval RELA            00000000 02e940 000054 0c   I 68  41  4
+  [43] .text.mc_block    PROGBITS        00000000 0041c4 000082 00  AX  0   0  4
+  [44] .rela.text.mc_block RELA            00000000 02e994 0000cc 0c   I 68  43  4
+  [45] .rodata.color_right PROGBITS        00000000 004248 00000c 00   A  0   0  4
+  [46] .rodata.color_left PROGBITS        00000000 004254 00000c 00   A  0   0  4
+  [47] .rodata.lut_shared PROGBITS        00000000 004260 000c0c 00   A  0   0  4
+  [48] .debug_frame      PROGBITS        00000000 004e6c 000118 00      0   0  4
+  [49] .rela.debug_frame RELA            00000000 02ea60 0002a0 0c   I 68  48  4
+  [50] .debug_info       PROGBITS        00000000 004f84 0076f0 00      0   0  1
+  [51] .rela.debug_info  RELA            00000000 02ed00 0094c8 0c   I 68  50  4
+  [52] .debug_abbrev     PROGBITS        00000000 00c674 0003bc 00      0   0  1
+  [53] .debug_loc        PROGBITS        00000000 00ca30 00a7b7 00      0   0  1
+  [54] .rela.debug_loc   RELA            00000000 0381c8 00b628 0c   I 68  53  4
+  [55] .debug_aranges    PROGBITS        00000000 0171e7 000070 00      0   0  1
+  [56] .rela.debug_aranges RELA            00000000 0437f0 000114 0c   I 68  55  4
+  [57] .debug_ranges     PROGBITS        00000000 017257 0023a8 00      0   0  1
+  [58] .rela.debug_ranges RELA            00000000 043904 005358 0c   I 68  57  4
+  [59] .debug_line       PROGBITS        00000000 0195ff 00a87e 00      0   0  1
+  [60] .rela.debug_line  RELA            00000000 048c5c 00c1b0 0c   I 68  59  4
+  [61] .debug_str        PROGBITS        00000000 023e7d 00045b 01  MS  0   0  1
+  [62] .comment          PROGBITS        00000000 0242d8 000030 01  MS  0   0  1
+  [63] .xtensa.info      NOTE            00000000 024308 000038 00      0   0  1
+  [64] .xt.lit           PROGBITS        00000000 024340 000050 00      0   0  1
+  [65] .rela.xt.lit      RELA            00000000 054e0c 000078 0c   I 68  64  4
+  [66] .xt.prop          PROGBITS        00000000 024390 0023f4 00      0   0  1
+  [67] .rela.xt.prop     RELA            00000000 054e84 0023f4 0c   I 68  66  4
+  [68] .symtab           SYMTAB          00000000 026784 0003b0 10     69  51  4
+  [69] .strtab           STRTAB          00000000 026b34 0000ca 00      0   0  1
+  [70] .shstrtab         STRTAB          00000000 057278 000305 00      0   0  1
+Key to Flags:
+  W (write), A (alloc), X (execute), M (merge), S (strings), I (info),
+  L (link order), O (extra OS processing required), G (group), T (TLS),
+  C (compressed), x (unknown), o (OS specific), E (exclude),
+  D (mbind), p (processor specific)

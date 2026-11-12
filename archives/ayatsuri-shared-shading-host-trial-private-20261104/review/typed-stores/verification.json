@@ -1,0 +1,72 @@
+{
+  "production_pairs": [
+    [
+      "O0",
+      "mixed",
+      6574028,
+      86,
+      77
+    ],
+    [
+      "O0",
+      "mesh_only",
+      6674257,
+      83,
+      74
+    ],
+    [
+      "O2",
+      "mixed",
+      6574028,
+      86,
+      77
+    ],
+    [
+      "O2",
+      "mesh_only",
+      6674257,
+      83,
+      74
+    ],
+    [
+      "asan_ubsan_O0",
+      "mixed",
+      6574028,
+      86,
+      77
+    ],
+    [
+      "asan_ubsan_O0",
+      "mesh_only",
+      6674257,
+      83,
+      74
+    ],
+    [
+      "asan_ubsan_O2",
+      "mixed",
+      6574028,
+      86,
+      77
+    ],
+    [
+      "asan_ubsan_O2",
+      "mesh_only",
+      6674257,
+      83,
+      74
+    ]
+  ],
+  "source_and_harness_hashes_match": true,
+  "fresh_O2_pair_result": {
+    "passed": true,
+    "cases": 87336,
+    "pair_calls": 1746720,
+    "exact_color_checks": 3493440,
+    "canary_checks": 24454080,
+    "output_2_not_4_aligned_calls": 873360,
+    "asymmetric_snorm_ties": 27,
+    "failures": 0,
+    "digest": "cb0a1d5fd3f72de5"
+  }
+}

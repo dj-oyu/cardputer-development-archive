@@ -1,0 +1,21 @@
+{
+  "include": [
+    "REPORT.md",
+    "summary.json",
+    "surface-feasibility.json",
+    "source-frames.json",
+    "measure_centerline.py",
+    "measure_surface_feasibility.py",
+    "inspect_source.py",
+    "inspect_frames.py",
+    "inspect_evaluated_rings.py"
+  ],
+  "exclude": [
+    "source-and-current.json",
+    "centerline-feasibility.json",
+    "source-evaluated-rings.json",
+    "source-lid--1-readonly.npz",
+    "source-lid-1-readonly.npz"
+  ],
+  "reason": "Do not bundle original control points or geometry arrays."
+}

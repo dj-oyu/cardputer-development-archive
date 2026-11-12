@@ -1,0 +1,144 @@
+{
+  "review_version": 1,
+  "reviewed_utc": "2026-10-20T05:57:30.623085+00:00",
+  "verdict": "EXACT_FLASH_READBACK_BOOT_ACCEPTED_TRIAL_TERMINAL_PENDING",
+  "scope": "Local files/analysis/review writes only. No API/MCP/device/USB/job/code operations. Preliminary review retained unchanged.",
+  "head": "dc2c5e044429a4904e91564aa7f9cb30d7d4cbbb",
+  "tree": "d72a737240d48def898899bf6dc71e0ac627c7f8",
+  "build_job": "derby-controller-baseline-build-dc2c5e04-20261020",
+  "flash_job": "derby-controller-baseline-flash-current-dc2c5e04-20261020",
+  "flash_plan_hash": "829e0ae03117682955f0109d9f905ec4c591ead1994d4213df2df6dcef00f6a0",
+  "flash_finished": "2026-10-20 05:54:50",
+  "expected_app_bin_sha256": "ae7ec8ec1fddd0238003c903fafe7c6de47ffe3c1e7df7c3b7b08a94f861578b",
+  "expected_elf_sha256": "f149d372f186a0e6642d2d929db1cbf1ae6cd2f8163458832b2024f0074c7962",
+  "flash_summary": {
+    "boot_log_matches_expected_artifact": true,
+    "boot_observed": true,
+    "boot_text_identity_verified": false,
+    "boot_text_is_cryptographic_proof": false,
+    "idf_version": "6.0.1",
+    "last_known_good_receipt": "e40bf864bafa4a3fdb94b418416ee90bda54801bfa4b0887c19e73d4a3889615",
+    "observed_elf_sha256_prefix": "f149d372f",
+    "observed_idf_version": "6.0.1",
+    "passive_boot_verified": true,
+    "readback_verified": true,
+    "target": "esp32s3",
+    "verification_basis": "full_segment_sha256_readback_and_boot_elf_prefix"
+  },
+  "provider_log_entries": 236,
+  "provider_log_sha256": "3ef6c95d017d0cd2b382109e07e4e45b0ab3504fb6b3d582604919a0dfb18379",
+  "provider_log_is_raw_uart": false,
+  "trial_job": "derby-controller-baseline-fixed-current-dc2c5e04-20261020",
+  "trial_plan_hash": "856cedeba14c533bf48380ac621a97ff9903fb27fe8acd3b79400349eadf66f1",
+  "trial_snapshot_state": "queued",
+  "trial_measurement_accepted": false,
+  "trial_plan_firmware_identity_limit": "configured_expected_hash_only is insufficient alone. Fresh preceding same-device exact manifest-segment SHA readback plus matching boot ELF/IDF binds this one trial sequence to the intended image; trial collector configured hash is not new cryptographic attestation.",
+  "checks": {
+    "flash_terminal_success": true,
+    "flash_exact_plan_job": true,
+    "exact_source_build": true,
+    "exact_image_proof": true,
+    "manifest_match": true,
+    "continuous236": true,
+    "private_provider_log_exact": true,
+    "continuity_summary": true,
+    "ordered_physical_stages": true,
+    "verified_flash_summary": true,
+    "boot_idf_elf": true,
+    "boot_home_marker": true,
+    "no_known_fatal_in_saved_boot": true,
+    "new_lkg_receipt": true,
+    "postflash_serial_closed_idle": true,
+    "same_owner_retained_for_trial": true,
+    "trial_plan_same_device_epoch": true,
+    "trial_v2_exact_bounds": true,
+    "trial_single_queued_execute": true,
+    "trial_after_flash": true,
+    "configured_hash_limited": true,
+    "prior_fixed_snapshot_retained": true
+  },
+  "input_sha256": {
+    "flash-poll-001-logs.json": {
+      "sha256": "ff6e2642791e311f27fc953565713dfed684cd79ead19bd2781f1a7150ae8665",
+      "bytes": 2136
+    },
+    "flash-poll-002-logs.json": {
+      "sha256": "fe44ab371637974395fc9b877169676b37b729afefe3064dbcfd3d7ee1de5d51",
+      "bytes": 1253
+    },
+    "flash-poll-003-logs.json": {
+      "sha256": "33a8fd58cfa8856bcb19b83ab0ca900f139eb60341c4366d39a4b63c1de55b15",
+      "bytes": 2486
+    },
+    "flash-poll-004-logs.json": {
+      "sha256": "9a7936140873ca7aa8ea9dd0bfa0ce6733e77550a6c2e5174f3444536350f59a",
+      "bytes": 2327
+    },
+    "flash-poll-005-logs.json": {
+      "sha256": "25fbe1ae43e80bbd15960e0217907ca42b88f9de1c6e47d95d5c58c06e2b4723",
+      "bytes": 2999
+    },
+    "flash-poll-006-logs.json": {
+      "sha256": "9f79510572febfe51ab40f42d31df3f1d5e5b420f536c9beb6951b92df2f2682",
+      "bytes": 1955
+    },
+    "flash-poll-007-logs.json": {
+      "sha256": "91ef8ce65f713c2ba74e9d424055e098424fabeb85c0ea0ac2218436aa0e2df5",
+      "bytes": 19603
+    },
+    "flash-final-logs.json": {
+      "sha256": "7aa848ac5a64034a3ea2faee7cbd46fb9d32a211595daf0826bfd8ad2fe9e85d",
+      "bytes": 14448
+    },
+    "flash-result.json": {
+      "sha256": "dd6b025fae959f525a58d9b09176b51577d1370b0033df6590d19615cb043371",
+      "bytes": 623
+    },
+    "post-flash-status.json": {
+      "sha256": "9963ae0ee284559e7f4dd89e09309889fc234ca17cc200fb42223a5585b91063",
+      "bytes": 1131
+    },
+    "FLASH-LOG-CONTINUITY.json": {
+      "sha256": "bdbeeed7524015bfc0214ab0b6e166d4041658c0e7bae39ef8f3a1a84ae3a9cf",
+      "bytes": 333
+    },
+    "flash-provider-output-private.log": {
+      "sha256": "3ef6c95d017d0cd2b382109e07e4e45b0ab3504fb6b3d582604919a0dfb18379",
+      "bytes": 14301
+    },
+    "SOURCE-BUILD-PROOF.json": {
+      "sha256": "96c1c7a1a9b41d0a37b0722071f04604437200cbfb319489a8e7764b3ecb0263",
+      "bytes": 11211
+    },
+    "flash-plan.json": {
+      "sha256": "f55140a08ee67fea6cf55881f21d3f70d43b908ae94b59ec5ece5b44f6ed67ab",
+      "bytes": 3844
+    },
+    "trial-plan.json": {
+      "sha256": "7d217b22bb98bfa415e8255cdc61a8e0005aef8dd914195c77b40a7ed655e979",
+      "bytes": 2266
+    },
+    "trial-execute.json": {
+      "sha256": "2d4e720ab4b5398e58f747b55b7d1a539ca2d8a194b46a5be376bd13458ab6a2",
+      "bytes": 590
+    },
+    "AUTHORIZATION-SCOPE.json": {
+      "sha256": "516bdb2d29df003b5ae22833df5d9c702a14517fc3247f0262934d9eefd630ed",
+      "bytes": 914
+    },
+    "INDEPENDENT-CURRENT-RECEIPT-PREFLIGHT-REVIEW.json": {
+      "sha256": "975ae1c468b52029d06cec9f961b3efa656502ec23053553deabc9b651ae4244",
+      "bytes": 10436
+    }
+  },
+  "pending": [
+    "Trial terminal result, full private raw receipt/SHA, strict exact-head parsing and END/owner EXIT/STOP/HOME/late-fault proof.",
+    "Final idle/uncertainty/lease release after finite trial."
+  ],
+  "notes": [
+    "Flash/readback/normal boot evidence is accepted at saved official-provider level; no physical LCD/UI attestation is claimed.",
+    "No application OOM resolution or measured workload success is inferred from HOME boot alone.",
+    "No native/batch/OFF or additional trial approval is implied. Prior failed gate/OOM history remains preserved.",
+    "Boot prefix alone is not cryptographic identity; verification basis includes full segment SHA256 readback. Raw BIN/ELF bytes are not independently materialized/rehashed by this reviewer."
+  ]
+}

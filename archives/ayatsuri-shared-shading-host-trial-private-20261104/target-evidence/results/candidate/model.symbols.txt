@@ -1,0 +1,116 @@
+
+/workspace/ayatsuri-s3-reconstructed-20261104/results/candidate/model.o:     file format elf32-xtensa-le
+
+SYMBOL TABLE:
+00000000 l    df *ABS*	00000000 ayatsuri_model.c
+00000000 l    d  .text	00000000 .text
+00000000 l    d  .data	00000000 .data
+00000000 l    d  .bss	00000000 .bss
+00000000 l    d  .text.md	00000000 .text.md
+00000000 l     F .text.md	00000055 md
+00000000 l    d  .text.mf	00000000 .text.mf
+00000000 l     F .text.mf	00000033 mf
+00000000 l    d  .text.pack_rgb	00000000 .text.pack_rgb
+00000000 l     F .text.pack_rgb	000000e8 pack_rgb
+00000000 l    d  .text.slot_bytes	00000000 .text.slot_bytes
+00000000 l     F .text.slot_bytes	0000002c slot_bytes
+00000000 l    d  .text.ayatsuri_shade_terms_prepare$isra$0	00000000 .text.ayatsuri_shade_terms_prepare$isra$0
+00000000 l     F .text.ayatsuri_shade_terms_prepare$isra$0	000001b7 ayatsuri_shade_terms_prepare$isra$0
+00000000 l    d  .text.float_rows_valid	00000000 .text.float_rows_valid
+00000000 l     F .text.float_rows_valid	0000007b float_rows_valid
+00000000 l    d  .text.node_slot_bytes	00000000 .text.node_slot_bytes
+00000000 l     F .text.node_slot_bytes	000000bf node_slot_bytes
+00000000 l    d  .text.mesh_project	00000000 .text.mesh_project
+00000000 l     F .text.mesh_project	00000145 mesh_project
+00000000 l    d  .text.mesh_packet	00000000 .text.mesh_packet
+00000000 l     F .text.mesh_packet	000022a4 mesh_packet
+00000000 l    d  .rodata.ayatsuri_model_open.str1.4	00000000 .rodata.ayatsuri_model_open.str1.4
+00000000 l    d  .text.ayatsuri_model_open	00000000 .text.ayatsuri_model_open
+00000000 l     O .rodata.strides$0	00000034 strides$0
+00000000 l    d  .text.ayatsuri_model_find_node	00000000 .text.ayatsuri_model_find_node
+00000000 l    d  .text.ayatsuri_model_instance_bytes	00000000 .text.ayatsuri_model_instance_bytes
+00000000 l    d  .text.ayatsuri_model_instance_init	00000000 .text.ayatsuri_model_instance_init
+00000000 l    d  .text.ayatsuri_model_instance_dispose	00000000 .text.ayatsuri_model_instance_dispose
+00000000 l    d  .text.ayatsuri_model_instance_targets	00000000 .text.ayatsuri_model_instance_targets
+00000000 l    d  .text.ayatsuri_model_instance_node_kind	00000000 .text.ayatsuri_model_instance_node_kind
+00000000 l    d  .text.ayatsuri_model_instance_read_pose	00000000 .text.ayatsuri_model_instance_read_pose
+00000000 l    d  .text.ayatsuri_model_instance_stats	00000000 .text.ayatsuri_model_instance_stats
+00000000 l    d  .text.ayatsuri_model_instance_evaluate	00000000 .text.ayatsuri_model_instance_evaluate
+00000000 l    d  .text.ayatsuri_model_instance_next	00000000 .text.ayatsuri_model_instance_next
+00000000 l    d  .text.ayatsuri_model_instance_mesh_view	00000000 .text.ayatsuri_model_instance_mesh_view
+00000000 l    d  .text.ayatsuri_model_instance_sided_mesh_view	00000000 .text.ayatsuri_model_instance_sided_mesh_view
+00000000 l    d  .rodata.strides$0	00000000 .rodata.strides$0
+00000000 l    d  .debug_frame	00000000 .debug_frame
+00000000 l    d  .debug_info	00000000 .debug_info
+00000000 l    d  .debug_abbrev	00000000 .debug_abbrev
+00000000 l    d  .debug_loc	00000000 .debug_loc
+00000000 l    d  .debug_aranges	00000000 .debug_aranges
+00000000 l    d  .debug_ranges	00000000 .debug_ranges
+00000000 l    d  .debug_line	00000000 .debug_line
+00000000 l    d  .debug_str	00000000 .debug_str
+00000000 l    d  .literal.md	00000000 .literal.md
+00000000 l    d  .literal.mf	00000000 .literal.mf
+00000000 l    d  .literal.pack_rgb	00000000 .literal.pack_rgb
+00000000 l    d  .literal.ayatsuri_shade_terms_prepare$isra$0	00000000 .literal.ayatsuri_shade_terms_prepare$isra$0
+00000000 l    d  .literal.float_rows_valid	00000000 .literal.float_rows_valid
+00000000 l    d  .literal.mesh_project	00000000 .literal.mesh_project
+00000000 l    d  .literal.mesh_packet	00000000 .literal.mesh_packet
+00000000 l    d  .literal.ayatsuri_model_open	00000000 .literal.ayatsuri_model_open
+00000000 l    d  .literal.ayatsuri_model_find_node	00000000 .literal.ayatsuri_model_find_node
+00000000 l    d  .literal.ayatsuri_model_instance_init	00000000 .literal.ayatsuri_model_instance_init
+00000000 l    d  .literal.ayatsuri_model_instance_targets	00000000 .literal.ayatsuri_model_instance_targets
+00000000 l    d  .literal.ayatsuri_model_instance_read_pose	00000000 .literal.ayatsuri_model_instance_read_pose
+00000000 l    d  .literal.ayatsuri_model_instance_stats	00000000 .literal.ayatsuri_model_instance_stats
+00000000 l    d  .literal.ayatsuri_model_instance_evaluate	00000000 .literal.ayatsuri_model_instance_evaluate
+00000000 l    d  .literal.ayatsuri_model_instance_next	00000000 .literal.ayatsuri_model_instance_next
+00000000 l    d  .literal.node_slot_bytes	00000000 .literal.node_slot_bytes
+00000000 l    d  .comment	00000000 .comment
+00000000 l    d  .xtensa.info	00000000 .xtensa.info
+00000000 l    d  .xt.lit	00000000 .xt.lit
+00000000 l    d  .xt.prop	00000000 .xt.prop
+00000000         *UND*	00000000 memcpy
+00000000         *UND*	00000000 __floatunsidf
+00000000         *UND*	00000000 __muldf3
+00000000         *UND*	00000000 __divdf3
+00000000         *UND*	00000000 __adddf3
+00000000         *UND*	00000000 floor
+00000000         *UND*	00000000 __fixunsdfsi
+00000000         *UND*	00000000 fmaxf
+00000000         *UND*	00000000 powf
+00000000         *UND*	00000000 __divsf3
+00000000         *UND*	00000000 sqrtf
+00000000         *UND*	00000000 __extendsfdf2
+00000000         *UND*	00000000 __subdf3
+00000000         *UND*	00000000 __unorddf2
+00000000         *UND*	00000000 __gtdf2
+00000000         *UND*	00000000 __eqdf2
+00000000         *UND*	00000000 hypot
+00000000         *UND*	00000000 fmin
+00000000         *UND*	00000000 fmax
+00000000         *UND*	00000000 __fixdfsi
+00000000         *UND*	00000000 lroundf
+00000000         *UND*	00000000 memset
+00000000         *UND*	00000000 __ltdf2
+00000000         *UND*	00000000 __ledf2
+00000000         *UND*	00000000 ayatsuri_visibility_select
+00000000 g     F .text.ayatsuri_model_open	000015ef ayatsuri_model_open
+00000000         *UND*	00000000 __gedf2
+00000000         *UND*	00000000 __nedf2
+00000000         *UND*	00000000 memcmp
+00000000 g     F .text.ayatsuri_model_find_node	000000e5 ayatsuri_model_find_node
+00000000 g     F .text.ayatsuri_model_instance_bytes	00000023 ayatsuri_model_instance_bytes
+00000000 g     F .text.ayatsuri_model_instance_init	000002be ayatsuri_model_instance_init
+00000000 g     F .text.ayatsuri_model_instance_dispose	00000039 ayatsuri_model_instance_dispose
+00000000 g     F .text.ayatsuri_model_instance_targets	00000394 ayatsuri_model_instance_targets
+00000000 g     F .text.ayatsuri_model_instance_node_kind	000000af ayatsuri_model_instance_node_kind
+00000000 g     F .text.ayatsuri_model_instance_read_pose	000000d0 ayatsuri_model_instance_read_pose
+00000000 g     F .text.ayatsuri_model_instance_stats	000000c6 ayatsuri_model_instance_stats
+00000000 g     F .text.ayatsuri_model_instance_evaluate	000037d1 ayatsuri_model_instance_evaluate
+00000000         *UND*	00000000 __truncdfsf2
+00000000         *UND*	00000000 cos
+00000000         *UND*	00000000 sin
+00000000 g     F .text.ayatsuri_model_instance_next	00000273 ayatsuri_model_instance_next
+00000000 g     F .text.ayatsuri_model_instance_mesh_view	00000125 ayatsuri_model_instance_mesh_view
+00000000 g     F .text.ayatsuri_model_instance_sided_mesh_view	00000140 ayatsuri_model_instance_sided_mesh_view
+
+

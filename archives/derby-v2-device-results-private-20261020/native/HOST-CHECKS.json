@@ -1,0 +1,211 @@
+{
+  "variant": "native",
+  "root": "/workspace/derby-controller-native",
+  "staged_tree": "b3de719ac438d8d3373a2c34786bc35c46e9200e",
+  "hardware_operations": false,
+  "checks": [
+    {
+      "name": "lint",
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.004,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "fixed-integration",
+      "command": [
+        "/workspace/.setup/venv/bin/python3",
+        "-B",
+        "tools/test_derby_fixed_integration.py"
+      ],
+      "exit_code": 0,
+      "seconds": 1.502,
+      "log_sha256": "9533de35ce535087cc0518b20d59cbce7a4419f89b7b46a1c5207d8fca37fd9d"
+    },
+    {
+      "name": "generation",
+      "command": [
+        "/workspace/.setup/venv/bin/python3",
+        "-B",
+        "tools/test_derby_detail_generation.py"
+      ],
+      "exit_code": 0,
+      "seconds": 1.22,
+      "log_sha256": "f8a716130ed5db0b71965d1831478f4f0aefbc6a4aea658e7b2a4aa9c7c2b723"
+    },
+    {
+      "name": "detail-accounting",
+      "command": [
+        "/workspace/.setup/venv/bin/python3",
+        "-B",
+        "tools/test_derby_detail.py"
+      ],
+      "exit_code": 0,
+      "seconds": 1.13,
+      "log_sha256": "5e7486c80dd25f839358a8484e9887cd4d49850fd873b2fa4cc7cc6511548c70"
+    },
+    {
+      "name": "detail-board",
+      "command": [
+        "/workspace/.setup/venv/bin/python3",
+        "-B",
+        "tools/test_derby_detail_board.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.342,
+      "log_sha256": "5782051cd7ab43c75e631109c1ee72df133df2fd77fbe277c27f95bed3c3f7fe"
+    },
+    {
+      "name": "detail-proof",
+      "command": [
+        "/workspace/.setup/venv/bin/python3",
+        "-B",
+        "tools/test_derby_detail_proof.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.134,
+      "log_sha256": "357e754eb681296020b6a93e1e9a414246ea336a45373c16f64ff6efafca8d91"
+    },
+    {
+      "name": "diagnostic-proof",
+      "command": [
+        "/workspace/.setup/venv/bin/python3",
+        "-B",
+        "tools/test_diagnostic_build.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.205,
+      "log_sha256": "dbe1503ab9e1540cdcbb25a14012efc71fb102c2ea8b6ae8a890a71bb089691c"
+    },
+    {
+      "name": "fixed-protocol",
+      "command": [
+        "/workspace/.setup/venv/bin/python3",
+        "-B",
+        "tools/test_derby_fixed_protocol.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.227,
+      "log_sha256": "c65e4163d7229d6a1334e4eca292466ed96c562a4d56fa5f165d76e1c544b54d"
+    },
+    {
+      "name": "fixed-controller",
+      "command": [
+        "/workspace/.setup/venv/bin/python3",
+        "-B",
+        "tools/test_derby_fixed_workload.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.438,
+      "log_sha256": "e99169a7822479bf9c9162e9f35ea0294e503387061449a127e3309e96b3daad"
+    },
+    {
+      "name": "fast-off",
+      "command": [
+        "/workspace/.setup/venv/bin/python3",
+        "-B",
+        "tools/games/run_derby_fixed.py",
+        "--out",
+        "/workspace/derby-evidence/controller-split-20261020/native/fast-off",
+        "--detail-fast"
+      ],
+      "exit_code": 0,
+      "seconds": 14.243,
+      "log_sha256": "fac517182bd01719da6f468fca8d2d3bf3a1a1965a71df62a4dda55558ed10ff"
+    },
+    {
+      "name": "fast-on",
+      "command": [
+        "/workspace/.setup/venv/bin/python3",
+        "-B",
+        "tools/games/run_derby_fixed.py",
+        "--out",
+        "/workspace/derby-evidence/controller-split-20261020/native/fast-on",
+        "--detail-fast",
+        "--detail"
+      ],
+      "exit_code": 0,
+      "seconds": 15.347,
+      "log_sha256": "322c789d2840ad0e581844cb6b35db679c3647d18078d97ac8d04b77ec0060c8"
+    },
+    {
+      "name": "fast-pair",
+      "command": [
+        "/workspace/.setup/venv/bin/python3",
+        "-B",
+        "tools/games/check_derby_detail_pair.py",
+        "--off",
+        "/workspace/derby-evidence/controller-split-20261020/native/fast-off",
+        "--on",
+        "/workspace/derby-evidence/controller-split-20261020/native/fast-on",
+        "--out",
+        "/workspace/derby-evidence/controller-split-20261020/native/fast-pair.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.047,
+      "log_sha256": "3f548632f07b3750a089e9d6b182455a9db9658a723569761d906d8a7c2a7ffb"
+    },
+    {
+      "name": "asan-off",
+      "command": [
+        "/workspace/.setup/venv/bin/python3",
+        "-B",
+        "tools/games/run_derby_fixed.py",
+        "--out",
+        "/workspace/derby-evidence/controller-split-20261020/native/asan-off"
+      ],
+      "exit_code": 0,
+      "seconds": 45.869,
+      "log_sha256": "aed7e92c53693d1f53ee849609d82771a844d585d3dcafb709c4465af1a66321"
+    },
+    {
+      "name": "asan-on",
+      "command": [
+        "/workspace/.setup/venv/bin/python3",
+        "-B",
+        "tools/games/run_derby_fixed.py",
+        "--out",
+        "/workspace/derby-evidence/controller-split-20261020/native/asan-on",
+        "--detail"
+      ],
+      "exit_code": 0,
+      "seconds": 50.286,
+      "log_sha256": "5022b9ab3ced6a1860d9e0e9cda225a40c57806fc4c9f1182d1b959c04dd4f12"
+    },
+    {
+      "name": "asan-pair",
+      "command": [
+        "/workspace/.setup/venv/bin/python3",
+        "-B",
+        "tools/games/check_derby_detail_pair.py",
+        "--off",
+        "/workspace/derby-evidence/controller-split-20261020/native/asan-off",
+        "--on",
+        "/workspace/derby-evidence/controller-split-20261020/native/asan-on",
+        "--out",
+        "/workspace/derby-evidence/controller-split-20261020/native/asan-pair.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.058,
+      "log_sha256": "c6e5c65620e81a112431a1f2cd9382557cbc04fb70f628c2f1ba3110c20b8dce"
+    },
+    {
+      "name": "normal-host",
+      "command": [
+        "/workspace/.setup/venv/bin/python3",
+        "-B",
+        "tools/games/run_derby.py",
+        "--heap-limit",
+        "524288"
+      ],
+      "exit_code": 0,
+      "seconds": 119.543,
+      "log_sha256": "8d194b903049b03f4c41a5400e68327f35f824fb5924144ee3acadedd23694bc"
+    }
+  ],
+  "all_pass": true
+}

@@ -1,0 +1,26 @@
+{
+  "status": "VISIBILITY_LIFETIME_FIXED42_APPROVED",
+  "actualFrameLimit": 42,
+  "authorFreezeApproved": true,
+  "independentReviewApproved": true,
+  "safetyGO": true,
+  "authorization": "Parent explicit fixed42 GO after corrected freeze, 2026-11-04T15:51:56Z. Canary each arm independently audited before remaining19. No retry or exception changes.",
+  "runnerSHA256": "91250f54c639675276ab85e5de572210c80265ed5adc0be9d565802667fe2391",
+  "comparatorSHA256": "5fa0ae8a5cabd0ed9d111d0155d598a03856883c4e1d7344734b365346c57404",
+  "contractSHA256": "e7373b785f3aad6f70916cb0fb85167f84b1942fd037898ce9865b152e437b43",
+  "baselinePinsSHA256": "72575db5283c9153e4924c8c11f302cd2c2d4ff79f5c86d1a9404f70b2d9521f",
+  "planSHA256": "273b0695d78ea61d13e6b5a0b71543d4bb905ef5d8e70925381bbc35087d3a79",
+  "sourceFreezeSHA256": "6c3e91af1b47fce6503cdd41b725f1cda93f3e3b57846c56e6cd0de0817cdc65",
+  "reviewSHA256": "f5f4f20b5152dd3d59dbde29734c82baa6747445a26f21f4985d2744e978a65a",
+  "runnerReviewSHA256": "d7c8b0aa557102da981e97562b3fb967c15b08992f08dc53cedb4ba7d650e1de",
+  "buildSHA256": "9c0cf1caf96ae8b9236c2558eec446f4ef602f28f8d37ee3b9fa10460cb034a7",
+  "additionalRequiredFiles": {
+    "comparison/COMPARISON_FREEZE.json": "123628b6e9456f503ce0c6ac0a0a01b95c688ec1441dfa82641d665445f71366",
+    "MEMORY_LEDGER.json": "584b3fccb11cb99d6345dca333616422055e3b87afa8491e220ed32fe2509461",
+    "CONSTRUCTION_NAMED_STACK.json": "c35d19e4e47111d491de849cbc8778c92067f290ecd95501afdc3c9f46e36cd7",
+    "PREREQUISITE_REPORT.json": "e4a998c54dc431a3f41910b0d379872a89c731c7159eae509a20bad3033c1ec2",
+    "SOURCE_DELTA.json": "f3d57863a0bdc3deb0ada59629b363a610da16afcf69900de7b4356122a2c14d",
+    "review/INDEPENDENT_SYNTHETIC.json": "ac7829188220d895e2f1a51778dc690369515b6dac4c63802a32bec4707f83da",
+    "review/INDEPENDENT_SOURCE_STACK_LEDGER.json": "da7416b8efad7df3fd45df2f9fcdb8064d9f506b7cf74bf46fec434463ce9887"
+  }
+}

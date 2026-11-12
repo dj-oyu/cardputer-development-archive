@@ -1,0 +1,114 @@
+{
+  "kind": "baseline",
+  "view": "front",
+  "status": "DERIVED_NOT_RENDERED",
+  "snapshotFNV": "017e6671f56c3bd8",
+  "targetPackedFNV": "dd51bcec009b27b1",
+  "targetU8FNV": "2c604373d9bce474",
+  "geometryFNV": "f9c66f89d3536bf6",
+  "geometrySHA256": "21b931cc40c2c42f0bf614b5091972c21412cf0f6c2b2345377141add3675a9e",
+  "targets": 2385,
+  "sampleHits": [
+    1922,
+    1920,
+    1933,
+    1903
+  ],
+  "centerUpdates": 9392,
+  "predictedObservedTotal": 7804336,
+  "reservedTotal": 7913890,
+  "counterDispatchConservativeBound": 296565,
+  "categories": {
+    "legacyCenterReservation": {
+      "predictedObserved": 2750272,
+      "reserved": 2750272
+    },
+    "centerIDInitialization": {
+      "predictedObserved": 32400,
+      "reserved": 32400
+    },
+    "centerIDUpdateUpper": {
+      "predictedObserved": 9392,
+      "reserved": 56128
+    },
+    "maskBytesClear": {
+      "predictedObserved": 4050,
+      "reserved": 4050
+    },
+    "maskNeighborComparisons": {
+      "predictedObserved": 129600,
+      "reserved": 129600
+    },
+    "bandHDRClear": {
+      "predictedObserved": 97200,
+      "reserved": 97200
+    },
+    "sampleDepthWinnerClear": {
+      "predictedObserved": 259200,
+      "reserved": 259200
+    },
+    "recordVisits": {
+      "predictedObserved": 3672,
+      "reserved": 3672
+    },
+    "faceSetupAndVertexDecodeStages": {
+      "predictedObserved": 1701632,
+      "reserved": 1701632
+    },
+    "bboxVisitAndMaskTest": {
+      "predictedObserved": 448136,
+      "reserved": 448136
+    },
+    "targetEdgeDepthWinnerStages": {
+      "predictedObserved": 1246416,
+      "reserved": 1246416
+    },
+    "finalSampleScan": {
+      "predictedObserved": 129600,
+      "reserved": 129600
+    },
+    "finalHitShadingAndInterpolationUpper": {
+      "predictedObserved": 583528,
+      "reserved": 583528
+    },
+    "finalPixelAverageEncodeWrite": {
+      "predictedObserved": 19080,
+      "reserved": 19080
+    },
+    "sourceIdentityBindingValidationUpper": {
+      "predictedObserved": 29463,
+      "reserved": 32768
+    },
+    "identityKeyClearBytes": {
+      "predictedObserved": 9920,
+      "reserved": 9920
+    },
+    "identityFingerprintBytes": {
+      "predictedObserved": 7930,
+      "reserved": 8192
+    },
+    "snapshotBindingFingerprintBytes": {
+      "predictedObserved": 64208,
+      "reserved": 65536
+    },
+    "admissionAndPhaseControl": {
+      "predictedObserved": 284,
+      "reserved": 4160
+    },
+    "counterGuardDispatches": {
+      "predictedObserved": 245953,
+      "reserved": 300000
+    },
+    "finalOutputPixelScan": {
+      "predictedObserved": 32400,
+      "reserved": 32400
+    }
+  },
+  "all21PredictedObservedEqualSavedActual": true,
+  "reservationDifferencesFromOld": {
+    "counterGuardDispatches": [
+      310000,
+      300000
+    ]
+  }
+}

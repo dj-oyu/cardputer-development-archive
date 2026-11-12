@@ -1,0 +1,18 @@
+bounce tests passed: uniform-world, blocked-world, rhoX*rhoY, zero-rho, 16/64, sign/sides, generations, lifetime, failure atomicity and budgets
+ground tests passed: primary rho*linearLe, two-sided, world replacement, secondary floor zero, opaque area blocking, descriptor ownership, emission generations, retained lifetime, range and capacity
+area secondary outer16 value 0.0615123913267, exact visibility-free reference matched
+area secondary outer64 value 0.059204987905, exact visibility-free reference matched
+dense plane area 1024 samples value 0.05850835038
+dense plane area 4096 samples value 0.0585013682084
+dense plane area 16384 samples value 0.058501232065
+partial square world: 16 samples visible fraction 0.5
+partial square world: 64 samples visible fraction 0.5
+partial square world: 1024 samples visible fraction 0.5625
+partial square world: 4096 samples visible fraction 0.5517578125
+partial square world: 16384 samples visible fraction 0.556396484375
+errors against16384: 16 0.056396484375,64 0.056396484375,1024 0.006103515625,4096 0.004638671875
+quadrature tests passed
+finite square a=h=1 analytic cosine fraction 0.554126423979572, Cartesian512x512 0.554126980528172
+actual outer16 Le fraction 0.5 relative_error -0.0976788357986106
+actual outer64 Le fraction 0.5625 relative_error 0.015111309726563
+independent cosine16384 0.55419921875 relative_error 0.000131368524000907

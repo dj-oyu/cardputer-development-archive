@@ -1,0 +1,84 @@
+{
+  "status": "SOURCE_LEVEL_SUCCESS_PATH_DISPATCH_BOUND",
+  "sourceSHA256": "2eacde0dc3c83dcf3330218145bd2b8f382703e7121f9381f557c6f3d643cf4b",
+  "unit": "One bridge-level guard dispatch evaluates a complete grouped condition, consistent with the existing rh_encode combined-capacity dispatch unit. Every bridge loop-condition evaluation is additionally counted conservatively. This is not scalar Boolean operands, machine instructions or CPU time.",
+  "rowValidateOn": {
+    "breakdown": [
+      {
+        "scope": "row_validate initial pointer guards",
+        "upper": 2
+      },
+      {
+        "scope": "row_validate metadata guard",
+        "upper": 1
+      },
+      {
+        "scope": "two direct/transport budgets:3 loop conditions+2 compound guards",
+        "upper": 5
+      },
+      {
+        "scope": "background budget/work guard",
+        "upper": 1
+      },
+      {
+        "scope": "world pointer enabled dispatch",
+        "upper": 1
+      },
+      {
+        "scope": "world span overflow/owned predicate dispatch",
+        "upper": 1
+      },
+      {
+        "scope": "world24 pairs:25 loop conditions+24 overlap predicate guards",
+        "upper": 49
+      },
+      {
+        "scope": "original24-span outer loop condition",
+        "upper": 25
+      },
+      {
+        "scope": "original24 span validity/owned predicates",
+        "upper": 24
+      },
+      {
+        "scope": "original276 pairs:300 inner-loop conditions+276 overlap guards",
+        "upper": 576
+      },
+      {
+        "scope": "original24 background owned dispatches",
+        "upper": 24
+      }
+    ],
+    "upper": 709
+  },
+  "otherBridgeControl": [
+    {
+      "scope": "row_transport_render including12 conditions for11 category sum loop",
+      "upper": 17
+    },
+    {
+      "scope": "row_hash_prepay compound bound dispatch",
+      "upper": 1
+    },
+    {
+      "scope": "row_verify_sources three compound guards",
+      "upper": 3
+    },
+    {
+      "scope": "row_finish final conjunction dispatch",
+      "upper": 1
+    }
+  ],
+  "worldOnTotalUpper": 731,
+  "worldOffTotalUpper": 681,
+  "unchangedReservedGuardUpper": 1024,
+  "worldOnHeadroom": 293,
+  "pairCategorySeparately": {
+    "off": 276,
+    "on": 300,
+    "unchangedAdmissionCap": 1024
+  },
+  "scope": "Successful path upper reservation for the row bridge only, not a count of all renderer branch instructions. Each compound predicate dispatch includes calls to existing owned-span, generation and source validation kernels; their internals are not independently metered by this preexisting dispatch unit. Fingerprint byte work has separate72138-byte prepayment and73728 limit. Core producer, background, transport and world shader work keep their separate original ledgers. Failed admission is not represented as a completed prepaid render.",
+  "unchangedPhysicalCaps": true,
+  "noCPUCostOrOld8MCombinedAdmissionClaim": true
+}

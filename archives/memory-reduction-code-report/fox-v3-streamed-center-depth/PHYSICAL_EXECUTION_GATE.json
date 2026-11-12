@@ -1,0 +1,26 @@
+{
+  "status": "STREAMED_DEPTH_FIXED42_APPROVED",
+  "actualFrameLimit": 42,
+  "authorFreezeApproved": true,
+  "independentReviewApproved": true,
+  "safetyGO": true,
+  "authorization": "Parent GO exact42 on frozen source, independent review and private preactual checkpoint; fail-stop no contract broadening",
+  "additionalRequiredFiles": {
+    "MEMORY_LEDGER.json": "54e891de775d36070dcb078f875407cb551d45c74e1086e60f377c25eb5128e2",
+    "PRODUCT_NAMED_STACK.json": "3ae67ef63657e13cd8f37f3cc522a172f9c0d21686ee42121c041ec54c999755",
+    "NAMED_STACK.json": "d68e1f4737d9d705cd98f3736a4cbd227707863647a6c36d687e9b6d397f953c",
+    "PREREQUISITE_REPORT.json": "00757c5e7c29133f1e35c0f7284bfc1b98d4245532c68c9a0be566e1fd499870",
+    "GUARD_ACCOUNTING.json": "3d21de6602e3a5a2258688d100b51b5589fb32e1deac00481fa7736edea5ff1b",
+    "HOST_BINARY_SIZE.json": "83e79e611cfb53d44fb2f783aa7ebbab791801b0b92e4e70f9c19dc39501da9e",
+    "comparison/COMPARISON_FREEZE.json": "0541da14591dc8d6f65aba3c2f81e006eb3ee3b580ed07848c52f650d9dea3ea"
+  },
+  "runnerSHA256": "8cce12e719ff88de9294f4799499aa8b75d1521308533d0e70be62148da0c5ea",
+  "comparatorSHA256": "da568922d477e1a3942f734d02b8477f7dfb3ed3c212adb289941794e61a9417",
+  "contractSHA256": "c711b96f0fee22e271984b1d1e05cf83f5c885685a778915f33b0a10a9ce455e",
+  "baselinePinsSHA256": "cd8023184a29cbfb945773f92b705d2427453a03841a9d317d11daef7c91d08f",
+  "planSHA256": "db23eb8fa47a02eb430bb3facd4ec4fcd578cee030375035d25a645438d9db76",
+  "sourceFreezeSHA256": "83e01a018e3f3839d26161b861b20c674b954ccd60f8b8b77332e890634604f0",
+  "reviewSHA256": "64bb50303bfdfe2fc28ef576373748273fae31d51a98f764ffae562aa58712a2",
+  "runnerReviewSHA256": "46261133bf0a0e88c07130aa52f80cb177991eb7f23a721da63961080ad146e0",
+  "buildSHA256": "4d20605604c77f454bf54ddfb0eb26cee1b7a292fd14b6253a73c9f43d372181"
+}

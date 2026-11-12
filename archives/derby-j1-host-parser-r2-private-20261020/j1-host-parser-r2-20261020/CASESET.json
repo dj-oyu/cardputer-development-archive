@@ -1,0 +1,398 @@
+[
+  {
+    "case": "actual_ON_host_metadata",
+    "expected_accept": true
+  },
+  {
+    "case": "canonical_bare_identity_ready",
+    "expected_accept": true
+  },
+  {
+    "case": "id_wrong_tag",
+    "expected_accept": false
+  },
+  {
+    "case": "ready_wrong_tag",
+    "expected_accept": false
+  },
+  {
+    "case": "id_prefix",
+    "expected_accept": false
+  },
+  {
+    "case": "id_suffix",
+    "expected_accept": false
+  },
+  {
+    "case": "ready_prefix",
+    "expected_accept": false
+  },
+  {
+    "case": "ready_suffix",
+    "expected_accept": false
+  },
+  {
+    "case": "id_timestamp_negative",
+    "expected_accept": false
+  },
+  {
+    "case": "ready_timestamp_decimal",
+    "expected_accept": false
+  },
+  {
+    "case": "duplicate_id",
+    "expected_accept": false
+  },
+  {
+    "case": "duplicate_ready",
+    "expected_accept": false
+  },
+  {
+    "case": "missing_id",
+    "expected_accept": false
+  },
+  {
+    "case": "missing_ready",
+    "expected_accept": false
+  },
+  {
+    "case": "missing_owner",
+    "expected_accept": false
+  },
+  {
+    "case": "duplicate_owner",
+    "expected_accept": false
+  },
+  {
+    "case": "owner_wrong_session",
+    "expected_accept": false
+  },
+  {
+    "case": "owner_prefix",
+    "expected_accept": false
+  },
+  {
+    "case": "owner_suffix",
+    "expected_accept": false
+  },
+  {
+    "case": "stop_before_owner",
+    "expected_accept": false
+  },
+  {
+    "case": "home_before_stop",
+    "expected_accept": false
+  },
+  {
+    "case": "end_after_owner",
+    "expected_accept": false
+  },
+  {
+    "case": "duplicate_end",
+    "expected_accept": false
+  },
+  {
+    "case": "duplicate_stop",
+    "expected_accept": false
+  },
+  {
+    "case": "duplicate_home",
+    "expected_accept": false
+  },
+  {
+    "case": "stop_wrong_tag",
+    "expected_accept": false
+  },
+  {
+    "case": "home_wrong_tag",
+    "expected_accept": false
+  },
+  {
+    "case": "late_fault_after_HOME",
+    "expected_accept": false
+  },
+  {
+    "case": "fault_after_END",
+    "expected_accept": false
+  },
+  {
+    "case": "partial_tail",
+    "expected_accept": false
+  },
+  {
+    "case": "extra_spoof_stop_prefix",
+    "expected_accept": false
+  },
+  {
+    "case": "extra_spoof_home_suffix",
+    "expected_accept": false
+  },
+  {
+    "case": "extra_spoof_end_prefix",
+    "expected_accept": false
+  },
+  {
+    "case": "transport_gaps",
+    "expected_accept": false
+  },
+  {
+    "case": "transport_overflow",
+    "expected_accept": false
+  },
+  {
+    "case": "transport_truncated",
+    "expected_accept": false
+  },
+  {
+    "case": "transport_partial_tail",
+    "expected_accept": false
+  },
+  {
+    "case": "transport_disconnect",
+    "expected_accept": false
+  },
+  {
+    "case": "transport_reset",
+    "expected_accept": false
+  },
+  {
+    "case": "transport_refused",
+    "expected_accept": false
+  },
+  {
+    "case": "transport_bytes",
+    "expected_accept": false
+  },
+  {
+    "case": "transport_sha256",
+    "expected_accept": false
+  },
+  {
+    "case": "transport_complete",
+    "expected_accept": false
+  },
+  {
+    "case": "transport_duration_ms",
+    "expected_accept": false
+  },
+  {
+    "case": "raw_export_mismatch",
+    "expected_accept": false
+  },
+  {
+    "case": "receipt_export_mismatch",
+    "expected_accept": false
+  },
+  {
+    "case": "collector_expected_elf",
+    "expected_accept": false
+  },
+  {
+    "case": "collector_planhash",
+    "expected_accept": false
+  },
+  {
+    "case": "collector_jobid",
+    "expected_accept": false
+  },
+  {
+    "case": "collector_epoch",
+    "expected_accept": false
+  },
+  {
+    "case": "collector_device",
+    "expected_accept": false
+  },
+  {
+    "case": "collector_principal",
+    "expected_accept": false
+  },
+  {
+    "case": "flash_job_planhash",
+    "expected_accept": false
+  },
+  {
+    "case": "collection_job_planhash",
+    "expected_accept": false
+  },
+  {
+    "case": "flash_unsuccessful",
+    "expected_accept": false
+  },
+  {
+    "case": "collector_unsuccessful",
+    "expected_accept": false
+  },
+  {
+    "case": "flash_summary_request",
+    "expected_accept": false
+  },
+  {
+    "case": "flash_receipt_current",
+    "expected_accept": false
+  },
+  {
+    "case": "proof_mode",
+    "expected_accept": false
+  },
+  {
+    "case": "source_commit",
+    "expected_accept": false
+  },
+  {
+    "case": "source_receipt",
+    "expected_accept": false
+  },
+  {
+    "case": "typed_plan_schema_version",
+    "expected_accept": false
+  },
+  {
+    "case": "typed_plan_principal_id",
+    "expected_accept": false
+  },
+  {
+    "case": "typed_plan_device_id",
+    "expected_accept": false
+  },
+  {
+    "case": "typed_plan_device_fingerprint",
+    "expected_accept": false
+  },
+  {
+    "case": "typed_plan_flash_job_id",
+    "expected_accept": false
+  },
+  {
+    "case": "typed_plan_flash_plan_hash",
+    "expected_accept": false
+  },
+  {
+    "case": "typed_plan_firmware_receipt",
+    "expected_accept": false
+  },
+  {
+    "case": "typed_plan_build_job_id",
+    "expected_accept": false
+  },
+  {
+    "case": "typed_plan_build_plan_hash",
+    "expected_accept": false
+  },
+  {
+    "case": "typed_plan_source_receipt",
+    "expected_accept": false
+  },
+  {
+    "case": "typed_plan_source_commit",
+    "expected_accept": false
+  },
+  {
+    "case": "typed_plan_manifest_sha256",
+    "expected_accept": false
+  },
+  {
+    "case": "typed_plan_modeproof_sha256",
+    "expected_accept": false
+  },
+  {
+    "case": "typed_plan_derby_detail_mode",
+    "expected_accept": false
+  },
+  {
+    "case": "typed_plan_expected_elf_sha256",
+    "expected_accept": false
+  },
+  {
+    "case": "typed_plan_expected_app_bin_sha256",
+    "expected_accept": false
+  },
+  {
+    "case": "typed_record_schema_version",
+    "expected_accept": false
+  },
+  {
+    "case": "typed_record_principal_id",
+    "expected_accept": false
+  },
+  {
+    "case": "typed_record_device_id",
+    "expected_accept": false
+  },
+  {
+    "case": "typed_record_device_fingerprint",
+    "expected_accept": false
+  },
+  {
+    "case": "typed_record_flash_job_id",
+    "expected_accept": false
+  },
+  {
+    "case": "typed_record_flash_plan_hash",
+    "expected_accept": false
+  },
+  {
+    "case": "typed_record_firmware_receipt",
+    "expected_accept": false
+  },
+  {
+    "case": "typed_record_build_job_id",
+    "expected_accept": false
+  },
+  {
+    "case": "typed_record_build_plan_hash",
+    "expected_accept": false
+  },
+  {
+    "case": "typed_record_source_receipt",
+    "expected_accept": false
+  },
+  {
+    "case": "typed_record_source_commit",
+    "expected_accept": false
+  },
+  {
+    "case": "typed_record_manifest_sha256",
+    "expected_accept": false
+  },
+  {
+    "case": "typed_record_modeproof_sha256",
+    "expected_accept": false
+  },
+  {
+    "case": "typed_record_derby_detail_mode",
+    "expected_accept": false
+  },
+  {
+    "case": "typed_record_expected_elf_sha256",
+    "expected_accept": false
+  },
+  {
+    "case": "typed_record_expected_app_bin_sha256",
+    "expected_accept": false
+  },
+  {
+    "case": "cross_plan_session",
+    "expected_accept": false
+  },
+  {
+    "case": "cross_plan_epoch",
+    "expected_accept": false
+  },
+  {
+    "case": "typed_schema_bool",
+    "expected_accept": false
+  },
+  {
+    "case": "binding_protocol_parser_commit",
+    "expected_accept": false
+  },
+  {
+    "case": "binding_device_reported_session",
+    "expected_accept": false
+  },
+  {
+    "case": "binding_installed_boot_source_image",
+    "expected_accept": false
+  }
+]

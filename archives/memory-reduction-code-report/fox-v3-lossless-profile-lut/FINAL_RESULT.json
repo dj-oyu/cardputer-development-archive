@@ -1,0 +1,45 @@
+{
+  "status": "STANDALONE_LOSSLESS_PROFILE_INDEPENDENT_PASS_NOT_INTEGRATED",
+  "rawLUTBytes": 1647750,
+  "compressedBlobBytes": 445248,
+  "LUTSavings": 1202502,
+  "valuesExhaustivelyExact": 823875,
+  "profileSyntheticInputs": 460224,
+  "retainedFrameCount": 40,
+  "retainedFramePixels": 1296000,
+  "totalStandaloneInputs": 1756224,
+  "compilerModes": [
+    "O0",
+    "O2",
+    "ASan+UBSan (LSan unavailable under ptrace)"
+  ],
+  "hostCost": {
+    "mainTableSavings": 1202502,
+    "allROSavings": 1202486,
+    "textIncrease": 1734,
+    "namedProfileChainIncrease": 344
+  },
+  "namedProfileStack": {
+    "old": 144,
+    "new": 488
+  },
+  "hostProfileOnlySlowdown": {
+    "finalSyntheticRatio": 24.78,
+    "finalRetainedSampleRatio": 84.47,
+    "initialSyntheticRatio": 22.587782094458237,
+    "scope": "different explicitly fixed corpora; no target or fullrenderer timing"
+  },
+  "oldFirmwareHeadroomBeforeNewCode": 544048,
+  "headroomMinusBlobOnly": 98800,
+  "rendererIntegrated": false,
+  "deviceFitProven": false,
+  "newPhysicalRenders": 0,
+  "pins": {
+    "research/block_decoder.c": "4edd59bb122619abfcd006e06e3bfb614ed116f25ce7f8788979f4f40d30f3e1",
+    "research/private/agx_cube4_rice.bin": "ddb92d760c9359008a2c1a8bb179936b196c0e37d1b7f9c2f12d4c71fafcae5e",
+    "profile/PROFILE_FREEZE.json": "d17bca397047891773da8a2fbb8ff6648d387f6d7642390b41440a56af1c72cb",
+    "profile/BENCHMARK.json": "c4f49710ec9c8fc80f11a9d56b3fd2c31900756a5623f7146bdc177544805404",
+    "review/REVIEW.json": "e114ec29fb1151862bfb032c622de71938d52659e47190881ea540bc129a94e7",
+    "review/PROFILE_REVIEW.json": "82d1d24d0c7c66d0bd9c89787bee42058ba50af7cf739c9e723960e7637f1dba"
+  }
+}

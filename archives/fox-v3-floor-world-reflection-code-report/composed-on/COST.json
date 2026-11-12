@@ -1,0 +1,306 @@
+{
+  "rows": [
+    {
+      "view": "front",
+      "case": "baseline",
+      "profile": "legacy",
+      "rawNs": [
+        1010648,
+        902294,
+        1048135
+      ],
+      "minNs": 902294,
+      "medianNs": 1010648,
+      "maxNs": 1048135,
+      "repetitions": 3,
+      "allOutputsExact": true
+    },
+    {
+      "view": "front",
+      "case": "baseline",
+      "profile": "agx",
+      "rawNs": [
+        3207159,
+        3099537,
+        3144304
+      ],
+      "minNs": 3099537,
+      "medianNs": 3144304,
+      "maxNs": 3207159,
+      "repetitions": 3,
+      "allOutputsExact": true
+    },
+    {
+      "view": "oblique",
+      "case": "baseline",
+      "profile": "legacy",
+      "rawNs": [
+        988765,
+        964599,
+        874282
+      ],
+      "minNs": 874282,
+      "medianNs": 964599,
+      "maxNs": 988765,
+      "repetitions": 3,
+      "allOutputsExact": true
+    },
+    {
+      "view": "oblique",
+      "case": "baseline",
+      "profile": "agx",
+      "rawNs": [
+        3466292,
+        3500123,
+        3227190
+      ],
+      "minNs": 3227190,
+      "medianNs": 3466292,
+      "maxNs": 3500123,
+      "repetitions": 3,
+      "allOutputsExact": true
+    },
+    {
+      "view": "front",
+      "case": "direction",
+      "profile": "legacy",
+      "rawNs": [
+        938389,
+        941754,
+        956406
+      ],
+      "minNs": 938389,
+      "medianNs": 941754,
+      "maxNs": 956406,
+      "repetitions": 3,
+      "allOutputsExact": true
+    },
+    {
+      "view": "front",
+      "case": "direction",
+      "profile": "agx",
+      "rawNs": [
+        3288192,
+        3198396,
+        3401062
+      ],
+      "minNs": 3198396,
+      "medianNs": 3288192,
+      "maxNs": 3401062,
+      "repetitions": 3,
+      "allOutputsExact": true
+    },
+    {
+      "view": "oblique",
+      "case": "direction",
+      "profile": "legacy",
+      "rawNs": [
+        1001323,
+        893110,
+        875283
+      ],
+      "minNs": 875283,
+      "medianNs": 893110,
+      "maxNs": 1001323,
+      "repetitions": 3,
+      "allOutputsExact": true
+    },
+    {
+      "view": "oblique",
+      "case": "direction",
+      "profile": "agx",
+      "rawNs": [
+        3371758,
+        5941543,
+        3285969
+      ],
+      "minNs": 3285969,
+      "medianNs": 3371758,
+      "maxNs": 5941543,
+      "repetitions": 3,
+      "allOutputsExact": true
+    },
+    {
+      "view": "front",
+      "case": "intensity",
+      "profile": "legacy",
+      "rawNs": [
+        936025,
+        874923,
+        894944
+      ],
+      "minNs": 874923,
+      "medianNs": 894944,
+      "maxNs": 936025,
+      "repetitions": 3,
+      "allOutputsExact": true
+    },
+    {
+      "view": "front",
+      "case": "intensity",
+      "profile": "agx",
+      "rawNs": [
+        3149862,
+        3220108,
+        3291626
+      ],
+      "minNs": 3149862,
+      "medianNs": 3220108,
+      "maxNs": 3291626,
+      "repetitions": 3,
+      "allOutputsExact": true
+    },
+    {
+      "view": "oblique",
+      "case": "intensity",
+      "profile": "legacy",
+      "rawNs": [
+        917738,
+        857257,
+        894983
+      ],
+      "minNs": 857257,
+      "medianNs": 894983,
+      "maxNs": 917738,
+      "repetitions": 3,
+      "allOutputsExact": true
+    },
+    {
+      "view": "oblique",
+      "case": "intensity",
+      "profile": "agx",
+      "rawNs": [
+        3527813,
+        3454212,
+        3469196
+      ],
+      "minNs": 3454212,
+      "medianNs": 3469196,
+      "maxNs": 3527813,
+      "repetitions": 3,
+      "allOutputsExact": true
+    },
+    {
+      "view": "front",
+      "case": "ambient",
+      "profile": "legacy",
+      "rawNs": [
+        960181,
+        939701,
+        888974
+      ],
+      "minNs": 888974,
+      "medianNs": 939701,
+      "maxNs": 960181,
+      "repetitions": 3,
+      "allOutputsExact": true
+    },
+    {
+      "view": "front",
+      "case": "ambient",
+      "profile": "agx",
+      "rawNs": [
+        3632903,
+        3266408,
+        3355343
+      ],
+      "minNs": 3266408,
+      "medianNs": 3355343,
+      "maxNs": 3632903,
+      "repetitions": 3,
+      "allOutputsExact": true
+    },
+    {
+      "view": "oblique",
+      "case": "ambient",
+      "profile": "legacy",
+      "rawNs": [
+        939941,
+        920852,
+        971499
+      ],
+      "minNs": 920852,
+      "medianNs": 939941,
+      "maxNs": 971499,
+      "repetitions": 3,
+      "allOutputsExact": true
+    },
+    {
+      "view": "oblique",
+      "case": "ambient",
+      "profile": "agx",
+      "rawNs": [
+        3039075,
+        3547634,
+        3924003
+      ],
+      "minNs": 3039075,
+      "medianNs": 3547634,
+      "maxNs": 3924003,
+      "repetitions": 3,
+      "allOutputsExact": true
+    },
+    {
+      "view": "front",
+      "case": "albedo",
+      "profile": "legacy",
+      "rawNs": [
+        1187606,
+        905679,
+        966622
+      ],
+      "minNs": 905679,
+      "medianNs": 966622,
+      "maxNs": 1187606,
+      "repetitions": 3,
+      "allOutputsExact": true
+    },
+    {
+      "view": "front",
+      "case": "albedo",
+      "profile": "agx",
+      "rawNs": [
+        3288973,
+        3198967,
+        3090292
+      ],
+      "minNs": 3090292,
+      "medianNs": 3198967,
+      "maxNs": 3288973,
+      "repetitions": 3,
+      "allOutputsExact": true
+    },
+    {
+      "view": "oblique",
+      "case": "albedo",
+      "profile": "legacy",
+      "rawNs": [
+        917998,
+        857076,
+        891568
+      ],
+      "minNs": 857076,
+      "medianNs": 891568,
+      "maxNs": 917998,
+      "repetitions": 3,
+      "allOutputsExact": true
+    },
+    {
+      "view": "oblique",
+      "case": "albedo",
+      "profile": "agx",
+      "rawNs": [
+        3240990,
+        3044353,
+        2989981
+      ],
+      "minNs": 2989981,
+      "medianNs": 3044353,
+      "maxNs": 3240990,
+      "repetitions": 3,
+      "allOutputsExact": true
+    }
+  ],
+  "RSSKiB": 122684,
+  "scope": "3 repetitions existing profile incl allocation/ctypes; functional host reference, not isolated/device bench"
+}

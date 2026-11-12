@@ -1,0 +1,27 @@
+{
+  "status": "INDEXED_BOUNDS_FIXED42_APPROVED",
+  "actualFrameLimit": 42,
+  "authorFreezeApproved": true,
+  "independentReviewApproved": true,
+  "safetyGO": true,
+  "authorization": "Parent explicit indexed-bounds fixed42 GO 2026-11-04T16:31:50Z. Independent arm canary review before remaining19. No retries or additional exceptions.",
+  "runnerSHA256": "095aa46e308d3f966711d853ac997054fc9cbfe94cf2072c8fa3f76f41153a62",
+  "comparatorSHA256": "5ef391500bd448055ede7b326640b34ff5b0e399c94a0fbde8e2f270852c8084",
+  "contractSHA256": "43c5c124e15f9615c01b998600e0ea6c56708db500b084d5fb589ae089cf23f7",
+  "baselinePinsSHA256": "462eda66088195199705cc26b8bd2cb1606439d000e50a242817f532fef71663",
+  "planSHA256": "5f4ea0a759aede747e8546b6ba25bde7eed4e8ffaddd4bdcea08b02354d24d76",
+  "sourceFreezeSHA256": "f94d00f94de91574a42d499c4fc59d22a3ebb43ec87e9767e91a736e2c4c321a",
+  "reviewSHA256": "235f3ea8ee1691657cacfb05d38943fe286f1b13035d0728a222339807c6cfa3",
+  "runnerReviewSHA256": "d6126583971c6cfa205058462d1fb14ed8eaa35d559ba40016eca62d7367a71d",
+  "buildSHA256": "6e848d3dda12330320ab07b7de44b2cac768afae8f032c72608163f37f7529e4",
+  "additionalRequiredFiles": {
+    "comparison/COMPARISON_FREEZE.json": "412a456ad1089e920076d1145bcc24370df4b833e2cb2b357683a55492382500",
+    "MEMORY_LEDGER.json": "a63c5d402acfe5a70b33589ef79192d853304082a6d9116d1c577db3782774f3",
+    "CONSTRUCTION_NAMED_STACK.json": "edc44cfbec144f75dcf351b5d5b754a4662517adb12aabac4e3f6a97f1272788",
+    "SOURCE_DELTA.json": "b4f10c41f7125494acdbbb9fee04e71f7dc70a65286407829df3dd6b83540d8d",
+    "review/FREEZE_SEAL.json": "3e446782c8014e060233a42f1a247e842c43f7d72cb457d398ca2639d51cbfef",
+    "review/INDEPENDENT_SEMANTICS.json": "732352fe52ce8cd8ed318407fe8402d9a6ae6c7b03abf4c56eaa589b56aa83d6",
+    "review/INDEPENDENT_EDGES.json": "aae35f7e290cec1fc50f54111c9a465966caa15eee6adb231754b131dfe4d6ad",
+    "review/INDEPENDENT_STACK_LEDGER.json": "6bfe32f2301da54a184391134a3d23f02071c1e997a7474982f4cc98aaac82f5"
+  }
+}

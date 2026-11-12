@@ -1,0 +1,557 @@
+{
+  "decision": "No unresolved blocking code finding in the common 10-file controller split. Supports exercised host fixture equivalence only. Target CI/link and actual device OOM resolution are not certified by this review.",
+  "date_utc": "2026-10-20",
+  "reviewed_patch_file_sha256": {
+    "docs/README.md": "c6ad5bf77d2a908ac584c0b7924468aed68107df59d06cb0b6cbb7b1a24c5530",
+    "docs/apps/derby-fixed-controller.md": "082206af26dc7269ad9340d76a85fd4d2a61adc6162bb7ff813a3a4f5c9bd7d2",
+    "tools/derby_fixed_workload_chunks.py": "c2df2b2fc6a73a9df3334ab0f696cdb11c0cccf83f29e7fc02865ff14245d7ee",
+    "tools/games/derby_fixed_tail_oracle.js": "ca63d93635391ebdd5ebf65b73bd39a9b5e0d93ab98e6f4ce8381f8a4115678e",
+    "tools/games/run_derby_fixed.py": "fee45053b59b90e6cc13468b72205901bc17d64896ff2137e02877359fdaa8cd",
+    "tools/record_verification.py": "4bdff4a386a643ab2f67ef10c228b48c4ffe217ffc7e1114d198b31b4e2cf572",
+    "tools/test_derby_detail_generation.py": "1fa32aef783f7b6f21853f5bf60a8b7fca9e4796d865bdf220f79424cf746915",
+    "tools/test_derby_detail_proof.py": "45fdc56f8ab4143e2e126dbc291a3922057a54108e92ba7b12300807247779cb",
+    "tools/test_derby_fixed_integration.py": "58f0d7e2bff8649610cbde9bc4038d1bc310d23f7c6c3af4f2dcdf83518df3eb",
+    "tools/test_diagnostic_build.py": "0787a8927dcceef1e1f0ce41269dcbdc0adf6a55bc0f6a4c52592beda0cb12d1"
+  },
+  "variants": {
+    "baseline": {
+      "base_head": "37af4225ad329aac4c5e79c880d7d69760b770be",
+      "index_tree": "d72a737240d48def898899bf6dc71e0ac627c7f8",
+      "same_10_patch_files": true,
+      "same_patch_file_sha256": true,
+      "unstaged_edits": false,
+      "cached_diff_check": "PASS",
+      "python_syntax": "PASS",
+      "host_driver_saved_all_pass": false,
+      "host_driver_completed_checks": [
+        "lint",
+        "fixed-integration",
+        "generation",
+        "detail-accounting",
+        "detail-board",
+        "detail-proof",
+        "diagnostic-proof",
+        "fixed-protocol",
+        "fixed-controller",
+        "fast-off",
+        "fast-on",
+        "fast-pair",
+        "asan-off",
+        "asan-on",
+        "asan-pair"
+      ],
+      "host_cases": {
+        "fast-off": {
+          "positive_raw_strict_and_known_work": "PASS",
+          "startup_tail_and_collector_finalized": true,
+          "raw_sha256": "c48e0baf7b3e791796860f645693d525e1c6e9d176190e65e138d7dec050885b",
+          "raw_bytes": 3893,
+          "result_sha256": "30a2c20222fc77d3899d1b18ff09f7398fce69b1d764c4313fbf2ec1cbc2324a"
+        },
+        "fast-on": {
+          "positive_raw_strict_and_known_work": "PASS",
+          "startup_tail_and_collector_finalized": true,
+          "raw_sha256": "f8c5cc41364880b3e320144bb4ee11e434238da687c302822ecf9a6fd8a131bd",
+          "raw_bytes": 12523,
+          "result_sha256": "ebfce1e7f1fcd4207b2b6c4e579608f978f396e8a9b45d97384f5179b29c7a29"
+        },
+        "asan-off": {
+          "positive_raw_strict_and_known_work": "PASS",
+          "startup_tail_and_collector_finalized": true,
+          "raw_sha256": "97b961a17d511d438a752fb5973b53fabcee04b225b4fdcba1988fdbded07fe4",
+          "raw_bytes": 3913,
+          "result_sha256": "33b6e4ad1a14dd5da7fa03cce6742f9b3d48c5d2c453e8b27845f82a3c5aab5a"
+        },
+        "asan-on": {
+          "positive_raw_strict_and_known_work": "PASS",
+          "startup_tail_and_collector_finalized": true,
+          "raw_sha256": "bdf6be2240c2f60de4800853e951b6ad276becb5432f1754d51222bc9cd9d431",
+          "raw_bytes": 12658,
+          "result_sha256": "42192aa3587fc913c1e16c3efa33b9de3f94f5559a3b9238ea36f845443ed263"
+        }
+      },
+      "fast_pair_independent_semantic_check": "PASS",
+      "asan_pair_independent_semantic_check": "PASS"
+    },
+    "native": {
+      "base_head": "92e70b7fbb2c15d99734a518096dffdf046d2ae3",
+      "index_tree": "b3de719ac438d8d3373a2c34786bc35c46e9200e",
+      "same_10_patch_files": true,
+      "same_patch_file_sha256": true,
+      "unstaged_edits": false,
+      "cached_diff_check": "PASS",
+      "python_syntax": "PASS",
+      "host_driver_saved_all_pass": false,
+      "host_driver_completed_checks": [
+        "lint",
+        "fixed-integration",
+        "generation",
+        "detail-accounting",
+        "detail-board",
+        "detail-proof",
+        "diagnostic-proof",
+        "fixed-protocol",
+        "fixed-controller",
+        "fast-off",
+        "fast-on",
+        "fast-pair",
+        "asan-off",
+        "asan-on",
+        "asan-pair"
+      ],
+      "host_cases": {
+        "fast-off": {
+          "positive_raw_strict_and_known_work": "PASS",
+          "startup_tail_and_collector_finalized": true,
+          "raw_sha256": "592599b63156dbd40dc0c92c273dac8d1c805ee4e90125a05749d2eb91e04801",
+          "raw_bytes": 3897,
+          "result_sha256": "9174aebff03be692ea7e7a74002248f3187bc7e6afdf9954e6dc3e12947a44ed"
+        },
+        "fast-on": {
+          "positive_raw_strict_and_known_work": "PASS",
+          "startup_tail_and_collector_finalized": true,
+          "raw_sha256": "1d61bdef182f9c6a62591bd2a4344081e743e4dc25c471ade9df97ec381a21e9",
+          "raw_bytes": 12525,
+          "result_sha256": "5004dbeb00d7b9068df979ace17909e16a0cf6e4d31a58028b2ee4e0846ee258"
+        },
+        "asan-off": {
+          "positive_raw_strict_and_known_work": "PASS",
+          "startup_tail_and_collector_finalized": true,
+          "raw_sha256": "0660f4c73ec7bd63023e171c6ffc63567a0c80003443187dab135df03f793d26",
+          "raw_bytes": 3920,
+          "result_sha256": "80db44892ad21c0299b6ea1e45e80b7caa7be332e34c209749d8369353908fb5"
+        },
+        "asan-on": {
+          "positive_raw_strict_and_known_work": "PASS",
+          "startup_tail_and_collector_finalized": true,
+          "raw_sha256": "060b7053fd0533402a30f29c04b007b3c52d53da638fb2b483e7a3b1ae724437",
+          "raw_bytes": 12659,
+          "result_sha256": "a19f9f85d72876694adeb6738f13a90728cc65f2ebe306eb68e613d22be5c069"
+        }
+      },
+      "fast_pair_independent_semantic_check": "PASS",
+      "asan_pair_independent_semantic_check": "PASS"
+    },
+    "batch": {
+      "base_head": "ea64b0ec9c176f852c853cb10142581ee527d7fc",
+      "index_tree": "160205ec7e435a6592378d94209a800c02ba2c91",
+      "same_10_patch_files": true,
+      "same_patch_file_sha256": true,
+      "unstaged_edits": false,
+      "cached_diff_check": "PASS",
+      "python_syntax": "PASS",
+      "host_driver_saved_all_pass": false,
+      "host_driver_completed_checks": [
+        "lint",
+        "fixed-integration",
+        "generation",
+        "detail-accounting",
+        "detail-board",
+        "detail-proof",
+        "diagnostic-proof",
+        "fixed-protocol",
+        "fixed-controller",
+        "fast-off",
+        "fast-on",
+        "fast-pair",
+        "asan-off",
+        "asan-on",
+        "asan-pair"
+      ],
+      "host_cases": {
+        "fast-off": {
+          "positive_raw_strict_and_known_work": "PASS",
+          "startup_tail_and_collector_finalized": true,
+          "raw_sha256": "1bd83ae8c3770930b5eb69464b9ec41d90c1b764086515ce4d7e2a3a3f054f9e",
+          "raw_bytes": 3992,
+          "result_sha256": "63dc134d6da7dc7a8575b0adeaebcebfc1f5959776163c4db741a7de3baf39fa"
+        },
+        "fast-on": {
+          "positive_raw_strict_and_known_work": "PASS",
+          "startup_tail_and_collector_finalized": true,
+          "raw_sha256": "36091e36ff3485c3e62c06b6fa9f9a17d1a004a0e3d87caa0202ff82af8e2e26",
+          "raw_bytes": 12639,
+          "result_sha256": "9df47f564efc024aa99e8849cb4d809dc28147d720f454f328025b1c40798276"
+        },
+        "asan-off": {
+          "positive_raw_strict_and_known_work": "PASS",
+          "startup_tail_and_collector_finalized": true,
+          "raw_sha256": "979668476738be93a40979ab2d74415d0f9fe9be250c668cce092e0c2fa88a6e",
+          "raw_bytes": 4015,
+          "result_sha256": "24152dbb7199fcae80a2f34b416c3a41008542a56e657bf26ce818419a7fe7e0"
+        },
+        "asan-on": {
+          "positive_raw_strict_and_known_work": "PASS",
+          "startup_tail_and_collector_finalized": true,
+          "raw_sha256": "a338190d5326237936afac6daabe06cc685dae23b26240ba0417a5c6d868ab66",
+          "raw_bytes": 12773,
+          "result_sha256": "e3e6f02d0f8c3c2da594121b0067f840f703bde3c0315a611074c58594d2759b"
+        }
+      },
+      "fast_pair_independent_semantic_check": "PASS",
+      "asan_pair_independent_semantic_check": "PASS"
+    }
+  },
+  "generated_independent_checks": {
+    "three_variants_both_detail_modes": true,
+    "ON_and_OFF_inlining_exact_frozen_generator": true,
+    "watch_view_and_ON_pan_unchanged": true,
+    "strict_global_controller": true,
+    "load_before_startup_enter_and_READY": true,
+    "generated_node_syntax": "PASS",
+    "result_sha256": "ae988cf89b42873f57639c0597965eadf24dfdcf1785b2953749686e140d5dea"
+  },
+  "completed_host_cases_independently_reparsed": [
+    "baseline/fast-off",
+    "baseline/fast-on",
+    "baseline/asan-off",
+    "baseline/asan-on",
+    "native/fast-off",
+    "native/fast-on",
+    "native/asan-off",
+    "native/asan-on",
+    "batch/fast-off",
+    "batch/fast-on",
+    "batch/asan-off",
+    "batch/asan-on"
+  ],
+  "resolved_during_development": [
+    "Host ON generation changed to generate(detail=args.detail) and use generated PAN instead of applying detail to already split play.",
+    "Startup order test anchors the top-level newline enter call instead of an earlier frame-body enter call.",
+    "Node pure tail oracle supplies no-op S.detail for instrumented generated watch; failed first attempt retained."
+  ],
+  "risk_notes": [
+    "Nested fixed load adds loader/JS execution depth, heap/stack/startup cost not measured on ESP32.",
+    "Failure cause filename now names fixed and may be wrapped by outer play runtime failure; outer play retry/outcome category differs from original compile failure.",
+    "Four generated components are required by exact file and ELF byte proof; actual target link/proof remains CI work.",
+    "Same split is applied to all three variants and detail ON/OFF; no C, heap/stack budget, draw, VM, transport, fixture or production shipping source changes.",
+    "Earlier sequential host peak numbers must not be used for this nested implementation; no device OOM fix or performance claim."
+  ],
+  "blockers": [
+    {
+      "action": "python3 tools/prepare_dependencies.py",
+      "target": "/workspace/derby-controller-baseline/third_party/bmi270",
+      "status": "failed, not denied or uncertain",
+      "reason": "GitHub CONNECT tunnel proxy503; underlying git submodule update attempted clone twice",
+      "completed": "correction branches, shared source patch, focused host tests and host fixture checks",
+      "remaining": "complete local target dependency setup unavailable; exact-head target CI still required"
+    },
+    {
+      "action": "resolve actual device batch startup compile OOM",
+      "target": "frozen batch ea64b0ec9c176f852c853cb10142581ee527d7fc",
+      "status": "unresolved; no hardware action attempted by reviewer",
+      "reason": "device halted; new source not flashed or tried",
+      "completed": "failure preserved and local-only correction review",
+      "remaining": "separate parent-authorized device workflow after required gates; no hardware success claimed"
+    }
+  ],
+  "reviewer_actions": {
+    "root_source_index_or_ref_edits": false,
+    "hardware_MCP_USB_reset_serial_flash": false,
+    "binary_fixture_reruns": false,
+    "generated_files_written": "private independent evidence only",
+    "read_only_exception": "During initial 9-file binding, reviewer accidentally used git write-tree once per correction checkout. This materialized tree objects only; no refs, index content or working source was changed. Parent informed promptly. Final 10-file tree binding uses saved parent receipt and read-only index hashing."
+  },
+  "evidence": {
+    "/workspace/derby-evidence/controller-split-20261020/baseline/lint.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/baseline/fixed-integration.log": {
+      "bytes": 105,
+      "sha256": "b16702e3f851fef5cd6663a5c7e0f57ff363f9d84fd0a126e196b1b00c6a00e8"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/baseline/generation.log": {
+      "bytes": 183,
+      "sha256": "f8a716130ed5db0b71965d1831478f4f0aefbc6a4aea658e7b2a4aa9c7c2b723"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/baseline/detail-accounting.log": {
+      "bytes": 577,
+      "sha256": "5e7486c80dd25f839358a8484e9887cd4d49850fd873b2fa4cc7cc6511548c70"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/baseline/detail-board.log": {
+      "bytes": 118,
+      "sha256": "5782051cd7ab43c75e631109c1ee72df133df2fd77fbe277c27f95bed3c3f7fe"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/baseline/detail-proof.log": {
+      "bytes": 110,
+      "sha256": "357e754eb681296020b6a93e1e9a414246ea336a45373c16f64ff6efafca8d91"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/baseline/diagnostic-proof.log": {
+      "bytes": 98,
+      "sha256": "dbe1503ab9e1540cdcbb25a14012efc71fb102c2ea8b6ae8a890a71bb089691c"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/baseline/fixed-protocol.log": {
+      "bytes": 152,
+      "sha256": "c65e4163d7229d6a1334e4eca292466ed96c562a4d56fa5f165d76e1c544b54d"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/baseline/fixed-controller.log": {
+      "bytes": 301,
+      "sha256": "e99169a7822479bf9c9162e9f35ea0294e503387061449a127e3309e96b3daad"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/baseline/fast-off.log": {
+      "bytes": 617,
+      "sha256": "10c36d64ac76ffc223d0d01276df5c3d052029c022ca213c580acf050cebf7bc"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/baseline/fast-on.log": {
+      "bytes": 616,
+      "sha256": "abb07c5bd9020c8fd7b8f988be10c9d2fb188f0ed08bedb268810998b2eb7ab2"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/baseline/fast-pair.log": {
+      "bytes": 278,
+      "sha256": "5402e2c3b50da85c0c61893eecf4588fab67e10d25686aae077429a8b9adaa7b"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/baseline/asan-off.log": {
+      "bytes": 617,
+      "sha256": "636e21b37470c4e28b3254c7be0e1a672bbe4b7551d693efc636f8f5e5192161"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/baseline/asan-on.log": {
+      "bytes": 616,
+      "sha256": "cbafa480751eed6360f7b59e86546005f222c5fad3ee9c2724349b98cf0013c7"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/baseline/asan-pair.log": {
+      "bytes": 281,
+      "sha256": "b03c07185ecf1237c6ef30bfa0f5d0c1112b69ac4b5436a835831b1ce2c78750"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/baseline/HOST-CHECKS.json": {
+      "bytes": 5834,
+      "sha256": "d16422da6176cebb4a9b61a49d7fc4c584ff4cc5a4bff3add9e304a27ffcf75a"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/baseline/fast-off/trial.log": {
+      "bytes": 3893,
+      "sha256": "c48e0baf7b3e791796860f645693d525e1c6e9d176190e65e138d7dec050885b"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/baseline/fast-off/result.json": {
+      "bytes": 9343,
+      "sha256": "30a2c20222fc77d3899d1b18ff09f7398fce69b1d764c4313fbf2ec1cbc2324a"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/baseline/fast-on/trial.log": {
+      "bytes": 12523,
+      "sha256": "f8c5cc41364880b3e320144bb4ee11e434238da687c302822ecf9a6fd8a131bd"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/baseline/fast-on/result.json": {
+      "bytes": 25126,
+      "sha256": "ebfce1e7f1fcd4207b2b6c4e579608f978f396e8a9b45d97384f5179b29c7a29"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/baseline/asan-off/trial.log": {
+      "bytes": 3913,
+      "sha256": "97b961a17d511d438a752fb5973b53fabcee04b225b4fdcba1988fdbded07fe4"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/baseline/asan-off/result.json": {
+      "bytes": 9367,
+      "sha256": "33b6e4ad1a14dd5da7fa03cce6742f9b3d48c5d2c453e8b27845f82a3c5aab5a"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/baseline/asan-on/trial.log": {
+      "bytes": 12658,
+      "sha256": "bdf6be2240c2f60de4800853e951b6ad276becb5432f1754d51222bc9cd9d431"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/baseline/asan-on/result.json": {
+      "bytes": 25263,
+      "sha256": "42192aa3587fc913c1e16c3efa33b9de3f94f5559a3b9238ea36f845443ed263"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/native/lint.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/native/fixed-integration.log": {
+      "bytes": 105,
+      "sha256": "9533de35ce535087cc0518b20d59cbce7a4419f89b7b46a1c5207d8fca37fd9d"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/native/generation.log": {
+      "bytes": 183,
+      "sha256": "f8a716130ed5db0b71965d1831478f4f0aefbc6a4aea658e7b2a4aa9c7c2b723"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/native/detail-accounting.log": {
+      "bytes": 577,
+      "sha256": "5e7486c80dd25f839358a8484e9887cd4d49850fd873b2fa4cc7cc6511548c70"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/native/detail-board.log": {
+      "bytes": 118,
+      "sha256": "5782051cd7ab43c75e631109c1ee72df133df2fd77fbe277c27f95bed3c3f7fe"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/native/detail-proof.log": {
+      "bytes": 110,
+      "sha256": "357e754eb681296020b6a93e1e9a414246ea336a45373c16f64ff6efafca8d91"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/native/diagnostic-proof.log": {
+      "bytes": 98,
+      "sha256": "dbe1503ab9e1540cdcbb25a14012efc71fb102c2ea8b6ae8a890a71bb089691c"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/native/fixed-protocol.log": {
+      "bytes": 152,
+      "sha256": "c65e4163d7229d6a1334e4eca292466ed96c562a4d56fa5f165d76e1c544b54d"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/native/fixed-controller.log": {
+      "bytes": 301,
+      "sha256": "e99169a7822479bf9c9162e9f35ea0294e503387061449a127e3309e96b3daad"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/native/fast-off.log": {
+      "bytes": 613,
+      "sha256": "fac517182bd01719da6f468fca8d2d3bf3a1a1965a71df62a4dda55558ed10ff"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/native/fast-on.log": {
+      "bytes": 612,
+      "sha256": "322c789d2840ad0e581844cb6b35db679c3647d18078d97ac8d04b77ec0060c8"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/native/fast-pair.log": {
+      "bytes": 277,
+      "sha256": "3f548632f07b3750a089e9d6b182455a9db9658a723569761d906d8a7c2a7ffb"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/native/asan-off.log": {
+      "bytes": 613,
+      "sha256": "aed7e92c53693d1f53ee849609d82771a844d585d3dcafb709c4465af1a66321"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/native/asan-on.log": {
+      "bytes": 612,
+      "sha256": "5022b9ab3ced6a1860d9e0e9cda225a40c57806fc4c9f1182d1b959c04dd4f12"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/native/asan-pair.log": {
+      "bytes": 279,
+      "sha256": "c6e5c65620e81a112431a1f2cd9382557cbc04fb70f628c2f1ba3110c20b8dce"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/native/HOST-CHECKS.json": {
+      "bytes": 5811,
+      "sha256": "1fcc5269428a760e46242ee76f0916164e17be60c5594bb9cade084220c51190"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/native/fast-off/trial.log": {
+      "bytes": 3897,
+      "sha256": "592599b63156dbd40dc0c92c273dac8d1c805ee4e90125a05749d2eb91e04801"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/native/fast-off/result.json": {
+      "bytes": 9344,
+      "sha256": "9174aebff03be692ea7e7a74002248f3187bc7e6afdf9954e6dc3e12947a44ed"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/native/fast-on/trial.log": {
+      "bytes": 12525,
+      "sha256": "1d61bdef182f9c6a62591bd2a4344081e743e4dc25c471ade9df97ec381a21e9"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/native/fast-on/result.json": {
+      "bytes": 25124,
+      "sha256": "5004dbeb00d7b9068df979ace17909e16a0cf6e4d31a58028b2ee4e0846ee258"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/native/asan-off/trial.log": {
+      "bytes": 3920,
+      "sha256": "0660f4c73ec7bd63023e171c6ffc63567a0c80003443187dab135df03f793d26"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/native/asan-off/result.json": {
+      "bytes": 9370,
+      "sha256": "80db44892ad21c0299b6ea1e45e80b7caa7be332e34c209749d8369353908fb5"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/native/asan-on/trial.log": {
+      "bytes": 12659,
+      "sha256": "060b7053fd0533402a30f29c04b007b3c52d53da638fb2b483e7a3b1ae724437"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/native/asan-on/result.json": {
+      "bytes": 25260,
+      "sha256": "a19f9f85d72876694adeb6738f13a90728cc65f2ebe306eb68e613d22be5c069"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/batch/lint.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/batch/fixed-integration.log": {
+      "bytes": 105,
+      "sha256": "2b889b8e6705d890c3ac3441ec5856dcd8d13e0fda486294437ee0061e04f457"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/batch/generation.log": {
+      "bytes": 183,
+      "sha256": "f8a716130ed5db0b71965d1831478f4f0aefbc6a4aea658e7b2a4aa9c7c2b723"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/batch/detail-accounting.log": {
+      "bytes": 577,
+      "sha256": "5e7486c80dd25f839358a8484e9887cd4d49850fd873b2fa4cc7cc6511548c70"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/batch/detail-board.log": {
+      "bytes": 118,
+      "sha256": "5782051cd7ab43c75e631109c1ee72df133df2fd77fbe277c27f95bed3c3f7fe"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/batch/detail-proof.log": {
+      "bytes": 110,
+      "sha256": "357e754eb681296020b6a93e1e9a414246ea336a45373c16f64ff6efafca8d91"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/batch/diagnostic-proof.log": {
+      "bytes": 98,
+      "sha256": "353239c6a391a5fe2e900b988e30c68aa3a27170e16d3a962ba3592c634b44fa"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/batch/fixed-protocol.log": {
+      "bytes": 152,
+      "sha256": "c65e4163d7229d6a1334e4eca292466ed96c562a4d56fa5f165d76e1c544b54d"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/batch/fixed-controller.log": {
+      "bytes": 301,
+      "sha256": "e99169a7822479bf9c9162e9f35ea0294e503387061449a127e3309e96b3daad"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/batch/fast-off.log": {
+      "bytes": 611,
+      "sha256": "5f19d8228e33cda1073e5bbb5e1946d0da43ba3ac7118a23ffbf92eef6854ae4"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/batch/fast-on.log": {
+      "bytes": 610,
+      "sha256": "b2add8de300355d710ff02f2933129a8dcc4aba8a864bcd1659a51fcdb179910"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/batch/fast-pair.log": {
+      "bytes": 275,
+      "sha256": "2c797e2911182898ac86b47f540171d24bafa4f72929167121939d40c89e3160"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/batch/asan-off.log": {
+      "bytes": 611,
+      "sha256": "6db784cd52196c1693efd6545408459e67dbe947776c90a9587488b163df321a"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/batch/asan-on.log": {
+      "bytes": 610,
+      "sha256": "0c42105f50939f93f8b611599414a90b1b81622851ef7243f65298462f123f1e"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/batch/asan-pair.log": {
+      "bytes": 278,
+      "sha256": "27d277d777135d1018d669163135a515a026f8dabea429fcf9a6d56bc98ca59e"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/batch/HOST-CHECKS.json": {
+      "bytes": 5801,
+      "sha256": "74173ea532cc9333a10b0f1cbd29f0297eca0f630563f261486565ab0a16dcd7"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/batch/fast-off/trial.log": {
+      "bytes": 3992,
+      "sha256": "1bd83ae8c3770930b5eb69464b9ec41d90c1b764086515ce4d7e2a3a3f054f9e"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/batch/fast-off/result.json": {
+      "bytes": 9339,
+      "sha256": "63dc134d6da7dc7a8575b0adeaebcebfc1f5959776163c4db741a7de3baf39fa"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/batch/fast-on/trial.log": {
+      "bytes": 12639,
+      "sha256": "36091e36ff3485c3e62c06b6fa9f9a17d1a004a0e3d87caa0202ff82af8e2e26"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/batch/fast-on/result.json": {
+      "bytes": 25139,
+      "sha256": "9df47f564efc024aa99e8849cb4d809dc28147d720f454f328025b1c40798276"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/batch/asan-off/trial.log": {
+      "bytes": 4015,
+      "sha256": "979668476738be93a40979ab2d74415d0f9fe9be250c668cce092e0c2fa88a6e"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/batch/asan-off/result.json": {
+      "bytes": 9366,
+      "sha256": "24152dbb7199fcae80a2f34b416c3a41008542a56e657bf26ce818419a7fe7e0"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/batch/asan-on/trial.log": {
+      "bytes": 12773,
+      "sha256": "a338190d5326237936afac6daabe06cc685dae23b26240ba0417a5c6d868ab66"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/batch/asan-on/result.json": {
+      "bytes": 25275,
+      "sha256": "e3e6f02d0f8c3c2da594121b0067f840f703bde3c0315a611074c58594d2759b"
+    },
+    "/workspace/derby-evidence/independent-v2-review/controller-generated/result.json": {
+      "bytes": 4519,
+      "sha256": "ae988cf89b42873f57639c0597965eadf24dfdcf1785b2953749686e140d5dea"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/common.patch": {
+      "bytes": 22149,
+      "sha256": "28ae9188226dd5644979a92006f3b74530dcadf98a6b8f532e32d59d665bab91"
+    },
+    "/workspace/derby-evidence/controller-split-20261020/DEPENDENCY-BLOCKER.json": {
+      "bytes": 616,
+      "sha256": "3e543b081c78b82958b0d09243b684b5d16e082e8de05df9abcb0ae8215cb23a"
+    }
+  }
+}

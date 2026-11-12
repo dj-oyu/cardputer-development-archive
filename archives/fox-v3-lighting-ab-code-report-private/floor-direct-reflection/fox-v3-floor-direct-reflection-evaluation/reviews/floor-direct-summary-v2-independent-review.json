@@ -1,0 +1,19 @@
+{
+  "status": "CORRECTED_V2_COMPONENT_AND_CLIPPING_ALL_MATCH",
+  "matchedValues": 794,
+  "floatingValues": 512,
+  "maxFloatingDifference": 8.881784197001252e-16,
+  "independentValuesSavedBeforeOwnerCorrection": "/tmp/floor-direct-samples-work-independent-review.json",
+  "supersededIncorrectV1Preserved": true,
+  "inputHashes": {
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-floor-direct-reflection-evaluation/actual-002/FLOOR_COMPONENT_SUMMARY_V2.json": "eb9beaa7c420a9146bbf86a01148d77d24172172cce67847ad77e09344dd6409",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-floor-direct-reflection-evaluation/actual-002/FLOOR_CLIPPING_SUMMARY_V2.json": "c4fae914cf0c2ad2e481167f70c1e2971d4f9be5cf810a3b656b6ba2e6e6c947",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-floor-direct-reflection-evaluation/code/summarize_floor_components_v2.py": "9092c9cb7710290aa23c093744fcd3848e2c843e1b7d9ad09ed4c3eceed1afac",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-floor-direct-reflection-evaluation/code/audit_floor_clipping_v2.py": "30f9982fbe15e54f268f151b700837cc7af2b4c31993f7447ac169aed12edb67",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-floor-direct-reflection-evaluation/code/target_samples.py": "da32008c545d98c62b1760834f785f463872e107d129cad707bb133791c6a8af"
+  },
+  "scope": "Only postprocessing summaries were corrected. Formal raw RGB/depth/reference score and all prior 153 regressions unchanged.",
+  "supplementFreezeSHA256": "dad5992f1e57bb7f54488103d251b528658930df70897347e05338c28d7be428",
+  "all5FrozenFilesVerified": true,
+  "oldActualOutputFreezeUnchanged": true
+}

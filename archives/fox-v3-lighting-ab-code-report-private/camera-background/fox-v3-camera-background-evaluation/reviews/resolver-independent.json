@@ -1,0 +1,37 @@
+{
+  "freeze": "21521c0d4554828e939129b9bc2e92488c5fa7a4bab32ee85328bd38630026d5",
+  "mismatch": [],
+  "tests": {
+    "authorFresh": [
+      "O2 PASS",
+      "O1 ASan+UBSan PASS; LSan off"
+    ],
+    "independentFresh": [
+      "O2 PASS",
+      "O1 ASan+UBSan PASS; LSan off"
+    ],
+    "independentCases": [
+      "100 analytical quarter rays",
+      "out overlaps work or query rejected without mutation",
+      "all input buffers poisoned, external scene and BVH owners released then 100 successful queries",
+      "wrong generation consumes exactly2048 paid work, outputs/result/counters/rays retained"
+    ]
+  },
+  "stack": {
+    "resolver": 2032,
+    "core": 1664,
+    "dispatch": 80,
+    "observer": 288,
+    "sumWithoutBridge": 4064,
+    "bridge": 592,
+    "sumIncludingBridge": 4656,
+    "oldBridge": 448,
+    "mainExcluded": 86640,
+    "cap": 4096,
+    "status": "Parent notified: bridge-inclusive named chain exceeds4096; caller exclusion/budget interpretation pending."
+  },
+  "productionCurrent": {
+    "background.c": "d6e3983c3bb244a281e85c28d586bd1bfb7278bc879c13638c2b19458bc6961d",
+    "background.h": "b758eeffe6e4e7f2de708386b8eb7a80bcd0dd28ab6b1ba7d3bc7027e5a1c301"
+  }
+}

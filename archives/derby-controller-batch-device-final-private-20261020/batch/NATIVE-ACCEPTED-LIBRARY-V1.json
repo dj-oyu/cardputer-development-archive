@@ -1,0 +1,39 @@
+{
+  "operation": "replace_library_file",
+  "status": "succeeded",
+  "path": "/workspace/derby-evidence/derby-controller-native-device-final-private-20261020.zip",
+  "file_id": "file_00000000adf081f4ba6dca51f69198f8",
+  "library_file_id": "libfile_bda493d69f508191b04a90a89ceb5e64",
+  "file_name": "derby-controller-native-device-final-private-20261020.zip",
+  "current_version_number": 1,
+  "restored_from_version_number": null,
+  "xattrs": [
+    {
+      "name": "user.library-file-version",
+      "value": "1"
+    }
+  ],
+  "directory_id": "libdir_59121da5ecdc81918fb4a1efcc821810",
+  "mime_type": "application/zip",
+  "library_artifact_type": "other",
+  "file_size_bytes": 369775,
+  "external_connectors_accessed": false,
+  "bytes": 369775,
+  "sha256": "e0f6e855b25bd03709d67fcccd2d1d5201ba24e1aa14bd5660710c7ca677dbe1",
+  "manifest_files": 127,
+  "phase": "device-final",
+  "firmware_bodies_included": false,
+  "local_identity_persisted": true,
+  "head": "3fafcadbd72ecbd0d799cbe9d29f037ff62c05d5",
+  "strict_pass": true,
+  "work_us": [
+    6720372,
+    6723824,
+    6716986
+  ],
+  "current_native_receipt": "1f4143a623658f01ec1d8d7623b65bc4268fb8b690ed6c106ea0f5c425de63f5",
+  "physical_operations_stopped": true,
+  "prior_version": 0,
+  "prior_file_id": "file_00000000490c820c838b6bd5bab4cf85",
+  "prior_archive_sha256": "4bec7cf269a74aef1fab4dc222b07ec6d66205f725bcc82e99acb19f17d95a3d"
+}

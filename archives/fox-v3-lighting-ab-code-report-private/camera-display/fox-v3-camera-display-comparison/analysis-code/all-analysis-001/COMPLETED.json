@@ -1,0 +1,47 @@
+{
+  "status": "DISPLAY_ANALYSIS_COMPLETE_NOT_GLOBAL_ACCEPTANCE",
+  "files": {
+    "ADMISSION.json": {
+      "sha256": "f93a877bfc67f79addb626d8c6c19aaad1d02fc68749afc4275d356715480bbd",
+      "bytes": 1065
+    },
+    "CLAMP_STRATA.json": {
+      "sha256": "d07691828a955563695c3f10e359c3feb5b626632ec66cc843f59a5d59ab3869",
+      "bytes": 173711
+    },
+    "COMPARISON.json": {
+      "sha256": "c145997dce02a1710e2b89e5088acb8c36329e58da7a3415974fba75c8570e19",
+      "bytes": 31571
+    },
+    "FIXED_DOMAINS.json": {
+      "sha256": "bd5fc9284f306fea1ee9da1c4020fc18a3f7e60de06a65acd7155de7fbf5d408",
+      "bytes": 4303
+    },
+    "REPORT.md": {
+      "sha256": "48a05cf468161a1a145a3553dd8051ba8d983e65f9b3c6a6aff64cdd5c517145",
+      "bytes": 6512
+    },
+    "SCALAR_AUDIT.json": {
+      "sha256": "0b40398a519ab0761cfefe9e1e0aa8972e4a7c4264816fe23cbb0025b45dbb11",
+      "bytes": 8973853
+    },
+    "descriptive-agx.json": {
+      "sha256": "e325506dc6c1beebd54fd341b4f275c18e9592893178dbbc8fbdf5525a198cbc",
+      "bytes": 3623289
+    },
+    "descriptive-legacy.json": {
+      "sha256": "201310a9e4ede5adeb575a2131a883feec6764b4b5ccfcee50a9dbb52dff8e00",
+      "bytes": 3624202
+    },
+    "formal-agx.json": {
+      "sha256": "fa07f051764da3edcec7faf675eaba3943c21a0961ac56d10dde63eed892aa7d",
+      "bytes": 1965630
+    },
+    "formal-legacy.json": {
+      "sha256": "bb041abc8b0c1652edd1ae9252d8b85603dea8e05e0e2f639573d93d17a9ffdf",
+      "bytes": 1965718
+    }
+  },
+  "codeReportOnly": true,
+  "noRawAssetsCopied": true
+}

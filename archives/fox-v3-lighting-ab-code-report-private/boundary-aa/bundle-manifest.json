@@ -1,0 +1,310 @@
+{
+  "fox-v3-boundary-aa-core/CORE-PLAN.md": {
+    "sha256": "42e6c6620f87ac3dd0788dc339923275d22785ddf0551777cd4b4bf6245688eb",
+    "bytes": 7058
+  },
+  "fox-v3-boundary-aa-core/OFF-source-prefix-proof.json": {
+    "sha256": "86f3cd2e2f4e0a5c61d9ff74279c561c1305da737cc7d998c709cd749a7d9793",
+    "bytes": 1788
+  },
+  "fox-v3-boundary-aa-core/SOURCE_FREEZE.json": {
+    "sha256": "f962f10f50dff7ea34ca7dd0632a577a4a125122d924cd62f76c6c29b12a6607",
+    "bytes": 9471
+  },
+  "fox-v3-boundary-aa-core/implementation-ledger.json": {
+    "sha256": "649eee1de42f2f064fa42c7e4766872ee2c95237a3ef79965684d071652040c5",
+    "bytes": 1955
+  },
+  "fox-v3-boundary-aa-core/legacy-source.diff": {
+    "sha256": "e3eed93c52630a8eb91581a3dd3cdaaccf546c0be610de3c64d7458c7f355a0b",
+    "bytes": 846
+  },
+  "fox-v3-boundary-aa-core/memory-size.json": {
+    "sha256": "dc112b2e8e68a21c4e065d959a57a16581aaa0f98ac0171b3b07811d2e54d63a",
+    "bytes": 181
+  },
+  "fox-v3-boundary-aa-core/product/main/ui/kasane/ksn_boundary_aa.h": {
+    "sha256": "4680b99560f17bedf633b548e81178cf7fda3cba927252919f1b7f5f1e30036d",
+    "bytes": 3691
+  },
+  "fox-v3-boundary-aa-core/product/main/ui/kasane/ksn_boundary_aa_center.inc": {
+    "sha256": "0ab6cf6e904e074df2d7969109d2f2e1a1f6de7a147deeceba1205f665e607e6",
+    "bytes": 5462
+  },
+  "fox-v3-boundary-aa-core/product/main/ui/kasane/ksn_boundary_aa_impl.inc": {
+    "sha256": "057d75dcda9bb470abecb0d21b4bdb4394efaf251a005fc7ce7e527672f6c30f",
+    "bytes": 15163
+  },
+  "fox-v3-boundary-aa-core/product/main/ui/kasane/ksn_mesh_depth.c": {
+    "sha256": "10824d3cc327a69f4a5b852d383df57a07ca2e426827e76d1205a9041d7ff7fc",
+    "bytes": 15950
+  },
+  "fox-v3-boundary-aa-core/product/main/ui/kasane/ksn_mesh_depth.h": {
+    "sha256": "883715d956ef7d2e52c517c45a62de80050f65d339d5817213b9c93c363d4f92",
+    "bytes": 3534
+  },
+  "fox-v3-boundary-aa-core/tests/geometry-all20.json": {
+    "sha256": "9848eb1a01492997ad5d50ef9dc54e33dc4395b9f070b1388bfc97f845e5654f",
+    "bytes": 54675
+  },
+  "fox-v3-boundary-aa-core/tests/hidden-failure-result.json": {
+    "sha256": "aa5980650afb34b9ca8f97fa0dbaebbcdafe720fc884d2a303ca568169817a77",
+    "bytes": 475
+  },
+  "fox-v3-boundary-aa-core/tests/run.sh": {
+    "sha256": "1edeafd9054fc4b474197da7088eb92f7fa8c796eedacaea6081c4390d5ead0b",
+    "bytes": 434
+  },
+  "fox-v3-boundary-aa-core/tests/sanitizer-result.json": {
+    "sha256": "fb001511d37cae57ba9bf09a891f961a2772a0bd5c7ce89aaf6bd800b130ed85",
+    "bytes": 406
+  },
+  "fox-v3-boundary-aa-core/tests/test_boundary_aa.c": {
+    "sha256": "9f64fcb873f8d03058522043af28b1bb0f8330b8ab56f803c080c46d486df0b5",
+    "bytes": 9002
+  },
+  "fox-v3-boundary-aa-core/tests/test_boundary_aa.json": {
+    "sha256": "fb001511d37cae57ba9bf09a891f961a2772a0bd5c7ce89aaf6bd800b130ed85",
+    "bytes": 406
+  },
+  "fox-v3-boundary-aa-core/tests/test_hidden_failure.c": {
+    "sha256": "30282246b350b7cd1aaa08e0240cd7bfeb13dc1a4e3439880af9399bd40d8954",
+    "bytes": 3926
+  },
+  "fox-v3-boundary-aa-core/tests/test_hidden_failure.json": {
+    "sha256": "aa5980650afb34b9ca8f97fa0dbaebbcdafe720fc884d2a303ca568169817a77",
+    "bytes": 475
+  },
+  "fox-v3-boundary-aa-core/transport/pixel_transport.c": {
+    "sha256": "3f503858d70759c2885be10c0e05d15a909cf8d068eab2ea5b88c6f45dde44bd",
+    "bytes": 4267
+  },
+  "fox-v3-boundary-aa-core/transport/pixel_transport.h": {
+    "sha256": "c5c2e0302ed8e8c0bee3f6450a1d1fce77398ee715a905fa40a19be3f82f175f",
+    "bytes": 1269
+  },
+  "fox-v3-boundary-aa-evaluation/INTEGRATION_FREEZE.json": {
+    "sha256": "786a2c49ac104079e849f54048ec0532f3402fb15f4ea6ccaf6b942301b49e1e",
+    "bytes": 5120
+  },
+  "fox-v3-boundary-aa-evaluation/OUTPUT_PIN.txt": {
+    "sha256": "a4469e2fe36422095d184458f7dc42954401c7d03ca4ffdcda0ad9d846f43d68",
+    "bytes": 65
+  },
+  "fox-v3-boundary-aa-evaluation/REPORT.md": {
+    "sha256": "699374e2a337a06584a91b3726453c5cd9108fdaf5eee39156ea4c9723a55ab2",
+    "bytes": 10886
+  },
+  "fox-v3-boundary-aa-evaluation/actual-001/ACTUAL_OUTPUT_FREEZE.json": {
+    "sha256": "b7bf9126d854008ca413233287ce3d1460b5fa50ca8eeaafd7741b77afa96df2",
+    "bytes": 21051
+  },
+  "fox-v3-boundary-aa-evaluation/actual-001/PREPARED.json": {
+    "sha256": "ad56864db2387a420b644209c1551c5ac706200341757c36f45f4ae524873f2f",
+    "bytes": 588
+  },
+  "fox-v3-boundary-aa-evaluation/actual-001/comparison/summary.json": {
+    "sha256": "cfc8f335d4666d99e44229ed13bce5e885dfe09b8f818f027b9e66b93679311b",
+    "bytes": 417246
+  },
+  "fox-v3-boundary-aa-evaluation/actual-001/cost-001/RESULT.json": {
+    "sha256": "66508f0d1967ba6c30c7f3530a31903ff76382c7b67897afc2c9011167823a1b",
+    "bytes": 8782
+  },
+  "fox-v3-boundary-aa-evaluation/actual-001/input-hashes.json": {
+    "sha256": "a222f230b99c983af25f16343adb367783e63d921c6f2593a89b5de932b48583",
+    "bytes": 17447
+  },
+  "fox-v3-boundary-aa-evaluation/actual-001/ledger-front.txt": {
+    "sha256": "f868fe405adad3c9fa31af3ef22892ebc6adf8d48b3ed5005d02e36b0150ab2f",
+    "bytes": 133
+  },
+  "fox-v3-boundary-aa-evaluation/actual-001/ledger-oblique.txt": {
+    "sha256": "a47bfbd9f1735f21409f7ce400460d16b301d181cdaf076cc20be1c53818bf5f",
+    "bytes": 133
+  },
+  "fox-v3-boundary-aa-evaluation/actual-001/off/OFF_SCORE_CONTROL.json": {
+    "sha256": "fb691305f5331607e07beed352c4ec5e2bd0c9fd770ce8a98b14432241ff4967",
+    "bytes": 230
+  },
+  "fox-v3-boundary-aa-evaluation/actual-001/off/score-v3/COMPLETED.json": {
+    "sha256": "81d7fa96d471dc9262874cda373b238d0e240e21ed35ff2b2dba6f02b9da8e5d",
+    "bytes": 1772
+  },
+  "fox-v3-boundary-aa-evaluation/actual-001/on/SAMPLE_AUDIT.json": {
+    "sha256": "685983eb3f61998e4ef63826279f15acca864d80f7b6f00dcf1fda493dfccd6f",
+    "bytes": 11961
+  },
+  "fox-v3-boundary-aa-evaluation/actual-001/on/score-v3/COMPLETED.json": {
+    "sha256": "244e36875528b295bdbbdd876192452a798e57bcf61c7005e438863eee7241c5",
+    "bytes": 1772
+  },
+  "fox-v3-boundary-aa-evaluation/code/aa_adapter.h": {
+    "sha256": "984be0dd0ad3d885bc887988cd82e5b5f4cf93ea6fc1f4d11af3493b5231a139",
+    "bytes": 3073
+  },
+  "fox-v3-boundary-aa-evaluation/code/aa_contract.py": {
+    "sha256": "baad740f12bc935daf5e167de84e8c68a80fc3930cf1a235cd002b50c9e81b1e",
+    "bytes": 3114
+  },
+  "fox-v3-boundary-aa-evaluation/code/audit_samples.py": {
+    "sha256": "5def1fbb05e26ecb5c30ed26357ee87e23be3e024ad0cabc64f8d3928b441a35",
+    "bytes": 4410
+  },
+  "fox-v3-boundary-aa-evaluation/code/benchmark.py": {
+    "sha256": "c85c7bb8953b33c19f161d6d364975566c1b490e5bcaffcd4d3d2311fa76be8e",
+    "bytes": 3185
+  },
+  "fox-v3-boundary-aa-evaluation/code/encode_control.c": {
+    "sha256": "598539096597e236cbe8f40fc5bd90040c04f2749043954c405837bbbeb40388",
+    "bytes": 357
+  },
+  "fox-v3-boundary-aa-evaluation/code/freeze_bundle.py": {
+    "sha256": "936f3888bdb4f40bee080fa1c2ac39af23a8a7cbc8a8554c75103580f43a4eb2",
+    "bytes": 2725
+  },
+  "fox-v3-boundary-aa-evaluation/code/generate_identity.py": {
+    "sha256": "e4897cb93678b33a03f9a0a4523716b527ef7bb3b8c9a3ce00d259f3d86710e0",
+    "bytes": 3738
+  },
+  "fox-v3-boundary-aa-evaluation/code/native_render.c": {
+    "sha256": "4eb7fd7c352da94ce28e2e1c4304518ba00c971e0fdd98dcaad7f795943f89d3",
+    "bytes": 21676
+  },
+  "fox-v3-boundary-aa-evaluation/code/prepare_run.py": {
+    "sha256": "11441c145b31734f2a88964a4e469ca142591f9d53e1c41839a70f5dbd90d634",
+    "bytes": 4075
+  },
+  "fox-v3-boundary-aa-evaluation/code/run_actual.py": {
+    "sha256": "340aca0afcf8fa643cb8c0e70cbe7192d9340c6e04bce17c98a1540b77a3f363",
+    "bytes": 6379
+  },
+  "fox-v3-boundary-aa-evaluation/code/score_actual.py": {
+    "sha256": "0d8ad4eb771d8ceba2c0b2b7c89efa4db8d99fedf772e3d2f70b8664273173ac",
+    "bytes": 5201
+  },
+  "fox-v3-boundary-aa-evaluation/code/score_actual_v2.py": {
+    "sha256": "6257b3cbfecc7c4537f3779d73b5e47fa0437b5c101c3d28ad06fc31f23a4c91",
+    "bytes": 4249
+  },
+  "fox-v3-boundary-aa-evaluation/code/summarize.py": {
+    "sha256": "9fa15802aaf994be9d49552745eb4679877de2627af535c011978627e9257be3",
+    "bytes": 2828
+  },
+  "fox-v3-boundary-aa-evaluation/identity-proof.json": {
+    "sha256": "fbd0c19d43b846ecacd3b06750b977fe844b106c75d92451ba70401bd746be5e",
+    "bytes": 18877
+  },
+  "fox-v3-boundary-aa-evaluation/reviews/actual-independent.json": {
+    "sha256": "fd3104f40eb7a1306a07ca46bb821e61ad506c27703cd4bf075ece3dc4b6e19b",
+    "bytes": 6553
+  },
+  "fox-v3-boundary-aa-evaluation/reviews/admission-independent.json": {
+    "sha256": "2a6500e4d6b679042502dcaecbb35d95bda43016937088609c0ec601da43b75d",
+    "bytes": 272
+  },
+  "fox-v3-boundary-aa-evaluation/reviews/metrics-independent-summary.json": {
+    "sha256": "ebfa5d420eb08cf9847e792ec3978e8caf3b5e4407d64ef96abf2ca0428bddcc",
+    "bytes": 34411
+  },
+  "fox-v3-boundary-aa-evaluation/reviews/samples-independent.json": {
+    "sha256": "40ff2707f647f8ccdcf7ddd987bea3362f040128959efa7cdaa8e217df2d0cc0",
+    "bytes": 26373
+  },
+  "fox-v3-boundary-aa-evaluation/reviews/timing-independent.json": {
+    "sha256": "381b423bb0b8c1eb7a0639a8482fde6f933c4fa34237b3f496a6f5935b9ae724",
+    "bytes": 502
+  },
+  "fox-v3-boundary-aa-evaluation/runtime-summary.json": {
+    "sha256": "34eeb6103903e4a429731d2cbcb3a8a74112be48bd83afc184e987ea3634ac5e",
+    "bytes": 1878
+  },
+  "fox-v3-boundary-aa-evaluation/tests/aa-contract-regression.json": {
+    "sha256": "ba8832e30bde77ffa15699b742b36c64ce5fbd9b81dfd9e090c2b558419793ad",
+    "bytes": 92935
+  },
+  "fox-v3-boundary-aa-evaluation/tests/fixtures/valid-aa-report.json": {
+    "sha256": "0b22edbf2c9a880376de5812371b5c3c4e6fc008465480d4e80f7c83448c84f1",
+    "bytes": 1796
+  },
+  "fox-v3-boundary-aa-evaluation/tests/test_aa_contract.py": {
+    "sha256": "2828c316a68952a68c7ff8171e9e1a77705b822d3121327efd47f4dbb9e2c46c",
+    "bytes": 9549
+  },
+  "fox-v3-boundary-aa-evaluation/tests/test_aa_contract_v2.py": {
+    "sha256": "b9529e1f08d712fab745dfbe5f50c7a9ce70f35c57dba411ff647503aac5d835",
+    "bytes": 4630
+  },
+  "fox-v3-boundary-aa-evaluation/tests/v2/aa-contract-regression.json": {
+    "sha256": "5dce82096a96f5e2bbfba627a5952ede342f8d923ba64851887cdd8551c82a4d",
+    "bytes": 108762
+  },
+  "fox-v3-boundary-aa-evaluation/tests/v2/aa_contract-v1-to-v2.diff": {
+    "sha256": "300c07636418e4f736d160029283b9b7427a3656384a093ada8061010b3d11b0",
+    "bytes": 1656
+  },
+  "fox-v3-boundary-aa-evaluation/tests/v2/validator-change.json": {
+    "sha256": "6abbf19457485f6dae08e6803259924b5c541b9ef96dd71440cd13e8abb55a5a",
+    "bytes": 477
+  },
+  "fox-v3-boundary-aa-evaluation/tests/v3/loader-regression.json": {
+    "sha256": "3a5ac49b317cac1a07daf81e4ac7299b69e2e43ffeced450cb5740f40d5294fd",
+    "bytes": 22362
+  },
+  "fox-v3-boundary-aa-evaluation/tests/v3/test_score_loader.py": {
+    "sha256": "059aca2e325d241c3945685d62eb259b144659f7b1c5ce36f15d83ed91d43695",
+    "bytes": 8946
+  },
+  "fox-v3-boundary-aa-plan/PLAN-v2.md": {
+    "sha256": "b669ed6e99c048c9e7f5705b54f604d6742b77fffb8e4530fcbf7eb472823764",
+    "bytes": 14231
+  },
+  "fox-v3-boundary-aa-plan/PLAN-v3.md": {
+    "sha256": "e67613649543251dc9ec09f5ea75abb9936afcbb7c20ef89da7cb20975585db6",
+    "bytes": 15636
+  },
+  "fox-v3-boundary-aa-plan/PLAN.md": {
+    "sha256": "419a3a77b1886dc2a6c55301930a761d8b78ae54e586454c1e66f5e2133a8f49",
+    "bytes": 10546
+  },
+  "fox-v3-boundary-aa-plan/PREIMPLEMENTATION_FREEZE-v2.json": {
+    "sha256": "2d32c7c4f82e3a549c141498b2e94bd0b3773ab7584e1a92c081c589bcdcbd61",
+    "bytes": 969
+  },
+  "fox-v3-boundary-aa-plan/PREIMPLEMENTATION_FREEZE.json": {
+    "sha256": "13e798d4888386f4da4b7f081b52f3c2d94394787c93beb7ecb79cde6c46c6bf",
+    "bytes": 682
+  },
+  "fox-v3-boundary-aa-plan/winner-only-ledger-v2.json": {
+    "sha256": "92de1571df1ea765d332cae4a9385bcee62691c624e5cf7394454e57c810121d",
+    "bytes": 1773
+  },
+  "fox-v3-boundary-aa-plan/winner-only-ledger-v3.json": {
+    "sha256": "65c0c856c523e0705bd0a9308520161fc96b8fc3334ce20588218488f75487fd",
+    "bytes": 1855
+  },
+  "fox-v3-boundary-aa-plan/winner-only-ledger-v4.json": {
+    "sha256": "c03e71406643a96d2080015570f920f19a03ae3287ffbbf96ce075829d875064",
+    "bytes": 1929
+  },
+  "fox-v3-boundary-aa-plan/winner-only-ledger.json": {
+    "sha256": "5af7b2066e3e3d3c54585b76411d1a6b6bac5cf6373cfb9fe887f7eb867d849e",
+    "bytes": 1471
+  },
+  "fox-v3-boundary-aa-evaluation/BUNDLE_ALLOWLIST.txt": {
+    "sha256": "c34055cc26b95df26a36f627618dc338d6025e8c5a3444de284e27dadda21a11",
+    "bytes": 4006
+  },
+  "fox-v3-boundary-aa-evaluation/CODE_REPORT_FREEZE.json": {
+    "sha256": "14fe34721fabe0226b0f7b25b3ba964c098f790b4bbf01055c39b65b178862c2",
+    "bytes": 12974
+  },
+  "package.py": {
+    "sha256": "232c57e575692e67fcb82f144a2f5e98f4f63c2a243927f47bfc699f7542918d",
+    "bytes": 1653
+  },
+  "selection-independent-summary.json": {
+    "sha256": "82f0ee75b54b2eb9bce119d8d02b48cf4690edc6cf9e86e0b34c0a74b84586e5",
+    "bytes": 1501
+  }
+}

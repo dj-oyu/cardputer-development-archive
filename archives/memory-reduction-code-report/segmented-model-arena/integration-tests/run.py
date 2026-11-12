@@ -1,0 +1,17 @@
+from pathlib import Path
+import subprocess,json,os,hashlib
+R=Path(__file__).resolve().parents[1];W=R.parent;D=R/'integration-results';D.mkdir(exist_ok=True)
+env={**os.environ,'ASAN_OPTIONS':'detect_leaks=0','UBSAN_OPTIONS':'halt_on_error=1'};records=[]
+def run(name,cmd):
+ p=subprocess.run(cmd,capture_output=True,text=True,env=env);(D/(name+'.log')).write_text(p.stdout+p.stderr);records.append({'name':name,'command':list(map(str,cmd)),'returncode':p.returncode,'output':p.stdout.strip()});print(name,p.returncode,flush=True);p.check_returncode()
+for san in [False,True]:
+ suffix='sanitized' if san else 'o2';flags=['-std=c11','-O2','-g','-Wall','-Wextra','-Werror','-Wno-misleading-indentation','-Wno-unused-function','-Wno-missing-field-initializers','-ffp-contract=off','-fexcess-precision=standard']+(['-fsanitize=address,undefined','-fno-omit-frame-pointer'] if san else [])
+ P=R/'private-build';extra=[P/'visibility/visibility.c',P/'physical/fox_disk_lighting.c']
+ for name,src,link in [('floor-world',R/'integration-tests/test_floor_world.c',extra),('pixel-floor',P/'floor-tests/test_pixel_floor.c',[P/'transport/bounce.c',*extra]),*[(n,P/'transport'/f'{n}.c',[P/'transport/bounce.c',*extra]) for n in ['test_bounce','test_ground','test_ground_quadrature','test_quadrature']]]:
+  binary=D/(name+'-'+suffix);run('build-'+binary.name,['cc',*flags,'-ffunction-sections','-fdata-sections','-I'+str(P/'product/main'),'-I'+str(P/'physical'),str(src),*map(str,link),'-Wl,--gc-sections','-lm','-o',str(binary)]);run(binary.name,[str(binary)])
+ for name,root,world,observe in [('indexed-off',W/'fox-v3-indexed-bvh/private-build',False,False),('candidate-off',P,False,False),('candidate-off-observed',P,False,True),('candidate-on',P,True,False),('candidate-on-observed',P,True,True),('floorworld-on',W/'fox-v3-floor-world-reflection/capture',True,False)]:
+  binary=D/(name+'-'+suffix);incs=[R/'harness',R/'code',P/'product/main',P/'product/main/ui/kasane',root/'physical'];defs=['-DPIXEL_SOURCE="'+str(root/'transport/pixel_transport.c')+'"']+(['-DTEST_WORLD_ON=1'] if world else [])+(['-DROW_HDR_OBSERVER=1'] if observe else [])
+  srcs=[R/'integration-tests/test_row_parity.c',root/'transport/bounce.c',root/'visibility/visibility.c',root/'visibility/pixel_binding.c',root/'physical/fox_disk_lighting.c',P/'product/main/ui/kasane/ksn_mesh_depth.c',P/'product/main/ayatsuri/compact_opaque.c']+([R/'harness/hdr_observer.c'] if observe else [])
+  run('build-'+binary.name,['cc',*flags,'-ffunction-sections','-fdata-sections',*defs,*['-I'+str(p) for p in incs],*map(str,srcs),'-Wl,--gc-sections','-lm','-o',str(binary)]);run(binary.name,[str(binary),str(binary)+'.bin'])
+ for a,b in [('indexed-off','candidate-off'),('candidate-off','candidate-off-observed'),('candidate-on','candidate-on-observed'),('candidate-on','floorworld-on')]:assert (D/(a+'-'+suffix+'.bin')).read_bytes()==(D/(b+'-'+suffix+'.bin')).read_bytes(),(a,b,suffix)
+(R/'INTEGRATION_TESTS.json').write_text(json.dumps({'status':'PASS','actualModelFrames':0,'records':records,'exactComparisons':['indexed OFF = integration OFF','observer OFF/ON exact RGB/depth/mask/old counters/budgets/core reports, world OFF and ON','completed oldhost floor-world transport ON = indexed transport ON on same synthetic row raster'],'LSAN':'disabled under ptrace; no whole-renderer leak claim','outputPins':{p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in D.glob('*.bin')}},indent=2)+'\n')

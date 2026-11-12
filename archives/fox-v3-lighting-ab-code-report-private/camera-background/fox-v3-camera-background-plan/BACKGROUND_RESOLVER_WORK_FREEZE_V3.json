@@ -1,0 +1,24 @@
+{
+  "scope": "Design-only camera-background resolver work contract v3; independent illumination token; final-event API; core full-result initialization included before implementation; no execution authorization",
+  "supersedes": [
+    "BACKGROUND_RESOLVER_WORK_FREEZE.json",
+    "BACKGROUND_RESOLVER_WORK_FREEZE_V2.json"
+  ],
+  "files": {
+    "fox-v3-camera-background-plan/BACKGROUND_RESOLVER_WORK_CONTRACT_V3.md": "5413736973900e9663cc4c108e84a1495849d0ccbc8cea07147643eac334443e",
+    "fox-v3-camera-background-plan/preflight/SOURCE_FREEZE.json": "5f282d4fb21370487a2d991dd8cf7eaaa32e3febe7697122646b70fcea063ab9",
+    "fox-v3-camera-background-plan/preflight/counts-001/COMPLETED.json": "82f6c16ed1fc2bc05aedc09292ab153632bd85b991de679f0ecaa83b2411b9aa",
+    "fox-v3-camera-background-plan/preflight/counts-001/INPUT_FREEZE.json": "9c712f2ba9b82a47971bce061f4ca8ea7942c659284077fda63d507a972201a8",
+    "fox-v3-camera-background-plan/preflight/ORDER_DIAGNOSTIC_FREEZE.json": "650c4e4d76c404fb6a68d93274a26bc13d89c263ed60235e2037fc3571cd8ba5",
+    "fox-v3-camera-source-audit/summary.json": "97ad99ed02297b3c8cc4b0fa0c425c74196cdcf5478a3e21c35323d6ba283d1b"
+  },
+  "workHardCap": 1540298112,
+  "separateCoreIntegrationCap": 1360000,
+  "newHostTotalCap": 1541658112,
+  "separateShadowCaps": {
+    "rays": 2000000,
+    "nodeVisits": 200000000,
+    "triangleTests": 100000000
+  },
+  "sourceAndCountRootsUnchanged": true
+}

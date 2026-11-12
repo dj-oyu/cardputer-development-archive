@@ -1,0 +1,29 @@
+{
+  "status": "PASS_INDEPENDENT_RETAINED_REVIEW",
+  "verifiedFrames": 1,
+  "rawComparisons": 5,
+  "reportComparisons": 9,
+  "forwardReverseComparisons": 0,
+  "frames": [
+    {
+      "arm": "off",
+      "mode": "diagnostic",
+      "name": "native-front-baseline",
+      "rawComparisons": 5,
+      "reportComparisons": 9,
+      "sceneBytes": 69276,
+      "sceneNodes": 1023,
+      "visibilityRays": 436099,
+      "visibilityNodeVisits": 27010385,
+      "visibilityTriangleTests": 8454884,
+      "transportRays": 7638837,
+      "transportNodeVisits": 409441240,
+      "transportTriangleTests": 129171291,
+      "producerWorkIncludingDepth": 476260
+    }
+  ],
+  "sourceFreezeSHA256": "f94d00f94de91574a42d499c4fc59d22a3ebb43ec87e9767e91a736e2c4c321a",
+  "gateSHA256": "30afc4931cae38b57c266f4fb8cf1085037e176236ca1878fb7819c7c7ca609f",
+  "auditSourceSHA256": "8dc631a9f2f0db8f83118f00afa0cff1f92c603a161e6ef4aeb7077f271dd3ae",
+  "scope": "Read-only retained verification; no renderer launches, rerenders, source changes or additional report exceptions. Actual observations retain HDR diagnostic state; not device/product whole-process fit."
+}

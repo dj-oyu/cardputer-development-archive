@@ -1,0 +1,123 @@
+{
+  "artifacts": {
+    "cardputer_pocketjs.bin": {
+      "bytes": 2296736,
+      "sha256": "63f35801715ce8f211a7ded14c138f1e9a6a40415bc39170660f92c779743e7d"
+    },
+    "cardputer_pocketjs.elf": {
+      "bytes": 20045388,
+      "sha256": "e2e49a8637d0ef0ee3c7f839c7323f76d5d230e66e474216419a7ba21f7c3a3b"
+    }
+  },
+  "build_measure": {
+    "cmake_cache_sha256": "4d282b41a104425d6eff3f8732360e75ab1f80dc35bf5d9e0200f135ae3ac7ac",
+    "measure_mode": "ON",
+    "native_symbols": [
+      "dm_batch",
+      "dm_calibrate",
+      "dm_dispatch",
+      "dm_emit",
+      "dm_enter",
+      "dm_format_record",
+      "dm_heap",
+      "dm_leave",
+      "dm_now_us",
+      "dm_output_reset",
+      "dm_present",
+      "dm_read",
+      "dm_refused",
+      "dm_reset",
+      "dm_transfer"
+    ]
+  },
+  "build_mode": {
+    "cmake_cache_sha256": "4d282b41a104425d6eff3f8732360e75ab1f80dc35bf5d9e0200f135ae3ac7ac",
+    "elf_embedded_play_verified": true,
+    "embedded_play_bytes": 9683,
+    "embedded_play_sha256": "4c4a243639b85df2d1285c226373eb8bc966dac71ecceda8ce4daaee106547a0",
+    "generated_chunk_present": true,
+    "native_symbols": [
+      "derby_telemetry_begin_frame",
+      "derby_telemetry_eval",
+      "derby_telemetry_io_us",
+      "derby_telemetry_present",
+      "derby_telemetry_reset",
+      "derby_telemetry_set",
+      "derby_telemetry_write"
+    ],
+    "source_play_sha256": "a6c2240b648ac0e328a15c5c7ded9e1157e45dc3a2d381707ff4461d4bdb5078",
+    "telemetry_mode": "ON"
+  },
+  "comparison_seed": {
+    "elf_embedded_view_verified": true,
+    "elf_seed_symbol_verified": true,
+    "embedded_view_sha256": "9e90ea8f986df8fcf71fd88b36f5a33a9bca8493c370963fb646fbd6d2b73ca8",
+    "hardware_seed": "2545F491",
+    "mode": "fixed",
+    "saved_race": 19
+  },
+  "detail_measurement": {
+    "mode": "ON",
+    "native_symbols": [
+      "dd_active",
+      "dd_add",
+      "dd_cancel",
+      "dd_depth",
+      "dd_enter",
+      "dd_finish",
+      "dd_js",
+      "dd_leave",
+      "dd_owned",
+      "dd_owner",
+      "dd_resume",
+      "dd_saved",
+      "dd_saved_depth",
+      "dd_stack",
+      "dd_start",
+      "dd_suspend",
+      "dd_suspended_at",
+      "dd_totals"
+    ]
+  },
+  "fixed_workload": {
+    "fixture": {
+      "camera": 8,
+      "contexts": 120,
+      "end": 510,
+      "finish": "5DC86E18",
+      "id": "oval-pan8-390-510-v1",
+      "independent": false,
+      "oval": 1,
+      "race": 1000001,
+      "repetitions": 3,
+      "seed": "9112A7AB",
+      "start": 390,
+      "tier": 1
+    },
+    "manifest_sha256": "84e0341ee1ac10c232e3008f28f8aada8823155e19229f926e633d7780a2021d",
+    "mode": "ON",
+    "native_symbols": [
+      "df_command",
+      "df_count",
+      "df_detail_exit_record",
+      "df_dispatch",
+      "df_fail",
+      "df_fixture_id",
+      "df_fixture_manifest",
+      "df_now_us",
+      "df_owner_begin",
+      "df_owner_end",
+      "df_owner_work_end",
+      "df_pace_begin",
+      "df_pace_end",
+      "df_present",
+      "df_reset",
+      "df_session",
+      "df_status",
+      "df_variant",
+      "df_write"
+    ]
+  },
+  "hardware_tested": false,
+  "schema_version": 1
+}

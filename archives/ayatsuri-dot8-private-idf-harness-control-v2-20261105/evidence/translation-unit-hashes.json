@@ -1,0 +1,1890 @@
+{
+  "/workspace/private-dot8-controlled-harness-20261105/build/project_elf_src_esp32s3.c": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "/workspace/.setup/esp-idf/components/xtensa/eri.c": {
+    "bytes": 434,
+    "sha256": "a3e057eb6c24ae2be50d0b672733a21cbfc16e02bbcd53a55861c394f3ce266c"
+  },
+  "/workspace/.setup/esp-idf/components/xtensa/xt_trax.c": {
+    "bytes": 1687,
+    "sha256": "555ec6b5fab7fa6266fea54409df172cdf43f74ee487f19b944165d256f7babf"
+  },
+  "/workspace/.setup/esp-idf/components/xtensa/xtensa_context.S": {
+    "bytes": 25340,
+    "sha256": "6446fd037a24069bc4d4ac5b42bcda53fd376be590f14a9c4e6a527a3aad88e2"
+  },
+  "/workspace/.setup/esp-idf/components/xtensa/xtensa_intr_asm.S": {
+    "bytes": 7360,
+    "sha256": "eb07af713699ffb6978d46a1f3e86b27fafe6890b3a370f8d4bd0275f6668d8b"
+  },
+  "/workspace/.setup/esp-idf/components/xtensa/xtensa_intr.c": {
+    "bytes": 5103,
+    "sha256": "b1a0200802daa02bbab52bdfdeb6fde5ab785b35c96d43ca26801e50286b861f"
+  },
+  "/workspace/.setup/esp-idf/components/xtensa/xtensa_vectors.S": {
+    "bytes": 85431,
+    "sha256": "647926040a82286ca4d5c503528121c0a645377650f84a6a36cfa66ae3b5161e"
+  },
+  "/workspace/.setup/esp-idf/components/esp_stdio/stdio_vfs.c": {
+    "bytes": 7941,
+    "sha256": "a6716dfe6bac8def08fe6bae5b74f340f50fcc27fd9190234af3263533f40457"
+  },
+  "/workspace/.setup/esp-idf/components/esp_stdio/stdio_simple.c": {
+    "bytes": 556,
+    "sha256": "7e580c33d50cfba5f9b69bc747fe82b8f88e22991b786005480a63033bcdef47"
+  },
+  "/workspace/.setup/esp-idf/components/esp_stdio/stdio_syscalls_simple.c": {
+    "bytes": 2809,
+    "sha256": "52886bbd7b00466192bf31fb52fce88775c19d55068d6d73bcd3594e1fe42d6b"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hal_dma/gdma_hal_top.c": {
+    "bytes": 4132,
+    "sha256": "c17183bb3b47ec469ae8b94bbe75d0c2fde5b4006df9e7447e6fca98cadba095"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hal_dma/esp32s3/gdma_periph.c": {
+    "bytes": 1124,
+    "sha256": "d3127e84e87605e7437b400a34d041ec257e484855cd1e85633083be5b078826"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hal_dma/gdma_hal_ahb_v1.c": {
+    "bytes": 7823,
+    "sha256": "1a913d5a216ce40cc72bdaf029612eb9134a8d5bfd21be030568ab0ef41a9473"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hal_gpspi/esp32s3/spi_periph.c": {
+    "bytes": 3057,
+    "sha256": "d9d049feb5fcedf09ab4820820be88c342db53d94a21376addd6066b2ed98b1a"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hal_gpspi/spi_hal.c": {
+    "bytes": 2168,
+    "sha256": "262bf7357794fa6816a18674c24f96f82890c88d7d9fda8a169af68daafdcd54"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hal_gpspi/spi_hal_iram.c": {
+    "bytes": 10763,
+    "sha256": "58f62132c492da4bfaffe95cffb6365b7658f3894684544f1503d499149815a4"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hal_gpspi/spi_slave_hal.c": {
+    "bytes": 1024,
+    "sha256": "f6e08cbd9d96553d00f37b498fc10e19dd83d0ed69afbce89619d10dfb573c97"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hal_gpspi/spi_slave_hal_iram.c": {
+    "bytes": 3327,
+    "sha256": "f553e26640512785c4e0194df07b6abfa287e30e17edbc78f8681ff275668db1"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hal_gpspi/spi_slave_hd_hal.c": {
+    "bytes": 8519,
+    "sha256": "9381799941051ed577c0cb3dd4ca1333e8e1debf4a04d45403a9289fc4fd35ed"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hal_clock/esp32s3/clk_tree_hal.c": {
+    "bytes": 2898,
+    "sha256": "86a631d4638b32732b3d45a71435a853ec893abe7f78eebc195a122be9ff58b2"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hal_mspi/spi_flash_hal.c": {
+    "bytes": 6112,
+    "sha256": "45a4a53f87590a913958fe93b7804b47d67d33697fda27a7d5e1c71ed322a1a4"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hal_mspi/spi_flash_hal_iram.c": {
+    "bytes": 7959,
+    "sha256": "31e830b40b07ff917e7e97c2fc949d66c0ad8cbefd9b9d52ae39f0a46419e904"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hal_mspi/spi_flash_encrypt_hal_iram.c": {
+    "bytes": 1704,
+    "sha256": "8995d7c00866f51eb2d87435280f855663813b8c9d90cae56cd31ab27ff8a219"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hal_mspi/spi_flash_hal_gpspi.c": {
+    "bytes": 1081,
+    "sha256": "b685128c52bbaecc6f05296c2049dcfddfd6f79c519a6ef6d78b0f852206cbd4"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hal_security/mpi_hal.c": {
+    "bytes": 2377,
+    "sha256": "1617a81cc99729ba18922ff2668d3dd6e04b7c09fb800ea7e33f44d181fe6135"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hal_security/sha_hal.c": {
+    "bytes": 3495,
+    "sha256": "afdeb77844e9f314e5206a4504d87d9abcc2c418a26cc8d15497e2a4909b2812"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hal_security/aes_hal.c": {
+    "bytes": 2935,
+    "sha256": "f349ff83d948ef0faa1870c0384dd2c648adaa5f4590d91756526a902d433ca5"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hal_security/hmac_hal.c": {
+    "bytes": 2275,
+    "sha256": "71398f54da9065dd8348b9aea8662e38f66b05e44dc1d027c784c9d4d8d2b36d"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hal_security/ds_hal.c": {
+    "bytes": 1231,
+    "sha256": "9bee74a5c816202ba630dec047f098d568133aeb70fa3421708118075bb6c971"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hal_security/mpu_hal.c": {
+    "bytes": 992,
+    "sha256": "664cc90d916e20a3bc944970a4d31629d5393698ac7e94639c4224866d0337b0"
+  },
+  "/workspace/.setup/esp-idf/components/esp_app_format/esp_app_desc.c": {
+    "bytes": 5392,
+    "sha256": "0a788fdbe97f6d9b25c6f98cc2e657104ccc297583d1fc1ba670135fcff2550d"
+  },
+  "/workspace/.setup/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c": {
+    "bytes": 1098,
+    "sha256": "09c1bf0995e8d2910b26196b59d5dfc565060c51dce0d5945ee4a56b8e8078e4"
+  },
+  "/workspace/.setup/esp-idf/components/app_update/esp_ota_ops.c": {
+    "bytes": 50877,
+    "sha256": "5240ef0ccbe63be9315b281c264bec51aeea65bfa06dc70ddd3899388a1e441b"
+  },
+  "/workspace/.setup/esp-idf/components/esp_partition/partition.c": {
+    "bytes": 27795,
+    "sha256": "f004e82fd271568f97965236ec027b50d384b2a96631d532bb712740792575e8"
+  },
+  "/workspace/.setup/esp-idf/components/esp_partition/partition_target.c": {
+    "bytes": 7768,
+    "sha256": "5917caadeb7a4a405c72eecbee939fdd153f50c32d9340699623da172f0f58d6"
+  },
+  "/workspace/.setup/esp-idf/components/efuse/esp32s3/esp_efuse_table.c": {
+    "bytes": 65542,
+    "sha256": "ebbff31657f49a24c10e1c98947f2f0d00190c985cef2f4714a1c92aa00bcb5f"
+  },
+  "/workspace/.setup/esp-idf/components/efuse/esp32s3/esp_efuse_fields.c": {
+    "bytes": 1530,
+    "sha256": "d36d3fdb9e2765dc5579f4811044752f22b6816d0e13abf3aabec306bba20746"
+  },
+  "/workspace/.setup/esp-idf/components/efuse/esp32s3/esp_efuse_rtc_calib.c": {
+    "bytes": 3999,
+    "sha256": "6b0744d69dc2e6cae3826136ea64aff6b06d51538c3465195f6485352de65abf"
+  },
+  "/workspace/.setup/esp-idf/components/efuse/esp32s3/esp_efuse_utility.c": {
+    "bytes": 10464,
+    "sha256": "c4295a38e0e9812226e0170baa073f1c9d8a7a9dc834c548f17c46d93369a57e"
+  },
+  "/workspace/.setup/esp-idf/components/efuse/src/esp_efuse_api.c": {
+    "bytes": 11398,
+    "sha256": "dddd15e910322cd8f5707b983857f31acc3399438e163293fb9adaeb8cc47e0b"
+  },
+  "/workspace/.setup/esp-idf/components/efuse/src/esp_efuse_fields.c": {
+    "bytes": 8376,
+    "sha256": "4ffc6c72e7175a293898241a59e5359c636a9942128290d3af0f266d88374155"
+  },
+  "/workspace/.setup/esp-idf/components/efuse/src/esp_efuse_utility.c": {
+    "bytes": 18397,
+    "sha256": "dc3ac899c0a0c5fc010a5d2f1d9b50e1743e948ca9eb973226bbc8f3a020aeb2"
+  },
+  "/workspace/.setup/esp-idf/components/efuse/src/efuse_controller/keys/with_key_purposes/esp_efuse_api_key.c": {
+    "bytes": 15849,
+    "sha256": "5c2a6fc259ae358d5eb07b176a24272d34880c14ee432174f380b6ffcb92c73d"
+  },
+  "/workspace/.setup/esp-idf/components/efuse/src/esp_efuse_startup.c": {
+    "bytes": 6734,
+    "sha256": "4595c95d5a52a349a54cfeb9fffd28cdcd6af6bf17c55d776e0d3023ba46fd19"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hal_timg/timer_hal.c": {
+    "bytes": 2379,
+    "sha256": "b6c22c6932eb5b20a5663c4c97b30ac57bd26820e7d26ef78459cb8d16e726e4"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hal_timg/esp32s3/timer_periph.c": {
+    "bytes": 934,
+    "sha256": "b8466ce1185cd586d083153b878364774d7e306b33e4ce6d7be399c70d0e8320"
+  },
+  "/workspace/.setup/esp-idf/components/esp_timer/src/esp_timer.c": {
+    "bytes": 25523,
+    "sha256": "fe2f8383feb0dae2cea44382fc20dfe950d5dcd15bbca9be04dd0c817d2486ea"
+  },
+  "/workspace/.setup/esp-idf/components/esp_timer/src/esp_timer_init.c": {
+    "bytes": 863,
+    "sha256": "c7c304c9eb480d5f725523ff8210679068090f540ee3a88509c8ddce743b4862"
+  },
+  "/workspace/.setup/esp-idf/components/esp_timer/src/ets_timer_legacy.c": {
+    "bytes": 3625,
+    "sha256": "fb28b0f5b2d15950bde406cd327992678c52300cef39e5f9462259f2fd2d083f"
+  },
+  "/workspace/.setup/esp-idf/components/esp_timer/src/system_time.c": {
+    "bytes": 1261,
+    "sha256": "80600e8accf7693899bd510d4aaed8e48e5457bb2df918000be66a7ea8867780"
+  },
+  "/workspace/.setup/esp-idf/components/esp_timer/src/esp_timer_impl_common.c": {
+    "bytes": 2149,
+    "sha256": "79c7c4b51d6a03c2d366acfdb443723af659f9ef0fbb93a581608a88efd6229c"
+  },
+  "/workspace/.setup/esp-idf/components/esp_timer/src/esp_timer_impl_systimer.c": {
+    "bytes": 9690,
+    "sha256": "0f3ff25d04101323139c83ebb82722da52a4b9cfc756298d21e29c6810974e7e"
+  },
+  "/workspace/.setup/esp-idf/components/esp_security/src/init.c": {
+    "bytes": 4836,
+    "sha256": "0ec3693522cf58c738383e1a13110f6179631e5685c60397d4f72b9267393667"
+  },
+  "/workspace/.setup/esp-idf/components/esp_security/src/esp_hmac.c": {
+    "bytes": 9295,
+    "sha256": "f21801f9c3094b3268088dedca7e88bf6da9d4b705e5c06b6d96af164b6de8ce"
+  },
+  "/workspace/.setup/esp-idf/components/esp_security/src/esp_ds.c": {
+    "bytes": 14752,
+    "sha256": "ca11fddab1507f03ebbd1d91aae6544aa54b36191098f708f58290a213ce3cd2"
+  },
+  "/workspace/.setup/esp-idf/components/esp_security/src/esp_crypto_lock.c": {
+    "bytes": 5587,
+    "sha256": "5ec2287139419de96af04c40afdff39829655d3b67893f2bdef8096070068c2b"
+  },
+  "/workspace/.setup/esp-idf/components/esp_security/src/esp_crypto_periph_clk.c": {
+    "bytes": 3559,
+    "sha256": "873e11b2ff9d311a397632a31f02e3deb7f9a8687e43a555c4a23dfb7b46f5d1"
+  },
+  "/workspace/.setup/esp-idf/components/esp_driver_gpio/src/gpio.c": {
+    "bytes": 40153,
+    "sha256": "7eacf984d67fdf59ee7047969da8cd682b736d2a3ba9dd4a21522c3a55194e04"
+  },
+  "/workspace/.setup/esp-idf/components/esp_driver_gpio/src/gpio_glitch_filter_ops.c": {
+    "bytes": 846,
+    "sha256": "bfe583cae8ef3363ae9b5bac0b17132a6bd2bf234aa92b0b00a313fde4cf9248"
+  },
+  "/workspace/.setup/esp-idf/components/esp_driver_gpio/src/rtc_io.c": {
+    "bytes": 9715,
+    "sha256": "3cd6dea78603f4f89f281e544c7c7392b11571d68afcdaaae872a7f03bbd3429"
+  },
+  "/workspace/.setup/esp-idf/components/esp_driver_gpio/src/dedic_gpio.c": {
+    "bytes": 18420,
+    "sha256": "aac5cea77d22e26b0bc1fbf4925cfa241bfdea10202c98e28435df5a955b74d9"
+  },
+  "/workspace/.setup/esp-idf/components/esp_driver_gpio/src/gpio_pin_glitch_filter.c": {
+    "bytes": 4209,
+    "sha256": "65c7099450a211212fe280f6da4d61594a846d2c563b17c6ad319ea5dfabe67b"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hal_uart/uart_hal.c": {
+    "bytes": 4741,
+    "sha256": "c1bd5f9d4471fa22f1c80e1f0156be1a9ad9783a750e785b417cd6ee15c1988e"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hal_uart/uart_hal_iram.c": {
+    "bytes": 1043,
+    "sha256": "ed6650843d8f2c5b1c3756231190e4189fd1b0160b0fde4a810653e1cffb3f68"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hal_uart/esp32s3/uart_periph.c": {
+    "bytes": 4571,
+    "sha256": "46785e05328b96318cecb7b781f90d6e9a95d8a2c940f75ffa898f7d1f2e7e86"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hal_uart/uhci_hal.c": {
+    "bytes": 413,
+    "sha256": "17050b24642d7166d68ca18a63ce4901103f25054c649e56a4a03909b887243b"
+  },
+  "/workspace/.setup/esp-idf/components/esp_pm/pm_locks.c": {
+    "bytes": 7702,
+    "sha256": "bc561903354d6036024de32efaaf62d2e0b618738079b8bde3a9fb0c538d6256"
+  },
+  "/workspace/.setup/esp-idf/components/esp_pm/pm_trace.c": {
+    "bytes": 2743,
+    "sha256": "a42350cd9887e25ded39478ea8ef251aea02b3e4a547bb6295936855f83bb386"
+  },
+  "/workspace/.setup/esp-idf/components/esp_pm/pm_impl.c": {
+    "bytes": 41023,
+    "sha256": "0fb39fb17381ed3b9b2c1cc0e069890f7f970164617fbc23cbb67eaef27d665d"
+  },
+  "/workspace/.setup/esp-idf/components/esp_mm/esp_mmu_map.c": {
+    "bytes": 35708,
+    "sha256": "6ef7c0adf3d43a44e8a2dafa75531b47a03117455beaacc72b19e2e83a3a2bed"
+  },
+  "/workspace/.setup/esp-idf/components/esp_mm/port/esp32s3/ext_mem_layout.c": {
+    "bytes": 867,
+    "sha256": "cc59d949201b4465112890903c1e682815d4beb4f46d5b18472b12c60efa74a3"
+  },
+  "/workspace/.setup/esp-idf/components/esp_mm/esp_cache_msync.c": {
+    "bytes": 6684,
+    "sha256": "68faefeb975ad9c932a291fbd59215fe5a5c10b785f2c5c4d43493fad5d8c0bc"
+  },
+  "/workspace/.setup/esp-idf/components/esp_mm/esp_cache_utils.c": {
+    "bytes": 3329,
+    "sha256": "d8dbb3de2e500531069d9a2dc20f3fe167680f63a23f13af8a335d9a4c0ed907"
+  },
+  "/workspace/.setup/esp-idf/components/esp_driver_dma/src/esp_dma_utils.c": {
+    "bytes": 7532,
+    "sha256": "274202859f3b455e08c18f57272737eb0f31aac210beb232a187452e5a15d3a7"
+  },
+  "/workspace/.setup/esp-idf/components/esp_driver_dma/src/gdma_link.c": {
+    "bytes": 17266,
+    "sha256": "e41c21886ddc313deab3f8fbc68b75040f3f72f0d88a2e1167e1ab94bb7cf754"
+  },
+  "/workspace/.setup/esp-idf/components/esp_driver_dma/src/gdma.c": {
+    "bytes": 42733,
+    "sha256": "8f1a14074d5828a0fc7d7b09668526b8663817102b2848efe13b69f86ea62500"
+  },
+  "/workspace/.setup/esp-idf/components/esp_driver_dma/src/esp_async_memcpy.c": {
+    "bytes": 1154,
+    "sha256": "26ee748868ac941c10d7179aeed29352f39cf4b2941093f56da709e83cafa419"
+  },
+  "/workspace/.setup/esp-idf/components/esp_driver_dma/src/async_memcpy_gdma.c": {
+    "bytes": 22039,
+    "sha256": "1166dd6e75bb37117734953543b86bb90c260a7745653b64257f87e4fd73c52a"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/esp_crt_bundle/esp_crt_bundle.c": {
+    "bytes": 21401,
+    "sha256": "e44d1e0a42a9d33cfc072ea005e93c8a0337c5ebcbfb9a1cf1554930f4f2816f"
+  },
+  "/workspace/private-dot8-controlled-harness-20261105/build/x509_crt_bundle.S": {
+    "bytes": 426885,
+    "sha256": "314ae52bf8208390e3a27af817a09fddb2aa71b417d548d2780a27a2fa78feba"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/core/psa_crypto.c": {
+    "bytes": 327512,
+    "sha256": "da9a119f1a83a6037f21eb2afeb116deb53d9b01cb4beee7e302fd9e499963db"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/core/psa_crypto_client.c": {
+    "bytes": 448,
+    "sha256": "622b752075a924573fc68aebd4fbb498b9d3a6bf30d03e28879ce7b1d7c169d9"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/core/psa_crypto_driver_wrappers_no_static.c": {
+    "bytes": 8348,
+    "sha256": "801c08674cde2a995230286a97200b7f833431b54a5d01302d67b0d3b3c4ceda"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/core/psa_crypto_slot_management.c": {
+    "bytes": 36430,
+    "sha256": "7284a26662b50deea7cba3cca39630f4f0076311eec3e8f14fa4050a2d377523"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/core/psa_crypto_storage.c": {
+    "bytes": 13545,
+    "sha256": "0a12e41b32942638981824a6d06b2dfa7322e0f16529c384bf5a13dbeb052573"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/core/psa_its_file.c": {
+    "bytes": 7335,
+    "sha256": "9ad5150d9d074b94a966c7c7374bf017a5aa1bfea554c2305315509cd1886b08"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/core/tf_psa_crypto_config.c": {
+    "bytes": 2794,
+    "sha256": "0619db0fb46fa905adb18e8555253ffa14544bb8fc03856f0640393243e57752"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/core/tf_psa_crypto_version.c": {
+    "bytes": 578,
+    "sha256": "19e17395c4e3aaec984c379d428bfdf2d69265ae06e86e20f41b2656d9f8b062"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/port/sha/core/esp_sha_gdma_impl.c": {
+    "bytes": 337,
+    "sha256": "a4a2766aebac84dae1f41e0c847e382151adf6ffb993a7c6ba028b9eb2ef31f2"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/port/aes/dma/esp_aes_gdma_impl.c": {
+    "bytes": 579,
+    "sha256": "5ad69d726b22331f887633e8aefc42e98f960717765648c0633446841780705f"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/port/aes/dma/esp_aes_dma_core.c": {
+    "bytes": 53543,
+    "sha256": "2dc004905a2ebe0125f28c04efd39aa228296d861e8c63d65d06c6aa32716c3a"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/port/crypto_shared_gdma/esp_crypto_shared_gdma.c": {
+    "bytes": 7811,
+    "sha256": "c2593847ad7878ac0b4d73956c6256fd6cd028c7378a6df49a1cc36d01cf9722"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/port/esp_hardware.c": {
+    "bytes": 916,
+    "sha256": "3fcb76a92ddce22aaaf15a7e9117f3ca8c2395a9a5152047bd94fb22167718eb"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/port/esp_mem.c": {
+    "bytes": 1199,
+    "sha256": "5b4d710ddb779b83c36aadb861bbfa1e59dac236e72f4b545fad2fb2f5154bb0"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/port/aes/esp_aes_xts.c": {
+    "bytes": 9137,
+    "sha256": "53a972dad10e03bd7dc5e566d656585d573ffe8d80eadf68a629f8223f208d00"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/port/aes/esp_aes_common.c": {
+    "bytes": 3427,
+    "sha256": "821485770eb7ab9f35dd9e3b0edafef686dc471af09f303eae81ed29b9b24aa9"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/port/aes/esp_aes.c": {
+    "bytes": 23555,
+    "sha256": "8820d4b3fc7b3ab3d413a0d3f61b9677e0ff3176532e0063e05f5d613e64b31f"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/port/aes/esp_aes_gcm.c": {
+    "bytes": 21503,
+    "sha256": "d40a0a6aa35bc20133783f117b8645c11ab76330380e1ddc41176be829a7ce59"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/port/psa_driver/esp_sha/psa_crypto_driver_esp_sha.c": {
+    "bytes": 14425,
+    "sha256": "bf8d1c89dfc190463c030eb6fbb3f12a0e3058dce7453f294d5fd0c837cfad66"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/port/psa_driver/esp_sha/core/psa_crypto_driver_esp_sha256.c": {
+    "bytes": 7130,
+    "sha256": "90c099e3bf5e03797314d170b6db4d1e6240f53547cf20fbc1aa8f3f152930d8"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/port/psa_driver/esp_sha/core/psa_crypto_driver_esp_sha512.c": {
+    "bytes": 8167,
+    "sha256": "bd6b5f18256048c1557071c4a79d4699014fc56cc9be629524ebe25f6fbaf8cc"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/port/sha/esp_sha.c": {
+    "bytes": 3089,
+    "sha256": "44e5f7c95e42c9886acdcd7c43c468e00e956aa9aa84746f22f58e1df1fdfbd2"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/port/psa_driver/esp_mac/psa_crypto_driver_esp_hmac_transparent.c": {
+    "bytes": 12318,
+    "sha256": "ae8b3b99c11d234f78a799a27cdb5854475bb690e95016775fe3868f6aae915f"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/port/psa_driver/esp_sha/core/psa_crypto_driver_esp_sha1.c": {
+    "bytes": 11571,
+    "sha256": "b5f493cc580cec3f073dcae08747c78f541743cdb51956c91fb879d6c9e0e858"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/port/sha/core/sha.c": {
+    "bytes": 12210,
+    "sha256": "3189340c3e1cde0675e48c6b019d44cde4936e83916ab0125c7c882fbf70fe74"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/port/psa_driver/esp_md/psa_crypto_driver_esp_md5.c": {
+    "bytes": 2665,
+    "sha256": "7a4b7458150daa9ceb11e3ab8558c21015d5424a2d0f12ae4259a9addd6a277e"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/port/psa_driver/esp_mac/psa_crypto_driver_esp_hmac_opaque.c": {
+    "bytes": 6862,
+    "sha256": "2fcc2df064f64d4fe3e4dd71ab55bdc4b95432b77bf0876d4f8488aa9dfeb2c5"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/port/esp_hmac_pbkdf2.c": {
+    "bytes": 3786,
+    "sha256": "204b18a43613765fea9cd19cf35a81b6b26be7d7532155dccf0a1d6dafc7ce91"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/port/bignum/esp_bignum.c": {
+    "bytes": 21002,
+    "sha256": "31b4a153708a933690e9b514829c665ad167540b7f85f043603ae4c81dc2397c"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/port/bignum/bignum_alt.c": {
+    "bytes": 7522,
+    "sha256": "23993e244defdbe2642e565bf0409dcf16de9c228ed4a54a8bbb625a986756c7"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/port/psa_driver/esp_aes/psa_crypto_driver_esp_aes.c": {
+    "bytes": 23154,
+    "sha256": "3e63e9c30218093fb5414934d5b2f1a54a40019418ece968e628cdbc7bd96c37"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/port/psa_driver/esp_aes/psa_crypto_driver_esp_aes_gcm.c": {
+    "bytes": 10740,
+    "sha256": "643dfac8959e847972d1041bcde0b99cac4cb46db4b905615d000b708324e3d3"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/port/psa_driver/esp_mac/psa_crypto_driver_esp_cmac.c": {
+    "bytes": 12852,
+    "sha256": "4741e9c04f61226bdce6e01c149384b57fcb12bc9cae1b6e10eed6e81289b1cc"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/everest/library/everest.c": {
+    "bytes": 3723,
+    "sha256": "998a607fb8ac3a565adae5aac74ce6d07831fda605289030b859c8c07922cc24"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/everest/library/x25519.c": {
+    "bytes": 5959,
+    "sha256": "fb95be62b33a2375891d6d016f72cc8ef5b2efb49db241b9cd6c82275fcb9d06"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/everest/library/Hacl_Curve25519_joined.c": {
+    "bytes": 1557,
+    "sha256": "4c81628a52ad2fd4d2434d763691bbd42c863c17d8f285deb77d66c946edf262"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/p256-m/p256-m_driver_entrypoints.c": {
+    "bytes": 10453,
+    "sha256": "36db3e42a3ca76ce803bb346761aaad85d829fc6077f75934f87b1ec435ff329"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/p256-m/p256-m/p256-m.c": {
+    "bytes": 42936,
+    "sha256": "f546b6e993e268dd2fa464c68b740f708498d480c1f74aa1bbda518d1f7bb770"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/src/aes.c": {
+    "bytes": 76897,
+    "sha256": "e9d11d3c5daa95e5c746e542eaf6b927b5a2815e54492c2e545f64e9d98b0bde"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/src/aesce.c": {
+    "bytes": 20422,
+    "sha256": "32b419979dc5d5a449e8bbfe8af52b1e754fd5c93a76675cebe8d86a0bec4c10"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/src/aesni.c": {
+    "bytes": 33614,
+    "sha256": "3458909ee5509ba7aa4603aba5bc0e4a451afa755958d40e5e02e650de6e3e1d"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/src/aria.c": {
+    "bytes": 34840,
+    "sha256": "43c1682e9010db91b0b8bbfe9559c8b7adc94ebcc6387e78f34629f6c2c41f4e"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/src/asn1parse.c": {
+    "bytes": 12119,
+    "sha256": "41bbf830c1153971bf22fe9b740547775afcc10bbc3ba470011f2b2064ce132f"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/src/asn1write.c": {
+    "bytes": 14558,
+    "sha256": "80349bbcd1c991d93f4f2e57763dc7d79f31f7a341cd2ba54fb6900e72c32076"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/src/base64.c": {
+    "bytes": 9450,
+    "sha256": "80459f5b1329dbd9fb4b73acfd322f1e8140abbeebac49356d9b0b27a77c33c9"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/src/bignum.c": {
+    "bytes": 68438,
+    "sha256": "a5056f77503d9db98d284881492b34df6cdf5c66e943b3f51716e48e9a0e6da2"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/src/bignum_core.c": {
+    "bytes": 42738,
+    "sha256": "a28d58ce6ae27f19dd9904ebc8b3584860393e60cc3c952f12f67bbfd330d71f"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/src/bignum_mod.c": {
+    "bytes": 11527,
+    "sha256": "c5db8fe8b70e2d666494e962a45d30a3f796dbbc34ab9c80645ece08a6e6f1ad"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/src/bignum_mod_raw.c": {
+    "bytes": 9365,
+    "sha256": "3f95ed690b715b95225c968f37a3410b3d8bce9a46b2919e55978c492ed74d9e"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/src/block_cipher.c": {
+    "bytes": 6613,
+    "sha256": "d59fd3ed04d360929c28ef981bd9ad98cc6087ae3bdcc996897b7120678847dc"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/src/camellia.c": {
+    "bytes": 34857,
+    "sha256": "f099ba55c4f31a3bc4785a900c4d25bdeb5f9687b7be8ec18bde1d25b02c6fe2"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/src/ccm.c": {
+    "bytes": 23421,
+    "sha256": "e0e3bf25e9eafac105dbc4a8e4b919c50edfb487d8e54d9ef0f74230a8ba37cf"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/src/chacha20.c": {
+    "bytes": 16869,
+    "sha256": "1c0f5eb8a5bfeff5ff8ce1007cecbc390a7d7384339140b7c877d0902405104a"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/src/chachapoly.c": {
+    "bytes": 14466,
+    "sha256": "7aeebeb1e3138a1a5681bdd06c58128dbe233789fb8aad58e71f6cb561aa6c06"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/src/cipher.c": {
+    "bytes": 52765,
+    "sha256": "6d1933c3bfa93d7862ebd9bba844bdb574d8e658907b2ba1a97582f76c3600ff"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/src/cipher_wrap.c": {
+    "bytes": 54088,
+    "sha256": "77a61ccd7dbfbe145bd2efcbe5cb2290f5d18fff7e25d88df256c45a218a771a"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/src/cmac.c": {
+    "bytes": 28573,
+    "sha256": "3225afc60000939263b7e91a1f7431946b4ee0a68023df0c97d061e0146e796e"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/src/constant_time.c": {
+    "bytes": 8777,
+    "sha256": "50f3b44f4190f52431df886f2c516be6102639d68a3ef1c47372692610b17a8e"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/src/ctr_drbg.c": {
+    "bytes": 32621,
+    "sha256": "dc1fb141e9d27ea09dfa567206fb67da078791ca09271ee750a4b984390d5cec"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/src/ecdh.c": {
+    "bytes": 21505,
+    "sha256": "cd9251cc5e004e031c33d6a80d32a64e49d42ece66764b6cb7a9cd1da6787455"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/src/ecdsa.c": {
+    "bytes": 25664,
+    "sha256": "80610978896812e69d2f53e40328e16fe86be02d125662d3b83d6766b912e391"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/src/ecjpake.c": {
+    "bytes": 41758,
+    "sha256": "74ba66ef37cbfb338affc1ba814150f985edb9373866b2d99528f8bf32c96fb2"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/src/ecp.c": {
+    "bytes": 112118,
+    "sha256": "7cddf4ad1e74a9a1cb213957af6ce12639141aee864af049eb27c1b25f706b0d"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/src/ecp_curves.c": {
+    "bytes": 284863,
+    "sha256": "4ee173ab25b2404fb77e43adadb3eadfa30e82e339bfab0e011313312778e6af"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/src/ecp_curves_new.c": {
+    "bytes": 304074,
+    "sha256": "16b0cdf0e35d4acf62e0f13f95b81f31daff3f510c3ed5b1cfc02d380fdc844c"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/src/entropy.c": {
+    "bytes": 18172,
+    "sha256": "28c11918ae86a88889f367f27139057fb6ecc44e3fed68a1bd4a993a943df199"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/src/entropy_poll.c": {
+    "bytes": 2892,
+    "sha256": "d8ad38faf55340574e6e9d4e054ef5881cba2816bf958a8c1df6c721e8f48a9b"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/src/gcm.c": {
+    "bytes": 44031,
+    "sha256": "b14b15e5c0baa197f89697810a2d2f97fd3c5c89ca7daf8c3214e903cae130b1"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/src/hmac_drbg.c": {
+    "bytes": 19196,
+    "sha256": "6ca3a75f295baa7172a31ece2ee72da98d29ed05e67d86088eeba0f141884001"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/src/lmots.c": {
+    "bytes": 27263,
+    "sha256": "45251fa812f800d69d68d513f631240b71937c37f511a7fbf95f6e3f2263107f"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/src/lms.c": {
+    "bytes": 26271,
+    "sha256": "c15aaec2535ab3eb63ce94f9e710a659ba391ec2c3ce7f5b5a99da2e37b05e64"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/src/md.c": {
+    "bytes": 33217,
+    "sha256": "d0d08e17566689ea51c44221b346f71dcd152135e2fc98a3eba503e315160605"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/src/md5.c": {
+    "bytes": 12457,
+    "sha256": "e39f6bd5f2a5f823dba195b455db677cdfda6f7fe140a3fcd66444fe87f93b8f"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/src/memory_buffer_alloc.c": {
+    "bytes": 18603,
+    "sha256": "ca3a2c7080c454e3682ac880a6154ff5bb5f67da14016eed8729d7b197f03927"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/src/nist_kw.c": {
+    "bytes": 15016,
+    "sha256": "074aa0a06b3105ac714778ec392f9c9be7d3babd947e7437b91606e77e20921f"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/src/oid.c": {
+    "bytes": 16374,
+    "sha256": "bba3fbad808b7d4119de133a2763c8662238999ccbe41a7fdc617b8036649669"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/src/pem.c": {
+    "bytes": 11951,
+    "sha256": "3090d640bb733a7bcb7206c5faa4cdaf3d112e602d7f5b71e702b89fe17e2b39"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/src/pk.c": {
+    "bytes": 49143,
+    "sha256": "9bf626a280e98e6460f63df54489f93d045d618ca9007a72cd39a43690980b15"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/src/pk_ecc.c": {
+    "bytes": 5849,
+    "sha256": "e1b9dfb3e8bd35b674494f9c9a4ff547750b0e1e53da5ff63c78cdb49177ccb0"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/src/pk_rsa.c": {
+    "bytes": 3710,
+    "sha256": "f7eaaddbef24e3bb2cca172eedee9dc097361466df58d744f30320f52fac35b7"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/src/pk_wrap.c": {
+    "bytes": 26147,
+    "sha256": "ac686e44ada6cbf807481258e59aeccdc205d9d3171c75d2b3d66b2fd0eb795f"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/src/pkcs5.c": {
+    "bytes": 15618,
+    "sha256": "6da7158f6355ac020ec6d86cceb6e5488a113eff157645f5985ada690924c677"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/src/pkparse.c": {
+    "bytes": 41962,
+    "sha256": "d66355edd5788a8552e63972042c19c382d0bfa54735e09fee18db05a14ba016"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/src/pkwrite.c": {
+    "bytes": 18756,
+    "sha256": "e8d4c9a81436716e6c2df24fe804e38307dbefd7d88b8749fc45061029e04a02"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/src/platform.c": {
+    "bytes": 10952,
+    "sha256": "6790ff760df94562bf6e641db819afc5d23ceee8f4573399110e7957fcad0e48"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/src/platform_util.c": {
+    "bytes": 14483,
+    "sha256": "c1faf5622ab553209aa1482b2fa69ee5c7351aeb7e51f965f200a4705c7955e9"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/src/poly1305.c": {
+    "bytes": 14415,
+    "sha256": "7735cad5b69901ea980eb3051d798583e4acafc35890e55e4cd11f8ac83c55df"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/src/psa_crypto_aead.c": {
+    "bytes": 22832,
+    "sha256": "6ac689a8d9ce68324bc41aa820af6effdfe24c5be66d8111ccaefe6ae202a08a"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/src/psa_crypto_cipher.c": {
+    "bytes": 23515,
+    "sha256": "076de15d2bbada4b144f75598318373a0e860ec05871181d38d02b656b736e1d"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/src/psa_crypto_ecp.c": {
+    "bytes": 28780,
+    "sha256": "387e6edce20cec32b672150a9d92bd87eb6fa45be6bffb242a5027cf09b7292c"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/src/psa_crypto_ffdh.c": {
+    "bytes": 34057,
+    "sha256": "7b855dbb92a88d91aae55e003e135f4eef4cf448d88431a10002e1c9411d8b7f"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/src/psa_crypto_hash.c": {
+    "bytes": 15071,
+    "sha256": "87263f7c2b33c1c3a05716c7251449534a5885eee9d17eefa59216f46b104813"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/src/psa_crypto_mac.c": {
+    "bytes": 15169,
+    "sha256": "e1f6ae88ab68ffe4f0bdf696ecd4130136de454a4f3751ba07528a69558268b3"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/src/psa_crypto_pake.c": {
+    "bytes": 20580,
+    "sha256": "8ee15bceac4d3735eb064b64681e57c9cb5e95a08afbf5c95a1ce4fe1a126dc8"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/src/psa_crypto_rsa.c": {
+    "bytes": 26219,
+    "sha256": "d9f5d123a4963f3ce2226110367b09153daaabb92464dc9a475c6c3fcf586798"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/src/psa_util.c": {
+    "bytes": 19626,
+    "sha256": "378507eabeb59e6c8e92ac5cd97a1a9df3e8223f269b44dcbd7317035df60b0a"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/src/ripemd160.c": {
+    "bytes": 16103,
+    "sha256": "fdb879cfaa9fc5ed931499dca7187e0d20ccb45c15c8d1d86762a080a92939bc"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/src/rsa.c": {
+    "bytes": 95867,
+    "sha256": "1e4265e69378ce6b0d41e950eda8e41f61b1f6fb8b52e696e015b420719a20b4"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/src/rsa_alt_helpers.c": {
+    "bytes": 13998,
+    "sha256": "911e5d198f4c77b98a5f99eb8665aff3036c19f9ebb07321e03acd6fc49d3ab3"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/src/sha1.c": {
+    "bytes": 14097,
+    "sha256": "ac4b2b41655adf357a849829f620cbab30c359236bd77a86c25e50cbae894881"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/src/sha256.c": {
+    "bytes": 29428,
+    "sha256": "211339a2fff12e85fd0942f07dcac1ebc5ddaaa26271958f65c2c4a03c9d1ac1"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/src/sha3.c": {
+    "bytes": 23679,
+    "sha256": "b24913861ef636c184c0b3749c22b3a3be22fd99697d21c60b060faccdf84b5d"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/src/sha512.c": {
+    "bytes": 36837,
+    "sha256": "550785539ec80878ad9e93c5eb455ccb63be4767be44248909a3afe687a98d15"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/tf-psa-crypto/drivers/builtin/src/threading.c": {
+    "bytes": 9677,
+    "sha256": "f88f4e2107d864334e50056ed70bb4211965eac9ba89f97f4cfe7f8dcd6a7803"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/library/error.c": {
+    "bytes": 23106,
+    "sha256": "e3265220c0804a1e021ed22e703666f1ce5924b508f3a78371e90f9a11dccced"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/library/mbedtls_config.c": {
+    "bytes": 1377,
+    "sha256": "1abdbca9f3a97c33b5b24d6767dcb1666e370c6fad8a33c2b9c9f9684082ba84"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/library/pkcs7.c": {
+    "bytes": 22709,
+    "sha256": "60e63e33d9282f5bf7b5c666c19fa39727b6c0612ca9b5f693ee89fc76c11633"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/library/x509.c": {
+    "bytes": 59081,
+    "sha256": "429274cfbcf72b90965aded7f7f8964c41d4d07e3caeb263bfd6f0058ebbd79f"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/library/x509_create.c": {
+    "bytes": 24872,
+    "sha256": "ed20ec0e75c13fb2a3617c50564a51e36893e337ca3812a461a593b024a46d09"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/library/x509_crl.c": {
+    "bytes": 20635,
+    "sha256": "f97f7f881aa9ea1aeb181e2f6c77ecb4798468552d877532cc25cce4fc977d01"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/library/x509_crt.c": {
+    "bytes": 102513,
+    "sha256": "b9be623b4b62039d9dedb78299ae17d221f4560ebafda278224d9cfd21b5a99e"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/library/x509_csr.c": {
+    "bytes": 19678,
+    "sha256": "c8d602d9850b404b99e38a1fc1af9dea14018232a41518aae5d1154daf59c6bc"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/library/x509_oid.c": {
+    "bytes": 22303,
+    "sha256": "151df692110ff752b7b865c6debe6ff7d2af06d37746c84929b3bda4f1e91c59"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/library/x509write.c": {
+    "bytes": 6927,
+    "sha256": "260292a6d28f781a5051aa1b010bd42870e5b01b5614b672ed380ae80a309326"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/library/x509write_crt.c": {
+    "bytes": 23397,
+    "sha256": "76e54251f29b1f6b820ec39a5db3f29636a74824da48def317c40af26de3fcca"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/library/x509write_csr.c": {
+    "bytes": 10208,
+    "sha256": "baaa3c35014d8006840e56c3b8986fa0f735243878d43507dda3604e38ab5348"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/library/debug.c": {
+    "bytes": 15253,
+    "sha256": "97d8b0ba1b11512eb2ceaff0d8ac3096d569be5d0fed5431920388943b70ca28"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/library/mps_reader.c": {
+    "bytes": 19420,
+    "sha256": "1c9188848afaa32d4218fcf53a99cbff3352dfb5ffe15f1e48b2d123f39bfdf3"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/library/mps_trace.c": {
+    "bytes": 2272,
+    "sha256": "223443e336e6e695bcf2e9309673ebfdd5c661aa17865189d287076a2534e74b"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/library/ssl_cache.c": {
+    "bytes": 10798,
+    "sha256": "518badf0e8b7f405f24a4abe9e29d508fd7b1853a3b9b0a6d0b04fffcdd29357"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/library/ssl_ciphersuites.c": {
+    "bytes": 39163,
+    "sha256": "e3880bb9c9818164a22bea625e8560b5709f3ef66afb4c82dae8267d95bb75fe"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/library/ssl_client.c": {
+    "bytes": 34530,
+    "sha256": "d5f535c1b1e26e62061149b71f8c39cd4ec30d431fbb510c3f5b2a277eb91985"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/library/ssl_cookie.c": {
+    "bytes": 6820,
+    "sha256": "6a44e514585fe9db1b616e1efa1141e7517c556a2877974817dcc2e0263c5540"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/library/ssl_debug_helpers_generated.c": {
+    "bytes": 9300,
+    "sha256": "ff6f9712f06d920c450f2e6d27676e77488ddc56f3a4a9adf6ec5f5244f55664"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/library/ssl_msg.c": {
+    "bytes": 220761,
+    "sha256": "9465c38f85c8266d465b4abbc440c68725d3d4e5295f1a79b0d75558f17cbe1e"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/library/ssl_ticket.c": {
+    "bytes": 13119,
+    "sha256": "73a387024259119744a9ac509af05e0aa530a991bddd68cb56cf3b4598b2e643"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/library/ssl_tls.c": {
+    "bytes": 297916,
+    "sha256": "5da7577b8d8df4bf88e8268b80704f39e1d7135e76b57131a30dbaffd65351f7"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/library/ssl_tls12_client.c": {
+    "bytes": 105865,
+    "sha256": "b0f800ab56299853167eb1222bb9c06d22ab1e71691399a082a0e364409d95b4"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/library/ssl_tls12_server.c": {
+    "bytes": 128774,
+    "sha256": "83e70a5118b2a992cd7be51f106ca3eb22db6135762d14e9d9eaf10ed9e2cf4a"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/library/ssl_tls13_keys.c": {
+    "bytes": 64205,
+    "sha256": "49be5970bdce4e1026d1dc505f33c69d8904cab643c391f88e571c02bf758d1d"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/library/ssl_tls13_server.c": {
+    "bytes": 126707,
+    "sha256": "93c528cf405e13778e42936187694586c459188322915e37fb4c58628ef07f16"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/library/ssl_tls13_client.c": {
+    "bytes": 107765,
+    "sha256": "eccbf3aab854efdced82e941ae6e25e9de7f6f70450c64408fa05b065546a401"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/library/ssl_tls13_generic.c": {
+    "bytes": 60026,
+    "sha256": "e5ca9a81698a37b8c32ad599ac7be36806b02d896d0d0f9e6dcb093e660ce4e1"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/library/timing.c": {
+    "bytes": 3974,
+    "sha256": "4b2a684ad41168db6e10fe7e728b3ca8f98e4b741adb371ff9f4f48fc0198bfb"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/library/version.c": {
+    "bytes": 537,
+    "sha256": "caae12f8d0080d9eeb15df7647b69d97a5f47d7d5bb2ab7632345cd73a04c04f"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/mbedtls/library/version_features.c": {
+    "bytes": 9308,
+    "sha256": "fc07b67e4ab4de701b381d07f799a126679192a1f8f530ad90f054add4ed0138"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/port/mbedtls_debug.c": {
+    "bytes": 2112,
+    "sha256": "238d9801496f7dd6368a7f402f164afc0369025f800e98341f9c0f0ddda3c828"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/port/esp_platform_time.c": {
+    "bytes": 569,
+    "sha256": "fa464318a72cef8fff011dcd0fa9f9b21d2464fa088822e6b68c07ce03645aa6"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/port/esp_timing.c": {
+    "bytes": 2308,
+    "sha256": "6217007faf94f1d6e740299a54420f1b0419c2ca5c07b8e3a71e28221f4f2c90"
+  },
+  "/workspace/.setup/esp-idf/components/mbedtls/port/esp_psa_crypto_init.c": {
+    "bytes": 938,
+    "sha256": "25ac26c0e24ce2879ca2e371e590da013f8ea8071de320e8af7395db1839bfd8"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hal_wdt/esp32s3/mwdt_periph.c": {
+    "bytes": 122,
+    "sha256": "536a8e63d2bac9931244e0481d7fbaf25c2d1ed3daa1306b0e3dde3a7fd63165"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hal_wdt/rom_patch.c": {
+    "bytes": 5189,
+    "sha256": "c3edfe80bec1a175275cf786f3484fec8d048e8c198755dadc5acebf36de625b"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hal_wdt/xt_wdt_hal.c": {
+    "bytes": 2304,
+    "sha256": "1f9e8966a39b9452f2236efd59c8ee1c585631a144b8347538aad340b2bec52b"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hal_ana_conv/esp32s3/adc_periph.c": {
+    "bytes": 843,
+    "sha256": "c239f8ebf89ee9a8be09e9975ddc2b85b6761dfbad7cf63e8a37b255b7ea7634"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hal_ana_conv/adc_hal_common.c": {
+    "bytes": 6329,
+    "sha256": "23389a151150e0a42baaa4c84d7160cf872164cef5c01465154b6cca5878672c"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hal_ana_conv/adc_oneshot_hal.c": {
+    "bytes": 7371,
+    "sha256": "fc5625bfbbe48d772192629ba047fa3100258833ff44a7cf4bf5433ce67de2aa"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hal_ana_conv/adc_hal.c": {
+    "bytes": 10779,
+    "sha256": "d6028824612eda49e84b1120c4b17a90374b783d69b4d446240e82401e722491"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hal_ana_conv/temperature_sensor_hal.c": {
+    "bytes": 3278,
+    "sha256": "9b19155830f2f0fd2d4f04f5b58626c70c3da846a85efddf5bcb91521279e682"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hal_ana_conv/esp32s3/temperature_sensor_periph.c": {
+    "bytes": 494,
+    "sha256": "9ca9020dd7b701ab26bcfb75c332930d708a6c3515ac978b30021572c1e58ed1"
+  },
+  "/workspace/.setup/esp-idf/components/bootloader_support/src/bootloader_common.c": {
+    "bytes": 7242,
+    "sha256": "e16a3d0dbc3315dd38cd0a9ccb2fdbf0e0b4d17a8d02a203dc7895ebf49313dc"
+  },
+  "/workspace/.setup/esp-idf/components/bootloader_support/src/bootloader_common_loader.c": {
+    "bytes": 10241,
+    "sha256": "b182a886ff4a4f7fb3c0e61347d8fd1a078fe1b3865c69246cd971753a70db84"
+  },
+  "/workspace/.setup/esp-idf/components/bootloader_support/src/bootloader_clock_init.c": {
+    "bytes": 10311,
+    "sha256": "c60d95f0920852343103980c66898f29c4dd58d1d0a18eefd96fda6d97861a47"
+  },
+  "/workspace/.setup/esp-idf/components/bootloader_support/src/bootloader_mem.c": {
+    "bytes": 1347,
+    "sha256": "90df1d53415b87e36743fab55e3e2c762f2d7f69aacaead1a1e244a727b06f83"
+  },
+  "/workspace/.setup/esp-idf/components/bootloader_support/src/bootloader_random.c": {
+    "bytes": 3274,
+    "sha256": "3e5be8723defae4677324e90ab7c4bfe8c83a6a0c9f41e5f30083ccf8e2f4258"
+  },
+  "/workspace/.setup/esp-idf/components/bootloader_support/src/bootloader_efuse.c": {
+    "bytes": 1225,
+    "sha256": "a5325c6a8ec259e41ad7b841f1d3b2453ceca57ed233061babed2fecf35bec50"
+  },
+  "/workspace/.setup/esp-idf/components/bootloader_support/src/flash_encrypt.c": {
+    "bytes": 19066,
+    "sha256": "8975f332b090d6bcd821aa660baafc8813993d9702ee7af3322899d6b2aacc13"
+  },
+  "/workspace/.setup/esp-idf/components/bootloader_support/src/secure_boot.c": {
+    "bytes": 17420,
+    "sha256": "fe65c1aaed2d90b3103bbb01d83aa1de961b1d9c927b41829bd0c9b1d56e2391"
+  },
+  "/workspace/.setup/esp-idf/components/bootloader_support/src/bootloader_random_esp32s3.c": {
+    "bytes": 2660,
+    "sha256": "2661138a73611d58f1a6eff7771fa4afa5aab0305a1cffa3ea57e7724d2095de"
+  },
+  "/workspace/.setup/esp-idf/components/bootloader_support/bootloader_flash/src/bootloader_flash.c": {
+    "bytes": 37114,
+    "sha256": "2d217035c9f5fe049108e783eaec4d66875d418f5dab36cc4a99223e8ebb1685"
+  },
+  "/workspace/.setup/esp-idf/components/bootloader_support/bootloader_flash/src/flash_qio_mode.c": {
+    "bytes": 8725,
+    "sha256": "fbbfbf60c27196abc8b9341e8e33d8aa361ebc4185c76726fa47b37bb3e64c66"
+  },
+  "/workspace/.setup/esp-idf/components/bootloader_support/bootloader_flash/src/bootloader_flash_config_esp32s3.c": {
+    "bytes": 12048,
+    "sha256": "307df1eedabed2e6c11f25d595232a0ee7787cf71c5632b8b51990b0aeb742ef"
+  },
+  "/workspace/.setup/esp-idf/components/bootloader_support/src/bootloader_utility.c": {
+    "bytes": 54075,
+    "sha256": "a7b2896d12980a524c798c667e48c43732605ea2b1c616ef25663810ffa2576b"
+  },
+  "/workspace/.setup/esp-idf/components/bootloader_support/src/flash_partitions.c": {
+    "bytes": 3084,
+    "sha256": "206e0b5dab6998f2875c7cde4ec2eb75570164246f52ec606c4c37ca5ee06e66"
+  },
+  "/workspace/.setup/esp-idf/components/bootloader_support/src/esp_image_format.c": {
+    "bytes": 49126,
+    "sha256": "a1b1ca00eedbd2384844434e1b49293fd7bb4658ce6962a6bb899098495c8fba"
+  },
+  "/workspace/.setup/esp-idf/components/bootloader_support/src/bootloader_sha.c": {
+    "bytes": 8683,
+    "sha256": "694cb2322e2a983b026a0a138c69ea56ed1de60fab3ec025acb3207e09c99f8f"
+  },
+  "/workspace/.setup/esp-idf/components/bootloader_support/src/esp32s3/secure_boot_secure_features.c": {
+    "bytes": 2270,
+    "sha256": "4e09d2262d2f136e742bb4fd0acffa3489c775565df5a41f1c8285f34cd22cc9"
+  },
+  "/workspace/.setup/esp-idf/components/spi_flash/flash_brownout_hook.c": {
+    "bytes": 883,
+    "sha256": "bfab178d7901533389570c73c6ebd44a70c3a17c28c0d6ab8e556e216155618f"
+  },
+  "/workspace/.setup/esp-idf/components/spi_flash/esp32s3/spi_flash_oct_flash_init.c": {
+    "bytes": 10941,
+    "sha256": "262c4c192bd785b7cfcdcf584d2b600fd4d4131ec56af4b64bbc8936f0ca0d75"
+  },
+  "/workspace/.setup/esp-idf/components/spi_flash/spi_flash_hpm_enable.c": {
+    "bytes": 19317,
+    "sha256": "c208d7d1ca1fd72c4704c6c41920f1e7b91cec603c1c300af77880e561dc0f11"
+  },
+  "/workspace/.setup/esp-idf/components/spi_flash/spi_flash_chip_drivers.c": {
+    "bytes": 4095,
+    "sha256": "95a94168aa3ec8ab96bbd68a2b2bc409959dfecdf0699bffe6a0c66d65f4cdd3"
+  },
+  "/workspace/.setup/esp-idf/components/spi_flash/spi_flash_chip_generic.c": {
+    "bytes": 34428,
+    "sha256": "a693206f14b762418d16dff49cfea35c03f512ff4f2400ec1020e3d940b34ffa"
+  },
+  "/workspace/.setup/esp-idf/components/spi_flash/spi_flash_chip_issi.c": {
+    "bytes": 3553,
+    "sha256": "dd4d3ba35bd0c8c572ed9b7cb0c1cf617bacbecd2b7cf8916b49fde314a74f8b"
+  },
+  "/workspace/.setup/esp-idf/components/spi_flash/spi_flash_chip_mxic.c": {
+    "bytes": 3724,
+    "sha256": "7d6e1b6516156de53f5e334d440c81f126c1bb35a105731a9fa15f1e7dcf3295"
+  },
+  "/workspace/.setup/esp-idf/components/spi_flash/spi_flash_chip_gd.c": {
+    "bytes": 6369,
+    "sha256": "4b9d20421107fc415ac4e068c976b18e2aee5c7361094ab784496c27db918504"
+  },
+  "/workspace/.setup/esp-idf/components/spi_flash/spi_flash_chip_winbond.c": {
+    "bytes": 10062,
+    "sha256": "12a415aa6b50d7666c9f9e81504c37c2c09c340bb35700e9a1d013bf93374818"
+  },
+  "/workspace/.setup/esp-idf/components/spi_flash/spi_flash_chip_boya.c": {
+    "bytes": 2710,
+    "sha256": "1b55486205f6ef2715b0afa5fb23a389d20a479c7eb0faa7432698c7de8fdefc"
+  },
+  "/workspace/.setup/esp-idf/components/spi_flash/spi_flash_chip_mxic_opi.c": {
+    "bytes": 15658,
+    "sha256": "706b53f2cba1564f582d86a4683b839b647b32d1712a964f1e5317c33253cf2e"
+  },
+  "/workspace/.setup/esp-idf/components/spi_flash/spi_flash_chip_th.c": {
+    "bytes": 2649,
+    "sha256": "4ebef8a945ccda6f81338189bca593e8f6b1b8f5195b373823f0b8ed68f9fa04"
+  },
+  "/workspace/.setup/esp-idf/components/spi_flash/memspi_host_driver.c": {
+    "bytes": 11410,
+    "sha256": "2586901bcc4692d526a284f7cfeb9fda7dc06c01ecd0726c4465b2ce4b846921"
+  },
+  "/workspace/.setup/esp-idf/components/spi_flash/spi_flash_blockdev.c": {
+    "bytes": 3900,
+    "sha256": "d4286fa0c68fd66d35345c34882e150c7a77ae663d9426deddba5036832f7bed"
+  },
+  "/workspace/.setup/esp-idf/components/spi_flash/cache_utils.c": {
+    "bytes": 31938,
+    "sha256": "fd0b176bf7761d5d8c50d7048ae1c9f306ebe95af35b877fcafcd165113c37e2"
+  },
+  "/workspace/.setup/esp-idf/components/spi_flash/flash_mmap.c": {
+    "bytes": 13668,
+    "sha256": "aa969386f2e9f5769d67643702407117fa753f8a357974efd2173b01a2626182"
+  },
+  "/workspace/.setup/esp-idf/components/spi_flash/flash_ops.c": {
+    "bytes": 9814,
+    "sha256": "6abd0b99628cbf93ba35dac21e372807e5769aecf285ad3d210f754843ac7f95"
+  },
+  "/workspace/.setup/esp-idf/components/spi_flash/spi_flash_wrap.c": {
+    "bytes": 5522,
+    "sha256": "d9d90e77119a483ffed36e6bb8bb201f40fdce2cd845c312d86282c9e1667be9"
+  },
+  "/workspace/.setup/esp-idf/components/spi_flash/esp_flash_api.c": {
+    "bytes": 55506,
+    "sha256": "527d8f48896efc74a92a5e7576d5f70150e8800c4a3838d61f6deca2115a9cf0"
+  },
+  "/workspace/.setup/esp-idf/components/spi_flash/esp_flash_spi_init.c": {
+    "bytes": 23403,
+    "sha256": "9fbea6c8fc3c25b4dd52193f73fa292922c0b4246587f9ffc1b9d6952094ccc5"
+  },
+  "/workspace/.setup/esp-idf/components/spi_flash/spi_flash_os_func_app.c": {
+    "bytes": 15306,
+    "sha256": "cec05bc6d84c7b0988553f967422bf4a4a9443e62cdbeeed917d57fa3a4d8cf1"
+  },
+  "/workspace/.setup/esp-idf/components/spi_flash/spi_flash_os_func_noos.c": {
+    "bytes": 1891,
+    "sha256": "bc7a02925ecefebb663364b78b2ac5245811fee37bf1679bbbf0b9fdef5e7476"
+  },
+  "/workspace/.setup/esp-idf/components/esp_system/esp_err.c": {
+    "bytes": 1765,
+    "sha256": "2f976d1fb429a8d2e46a8b16fce2a3984c8f4a1749e891f203dbf12c31a4fdbc"
+  },
+  "/workspace/.setup/esp-idf/components/esp_system/crosscore_int.c": {
+    "bytes": 4753,
+    "sha256": "92a7b95e3f30b46f7d77f270e1a4ed7ea6a08bb09264ad27e7dd2c8202b834aa"
+  },
+  "/workspace/.setup/esp-idf/components/esp_system/esp_ipc.c": {
+    "bytes": 7622,
+    "sha256": "1429b6843566356758c9e4c80ecfcdc4c01c1bf3ad20dc4bfe534d41ece7414f"
+  },
+  "/workspace/.setup/esp-idf/components/esp_system/freertos_hooks.c": {
+    "bytes": 4211,
+    "sha256": "e6b12b42674709a3127798eca578f100daa3b4a11d61ee8ba3e1c526f4dbd6e0"
+  },
+  "/workspace/.setup/esp-idf/components/esp_system/int_wdt.c": {
+    "bytes": 6999,
+    "sha256": "6bc295bbec7353a1aa691c17eae280ddd76fc35406a16de8b6dc97124234106e"
+  },
+  "/workspace/.setup/esp-idf/components/esp_system/panic.c": {
+    "bytes": 15816,
+    "sha256": "d14d24b5d4708b365a1321e0c73fb861008157d7c067a0994711e3bd53d4ecd7"
+  },
+  "/workspace/.setup/esp-idf/components/esp_system/esp_system.c": {
+    "bytes": 1525,
+    "sha256": "3dff935f82b8754ec4574bff6744fa59b2c3171146d9600d05fd0a1e298a1210"
+  },
+  "/workspace/.setup/esp-idf/components/esp_system/startup.c": {
+    "bytes": 6674,
+    "sha256": "35ff236b94c60617660fb2b9548e06200d02bed4f1df3c958013953d2d3f4c05"
+  },
+  "/workspace/.setup/esp-idf/components/esp_system/startup_funcs.c": {
+    "bytes": 4239,
+    "sha256": "a222b8647e06e307c630e7e5d56c95f9216bb6833e324bb92478bfe8a3a4a2ee"
+  },
+  "/workspace/.setup/esp-idf/components/esp_system/system_time.c": {
+    "bytes": 733,
+    "sha256": "329b64c5dddf6e58dd344ae5e55c0d9db49bd7f489dbaa8e3cb8d4e65941e3b8"
+  },
+  "/workspace/.setup/esp-idf/components/esp_system/stack_check.c": {
+    "bytes": 627,
+    "sha256": "fe171f15f30778c1f5c51752d68c3d6ce8c03f67b87dbd5d30be1b3ebedaa133"
+  },
+  "/workspace/.setup/esp-idf/components/esp_system/ubsan.c": {
+    "bytes": 10039,
+    "sha256": "ce1ce999be44a2bdccf00e4ed1ce0f56b541c490e857f822c39c0a8be2c10c18"
+  },
+  "/workspace/.setup/esp-idf/components/esp_system/xt_wdt.c": {
+    "bytes": 2534,
+    "sha256": "fa0cfa128cb4ca721743ea8cee3df33a2141b06d8cd6b4ea64ed2542b1f4543a"
+  },
+  "/workspace/.setup/esp-idf/components/esp_system/task_wdt/task_wdt.c": {
+    "bytes": 29236,
+    "sha256": "5a3756da705c4ebf003610d25de243a5fd0160e88d3ed28411869d7c19982405"
+  },
+  "/workspace/.setup/esp-idf/components/esp_system/task_wdt/task_wdt_impl_timergroup.c": {
+    "bytes": 8460,
+    "sha256": "53958a169981e5beb5bf32cb7889f060e6dee1f5ec94bd1446615c2a31c3b87f"
+  },
+  "/workspace/.setup/esp-idf/components/esp_system/port/cpu_start.c": {
+    "bytes": 36687,
+    "sha256": "a2eba91e3cb6465abb3f8216e58c3a0ad3d5cb02096cb67439348b2f4d88cbab"
+  },
+  "/workspace/.setup/esp-idf/components/esp_system/port/panic_handler.c": {
+    "bytes": 11156,
+    "sha256": "57bd5762e94003fe5bc4b0064610ec7ceb9a5d2f6536de4b95313e140b95a363"
+  },
+  "/workspace/.setup/esp-idf/components/esp_system/port/esp_system_chip.c": {
+    "bytes": 2450,
+    "sha256": "919cfa6faf79b441faa116360c4434d747e2757ff6d240162b1cf5c07976e251"
+  },
+  "/workspace/.setup/esp-idf/components/esp_system/port/image_process.c": {
+    "bytes": 8285,
+    "sha256": "7b927fac59ca24393f6a24a514eae777fed192c8dc8b31b09ec75cdd15e05124"
+  },
+  "/workspace/.setup/esp-idf/components/esp_system/port/esp_ipc_isr.c": {
+    "bytes": 6445,
+    "sha256": "5c0a3721ee3bb2738cfeb1a4f4bfb102a0a9d63836ac6b594234c7bf542603cc"
+  },
+  "/workspace/.setup/esp-idf/components/esp_system/port/arch/xtensa/esp_ipc_isr_port.c": {
+    "bytes": 1070,
+    "sha256": "930d4c7d8c675a0147a99585daf9bd3a006bb2eb7c2808f93a7923abe5d0cb55"
+  },
+  "/workspace/.setup/esp-idf/components/esp_system/port/arch/xtensa/esp_ipc_isr_handler.S": {
+    "bytes": 3563,
+    "sha256": "c359b15601417b1784a449e21969641ace0b7922b2b02e01e281855704abdd23"
+  },
+  "/workspace/.setup/esp-idf/components/esp_system/port/arch/xtensa/esp_ipc_isr_routines.S": {
+    "bytes": 900,
+    "sha256": "ea66816bb24317469bdd60aae8901c99a19f1f5e1ea7720fd164273fcedbbdbe"
+  },
+  "/workspace/.setup/esp-idf/components/esp_system/port/arch/xtensa/panic_arch.c": {
+    "bytes": 11067,
+    "sha256": "e1a1bdeecea450008597b37bdb1052e7eabb052681994f6a78088480fe934faf"
+  },
+  "/workspace/.setup/esp-idf/components/esp_system/port/arch/xtensa/panic_handler_asm.S": {
+    "bytes": 2078,
+    "sha256": "557edce8e7d84688fdf0892c99328df32255cbe7f71b2285f947990da9f0849d"
+  },
+  "/workspace/.setup/esp-idf/components/esp_system/port/arch/xtensa/expression_with_stack.c": {
+    "bytes": 2533,
+    "sha256": "92b379c0e274194de97f2cf2b0228dc7082929dba8a98d2438579f5bcb3bcaf8"
+  },
+  "/workspace/.setup/esp-idf/components/esp_system/port/arch/xtensa/expression_with_stack_asm.S": {
+    "bytes": 1452,
+    "sha256": "7318f91dd40605772d18fbcb741ba5a6c8161874a28436a6ef7db845dbde147f"
+  },
+  "/workspace/.setup/esp-idf/components/esp_system/port/arch/xtensa/debug_helpers.c": {
+    "bytes": 9660,
+    "sha256": "88f7dd70ed75f7c9e388863d389211c21443ad585eb8d7ac0f61804c0f40f183"
+  },
+  "/workspace/.setup/esp-idf/components/esp_system/port/arch/xtensa/debug_helpers_asm.S": {
+    "bytes": 2217,
+    "sha256": "cbe22b186dca2c31b111383bd4c94699b1f72d00d6c22a6e1ff655a50977ae9f"
+  },
+  "/workspace/.setup/esp-idf/components/esp_system/port/arch/xtensa/debug_stubs.c": {
+    "bytes": 662,
+    "sha256": "a958b6816b8d965387b085cb5e513c4ea735fd6dbe4b7467d8de6b38dab6b63b"
+  },
+  "/workspace/.setup/esp-idf/components/esp_system/port/arch/xtensa/trax.c": {
+    "bytes": 3217,
+    "sha256": "6f411f8ade2fa5cc14c2f4a31574e7f8eff5dd758a1a439db4454a0a0fd04f78"
+  },
+  "/workspace/.setup/esp-idf/components/esp_system/port/soc/esp32s3/highint_hdl.S": {
+    "bytes": 4275,
+    "sha256": "7e062bea1ed6b69d4c8c3a203a85be285ea6355d75e3478485256cd702705b31"
+  },
+  "/workspace/.setup/esp-idf/components/esp_system/port/soc/esp32s3/clk.c": {
+    "bytes": 15687,
+    "sha256": "28f94d2e1d11a8f152943d8406d4bdbca6c3e1a2dbd800a182622bc3948155d2"
+  },
+  "/workspace/.setup/esp-idf/components/esp_system/port/soc/esp32s3/reset_reason.c": {
+    "bytes": 3357,
+    "sha256": "ff52c1dc1b086dd9d1e029da75098d53942df1dec3e24e3bd08c523c648b9b92"
+  },
+  "/workspace/.setup/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c": {
+    "bytes": 6384,
+    "sha256": "3ccabbf8bc70c33b5b2c371a77cf55d881ee6bbeede5b22a38015a97a543976f"
+  },
+  "/workspace/.setup/esp-idf/components/esp_system/port/soc/esp32s3/cache_err_int.c": {
+    "bytes": 9476,
+    "sha256": "9fcab6b1db499a232e0ab2ef13a168513c5166d672b9acd3c5f152015ea8369b"
+  },
+  "/workspace/.setup/esp-idf/components/esp_system/port/soc/esp32s3/apb_backup_dma.c": {
+    "bytes": 964,
+    "sha256": "40c9dc9e2b97d71ec81e56057a6ef11a1699276eea50cf48fcab05bb20952ba4"
+  },
+  "/workspace/.setup/esp-idf/components/esp_common/src/esp_err_to_name.c": {
+    "bytes": 47969,
+    "sha256": "5d53f3ab2606ff30b351ba5d8432acc24b9d4088c46be2fce3c2fd9cc5f2f88a"
+  },
+  "/workspace/.setup/esp-idf/components/esp_rom/patches/esp_rom_sys.c": {
+    "bytes": 4483,
+    "sha256": "a2996bad11d9c02db60227bce0f094d6ccbb7fbc002c9e90d048cad54b2bc46b"
+  },
+  "/workspace/.setup/esp-idf/components/esp_rom/patches/esp_rom_print.c": {
+    "bytes": 8323,
+    "sha256": "041904a9c2c4d5ec1d3c64e051a174527901261ad85a922c52a44613e1ae02e1"
+  },
+  "/workspace/.setup/esp-idf/components/esp_rom/patches/esp_rom_crc.c": {
+    "bytes": 16689,
+    "sha256": "e2c882fb507b8ba1d646235efcc7a5944524a3066e9d0a9bb282cc31354d7ff6"
+  },
+  "/workspace/.setup/esp-idf/components/esp_rom/patches/esp_rom_serial_output.c": {
+    "bytes": 1532,
+    "sha256": "724f3dd09dcd5b05bc0c82933159c6bcab7f0c3ebda32bf5b71d1daf2fe8a173"
+  },
+  "/workspace/.setup/esp-idf/components/esp_rom/patches/esp_rom_spiflash.c": {
+    "bytes": 33970,
+    "sha256": "782d32bf5b61dc9fcc22e1b28156f954e8ff6131fa782bbf3f591a535e741a3c"
+  },
+  "/workspace/.setup/esp-idf/components/esp_rom/patches/esp_rom_efuse.c": {
+    "bytes": 946,
+    "sha256": "14caa67718a6fcab1986b2957319f09c4b3fecd945714ecb756ff7c8266af8e6"
+  },
+  "/workspace/.setup/esp-idf/components/esp_rom/patches/esp_rom_gpio.c": {
+    "bytes": 1036,
+    "sha256": "41163c1aac8edbec6287c19b96685ae36d4a8be9874cf6fd03811c248e48f75a"
+  },
+  "/workspace/.setup/esp-idf/components/esp_rom/patches/esp_rom_longjmp.S": {
+    "bytes": 4726,
+    "sha256": "356d3940acb7dc1dee67b8de79bcef3366eb5430bf13d9f90a51f9e1c769d679"
+  },
+  "/workspace/.setup/esp-idf/components/esp_rom/patches/esp_rom_systimer.c": {
+    "bytes": 2664,
+    "sha256": "b0fa1444a7dcc2aef6d457f025e1273555d3854161a53d4c56e00476ab7821bd"
+  },
+  "/workspace/.setup/esp-idf/components/esp_rom/patches/esp_rom_cache_esp32s2_esp32s3.c": {
+    "bytes": 4766,
+    "sha256": "73ecacf0310ab41f0d85d343623b1be101eeb292beb3c664bee9596f07b3a144"
+  },
+  "/workspace/.setup/esp-idf/components/esp_rom/patches/esp_rom_cache_writeback_esp32s3.S": {
+    "bytes": 5246,
+    "sha256": "38001eb4e54ba222e0d68a83f8df9ca1721eaa32bb780c8a74b6b7f185b4c287"
+  },
+  "/workspace/.setup/esp-idf/components/hal/hal_utils.c": {
+    "bytes": 7009,
+    "sha256": "a7f3690377279dfa93de62b3b36bce2878086645416836ec54ee6db2b5de9838"
+  },
+  "/workspace/.setup/esp-idf/components/hal/efuse_hal.c": {
+    "bytes": 1890,
+    "sha256": "a315088a5fd862e7fb0773a36e34280f432b2e15018574c4aa079327669e3a90"
+  },
+  "/workspace/.setup/esp-idf/components/hal/esp32s3/efuse_hal.c": {
+    "bytes": 3077,
+    "sha256": "a9076f61ea9dd5b3ceebcab2192cae4fe49de2d9bdcbb4ee900009bc32048ee1"
+  },
+  "/workspace/.setup/esp-idf/components/hal/mmu_hal.c": {
+    "bytes": 5579,
+    "sha256": "8fb1e2d017557a093a1fcc5add97d8d74cb195147adf2ae0efb6e5505686573f"
+  },
+  "/workspace/.setup/esp-idf/components/hal/cache_hal.c": {
+    "bytes": 9558,
+    "sha256": "bb70096f6adeb44b056a3852dfcfb27b5efcbd4b38b2116c10f0f4f559ee2a27"
+  },
+  "/workspace/.setup/esp-idf/components/hal/color_hal.c": {
+    "bytes": 1149,
+    "sha256": "58b3f4b32829c5ca0edfd6d24651c08e494a41d71d3304b087ad46ba758af262"
+  },
+  "/workspace/.setup/esp-idf/components/hal/systimer_hal.c": {
+    "bytes": 7364,
+    "sha256": "ca9a50f82b5394e2ef663721d27ac5c37b0c6555747d6c0b5743879a403b4a7a"
+  },
+  "/workspace/.setup/esp-idf/components/log/src/os/log_timestamp.c": {
+    "bytes": 1211,
+    "sha256": "666d658f99e05a34e77ffa35e4981ac3bc80c286c2c8e1caaba068488c3e3fc9"
+  },
+  "/workspace/.setup/esp-idf/components/log/src/log_timestamp_common.c": {
+    "bytes": 4089,
+    "sha256": "c262a70356c1899f4f8accfa6379b0a699a25fce9aa1df93cc6704c89dad92d7"
+  },
+  "/workspace/.setup/esp-idf/components/log/src/os/log_lock.c": {
+    "bytes": 1526,
+    "sha256": "df2f35f25285831fdfcddeafbf677694e79d3178d74060bb3d27f5f8774493b7"
+  },
+  "/workspace/.setup/esp-idf/components/log/src/buffer/log_buffers.c": {
+    "bytes": 6667,
+    "sha256": "2966beb132c2f76ea08a0ad5b181c3b07a9d6db4b834037380b4ede78000b181"
+  },
+  "/workspace/.setup/esp-idf/components/log/src/os/util.c": {
+    "bytes": 710,
+    "sha256": "fb990c54192d83ee705adcc570aae8a9a547c6651ed658ce343053459d462ac1"
+  },
+  "/workspace/.setup/esp-idf/components/log/src/util.c": {
+    "bytes": 592,
+    "sha256": "2d08fefb68462c69184f70707d9eeee89aaa45b85850b8057ba36be41fcefce8"
+  },
+  "/workspace/.setup/esp-idf/components/log/src/log_format_text.c": {
+    "bytes": 2730,
+    "sha256": "9bc2237b207e4f933333a84ee73fe13d0ab20584c402977a5f464612180e0b97"
+  },
+  "/workspace/.setup/esp-idf/components/log/src/log_print.c": {
+    "bytes": 431,
+    "sha256": "aec0f14a35a78cfa3162bfc4edc3a63d06303b0e4bb4a68c592553f056ae4983"
+  },
+  "/workspace/.setup/esp-idf/components/log/src/log.c": {
+    "bytes": 3131,
+    "sha256": "c09bca5060c9e749ab2b148b8bfbd036fba9ffc602188bd54422e9e584cf0bd7"
+  },
+  "/workspace/.setup/esp-idf/components/log/src/os/log_write.c": {
+    "bytes": 1230,
+    "sha256": "4747dba641bf3759e5f5e398548e80e89ee4341fbe227fb2783c7f7451fae41c"
+  },
+  "/workspace/.setup/esp-idf/components/log/src/log_level/log_level.c": {
+    "bytes": 1275,
+    "sha256": "9085be5558ad8ee2b293f44e0314661b593f13bac7714d94ff0c98fa80bcd870"
+  },
+  "/workspace/.setup/esp-idf/components/log/src/log_level/tag_log_level/tag_log_level.c": {
+    "bytes": 2872,
+    "sha256": "6c878cab17813c6bd065b24aaabb929d4e0976538f4842f68f0aa4e15c71cc67"
+  },
+  "/workspace/.setup/esp-idf/components/log/src/log_level/tag_log_level/linked_list/log_linked_list.c": {
+    "bytes": 4013,
+    "sha256": "3777f7eb3ab4dc2557bea4293f6641b4ffbc4cc2e7091f02b1b822ccb9b28c5a"
+  },
+  "/workspace/.setup/esp-idf/components/log/src/log_level/tag_log_level/cache/log_binary_heap.c": {
+    "bytes": 6878,
+    "sha256": "2f789f4c2f87129595475c918c5064d29cbc066e906ae276aca5db960e6ee25f"
+  },
+  "/workspace/.setup/esp-idf/components/heap/heap_caps_base.c": {
+    "bytes": 14407,
+    "sha256": "596f1006c850492d947c7770fe3f759c2b3ebffd90be2167be5a9245a393adbf"
+  },
+  "/workspace/.setup/esp-idf/components/heap/heap_caps.c": {
+    "bytes": 18983,
+    "sha256": "2478dc898ea6329c1eaf06f7b00445c4a03cccb2aadf04de35dd2e38e7d41f02"
+  },
+  "/workspace/.setup/esp-idf/components/heap/heap_caps_init.c": {
+    "bytes": 13443,
+    "sha256": "506886580f8c76c90c30022ef3d317d8754d1d1df6b9f59e5fb8d53434aeb024"
+  },
+  "/workspace/.setup/esp-idf/components/heap/multi_heap.c": {
+    "bytes": 13957,
+    "sha256": "2647ff6bb7284a70c94491d003acbc3cd821c02a9f7d49d643aaf7241ac5f74b"
+  },
+  "/workspace/.setup/esp-idf/components/heap/tlsf/tlsf.c": {
+    "bytes": 23710,
+    "sha256": "ca8f8c1941e0e34a4b127a7d2bd7c77e66ad39d02450111087f32b552b2f3628"
+  },
+  "/workspace/.setup/esp-idf/components/heap/port/memory_layout_utils.c": {
+    "bytes": 7909,
+    "sha256": "292d3fffe17ebe82888b63a505ac829a6a2b0064f9917e9f7c41ace537d4be07"
+  },
+  "/workspace/.setup/esp-idf/components/heap/port/esp32s3/memory_layout.c": {
+    "bytes": 9419,
+    "sha256": "f9d2491644f6df8e38f3ad9b1e51560641a5f44a3582955733e7b73883af1b58"
+  },
+  "/workspace/.setup/esp-idf/components/soc/lldesc.c": {
+    "bytes": 1476,
+    "sha256": "806a9ff8a13f6b6f5283c6cc43367f1702a9b52a4632f6cff5142aa043b67916"
+  },
+  "/workspace/.setup/esp-idf/components/soc/dport_access_common.c": {
+    "bytes": 503,
+    "sha256": "dffcfbc272403f99d3c0270359e2aa5035ae148fddb20c447446348ea50d623f"
+  },
+  "/workspace/.setup/esp-idf/components/soc/esp32s3/interrupts.c": {
+    "bytes": 2523,
+    "sha256": "44917bdce762b7e8fa01761129af2a466ce2e02ad90a6af258a018dee2f72efb"
+  },
+  "/workspace/.setup/esp-idf/components/soc/esp32s3/gpio_periph.c": {
+    "bytes": 2047,
+    "sha256": "e54008dbc0b14fa66a4bc5e8cab423e193fc240045dba9599d729a2af85dfa85"
+  },
+  "/workspace/.setup/esp-idf/components/soc/esp32s3/mpi_periph.c": {
+    "bytes": 487,
+    "sha256": "87ce6fc1afcc3f9e810864962889a680a0c4f74ad96160d365cf3bdac1b3f92d"
+  },
+  "/workspace/.setup/esp-idf/components/soc/esp32s3/power_supply_periph.c": {
+    "bytes": 260,
+    "sha256": "716ff57af2b348c92a464a11f0cbb93370ac7c978f0d6fbd92303887bc5214d2"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hal_gpio/gpio_hal.c": {
+    "bytes": 3162,
+    "sha256": "16e1a9ffa1c04c515110511b978f456aedb309f97ee6a92c87f03a2871f40d64"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hal_gpio/rtc_io_hal.c": {
+    "bytes": 2808,
+    "sha256": "4b04e04ef50bac9bfc6d36853c67f568579805bb67bec6fccf07c9417f4b6752"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hal_gpio/esp32s3/rtc_io_periph.c": {
+    "bytes": 10451,
+    "sha256": "0340c1e8544e9e6039f65048c0dd958dfff1e5f2505e1d25be58d0dbcbc136a7"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hal_gpio/esp32s3/dedic_gpio_periph.c": {
+    "bytes": 1956,
+    "sha256": "9fc4105d92bfaa74594e0f999512995c7cc131649ecdac1da451e702f74bf653"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hal_gpio/sdm_hal.c": {
+    "bytes": 652,
+    "sha256": "92a4dc9ff0dabc0205c68592da0cce761b30920528144bd1735ee5e6d261fec5"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hal_gpio/esp32s3/sdm_periph.c": {
+    "bytes": 996,
+    "sha256": "7deebf4177cc80672685f23aaa9908c56b0ea450fab078750feaf154224e002a"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hal_usb/usb_dwc_hal.c": {
+    "bytes": 26934,
+    "sha256": "a019b2e791537b54df573c5a265ed1e2144817e8556c4fe32549253b87cf4e5e"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hal_usb/usb_wrap_hal.c": {
+    "bytes": 898,
+    "sha256": "f67985ec9a62dffa84bc5bd343c9396e7635330c83ad9dea5e42b02c2f25aad3"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hal_usb/esp32s3/usb_dwc_periph.c": {
+    "bytes": 1833,
+    "sha256": "2014f85a11c825461562783711399404a77e3c165faab665432d22504917c638"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hal_usb/usb_serial_jtag_hal.c": {
+    "bytes": 770,
+    "sha256": "bf108554b48ea9a06f7cd0078e1b12ff13078fda98ef376377ab46d6901208dd"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hal_pmu/esp32s3/rtc_cntl_hal.c": {
+    "bytes": 5075,
+    "sha256": "9ef8883c0cd4c3365e3b06a2c141dee57ec7014eff9797659c10df99ce0ff895"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hal_pmu/brownout_hal.c": {
+    "bytes": 779,
+    "sha256": "2bc9499ffe99d4d0cf0f4de490d7d0dd76a18225532674ec1d61b0e441bf4d66"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hal_touch_sens/esp32s3/touch_sensor_legacy_hal.c": {
+    "bytes": 6073,
+    "sha256": "09a27aa4f9377e4cbd2ba0f5ca6f62b87f9dafdeb7a57eb49edd6cfe9b7e0bca"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hal_touch_sens/touch_sensor_legacy_hal.c": {
+    "bytes": 1302,
+    "sha256": "09b919d5e28e153939bfaa850876bf2773368b3fcc95a5d38a39c7ee1bf8f7d3"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hal_touch_sens/touch_sens_hal.c": {
+    "bytes": 5104,
+    "sha256": "97178f3159ee1b9f31405107d1dc25470b155ad321a9a24b571d5630942ec05f"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hal_touch_sens/esp32s3/touch_sensor_periph.c": {
+    "bytes": 787,
+    "sha256": "f5db6e158a16a7d3538393732ced6624b7476f7fcc0913c029dd9bec4de6eeb3"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hal_i2s/i2s_hal.c": {
+    "bytes": 18997,
+    "sha256": "673044c270694f927f3dc98d4f7b6446d891ad291b004614ba9b901b78bcb9d5"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hal_i2s/esp32s3/i2s_periph.c": {
+    "bytes": 1812,
+    "sha256": "89cd101286dd0ecd5c07da428fc8612f80783aa3b9cd5505b48b4ed3a8df2610"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hw_support/cpu.c": {
+    "bytes": 8008,
+    "sha256": "84f2586305063244c1a0fcddd6290b17b350dd3a63ad85efae79823859b8826e"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hw_support/port/esp32s3/esp_cpu_intr.c": {
+    "bytes": 5018,
+    "sha256": "9d45c0ac95367754d0e4c673db372e024784527d0a80e1cc59b6e1161840a76c"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hw_support/esp_memory_utils.c": {
+    "bytes": 2821,
+    "sha256": "c4b931b67b11c78a1106171c11ecfc4b68f2fb1d50a6448ee727b00a828d3685"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hw_support/port/esp32s3/cpu_region_protect.c": {
+    "bytes": 726,
+    "sha256": "4265bfb800359eb6c05202a4d1e9230d2470ba3ea816c5f8929b158ec4f3e43e"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hw_support/esp_clk.c": {
+    "bytes": 7446,
+    "sha256": "5beb873714ea3eef89769bd28b172a392bafd95cb8af75f7ef5161e999b2c3e9"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hw_support/clk_ctrl_os.c": {
+    "bytes": 6744,
+    "sha256": "fe5fc80a6711920b8758d13430a22302ad4f334e6ef4ecf545e746c0df8f537a"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hw_support/hw_random.c": {
+    "bytes": 4230,
+    "sha256": "0cdd29d3b1696aba73056f87517552fe6c0343bfbca23a6c84730eadc50da057"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hw_support/intr_alloc.c": {
+    "bytes": 39568,
+    "sha256": "f48e58726baf114b1b323f253b3290cbb7e3c218ece76ba90715ec7ede96d100"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hw_support/mac_addr.c": {
+    "bytes": 13004,
+    "sha256": "f506709b328e050f1be8a63f7a30c739df6b3a471ad065e1590ecf492e217ea8"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hw_support/periph_ctrl.c": {
+    "bytes": 7931,
+    "sha256": "e3ce744a6ec3598de7a274a257ab85a25a103b6b3041812c15b0655fd611acaf"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hw_support/revision.c": {
+    "bytes": 475,
+    "sha256": "e240fd82ae4c57c14f696f6e0f96ba6e2b8442ea73a02f487cce4e394c6c72c8"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hw_support/rtc_module.c": {
+    "bytes": 6699,
+    "sha256": "944cbb567ff7810b93973bc1308b3e9009ee5b255d1396897d20ade6c64292f3"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hw_support/regi2c_ctrl.c": {
+    "bytes": 3650,
+    "sha256": "4c002a6c38f91ab37452cb3f0bd6118b1c492a452e75f9554dd2b1e9cfa04ed1"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hw_support/esp_gpio_reserve.c": {
+    "bytes": 772,
+    "sha256": "a0872833b26d4c997eba11b655901eea8827e695136d78deba975c5367e61ac0"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hw_support/sar_tsens_ctrl.c": {
+    "bytes": 3516,
+    "sha256": "07f11fb1a8ebc31552132ff35bfd8d0c2aa3747df4ceb8bb5a25c8c331087b4c"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hw_support/port/esp32s3/io_mux.c": {
+    "bytes": 2562,
+    "sha256": "a35823aea76ac89de21c4a152427147809bd5c389950f36058d8c5e754c22c78"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hw_support/port/esp32s3/esp_clk_tree.c": {
+    "bytes": 2745,
+    "sha256": "612a095520631cf541107f1a7473b7db706937f932335c6bb32925a73458e67a"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hw_support/spi_bus_lock.c": {
+    "bytes": 35898,
+    "sha256": "e1f8cba7bd5140605b01423d88127e82b5f4bdfb56abc7560a8e23bc24f8beea"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hw_support/heap_align_hw.c": {
+    "bytes": 4123,
+    "sha256": "ff236dba92a105848ef9409e7cb0cb2985c942d0bd5fb3aa627b7e968050438c"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hw_support/clk_utils.c": {
+    "bytes": 2738,
+    "sha256": "cfe41addf0b082c6e4a7524470e253a1cb8870145e8e092633589d96348fd0ed"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hw_support/usb_phy/usb_phy.c": {
+    "bytes": 17348,
+    "sha256": "7e9b849d532d1b96a19f12b259bb4066e71440f8123653e2b8e5821c334dcd46"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hw_support/port/esp_clk_tree_common.c": {
+    "bytes": 7864,
+    "sha256": "70a66ec8d1e289f0d37813be7ad19a66293f4d7cb41c1b2469004e2156bec6f1"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hw_support/spi_share_hw_ctrl.c": {
+    "bytes": 2092,
+    "sha256": "023ed923bbe3f24885832de5b94deaf550a13961d9fc60803830fcb2cbf2aa1c"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hw_support/adc_share_hw_ctrl.c": {
+    "bytes": 7263,
+    "sha256": "87e1ccfc3683ecbf71682c71b8f25196d812a68d180f04ef525aff8bf4fbc1a7"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hw_support/sleep_modem.c": {
+    "bytes": 12563,
+    "sha256": "ff676b20031841f7429a1234031a30c28973633997e257370f3125f434d71917"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hw_support/sleep_modes.c": {
+    "bytes": 106881,
+    "sha256": "0d2467fabba91f14af590715b99e9df7032982ef0d0728242aafb4c0eaf5e189"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hw_support/sleep_uart.c": {
+    "bytes": 5326,
+    "sha256": "ac5350650ea9c35b42f1de810aa492afc1f9f66d50dc84e6fb7f9b659d53cf52"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hw_support/sleep_console.c": {
+    "bytes": 1807,
+    "sha256": "51252958a1df993fdbe244e1a70047b8fbbd347469063e90335f99ee73709d03"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hw_support/sleep_mspi.c": {
+    "bytes": 1106,
+    "sha256": "ab7c246cc975bab179990cfaa87c0e81511d8ba4630e555f75d949b9c24aa840"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hw_support/sleep_usb.c": {
+    "bytes": 1642,
+    "sha256": "3dffcaf19737587d5f8b4c0bac04c51ed0f2a721221084f6c66afae009d6750e"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hw_support/sleep_gpio.c": {
+    "bytes": 10906,
+    "sha256": "147a5a5fb1893b28a57d052f6536300e9d8c299951bd8b3ef94b3646f1483a6c"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hw_support/sleep_event.c": {
+    "bytes": 3265,
+    "sha256": "bf147d93f2f333a52fcecc425b6372350e0613c87e1649dc94440f07ee84499b"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hw_support/port/esp32s3/systimer.c": {
+    "bytes": 471,
+    "sha256": "20489a20445cf7953a92616c81217bcab8bc251c5ba06652a56e3726d930decc"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hw_support/mspi_timing_tuning/mspi_timing_tuning.c": {
+    "bytes": 26124,
+    "sha256": "8c4cfd8ad57d080c9d33288857565bac568a819170b4ec2353571abf274475ce"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hw_support/sleep_wake_stub.c": {
+    "bytes": 2955,
+    "sha256": "03d9d6353080f24d01e52543f664db1210aa61234f937ef07689bcd7a13c62cd"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hw_support/esp_clock_output.c": {
+    "bytes": 10502,
+    "sha256": "012f125bdaacb0cf22d1a756485ed7d99fbcd5536c9aac58118eec3389033af8"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hw_support/power_supply/brownout.c": {
+    "bytes": 3971,
+    "sha256": "abcaeb7c80f24bb2bbee68866f3be6f6e83e0cd3d2babeb0f6cf3bf728352459"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hw_support/port/esp32s3/rtc_clk.c": {
+    "bytes": 15299,
+    "sha256": "d0ea4e7d151ee22d39874669f04cb22b876450a58d13a73fcd525acd3ac8d8c4"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hw_support/port/esp32s3/rtc_clk_init.c": {
+    "bytes": 2993,
+    "sha256": "cddacd19e57246e2697a0a25a822597c163a2bf8ce24d2de74dfcacaf6d9dab0"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hw_support/port/esp32s3/rtc_init.c": {
+    "bytes": 18981,
+    "sha256": "a2e0c94e18ca1cdeba36bd7cf86a31e354da45719e16e71d448b056f8dd2af5e"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hw_support/port/esp32s3/rtc_sleep.c": {
+    "bytes": 13733,
+    "sha256": "c426c488e4605864c9277f18556a801521c9e902088d4b9f59945392ffbb87d4"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hw_support/port/esp32s3/rtc_time.c": {
+    "bytes": 8443,
+    "sha256": "40fa2c6ba64767d112b1d034a4609d828a35b76d455922dcfdd4982018a6b487"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hw_support/port/esp32s3/chip_info.c": {
+    "bytes": 472,
+    "sha256": "aa3729005d184046fd4860831286644630853a03aa1b9c2e4711ddf33df74e40"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hw_support/port/esp32s3/sar_periph_ctrl.c": {
+    "bytes": 3607,
+    "sha256": "a5cb13baa41317e712ddacb44c4023b2e61f4af1d16d8f3d75ecc6c2c4d85c7e"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hw_support/port/esp32s3/esp_memprot.c": {
+    "bytes": 54394,
+    "sha256": "cd1ab90467f8e6670cde19165aa239ea92cfbb2ba54fc8449c7510ecb5e43be5"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hw_support/port/esp_memprot_conv.c": {
+    "bytes": 1922,
+    "sha256": "1d8394a5a3ab0e5c8daef0c6a1f489318d0ef81729080740ecd73a6beffb06c6"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hw_support/mspi_timing_tuning/port/esp32s3/mspi_timing_config.c": {
+    "bytes": 2527,
+    "sha256": "d302c7e0f2b9ead1c0aecb4a12daf87ac194ad93078204d3e0b33d25c5e31c74"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hw_support/mspi_timing_tuning/port/esp32s3/mspi_timing_by_mspi_delay.c": {
+    "bytes": 37020,
+    "sha256": "81a295e4ee9d33f1d16d042a7d6b497742aab6ef2a5d76badb960539a9d2345b"
+  },
+  "/workspace/.setup/esp-idf/components/esp_hw_support/lowpower/port/esp32s3/sleep_cpu.c": {
+    "bytes": 8951,
+    "sha256": "8785c00052c261b58ae503acd3ff7e353733b5b23c89bebbed5e07e61035b68a"
+  },
+  "/workspace/.setup/esp-idf/components/esp_libc/src/init.c": {
+    "bytes": 611,
+    "sha256": "50eeaae7c3e4c6077d0f794c9469d16325e9b2cadd1fff1a647b86d91d9eda47"
+  },
+  "/workspace/.setup/esp-idf/components/esp_libc/src/abort.c": {
+    "bytes": 1051,
+    "sha256": "5ca5ba7e72df4aa102b3afea9e027db74f5c3ab2043d0fd2d6bf0ef81f9bd80f"
+  },
+  "/workspace/.setup/esp-idf/components/esp_libc/src/assert.c": {
+    "bytes": 2533,
+    "sha256": "778e82900ace28708233fdf09496c3663a5522aaaa1decb399be9e10d46a675f"
+  },
+  "/workspace/.setup/esp-idf/components/esp_libc/src/heap.c": {
+    "bytes": 3328,
+    "sha256": "6071b8c2b4fe82fb840d149783d362dcaf37685215c233fb69e0f82eef18c1b2"
+  },
+  "/workspace/.setup/esp-idf/components/esp_libc/src/locks.c": {
+    "bytes": 15948,
+    "sha256": "f387412296c33db8d06d8b666aa4b61c7bdf10be1ff43f6bbb1d71b4937e1edd"
+  },
+  "/workspace/.setup/esp-idf/components/esp_libc/src/poll.c": {
+    "bytes": 2157,
+    "sha256": "ac76465ed7ce97ac64f79177eb0afaa5bdc1dd09c2c302326b716e85fcb65901"
+  },
+  "/workspace/.setup/esp-idf/components/esp_libc/src/pthread.c": {
+    "bytes": 1057,
+    "sha256": "101c62f2eb81b1d56a24d7d5bff9b37916371d033adf6b70d4e45272e4e7cb40"
+  },
+  "/workspace/.setup/esp-idf/components/esp_libc/src/random.c": {
+    "bytes": 895,
+    "sha256": "2226ec965f2add5119f95d829fe00ea850a6f3168fff76cf77a6315dbb41226b"
+  },
+  "/workspace/.setup/esp-idf/components/esp_libc/src/getentropy.c": {
+    "bytes": 598,
+    "sha256": "c3e9e60a12aaeafcb7f611351d256a6a7befc7f92bd811626d85f65b09c92b45"
+  },
+  "/workspace/.setup/esp-idf/components/esp_libc/src/termios.c": {
+    "bytes": 776,
+    "sha256": "b4a70308912a36c9e99cf540583e2edd8a5b2a86f0a651a1e1a98cb856544fbf"
+  },
+  "/workspace/.setup/esp-idf/components/esp_libc/src/stdatomic.c": {
+    "bytes": 3904,
+    "sha256": "5fbd41474e5f31bef5d70d8dc9e32391ee239dffca52f2d37e6f76f98768e67e"
+  },
+  "/workspace/.setup/esp-idf/components/esp_libc/src/time.c": {
+    "bytes": 9646,
+    "sha256": "cab7b527b5a504656e76fecf4e2bd6f4d23a92dda92737ea5f2b95c56e0cb318"
+  },
+  "/workspace/.setup/esp-idf/components/esp_libc/src/sysconf.c": {
+    "bytes": 994,
+    "sha256": "3037d419fbfd035496053de7e10923a9f83b94c2e620bffb11729aff7cccc281"
+  },
+  "/workspace/.setup/esp-idf/components/esp_libc/src/realpath.c": {
+    "bytes": 4369,
+    "sha256": "53f56a400cda7f7327ee8c9008b8a16e9629bf74a0f158129ef3d502709949d4"
+  },
+  "/workspace/.setup/esp-idf/components/esp_libc/src/scandir.c": {
+    "bytes": 2479,
+    "sha256": "47466f6f3fa85ee218a9dda74bed133018280177a4042cb9b5d4d1f7371b82a8"
+  },
+  "/workspace/.setup/esp-idf/components/esp_libc/src/syscalls.c": {
+    "bytes": 3044,
+    "sha256": "90d73c98612d3ca2dc0e9fb1a3eae8aa4c689f30963bdf48096a011241ca1591"
+  },
+  "/workspace/.setup/esp-idf/components/esp_libc/src/reent_syscalls.c": {
+    "bytes": 2648,
+    "sha256": "ba7a9ae16f622624df0f917041952c068425f0ba8eaa1880eb0c499f1d96365a"
+  },
+  "/workspace/.setup/esp-idf/components/esp_libc/src/port/esp_time_impl.c": {
+    "bytes": 3456,
+    "sha256": "f50f9841d1b371f251f5ef62f9d0951f52a31b844ccd3849b51c05734fc2980a"
+  },
+  "/workspace/.setup/esp-idf/components/esp_libc/src/picolibc/picolibc_init.c": {
+    "bytes": 5728,
+    "sha256": "efb955bc87502152ddaa0202f1d977fb9418ef3ff77a2301e99a34faf72abd87"
+  },
+  "/workspace/.setup/esp-idf/components/esp_libc/src/picolibc/rand.c": {
+    "bytes": 607,
+    "sha256": "663da9b5eec6684197add6c72af3a2668e36d24646f01c94aa5013ae965d9e2e"
+  },
+  "/workspace/.setup/esp-idf/components/esp_libc/src/picolibc/open_memstream.c": {
+    "bytes": 2724,
+    "sha256": "12ab0465e4d4780553d189c88a4017cb2094c51d79e50f0498344d2cffe454be"
+  },
+  "/workspace/.setup/esp-idf/components/esp_libc/src/picolibc/errno.c": {
+    "bytes": 597,
+    "sha256": "2aca2ffe8a67f66e1d48c7f89c0f8e7610489f7215a68be53ccdc371fca11541"
+  },
+  "/workspace/.setup/esp-idf/components/esp_libc/src/picolibc/bufio_setvbuf.c": {
+    "bytes": 944,
+    "sha256": "b230464cb41156763460537694b2254bf29f103f0ed40a1854cd5a064021ac7e"
+  },
+  "/workspace/.setup/esp-idf/components/esp_libc/src/picolibc/getreent.c": {
+    "bytes": 487,
+    "sha256": "61b99ca6da2ee31db6fa042d191cc434b7a32ec6dd9139bdc0aa04311dac0f47"
+  },
+  "/workspace/.setup/esp-idf/components/esp_libc/src/picolibc/fopencookie.c": {
+    "bytes": 1485,
+    "sha256": "843c4270aaab85f60f955c4e5e6bf3ff0efda148a93a94433b89ce71fe0eba7e"
+  },
+  "/workspace/.setup/esp-idf/components/pthread/pthread.c": {
+    "bytes": 28359,
+    "sha256": "3423df09f2a291e76abf2cb34a26b5fde21a22bd514563f1526d44cdafa8da15"
+  },
+  "/workspace/.setup/esp-idf/components/pthread/pthread_cond_var.c": {
+    "bytes": 7395,
+    "sha256": "698dd4e356441a67d779d7b9e3fc6634c7cdbb1cf4b50276e7aa95b9e6414165"
+  },
+  "/workspace/.setup/esp-idf/components/pthread/pthread_local_storage.c": {
+    "bytes": 8626,
+    "sha256": "838b9ea24df5493cc648248110bc5ce2e28c98bbad945ac7cfd70912977cc378"
+  },
+  "/workspace/.setup/esp-idf/components/pthread/pthread_rwlock.c": {
+    "bytes": 10350,
+    "sha256": "144afb2eea9eb7a82e34cfd59c9e93c3c5cc189571c3527e2eed8c0472a28682"
+  },
+  "/workspace/.setup/esp-idf/components/pthread/pthread_semaphore.c": {
+    "bytes": 4452,
+    "sha256": "931b0a35cddae540ece844de1bebd89ef61ec9e726b194511c47a7ee8ba7b388"
+  },
+  "/workspace/.setup/esp-idf/components/cxx/cxx_exception_stubs.cpp": {
+    "bytes": 5555,
+    "sha256": "4a693d5b9c3c764f2ceae702ba005eec6d873553ac3635f126a08f0ee3650984"
+  },
+  "/workspace/.setup/esp-idf/components/cxx/cxx_guards.cpp": {
+    "bytes": 8354,
+    "sha256": "a0cd7a6b3df92538b7b7d49c6a8d9d82d9fb15c4a2185d83495ef103af28d71f"
+  },
+  "/workspace/.setup/esp-idf/components/cxx/cxx_init.cpp": {
+    "bytes": 1159,
+    "sha256": "b944d2386ba83447b7656dc5f4c516d8fdf4112adaeb4e31fe60863d18cc1fe7"
+  },
+  "/workspace/.setup/esp-idf/components/freertos/heap_idf.c": {
+    "bytes": 3500,
+    "sha256": "6201b70a245f721c3021656d62fbbbf45c3e4d5d843365df007d0da9ac99db2e"
+  },
+  "/workspace/.setup/esp-idf/components/freertos/app_startup.c": {
+    "bytes": 7569,
+    "sha256": "e1b7b5e2973ef5d0fa66d8a4945e6c075f600e399f057c2f5a5a2b90b337f52d"
+  },
+  "/workspace/.setup/esp-idf/components/freertos/port_common.c": {
+    "bytes": 4033,
+    "sha256": "7593e23d0d4c314b9f8d5b143b4a1a2c2b56a676ca28b53aeaaa8bd819ee1a93"
+  },
+  "/workspace/.setup/esp-idf/components/freertos/port_systick.c": {
+    "bytes": 9333,
+    "sha256": "55214d9d6a6d36d17b2638e909739f9ae48ea770944ed25593cbce4cd0e477a6"
+  },
+  "/workspace/.setup/esp-idf/components/freertos/FreeRTOS-Kernel/list.c": {
+    "bytes": 10274,
+    "sha256": "2d59faad741f562ec8a68eb29298bae5b05afff5796f8abf8e519f07d069a681"
+  },
+  "/workspace/.setup/esp-idf/components/freertos/FreeRTOS-Kernel/queue.c": {
+    "bytes": 140292,
+    "sha256": "6794db86ab086372ea2789d043d83e0b1efd0534a0c0deb5d28cffb342feaa0e"
+  },
+  "/workspace/.setup/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c": {
+    "bytes": 272955,
+    "sha256": "193c3d8379acc847097632da8e6d4dd2ee0bf8e069d78979d68dd26b653d48df"
+  },
+  "/workspace/.setup/esp-idf/components/freertos/FreeRTOS-Kernel/timers.c": {
+    "bytes": 54247,
+    "sha256": "cd2c4bb57b08dfda51d7b23862a3125afca5a0f63a9196aafd586182cce534fb"
+  },
+  "/workspace/.setup/esp-idf/components/freertos/FreeRTOS-Kernel/event_groups.c": {
+    "bytes": 34547,
+    "sha256": "5e1d21a871cc23a0fa493a9aa0d50dfd43abd67b06b9bcf87d8a6904b5c03f85"
+  },
+  "/workspace/.setup/esp-idf/components/freertos/FreeRTOS-Kernel/stream_buffer.c": {
+    "bytes": 65689,
+    "sha256": "b5b1024ae01373d51e3a860bb02bc8848906314ae3beb86d5b5b38c5af7252ae"
+  },
+  "/workspace/.setup/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c": {
+    "bytes": 30127,
+    "sha256": "c3c45a599a143ece363aa64625859d649f15aa43e96600f85172d369ed1828e3"
+  },
+  "/workspace/.setup/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S": {
+    "bytes": 28374,
+    "sha256": "d54eb6241209a1f0a852885666b7232617ee1b53fae429f37d3623b3f811da57"
+  },
+  "/workspace/.setup/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_init.c": {
+    "bytes": 1944,
+    "sha256": "90c49e55080978ed67d31ea542db264e510805fb706519af5e7af9c0e4e48d11"
+  },
+  "/workspace/.setup/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_overlay_os_hook.c": {
+    "bytes": 2442,
+    "sha256": "cba4a4eb8d489f016a41712c7b91e87b6b4ea84a0b5879a4b0c825354767d809"
+  },
+  "/workspace/.setup/esp-idf/components/freertos/esp_additions/idf_additions_event_groups.c": {
+    "bytes": 2610,
+    "sha256": "aa9e92ddc2278a0140e6106761264bd047e5be16bc99609dcc6c7187c401cb89"
+  },
+  "/workspace/.setup/esp-idf/components/freertos/esp_additions/idf_additions.c": {
+    "bytes": 16515,
+    "sha256": "799b7f52daea5ea1f3ea446b9e5c77e73a795529b1cf2bf9aa14c1d40f0ab1a9"
+  },
+  "/workspace/private-dot8-controlled-harness-20261105/main/dot8.c": {
+    "bytes": 1678,
+    "sha256": "d1d321916966b3632a258aad130356459dd502123819ea8b2b0c66fced41b09d"
+  },
+  "/workspace/private-dot8-controlled-harness-20261105/main/checked.c": {
+    "bytes": 991,
+    "sha256": "81f54e15c26952da4ba0ed5b4f1461ef4ae79dedd250fe78bd5e272ccb638756"
+  },
+  "/workspace/private-dot8-controlled-harness-20261105/main/corpus.c": {
+    "bytes": 2829,
+    "sha256": "813aca5baae048bb45eb62f45a0083a67d4669d592c5910344ae7edf49686114"
+  },
+  "/workspace/private-dot8-controlled-harness-20261105/main/control.c": {
+    "bytes": 2630,
+    "sha256": "3c30a42815f45837a3ba08d5be3ee3a8c2395d1a68de6e7d36e800e94cff3ba1"
+  },
+  "/workspace/private-dot8-controlled-harness-20261105/main/harness.c": {
+    "bytes": 4643,
+    "sha256": "33bbca6597dfeca3b20fffb24b69f356a4715a249b3aca37d3bdca11c540c485"
+  }
+}

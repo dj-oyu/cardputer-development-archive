@@ -1,0 +1,246 @@
+--- fox-v3-eye-evaluation/actual-eyeB/product/main/ayatsuri/compact_opaque.c	2026-11-03 12:50:44.934157477 +0900
++++ fox-v3-normal-pair-codec/product/main/ayatsuri/compact_opaque.c	2026-11-03 17:25:56.498036833 +0900
+@@ -10,6 +10,8 @@
+  * U8 triangle indices + ceil(triangles/8) side bytes; old reserved fields stay0.
+  * Mode3 reserved. Mode4 = mode0 front (20B), world F64 (24B), front/back
+  * SNORM16 normals (12B), followed by U8 indices and side bytes like mode2.
++ * Explicit mode5 uses the same first 50B, restoring back=-front exactly.
++ * Eligibility is whole-record and only includes serialized referenced vertices.
+  * U8 triangle indices for modes0/1, then zero padding to four bytes. All fields little-endian.
+  * Constant mode is legal only when all referenced vertices have identical A=B.
+  * Depth is preserved exactly; interpretation/tie policy belongs to the renderer. */
+@@ -20,8 +22,14 @@
+ static double rd(const uint8_t*p){uint64_t u=0;for(unsigned k=0;k<8;k++)u|=(uint64_t)p[k]<<(8*k);double d;memcpy(&d,&u,8);return d;}
+ static void wd(uint8_t*p,double d){uint64_t u;memcpy(&u,&d,8);for(unsigned k=0;k<8;k++)p[k]=(uint8_t)(u>>(8*k));}
+ static int16_t rs16(const uint8_t*p){unsigned u=u16(p);return (int16_t)(u<32768u?(int)u:(int)u-65536);}
+-static bool mode_valid(unsigned m){return m<=2||m==4;}
+-static bool has_sides(unsigned m){return m==2||m==4;}
++static bool pixel_mode(unsigned m){return m==CO_MODE_PIXEL||m==CO_MODE_PIXEL_NORMAL_PAIR;}
++static bool mode_valid(unsigned m){return m<=2||pixel_mode(m);}
++static bool has_sides(unsigned m){return m==2||pixel_mode(m);}
++static bool span_valid(const void *p,size_t n){return p&&n<=UINTPTR_MAX-(uintptr_t)p;}
++static bool overlap(const void *a,size_t an,const void *b,size_t bn){
++    uintptr_t x=(uintptr_t)a,y=(uintptr_t)b;
++    return an&&bn&&(x<=y?y-x<an:x-y<bn);
++}
+ static size_t aligned(size_t n){return (n+3u)&~(size_t)3u;}
+ static bool vertex_valid(const co_vertex*v){return isfinite(v->x)&&isfinite(v->y)&&isfinite(v->depth)&&isfinite(v->mask)&&fabsf(v->x)<=4096&&fabsf(v->y)<=4096;}
+ bool co_append(co_buffer*b,const co_input*in){
+@@ -49,7 +57,7 @@
+     uint8_t*ix=out+12+stride*count;for(unsigned j=0;j<3u*in->triangle_count;j++)ix[j]=remap[in->indices[j]];
+     b->size+=bytes;b->packets++;return true;
+ }
+-static unsigned vertex_stride(unsigned mode){return mode==4?56u:mode==1?12u:mode==2?24u:20u;}
++static unsigned vertex_stride(unsigned mode){return mode==CO_MODE_PIXEL_NORMAL_PAIR?50u:mode==CO_MODE_PIXEL?56u:mode==1?12u:mode==2?24u:20u;}
+ static __attribute__((noinline)) bool append_back_only(co_buffer *b,const co_sided_input *in){
+     co_vertex selected[CO_MAX_VERTICES];
+     memcpy(selected,in->front.vertices,in->front.vertex_count*sizeof *selected);
+@@ -104,10 +112,17 @@
+     }
+     return front&&back;
+ }
+-bool co_append_pixel(co_buffer *b,const co_pixel_input *in){
+-    if(!b||!in||!b->data||!in->vertices||!in->indices||!in->back_faces||b->size>b->capacity||b->packets>=CO_MAX_PACKETS||
++static bool append_pixel(co_buffer *b,const co_pixel_input *in,bool normal_pair){
++    if(!span_valid(b,sizeof *b)||!span_valid(in,sizeof *in)||!b->data||!in->vertices||!in->indices||!in->back_faces||b->size>b->capacity||b->packets>=CO_MAX_PACKETS||
+        in->vertex_count<3||in->vertex_count>CO_MAX_VERTICES||!in->triangle_count||in->triangle_count>CO_MAX_TRIANGLES)return false;
+     const unsigned side_bytes=(in->triangle_count+7u)/8u;
++    const void *spans[]={b,in,b->data,in->vertices,in->indices,in->back_faces};
++    const size_t sizes[]={sizeof *b,sizeof *in,b->capacity,
++        in->vertex_count*sizeof *in->vertices,3u*in->triangle_count*sizeof *in->indices,side_bytes};
++    for(unsigned i=0;i<6;i++){
++        if(!span_valid(spans[i],sizes[i]))return false;
++        for(unsigned j=0;j<i;j++)if(overlap(spans[i],sizes[i],spans[j],sizes[j]))return false;
++    }
+     if((in->triangle_count%8u)&&(in->back_faces[side_bytes-1]&(uint8_t)(0xffu<<(in->triangle_count%8u))))return false;
+     bool used[CO_MAX_VERTICES]={0};uint8_t remap[CO_MAX_VERTICES]={0};unsigned count=0;
+     for(unsigned t=0;t<in->triangle_count;t++){
+@@ -116,28 +131,42 @@
+         for(unsigned j=0;j<3;j++)used[ix[j]]=true;
+     }
+     for(unsigned v=0;v<in->vertex_count;v++)if(used[v]){
+-        if(!pixel_valid(in->vertices+v))return false;
++        const co_pixel_vertex *p=in->vertices+v;
++        if(!pixel_valid(p))return false;
++        if(normal_pair)for(unsigned k=0;k<3;k++)if((int32_t)p->normal_back[k]!=-(int32_t)p->normal_front[k])normal_pair=false;
+         remap[v]=(uint8_t)count++;
+     }
+-    const size_t raw=12u+56u*count+3u*in->triangle_count+side_bytes,bytes=aligned(raw);
++    const unsigned mode=normal_pair?CO_MODE_PIXEL_NORMAL_PAIR:CO_MODE_PIXEL,stride=vertex_stride(mode);
++    /* Counts were bounded before arithmetic: max record is < UINT16_MAX. */
++    const size_t raw=12u+stride*count+3u*in->triangle_count+side_bytes,bytes=aligned(raw);
+     if(bytes>b->capacity-b->size)return false;
+-    uint8_t *out=b->data+b->size;memset(out,0,bytes);out[0]=(uint8_t)count;out[1]=in->triangle_count;out[2]=4;
++    uint8_t *out=b->data+b->size;memset(out,0,bytes);out[0]=(uint8_t)count;out[1]=in->triangle_count;out[2]=(uint8_t)mode;
+     w16(out+4,in->node);w16(out+10,(unsigned)bytes);
+     for(unsigned v=0;v<in->vertex_count;v++)if(used[v]){
+-        const co_pixel_vertex *p=in->vertices+v;const co_vertex *f=&p->front;uint8_t *d=out+12+56u*remap[v];
++        const co_pixel_vertex *p=in->vertices+v;const co_vertex *f=&p->front;uint8_t *d=out+12+stride*remap[v];
+         wf(d,f->x);wf(d+4,f->y);wf(d+8,f->mask);wf(d+12,f->depth);w16(d+16,f->color_a);w16(d+18,f->color_b);
+-        for(unsigned k=0;k<3;k++){wd(d+20+8*k,p->world[k]);w16(d+44+2*k,(uint16_t)p->normal_front[k]);w16(d+50+2*k,(uint16_t)p->normal_back[k]);}
++        for(unsigned k=0;k<3;k++){wd(d+20+8*k,p->world[k]);w16(d+44+2*k,(uint16_t)p->normal_front[k]);if(!normal_pair)w16(d+50+2*k,(uint16_t)p->normal_back[k]);}
+     }
+-    uint8_t *ix=out+12+56u*count;for(unsigned j=0;j<3u*in->triangle_count;j++)ix[j]=remap[in->indices[j]];
++    uint8_t *ix=out+12+stride*count;for(unsigned j=0;j<3u*in->triangle_count;j++)ix[j]=remap[in->indices[j]];
+     memcpy(ix+3u*in->triangle_count,in->back_faces,side_bytes);
+     b->size+=bytes;b->packets++;return true;
+ }
++bool co_append_pixel(co_buffer *b,const co_pixel_input *in){return append_pixel(b,in,false);}
++bool co_append_pixel_normal_pair(co_buffer *b,const co_pixel_input *in){return append_pixel(b,in,true);}
+ bool co_pixel_vertex_at(const co_view *v,unsigned index,co_pixel_vertex *out){
+-    if(!v||!out||v->mode!=4)return false;
++    if(!span_valid(v,sizeof *v)||!out||!pixel_mode(v->mode)||!span_valid(v->data,v->size)||
++       !span_valid(out,sizeof *out)||overlap(out,sizeof *out,v,sizeof *v)||
++       overlap(out,sizeof *out,v->data,v->size))return false;
+     co_pixel_vertex p;
+     if(!co_vertex_at(v,index,&p.front))return false;
+-    const uint8_t *d=v->data+12+56u*index;
+-    for(unsigned k=0;k<3;k++){p.world[k]=rd(d+20+8*k);p.normal_front[k]=rs16(d+44+2*k);p.normal_back[k]=rs16(d+50+2*k);}
++    const uint8_t *d=v->data+12+vertex_stride(v->mode)*index;
++    for(unsigned k=0;k<3;k++){
++        p.world[k]=rd(d+20+8*k);p.normal_front[k]=rs16(d+44+2*k);
++        if(v->mode==CO_MODE_PIXEL_NORMAL_PAIR){
++            if(p.normal_front[k]==INT16_MIN)return false;
++            p.normal_back[k]=(int16_t)(-(int32_t)p.normal_front[k]);
++        }else p.normal_back[k]=rs16(d+50+2*k);
++    }
+     *out=p;return true;
+ }
+ bool co_vertex_at(const co_view*v,unsigned index,co_vertex*out){
+@@ -173,12 +202,12 @@
+     *back=value;return true;
+ }
+ bool co_read(const uint8_t*d,size_t available,co_view*out){
+-    if(!d||!out||available<12||d[0]<3||d[0]>CO_MAX_VERTICES||!d[1]||d[1]>CO_MAX_TRIANGLES||!mode_valid(d[2])||d[3]||u16(d+6)||(d[2]!=1&&u16(d+8)))return false;
++    if(!d||!out||available<12||!span_valid(d,available)||!span_valid(out,sizeof *out)||overlap(d,available,out,sizeof *out)||d[0]<3||d[0]>CO_MAX_VERTICES||!d[1]||d[1]>CO_MAX_TRIANGLES||!mode_valid(d[2])||d[3]||u16(d+6)||(d[2]!=1&&u16(d+8)))return false;
+     const size_t raw=12u+vertex_stride(d[2])*d[0]+3u*d[1]+(has_sides(d[2])?(d[1]+7u)/8u:0u),bytes=aligned(raw);
+     if(u16(d+10)!=bytes||bytes>available)return false;
+     co_view v={d,bytes,(uint16_t)u16(d+4),(uint16_t)u16(d+8),d[0],d[1],d[2]};
+     for(unsigned i=0;i<v.vertex_count;i++){co_vertex p;if(!co_vertex_at(&v,i,&p)||!vertex_valid(&p))return false;}
+-    if(v.mode==4)for(unsigned i=0;i<v.vertex_count;i++){co_pixel_vertex p;if(!co_pixel_vertex_at(&v,i,&p)||!pixel_valid(&p))return false;}
++    if(pixel_mode(v.mode))for(unsigned i=0;i<v.vertex_count;i++){co_pixel_vertex p;if(!co_pixel_vertex_at(&v,i,&p)||!pixel_valid(&p))return false;}
+     for(unsigned t=0;t<v.triangle_count;t++){uint8_t ix[3];if(!co_triangle_at(&v,t,ix)||ix[0]==ix[1]||ix[1]==ix[2]||ix[0]==ix[2])return false;}
+     if(has_sides(d[2])&&(d[1]%8u)&&(d[raw-1]&(uint8_t)(0xffu<<(d[1]%8u))))return false;
+     for(size_t i=raw;i<bytes;i++)if(d[i])return false;
+--- fox-v3-eye-evaluation/actual-eyeB/product/main/ayatsuri/compact_opaque.h	2026-11-03 12:50:16.540897011 +0900
++++ fox-v3-normal-pair-codec/product/main/ayatsuri/compact_opaque.h	2026-11-03 17:20:38.118264068 +0900
+@@ -8,6 +8,7 @@
+  * Caller owns storage/lifetime/accounting and must copy before borrowed inputs mutate.
+  * Holes/alpha/clips are not represented: caller must reject those before append. */
+ enum { CO_MAX_VERTICES=32, CO_MAX_TRIANGLES=64, CO_MAX_PACKETS=256 };
++enum { CO_MODE_PIXEL=4, CO_MODE_PIXEL_NORMAL_PAIR=5 };
+ typedef struct { float x,y,mask,depth; uint16_t color_a,color_b; } co_vertex;
+ typedef struct {
+     const co_vertex *vertices;
+@@ -22,7 +23,11 @@
+ typedef struct { co_input front; const uint16_t *back_colors; const uint8_t *back_faces; } co_sided_input;
+ /* Mode4 owns raw palettes, world positions, and separate front/back SNORM16
+  * normals. Native padding is not serialized: each wire vertex is exactly 56B.
+- * Mode3 is reserved. As with other inputs, all source spans must be disjoint
++ * Mode3 is reserved. Mode5 is the explicit lossless normal-pair encoding:
++ * its first 50B match mode4, and back normals are the exact integer negative
++ * of front normals. Only serialized (referenced) vertices decide eligibility.
++ * No rounding or quantization is performed by either encoding.
++ * As with other inputs, all source spans must be disjoint
+  * from the destination storage, and remain stable throughout append. */
+ typedef struct {
+     co_vertex front;
+@@ -46,9 +51,16 @@
+  * non-overlapping source and destination spans are required. */
+ bool co_append(co_buffer *buffer,const co_input *input);
+ bool co_append_sided(co_buffer *buffer,const co_sided_input *input);
++/* Legacy default: always emits mode4. Both pixel append APIs reject overlapping
++ * input/control/storage spans, including overlapping input spans, before writes. */
+ bool co_append_pixel(co_buffer *buffer,const co_pixel_input *input);
++/* Explicit opt-in: mode5 only if every serialized normal pair is exactly
++ * opposite; otherwise one complete mode4 record. Invalid input still rejects.
++ * All fields are copied; neither source pointers nor native padding survive. */
++bool co_append_pixel_normal_pair(co_buffer *buffer,const co_pixel_input *input);
+ /* Validate one complete record at the start of a span. view.size is its length.
+- * Reject malformed fields, nonfinite values, bad indices and nonzero padding. */
++ * Reject malformed fields, nonfinite values, bad indices and nonzero padding.
++ * available may include following records. Output must not overlap that span. */
+ bool co_read(const uint8_t *data,size_t available,co_view *view);
+ bool co_vertex_at(const co_view *view,unsigned index,co_vertex *vertex);
+ bool co_pixel_vertex_at(const co_view *view,unsigned index,co_pixel_vertex *vertex);
+--- fox-v3-eye-evaluation/actual-eyeB/product/main/ui/kasane/ksn_mesh_depth.c	2026-11-03 13:36:56.443635335 +0900
++++ fox-v3-normal-pair-codec/product/main/ui/kasane/ksn_mesh_depth.c	2026-11-03 17:24:27.727159911 +0900
+@@ -4,6 +4,7 @@
+ #include <math.h>
+ #include <string.h>
+ #include <limits.h>
++static bool mesh_span_valid(const void *p,size_t n){return p&&n<=UINTPTR_MAX-(uintptr_t)p;}
+ static bool mesh_overlap(const void *a,size_t an,const void *b,size_t bn){
+     uintptr_t x=(uintptr_t)a,y=(uintptr_t)b;
+     return an&&bn&&(x<=y?y-x<an:x-y<bn);
+@@ -60,24 +61,28 @@
+ static void pixel_wd(uint8_t *p,double x){uint64_t u;memcpy(&u,&x,8);for(unsigned j=0;j<8;j++)p[j]=(uint8_t)(u>>(8*j));}
+ static double pixel_rd(const uint8_t *p){uint64_t u=0;for(unsigned j=0;j<8;j++)u|=(uint64_t)p[j]<<(8*j);double x;memcpy(&x,&u,8);return x;}
+ static bool pixel_scene(const ksn_mesh_pixel_snapshot *s,FoxDiskScene *out){
+- if(!s||!s->storage||s->capacity<416||s->capacity>65536||!s->mesh.enabled||s->mesh.packets.data!=s->storage+416||s->mesh.packets.capacity!=s->capacity-416||s->mesh.packets.size>s->mesh.packets.capacity||s->mesh.work>s->mesh.work_limit||s->mesh.work_limit>8000000||mesh_overlap(s,sizeof *s,s->storage,s->capacity)||memcmp(s->storage,pixel_magic,8))return false;
++ if(!mesh_span_valid(s,sizeof *s)||!s->storage||s->capacity<416||s->capacity>65536||!mesh_span_valid(s->storage,s->capacity)||s->mesh.packets.packets>CO_MAX_PACKETS||!s->mesh.enabled||s->mesh.packets.data!=s->storage+416||s->mesh.packets.capacity!=s->capacity-416||s->mesh.packets.size>s->mesh.packets.capacity||s->mesh.work>s->mesh.work_limit||s->mesh.work_limit>8000000||mesh_overlap(s,sizeof *s,s->storage,s->capacity)||memcmp(s->storage,pixel_magic,8))return false;
+  double d[51];for(unsigned j=0;j<51;j++)d[j]=pixel_rd(s->storage+8+8*j);memcpy(out,d,sizeof *out);return fox_disk_scene_validate(out)==FOX_DISK_OK;
+ }
+ bool ksn_mesh_pixel_begin(ksn_mesh_pixel_snapshot *out,void *storage,size_t capacity,const FoxDiskScene *scene,uint32_t work_limit){
+- if(!out||!storage||capacity<416||capacity>65536||!scene||!work_limit||work_limit>8000000||fox_disk_scene_validate(scene)!=FOX_DISK_OK||mesh_overlap(out,sizeof *out,storage,capacity)||mesh_overlap(scene,sizeof *scene,storage,capacity)||mesh_overlap(out,sizeof *out,scene,sizeof *scene))return false;
++ if(!mesh_span_valid(out,sizeof *out)||!storage||capacity<416||capacity>65536||!mesh_span_valid(storage,capacity)||!mesh_span_valid(scene,sizeof *scene)||!work_limit||work_limit>8000000||fox_disk_scene_validate(scene)!=FOX_DISK_OK||mesh_overlap(out,sizeof *out,storage,capacity)||mesh_overlap(scene,sizeof *scene,storage,capacity)||mesh_overlap(out,sizeof *out,scene,sizeof *scene))return false;
+  /* Public contract: snapshot control, storage and input scene are disjoint. */
+  uint8_t header[416];memcpy(header,pixel_magic,8);double d[51];memcpy(d,scene,sizeof d);for(unsigned j=0;j<51;j++)pixel_wd(header+8+8*j,d[j]);
+  ksn_mesh_pixel_snapshot value={.mesh={.packets={.data=(uint8_t *)storage+416,.capacity=capacity-416},.work_limit=work_limit,.enabled=true},.storage=storage,.capacity=capacity};
+  memcpy(storage,header,sizeof header);*out=value;return true;
+ }
+-bool ksn_mesh_pixel_append(ksn_mesh_pixel_snapshot *s,const ksn_proc_gouraud_patch *p,const co_pixel_vertex *vertices,const uint8_t bits[8],uint16_t node){
++static bool pixel_append(ksn_mesh_pixel_snapshot *s,const ksn_proc_gouraud_patch *p,const co_pixel_vertex *vertices,const uint8_t bits[8],uint16_t node,bool normal_pair){
+  FoxDiskScene scene;int l,t,r,b;unsigned cost;
+- if(!s||!p||!vertices||!bits||!pixel_scene(s,&scene)||p->header.holes||!ksn_proc_gouraud_bounds(p,&l,&t,&r,&b,&cost)||s->mesh.work>s->mesh.work_limit||cost>(s->mesh.work_limit-s->mesh.work)/49u)return false;
++ if(!s||!mesh_span_valid(p,sizeof *p)||!vertices||!mesh_span_valid(bits,8)||!pixel_scene(s,&scene)||p->header.holes||!ksn_proc_gouraud_bounds(p,&l,&t,&r,&b,&cost)||s->mesh.work>s->mesh.work_limit||cost>(s->mesh.work_limit-s->mesh.work)/49u)return false;
+  if(mesh_overlap(vertices,p->header.vertices*sizeof *vertices,s,sizeof *s)||mesh_overlap(p,sizeof *p,s,sizeof *s)||mesh_overlap(bits,8,s,sizeof *s)||mesh_overlap(vertices,p->header.vertices*sizeof *vertices,s->storage,s->capacity)||mesh_overlap(p,sizeof *p,s->storage,s->capacity)||mesh_overlap(bits,8,s->storage,s->capacity))return false;
++ if(!mesh_span_valid(vertices,p->header.vertices*sizeof *vertices)||mesh_overlap(p,sizeof *p,vertices,p->header.vertices*sizeof *vertices)||mesh_overlap(p,sizeof *p,bits,8)||mesh_overlap(vertices,p->header.vertices*sizeof *vertices,bits,8))return false;
+  for(unsigned j=0;j<p->header.vertices;j++)if(p->vertices[j].x!=vertices[j].front.x||p->vertices[j].y!=vertices[j].front.y||p->vertices[j].mask!=vertices[j].front.mask)return false;
+  co_pixel_input in={vertices,p->indices,bits,node,p->header.vertices,p->header.triangles};
+- if(!co_append_pixel(&s->mesh.packets,&in))return false;s->mesh.work+=cost*49u;return true;
++ if(!(normal_pair?co_append_pixel_normal_pair(&s->mesh.packets,&in):co_append_pixel(&s->mesh.packets,&in)))return false;
++ s->mesh.work+=cost*49u;return true;
+ }
++bool ksn_mesh_pixel_append(ksn_mesh_pixel_snapshot *s,const ksn_proc_gouraud_patch *p,const co_pixel_vertex *v,const uint8_t bits[8],uint16_t node){return pixel_append(s,p,v,bits,node,false);}
++bool ksn_mesh_pixel_append_normal_pair(ksn_mesh_pixel_snapshot *s,const ksn_proc_gouraud_patch *p,const co_pixel_vertex *v,const uint8_t bits[8],uint16_t node){return pixel_append(s,p,v,bits,node,true);}
+ typedef struct {double a,b,c;int sign;bool closed;} gouraud_edge;
+ static gouraud_edge gouraud_make_edge(const co_vertex *a,const co_vertex *b){
+     const double dx=(double)b->x-a->x,dy=(double)b->y-a->y;
+@@ -94,10 +99,12 @@
+ 
+ static bool strip(const ksn_mesh_snapshot *s,uint16_t *pixels,unsigned y,unsigned height,float *z,const FoxDiskScene *scene,ksn_mesh_pixel_stats *stats,FoxDiskVisibilityCallback visibility,void *visibility_context,FoxPixelShader shader,void *shader_context){
+     for(unsigned j=0;j<height*KSN_PROC_W;j++)z[j]=-INFINITY;
+-    size_t offset=0;
++    size_t offset=0;unsigned records=0;
+     while(offset<s->packets.size){
+         co_view view;if(!co_read(s->packets.data+offset,s->packets.size-offset,&view))return false;
+-        if((scene&&view.mode!=4)||(!scene&&view.mode==4))return false;
++        const bool pixel=view.mode==CO_MODE_PIXEL||view.mode==CO_MODE_PIXEL_NORMAL_PAIR;
++        if((scene&&!pixel)||(!scene&&pixel))return false;
++        if(scene&&++records>s->packets.packets)return false;
+         for(unsigned face=0;face<view.triangle_count;face++){
+             uint8_t indices[3];co_vertex v[3];co_pixel_vertex fields[3];
+             if(!co_triangle_at(&view,face,indices))return false;
+@@ -150,7 +157,7 @@
+         }
+         offset+=view.size;
+     }
+-    return true;
++    return !scene||records==s->packets.packets;
+ }
+ bool ksn_mesh_render(const ksn_mesh_snapshot *s,uint16_t *pixels,unsigned y,unsigned height,float *scratch,unsigned rows){
+     if(!s||!s->enabled||!pixels||!scratch||(rows!=1&&rows!=8)||y>KSN_PROC_H||height>KSN_PROC_H-y)return false;
+--- fox-v3-eye-evaluation/actual-eyeB/product/main/ui/kasane/ksn_mesh_depth.h	2026-11-03 13:36:56.443540973 +0900
++++ fox-v3-normal-pair-codec/product/main/ui/kasane/ksn_mesh_depth.h	2026-11-03 17:20:38.118665826 +0900
+@@ -30,7 +30,10 @@
+ typedef struct { ksn_mesh_snapshot mesh; uint8_t *storage; size_t capacity; } ksn_mesh_pixel_snapshot;
+ typedef struct { uint64_t shade_updates, disk_samples; } ksn_mesh_pixel_stats;
+ bool ksn_mesh_pixel_begin(ksn_mesh_pixel_snapshot *,void *,size_t,const FoxDiskScene *,uint32_t);
++/* Existing entry point always uses mode4. Explicit opt-in below may emit
++ * mode5 or a whole mode4 fallback; storage cap and work accounting are equal. */
+ bool ksn_mesh_pixel_append(ksn_mesh_pixel_snapshot *,const ksn_proc_gouraud_patch *,const co_pixel_vertex *,const uint8_t[8],uint16_t);
++bool ksn_mesh_pixel_append_normal_pair(ksn_mesh_pixel_snapshot *,const ksn_proc_gouraud_patch *,const co_pixel_vertex *,const uint8_t[8],uint16_t);
+ bool ksn_mesh_pixel_render(const ksn_mesh_pixel_snapshot *,uint16_t *,unsigned,unsigned,float *,unsigned,ksn_mesh_pixel_stats *);
+ /* Host-only callback variant. Callback lifetime/context is caller-owned for this synchronous call. Failure discards partial band. */
+ bool ksn_mesh_pixel_render_visible(const ksn_mesh_pixel_snapshot *,uint16_t *,unsigned,unsigned,float *,unsigned,ksn_mesh_pixel_stats *,FoxDiskVisibilityCallback,void *);

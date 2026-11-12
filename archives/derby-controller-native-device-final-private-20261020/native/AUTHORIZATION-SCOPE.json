@@ -1,0 +1,10 @@
+{
+  "parent_thread": "01a15560-53fc-74be-bdcc-e2ec8c3d200a",
+  "scope": "native PR26 exacthead3fafcadbd72ecbd0d799cbe9d29f037ff62c05d5 formal source/build then one flash boot and one ON fixed trial; same frozen baseline series",
+  "trusted_user_authorization": "Sentinel_6d31198677008191b9da5dcd3fe82738: y for corrected firmware obtain/build/write/remeasure with recovery preserved and stop on baseline error; baseline now accepted",
+  "current_comparison_receipt": "e40bf864bafa4a3fdb94b418416ee90bda54801bfa4b0887c19e73d4a3889615",
+  "normal_historical_rollback_receipt": "e9a33d3e3d0a9c1809a4238efc42c85cf440837ec62466c5c52326ddd69c761a",
+  "cache_policy": "existing protected automatic reclamation allowed, no manual deletion/limits relaxation",
+  "forbidden": "batch, new OFF/DMA integration, unrequested backup/restore/reset, direct USB, auth/SDK/config changes, failure history rewrite, retry on safety refusal or actual mismatch",
+  "stop_on": "uncertainty, mismatch, explicit safety refusal, fatal/OOM"
+}

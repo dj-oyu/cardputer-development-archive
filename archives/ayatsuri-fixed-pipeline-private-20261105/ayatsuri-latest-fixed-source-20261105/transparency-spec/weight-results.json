@@ -1,0 +1,29 @@
+[
+  {
+    "fractional_witness_code": 39936,
+    "fractional_witness_real": "39/64",
+    "bits": 16,
+    "explicit_and_random_raw_codes": 10011,
+    "sum_codes": 65536,
+    "min_max_and_complement": "PASS",
+    "scope": "top-level incoming weight one; not source float32 branch or scene transport parity"
+  },
+  {
+    "fractional_witness_code": 638976,
+    "fractional_witness_real": "39/64",
+    "bits": 20,
+    "explicit_and_random_raw_codes": 10011,
+    "sum_codes": 1048576,
+    "min_max_and_complement": "PASS",
+    "scope": "top-level incoming weight one; not source float32 branch or scene transport parity"
+  },
+  {
+    "fractional_witness_code": 10223616,
+    "fractional_witness_real": "39/64",
+    "bits": 24,
+    "explicit_and_random_raw_codes": 10011,
+    "sum_codes": 16777216,
+    "min_max_and_complement": "PASS",
+    "scope": "top-level incoming weight one; not source float32 branch or scene transport parity"
+  }
+]

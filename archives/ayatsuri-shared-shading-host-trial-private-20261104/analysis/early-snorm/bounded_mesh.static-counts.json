@@ -1,0 +1,33 @@
+{
+  "interpretation": "Static instruction-site counts across whole functions, including branches. %rbp is not assumed to be a frame pointer. %rsp operands may be deliberate arrays, arguments or spills; these counts alone cannot distinguish them. Does not count implicit call/return memory operations as explicit rsp operands. Not dynamic frequency or cycles.",
+  "functions": {
+    "mesh_packet": {
+      "instructions": 1067,
+      "rsp_memory_operand_instructions": 224,
+      "push_pop_instructions": 15,
+      "call_instructions": [
+        "c1d:\te8 00 00 00 00       \tcall   c22 <mesh_packet+0x422>",
+        "c32:\te8 00 00 00 00       \tcall   c37 <mesh_packet+0x437>",
+        "d00:\te8 00 00 00 00       \tcall   d05 <mesh_packet+0x505>",
+        "d18:\te8 00 00 00 00       \tcall   d1d <mesh_packet+0x51d>",
+        "e60:\te8 00 00 00 00       \tcall   e65 <mesh_packet+0x665>",
+        "e75:\te8 00 00 00 00       \tcall   e7a <mesh_packet+0x67a>",
+        "10e6:\te8 a5 ef ff ff       \tcall   90 <mesh_project>",
+        "11a5:\te8 00 00 00 00       \tcall   11aa <mesh_packet+0x9aa>",
+        "11af:\te8 00 00 00 00       \tcall   11b4 <mesh_packet+0x9b4>",
+        "1281:\te8 00 00 00 00       \tcall   1286 <mesh_packet+0xa86>",
+        "128e:\te8 00 00 00 00       \tcall   1293 <mesh_packet+0xa93>",
+        "1310:\te8 cb f1 ff ff       \tcall   4e0 <ayatsuri_shade_terms_prepare.isra.0>",
+        "1354:\te8 a7 ef ff ff       \tcall   300 <ayatsuri_shade_from_terms.isra.0>",
+        "1384:\te8 77 ef ff ff       \tcall   300 <ayatsuri_shade_from_terms.isra.0>",
+        "145e:\te8 00 00 00 00       \tcall   1463 <mesh_packet+0xc63>",
+        "146b:\te8 00 00 00 00       \tcall   1470 <mesh_packet+0xc70>",
+        "14fa:\te8 e1 ef ff ff       \tcall   4e0 <ayatsuri_shade_terms_prepare.isra.0>",
+        "153f:\te8 bc ed ff ff       \tcall   300 <ayatsuri_shade_from_terms.isra.0>",
+        "1573:\te8 88 ed ff ff       \tcall   300 <ayatsuri_shade_from_terms.isra.0>",
+        "1ae4:\te8 00 00 00 00       \tcall   1ae9 <mesh_packet+0x12e9>",
+        "1b83:\te8 08 e5 ff ff       \tcall   90 <mesh_project>"
+      ]
+    }
+  }
+}

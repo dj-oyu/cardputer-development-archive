@@ -1,0 +1,30 @@
+{
+  "version": "eye-evaluation-code-report-freeze-v1",
+  "timestampUTC": "2026-11-03T08:03:14.140682+00:00",
+  "files": {
+    "REPORT.md": "e9c3533307aa47326fd02baede52f114d7824b05e20505f0fa4bfa812ec56e09",
+    "compare_actual.py": "8fc02fda837248246f3b4477de47ed9ee5750e43a61a235f906844cedf3ed978",
+    "compare_face.py": "b7216e1614a75fdd22fe72261a9fb0ff9227fdbd6f1b16b5709f9a47e8a3b975",
+    "run_density.py": "075d4b0078a860fe2526303ed83673cc9d3c716ed6d66da659975743de536b45",
+    "run_holdout.py": "7b302478efb23f764de26c14cd339bac243d645d92cbe8232fe3d1cc60f45cff",
+    "measure_actual_cost.py": "fcfdd439cee5f692f6660111dadd835731c92eb32a77bf3bae0c7eb154f26599",
+    "actual-comparison.json": "c30d72beeac766fae06cf55af564c4d00ccd8424b375a6d1e4440b940e9ed4d4",
+    "face-comparison.json": "900cb0fdb632099d8ee1211b52d8a2e2eba9d629b49de2777b0e698358d386f9",
+    "cpu-comparison.json": "4319a53e9a533044f3ea53fdadd45946d6ff0a76b75a1028c5da94ce7cf1be2f",
+    "cpu-001/COMPLETED.json": "71a3626a8ac315fe5355366c8f70e7ae98798625d5ddb90101a64278f4cf4722",
+    "adapter-parity.json": "f92e6ddce12294490d20d307c571c44c26f989a13f33c233948f253fb37cf816",
+    "code/native_render.c": "0051c4fc65a669ff7891fffff867e38cff8e9f4b82f0428239543698e1dfe7fc",
+    "code/run.py": "c64d55c0a3e04ec618fd60085df23b81eba0e437054a9dff53b813da9b48230d",
+    "code/compile.cjs": "42ae63f5a4d78d97a7b098edc7292b4f14da879cde304f6f6e9d290edd8a434a",
+    "code/prepare_geometry.py": "65e475d40c3479663547ba9723b84aef5316b7e496132ddf9e7c2687b8150231",
+    "code/geometry_certificate.py": "2b9c0239116e3e22054d91990bba28644275d023746cb7656587eb7d3b8e01ac",
+    "scoring/score_candidate.py": "362663e2d96d654dfea055a9f6cf903c68504bfcc7368587529d3be0b94068d2",
+    "inputs/immutable-core-pins.json": "61f257303fe4569a03fb3f82d88d26ff5928d2f5a33b6eb0773afff005f4311c"
+  },
+  "formalAll10BothComplete": true,
+  "densityBothComplete": true,
+  "holdoutFourComplete": true,
+  "cpu18Complete": true,
+  "formalAdoption": false,
+  "scope": "Code/report freeze only, excludes source GLB, compiled private geometry, private sourceVertexIds, and image assets"
+}

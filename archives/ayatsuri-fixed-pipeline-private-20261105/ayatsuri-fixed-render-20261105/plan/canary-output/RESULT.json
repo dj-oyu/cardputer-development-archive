@@ -1,0 +1,824 @@
+{
+  "status": "THREE_FRONT_GEOMETRY_CANARY_COMPLETE",
+  "fullShadedFrames": 3,
+  "additionalFrames": 0,
+  "retries": 0,
+  "executionFreezeSHA256": "85d6f6fe0da507c7fe6a7128fa05ff2a3de03839ae369cfe83c5c8743e80e4a0",
+  "contactSheetSHA256": "cf1671ed489b72f0e4e2cd1259a4932be9f46557f1c2db7776c821eb585e8cf7",
+  "visualInspection": "Viewed actual-image-contact-sheet.png. Original, q16 and q20 appear alike at contact-sheet scale. Amplified RGB differences show only isolated q16 pixels; q20 is black because final RGB565 exactly matches. HDR maps retain localized q16 hotspots; no inference of transport/shadow identity.",
+  "geometryOnly": true,
+  "fixedArithmeticPerformanceClaim": false,
+  "deploymentAcceptanceClaim": false,
+  "shadowParityClaim": false,
+  "rows": [
+    {
+      "kind": "baseline",
+      "passSHA256": "0552f8845a73011f406f8fd4b3ef1dd8f53efbcb8aa5d6b9a6628fe2341a753d",
+      "comparison": {
+        "kind": "baseline",
+        "complete": true,
+        "shadowParityClaim": false,
+        "reportDifferences": {
+          ".json": [],
+          ".aa.json": [],
+          ".floor.json": [],
+          ".background.json": [],
+          ".row.json": [],
+          ".floor-world.json": [],
+          ".hdr-observer.json": [],
+          ".depth-stream.json": [],
+          ".cache.json": []
+        },
+        "originalRawBitExact": true,
+        "HDR": {
+          "all": {
+            "count": 97200,
+            "changed": 0,
+            "max_abs": 0.0,
+            "mean_abs": 0.0,
+            "rms": 0.0
+          },
+          "boundary": {
+            "count": 7155,
+            "changed": 0,
+            "max_abs": 0.0,
+            "mean_abs": 0.0,
+            "rms": 0.0
+          },
+          "character_depth_finite": {
+            "count": 14094,
+            "changed": 0,
+            "max_abs": 0.0,
+            "mean_abs": 0.0,
+            "rms": 0.0
+          },
+          "background_depth_nonfinite": {
+            "count": 83106,
+            "changed": 0,
+            "max_abs": 0.0,
+            "mean_abs": 0.0,
+            "rms": 0.0
+          },
+          "relative_above_1e_3": {
+            "count": 97198,
+            "changed": 0,
+            "max_abs": 0.0,
+            "mean_abs": 0.0,
+            "rms": 0.0
+          },
+          "abs_error_quantiles": {
+            "0.5": 0.0,
+            "0.95": 0.0,
+            "0.99": 0.0,
+            "1": 0.0
+          }
+        },
+        "HDR_baseline_composition_regions": {
+          "character_only": {
+            "count": 13575,
+            "changed": 0,
+            "max_abs": 0.0,
+            "mean_abs": 0.0,
+            "rms": 0.0
+          },
+          "floor_only": {
+            "count": 82602,
+            "changed": 0,
+            "max_abs": 0.0,
+            "mean_abs": 0.0,
+            "rms": 0.0
+          },
+          "world_only": {
+            "count": 0,
+            "changed": 0,
+            "max_abs": 0.0,
+            "mean_abs": 0.0,
+            "rms": 0.0
+          },
+          "mixed_character_floor_world": {
+            "count": 1023,
+            "changed": 0,
+            "max_abs": 0.0,
+            "mean_abs": 0.0,
+            "rms": 0.0
+          }
+        },
+        "baselineCompositionPixelCounts": {
+          "character_only": 4525,
+          "floor_only": 27534,
+          "world_only": 0,
+          "mixed_character_floor_world": 341
+        },
+        "RGB565": {
+          "changed_pixels": 0,
+          "channel_steps": {
+            "count": 97200,
+            "changed": 0,
+            "max_abs": 0.0,
+            "mean_abs": 0.0,
+            "rms": 0.0
+          }
+        },
+        "depth": {
+          "coverage_changed_pixels": 0,
+          "shared_finite": {
+            "count": 4698,
+            "changed": 0,
+            "max_abs": 0.0,
+            "mean_abs": 0.0,
+            "rms": 0.0
+          }
+        },
+        "targetMaskChangedPixels": 0
+      },
+      "elapsedSecondsDescriptiveOnly": 18.367487621988403
+    },
+    {
+      "kind": "q16",
+      "passSHA256": "5b4eb63d2cc55d000b32220ace34da9c0ab98cc0d49f0aefeba4870bbfd7320f",
+      "comparison": {
+        "kind": "q16",
+        "complete": true,
+        "shadowParityClaim": false,
+        "reportDifferences": {
+          ".json": [
+            {
+              "path": ".secondary_world_rays",
+              "baseline": 1684032,
+              "candidate": 1683936
+            },
+            {
+              "path": ".transportTriangleTests",
+              "baseline": 135683100,
+              "candidate": 135746086
+            },
+            {
+              "path": ".visibilityRays",
+              "baseline": 436099,
+              "candidate": 436096
+            },
+            {
+              "path": ".primary_direct_queries",
+              "baseline": 436099,
+              "candidate": 436096
+            },
+            {
+              "path": ".visibilityTriangleTests",
+              "baseline": 8454884,
+              "candidate": 8448294
+            },
+            {
+              "path": ".transportNodeVisits",
+              "baseline": 442570416,
+              "candidate": 442945501
+            },
+            {
+              "path": ".zero_reflection_ns_v",
+              "baseline": 10504,
+              "candidate": 10510
+            },
+            {
+              "path": ".visibilitySnapshotFingerprint",
+              "baseline": "017e6671f56c3bd8",
+              "candidate": "fcd030d99428ed59"
+            },
+            {
+              "path": ".visibilityNodeVisits",
+              "baseline": 27010385,
+              "candidate": 27044658
+            },
+            {
+              "path": ".secondary_direct_queries",
+              "baseline": 2600725,
+              "candidate": 2600588
+            },
+            {
+              "path": ".transportRays",
+              "baseline": 8764309,
+              "candidate": 8764076
+            },
+            {
+              "path": ".secondary_ground_hits",
+              "baseline": 129868,
+              "candidate": 129831
+            },
+            {
+              "path": ".visibilityGeometryFingerprint",
+              "baseline": "f9c66f89d3536bf6",
+              "candidate": "fd4668900ad2f35f"
+            }
+          ],
+          ".aa.json": [
+            {
+              "path": ".preflightSnapshotFNV",
+              "baseline": "017e6671f56c3bd8",
+              "candidate": "fcd030d99428ed59"
+            }
+          ],
+          ".floor.json": [],
+          ".background.json": [
+            {
+              "path": ".backgroundNodeVisits",
+              "baseline": 26973407,
+              "candidate": 26978373
+            },
+            {
+              "path": ".snapshotFingerprint",
+              "baseline": "017e6671f56c3bd8",
+              "candidate": "fcd030d99428ed59"
+            },
+            {
+              "path": ".backgroundTriangleTests",
+              "baseline": 4862747,
+              "candidate": 4862949
+            }
+          ],
+          ".row.json": [
+            {
+              "path": ".backgroundNodes",
+              "baseline": 26973407,
+              "candidate": 26978373
+            },
+            {
+              "path": ".backgroundTriangles",
+              "baseline": 4862747,
+              "candidate": 4862949
+            }
+          ],
+          ".floor-world.json": [
+            {
+              "path": ".visibilityTriangleTests",
+              "baseline": 6511809,
+              "candidate": 6516230
+            },
+            {
+              "path": ".misses",
+              "baseline": 1010525,
+              "candidate": 1010532
+            },
+            {
+              "path": ".blockedCharacter",
+              "baseline": 114947,
+              "candidate": 114940
+            },
+            {
+              "path": ".visibilityNodeVisits",
+              "baseline": 33129176,
+              "candidate": 33145428
+            }
+          ],
+          ".hdr-observer.json": [],
+          ".depth-stream.json": [],
+          ".cache.json": [
+            {
+              "path": ".hits",
+              "baseline": 126352,
+              "candidate": 126353
+            },
+            {
+              "path": ".misses",
+              "baseline": 3248,
+              "candidate": 3247
+            }
+          ]
+        },
+        "HDR": {
+          "all": {
+            "count": 97200,
+            "changed": 14598,
+            "max_abs": 0.03188084701332228,
+            "mean_abs": 3.4399092362877654e-06,
+            "rms": 0.0001828165514280611
+          },
+          "boundary": {
+            "count": 7155,
+            "changed": 6261,
+            "max_abs": 0.03188084701332228,
+            "mean_abs": 4.164640814829537e-05,
+            "rms": 0.0006716302935092826
+          },
+          "character_depth_finite": {
+            "count": 14094,
+            "changed": 14094,
+            "max_abs": 0.03188084701332228,
+            "mean_abs": 2.352309933926287e-05,
+            "rms": 0.00048008072104676323
+          },
+          "background_depth_nonfinite": {
+            "count": 83106,
+            "changed": 504,
+            "max_abs": 0.0002460801419934544,
+            "mean_abs": 3.398810771303955e-08,
+            "rms": 1.7618974141548916e-06
+          },
+          "relative_above_1e_3": {
+            "count": 97198,
+            "changed": 14596,
+            "max_abs": 0.21182668674636806,
+            "mean_abs": 1.022264374070381e-05,
+            "rms": 0.0009453849391693898
+          },
+          "abs_error_quantiles": {
+            "0.5": 0.0,
+            "0.95": 1.887280441494057e-06,
+            "0.99": 1.7358828969776733e-05,
+            "1": 0.03188084701332228
+          }
+        },
+        "HDR_baseline_composition_regions": {
+          "character_only": {
+            "count": 13575,
+            "changed": 13575,
+            "max_abs": 0.03188084701332228,
+            "mean_abs": 2.369467596355156e-05,
+            "rms": 0.0004877921038550911
+          },
+          "floor_only": {
+            "count": 82602,
+            "changed": 0,
+            "max_abs": 0.0,
+            "mean_abs": 0.0,
+            "rms": 0.0
+          },
+          "world_only": {
+            "count": 0,
+            "changed": 0,
+            "max_abs": 0.0,
+            "mean_abs": 0.0,
+            "rms": 0.0
+          },
+          "mixed_character_floor_world": {
+            "count": 1023,
+            "changed": 1023,
+            "max_abs": 0.0035530441976687754,
+            "mean_abs": 1.2418329972588763e-05,
+            "rms": 0.0001346837371199621
+          }
+        },
+        "baselineCompositionPixelCounts": {
+          "character_only": 4525,
+          "floor_only": 27534,
+          "world_only": 0,
+          "mixed_character_floor_world": 341
+        },
+        "RGB565": {
+          "changed_pixels": 4,
+          "channel_steps": {
+            "count": 97200,
+            "changed": 5,
+            "max_abs": 1.0,
+            "mean_abs": 5.1440329218106995e-05,
+            "rms": 0.0071721913818655865
+          }
+        },
+        "depth": {
+          "coverage_changed_pixels": 0,
+          "shared_finite": {
+            "count": 4698,
+            "changed": 4671,
+            "max_abs": 0.004828929901123047,
+            "mean_abs": 0.00016050726467114706,
+            "rms": 0.00024072931292121056
+          }
+        },
+        "targetMaskChangedPixels": 0
+      },
+      "elapsedSecondsDescriptiveOnly": 17.59604402098921,
+      "largestHDRDifference": {
+        "x": 140,
+        "y": 60,
+        "channel": 0,
+        "baseline": 2.151848634159943,
+        "candidate": 2.1199677871466207,
+        "absError": 0.03188084701332228
+      },
+      "changedDisplayPixels": [
+        {
+          "x": 144,
+          "y": 58,
+          "old565": 59195,
+          "new565": 59163
+        },
+        {
+          "x": 136,
+          "y": 74,
+          "old565": 54870,
+          "new565": 54838
+        },
+        {
+          "x": 123,
+          "y": 102,
+          "old565": 51840,
+          "new565": 49792
+        },
+        {
+          "x": 140,
+          "y": 105,
+          "old565": 16544,
+          "new565": 18624
+        }
+      ]
+    },
+    {
+      "kind": "q20",
+      "passSHA256": "57b338801b509e23c39b3c8e2f631bb93a3c3a88a599b87e6955e27fcebf3b02",
+      "comparison": {
+        "kind": "q20",
+        "complete": true,
+        "shadowParityClaim": false,
+        "reportDifferences": {
+          ".json": [
+            {
+              "path": ".secondary_ground_hits",
+              "baseline": 129868,
+              "candidate": 129867
+            },
+            {
+              "path": ".primary_ground_direct_queries",
+              "baseline": 3080960,
+              "candidate": 3080912
+            },
+            {
+              "path": ".visibilityGeometryFingerprint",
+              "baseline": "f9c66f89d3536bf6",
+              "candidate": "d24b4ff5eb104d25"
+            },
+            {
+              "path": ".transportNodeVisits",
+              "baseline": 442570416,
+              "candidate": 443058472
+            },
+            {
+              "path": ".secondary_world_rays",
+              "baseline": 1684032,
+              "candidate": 1684048
+            },
+            {
+              "path": ".visibilityTriangleTests",
+              "baseline": 8454884,
+              "candidate": 8442027
+            },
+            {
+              "path": ".transportTriangleTests",
+              "baseline": 135683100,
+              "candidate": 135641508
+            },
+            {
+              "path": ".visibilitySnapshotFingerprint",
+              "baseline": "017e6671f56c3bd8",
+              "candidate": "46470de7377f825d"
+            },
+            {
+              "path": ".visibilityNodeVisits",
+              "baseline": 27010385,
+              "candidate": 27055255
+            },
+            {
+              "path": ".secondary_direct_queries",
+              "baseline": 2600725,
+              "candidate": 2600775
+            },
+            {
+              "path": ".primary_ground_reflection_hits",
+              "baseline": 70342,
+              "candidate": 70341
+            },
+            {
+              "path": ".transportRays",
+              "baseline": 8764309,
+              "candidate": 8764311
+            },
+            {
+              "path": ".primary_ground_hits",
+              "baseline": 70342,
+              "candidate": 70341
+            },
+            {
+              "path": ".primary_ground_emission_hits",
+              "baseline": 70342,
+              "candidate": 70341
+            }
+          ],
+          ".aa.json": [
+            {
+              "path": ".preflightSnapshotFNV",
+              "baseline": "017e6671f56c3bd8",
+              "candidate": "46470de7377f825d"
+            }
+          ],
+          ".floor.json": [
+            {
+              "path": ".evaluations",
+              "baseline": 70342,
+              "candidate": 70341
+            },
+            {
+              "path": ".floorQueries",
+              "baseline": 3080960,
+              "candidate": 3080912
+            },
+            {
+              "path": ".usedTotal",
+              "baseline": 859794624,
+              "candidate": 859782432
+            },
+            {
+              "path": ".floorHitLimit",
+              "baseline": 70342,
+              "candidate": 70341
+            },
+            {
+              "path": ".kernelReservations",
+              "baseline": 3376416,
+              "candidate": 3376368
+            },
+            {
+              "path": ".limitTotal",
+              "baseline": 859794624,
+              "candidate": 859782432
+            },
+            {
+              "path": ".floorHits",
+              "baseline": 70342,
+              "candidate": 70341
+            },
+            {
+              "path": ".categories.floorAccumulationCounters.limit",
+              "baseline": 4501888,
+              "candidate": 4501824
+            },
+            {
+              "path": ".categories.floorAccumulationCounters.used",
+              "baseline": 4501888,
+              "candidate": 4501824
+            },
+            {
+              "path": ".categories.diskSampleControlCallback.limit",
+              "baseline": 324135936,
+              "candidate": 324131328
+            },
+            {
+              "path": ".categories.diskSampleControlCallback.used",
+              "baseline": 324135936,
+              "candidate": 324131328
+            },
+            {
+              "path": ".categories.floorEligibilityNormal.limit",
+              "baseline": 9003776,
+              "candidate": 9003648
+            },
+            {
+              "path": ".categories.floorEligibilityNormal.used",
+              "baseline": 9003776,
+              "candidate": 9003648
+            },
+            {
+              "path": ".categories.diskSampleKernels.limit",
+              "baseline": 432181248,
+              "candidate": 432175104
+            },
+            {
+              "path": ".categories.diskSampleKernels.used",
+              "baseline": 432181248,
+              "candidate": 432175104
+            },
+            {
+              "path": ".categories.diskAdmission.limit",
+              "baseline": 54022656,
+              "candidate": 54021888
+            },
+            {
+              "path": ".categories.diskAdmission.used",
+              "baseline": 54022656,
+              "candidate": 54021888
+            },
+            {
+              "path": ".categories.floorLedgerGuards.limit",
+              "baseline": 4501888,
+              "candidate": 4501824
+            },
+            {
+              "path": ".categories.floorLedgerGuards.used",
+              "baseline": 4501888,
+              "candidate": 4501824
+            },
+            {
+              "path": ".categories.diskReductionOutput.limit",
+              "baseline": 9003776,
+              "candidate": 9003648
+            },
+            {
+              "path": ".categories.diskReductionOutput.used",
+              "baseline": 9003776,
+              "candidate": 9003648
+            },
+            {
+              "path": ".categories.diskReceiverSetup.limit",
+              "baseline": 20258496,
+              "candidate": 20258208
+            },
+            {
+              "path": ".categories.diskReceiverSetup.used",
+              "baseline": 20258496,
+              "candidate": 20258208
+            }
+          ],
+          ".background.json": [
+            {
+              "path": ".backgroundNodeVisits",
+              "baseline": 26973407,
+              "candidate": 26978415
+            },
+            {
+              "path": ".snapshotFingerprint",
+              "baseline": "017e6671f56c3bd8",
+              "candidate": "46470de7377f825d"
+            },
+            {
+              "path": ".backgroundTriangleTests",
+              "baseline": 4862747,
+              "candidate": 4859736
+            }
+          ],
+          ".row.json": [
+            {
+              "path": ".backgroundNodes",
+              "baseline": 26973407,
+              "candidate": 26978415
+            },
+            {
+              "path": ".backgroundTriangles",
+              "baseline": 4862747,
+              "candidate": 4859736
+            }
+          ],
+          ".floor-world.json": [
+            {
+              "path": ".evaluations",
+              "baseline": 70342,
+              "candidate": 70341
+            },
+            {
+              "path": ".workLimit",
+              "baseline": 442277504,
+              "candidate": 442271232
+            },
+            {
+              "path": ".visibilityTriangleTests",
+              "baseline": 6511809,
+              "candidate": 6513141
+            },
+            {
+              "path": ".visibilityRays",
+              "baseline": 1125472,
+              "candidate": 1125456
+            },
+            {
+              "path": ".visibilityNodeVisits",
+              "baseline": 33129176,
+              "candidate": 33144362
+            },
+            {
+              "path": ".queries",
+              "baseline": 1125472,
+              "candidate": 1125456
+            },
+            {
+              "path": ".workUsed",
+              "baseline": 442277504,
+              "candidate": 442271232
+            },
+            {
+              "path": ".blockedCharacter",
+              "baseline": 114947,
+              "candidate": 114946
+            },
+            {
+              "path": ".hitLimit",
+              "baseline": 70342,
+              "candidate": 70341
+            },
+            {
+              "path": ".misses",
+              "baseline": 1010525,
+              "candidate": 1010510
+            }
+          ],
+          ".hdr-observer.json": [],
+          ".depth-stream.json": [],
+          ".cache.json": []
+        },
+        "HDR": {
+          "all": {
+            "count": 97200,
+            "changed": 14598,
+            "max_abs": 0.0007139898561824287,
+            "mean_abs": 5.275429690045474e-08,
+            "rms": 2.42564112088854e-06
+          },
+          "boundary": {
+            "count": 7155,
+            "changed": 6261,
+            "max_abs": 0.00020985519037181044,
+            "mean_abs": 4.012570306065727e-07,
+            "rms": 2.695295982583246e-06
+          },
+          "character_depth_finite": {
+            "count": 14094,
+            "changed": 14094,
+            "max_abs": 0.0007139898561824287,
+            "mean_abs": 3.576854124730386e-07,
+            "rms": 6.369177777982503e-06
+          },
+          "background_depth_nonfinite": {
+            "count": 83106,
+            "changed": 504,
+            "max_abs": 7.84691738187071e-06,
+            "mean_abs": 1.0408328559814548e-09,
+            "rms": 4.330147345955225e-08
+          },
+          "relative_above_1e_3": {
+            "count": 97198,
+            "changed": 14596,
+            "max_abs": 0.000764700941586316,
+            "mean_abs": 1.2518591461351274e-07,
+            "rms": 5.235804517026344e-06
+          },
+          "abs_error_quantiles": {
+            "0.5": 0.0,
+            "0.95": 1.0273948314598618e-07,
+            "0.99": 1.0854924600689449e-06,
+            "1": 0.0007139898561824287
+          }
+        },
+        "HDR_baseline_composition_regions": {
+          "character_only": {
+            "count": 13575,
+            "changed": 13575,
+            "max_abs": 0.0007139898561824287,
+            "mean_abs": 3.618914302391431e-07,
+            "rms": 6.487694049852497e-06
+          },
+          "floor_only": {
+            "count": 82602,
+            "changed": 0,
+            "max_abs": 0.0,
+            "mean_abs": 0.0,
+            "rms": 0.0
+          },
+          "world_only": {
+            "count": 0,
+            "changed": 0,
+            "max_abs": 0.0,
+            "mean_abs": 0.0,
+            "rms": 0.0
+          },
+          "mixed_character_floor_world": {
+            "count": 1023,
+            "changed": 1023,
+            "max_abs": 9.862324113152354e-06,
+            "mean_abs": 2.1020673824812583e-07,
+            "rms": 7.163186303987717e-07
+          }
+        },
+        "baselineCompositionPixelCounts": {
+          "character_only": 4525,
+          "floor_only": 27534,
+          "world_only": 0,
+          "mixed_character_floor_world": 341
+        },
+        "RGB565": {
+          "changed_pixels": 0,
+          "channel_steps": {
+            "count": 97200,
+            "changed": 0,
+            "max_abs": 0.0,
+            "mean_abs": 0.0,
+            "rms": 0.0
+          }
+        },
+        "depth": {
+          "coverage_changed_pixels": 0,
+          "shared_finite": {
+            "count": 4698,
+            "changed": 4248,
+            "max_abs": 0.000568389892578125,
+            "mean_abs": 1.120009083299243e-05,
+            "rms": 1.8435542993532606e-05
+          }
+        },
+        "targetMaskChangedPixels": 0
+      },
+      "elapsedSecondsDescriptiveOnly": 17.350653069006512,
+      "largestHDRDifference": {
+        "x": 103,
+        "y": 68,
+        "channel": 0,
+        "baseline": 0.9336850752416621,
+        "candidate": 0.9343990650978445,
+        "absError": 0.0007139898561824287
+      },
+      "changedDisplayPixels": []
+    }
+  ]
+}

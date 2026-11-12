@@ -1,0 +1,85 @@
+
+/workspace/private-dot8-controlled-harness-20261105/build/private_dot8_control_validation.elf:     file format elf32-xtensa-le
+
+
+Disassembly of section .iram0.vectors:
+
+Disassembly of section .iram0.text:
+
+Disassembly of section .flash.text:
+
+420050d8 <worker>:
+420050d8:	004136        	entry	a1, 32
+420050db:	ffafc2        	movi	a12, -1
+420050de:	01a0b2        	movi	a11, 1
+420050e1:	0a0c      	movi.n	a10, 0
+420050e3:	068ba5        	call8	4200b99c <ulTaskGenericNotifyTake>
+420050e6:	eda451        	l32r	a5, 42000778 <_stext+0x758> (3fc917c0 <suite>)
+420050e9:	05ad      	mov.n	a10, a5
+420050eb:	0038e5        	call8	42005478 <dot8_suite_init>
+420050ee:	ed9961        	l32r	a6, 42000754 <_stext+0x734> (3fc8e5d4 <mux>)
+420050f1:	ed9941        	l32r	a4, 42000758 <_stext+0x738> (3fc91768 <control>)
+420050f4:	eda321        	l32r	a2, 42000780 <_stext+0x760> (420052e0 <dot8_checked>)
+420050f7:	eda331        	l32r	a3, 42000784 <_stext+0x764> (3fc917e0 <workspace>)
+420050fa:	000d86        	j	42005134 <worker+0x5c>
+420050fd:	003925        	call8	42005490 <dot8_suite_step>
+42005100:	ffafb2        	movi	a11, -1
+42005103:	20a660        	or	a10, a6, a6
+42005106:	ece181        	l32r	a8, 4200048c <_stext+0x46c> (40379a98 <xPortEnterCriticalTimeout>)
+42005109:	0008e0        	callx8	a8
+4200510c:	ebca81        	l32r	a8, 42000034 <_stext+0x14> (40374e30 <esp_timer_get_time>)
+4200510f:	0008e0        	callx8	a8
+42005112:	20caa0        	or	a12, a10, a10
+42005115:	0bdd      	mov.n	a13, a11
+42005117:	04ad      	mov.n	a10, a4
+42005119:	05bd      	mov.n	a11, a5
+4200511b:	0066a5        	call8	42005784 <dot8_control_progress>
+4200511e:	2c0472        	l8ui	a7, a4, 44
+42005121:	06ad      	mov.n	a10, a6
+42005123:	ecdc81        	l32r	a8, 42000494 <_stext+0x474> (403799f8 <vPortExitCritical>)
+42005126:	0008e0        	callx8	a8
+42005129:	04b756        	bnez	a7, 42005178 <worker+0xa0>
+4200512c:	3588      	l32i.n	a8, a5, 12
+4200512e:	348080        	extui	a8, a8, 0, 4
+42005131:	05d816        	beqz	a8, 42005192 <worker+0xba>
+42005134:	fb7c      	movi.n	a11, -1
+42005136:	06ad      	mov.n	a10, a6
+42005138:	ecd581        	l32r	a8, 4200048c <_stext+0x46c> (40379a98 <xPortEnterCriticalTimeout>)
+4200513b:	0008e0        	callx8	a8
+4200513e:	ebbd81        	l32r	a8, 42000034 <_stext+0x14> (40374e30 <esp_timer_get_time>)
+42005141:	0008e0        	callx8	a8
+42005144:	0acd      	mov.n	a12, a10
+42005146:	0bdd      	mov.n	a13, a11
+42005148:	04ad      	mov.n	a10, a4
+4200514a:	005fa5        	call8	42005744 <dot8_control_permit>
+4200514d:	0a7d      	mov.n	a7, a10
+4200514f:	06ad      	mov.n	a10, a6
+42005151:	ecd081        	l32r	a8, 42000494 <_stext+0x474> (403799f8 <vPortExitCritical>)
+42005154:	0008e0        	callx8	a8
+42005157:	02cd      	mov.n	a12, a2
+42005159:	05bd      	mov.n	a11, a5
+4200515b:	03ad      	mov.n	a10, a3
+4200515d:	f9c756        	bnez	a7, 420050fd <worker+0x25>
+42005160:	ed8781        	l32r	a8, 4200077c <_stext+0x75c> (3fc91948 <supervisor_handle>)
+42005163:	07ed      	mov.n	a14, a7
+42005165:	08a8      	l32i.n	a10, a8, 0
+42005167:	2d0c      	movi.n	a13, 2
+42005169:	07cd      	mov.n	a12, a7
+4200516b:	07bd      	mov.n	a11, a7
+4200516d:	068ee5        	call8	4200ba5c <xTaskGenericNotify>
+42005170:	07ad      	mov.n	a10, a7
+42005172:	060e65        	call8	4200b258 <vTaskSuspend>
+42005175:	fffdc6        	j	42005170 <worker+0x98>
+42005178:	ed8181        	l32r	a8, 4200077c <_stext+0x75c> (3fc91948 <supervisor_handle>)
+4200517b:	00a0e2        	movi	a14, 0
+4200517e:	0028a2        	l32i	a10, a8, 0
+42005181:	2d0c      	movi.n	a13, 2
+42005183:	0c0c      	movi.n	a12, 0
+42005185:	0b0c      	movi.n	a11, 0
+42005187:	068d65        	call8	4200ba5c <xTaskGenericNotify>
+4200518a:	0a0c      	movi.n	a10, 0
+4200518c:	060ca5        	call8	4200b258 <vTaskSuspend>
+4200518f:	fffdc6        	j	4200518a <worker+0xb2>
+42005192:	1a0c      	movi.n	a10, 1
+42005194:	062fe5        	call8	4200b494 <vTaskDelay>
+42005197:	ffe646        	j	42005134 <worker+0x5c>

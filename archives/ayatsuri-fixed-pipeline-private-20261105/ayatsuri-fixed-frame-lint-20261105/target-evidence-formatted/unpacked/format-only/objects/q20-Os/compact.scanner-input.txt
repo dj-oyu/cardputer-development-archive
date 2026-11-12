@@ -1,0 +1,1037 @@
+
+/workspace/ayatsuri-s3-fixed-format-objects-20261105/q20-Os/compact.o:     file format elf32-xtensa-le
+
+
+Disassembly of section .literal.il_round:
+
+00000000 <.literal.il_round>:
+	...
+
+Disassembly of section .literal.il_normal_length:
+
+00000000 <.literal.il_normal_length>:
+   0:	
+   4:	
+   8:	
+
+Disassembly of section .literal.il_signed_round:
+
+00000000 <.literal.il_signed_round>:
+	...
+
+Disassembly of section .literal.kcc_block:
+
+00000000 <.literal.kcc_block>:
+   0:	
+   4:	
+   8:	
+   c:	
+  10:	
+  14:	
+  18:	
+  1c:	
+  20:	
+  24:	
+  28:	
+  2c:	
+	...
+
+Disassembly of section .text.il_sqrt:
+
+00000000 <il_sqrt>:
+   0:	entry	a1, 32
+   3:	movi.n	a9, 1
+   5:	mov.n	a11, a2
+   7:	mov.n	a8, a3
+   9:	movi.n	a10, 0
+   b:	slli	a9, a9, 30
+   e:	bltu	a8, a9, 22 <il_sqrt+0x22>
+  11:	bne	a9, a8, 17 <il_sqrt+0x17>
+  14:	bltu	a11, a10, 22 <il_sqrt+0x22>
+  17:	movi.n	a2, 0
+  19:	movi.n	a3, 0
+  1b:	or	a12, a10, a9
+  1e:	bnez.n	a12, 2e <il_sqrt+0x2e>
+  20:	retw.n
+  22:	ssai	2
+  25:	src	a10, a9, a10
+  28:	srli	a9, a9, 2
+  2b:	j	e <il_sqrt+0xe>
+  2e:	add.n	a15, a2, a10
+  30:	add.n	a13, a3, a9
+  32:	bgeu	a15, a2, 37 <il_sqrt+0x37>
+  35:	addi.n	a13, a13, 1
+  37:	ssai	1
+  3a:	src	a12, a3, a2
+  3d:	srli	a14, a3, 1
+  40:	mov.n	a2, a12
+  42:	mov.n	a3, a14
+  44:	bltu	a8, a13, 61 <il_sqrt+0x61>
+  47:	bne	a13, a8, 4d <il_sqrt+0x4d>
+  4a:	bltu	a11, a15, 61 <il_sqrt+0x61>
+  4d:	sub	a8, a8, a13
+  50:	bgeu	a11, a15, 55 <il_sqrt+0x55>
+  53:	addi.n	a8, a8, -1
+  55:	add.n	a2, a12, a10
+  57:	saltu	a12, a2, a12
+  5a:	add.n	a14, a14, a9
+  5c:	sub	a11, a11, a15
+  5f:	add.n	a3, a12, a14
+  61:	ssai	2
+  64:	src	a10, a9, a10
+  67:	srli	a9, a9, 2
+  6a:	j	1b <il_sqrt+0x1b>
+
+Disassembly of section .text.il_round:
+
+00000000 <il_round>:
+   0:	entry	a1, 32
+   3:	mov.n	a13, a5
+   5:	mov.n	a12, a4
+   7:	mov.n	a10, a2
+   9:	mov.n	a11, a3
+   b:	l32r	a8, fffc000c <il_round+0xfffc000c>
+   e:	callx8	a8
+  11:	mov.n	a6, a2
+  13:	mov.n	a7, a3
+  15:	mov.n	a13, a5
+  17:	mov.n	a2, a10
+  19:	mov.n	a3, a11
+  1b:	mov.n	a12, a4
+  1d:	mov.n	a10, a6
+  1f:	mov.n	a11, a7
+  21:	l32r	a8, fffc0024 <il_round+0xfffc0024>
+  24:	callx8	a8
+  27:	sub	a5, a5, a11
+  2a:	bgeu	a4, a10, 2f <il_round+0x2f>
+  2d:	addi.n	a5, a5, -1
+  2f:	sub	a4, a4, a10
+  32:	bltu	a5, a11, 49 <il_round+0x49>
+  35:	bne	a11, a5, 3b <il_round+0x3b>
+  38:	bltu	a4, a10, 49 <il_round+0x49>
+  3b:	bne	a4, a10, 44 <il_round+0x44>
+  3e:	extui	a8, a2, 0, 1
+  41:	beq	a5, a11, 4b <il_round+0x4b>
+  44:	movi.n	a8, 0
+  46:	j	4b <il_round+0x4b>
+  49:	movi.n	a8, 1
+  4b:	add.n	a2, a8, a2
+  4d:	bgeu	a2, a8, 52 <il_round+0x52>
+  50:	addi.n	a3, a3, 1
+  52:	retw.n
+
+Disassembly of section .text.il_position:
+
+00000000 <il_position>:
+   0:	entry	a1, 32
+   3:	l32i.n	a11, a2, 0
+   5:	movi.n	a10, 1
+   7:	slli	a10, a10, 19
+   a:	movi.n	a8, 1
+   c:	add.n	a11, a11, a10
+   e:	slli	a8, a8, 20
+  11:	mov.n	a9, a2
+  13:	movi.n	a2, 0
+  15:	bltu	a8, a11, 2e <il_position+0x2e>
+  18:	l32i.n	a11, a9, 4
+  1a:	add.n	a11, a11, a10
+  1c:	bltu	a8, a11, 2e <il_position+0x2e>
+  1f:	l32i.n	a9, a9, 8
+  21:	add.n	a9, a9, a10
+  23:	saltu	a2, a8, a9
+  26:	addi.n	a2, a2, -1
+  28:	neg	a2, a2
+  2b:	extui	a2, a2, 0, 8
+  2e:	retw.n
+
+Disassembly of section .text.il_normal_length:
+
+00000000 <il_normal_length>:
+   0:	entry	a1, 32
+   3:	movi.n	a14, -1
+   5:	addi.n	a13, a2, 6
+   7:	movi.n	a8, 0
+   9:	movi.n	a10, 0
+   b:	slli	a14, a14, 15
+   e:	l16si	a9, a2, 0
+  11:	beq	a9, a14, 55 <il_normal_length+0x55>
+  14:	mull	a12, a9, a9
+  17:	mulsh	a9, a9, a9
+  1a:	add.n	a12, a8, a12
+  1c:	saltu	a8, a12, a8
+  1f:	add.n	a10, a10, a9
+  21:	add.n	a11, a8, a10
+  23:	addi.n	a2, a2, 2
+  25:	mov.n	a8, a12
+  27:	mov.n	a10, a11
+  29:	bne	a2, a13, e <il_normal_length+0xe>
+  2c:	l32r	a13, fffc002c <il_normal_length+0xfffc002c>
+  2f:	addi.n	a9, a11, -1
+  31:	add.n	a8, a12, a13
+  33:	bgeu	a8, a13, 38 <il_normal_length+0x38>
+  36:	mov.n	a9, a11
+  38:	bnez.n	a9, 55 <il_normal_length+0x55>
+  3a:	l32r	a9, fffc003c <il_normal_length+0xfffc003c>
+  3d:	bltu	a9, a8, 55 <il_normal_length+0x55>
+  40:	slli	a10, a12, 16
+  43:	ssai	16
+  46:	src	a11, a11, a12
+  49:	l32r	a8, fffc004c <il_normal_length+0xfffc004c>
+  4c:	callx8	a8
+  4f:	mov.n	a2, a10
+  51:	mov.n	a3, a11
+  53:	retw.n
+  55:	movi.n	a2, 0
+  57:	movi.n	a3, 0
+  59:	j	53 <il_normal_length+0x53>
+
+Disassembly of section .text.il_signed_round:
+
+00000000 <il_signed_round>:
+   0:	entry	a1, 32
+   3:	mov.n	a10, a2
+   5:	mov.n	a11, a3
+   7:	mov.n	a12, a4
+   9:	mov.n	a13, a5
+   b:	bgez	a3, 2a <il_signed_round+0x2a>
+   e:	neg	a11, a3
+  11:	beqz.n	a2, 15 <il_signed_round+0x15>
+  13:	addi.n	a11, a11, -1
+  15:	neg	a10, a10
+  18:	l32r	a8, fffc0018 <il_signed_round+0xfffc0018>
+  1b:	callx8	a8
+  1e:	neg	a3, a11
+  21:	beqz.n	a10, 25 <il_signed_round+0x25>
+  23:	addi.n	a3, a3, -1
+  25:	neg	a2, a10
+  28:	retw.n
+  2a:	l32r	a8, fffc002c <il_signed_round+0xfffc002c>
+  2d:	callx8	a8
+  30:	mov.n	a2, a10
+  32:	mov.n	a3, a11
+  34:	j	28 <il_signed_round+0x28>
+
+Disassembly of section .text.kcc_block:
+
+00000000 <kcc_block>:
+   0:	entry	a1, 0x1f0
+   3:	nsau	a8, a2
+   6:	s32i	a7, a1, 0x1b4
+   9:	s32i	a2, a1, 0x1a0
+   c:	s32i	a3, a1, 0x174
+   f:	s32i	a5, a1, 0x188
+  12:	s32i	a6, a1, 0x1b0
+  15:	movi.n	a10, 1
+  17:	srli	a8, a8, 5
+  1a:	beqz	a2, 149 <kcc_block+0x149>
+  1d:	moveqz	a8, a10, a3
+  20:	bnez	a8, 149 <kcc_block+0x149>
+  23:	mov.n	a9, a8
+  25:	moveqz	a9, a10, a4
+  28:	moveqz	a8, a10, a6
+  2b:	or	a8, a9, a8
+  2e:	extui	a8, a8, 0, 8
+  31:	bnez	a8, 149 <kcc_block+0x149>
+  34:	l32i	a9, a1, 0x1b4
+  37:	moveqz	a8, a10, a9
+  3a:	bnez	a8, 149 <kcc_block+0x149>
+  3d:	addi	a8, a5, -4
+  40:	movi.n	a9, -5
+  42:	bnone	a8, a9, 4f <kcc_block+0x4f>
+  45:	addi.n	a8, a5, -1
+  47:	movi.n	a2, 1
+  49:	bgeu	a10, a8, 4f <kcc_block+0x4f>
+  4c:	j	857 <kcc_block+0x857>
+  4f:	l32i	a9, a1, 0x174
+  52:	l32r	a8, fffc0054 <kcc_block+0xfffc0054>
+  55:	l32i	a9, a9, 0x2a0
+  58:	movi.n	a2, 1
+  5a:	bgeu	a8, a9, 60 <kcc_block+0x60>
+  5d:	j	857 <kcc_block+0x857>
+  60:	l32i	a9, a1, 0x174
+  63:	l32i	a9, a9, 0x2a4
+  66:	bgeu	a8, a9, 6c <kcc_block+0x6c>
+  69:	j	857 <kcc_block+0x857>
+  6c:	l32i	a9, a1, 0x174
+  6f:	l32i	a9, a9, 0x2a8
+  72:	bgeu	a8, a9, 78 <kcc_block+0x78>
+  75:	j	857 <kcc_block+0x857>
+  78:	l32i	a9, a1, 0x174
+  7b:	movi	a8, 0x2a0
+  7e:	add.n	a8, a9, a8
+  80:	l32r	a7, fffc0080 <kcc_block+0xfffc0080>
+  83:	s32i	a8, a1, 0x1ac
+  86:	mov.n	a6, a9
+  88:	mov.n	a10, a6
+  8a:	l32r	a8, fffc008c <kcc_block+0xfffc008c>
+  8d:	callx8	a8
+  90:	beqz	a10, 149 <kcc_block+0x149>
+  93:	movi	a10, 204
+  96:	add.n	a10, a6, a10
+  98:	l32r	a8, fffc0098 <kcc_block+0xfffc0098>
+  9b:	callx8	a8
+  9e:	or	a10, a10, a11
+  a1:	beqz	a10, 149 <kcc_block+0x149>
+  a4:	l32i	a8, a6, 212
+  a7:	bgeu	a7, a8, ad <kcc_block+0xad>
+  aa:	j	149 <kcc_block+0x149>
+  ad:	l32i	a8, a6, 216
+  b0:	bgeu	a7, a8, b6 <kcc_block+0xb6>
+  b3:	j	149 <kcc_block+0x149>
+  b6:	l32i	a8, a6, 220
+  b9:	bgeu	a7, a8, bf <kcc_block+0xbf>
+  bc:	j	149 <kcc_block+0x149>
+  bf:	addi.n	a3, a6, 12
+  c1:	movi.n	a5, 0
+  c3:	mov.n	a10, a3
+  c5:	l32r	a8, fffc00c8 <kcc_block+0xfffc00c8>
+  c8:	callx8	a8
+  cb:	beqz	a10, 149 <kcc_block+0x149>
+  ce:	addi.n	a5, a5, 1
+  d0:	addi.n	a3, a3, 12
+  d2:	bnei	a5, 16, c3 <kcc_block+0xc3>
+  d5:	movi	a8, 224
+  d8:	add.n	a6, a6, a8
+  da:	l32i	a8, a1, 0x1ac
+  dd:	bne	a6, a8, 88 <kcc_block+0x88>
+  e0:	movi.n	a8, 0
+  e2:	s32i	a4, a1, 0x19c
+  e5:	s32i	a8, a1, 0x17c
+  e8:	movi	a8, 0x130
+  eb:	movi.n	a11, 0
+  ed:	add.n	a10, a1, a8
+  ef:	movi.n	a12, 16
+  f1:	l32r	a8, fffc00f4 <kcc_block+0xfffc00f4>
+  f4:	callx8	a8
+  f7:	movi	a8, 224
+  fa:	movi.n	a11, 4
+  fc:	add.n	a10, a1, a8
+  fe:	l32r	a8, fffc0100 <kcc_block+0xfffc0100>
+ 101:	callx8	a8
+ 104:	bnez	a10, 872 <kcc_block+0x872>
+ 107:	l32i	a8, a1, 0x19c
+ 10a:	s32i	a8, a1, 0x170
+ 10d:	movi.n	a8, 0
+ 10f:	s32i	a8, a1, 0x180
+ 112:	l32i	a8, a1, 0x170
+ 115:	l16ui	a2, a8, 78
+ 118:	l16ui	a4, a8, 80
+ 11b:	l16ui	a8, a8, 82
+ 11e:	s32i	a8, a1, 0x178
+ 121:	l32i	a9, a1, 0x178
+ 124:	add.n	a8, a2, a4
+ 126:	add.n	a8, a8, a9
+ 128:	l32r	a9, fffc0128 <kcc_block+0xfffc0128>
+ 12b:	bne	a8, a9, 149 <kcc_block+0x149>
+ 12e:	movi.n	a11, 1
+ 130:	l32i	a8, a1, 0x170
+ 133:	l32r	a10, fffc0134 <kcc_block+0xfffc0134>
+ 136:	movi.n	a12, 0
+ 138:	slli	a11, a11, 23
+ 13b:	l32i.n	a9, a8, 24
+ 13d:	add.n	a9, a9, a11
+ 13f:	bltu	a10, a9, 149 <kcc_block+0x149>
+ 142:	l32i.n	a9, a8, 28
+ 144:	add.n	a9, a9, a11
+ 146:	bgeu	a10, a9, 14e <kcc_block+0x14e>
+ 149:	movi.n	a2, 1
+ 14b:	j	857 <kcc_block+0x857>
+ 14e:	l32i.n	a9, a8, 32
+ 150:	add.n	a9, a9, a11
+ 152:	bltu	a10, a9, 149 <kcc_block+0x149>
+ 155:	addi.n	a12, a12, 1
+ 157:	addi.n	a8, a8, 12
+ 159:	bnei	a12, 3, 13b <kcc_block+0x13b>
+ 15c:	movi.n	a12, 1
+ 15e:	l32i	a8, a1, 0x170
+ 161:	l32r	a11, fffc0164 <kcc_block+0xfffc0164>
+ 164:	movi.n	a10, 0
+ 166:	slli	a12, a12, 27
+ 169:	l32i.n	a9, a8, 0
+ 16b:	add.n	a9, a9, a12
+ 16d:	bltu	a11, a9, 149 <kcc_block+0x149>
+ 170:	l32i.n	a9, a8, 4
+ 172:	add.n	a9, a9, a12
+ 174:	bltu	a11, a9, 149 <kcc_block+0x149>
+ 177:	addi.n	a10, a10, 1
+ 179:	addi.n	a8, a8, 8
+ 17b:	bnei	a10, 3, 169 <kcc_block+0x169>
+ 17e:	movi.n	a6, 0
+ 180:	l32i	a8, a1, 0x170
+ 183:	extui	a7, a6, 0, 16
+ 186:	add.n	a7, a7, a7
+ 188:	add.n	a3, a7, a8
+ 18a:	add.n	a15, a6, a8
+ 18c:	mov.n	a14, a8
+ 18e:	movi.n	a8, 0
+ 190:	movi.n	a13, 0
+ 192:	movi.n	a5, 0
+ 194:	s32i	a8, a1, 0x184
+ 197:	movi.n	a10, 0
+ 199:	movi.n	a11, 0
+ 19b:	l16ui	a9, a14, 78
+ 19e:	l32i.n	a8, a3, 24
+ 1a0:	addi.n	a13, a13, 1
+ 1a2:	mull	a12, a8, a9
+ 1a5:	mulsh	a8, a8, a9
+ 1a8:	add.n	a12, a10, a12
+ 1aa:	saltu	a10, a12, a10
+ 1ad:	s32i	a10, a1, 0x18c
+ 1b0:	add.n	a8, a11, a8
+ 1b2:	mov.n	a10, a12
+ 1b4:	l32i	a11, a1, 0x18c
+ 1b7:	l16si	a12, a15, 60
+ 1ba:	add.n	a11, a11, a8
+ 1bc:	mull	a8, a12, a9
+ 1bf:	mulsh	a12, a12, a9
+ 1c2:	add.n	a8, a5, a8
+ 1c4:	saltu	a9, a8, a5
+ 1c7:	l32i	a5, a1, 0x184
+ 1ca:	addi.n	a14, a14, 2
+ 1cc:	add.n	a12, a5, a12
+ 1ce:	mov.n	a5, a8
+ 1d0:	add.n	a8, a9, a12
+ 1d2:	s32i	a8, a1, 0x184
+ 1d5:	addi.n	a3, a3, 12
+ 1d7:	addi.n	a15, a15, 6
+ 1d9:	bnei	a13, 3, 19b <kcc_block+0x19b>
+ 1dc:	l32r	a12, fffc01dc <kcc_block+0xfffc01dc>
+ 1df:	movi.n	a13, 0
+ 1e1:	l32r	a8, fffc01e4 <kcc_block+0xfffc01e4>
+ 1e4:	callx8	a8
+ 1e7:	movi.n	a12, 16
+ 1e9:	movi.n	a13, 0
+ 1eb:	l32r	a8, fffc01ec <kcc_block+0xfffc01ec>
+ 1ee:	callx8	a8
+ 1f1:	movi	a8, 0x140
+ 1f4:	add.n	a8, a8, a1
+ 1f6:	add.n	a7, a8, a7
+ 1f8:	l32r	a12, fffc01f8 <kcc_block+0xfffc01f8>
+ 1fb:	l32i	a11, a1, 0x184
+ 1fe:	s32i.n	a10, a7, 0
+ 200:	movi.n	a13, 0
+ 202:	mov.n	a10, a5
+ 204:	l32r	a8, fffc0204 <kcc_block+0xfffc0204>
+ 207:	callx8	a8
+ 20a:	movi	a8, 0x15a
+ 20d:	add.n	a8, a8, a1
+ 20f:	add.n	a8, a8, a6
+ 211:	s16i	a10, a8, 0
+ 214:	addi.n	a6, a6, 2
+ 216:	beqi	a6, 6, 21c <kcc_block+0x21c>
+ 219:	j	180 <kcc_block+0x180>
+ 21c:	movi	a8, 0x14c
+ 21f:	l32i	a7, a1, 0x170
+ 222:	movi.n	a5, 0
+ 224:	add.n	a6, a1, a8
+ 226:	l32i.n	a8, a7, 8
+ 228:	l32i.n	a9, a7, 0
+ 22a:	mull	a10, a8, a4
+ 22d:	mull	a11, a9, a2
+ 230:	mulsh	a8, a8, a4
+ 233:	mulsh	a9, a9, a2
+ 236:	add.n	a10, a10, a11
+ 238:	add.n	a8, a8, a9
+ 23a:	bgeu	a10, a11, 23f <kcc_block+0x23f>
+ 23d:	addi.n	a8, a8, 1
+ 23f:	l32i.n	a11, a7, 16
+ 241:	l32i	a9, a1, 0x178
+ 244:	l32i	a12, a1, 0x178
+ 247:	mull	a9, a11, a9
+ 24a:	mulsh	a11, a11, a12
+ 24d:	add.n	a10, a9, a10
+ 24f:	add.n	a11, a11, a8
+ 251:	bgeu	a10, a9, 256 <kcc_block+0x256>
+ 254:	addi.n	a11, a11, 1
+ 256:	l32r	a12, fffc0258 <kcc_block+0xfffc0258>
+ 259:	movi.n	a13, 0
+ 25b:	l32r	a8, fffc025c <kcc_block+0xfffc025c>
+ 25e:	callx8	a8
+ 261:	l32r	a8, fffc0264 <kcc_block+0xfffc0264>
+ 264:	l32r	a9, fffc0264 <kcc_block+0xfffc0264>
+ 267:	add.n	a8, a10, a8
+ 269:	bgeu	a8, a9, 26e <kcc_block+0x26e>
+ 26c:	addi.n	a11, a11, 1
+ 26e:	bnez	a11, 149 <kcc_block+0x149>
+ 271:	add.n	a8, a6, a5
+ 273:	s32i.n	a10, a8, 0
+ 275:	addi.n	a7, a7, 4
+ 277:	beqi	a5, 4, 27f <kcc_block+0x27f>
+ 27a:	movi.n	a5, 4
+ 27c:	j	226 <kcc_block+0x226>
+ 27f:	movi	a8, 128
+ 282:	add.n	a7, a1, a8
+ 284:	l32i	a10, a1, 0x1a0
+ 287:	mov.n	a12, a7
+ 289:	mov.n	a11, a6
+ 28b:	l32r	a8, fffc028c <kcc_block+0xfffc028c>
+ 28e:	callx8	a8
+ 291:	mov.n	a2, a10
+ 293:	bnez	a10, 85e <kcc_block+0x85e>
+ 296:	l32r	a8, fffc0298 <kcc_block+0xfffc0298>
+ 299:	l32i	a9, a1, 152
+ 29c:	beq	a9, a8, 2a2 <kcc_block+0x2a2>
+ 29f:	j	863 <kcc_block+0x863>
+ 2a2:	l32i	a8, a1, 156
+ 2a5:	bnez	a8, 863 <kcc_block+0x863>
+ 2a8:	movi	a8, 0x160
+ 2ab:	l32r	a5, fffc02ac <kcc_block+0xfffc02ac>
+ 2ae:	add.n	a6, a1, a8
+ 2b0:	addi	a4, a7, 24
+ 2b3:	l32i.n	a8, a7, 4
+ 2b5:	l32i.n	a10, a7, 0
+ 2b7:	bnez	a8, 868 <kcc_block+0x868>
+ 2ba:	l32r	a8, fffc02bc <kcc_block+0xfffc02bc>
+ 2bd:	bgeu	a8, a10, 2c3 <kcc_block+0x2c3>
+ 2c0:	j	868 <kcc_block+0x868>
+ 2c3:	muluh	a11, a10, a5
+ 2c6:	mull	a10, a10, a5
+ 2c9:	mov.n	a12, a8
+ 2cb:	movi.n	a13, 0
+ 2cd:	l32r	a8, fffc02d0 <kcc_block+0xfffc02d0>
+ 2d0:	callx8	a8
+ 2d3:	s16i	a10, a6, 0
+ 2d6:	addi.n	a7, a7, 8
+ 2d8:	addi.n	a6, a6, 2
+ 2da:	bne	a4, a7, 2b3 <kcc_block+0x2b3>
+ 2dd:	l16si	a8, a1, 0x15a
+ 2e0:	l16si	a9, a1, 0x15c
+ 2e3:	mull	a11, a8, a8
+ 2e6:	mull	a10, a9, a9
+ 2e9:	mulsh	a8, a8, a8
+ 2ec:	mulsh	a9, a9, a9
+ 2ef:	add.n	a11, a11, a10
+ 2f1:	add.n	a9, a8, a9
+ 2f3:	bgeu	a11, a10, 2f8 <kcc_block+0x2f8>
+ 2f6:	addi.n	a9, a9, 1
+ 2f8:	l16si	a8, a1, 0x15e
+ 2fb:	mull	a10, a8, a8
+ 2fe:	mulsh	a8, a8, a8
+ 301:	add.n	a11, a10, a11
+ 303:	add.n	a8, a8, a9
+ 305:	bgeu	a11, a10, 30a <kcc_block+0x30a>
+ 308:	addi.n	a8, a8, 1
+ 30a:	bnez.n	a8, 317 <kcc_block+0x317>
+ 30c:	movi.n	a9, -1
+ 30e:	srli	a9, a9, 14
+ 311:	bltu	a9, a11, 317 <kcc_block+0x317>
+ 314:	j	855 <kcc_block+0x855>
+ 317:	slli	a10, a11, 16
+ 31a:	ssai	16
+ 31d:	src	a11, a8, a11
+ 320:	l32r	a8, fffc0320 <kcc_block+0xfffc0320>
+ 323:	callx8	a8
+ 326:	movi	a8, 0x15a
+ 329:	add.n	a3, a1, a8
+ 32b:	l32r	a9, fffc032c <kcc_block+0xfffc032c>
+ 32e:	movi	a8, 192
+ 331:	s32i	a10, a1, 0x178
+ 334:	s32i	a11, a1, 0x184
+ 337:	movi.n	a6, 0
+ 339:	movi.n	a7, 0
+ 33b:	movi.n	a5, 0
+ 33d:	add.n	a4, a1, a8
+ 33f:	add.n	a10, a3, a6
+ 341:	l16si	a10, a10, 0
+ 344:	l32i	a12, a1, 0x178
+ 347:	srai	a11, a10, 31
+ 34a:	muluh	a14, a10, a9
+ 34d:	mull	a11, a11, a9
+ 350:	l32i	a13, a1, 0x184
+ 353:	mull	a10, a10, a9
+ 356:	add.n	a11, a11, a14
+ 358:	l32r	a8, fffc0358 <kcc_block+0xfffc0358>
+ 35b:	callx8	a8
+ 35e:	l32r	a8, fffc0360 <kcc_block+0xfffc0360>
+ 361:	l32r	a9, fffc0364 <kcc_block+0xfffc0364>
+ 364:	add.n	a12, a10, a8
+ 366:	mov.n	a13, a11
+ 368:	bgeu	a12, a8, 36d <kcc_block+0x36d>
+ 36b:	addi.n	a13, a11, 1
+ 36d:	bnez	a13, 855 <kcc_block+0x855>
+ 370:	l32r	a13, fffc0370 <kcc_block+0xfffc0370>
+ 373:	bgeu	a13, a12, 379 <kcc_block+0x379>
+ 376:	j	855 <kcc_block+0x855>
+ 379:	add.n	a12, a4, a6
+ 37b:	mull	a11, a11, a10
+ 37e:	s16i	a10, a12, 0
+ 381:	mull	a12, a10, a10
+ 384:	muluh	a10, a10, a10
+ 387:	add.n	a12, a7, a12
+ 389:	addx2	a10, a11, a10
+ 38c:	add.n	a10, a5, a10
+ 38e:	saltu	a11, a12, a7
+ 391:	addi.n	a6, a6, 2
+ 393:	mov.n	a7, a12
+ 395:	add.n	a5, a11, a10
+ 397:	bnei	a6, 6, 33f <kcc_block+0x33f>
+ 39a:	l32r	a8, fffc039c <kcc_block+0xfffc039c>
+ 39d:	addi.n	a6, a5, -1
+ 39f:	add.n	a7, a12, a8
+ 3a1:	bgeu	a7, a8, 3a6 <kcc_block+0x3a6>
+ 3a4:	mov.n	a6, a5
+ 3a6:	bnez	a6, 855 <kcc_block+0x855>
+ 3a9:	l32r	a8, fffc03ac <kcc_block+0xfffc03ac>
+ 3ac:	bgeu	a8, a7, 3b2 <kcc_block+0x3b2>
+ 3af:	j	855 <kcc_block+0x855>
+ 3b2:	l16ui	a8, a1, 192
+ 3b5:	movi	a10, 192
+ 3b8:	s16i	a8, a1, 0x166
+ 3bb:	l16ui	a8, a1, 194
+ 3be:	movi.n	a12, 12
+ 3c0:	s16i	a8, a1, 0x168
+ 3c3:	l16ui	a8, a1, 196
+ 3c6:	add.n	a10, a10, a1
+ 3c8:	s16i	a8, a1, 0x16a
+ 3cb:	movi	a8, 0x140
+ 3ce:	add.n	a11, a1, a8
+ 3d0:	l32r	a8, fffc03d0 <kcc_block+0xfffc03d0>
+ 3d3:	callx8	a8
+ 3d6:	movi	a8, 192
+ 3d9:	add.n	a8, a8, a1
+ 3db:	addi.n	a7, a8, 12
+ 3dd:	movi	a8, 0x166
+ 3e0:	add.n	a11, a1, a8
+ 3e2:	movi.n	a12, 6
+ 3e4:	mov.n	a10, a7
+ 3e6:	l32r	a8, fffc03e8 <kcc_block+0xfffc03e8>
+ 3e9:	callx8	a8
+ 3ec:	movi	a8, 0x160
+ 3ef:	add.n	a11, a1, a8
+ 3f1:	movi	a8, 192
+ 3f4:	add.n	a8, a8, a1
+ 3f6:	movi.n	a12, 6
+ 3f8:	addi	a10, a8, 18
+ 3fb:	l32r	a8, fffc03fc <kcc_block+0xfffc03fc>
+ 3fe:	callx8	a8
+ 401:	l32i	a8, a1, 0x170
+ 404:	movi.n	a12, 6
+ 406:	addi	a11, a8, 84
+ 409:	movi	a8, 192
+ 40c:	add.n	a8, a8, a1
+ 40e:	addi	a10, a8, 24
+ 411:	l32r	a8, fffc0414 <kcc_block+0xfffc0414>
+ 414:	callx8	a8
+ 417:	movi	a10, 192
+ 41a:	add.n	a10, a10, a1
+ 41c:	l32r	a8, fffc041c <kcc_block+0xfffc041c>
+ 41f:	callx8	a8
+ 422:	beqz	a10, 859 <kcc_block+0x859>
+ 425:	mov.n	a10, a7
+ 427:	l32r	a8, fffc0428 <kcc_block+0xfffc0428>
+ 42a:	callx8	a8
+ 42d:	s32i	a10, a1, 0x1b8
+ 430:	s32i	a11, a1, 0x1bc
+ 433:	or	a8, a10, a11
+ 436:	beqz	a8, 859 <kcc_block+0x859>
+ 439:	l16ui	a9, a1, 210
+ 43c:	l16ui	a8, a1, 212
+ 43f:	or	a8, a8, a9
+ 442:	l16ui	a9, a1, 214
+ 445:	or	a8, a8, a9
+ 448:	bbci	a8, 15, 44e <kcc_block+0x44e>
+ 44b:	j	859 <kcc_block+0x859>
+ 44e:	l32i	a9, a1, 0x174
+ 451:	movi	a8, 192
+ 454:	l32i	a9, a9, 0x2a0
+ 457:	add.n	a8, a8, a1
+ 459:	s32i	a9, a1, 0x118
+ 45c:	l32i	a9, a1, 0x174
+ 45f:	s32i	a8, a1, 0x198
+ 462:	l32i	a9, a9, 0x2a4
+ 465:	movi	a8, 192
+ 468:	s32i	a9, a1, 0x120
+ 46b:	l32i	a9, a1, 0x174
+ 46e:	add.n	a8, a8, a1
+ 470:	l32i	a9, a9, 0x2a8
+ 473:	s32i	a8, a1, 0x190
+ 476:	l32i	a8, a1, 0x174
+ 479:	s32i	a6, a1, 0x11c
+ 47c:	s32i	a6, a1, 0x124
+ 47f:	s32i	a9, a1, 0x128
+ 482:	s32i	a6, a1, 0x12c
+ 485:	s32i	a8, a1, 0x178
+ 488:	l32i	a8, a1, 0x178
+ 48b:	movi	a9, 204
+ 48e:	add.n	a10, a8, a9
+ 490:	l32r	a8, fffc0490 <kcc_block+0xfffc0490>
+ 493:	callx8	a8
+ 496:	s32i	a10, a1, 0x1c0
+ 499:	s32i	a11, a1, 0x1c4
+ 49c:	or	a8, a10, a11
+ 49f:	beqz	a8, 859 <kcc_block+0x859>
+ 4a2:	movi	a8, 192
+ 4a5:	l32i	a14, a1, 0x178
+ 4a8:	movi.n	a12, 0
+ 4aa:	movi.n	a10, 0
+ 4ac:	movi.n	a9, 0
+ 4ae:	add.n	a15, a1, a8
+ 4b0:	l32i	a8, a1, 0x178
+ 4b3:	add.n	a13, a15, a12
+ 4b5:	add.n	a8, a8, a12
+ 4b7:	l32i.n	a8, a8, 0
+ 4b9:	l32i.n	a13, a13, 0
+ 4bb:	srai	a11, a8, 31
+ 4be:	srai	a7, a13, 31
+ 4c1:	sub	a11, a11, a7
+ 4c4:	bgeu	a8, a13, 4c9 <kcc_block+0x4c9>
+ 4c7:	addi.n	a11, a11, -1
+ 4c9:	sub	a8, a8, a13
+ 4cc:	l16si	a13, a14, 204
+ 4cf:	addi.n	a12, a12, 4
+ 4d1:	srai	a7, a13, 31
+ 4d4:	mull	a7, a7, a8
+ 4d7:	mull	a11, a11, a13
+ 4da:	addi.n	a14, a14, 2
+ 4dc:	add.n	a11, a11, a7
+ 4de:	mull	a7, a8, a13
+ 4e1:	muluh	a8, a8, a13
+ 4e4:	add.n	a7, a10, a7
+ 4e6:	add.n	a8, a11, a8
+ 4e8:	add.n	a8, a9, a8
+ 4ea:	saltu	a11, a7, a10
+ 4ed:	add.n	a9, a11, a8
+ 4ef:	mov.n	a10, a7
+ 4f1:	bnei	a12, 12, 4b0 <kcc_block+0x4b0>
+ 4f4:	srai	a8, a9, 31
+ 4f7:	xor	a9, a8, a9
+ 4fa:	xor	a10, a8, a7
+ 4fd:	sub	a9, a9, a8
+ 500:	bgeu	a10, a8, 505 <kcc_block+0x505>
+ 503:	addi.n	a9, a9, -1
+ 505:	sub	a10, a10, a8
+ 508:	bgei	a9, 1, 517 <kcc_block+0x517>
+ 50b:	bnez	a9, 859 <kcc_block+0x859>
+ 50e:	l32r	a8, fffc0510 <kcc_block+0xfffc0510>
+ 511:	bltu	a8, a10, 517 <kcc_block+0x517>
+ 514:	j	859 <kcc_block+0x859>
+ 517:	l32i	a8, a1, 0x178
+ 51a:	s32i	a8, a1, 0x194
+ 51d:	movi.n	a8, 0
+ 51f:	s32i	a8, a1, 0x184
+ 522:	s32i	a8, a1, 0x18c
+ 525:	s32i	a8, a1, 0x1a8
+ 528:	l32i	a14, a1, 0x194
+ 52b:	addmi	a12, a1, 0x100
+ 52e:	movi.n	a11, 0
+ 530:	movi.n	a10, 0
+ 532:	movi.n	a13, 0
+ 534:	movi	a15, 192
+ 537:	add.n	a15, a15, a1
+ 539:	add.n	a15, a15, a11
+ 53b:	l32i.n	a9, a14, 12
+ 53d:	l32i.n	a15, a15, 0
+ 53f:	srai	a8, a9, 31
+ 542:	srai	a7, a15, 31
+ 545:	sub	a8, a8, a7
+ 548:	bgeu	a9, a15, 54d <kcc_block+0x54d>
+ 54b:	addi.n	a8, a8, -1
+ 54d:	sub	a9, a9, a15
+ 550:	l32r	a15, fffc0550 <kcc_block+0xfffc0550>
+ 553:	l32r	a6, fffc0554 <kcc_block+0xfffc0554>
+ 556:	s32i.n	a9, a12, 0
+ 558:	s32i.n	a8, a12, 4
+ 55a:	add.n	a15, a9, a15
+ 55c:	mov.n	a7, a8
+ 55e:	bgeu	a15, a6, 563 <kcc_block+0x563>
+ 561:	addi.n	a7, a8, 1
+ 563:	bnez	a7, 859 <kcc_block+0x859>
+ 566:	movi.n	a7, 1
+ 568:	slli	a7, a7, 21
+ 56b:	bgeu	a7, a15, 571 <kcc_block+0x571>
+ 56e:	j	859 <kcc_block+0x859>
+ 571:	mull	a8, a8, a9
+ 574:	mull	a6, a9, a9
+ 577:	muluh	a9, a9, a9
+ 57a:	add.n	a6, a10, a6
+ 57c:	addx2	a8, a8, a9
+ 57f:	saltu	a10, a6, a10
+ 582:	add.n	a8, a13, a8
+ 584:	add.n	a8, a10, a8
+ 586:	s32i	a8, a1, 0x1a4
+ 589:	addi.n	a11, a11, 4
+ 58b:	mov.n	a10, a6
+ 58d:	mov.n	a13, a8
+ 58f:	addi.n	a14, a14, 4
+ 591:	addi.n	a12, a12, 8
+ 593:	bnei	a11, 12, 534 <kcc_block+0x534>
+ 596:	bnez.n	a8, 5a3 <kcc_block+0x5a3>
+ 598:	movi.n	a8, -1
+ 59a:	srli	a8, a8, 6
+ 59d:	bltu	a8, a6, 5a3 <kcc_block+0x5a3>
+ 5a0:	j	859 <kcc_block+0x859>
+ 5a3:	l32i	a8, a1, 0x1a4
+ 5a6:	slli	a10, a6, 16
+ 5a9:	ssai	16
+ 5ac:	src	a11, a8, a6
+ 5af:	l32r	a8, fffc05b0 <kcc_block+0xfffc05b0>
+ 5b2:	callx8	a8
+ 5b5:	movi	a8, 0x154
+ 5b8:	mov.n	a4, a10
+ 5ba:	mov.n	a13, a11
+ 5bc:	movi.n	a7, 0
+ 5be:	add.n	a5, a1, a8
+ 5c0:	extui	a3, a7, 0, 16
+ 5c3:	addmi	a8, a1, 0x100
+ 5c6:	addx8	a9, a3, a8
+ 5c9:	l32i.n	a8, a9, 0
+ 5cb:	l32i.n	a11, a9, 4
+ 5cd:	mov.n	a12, a4
+ 5cf:	slli	a10, a8, 22
+ 5d2:	ssai	10
+ 5d5:	src	a11, a11, a8
+ 5d8:	s32i	a13, a1, 0x1c8
+ 5db:	addx2	a3, a3, a5
+ 5de:	l32r	a8, fffc05e0 <kcc_block+0xfffc05e0>
+ 5e1:	callx8	a8
+ 5e4:	s16i	a10, a3, 0
+ 5e7:	addi.n	a7, a7, 1
+ 5e9:	l32i	a13, a1, 0x1c8
+ 5ec:	bnei	a7, 3, 5c0 <kcc_block+0x5c0>
+ 5ef:	movi	a12, 192
+ 5f2:	l32i	a10, a1, 0x178
+ 5f5:	movi.n	a9, 0
+ 5f7:	add.n	a12, a12, a1
+ 5f9:	movi.n	a5, 0
+ 5fb:	movi.n	a15, 0
+ 5fd:	movi.n	a8, 0
+ 5ff:	movi.n	a3, 0
+ 601:	movi	a11, 0x154
+ 604:	add.n	a11, a11, a1
+ 606:	add.n	a11, a11, a9
+ 608:	l16si	a13, a11, 0
+ 60b:	l16si	a11, a12, 12
+ 60e:	l16si	a7, a10, 204
+ 611:	mull	a14, a11, a13
+ 614:	mulsh	a11, a11, a13
+ 617:	add.n	a14, a8, a14
+ 619:	saltu	a8, a14, a8
+ 61c:	add.n	a11, a3, a11
+ 61e:	mull	a4, a7, a13
+ 621:	mulsh	a7, a7, a13
+ 624:	add.n	a11, a8, a11
+ 626:	mov.n	a3, a11
+ 628:	mov.n	a8, a14
+ 62a:	sub	a7, a15, a7
+ 62d:	bgeu	a5, a4, 632 <kcc_block+0x632>
+ 630:	addi.n	a7, a7, -1
+ 632:	addi.n	a9, a9, 2
+ 634:	sub	a5, a5, a4
+ 637:	mov.n	a15, a7
+ 639:	addi.n	a12, a12, 2
+ 63b:	addi.n	a10, a10, 2
+ 63d:	bnei	a9, 6, 601 <kcc_block+0x601>
+ 640:	addi.n	a8, a11, -1
+ 642:	movnez	a8, a11, a14
+ 645:	or	a8, a11, a8
+ 648:	bltz	a8, 6f2 <kcc_block+0x6f2>
+ 64b:	addi.n	a8, a7, -1
+ 64d:	movnez	a8, a7, a5
+ 650:	or	a8, a7, a8
+ 653:	bltz	a8, 6f2 <kcc_block+0x6f2>
+ 656:	l32i	a8, a1, 0x190
+ 659:	l32i	a9, a1, 0x184
+ 65c:	l16ui	a8, a8, 24
+ 65f:	bbs	a8, a9, 665 <kcc_block+0x665>
+ 662:	j	6f2 <kcc_block+0x6f2>
+ 665:	l32i	a12, a1, 0x1b8
+ 668:	l32i	a13, a1, 0x1bc
+ 66b:	slli	a10, a14, 8
+ 66e:	ssai	24
+ 671:	src	a11, a11, a14
+ 674:	l32r	a8, fffc0674 <kcc_block+0xfffc0674>
+ 677:	callx8	a8
+ 67a:	l32i	a12, a1, 0x1c0
+ 67d:	l32i	a13, a1, 0x1c4
+ 680:	mov.n	a4, a10
+ 682:	mov.n	a3, a11
+ 684:	slli	a10, a5, 8
+ 687:	ssai	24
+ 68a:	src	a11, a7, a5
+ 68d:	l32r	a8, fffc0690 <kcc_block+0xfffc0690>
+ 690:	callx8	a8
+ 693:	mov.n	a7, a10
+ 695:	bnez	a3, 859 <kcc_block+0x859>
+ 698:	movi.n	a8, 3
+ 69a:	addmi	a8, a8, 0x4000
+ 69d:	bgeu	a8, a4, 6a3 <kcc_block+0x6a3>
+ 6a0:	j	859 <kcc_block+0x859>
+ 6a3:	bnez	a11, 859 <kcc_block+0x859>
+ 6a6:	bgeu	a8, a10, 6ac <kcc_block+0x6ac>
+ 6a9:	j	859 <kcc_block+0x859>
+ 6ac:	l32i	a13, a1, 0x1a4
+ 6af:	l32r	a11, fffc06b0 <kcc_block+0xfffc06b0>
+ 6b2:	mov.n	a12, a6
+ 6b4:	movi.n	a10, 0
+ 6b6:	l32r	a8, fffc06b8 <kcc_block+0xfffc06b8>
+ 6b9:	callx8	a8
+ 6bc:	mull	a8, a4, a7
+ 6bf:	muluh	a4, a4, a7
+ 6c2:	mull	a11, a11, a8
+ 6c5:	mull	a4, a4, a10
+ 6c8:	l32r	a12, fffc06c8 <kcc_block+0xfffc06c8>
+ 6cb:	add.n	a4, a4, a11
+ 6cd:	muluh	a11, a8, a10
+ 6d0:	mull	a10, a8, a10
+ 6d3:	movi.n	a13, 0
+ 6d5:	add.n	a11, a4, a11
+ 6d7:	l32r	a8, fffc06d8 <kcc_block+0xfffc06d8>
+ 6da:	callx8	a8
+ 6dd:	l32i	a8, a1, 0x18c
+ 6e0:	l32i	a9, a1, 0x1a8
+ 6e3:	add.n	a10, a8, a10
+ 6e5:	saltu	a8, a10, a8
+ 6e8:	add.n	a11, a9, a11
+ 6ea:	add.n	a8, a8, a11
+ 6ec:	s32i	a10, a1, 0x18c
+ 6ef:	s32i	a8, a1, 0x1a8
+ 6f2:	l32i	a8, a1, 0x184
+ 6f5:	addi.n	a8, a8, 1
+ 6f7:	s32i	a8, a1, 0x184
+ 6fa:	l32i	a8, a1, 0x194
+ 6fd:	addi.n	a8, a8, 12
+ 6ff:	s32i	a8, a1, 0x194
+ 702:	l32i	a8, a1, 0x184
+ 705:	beqi	a8, 16, 70b <kcc_block+0x70b>
+ 708:	j	528 <kcc_block+0x528>
+ 70b:	l32i	a10, a1, 0x18c
+ 70e:	l32i	a11, a1, 0x1a8
+ 711:	movi.n	a12, 16
+ 713:	movi.n	a13, 0
+ 715:	l32r	a8, fffc0718 <kcc_block+0xfffc0718>
+ 718:	callx8	a8
+ 71b:	movi	a8, 0x118
+ 71e:	add.n	a7, a1, a8
+ 720:	l32i	a5, a1, 0x178
+ 723:	mov.n	a6, a10
+ 725:	mov.n	a4, a11
+ 727:	addi	a3, a7, 24
+ 72a:	l32i	a10, a5, 212
+ 72d:	movi.n	a12, 1
+ 72f:	muluh	a8, a10, a6
+ 732:	mull	a11, a4, a10
+ 735:	mull	a10, a10, a6
+ 738:	add.n	a11, a11, a8
+ 73a:	slli	a12, a12, 16
+ 73d:	movi.n	a13, 0
+ 73f:	l32r	a8, fffc0740 <kcc_block+0xfffc0740>
+ 742:	callx8	a8
+ 745:	l32i.n	a9, a7, 0
+ 747:	l32i.n	a8, a7, 4
+ 749:	add.n	a10, a9, a10
+ 74b:	add.n	a11, a8, a11
+ 74d:	bgeu	a10, a9, 752 <kcc_block+0x752>
+ 750:	addi.n	a11, a11, 1
+ 752:	s32i.n	a10, a7, 0
+ 754:	s32i.n	a11, a7, 4
+ 756:	addi.n	a7, a7, 8
+ 758:	addi.n	a5, a5, 4
+ 75a:	bne	a3, a7, 72a <kcc_block+0x72a>
+ 75d:	l32i	a9, a1, 0x178
+ 760:	movi	a8, 224
+ 763:	add.n	a8, a9, a8
+ 765:	s32i	a8, a1, 0x178
+ 768:	l32i	a8, a1, 0x190
+ 76b:	l32i	a9, a1, 0x1ac
+ 76e:	addi.n	a8, a8, 2
+ 770:	s32i	a8, a1, 0x190
+ 773:	l32i	a8, a1, 0x178
+ 776:	beq	a8, a9, 77c <kcc_block+0x77c>
+ 779:	j	488 <kcc_block+0x488>
+ 77c:	movi	a8, 0x118
+ 77f:	movi.n	a5, 0
+ 781:	add.n	a4, a1, a8
+ 783:	addmi	a6, a1, 0x100
+ 786:	extui	a7, a5, 0, 16
+ 789:	l32i	a9, a1, 0x198
+ 78c:	slli	a7, a7, 3
+ 78f:	add.n	a8, a4, a7
+ 791:	l16ui	a9, a9, 18
+ 794:	l32i.n	a10, a8, 0
+ 796:	l32i.n	a8, a8, 4
+ 798:	muluh	a11, a10, a9
+ 79b:	mull	a8, a8, a9
+ 79e:	l32r	a12, fffc07a0 <kcc_block+0xfffc07a0>
+ 7a1:	mull	a10, a10, a9
+ 7a4:	add.n	a11, a8, a11
+ 7a6:	movi.n	a13, 0
+ 7a8:	l32r	a8, fffc07a8 <kcc_block+0xfffc07a8>
+ 7ab:	callx8	a8
+ 7ae:	l32i	a8, a1, 0x198
+ 7b1:	add.n	a7, a6, a7
+ 7b3:	addi.n	a8, a8, 2
+ 7b5:	s32i.n	a10, a7, 0
+ 7b7:	s32i.n	a11, a7, 4
+ 7b9:	addi.n	a5, a5, 1
+ 7bb:	s32i	a8, a1, 0x198
+ 7be:	bnei	a5, 3, 786 <kcc_block+0x786>
+ 7c1:	movi	a8, 224
+ 7c4:	add.n	a7, a1, a8
+ 7c6:	l32i	a11, a1, 0x180
+ 7c9:	movi.n	a14, 0
+ 7cb:	mov.n	a13, a6
+ 7cd:	movi.n	a12, 0
+ 7cf:	mov.n	a10, a7
+ 7d1:	l32r	a8, fffc07d4 <kcc_block+0xfffc07d4>
+ 7d4:	callx8	a8
+ 7d7:	bnez	a10, 872 <kcc_block+0x872>
+ 7da:	l32i	a8, a1, 0x180
+ 7dd:	addi.n	a8, a8, 1
+ 7df:	s32i	a8, a1, 0x180
+ 7e2:	l32i	a8, a1, 0x170
+ 7e5:	addi	a8, a8, 92
+ 7e8:	s32i	a8, a1, 0x170
+ 7eb:	l32i	a8, a1, 0x180
+ 7ee:	beqi	a8, 4, 7f4 <kcc_block+0x7f4>
+ 7f1:	j	112 <kcc_block+0x112>
+ 7f4:	movi	a8, 0x130
+ 7f7:	l32i	a12, a1, 0x1b0
+ 7fa:	l32r	a11, fffc07fc <kcc_block+0xfffc07fc>
+ 7fd:	add.n	a13, a1, a8
+ 7ff:	mov.n	a10, a7
+ 801:	l32r	a8, fffc0804 <kcc_block+0xfffc0804>
+ 804:	callx8	a8
+ 807:	bnez	a10, 86d <kcc_block+0x86d>
+ 80a:	l32i	a8, a1, 0x17c
+ 80d:	l32i.n	a10, a6, 48
+ 80f:	slli	a8, a8, 4
+ 812:	add.n	a8, a1, a8
+ 814:	l32i.n	a9, a6, 60
+ 816:	s32i.n	a10, a8, 0
+ 818:	l32i.n	a11, a6, 52
+ 81a:	l32i.n	a10, a6, 56
+ 81c:	s32i.n	a9, a8, 12
+ 81e:	s32i.n	a11, a8, 4
+ 820:	s32i.n	a10, a8, 8
+ 822:	l32i	a8, a1, 0x17c
+ 825:	l32i	a9, a1, 0x19c
+ 828:	addi.n	a8, a8, 1
+ 82a:	s32i	a8, a1, 0x17c
+ 82d:	movi	a8, 0x170
+ 830:	add.n	a8, a9, a8
+ 832:	s32i	a8, a1, 0x19c
+ 835:	l32i	a9, a1, 0x188
+ 838:	l32i	a8, a1, 0x17c
+ 83b:	bgeu	a8, a9, 841 <kcc_block+0x841>
+ 83e:	j	e8 <kcc_block+0xe8>
+ 841:	l32i	a8, a1, 0x188
+ 844:	l32i	a10, a1, 0x1b4
+ 847:	slli	a12, a8, 4
+ 84a:	mov.n	a11, a1
+ 84c:	l32r	a8, fffc084c <kcc_block+0xfffc084c>
+ 84f:	callx8	a8
+ 852:	j	857 <kcc_block+0x857>
+ 855:	movi.n	a2, 5
+ 857:	retw.n
+ 859:	movi.n	a2, 6
+ 85b:	j	857 <kcc_block+0x857>
+ 85e:	movi.n	a2, 2
+ 860:	j	857 <kcc_block+0x857>
+ 863:	movi.n	a2, 3
+ 865:	j	857 <kcc_block+0x857>
+ 868:	movi.n	a2, 4
+ 86a:	j	857 <kcc_block+0x857>
+ 86d:	movi.n	a2, 8
+ 86f:	j	857 <kcc_block+0x857>
+ 872:	movi.n	a2, 7
+ 874:	j	857 <kcc_block+0x857>

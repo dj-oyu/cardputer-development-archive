@@ -1,0 +1,32 @@
+{
+  "units": [
+    "ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c",
+    "ayatsuri-latest-fixed-source-20261105/material-c-compact/material.c",
+    "ayatsuri-latest-fixed-source-20261105/control-prototype/control.c",
+    "ayatsuri-latest-fixed-source-20261105/transparency-chain-prototype/conditional.c"
+  ],
+  "copied_sha256": {
+    "ayatsuri-latest-fixed-source-20261105/transparency-chain-prototype/conditional.c": "416f0f8e0d5db6ad9220aa53a9dbbb8a41fcb1d864d10152f5946a0cf2622477",
+    "ayatsuri-latest-fixed-source-20261105/transparency-chain-prototype/conditional.h": "6864eb60f90608333e0b9997b5a1119e41fcb1ad5ae60469d73d65931f0abfad",
+    "ayatsuri-fixed-frame-stage1-20261105/aa/code/profile_adapter.h": "b3929a368705f19fae4c59bee46689140794063eb1c1b82f7543b4cda0874b53",
+    "ayatsuri-fixed-integer-output-20261105/code/private_adapter_api.h": "2b96cd44cf474b5367455532dc700248b9a40a20b66b707188a3853c95921bc7",
+    "ayatsuri-fixed-integer-output-20261105/code/integer_output.h": "ba23c84006607cd061edb2c92f1efaf280b6853b7ed644dd083993c1dd81ce7e",
+    "ayatsuri-fixed-integer-output-20261105/code/block_cache.h": "a76ea0d95784bad525a0553843ebffeb9a3fd38b2a55f9fd0f2e9a1bae3e230f",
+    "ayatsuri-fixed-frame-stage1-20261105/aa/code/integer_aa.h": "49bc7df89ffa67f5d5f74e76bb6142ba8bc3c7092564b9731f372990db497355",
+    "ayatsuri-latest-fixed-source-20261105/control-prototype/control.c": "5802202da52a810b0a6d81c32c87688253b452333dd82dd80c3b911c1dfc723e",
+    "ayatsuri-latest-fixed-source-20261105/control-prototype/control.h": "05cd432f8736c73e71e641389ef7949961c23e8ac44825e9fa47410c16e1223a",
+    "ayatsuri-latest-fixed-source-20261105/material-c-compact/material.c": "4981230605cfa35aac91dee75c06a602e3f7b65b475aff2e86da2ee444ea0fbf",
+    "ayatsuri-latest-fixed-source-20261105/material-c-compact/generated-q24.inc": "1c2b884c1f6cb610fd4de3aa8f385f479c36b4de396b6a89321c9876cc20a3cb",
+    "ayatsuri-latest-fixed-source-20261105/material-c-compact/generated-q20.inc": "45fc2c545d8df6d9041d6594afc6855124b0fbdaf60b7c5f6599fc9bb1bf734d",
+    "ayatsuri-latest-fixed-source-20261105/material-c-compact/generated-q16.inc": "5e4c5bd0c564064eb999916aab9a4d3767880ed65e77ed9b62d54bf82c6763cb",
+    "ayatsuri-latest-fixed-source-20261105/material-c-compact/material.h": "286f69d09a6a5464427cf9174d52a3258726d22c16319de078ae063cb973b428",
+    "ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c": "4bf64c1e6c60719de52a055b29ecf828a7b8c50751566412a7e2d4906a3b47f3",
+    "ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.h": "84ed50dd5eaa61194280621a21ad8af377a4a797d1c8a728d0fb0dce20c92efd",
+    "ayatsuri-latest-fixed-source-20261105/kernel-chain-prototype/chain.h": "e3c1310b08fd283f8f1081b954ac3e68d13a72c45d6a92ac859db8f938fa57ef",
+    "ayatsuri-fixed-integer-light-20261105/normal_bridge.h": "22c7082c6020c5b3dc5b9819ba5bec74504c0490abb29aaed4da4b40506781e2",
+    "ayatsuri-fixed-integer-light-20261105/integer_light.h": "8c609d85f35b3cc8ac89bbea99b22338d0debd5ca598cdbde3cb42a2de872a74"
+  },
+  "private_profile_content_included": false,
+  "geometry_fixtures_included": false,
+  "note": "Material generated LUTs are source-derived private numeric data; capsule stays private. Profile API headers only, no profile definition or fabricated replacement. Objects intentionally remain unlinked."
+}

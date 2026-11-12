@@ -1,0 +1,49 @@
+{
+  "status": "PASS_SOURCE_INVARIANTS_NOT_RENDER_GATE",
+  "changedProductionFiles": [
+    "code/ksn_bounded_ring.h",
+    "code/build_core.sh",
+    "code/ksn_bounded_ring_impl.inc"
+  ],
+  "orchestrationAndBudgetsByteIdentical": true,
+  "privateBuildByteIdentical": true,
+  "centerIdSites": {
+    "ksn_bounded_hdr_center.inc": [
+      55
+    ],
+    "ksn_depth_bands_impl.inc": [
+      6,
+      53
+    ],
+    "ksn_bounded_ring.h": [
+      13
+    ],
+    "ksn_bounded_hdr_impl.inc": [
+      38,
+      74
+    ],
+    "ksn_bounded_ring_impl.inc": [
+      10,
+      11,
+      14,
+      15,
+      49,
+      90
+    ],
+    "ksn_bounded_ring_center.inc": [
+      55
+    ]
+  },
+  "sourcePins": {
+    "code/ksn_bounded_ring_helpers.inc": "b6ed1d058167cee8dcdddf8321c10df7c684034c4137f898cda6cbeb841115d2",
+    "code/ksn_bounded_hdr_center.inc": "ef17a76873d19de66721fe770a34fe668f05314062365fb4d59a222f2f2d1d23",
+    "code/ksn_depth_bands_impl.inc": "c6e708859ea0a79533548e5644f9de5a932d057029ed7f6396565c01d7fa1e7c",
+    "code/ksn_bounded_ring.h": "ae800f7f73e8b75d8c32ba5b3d0a77fe197f96507c58a1da473cd28297062a6c",
+    "code/build_core.sh": "cbccc68d829034cad08a6938a6d2ad692cfbc1095f52fc36a868708013f54b8d",
+    "code/ksn_bounded_hdr_impl.inc": "44b5cf3d81637a30f051ccf9fbc9513814b76cb646e9a0aa3665e562bbbcc56a",
+    "code/CORE_NOTES.md": "2905238779dc776881d00a0ad83bfad8c9477bf0002b79ac9a7cf646fa53037a",
+    "code/ksn_bounded_hdr.h": "6c5c9165affa8938b98aef9a5e75d56f25a5cc23ad5e3c381ba98d710c7d58d7",
+    "code/ksn_bounded_ring_impl.inc": "ddd39c4610738920d2808250146aaec42e702f7928e8932b22d28cfb01c1c804",
+    "code/ksn_bounded_ring_center.inc": "e92d8cd6046e3a9358a03e7be2e157220964cb51f0d55b78a3c9ffbecfe5a42a"
+  }
+}

@@ -1,0 +1,94 @@
+[
+  {
+    "side": -1,
+    "stations": 8,
+    "vertices": 48,
+    "triangles": 84,
+    "edges": 132,
+    "EulerCharacteristic": 0,
+    "connectedComponents": 1,
+    "boundaryLoopLengths": [
+      6,
+      6
+    ],
+    "boundaryDegreesAllTwo": true,
+    "nonmanifoldEdges": 0,
+    "interiorWindingMismatches": 0,
+    "minimumDoubleArea": 0.0008328544519697965,
+    "minimumGeometricDotSourceNormal": 0.7814245825727433,
+    "maxSourceNormalLengthError": 8.864676814823724e-08,
+    "sourceVertexAndNormalExact": true,
+    "selectedEndpointSourceIDsExact": true,
+    "noGLBOrSceneObjectCreated": true,
+    "pass": true
+  },
+  {
+    "side": -1,
+    "stations": 9,
+    "vertices": 54,
+    "triangles": 96,
+    "edges": 150,
+    "EulerCharacteristic": 0,
+    "connectedComponents": 1,
+    "boundaryLoopLengths": [
+      6,
+      6
+    ],
+    "boundaryDegreesAllTwo": true,
+    "nonmanifoldEdges": 0,
+    "interiorWindingMismatches": 0,
+    "minimumDoubleArea": 0.0005514003266678323,
+    "minimumGeometricDotSourceNormal": 0.8393104711909228,
+    "maxSourceNormalLengthError": 8.864676814823724e-08,
+    "sourceVertexAndNormalExact": true,
+    "selectedEndpointSourceIDsExact": true,
+    "noGLBOrSceneObjectCreated": true,
+    "pass": true
+  },
+  {
+    "side": 1,
+    "stations": 8,
+    "vertices": 48,
+    "triangles": 84,
+    "edges": 132,
+    "EulerCharacteristic": 0,
+    "connectedComponents": 1,
+    "boundaryLoopLengths": [
+      6,
+      6
+    ],
+    "boundaryDegreesAllTwo": true,
+    "nonmanifoldEdges": 0,
+    "interiorWindingMismatches": 0,
+    "minimumDoubleArea": 0.0008328551286852927,
+    "minimumGeometricDotSourceNormal": 0.7814238935050685,
+    "maxSourceNormalLengthError": 9.777210008277137e-08,
+    "sourceVertexAndNormalExact": true,
+    "selectedEndpointSourceIDsExact": true,
+    "noGLBOrSceneObjectCreated": true,
+    "pass": true
+  },
+  {
+    "side": 1,
+    "stations": 9,
+    "vertices": 54,
+    "triangles": 96,
+    "edges": 150,
+    "EulerCharacteristic": 0,
+    "connectedComponents": 1,
+    "boundaryLoopLengths": [
+      6,
+      6
+    ],
+    "boundaryDegreesAllTwo": true,
+    "nonmanifoldEdges": 0,
+    "interiorWindingMismatches": 0,
+    "minimumDoubleArea": 0.0005514005369968979,
+    "minimumGeometricDotSourceNormal": 0.839311962312722,
+    "maxSourceNormalLengthError": 9.777210008277137e-08,
+    "sourceVertexAndNormalExact": true,
+    "selectedEndpointSourceIDsExact": true,
+    "noGLBOrSceneObjectCreated": true,
+    "pass": true
+  }
+]

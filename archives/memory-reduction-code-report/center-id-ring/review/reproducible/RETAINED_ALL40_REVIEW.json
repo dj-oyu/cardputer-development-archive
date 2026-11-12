@@ -1,0 +1,214 @@
+{
+  "status": "INDEPENDENT_ALL40_RETAINED_EXACT_PASS",
+  "actualFramesRunByReviewer": 0,
+  "cases": [
+    {
+      "arm": "off",
+      "name": "native-front-baseline",
+      "status": "PASS"
+    },
+    {
+      "arm": "off",
+      "name": "native-front-baseline-reverse",
+      "status": "PASS"
+    },
+    {
+      "arm": "off",
+      "name": "native-oblique-baseline",
+      "status": "PASS"
+    },
+    {
+      "arm": "off",
+      "name": "native-oblique-baseline-reverse",
+      "status": "PASS"
+    },
+    {
+      "arm": "off",
+      "name": "native-front-direction",
+      "status": "PASS"
+    },
+    {
+      "arm": "off",
+      "name": "native-front-direction-reverse",
+      "status": "PASS"
+    },
+    {
+      "arm": "off",
+      "name": "native-oblique-direction",
+      "status": "PASS"
+    },
+    {
+      "arm": "off",
+      "name": "native-oblique-direction-reverse",
+      "status": "PASS"
+    },
+    {
+      "arm": "off",
+      "name": "native-front-intensity",
+      "status": "PASS"
+    },
+    {
+      "arm": "off",
+      "name": "native-front-intensity-reverse",
+      "status": "PASS"
+    },
+    {
+      "arm": "off",
+      "name": "native-oblique-intensity",
+      "status": "PASS"
+    },
+    {
+      "arm": "off",
+      "name": "native-oblique-intensity-reverse",
+      "status": "PASS"
+    },
+    {
+      "arm": "off",
+      "name": "native-front-ambient",
+      "status": "PASS"
+    },
+    {
+      "arm": "off",
+      "name": "native-front-ambient-reverse",
+      "status": "PASS"
+    },
+    {
+      "arm": "off",
+      "name": "native-oblique-ambient",
+      "status": "PASS"
+    },
+    {
+      "arm": "off",
+      "name": "native-oblique-ambient-reverse",
+      "status": "PASS"
+    },
+    {
+      "arm": "off",
+      "name": "native-front-albedo",
+      "status": "PASS"
+    },
+    {
+      "arm": "off",
+      "name": "native-front-albedo-reverse",
+      "status": "PASS"
+    },
+    {
+      "arm": "off",
+      "name": "native-oblique-albedo",
+      "status": "PASS"
+    },
+    {
+      "arm": "off",
+      "name": "native-oblique-albedo-reverse",
+      "status": "PASS"
+    },
+    {
+      "arm": "on",
+      "name": "native-front-baseline",
+      "status": "PASS"
+    },
+    {
+      "arm": "on",
+      "name": "native-front-baseline-reverse",
+      "status": "PASS"
+    },
+    {
+      "arm": "on",
+      "name": "native-oblique-baseline",
+      "status": "PASS"
+    },
+    {
+      "arm": "on",
+      "name": "native-oblique-baseline-reverse",
+      "status": "PASS"
+    },
+    {
+      "arm": "on",
+      "name": "native-front-direction",
+      "status": "PASS"
+    },
+    {
+      "arm": "on",
+      "name": "native-front-direction-reverse",
+      "status": "PASS"
+    },
+    {
+      "arm": "on",
+      "name": "native-oblique-direction",
+      "status": "PASS"
+    },
+    {
+      "arm": "on",
+      "name": "native-oblique-direction-reverse",
+      "status": "PASS"
+    },
+    {
+      "arm": "on",
+      "name": "native-front-intensity",
+      "status": "PASS"
+    },
+    {
+      "arm": "on",
+      "name": "native-front-intensity-reverse",
+      "status": "PASS"
+    },
+    {
+      "arm": "on",
+      "name": "native-oblique-intensity",
+      "status": "PASS"
+    },
+    {
+      "arm": "on",
+      "name": "native-oblique-intensity-reverse",
+      "status": "PASS"
+    },
+    {
+      "arm": "on",
+      "name": "native-front-ambient",
+      "status": "PASS"
+    },
+    {
+      "arm": "on",
+      "name": "native-front-ambient-reverse",
+      "status": "PASS"
+    },
+    {
+      "arm": "on",
+      "name": "native-oblique-ambient",
+      "status": "PASS"
+    },
+    {
+      "arm": "on",
+      "name": "native-oblique-ambient-reverse",
+      "status": "PASS"
+    },
+    {
+      "arm": "on",
+      "name": "native-front-albedo",
+      "status": "PASS"
+    },
+    {
+      "arm": "on",
+      "name": "native-front-albedo-reverse",
+      "status": "PASS"
+    },
+    {
+      "arm": "on",
+      "name": "native-oblique-albedo",
+      "status": "PASS"
+    },
+    {
+      "arm": "on",
+      "name": "native-oblique-albedo-reverse",
+      "status": "PASS"
+    }
+  ],
+  "rawComparisons": 200,
+  "reportComparisons": 280,
+  "forwardReverseRawComparisons": 80,
+  "allowedReportDelta": "workspace137312->77312 only, excluding seven named timings",
+  "completionManifestHashes": {
+    "off": "076f5f0d3d55db106fd13ad03a2b9713880ec7944279baa31993138446071dfe",
+    "on": "8aa80fd04c22f77c532e2304fe25957b4dc50631c6625ec9fa6fd1b0de96bcd4"
+  }
+}

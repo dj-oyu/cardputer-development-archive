@@ -1,0 +1,32 @@
+{
+  "created_utc": "2026-10-20T00:59:33.085937+00:00",
+  "status": "source_binding_confirmed_build_flash_trial_strict_pending",
+  "baseline_head": "37af4225ad329aac4c5e79c880d7d69760b770be",
+  "broker_epoch_in_plans": "62c7885ab3f34ce6b9fc6973754c85f2",
+  "source_tree": "7753c5c8919ee36c24080ce08102438a285da6f2",
+  "source_sha256": "9e89fd87e0019e52a8111fc1adb24f3a689934188095539e157c92f8a1f5898d",
+  "source_job": "derby-v2-baseline-source-37af4225-20261020",
+  "source_result": "source_snapshot_fetched_no_build_no_flash",
+  "build_job": "derby-v2-baseline-build-37af4225-20261020",
+  "build_execute_state_at_review": "queued",
+  "files_sha256": {
+    "baseline-source-plan.json": "36938db13bacbaf2fc0c4dee98b1d1cf61cb2e6993729a4a635aff4934030eff",
+    "baseline-source-execute.json": "e458f497f7b247378d4e905eec78a99719a0db4f8c43bb99b5b2cac96ff008f8",
+    "baseline-source-result.json": "0fb90a653817c7bb8db8d070e659733cdaf0bfa93dabfd5d7e56b3a1a0e47d5a",
+    "baseline-build-plan.json": "f1694cfa56190a08694199648c45e9d12cb50d9efdcb3a7c259bcccedb88d2fd",
+    "baseline-build-execute.json": "80d1c9dee75b9fc647d2fa85e5737d2185deda6b2046f84b37a89a30646963ad"
+  },
+  "parser_files_sha256": {
+    "tools/games/derby_detail_result.py": "9064850a370d1111f553368828c0c1698b2f1ff34579819f135a91710efd961e",
+    "tools/games/derby_fixed_result.py": "6e2fb1beda9cc78ebcf45be3efe4180a6351f40c8604d495c09ae3962a664e89",
+    "tools/games/derby_detail_schema.json": "4027121a79b6511b4ed30a6e6142eb4735a70218f0fc72923ebef55c569fdf45"
+  },
+  "scope": "Local file read and static review only. No live MCP/device read, USB, source, build, flash, retry, repo or GitHub operation. No device acceptance.",
+  "pending_requirements": [
+    "registered build terminal result/proof/source and detail ON mode",
+    "verified flash/readback receipt and exact build/BIN/ELF binding",
+    "finite trial raw and transport receipt and expected variant",
+    "strict detailed parser outcome on same complete untouched raw stream"
+  ],
+  "policy": "Baseline strict detailed success is required before later variants; no following device action delegated to this reviewer."
+}

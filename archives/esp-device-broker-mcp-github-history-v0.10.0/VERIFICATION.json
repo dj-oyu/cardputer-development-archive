@@ -1,0 +1,27 @@
+{
+  "project": "esp-device-broker-mcp",
+  "publication_target": "dj-oyu/esp-device-broker-mcp",
+  "intended_visibility": "public",
+  "source_version": "0.10.0",
+  "head": "7d869909cf52baf962d933e9733015d5d380781b",
+  "tree": "9ad6ab9ca558ed485cc3ef2e802d3856b1b97eb2",
+  "source_branch": "master",
+  "recommended_remote_branch": "main",
+  "main_lineage_commits": 18,
+  "all_reachable_commits": 20,
+  "reachable_branches": 6,
+  "tags": [],
+  "earliest_commit": "ba4ef2532b7b920d1f482086c6cf60809e491741",
+  "history_starts_at": "Restored delivered v0.5 source snapshot; earlier development commits are not present.",
+  "license": "Existing MIT LICENSE and NOTICE preserved without modification.",
+  "bundle_sha256": "af133ea1d38aa1037e19ee780d0c64c4ddbca70e1c7b85da9a790f3a6ff6759f",
+  "bundle_bytes": 630077,
+  "verification": [
+    "git bundle verify passed",
+    "Fresh mirror clone succeeded",
+    "All branch refs, HEAD and tree SHA matched source",
+    "git fsck --full passed on restored bundle",
+    "All 20 reachable commits and 345 blobs screened for private data; matches limited to synthetic test fixtures and placeholder YOUR_NAME paths"
+  ],
+  "publication_state": "Not yet pushed; remote repository creation is a separate step."
+}

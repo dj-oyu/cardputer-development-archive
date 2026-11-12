@@ -1,0 +1,51 @@
+{
+  "blender": "4.3.2",
+  "source": "/workspace/cardputer-authoring-proof-20261101/sources/after.blend",
+  "sourceSha256": "379be01c35d06b9eef83b081970944ac74b5501da6dc3cc338785e1d6ab0a138",
+  "export": "Blender bundled glTF exporter, GLB, normals, opaque material colors, no UV/animation",
+  "poseSamplesAreStaticDiagnosticOnly": true,
+  "poses": [
+    {
+      "name": "neutral",
+      "blink": 0,
+      "jawOpen": 0,
+      "vertices": 233,
+      "triangles": 434
+    },
+    {
+      "name": "blink-half",
+      "blink": 0.5,
+      "jawOpen": 0,
+      "vertices": 233,
+      "triangles": 434
+    },
+    {
+      "name": "blink",
+      "blink": 1,
+      "jawOpen": 0,
+      "vertices": 233,
+      "triangles": 434
+    },
+    {
+      "name": "jaw-half",
+      "blink": 0,
+      "jawOpen": 0.5,
+      "vertices": 233,
+      "triangles": 434
+    },
+    {
+      "name": "jaw",
+      "blink": 0,
+      "jawOpen": 1,
+      "vertices": 233,
+      "triangles": 434
+    },
+    {
+      "name": "combined",
+      "blink": 1,
+      "jawOpen": 1,
+      "vertices": 233,
+      "triangles": 434
+    }
+  ]
+}

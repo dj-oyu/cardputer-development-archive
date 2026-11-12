@@ -1,0 +1,31 @@
+{
+  "status": "PROTOTYPE_SOURCE_AUDIT",
+  "actualFrames": 0,
+  "unchangedConstruction": {
+    "triangle_bounds": {
+      "exact": true,
+      "SHA256": "0119f6170188037ce17fc502a6dcff86d2cb4c77e7735848dd52698f61a0862c"
+    },
+    "node_builder": {
+      "exact": true,
+      "SHA256": "ffd4511cf21ac4daa67ded344d7b00509ef3a6088e7a6b32c26808a7123d0d6e"
+    }
+  },
+  "changedCopiedSources": [
+    {
+      "path": "private-build/visibility/test_visibility.c",
+      "before": "4fd5a37ab81a390d58cebaa0e5577db2e5c18f56e1d4290024a709358dbb500f",
+      "after": "205f7b51c0c0a6341775936da9d6e68a8f0aea3e7eb27a3c660b30e565453c28"
+    },
+    {
+      "path": "private-build/visibility/visibility.c",
+      "before": "8eb08314bd75441c1f77699a7b56a30a71986d8112dec0cf39e56be770dd42f8",
+      "after": "a516325cb207a50e4dd34d0fa4e28d321499b2c43d2ad617587ca00bed037b88"
+    },
+    {
+      "path": "private-build/visibility/visibility.h",
+      "before": "95d106ba97255313b78985789687764eb1ce1a36dbe79a3bd5450eb4efe70ee0",
+      "after": "5744b70731fa86fdce43d9d6092c4b7cb759a4a96056fd1a2be2eb8b07e8d1ce"
+    }
+  ]
+}

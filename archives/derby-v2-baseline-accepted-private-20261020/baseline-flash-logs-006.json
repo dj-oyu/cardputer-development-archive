@@ -1,0 +1,55 @@
+{
+  "ok": true,
+  "entries": [
+    {
+      "sequence": 60,
+      "text": "info: ROM read 2054144/2296736 bytes; elapsed 96 s",
+      "level": "info",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 61,
+      "text": "info: ROM read 2146304/2296736 bytes; elapsed 101 s",
+      "level": "info",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 62,
+      "text": "info: ROM read 2239488/2296736 bytes; elapsed 106 s",
+      "level": "info",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 63,
+      "text": "info: ROM read 2296736/2296736 bytes; elapsed 109 s",
+      "level": "info",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 64,
+      "text": "info: ROM read native exit 0; 2296736/2296736 bytes; elapsed 109 s",
+      "level": "info",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 65,
+      "text": "-- flash_boot_observe",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    }
+  ],
+  "expired": false,
+  "gap": false,
+  "oldest_sequence": 1,
+  "next_cursor": {
+    "epoch": "bd3faaae61f7464c84416cbe8e9e9135",
+    "sequence": 65
+  },
+  "has_more": false
+}

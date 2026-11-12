@@ -1,0 +1,191 @@
+{
+  "scorerSHA256": "9c99a17771d410cd68b27ff6d108f0379989814b99dc35f999b4ff4d6ef0b3cb",
+  "validModes": 3,
+  "negativeCases": 34,
+  "results": [
+    {
+      "case": "valid_ground_mode0",
+      "result": "VALID"
+    },
+    {
+      "case": "valid_ground_mode1",
+      "result": "VALID"
+    },
+    {
+      "case": "valid_ground_mode2",
+      "result": "VALID"
+    },
+    {
+      "case": "groundMode",
+      "result": "REJECTED",
+      "reason": "actual groundMode mismatch"
+    },
+    {
+      "case": "groundObjectId",
+      "result": "REJECTED",
+      "reason": "actual groundObjectId mismatch"
+    },
+    {
+      "case": "groundFirstTriangle",
+      "result": "REJECTED",
+      "reason": "actual groundFirstTriangle mismatch"
+    },
+    {
+      "case": "groundTriangleCount",
+      "result": "REJECTED",
+      "reason": "actual groundTriangleCount mismatch"
+    },
+    {
+      "case": "visibilityVertices",
+      "result": "REJECTED",
+      "reason": "visibility full-v3 geometry count mismatch"
+    },
+    {
+      "case": "visibilityTriangles",
+      "result": "REJECTED",
+      "reason": "visibility full-v3 geometry count mismatch"
+    },
+    {
+      "case": "visibilityGeneration",
+      "result": "REJECTED",
+      "reason": "visibilityGeneration runtime audit mismatch"
+    },
+    {
+      "case": "emissionGeneration",
+      "result": "REJECTED",
+      "reason": "actual emissionGeneration mismatch"
+    },
+    {
+      "case": "groundLe",
+      "result": "REJECTED",
+      "reason": "actual groundLe mismatch"
+    },
+    {
+      "case": "groundInputFingerprint",
+      "result": "REJECTED",
+      "reason": "actual groundInputFingerprint mismatch"
+    },
+    {
+      "case": "primary_ground_emission_hits",
+      "result": "REJECTED",
+      "reason": "ground emission hit accounting mismatch"
+    },
+    {
+      "case": "secondary_ground_hits",
+      "result": "REJECTED",
+      "reason": "ground secondary hits exceed world queries"
+    },
+    {
+      "case": "transportComplete",
+      "result": "REJECTED",
+      "reason": "transportComplete must be boolean true"
+    },
+    {
+      "case": "visibilityComplete",
+      "result": "REJECTED",
+      "reason": "frame actual visibilityComplete must be boolean true"
+    },
+    {
+      "case": "transportTriangleTests",
+      "result": "REJECTED",
+      "reason": "transportTriangleTests exceeds transport budget"
+    },
+    {
+      "case": "visibilityRays",
+      "result": "REJECTED",
+      "reason": "visibilityRays exceeds fixed budget"
+    },
+    {
+      "case": "transportSceneBytes",
+      "result": "REJECTED",
+      "reason": "transport fixed-fixture scene/temp/build audit mismatch"
+    },
+    {
+      "case": "transportContextBytes",
+      "result": "REJECTED",
+      "reason": "transport host64 context/budget size mismatch"
+    },
+    {
+      "case": "snapshotBytes",
+      "result": "REJECTED",
+      "reason": "ground snapshot/record invariant mismatch"
+    },
+    {
+      "case": "groundOFF_has_hit",
+      "result": "REJECTED",
+      "reason": "ground OFF counters must be zero"
+    },
+    {
+      "case": "opaque_has_emission",
+      "result": "REJECTED",
+      "reason": "ground emission hit accounting mismatch"
+    },
+    {
+      "case": "forgot_ground_hit_subtraction",
+      "result": "REJECTED",
+      "reason": "transport secondary_world_rays must equal reflectableHits * innerSamples"
+    },
+    {
+      "case": "ground_plus_discard_overlap",
+      "result": "REJECTED",
+      "reason": "ground secondary hits exceed world queries"
+    },
+    {
+      "case": "secondary_direct_over_reflectable",
+      "result": "REJECTED",
+      "reason": "transport secondary_direct_queries exceeds reflectableHits * 48"
+    },
+    {
+      "case": "source_coordinated_rehash",
+      "result": "REJECTED",
+      "reason": "fixed ground source hash mismatch"
+    },
+    {
+      "case": "extractor_coordinated_rehash",
+      "result": "REJECTED",
+      "reason": "fixed ground extractor hash mismatch"
+    },
+    {
+      "case": "input_coordinated_rehash_and_echo",
+      "result": "REJECTED",
+      "reason": "ground input bytes differ from pinned source"
+    },
+    {
+      "case": "config_actual_firstTriangle",
+      "result": "REJECTED",
+      "reason": "scenario ground firstTriangle mismatch"
+    },
+    {
+      "case": "config_actual_triangleCount",
+      "result": "REJECTED",
+      "reason": "scenario ground triangleCount mismatch"
+    },
+    {
+      "case": "config_actual_linearLe",
+      "result": "REJECTED",
+      "reason": "scenario ground linearLe mismatch"
+    },
+    {
+      "case": "config_actual_emissionGeneration",
+      "result": "REJECTED",
+      "reason": "scenario ground emissionGeneration mismatch"
+    },
+    {
+      "case": "missing_ground_source",
+      "result": "REJECTED",
+      "reason": "ground source pin/declaration missing"
+    },
+    {
+      "case": "partial_missing_frame",
+      "result": "REJECTED",
+      "reason": "candidate requires exactly ten frames"
+    },
+    {
+      "case": "partial_truncated_rehashed_RGB",
+      "result": "REJECTED",
+      "reason": "wrong file size: front-baseline.u16le"
+    }
+  ],
+  "scope": "Synthetic full-pack load through frozen scorer. Owner sources untouched. Complete/partial declarations rejected; actual execution and world-miss/secondary-Le exclusivity are separate parent/core audits.",
+  "temporaryWorkspace": "/tmp/ground-metadata-review-3q1ybhik"
+}

@@ -1,0 +1,321 @@
+{
+  "scope": "x86_64 host O2 relocatable objects; not linked target firmware or peak RAM",
+  "flags": "-std=c11 -O2 -Wall -Wextra -Werror -Wno-misleading-indentation -ffp-contract=off -fexcess-precision=standard",
+  "extra_measurement_flag": "-fstack-usage",
+  "abi_identical": true,
+  "source_freeze_sha256": "230140690027b5a775c328c9a50ef9d5c68b44c345539b740eb2d482697b5a4a",
+  "product_sources_unchanged": true,
+  "struct_declarations_identical": {
+    "product/main/ayatsuri/compact_opaque.h": true,
+    "product/main/ui/kasane/ksn_mesh_depth.h": true
+  },
+  "objects": {
+    "compact_opaque": {
+      "old": {
+        "text": 5314,
+        "rodata": 64,
+        "data": 0,
+        "bss": 0,
+        "eh_frame": 736,
+        "allocator_symbols": [],
+        "object_sha256": "266b548aa54313b00dd0f5f866b25491e95f95fbbe83845d9cc284dc73099537"
+      },
+      "new": {
+        "text": 6037,
+        "rodata": 68,
+        "data": 0,
+        "bss": 0,
+        "eh_frame": 720,
+        "allocator_symbols": [],
+        "object_sha256": "7cbd4650d2b658bffa93bc7df60f784e2cf2a13a52dc8a7d5c994c496629fbd8"
+      },
+      "delta": {
+        "text": 723,
+        "rodata": 4,
+        "data": 0,
+        "bss": 0,
+        "eh_frame": -16
+      }
+    },
+    "ksn_mesh_depth": {
+      "old": {
+        "text": 8880,
+        "rodata": 172,
+        "data": 0,
+        "bss": 0,
+        "eh_frame": 984,
+        "allocator_symbols": [],
+        "object_sha256": "63df63643859c22e347c8d4e9cf9be27ae1911d9fa76d65c4ffe8ec1c2352bab"
+      },
+      "new": {
+        "text": 9264,
+        "rodata": 172,
+        "data": 0,
+        "bss": 0,
+        "eh_frame": 984,
+        "allocator_symbols": [],
+        "object_sha256": "81b021af8b70289ba379c3cff114535996753b3d08a787bca6c6a444da9e3412"
+      },
+      "delta": {
+        "text": 384,
+        "rodata": 0,
+        "data": 0,
+        "bss": 0,
+        "eh_frame": 0
+      }
+    }
+  },
+  "stack_frames": {
+    "compact_opaque": {
+      "old": {
+        "vertex_valid": {
+          "own_frame_bytes": 8,
+          "classification": "static"
+        },
+        "pixel_valid": {
+          "own_frame_bytes": 8,
+          "classification": "static"
+        },
+        "co_append": {
+          "own_frame_bytes": 160,
+          "classification": "static"
+        },
+        "append_back_only": {
+          "own_frame_bytes": 688,
+          "classification": "static"
+        },
+        "co_append_sided": {
+          "own_frame_bytes": 176,
+          "classification": "static"
+        },
+        "co_append_pixel": {
+          "own_frame_bytes": 144,
+          "classification": "static"
+        },
+        "co_vertex_at": {
+          "own_frame_bytes": 8,
+          "classification": "static"
+        },
+        "co_pixel_vertex_at": {
+          "own_frame_bytes": 112,
+          "classification": "static"
+        },
+        "co_triangle_at": {
+          "own_frame_bytes": 8,
+          "classification": "static"
+        },
+        "co_vertex_at_side": {
+          "own_frame_bytes": 80,
+          "classification": "static"
+        },
+        "co_triangle_side": {
+          "own_frame_bytes": 16,
+          "classification": "static"
+        },
+        "co_read": {
+          "own_frame_bytes": 224,
+          "classification": "static"
+        }
+      },
+      "new": {
+        "vertex_valid": {
+          "own_frame_bytes": 8,
+          "classification": "static"
+        },
+        "pixel_valid": {
+          "own_frame_bytes": 8,
+          "classification": "static"
+        },
+        "append_pixel": {
+          "own_frame_bytes": 320,
+          "classification": "static"
+        },
+        "co_append": {
+          "own_frame_bytes": 160,
+          "classification": "static"
+        },
+        "append_back_only": {
+          "own_frame_bytes": 688,
+          "classification": "static"
+        },
+        "co_append_sided": {
+          "own_frame_bytes": 176,
+          "classification": "static"
+        },
+        "co_append_pixel": {
+          "own_frame_bytes": 8,
+          "classification": "static"
+        },
+        "co_append_pixel_normal_pair": {
+          "own_frame_bytes": 8,
+          "classification": "static"
+        },
+        "co_vertex_at": {
+          "own_frame_bytes": 8,
+          "classification": "static"
+        },
+        "co_pixel_vertex_at": {
+          "own_frame_bytes": 128,
+          "classification": "static"
+        },
+        "co_triangle_at": {
+          "own_frame_bytes": 8,
+          "classification": "static"
+        },
+        "co_vertex_at_side": {
+          "own_frame_bytes": 64,
+          "classification": "static"
+        },
+        "co_triangle_side": {
+          "own_frame_bytes": 8,
+          "classification": "static"
+        },
+        "co_read": {
+          "own_frame_bytes": 224,
+          "classification": "static"
+        }
+      }
+    },
+    "ksn_mesh_depth": {
+      "old": {
+        "gouraud_make_edge": {
+          "own_frame_bytes": 8,
+          "classification": "static"
+        },
+        "pixel_scene": {
+          "own_frame_bytes": 432,
+          "classification": "static"
+        },
+        "strip": {
+          "own_frame_bytes": 912,
+          "classification": "dynamic,bounded"
+        },
+        "pixel_render_extended": {
+          "own_frame_bytes": 592,
+          "classification": "dynamic,bounded"
+        },
+        "ksn_mesh_sided_run": {
+          "own_frame_bytes": 64,
+          "classification": "static"
+        },
+        "ksn_mesh_append": {
+          "own_frame_bytes": 752,
+          "classification": "static"
+        },
+        "ksn_mesh_append_sided": {
+          "own_frame_bytes": 784,
+          "classification": "static"
+        },
+        "ksn_mesh_pixel_begin": {
+          "own_frame_bytes": 896,
+          "classification": "static"
+        },
+        "ksn_mesh_pixel_append": {
+          "own_frame_bytes": 528,
+          "classification": "static"
+        },
+        "ksn_mesh_render": {
+          "own_frame_bytes": 128,
+          "classification": "dynamic,bounded"
+        },
+        "ksn_mesh_pixel_render": {
+          "own_frame_bytes": 64,
+          "classification": "dynamic,bounded"
+        },
+        "ksn_mesh_pixel_render_visible": {
+          "own_frame_bytes": 64,
+          "classification": "dynamic,bounded"
+        },
+        "ksn_mesh_pixel_render_shaded": {
+          "own_frame_bytes": 64,
+          "classification": "dynamic,bounded"
+        }
+      },
+      "new": {
+        "gouraud_make_edge": {
+          "own_frame_bytes": 8,
+          "classification": "static"
+        },
+        "pixel_scene": {
+          "own_frame_bytes": 432,
+          "classification": "static"
+        },
+        "pixel_append": {
+          "own_frame_bytes": 560,
+          "classification": "static"
+        },
+        "strip": {
+          "own_frame_bytes": 912,
+          "classification": "dynamic,bounded"
+        },
+        "pixel_render_extended": {
+          "own_frame_bytes": 592,
+          "classification": "dynamic,bounded"
+        },
+        "ksn_mesh_sided_run": {
+          "own_frame_bytes": 64,
+          "classification": "static"
+        },
+        "ksn_mesh_append": {
+          "own_frame_bytes": 752,
+          "classification": "static"
+        },
+        "ksn_mesh_append_sided": {
+          "own_frame_bytes": 784,
+          "classification": "static"
+        },
+        "ksn_mesh_pixel_begin": {
+          "own_frame_bytes": 896,
+          "classification": "static"
+        },
+        "ksn_mesh_pixel_append": {
+          "own_frame_bytes": 8,
+          "classification": "static"
+        },
+        "ksn_mesh_pixel_append_normal_pair": {
+          "own_frame_bytes": 8,
+          "classification": "static"
+        },
+        "ksn_mesh_render": {
+          "own_frame_bytes": 128,
+          "classification": "dynamic,bounded"
+        },
+        "ksn_mesh_pixel_render": {
+          "own_frame_bytes": 64,
+          "classification": "dynamic,bounded"
+        },
+        "ksn_mesh_pixel_render_visible": {
+          "own_frame_bytes": 64,
+          "classification": "dynamic,bounded"
+        },
+        "ksn_mesh_pixel_render_shaded": {
+          "own_frame_bytes": 64,
+          "classification": "dynamic,bounded"
+        }
+      }
+    }
+  },
+  "combined": {
+    "old": {
+      "text": 14194,
+      "rodata": 236,
+      "data": 0,
+      "bss": 0,
+      "eh_frame": 1720
+    },
+    "new": {
+      "text": 15301,
+      "rodata": 240,
+      "data": 0,
+      "bss": 0,
+      "eh_frame": 1704
+    },
+    "delta": {
+      "text": 1107,
+      "rodata": 4,
+      "data": 0,
+      "bss": 0,
+      "eh_frame": -16
+    }
+  }
+}

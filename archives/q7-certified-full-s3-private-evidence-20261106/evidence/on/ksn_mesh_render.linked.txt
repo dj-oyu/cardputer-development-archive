@@ -1,0 +1,716 @@
+
+/workspace/private-q7-certified-full-s3-20261106/build-on/cardputer_pocketjs.elf:     file format elf32-xtensa-le
+
+
+Disassembly of section .iram0.vectors:
+
+Disassembly of section .iram0.text:
+
+Disassembly of section .flash.text:
+
+4208db94 <ksn_mesh_render>:
+4208db94:	030136        	entry	a1, 0x180
+4208db97:	078d      	mov.n	a8, a7
+4208db99:	03fd      	mov.n	a15, a3
+4208db9b:	06ed      	mov.n	a14, a6
+4208db9d:	32bc      	beqz.n	a2, 4208dbd4 <ksn_mesh_render+0x40>
+4208db9f:	180272        	l8ui	a7, a2, 24
+4208dba2:	e7ac      	beqz.n	a7, 4208dbd4 <ksn_mesh_render+0x40>
+4208dba4:	40f390        	nsau	a9, a3
+4208dba7:	1a0c      	movi.n	a10, 1
+4208dba9:	419590        	srli	a9, a9, 5
+4208dbac:	43ac      	beqz.n	a3, 4208dbd4 <ksn_mesh_render+0x40>
+4208dbae:	839a60        	moveqz	a9, a10, a6
+4208dbb1:	f9dc      	bnez.n	a9, 4208dbd4 <ksn_mesh_render+0x40>
+4208dbb3:	f8c8d2        	addi	a13, a8, -8
+4208dbb6:	09bd      	mov.n	a11, a9
+4208dbb8:	680b      	addi.n	a6, a8, -1
+4208dbba:	93ba60        	movnez	a11, a10, a6
+4208dbbd:	83a9d0        	moveqz	a10, a9, a13
+4208dbc0:	87a0d2        	movi	a13, 135
+4208dbc3:	10aba0        	and	a10, a11, a10
+4208dbc6:	629d40        	saltu	a9, a13, a4
+4208dbc9:	2099a0        	or	a9, a9, a10
+4208dbcc:	749090        	extui	a9, a9, 0, 8
+4208dbcf:	426192        	s32i	a9, a1, 0x108
+4208dbd2:	498c      	beqz.n	a9, 4208dbda <ksn_mesh_render+0x46>
+4208dbd4:	070c      	movi.n	a7, 0
+4208dbd6:	072d      	mov.n	a2, a7
+4208dbd8:	f01d      	retw.n
+4208dbda:	c0dd40        	sub	a13, a13, a4
+4208dbdd:	f33d57        	bltu	a13, a5, 4208dbd4 <ksn_mesh_render+0x40>
+4208dbe0:	ff2516        	beqz	a5, 4208dbd6 <ksn_mesh_render+0x42>
+4208dbe3:	22b8      	l32i.n	a11, a2, 8
+4208dbe5:	4b6142        	s32i	a4, a1, 0x12c
+4208dbe8:	056d      	mov.n	a6, a5
+4208dbea:	09dd      	mov.n	a13, a9
+4208dbec:	073d      	mov.n	a3, a7
+4208dbee:	5761f2        	s32i	a15, a1, 0x15c
+4208dbf1:	0ecd      	mov.n	a12, a14
+4208dbf3:	084d      	mov.n	a4, a8
+4208dbf5:	025d      	mov.n	a5, a2
+4208dbf7:	c086d0        	sub	a8, a6, a13
+4208dbfa:	638840        	minu	a8, a8, a4
+4208dbfd:	f49080        	extui	a9, a8, 0, 16
+4208dc00:	4f6182        	s32i	a8, a1, 0x13c
+4208dc03:	1189c0        	slli	a8, a9, 4
+4208dc06:	c08890        	sub	a8, a8, a9
+4208dc09:	1188c0        	slli	a8, a8, 4
+4208dc0c:	01a0a2        	movi	a10, 1
+4208dc0f:	209cc0        	or	a9, a12, a12
+4208dc12:	838a80        	moveqz	a8, a10, a8
+4208dc15:	068876        	loop	a8, 4208dc1f <ksn_mesh_render+0x8b>
+4208dc18:	d444a1        	l32r	a10, 42082d28 <float_rows_valid+0x11c> (ff800000 <_rtc_reserved_end+0x9f700000>)
+4208dc1b:	09a9      	s32i.n	a10, a9, 0
+4208dc1d:	994b      	addi.n	a9, a9, 4
+4208dc1f:	466b16        	beqz	a11, 4208e089 <ksn_mesh_render+0x4f5>
+4208dc22:	60c122        	addi	a2, a1, 96
+4208dc25:	3cc282        	addi	a8, a2, 60
+4208dc28:	070c      	movi.n	a7, 0
+4208dc2a:	4e6182        	s32i	a8, a1, 0x138
+4208dc2d:	5061d2        	s32i	a13, a1, 0x140
+4208dc30:	526132        	s32i	a3, a1, 0x148
+4208dc33:	536162        	s32i	a6, a1, 0x14c
+4208dc36:	5161c2        	s32i	a12, a1, 0x144
+4208dc39:	0025a2        	l32i	a10, a5, 0
+4208dc3c:	b8a0c2        	movi	a12, 184
+4208dc3f:	80cc10        	add	a12, a12, a1
+4208dc42:	c0bb70        	sub	a11, a11, a7
+4208dc45:	80aa70        	add	a10, a10, a7
+4208dc48:	ff89a5        	call8	4208d4e4 <co_read>
+4208dc4b:	f85a16        	beqz	a10, 4208dbd4 <ksn_mesh_render+0x40>
+4208dc4e:	090c      	movi.n	a9, 0
+4208dc50:	c50182        	l8ui	a8, a1, 197
+4208dc53:	4d6192        	s32i	a9, a1, 0x134
+4208dc56:	416816        	beqz	a8, 4208e070 <ksn_mesh_render+0x4dc>
+4208dc59:	546172        	s32i	a7, a1, 0x150
+4208dc5c:	556152        	s32i	a5, a1, 0x154
+4208dc5f:	566142        	s32i	a4, a1, 0x158
+4208dc62:	4d2172        	l32i	a7, a1, 0x134
+4208dc65:	c8a0c2        	movi	a12, 200
+4208dc68:	b8a0a2        	movi	a10, 184
+4208dc6b:	cc1a      	add.n	a12, a12, a1
+4208dc6d:	07bd      	mov.n	a11, a7
+4208dc6f:	aa1a      	add.n	a10, a10, a1
+4208dc71:	d42a81        	l32r	a8, 42082d1c <float_rows_valid+0x110> (4213a764 <co_triangle_at>)
+4208dc74:	0008e0        	callx8	a8
+4208dc77:	f59a16        	beqz	a10, 4208dbd4 <ksn_mesh_render+0x40>
+4208dc7a:	cba0c2        	movi	a12, 203
+4208dc7d:	b8a0a2        	movi	a10, 184
+4208dc80:	cc1a      	add.n	a12, a12, a1
+4208dc82:	07bd      	mov.n	a11, a7
+4208dc84:	aa1a      	add.n	a10, a10, a1
+4208dc86:	d42981        	l32r	a8, 42082d2c <float_rows_valid+0x120> (4213a7d4 <co_triangle_side>)
+4208dc89:	0008e0        	callx8	a8
+4208dc8c:	f44a16        	beqz	a10, 4208dbd4 <ksn_mesh_render+0x40>
+4208dc8f:	c8a062        	movi	a6, 200
+4208dc92:	4e2152        	l32i	a5, a1, 0x138
+4208dc95:	661a      	add.n	a6, a6, a1
+4208dc97:	027d      	mov.n	a7, a2
+4208dc99:	cb01c2        	l8ui	a12, a1, 203
+4208dc9c:	0006b2        	l8ui	a11, a6, 0
+4208dc9f:	b8a0a2        	movi	a10, 184
+4208dca2:	07dd      	mov.n	a13, a7
+4208dca4:	aa1a      	add.n	a10, a10, a1
+4208dca6:	ff7c25        	call8	4208d468 <co_vertex_at_side>
+4208dca9:	14c772        	addi	a7, a7, 20
+4208dcac:	f24a16        	beqz	a10, 4208dbd4 <ksn_mesh_render+0x40>
+4208dcaf:	661b      	addi.n	a6, a6, 1
+4208dcb1:	e49577        	bne	a5, a7, 4208dc99 <ksn_mesh_render+0x105>
+4208dcb4:	4461a2        	s32i	a10, a1, 0x110
+4208dcb7:	1d21a2        	l32i	a10, a1, 116
+4208dcba:	d40681        	l32r	a8, 42082cd4 <float_rows_valid+0xc8> (400022a4 <__extendsfdf2>)
+4208dcbd:	0008e0        	callx8	a8
+4208dcc0:	0a8d      	mov.n	a8, a10
+4208dcc2:	1821a2        	l32i	a10, a1, 96
+4208dcc5:	3a6182        	s32i	a8, a1, 232
+4208dcc8:	3b61b2        	s32i	a11, a1, 236
+4208dccb:	d40281        	l32r	a8, 42082cd4 <float_rows_valid+0xc8> (400022a4 <__extendsfdf2>)
+4208dcce:	0008e0        	callx8	a8
+4208dcd1:	0a6d      	mov.n	a6, a10
+4208dcd3:	2321a2        	l32i	a10, a1, 140
+4208dcd6:	0b7d      	mov.n	a7, a11
+4208dcd8:	d3ff81        	l32r	a8, 42082cd4 <float_rows_valid+0xc8> (400022a4 <__extendsfdf2>)
+4208dcdb:	0008e0        	callx8	a8
+4208dcde:	0a4d      	mov.n	a4, a10
+4208dce0:	1921a2        	l32i	a10, a1, 100
+4208dce3:	0b5d      	mov.n	a5, a11
+4208dce5:	d3fb81        	l32r	a8, 42082cd4 <float_rows_valid+0xc8> (400022a4 <__extendsfdf2>)
+4208dce8:	0008e0        	callx8	a8
+4208dceb:	0a8d      	mov.n	a8, a10
+4208dced:	1e21a2        	l32i	a10, a1, 120
+4208dcf0:	346182        	s32i	a8, a1, 208
+4208dcf3:	3561b2        	s32i	a11, a1, 212
+4208dcf6:	d3f781        	l32r	a8, 42082cd4 <float_rows_valid+0xc8> (400022a4 <__extendsfdf2>)
+4208dcf9:	0008e0        	callx8	a8
+4208dcfc:	0a8d      	mov.n	a8, a10
+4208dcfe:	2221a2        	l32i	a10, a1, 136
+4208dd01:	366182        	s32i	a8, a1, 216
+4208dd04:	3761b2        	s32i	a11, a1, 220
+4208dd07:	d3f381        	l32r	a8, 42082cd4 <float_rows_valid+0xc8> (400022a4 <__extendsfdf2>)
+4208dd0a:	0008e0        	callx8	a8
+4208dd0d:	0a8d      	mov.n	a8, a10
+4208dd0f:	0b9d      	mov.n	a9, a11
+4208dd11:	3a21a2        	l32i	a10, a1, 232
+4208dd14:	3b21b2        	l32i	a11, a1, 236
+4208dd17:	3c6182        	s32i	a8, a1, 240
+4208dd1a:	3d6192        	s32i	a9, a1, 244
+4208dd1d:	06cd      	mov.n	a12, a6
+4208dd1f:	07dd      	mov.n	a13, a7
+4208dd21:	386162        	s32i	a6, a1, 224
+4208dd24:	396172        	s32i	a7, a1, 228
+4208dd27:	d3e981        	l32r	a8, 42082ccc <float_rows_valid+0xc0> (400024fc <__subdf3>)
+4208dd2a:	0008e0        	callx8	a8
+4208dd2d:	3421c2        	l32i	a12, a1, 208
+4208dd30:	3521d2        	l32i	a13, a1, 212
+4208dd33:	0a6d      	mov.n	a6, a10
+4208dd35:	0b7d      	mov.n	a7, a11
+4208dd37:	04ad      	mov.n	a10, a4
+4208dd39:	05bd      	mov.n	a11, a5
+4208dd3b:	d3e481        	l32r	a8, 42082ccc <float_rows_valid+0xc0> (400024fc <__subdf3>)
+4208dd3e:	0008e0        	callx8	a8
+4208dd41:	0acd      	mov.n	a12, a10
+4208dd43:	0bdd      	mov.n	a13, a11
+4208dd45:	06ad      	mov.n	a10, a6
+4208dd47:	07bd      	mov.n	a11, a7
+4208dd49:	d3e381        	l32r	a8, 42082cd8 <float_rows_valid+0xcc> (40002418 <__muldf3>)
+4208dd4c:	0008e0        	callx8	a8
+4208dd4f:	0a8d      	mov.n	a8, a10
+4208dd51:	0b9d      	mov.n	a9, a11
+4208dd53:	3421c2        	l32i	a12, a1, 208
+4208dd56:	3521d2        	l32i	a13, a1, 212
+4208dd59:	3621a2        	l32i	a10, a1, 216
+4208dd5c:	3721b2        	l32i	a11, a1, 220
+4208dd5f:	3e6182        	s32i	a8, a1, 248
+4208dd62:	3f6192        	s32i	a9, a1, 252
+4208dd65:	d3d981        	l32r	a8, 42082ccc <float_rows_valid+0xc0> (400024fc <__subdf3>)
+4208dd68:	0008e0        	callx8	a8
+4208dd6b:	3821c2        	l32i	a12, a1, 224
+4208dd6e:	3921d2        	l32i	a13, a1, 228
+4208dd71:	0a6d      	mov.n	a6, a10
+4208dd73:	0b7d      	mov.n	a7, a11
+4208dd75:	3c21a2        	l32i	a10, a1, 240
+4208dd78:	3d21b2        	l32i	a11, a1, 244
+4208dd7b:	d3d481        	l32r	a8, 42082ccc <float_rows_valid+0xc0> (400024fc <__subdf3>)
+4208dd7e:	0008e0        	callx8	a8
+4208dd81:	0acd      	mov.n	a12, a10
+4208dd83:	0bdd      	mov.n	a13, a11
+4208dd85:	06ad      	mov.n	a10, a6
+4208dd87:	07bd      	mov.n	a11, a7
+4208dd89:	d3d381        	l32r	a8, 42082cd8 <float_rows_valid+0xcc> (40002418 <__muldf3>)
+4208dd8c:	0008e0        	callx8	a8
+4208dd8f:	0acd      	mov.n	a12, a10
+4208dd91:	0bdd      	mov.n	a13, a11
+4208dd93:	3e21a2        	l32i	a10, a1, 248
+4208dd96:	3f21b2        	l32i	a11, a1, 252
+4208dd99:	d3cc81        	l32r	a8, 42082ccc <float_rows_valid+0xc0> (400024fc <__subdf3>)
+4208dd9c:	0008e0        	callx8	a8
+4208dd9f:	d3dbc1        	l32r	a12, 42082d0c <float_rows_valid+0x100> (88e368f1 <_rtc_reserved_end+0x28d368f1>)
+4208dda2:	d3dcd1        	l32r	a13, 42082d14 <float_rows_valid+0x108> (3ee4f8b5 <_picolibc_reent_stub_end+0x2bd83b1>)
+4208dda5:	0a6d      	mov.n	a6, a10
+4208dda7:	0b7d      	mov.n	a7, a11
+4208dda9:	d3c981        	l32r	a8, 42082cd0 <float_rows_valid+0xc4> (400023a0 <__gtdf2>)
+4208ddac:	0008e0        	callx8	a8
+4208ddaf:	021ae6        	bgei	a10, 1, 4208ddb5 <ksn_mesh_render+0x221>
+4208ddb2:	ff8786        	j	4208dbd4 <ksn_mesh_render+0x40>
+4208ddb5:	3621c2        	l32i	a12, a1, 216
+4208ddb8:	3721d2        	l32i	a13, a1, 220
+4208ddbb:	04ad      	mov.n	a10, a4
+4208ddbd:	05bd      	mov.n	a11, a5
+4208ddbf:	d3dc81        	l32r	a8, 42082d30 <float_rows_valid+0x124> (4212afac <fmin>)
+4208ddc2:	0008e0        	callx8	a8
+4208ddc5:	0acd      	mov.n	a12, a10
+4208ddc7:	0bdd      	mov.n	a13, a11
+4208ddc9:	3421a2        	l32i	a10, a1, 208
+4208ddcc:	3521b2        	l32i	a11, a1, 212
+4208ddcf:	d3d881        	l32r	a8, 42082d30 <float_rows_valid+0x124> (4212afac <fmin>)
+4208ddd2:	0008e0        	callx8	a8
+4208ddd5:	d3d781        	l32r	a8, 42082d34 <float_rows_valid+0x128> (42126ed4 <ceil>)
+4208ddd8:	0008e0        	callx8	a8
+4208dddb:	3621c2        	l32i	a12, a1, 216
+4208ddde:	3721d2        	l32i	a13, a1, 220
+4208dde1:	0b9d      	mov.n	a9, a11
+4208dde3:	0a8d      	mov.n	a8, a10
+4208dde5:	05bd      	mov.n	a11, a5
+4208dde7:	04ad      	mov.n	a10, a4
+4208dde9:	095d      	mov.n	a5, a9
+4208ddeb:	084d      	mov.n	a4, a8
+4208dded:	d3d281        	l32r	a8, 42082d38 <float_rows_valid+0x12c> (4212af48 <fmax>)
+4208ddf0:	0008e0        	callx8	a8
+4208ddf3:	0acd      	mov.n	a12, a10
+4208ddf5:	0bdd      	mov.n	a13, a11
+4208ddf7:	3421a2        	l32i	a10, a1, 208
+4208ddfa:	3521b2        	l32i	a11, a1, 212
+4208ddfd:	d3ce81        	l32r	a8, 42082d38 <float_rows_valid+0x12c> (4212af48 <fmax>)
+4208de00:	0008e0        	callx8	a8
+4208de03:	d3ce81        	l32r	a8, 42082d3c <float_rows_valid+0x130> (42127408 <floor>)
+4208de06:	0008e0        	callx8	a8
+4208de09:	d3cd81        	l32r	a8, 42082d40 <float_rows_valid+0x134> (400022d4 <__fixdfsi>)
+4208de0c:	0008e0        	callx8	a8
+4208de0f:	0a8d      	mov.n	a8, a10
+4208de11:	05bd      	mov.n	a11, a5
+4208de13:	4a6182        	s32i	a8, a1, 0x128
+4208de16:	04ad      	mov.n	a10, a4
+4208de18:	085d      	mov.n	a5, a8
+4208de1a:	d3c981        	l32r	a8, 42082d40 <float_rows_valid+0x134> (400022d4 <__fixdfsi>)
+4208de1d:	0008e0        	callx8	a8
+4208de20:	4b2192        	l32i	a9, a1, 0x12c
+4208de23:	4f2182        	l32i	a8, a1, 0x13c
+4208de26:	533a90        	max	a3, a10, a9
+4208de29:	889a      	add.n	a8, a8, a9
+4208de2b:	042587        	blt	a5, a8, 4208de33 <ksn_mesh_render+0x29f>
+4208de2e:	880b      	addi.n	a8, a8, -1
+4208de30:	4a6182        	s32i	a8, a1, 0x128
+4208de33:	28c252        	addi	a5, a2, 40
+4208de36:	05cd      	mov.n	a12, a5
+4208de38:	74c1b2        	addi	a11, a1, 116
+4208de3b:	01ad      	mov.n	a10, a1
+4208de3d:	ff8625        	call8	4208d6a0 <gouraud_make_edge>
+4208de40:	02cd      	mov.n	a12, a2
+4208de42:	05bd      	mov.n	a11, a5
+4208de44:	20c1a2        	addi	a10, a1, 32
+4208de47:	ff85a5        	call8	4208d6a0 <gouraud_make_edge>
+4208de4a:	74c1c2        	addi	a12, a1, 116
+4208de4d:	02bd      	mov.n	a11, a2
+4208de4f:	40c1a2        	addi	a10, a1, 64
+4208de52:	ff84e5        	call8	4208d6a0 <gouraud_make_edge>
+4208de55:	4a2182        	l32i	a8, a1, 0x128
+4208de58:	02a837        	bge	a8, a3, 4208de5e <ksn_mesh_render+0x2ca>
+4208de5b:	007dc6        	j	4208e056 <ksn_mesh_render+0x4c2>
+4208de5e:	d392b1        	l32r	a11, 42082ca8 <float_rows_valid+0x9c> (3ff00000 <ets_ops_table_ptr+0x210004>)
+4208de61:	06cd      	mov.n	a12, a6
+4208de63:	07dd      	mov.n	a13, a7
+4208de65:	0a0c      	movi.n	a10, 0
+4208de67:	d3b781        	l32r	a8, 42082d44 <float_rows_valid+0x138> (40002250 <__divdf3>)
+4208de6a:	0008e0        	callx8	a8
+4208de6d:	0a8d      	mov.n	a8, a10
+4208de6f:	0b9d      	mov.n	a9, a11
+4208de71:	3c21c2        	l32i	a12, a1, 240
+4208de74:	3d21d2        	l32i	a13, a1, 244
+4208de77:	3a21a2        	l32i	a10, a1, 232
+4208de7a:	3b21b2        	l32i	a11, a1, 236
+4208de7d:	406182        	s32i	a8, a1, 0x100
+4208de80:	416192        	s32i	a9, a1, 0x104
+4208de83:	d3ab81        	l32r	a8, 42082d30 <float_rows_valid+0x124> (4212afac <fmin>)
+4208de86:	0008e0        	callx8	a8
+4208de89:	382162        	l32i	a6, a1, 224
+4208de8c:	392172        	l32i	a7, a1, 228
+4208de8f:	0acd      	mov.n	a12, a10
+4208de91:	0bdd      	mov.n	a13, a11
+4208de93:	06ad      	mov.n	a10, a6
+4208de95:	07bd      	mov.n	a11, a7
+4208de97:	d3a681        	l32r	a8, 42082d30 <float_rows_valid+0x124> (4212afac <fmin>)
+4208de9a:	0008e0        	callx8	a8
+4208de9d:	d3a581        	l32r	a8, 42082d34 <float_rows_valid+0x128> (42126ed4 <ceil>)
+4208dea0:	0008e0        	callx8	a8
+4208dea3:	0a4d      	mov.n	a4, a10
+4208dea5:	0b5d      	mov.n	a5, a11
+4208dea7:	3c21c2        	l32i	a12, a1, 240
+4208deaa:	3d21d2        	l32i	a13, a1, 244
+4208dead:	3a21a2        	l32i	a10, a1, 232
+4208deb0:	3b21b2        	l32i	a11, a1, 236
+4208deb3:	d3a181        	l32r	a8, 42082d38 <float_rows_valid+0x12c> (4212af48 <fmax>)
+4208deb6:	0008e0        	callx8	a8
+4208deb9:	0acd      	mov.n	a12, a10
+4208debb:	0bdd      	mov.n	a13, a11
+4208debd:	06ad      	mov.n	a10, a6
+4208debf:	07bd      	mov.n	a11, a7
+4208dec1:	d39d81        	l32r	a8, 42082d38 <float_rows_valid+0x12c> (4212af48 <fmax>)
+4208dec4:	0008e0        	callx8	a8
+4208dec7:	d39d81        	l32r	a8, 42082d3c <float_rows_valid+0x130> (42127408 <floor>)
+4208deca:	0008e0        	callx8	a8
+4208decd:	0a6d      	mov.n	a6, a10
+4208decf:	0b7d      	mov.n	a7, a11
+4208ded1:	04ad      	mov.n	a10, a4
+4208ded3:	05bd      	mov.n	a11, a5
+4208ded5:	d39a81        	l32r	a8, 42082d40 <float_rows_valid+0x134> (400022d4 <__fixdfsi>)
+4208ded8:	0008e0        	callx8	a8
+4208dedb:	0a9d      	mov.n	a9, a10
+4208dedd:	07bd      	mov.n	a11, a7
+4208dedf:	080c      	movi.n	a8, 0
+4208dee1:	06ad      	mov.n	a10, a6
+4208dee3:	537980        	max	a7, a9, a8
+4208dee6:	d39681        	l32r	a8, 42082d40 <float_rows_valid+0x134> (400022d4 <__fixdfsi>)
+4208dee9:	0008e0        	callx8	a8
+4208deec:	502182        	l32i	a8, a1, 0x140
+4208deef:	4b21b2        	l32i	a11, a1, 0x12c
+4208def2:	034d      	mov.n	a4, a3
+4208def4:	c098b0        	sub	a9, a8, a11
+4208def7:	993a      	add.n	a9, a9, a3
+4208def9:	c0b3b0        	sub	a11, a3, a11
+4208defc:	1189c0        	slli	a8, a9, 4
+4208deff:	c08890        	sub	a8, a8, a9
+4208df02:	119bc0        	slli	a9, a11, 4
+4208df05:	c099b0        	sub	a9, a9, a11
+4208df08:	1188c0        	slli	a8, a8, 4
+4208df0b:	1159c0        	slli	a5, a9, 4
+4208df0e:	572192        	l32i	a9, a1, 0x15c
+4208df11:	887a      	add.n	a8, a8, a7
+4208df13:	908890        	addx2	a8, a8, a9
+4208df16:	512192        	l32i	a9, a1, 0x144
+4208df19:	efa0b2        	movi	a11, 239
+4208df1c:	43aab0        	min	a10, a10, a11
+4208df1f:	a09790        	addx4	a9, a7, a9
+4208df22:	4361a2        	s32i	a10, a1, 0x10c
+4208df25:	4c6192        	s32i	a9, a1, 0x130
+4208df28:	083d      	mov.n	a3, a8
+4208df2a:	076d      	mov.n	a6, a7
+4208df2c:	432182        	l32i	a8, a1, 0x10c
+4208df2f:	02a867        	bge	a8, a6, 4208df35 <ksn_mesh_render+0x3a1>
+4208df32:	0042c6        	j	4208e041 <ksn_mesh_render+0x4ad>
+4208df35:	04ad      	mov.n	a10, a4
+4208df37:	d38481        	l32r	a8, 42082d48 <float_rows_valid+0x13c> (40002334 <__floatsidf>)
+4208df3a:	0008e0        	callx8	a8
+4208df3d:	4c2182        	l32i	a8, a1, 0x130
+4208df40:	496152        	s32i	a5, a1, 0x124
+4208df43:	a08580        	addx4	a8, a5, a8
+4208df46:	3861a2        	s32i	a10, a1, 224
+4208df49:	3961b2        	s32i	a11, a1, 228
+4208df4c:	3a6182        	s32i	a8, a1, 232
+4208df4f:	3c6132        	s32i	a3, a1, 240
+4208df52:	466162        	s32i	a6, a1, 0x118
+4208df55:	476142        	s32i	a4, a1, 0x11c
+4208df58:	486132        	s32i	a3, a1, 0x120
+4208df5b:	065d      	mov.n	a5, a6
+4208df5d:	05ad      	mov.n	a10, a5
+4208df5f:	d37a81        	l32r	a8, 42082d48 <float_rows_valid+0x13c> (40002334 <__floatsidf>)
+4208df62:	0008e0        	callx8	a8
+4208df65:	a0a082        	movi	a8, 160
+4208df68:	318a      	add.n	a3, a1, a8
+4208df6a:	442142        	l32i	a4, a1, 0x110
+4208df6d:	3661a2        	s32i	a10, a1, 216
+4208df70:	3761b2        	s32i	a11, a1, 220
+4208df73:	017d      	mov.n	a7, a1
+4208df75:	036d      	mov.n	a6, a3
+4208df77:	27c8      	l32i.n	a12, a7, 8
+4208df79:	37d8      	l32i.n	a13, a7, 12
+4208df7b:	3821a2        	l32i	a10, a1, 224
+4208df7e:	3921b2        	l32i	a11, a1, 228
+4208df81:	d35581        	l32r	a8, 42082cd8 <float_rows_valid+0xcc> (40002418 <__muldf3>)
+4208df84:	0008e0        	callx8	a8
+4208df87:	0b9d      	mov.n	a9, a11
+4208df89:	07c8      	l32i.n	a12, a7, 0
+4208df8b:	17d8      	l32i.n	a13, a7, 4
+4208df8d:	0a8d      	mov.n	a8, a10
+4208df8f:	3721b2        	l32i	a11, a1, 220
+4208df92:	3621a2        	l32i	a10, a1, 216
+4208df95:	356192        	s32i	a9, a1, 212
+4208df98:	346182        	s32i	a8, a1, 208
+4208df9b:	d34f81        	l32r	a8, 42082cd8 <float_rows_valid+0xcc> (40002418 <__muldf3>)
+4208df9e:	0008e0        	callx8	a8
+4208dfa1:	0acd      	mov.n	a12, a10
+4208dfa3:	0bdd      	mov.n	a13, a11
+4208dfa5:	3421a2        	l32i	a10, a1, 208
+4208dfa8:	3521b2        	l32i	a11, a1, 212
+4208dfab:	d34c81        	l32r	a8, 42082cdc <float_rows_valid+0xd0> (40002184 <__adddf3>)
+4208dfae:	0008e0        	callx8	a8
+4208dfb1:	47c8      	l32i.n	a12, a7, 16
+4208dfb3:	57d8      	l32i.n	a13, a7, 20
+4208dfb5:	d34981        	l32r	a8, 42082cdc <float_rows_valid+0xd0> (40002184 <__adddf3>)
+4208dfb8:	0008e0        	callx8	a8
+4208dfbb:	0a8d      	mov.n	a8, a10
+4208dfbd:	67a8      	l32i.n	a10, a7, 24
+4208dfbf:	346182        	s32i	a8, a1, 208
+4208dfc2:	3561b2        	s32i	a11, a1, 212
+4208dfc5:	d36081        	l32r	a8, 42082d48 <float_rows_valid+0x13c> (40002334 <__floatsidf>)
+4208dfc8:	0008e0        	callx8	a8
+4208dfcb:	0acd      	mov.n	a12, a10
+4208dfcd:	0bdd      	mov.n	a13, a11
+4208dfcf:	3421a2        	l32i	a10, a1, 208
+4208dfd2:	3521b2        	l32i	a11, a1, 212
+4208dfd5:	d34081        	l32r	a8, 42082cd8 <float_rows_valid+0xcc> (40002418 <__muldf3>)
+4208dfd8:	0008e0        	callx8	a8
+4208dfdb:	16b9      	s32i.n	a11, a6, 4
+4208dfdd:	0c0c      	movi.n	a12, 0
+4208dfdf:	0d0c      	movi.n	a13, 0
+4208dfe1:	3561b2        	s32i	a11, a1, 212
+4208dfe4:	06a9      	s32i.n	a10, a6, 0
+4208dfe6:	3461a2        	s32i	a10, a1, 208
+4208dfe9:	d34b81        	l32r	a8, 42082d18 <float_rows_valid+0x10c> (400023dc <__ltdf2>)
+4208dfec:	0008e0        	callx8	a8
+4208dfef:	0aed      	mov.n	a14, a10
+4208dff1:	3521b2        	l32i	a11, a1, 212
+4208dff4:	3421a2        	l32i	a10, a1, 208
+4208dff7:	0c0c      	movi.n	a12, 0
+4208dff9:	0d0c      	movi.n	a13, 0
+4208dffb:	09fe96        	bltz	a14, 4208e09e <ksn_mesh_render+0x50a>
+4208dffe:	d33881        	l32r	a8, 42082ce0 <float_rows_valid+0xd4> (4000228c <__eqdf2>)
+4208e001:	0008e0        	callx8	a8
+4208e004:	4acc      	bnez.n	a10, 4208e00c <ksn_mesh_render+0x478>
+4208e006:	1c0782        	l8ui	a8, a7, 28
+4208e009:	104480        	and	a4, a4, a8
+4208e00c:	20c772        	addi	a7, a7, 32
+4208e00f:	668b      	addi.n	a6, a6, 8
+4208e011:	021727        	beq	a7, a2, 4208e017 <ksn_mesh_render+0x483>
+4208e014:	ffd7c6        	j	4208df77 <ksn_mesh_render+0x3e3>
+4208e017:	089456        	bnez	a4, 4208e0a4 <ksn_mesh_render+0x510>
+4208e01a:	3c2182        	l32i	a8, a1, 240
+4208e01d:	551b      	addi.n	a5, a5, 1
+4208e01f:	882b      	addi.n	a8, a8, 2
+4208e021:	3c6182        	s32i	a8, a1, 240
+4208e024:	3a2182        	l32i	a8, a1, 232
+4208e027:	884b      	addi.n	a8, a8, 4
+4208e029:	3a6182        	s32i	a8, a1, 232
+4208e02c:	432182        	l32i	a8, a1, 0x10c
+4208e02f:	022857        	blt	a8, a5, 4208e035 <ksn_mesh_render+0x4a1>
+4208e032:	ffc9c6        	j	4208df5d <ksn_mesh_render+0x3c9>
+4208e035:	462162        	l32i	a6, a1, 0x118
+4208e038:	472142        	l32i	a4, a1, 0x11c
+4208e03b:	482132        	l32i	a3, a1, 0x120
+4208e03e:	492152        	l32i	a5, a1, 0x124
+4208e041:	f0a082        	movi	a8, 240
+4208e044:	558a      	add.n	a5, a5, a8
+4208e046:	e0a182        	movi	a8, 0x1e0
+4208e049:	338a      	add.n	a3, a3, a8
+4208e04b:	4a2182        	l32i	a8, a1, 0x128
+4208e04e:	441b      	addi.n	a4, a4, 1
+4208e050:	022847        	blt	a8, a4, 4208e056 <ksn_mesh_render+0x4c2>
+4208e053:	ffb546        	j	4208df2c <ksn_mesh_render+0x398>
+4208e056:	4d2192        	l32i	a9, a1, 0x134
+4208e059:	c50182        	l8ui	a8, a1, 197
+4208e05c:	991b      	addi.n	a9, a9, 1
+4208e05e:	4d6192        	s32i	a9, a1, 0x134
+4208e061:	02b987        	bgeu	a9, a8, 4208e067 <ksn_mesh_render+0x4d3>
+4208e064:	fefe86        	j	4208dc62 <ksn_mesh_render+0xce>
+4208e067:	542172        	l32i	a7, a1, 0x150
+4208e06a:	552152        	l32i	a5, a1, 0x154
+4208e06d:	562142        	l32i	a4, a1, 0x158
+4208e070:	2f2182        	l32i	a8, a1, 188
+4208e073:	25b8      	l32i.n	a11, a5, 8
+4208e075:	778a      	add.n	a7, a7, a8
+4208e077:	02b7b7        	bgeu	a7, a11, 4208e07d <ksn_mesh_render+0x4e9>
+4208e07a:	feeec6        	j	4208dc39 <ksn_mesh_render+0xa5>
+4208e07d:	5021d2        	l32i	a13, a1, 0x140
+4208e080:	522132        	l32i	a3, a1, 0x148
+4208e083:	532162        	l32i	a6, a1, 0x14c
+4208e086:	5121c2        	l32i	a12, a1, 0x144
+4208e089:	4b2182        	l32i	a8, a1, 0x12c
+4208e08c:	dd4a      	add.n	a13, a13, a4
+4208e08e:	884a      	add.n	a8, a8, a4
+4208e090:	4b6182        	s32i	a8, a1, 0x12c
+4208e093:	02bd67        	bgeu	a13, a6, 4208e099 <ksn_mesh_render+0x505>
+4208e096:	fed746        	j	4208dbf7 <ksn_mesh_render+0x63>
+4208e099:	037d      	mov.n	a7, a3
+4208e09b:	fecdc6        	j	4208dbd6 <ksn_mesh_render+0x42>
+4208e09e:	422142        	l32i	a4, a1, 0x108
+4208e0a1:	ffd9c6        	j	4208e00c <ksn_mesh_render+0x478>
+4208e0a4:	18c372        	addi	a7, a3, 24
+4208e0a7:	03a8      	l32i.n	a10, a3, 0
+4208e0a9:	13b8      	l32i.n	a11, a3, 4
+4208e0ab:	4021c2        	l32i	a12, a1, 0x100
+4208e0ae:	4121d2        	l32i	a13, a1, 0x104
+4208e0b1:	d30981        	l32r	a8, 42082cd8 <float_rows_valid+0xcc> (40002418 <__muldf3>)
+4208e0b4:	0008e0        	callx8	a8
+4208e0b7:	03a9      	s32i.n	a10, a3, 0
+4208e0b9:	13b9      	s32i.n	a11, a3, 4
+4208e0bb:	338b      	addi.n	a3, a3, 8
+4208e0bd:	e69737        	bne	a7, a3, 4208e0a7 <ksn_mesh_render+0x513>
+4208e0c0:	2b2192        	l32i	a9, a1, 172
+4208e0c3:	2a2182        	l32i	a8, a1, 168
+4208e0c6:	2c21c2        	l32i	a12, a1, 176
+4208e0c9:	2d21d2        	l32i	a13, a1, 180
+4208e0cc:	1b21a2        	l32i	a10, a1, 108
+4208e0cf:	376192        	s32i	a9, a1, 220
+4208e0d2:	366182        	s32i	a8, a1, 216
+4208e0d5:	282162        	l32i	a6, a1, 160
+4208e0d8:	292172        	l32i	a7, a1, 164
+4208e0db:	3e61c2        	s32i	a12, a1, 248
+4208e0de:	3f61d2        	s32i	a13, a1, 252
+4208e0e1:	d2fc81        	l32r	a8, 42082cd4 <float_rows_valid+0xc8> (400022a4 <__extendsfdf2>)
+4208e0e4:	0008e0        	callx8	a8
+4208e0e7:	06cd      	mov.n	a12, a6
+4208e0e9:	07dd      	mov.n	a13, a7
+4208e0eb:	346162        	s32i	a6, a1, 208
+4208e0ee:	356172        	s32i	a7, a1, 212
+4208e0f1:	d2f981        	l32r	a8, 42082cd8 <float_rows_valid+0xcc> (40002418 <__muldf3>)
+4208e0f4:	0008e0        	callx8	a8
+4208e0f7:	0a6d      	mov.n	a6, a10
+4208e0f9:	2021a2        	l32i	a10, a1, 128
+4208e0fc:	0b7d      	mov.n	a7, a11
+4208e0fe:	d2f581        	l32r	a8, 42082cd4 <float_rows_valid+0xc8> (400022a4 <__extendsfdf2>)
+4208e101:	0008e0        	callx8	a8
+4208e104:	3621c2        	l32i	a12, a1, 216
+4208e107:	3721d2        	l32i	a13, a1, 220
+4208e10a:	d2f381        	l32r	a8, 42082cd8 <float_rows_valid+0xcc> (40002418 <__muldf3>)
+4208e10d:	0008e0        	callx8	a8
+4208e110:	0acd      	mov.n	a12, a10
+4208e112:	0bdd      	mov.n	a13, a11
+4208e114:	06ad      	mov.n	a10, a6
+4208e116:	07bd      	mov.n	a11, a7
+4208e118:	d2f181        	l32r	a8, 42082cdc <float_rows_valid+0xd0> (40002184 <__adddf3>)
+4208e11b:	0008e0        	callx8	a8
+4208e11e:	0a6d      	mov.n	a6, a10
+4208e120:	2521a2        	l32i	a10, a1, 148
+4208e123:	0b7d      	mov.n	a7, a11
+4208e125:	d2eb81        	l32r	a8, 42082cd4 <float_rows_valid+0xc8> (400022a4 <__extendsfdf2>)
+4208e128:	0008e0        	callx8	a8
+4208e12b:	3e21c2        	l32i	a12, a1, 248
+4208e12e:	3f21d2        	l32i	a13, a1, 252
+4208e131:	d2e981        	l32r	a8, 42082cd8 <float_rows_valid+0xcc> (40002418 <__muldf3>)
+4208e134:	0008e0        	callx8	a8
+4208e137:	0acd      	mov.n	a12, a10
+4208e139:	0bdd      	mov.n	a13, a11
+4208e13b:	06ad      	mov.n	a10, a6
+4208e13d:	07bd      	mov.n	a11, a7
+4208e13f:	d2e781        	l32r	a8, 42082cdc <float_rows_valid+0xd0> (40002184 <__adddf3>)
+4208e142:	0008e0        	callx8	a8
+4208e145:	d30181        	l32r	a8, 42082d4c <float_rows_valid+0x140> (4000252c <__truncdfsf2>)
+4208e148:	0008e0        	callx8	a8
+4208e14b:	d2d691        	l32r	a9, 42082ca4 <float_rows_valid+0x98> (7f7fffff <_rtc_reserved_end+0x1f6fffff>)
+4208e14e:	fa0a50        	wfr	f0, a10
+4208e151:	fa1010        	abs.s	f1, f0
+4208e154:	fa2950        	wfr	f2, a9
+4208e157:	5b0210        	ult.s	b0, f2, f1
+4208e15a:	020076        	bf	b0, 4208e160 <ksn_mesh_render+0x5cc>
+4208e15d:	fe9cc6        	j	4208dbd4 <ksn_mesh_render+0x40>
+4208e160:	3a2192        	l32i	a9, a1, 232
+4208e163:	000913        	lsi	f1, a9, 0
+4208e166:	454113        	ssi	f1, a1, 0x114
+4208e169:	6b0010        	ole.s	b0, f0, f1
+4208e16c:	020076        	bf	b0, 4208e172 <ksn_mesh_render+0x5de>
+4208e16f:	ffa9c6        	j	4208e01a <ksn_mesh_render+0x486>
+4208e172:	1a21a2        	l32i	a10, a1, 104
+4208e175:	004903        	ssi	f0, a9, 0
+4208e178:	d2d781        	l32r	a8, 42082cd4 <float_rows_valid+0xc8> (400022a4 <__extendsfdf2>)
+4208e17b:	0008e0        	callx8	a8
+4208e17e:	3421c2        	l32i	a12, a1, 208
+4208e181:	3521d2        	l32i	a13, a1, 212
+4208e184:	d2d581        	l32r	a8, 42082cd8 <float_rows_valid+0xcc> (40002418 <__muldf3>)
+4208e187:	0008e0        	callx8	a8
+4208e18a:	0a6d      	mov.n	a6, a10
+4208e18c:	1f21a2        	l32i	a10, a1, 124
+4208e18f:	0b7d      	mov.n	a7, a11
+4208e191:	d2d081        	l32r	a8, 42082cd4 <float_rows_valid+0xc8> (400022a4 <__extendsfdf2>)
+4208e194:	0008e0        	callx8	a8
+4208e197:	3621c2        	l32i	a12, a1, 216
+4208e19a:	3721d2        	l32i	a13, a1, 220
+4208e19d:	d2ce81        	l32r	a8, 42082cd8 <float_rows_valid+0xcc> (40002418 <__muldf3>)
+4208e1a0:	0008e0        	callx8	a8
+4208e1a3:	0acd      	mov.n	a12, a10
+4208e1a5:	0bdd      	mov.n	a13, a11
+4208e1a7:	06ad      	mov.n	a10, a6
+4208e1a9:	07bd      	mov.n	a11, a7
+4208e1ab:	d2cc81        	l32r	a8, 42082cdc <float_rows_valid+0xd0> (40002184 <__adddf3>)
+4208e1ae:	0008e0        	callx8	a8
+4208e1b1:	0a6d      	mov.n	a6, a10
+4208e1b3:	2421a2        	l32i	a10, a1, 144
+4208e1b6:	0b7d      	mov.n	a7, a11
+4208e1b8:	d2c781        	l32r	a8, 42082cd4 <float_rows_valid+0xc8> (400022a4 <__extendsfdf2>)
+4208e1bb:	0008e0        	callx8	a8
+4208e1be:	3e21c2        	l32i	a12, a1, 248
+4208e1c1:	3f21d2        	l32i	a13, a1, 252
+4208e1c4:	d2c581        	l32r	a8, 42082cd8 <float_rows_valid+0xcc> (40002418 <__muldf3>)
+4208e1c7:	0008e0        	callx8	a8
+4208e1ca:	0acd      	mov.n	a12, a10
+4208e1cc:	0bdd      	mov.n	a13, a11
+4208e1ce:	06ad      	mov.n	a10, a6
+4208e1d0:	07bd      	mov.n	a11, a7
+4208e1d2:	d2c281        	l32r	a8, 42082cdc <float_rows_valid+0xd0> (40002184 <__adddf3>)
+4208e1d5:	0008e0        	callx8	a8
+4208e1d8:	0c0c      	movi.n	a12, 0
+4208e1da:	0d0c      	movi.n	a13, 0
+4208e1dc:	d2c381        	l32r	a8, 42082ce8 <float_rows_valid+0xdc> (40002388 <__gedf2>)
+4208e1df:	0008e0        	callx8	a8
+4208e1e2:	11ea96        	bltz	a10, 4208e304 <ksn_mesh_render+0x770>
+4208e1e5:	391132        	l16ui	a3, a1, 114
+4208e1e8:	431162        	l16ui	a6, a1, 134
+4208e1eb:	4d1172        	l16ui	a7, a1, 154
+4208e1ee:	3421a2        	l32i	a10, a1, 208
+4208e1f1:	3521b2        	l32i	a11, a1, 212
+4208e1f4:	d2d681        	l32r	a8, 42082d4c <float_rows_valid+0x140> (4000252c <__truncdfsf2>)
+4208e1f7:	0008e0        	callx8	a8
+4208e1fa:	0a8d      	mov.n	a8, a10
+4208e1fc:	3721b2        	l32i	a11, a1, 220
+4208e1ff:	3621a2        	l32i	a10, a1, 216
+4208e202:	346182        	s32i	a8, a1, 208
+4208e205:	d2d181        	l32r	a8, 42082d4c <float_rows_valid+0x140> (4000252c <__truncdfsf2>)
+4208e208:	0008e0        	callx8	a8
+4208e20b:	0a8d      	mov.n	a8, a10
+4208e20d:	3f21b2        	l32i	a11, a1, 252
+4208e210:	3e21a2        	l32i	a10, a1, 248
+4208e213:	366182        	s32i	a8, a1, 216
+4208e216:	d2cd81        	l32r	a8, 42082d4c <float_rows_valid+0x140> (4000252c <__truncdfsf2>)
+4208e219:	0008e0        	callx8	a8
+4208e21c:	419b30        	srli	a9, a3, 11
+4208e21f:	418b60        	srli	a8, a6, 11
+4208e222:	ca0900        	float.s	f0, a9, 0
+4208e225:	340113        	lsi	f1, a1, 208
+4208e228:	360123        	lsi	f2, a1, 216
+4208e22b:	ca3800        	float.s	f3, a8, 0
+4208e22e:	2a0010        	mul.s	f0, f0, f1
+4208e231:	2a3320        	mul.s	f3, f3, f2
+4208e234:	418b70        	srli	a8, a7, 11
+4208e237:	ca1800        	float.s	f1, a8, 0
+4208e23a:	fa2a50        	wfr	f2, a10
+4208e23d:	2a1120        	mul.s	f1, f1, f2
+4208e240:	0a0030        	add.s	f0, f0, f3
+4208e243:	d2b7b1        	l32r	a11, 42082d20 <float_rows_valid+0x114> (41f80000 <_iram_bss_end+0x1bf3c00>)
+4208e246:	3e61a2        	s32i	a10, a1, 248
+4208e249:	0a0010        	add.s	f0, f0, f1
+4208e24c:	faa040        	rfr	a10, f0
+4208e24f:	d2c081        	l32r	a8, 42082d50 <float_rows_valid+0x144> (4212b7dc <fminf>)
+4208e252:	0008e0        	callx8	a8
+4208e255:	0b0c      	movi.n	a11, 0
+4208e257:	d2bf81        	l32r	a8, 42082d54 <float_rows_valid+0x148> (4212b778 <fmaxf>)
+4208e25a:	0008e0        	callx8	a8
+4208e25d:	d2be81        	l32r	a8, 42082d58 <float_rows_valid+0x14c> (4212b83c <lroundf>)
+4208e260:	0008e0        	callx8	a8
+4208e263:	549530        	extui	a9, a3, 5, 6
+4208e266:	548560        	extui	a8, a6, 5, 6
+4208e269:	ca0900        	float.s	f0, a9, 0
+4208e26c:	340113        	lsi	f1, a1, 208
+4208e26f:	360123        	lsi	f2, a1, 216
+4208e272:	ca3800        	float.s	f3, a8, 0
+4208e275:	2a0010        	mul.s	f0, f0, f1
+4208e278:	2a3320        	mul.s	f3, f3, f2
+4208e27b:	548570        	extui	a8, a7, 5, 6
+4208e27e:	ca1800        	float.s	f1, a8, 0
+4208e281:	3e0123        	lsi	f2, a1, 248
+4208e284:	0a0030        	add.s	f0, f0, f3
+4208e287:	2a1120        	mul.s	f1, f1, f2
+4208e28a:	d2a6b1        	l32r	a11, 42082d24 <float_rows_valid+0x118> (427c0000 <_etext+0x61a944>)
+4208e28d:	0a4d      	mov.n	a4, a10
+4208e28f:	446060        	extui	a6, a6, 0, 5
+4208e292:	0a0010        	add.s	f0, f0, f1
+4208e295:	faa040        	rfr	a10, f0
+4208e298:	d2ae81        	l32r	a8, 42082d50 <float_rows_valid+0x144> (4212b7dc <fminf>)
+4208e29b:	0008e0        	callx8	a8
+4208e29e:	0b0c      	movi.n	a11, 0
+4208e2a0:	d2ad81        	l32r	a8, 42082d54 <float_rows_valid+0x148> (4212b778 <fmaxf>)
+4208e2a3:	0008e0        	callx8	a8
+4208e2a6:	d2ac81        	l32r	a8, 42082d58 <float_rows_valid+0x14c> (4212b83c <lroundf>)
+4208e2a9:	0008e0        	callx8	a8
+4208e2ac:	448030        	extui	a8, a3, 0, 5
+4208e2af:	ca0800        	float.s	f0, a8, 0
+4208e2b2:	340113        	lsi	f1, a1, 208
+4208e2b5:	360123        	lsi	f2, a1, 216
+4208e2b8:	ca3600        	float.s	f3, a6, 0
+4208e2bb:	2a0010        	mul.s	f0, f0, f1
+4208e2be:	2a3320        	mul.s	f3, f3, f2
+4208e2c1:	449070        	extui	a9, a7, 0, 5
+4208e2c4:	ca1900        	float.s	f1, a9, 0
+4208e2c7:	3e0123        	lsi	f2, a1, 248
+4208e2ca:	0a0030        	add.s	f0, f0, f3
+4208e2cd:	2a1120        	mul.s	f1, f1, f2
+4208e2d0:	d294b1        	l32r	a11, 42082d20 <float_rows_valid+0x114> (41f80000 <_iram_bss_end+0x1bf3c00>)
+4208e2d3:	0a7d      	mov.n	a7, a10
+4208e2d5:	1177b0        	slli	a7, a7, 5
+4208e2d8:	0a0010        	add.s	f0, f0, f1
+4208e2db:	faa040        	rfr	a10, f0
+4208e2de:	d29c81        	l32r	a8, 42082d50 <float_rows_valid+0x144> (4212b7dc <fminf>)
+4208e2e1:	0008e0        	callx8	a8
+4208e2e4:	0b0c      	movi.n	a11, 0
+4208e2e6:	d29b81        	l32r	a8, 42082d54 <float_rows_valid+0x148> (4212b778 <fmaxf>)
+4208e2e9:	0008e0        	callx8	a8
+4208e2ec:	d29b81        	l32r	a8, 42082d58 <float_rows_valid+0x14c> (4212b83c <lroundf>)
+4208e2ef:	0008e0        	callx8	a8
+4208e2f2:	118450        	slli	a8, a4, 11
+4208e2f5:	3c2192        	l32i	a9, a1, 240
+4208e2f8:	208870        	or	a8, a8, a7
+4208e2fb:	2088a0        	or	a8, a8, a10
+4208e2fe:	005982        	s16i	a8, a9, 0
+4208e301:	ff4546        	j	4208e01a <ksn_mesh_render+0x486>
+4208e304:	381132        	l16ui	a3, a1, 112
+4208e307:	421162        	l16ui	a6, a1, 132
+4208e30a:	4c1172        	l16ui	a7, a1, 152
+4208e30d:	ffb746        	j	4208e1ee <ksn_mesh_render+0x65a>

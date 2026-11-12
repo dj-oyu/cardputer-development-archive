@@ -1,0 +1,547 @@
+
+/workspace/private-q7-certified-full-s3-20261106/build-on/cardputer_pocketjs.elf:     file format elf32-xtensa-le
+
+
+Disassembly of section .iram0.vectors:
+
+Disassembly of section .iram0.text:
+
+Disassembly of section .flash.text:
+
+4206db90 <ksn_mesh_prepared_render>:
+4206db90:	01c136        	entry	a1, 224
+4206db93:	236122        	s32i	a2, a1, 140
+4206db96:	256132        	s32i	a3, a1, 148
+4206db99:	1d6162        	s32i	a6, a1, 116
+4206db9c:	07ed      	mov.n	a14, a7
+4206db9e:	62bc      	beqz.n	a2, 4206dbd8 <ksn_mesh_prepared_render+0x48>
+4206dba0:	900282        	l8ui	a8, a2, 144
+4206dba3:	176182        	s32i	a8, a1, 92
+4206dba6:	e8ac      	beqz.n	a8, 4206dbd8 <ksn_mesh_prepared_render+0x48>
+4206dba8:	40f380        	nsau	a8, a3
+4206dbab:	190c      	movi.n	a9, 1
+4206dbad:	418580        	srli	a8, a8, 5
+4206dbb0:	43ac      	beqz.n	a3, 4206dbd8 <ksn_mesh_prepared_render+0x48>
+4206dbb2:	838960        	moveqz	a8, a9, a6
+4206dbb5:	f8dc      	bnez.n	a8, 4206dbd8 <ksn_mesh_prepared_render+0x48>
+4206dbb7:	08ad      	mov.n	a10, a8
+4206dbb9:	d70b      	addi.n	a13, a7, -1
+4206dbbb:	f8c7b2        	addi	a11, a7, -8
+4206dbbe:	93a9d0        	movnez	a10, a9, a13
+4206dbc1:	8398b0        	moveqz	a9, a8, a11
+4206dbc4:	87a082        	movi	a8, 135
+4206dbc7:	10aa90        	and	a10, a10, a9
+4206dbca:	629840        	saltu	a9, a8, a4
+4206dbcd:	2099a0        	or	a9, a9, a10
+4206dbd0:	749090        	extui	a9, a9, 0, 8
+4206dbd3:	146192        	s32i	a9, a1, 80
+4206dbd6:	898c      	beqz.n	a9, 4206dbe2 <ksn_mesh_prepared_render+0x52>
+4206dbd8:	080c      	movi.n	a8, 0
+4206dbda:	176182        	s32i	a8, a1, 92
+4206dbdd:	172122        	l32i	a2, a1, 92
+4206dbe0:	f01d      	retw.n
+4206dbe2:	c08840        	sub	a8, a8, a4
+4206dbe5:	ef3857        	bltu	a8, a5, 4206dbd8 <ksn_mesh_prepared_render+0x48>
+4206dbe8:	ff1516        	beqz	a5, 4206dbdd <ksn_mesh_prepared_render+0x4d>
+4206dbeb:	057d      	mov.n	a7, a5
+4206dbed:	092d      	mov.n	a2, a9
+4206dbef:	1b6142        	s32i	a4, a1, 108
+4206dbf2:	0e5d      	mov.n	a5, a14
+4206dbf4:	c0a720        	sub	a10, a7, a2
+4206dbf7:	63aa50        	minu	a10, a10, a5
+4206dbfa:	f490a0        	extui	a9, a10, 0, 16
+4206dbfd:	1189c0        	slli	a8, a9, 4
+4206dc00:	c08890        	sub	a8, a8, a9
+4206dc03:	1188c0        	slli	a8, a8, 4
+4206dc06:	1b0c      	movi.n	a11, 1
+4206dc08:	1d2192        	l32i	a9, a1, 116
+4206dc0b:	838b80        	moveqz	a8, a11, a8
+4206dc0e:	068876        	loop	a8, 4206dc18 <ksn_mesh_prepared_render+0x88>
+4206dc11:	597fb1        	l32r	a11, 42044210 <ksn_proc_frame_next+0x1628> (ff800000 <_rtc_reserved_end+0x9f700000>)
+4206dc14:	09b9      	s32i.n	a11, a9, 0
+4206dc16:	994b      	addi.n	a9, a9, 4
+4206dc18:	1b2192        	l32i	a9, a1, 108
+4206dc1b:	8a9a      	add.n	a8, a10, a9
+4206dc1d:	a80b      	addi.n	a10, a8, -1
+4206dc1f:	246182        	s32i	a8, a1, 144
+4206dc22:	2861a2        	s32i	a10, a1, 160
+4206dc25:	418390        	srli	a8, a9, 3
+4206dc28:	4193a0        	srli	a9, a10, 3
+4206dc2b:	02b987        	bgeu	a9, a8, 4206dc31 <ksn_mesh_prepared_render+0xa1>
+4206dc2e:	013446        	j	4206e103 <ksn_mesh_prepared_render+0x573>
+4206dc31:	2321a2        	l32i	a10, a1, 140
+4206dc34:	f48080        	extui	a8, a8, 0, 16
+4206dc37:	f49090        	extui	a9, a9, 0, 16
+4206dc3a:	b088a0        	addx8	a8, a8, a10
+4206dc3d:	b099a0        	addx8	a9, a9, a10
+4206dc40:	c09980        	sub	a9, a9, a8
+4206dc43:	0a0c      	movi.n	a10, 0
+4206dc45:	419390        	srli	a9, a9, 3
+4206dc48:	0abd      	mov.n	a11, a10
+4206dc4a:	01c992        	addi	a9, a9, 1
+4206dc4d:	0b8976        	loop	a9, 4206dc5c <ksn_mesh_prepared_render+0xcc>
+4206dc50:	08d8      	l32i.n	a13, a8, 0
+4206dc52:	18c8      	l32i.n	a12, a8, 4
+4206dc54:	20ada0        	or	a10, a13, a10
+4206dc57:	20bcb0        	or	a11, a12, a11
+4206dc5a:	888b      	addi.n	a8, a8, 8
+4206dc5c:	2761b2        	s32i	a11, a1, 156
+4206dc5f:	208ab0        	or	a8, a10, a11
+4206dc62:	0a6d      	mov.n	a6, a10
+4206dc64:	49b816        	beqz	a8, 4206e103 <ksn_mesh_prepared_render+0x573>
+4206dc67:	232132        	l32i	a3, a1, 140
+4206dc6a:	2c6172        	s32i	a7, a1, 176
+4206dc6d:	2d6152        	s32i	a5, a1, 180
+4206dc70:	4a2616        	beqz	a6, 4206e116 <ksn_mesh_prepared_render+0x586>
+4206dc73:	609060        	neg	a9, a6
+4206dc76:	109960        	and	a9, a9, a6
+4206dc79:	40f990        	nsau	a9, a9
+4206dc7c:	e1c992        	addi	a9, a9, -31
+4206dc7f:	609090        	neg	a9, a9
+4206dc82:	908990        	addx2	a8, a9, a9
+4206dc85:	f08890        	subx8	a8, a8, a9
+4206dc88:	b08830        	addx8	a8, a8, a3
+4206dc8b:	5228b2        	l32i	a11, a8, 0x148
+4206dc8e:	1b21c2        	l32i	a12, a1, 108
+4206dc91:	532882        	l32i	a8, a8, 0x14c
+4206dc94:	53bcb0        	max	a11, a12, a11
+4206dc97:	1561b2        	s32i	a11, a1, 84
+4206dc9a:	2421b2        	l32i	a11, a1, 144
+4206dc9d:	a99a      	add.n	a10, a9, a9
+4206dc9f:	0228b7        	blt	a8, a11, 4206dca5 <ksn_mesh_prepared_render+0x115>
+4206dca2:	282182        	l32i	a8, a1, 160
+4206dca5:	1521b2        	l32i	a11, a1, 84
+4206dca8:	02a8b7        	bge	a8, a11, 4206dcae <ksn_mesh_prepared_render+0x11e>
+4206dcab:	010d46        	j	4206e0e4 <ksn_mesh_prepared_render+0x554>
+4206dcae:	1b21d2        	l32i	a13, a1, 108
+4206dcb1:	aa9a      	add.n	a10, a10, a9
+4206dcb3:	f4c090        	extui	a12, a9, 0, 16
+4206dcb6:	f09a90        	subx8	a9, a10, a9
+4206dcb9:	b09930        	addx8	a9, a9, a3
+4206dcbc:	c0a2d0        	sub	a10, a2, a13
+4206dcbf:	c0ebd0        	sub	a14, a11, a13
+4206dcc2:	aaba      	add.n	a10, a10, a11
+4206dcc4:	5029d2        	l32i	a13, a9, 0x140
+4206dcc7:	90bcc0        	addx2	a11, a12, a12
+4206dcca:	4e2942        	l32i	a4, a9, 0x138
+4206dccd:	f0bbc0        	subx8	a11, a11, a12
+4206dcd0:	11fec0        	slli	a15, a14, 4
+4206dcd3:	11cac0        	slli	a12, a10, 4
+4206dcd6:	1c61d2        	s32i	a13, a1, 112
+4206dcd9:	c0cca0        	sub	a12, a12, a10
+4206dcdc:	98a0d2        	movi	a13, 152
+4206dcdf:	c0afe0        	sub	a10, a15, a14
+4206dce2:	5129e2        	l32i	a14, a9, 0x144
+4206dce5:	4f2952        	l32i	a5, a9, 0x13c
+4206dce8:	b0dbd0        	addx8	a13, a11, a13
+4206dceb:	1c2192        	l32i	a9, a1, 112
+4206dcee:	d8a072        	movi	a7, 216
+4206dcf1:	106142        	s32i	a4, a1, 64
+4206dcf4:	114ac0        	slli	a4, a10, 4
+4206dcf7:	2521a2        	l32i	a10, a1, 148
+4206dcfa:	b0bb70        	addx8	a11, a11, a7
+4206dcfd:	f1e9      	s32i.n	a14, a1, 60
+4206dcff:	e3da      	add.n	a14, a3, a13
+4206dd01:	91e9      	s32i.n	a14, a1, 36
+4206dd03:	e3ba      	add.n	a14, a3, a11
+4206dd05:	90b9a0        	addx2	a11, a9, a10
+4206dd08:	1d21a2        	l32i	a10, a1, 116
+4206dd0b:	116152        	s32i	a5, a1, 68
+4206dd0e:	a0a9a0        	addx4	a10, a9, a10
+4206dd11:	115cc0        	slli	a5, a12, 4
+4206dd14:	794b      	addi.n	a7, a9, 4
+4206dd16:	296122        	s32i	a2, a1, 164
+4206dd19:	1661e2        	s32i	a14, a1, 88
+4206dd1c:	266182        	s32i	a8, a1, 152
+4206dd1f:	2a6132        	s32i	a3, a1, 168
+4206dd22:	2b6162        	s32i	a6, a1, 172
+4206dd25:	f188      	l32i.n	a8, a1, 60
+4206dd27:	1c2192        	l32i	a9, a1, 112
+4206dd2a:	02a897        	bge	a8, a9, 4206dd30 <ksn_mesh_prepared_render+0x1a0>
+4206dd2d:	00e486        	j	4206e0c3 <ksn_mesh_prepared_render+0x533>
+4206dd30:	162182        	l32i	a8, a1, 88
+4206dd33:	07cd      	mov.n	a12, a7
+4206dd35:	60c882        	addi	a8, a8, 96
+4206dd38:	9025b0        	addx2	a2, a5, a11
+4206dd3b:	a034a0        	addx4	a3, a4, a10
+4206dd3e:	186182        	s32i	a8, a1, 96
+4206dd41:	1e61a2        	s32i	a10, a1, 120
+4206dd44:	1f61b2        	s32i	a11, a1, 124
+4206dd47:	206142        	s32i	a4, a1, 128
+4206dd4a:	216152        	s32i	a5, a1, 132
+4206dd4d:	226172        	s32i	a7, a1, 136
+4206dd50:	fccc52        	addi	a5, a12, -4
+4206dd53:	034d      	mov.n	a4, a3
+4206dd55:	8129      	s32i.n	a2, a1, 32
+4206dd57:	196132        	s32i	a3, a1, 100
+4206dd5a:	1a6122        	s32i	a2, a1, 104
+4206dd5d:	e1c9      	s32i.n	a12, a1, 56
+4206dd5f:	f188      	l32i.n	a8, a1, 60
+4206dd61:	02a857        	bge	a8, a5, 4206dd67 <ksn_mesh_prepared_render+0x1d7>
+4206dd64:	0035c6        	j	4206de3f <ksn_mesh_prepared_render+0x2af>
+4206dd67:	05ad      	mov.n	a10, a5
+4206dd69:	555e81        	l32r	a8, 420432e4 <ksn_proc_frame_next+0x6fc> (40002334 <__floatsidf>)
+4206dd6c:	0008e0        	callx8	a8
+4206dd6f:	0a8d      	mov.n	a8, a10
+4206dd71:	1521a2        	l32i	a10, a1, 84
+4206dd74:	a189      	s32i.n	a8, a1, 40
+4206dd76:	b1b9      	s32i.n	a11, a1, 44
+4206dd78:	555b81        	l32r	a8, 420432e4 <ksn_proc_frame_next+0x6fc> (40002334 <__floatsidf>)
+4206dd7b:	0008e0        	callx8	a8
+4206dd7e:	162172        	l32i	a7, a1, 88
+4206dd81:	172132        	l32i	a3, a1, 92
+4206dd84:	c1a9      	s32i.n	a10, a1, 48
+4206dd86:	d1b9      	s32i.n	a11, a1, 52
+4206dd88:	012d      	mov.n	a2, a1
+4206dd8a:	016d      	mov.n	a6, a1
+4206dd8c:	27c8      	l32i.n	a12, a7, 8
+4206dd8e:	37d8      	l32i.n	a13, a7, 12
+4206dd90:	c1a8      	l32i.n	a10, a1, 48
+4206dd92:	d1b8      	l32i.n	a11, a1, 52
+4206dd94:	55c681        	l32r	a8, 420434ac <ksn_proc_frame_next+0x8c4> (40002418 <__muldf3>)
+4206dd97:	0008e0        	callx8	a8
+4206dd9a:	0b9d      	mov.n	a9, a11
+4206dd9c:	07c8      	l32i.n	a12, a7, 0
+4206dd9e:	17d8      	l32i.n	a13, a7, 4
+4206dda0:	0a8d      	mov.n	a8, a10
+4206dda2:	b1b8      	l32i.n	a11, a1, 44
+4206dda4:	a1a8      	l32i.n	a10, a1, 40
+4206dda6:	136192        	s32i	a9, a1, 76
+4206dda9:	126182        	s32i	a8, a1, 72
+4206ddac:	55c081        	l32r	a8, 420434ac <ksn_proc_frame_next+0x8c4> (40002418 <__muldf3>)
+4206ddaf:	0008e0        	callx8	a8
+4206ddb2:	0acd      	mov.n	a12, a10
+4206ddb4:	0bdd      	mov.n	a13, a11
+4206ddb6:	1221a2        	l32i	a10, a1, 72
+4206ddb9:	1321b2        	l32i	a11, a1, 76
+4206ddbc:	55bd81        	l32r	a8, 420434b0 <ksn_proc_frame_next+0x8c8> (40002184 <__adddf3>)
+4206ddbf:	0008e0        	callx8	a8
+4206ddc2:	47c8      	l32i.n	a12, a7, 16
+4206ddc4:	57d8      	l32i.n	a13, a7, 20
+4206ddc6:	55ba81        	l32r	a8, 420434b0 <ksn_proc_frame_next+0x8c8> (40002184 <__adddf3>)
+4206ddc9:	0008e0        	callx8	a8
+4206ddcc:	0a8d      	mov.n	a8, a10
+4206ddce:	67a8      	l32i.n	a10, a7, 24
+4206ddd0:	126182        	s32i	a8, a1, 72
+4206ddd3:	1361b2        	s32i	a11, a1, 76
+4206ddd6:	554381        	l32r	a8, 420432e4 <ksn_proc_frame_next+0x6fc> (40002334 <__floatsidf>)
+4206ddd9:	0008e0        	callx8	a8
+4206dddc:	0acd      	mov.n	a12, a10
+4206ddde:	0bdd      	mov.n	a13, a11
+4206dde0:	1221a2        	l32i	a10, a1, 72
+4206dde3:	1321b2        	l32i	a11, a1, 76
+4206dde6:	55b181        	l32r	a8, 420434ac <ksn_proc_frame_next+0x8c4> (40002418 <__muldf3>)
+4206dde9:	0008e0        	callx8	a8
+4206ddec:	0c0c      	movi.n	a12, 0
+4206ddee:	0d0c      	movi.n	a13, 0
+4206ddf0:	16b9      	s32i.n	a11, a6, 4
+4206ddf2:	1361b2        	s32i	a11, a1, 76
+4206ddf5:	06a9      	s32i.n	a10, a6, 0
+4206ddf7:	1261a2        	s32i	a10, a1, 72
+4206ddfa:	54a681        	l32r	a8, 42043094 <ksn_proc_frame_next+0x4ac> (400023dc <__ltdf2>)
+4206ddfd:	0008e0        	callx8	a8
+4206de00:	0aed      	mov.n	a14, a10
+4206de02:	1321b2        	l32i	a11, a1, 76
+4206de05:	1221a2        	l32i	a10, a1, 72
+4206de08:	0c0c      	movi.n	a12, 0
+4206de0a:	0d0c      	movi.n	a13, 0
+4206de0c:	04be96        	bltz	a14, 4206de5b <ksn_mesh_prepared_render+0x2cb>
+4206de0f:	55a381        	l32r	a8, 4204349c <ksn_proc_frame_next+0x8b4> (4000228c <__eqdf2>)
+4206de12:	0008e0        	callx8	a8
+4206de15:	4acc      	bnez.n	a10, 4206de1d <ksn_mesh_prepared_render+0x28d>
+4206de17:	1c0782        	l8ui	a8, a7, 28
+4206de1a:	103380        	and	a3, a3, a8
+4206de1d:	182182        	l32i	a8, a1, 96
+4206de20:	20c772        	addi	a7, a7, 32
+4206de23:	668b      	addi.n	a6, a6, 8
+4206de25:	021787        	beq	a7, a8, 4206de2b <ksn_mesh_prepared_render+0x29b>
+4206de28:	ffd806        	j	4206dd8c <ksn_mesh_prepared_render+0x1fc>
+4206de2b:	23fc      	bnez.n	a3, 4206de61 <ksn_mesh_prepared_render+0x2d1>
+4206de2d:	8188      	l32i.n	a8, a1, 32
+4206de2f:	551b      	addi.n	a5, a5, 1
+4206de31:	882b      	addi.n	a8, a8, 2
+4206de33:	8189      	s32i.n	a8, a1, 32
+4206de35:	e188      	l32i.n	a8, a1, 56
+4206de37:	444b      	addi.n	a4, a4, 4
+4206de39:	021857        	beq	a8, a5, 4206de3f <ksn_mesh_prepared_render+0x2af>
+4206de3c:	ffc7c6        	j	4206dd5f <ksn_mesh_prepared_render+0x1cf>
+4206de3f:	192132        	l32i	a3, a1, 100
+4206de42:	1a2122        	l32i	a2, a1, 104
+4206de45:	e1c8      	l32i.n	a12, a1, 56
+4206de47:	f198      	l32i.n	a9, a1, 60
+4206de49:	8c4b      	addi.n	a8, a12, 4
+4206de4b:	228b      	addi.n	a2, a2, 8
+4206de4d:	10c332        	addi	a3, a3, 16
+4206de50:	02a9c7        	bge	a9, a12, 4206de56 <ksn_mesh_prepared_render+0x2c6>
+4206de53:	009746        	j	4206e0b4 <ksn_mesh_prepared_render+0x524>
+4206de56:	08cd      	mov.n	a12, a8
+4206de58:	ffbd06        	j	4206dd50 <ksn_mesh_prepared_render+0x1c0>
+4206de5b:	142132        	l32i	a3, a1, 80
+4206de5e:	ffeec6        	j	4206de1d <ksn_mesh_prepared_render+0x28d>
+4206de61:	18c272        	addi	a7, a2, 24
+4206de64:	02a8      	l32i.n	a10, a2, 0
+4206de66:	12b8      	l32i.n	a11, a2, 4
+4206de68:	1021c2        	l32i	a12, a1, 64
+4206de6b:	1121d2        	l32i	a13, a1, 68
+4206de6e:	558f81        	l32r	a8, 420434ac <ksn_proc_frame_next+0x8c4> (40002418 <__muldf3>)
+4206de71:	0008e0        	callx8	a8
+4206de74:	02a9      	s32i.n	a10, a2, 0
+4206de76:	12b9      	s32i.n	a11, a2, 4
+4206de78:	228b      	addi.n	a2, a2, 8
+4206de7a:	e69727        	bne	a7, a2, 4206de64 <ksn_mesh_prepared_render+0x2d4>
+4206de7d:	9138      	l32i.n	a3, a1, 36
+4206de7f:	2188      	l32i.n	a8, a1, 8
+4206de81:	33a8      	l32i.n	a10, a3, 12
+4206de83:	3198      	l32i.n	a9, a1, 12
+4206de85:	41c8      	l32i.n	a12, a1, 16
+4206de87:	51d8      	l32i.n	a13, a1, 20
+4206de89:	0128      	l32i.n	a2, a1, 0
+4206de8b:	1138      	l32i.n	a3, a1, 4
+4206de8d:	a189      	s32i.n	a8, a1, 40
+4206de8f:	b199      	s32i.n	a9, a1, 44
+4206de91:	c1c9      	s32i.n	a12, a1, 48
+4206de93:	d1d9      	s32i.n	a13, a1, 52
+4206de95:	126122        	s32i	a2, a1, 72
+4206de98:	136132        	s32i	a3, a1, 76
+4206de9b:	565681        	l32r	a8, 420437f4 <ksn_proc_frame_next+0xc0c> (400022a4 <__extendsfdf2>)
+4206de9e:	0008e0        	callx8	a8
+4206dea1:	02cd      	mov.n	a12, a2
+4206dea3:	03dd      	mov.n	a13, a3
+4206dea5:	558181        	l32r	a8, 420434ac <ksn_proc_frame_next+0x8c4> (40002418 <__muldf3>)
+4206dea8:	0008e0        	callx8	a8
+4206deab:	9198      	l32i.n	a9, a1, 36
+4206dead:	0a6d      	mov.n	a6, a10
+4206deaf:	89a8      	l32i.n	a10, a9, 32
+4206deb1:	0b7d      	mov.n	a7, a11
+4206deb3:	565081        	l32r	a8, 420437f4 <ksn_proc_frame_next+0xc0c> (400022a4 <__extendsfdf2>)
+4206deb6:	0008e0        	callx8	a8
+4206deb9:	a1c8      	l32i.n	a12, a1, 40
+4206debb:	b1d8      	l32i.n	a13, a1, 44
+4206debd:	557b81        	l32r	a8, 420434ac <ksn_proc_frame_next+0x8c4> (40002418 <__muldf3>)
+4206dec0:	0008e0        	callx8	a8
+4206dec3:	0acd      	mov.n	a12, a10
+4206dec5:	0bdd      	mov.n	a13, a11
+4206dec7:	06ad      	mov.n	a10, a6
+4206dec9:	07bd      	mov.n	a11, a7
+4206decb:	557981        	l32r	a8, 420434b0 <ksn_proc_frame_next+0x8c8> (40002184 <__adddf3>)
+4206dece:	0008e0        	callx8	a8
+4206ded1:	9198      	l32i.n	a9, a1, 36
+4206ded3:	0a6d      	mov.n	a6, a10
+4206ded5:	d9a8      	l32i.n	a10, a9, 52
+4206ded7:	0b7d      	mov.n	a7, a11
+4206ded9:	564681        	l32r	a8, 420437f4 <ksn_proc_frame_next+0xc0c> (400022a4 <__extendsfdf2>)
+4206dedc:	0008e0        	callx8	a8
+4206dedf:	c1c8      	l32i.n	a12, a1, 48
+4206dee1:	d1d8      	l32i.n	a13, a1, 52
+4206dee3:	557281        	l32r	a8, 420434ac <ksn_proc_frame_next+0x8c4> (40002418 <__muldf3>)
+4206dee6:	0008e0        	callx8	a8
+4206dee9:	0acd      	mov.n	a12, a10
+4206deeb:	0bdd      	mov.n	a13, a11
+4206deed:	06ad      	mov.n	a10, a6
+4206deef:	07bd      	mov.n	a11, a7
+4206def1:	556f81        	l32r	a8, 420434b0 <ksn_proc_frame_next+0x8c8> (40002184 <__adddf3>)
+4206def4:	0008e0        	callx8	a8
+4206def7:	564081        	l32r	a8, 420437f8 <ksn_proc_frame_next+0xc10> (4000252c <__truncdfsf2>)
+4206defa:	0008e0        	callx8	a8
+4206defd:	fa0a50        	wfr	f0, a10
+4206df00:	5602a1        	l32r	a10, 42043708 <ksn_proc_frame_next+0xb20> (7f7fffff <_rtc_reserved_end+0x1f6fffff>)
+4206df03:	fa1010        	abs.s	f1, f0
+4206df06:	fa2a50        	wfr	f2, a10
+4206df09:	5b0210        	ult.s	b0, f2, f1
+4206df0c:	020076        	bf	b0, 4206df12 <ksn_mesh_prepared_render+0x382>
+4206df0f:	ff3146        	j	4206dbd8 <ksn_mesh_prepared_render+0x48>
+4206df12:	000413        	lsi	f1, a4, 0
+4206df15:	6b0010        	ole.s	b0, f0, f1
+4206df18:	020076        	bf	b0, 4206df1e <ksn_mesh_prepared_render+0x38e>
+4206df1b:	ffc386        	j	4206de2d <ksn_mesh_prepared_render+0x29d>
+4206df1e:	9198      	l32i.n	a9, a1, 36
+4206df20:	004403        	ssi	f0, a4, 0
+4206df23:	29a8      	l32i.n	a10, a9, 8
+4206df25:	563381        	l32r	a8, 420437f4 <ksn_proc_frame_next+0xc0c> (400022a4 <__extendsfdf2>)
+4206df28:	0008e0        	callx8	a8
+4206df2b:	03dd      	mov.n	a13, a3
+4206df2d:	02cd      	mov.n	a12, a2
+4206df2f:	555f81        	l32r	a8, 420434ac <ksn_proc_frame_next+0x8c4> (40002418 <__muldf3>)
+4206df32:	0008e0        	callx8	a8
+4206df35:	9138      	l32i.n	a3, a1, 36
+4206df37:	0a6d      	mov.n	a6, a10
+4206df39:	73a8      	l32i.n	a10, a3, 28
+4206df3b:	0b7d      	mov.n	a7, a11
+4206df3d:	562d81        	l32r	a8, 420437f4 <ksn_proc_frame_next+0xc0c> (400022a4 <__extendsfdf2>)
+4206df40:	0008e0        	callx8	a8
+4206df43:	a1c8      	l32i.n	a12, a1, 40
+4206df45:	b1d8      	l32i.n	a13, a1, 44
+4206df47:	555981        	l32r	a8, 420434ac <ksn_proc_frame_next+0x8c4> (40002418 <__muldf3>)
+4206df4a:	0008e0        	callx8	a8
+4206df4d:	0acd      	mov.n	a12, a10
+4206df4f:	0bdd      	mov.n	a13, a11
+4206df51:	06ad      	mov.n	a10, a6
+4206df53:	07bd      	mov.n	a11, a7
+4206df55:	555681        	l32r	a8, 420434b0 <ksn_proc_frame_next+0x8c8> (40002184 <__adddf3>)
+4206df58:	0008e0        	callx8	a8
+4206df5b:	0a6d      	mov.n	a6, a10
+4206df5d:	c3a8      	l32i.n	a10, a3, 48
+4206df5f:	0b7d      	mov.n	a7, a11
+4206df61:	562481        	l32r	a8, 420437f4 <ksn_proc_frame_next+0xc0c> (400022a4 <__extendsfdf2>)
+4206df64:	0008e0        	callx8	a8
+4206df67:	c1c8      	l32i.n	a12, a1, 48
+4206df69:	d1d8      	l32i.n	a13, a1, 52
+4206df6b:	555081        	l32r	a8, 420434ac <ksn_proc_frame_next+0x8c4> (40002418 <__muldf3>)
+4206df6e:	0008e0        	callx8	a8
+4206df71:	0acd      	mov.n	a12, a10
+4206df73:	0bdd      	mov.n	a13, a11
+4206df75:	06ad      	mov.n	a10, a6
+4206df77:	07bd      	mov.n	a11, a7
+4206df79:	554d81        	l32r	a8, 420434b0 <ksn_proc_frame_next+0x8c8> (40002184 <__adddf3>)
+4206df7c:	0008e0        	callx8	a8
+4206df7f:	0c0c      	movi.n	a12, 0
+4206df81:	0d0c      	movi.n	a13, 0
+4206df83:	548581        	l32r	a8, 42043198 <ksn_proc_frame_next+0x5b0> (40002388 <__gedf2>)
+4206df86:	0008e0        	callx8	a8
+4206df89:	119a96        	bltz	a10, 4206e0a6 <ksn_mesh_prepared_render+0x516>
+4206df8c:	038d      	mov.n	a8, a3
+4206df8e:	131862        	l16ui	a6, a8, 38
+4206df91:	091332        	l16ui	a3, a3, 18
+4206df94:	1d1872        	l16ui	a7, a8, 58
+4206df97:	1221a2        	l32i	a10, a1, 72
+4206df9a:	1321b2        	l32i	a11, a1, 76
+4206df9d:	561681        	l32r	a8, 420437f8 <ksn_proc_frame_next+0xc10> (4000252c <__truncdfsf2>)
+4206dfa0:	0008e0        	callx8	a8
+4206dfa3:	0a8d      	mov.n	a8, a10
+4206dfa5:	b1b8      	l32i.n	a11, a1, 44
+4206dfa7:	a1a8      	l32i.n	a10, a1, 40
+4206dfa9:	a189      	s32i.n	a8, a1, 40
+4206dfab:	561381        	l32r	a8, 420437f8 <ksn_proc_frame_next+0xc10> (4000252c <__truncdfsf2>)
+4206dfae:	0008e0        	callx8	a8
+4206dfb1:	0a8d      	mov.n	a8, a10
+4206dfb3:	d1b8      	l32i.n	a11, a1, 52
+4206dfb5:	c1a8      	l32i.n	a10, a1, 48
+4206dfb7:	c189      	s32i.n	a8, a1, 48
+4206dfb9:	560f81        	l32r	a8, 420437f8 <ksn_proc_frame_next+0xc10> (4000252c <__truncdfsf2>)
+4206dfbc:	0008e0        	callx8	a8
+4206dfbf:	419b30        	srli	a9, a3, 11
+4206dfc2:	418b60        	srli	a8, a6, 11
+4206dfc5:	ca0900        	float.s	f0, a9, 0
+4206dfc8:	0a0113        	lsi	f1, a1, 40
+4206dfcb:	0c0123        	lsi	f2, a1, 48
+4206dfce:	ca3800        	float.s	f3, a8, 0
+4206dfd1:	2a0010        	mul.s	f0, f0, f1
+4206dfd4:	2a3320        	mul.s	f3, f3, f2
+4206dfd7:	418b70        	srli	a8, a7, 11
+4206dfda:	ca1800        	float.s	f1, a8, 0
+4206dfdd:	fa2a50        	wfr	f2, a10
+4206dfe0:	2a1120        	mul.s	f1, f1, f2
+4206dfe3:	0a0030        	add.s	f0, f0, f3
+4206dfe6:	567bb1        	l32r	a11, 420439d4 <ksn_proc_frame_next+0xdec> (41f80000 <_iram_bss_end+0x1bf3c00>)
+4206dfe9:	1261a2        	s32i	a10, a1, 72
+4206dfec:	0a0010        	add.s	f0, f0, f1
+4206dfef:	faa040        	rfr	a10, f0
+4206dff2:	57eb81        	l32r	a8, 42043fa0 <ksn_proc_frame_next+0x13b8> (4212b7dc <fminf>)
+4206dff5:	0008e0        	callx8	a8
+4206dff8:	0b0c      	movi.n	a11, 0
+4206dffa:	567f81        	l32r	a8, 420439f8 <ksn_proc_frame_next+0xe10> (4212b778 <fmaxf>)
+4206dffd:	0008e0        	callx8	a8
+4206e000:	568181        	l32r	a8, 42043a04 <ksn_proc_frame_next+0xe1c> (4212b83c <lroundf>)
+4206e003:	0008e0        	callx8	a8
+4206e006:	549530        	extui	a9, a3, 5, 6
+4206e009:	548560        	extui	a8, a6, 5, 6
+4206e00c:	ca0900        	float.s	f0, a9, 0
+4206e00f:	0a0113        	lsi	f1, a1, 40
+4206e012:	0c0123        	lsi	f2, a1, 48
+4206e015:	ca3800        	float.s	f3, a8, 0
+4206e018:	2a0010        	mul.s	f0, f0, f1
+4206e01b:	2a3320        	mul.s	f3, f3, f2
+4206e01e:	548570        	extui	a8, a7, 5, 6
+4206e021:	ca1800        	float.s	f1, a8, 0
+4206e024:	120123        	lsi	f2, a1, 72
+4206e027:	0a0030        	add.s	f0, f0, f3
+4206e02a:	2a1120        	mul.s	f1, f1, f2
+4206e02d:	566bb1        	l32r	a11, 420439dc <ksn_proc_frame_next+0xdf4> (427c0000 <_etext+0x61a944>)
+4206e030:	0a2d      	mov.n	a2, a10
+4206e032:	443030        	extui	a3, a3, 0, 5
+4206e035:	0a0010        	add.s	f0, f0, f1
+4206e038:	446060        	extui	a6, a6, 0, 5
+4206e03b:	447070        	extui	a7, a7, 0, 5
+4206e03e:	faa040        	rfr	a10, f0
+4206e041:	57d781        	l32r	a8, 42043fa0 <ksn_proc_frame_next+0x13b8> (4212b7dc <fminf>)
+4206e044:	0008e0        	callx8	a8
+4206e047:	0b0c      	movi.n	a11, 0
+4206e049:	566b81        	l32r	a8, 420439f8 <ksn_proc_frame_next+0xe10> (4212b778 <fmaxf>)
+4206e04c:	0008e0        	callx8	a8
+4206e04f:	566d81        	l32r	a8, 42043a04 <ksn_proc_frame_next+0xe1c> (4212b83c <lroundf>)
+4206e052:	0008e0        	callx8	a8
+4206e055:	0a0113        	lsi	f1, a1, 40
+4206e058:	0c0123        	lsi	f2, a1, 48
+4206e05b:	ca0300        	float.s	f0, a3, 0
+4206e05e:	ca3600        	float.s	f3, a6, 0
+4206e061:	2a0010        	mul.s	f0, f0, f1
+4206e064:	2a3320        	mul.s	f3, f3, f2
+4206e067:	ca1700        	float.s	f1, a7, 0
+4206e06a:	120123        	lsi	f2, a1, 72
+4206e06d:	5659b1        	l32r	a11, 420439d4 <ksn_proc_frame_next+0xdec> (41f80000 <_iram_bss_end+0x1bf3c00>)
+4206e070:	0a0030        	add.s	f0, f0, f3
+4206e073:	2a1120        	mul.s	f1, f1, f2
+4206e076:	0a7d      	mov.n	a7, a10
+4206e078:	1177b0        	slli	a7, a7, 5
+4206e07b:	0a0010        	add.s	f0, f0, f1
+4206e07e:	faa040        	rfr	a10, f0
+4206e081:	57c781        	l32r	a8, 42043fa0 <ksn_proc_frame_next+0x13b8> (4212b7dc <fminf>)
+4206e084:	0008e0        	callx8	a8
+4206e087:	0b0c      	movi.n	a11, 0
+4206e089:	565b81        	l32r	a8, 420439f8 <ksn_proc_frame_next+0xe10> (4212b778 <fmaxf>)
+4206e08c:	0008e0        	callx8	a8
+4206e08f:	565d81        	l32r	a8, 42043a04 <ksn_proc_frame_next+0xe1c> (4212b83c <lroundf>)
+4206e092:	0008e0        	callx8	a8
+4206e095:	118250        	slli	a8, a2, 11
+4206e098:	8198      	l32i.n	a9, a1, 32
+4206e09a:	208870        	or	a8, a8, a7
+4206e09d:	2088a0        	or	a8, a8, a10
+4206e0a0:	005982        	s16i	a8, a9, 0
+4206e0a3:	ff6186        	j	4206de2d <ksn_mesh_prepared_render+0x29d>
+4206e0a6:	9188      	l32i.n	a8, a1, 36
+4206e0a8:	081832        	l16ui	a3, a8, 16
+4206e0ab:	121862        	l16ui	a6, a8, 36
+4206e0ae:	1c1872        	l16ui	a7, a8, 56
+4206e0b1:	ffb886        	j	4206df97 <ksn_mesh_prepared_render+0x407>
+4206e0b4:	1e21a2        	l32i	a10, a1, 120
+4206e0b7:	1f21b2        	l32i	a11, a1, 124
+4206e0ba:	202142        	l32i	a4, a1, 128
+4206e0bd:	212152        	l32i	a5, a1, 132
+4206e0c0:	222172        	l32i	a7, a1, 136
+4206e0c3:	152192        	l32i	a9, a1, 84
+4206e0c6:	f0a082        	movi	a8, 240
+4206e0c9:	991b      	addi.n	a9, a9, 1
+4206e0cb:	558a      	add.n	a5, a5, a8
+4206e0cd:	448a      	add.n	a4, a4, a8
+4206e0cf:	262182        	l32i	a8, a1, 152
+4206e0d2:	156192        	s32i	a9, a1, 84
+4206e0d5:	022897        	blt	a8, a9, 4206e0db <ksn_mesh_prepared_render+0x54b>
+4206e0d8:	ff1246        	j	4206dd25 <ksn_mesh_prepared_render+0x195>
+4206e0db:	292122        	l32i	a2, a1, 164
+4206e0de:	2a2132        	l32i	a3, a1, 168
+4206e0e1:	2b2162        	l32i	a6, a1, 172
+4206e0e4:	2721a2        	l32i	a10, a1, 156
+4206e0e7:	960b      	addi.n	a9, a6, -1
+4206e0e9:	8a0b      	addi.n	a8, a10, -1
+4206e0eb:	938a60        	movnez	a8, a10, a6
+4206e0ee:	108a80        	and	a8, a10, a8
+4206e0f1:	106690        	and	a6, a6, a9
+4206e0f4:	276182        	s32i	a8, a1, 156
+4206e0f7:	208680        	or	a8, a6, a8
+4206e0fa:	b72856        	bnez	a8, 4206dc70 <ksn_mesh_prepared_render+0xe0>
+4206e0fd:	2c2172        	l32i	a7, a1, 176
+4206e100:	2d2152        	l32i	a5, a1, 180
+4206e103:	1b2182        	l32i	a8, a1, 108
+4206e106:	225a      	add.n	a2, a2, a5
+4206e108:	885a      	add.n	a8, a8, a5
+4206e10a:	1b6182        	s32i	a8, a1, 108
+4206e10d:	02b277        	bgeu	a2, a7, 4206e113 <ksn_mesh_prepared_render+0x583>
+4206e110:	feb806        	j	4206dbf4 <ksn_mesh_prepared_render+0x64>
+4206e113:	feb186        	j	4206dbdd <ksn_mesh_prepared_render+0x4d>
+4206e116:	272182        	l32i	a8, a1, 156
+4206e119:	609080        	neg	a9, a8
+4206e11c:	109980        	and	a9, a9, a8
+4206e11f:	40f990        	nsau	a9, a9
+4206e122:	c1c992        	addi	a9, a9, -63
+4206e125:	609090        	neg	a9, a9
+4206e128:	fed586        	j	4206dc82 <ksn_mesh_prepared_render+0xf2>

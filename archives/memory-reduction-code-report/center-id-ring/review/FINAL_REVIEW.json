@@ -1,0 +1,245 @@
+{
+  "status": "INDEPENDENT_FINAL_PASS",
+  "actualFramesRunByReviewer": 0,
+  "cases": [
+    {
+      "arm": "off",
+      "name": "native-front-baseline",
+      "status": "PASS"
+    },
+    {
+      "arm": "off",
+      "name": "native-front-baseline-reverse",
+      "status": "PASS"
+    },
+    {
+      "arm": "off",
+      "name": "native-oblique-baseline",
+      "status": "PASS"
+    },
+    {
+      "arm": "off",
+      "name": "native-oblique-baseline-reverse",
+      "status": "PASS"
+    },
+    {
+      "arm": "off",
+      "name": "native-front-direction",
+      "status": "PASS"
+    },
+    {
+      "arm": "off",
+      "name": "native-front-direction-reverse",
+      "status": "PASS"
+    },
+    {
+      "arm": "off",
+      "name": "native-oblique-direction",
+      "status": "PASS"
+    },
+    {
+      "arm": "off",
+      "name": "native-oblique-direction-reverse",
+      "status": "PASS"
+    },
+    {
+      "arm": "off",
+      "name": "native-front-intensity",
+      "status": "PASS"
+    },
+    {
+      "arm": "off",
+      "name": "native-front-intensity-reverse",
+      "status": "PASS"
+    },
+    {
+      "arm": "off",
+      "name": "native-oblique-intensity",
+      "status": "PASS"
+    },
+    {
+      "arm": "off",
+      "name": "native-oblique-intensity-reverse",
+      "status": "PASS"
+    },
+    {
+      "arm": "off",
+      "name": "native-front-ambient",
+      "status": "PASS"
+    },
+    {
+      "arm": "off",
+      "name": "native-front-ambient-reverse",
+      "status": "PASS"
+    },
+    {
+      "arm": "off",
+      "name": "native-oblique-ambient",
+      "status": "PASS"
+    },
+    {
+      "arm": "off",
+      "name": "native-oblique-ambient-reverse",
+      "status": "PASS"
+    },
+    {
+      "arm": "off",
+      "name": "native-front-albedo",
+      "status": "PASS"
+    },
+    {
+      "arm": "off",
+      "name": "native-front-albedo-reverse",
+      "status": "PASS"
+    },
+    {
+      "arm": "off",
+      "name": "native-oblique-albedo",
+      "status": "PASS"
+    },
+    {
+      "arm": "off",
+      "name": "native-oblique-albedo-reverse",
+      "status": "PASS"
+    },
+    {
+      "arm": "on",
+      "name": "native-front-baseline",
+      "status": "PASS"
+    },
+    {
+      "arm": "on",
+      "name": "native-front-baseline-reverse",
+      "status": "PASS"
+    },
+    {
+      "arm": "on",
+      "name": "native-oblique-baseline",
+      "status": "PASS"
+    },
+    {
+      "arm": "on",
+      "name": "native-oblique-baseline-reverse",
+      "status": "PASS"
+    },
+    {
+      "arm": "on",
+      "name": "native-front-direction",
+      "status": "PASS"
+    },
+    {
+      "arm": "on",
+      "name": "native-front-direction-reverse",
+      "status": "PASS"
+    },
+    {
+      "arm": "on",
+      "name": "native-oblique-direction",
+      "status": "PASS"
+    },
+    {
+      "arm": "on",
+      "name": "native-oblique-direction-reverse",
+      "status": "PASS"
+    },
+    {
+      "arm": "on",
+      "name": "native-front-intensity",
+      "status": "PASS"
+    },
+    {
+      "arm": "on",
+      "name": "native-front-intensity-reverse",
+      "status": "PASS"
+    },
+    {
+      "arm": "on",
+      "name": "native-oblique-intensity",
+      "status": "PASS"
+    },
+    {
+      "arm": "on",
+      "name": "native-oblique-intensity-reverse",
+      "status": "PASS"
+    },
+    {
+      "arm": "on",
+      "name": "native-front-ambient",
+      "status": "PASS"
+    },
+    {
+      "arm": "on",
+      "name": "native-front-ambient-reverse",
+      "status": "PASS"
+    },
+    {
+      "arm": "on",
+      "name": "native-oblique-ambient",
+      "status": "PASS"
+    },
+    {
+      "arm": "on",
+      "name": "native-oblique-ambient-reverse",
+      "status": "PASS"
+    },
+    {
+      "arm": "on",
+      "name": "native-front-albedo",
+      "status": "PASS"
+    },
+    {
+      "arm": "on",
+      "name": "native-front-albedo-reverse",
+      "status": "PASS"
+    },
+    {
+      "arm": "on",
+      "name": "native-oblique-albedo",
+      "status": "PASS"
+    },
+    {
+      "arm": "on",
+      "name": "native-oblique-albedo-reverse",
+      "status": "PASS"
+    }
+  ],
+  "rawComparisons": 200,
+  "reportComparisons": 280,
+  "forwardReverseRawComparisons": 80,
+  "allowedReportDelta": "workspace137312->77312 only, excluding seven named timings",
+  "completionManifestHashes": {
+    "off": "076f5f0d3d55db106fd13ad03a2b9713880ec7944279baa31993138446071dfe",
+    "on": "8aa80fd04c22f77c532e2304fe25957b4dc50631c6625ec9fa6fd1b0de96bcd4"
+  },
+  "sourceFreezeSHA256": "63358b04f50a9c2e0757abe36e94c6f64e76daf0b7be4403df5b0e9352f96bd9",
+  "gateSHA256": "b9f5664362e50bc72564b65f925957751ee08ae6fb760be660a01e0b015b0b9e",
+  "observerBuildSHA256": "25fd862402b418216bb4475e55d1f7bfa12f3e03a83634aadc9b0d9cf9053f35",
+  "allFrozenSourceBuildBaselinePinsVerified": true,
+  "sourceFilesChecked": 92,
+  "buildFilesChecked": 68,
+  "baselinePinsChecked": 1019,
+  "memoryLedgerSHA256": "261d4b767e1a48e5479095353999c3029e10e119cf6eeb7ca6ca5f1dbc472e8d",
+  "memory": {
+    "workspace": 77312,
+    "workspaceSaved": 60000,
+    "renderNamedBytes": 568880,
+    "renderNamedSaved": 59312,
+    "overallNamedPeak": 593184,
+    "overallNamedSaved": 35008
+  },
+  "stack": {
+    "background": 4016,
+    "backgroundCap": 4096,
+    "renderer": 5664,
+    "rendererCap": 8192,
+    "mainSeparate": 83616
+  },
+  "limits": [
+    "No device-fit or speedup claim",
+    "Named memory excludes library/runtime stacks,allocator metadata,unnamed executable/RO,unrelated caller state",
+    "No ASan leak-proof claim; detect_leaks disabled",
+    "No reviewer actual render, public repository, PR, device, SDK, model or reference changes"
+  ],
+  "independentPrerequisiteReport": "/tmp/center-id-ring-independent/PREREQUISITE_PASS.md",
+  "reproductionScript": "/tmp/center-id-ring-independent/audit_retained.py"
+}

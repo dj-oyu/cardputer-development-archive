@@ -1,0 +1,874 @@
+{
+  "fox-v3-camera-background-core/CORE_DESIGN.md": {
+    "sha256": "30ed8ff26341788a0285ea7e330a876fd4c39749d9d29aee83b281df90d245f5",
+    "bytes": 21026
+  },
+  "fox-v3-camera-background-core/CORE_REPORT.md": {
+    "sha256": "a28ec22aade1be270fb6156138f66d23d5d8bde7d3c882a246fd07cb83174a52",
+    "bytes": 5463
+  },
+  "fox-v3-camera-background-core/CORE_SOURCE_FREEZE.json": {
+    "sha256": "5b0e787226a8de30c647ac8dbf356984ec5566134c34dd6d4e3f922aa7fdf390",
+    "bytes": 3474
+  },
+  "fox-v3-camera-background-core/CORE_WORK_CONTRACT.json": {
+    "sha256": "d9b37e3c31691f6b9a0ea654f9b592d86a4e9ba435afc48a08cc12fbee06898b",
+    "bytes": 12823
+  },
+  "fox-v3-camera-background-core/INTEGRATION_SOURCE_FREEZE.json": {
+    "sha256": "018b68998aeb6b91dfb45f859f9ae40e6790f95781d55bb912b40c0535a0851f",
+    "bytes": 9767
+  },
+  "fox-v3-camera-background-core/background/BYTE_PROOF.json": {
+    "sha256": "63ecbfd786cc1ea9b819f48f1a522abea1e0840fb67d2f695997f23140573300",
+    "bytes": 3465
+  },
+  "fox-v3-camera-background-core/background/REPORT.md": {
+    "sha256": "522f617d5c5dc70edab3dbe6968415142d89cc6259d5b327e4b319268bb5f5db",
+    "bytes": 7706
+  },
+  "fox-v3-camera-background-core/background/SIZES.json": {
+    "sha256": "4a0612570ad05b0eae724e810b00e3d24b7a1456ba99498c32d047b87e84f70f",
+    "bytes": 1142
+  },
+  "fox-v3-camera-background-core/background/SOURCE_FREEZE-v1-before-final-core-stack.json": {
+    "sha256": "33d6748decf95a061c14ffc741fddf93419b5da1bac60d29a93a4fda6774f156",
+    "bytes": 5261
+  },
+  "fox-v3-camera-background-core/background/SOURCE_FREEZE.json": {
+    "sha256": "21521c0d4554828e939129b9bc2e92488c5fa7a4bab32ee85328bd38630026d5",
+    "bytes": 5433
+  },
+  "fox-v3-camera-background-core/background/background.c": {
+    "sha256": "d6e3983c3bb244a281e85c28d586bd1bfb7278bc879c13638c2b19458bc6961d",
+    "bytes": 22266
+  },
+  "fox-v3-camera-background-core/background/background.h": {
+    "sha256": "b758eeffe6e4e7f2de708386b8eb7a80bcd0dd28ab6b1ba7d3bc7027e5a1c301",
+    "bytes": 5453
+  },
+  "fox-v3-camera-background-core/background/tests/run.log": {
+    "sha256": "556156fb92f730f014153405e01a0af2a8ea57d5853c2a2f900585559060b8a8",
+    "bytes": 252
+  },
+  "fox-v3-camera-background-core/background/tests/run.sh": {
+    "sha256": "2e28dc09ee59d322cd2f31bde4fee5a899dec502752d034524865567423669da",
+    "bytes": 794
+  },
+  "fox-v3-camera-background-core/background/tests/stack/background.su": {
+    "sha256": "a0889b488c57fb1e3b5085748708e2c742bf5ec5f64a1352a6e730362435b346",
+    "bytes": 1254
+  },
+  "fox-v3-camera-background-core/background/tests/stack/physical.su": {
+    "sha256": "5843b17be7041d0f925355a5e449b9fddb2da9569520d81292d79b5537acd3e3",
+    "bytes": 572
+  },
+  "fox-v3-camera-background-core/background/tests/stack/visibility.su": {
+    "sha256": "a86135ee58dbd1a647f821f6485216c917bcebfeb0ea2773488748b1c9853cac",
+    "bytes": 972
+  },
+  "fox-v3-camera-background-core/background/tests/test_background.c": {
+    "sha256": "ffc7f222b5c36e64ebe11e9390e3047138374fe7dd67164daf7b2b9e109afd8d",
+    "bytes": 19132
+  },
+  "fox-v3-camera-background-core/physical/fox_disk_lighting.c": {
+    "sha256": "c8bd5a8fbb006050628c4a5349fffef91155a36ee436a0ede541569b008573ac",
+    "bytes": 10632
+  },
+  "fox-v3-camera-background-core/physical/fox_disk_lighting.h": {
+    "sha256": "86ece65f6742e510f7b536d7e2c948cff9e1b2e555a204a86017dae1473ed0a7",
+    "bytes": 3861
+  },
+  "fox-v3-camera-background-core/physical/test_disk_lighting.c": {
+    "sha256": "1e302352a8198aedb3071d38d85e138819e85624bbfa552e51523ddaa0066eba",
+    "bytes": 9443
+  },
+  "fox-v3-camera-background-core/physical/test_visibility.c": {
+    "sha256": "7547748868bb53ba142c02e5dbc3be33aedde185df38d1376c46e9b1d1adabd8",
+    "bytes": 6189
+  },
+  "fox-v3-camera-background-core/product/main/ayatsuri/ayatsuri_model.c": {
+    "sha256": "5d65fc53ff2f1175e8a44829c4acf07a23e3601f773486454f167dcbd0c194f0",
+    "bytes": 48337
+  },
+  "fox-v3-camera-background-core/product/main/ayatsuri/ayatsuri_model.h": {
+    "sha256": "de593d84b5591804aa5252dc05ba55d6beb14b86f88e499db89f0961524f7b27",
+    "bytes": 10429
+  },
+  "fox-v3-camera-background-core/product/main/ayatsuri/ayatsuri_shade.h": {
+    "sha256": "8e83a2573fbe17a3bb74589ed3713554cdfe2078790962d68a525b86dbab977e",
+    "bytes": 4120
+  },
+  "fox-v3-camera-background-core/product/main/ayatsuri/ayatsuri_transform.h": {
+    "sha256": "8983eb55223aa3f0bc65047e9f102ae97775041d6d08a5ff69a48637a7cd34ad",
+    "bytes": 4184
+  },
+  "fox-v3-camera-background-core/product/main/ayatsuri/ayatsuri_visibility.c": {
+    "sha256": "3d4654e35589cdb782ab61a90ca1919b5752a830fa6e4ced5c2844304cd181ca",
+    "bytes": 3780
+  },
+  "fox-v3-camera-background-core/product/main/ayatsuri/ayatsuri_visibility.h": {
+    "sha256": "fa8922ae6ac5b3dd9a76fe32c2a0a4479c14ea58f24ba73bc6d5473269f59a2c",
+    "bytes": 1774
+  },
+  "fox-v3-camera-background-core/product/main/ayatsuri/compact_opaque.c": {
+    "sha256": "daa6e537d00ce085ca431fd749badc93ff8f91eee9d32aae9e2c5020321124cf",
+    "bytes": 14460
+  },
+  "fox-v3-camera-background-core/product/main/ayatsuri/compact_opaque.h": {
+    "sha256": "dfdd96112c7371cf6d38d024148a8577ddbdd5025abbd375d4385ccfab69fdfa",
+    "bytes": 3868
+  },
+  "fox-v3-camera-background-core/product/main/pocket/pocket_ayatsuri_model.inc": {
+    "sha256": "c8c087321c76a9c23591b9373646136a666b1a346b7463289cb4e653d4a05048",
+    "bytes": 30125
+  },
+  "fox-v3-camera-background-core/product/main/pocket/pocket_proc.c": {
+    "sha256": "bc1e17f083538fa9ba61df41ae97f75a440a3516870bec9a7b07509cac75e6a0",
+    "bytes": 77838
+  },
+  "fox-v3-camera-background-core/product/main/pocket/pocket_proc.h": {
+    "sha256": "a7a2b6b10d9bc6743ac2d2f30af45d5e05316ab434a0a3407e56930a7ab6f9de",
+    "bytes": 8916
+  },
+  "fox-v3-camera-background-core/product/main/ui/kasane/ksn_aa_rho_affine.h": {
+    "sha256": "66193f3cf6571d2d158abcbdb32c3d6187e007a5c746c3bafae77dadbafde8ca",
+    "bytes": 976
+  },
+  "fox-v3-camera-background-core/product/main/ui/kasane/ksn_boundary_aa.h": {
+    "sha256": "4680b99560f17bedf633b548e81178cf7fda3cba927252919f1b7f5f1e30036d",
+    "bytes": 3691
+  },
+  "fox-v3-camera-background-core/product/main/ui/kasane/ksn_boundary_aa_center.inc": {
+    "sha256": "0ab6cf6e904e074df2d7969109d2f2e1a1f6de7a147deeceba1205f665e607e6",
+    "bytes": 5462
+  },
+  "fox-v3-camera-background-core/product/main/ui/kasane/ksn_boundary_aa_impl.inc": {
+    "sha256": "9a5ebadefc4558d389da47b4a929ac1842de82cc374fce843549e4c2ab008058",
+    "bytes": 15118
+  },
+  "fox-v3-camera-background-core/product/main/ui/kasane/ksn_depth_lines.c": {
+    "sha256": "15780f51b1e04d6d218ff5e3c991b626a3555e9e104ab0e6c6e7e1316e62530d",
+    "bytes": 3467
+  },
+  "fox-v3-camera-background-core/product/main/ui/kasane/ksn_depth_lines.h": {
+    "sha256": "b8daba3ca9489fdc247da5cf3a52663d603180a248fb6a0848b1fe48d3c3cfdd",
+    "bytes": 1207
+  },
+  "fox-v3-camera-background-core/product/main/ui/kasane/ksn_mesh_depth.c": {
+    "sha256": "1e7bed3e2e0d028c24bf9f21bef5ab62f01699f12018b6e795eadc397a0c7f38",
+    "bytes": 16071
+  },
+  "fox-v3-camera-background-core/product/main/ui/kasane/ksn_mesh_depth.h": {
+    "sha256": "883715d956ef7d2e52c517c45a62de80050f65d339d5817213b9c93c363d4f92",
+    "bytes": 3534
+  },
+  "fox-v3-camera-background-core/product/main/ui/kasane/ksn_procedural.c": {
+    "sha256": "c81119ae753c31b0c97ca0483cdb3c51203849edf908402ff3d60a2a18f6ef1c",
+    "bytes": 55962
+  },
+  "fox-v3-camera-background-core/product/main/ui/kasane/ksn_procedural.h": {
+    "sha256": "d15af5372e25d9ca52cbe68f04f2e8fc60053d6e092cdbef08f3b553a3964916",
+    "bytes": 20034
+  },
+  "fox-v3-camera-background-core/product/main/ui/kasane/ksn_scene_composition.h": {
+    "sha256": "a6c8a646b314efd9429a8b3d60d8bf5c3dd381fc0a929a99054b39ad647e52b9",
+    "bytes": 3896
+  },
+  "fox-v3-camera-background-core/product/main/ui/kasane/ksn_scene_composition_impl.inc": {
+    "sha256": "048aa007d936ca839e7c1e644f8df3bdf30f6654c915af30dce90c9d9b4444bd",
+    "bytes": 17824
+  },
+  "fox-v3-camera-background-core/product/tools/ayatsuri/model/test_sidedness.c": {
+    "sha256": "65700c30c470808827894493249adef419b930ff17e40a92215ea73505d8644d",
+    "bytes": 7847
+  },
+  "fox-v3-camera-background-core/product/tools/kasane_contract/proc_native_weak.c": {
+    "sha256": "9756a3a1367e848777d21325c3cfb3c4de528ab33db8a48498f273d3e4fb0ab9",
+    "bytes": 4064
+  },
+  "fox-v3-camera-background-core/product/tools/kasane_contract/test_mesh_depth_qjs.c": {
+    "sha256": "1b9cc935074a63030bdce265c1d40c6996a3cf070c52d2647296efff1a42b5fd",
+    "bytes": 14654
+  },
+  "fox-v3-camera-background-core/product/tools/kasane_contract/test_mesh_side_record.c": {
+    "sha256": "6cc38b789f5cb72f07e9993c18719819c80917a317d13a2cd83e197abaf0c2b5",
+    "bytes": 6519
+  },
+  "fox-v3-camera-background-core/product/tools/kasane_contract/test_sided_legacy_compat.c": {
+    "sha256": "60ede1434836758fde84d9aa123776cda628f8e5c915c602efeaf21c8cb8af16",
+    "bytes": 2358
+  },
+  "fox-v3-camera-background-core/tests/core.su": {
+    "sha256": "0414f416366c06895cd2606b3df095328d44c7aa4624fa3bdbfad986c5dab0f0",
+    "bytes": 3667
+  },
+  "fox-v3-camera-background-core/tests/fixtures-O1-ASanUBSan.json": {
+    "sha256": "250dec8154f76d775e9ce01b7e71e78e524a30ab5674982004d124b7a0cb5747",
+    "bytes": 526
+  },
+  "fox-v3-camera-background-core/tests/fixtures-O2.json": {
+    "sha256": "250dec8154f76d775e9ce01b7e71e78e524a30ab5674982004d124b7a0cb5747",
+    "bytes": 526
+  },
+  "fox-v3-camera-background-core/tests/run.log": {
+    "sha256": "8fdece7f8ac8c91b65f3c51ddeef0af3f7dab7a2f0fdc47fa6b04ecaad3906ca",
+    "bytes": 2047
+  },
+  "fox-v3-camera-background-core/tests/run.sh": {
+    "sha256": "c25bc4253e9d0c80623abc4529f9f28769a6652e100bd9878d63e825a2ffed78",
+    "bytes": 1164
+  },
+  "fox-v3-camera-background-core/tests/source-preservation.json": {
+    "sha256": "49f690bbd4cefc859914b7217be1d82fb64bb0889295abb04c3d64f9e00dfea5",
+    "bytes": 18971
+  },
+  "fox-v3-camera-background-core/tests/stack-probe.su": {
+    "sha256": "42c7b05a1a2d7d8f97e52e1838f2ece25120507b873c3bf86c03e893aedbee81",
+    "bytes": 2744
+  },
+  "fox-v3-camera-background-core/tests/test_boundary_aa.c": {
+    "sha256": "9f64fcb873f8d03058522043af28b1bb0f8330b8ab56f803c080c46d486df0b5",
+    "bytes": 9002
+  },
+  "fox-v3-camera-background-core/tests/test_boundary_aa.json": {
+    "sha256": "fb001511d37cae57ba9bf09a891f961a2772a0bd5c7ce89aaf6bd800b130ed85",
+    "bytes": 406
+  },
+  "fox-v3-camera-background-core/tests/test_hidden_failure.c": {
+    "sha256": "30282246b350b7cd1aaa08e0240cd7bfeb13dc1a4e3439880af9399bd40d8954",
+    "bytes": 3926
+  },
+  "fox-v3-camera-background-core/tests/test_hidden_failure.json": {
+    "sha256": "aa5980650afb34b9ca8f97fa0dbaebbcdafe720fc884d2a303ca568169817a77",
+    "bytes": 475
+  },
+  "fox-v3-camera-background-core/tests/test_scene_composition-compact_opaque.su": {
+    "sha256": "7f4206f463b1f8c08e177651930bcfb1bf95256ccc57639daf39e09727f7b60f",
+    "bytes": 984
+  },
+  "fox-v3-camera-background-core/tests/test_scene_composition-fox_disk_lighting.su": {
+    "sha256": "ecbb31f49e85dd6478a8e6b8381ad6d8e2ede2f87b1a374f695a88e5ed19d33c",
+    "bytes": 548
+  },
+  "fox-v3-camera-background-core/tests/test_scene_composition-ksn_mesh_depth.su": {
+    "sha256": "8d542c2b48e8617f14965a502da8d8436f45966ee7b342285a06a6eed3a28dfb",
+    "bytes": 2830
+  },
+  "fox-v3-camera-background-core/tests/test_scene_composition-test_scene_composition.su": {
+    "sha256": "47d2f9311fb956a80527f3639ce1de956c8c34c57cd71572e4bd022f0d063109",
+    "bytes": 408
+  },
+  "fox-v3-camera-background-core/tests/test_scene_composition.c": {
+    "sha256": "96bff48c0ac99d9583c09d1b8a6fcc56b2e713080ddd084da9ee8abb2ad68ef9",
+    "bytes": 15174
+  },
+  "fox-v3-camera-background-core/tests/transport.su": {
+    "sha256": "03d177bd605325e4fd70a4df463a4fd99dd7646809e99e8a16f1c3bab903740d",
+    "bytes": 454
+  },
+  "fox-v3-camera-background-core/tests/verify_source.py": {
+    "sha256": "e1826ce0132b7f4d41b02831079ecc895b0c5d8e0ef575f9e804357c7c651e5a",
+    "bytes": 1558
+  },
+  "fox-v3-camera-background-core/transport/bounce.c": {
+    "sha256": "048a923d8bdf670ea174010d396c60999a430c25f8e62dfaf1a43e063e27a377",
+    "bytes": 13379
+  },
+  "fox-v3-camera-background-core/transport/bounce.h": {
+    "sha256": "286547691de79e1017f6382cdb6486f5264798fff540c7905cf42d428addbe4d",
+    "bytes": 4988
+  },
+  "fox-v3-camera-background-core/transport/pixel_transport.c": {
+    "sha256": "3f503858d70759c2885be10c0e05d15a909cf8d068eab2ea5b88c6f45dde44bd",
+    "bytes": 4267
+  },
+  "fox-v3-camera-background-core/transport/pixel_transport.h": {
+    "sha256": "c5c2e0302ed8e8c0bee3f6450a1d1fce77398ee715a905fa40a19be3f82f175f",
+    "bytes": 1269
+  },
+  "fox-v3-camera-background-core/transport/test_bounce.c": {
+    "sha256": "8582d75373a7fa27d5a199688eabae8ff0f6b683cffb7bb9452c48b74d61e7aa",
+    "bytes": 5749
+  },
+  "fox-v3-camera-background-core/transport/test_ground.c": {
+    "sha256": "8616958d70dc174242e3e1d9f84adcedf863262b09eccc77275e8c8b8a2b8de9",
+    "bytes": 6831
+  },
+  "fox-v3-camera-background-core/transport/test_ground_quadrature.c": {
+    "sha256": "fbd5320538c6845a71c6920534ff9e48f9a09f2d7d7e4e510775c4cb5626898f",
+    "bytes": 1807
+  },
+  "fox-v3-camera-background-core/transport/test_quadrature.c": {
+    "sha256": "aa4f7ab083c7e5d6ff8d5951b74e03f33539263964107da2d02814250dc8ad89",
+    "bytes": 3858
+  },
+  "fox-v3-camera-background-core/visibility/pixel_binding.c": {
+    "sha256": "24e4d1199df76854ffb269418fdb1ebdbadfbb6027ac98c66bbddb611f936296",
+    "bytes": 3570
+  },
+  "fox-v3-camera-background-core/visibility/pixel_binding.h": {
+    "sha256": "7214e1ffa10d5f93cb2651e9bde92025754ac9dbfddac89803cba113411ae774",
+    "bytes": 931
+  },
+  "fox-v3-camera-background-core/visibility/test_bruteforce.c": {
+    "sha256": "84e7b6881cf8b531de8ab7758fe922125a70b5a333e5f901cd1513b21d183c49",
+    "bytes": 5438
+  },
+  "fox-v3-camera-background-core/visibility/test_nearest.c": {
+    "sha256": "096f631dc2f7239452450a6fa5507262345d772d015e0cc6d35e53714ea64f54",
+    "bytes": 5321
+  },
+  "fox-v3-camera-background-core/visibility/test_visibility.c": {
+    "sha256": "00e8a8725274df2328f5fbf26c78aa4fd6acef060076ff499cf1f2b0a4dc73a1",
+    "bytes": 8619
+  },
+  "fox-v3-camera-background-core/visibility/visibility.c": {
+    "sha256": "3ef439ed2eaaf24997743b38207d8d22167f809bea9e1d1191305a2ce39fbc3a",
+    "bytes": 13072
+  },
+  "fox-v3-camera-background-core/visibility/visibility.h": {
+    "sha256": "113c313b2a2b491884743b351fbb8da6283d7007733ad14ebe61dc6f348b24a3",
+    "bytes": 4666
+  },
+  "fox-v3-camera-background-evaluation/CPU_PLAN_FREEZE.json": {
+    "sha256": "62bac98590acd7f8d1d648e3b7e9fe44398076a025ed263705fcfdc462cf2b1a",
+    "bytes": 376
+  },
+  "fox-v3-camera-background-evaluation/CPU_SUMMARY.json": {
+    "sha256": "bd9093f2b76d0aecb521273e400d6fae3b199c74efa1a8af81eccb61fb76db5e",
+    "bytes": 810
+  },
+  "fox-v3-camera-background-evaluation/OUTER_VALIDATION_FREEZE.json": {
+    "sha256": "49b92998bda818eab8b4b962641284888e3e471410fb061abca5ab70856b9f19",
+    "bytes": 767
+  },
+  "fox-v3-camera-background-evaluation/OUTER_VALIDATION_FREEZE_V2.json": {
+    "sha256": "c6e717f447ea1eb8718b3a0e3bcc93cf59724538fd58dcf6c615107c59f7fc49",
+    "bytes": 1061
+  },
+  "fox-v3-camera-background-evaluation/REPORT.md": {
+    "sha256": "a060e11c5036b2d1d48818c6a62326d83a9b023fcce2bcd45ce040647e635ce5",
+    "bytes": 11522
+  },
+  "fox-v3-camera-background-evaluation/RESOURCE_SUMMARY.json": {
+    "sha256": "c58f1346e4f94318f4387f7cec9aa3fb55a563ab10233beba24fdf8535e11ebc",
+    "bytes": 69819
+  },
+  "fox-v3-camera-background-evaluation/STACK_FIX_FREEZE.json": {
+    "sha256": "67fdc25c91e328b4b26c59bb11cb229105ff79ad11f36869613efac5b3a6203d",
+    "bytes": 989
+  },
+  "fox-v3-camera-background-evaluation/STACK_FIX_REPORT.md": {
+    "sha256": "9a80d6787e046783ee9cce3ed58e15daee1f6b13592c9d11b8d1184e426720a1",
+    "bytes": 1575
+  },
+  "fox-v3-camera-background-evaluation/actual-001/PREPARED.json": {
+    "sha256": "7cbf4e540636236b593bf41e832479b9c278b96fd3ec8e4509c3c7ca7acf7628",
+    "bytes": 777
+  },
+  "fox-v3-camera-background-evaluation/actual-002/PREPARED.json": {
+    "sha256": "0ee50b4df2def6794c3331f3cbb034f12d150b7158fd07c4b6b503ecb2cf1749",
+    "bytes": 777
+  },
+  "fox-v3-camera-background-evaluation/actual-002/background-control/COMPOSITION_AUDIT.json": {
+    "sha256": "ef8832a4a01bd1f9545beb489897856876b07426c17b3e9d41cabf0c53eb182d",
+    "bytes": 12922
+  },
+  "fox-v3-camera-background-evaluation/actual-002/background-control/STRICT_TEST.json": {
+    "sha256": "ec0f0fae6f338ee56d280e7062e5e57b5d24dc9388d01e6c381f1781b42f4c79",
+    "bytes": 72
+  },
+  "fox-v3-camera-background-evaluation/actual-002/background-run.log": {
+    "sha256": "3448aec1521c398cab7c7cbdd53e7b4c6ccf67a5228eda75d9657e3d8162046f",
+    "bytes": 505
+  },
+  "fox-v3-camera-background-evaluation/actual-002/input-hashes.json": {
+    "sha256": "c4f5891539ef2efc15517de8b3a5e15d6ee8eba49242a66599bfad71164f5631",
+    "bytes": 20356
+  },
+  "fox-v3-camera-background-evaluation/actual-002/on/COMPOSITION_AUDIT.json": {
+    "sha256": "3267d228fc96992f5b8c3fdcd20831279ae71f64ddcc6ec6f99e9bd7e1e192ce",
+    "bytes": 12962
+  },
+  "fox-v3-camera-background-evaluation/actual-002/on/STRICT_TEST.json": {
+    "sha256": "ea2ac9964916cbd5cd103fc429fecb9c8a94924048f0facd01e862ce6ef15106",
+    "bytes": 64
+  },
+  "fox-v3-camera-background-evaluation/analysis-code/ALL_OUTPUT_PINS.json": {
+    "sha256": "88c5f4d7d68e111795cc25b53d55e472dfec8da58c27d63985e02823e7b05259",
+    "bytes": 93241
+  },
+  "fox-v3-camera-background-evaluation/analysis-code/ATTRIBUTION_SUMMARY.md": {
+    "sha256": "65b69a64dde62cfdf4985d8c4bc272cd19f9d78d25a996cb41ab4108547e1279",
+    "bytes": 2748
+  },
+  "fox-v3-camera-background-evaluation/analysis-code/BUNDLE_ALLOWLIST.json": {
+    "sha256": "d4cec81943d338865e5139a315c8c52b822d13c9c1854e9a341a7060eea51eec",
+    "bytes": 3549
+  },
+  "fox-v3-camera-background-evaluation/analysis-code/DESIGN.md": {
+    "sha256": "54533526295af48bce384f828b69154566198d0d3d3581bd4f0b0853f1ab8efa",
+    "bytes": 7594
+  },
+  "fox-v3-camera-background-evaluation/analysis-code/TEST_RESULTS.txt": {
+    "sha256": "c1d1f7df792425f10feae3fefd65c14bed687dc865383c6c98cb6b7b1b6c4ee0",
+    "bytes": 1613
+  },
+  "fox-v3-camera-background-evaluation/analysis-code/TRUST_INPUTS.json": {
+    "sha256": "d4392ca85bf91d6c287241549d0d8c5bd43941723bd846db6bd8803554714183",
+    "bytes": 13116
+  },
+  "fox-v3-camera-background-evaluation/analysis-code/TRUST_INPUTS.sha256": {
+    "sha256": "26b7de96bb5640f0f2d6e211a94cc44862baf88df1eb75af9e4db5a332c8fe0d",
+    "bytes": 65
+  },
+  "fox-v3-camera-background-evaluation/analysis-code/all-analysis-001/ADMISSION.json": {
+    "sha256": "d79fa400ec94272c2a11434912c9b69731af3aff6cffe56099653a955c340deb",
+    "bytes": 707
+  },
+  "fox-v3-camera-background-evaluation/analysis-code/all-analysis-001/COMPLETED.json": {
+    "sha256": "df3934c0fd5fdb1377484fd6e8f65330897aab262647da72d6bc3e2751f0055b",
+    "bytes": 1405
+  },
+  "fox-v3-camera-background-evaluation/analysis-code/all-analysis-001/FIXED_DOMAINS.json": {
+    "sha256": "530aa1fff31f3925808470595bbca616152e302af2fc66943e06bf6873ac8efd",
+    "bytes": 4517
+  },
+  "fox-v3-camera-background-evaluation/analysis-code/all-analysis-001/OFF_A2_PARITY.json": {
+    "sha256": "a5fadb558bc8681fcad90898f4669879dd31eb505f2bc87ee7f4ee7ac8fdaca4",
+    "bytes": 88
+  },
+  "fox-v3-camera-background-evaluation/analysis-code/all-analysis-001/SHAPE_PARITY.json": {
+    "sha256": "69c90ae31477c4dfa4cc874616e56c10658d99d1c59aaaf737fbebaf3925276a",
+    "bytes": 86
+  },
+  "fox-v3-camera-background-evaluation/analysis-code/all-analysis-001/descriptive-background.json": {
+    "sha256": "5afae8d3350cb7dda3e32878a2ee1d0dbe4f50b87bb9ae598b3dea9cc7a2f8a7",
+    "bytes": 2382380
+  },
+  "fox-v3-camera-background-evaluation/analysis-code/all-analysis-001/descriptive-off.json": {
+    "sha256": "71d840ad37cd54d097ec02bad3535c1ec2fbe8c0ce57ab5d6438bc3eefe74910",
+    "bytes": 2379447
+  },
+  "fox-v3-camera-background-evaluation/analysis-code/all-analysis-001/descriptive-on.json": {
+    "sha256": "8bb5125de991e416ba8d56b68930a400843a80f43e5d546c03e3046cbc02ef81",
+    "bytes": 2388750
+  },
+  "fox-v3-camera-background-evaluation/analysis-code/all-analysis-001/formal-off.json": {
+    "sha256": "2e8393a650dc16637b9782ed0f7300388cc7505e5069b371771674057b521677",
+    "bytes": 1961358
+  },
+  "fox-v3-camera-background-evaluation/analysis-code/all-analysis-001/formal-on.json": {
+    "sha256": "d978a6c8c861648e7a3f9c52b912d4d1a9e92a1982ff6f67e1b716a547803197",
+    "bytes": 1963333
+  },
+  "fox-v3-camera-background-evaluation/analysis-code/all-comparison-001/COMPARISON.json": {
+    "sha256": "c61be5e40dd97c43cd100a4fd3771a95d4727a3314584a89dea171df6f880809",
+    "bytes": 496131
+  },
+  "fox-v3-camera-background-evaluation/analysis-code/all-comparison-001/COMPLETED.json": {
+    "sha256": "05d8e202eb5ac2e61596aa10722d4129ec5b398af83aaff0f1501a4bcee13e23",
+    "bytes": 439
+  },
+  "fox-v3-camera-background-evaluation/analysis-code/all-comparison-001/REPORT.md": {
+    "sha256": "6f257415235fd6795c72e4bf537de87988bd1616717004c69c824212667d01fe",
+    "bytes": 5112
+  },
+  "fox-v3-camera-background-evaluation/analysis-code/freeze_completed_outputs.py": {
+    "sha256": "15d41bd500822a462d718a32602d1999e8aee6ec1a69524b03f9b3f27732fa44",
+    "bytes": 2593
+  },
+  "fox-v3-camera-background-evaluation/analysis-code/strict_scene_score.py": {
+    "sha256": "c265987817d6c3508d0b794f0a945b45d60d24f59e2f1f8e38b067565196f2fb",
+    "bytes": 29357
+  },
+  "fox-v3-camera-background-evaluation/analysis-code/summarize_scene.py": {
+    "sha256": "6d5abc2a7eb6e9d911fdfed5683e5e05d7a68a87176c6c55ff1546f917d6816a",
+    "bytes": 9789
+  },
+  "fox-v3-camera-background-evaluation/analysis-code/test_strict_scene_score.py": {
+    "sha256": "9be6f1164aeeb6105a9e1e5cfdb59feb471ca7c791b043cd2978b14a2c8bd36f",
+    "bytes": 4480
+  },
+  "fox-v3-camera-background-evaluation/code/aa_adapter.h": {
+    "sha256": "e6f6b84e0593a2f9b15ee21cb258e27f3f6c3309a014e7266cfeba0cde0d36ac",
+    "bytes": 3545
+  },
+  "fox-v3-camera-background-evaluation/code/aa_contract.py": {
+    "sha256": "99ec5bc06fccbce3f0901643ae365ce0d7bdd40e99622f27ac6e32690c2abd6a",
+    "bytes": 3800
+  },
+  "fox-v3-camera-background-evaluation/code/audit_composition.py": {
+    "sha256": "495d802229b2278957a76d93146ab658eb9969481d93805169e90a07f9d986f4",
+    "bytes": 4004
+  },
+  "fox-v3-camera-background-evaluation/code/audit_composition_v1.py": {
+    "sha256": "495d802229b2278957a76d93146ab658eb9969481d93805169e90a07f9d986f4",
+    "bytes": 4004
+  },
+  "fox-v3-camera-background-evaluation/code/audit_composition_v2.py": {
+    "sha256": "db36b5027cd621ab9232f1b3e35ea51cd10042a93b0952b086ad2bd6dd59e3d6",
+    "bytes": 4983
+  },
+  "fox-v3-camera-background-evaluation/code/audit_composition_v3.py": {
+    "sha256": "630c752f34482568c2c9942f5a9180febd00bbd9b63d466e30636a310ac87e09",
+    "bytes": 5032
+  },
+  "fox-v3-camera-background-evaluation/code/background_adapter.h": {
+    "sha256": "df2527eabcaf3546abfd028a3ce1194a0ebb000203c828e81b449c51115e9bca",
+    "bytes": 7455
+  },
+  "fox-v3-camera-background-evaluation/code/background_contract.py": {
+    "sha256": "8e026122c78a16f797b543ca1e5f0d8cd447707e017359c6efee56fc66896a0c",
+    "bytes": 6276
+  },
+  "fox-v3-camera-background-evaluation/code/benchmark_background.py": {
+    "sha256": "2a992059d692adfb68b6620267cdabc4255f9d9d8dd04c17e0e96292eacbb9ca",
+    "bytes": 4661
+  },
+  "fox-v3-camera-background-evaluation/code/encode_control.c": {
+    "sha256": "598539096597e236cbe8f40fc5bd90040c04f2749043954c405837bbbeb40388",
+    "bytes": 357
+  },
+  "fox-v3-camera-background-evaluation/code/freeze_code_reports.py": {
+    "sha256": "429dfed3560bd9dc5e02403263e2a4a4d2ecf75ae5eb5abc0cadd00012f431fc",
+    "bytes": 4187
+  },
+  "fox-v3-camera-background-evaluation/code/generate_core_inputs.py": {
+    "sha256": "bf295f597a7a913dbf839d0c21076ee3fe1f2b146d87647de7d2b5e45b663710",
+    "bytes": 1308
+  },
+  "fox-v3-camera-background-evaluation/code/generate_header.py": {
+    "sha256": "0476a842bee78275d054bd74a690fb15f805402e9cc0dbbf422f59694d1abfcd",
+    "bytes": 1254
+  },
+  "fox-v3-camera-background-evaluation/code/generate_inputs.py": {
+    "sha256": "94952a5cc18c32629bd51e71ac5d7b82966589bcf714dc3f21ce0024b0321e8c",
+    "bytes": 3547
+  },
+  "fox-v3-camera-background-evaluation/code/make_private_preview.py": {
+    "sha256": "432b0f82a637f9d3bc9c6f3f89203131d62fd84d9379922f4480f37b5ed1fda0",
+    "bytes": 771
+  },
+  "fox-v3-camera-background-evaluation/code/native_render.c": {
+    "sha256": "1dbd6eaba4ad8723e0729e3f9dc7b899956e274cadf55fa09da7827932d7d8a9",
+    "bytes": 27177
+  },
+  "fox-v3-camera-background-evaluation/code/prepare.py": {
+    "sha256": "76b3019b48cec58f5a92b4509b0c566e758fa627e3e32bc91a212d6afe05730e",
+    "bytes": 3646
+  },
+  "fox-v3-camera-background-evaluation/code/run_actual.py": {
+    "sha256": "142089c123d6b71c465ca14823aee94c5dde5a437c04b4c709ee4e3ba6135667",
+    "bytes": 6303
+  },
+  "fox-v3-camera-background-evaluation/code/run_actual_v2.py": {
+    "sha256": "4741d1ca1175c1c20e081b2d3f62bb24681e692c93d4522ea730bc0b315d5b68",
+    "bytes": 6352
+  },
+  "fox-v3-camera-background-evaluation/code/sample_cpu_context.py": {
+    "sha256": "5921ca15a0b1a394cf8387fb1e52b7eb5215aec9f5615aa9fc092548d469f66d",
+    "bytes": 927
+  },
+  "fox-v3-camera-background-evaluation/code/scene_transport_bridge.c": {
+    "sha256": "ce0109c5141d18f5d0ef2fb800c234d80b35588402bce2934212eba83fe5cb06",
+    "bytes": 4103
+  },
+  "fox-v3-camera-background-evaluation/code/scene_transport_bridge.h": {
+    "sha256": "6d9d19a68b6cd8b0b711a540bcfe2c207391b32e5caa2d08f002925bcdfa0b27",
+    "bytes": 454
+  },
+  "fox-v3-camera-background-evaluation/code/summarize_resources.py": {
+    "sha256": "862cc210170cb23de79a1a3a4990f7d4b515944d5f5798336bd64062dea0b83c",
+    "bytes": 2747
+  },
+  "fox-v3-camera-background-evaluation/code/test_actual_background.py": {
+    "sha256": "28d7ac67357f38f8b9057581d74d23ce300d94e8e2c2e7e3c12dae511a8fef40",
+    "bytes": 1300
+  },
+  "fox-v3-camera-background-evaluation/code/test_background_contract.py": {
+    "sha256": "1c04b5d011c43b6a9e14a6edf7fdd062aa7595c65ddb7370065e08c92bbe5787",
+    "bytes": 4227
+  },
+  "fox-v3-camera-background-evaluation/cost-001/NOT_PRIMARY_COMPARISON.md": {
+    "sha256": "36390079240a843e4d2f425d814a5565886879c5ba12f2ad6c8d3376c6f9dde0",
+    "bytes": 581
+  },
+  "fox-v3-camera-background-evaluation/cost-001/RESULT.json": {
+    "sha256": "8c2f00340ff38a019c668286967635385f446ac334a7929e2612612d94b567b2",
+    "bytes": 14033
+  },
+  "fox-v3-camera-background-evaluation/cost-001/cpu-context-after.json": {
+    "sha256": "c3b79f00899db6a97dc372d600116d7bcc1c49096339dd648c8af9d6b85cb44e",
+    "bytes": 727
+  },
+  "fox-v3-camera-background-evaluation/cost-001/cpu-context-before.json": {
+    "sha256": "1a77998b78b43b1910abdffe48a0ca485fa219fbc6505dc4955b5d88ce1a8b00",
+    "bytes": 726
+  },
+  "fox-v3-camera-background-evaluation/cost-002/RESULT.json": {
+    "sha256": "ff11df2149546c058b3e07e04de170b9fac8f2ad63969af456db92a2d2980f98",
+    "bytes": 14030
+  },
+  "fox-v3-camera-background-evaluation/cost-002/cpu-context-after.json": {
+    "sha256": "ac93340ce22370ab5733b4a4884ff93c70f31a5377347639c43ea8102ae43279",
+    "bytes": 727
+  },
+  "fox-v3-camera-background-evaluation/cost-002/cpu-context-before.json": {
+    "sha256": "d95277fa5a3b662d8d01f2b937f832d4b39077167dfcb139b190d43044665954",
+    "bytes": 727
+  },
+  "fox-v3-camera-background-evaluation/cpu-context/pre-start.json": {
+    "sha256": "782377b3af1c76330c06cdbf756a2db26137a7c435fac87790121d6c94278d12",
+    "bytes": 727
+  },
+  "fox-v3-camera-background-evaluation/cpu-context/visible-processes-after-002.txt": {
+    "sha256": "7701d760ec0b928e6938d6d8ee9daada0a3d69c08eea75aa319dd86fac063f48",
+    "bytes": 5179
+  },
+  "fox-v3-camera-background-evaluation/cpu-context/visible-processes-before-002.txt": {
+    "sha256": "7bc2980fffeccf39c498a005bab945f8c0b17889995cf28a65a4a4896c7eaab3",
+    "bytes": 5089
+  },
+  "fox-v3-camera-background-evaluation/cpu-context/visible-processes-before.txt": {
+    "sha256": "855721f8ca6b55c3405dfeac2b88d6a1bafc2be39592d14c6d0ffd508cea6044",
+    "bytes": 3595
+  },
+  "fox-v3-camera-background-evaluation/history/stack-fail-001/background_adapter.h": {
+    "sha256": "393b9af428695de1add4a1f53cf4aaa79f4cc28008c4b403d462cf4854ad4c7f",
+    "bytes": 7257
+  },
+  "fox-v3-camera-background-evaluation/history/stack-fail-001/scene_transport_bridge.c": {
+    "sha256": "eee01b27e137ec2e4e9bc84e8dd0922486d1c80b386290d6dd4e88b8901ba093",
+    "bytes": 3483
+  },
+  "fox-v3-camera-background-evaluation/memory-v2/OWNED_SCOPE.json": {
+    "sha256": "e751f2eb1f6b0b7a8071d0beadb41dd502c7a995df36a1fd69ca2dca6dbad40c",
+    "bytes": 346
+  },
+  "fox-v3-camera-background-evaluation/memory-v2/RO_AND_CALLER_SCOPE.json": {
+    "sha256": "de7afe599becb80e6af2c6359efde2c3e825c1dd99f91b7ca930eb9c1e8098f6",
+    "bytes": 1208
+  },
+  "fox-v3-camera-background-evaluation/memory-v2/STACK_REPORT.json": {
+    "sha256": "5bc8dcf07e119519deccc3463ea9f794283fb14887d998ff54c63596e775fe62",
+    "bytes": 1011
+  },
+  "fox-v3-camera-background-evaluation/memory-v2/native_render.su": {
+    "sha256": "6b029796b057ef6c63ad26ed585483fabcd850c6b659de9051a32d6d14b8a04e",
+    "bytes": 1198
+  },
+  "fox-v3-camera-background-evaluation/memory-v2/scene_transport_bridge.su": {
+    "sha256": "14c2c6bb2b362e4ea2ef6ca7aed26f43f363206f6288f844482440f0a20e8342",
+    "bytes": 958
+  },
+  "fox-v3-camera-background-evaluation/reviews/actual-floor-order-independent.json": {
+    "sha256": "531d2bdbaca3b36a634e664880d09be4175010630e9017ad85ded463f9982838",
+    "bytes": 1472
+  },
+  "fox-v3-camera-background-evaluation/reviews/actual-independent.json": {
+    "sha256": "0bd934474efa9700fe5cddec0da08f52fc4ad3b93586cc9e07323fef09a2ffa2",
+    "bytes": 5187
+  },
+  "fox-v3-camera-background-evaluation/reviews/camera-background-admission-independent-review.json": {
+    "sha256": "534dccdc1da4918c98deb387c5a6939f07b166e44755821c823bb2ce48c8da72",
+    "bytes": 1104
+  },
+  "fox-v3-camera-background-evaluation/reviews/camera-background-comparison-independent-review.json": {
+    "sha256": "3adc33461542012dce97851cd3c71ca8de2ea0ef24d9de3defdf3483cea33453",
+    "bytes": 538
+  },
+  "fox-v3-camera-background-evaluation/reviews/camera-background-composition-independent-review.json": {
+    "sha256": "808be65aee2b392cae5503e32ae44fdcfcd11e0c2904227e7862258bef00046d",
+    "bytes": 34014
+  },
+  "fox-v3-camera-background-evaluation/reviews/camera-background-cost-independent-review.json": {
+    "sha256": "0d72097596848912c43ff8834907b22edc2a1d05e9b3fcbec7b733f0d3130a49",
+    "bytes": 39923
+  },
+  "fox-v3-camera-background-evaluation/reviews/camera-background-independent-review.json": {
+    "sha256": "72586ef481b7eee122c354e2b845c626f7c120fdd7b9d9552f6600f2f25fa19b",
+    "bytes": 11295
+  },
+  "fox-v3-camera-background-evaluation/reviews/camera-background-metrics-independent-review.json": {
+    "sha256": "638a6cea1f4cea7fdb3c629fdbdc21881880cfe49ea1d9a22f5641e4182eceb7",
+    "bytes": 425963
+  },
+  "fox-v3-camera-background-evaluation/reviews/core-independent.json": {
+    "sha256": "193a5b699b262253e513f3fbfd94d9d51bf4f233e5a57aac3ff268825ebc35bd",
+    "bytes": 294
+  },
+  "fox-v3-camera-background-evaluation/reviews/resolver-independent.json": {
+    "sha256": "88ce6cadbee99787d91fb9846427720cc966ef81f8d356342eee7b0203a70f10",
+    "bytes": 1191
+  },
+  "fox-v3-camera-background-evaluation/reviews/source-floor-order-independent.json": {
+    "sha256": "e23d705789c12b8ec9254b29016f24828ad8b32fdfd20a6665304e83a6c9008d",
+    "bytes": 469
+  },
+  "fox-v3-camera-background-evaluation/reviews/stackfix-independent.json": {
+    "sha256": "5c4585b0a94442ee7ccc4c63db3ce12c3a14991f64781f52eac6fdab7f7474da",
+    "bytes": 961
+  },
+  "fox-v3-camera-background-evaluation/strict-synthetic-test.json": {
+    "sha256": "184a8ee6a326e238df8e0899f3996af2b3820217be1faf39b8eebdb975bd2fd3",
+    "bytes": 90
+  },
+  "fox-v3-camera-background-plan/BACKGROUND_RESOLVER_WORK_CONTRACT.md": {
+    "sha256": "3ea1dbd786b6ade995a20e3394c8747c05177b81a59c1451ad5a5106ac3594cc",
+    "bytes": 13105
+  },
+  "fox-v3-camera-background-plan/BACKGROUND_RESOLVER_WORK_CONTRACT_V2.md": {
+    "sha256": "4cee63c02f228743800e9cbb1e89b37c569310b67aa4c3ac1444e5b2aad6a375",
+    "bytes": 13957
+  },
+  "fox-v3-camera-background-plan/BACKGROUND_RESOLVER_WORK_CONTRACT_V3.md": {
+    "sha256": "5413736973900e9663cc4c108e84a1495849d0ccbc8cea07147643eac334443e",
+    "bytes": 14355
+  },
+  "fox-v3-camera-background-plan/BACKGROUND_RESOLVER_WORK_CONTRACT_V4.md": {
+    "sha256": "f935f6ac21e1ad3eb0910b7f164de7cb1aed1988213f11e325f3f795f2960206",
+    "bytes": 15772
+  },
+  "fox-v3-camera-background-plan/BACKGROUND_RESOLVER_WORK_CONTRACT_V5.md": {
+    "sha256": "1efc07acfc68f6c8810b19795147cb81cd72d30339298813f6057acb5949d0f1",
+    "bytes": 16564
+  },
+  "fox-v3-camera-background-plan/BACKGROUND_RESOLVER_WORK_FREEZE.json": {
+    "sha256": "486d5be5c769c45e1a8014e2e4cf2d3414c61df8713c7cc341fc91afc4366080",
+    "bytes": 1211
+  },
+  "fox-v3-camera-background-plan/BACKGROUND_RESOLVER_WORK_FREEZE_V2.json": {
+    "sha256": "e035ac04ab088a70ef7a54a954085c580bb5a81dd9cb08239c9545dbcb432988",
+    "bytes": 1340
+  },
+  "fox-v3-camera-background-plan/BACKGROUND_RESOLVER_WORK_FREEZE_V3.json": {
+    "sha256": "9a8a29ffb73c66eb8487d057d63e48f3f6c352ceb9d37ffba5078f4c5a401baf",
+    "bytes": 1422
+  },
+  "fox-v3-camera-background-plan/BACKGROUND_RESOLVER_WORK_FREEZE_V4.json": {
+    "sha256": "157aba040924944fb48f19fbebbd184efa0b4f65dd227ce1ff8986fef13ea26e",
+    "bytes": 1588
+  },
+  "fox-v3-camera-background-plan/BACKGROUND_RESOLVER_WORK_FREEZE_V5.json": {
+    "sha256": "99c7493c249660a0223a599639b432c8448e9cdc84d20fdbc7edc091289f640d",
+    "bytes": 1561
+  },
+  "fox-v3-camera-background-plan/CORE-DESIGN-nohit-only-rejected.md": {
+    "sha256": "8acd795e501b8821478f5be485304d58b38774feaa509d1b21f06e635e78f511",
+    "bytes": 14457
+  },
+  "fox-v3-camera-background-plan/CORE-DESIGN-v2-pre-budget-correction.md": {
+    "sha256": "0b85ed7445a4235293d45d4ec0f5e5b2dae06c7370d37d3308d0e252dc04e5cd",
+    "bytes": 14863
+  },
+  "fox-v3-camera-background-plan/CORE-DESIGN-v3-history.md": {
+    "sha256": "31561536d8fb6ecebef2ac803022804b245f983fac3bd5df2185250b368cb2f0",
+    "bytes": 17128
+  },
+  "fox-v3-camera-background-plan/CORE-DESIGN.md": {
+    "sha256": "30ed8ff26341788a0285ea7e330a876fd4c39749d9d29aee83b281df90d245f5",
+    "bytes": 21026
+  },
+  "fox-v3-camera-background-plan/CORE-WORK-DESIGN-nohit-only-rejected.json": {
+    "sha256": "e7df55e423c2deb14e8622bb0a3dd4a9331f2951bed025f899446229eb3325f2",
+    "bytes": 4990
+  },
+  "fox-v3-camera-background-plan/CORE-WORK-DESIGN-v2-pre-budget-correction.json": {
+    "sha256": "b3726e896407cde3621c71b719374cf5973267588e2c2c3f263907c6c2412acb",
+    "bytes": 4199
+  },
+  "fox-v3-camera-background-plan/CORE-WORK-DESIGN-v3-history.json": {
+    "sha256": "ffec766dde58f5aecb6719906c8f9fb17177349d4d70d9e154bd9cfa81b4cefb",
+    "bytes": 5353
+  },
+  "fox-v3-camera-background-plan/CORE-WORK-DESIGN.json": {
+    "sha256": "d9b37e3c31691f6b9a0ea654f9b592d86a4e9ba435afc48a08cc12fbee06898b",
+    "bytes": 12823
+  },
+  "fox-v3-camera-background-plan/EVALUATION_SCOPE.md": {
+    "sha256": "a3b5aabf6902045a634aefc7d49e160e79586f220879871317a17661505f33c3",
+    "bytes": 2080
+  },
+  "fox-v3-camera-background-plan/IMPLEMENTATION_CLARIFICATIONS.md": {
+    "sha256": "2c114789a7fe207d512ab1adb07214597a357bf919f672c05bd2b3a71b7621e9",
+    "bytes": 1060
+  },
+  "fox-v3-camera-background-plan/PLAN-nohit-only-rejected.md": {
+    "sha256": "25dd2fb83db92181f18120e40073e8cc23f7f02ee1937025f030b1c2f05db269",
+    "bytes": 9680
+  },
+  "fox-v3-camera-background-plan/PLAN-revision-history.md": {
+    "sha256": "473513ce2bfa491e19e1d3e1ac411011101fec1c4b4c3171a23cf47bca58fa4c",
+    "bytes": 12095
+  },
+  "fox-v3-camera-background-plan/PLAN.md": {
+    "sha256": "bb13373a10b9696f9a8fce70e989d29c6bc349b9f1212a2b123eec6648c496e9",
+    "bytes": 11314
+  },
+  "fox-v3-camera-background-plan/PREIMPLEMENTATION_FREEZE.json": {
+    "sha256": "94146b98c7818c1f28d318a93f1fad192858db665be581f7c3f90c8e24204e15",
+    "bytes": 1692
+  },
+  "fox-v3-camera-background-plan/preflight/ORDER_DIAGNOSTIC_FREEZE.json": {
+    "sha256": "650c4e4d76c404fb6a68d93274a26bc13d89c263ed60235e2037fc3571cd8ba5",
+    "bytes": 790
+  },
+  "fox-v3-camera-background-plan/preflight/ORDER_DIAGNOSTIC_SUMMARY.json": {
+    "sha256": "ddebcb19dfc7fe2ef98447d9fc820aee5eb2089acb018dd423d3defbe333eedf",
+    "bytes": 2097
+  },
+  "fox-v3-camera-background-plan/preflight/SOURCE_FREEZE.json": {
+    "sha256": "5f282d4fb21370487a2d991dd8cf7eaaa32e3febe7697122646b70fcea063ab9",
+    "bytes": 914
+  },
+  "fox-v3-camera-background-plan/preflight/count_background.c": {
+    "sha256": "a05d4820259bbbcae563df46f83dd097e0456ad40d75ca6cb58fdd01b7974218",
+    "bytes": 14614
+  },
+  "fox-v3-camera-background-plan/preflight/counts-001/COMPLETED.json": {
+    "sha256": "82f6c16ed1fc2bc05aedc09292ab153632bd85b991de679f0ecaa83b2411b9aa",
+    "bytes": 37621
+  },
+  "fox-v3-camera-background-plan/preflight/counts-001/INPUT_FREEZE.json": {
+    "sha256": "9c712f2ba9b82a47971bce061f4ca8ea7942c659284077fda63d507a972201a8",
+    "bytes": 67655
+  },
+  "fox-v3-camera-background-plan/preflight/diagnostic_positions.c": {
+    "sha256": "e1a8d44c6e7dbb4a83de6f10fa24011e43b0f9848b1457a66fc2c9c208eb9cf2",
+    "bytes": 18278
+  },
+  "fox-v3-camera-background-plan/preflight/final-overrides-001/SOURCE_FREEZE.json": {
+    "sha256": "e235b0af5fa08c2e81d5d01000970f2608a4cd27aba49af708e48bcc826d393f",
+    "bytes": 1203
+  },
+  "fox-v3-camera-background-plan/preflight/final-overrides-001/SUMMARY.json": {
+    "sha256": "75996a95355cbd744c0c66cef7e43b0638312e916d7c4c97e7b30cfb5324ffd6",
+    "bytes": 7443
+  },
+  "fox-v3-camera-background-plan/preflight/final-overrides-001/run.py": {
+    "sha256": "8625289bf576c680eac917f20e0e112dc6b2ec21d48697ee440ddf35e637c237",
+    "bytes": 4532
+  },
+  "fox-v3-camera-background-plan/preflight/run_counts.py": {
+    "sha256": "4d01a33f78a56dbc6240843f51437291dd7536db3f4a8e16086cad037c21b179",
+    "bytes": 6772
+  },
+  "fox-v3-camera-background-plan/preflight/test_geometry.c": {
+    "sha256": "39690993dc4cce2b6e033dc0997874fb92205b98829acac2fffc49194c740d05",
+    "bytes": 1884
+  },
+  "fox-v3-camera-background-evaluation/BUNDLE_ALLOWLIST.txt": {
+    "sha256": "a018d15e42056d84cbd69ccbdae6540e4347afbc0432f9603b8e7a46c66c2e3d",
+    "bytes": 14331
+  },
+  "fox-v3-camera-background-evaluation/CODE_REPORT_FREEZE.json": {
+    "sha256": "dda4c1d1dabdc5c72ab0ed4c100be0f1dae187dda0c9e2988e54c5e9e54f5685",
+    "bytes": 40398
+  },
+  "package.py": {
+    "sha256": "584f213dbd71818f1ec8aa63b02284468ee3e6e49cda482900ab23739718e535",
+    "bytes": 1599
+  }
+}

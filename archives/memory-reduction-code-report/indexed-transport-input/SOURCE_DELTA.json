@@ -1,0 +1,54 @@
+{
+  "sameFiles": 99,
+  "changes": {
+    "private-build/transport/bounce.c": {
+      "base": "d423bfed9ca33ddcb8aaa07c15dfce148073c6ce4778dfe6a9c4d9d459dca5b6",
+      "candidate": "add714e3612ce15cd947bd2649ea15a7a7a54930ee40103c5122e9894d064151"
+    },
+    "private-build/transport/bounce.h": {
+      "base": "63f8805c95fdbd2abf3e406c5871ca0219ec7189617e2b03bc1572d7e1c5b6d7",
+      "candidate": "6f75c9292dca918c86aadad5ed860cc63dc3b55cf7341d5c1eb30f1d67b3eb55"
+    },
+    "harness/__pycache__/run_indexed_input_actual.cpython-312.pyc": {
+      "base": null,
+      "candidate": "824c4be5bc4e21cbb2a9b59b01eea03d39514527a2734999afe34c2ca8da9e81"
+    },
+    "harness/freeze_sources.py": {
+      "base": "e361304a5734196f066de3bb2aae9f2af82ab995c0572d3e87ed8c6771c0e5a6",
+      "candidate": "d0ad5841bfab08fb764c7ced569d0eeb7a2e436be25ddcfd620562f1ae4d6c53"
+    },
+    "harness/native_render_row.c": {
+      "base": "28e77dc2e24c0a28272bb210387b5e3e227e903b9d35def7467db510ab8586ba",
+      "candidate": "5768f03a31f366f91fc0d14b2941663a8659860c33aa0cc3af4ee1205fd065ab"
+    },
+    "harness/run_actual.py": {
+      "base": "4985802e0fc20fe2fde7e29535d1950997d058df4e055568c01e35e25ae715be",
+      "candidate": "9bf4a12db0580716901c1e049a3389697e4cfd2c5ed95c860c23c89d5b0bacb6"
+    },
+    "harness/run_compact_actual.py": {
+      "base": "4985802e0fc20fe2fde7e29535d1950997d058df4e055568c01e35e25ae715be",
+      "candidate": "9bf4a12db0580716901c1e049a3389697e4cfd2c5ed95c860c23c89d5b0bacb6"
+    },
+    "harness/run_depth_actual.py": {
+      "base": "4985802e0fc20fe2fde7e29535d1950997d058df4e055568c01e35e25ae715be",
+      "candidate": "9bf4a12db0580716901c1e049a3389697e4cfd2c5ed95c860c23c89d5b0bacb6"
+    },
+    "harness/run_indexed_input_actual.py": {
+      "base": null,
+      "candidate": "0c0bcc71e58a83885ebdbaecd2561b7d00dc39c5efd38f5cd535f11d4f2bf0a2"
+    },
+    "harness/run_ring_actual.py": {
+      "base": "4985802e0fc20fe2fde7e29535d1950997d058df4e055568c01e35e25ae715be",
+      "candidate": "9bf4a12db0580716901c1e049a3389697e4cfd2c5ed95c860c23c89d5b0bacb6"
+    },
+    "harness/run_transport_actual.py": {
+      "base": "f1602e4c00362dceb1669071417aff6ab320f34e9402cf494213dbef59356323",
+      "candidate": "9bf4a12db0580716901c1e049a3389697e4cfd2c5ed95c860c23c89d5b0bacb6"
+    },
+    "harness/stack_manifest.py": {
+      "base": "76ad11392aec6e677a7d2281878d9d7729b462acd4fd8c6c3788381f8048cf45",
+      "candidate": "c18722b874b38f8de93d0076c3029e04c8a9d485b06feedee1ca52089a780317"
+    }
+  },
+  "hotCodeProof": "Remove new block from _Static_assert(sizeof(bounce_indexed_triangle) to bounce_binding_set: remainder byte-identical; existing builder implementations unchanged."
+}

@@ -1,0 +1,35 @@
+{
+  "method": "analytic normalized BH CDF quartile midpoint, not Cycles finite float lookup",
+  "widthUI": 1.5,
+  "supportHalfWidth": 1.5,
+  "quantiles": [
+    0.25,
+    0.75
+  ],
+  "positiveOffset": 0.28820947825813636,
+  "positiveOffsetHex": "0x1.272062ae104d0p-2",
+  "offsets": [
+    [
+      -0.28820947825813636,
+      -0.28820947825813636
+    ],
+    [
+      0.28820947825813636,
+      -0.28820947825813636
+    ],
+    [
+      -0.28820947825813636,
+      0.28820947825813636
+    ],
+    [
+      0.28820947825813636,
+      0.28820947825813636
+    ]
+  ],
+  "weights": [
+    0.25,
+    0.25,
+    0.25,
+    0.25
+  ]
+}

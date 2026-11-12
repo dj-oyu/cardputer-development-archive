@@ -1,0 +1,64 @@
+{
+  "status": "PASS_CODE_AND_COMPILED_STACK_REVIEW",
+  "observedUTC": "2026-11-04T12:08:01.161600+00:00",
+  "actualRenderRunsByReviewer": 0,
+  "sourceChanges": [
+    "harness/run_compact_actual.py",
+    "harness/stack_manifest.py",
+    "harness/freeze_sources.py",
+    "harness/run_depth_actual.py",
+    "harness/run_transport_actual.py",
+    "harness/native_render_row.c",
+    "harness/run_ring_actual.py",
+    "harness/run_actual.py",
+    "private-build/transport/bounce.h",
+    "private-build/transport/bounce.c"
+  ],
+  "entireBaseBounceCExactOutsideAddedColdIndexedAPI": true,
+  "stack": {
+    "NAMED_STACK.json": {
+      "sha256": "c86baaec5da72acfff02b8e4cca5fd6413dd07dd3990669dd573686710d69243",
+      "main": 83760,
+      "background": 4080,
+      "renderer": 5008,
+      "constructor": 400,
+      "query": 32
+    },
+    "PRODUCT_NAMED_STACK.json": {
+      "sha256": "6433664a6f584e26d540419cbd5a3fb9f62a68161089d487830d719fe38bb9a3",
+      "main": 83760,
+      "background": 4080,
+      "renderer": 5008,
+      "constructor": 400,
+      "query": 32
+    }
+  },
+  "baselinePinsVerified": 1019,
+  "namedPeak": 496152,
+  "namedPeakSaved": 9800,
+  "sourceHashes": {
+    "harness/run_compact_actual.py": "9bf4a12db0580716901c1e049a3389697e4cfd2c5ed95c860c23c89d5b0bacb6",
+    "harness/stack_manifest.py": "c18722b874b38f8de93d0076c3029e04c8a9d485b06feedee1ca52089a780317",
+    "harness/freeze_sources.py": "d0ad5841bfab08fb764c7ced569d0eeb7a2e436be25ddcfd620562f1ae4d6c53",
+    "harness/run_depth_actual.py": "9bf4a12db0580716901c1e049a3389697e4cfd2c5ed95c860c23c89d5b0bacb6",
+    "harness/run_transport_actual.py": "9bf4a12db0580716901c1e049a3389697e4cfd2c5ed95c860c23c89d5b0bacb6",
+    "harness/native_render_row.c": "5768f03a31f366f91fc0d14b2941663a8659860c33aa0cc3af4ee1205fd065ab",
+    "harness/run_ring_actual.py": "9bf4a12db0580716901c1e049a3389697e4cfd2c5ed95c860c23c89d5b0bacb6",
+    "harness/run_actual.py": "9bf4a12db0580716901c1e049a3389697e4cfd2c5ed95c860c23c89d5b0bacb6",
+    "private-build/transport/bounce.h": "6f75c9292dca918c86aadad5ed860cc63dc3b55cf7341d5c1eb30f1d67b3eb55",
+    "private-build/transport/bounce.c": "add714e3612ce15cd947bd2649ea15a7a7a54930ee40103c5122e9894d064151"
+  },
+  "evidenceHashes": {
+    "MEMORY_LEDGER.json": "b8a5a2aaf2ee49dbfd4ff8be9fb7780602ad0f23ef373d618787a5c8d12a7381",
+    "measure/MEASUREMENT.json": "d0d9f8291a48bd1a5af994b7ac461e570ec3a27441d9e3a0cadbb0c5c7d6e1a1",
+    "review-independent/RESULTS.json": "f864225e5edd66adef8220cce3d9ac3feb6faf9e5fa101947f6fd8f95a8cc5f0",
+    "test-independent/RESULTS.json": "563bb59df61fa87b6f31ac2c5c74400090cb5f4f40b835b8edd0f711c7b5e299",
+    "test-independent/CALLER_RESULTS.json": "23acc815500a16b5c56c1ba399ffceb6e11898f24ed6d97ef9731b4533838742",
+    "review/RUNNER_REVIEW.json": "b5119a671429a1a47c4855c051c8dd2b7345edc8755e01328e221245e454e10b"
+  },
+  "limitations": [
+    "Named conservative lifecycle only; no device or whole-host fit claim",
+    "LSan disabled; explicit tracked-allocation balance tests used",
+    "Synthetic caller allocation test extracts exact statements, not full main failure execution"
+  ]
+}

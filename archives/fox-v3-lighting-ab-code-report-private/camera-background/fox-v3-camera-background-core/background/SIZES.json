@@ -1,0 +1,52 @@
+{
+  "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+  "flags": [
+    "-std=c11",
+    "-O2",
+    "-ffp-contract=off",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-Wno-misleading-indentation",
+    "-fstack-usage"
+  ],
+  "sizes": {
+    "input": 752,
+    "scene": 976,
+    "binding": 64,
+    "work": 296,
+    "context": 376,
+    "privateResult": 208,
+    "query": 24,
+    "compactResult": 40,
+    "shadowBudget": 48
+  },
+  "resolverSteadyBytes": 1696,
+  "coreAdditionalBytes": 664,
+  "combinedSteadyBytes": 2360,
+  "oldNewSceneAndInputPeakBytes": 4088,
+  "withMaskConstructionPeakBytes": 8138,
+  "newOwnedCap": 16384,
+  "resolverCallbackFrames": {
+    "compose": 16,
+    "resolve": 1024,
+    "diskWrapper": 48,
+    "diskEval": 352,
+    "visibilityCallback": 80,
+    "segment": 432,
+    "box": 80
+  },
+  "resolverCallbackSum": 2032,
+  "coreCompositeFrame": 1664,
+  "coreDispatchFrame": 80,
+  "completeNamedChain": 3776,
+  "completeControlChain": 2368,
+  "newNamedChainCap": 4096,
+  "stackExclusions": [
+    "native adapter/main callers",
+    "compiler runtime",
+    "libm internals"
+  ],
+  "no32BitClaim": true,
+  "noActualPhysicalFrame": true
+}

@@ -1,0 +1,24 @@
+{
+  "status": "NARROW_ALLOWLIST_PASS",
+  "base": "/workspace/scratch/6d8dcdbcdc54/fox-v3-segmented-model-arena",
+  "changedExisting": [
+    "code/ksn_bounded_ring.h",
+    "code/build_core.sh",
+    "code/ksn_bounded_ring_impl.inc",
+    "harness/test_adapter.c",
+    "harness/run_ring_tests.sh",
+    "harness/test_ring_negative.c",
+    "harness/test_ring_exact.c",
+    "harness/run_segmented_model_actual.py",
+    "harness/run_synthetic.sh",
+    "measure/refresh_accounting.py",
+    "measure/freeze_candidate.py"
+  ],
+  "newSource": [
+    "harness/test_ring_exact_depth.c",
+    "harness/test_ring_negative_depth.c"
+  ],
+  "allBaseFilesStillMatch": true,
+  "productFilesUnchanged": true,
+  "actualFrames": 0
+}

@@ -1,0 +1,730 @@
+{
+  "utc": "2026-10-18 23:26:26 UTC",
+  "logs": {
+    "ok": true,
+    "entries": [
+      {
+        "sequence": 64,
+        "text": "ESP-ROM:esp32s3-20210327",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 65,
+        "text": "Build:Mar 27 2021",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 66,
+        "text": "rst:0x15 (USB_UART_CHIP_RESET),boot:0xb (SPI_FAST_FLASH_BOOT)",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 67,
+        "text": "Saved PC:0x400490cc",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 68,
+        "text": "SPIWP:0xee",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 69,
+        "text": "mode:DIO, clock div:1",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 70,
+        "text": "load:0x3fce2820,len:0x16b8",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 71,
+        "text": "load:0x403c8700,len:0xef8",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 72,
+        "text": "load:0x403cb700,len:0x31f4",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 73,
+        "text": "entry 0x403c892c",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 74,
+        "text": "I (24) boot: ESP-IDF v6.0.1 2nd stage bootloader",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 75,
+        "text": "I (24) boot: compile time Oct 19 2026 06:57:18",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 76,
+        "text": "I (25) boot: Multicore bootloader",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 77,
+        "text": "I (25) boot: chip revision: v0.2",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 78,
+        "text": "I (25) boot: efuse block revision: v1.4",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 79,
+        "text": "I (25) qio_mode: Enabling default flash chip QIO",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 80,
+        "text": "I (25) boot.esp32s3: Boot SPI Speed : 80MHz",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 81,
+        "text": "I (26) boot.esp32s3: SPI Mode       : QIO",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 82,
+        "text": "I (26) boot.esp32s3: SPI Flash Size : 8MB",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 83,
+        "text": "I (26) boot: Enabling RNG early entropy source...",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 84,
+        "text": "I (26) boot: Partition Table:",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 85,
+        "text": "I (26) boot: ## Label            Usage          Type ST Offset   Length",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 86,
+        "text": "I (27) boot:  0 nvs              WiFi data        01 02 00009000 00006000",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 87,
+        "text": "I (27) boot:  1 phy_init         RF data          01 01 0000f000 00001000",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 88,
+        "text": "I (27) boot:  2 factory          factory app      00 00 00010000 00300000",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 89,
+        "text": "I (28) boot:  3 skk_dict         Unknown data     01 40 00310000 00200000",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 90,
+        "text": "I (28) boot:  4 jp_font          Unknown data     01 41 00510000 00080000",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 91,
+        "text": "I (29) boot:  5 storage          Unknown data     01 42 00590000 00270000",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 92,
+        "text": "I (29) boot: End of partition table",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 93,
+        "text": "I (29) esp_image: segment 0: paddr=00010020 vaddr=3c180020 size=9c854h (641108) map",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 94,
+        "text": "I (127) esp_image: segment 1: paddr=000ac87c vaddr=3fc99800 size=0379ch ( 14236) load",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 95,
+        "text": "I (130) esp_image: segment 2: paddr=000b0020 vaddr=42000020 size=17a7cch (1550284) map",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 96,
+        "text": "I (365) esp_image: segment 3: paddr=0022a7f4 vaddr=3fc9cf9c size=01dech (  7660) load",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 97,
+        "text": "I (367) esp_image: segment 4: paddr=0022c5e8 vaddr=40378000 size=117b8h ( 71608) load",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 98,
+        "text": "I (381) esp_image: segment 5: paddr=0023dda8 vaddr=50000000 size=00024h (    36) load",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 99,
+        "text": "I (389) boot: Loaded app from partition at offset 0x10000",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 100,
+        "text": "I (389) boot: Disabling RNG early entropy source...",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 101,
+        "text": "I (390) cpu_start: Multicore app",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 102,
+        "text": "I (399) cpu_start: Pro cpu start user code",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 103,
+        "text": "I (399) cpu_start: cpu freq: 240000000 Hz",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 104,
+        "text": "I (399) app_init: Application information:",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 105,
+        "text": "I (399) app_init: Project name:     cardputer_pocketjs",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 106,
+        "text": "I (400) app_init: App version:      1",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 107,
+        "text": "I (400) app_init: Compile time:     Oct 19 2026 06:56:56",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 108,
+        "text": "I (400) app_init: ELF file SHA256:  4a2a6a430...",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 109,
+        "text": "I (400) app_init: ESP-IDF:          v6.0.1",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 110,
+        "text": "I (400) efuse_init: Min chip rev:     v0.0",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 111,
+        "text": "I (401) efuse_init: Max chip rev:     v0.99 ",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 112,
+        "text": "I (401) efuse_init: Chip rev:         v0.2",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 113,
+        "text": "I (401) heap_init: Initializing. RAM available for dynamic allocation:",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 114,
+        "text": "I (401) heap_init: At 3FCB2440 len 000372D0 (220 KiB): RAM",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 115,
+        "text": "I (401) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 116,
+        "text": "I (401) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 117,
+        "text": "I (402) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 118,
+        "text": "I (402) spi_flash: detected chip: generic",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 119,
+        "text": "I (402) spi_flash: flash io: qio",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 120,
+        "text": "I (403) sleep_gpio: Configure to isolate all GPIO pins in sleep state",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 121,
+        "text": "I (403) sleep_gpio: Enable automatic switching of GPIO sleep configuration",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 122,
+        "text": "I (404) main_task: Started on CPU0",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 123,
+        "text": "I (405) main_task: Calling app_main()",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 124,
+        "text": "I (406) boot: Cardputer ADV PocketJS M1; app=3MiB skk=2MiB fonts=512KiB",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 125,
+        "text": "I (547) board: LCD SPI 80000000 Hz, byte swap: PIE",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 126,
+        "text": "I (821) board: ADV keyboard detected; LCD 240x135 RGB565; no PSRAM",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 127,
+        "text": "I (822) board: Battery ADC on GPIO10 (ADC1 ch9, x2 divider), calibration: curve fitting",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 128,
+        "text": "I (1103) motion: BMI270 addr=0x69 chip=0x24 init=0 accel=50Hz gyro=configured,off",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 129,
+        "text": "I (1122) sound: ES8311 ready; 24kHz stereo from 3496 baked samples; default ON",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 130,
+        "text": "I (1147) background: MODE 3 FLOWER",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 131,
+        "text": "I (1148) overlay: OVERLAY armed state=4",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 132,
+        "text": "I (1152) sound: VOLUME 2 reg=0xa8",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 133,
+        "text": "I (1152) settings: LOADED background=3 fps=0 sound=1 overlay=2 volume=2 autotime=1",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 134,
+        "text": "I (1154) overlay: OVERLAY init state=4",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 135,
+        "text": "I (1155) jpfont: face 0 at 0x0: 12x12, 6975 glyphs",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 136,
+        "text": "I (1156) jpfont: face 1 at 0x40000: 8x8, 7077 glyphs",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 137,
+        "text": "I (1157) skk: dict open in 122 us (cached); nasi=6934 ari=1412",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 138,
+        "text": "I (1159) skk: probe \\u304b\\u3093\\u3058 -> \\u6f22\\u5b57 (2 cands, 91 us)",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 139,
+        "text": "I (1160) main_task: Returned from app_main()",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 140,
+        "text": "I (1160) shell: ui runs on core 1",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 141,
+        "text": "I (1162) shell: HOME_READY",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 142,
+        "text": "I (1165) guest: BLOCK_LENGTH direct=1",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 143,
+        "text": "I (1173) app: APP_ID local.player",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 144,
+        "text": "I (1206) app: MEM free=160364 largest=114688 js=49488 frames=0",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 145,
+        "text": "I (1207) overlay: OVERLAY_COST free_before=220280 free_after=160364 took=59916 floor=57344",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 146,
+        "text": "I (1209) overlay: OVERLAY running state=5",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 147,
+        "text": "I (2421) motion: ACC -152 9334 2466 mm/s2 GYR 0 0 0 mrad/s (off) seq=59 drop=0 TILT -4 0",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 148,
+        "text": "I (3227) background: PERF mode=3 async=1 clock=DEMO fps=30.2 draw=21.77 prep=0.87 loop=18.83 kernel=18.81 hud=0.05 (ovl=0.00 fmt=0.00 fps=0.00 menu=0.01) send=0.48",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 149,
+        "text": "I (4439) motion: ACC -156 9354 2466 mm/s2 GYR 0 0 0 mrad/s (off) seq=155 drop=0 TILT -4 0",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 150,
+        "text": "I (5256) background: PERF mode=3 async=1 clock=DEMO fps=30.1 draw=21.71 prep=0.86 loop=18.78 kernel=18.75 hud=0.05 (ovl=0.00 fmt=0.00 fps=0.00 menu=0.01) send=0.48",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 151,
+        "text": "I (6236) overlay: OVERLAY_HEALTHY worst=2131us",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 152,
+        "text": "I (6457) motion: ACC -150 9355 2464 mm/s2 GYR 0 0 0 mrad/s (off) seq=251 drop=0 TILT -4 0",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 153,
+        "text": "I (7259) background: PERF mode=3 async=1 clock=DEMO fps=30.0 draw=21.75 prep=0.86 loop=18.81 kernel=18.79 hud=0.05 (ovl=0.00 fmt=0.00 fps=0.00 menu=0.01) send=0.48",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 154,
+        "text": "I (8475) motion: ACC -159 9361 2473 mm/s2 GYR 0 0 0 mrad/s (off) seq=347 drop=0 TILT -4 0",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 155,
+        "text": "I (9272) background: PERF mode=3 async=1 clock=DEMO fps=29.8 draw=21.81 prep=0.86 loop=18.88 kernel=18.85 hud=0.05 (ovl=0.00 fmt=0.00 fps=0.00 menu=0.01) send=0.47",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 156,
+        "text": "I (10493) motion: ACC -160 9352 2470 mm/s2 GYR 0 0 0 mrad/s (off) seq=443 drop=0 TILT -4 0",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 157,
+        "text": "I (11255) autosync: AUTOSYNC_START free=119904 largest=73728",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 158,
+        "text": "I (11256) net_service: NET_ACQUIRE time holders=1",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 159,
+        "text": "I (11257) wifi: LINK_START ssid=IODATA-3385fc-2G",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 160,
+        "text": "I (11260) pp: pp rom version: e7ae62f",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 161,
+        "text": "I (11260) net80211: net80211 rom version: e7ae62f",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 162,
+        "text": "I (11263) wifi:wifi driver task: 3fccbbd0, prio:23, stack:6656, core=0",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 163,
+        "text": "I (11264) wifi:wifi firmware version: b37c951",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      }
+    ],
+    "expired": false,
+    "gap": false,
+    "oldest_sequence": 1,
+    "next_cursor": {
+      "epoch": "01372e4d27c74bdca41b06da6e0721b2",
+      "sequence": 163
+    },
+    "has_more": true,
+    "flash_summary": {
+      "boot_log_matches_expected_artifact": true,
+      "boot_observed": true,
+      "boot_text_identity_verified": false,
+      "boot_text_is_cryptographic_proof": false,
+      "idf_version": "6.0.1",
+      "last_known_good_receipt": "b55d2cc1739b98389bb04e9f288ec3770b66d6f6036232026f5782e2e9d4e03e",
+      "observed_elf_sha256_prefix": "4a2a6a430",
+      "observed_idf_version": "6.0.1",
+      "passive_boot_verified": true,
+      "readback_verified": true,
+      "target": "esp32s3",
+      "verification_basis": "full_segment_sha256_readback_and_boot_elf_prefix"
+    }
+  }
+}

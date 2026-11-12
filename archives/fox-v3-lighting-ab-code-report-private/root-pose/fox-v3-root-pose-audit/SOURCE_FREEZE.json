@@ -1,0 +1,17 @@
+{
+  "files": {
+    "CONTROL_FREEZE.json": "06cc5d3d0cb4a1d937ab2323c1e87e8c419058abfb04c2df3bcf7df093b6713a",
+    "DEPENDENCY_FREEZE.json": "aa2992aee9137f65409a2c4cb77328effecf4b07c7126a6ec7bb186ab54efb1f",
+    "PLAN-REVIEW-ADDENDUM.md": "7a161495f37c6c8f8abe045dbe28f1f7ff078e27b51af94e327a6660ce293550",
+    "PLAN.md": "0687780d32abf2b4e1c85da7bf155ecd127645297708d22d189b5c6ff4c24c98",
+    "code/build_root_pose.sh": "cd877e93fa2aaa23985ffd99486dcfff3897d38a920013817ec7eb614aad2db7",
+    "code/prepare_inputs.py": "03be0bae971ad2d0b6e2d10befba8ea8f9ab940cd3d81fc3f36e4a5f96a24fdb",
+    "code/root_pose.c": "b1d53fcebe91d0ac67924e74b8a1d30f119ba8aea62486a5aee696ac71f8d817",
+    "code/run_chains.py": "9846b32c53bbdf7f66bc0410fa0daef5c8395bd97f7570f4c651a855a1d96566",
+    "code/test_root_pose.py": "5219103539cf13afc20a5ba5397b910f28063d7e4050139aa87c2d40e3b24c52",
+    "fixtures-freeze-v1/FIXTURE_REPORT.json": "8cc5a883a8fff5e7993a82f3887027e3e0a605b6f191557b091d0231fd233647",
+    "root-pose": "f09ba79390f20c77782d04a6ffd6d5adde3d6cd799d03052ce2ea269789d99b0"
+  },
+  "scope": "New host harness only. Dependency source/model files fixed separately; no product modifications. Physical render not yet executed.",
+  "binarySHA256": "f09ba79390f20c77782d04a6ffd6d5adde3d6cd799d03052ce2ea269789d99b0"
+}

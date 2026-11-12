@@ -1,0 +1,597 @@
+﻿2026-10-19T22:02:14.4902366Z Current runner version: '2.337.0'
+2026-10-19T22:02:14.4926711Z ##[group]Runner Image Provisioner
+2026-10-19T22:02:14.4927657Z Hosted Compute Agent
+2026-10-19T22:02:14.4928366Z Version: 20261015.610
+2026-10-19T22:02:14.4929098Z Commit: 267fdb4e8bbec4ab5ea31367f3a00d5c480c7656
+2026-10-19T22:02:14.4930249Z Build Date: 2026-10-14T17:06:54Z
+2026-10-19T22:02:14.4931118Z Worker ID: {13c6220c-52e2-47eb-8c78-62d985aaf167}
+2026-10-19T22:02:14.4931853Z Region: westus
+2026-10-19T22:02:14.4932469Z Cloud: Azure
+2026-10-19T22:02:14.4933105Z ##[endgroup]
+2026-10-19T22:02:14.4934658Z ##[group]Operating System
+2026-10-19T22:02:14.4935448Z Ubuntu
+2026-10-19T22:02:14.4936062Z 24.04.5
+2026-10-19T22:02:14.4936642Z LTS
+2026-10-19T22:02:14.4937252Z ##[endgroup]
+2026-10-19T22:02:14.4937855Z ##[group]Runner Image
+2026-10-19T22:02:14.4938549Z Image: ubuntu-24.04
+2026-10-19T22:02:14.4939420Z Version: 20261018.339.1
+2026-10-19T22:02:14.4940880Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261018.339/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-19T22:02:14.4942538Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261018.339
+2026-10-19T22:02:14.4943622Z ##[endgroup]
+2026-10-19T22:02:14.4944809Z ##[group]GITHUB_TOKEN Permissions
+2026-10-19T22:02:14.4946874Z Contents: read
+2026-10-19T22:02:14.4947528Z Metadata: read
+2026-10-19T22:02:14.4948128Z ##[endgroup]
+2026-10-19T22:02:14.4950554Z Secret source: Actions
+2026-10-19T22:02:14.4951604Z Cache mode: write
+2026-10-19T22:02:14.4952483Z Prepare workflow directory
+2026-10-19T22:02:14.5541412Z Prepare all required actions
+2026-10-19T22:02:14.5589719Z Getting action download info
+2026-10-19T22:02:14.9084700Z Download action repository 'actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683' (SHA:11bd71901bbe5b1630ceea73d27597364c9af683)
+2026-10-19T22:02:15.1112582Z Download action repository 'actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+2026-10-19T22:02:15.3395571Z Download action repository 'actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-10-19T22:02:15.4170486Z Download action repository 'actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-10-19T22:02:15.6224195Z Complete job name: host
+2026-10-19T22:02:15.7115887Z ##[group]Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+2026-10-19T22:02:15.7117049Z with:
+2026-10-19T22:02:15.7117588Z   ref: 37af4225ad329aac4c5e79c880d7d69760b770be
+2026-10-19T22:02:15.7118233Z   fetch-depth: 0
+2026-10-19T22:02:15.7118716Z   submodules: recursive
+2026-10-19T22:02:15.7120347Z   persist-credentials: false
+2026-10-19T22:02:15.7121478Z   repository: dj-oyu/cardputer-adv-pocketjs
+2026-10-19T22:02:15.7125660Z   token: ***
+2026-10-19T22:02:15.7126129Z   ssh-strict: true
+2026-10-19T22:02:15.7126608Z   ssh-user: git
+2026-10-19T22:02:15.7127067Z   clean: true
+2026-10-19T22:02:15.7127972Z   sparse-checkout-cone-mode: true
+2026-10-19T22:02:15.7129077Z   fetch-tags: false
+2026-10-19T22:02:15.7130010Z   show-progress: true
+2026-10-19T22:02:15.7130523Z   lfs: false
+2026-10-19T22:02:15.7131006Z   set-safe-directory: true
+2026-10-19T22:02:15.7131930Z env:
+2026-10-19T22:02:15.7132487Z   SOURCE_HEAD: 37af4225ad329aac4c5e79c880d7d69760b770be
+2026-10-19T22:02:15.7133200Z ##[endgroup]
+2026-10-19T22:02:15.8140882Z Syncing repository: dj-oyu/cardputer-adv-pocketjs
+2026-10-19T22:02:15.8143049Z ##[group]Getting Git version info
+2026-10-19T22:02:15.8144030Z Working directory is '/home/runner/work/cardputer-adv-pocketjs/cardputer-adv-pocketjs'
+2026-10-19T22:02:15.8145427Z [command]/usr/bin/git version
+2026-10-19T22:02:15.8211157Z git version 2.55.0
+2026-10-19T22:02:15.8232322Z ##[endgroup]
+2026-10-19T22:02:15.8246089Z Temporarily overriding HOME='/home/runner/work/_temp/f0f2f30e-1063-4b26-93b0-141a43149f55' before making global git config changes
+2026-10-19T22:02:15.8247808Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-19T22:02:15.8252051Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/cardputer-adv-pocketjs/cardputer-adv-pocketjs
+2026-10-19T22:02:15.8300369Z Deleting the contents of '/home/runner/work/cardputer-adv-pocketjs/cardputer-adv-pocketjs'
+2026-10-19T22:02:15.8304309Z ##[group]Initializing the repository
+2026-10-19T22:02:15.8308912Z [command]/usr/bin/git init /home/runner/work/cardputer-adv-pocketjs/cardputer-adv-pocketjs
+2026-10-19T22:02:15.8431894Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-19T22:02:15.8433682Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-19T22:02:15.8435487Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-19T22:02:15.8437477Z hint: call:
+2026-10-19T22:02:15.8438921Z hint:
+2026-10-19T22:02:15.8440844Z hint: 	git config --global init.defaultBranch <name>
+2026-10-19T22:02:15.8442458Z hint:
+2026-10-19T22:02:15.8444039Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-19T22:02:15.8446731Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-19T22:02:15.8448592Z hint:
+2026-10-19T22:02:15.8449992Z hint: 	git branch -m <name>
+2026-10-19T22:02:15.8451104Z hint:
+2026-10-19T22:02:15.8530989Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-19T22:02:15.8533171Z Initialized empty Git repository in /home/runner/work/cardputer-adv-pocketjs/cardputer-adv-pocketjs/.git/
+2026-10-19T22:02:15.8537377Z [command]/usr/bin/git remote add origin https://github.com/dj-oyu/cardputer-adv-pocketjs
+2026-10-19T22:02:15.8541304Z ##[endgroup]
+2026-10-19T22:02:15.8542583Z ##[group]Disabling automatic garbage collection
+2026-10-19T22:02:15.8543384Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-19T22:02:15.8577667Z ##[endgroup]
+2026-10-19T22:02:15.8579567Z ##[group]Setting up auth
+2026-10-19T22:02:15.8584830Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-19T22:02:15.8618164Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-19T22:02:15.9015249Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-19T22:02:15.9050280Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-19T22:02:15.9278968Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-19T22:02:15.9317298Z ##[endgroup]
+2026-10-19T22:02:15.9318232Z ##[group]Fetching the repository
+2026-10-19T22:02:15.9326354Z [command]/usr/bin/git -c protocol.version=2 fetch --prune --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/*
+2026-10-19T22:02:17.7755793Z From https://github.com/dj-oyu/cardputer-adv-pocketjs
+2026-10-19T22:02:17.7757622Z  * [new branch]      codex/device-validation-scripts -> origin/codex/device-validation-scripts
+2026-10-19T22:02:17.7759687Z  * [new branch]      codex/vm-improvements     -> origin/codex/vm-improvements
+2026-10-19T22:02:17.7761138Z  * [new branch]      codex/y-scoped-grid-borrow -> origin/codex/y-scoped-grid-borrow
+2026-10-19T22:02:17.7763008Z  * [new branch]      diagnostic/derby-batch-measured-20261019 -> origin/diagnostic/derby-batch-measured-20261019
+2026-10-19T22:02:17.7764958Z  * [new branch]      diagnostic/derby-measure-source-20261019 -> origin/diagnostic/derby-measure-source-20261019
+2026-10-19T22:02:17.7767010Z  * [new branch]      diagnostic/derby-native-measured-20261019 -> origin/diagnostic/derby-native-measured-20261019
+2026-10-19T22:02:17.7769072Z  * [new branch]      diagnostic/derby-telemetry-source -> origin/diagnostic/derby-telemetry-source
+2026-10-19T22:02:17.7771553Z  * [new branch]      exp/derby-bounded-measure-20261019 -> origin/exp/derby-bounded-measure-20261019
+2026-10-19T22:02:17.7773210Z  * [new branch]      exp/derby-camera-batch-20261019 -> origin/exp/derby-camera-batch-20261019
+2026-10-19T22:02:17.7775037Z  * [new branch]      exp/derby-native-clip-norm-20261019 -> origin/exp/derby-native-clip-norm-20261019
+2026-10-19T22:02:17.7777019Z  * [new branch]      exp/derby-runner-affine-q14-20261019 -> origin/exp/derby-runner-affine-q14-20261019
+2026-10-19T22:02:17.7778690Z  * [new branch]      exp/derby-runner-batch-20261019 -> origin/exp/derby-runner-batch-20261019
+2026-10-19T22:02:17.7780560Z  * [new branch]      exp/proc-validated-plan-20261019 -> origin/exp/proc-validated-plan-20261019
+2026-10-19T22:02:17.7782020Z  * [new branch]      feat/derby-bounded-telemetry -> origin/feat/derby-bounded-telemetry
+2026-10-19T22:02:17.7783609Z  * [new branch]      feature/derby-detail-baseline-20261019 -> origin/feature/derby-detail-baseline-20261019
+2026-10-19T22:02:17.7785546Z  * [new branch]      feature/derby-detail-batch-20261019 -> origin/feature/derby-detail-batch-20261019
+2026-10-19T22:02:17.7787053Z  * [new branch]      feature/derby-detail-native-20261019 -> origin/feature/derby-detail-native-20261019
+2026-10-19T22:02:17.7787744Z  * [new branch]      feature/kasane            -> origin/feature/kasane
+2026-10-19T22:02:17.7788412Z  * [new branch]      fix/derby-home-transport-integration -> origin/fix/derby-home-transport-integration
+2026-10-19T22:02:17.7789387Z  * [new branch]      fix/derby-interpolated-sway -> origin/fix/derby-interpolated-sway
+2026-10-19T22:02:17.7790212Z  * [new branch]      fix/derby-pan-depth-order -> origin/fix/derby-pan-depth-order
+2026-10-19T22:02:17.7790844Z  * [new branch]      fix/derby-photo-snapshot  -> origin/fix/derby-photo-snapshot
+2026-10-19T22:02:17.7791419Z  * [new branch]      fix/memory-log-builddir   -> origin/fix/memory-log-builddir
+2026-10-19T22:02:17.7792016Z  * [new branch]      fix/minimp3-git-submodule -> origin/fix/minimp3-git-submodule
+2026-10-19T22:02:17.7792643Z  * [new branch]      fix/single-present-capture -> origin/fix/single-present-capture
+2026-10-19T22:02:17.7793734Z  * [new branch]      integrate/derby-clip-batch-off-20261019 -> origin/integrate/derby-clip-batch-off-20261019
+2026-10-19T22:02:17.7795506Z  * [new branch]      integrate/derby-diagnostics-off-20261019 -> origin/integrate/derby-diagnostics-off-20261019
+2026-10-19T22:02:17.7796444Z  * [new branch]      integrate/derby-experiments-off-20261019 -> origin/integrate/derby-experiments-off-20261019
+2026-10-19T22:02:17.7797187Z  * [new branch]      main                      -> origin/main
+2026-10-19T22:02:17.7797796Z  * [new branch]      vm/cloud-v2-a-frame-entry -> origin/vm/cloud-v2-a-frame-entry
+2026-10-19T22:02:17.7798415Z  * [new branch]      vm/cloud-v2-c-parser-shrink -> origin/vm/cloud-v2-c-parser-shrink
+2026-10-19T22:02:17.7799040Z  * [new branch]      vm/cloud-v2-e-array-trim  -> origin/vm/cloud-v2-e-array-trim
+2026-10-19T22:02:17.7800038Z  * [new branch]      vm/cloud-v2-f-precompile  -> origin/vm/cloud-v2-f-precompile
+2026-10-19T22:02:17.7800667Z  * [new branch]      vm/cloud-v2-h-typed-put   -> origin/vm/cloud-v2-h-typed-put
+2026-10-19T22:02:17.7801239Z  * [new branch]      vm/codex-a-frame-entry    -> origin/vm/codex-a-frame-entry
+2026-10-19T22:02:17.7801793Z  * [new branch]      vm/codex-b-grid-oom       -> origin/vm/codex-b-grid-oom
+2026-10-19T22:02:17.7802368Z  * [new branch]      vm/codex-c-parser-shrink  -> origin/vm/codex-c-parser-shrink
+2026-10-19T22:02:17.7802953Z  * [new branch]      vm/codex-d-grid-release   -> origin/vm/codex-d-grid-release
+2026-10-19T22:02:17.7803509Z  * [new branch]      vm/codex-e-array-trim     -> origin/vm/codex-e-array-trim
+2026-10-19T22:02:17.7804052Z  * [new branch]      vm/codex-f-precompile     -> origin/vm/codex-f-precompile
+2026-10-19T22:02:17.7804865Z  * [new branch]      vm/codex-g-typed-bulk     -> origin/vm/codex-g-typed-bulk
+2026-10-19T22:02:17.7805821Z  * [new branch]      vm/codex-h-typed-put      -> origin/vm/codex-h-typed-put
+2026-10-19T22:02:17.7806645Z  * [new branch]      vm/codex-i-row-reuse      -> origin/vm/codex-i-row-reuse
+2026-10-19T22:02:17.7807590Z  * [new branch]      vm/codex-y-grid-borrow    -> origin/vm/codex-y-grid-borrow
+2026-10-19T22:02:17.7808684Z  * [new branch]      vm/finish-fx              -> origin/vm/finish-fx
+2026-10-19T22:02:17.7809895Z  * [new branch]      vm/main                   -> origin/vm/main
+2026-10-19T22:02:17.7810832Z  * [new branch]      vm/ser-native             -> origin/vm/ser-native
+2026-10-19T22:02:17.7811806Z  * [new tag]         archive/crowd-prim        -> archive/crowd-prim
+2026-10-19T22:02:17.7812697Z  * [new tag]         archive/pan-camera        -> archive/pan-camera
+2026-10-19T22:02:17.7813718Z  * [new tag]         archive/perf-flower-decor -> archive/perf-flower-decor
+2026-10-19T22:02:17.7814735Z  * [new tag]         archive/trig-cull-B       -> archive/trig-cull-B
+2026-10-19T22:02:17.7815547Z  * [new tag]         vm-F1                     -> vm-F1
+2026-10-19T22:02:17.7816283Z  * [new tag]         vm-F2                     -> vm-F2
+2026-10-19T22:02:17.7816972Z  * [new tag]         vm-L0                     -> vm-L0
+2026-10-19T22:02:17.7817657Z  * [new tag]         vm-L1                     -> vm-L1
+2026-10-19T22:02:17.7818405Z  * [new tag]         vm-L2                     -> vm-L2
+2026-10-19T22:02:17.7821035Z [command]/usr/bin/git rev-parse --verify --quiet 37af4225ad329aac4c5e79c880d7d69760b770be^{object}
+2026-10-19T22:02:17.7822139Z 37af4225ad329aac4c5e79c880d7d69760b770be
+2026-10-19T22:02:17.7823757Z ##[endgroup]
+2026-10-19T22:02:17.7824537Z ##[group]Determining the checkout info
+2026-10-19T22:02:17.7825378Z ##[endgroup]
+2026-10-19T22:02:17.7825890Z [command]/usr/bin/git sparse-checkout disable
+2026-10-19T22:02:17.7879775Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-19T22:02:17.7910710Z ##[group]Checking out the ref
+2026-10-19T22:02:17.7914401Z [command]/usr/bin/git checkout --progress --force 37af4225ad329aac4c5e79c880d7d69760b770be
+2026-10-19T22:02:17.9792340Z Note: switching to '37af4225ad329aac4c5e79c880d7d69760b770be'.
+2026-10-19T22:02:17.9792979Z 
+2026-10-19T22:02:17.9793465Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-10-19T22:02:17.9794841Z changes and commit them, and you can discard any commits you make in this
+2026-10-19T22:02:17.9795948Z state without impacting any branches by switching back to a branch.
+2026-10-19T22:02:17.9796564Z 
+2026-10-19T22:02:17.9797017Z If you want to create a new branch to retain commits you create, you may
+2026-10-19T22:02:17.9798026Z do so (now or later) by using -c with the switch command. Example:
+2026-10-19T22:02:17.9798583Z 
+2026-10-19T22:02:17.9798849Z   git switch -c <new-branch-name>
+2026-10-19T22:02:17.9799541Z 
+2026-10-19T22:02:17.9799804Z Or undo this operation with:
+2026-10-19T22:02:17.9800167Z 
+2026-10-19T22:02:17.9800388Z   git switch -
+2026-10-19T22:02:17.9800666Z 
+2026-10-19T22:02:17.9801167Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-10-19T22:02:17.9801838Z 
+2026-10-19T22:02:17.9802345Z HEAD is now at 37af422 fix(derby): bind owner exit symbols to detailed build mode
+2026-10-19T22:02:17.9833405Z ##[endgroup]
+2026-10-19T22:02:17.9834286Z ##[group]Setting up auth for fetching submodules
+2026-10-19T22:02:17.9840016Z [command]/usr/bin/git config --global http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-19T22:02:17.9886020Z [command]/usr/bin/git config --global --unset-all url.https://github.com/.insteadOf
+2026-10-19T22:02:17.9919709Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf git@github.com:
+2026-10-19T22:02:17.9954556Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf org-68707227@github.com:
+2026-10-19T22:02:17.9986075Z ##[endgroup]
+2026-10-19T22:02:17.9986948Z ##[group]Fetching submodules
+2026-10-19T22:02:17.9990764Z [command]/usr/bin/git submodule sync --recursive
+2026-10-19T22:02:18.0250598Z [command]/usr/bin/git -c protocol.version=2 submodule update --init --force --recursive
+2026-10-19T22:02:18.0501182Z Submodule 'bmi270' (https://github.com/boschsensortec/BMI270_SensorAPI.git) registered for path 'third_party/bmi270'
+2026-10-19T22:02:18.0506746Z Submodule 'minimp3' (https://github.com/lieff/minimp3.git) registered for path 'third_party/minimp3'
+2026-10-19T22:02:18.0516588Z Submodule 'opus' (https://github.com/xiph/opus.git) registered for path 'third_party/opus'
+2026-10-19T22:02:18.0544594Z Cloning into '/home/runner/work/cardputer-adv-pocketjs/cardputer-adv-pocketjs/third_party/bmi270'...
+2026-10-19T22:02:18.6155469Z Cloning into '/home/runner/work/cardputer-adv-pocketjs/cardputer-adv-pocketjs/third_party/minimp3'...
+2026-10-19T22:02:19.4202031Z Cloning into '/home/runner/work/cardputer-adv-pocketjs/cardputer-adv-pocketjs/third_party/opus'...
+2026-10-19T22:02:21.5064973Z Submodule path 'third_party/bmi270': checked out '41129fcfe39c583ee5462d79195741945d51c1fe'
+2026-10-19T22:02:21.6582001Z Submodule path 'third_party/minimp3': checked out 'ea99364f61c14656440e8d77e9c233ccf3124633'
+2026-10-19T22:02:21.7910601Z Submodule path 'third_party/opus': checked out '22244de5a79bd1d6d623c32e72bf1954b56235be'
+2026-10-19T22:02:21.7943804Z [command]/usr/bin/git submodule foreach --recursive git config --local gc.auto 0
+2026-10-19T22:02:21.8192341Z Entering 'third_party/bmi270'
+2026-10-19T22:02:21.8240043Z Entering 'third_party/minimp3'
+2026-10-19T22:02:21.8280376Z Entering 'third_party/opus'
+2026-10-19T22:02:21.8329646Z ##[endgroup]
+2026-10-19T22:02:21.8373042Z [command]/usr/bin/git log -1 --format=%H
+2026-10-19T22:02:21.8400775Z 37af4225ad329aac4c5e79c880d7d69760b770be
+2026-10-19T22:02:21.8414332Z ##[group]Removing auth
+2026-10-19T22:02:21.8420012Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-19T22:02:21.8456408Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-19T22:02:21.8688838Z Entering 'third_party/bmi270'
+2026-10-19T22:02:21.8734931Z Entering 'third_party/minimp3'
+2026-10-19T22:02:21.8779750Z Entering 'third_party/opus'
+2026-10-19T22:02:21.8836691Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-19T22:02:21.8866520Z http.https://github.com/.extraheader
+2026-10-19T22:02:21.8877053Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-10-19T22:02:21.8914497Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-19T22:02:21.9132465Z Entering 'third_party/bmi270'
+2026-10-19T22:02:21.9178807Z Entering 'third_party/minimp3'
+2026-10-19T22:02:21.9223192Z Entering 'third_party/opus'
+2026-10-19T22:02:21.9276336Z ##[endgroup]
+2026-10-19T22:02:21.9566574Z ##[group]Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+2026-10-19T22:02:21.9566996Z with:
+2026-10-19T22:02:21.9567194Z   node-version: 24
+2026-10-19T22:02:21.9567402Z   always-auth: false
+2026-10-19T22:02:21.9567617Z   check-latest: false
+2026-10-19T22:02:21.9570512Z   token: ***
+2026-10-19T22:02:21.9570721Z env:
+2026-10-19T22:02:21.9570962Z   SOURCE_HEAD: 37af4225ad329aac4c5e79c880d7d69760b770be
+2026-10-19T22:02:21.9571273Z ##[endgroup]
+2026-10-19T22:02:22.1030970Z Found in cache @ /opt/hostedtoolcache/node/24.22.0/x64
+2026-10-19T22:02:22.1035865Z (node:2531) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-19T22:02:22.1036797Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-19T22:02:22.1038559Z ##[group]Environment details
+2026-10-19T22:02:22.5137958Z node: v24.22.0
+2026-10-19T22:02:22.5138687Z npm: 11.19.1
+2026-10-19T22:02:22.5139083Z yarn: 1.22.22
+2026-10-19T22:02:22.5140794Z ##[endgroup]
+2026-10-19T22:02:22.5314479Z ##[group]Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+2026-10-19T22:02:22.5314897Z with:
+2026-10-19T22:02:22.5315103Z   python-version: 3.12
+2026-10-19T22:02:22.5315346Z   check-latest: false
+2026-10-19T22:02:22.5317860Z   token: ***
+2026-10-19T22:02:22.5318075Z   update-environment: true
+2026-10-19T22:02:22.5318320Z   allow-prereleases: false
+2026-10-19T22:02:22.5318544Z   freethreaded: false
+2026-10-19T22:02:22.5318747Z env:
+2026-10-19T22:02:22.5318977Z   SOURCE_HEAD: 37af4225ad329aac4c5e79c880d7d69760b770be
+2026-10-19T22:02:22.5319627Z ##[endgroup]
+2026-10-19T22:02:22.6698453Z ##[group]Installed versions
+2026-10-19T22:02:22.6795910Z (node:2564) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-19T22:02:22.6797104Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-19T22:02:22.6797830Z Successfully set up CPython (3.12.15)
+2026-10-19T22:02:22.6798504Z ##[endgroup]
+2026-10-19T22:02:22.6936738Z ##[group]Run set -euo pipefail
+2026-10-19T22:02:22.6937092Z [36;1mset -euo pipefail[0m
+2026-10-19T22:02:22.6937353Z [36;1mmkdir -p artifacts[0m
+2026-10-19T22:02:22.6937651Z [36;1mpython -m pip install jsonschema==4.23.0[0m
+2026-10-19T22:02:22.6937979Z [36;1mgit diff --check[0m
+2026-10-19T22:02:22.6938248Z [36;1mpython -B tools/test_derby_detail.py[0m
+2026-10-19T22:02:22.6938605Z [36;1mpython -B tools/test_derby_detail_generation.py[0m
+2026-10-19T22:02:22.6938977Z [36;1mpython -B tools/test_derby_detail_board.py[0m
+2026-10-19T22:02:22.6939666Z [36;1mpython -B tools/test_derby_detail_proof.py[0m
+2026-10-19T22:02:22.6940013Z [36;1mpython -B tools/test_derby_fixed_integration.py[0m
+2026-10-19T22:02:22.6940359Z [36;1mpython -B tools/test_diagnostic_build.py[0m
+2026-10-19T22:02:22.7156048Z shell: /usr/bin/bash -e {0}
+2026-10-19T22:02:22.7156371Z env:
+2026-10-19T22:02:22.7156684Z   SOURCE_HEAD: 37af4225ad329aac4c5e79c880d7d69760b770be
+2026-10-19T22:02:22.7157231Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T22:02:22.7157826Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-19T22:02:22.7158398Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T22:02:22.7158911Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T22:02:22.7159615Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T22:02:22.7160127Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-19T22:02:22.7160565Z ##[endgroup]
+2026-10-19T22:02:24.9878790Z Collecting jsonschema==4.23.0
+2026-10-19T22:02:25.0356265Z   Downloading jsonschema-4.23.0-py3-none-any.whl.metadata (7.9 kB)
+2026-10-19T22:02:25.0697913Z Collecting attrs>=22.2.0 (from jsonschema==4.23.0)
+2026-10-19T22:02:25.0733400Z   Downloading attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+2026-10-19T22:02:25.1061184Z Collecting jsonschema-specifications>=2023.03.6 (from jsonschema==4.23.0)
+2026-10-19T22:02:25.1101871Z   Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl.metadata (2.9 kB)
+2026-10-19T22:02:25.1524367Z Collecting referencing>=0.28.4 (from jsonschema==4.23.0)
+2026-10-19T22:02:25.1555535Z   Downloading referencing-0.37.0-py3-none-any.whl.metadata (2.8 kB)
+2026-10-19T22:02:25.4900507Z Collecting rpds-py>=0.7.1 (from jsonschema==4.23.0)
+2026-10-19T22:02:25.4936691Z   Downloading rpds_py-2026.9.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.1 kB)
+2026-10-19T22:02:25.5336101Z Collecting typing-extensions>=4.4.0 (from referencing>=0.28.4->jsonschema==4.23.0)
+2026-10-19T22:02:25.5373193Z   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+2026-10-19T22:02:25.5452349Z Downloading jsonschema-4.23.0-py3-none-any.whl (88 kB)
+2026-10-19T22:02:25.5539370Z Downloading attrs-26.1.0-py3-none-any.whl (67 kB)
+2026-10-19T22:02:25.5600093Z Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl (18 kB)
+2026-10-19T22:02:25.5662689Z Downloading referencing-0.37.0-py3-none-any.whl (26 kB)
+2026-10-19T22:02:25.5722431Z Downloading rpds_py-2026.9.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (371 kB)
+2026-10-19T22:02:25.5808801Z Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+2026-10-19T22:02:25.6359690Z Installing collected packages: typing-extensions, rpds-py, attrs, referencing, jsonschema-specifications, jsonschema
+2026-10-19T22:02:25.8444104Z 
+2026-10-19T22:02:25.8458150Z Successfully installed attrs-26.1.0 jsonschema-4.23.0 jsonschema-specifications-2025.9.1 referencing-0.37.0 rpds-py-2026.9.1 typing-extensions-4.16.0
+2026-10-19T22:02:27.0089258Z PASS detail exclusive/inclusive, return cleanup, foreign task/ISR ignored, active read refused, overflow/clock/order faults
+2026-10-19T22:02:27.1793913Z PASS detail exclusive/inclusive, return cleanup, foreign task/ISR ignored, active read refused, overflow/clock/order faults
+2026-10-19T22:02:27.5478454Z PASS slow successful output: one record/return, 110ms native writes, all 42 refusal positions, timeout before final validity
+2026-10-19T22:02:27.8262799Z PASS slow successful output: one record/return, 110ms native writes, all 42 refusal positions, timeout before final validity
+2026-10-19T22:02:28.5988373Z PASS detail OFF does not evaluate arguments or reference instrumentation at O0
+2026-10-19T22:02:30.0250882Z PASS repeated ON and ON/OFF/ON generation; OFF generated JS equals exact comparison-base generator
+2026-10-19T22:02:30.0252304Z PASS five production C objects OFF .text byte-identical at O0; no dd symbols
+2026-10-19T22:02:30.3587392Z PASS actual full/narrow async+blocking board paths; queue/reap failures, logical bytes, elapsed boundaries (SPI stub)
+2026-10-19T22:02:30.8496919Z PASS detailed generated watch/view/play/PAN ELF proof, mixed mode and missing pause rejection (synthetic ELF)
+2026-10-19T22:02:32.3452379Z ......
+2026-10-19T22:02:32.3452999Z ----------------------------------------------------------------------
+2026-10-19T22:02:32.3453644Z Ran 6 tests in 1.280s
+2026-10-19T22:02:32.3453902Z 
+2026-10-19T22:02:32.3454050Z OK
+2026-10-19T22:02:32.6239478Z .
+2026-10-19T22:02:32.6240403Z ----------------------------------------------------------------------
+2026-10-19T22:02:32.6241008Z Ran 1 test in 0.060s
+2026-10-19T22:02:32.6241235Z 
+2026-10-19T22:02:32.6241368Z OK
+2026-10-19T22:02:32.6407498Z ##[group]Run set -euo pipefail
+2026-10-19T22:02:32.6407873Z [36;1mset -euo pipefail[0m
+2026-10-19T22:02:32.6408261Z [36;1mpython -B tools/games/run_derby_fixed.py --out artifacts/off[0m
+2026-10-19T22:02:32.6408814Z [36;1mpython -B tools/games/run_derby_fixed.py --detail --out artifacts/on[0m
+2026-10-19T22:02:32.6409766Z [36;1mpython -B tools/test_derby_detail.py --log artifacts/on/trial.log[0m
+2026-10-19T22:02:32.6410541Z [36;1mpython -B tools/games/check_derby_detail_pair.py --off artifacts/off --on artifacts/on --out artifacts/asan-pair.json[0m
+2026-10-19T22:02:32.6461590Z shell: /usr/bin/bash -e {0}
+2026-10-19T22:02:32.6461876Z env:
+2026-10-19T22:02:32.6462167Z   SOURCE_HEAD: 37af4225ad329aac4c5e79c880d7d69760b770be
+2026-10-19T22:02:32.6462645Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T22:02:32.6463160Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-19T22:02:32.6463707Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T22:02:32.6464170Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T22:02:32.6464633Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T22:02:32.6465100Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-19T22:02:32.6465491Z ##[endgroup]
+2026-10-19T22:03:56.8168375Z {"variant": "baseline", "pass": true, "windows": [{"rep": 1, "contexts": 120, "draws": 4975, "input_hash": "986b2e6e027af00d", "procedural_pixel_hash": "c1b0fdbde748d0de", "panel_hash": "cec4b765a2794b14"}, {"rep": 2, "contexts": 120, "draws": 4975, "input_hash": "986b2e6e027af00d", "procedural_pixel_hash": "c1b0fdbde748d0de", "panel_hash": "cec4b765a2794b14"}, {"rep": 3, "contexts": 120, "draws": 4975, "input_hash": "986b2e6e027af00d", "procedural_pixel_hash": "c1b0fdbde748d0de", "panel_hash": "cec4b765a2794b14"}], "result": "/home/runner/work/cardputer-adv-pocketjs/cardputer-adv-pocketjs/artifacts/off/result.json"}
+2026-10-19T22:05:22.8283489Z {"variant": "baseline", "pass": true, "windows": [{"rep": 1, "contexts": 120, "draws": 4975, "input_hash": "986b2e6e027af00d", "procedural_pixel_hash": "c1b0fdbde748d0de", "panel_hash": "cec4b765a2794b14"}, {"rep": 2, "contexts": 120, "draws": 4975, "input_hash": "986b2e6e027af00d", "procedural_pixel_hash": "c1b0fdbde748d0de", "panel_hash": "cec4b765a2794b14"}, {"rep": 3, "contexts": 120, "draws": 4975, "input_hash": "986b2e6e027af00d", "procedural_pixel_hash": "c1b0fdbde748d0de", "panel_hash": "cec4b765a2794b14"}], "result": "/home/runner/work/cardputer-adv-pocketjs/cardputer-adv-pocketjs/artifacts/on/result.json"}
+2026-10-19T22:05:23.1017558Z PASS detail exclusive/inclusive, return cleanup, foreign task/ISR ignored, active read refused, overflow/clock/order faults
+2026-10-19T22:05:23.2582410Z PASS detail exclusive/inclusive, return cleanup, foreign task/ISR ignored, active read refused, overflow/clock/order faults
+2026-10-19T22:05:23.6215188Z PASS slow successful output: one record/return, 110ms native writes, all 42 refusal positions, timeout before final validity
+2026-10-19T22:05:23.9020801Z PASS slow successful output: one record/return, 110ms native writes, all 42 refusal positions, timeout before final validity
+2026-10-19T22:05:24.0821958Z PASS detail OFF does not evaluate arguments or reference instrumentation at O0
+2026-10-19T22:05:24.0824017Z PASS bare/tagged/ANSI detail stream; 38 missing/schema/order/quality/runtime/OFF failure cases rejected
+2026-10-19T22:05:24.2305482Z {"pass": true, "variant": "baseline", "hardware_tested": false, "scope": "host functional overhead control; dependent replay and oracle work; not target timing", "off_work_us": [838132, 821757, 840851], "on_work_us": [905647, 893555, 905532], "median_ratio": 1.0804169271666038}
+2026-10-19T22:05:24.2412293Z ##[group]Run set -euo pipefail
+2026-10-19T22:05:24.2412879Z [36;1mset -euo pipefail[0m
+2026-10-19T22:05:24.2413604Z [36;1mpython -B tools/games/run_derby_fixed.py --detail-fast --out artifacts/fast-off[0m
+2026-10-19T22:05:24.2414728Z [36;1mpython -B tools/games/run_derby_fixed.py --detail-fast --detail --out artifacts/fast-on[0m
+2026-10-19T22:05:24.2416157Z [36;1mpython -B tools/games/check_derby_detail_pair.py --off artifacts/fast-off --on artifacts/fast-on --out artifacts/fast-pair.json[0m
+2026-10-19T22:05:24.2490979Z shell: /usr/bin/bash -e {0}
+2026-10-19T22:05:24.2491388Z env:
+2026-10-19T22:05:24.2491796Z   SOURCE_HEAD: 37af4225ad329aac4c5e79c880d7d69760b770be
+2026-10-19T22:05:24.2492457Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T22:05:24.2493221Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-19T22:05:24.2494044Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T22:05:24.2494796Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T22:05:24.2495516Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T22:05:24.2496225Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-19T22:05:24.2496825Z ##[endgroup]
+2026-10-19T22:06:06.5983206Z {"variant": "baseline", "pass": true, "windows": [{"rep": 1, "contexts": 120, "draws": 4975, "input_hash": "986b2e6e027af00d", "procedural_pixel_hash": "c1b0fdbde748d0de", "panel_hash": "cec4b765a2794b14"}, {"rep": 2, "contexts": 120, "draws": 4975, "input_hash": "986b2e6e027af00d", "procedural_pixel_hash": "c1b0fdbde748d0de", "panel_hash": "cec4b765a2794b14"}, {"rep": 3, "contexts": 120, "draws": 4975, "input_hash": "986b2e6e027af00d", "procedural_pixel_hash": "c1b0fdbde748d0de", "panel_hash": "cec4b765a2794b14"}], "result": "/home/runner/work/cardputer-adv-pocketjs/cardputer-adv-pocketjs/artifacts/fast-off/result.json"}
+2026-10-19T22:06:49.6378788Z {"variant": "baseline", "pass": true, "windows": [{"rep": 1, "contexts": 120, "draws": 4975, "input_hash": "986b2e6e027af00d", "procedural_pixel_hash": "c1b0fdbde748d0de", "panel_hash": "cec4b765a2794b14"}, {"rep": 2, "contexts": 120, "draws": 4975, "input_hash": "986b2e6e027af00d", "procedural_pixel_hash": "c1b0fdbde748d0de", "panel_hash": "cec4b765a2794b14"}, {"rep": 3, "contexts": 120, "draws": 4975, "input_hash": "986b2e6e027af00d", "procedural_pixel_hash": "c1b0fdbde748d0de", "panel_hash": "cec4b765a2794b14"}], "result": "/home/runner/work/cardputer-adv-pocketjs/cardputer-adv-pocketjs/artifacts/fast-on/result.json"}
+2026-10-19T22:06:49.7058192Z {"pass": true, "variant": "baseline", "hardware_tested": false, "scope": "host functional overhead control; dependent replay and oracle work; not target timing", "off_work_us": [146538, 144916, 146191], "on_work_us": [169205, 167777, 168244], "median_ratio": 1.1508505995581124}
+2026-10-19T22:06:49.7171477Z ##[group]Run set -euo pipefail
+2026-10-19T22:06:49.7172021Z [36;1mset -euo pipefail[0m
+2026-10-19T22:06:49.7172485Z [36;1msudo apt-get update[0m
+2026-10-19T22:06:49.7172979Z [36;1msudo apt-get install -y gcc-multilib[0m
+2026-10-19T22:06:49.7173913Z [36;1mDERBY_FIXED_SYSTEM_M32=1 python -B tools/games/run_derby_fixed.py --m32 --detail --out artifacts/m32-on[0m
+2026-10-19T22:06:49.7249424Z shell: /usr/bin/bash -e {0}
+2026-10-19T22:06:49.7249859Z env:
+2026-10-19T22:06:49.7250285Z   SOURCE_HEAD: 37af4225ad329aac4c5e79c880d7d69760b770be
+2026-10-19T22:06:49.7250967Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T22:06:49.7251787Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-19T22:06:49.7252582Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T22:06:49.7252973Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T22:06:49.7253400Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T22:06:49.7253784Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-19T22:06:49.7254255Z ##[endgroup]
+2026-10-19T22:06:49.9900505Z Get:1 https://packages.microsoft.com/ubuntu/24.04/prod noble InRelease [3600 B]
+2026-10-19T22:06:50.0140780Z Get:2 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+2026-10-19T22:06:50.0372465Z Hit:3 http://azure.archive.ubuntu.com/ubuntu noble InRelease
+2026-10-19T22:06:50.0384011Z Get:4 http://azure.archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+2026-10-19T22:06:50.0460592Z Get:5 http://azure.archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+2026-10-19T22:06:50.0524833Z Get:6 http://azure.archive.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+2026-10-19T22:06:50.3870961Z Get:7 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1397 kB]
+2026-10-19T22:06:50.4062433Z Get:8 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [1704 kB]
+2026-10-19T22:06:50.5018486Z Get:9 http://azure.archive.ubuntu.com/ubuntu noble-security/main amd64 Packages [1145 kB]
+2026-10-19T22:06:50.5073532Z Get:10 http://azure.archive.ubuntu.com/ubuntu noble-security/main Translation-en [231 kB]
+2026-10-19T22:06:50.5090958Z Get:11 http://azure.archive.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1222 kB]
+2026-10-19T22:06:59.9087515Z Fetched 6081 kB in 1s (6144 kB/s)
+2026-10-19T22:07:00.9864992Z Reading package lists...
+2026-10-19T22:07:01.0274475Z Reading package lists...
+2026-10-19T22:07:01.2470008Z Building dependency tree...
+2026-10-19T22:07:01.2477683Z Reading state information...
+2026-10-19T22:07:01.4206625Z The following additional packages will be installed:
+2026-10-19T22:07:01.4207614Z   gcc-13-multilib lib32asan8 lib32atomic1 lib32gcc-13-dev lib32gomp1 lib32itm1
+2026-10-19T22:07:01.4211072Z   lib32quadmath0 lib32ubsan1 libc6-dev-i386 libc6-dev-x32 libc6-x32
+2026-10-19T22:07:01.4211989Z   libx32asan8 libx32atomic1 libx32gcc-13-dev libx32gcc-s1 libx32gomp1
+2026-10-19T22:07:01.4214251Z   libx32itm1 libx32quadmath0 libx32stdc++6 libx32ubsan1
+2026-10-19T22:07:01.4855705Z The following NEW packages will be installed:
+2026-10-19T22:07:01.4856882Z   gcc-13-multilib gcc-multilib lib32asan8 lib32atomic1 lib32gcc-13-dev
+2026-10-19T22:07:01.4857740Z   lib32gomp1 lib32itm1 lib32quadmath0 lib32ubsan1 libc6-dev-i386 libc6-dev-x32
+2026-10-19T22:07:01.4860884Z   libc6-x32 libx32asan8 libx32atomic1 libx32gcc-13-dev libx32gcc-s1
+2026-10-19T22:07:01.4864269Z   libx32gomp1 libx32itm1 libx32quadmath0 libx32stdc++6 libx32ubsan1
+2026-10-19T22:07:01.5080422Z 0 upgraded, 21 newly installed, 0 to remove and 38 not upgraded.
+2026-10-19T22:07:01.5081127Z Need to get 20.3 MB of archives.
+2026-10-19T22:07:01.5081585Z After this operation, 75.1 MB of additional disk space will be used.
+2026-10-19T22:07:01.5082101Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+2026-10-19T22:07:01.5945859Z Get:2 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 libc6-dev-i386 amd64 2.39-0ubuntu8.9 [1447 kB]
+2026-10-19T22:07:02.0617856Z Get:3 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 libc6-x32 amd64 2.39-0ubuntu8.9 [2917 kB]
+2026-10-19T22:07:02.2479966Z Get:4 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 libc6-dev-x32 amd64 2.39-0ubuntu8.9 [1637 kB]
+2026-10-19T22:07:02.3433618Z Get:5 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 libx32gcc-s1 amd64 14.2.0-4ubuntu2~24.04.1 [78.5 kB]
+2026-10-19T22:07:02.4142223Z Get:6 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 lib32gomp1 amd64 14.2.0-4ubuntu2~24.04.1 [141 kB]
+2026-10-19T22:07:02.4851224Z Get:7 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 libx32gomp1 amd64 14.2.0-4ubuntu2~24.04.1 [144 kB]
+2026-10-19T22:07:02.5563265Z Get:8 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 lib32itm1 amd64 14.2.0-4ubuntu2~24.04.1 [29.5 kB]
+2026-10-19T22:07:02.6263569Z Get:9 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 libx32itm1 amd64 14.2.0-4ubuntu2~24.04.1 [29.8 kB]
+2026-10-19T22:07:02.6964715Z Get:10 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 lib32atomic1 amd64 14.2.0-4ubuntu2~24.04.1 [8594 B]
+2026-10-19T22:07:02.7663336Z Get:11 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 libx32atomic1 amd64 14.2.0-4ubuntu2~24.04.1 [10.3 kB]
+2026-10-19T22:07:02.8364506Z Get:12 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 lib32asan8 amd64 14.2.0-4ubuntu2~24.04.1 [2880 kB]
+2026-10-19T22:07:02.9513892Z Get:13 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 libx32asan8 amd64 14.2.0-4ubuntu2~24.04.1 [2893 kB]
+2026-10-19T22:07:03.0605828Z Get:14 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 lib32ubsan1 amd64 14.2.0-4ubuntu2~24.04.1 [1150 kB]
+2026-10-19T22:07:03.1447203Z Get:15 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 libx32stdc++6 amd64 14.2.0-4ubuntu2~24.04.1 [778 kB]
+2026-10-19T22:07:03.2241518Z Get:16 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 libx32ubsan1 amd64 14.2.0-4ubuntu2~24.04.1 [1169 kB]
+2026-10-19T22:07:03.3083510Z Get:17 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 lib32quadmath0 amd64 14.2.0-4ubuntu2~24.04.1 [227 kB]
+2026-10-19T22:07:03.3804165Z Get:18 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 libx32quadmath0 amd64 14.2.0-4ubuntu2~24.04.1 [157 kB]
+2026-10-19T22:07:03.4516633Z Get:19 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 lib32gcc-13-dev amd64 13.3.0-6ubuntu2~24.04.1 [2380 kB]
+2026-10-19T22:07:03.5518649Z Get:20 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 libx32gcc-13-dev amd64 13.3.0-6ubuntu2~24.04.1 [2190 kB]
+2026-10-19T22:07:03.6500074Z Get:21 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 gcc-13-multilib amd64 13.3.0-6ubuntu2~24.04.1 [880 B]
+2026-10-19T22:07:03.7201145Z Get:22 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 gcc-multilib amd64 4:13.2.0-7ubuntu1 [1474 B]
+2026-10-19T22:07:04.0917486Z Fetched 20.3 MB in 2s (9110 kB/s)
+2026-10-19T22:07:04.2060247Z Selecting previously unselected package libc6-dev-i386.
+2026-10-19T22:07:04.2918538Z (Reading database ... 
+2026-10-19T22:07:04.2919880Z (Reading database ... 5%
+2026-10-19T22:07:04.2920561Z (Reading database ... 10%
+2026-10-19T22:07:04.2920911Z (Reading database ... 15%
+2026-10-19T22:07:04.2921230Z (Reading database ... 20%
+2026-10-19T22:07:04.2921530Z (Reading database ... 25%
+2026-10-19T22:07:04.2921825Z (Reading database ... 30%
+2026-10-19T22:07:04.2922116Z (Reading database ... 35%
+2026-10-19T22:07:04.2922417Z (Reading database ... 40%
+2026-10-19T22:07:04.2922705Z (Reading database ... 45%
+2026-10-19T22:07:04.2922995Z (Reading database ... 50%
+2026-10-19T22:07:04.3636928Z (Reading database ... 55%
+2026-10-19T22:07:04.7537180Z (Reading database ... 60%
+2026-10-19T22:07:05.0658075Z (Reading database ... 65%
+2026-10-19T22:07:05.3309805Z (Reading database ... 70%
+2026-10-19T22:07:05.7575094Z (Reading database ... 75%
+2026-10-19T22:07:06.6707035Z (Reading database ... 80%
+2026-10-19T22:07:07.8376569Z (Reading database ... 85%
+2026-10-19T22:07:09.1191306Z (Reading database ... 90%
+2026-10-19T22:07:10.6906988Z (Reading database ... 95%
+2026-10-19T22:07:10.6908075Z (Reading database ... 100%
+2026-10-19T22:07:10.6909631Z (Reading database ... 214410 files and directories currently installed.)
+2026-10-19T22:07:10.6957814Z Preparing to unpack .../00-libc6-dev-i386_2.39-0ubuntu8.9_amd64.deb ...
+2026-10-19T22:07:10.6984325Z Unpacking libc6-dev-i386 (2.39-0ubuntu8.9) ...
+2026-10-19T22:07:10.7685978Z Selecting previously unselected package libc6-x32.
+2026-10-19T22:07:10.7832604Z Preparing to unpack .../01-libc6-x32_2.39-0ubuntu8.9_amd64.deb ...
+2026-10-19T22:07:10.7945856Z Unpacking libc6-x32 (2.39-0ubuntu8.9) ...
+2026-10-19T22:07:10.9285156Z Selecting previously unselected package libc6-dev-x32.
+2026-10-19T22:07:10.9430819Z Preparing to unpack .../02-libc6-dev-x32_2.39-0ubuntu8.9_amd64.deb ...
+2026-10-19T22:07:10.9439969Z Unpacking libc6-dev-x32 (2.39-0ubuntu8.9) ...
+2026-10-19T22:07:11.0025819Z Selecting previously unselected package libx32gcc-s1.
+2026-10-19T22:07:11.0177765Z Preparing to unpack .../03-libx32gcc-s1_14.2.0-4ubuntu2~24.04.1_amd64.deb ...
+2026-10-19T22:07:11.0188883Z Unpacking libx32gcc-s1 (14.2.0-4ubuntu2~24.04.1) ...
+2026-10-19T22:07:11.0461129Z Selecting previously unselected package lib32gomp1.
+2026-10-19T22:07:11.0606057Z Preparing to unpack .../04-lib32gomp1_14.2.0-4ubuntu2~24.04.1_amd64.deb ...
+2026-10-19T22:07:11.0622002Z Unpacking lib32gomp1 (14.2.0-4ubuntu2~24.04.1) ...
+2026-10-19T22:07:11.0915775Z Selecting previously unselected package libx32gomp1.
+2026-10-19T22:07:11.1066486Z Preparing to unpack .../05-libx32gomp1_14.2.0-4ubuntu2~24.04.1_amd64.deb ...
+2026-10-19T22:07:11.1079037Z Unpacking libx32gomp1 (14.2.0-4ubuntu2~24.04.1) ...
+2026-10-19T22:07:11.1385559Z Selecting previously unselected package lib32itm1.
+2026-10-19T22:07:11.1533906Z Preparing to unpack .../06-lib32itm1_14.2.0-4ubuntu2~24.04.1_amd64.deb ...
+2026-10-19T22:07:11.1542376Z Unpacking lib32itm1 (14.2.0-4ubuntu2~24.04.1) ...
+2026-10-19T22:07:11.1847525Z Selecting previously unselected package libx32itm1.
+2026-10-19T22:07:11.1994754Z Preparing to unpack .../07-libx32itm1_14.2.0-4ubuntu2~24.04.1_amd64.deb ...
+2026-10-19T22:07:11.2003637Z Unpacking libx32itm1 (14.2.0-4ubuntu2~24.04.1) ...
+2026-10-19T22:07:11.2254857Z Selecting previously unselected package lib32atomic1.
+2026-10-19T22:07:11.2401039Z Preparing to unpack .../08-lib32atomic1_14.2.0-4ubuntu2~24.04.1_amd64.deb ...
+2026-10-19T22:07:11.2411225Z Unpacking lib32atomic1 (14.2.0-4ubuntu2~24.04.1) ...
+2026-10-19T22:07:11.2657191Z Selecting previously unselected package libx32atomic1.
+2026-10-19T22:07:11.2806174Z Preparing to unpack .../09-libx32atomic1_14.2.0-4ubuntu2~24.04.1_amd64.deb ...
+2026-10-19T22:07:11.2815788Z Unpacking libx32atomic1 (14.2.0-4ubuntu2~24.04.1) ...
+2026-10-19T22:07:11.3065383Z Selecting previously unselected package lib32asan8.
+2026-10-19T22:07:11.3210497Z Preparing to unpack .../10-lib32asan8_14.2.0-4ubuntu2~24.04.1_amd64.deb ...
+2026-10-19T22:07:11.3218390Z Unpacking lib32asan8 (14.2.0-4ubuntu2~24.04.1) ...
+2026-10-19T22:07:11.3914596Z Selecting previously unselected package libx32asan8.
+2026-10-19T22:07:11.4064907Z Preparing to unpack .../11-libx32asan8_14.2.0-4ubuntu2~24.04.1_amd64.deb ...
+2026-10-19T22:07:11.4075344Z Unpacking libx32asan8 (14.2.0-4ubuntu2~24.04.1) ...
+2026-10-19T22:07:11.4764266Z Selecting previously unselected package lib32ubsan1.
+2026-10-19T22:07:11.4913354Z Preparing to unpack .../12-lib32ubsan1_14.2.0-4ubuntu2~24.04.1_amd64.deb ...
+2026-10-19T22:07:11.4922952Z Unpacking lib32ubsan1 (14.2.0-4ubuntu2~24.04.1) ...
+2026-10-19T22:07:11.5347255Z Selecting previously unselected package libx32stdc++6.
+2026-10-19T22:07:11.5495780Z Preparing to unpack .../13-libx32stdc++6_14.2.0-4ubuntu2~24.04.1_amd64.deb ...
+2026-10-19T22:07:11.5505260Z Unpacking libx32stdc++6 (14.2.0-4ubuntu2~24.04.1) ...
+2026-10-19T22:07:11.5870249Z Selecting previously unselected package libx32ubsan1.
+2026-10-19T22:07:11.6016728Z Preparing to unpack .../14-libx32ubsan1_14.2.0-4ubuntu2~24.04.1_amd64.deb ...
+2026-10-19T22:07:11.6025120Z Unpacking libx32ubsan1 (14.2.0-4ubuntu2~24.04.1) ...
+2026-10-19T22:07:11.6446949Z Selecting previously unselected package lib32quadmath0.
+2026-10-19T22:07:11.6594061Z Preparing to unpack .../15-lib32quadmath0_14.2.0-4ubuntu2~24.04.1_amd64.deb ...
+2026-10-19T22:07:11.6602254Z Unpacking lib32quadmath0 (14.2.0-4ubuntu2~24.04.1) ...
+2026-10-19T22:07:11.6920357Z Selecting previously unselected package libx32quadmath0.
+2026-10-19T22:07:11.7066741Z Preparing to unpack .../16-libx32quadmath0_14.2.0-4ubuntu2~24.04.1_amd64.deb ...
+2026-10-19T22:07:11.7074839Z Unpacking libx32quadmath0 (14.2.0-4ubuntu2~24.04.1) ...
+2026-10-19T22:07:11.7342334Z Selecting previously unselected package lib32gcc-13-dev.
+2026-10-19T22:07:11.7492294Z Preparing to unpack .../17-lib32gcc-13-dev_13.3.0-6ubuntu2~24.04.1_amd64.deb ...
+2026-10-19T22:07:11.7500387Z Unpacking lib32gcc-13-dev (13.3.0-6ubuntu2~24.04.1) ...
+2026-10-19T22:07:11.8099870Z Selecting previously unselected package libx32gcc-13-dev.
+2026-10-19T22:07:11.8253506Z Preparing to unpack .../18-libx32gcc-13-dev_13.3.0-6ubuntu2~24.04.1_amd64.deb ...
+2026-10-19T22:07:11.8261342Z Unpacking libx32gcc-13-dev (13.3.0-6ubuntu2~24.04.1) ...
+2026-10-19T22:07:11.8822124Z Selecting previously unselected package gcc-13-multilib.
+2026-10-19T22:07:11.8975005Z Preparing to unpack .../19-gcc-13-multilib_13.3.0-6ubuntu2~24.04.1_amd64.deb ...
+2026-10-19T22:07:11.8982254Z Unpacking gcc-13-multilib (13.3.0-6ubuntu2~24.04.1) ...
+2026-10-19T22:07:11.9215132Z Selecting previously unselected package gcc-multilib.
+2026-10-19T22:07:11.9363171Z Preparing to unpack .../20-gcc-multilib_4%3a13.2.0-7ubuntu1_amd64.deb ...
+2026-10-19T22:07:11.9370371Z Unpacking gcc-multilib (4:13.2.0-7ubuntu1) ...
+2026-10-19T22:07:11.9824726Z Setting up libc6-dev-i386 (2.39-0ubuntu8.9) ...
+2026-10-19T22:07:11.9848462Z Setting up lib32itm1 (14.2.0-4ubuntu2~24.04.1) ...
+2026-10-19T22:07:11.9869921Z Setting up lib32ubsan1 (14.2.0-4ubuntu2~24.04.1) ...
+2026-10-19T22:07:11.9890365Z Setting up libc6-x32 (2.39-0ubuntu8.9) ...
+2026-10-19T22:07:11.9930193Z Setting up libc6-dev-x32 (2.39-0ubuntu8.9) ...
+2026-10-19T22:07:11.9949632Z Setting up lib32gomp1 (14.2.0-4ubuntu2~24.04.1) ...
+2026-10-19T22:07:11.9993848Z Setting up lib32asan8 (14.2.0-4ubuntu2~24.04.1) ...
+2026-10-19T22:07:12.0014633Z Setting up libx32gomp1 (14.2.0-4ubuntu2~24.04.1) ...
+2026-10-19T22:07:12.0034743Z Setting up lib32quadmath0 (14.2.0-4ubuntu2~24.04.1) ...
+2026-10-19T22:07:12.0055139Z Setting up libx32quadmath0 (14.2.0-4ubuntu2~24.04.1) ...
+2026-10-19T22:07:12.0074886Z Setting up lib32atomic1 (14.2.0-4ubuntu2~24.04.1) ...
+2026-10-19T22:07:12.0093579Z Setting up libx32atomic1 (14.2.0-4ubuntu2~24.04.1) ...
+2026-10-19T22:07:12.0113753Z Setting up libx32gcc-s1 (14.2.0-4ubuntu2~24.04.1) ...
+2026-10-19T22:07:12.0135553Z Setting up libx32itm1 (14.2.0-4ubuntu2~24.04.1) ...
+2026-10-19T22:07:12.0154572Z Setting up libx32asan8 (14.2.0-4ubuntu2~24.04.1) ...
+2026-10-19T22:07:12.0173233Z Setting up libx32stdc++6 (14.2.0-4ubuntu2~24.04.1) ...
+2026-10-19T22:07:12.0191154Z Setting up libx32ubsan1 (14.2.0-4ubuntu2~24.04.1) ...
+2026-10-19T22:07:12.0211967Z Setting up lib32gcc-13-dev (13.3.0-6ubuntu2~24.04.1) ...
+2026-10-19T22:07:12.0231570Z Setting up libx32gcc-13-dev (13.3.0-6ubuntu2~24.04.1) ...
+2026-10-19T22:07:12.0251483Z Setting up gcc-13-multilib (13.3.0-6ubuntu2~24.04.1) ...
+2026-10-19T22:07:12.0270293Z Setting up gcc-multilib (4:13.2.0-7ubuntu1) ...
+2026-10-19T22:07:12.0298853Z Processing triggers for libc-bin (2.39-0ubuntu8.9) ...
+2026-10-19T22:07:13.7857883Z 
+2026-10-19T22:07:13.7858721Z Running kernel seems to be up-to-date.
+2026-10-19T22:07:13.7859839Z 
+2026-10-19T22:07:13.7860333Z No services need to be restarted.
+2026-10-19T22:07:13.7860918Z 
+2026-10-19T22:07:13.7861392Z No containers need to be restarted.
+2026-10-19T22:07:13.7861974Z 
+2026-10-19T22:07:13.7862437Z No user sessions are running outdated binaries.
+2026-10-19T22:07:13.7863014Z 
+2026-10-19T22:07:13.7864000Z No VM guests are running outdated hypervisor (qemu) binaries on this host.
+2026-10-19T22:07:39.7440083Z {"variant": "baseline", "pass": true, "windows": [{"rep": 1, "contexts": 120, "draws": 4975, "input_hash": "a2e6df112728ff71", "procedural_pixel_hash": "c1b0fdbde748d0de", "panel_hash": "cec4b765a2794b14"}, {"rep": 2, "contexts": 120, "draws": 4975, "input_hash": "a2e6df112728ff71", "procedural_pixel_hash": "c1b0fdbde748d0de", "panel_hash": "cec4b765a2794b14"}, {"rep": 3, "contexts": 120, "draws": 4975, "input_hash": "a2e6df112728ff71", "procedural_pixel_hash": "c1b0fdbde748d0de", "panel_hash": "cec4b765a2794b14"}], "result": "/home/runner/work/cardputer-adv-pocketjs/cardputer-adv-pocketjs/artifacts/m32-on/result.json"}
+2026-10-19T22:07:39.7632866Z ##[group]Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+2026-10-19T22:07:39.7633299Z with:
+2026-10-19T22:07:39.7633599Z   name: derby-detail-host-37af4225ad329aac4c5e79c880d7d69760b770be
+2026-10-19T22:07:39.7633982Z   path: artifacts/**/*.json
+
+2026-10-19T22:07:39.7634219Z   retention-days: 14
+2026-10-19T22:07:39.7634437Z   if-no-files-found: warn
+2026-10-19T22:07:39.7634662Z   compression-level: 6
+2026-10-19T22:07:39.7634894Z   overwrite: false
+2026-10-19T22:07:39.7635104Z   include-hidden-files: false
+2026-10-19T22:07:39.7635333Z env:
+2026-10-19T22:07:39.7635558Z   SOURCE_HEAD: 37af4225ad329aac4c5e79c880d7d69760b770be
+2026-10-19T22:07:39.7635935Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T22:07:39.7636357Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-19T22:07:39.7636780Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T22:07:39.7637221Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T22:07:39.7637602Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-19T22:07:39.7637980Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-19T22:07:39.7638296Z ##[endgroup]
+2026-10-19T22:07:39.9550971Z (node:4211) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-19T22:07:39.9552494Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-19T22:07:39.9900246Z With the provided path, there will be 22 files uploaded
+2026-10-19T22:07:39.9908420Z Artifact name is valid!
+2026-10-19T22:07:39.9909412Z Root directory input is valid!
+2026-10-19T22:07:40.4104473Z Beginning upload of artifact content to blob storage
+2026-10-19T22:07:40.4581972Z (node:4211) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-10-19T22:07:40.8329608Z Uploaded bytes 43559
+2026-10-19T22:07:40.9072598Z Finished uploading artifact content to blob storage!
+2026-10-19T22:07:40.9073698Z SHA256 digest of uploaded artifact zip is 26cb3c377cb27f411470f279b59eee436de0d0647c701a0b86ffc90f2e299363
+2026-10-19T22:07:40.9075838Z Finalizing artifact upload
+2026-10-19T22:07:41.2056970Z Artifact derby-detail-host-37af4225ad329aac4c5e79c880d7d69760b770be.zip successfully finalized. Artifact ID 12225147121
+2026-10-19T22:07:41.2059923Z Artifact derby-detail-host-37af4225ad329aac4c5e79c880d7d69760b770be has been successfully uploaded! Final size is 43559 bytes. Artifact ID is 12225147121
+2026-10-19T22:07:41.2066445Z Artifact download URL: https://github.com/dj-oyu/cardputer-adv-pocketjs/actions/runs/39332037916/artifacts/12225147121
+2026-10-19T22:07:41.2274653Z Post job cleanup.
+2026-10-19T22:07:41.3587719Z (node:4224) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-19T22:07:41.3588881Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-19T22:07:41.3737953Z Post job cleanup.
+2026-10-19T22:07:41.5127680Z (node:4232) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-19T22:07:41.5130278Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-19T22:07:41.5307913Z Post job cleanup.
+2026-10-19T22:07:41.6269718Z [command]/usr/bin/git version
+2026-10-19T22:07:41.6312718Z git version 2.55.0
+2026-10-19T22:07:41.6353025Z Temporarily overriding HOME='/home/runner/work/_temp/9ee8104d-b2f1-41e1-b8c0-4131df4df746' before making global git config changes
+2026-10-19T22:07:41.6354325Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-19T22:07:41.6360528Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/cardputer-adv-pocketjs/cardputer-adv-pocketjs
+2026-10-19T22:07:41.6405210Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-19T22:07:41.6443054Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-19T22:07:41.6687031Z Entering 'third_party/bmi270'
+2026-10-19T22:07:41.6735752Z Entering 'third_party/minimp3'
+2026-10-19T22:07:41.6783749Z Entering 'third_party/opus'
+2026-10-19T22:07:41.6848799Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-19T22:07:41.6889069Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-19T22:07:41.7122668Z Entering 'third_party/bmi270'
+2026-10-19T22:07:41.7173144Z Entering 'third_party/minimp3'
+2026-10-19T22:07:41.7219660Z Entering 'third_party/opus'
+2026-10-19T22:07:41.7464790Z Cleaning up orphan processes
+2026-10-19T22:07:41.7872722Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683, actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020, actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065, actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/6d8dcdbcdc54/fox-v3-camera-background-evaluation/code/run_actual.py", line 7, in <module>
+    assert len(sys.argv)==3;D=Path(sys.argv[1]).resolve();arm=sys.argv[2];assert arm in ['off','on','background'];O=D/arm;assert not O.exists();O.mkdir();stage=O/'private-partial';stage.mkdir()
+                                                                                                                                 ^^^^^^^^^^^^^^
+AssertionError

@@ -1,0 +1,29 @@
+{
+  "existing_snapshots": 13,
+  "max_snapshots": 16,
+  "new_snapshots_needed": 3,
+  "slot_shortfall": 0,
+  "existing_bytes": 1121839000,
+  "new_bytes_estimate": 257445764,
+  "estimated_total_bytes": 1379284764,
+  "max_bytes": 2147483648,
+  "variants": {
+    "baseline": {
+      "commit": "37af4225ad329aac4c5e79c880d7d69760b770be",
+      "expanded_bytes_estimate": 85799893,
+      "files_estimate": 2853
+    },
+    "native": {
+      "commit": "92e70b7fbb2c15d99734a518096dffdf046d2ae3",
+      "expanded_bytes_estimate": 85805844,
+      "files_estimate": 2855
+    },
+    "batch": {
+      "commit": "ea64b0ec9c176f852c853cb10142581ee527d7fc",
+      "expanded_bytes_estimate": 85840027,
+      "files_estimate": 2863
+    }
+  },
+  "basis": "Observed expanded baseline90b9 source bytes/files plus exact Git tree blob/count delta withsame pinnedGitlinks; no newfetch executed. Compresseddownload/actualaccounting notverified.",
+  "source_flash_hold": "MCP preflight source_cache_scan_limit; maintainhold perparent, nocacheoperationfromthisworker"
+}

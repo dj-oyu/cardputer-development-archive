@@ -1,0 +1,185 @@
+{
+  "allArithmeticExact": true,
+  "cases": [
+    {
+      "view": "front",
+      "case": "baseline",
+      "reverse": false,
+      "rasterMedianMs": [
+        2.556976,
+        22.944994
+      ]
+    },
+    {
+      "view": "front",
+      "case": "baseline",
+      "reverse": true,
+      "rasterMedianMs": [
+        2.456484,
+        23.085425
+      ]
+    },
+    {
+      "view": "front",
+      "case": "direction",
+      "reverse": false,
+      "rasterMedianMs": [
+        2.494107,
+        21.955597
+      ]
+    },
+    {
+      "view": "front",
+      "case": "direction",
+      "reverse": true,
+      "rasterMedianMs": [
+        2.471415,
+        22.346532
+      ]
+    },
+    {
+      "view": "front",
+      "case": "intensity",
+      "reverse": false,
+      "rasterMedianMs": [
+        2.720391,
+        24.242115
+      ]
+    },
+    {
+      "view": "front",
+      "case": "intensity",
+      "reverse": true,
+      "rasterMedianMs": [
+        2.486017,
+        22.309384
+      ]
+    },
+    {
+      "view": "front",
+      "case": "ambient",
+      "reverse": false,
+      "rasterMedianMs": [
+        2.695816,
+        24.224437
+      ]
+    },
+    {
+      "view": "front",
+      "case": "ambient",
+      "reverse": true,
+      "rasterMedianMs": [
+        2.561682,
+        22.663866
+      ]
+    },
+    {
+      "view": "front",
+      "case": "albedo",
+      "reverse": false,
+      "rasterMedianMs": [
+        2.542141,
+        23.647997
+      ]
+    },
+    {
+      "view": "front",
+      "case": "albedo",
+      "reverse": true,
+      "rasterMedianMs": [
+        2.695013,
+        24.443951
+      ]
+    },
+    {
+      "view": "oblique",
+      "case": "baseline",
+      "reverse": false,
+      "rasterMedianMs": [
+        2.64128,
+        23.876778
+      ]
+    },
+    {
+      "view": "oblique",
+      "case": "baseline",
+      "reverse": true,
+      "rasterMedianMs": [
+        2.649913,
+        26.966286
+      ]
+    },
+    {
+      "view": "oblique",
+      "case": "direction",
+      "reverse": false,
+      "rasterMedianMs": [
+        2.642534,
+        25.444944
+      ]
+    },
+    {
+      "view": "oblique",
+      "case": "direction",
+      "reverse": true,
+      "rasterMedianMs": [
+        2.784257,
+        24.048025
+      ]
+    },
+    {
+      "view": "oblique",
+      "case": "intensity",
+      "reverse": false,
+      "rasterMedianMs": [
+        2.630815,
+        24.218683
+      ]
+    },
+    {
+      "view": "oblique",
+      "case": "intensity",
+      "reverse": true,
+      "rasterMedianMs": [
+        2.790705,
+        28.122682
+      ]
+    },
+    {
+      "view": "oblique",
+      "case": "ambient",
+      "reverse": false,
+      "rasterMedianMs": [
+        3.033073,
+        27.592137
+      ]
+    },
+    {
+      "view": "oblique",
+      "case": "ambient",
+      "reverse": true,
+      "rasterMedianMs": [
+        2.677089,
+        25.610354
+      ]
+    },
+    {
+      "view": "oblique",
+      "case": "albedo",
+      "reverse": false,
+      "rasterMedianMs": [
+        2.697425,
+        25.463406
+      ]
+    },
+    {
+      "view": "oblique",
+      "case": "albedo",
+      "reverse": true,
+      "rasterMedianMs": [
+        2.701394,
+        24.648515
+      ]
+    }
+  ]
+}

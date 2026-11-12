@@ -1,0 +1,46 @@
+{
+  "epoch": 1793715360.0822403,
+  "elapsedNs": 1000342014,
+  "jiffiesBefore": [
+    2867857,
+    0,
+    92336,
+    43591727,
+    285,
+    0,
+    7064,
+    207317,
+    0,
+    0
+  ],
+  "jiffiesAfter": [
+    2867859,
+    0,
+    92338,
+    43592621,
+    285,
+    0,
+    7064,
+    207319,
+    0,
+    0
+  ],
+  "jiffiesDelta": [
+    2,
+    0,
+    2,
+    894,
+    0,
+    0,
+    0,
+    2,
+    0,
+    0
+  ],
+  "totalJiffiesFirst8": 900,
+  "busyJiffiesFirst8": 6,
+  "busyFraction": 0.006666666666666667,
+  "loadavg": "0.52 1.00 1.25 1/598 5",
+  "visibleProcessCount": 3,
+  "scope": "Namespace-visible one-second observation, not proof that all host workloads are absent. Guest columns excluded from total to avoid double counting."
+}

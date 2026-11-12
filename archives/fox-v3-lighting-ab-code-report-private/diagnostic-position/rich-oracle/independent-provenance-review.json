@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "method": "read-only source/manifest and image checks; no duplicate render",
+  "codePins": 7,
+  "inputPins": 70,
+  "images": 8,
+  "originalControlsDecodedRGBAExact": [
+    "front",
+    "oblique"
+  ],
+  "parts": 45,
+  "triangles": 1166,
+  "sideWinnerChecks": {
+    "front": 4698,
+    "oblique": 5156
+  },
+  "normalStorageMaxVectorError": 0.00011833039450952782,
+  "positionStorageMaxError": 1.1293511636978337e-07,
+  "normalOpposition": {
+    "faceMean": 21,
+    "anyCornerFaces": 67,
+    "corners": 84
+  },
+  "limitations": [
+    "two-seed descriptive oracle only",
+    "original materials not native RGB565 albedo",
+    "Cycles normal corrections differ",
+    "no native renderer goal acceptance"
+  ]
+}

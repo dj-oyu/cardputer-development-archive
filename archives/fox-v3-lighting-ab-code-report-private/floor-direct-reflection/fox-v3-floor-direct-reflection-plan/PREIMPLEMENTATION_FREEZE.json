@@ -1,0 +1,18 @@
+{
+  "status": "CONTRACT_REVIEWED_CORE_IMPLEMENTATION_AUTHORIZED",
+  "files": {
+    "ADMISSION_FINDINGS.md": "5b6ff529352502cc11d4f861757d19dfbe828d1106dacef05ccbdbaa34316715",
+    "HOST_WORK_CONTRACT.md": "7ab68cb13136cefdad52303a7c8641b2b1aaf1f111e7d5f6a43b7a5f34bcea42",
+    "WORKLOAD_BOUNDS.json": "3d1f366848bd81938ffbf65edea5b4895dedb60901e97666e656dee0877b91c9",
+    "SOURCE_RHO.json": "d2d1eb732bbf4981a351b57c27dd08588cbb391deba43db21dce861c8899db68",
+    "PLAN.md": "2cf01d9db6736eaf635cc6918d772f1a3fbb9e2df90d0fd8133f3e5156d7443b"
+  },
+  "baseline": "frozen affine A2, lid8 geometry unchanged",
+  "old8MCombinedAdmission": false,
+  "separateHostFloorBudget": 875970912,
+  "transportCaps": [
+    20000000,
+    800000000,
+    300000000
+  ]
+}

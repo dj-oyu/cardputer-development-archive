@@ -1,0 +1,713 @@
+{
+  "ok": true,
+  "entries": [
+    {
+      "sequence": 1420,
+      "text": "-- Detecting C compile features - done",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1421,
+      "text": "-- Detecting CXX compiler ABI info",
+      "level": "info",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1422,
+      "text": "CMake Warning in C:/Users/core/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/b-c83/o/d9f93962f8ad2d6371497ced2c533c12abf61198e1a7321b07c4a03e0a4269e5/bootloader/CMakeFiles/CMakeScratch/TryCompile-432ujw/CMakeLists.txt:",
+      "level": "warning",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 1423,
+      "text": "  The object file directory",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 1424,
+      "text": "",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 1434,
+      "text": "",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 1435,
+      "text": "",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 1436,
+      "text": "-- Detecting CXX compiler ABI info - done",
+      "level": "info",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1437,
+      "text": "-- Check for working CXX compiler: C:/Espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/bin/xtensa-esp32s3-elf-g++.exe - skipped",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1438,
+      "text": "-- Detecting CXX compile features",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1439,
+      "text": "-- Detecting CXX compile features - done",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1440,
+      "text": "-- Building ESP-IDF components for target esp32s3",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1441,
+      "text": "-- ESP-TEE is currently supported only on the esp32c6;esp32h2;esp32c5;esp32c61 SoCs",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1442,
+      "text": "-- KCONFIG_REPORT_VERBOSITY not set, using default",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1443,
+      "text": "-- Project sdkconfig file C:/Users/core/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/b-c83/o/d9f93962f8ad2d6371497ced2c533c12abf61198e1a7321b07c4a03e0a4269e5/sdkconfig",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1444,
+      "text": "Configuration Report               ",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 1445,
+      "text": " ───────────────────────────────── ",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 1450,
+      "text": "                                   ",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 1451,
+      "text": " ───────────────────────────────── ",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 1452,
+      "text": "-- Compiler supported targets: xtensa-esp-elf",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1453,
+      "text": "-- Detecting C compiler ABI info",
+      "level": "info",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1454,
+      "text": "CMake Warning in C:/Users/core/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/b-c83/o/d9f93962f8ad2d6371497ced2c533c12abf61198e1a7321b07c4a03e0a4269e5/bootloader/CMakeFiles/CMakeScratch/TryCompile-h5ovk9/CMakeLists.txt:",
+      "level": "warning",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 1455,
+      "text": "  The object file directory",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 1456,
+      "text": "",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 1466,
+      "text": "",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 1467,
+      "text": "",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 1468,
+      "text": "-- Detecting C compiler ABI info - done",
+      "level": "info",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1469,
+      "text": "-- Detecting CXX compiler ABI info",
+      "level": "info",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1470,
+      "text": "CMake Warning in C:/Users/core/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/b-c83/o/d9f93962f8ad2d6371497ced2c533c12abf61198e1a7321b07c4a03e0a4269e5/bootloader/CMakeFiles/CMakeScratch/TryCompile-56nmvx/CMakeLists.txt:",
+      "level": "warning",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 1471,
+      "text": "  The object file directory",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 1472,
+      "text": "",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 1482,
+      "text": "",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 1483,
+      "text": "",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 1484,
+      "text": "-- Detecting CXX compiler ABI info - done",
+      "level": "info",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1485,
+      "text": "-- Detecting C compiler ABI info",
+      "level": "info",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1486,
+      "text": "CMake Warning in C:/Users/core/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/b-c83/o/d9f93962f8ad2d6371497ced2c533c12abf61198e1a7321b07c4a03e0a4269e5/bootloader/CMakeFiles/CMakeScratch/TryCompile-rk9o11/CMakeLists.txt:",
+      "level": "warning",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 1487,
+      "text": "  The object file directory",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 1488,
+      "text": "",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 1498,
+      "text": "",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 1499,
+      "text": "",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 1500,
+      "text": "-- Detecting C compiler ABI info - done",
+      "level": "info",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1501,
+      "text": "-- Detecting CXX compiler ABI info",
+      "level": "info",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1502,
+      "text": "CMake Warning in C:/Users/core/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/b-c83/o/d9f93962f8ad2d6371497ced2c533c12abf61198e1a7321b07c4a03e0a4269e5/bootloader/CMakeFiles/CMakeScratch/TryCompile-yrpj4k/CMakeLists.txt:",
+      "level": "warning",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 1503,
+      "text": "  The object file directory",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 1504,
+      "text": "",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 1514,
+      "text": "",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 1515,
+      "text": "",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 1516,
+      "text": "-- Detecting CXX compiler ABI info - done",
+      "level": "info",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1517,
+      "text": "-- Adding linker script C:/esp/v6.0.1/esp-idf/components/soc/esp32s3/ld/esp32s3.peripherals.ld",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1518,
+      "text": "-- Bootloader project name: \"bootloader\" version: 1",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1519,
+      "text": "-- Adding linker script C:/esp/v6.0.1/esp-idf/components/esp_hal_wdt/esp32s3/rom.wdt.ld",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1520,
+      "text": "-- Adding linker script C:/esp/v6.0.1/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.ld",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1521,
+      "text": "-- Adding linker script C:/esp/v6.0.1/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.api.ld",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1522,
+      "text": "-- Adding linker script C:/esp/v6.0.1/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.bt_funcs.ld",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1523,
+      "text": "-- Adding linker script C:/esp/v6.0.1/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.libgcc.ld",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1524,
+      "text": "-- Adding linker script C:/esp/v6.0.1/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.version.ld",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1525,
+      "text": "-- Adding linker script C:/esp/v6.0.1/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.libc.ld",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1526,
+      "text": "Traceback (most recent call last):",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 1527,
+      "text": "  File \"[REDACTED]\\components\\esp_rom\\gen_gdbinit.py\", line 72, in <module>",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 1531,
+      "text": "    raise OSError(",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 1532,
+      "text": "OSError: ESP_ROM_ELF_DIR environment variable is not defined. Please try to run IDF \"install\" and \"export\" scripts.",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 1533,
+      "text": "CMake Warning at C:/esp/v6.0.1/esp-idf/tools/cmake/gdbinit.cmake:52 (message):",
+      "level": "warning",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 1534,
+      "text": "  Error while generating esp_rom gdbinit",
+      "level": "error",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 1535,
+      "text": "Call Stack (most recent call first):",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 1536,
+      "text": "  C:/esp/v6.0.1/esp-idf/tools/cmake/project.cmake:357 (__generate_gdbinit)",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 1539,
+      "text": "",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 1540,
+      "text": "",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 1541,
+      "text": "-- Components: bootloader bootloader_support efuse esp_app_format esp_blockdev esp_bootloader_format esp_common esp_hal_ana_conv esp_hal_clock esp_hal_dma esp_hal_gpio esp_hal_gpspi esp_hal_mspi esp_hal_pmu esp_hal_rtc_timer esp_hal_security esp_hal_timg esp_hal_uart esp_hal_usb esp_hal_wdt esp_hw_support esp_libc esp_rom esp_security esp_stdio esp_system esptool_py freertos hal log main micro-ecc partition_table soc spi_flash xtensa",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1542,
+      "text": "-- Component paths: C:/esp/v6.0.1/esp-idf/components/bootloader C:/esp/v6.0.1/esp-idf/components/bootloader_support C:/esp/v6.0.1/esp-idf/components/efuse C:/esp/v6.0.1/esp-idf/components/esp_app_format C:/esp/v6.0.1/esp-idf/components/esp_blockdev C:/esp/v6.0.1/esp-idf/components/esp_bootloader_format C:/esp/v6.0.1/esp-idf/components/esp_common C:/esp/v6.0.1/esp-idf/components/esp_hal_ana_conv C:/esp/v6.0.1/esp-idf/components/esp_hal_clock C:/esp/v6.0.1/esp-idf/components/esp_hal_dma C:/esp/v6.0.1/esp-idf/components/esp_hal_gpio C:/esp/v6.0.1/esp-idf/components/esp_hal_gpspi C:/esp/v6.0.1/esp-idf/components/esp_hal_mspi C:/esp/v6.0.1/esp-idf/components/esp_hal_pmu C:/esp/v6.0.1/esp-idf/components/esp_hal_rtc_timer C:/esp/v6.0.1/esp-idf/components/esp_hal_security C:/esp/v6.0.1/esp-idf/components/esp_hal_timg C:/esp/v6.0.1/esp-idf/components/esp_hal_uart C:/esp/v6.0.1/esp-idf/components/esp_hal_usb C:/esp/v6.0.1/esp-idf/components/esp_hal_wdt C:/esp/v6.0.1/esp-idf/components/esp_hw_support C:/esp/v6.0.1/esp-idf/components/esp_libc C:/esp/v6.0.1/esp-idf/components/esp_rom C:/esp/v6.0.1/esp-idf/components/esp_security C:/esp/v6.0.1/esp-idf/components/esp_stdio C:/esp/v6.0.1/esp-idf/components/esp_system C:/esp/v6.0.1/esp-idf/components/esptool_py C:/esp/v6.0.1/esp-idf/components/freertos C:/esp/v6.0.1/esp-idf/components/hal C:/esp/v6.0.1/esp-idf/components/log C:/esp/v6.0.1/esp-idf/components/bootloader/subproject/main C:/esp/v6.0.1/esp-idf/components/bootloader/subproject/components/micro-ecc C:/esp/v6.0.1/esp-idf/components/partition_table C:/esp/v6.0.1/esp-idf/components/soc C:/esp/v6.0.1/esp-idf/components/spi_flash C:/esp/v6.0.1/esp-idf/components/xtensa",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1543,
+      "text": "-- Adding linker script C:/esp/v6.0.1/esp-idf/components/bootloader/subproject/main/ld/esp32s3/bootloader.ld.in",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1544,
+      "text": "--   -> Preprocessing .in script: C:/esp/v6.0.1/esp-idf/components/bootloader/subproject/main/ld/esp32s3/bootloader.ld.in",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1545,
+      "text": "-- Configuring done (26.8s)",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1546,
+      "text": "CMake Warning in C:/esp/v6.0.1/esp-idf/components/esp_hal_gpio/CMakeLists.txt:",
+      "level": "warning",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 1547,
+      "text": "  The object file directory",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 1548,
+      "text": "",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 1558,
+      "text": "",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 1559,
+      "text": "",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 1560,
+      "text": "CMake Warning in C:/esp/v6.0.1/esp-idf/components/esp_bootloader_format/CMakeLists.txt:",
+      "level": "warning",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 1561,
+      "text": "  The object file directory",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 1562,
+      "text": "",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 1572,
+      "text": "",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 1573,
+      "text": "",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 1574,
+      "text": "CMake Warning in C:/esp/v6.0.1/esp-idf/components/esp_hal_ana_conv/CMakeLists.txt:",
+      "level": "warning",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 1575,
+      "text": "  The object file directory",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 1576,
+      "text": "",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 1586,
+      "text": "",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 1587,
+      "text": "",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 1588,
+      "text": "CMake Warning in C:/esp/v6.0.1/esp-idf/components/esp_security/CMakeLists.txt:",
+      "level": "warning",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 1589,
+      "text": "  The object file directory",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 1590,
+      "text": "",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 1600,
+      "text": "",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 1601,
+      "text": "",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 1602,
+      "text": "CMake Warning in C:/esp/v6.0.1/esp-idf/components/bootloader_support/CMakeLists.txt:",
+      "level": "warning",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 1603,
+      "text": "  The object file directory",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 1604,
+      "text": "",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 1614,
+      "text": "",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 1615,
+      "text": "",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 1616,
+      "text": "CMake Warning in C:/esp/v6.0.1/esp-idf/components/efuse/CMakeLists.txt:",
+      "level": "warning",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 1617,
+      "text": "  The object file directory",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 1618,
+      "text": "",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    }
+  ],
+  "expired": false,
+  "gap": false,
+  "oldest_sequence": 43,
+  "next_cursor": {
+    "epoch": "679b080a14f74643986be260f20f24cc",
+    "sequence": 1618
+  },
+  "has_more": true
+}

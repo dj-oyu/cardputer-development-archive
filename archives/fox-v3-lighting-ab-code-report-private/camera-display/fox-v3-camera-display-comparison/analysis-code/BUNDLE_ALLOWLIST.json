@@ -1,0 +1,113 @@
+{
+  "status": "FINAL_CODE_REPORT_ONLY_ALLOWLIST",
+  "scope": "Individual analysis code/tests/design and aggregate metrics/reports only. Private saving is handled separately.",
+  "excluded": [
+    "raw HDR",
+    "generated RGB565/pixels",
+    "depth buffers",
+    "source/reference images",
+    "model/source geometry",
+    "sample/composition events",
+    "raw masks/NPZ",
+    "raw LUT assets",
+    "binaries",
+    "__pycache__ bytecode"
+  ],
+  "files": {
+    "DESIGN.md": {
+      "sha256": "fa9f3e6d8701369229b6a878348d6b070005b7133e2aaec25f8052d7ac6d1ca5",
+      "bytes": 6926
+    },
+    "INDEPENDENT_REVIEW.md": {
+      "sha256": "1dad09a829165a29f864ab6b265cede3db79d46ab82a955a94c7971f9f29e2cf",
+      "bytes": 2817
+    },
+    "METRICS_FINDINGS.md": {
+      "sha256": "67ebd74e14a536f650d1dc2518a677581082af0c565d9a0bb24f02bcd4900190",
+      "bytes": 9028
+    },
+    "RUN_RECORD.json": {
+      "sha256": "2311f709c00e4fbad315df44bbe5f64b59caa3593d0dc6e704a0b2f17039f5d4",
+      "bytes": 824
+    },
+    "TEST_RESULTS.txt": {
+      "sha256": "c65bd703f0a38aebbff1e76486c7c5781164554bff871e1f07ee2646cce9962a",
+      "bytes": 2292
+    },
+    "all-analysis-001/ADMISSION.json": {
+      "sha256": "f93a877bfc67f79addb626d8c6c19aaad1d02fc68749afc4275d356715480bbd",
+      "bytes": 1065
+    },
+    "all-analysis-001/CLAMP_STRATA.json": {
+      "sha256": "d07691828a955563695c3f10e359c3feb5b626632ec66cc843f59a5d59ab3869",
+      "bytes": 173711
+    },
+    "all-analysis-001/COMPARISON.json": {
+      "sha256": "c145997dce02a1710e2b89e5088acb8c36329e58da7a3415974fba75c8570e19",
+      "bytes": 31571
+    },
+    "all-analysis-001/COMPLETED.json": {
+      "sha256": "80f4def6595e0df805d5c13e1cc01c93740e56e955b626c68473688844a444d4",
+      "bytes": 1532
+    },
+    "all-analysis-001/FIXED_DOMAINS.json": {
+      "sha256": "bd5fc9284f306fea1ee9da1c4020fc18a3f7e60de06a65acd7155de7fbf5d408",
+      "bytes": 4303
+    },
+    "all-analysis-001/REPORT.md": {
+      "sha256": "48a05cf468161a1a145a3553dd8051ba8d983e65f9b3c6a6aff64cdd5c517145",
+      "bytes": 6512
+    },
+    "all-analysis-001/SCALAR_AUDIT.json": {
+      "sha256": "0b40398a519ab0761cfefe9e1e0aa8972e4a7c4264816fe23cbb0025b45dbb11",
+      "bytes": 8973853
+    },
+    "all-analysis-001/descriptive-agx.json": {
+      "sha256": "e325506dc6c1beebd54fd341b4f275c18e9592893178dbbc8fbdf5525a198cbc",
+      "bytes": 3623289
+    },
+    "all-analysis-001/descriptive-legacy.json": {
+      "sha256": "201310a9e4ede5adeb575a2131a883feec6764b4b5ccfcee50a9dbb52dff8e00",
+      "bytes": 3624202
+    },
+    "all-analysis-001/formal-agx.json": {
+      "sha256": "fa07f051764da3edcec7faf675eaba3943c21a0961ac56d10dde63eed892aa7d",
+      "bytes": 1965630
+    },
+    "all-analysis-001/formal-legacy.json": {
+      "sha256": "bb041abc8b0c1652edd1ae9252d8b85603dea8e05e0e2f639573d93d17a9ffdf",
+      "bytes": 1965718
+    },
+    "compare_metrics.py": {
+      "sha256": "43994484796b53800d13ca6f828def3ce40efab1a6519ee27846f36e5331a3d5",
+      "bytes": 11282
+    },
+    "conditional-summary-001/COMPLETED.json": {
+      "sha256": "8a9a18a27ccc9631d6fe0db8fdbb811a50c7058706195e3e6b1a6ca83940c9aa",
+      "bytes": 543
+    },
+    "conditional-summary-001/REPORT.md": {
+      "sha256": "6e2e9722e694fba1afff0affab1faaec66b4fa239da603f7eb6028c342c14465",
+      "bytes": 4628
+    },
+    "conditional-summary-001/SUMMARY.json": {
+      "sha256": "2af7868979f75fe96187cc08e87ffccb50fc7f63e4ad544c39bea8026d55265b",
+      "bytes": 44025
+    },
+    "strict_display_score.py": {
+      "sha256": "0c3171e85f648c1e5442de44c99e3ed6c94636a3a47fb5c22fc79965a87916c8",
+      "bytes": 19790
+    },
+    "summarize_conditional_status.py": {
+      "sha256": "38f35dc632747276d3bd719d434fb87f740ae3c1cb7f69c22a2da9b386b510d2",
+      "bytes": 9963
+    },
+    "test_display_score.py": {
+      "sha256": "0da8792c6ec830f38179547f3abc5221d22b6a7fb03104d6020944219752b85c",
+      "bytes": 6826
+    }
+  },
+  "fileCount": 23,
+  "totalBytes": 20490330,
+  "manifestSelfExcludedFromItsOwnHashInventory": true
+}

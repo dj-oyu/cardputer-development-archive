@@ -1,0 +1,16 @@
+# Local builds and preserved failed configuration evidence.
+/build-target/
+/build-batch/
+/failed-configure/
+# Reproducible generated fixtures, sources and fonts.
+/generated/
+# Local execution logs, command transcripts and captured pixels.
+/*.log
+/host-commands.json
+/host-batch-commands.json
+/host-captures/
+/host-batch-captures/
+/target-captures/
+/target-batch-captures/
+__pycache__/
+*.pyc

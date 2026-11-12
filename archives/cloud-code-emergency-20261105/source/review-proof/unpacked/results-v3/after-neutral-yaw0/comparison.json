@@ -1,0 +1,30 @@
+{
+  "revision": "after",
+  "pose": "neutral",
+  "yaw": 0,
+  "sourceToExportDifferentPixels": 0,
+  "nativeDifferentPixels": 515,
+  "interiorWrongPartPixels": 417,
+  "wrongPartByExpected": {
+    "eye_L": 163,
+    "eye_R": 163,
+    "head": 0,
+    "lid_L": 0,
+    "lid_R": 0,
+    "lower_jaw": 91,
+    "mouth_cavity": 0,
+    "upper_muzzle": 0
+  },
+  "coldBytes": 14056,
+  "instanceArenaBytes64bit": 21484,
+  "frameSegments": 733,
+  "rasterCost": 19963,
+  "compileWallMs": 86.50653799986685,
+  "compilerInternalMs": 32.059514,
+  "nativeHostProcessWallMsIncludingDiagnosticPasses": 33.73360999989927,
+  "nativeHostMaxRssKiB": 9088,
+  "sourceVertices": 233,
+  "partitionVertices": 342,
+  "sourceTriangles": 434,
+  "output": "results-v3/after-neutral-yaw0"
+}

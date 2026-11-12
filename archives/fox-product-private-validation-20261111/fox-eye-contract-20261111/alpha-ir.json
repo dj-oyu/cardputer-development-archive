@@ -1,0 +1,5570 @@
+[
+  {
+    "name": "Blink mask Expressive eye contour -1",
+    "side": -1,
+    "center_x": -0.2849999964237213,
+    "radius_x": 0.2549999952316284,
+    "slope": -0.03999999910593033,
+    "center_z": 2.549999952316284,
+    "radius_z": 0.3100000023841858,
+    "neutral_fade_gain": 50.0,
+    "alpha_dependencies": [
+      "Blink driver",
+      "Head-local eye coordinates",
+      "Math",
+      "Math.001",
+      "Math.002",
+      "Math.003",
+      "Math.004",
+      "Math.005",
+      "Math.006",
+      "Math.007",
+      "Math.008",
+      "Math.009",
+      "Math.010",
+      "Math.011",
+      "Math.012",
+      "Math.013",
+      "Math.014",
+      "Math.015",
+      "Math.016",
+      "Math.017",
+      "Math.018",
+      "Math.019",
+      "Separate XYZ"
+    ],
+    "alpha_links": [
+      [
+        "Transparent BSDF",
+        "BSDF",
+        "Mix Shader",
+        "Shader"
+      ],
+      [
+        "Principled BSDF",
+        "BSDF",
+        "Mix Shader",
+        "Shader_001"
+      ],
+      [
+        "Separate XYZ",
+        "X",
+        "Math",
+        "Value"
+      ],
+      [
+        "Math",
+        "Value",
+        "Math.001",
+        "Value"
+      ],
+      [
+        "Math.001",
+        "Value",
+        "Math.002",
+        "Value"
+      ],
+      [
+        "Math.001",
+        "Value",
+        "Math.002",
+        "Value_001"
+      ],
+      [
+        "Math.002",
+        "Value",
+        "Math.003",
+        "Value_001"
+      ],
+      [
+        "Math.003",
+        "Value",
+        "Math.004",
+        "Value"
+      ],
+      [
+        "Math.004",
+        "Value",
+        "Math.005",
+        "Value"
+      ],
+      [
+        "Math.001",
+        "Value",
+        "Math.006",
+        "Value"
+      ],
+      [
+        "Math.006",
+        "Value",
+        "Math.007",
+        "Value_001"
+      ],
+      [
+        "Blink driver",
+        "Value",
+        "Math.008",
+        "Value_001"
+      ],
+      [
+        "Math.008",
+        "Value",
+        "Math.009",
+        "Value_001"
+      ],
+      [
+        "Math.009",
+        "Value",
+        "Math.010",
+        "Value"
+      ],
+      [
+        "Math.005",
+        "Value",
+        "Math.010",
+        "Value_001"
+      ],
+      [
+        "Math.007",
+        "Value",
+        "Math.011",
+        "Value"
+      ],
+      [
+        "Math.010",
+        "Value",
+        "Math.011",
+        "Value_001"
+      ],
+      [
+        "Math.007",
+        "Value",
+        "Math.012",
+        "Value"
+      ],
+      [
+        "Math.010",
+        "Value",
+        "Math.012",
+        "Value_001"
+      ],
+      [
+        "Separate XYZ",
+        "Z",
+        "Math.013",
+        "Value"
+      ],
+      [
+        "Math.011",
+        "Value",
+        "Math.013",
+        "Value_001"
+      ],
+      [
+        "Separate XYZ",
+        "Z",
+        "Math.014",
+        "Value"
+      ],
+      [
+        "Math.012",
+        "Value",
+        "Math.014",
+        "Value_001"
+      ],
+      [
+        "Math.013",
+        "Value",
+        "Math.015",
+        "Value"
+      ],
+      [
+        "Math.014",
+        "Value",
+        "Math.015",
+        "Value_001"
+      ],
+      [
+        "Blink driver",
+        "Value",
+        "Math.016",
+        "Value"
+      ],
+      [
+        "Math.016",
+        "Value",
+        "Math.017",
+        "Value_001"
+      ],
+      [
+        "Math.017",
+        "Value",
+        "Math.018",
+        "Value_001"
+      ],
+      [
+        "Math.015",
+        "Value",
+        "Math.019",
+        "Value"
+      ],
+      [
+        "Math.018",
+        "Value",
+        "Math.019",
+        "Value_001"
+      ],
+      [
+        "Math.019",
+        "Value",
+        "Mix Shader",
+        "Fac"
+      ],
+      [
+        "Head-local eye coordinates",
+        "Object",
+        "Separate XYZ",
+        "Vector"
+      ]
+    ],
+    "alpha_nodes": [
+      {
+        "name": "Separate XYZ",
+        "type": "ShaderNodeSeparateXYZ",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": null,
+        "use_clamp": null,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Vector",
+            "value": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        ],
+        "outputs": [
+          {
+            "id": "X",
+            "value": 0.0
+          },
+          {
+            "id": "Y",
+            "value": 0.0
+          },
+          {
+            "id": "Z",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Blink driver",
+        "type": "ShaderNodeValue",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": null,
+        "use_clamp": null,
+        "object": null,
+        "inputs": [],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "SUBTRACT",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": -0.2849999964237213
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.001",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "DIVIDE",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 0.2549999952316284
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.002",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "MULTIPLY",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.003",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "SUBTRACT",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 1.0
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.004",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "MAXIMUM",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 0.0
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.005",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "SQRT",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.006",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "MULTIPLY",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": -0.03999999910593033
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.007",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "ADD",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 2.549999952316284
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.008",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "SUBTRACT",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 1.0
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.009",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "MULTIPLY",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.3100000023841858
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.010",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "MULTIPLY",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.011",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "ADD",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.012",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "SUBTRACT",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.013",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "LESS_THAN",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.014",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "GREATER_THAN",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.015",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "MULTIPLY",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.016",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "MULTIPLY",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 50.0
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.017",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "MINIMUM",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 1.0
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.018",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "SUBTRACT",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 1.0
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.019",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "MAXIMUM",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Head-local eye coordinates",
+        "type": "ShaderNodeTexCoord",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": null,
+        "use_clamp": null,
+        "object": null,
+        "inputs": [],
+        "outputs": [
+          {
+            "id": "Generated",
+            "value": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "id": "Normal",
+            "value": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "id": "UV",
+            "value": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "id": "Object",
+            "value": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "id": "Camera",
+            "value": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "id": "Window",
+            "value": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "id": "Reflection",
+            "value": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Blink mask Expressive eye contour 1",
+    "side": 1,
+    "center_x": 0.2849999964237213,
+    "radius_x": 0.2549999952316284,
+    "slope": 0.03999999910593033,
+    "center_z": 2.549999952316284,
+    "radius_z": 0.3100000023841858,
+    "neutral_fade_gain": 50.0,
+    "alpha_dependencies": [
+      "Blink driver",
+      "Head-local eye coordinates",
+      "Math",
+      "Math.001",
+      "Math.002",
+      "Math.003",
+      "Math.004",
+      "Math.005",
+      "Math.006",
+      "Math.007",
+      "Math.008",
+      "Math.009",
+      "Math.010",
+      "Math.011",
+      "Math.012",
+      "Math.013",
+      "Math.014",
+      "Math.015",
+      "Math.016",
+      "Math.017",
+      "Math.018",
+      "Math.019",
+      "Separate XYZ"
+    ],
+    "alpha_links": [
+      [
+        "Transparent BSDF",
+        "BSDF",
+        "Mix Shader",
+        "Shader"
+      ],
+      [
+        "Principled BSDF",
+        "BSDF",
+        "Mix Shader",
+        "Shader_001"
+      ],
+      [
+        "Separate XYZ",
+        "X",
+        "Math",
+        "Value"
+      ],
+      [
+        "Math",
+        "Value",
+        "Math.001",
+        "Value"
+      ],
+      [
+        "Math.001",
+        "Value",
+        "Math.002",
+        "Value"
+      ],
+      [
+        "Math.001",
+        "Value",
+        "Math.002",
+        "Value_001"
+      ],
+      [
+        "Math.002",
+        "Value",
+        "Math.003",
+        "Value_001"
+      ],
+      [
+        "Math.003",
+        "Value",
+        "Math.004",
+        "Value"
+      ],
+      [
+        "Math.004",
+        "Value",
+        "Math.005",
+        "Value"
+      ],
+      [
+        "Math.001",
+        "Value",
+        "Math.006",
+        "Value"
+      ],
+      [
+        "Math.006",
+        "Value",
+        "Math.007",
+        "Value_001"
+      ],
+      [
+        "Blink driver",
+        "Value",
+        "Math.008",
+        "Value_001"
+      ],
+      [
+        "Math.008",
+        "Value",
+        "Math.009",
+        "Value_001"
+      ],
+      [
+        "Math.009",
+        "Value",
+        "Math.010",
+        "Value"
+      ],
+      [
+        "Math.005",
+        "Value",
+        "Math.010",
+        "Value_001"
+      ],
+      [
+        "Math.007",
+        "Value",
+        "Math.011",
+        "Value"
+      ],
+      [
+        "Math.010",
+        "Value",
+        "Math.011",
+        "Value_001"
+      ],
+      [
+        "Math.007",
+        "Value",
+        "Math.012",
+        "Value"
+      ],
+      [
+        "Math.010",
+        "Value",
+        "Math.012",
+        "Value_001"
+      ],
+      [
+        "Separate XYZ",
+        "Z",
+        "Math.013",
+        "Value"
+      ],
+      [
+        "Math.011",
+        "Value",
+        "Math.013",
+        "Value_001"
+      ],
+      [
+        "Separate XYZ",
+        "Z",
+        "Math.014",
+        "Value"
+      ],
+      [
+        "Math.012",
+        "Value",
+        "Math.014",
+        "Value_001"
+      ],
+      [
+        "Math.013",
+        "Value",
+        "Math.015",
+        "Value"
+      ],
+      [
+        "Math.014",
+        "Value",
+        "Math.015",
+        "Value_001"
+      ],
+      [
+        "Blink driver",
+        "Value",
+        "Math.016",
+        "Value"
+      ],
+      [
+        "Math.016",
+        "Value",
+        "Math.017",
+        "Value_001"
+      ],
+      [
+        "Math.017",
+        "Value",
+        "Math.018",
+        "Value_001"
+      ],
+      [
+        "Math.015",
+        "Value",
+        "Math.019",
+        "Value"
+      ],
+      [
+        "Math.018",
+        "Value",
+        "Math.019",
+        "Value_001"
+      ],
+      [
+        "Math.019",
+        "Value",
+        "Mix Shader",
+        "Fac"
+      ],
+      [
+        "Head-local eye coordinates",
+        "Object",
+        "Separate XYZ",
+        "Vector"
+      ]
+    ],
+    "alpha_nodes": [
+      {
+        "name": "Separate XYZ",
+        "type": "ShaderNodeSeparateXYZ",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": null,
+        "use_clamp": null,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Vector",
+            "value": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        ],
+        "outputs": [
+          {
+            "id": "X",
+            "value": 0.0
+          },
+          {
+            "id": "Y",
+            "value": 0.0
+          },
+          {
+            "id": "Z",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Blink driver",
+        "type": "ShaderNodeValue",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": null,
+        "use_clamp": null,
+        "object": null,
+        "inputs": [],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "SUBTRACT",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 0.2849999964237213
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.001",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "DIVIDE",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 0.2549999952316284
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.002",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "MULTIPLY",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.003",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "SUBTRACT",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 1.0
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.004",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "MAXIMUM",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 0.0
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.005",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "SQRT",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.006",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "MULTIPLY",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 0.03999999910593033
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.007",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "ADD",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 2.549999952316284
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.008",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "SUBTRACT",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 1.0
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.009",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "MULTIPLY",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.3100000023841858
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.010",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "MULTIPLY",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.011",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "ADD",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.012",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "SUBTRACT",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.013",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "LESS_THAN",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.014",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "GREATER_THAN",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.015",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "MULTIPLY",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.016",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "MULTIPLY",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 50.0
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.017",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "MINIMUM",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 1.0
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.018",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "SUBTRACT",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 1.0
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.019",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "MAXIMUM",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Head-local eye coordinates",
+        "type": "ShaderNodeTexCoord",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": null,
+        "use_clamp": null,
+        "object": null,
+        "inputs": [],
+        "outputs": [
+          {
+            "id": "Generated",
+            "value": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "id": "Normal",
+            "value": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "id": "UV",
+            "value": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "id": "Object",
+            "value": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "id": "Camera",
+            "value": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "id": "Window",
+            "value": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "id": "Reflection",
+            "value": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Blink mask Expressive eye white -1",
+    "side": -1,
+    "center_x": -0.2849999964237213,
+    "radius_x": 0.2549999952316284,
+    "slope": -0.03999999910593033,
+    "center_z": 2.549999952316284,
+    "radius_z": 0.3100000023841858,
+    "neutral_fade_gain": 50.0,
+    "alpha_dependencies": [
+      "Blink driver",
+      "Head-local eye coordinates",
+      "Math",
+      "Math.001",
+      "Math.002",
+      "Math.003",
+      "Math.004",
+      "Math.005",
+      "Math.006",
+      "Math.007",
+      "Math.008",
+      "Math.009",
+      "Math.010",
+      "Math.011",
+      "Math.012",
+      "Math.013",
+      "Math.014",
+      "Math.015",
+      "Math.016",
+      "Math.017",
+      "Math.018",
+      "Math.019",
+      "Separate XYZ"
+    ],
+    "alpha_links": [
+      [
+        "Transparent BSDF",
+        "BSDF",
+        "Mix Shader",
+        "Shader"
+      ],
+      [
+        "Principled BSDF",
+        "BSDF",
+        "Mix Shader",
+        "Shader_001"
+      ],
+      [
+        "Separate XYZ",
+        "X",
+        "Math",
+        "Value"
+      ],
+      [
+        "Math",
+        "Value",
+        "Math.001",
+        "Value"
+      ],
+      [
+        "Math.001",
+        "Value",
+        "Math.002",
+        "Value"
+      ],
+      [
+        "Math.001",
+        "Value",
+        "Math.002",
+        "Value_001"
+      ],
+      [
+        "Math.002",
+        "Value",
+        "Math.003",
+        "Value_001"
+      ],
+      [
+        "Math.003",
+        "Value",
+        "Math.004",
+        "Value"
+      ],
+      [
+        "Math.004",
+        "Value",
+        "Math.005",
+        "Value"
+      ],
+      [
+        "Math.001",
+        "Value",
+        "Math.006",
+        "Value"
+      ],
+      [
+        "Math.006",
+        "Value",
+        "Math.007",
+        "Value_001"
+      ],
+      [
+        "Blink driver",
+        "Value",
+        "Math.008",
+        "Value_001"
+      ],
+      [
+        "Math.008",
+        "Value",
+        "Math.009",
+        "Value_001"
+      ],
+      [
+        "Math.009",
+        "Value",
+        "Math.010",
+        "Value"
+      ],
+      [
+        "Math.005",
+        "Value",
+        "Math.010",
+        "Value_001"
+      ],
+      [
+        "Math.007",
+        "Value",
+        "Math.011",
+        "Value"
+      ],
+      [
+        "Math.010",
+        "Value",
+        "Math.011",
+        "Value_001"
+      ],
+      [
+        "Math.007",
+        "Value",
+        "Math.012",
+        "Value"
+      ],
+      [
+        "Math.010",
+        "Value",
+        "Math.012",
+        "Value_001"
+      ],
+      [
+        "Separate XYZ",
+        "Z",
+        "Math.013",
+        "Value"
+      ],
+      [
+        "Math.011",
+        "Value",
+        "Math.013",
+        "Value_001"
+      ],
+      [
+        "Separate XYZ",
+        "Z",
+        "Math.014",
+        "Value"
+      ],
+      [
+        "Math.012",
+        "Value",
+        "Math.014",
+        "Value_001"
+      ],
+      [
+        "Math.013",
+        "Value",
+        "Math.015",
+        "Value"
+      ],
+      [
+        "Math.014",
+        "Value",
+        "Math.015",
+        "Value_001"
+      ],
+      [
+        "Blink driver",
+        "Value",
+        "Math.016",
+        "Value"
+      ],
+      [
+        "Math.016",
+        "Value",
+        "Math.017",
+        "Value_001"
+      ],
+      [
+        "Math.017",
+        "Value",
+        "Math.018",
+        "Value_001"
+      ],
+      [
+        "Math.015",
+        "Value",
+        "Math.019",
+        "Value"
+      ],
+      [
+        "Math.018",
+        "Value",
+        "Math.019",
+        "Value_001"
+      ],
+      [
+        "Math.019",
+        "Value",
+        "Mix Shader",
+        "Fac"
+      ],
+      [
+        "Head-local eye coordinates",
+        "Object",
+        "Separate XYZ",
+        "Vector"
+      ]
+    ],
+    "alpha_nodes": [
+      {
+        "name": "Separate XYZ",
+        "type": "ShaderNodeSeparateXYZ",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": null,
+        "use_clamp": null,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Vector",
+            "value": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        ],
+        "outputs": [
+          {
+            "id": "X",
+            "value": 0.0
+          },
+          {
+            "id": "Y",
+            "value": 0.0
+          },
+          {
+            "id": "Z",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Blink driver",
+        "type": "ShaderNodeValue",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": null,
+        "use_clamp": null,
+        "object": null,
+        "inputs": [],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "SUBTRACT",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": -0.2849999964237213
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.001",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "DIVIDE",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 0.2549999952316284
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.002",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "MULTIPLY",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.003",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "SUBTRACT",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 1.0
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.004",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "MAXIMUM",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 0.0
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.005",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "SQRT",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.006",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "MULTIPLY",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": -0.03999999910593033
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.007",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "ADD",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 2.549999952316284
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.008",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "SUBTRACT",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 1.0
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.009",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "MULTIPLY",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.3100000023841858
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.010",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "MULTIPLY",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.011",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "ADD",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.012",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "SUBTRACT",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.013",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "LESS_THAN",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.014",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "GREATER_THAN",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.015",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "MULTIPLY",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.016",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "MULTIPLY",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 50.0
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.017",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "MINIMUM",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 1.0
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.018",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "SUBTRACT",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 1.0
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.019",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "MAXIMUM",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Head-local eye coordinates",
+        "type": "ShaderNodeTexCoord",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": null,
+        "use_clamp": null,
+        "object": null,
+        "inputs": [],
+        "outputs": [
+          {
+            "id": "Generated",
+            "value": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "id": "Normal",
+            "value": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "id": "UV",
+            "value": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "id": "Object",
+            "value": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "id": "Camera",
+            "value": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "id": "Window",
+            "value": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "id": "Reflection",
+            "value": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Blink mask Expressive eye white 1",
+    "side": 1,
+    "center_x": 0.2849999964237213,
+    "radius_x": 0.2549999952316284,
+    "slope": 0.03999999910593033,
+    "center_z": 2.549999952316284,
+    "radius_z": 0.3100000023841858,
+    "neutral_fade_gain": 50.0,
+    "alpha_dependencies": [
+      "Blink driver",
+      "Head-local eye coordinates",
+      "Math",
+      "Math.001",
+      "Math.002",
+      "Math.003",
+      "Math.004",
+      "Math.005",
+      "Math.006",
+      "Math.007",
+      "Math.008",
+      "Math.009",
+      "Math.010",
+      "Math.011",
+      "Math.012",
+      "Math.013",
+      "Math.014",
+      "Math.015",
+      "Math.016",
+      "Math.017",
+      "Math.018",
+      "Math.019",
+      "Separate XYZ"
+    ],
+    "alpha_links": [
+      [
+        "Transparent BSDF",
+        "BSDF",
+        "Mix Shader",
+        "Shader"
+      ],
+      [
+        "Principled BSDF",
+        "BSDF",
+        "Mix Shader",
+        "Shader_001"
+      ],
+      [
+        "Separate XYZ",
+        "X",
+        "Math",
+        "Value"
+      ],
+      [
+        "Math",
+        "Value",
+        "Math.001",
+        "Value"
+      ],
+      [
+        "Math.001",
+        "Value",
+        "Math.002",
+        "Value"
+      ],
+      [
+        "Math.001",
+        "Value",
+        "Math.002",
+        "Value_001"
+      ],
+      [
+        "Math.002",
+        "Value",
+        "Math.003",
+        "Value_001"
+      ],
+      [
+        "Math.003",
+        "Value",
+        "Math.004",
+        "Value"
+      ],
+      [
+        "Math.004",
+        "Value",
+        "Math.005",
+        "Value"
+      ],
+      [
+        "Math.001",
+        "Value",
+        "Math.006",
+        "Value"
+      ],
+      [
+        "Math.006",
+        "Value",
+        "Math.007",
+        "Value_001"
+      ],
+      [
+        "Blink driver",
+        "Value",
+        "Math.008",
+        "Value_001"
+      ],
+      [
+        "Math.008",
+        "Value",
+        "Math.009",
+        "Value_001"
+      ],
+      [
+        "Math.009",
+        "Value",
+        "Math.010",
+        "Value"
+      ],
+      [
+        "Math.005",
+        "Value",
+        "Math.010",
+        "Value_001"
+      ],
+      [
+        "Math.007",
+        "Value",
+        "Math.011",
+        "Value"
+      ],
+      [
+        "Math.010",
+        "Value",
+        "Math.011",
+        "Value_001"
+      ],
+      [
+        "Math.007",
+        "Value",
+        "Math.012",
+        "Value"
+      ],
+      [
+        "Math.010",
+        "Value",
+        "Math.012",
+        "Value_001"
+      ],
+      [
+        "Separate XYZ",
+        "Z",
+        "Math.013",
+        "Value"
+      ],
+      [
+        "Math.011",
+        "Value",
+        "Math.013",
+        "Value_001"
+      ],
+      [
+        "Separate XYZ",
+        "Z",
+        "Math.014",
+        "Value"
+      ],
+      [
+        "Math.012",
+        "Value",
+        "Math.014",
+        "Value_001"
+      ],
+      [
+        "Math.013",
+        "Value",
+        "Math.015",
+        "Value"
+      ],
+      [
+        "Math.014",
+        "Value",
+        "Math.015",
+        "Value_001"
+      ],
+      [
+        "Blink driver",
+        "Value",
+        "Math.016",
+        "Value"
+      ],
+      [
+        "Math.016",
+        "Value",
+        "Math.017",
+        "Value_001"
+      ],
+      [
+        "Math.017",
+        "Value",
+        "Math.018",
+        "Value_001"
+      ],
+      [
+        "Math.015",
+        "Value",
+        "Math.019",
+        "Value"
+      ],
+      [
+        "Math.018",
+        "Value",
+        "Math.019",
+        "Value_001"
+      ],
+      [
+        "Math.019",
+        "Value",
+        "Mix Shader",
+        "Fac"
+      ],
+      [
+        "Head-local eye coordinates",
+        "Object",
+        "Separate XYZ",
+        "Vector"
+      ]
+    ],
+    "alpha_nodes": [
+      {
+        "name": "Separate XYZ",
+        "type": "ShaderNodeSeparateXYZ",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": null,
+        "use_clamp": null,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Vector",
+            "value": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        ],
+        "outputs": [
+          {
+            "id": "X",
+            "value": 0.0
+          },
+          {
+            "id": "Y",
+            "value": 0.0
+          },
+          {
+            "id": "Z",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Blink driver",
+        "type": "ShaderNodeValue",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": null,
+        "use_clamp": null,
+        "object": null,
+        "inputs": [],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "SUBTRACT",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 0.2849999964237213
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.001",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "DIVIDE",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 0.2549999952316284
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.002",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "MULTIPLY",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.003",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "SUBTRACT",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 1.0
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.004",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "MAXIMUM",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 0.0
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.005",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "SQRT",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.006",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "MULTIPLY",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 0.03999999910593033
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.007",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "ADD",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 2.549999952316284
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.008",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "SUBTRACT",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 1.0
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.009",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "MULTIPLY",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.3100000023841858
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.010",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "MULTIPLY",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.011",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "ADD",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.012",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "SUBTRACT",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.013",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "LESS_THAN",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.014",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "GREATER_THAN",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.015",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "MULTIPLY",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.016",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "MULTIPLY",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 50.0
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.017",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "MINIMUM",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 1.0
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.018",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "SUBTRACT",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 1.0
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.019",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "MAXIMUM",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Head-local eye coordinates",
+        "type": "ShaderNodeTexCoord",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": null,
+        "use_clamp": null,
+        "object": null,
+        "inputs": [],
+        "outputs": [
+          {
+            "id": "Generated",
+            "value": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "id": "Normal",
+            "value": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "id": "UV",
+            "value": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "id": "Object",
+            "value": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "id": "Camera",
+            "value": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "id": "Window",
+            "value": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "id": "Reflection",
+            "value": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Blink mask Outer eye corner -1",
+    "side": -1,
+    "center_x": -0.2849999964237213,
+    "radius_x": 0.2549999952316284,
+    "slope": -0.03999999910593033,
+    "center_z": 2.549999952316284,
+    "radius_z": 0.3100000023841858,
+    "neutral_fade_gain": 50.0,
+    "alpha_dependencies": [
+      "Blink driver",
+      "Head-local eye coordinates",
+      "Math",
+      "Math.001",
+      "Math.002",
+      "Math.003",
+      "Math.004",
+      "Math.005",
+      "Math.006",
+      "Math.007",
+      "Math.008",
+      "Math.009",
+      "Math.010",
+      "Math.011",
+      "Math.012",
+      "Math.013",
+      "Math.014",
+      "Math.015",
+      "Math.016",
+      "Math.017",
+      "Math.018",
+      "Math.019",
+      "Separate XYZ"
+    ],
+    "alpha_links": [
+      [
+        "Transparent BSDF",
+        "BSDF",
+        "Mix Shader",
+        "Shader"
+      ],
+      [
+        "Principled BSDF",
+        "BSDF",
+        "Mix Shader",
+        "Shader_001"
+      ],
+      [
+        "Separate XYZ",
+        "X",
+        "Math",
+        "Value"
+      ],
+      [
+        "Math",
+        "Value",
+        "Math.001",
+        "Value"
+      ],
+      [
+        "Math.001",
+        "Value",
+        "Math.002",
+        "Value"
+      ],
+      [
+        "Math.001",
+        "Value",
+        "Math.002",
+        "Value_001"
+      ],
+      [
+        "Math.002",
+        "Value",
+        "Math.003",
+        "Value_001"
+      ],
+      [
+        "Math.003",
+        "Value",
+        "Math.004",
+        "Value"
+      ],
+      [
+        "Math.004",
+        "Value",
+        "Math.005",
+        "Value"
+      ],
+      [
+        "Math.001",
+        "Value",
+        "Math.006",
+        "Value"
+      ],
+      [
+        "Math.006",
+        "Value",
+        "Math.007",
+        "Value_001"
+      ],
+      [
+        "Blink driver",
+        "Value",
+        "Math.008",
+        "Value_001"
+      ],
+      [
+        "Math.008",
+        "Value",
+        "Math.009",
+        "Value_001"
+      ],
+      [
+        "Math.009",
+        "Value",
+        "Math.010",
+        "Value"
+      ],
+      [
+        "Math.005",
+        "Value",
+        "Math.010",
+        "Value_001"
+      ],
+      [
+        "Math.007",
+        "Value",
+        "Math.011",
+        "Value"
+      ],
+      [
+        "Math.010",
+        "Value",
+        "Math.011",
+        "Value_001"
+      ],
+      [
+        "Math.007",
+        "Value",
+        "Math.012",
+        "Value"
+      ],
+      [
+        "Math.010",
+        "Value",
+        "Math.012",
+        "Value_001"
+      ],
+      [
+        "Separate XYZ",
+        "Z",
+        "Math.013",
+        "Value"
+      ],
+      [
+        "Math.011",
+        "Value",
+        "Math.013",
+        "Value_001"
+      ],
+      [
+        "Separate XYZ",
+        "Z",
+        "Math.014",
+        "Value"
+      ],
+      [
+        "Math.012",
+        "Value",
+        "Math.014",
+        "Value_001"
+      ],
+      [
+        "Math.013",
+        "Value",
+        "Math.015",
+        "Value"
+      ],
+      [
+        "Math.014",
+        "Value",
+        "Math.015",
+        "Value_001"
+      ],
+      [
+        "Blink driver",
+        "Value",
+        "Math.016",
+        "Value"
+      ],
+      [
+        "Math.016",
+        "Value",
+        "Math.017",
+        "Value_001"
+      ],
+      [
+        "Math.017",
+        "Value",
+        "Math.018",
+        "Value_001"
+      ],
+      [
+        "Math.015",
+        "Value",
+        "Math.019",
+        "Value"
+      ],
+      [
+        "Math.018",
+        "Value",
+        "Math.019",
+        "Value_001"
+      ],
+      [
+        "Math.019",
+        "Value",
+        "Mix Shader",
+        "Fac"
+      ],
+      [
+        "Head-local eye coordinates",
+        "Object",
+        "Separate XYZ",
+        "Vector"
+      ]
+    ],
+    "alpha_nodes": [
+      {
+        "name": "Separate XYZ",
+        "type": "ShaderNodeSeparateXYZ",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": null,
+        "use_clamp": null,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Vector",
+            "value": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        ],
+        "outputs": [
+          {
+            "id": "X",
+            "value": 0.0
+          },
+          {
+            "id": "Y",
+            "value": 0.0
+          },
+          {
+            "id": "Z",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Blink driver",
+        "type": "ShaderNodeValue",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": null,
+        "use_clamp": null,
+        "object": null,
+        "inputs": [],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "SUBTRACT",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": -0.2849999964237213
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.001",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "DIVIDE",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 0.2549999952316284
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.002",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "MULTIPLY",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.003",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "SUBTRACT",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 1.0
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.004",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "MAXIMUM",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 0.0
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.005",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "SQRT",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.006",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "MULTIPLY",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": -0.03999999910593033
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.007",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "ADD",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 2.549999952316284
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.008",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "SUBTRACT",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 1.0
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.009",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "MULTIPLY",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.3100000023841858
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.010",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "MULTIPLY",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.011",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "ADD",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.012",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "SUBTRACT",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.013",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "LESS_THAN",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.014",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "GREATER_THAN",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.015",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "MULTIPLY",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.016",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "MULTIPLY",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 50.0
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.017",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "MINIMUM",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 1.0
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.018",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "SUBTRACT",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 1.0
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.019",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "MAXIMUM",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Head-local eye coordinates",
+        "type": "ShaderNodeTexCoord",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": null,
+        "use_clamp": null,
+        "object": null,
+        "inputs": [],
+        "outputs": [
+          {
+            "id": "Generated",
+            "value": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "id": "Normal",
+            "value": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "id": "UV",
+            "value": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "id": "Object",
+            "value": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "id": "Camera",
+            "value": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "id": "Window",
+            "value": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "id": "Reflection",
+            "value": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Blink mask Outer eye corner 1",
+    "side": 1,
+    "center_x": 0.2849999964237213,
+    "radius_x": 0.2549999952316284,
+    "slope": 0.03999999910593033,
+    "center_z": 2.549999952316284,
+    "radius_z": 0.3100000023841858,
+    "neutral_fade_gain": 50.0,
+    "alpha_dependencies": [
+      "Blink driver",
+      "Head-local eye coordinates",
+      "Math",
+      "Math.001",
+      "Math.002",
+      "Math.003",
+      "Math.004",
+      "Math.005",
+      "Math.006",
+      "Math.007",
+      "Math.008",
+      "Math.009",
+      "Math.010",
+      "Math.011",
+      "Math.012",
+      "Math.013",
+      "Math.014",
+      "Math.015",
+      "Math.016",
+      "Math.017",
+      "Math.018",
+      "Math.019",
+      "Separate XYZ"
+    ],
+    "alpha_links": [
+      [
+        "Transparent BSDF",
+        "BSDF",
+        "Mix Shader",
+        "Shader"
+      ],
+      [
+        "Principled BSDF",
+        "BSDF",
+        "Mix Shader",
+        "Shader_001"
+      ],
+      [
+        "Separate XYZ",
+        "X",
+        "Math",
+        "Value"
+      ],
+      [
+        "Math",
+        "Value",
+        "Math.001",
+        "Value"
+      ],
+      [
+        "Math.001",
+        "Value",
+        "Math.002",
+        "Value"
+      ],
+      [
+        "Math.001",
+        "Value",
+        "Math.002",
+        "Value_001"
+      ],
+      [
+        "Math.002",
+        "Value",
+        "Math.003",
+        "Value_001"
+      ],
+      [
+        "Math.003",
+        "Value",
+        "Math.004",
+        "Value"
+      ],
+      [
+        "Math.004",
+        "Value",
+        "Math.005",
+        "Value"
+      ],
+      [
+        "Math.001",
+        "Value",
+        "Math.006",
+        "Value"
+      ],
+      [
+        "Math.006",
+        "Value",
+        "Math.007",
+        "Value_001"
+      ],
+      [
+        "Blink driver",
+        "Value",
+        "Math.008",
+        "Value_001"
+      ],
+      [
+        "Math.008",
+        "Value",
+        "Math.009",
+        "Value_001"
+      ],
+      [
+        "Math.009",
+        "Value",
+        "Math.010",
+        "Value"
+      ],
+      [
+        "Math.005",
+        "Value",
+        "Math.010",
+        "Value_001"
+      ],
+      [
+        "Math.007",
+        "Value",
+        "Math.011",
+        "Value"
+      ],
+      [
+        "Math.010",
+        "Value",
+        "Math.011",
+        "Value_001"
+      ],
+      [
+        "Math.007",
+        "Value",
+        "Math.012",
+        "Value"
+      ],
+      [
+        "Math.010",
+        "Value",
+        "Math.012",
+        "Value_001"
+      ],
+      [
+        "Separate XYZ",
+        "Z",
+        "Math.013",
+        "Value"
+      ],
+      [
+        "Math.011",
+        "Value",
+        "Math.013",
+        "Value_001"
+      ],
+      [
+        "Separate XYZ",
+        "Z",
+        "Math.014",
+        "Value"
+      ],
+      [
+        "Math.012",
+        "Value",
+        "Math.014",
+        "Value_001"
+      ],
+      [
+        "Math.013",
+        "Value",
+        "Math.015",
+        "Value"
+      ],
+      [
+        "Math.014",
+        "Value",
+        "Math.015",
+        "Value_001"
+      ],
+      [
+        "Blink driver",
+        "Value",
+        "Math.016",
+        "Value"
+      ],
+      [
+        "Math.016",
+        "Value",
+        "Math.017",
+        "Value_001"
+      ],
+      [
+        "Math.017",
+        "Value",
+        "Math.018",
+        "Value_001"
+      ],
+      [
+        "Math.015",
+        "Value",
+        "Math.019",
+        "Value"
+      ],
+      [
+        "Math.018",
+        "Value",
+        "Math.019",
+        "Value_001"
+      ],
+      [
+        "Math.019",
+        "Value",
+        "Mix Shader",
+        "Fac"
+      ],
+      [
+        "Head-local eye coordinates",
+        "Object",
+        "Separate XYZ",
+        "Vector"
+      ]
+    ],
+    "alpha_nodes": [
+      {
+        "name": "Separate XYZ",
+        "type": "ShaderNodeSeparateXYZ",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": null,
+        "use_clamp": null,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Vector",
+            "value": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        ],
+        "outputs": [
+          {
+            "id": "X",
+            "value": 0.0
+          },
+          {
+            "id": "Y",
+            "value": 0.0
+          },
+          {
+            "id": "Z",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Blink driver",
+        "type": "ShaderNodeValue",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": null,
+        "use_clamp": null,
+        "object": null,
+        "inputs": [],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "SUBTRACT",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 0.2849999964237213
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.001",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "DIVIDE",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 0.2549999952316284
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.002",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "MULTIPLY",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.003",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "SUBTRACT",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 1.0
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.004",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "MAXIMUM",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 0.0
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.005",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "SQRT",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.006",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "MULTIPLY",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 0.03999999910593033
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.007",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "ADD",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 2.549999952316284
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.008",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "SUBTRACT",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 1.0
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.009",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "MULTIPLY",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.3100000023841858
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.010",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "MULTIPLY",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.011",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "ADD",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.012",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "SUBTRACT",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.013",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "LESS_THAN",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.014",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "GREATER_THAN",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.015",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "MULTIPLY",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.016",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "MULTIPLY",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 50.0
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.017",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "MINIMUM",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 1.0
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.018",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "SUBTRACT",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 1.0
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Math.019",
+        "type": "ShaderNodeMath",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": "MAXIMUM",
+        "use_clamp": false,
+        "object": null,
+        "inputs": [
+          {
+            "id": "Value",
+            "value": 0.5
+          },
+          {
+            "id": "Value_001",
+            "value": 0.5
+          },
+          {
+            "id": "Value_002",
+            "value": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "Value",
+            "value": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Head-local eye coordinates",
+        "type": "ShaderNodeTexCoord",
+        "blend_type": null,
+        "color_ramp": null,
+        "operation": null,
+        "use_clamp": null,
+        "object": null,
+        "inputs": [],
+        "outputs": [
+          {
+            "id": "Generated",
+            "value": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "id": "Normal",
+            "value": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "id": "UV",
+            "value": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "id": "Object",
+            "value": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "id": "Camera",
+            "value": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "id": "Window",
+            "value": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "id": "Reflection",
+            "value": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

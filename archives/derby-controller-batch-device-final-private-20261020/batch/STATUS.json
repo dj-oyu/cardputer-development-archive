@@ -1,0 +1,28 @@
+{
+  "updated_utc": "2026-10-20T06:40:47.743381+00:00",
+  "phase": "Batch ON strict accepted; physical operations stopped; parent handoff",
+  "head": "711f94fa91c6e0d6ba7bc00def75ad686b724c7d",
+  "branch": "fix/derby-detail-controller-batch-20261020",
+  "flash_job": "derby-controller-batch-flash-711f94fa-20261020",
+  "measurement_job": "derby-controller-batch-fixed-711f94fa-20261020",
+  "strict_pass": true,
+  "work_us": [
+    6606158,
+    6604002,
+    6608389
+  ],
+  "raw_bytes": 31000,
+  "raw_sha256": "cde6ecae18d01e7cdb854320b227b48496852c17799f201536a090343b0c12c8",
+  "fresh_flash_boots": 1,
+  "dependent_replays": 3,
+  "independent_trials": false,
+  "lease_released": true,
+  "owner": null,
+  "execution_uncertain": false,
+  "ownership_uncertain": false,
+  "profile_uncertain": false,
+  "current_batch_receipt": "916b1fe2dc4bea181bea6ce71958f995725cba185231706a2fd0d861b92daefe",
+  "remaining": "OFF control/independent repetitions/new optimization branches not physically tested",
+  "current_batch_gate_blocker": null,
+  "prior_failure_history_preserved": true
+}

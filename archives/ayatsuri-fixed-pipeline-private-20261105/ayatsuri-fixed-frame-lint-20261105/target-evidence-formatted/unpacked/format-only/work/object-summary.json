@@ -1,0 +1,158 @@
+[
+  {
+    "identity": "q16-Os/compact-format",
+    "instruction_bytes": 2563,
+    "literal_bytes": 212,
+    "rodata_bytes": 0,
+    "data_bytes": 0,
+    "bss_bytes": 0,
+    "runtime_helper_sites": {
+      "__udivdi3": 1,
+      "__umoddi3": 1
+    },
+    "unresolved_symbols": [
+      "__udivdi3",
+      "__umoddi3",
+      "aa_finish",
+      "aa_init",
+      "aa_private_profile",
+      "aa_put",
+      "mc_eval",
+      "memcpy",
+      "memset"
+    ],
+    "scanner_far_sites": 0,
+    "preprocessor_token_identity": true,
+    "object_sha256": "a94778655c29b4ddc3aeadf54deac82f89ba746f552d7a5d3865809a85badb74"
+  },
+  {
+    "identity": "q16-O2/compact-format",
+    "instruction_bytes": 3684,
+    "literal_bytes": 236,
+    "rodata_bytes": 0,
+    "data_bytes": 0,
+    "bss_bytes": 0,
+    "runtime_helper_sites": {
+      "__udivdi3": 5,
+      "__umoddi3": 5
+    },
+    "unresolved_symbols": [
+      "__udivdi3",
+      "__umoddi3",
+      "aa_finish",
+      "aa_init",
+      "aa_private_profile",
+      "aa_put",
+      "mc_eval",
+      "memcpy",
+      "memset"
+    ],
+    "scanner_far_sites": 0,
+    "preprocessor_token_identity": true,
+    "object_sha256": "0988734cdaa654f58770c4eec4cee4364114e43ac849c14ee9d78b5435ca88d9"
+  },
+  {
+    "identity": "q20-Os/compact-format",
+    "instruction_bytes": 2555,
+    "literal_bytes": 204,
+    "rodata_bytes": 0,
+    "data_bytes": 0,
+    "bss_bytes": 0,
+    "runtime_helper_sites": {
+      "__udivdi3": 1,
+      "__umoddi3": 1
+    },
+    "unresolved_symbols": [
+      "__udivdi3",
+      "__umoddi3",
+      "aa_finish",
+      "aa_init",
+      "aa_private_profile",
+      "aa_put",
+      "mc_eval",
+      "memcpy",
+      "memset"
+    ],
+    "scanner_far_sites": 0,
+    "preprocessor_token_identity": true,
+    "object_sha256": "6295f9bfbd37c535226f9a224794cd296d7a6ca775c780d888ef6703a7ad9167"
+  },
+  {
+    "identity": "q20-O2/compact-format",
+    "instruction_bytes": 3681,
+    "literal_bytes": 232,
+    "rodata_bytes": 0,
+    "data_bytes": 0,
+    "bss_bytes": 0,
+    "runtime_helper_sites": {
+      "__udivdi3": 5,
+      "__umoddi3": 5
+    },
+    "unresolved_symbols": [
+      "__udivdi3",
+      "__umoddi3",
+      "aa_finish",
+      "aa_init",
+      "aa_private_profile",
+      "aa_put",
+      "mc_eval",
+      "memcpy",
+      "memset"
+    ],
+    "scanner_far_sites": 0,
+    "preprocessor_token_identity": true,
+    "object_sha256": "c708852ae2f38a0cc51492854d5fe009ea9565cd2d0d0fcbffd71f79098a86fe"
+  },
+  {
+    "identity": "q24-Os/compact-format",
+    "instruction_bytes": 2564,
+    "literal_bytes": 204,
+    "rodata_bytes": 0,
+    "data_bytes": 0,
+    "bss_bytes": 0,
+    "runtime_helper_sites": {
+      "__udivdi3": 1,
+      "__umoddi3": 1
+    },
+    "unresolved_symbols": [
+      "__udivdi3",
+      "__umoddi3",
+      "aa_finish",
+      "aa_init",
+      "aa_private_profile",
+      "aa_put",
+      "mc_eval",
+      "memcpy",
+      "memset"
+    ],
+    "scanner_far_sites": 0,
+    "preprocessor_token_identity": true,
+    "object_sha256": "c2b4c10c450f16658eeb997ca28fff6960bffbc6b2d5f4bf31ad35b79dcceb16"
+  },
+  {
+    "identity": "q24-O2/compact-format",
+    "instruction_bytes": 3690,
+    "literal_bytes": 232,
+    "rodata_bytes": 0,
+    "data_bytes": 0,
+    "bss_bytes": 0,
+    "runtime_helper_sites": {
+      "__udivdi3": 5,
+      "__umoddi3": 5
+    },
+    "unresolved_symbols": [
+      "__udivdi3",
+      "__umoddi3",
+      "aa_finish",
+      "aa_init",
+      "aa_private_profile",
+      "aa_put",
+      "mc_eval",
+      "memcpy",
+      "memset"
+    ],
+    "scanner_far_sites": 0,
+    "preprocessor_token_identity": true,
+    "object_sha256": "6dc72ccba3e117b374452e3369cd2841803accc290ef7933254f922ad99df0c1"
+  }
+]

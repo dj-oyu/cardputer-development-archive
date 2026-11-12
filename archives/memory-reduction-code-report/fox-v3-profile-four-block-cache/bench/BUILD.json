@@ -1,0 +1,72 @@
+{
+  "flags": [
+    "-std=c11",
+    "-O2",
+    "-fno-fast-math",
+    "-ffp-contract=off",
+    "-fstack-usage",
+    "-fPIC",
+    "-I/workspace/scratch/6d8dcdbcdc54/fox-v3-profile-four-block-cache/implementation",
+    "-I/workspace/scratch/6d8dcdbcdc54/fox-v3-lossless-profile-lut/profile/private"
+  ],
+  "compiler": "cc (Debian 14.2.0-19) 14.2.0\nCopyright (C) 2024 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+  "sourcePins": {
+    "fox-v3-profile-integration-feasibility/build-private/agx_profile.c": "219bfd8f602c20017818757aae64220b27f40a48ca7ce7652fff0cbe9c194483",
+    "fox-v3-profile-four-block-cache/bench/batch_bridge.c": "c32621aa6c8af13ea2697ee09cb0963235898db8f73cf3391fd5fd8369766d6b",
+    "fox-v3-lossless-profile-lut/profile/candidate_profile.c": "f2e720fcb581a1558a000e27ef16e854d81ae7b945afdcd546fe75fb5ebe30f3",
+    "fox-v3-lossless-profile-lut/research/block_decoder.c": "4edd59bb122619abfcd006e06e3bfb614ed116f25ce7f8788979f4f40d30f3e1",
+    "fox-v3-lossless-profile-fast-access/implementation/candidate_profile.c": "b15db8fcf931d043d0cefa9fe726d74893f56bdddcb5c302e3aed4e3bde3fc73",
+    "fox-v3-lossless-profile-fast-access/implementation/block_decoder.c": "384123bed89fab69bffd5eef1670366f4dbe4c02d57f731ff1cb0c9efba31885",
+    "fox-v3-profile-four-block-cache/implementation/candidate_profile.c": "c3e4fa522602fdb88f8067284a167a148a46bd31c641cfc96666716665fbe144",
+    "fox-v3-profile-four-block-cache/implementation/block_cache.c": "7e06ed0436d9e6be0783f0b31c208f75034be297f450e10f813e00d04a13fff6",
+    "fox-v3-profile-four-block-cache/implementation/block_cache.h": "a76ea0d95784bad525a0553843ebffeb9a3fd38b2a55f9fd0f2e9a1bae3e230f"
+  },
+  "objects": {
+    "raw": [
+      "raw_profile.o",
+      "raw_bridge.o"
+    ],
+    "baseline": [
+      "baseline_profile.o",
+      "baseline_bridge.o",
+      "baseline_decoder.o"
+    ],
+    "gather": [
+      "gather_profile.o",
+      "gather_bridge.o",
+      "gather_decoder.o"
+    ],
+    "cache4": [
+      "cache4_profile.o",
+      "cache4_bridge.o",
+      "cache4_decoder.o"
+    ]
+  },
+  "armMacros": {
+    "raw": [
+      0,
+      0,
+      0
+    ],
+    "baseline": [
+      0,
+      0,
+      0
+    ],
+    "gather": [
+      0,
+      1,
+      0
+    ],
+    "cache4": [
+      0,
+      0,
+      1
+    ]
+  },
+  "macroOrder": [
+    "FAST_BITS",
+    "GATHER",
+    "CACHE_ARM"
+  ]
+}

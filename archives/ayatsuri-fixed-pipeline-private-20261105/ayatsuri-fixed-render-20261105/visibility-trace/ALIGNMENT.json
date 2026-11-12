@@ -1,0 +1,49 @@
+{
+  "status": "KEY_SETS_AND_PER_PIXEL_EVENT_COUNTS_PROVEN",
+  "key": [
+    "phase",
+    "x",
+    "y",
+    "per-pixel-update-ordinal"
+  ],
+  "directionKey": "append j=0..15",
+  "variants": {
+    "baseline": {
+      "events": 17070,
+      "groups": 12376,
+      "dispositions": {
+        "center-replaced-by-AA": 1919,
+        "overwritten-center": 4694,
+        "retained-center": 2779,
+        "final-quarter": 7678
+      },
+      "perGroupCountsIdentical": true
+    },
+    "q16": {
+      "events": 17070,
+      "groups": 12376,
+      "dispositions": {
+        "center-replaced-by-AA": 1919,
+        "overwritten-center": 4694,
+        "retained-center": 2779,
+        "final-quarter": 7678
+      },
+      "perGroupCountsIdentical": true
+    },
+    "q20": {
+      "events": 17070,
+      "groups": 12376,
+      "dispositions": {
+        "center-replaced-by-AA": 1919,
+        "overwritten-center": 4694,
+        "retained-center": 2779,
+        "final-quarter": 7678
+      },
+      "perGroupCountsIdentical": true
+    }
+  },
+  "primitiveInputChanges": {
+    "q16": 3,
+    "q20": 0
+  }
+}

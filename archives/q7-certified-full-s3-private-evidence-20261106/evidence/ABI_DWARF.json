@@ -1,0 +1,104 @@
+{
+  "ksn_prepared_triangle": {
+    "bytes": 184,
+    "members": {
+      "v": 0,
+      "edge": 64,
+      "inverse": 160,
+      "left": 168,
+      "right": 172,
+      "top": 176,
+      "bottom": 180
+    }
+  },
+  "ksn_mesh_prepared": {
+    "bytes": 152,
+    "members": {
+      "bands": 0,
+      "capacity": 136,
+      "count": 140,
+      "valid": 144,
+      "triangles": 152
+    }
+  },
+  "ksn_mesh_q7_certificate": {
+    "bytes": 72,
+    "members": {
+      "p": 0,
+      "error": 48,
+      "valid": 64
+    }
+  },
+  "ksn_mesh_q7_extra": {
+    "bytes": 208,
+    "members": {
+      "abc": 0,
+      "rgb": 40,
+      "dx": 184
+    }
+  },
+  "ksn_mesh_q7_triangle": {
+    "bytes": 464,
+    "members": {
+      "original": 0,
+      "fixed": 184,
+      "cert": 392
+    }
+  },
+  "ksn_mesh_q7_snapshot": {
+    "bytes": 152,
+    "members": {
+      "bands": 0,
+      "count": 136,
+      "capacity": 140,
+      "valid": 144,
+      "fallback": 145,
+      "triangles": 152
+    }
+  },
+  "ksn_mesh_q7_stats": {
+    "bytes": 88,
+    "members": {
+      "rows": 0,
+      "span_pixels": 8,
+      "original_pixels": 16,
+      "depth_reject": 24,
+      "mask_evals": 32,
+      "color_fallback": 40,
+      "frame_fallback": 48,
+      "depth_fast": 56,
+      "depth_exact": 64,
+      "mask_fast": 72,
+      "mask_exact": 80
+    }
+  },
+  "proc_surface": {
+    "bytes": 468,
+    "members": {
+      "candidate": 0,
+      "committed": 4,
+      "depth_candidate": 8,
+      "depth_committed": 36,
+      "prepared_candidate": 64,
+      "prepared_committed": 68,
+      "prepared_candidate_bytes": 72,
+      "prepared_committed_bytes": 76,
+      "q7_candidate": 80,
+      "q7_committed": 84,
+      "q7_candidate_bytes": 88,
+      "q7_committed_bytes": 92,
+      "candidate_sig": 96,
+      "committed_sig": 268,
+      "candidate_color": 440,
+      "committed_color": 442,
+      "pending": 444,
+      "has_committed": 445,
+      "repair_required": 446,
+      "image_mode": 447,
+      "sig_ready": 448,
+      "handle": 452,
+      "damage": 456,
+      "max_segments": 464
+    }
+  }
+}

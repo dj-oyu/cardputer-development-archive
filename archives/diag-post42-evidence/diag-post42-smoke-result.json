@@ -1,0 +1,5498 @@
+{
+  "captured_utc": "2026-10-18 23:28:28 UTC",
+  "job": {
+    "ok": true,
+    "id": "derby-diag-9db14c88-post42-20261018",
+    "plan_hash": "a1c5509173e5b534eff74200717f7ee067f5acf54ce77eb741b926a8df208666",
+    "state": "succeeded",
+    "stage": "serial_close",
+    "result": "derby_demo_cycle_observed_render_buffer_lcd_unverified",
+    "diagnostic": {
+      "derby_observation": {
+        "version": 1,
+        "time_basis": "host_ms_since_serial_operation_start",
+        "events": [
+          {
+            "at_ms": 4307,
+            "kind": "ready"
+          },
+          {
+            "at_ms": 19363,
+            "kind": "demo_start"
+          },
+          {
+            "at_ms": 19364,
+            "kind": "scene",
+            "phase": "pad",
+            "race": "1000001",
+            "seed": "BE2494E7"
+          },
+          {
+            "at_ms": 21429,
+            "kind": "scene",
+            "phase": "gate",
+            "race": "1000001",
+            "seed": "BE2494E7"
+          },
+          {
+            "at_ms": 22811,
+            "kind": "scene",
+            "phase": "race",
+            "race": "1000001",
+            "seed": "BE2494E7"
+          },
+          {
+            "at_ms": 72416,
+            "kind": "scene",
+            "phase": "photo",
+            "race": "1000001",
+            "seed": "BE2494E7"
+          },
+          {
+            "at_ms": 72416,
+            "kind": "photo_observed",
+            "phase": "photo",
+            "race": "1000001",
+            "seed": "BE2494E7"
+          },
+          {
+            "at_ms": 72478,
+            "kind": "capture_s_requested",
+            "phase": "photo",
+            "race": "1000001",
+            "seed": "BE2494E7",
+            "reason": "photo_observed"
+          },
+          {
+            "at_ms": 72479,
+            "kind": "capture_s_sent",
+            "phase": "photo",
+            "race": "1000001",
+            "seed": "BE2494E7",
+            "reason": "photo_observed"
+          },
+          {
+            "at_ms": 72542,
+            "kind": "capture_begin",
+            "phase": "photo",
+            "race": "1000001",
+            "seed": "BE2494E7",
+            "reason": "photo_observed"
+          },
+          {
+            "at_ms": 75361,
+            "kind": "capture_end",
+            "phase": "photo",
+            "race": "1000001",
+            "seed": "BE2494E7",
+            "reason": "photo_observed"
+          },
+          {
+            "at_ms": 79728,
+            "kind": "scene",
+            "phase": "res",
+            "race": "1000001",
+            "seed": "BE2494E7"
+          },
+          {
+            "at_ms": 84784,
+            "kind": "demo_end"
+          },
+          {
+            "at_ms": 84784,
+            "kind": "exit_requested",
+            "reason": "observation_complete"
+          },
+          {
+            "at_ms": 84909,
+            "kind": "home_ready"
+          }
+        ],
+        "events_truncated": false,
+        "demo_cycle_observed": true,
+        "photo_context_correlation": "same_observed_phase_race_seed",
+        "photo_pixels_verified": false,
+        "image_acquired": true,
+        "exit_home_observed": true,
+        "capture_reason": "photo_observed"
+      }
+    },
+    "reviewed": 0,
+    "created": "2026-10-18 23:26:54",
+    "finished": "2026-10-18 23:28:19",
+    "derby_diagnostics": {
+      "available": true,
+      "observation": {
+        "version": 1,
+        "wire_contract_commit": "9db14c8825b389fba98b541b4b7b712574f9346e",
+        "time_basis": "host_ms_since_serial_operation_start",
+        "started_at_ms": 0,
+        "finished_at_ms": 84910,
+        "samples": [
+          {
+            "at_ms": 5385,
+            "continuity_epoch": 0,
+            "v": 1,
+            "run": 1,
+            "us": 74152226,
+            "begin": 73146167,
+            "frame": 31,
+            "ctx": 31,
+            "seed": "E0F403A9",
+            "race": 19,
+            "phase": 0,
+            "cam": 1,
+            "tier": 1,
+            "step": 0,
+            "u": -1,
+            "gu_sample_max": 132260,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 1,
+            "limit": 300,
+            "io_us_max": 0,
+            "intervals": [
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 30,
+                "device_us": 1006059
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              }
+            ]
+          },
+          {
+            "at_ms": 6392,
+            "continuity_epoch": 0,
+            "v": 1,
+            "run": 1,
+            "us": 75162993,
+            "begin": 73146167,
+            "frame": 61,
+            "ctx": 61,
+            "seed": "E0F403A9",
+            "race": 19,
+            "phase": 0,
+            "cam": 1,
+            "tier": 1,
+            "step": 0,
+            "u": -1,
+            "gu_sample_max": 132260,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 2,
+            "limit": 300,
+            "io_us_max": 73,
+            "intervals": [
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 60,
+                "device_us": 2016826
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              }
+            ]
+          },
+          {
+            "at_ms": 7465,
+            "continuity_epoch": 0,
+            "v": 1,
+            "run": 1,
+            "us": 76174739,
+            "begin": 73146167,
+            "frame": 91,
+            "ctx": 91,
+            "seed": "E0F403A9",
+            "race": 19,
+            "phase": 0,
+            "cam": 1,
+            "tier": 1,
+            "step": 0,
+            "u": -1,
+            "gu_sample_max": 132260,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 3,
+            "limit": 300,
+            "io_us_max": 76,
+            "intervals": [
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 90,
+                "device_us": 3028572
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              }
+            ]
+          },
+          {
+            "at_ms": 8467,
+            "continuity_epoch": 0,
+            "v": 1,
+            "run": 1,
+            "us": 77184574,
+            "begin": 73146167,
+            "frame": 121,
+            "ctx": 121,
+            "seed": "E0F403A9",
+            "race": 19,
+            "phase": 0,
+            "cam": 1,
+            "tier": 1,
+            "step": 0,
+            "u": -1,
+            "gu_sample_max": 132260,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 4,
+            "limit": 300,
+            "io_us_max": 79,
+            "intervals": [
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 120,
+                "device_us": 4038407
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              }
+            ]
+          },
+          {
+            "at_ms": 9468,
+            "continuity_epoch": 0,
+            "v": 1,
+            "run": 1,
+            "us": 78195088,
+            "begin": 73146167,
+            "frame": 151,
+            "ctx": 151,
+            "seed": "E0F403A9",
+            "race": 19,
+            "phase": 0,
+            "cam": 1,
+            "tier": 1,
+            "step": 0,
+            "u": -1,
+            "gu_sample_max": 132260,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 5,
+            "limit": 300,
+            "io_us_max": 79,
+            "intervals": [
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 150,
+                "device_us": 5048921
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              }
+            ]
+          },
+          {
+            "at_ms": 10469,
+            "continuity_epoch": 0,
+            "v": 1,
+            "run": 1,
+            "us": 79205086,
+            "begin": 73146167,
+            "frame": 181,
+            "ctx": 181,
+            "seed": "E0F403A9",
+            "race": 19,
+            "phase": 0,
+            "cam": 1,
+            "tier": 1,
+            "step": 0,
+            "u": -1,
+            "gu_sample_max": 132260,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 6,
+            "limit": 300,
+            "io_us_max": 79,
+            "intervals": [
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 180,
+                "device_us": 6058919
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              }
+            ]
+          },
+          {
+            "at_ms": 11473,
+            "continuity_epoch": 0,
+            "v": 1,
+            "run": 1,
+            "us": 80216455,
+            "begin": 73146167,
+            "frame": 211,
+            "ctx": 211,
+            "seed": "E0F403A9",
+            "race": 19,
+            "phase": 0,
+            "cam": 1,
+            "tier": 1,
+            "step": 0,
+            "u": -1,
+            "gu_sample_max": 132260,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 7,
+            "limit": 300,
+            "io_us_max": 79,
+            "intervals": [
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 210,
+                "device_us": 7070288
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              }
+            ]
+          },
+          {
+            "at_ms": 12476,
+            "continuity_epoch": 0,
+            "v": 1,
+            "run": 1,
+            "us": 81227473,
+            "begin": 73146167,
+            "frame": 241,
+            "ctx": 241,
+            "seed": "E0F403A9",
+            "race": 19,
+            "phase": 0,
+            "cam": 1,
+            "tier": 1,
+            "step": 0,
+            "u": -1,
+            "gu_sample_max": 132260,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 8,
+            "limit": 300,
+            "io_us_max": 81,
+            "intervals": [
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 240,
+                "device_us": 8081306
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              }
+            ]
+          },
+          {
+            "at_ms": 13474,
+            "continuity_epoch": 0,
+            "v": 1,
+            "run": 1,
+            "us": 82240819,
+            "begin": 73146167,
+            "frame": 271,
+            "ctx": 271,
+            "seed": "E0F403A9",
+            "race": 19,
+            "phase": 0,
+            "cam": 1,
+            "tier": 1,
+            "step": 0,
+            "u": -1,
+            "gu_sample_max": 132260,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 9,
+            "limit": 300,
+            "io_us_max": 81,
+            "intervals": [
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 270,
+                "device_us": 9094652
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              }
+            ]
+          },
+          {
+            "at_ms": 14534,
+            "continuity_epoch": 0,
+            "v": 1,
+            "run": 1,
+            "us": 83251596,
+            "begin": 73146167,
+            "frame": 301,
+            "ctx": 301,
+            "seed": "E0F403A9",
+            "race": 19,
+            "phase": 0,
+            "cam": 1,
+            "tier": 1,
+            "step": 0,
+            "u": -1,
+            "gu_sample_max": 132260,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 10,
+            "limit": 300,
+            "io_us_max": 81,
+            "intervals": [
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 300,
+                "device_us": 10105429
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              }
+            ]
+          },
+          {
+            "at_ms": 15535,
+            "continuity_epoch": 0,
+            "v": 1,
+            "run": 1,
+            "us": 84259619,
+            "begin": 73146167,
+            "frame": 331,
+            "ctx": 331,
+            "seed": "E0F403A9",
+            "race": 19,
+            "phase": 0,
+            "cam": 1,
+            "tier": 1,
+            "step": 0,
+            "u": -1,
+            "gu_sample_max": 132260,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 11,
+            "limit": 300,
+            "io_us_max": 82,
+            "intervals": [
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 330,
+                "device_us": 11113452
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              }
+            ]
+          },
+          {
+            "at_ms": 16542,
+            "continuity_epoch": 0,
+            "v": 1,
+            "run": 1,
+            "us": 85270661,
+            "begin": 73146167,
+            "frame": 361,
+            "ctx": 361,
+            "seed": "E0F403A9",
+            "race": 19,
+            "phase": 0,
+            "cam": 1,
+            "tier": 1,
+            "step": 0,
+            "u": -1,
+            "gu_sample_max": 132260,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 12,
+            "limit": 300,
+            "io_us_max": 82,
+            "intervals": [
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 360,
+                "device_us": 12124494
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              }
+            ]
+          },
+          {
+            "at_ms": 17544,
+            "continuity_epoch": 0,
+            "v": 1,
+            "run": 1,
+            "us": 86283454,
+            "begin": 73146167,
+            "frame": 391,
+            "ctx": 391,
+            "seed": "E0F403A9",
+            "race": 19,
+            "phase": 0,
+            "cam": 1,
+            "tier": 1,
+            "step": 0,
+            "u": -1,
+            "gu_sample_max": 132260,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 13,
+            "limit": 300,
+            "io_us_max": 82,
+            "intervals": [
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 390,
+                "device_us": 13137287
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              }
+            ]
+          },
+          {
+            "at_ms": 18546,
+            "continuity_epoch": 0,
+            "v": 1,
+            "run": 1,
+            "us": 87295402,
+            "begin": 73146167,
+            "frame": 421,
+            "ctx": 421,
+            "seed": "E0F403A9",
+            "race": 19,
+            "phase": 0,
+            "cam": 1,
+            "tier": 1,
+            "step": 0,
+            "u": -1,
+            "gu_sample_max": 132260,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 14,
+            "limit": 300,
+            "io_us_max": 82,
+            "intervals": [
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 420,
+                "device_us": 14149235
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              }
+            ]
+          },
+          {
+            "at_ms": 19550,
+            "continuity_epoch": 0,
+            "v": 1,
+            "run": 1,
+            "us": 88307370,
+            "begin": 73146167,
+            "frame": 450,
+            "ctx": 450,
+            "seed": "BE2494E7",
+            "race": 1000001,
+            "phase": 0,
+            "cam": 1,
+            "tier": 1,
+            "step": 0,
+            "u": -1,
+            "gu_sample_max": 133932,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 15,
+            "limit": 300,
+            "io_us_max": 82,
+            "intervals": [
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 448,
+                "device_us": 15089189
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              }
+            ]
+          },
+          {
+            "at_ms": 20549,
+            "continuity_epoch": 0,
+            "v": 1,
+            "run": 1,
+            "us": 89319440,
+            "begin": 73146167,
+            "frame": 480,
+            "ctx": 480,
+            "seed": "BE2494E7",
+            "race": 1000001,
+            "phase": 0,
+            "cam": 1,
+            "tier": 1,
+            "step": 0,
+            "u": -1,
+            "gu_sample_max": 133932,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 16,
+            "limit": 300,
+            "io_us_max": 82,
+            "intervals": [
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 478,
+                "device_us": 16101259
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              }
+            ]
+          },
+          {
+            "at_ms": 21617,
+            "continuity_epoch": 0,
+            "v": 1,
+            "run": 1,
+            "us": 90334458,
+            "begin": 73146167,
+            "frame": 509,
+            "ctx": 510,
+            "seed": "BE2494E7",
+            "race": 1000001,
+            "phase": 1,
+            "cam": 0,
+            "tier": 1,
+            "step": 0,
+            "u": 1000000,
+            "gu_sample_max": 135672,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 17,
+            "limit": 300,
+            "io_us_max": 82,
+            "intervals": [
+              {
+                "count": 3,
+                "device_us": 96434
+              },
+              {
+                "count": 503,
+                "device_us": 16943116
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              }
+            ]
+          },
+          {
+            "at_ms": 22623,
+            "continuity_epoch": 0,
+            "v": 1,
+            "run": 1,
+            "us": 91341402,
+            "begin": 73146167,
+            "frame": 539,
+            "ctx": 540,
+            "seed": "BE2494E7",
+            "race": 1000001,
+            "phase": 1,
+            "cam": 0,
+            "tier": 1,
+            "step": 0,
+            "u": 1000000,
+            "gu_sample_max": 136156,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 18,
+            "limit": 300,
+            "io_us_max": 82,
+            "intervals": [
+              {
+                "count": 33,
+                "device_us": 1103378
+              },
+              {
+                "count": 503,
+                "device_us": 16943116
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              }
+            ]
+          },
+          {
+            "at_ms": 23628,
+            "continuity_epoch": 0,
+            "v": 1,
+            "run": 1,
+            "us": 92360032,
+            "begin": 73146167,
+            "frame": 568,
+            "ctx": 570,
+            "seed": "BE2494E7",
+            "race": 1000001,
+            "phase": 2,
+            "cam": 0,
+            "tier": 1,
+            "step": 23,
+            "u": 1000000,
+            "gu_sample_max": 136176,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 19,
+            "limit": 300,
+            "io_us_max": 82,
+            "intervals": [
+              {
+                "count": 61,
+                "device_us": 2045781
+              },
+              {
+                "count": 503,
+                "device_us": 16943116
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              }
+            ]
+          },
+          {
+            "at_ms": 24627,
+            "continuity_epoch": 0,
+            "v": 1,
+            "run": 1,
+            "us": 93374992,
+            "begin": 73146167,
+            "frame": 598,
+            "ctx": 600,
+            "seed": "BE2494E7",
+            "race": 1000001,
+            "phase": 2,
+            "cam": 0,
+            "tier": 1,
+            "step": 53,
+            "u": 1000000,
+            "gu_sample_max": 136176,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 20,
+            "limit": 300,
+            "io_us_max": 82,
+            "intervals": [
+              {
+                "count": 91,
+                "device_us": 3060741
+              },
+              {
+                "count": 503,
+                "device_us": 16943116
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              }
+            ]
+          },
+          {
+            "at_ms": 25631,
+            "continuity_epoch": 0,
+            "v": 1,
+            "run": 1,
+            "us": 94386574,
+            "begin": 73146167,
+            "frame": 628,
+            "ctx": 630,
+            "seed": "BE2494E7",
+            "race": 1000001,
+            "phase": 2,
+            "cam": 0,
+            "tier": 1,
+            "step": 83,
+            "u": 1000000,
+            "gu_sample_max": 136176,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 21,
+            "limit": 300,
+            "io_us_max": 82,
+            "intervals": [
+              {
+                "count": 121,
+                "device_us": 4072323
+              },
+              {
+                "count": 503,
+                "device_us": 16943116
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              }
+            ]
+          },
+          {
+            "at_ms": 26634,
+            "continuity_epoch": 0,
+            "v": 1,
+            "run": 1,
+            "us": 95403548,
+            "begin": 73146167,
+            "frame": 658,
+            "ctx": 660,
+            "seed": "BE2494E7",
+            "race": 1000001,
+            "phase": 2,
+            "cam": 0,
+            "tier": 1,
+            "step": 113,
+            "u": 1000000,
+            "gu_sample_max": 136176,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 22,
+            "limit": 300,
+            "io_us_max": 82,
+            "intervals": [
+              {
+                "count": 151,
+                "device_us": 5089297
+              },
+              {
+                "count": 503,
+                "device_us": 16943116
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              }
+            ]
+          },
+          {
+            "at_ms": 27702,
+            "continuity_epoch": 0,
+            "v": 1,
+            "run": 1,
+            "us": 96418966,
+            "begin": 73146167,
+            "frame": 688,
+            "ctx": 690,
+            "seed": "BE2494E7",
+            "race": 1000001,
+            "phase": 2,
+            "cam": 0,
+            "tier": 1,
+            "step": 143,
+            "u": 1000000,
+            "gu_sample_max": 136176,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 23,
+            "limit": 300,
+            "io_us_max": 82,
+            "intervals": [
+              {
+                "count": 181,
+                "device_us": 6104715
+              },
+              {
+                "count": 503,
+                "device_us": 16943116
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              }
+            ]
+          },
+          {
+            "at_ms": 28698,
+            "continuity_epoch": 0,
+            "v": 1,
+            "run": 1,
+            "us": 97435779,
+            "begin": 73146167,
+            "frame": 718,
+            "ctx": 720,
+            "seed": "BE2494E7",
+            "race": 1000001,
+            "phase": 2,
+            "cam": 0,
+            "tier": 1,
+            "step": 173,
+            "u": 1000000,
+            "gu_sample_max": 136308,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 24,
+            "limit": 300,
+            "io_us_max": 82,
+            "intervals": [
+              {
+                "count": 211,
+                "device_us": 7121528
+              },
+              {
+                "count": 503,
+                "device_us": 16943116
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              }
+            ]
+          },
+          {
+            "at_ms": 29701,
+            "continuity_epoch": 0,
+            "v": 1,
+            "run": 1,
+            "us": 98442701,
+            "begin": 73146167,
+            "frame": 748,
+            "ctx": 750,
+            "seed": "BE2494E7",
+            "race": 1000001,
+            "phase": 2,
+            "cam": 0,
+            "tier": 1,
+            "step": 203,
+            "u": 1000000,
+            "gu_sample_max": 136308,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 25,
+            "limit": 300,
+            "io_us_max": 82,
+            "intervals": [
+              {
+                "count": 241,
+                "device_us": 8128450
+              },
+              {
+                "count": 503,
+                "device_us": 16943116
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              }
+            ]
+          },
+          {
+            "at_ms": 30696,
+            "continuity_epoch": 1,
+            "v": 1,
+            "run": 1,
+            "us": 99452331,
+            "begin": 73146167,
+            "frame": 778,
+            "ctx": 780,
+            "seed": "BE2494E7",
+            "race": 1000001,
+            "phase": 2,
+            "cam": 2,
+            "tier": 1,
+            "step": 233,
+            "u": 1000000,
+            "gu_sample_max": 136308,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 26,
+            "limit": 300,
+            "io_us_max": 82,
+            "intervals": [
+              {
+                "count": 243,
+                "device_us": 8195665
+              },
+              {
+                "count": 503,
+                "device_us": 16943116
+              },
+              {
+                "count": 27,
+                "device_us": 903854
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              }
+            ]
+          },
+          {
+            "at_ms": 31699,
+            "continuity_epoch": 1,
+            "v": 1,
+            "run": 1,
+            "us": 100464105,
+            "begin": 73146167,
+            "frame": 808,
+            "ctx": 810,
+            "seed": "BE2494E7",
+            "race": 1000001,
+            "phase": 2,
+            "cam": 2,
+            "tier": 1,
+            "step": 263,
+            "u": 1000000,
+            "gu_sample_max": 136308,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 27,
+            "limit": 300,
+            "io_us_max": 82,
+            "intervals": [
+              {
+                "count": 243,
+                "device_us": 8195665
+              },
+              {
+                "count": 503,
+                "device_us": 16943116
+              },
+              {
+                "count": 57,
+                "device_us": 1915628
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              }
+            ]
+          },
+          {
+            "at_ms": 32759,
+            "continuity_epoch": 1,
+            "v": 1,
+            "run": 1,
+            "us": 101475980,
+            "begin": 73146167,
+            "frame": 838,
+            "ctx": 840,
+            "seed": "BE2494E7",
+            "race": 1000001,
+            "phase": 2,
+            "cam": 2,
+            "tier": 1,
+            "step": 293,
+            "u": 1000000,
+            "gu_sample_max": 136308,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 28,
+            "limit": 300,
+            "io_us_max": 82,
+            "intervals": [
+              {
+                "count": 243,
+                "device_us": 8195665
+              },
+              {
+                "count": 503,
+                "device_us": 16943116
+              },
+              {
+                "count": 87,
+                "device_us": 2927503
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              }
+            ]
+          },
+          {
+            "at_ms": 33759,
+            "continuity_epoch": 1,
+            "v": 1,
+            "run": 1,
+            "us": 102486239,
+            "begin": 73146167,
+            "frame": 868,
+            "ctx": 870,
+            "seed": "BE2494E7",
+            "race": 1000001,
+            "phase": 2,
+            "cam": 2,
+            "tier": 1,
+            "step": 323,
+            "u": 1000000,
+            "gu_sample_max": 136308,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 29,
+            "limit": 300,
+            "io_us_max": 82,
+            "intervals": [
+              {
+                "count": 243,
+                "device_us": 8195665
+              },
+              {
+                "count": 503,
+                "device_us": 16943116
+              },
+              {
+                "count": 117,
+                "device_us": 3937762
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              }
+            ]
+          },
+          {
+            "at_ms": 34759,
+            "continuity_epoch": 2,
+            "v": 1,
+            "run": 1,
+            "us": 103514241,
+            "begin": 73146167,
+            "frame": 898,
+            "ctx": 900,
+            "seed": "BE2494E7",
+            "race": 1000001,
+            "phase": 2,
+            "cam": 8,
+            "tier": 1,
+            "step": 353,
+            "u": 1000000,
+            "gu_sample_max": 136676,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 30,
+            "limit": 300,
+            "io_us_max": 82,
+            "intervals": [
+              {
+                "count": 243,
+                "device_us": 8195665
+              },
+              {
+                "count": 503,
+                "device_us": 16943116
+              },
+              {
+                "count": 145,
+                "device_us": 4882733
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 1,
+                "device_us": 39978
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              }
+            ]
+          },
+          {
+            "at_ms": 35826,
+            "continuity_epoch": 2,
+            "v": 1,
+            "run": 1,
+            "us": 104552519,
+            "begin": 73146167,
+            "frame": 923,
+            "ctx": 925,
+            "seed": "BE2494E7",
+            "race": 1000001,
+            "phase": 2,
+            "cam": 8,
+            "tier": 1,
+            "step": 378,
+            "u": 1000000,
+            "gu_sample_max": 136676,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 31,
+            "limit": 300,
+            "io_us_max": 82,
+            "intervals": [
+              {
+                "count": 243,
+                "device_us": 8195665
+              },
+              {
+                "count": 503,
+                "device_us": 16943116
+              },
+              {
+                "count": 145,
+                "device_us": 4882733
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 26,
+                "device_us": 1078256
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              }
+            ]
+          },
+          {
+            "at_ms": 36821,
+            "continuity_epoch": 2,
+            "v": 1,
+            "run": 1,
+            "us": 105581860,
+            "begin": 73146167,
+            "frame": 947,
+            "ctx": 949,
+            "seed": "BE2494E7",
+            "race": 1000001,
+            "phase": 2,
+            "cam": 8,
+            "tier": 1,
+            "step": 402,
+            "u": 1000000,
+            "gu_sample_max": 136676,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 32,
+            "limit": 300,
+            "io_us_max": 82,
+            "intervals": [
+              {
+                "count": 243,
+                "device_us": 8195665
+              },
+              {
+                "count": 503,
+                "device_us": 16943116
+              },
+              {
+                "count": 145,
+                "device_us": 4882733
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 50,
+                "device_us": 2107597
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              }
+            ]
+          },
+          {
+            "at_ms": 37889,
+            "continuity_epoch": 2,
+            "v": 1,
+            "run": 1,
+            "us": 106597582,
+            "begin": 73146167,
+            "frame": 970,
+            "ctx": 972,
+            "seed": "BE2494E7",
+            "race": 1000001,
+            "phase": 2,
+            "cam": 8,
+            "tier": 1,
+            "step": 425,
+            "u": 1000000,
+            "gu_sample_max": 136676,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 33,
+            "limit": 300,
+            "io_us_max": 87,
+            "intervals": [
+              {
+                "count": 243,
+                "device_us": 8195665
+              },
+              {
+                "count": 503,
+                "device_us": 16943116
+              },
+              {
+                "count": 145,
+                "device_us": 4882733
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 73,
+                "device_us": 3123319
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              }
+            ]
+          },
+          {
+            "at_ms": 38887,
+            "continuity_epoch": 2,
+            "v": 1,
+            "run": 1,
+            "us": 107623762,
+            "begin": 73146167,
+            "frame": 993,
+            "ctx": 995,
+            "seed": "BE2494E7",
+            "race": 1000001,
+            "phase": 2,
+            "cam": 8,
+            "tier": 1,
+            "step": 448,
+            "u": 1000000,
+            "gu_sample_max": 136676,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 34,
+            "limit": 300,
+            "io_us_max": 87,
+            "intervals": [
+              {
+                "count": 243,
+                "device_us": 8195665
+              },
+              {
+                "count": 503,
+                "device_us": 16943116
+              },
+              {
+                "count": 145,
+                "device_us": 4882733
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 96,
+                "device_us": 4149499
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              }
+            ]
+          },
+          {
+            "at_ms": 39894,
+            "continuity_epoch": 2,
+            "v": 1,
+            "run": 1,
+            "us": 108654194,
+            "begin": 73146167,
+            "frame": 1016,
+            "ctx": 1018,
+            "seed": "BE2494E7",
+            "race": 1000001,
+            "phase": 2,
+            "cam": 8,
+            "tier": 1,
+            "step": 471,
+            "u": 1000000,
+            "gu_sample_max": 136676,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 35,
+            "limit": 300,
+            "io_us_max": 87,
+            "intervals": [
+              {
+                "count": 243,
+                "device_us": 8195665
+              },
+              {
+                "count": 503,
+                "device_us": 16943116
+              },
+              {
+                "count": 145,
+                "device_us": 4882733
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 119,
+                "device_us": 5179931
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              }
+            ]
+          },
+          {
+            "at_ms": 40892,
+            "continuity_epoch": 2,
+            "v": 1,
+            "run": 1,
+            "us": 109657609,
+            "begin": 73146167,
+            "frame": 1038,
+            "ctx": 1040,
+            "seed": "BE2494E7",
+            "race": 1000001,
+            "phase": 2,
+            "cam": 8,
+            "tier": 1,
+            "step": 493,
+            "u": 1000000,
+            "gu_sample_max": 136676,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 36,
+            "limit": 300,
+            "io_us_max": 87,
+            "intervals": [
+              {
+                "count": 243,
+                "device_us": 8195665
+              },
+              {
+                "count": 503,
+                "device_us": 16943116
+              },
+              {
+                "count": 145,
+                "device_us": 4882733
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 141,
+                "device_us": 6183346
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              }
+            ]
+          },
+          {
+            "at_ms": 41896,
+            "continuity_epoch": 2,
+            "v": 1,
+            "run": 1,
+            "us": 110662224,
+            "begin": 73146167,
+            "frame": 1060,
+            "ctx": 1062,
+            "seed": "BE2494E7",
+            "race": 1000001,
+            "phase": 2,
+            "cam": 8,
+            "tier": 1,
+            "step": 515,
+            "u": 1000000,
+            "gu_sample_max": 136676,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 37,
+            "limit": 300,
+            "io_us_max": 87,
+            "intervals": [
+              {
+                "count": 243,
+                "device_us": 8195665
+              },
+              {
+                "count": 503,
+                "device_us": 16943116
+              },
+              {
+                "count": 145,
+                "device_us": 4882733
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 163,
+                "device_us": 7187961
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              }
+            ]
+          },
+          {
+            "at_ms": 42960,
+            "continuity_epoch": 2,
+            "v": 1,
+            "run": 1,
+            "us": 111669903,
+            "begin": 73146167,
+            "frame": 1082,
+            "ctx": 1084,
+            "seed": "BE2494E7",
+            "race": 1000001,
+            "phase": 2,
+            "cam": 8,
+            "tier": 1,
+            "step": 537,
+            "u": 1000000,
+            "gu_sample_max": 136680,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 38,
+            "limit": 300,
+            "io_us_max": 87,
+            "intervals": [
+              {
+                "count": 243,
+                "device_us": 8195665
+              },
+              {
+                "count": 503,
+                "device_us": 16943116
+              },
+              {
+                "count": 145,
+                "device_us": 4882733
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 185,
+                "device_us": 8195640
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              }
+            ]
+          },
+          {
+            "at_ms": 43960,
+            "continuity_epoch": 2,
+            "v": 1,
+            "run": 1,
+            "us": 112681752,
+            "begin": 73146167,
+            "frame": 1105,
+            "ctx": 1107,
+            "seed": "BE2494E7",
+            "race": 1000001,
+            "phase": 2,
+            "cam": 8,
+            "tier": 1,
+            "step": 560,
+            "u": 1000000,
+            "gu_sample_max": 136680,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 39,
+            "limit": 300,
+            "io_us_max": 87,
+            "intervals": [
+              {
+                "count": 243,
+                "device_us": 8195665
+              },
+              {
+                "count": 503,
+                "device_us": 16943116
+              },
+              {
+                "count": 145,
+                "device_us": 4882733
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 208,
+                "device_us": 9207489
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              }
+            ]
+          },
+          {
+            "at_ms": 44955,
+            "continuity_epoch": 2,
+            "v": 1,
+            "run": 1,
+            "us": 113720120,
+            "begin": 73146167,
+            "frame": 1130,
+            "ctx": 1132,
+            "seed": "BE2494E7",
+            "race": 1000001,
+            "phase": 2,
+            "cam": 8,
+            "tier": 1,
+            "step": 585,
+            "u": 1000000,
+            "gu_sample_max": 136680,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 40,
+            "limit": 300,
+            "io_us_max": 87,
+            "intervals": [
+              {
+                "count": 243,
+                "device_us": 8195665
+              },
+              {
+                "count": 503,
+                "device_us": 16943116
+              },
+              {
+                "count": 145,
+                "device_us": 4882733
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 233,
+                "device_us": 10245857
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              }
+            ]
+          },
+          {
+            "at_ms": 46019,
+            "continuity_epoch": 2,
+            "v": 1,
+            "run": 1,
+            "us": 114748822,
+            "begin": 73146167,
+            "frame": 1154,
+            "ctx": 1156,
+            "seed": "BE2494E7",
+            "race": 1000001,
+            "phase": 2,
+            "cam": 8,
+            "tier": 1,
+            "step": 609,
+            "u": 1000000,
+            "gu_sample_max": 136680,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 41,
+            "limit": 300,
+            "io_us_max": 87,
+            "intervals": [
+              {
+                "count": 243,
+                "device_us": 8195665
+              },
+              {
+                "count": 503,
+                "device_us": 16943116
+              },
+              {
+                "count": 145,
+                "device_us": 4882733
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 257,
+                "device_us": 11274559
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              }
+            ]
+          },
+          {
+            "at_ms": 47016,
+            "continuity_epoch": 2,
+            "v": 1,
+            "run": 1,
+            "us": 115781173,
+            "begin": 73146167,
+            "frame": 1177,
+            "ctx": 1179,
+            "seed": "BE2494E7",
+            "race": 1000001,
+            "phase": 2,
+            "cam": 8,
+            "tier": 1,
+            "step": 632,
+            "u": 1000000,
+            "gu_sample_max": 136680,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 42,
+            "limit": 300,
+            "io_us_max": 87,
+            "intervals": [
+              {
+                "count": 243,
+                "device_us": 8195665
+              },
+              {
+                "count": 503,
+                "device_us": 16943116
+              },
+              {
+                "count": 145,
+                "device_us": 4882733
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 280,
+                "device_us": 12306910
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              }
+            ]
+          },
+          {
+            "at_ms": 48081,
+            "continuity_epoch": 3,
+            "v": 1,
+            "run": 1,
+            "us": 116796456,
+            "begin": 73146167,
+            "frame": 1206,
+            "ctx": 1208,
+            "seed": "BE2494E7",
+            "race": 1000001,
+            "phase": 2,
+            "cam": 1,
+            "tier": 1,
+            "step": 661,
+            "u": 1000000,
+            "gu_sample_max": 136680,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 43,
+            "limit": 300,
+            "io_us_max": 87,
+            "intervals": [
+              {
+                "count": 243,
+                "device_us": 8195665
+              },
+              {
+                "count": 527,
+                "device_us": 17743534
+              },
+              {
+                "count": 145,
+                "device_us": 4882733
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 284,
+                "device_us": 12486673
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              }
+            ]
+          },
+          {
+            "at_ms": 49079,
+            "continuity_epoch": 3,
+            "v": 1,
+            "run": 1,
+            "us": 117799588,
+            "begin": 73146167,
+            "frame": 1236,
+            "ctx": 1238,
+            "seed": "BE2494E7",
+            "race": 1000001,
+            "phase": 2,
+            "cam": 1,
+            "tier": 1,
+            "step": 691,
+            "u": 1000000,
+            "gu_sample_max": 136680,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 44,
+            "limit": 300,
+            "io_us_max": 87,
+            "intervals": [
+              {
+                "count": 243,
+                "device_us": 8195665
+              },
+              {
+                "count": 557,
+                "device_us": 18746666
+              },
+              {
+                "count": 145,
+                "device_us": 4882733
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 284,
+                "device_us": 12486673
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              }
+            ]
+          },
+          {
+            "at_ms": 50086,
+            "continuity_epoch": 4,
+            "v": 1,
+            "run": 1,
+            "us": 118819864,
+            "begin": 73146167,
+            "frame": 1260,
+            "ctx": 1262,
+            "seed": "BE2494E7",
+            "race": 1000001,
+            "phase": 2,
+            "cam": 8,
+            "tier": 1,
+            "step": 715,
+            "u": 1000000,
+            "gu_sample_max": 136680,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 45,
+            "limit": 300,
+            "io_us_max": 87,
+            "intervals": [
+              {
+                "count": 243,
+                "device_us": 8195665
+              },
+              {
+                "count": 561,
+                "device_us": 18880113
+              },
+              {
+                "count": 145,
+                "device_us": 4882733
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 303,
+                "device_us": 13325126
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              }
+            ]
+          },
+          {
+            "at_ms": 51092,
+            "continuity_epoch": 4,
+            "v": 1,
+            "run": 1,
+            "us": 119827719,
+            "begin": 73146167,
+            "frame": 1283,
+            "ctx": 1285,
+            "seed": "BE2494E7",
+            "race": 1000001,
+            "phase": 2,
+            "cam": 8,
+            "tier": 1,
+            "step": 738,
+            "u": 1000000,
+            "gu_sample_max": 136680,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 46,
+            "limit": 300,
+            "io_us_max": 87,
+            "intervals": [
+              {
+                "count": 243,
+                "device_us": 8195665
+              },
+              {
+                "count": 561,
+                "device_us": 18880113
+              },
+              {
+                "count": 145,
+                "device_us": 4882733
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 326,
+                "device_us": 14332981
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              }
+            ]
+          },
+          {
+            "at_ms": 52097,
+            "continuity_epoch": 4,
+            "v": 1,
+            "run": 1,
+            "us": 120843238,
+            "begin": 73146167,
+            "frame": 1306,
+            "ctx": 1308,
+            "seed": "BE2494E7",
+            "race": 1000001,
+            "phase": 2,
+            "cam": 8,
+            "tier": 1,
+            "step": 761,
+            "u": 1000000,
+            "gu_sample_max": 136680,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 47,
+            "limit": 300,
+            "io_us_max": 87,
+            "intervals": [
+              {
+                "count": 243,
+                "device_us": 8195665
+              },
+              {
+                "count": 561,
+                "device_us": 18880113
+              },
+              {
+                "count": 145,
+                "device_us": 4882733
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 349,
+                "device_us": 15348500
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              }
+            ]
+          },
+          {
+            "at_ms": 53157,
+            "continuity_epoch": 4,
+            "v": 1,
+            "run": 1,
+            "us": 121876726,
+            "begin": 73146167,
+            "frame": 1330,
+            "ctx": 1332,
+            "seed": "BE2494E7",
+            "race": 1000001,
+            "phase": 2,
+            "cam": 8,
+            "tier": 1,
+            "step": 785,
+            "u": 1000000,
+            "gu_sample_max": 136680,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 48,
+            "limit": 300,
+            "io_us_max": 87,
+            "intervals": [
+              {
+                "count": 243,
+                "device_us": 8195665
+              },
+              {
+                "count": 561,
+                "device_us": 18880113
+              },
+              {
+                "count": 145,
+                "device_us": 4882733
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 373,
+                "device_us": 16381988
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              }
+            ]
+          },
+          {
+            "at_ms": 54155,
+            "continuity_epoch": 5,
+            "v": 1,
+            "run": 1,
+            "us": 122887804,
+            "begin": 73146167,
+            "frame": 1354,
+            "ctx": 1356,
+            "seed": "BE2494E7",
+            "race": 1000001,
+            "phase": 2,
+            "cam": 9,
+            "tier": 1,
+            "step": 809,
+            "u": 1000000,
+            "gu_sample_max": 136680,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 49,
+            "limit": 300,
+            "io_us_max": 87,
+            "intervals": [
+              {
+                "count": 243,
+                "device_us": 8195665
+              },
+              {
+                "count": 561,
+                "device_us": 18880113
+              },
+              {
+                "count": 145,
+                "device_us": 4882733
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 393,
+                "device_us": 17212455
+              },
+              {
+                "count": 3,
+                "device_us": 130475
+              }
+            ]
+          },
+          {
+            "at_ms": 55157,
+            "continuity_epoch": 5,
+            "v": 1,
+            "run": 1,
+            "us": 123914913,
+            "begin": 73146167,
+            "frame": 1378,
+            "ctx": 1380,
+            "seed": "BE2494E7",
+            "race": 1000001,
+            "phase": 2,
+            "cam": 9,
+            "tier": 1,
+            "step": 833,
+            "u": 1000000,
+            "gu_sample_max": 136680,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 50,
+            "limit": 300,
+            "io_us_max": 87,
+            "intervals": [
+              {
+                "count": 243,
+                "device_us": 8195665
+              },
+              {
+                "count": 561,
+                "device_us": 18880113
+              },
+              {
+                "count": 145,
+                "device_us": 4882733
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 393,
+                "device_us": 17212455
+              },
+              {
+                "count": 27,
+                "device_us": 1157584
+              }
+            ]
+          },
+          {
+            "at_ms": 56161,
+            "continuity_epoch": 5,
+            "v": 1,
+            "run": 1,
+            "us": 124927269,
+            "begin": 73146167,
+            "frame": 1402,
+            "ctx": 1404,
+            "seed": "BE2494E7",
+            "race": 1000001,
+            "phase": 2,
+            "cam": 9,
+            "tier": 1,
+            "step": 857,
+            "u": 1000000,
+            "gu_sample_max": 136680,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 51,
+            "limit": 300,
+            "io_us_max": 87,
+            "intervals": [
+              {
+                "count": 243,
+                "device_us": 8195665
+              },
+              {
+                "count": 561,
+                "device_us": 18880113
+              },
+              {
+                "count": 145,
+                "device_us": 4882733
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 393,
+                "device_us": 17212455
+              },
+              {
+                "count": 51,
+                "device_us": 2169940
+              }
+            ]
+          },
+          {
+            "at_ms": 57219,
+            "continuity_epoch": 6,
+            "v": 1,
+            "run": 1,
+            "us": 125957395,
+            "begin": 73146167,
+            "frame": 1432,
+            "ctx": 1434,
+            "seed": "BE2494E7",
+            "race": 1000001,
+            "phase": 2,
+            "cam": 1,
+            "tier": 1,
+            "step": 887,
+            "u": 1000000,
+            "gu_sample_max": 136680,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 52,
+            "limit": 300,
+            "io_us_max": 87,
+            "intervals": [
+              {
+                "count": 243,
+                "device_us": 8195665
+              },
+              {
+                "count": 587,
+                "device_us": 19751672
+              },
+              {
+                "count": 145,
+                "device_us": 4882733
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 393,
+                "device_us": 17212455
+              },
+              {
+                "count": 54,
+                "device_us": 2295215
+              }
+            ]
+          },
+          {
+            "at_ms": 58224,
+            "continuity_epoch": 6,
+            "v": 1,
+            "run": 1,
+            "us": 126961177,
+            "begin": 73146167,
+            "frame": 1462,
+            "ctx": 1464,
+            "seed": "BE2494E7",
+            "race": 1000001,
+            "phase": 2,
+            "cam": 1,
+            "tier": 1,
+            "step": 917,
+            "u": 1000000,
+            "gu_sample_max": 136680,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 53,
+            "limit": 300,
+            "io_us_max": 87,
+            "intervals": [
+              {
+                "count": 243,
+                "device_us": 8195665
+              },
+              {
+                "count": 617,
+                "device_us": 20755454
+              },
+              {
+                "count": 145,
+                "device_us": 4882733
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 393,
+                "device_us": 17212455
+              },
+              {
+                "count": 54,
+                "device_us": 2295215
+              }
+            ]
+          },
+          {
+            "at_ms": 59227,
+            "continuity_epoch": 6,
+            "v": 1,
+            "run": 1,
+            "us": 127962235,
+            "begin": 73146167,
+            "frame": 1492,
+            "ctx": 1494,
+            "seed": "BE2494E7",
+            "race": 1000001,
+            "phase": 2,
+            "cam": 1,
+            "tier": 1,
+            "step": 947,
+            "u": 1000000,
+            "gu_sample_max": 136680,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 54,
+            "limit": 300,
+            "io_us_max": 87,
+            "intervals": [
+              {
+                "count": 243,
+                "device_us": 8195665
+              },
+              {
+                "count": 647,
+                "device_us": 21756512
+              },
+              {
+                "count": 145,
+                "device_us": 4882733
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 393,
+                "device_us": 17212455
+              },
+              {
+                "count": 54,
+                "device_us": 2295215
+              }
+            ]
+          },
+          {
+            "at_ms": 60223,
+            "continuity_epoch": 7,
+            "v": 1,
+            "run": 1,
+            "us": 128983448,
+            "begin": 73146167,
+            "frame": 1521,
+            "ctx": 1523,
+            "seed": "BE2494E7",
+            "race": 1000001,
+            "phase": 2,
+            "cam": 5,
+            "tier": 1,
+            "step": 976,
+            "u": 1000000,
+            "gu_sample_max": 136680,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 55,
+            "limit": 300,
+            "io_us_max": 87,
+            "intervals": [
+              {
+                "count": 243,
+                "device_us": 8195665
+              },
+              {
+                "count": 657,
+                "device_us": 22094397
+              },
+              {
+                "count": 145,
+                "device_us": 4882733
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 18,
+                "device_us": 648551
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 393,
+                "device_us": 17212455
+              },
+              {
+                "count": 54,
+                "device_us": 2295215
+              }
+            ]
+          },
+          {
+            "at_ms": 61286,
+            "continuity_epoch": 7,
+            "v": 1,
+            "run": 1,
+            "us": 130014686,
+            "begin": 73146167,
+            "frame": 1548,
+            "ctx": 1550,
+            "seed": "BE2494E7",
+            "race": 1000001,
+            "phase": 2,
+            "cam": 5,
+            "tier": 1,
+            "step": 1003,
+            "u": 1000000,
+            "gu_sample_max": 136680,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 56,
+            "limit": 300,
+            "io_us_max": 87,
+            "intervals": [
+              {
+                "count": 243,
+                "device_us": 8195665
+              },
+              {
+                "count": 657,
+                "device_us": 22094397
+              },
+              {
+                "count": 145,
+                "device_us": 4882733
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 45,
+                "device_us": 1679789
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 393,
+                "device_us": 17212455
+              },
+              {
+                "count": 54,
+                "device_us": 2295215
+              }
+            ]
+          },
+          {
+            "at_ms": 62289,
+            "continuity_epoch": 7,
+            "v": 1,
+            "run": 1,
+            "us": 131046500,
+            "begin": 73146167,
+            "frame": 1575,
+            "ctx": 1577,
+            "seed": "BE2494E7",
+            "race": 1000001,
+            "phase": 2,
+            "cam": 5,
+            "tier": 1,
+            "step": 1030,
+            "u": 1000000,
+            "gu_sample_max": 136680,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 57,
+            "limit": 300,
+            "io_us_max": 87,
+            "intervals": [
+              {
+                "count": 243,
+                "device_us": 8195665
+              },
+              {
+                "count": 657,
+                "device_us": 22094397
+              },
+              {
+                "count": 145,
+                "device_us": 4882733
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 72,
+                "device_us": 2711603
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 393,
+                "device_us": 17212455
+              },
+              {
+                "count": 54,
+                "device_us": 2295215
+              }
+            ]
+          },
+          {
+            "at_ms": 63351,
+            "continuity_epoch": 7,
+            "v": 1,
+            "run": 1,
+            "us": 132075639,
+            "begin": 73146167,
+            "frame": 1602,
+            "ctx": 1604,
+            "seed": "BE2494E7",
+            "race": 1000001,
+            "phase": 2,
+            "cam": 5,
+            "tier": 1,
+            "step": 1057,
+            "u": 1000000,
+            "gu_sample_max": 136680,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 58,
+            "limit": 300,
+            "io_us_max": 87,
+            "intervals": [
+              {
+                "count": 243,
+                "device_us": 8195665
+              },
+              {
+                "count": 657,
+                "device_us": 22094397
+              },
+              {
+                "count": 145,
+                "device_us": 4882733
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 99,
+                "device_us": 3740742
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 393,
+                "device_us": 17212455
+              },
+              {
+                "count": 54,
+                "device_us": 2295215
+              }
+            ]
+          },
+          {
+            "at_ms": 64355,
+            "continuity_epoch": 7,
+            "v": 1,
+            "run": 1,
+            "us": 133097575,
+            "begin": 73146167,
+            "frame": 1629,
+            "ctx": 1631,
+            "seed": "BE2494E7",
+            "race": 1000001,
+            "phase": 2,
+            "cam": 5,
+            "tier": 1,
+            "step": 1084,
+            "u": 1000000,
+            "gu_sample_max": 136680,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 59,
+            "limit": 300,
+            "io_us_max": 87,
+            "intervals": [
+              {
+                "count": 243,
+                "device_us": 8195665
+              },
+              {
+                "count": 657,
+                "device_us": 22094397
+              },
+              {
+                "count": 145,
+                "device_us": 4882733
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 126,
+                "device_us": 4762678
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 393,
+                "device_us": 17212455
+              },
+              {
+                "count": 54,
+                "device_us": 2295215
+              }
+            ]
+          },
+          {
+            "at_ms": 65357,
+            "continuity_epoch": 8,
+            "v": 1,
+            "run": 1,
+            "us": 134125800,
+            "begin": 73146167,
+            "frame": 1656,
+            "ctx": 1658,
+            "seed": "BE2494E7",
+            "race": 1000001,
+            "phase": 2,
+            "cam": 9,
+            "tier": 1,
+            "step": 1111,
+            "u": 1000000,
+            "gu_sample_max": 136680,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 60,
+            "limit": 300,
+            "io_us_max": 87,
+            "intervals": [
+              {
+                "count": 243,
+                "device_us": 8195665
+              },
+              {
+                "count": 657,
+                "device_us": 22094397
+              },
+              {
+                "count": 145,
+                "device_us": 4882733
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 146,
+                "device_us": 5514926
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 393,
+                "device_us": 17212455
+              },
+              {
+                "count": 60,
+                "device_us": 2530462
+              }
+            ]
+          },
+          {
+            "at_ms": 66420,
+            "continuity_epoch": 8,
+            "v": 1,
+            "run": 1,
+            "us": 135131856,
+            "begin": 73146167,
+            "frame": 1682,
+            "ctx": 1684,
+            "seed": "BE2494E7",
+            "race": 1000001,
+            "phase": 2,
+            "cam": 9,
+            "tier": 1,
+            "step": 1137,
+            "u": 1000000,
+            "gu_sample_max": 136680,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 61,
+            "limit": 300,
+            "io_us_max": 87,
+            "intervals": [
+              {
+                "count": 243,
+                "device_us": 8195665
+              },
+              {
+                "count": 657,
+                "device_us": 22094397
+              },
+              {
+                "count": 145,
+                "device_us": 4882733
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 146,
+                "device_us": 5514926
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 393,
+                "device_us": 17212455
+              },
+              {
+                "count": 86,
+                "device_us": 3536518
+              }
+            ]
+          },
+          {
+            "at_ms": 67418,
+            "continuity_epoch": 9,
+            "v": 1,
+            "run": 1,
+            "us": 136158297,
+            "begin": 73146167,
+            "frame": 1711,
+            "ctx": 1713,
+            "seed": "BE2494E7",
+            "race": 1000001,
+            "phase": 2,
+            "cam": 6,
+            "tier": 1,
+            "step": 1166,
+            "u": 1000000,
+            "gu_sample_max": 136680,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 62,
+            "limit": 300,
+            "io_us_max": 87,
+            "intervals": [
+              {
+                "count": 243,
+                "device_us": 8195665
+              },
+              {
+                "count": 657,
+                "device_us": 22094397
+              },
+              {
+                "count": 145,
+                "device_us": 4882733
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 146,
+                "device_us": 5514926
+              },
+              {
+                "count": 16,
+                "device_us": 533269
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 393,
+                "device_us": 17212455
+              },
+              {
+                "count": 98,
+                "device_us": 3999423
+              }
+            ]
+          },
+          {
+            "at_ms": 68424,
+            "continuity_epoch": 9,
+            "v": 1,
+            "run": 1,
+            "us": 137164417,
+            "begin": 73146167,
+            "frame": 1741,
+            "ctx": 1743,
+            "seed": "BE2494E7",
+            "race": 1000001,
+            "phase": 2,
+            "cam": 6,
+            "tier": 1,
+            "step": 1196,
+            "u": 1000000,
+            "gu_sample_max": 136680,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 63,
+            "limit": 300,
+            "io_us_max": 87,
+            "intervals": [
+              {
+                "count": 243,
+                "device_us": 8195665
+              },
+              {
+                "count": 657,
+                "device_us": 22094397
+              },
+              {
+                "count": 145,
+                "device_us": 4882733
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 146,
+                "device_us": 5514926
+              },
+              {
+                "count": 46,
+                "device_us": 1539389
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 393,
+                "device_us": 17212455
+              },
+              {
+                "count": 98,
+                "device_us": 3999423
+              }
+            ]
+          },
+          {
+            "at_ms": 69419,
+            "continuity_epoch": 10,
+            "v": 1,
+            "run": 1,
+            "us": 138182708,
+            "begin": 73146167,
+            "frame": 1771,
+            "ctx": 1773,
+            "seed": "BE2494E7",
+            "race": 1000001,
+            "phase": 2,
+            "cam": 3,
+            "tier": 1,
+            "step": 1208,
+            "u": 0,
+            "gu_sample_max": 136680,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 64,
+            "limit": 300,
+            "io_us_max": 87,
+            "intervals": [
+              {
+                "count": 243,
+                "device_us": 8195665
+              },
+              {
+                "count": 657,
+                "device_us": 22094397
+              },
+              {
+                "count": 145,
+                "device_us": 4882733
+              },
+              {
+                "count": 23,
+                "device_us": 778497
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 146,
+                "device_us": 5514926
+              },
+              {
+                "count": 52,
+                "device_us": 1740591
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 393,
+                "device_us": 17212455
+              },
+              {
+                "count": 98,
+                "device_us": 3999423
+              }
+            ]
+          },
+          {
+            "at_ms": 70478,
+            "continuity_epoch": 10,
+            "v": 1,
+            "run": 1,
+            "us": 139195765,
+            "begin": 73146167,
+            "frame": 1801,
+            "ctx": 1803,
+            "seed": "BE2494E7",
+            "race": 1000001,
+            "phase": 2,
+            "cam": 3,
+            "tier": 1,
+            "step": 1215,
+            "u": 500000,
+            "gu_sample_max": 136680,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 65,
+            "limit": 300,
+            "io_us_max": 87,
+            "intervals": [
+              {
+                "count": 243,
+                "device_us": 8195665
+              },
+              {
+                "count": 657,
+                "device_us": 22094397
+              },
+              {
+                "count": 145,
+                "device_us": 4882733
+              },
+              {
+                "count": 53,
+                "device_us": 1791554
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 146,
+                "device_us": 5514926
+              },
+              {
+                "count": 52,
+                "device_us": 1740591
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 393,
+                "device_us": 17212455
+              },
+              {
+                "count": 98,
+                "device_us": 3999423
+              }
+            ]
+          },
+          {
+            "at_ms": 71482,
+            "continuity_epoch": 10,
+            "v": 1,
+            "run": 1,
+            "us": 140211889,
+            "begin": 73146167,
+            "frame": 1831,
+            "ctx": 1833,
+            "seed": "BE2494E7",
+            "race": 1000001,
+            "phase": 2,
+            "cam": 3,
+            "tier": 1,
+            "step": 1223,
+            "u": 0,
+            "gu_sample_max": 136680,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 66,
+            "limit": 300,
+            "io_us_max": 87,
+            "intervals": [
+              {
+                "count": 243,
+                "device_us": 8195665
+              },
+              {
+                "count": 657,
+                "device_us": 22094397
+              },
+              {
+                "count": 145,
+                "device_us": 4882733
+              },
+              {
+                "count": 83,
+                "device_us": 2807678
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 146,
+                "device_us": 5514926
+              },
+              {
+                "count": 52,
+                "device_us": 1740591
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 393,
+                "device_us": 17212455
+              },
+              {
+                "count": 98,
+                "device_us": 3999423
+              }
+            ]
+          },
+          {
+            "at_ms": 72541,
+            "continuity_epoch": 10,
+            "v": 1,
+            "run": 1,
+            "us": 141249212,
+            "begin": 73146167,
+            "frame": 1860,
+            "ctx": 1863,
+            "seed": "BE2494E7",
+            "race": 1000001,
+            "phase": 3,
+            "cam": 4,
+            "tier": 1,
+            "step": 1253,
+            "u": -1,
+            "gu_sample_max": 137152,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 67,
+            "limit": 300,
+            "io_us_max": 87,
+            "intervals": [
+              {
+                "count": 243,
+                "device_us": 8195665
+              },
+              {
+                "count": 657,
+                "device_us": 22094397
+              },
+              {
+                "count": 145,
+                "device_us": 4882733
+              },
+              {
+                "count": 110,
+                "device_us": 3718455
+              },
+              {
+                "count": 1,
+                "device_us": 39619
+              },
+              {
+                "count": 146,
+                "device_us": 5514926
+              },
+              {
+                "count": 52,
+                "device_us": 1740591
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 393,
+                "device_us": 17212455
+              },
+              {
+                "count": 98,
+                "device_us": 3999423
+              }
+            ]
+          },
+          {
+            "at_ms": 75424,
+            "continuity_epoch": 10,
+            "v": 1,
+            "run": 1,
+            "us": 144159122,
+            "begin": 73146167,
+            "frame": 1861,
+            "ctx": 1864,
+            "seed": "BE2494E7",
+            "race": 1000001,
+            "phase": 3,
+            "cam": 4,
+            "tier": 1,
+            "step": 1253,
+            "u": -1,
+            "gu_sample_max": 137152,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 68,
+            "limit": 300,
+            "io_us_max": 87,
+            "intervals": [
+              {
+                "count": 243,
+                "device_us": 8195665
+              },
+              {
+                "count": 657,
+                "device_us": 22094397
+              },
+              {
+                "count": 145,
+                "device_us": 4882733
+              },
+              {
+                "count": 110,
+                "device_us": 3718455
+              },
+              {
+                "count": 2,
+                "device_us": 2949529
+              },
+              {
+                "count": 146,
+                "device_us": 5514926
+              },
+              {
+                "count": 52,
+                "device_us": 1740591
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 393,
+                "device_us": 17212455
+              },
+              {
+                "count": 98,
+                "device_us": 3999423
+              }
+            ]
+          },
+          {
+            "at_ms": 76483,
+            "continuity_epoch": 10,
+            "v": 1,
+            "run": 1,
+            "us": 145194361,
+            "begin": 73146167,
+            "frame": 1887,
+            "ctx": 1890,
+            "seed": "BE2494E7",
+            "race": 1000001,
+            "phase": 3,
+            "cam": 4,
+            "tier": 1,
+            "step": 1253,
+            "u": -1,
+            "gu_sample_max": 137152,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 69,
+            "limit": 300,
+            "io_us_max": 87,
+            "intervals": [
+              {
+                "count": 243,
+                "device_us": 8195665
+              },
+              {
+                "count": 657,
+                "device_us": 22094397
+              },
+              {
+                "count": 145,
+                "device_us": 4882733
+              },
+              {
+                "count": 110,
+                "device_us": 3718455
+              },
+              {
+                "count": 28,
+                "device_us": 3984768
+              },
+              {
+                "count": 146,
+                "device_us": 5514926
+              },
+              {
+                "count": 52,
+                "device_us": 1740591
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 393,
+                "device_us": 17212455
+              },
+              {
+                "count": 98,
+                "device_us": 3999423
+              }
+            ]
+          },
+          {
+            "at_ms": 77482,
+            "continuity_epoch": 10,
+            "v": 1,
+            "run": 1,
+            "us": 146231469,
+            "begin": 73146167,
+            "frame": 1913,
+            "ctx": 1916,
+            "seed": "BE2494E7",
+            "race": 1000001,
+            "phase": 3,
+            "cam": 4,
+            "tier": 1,
+            "step": 1253,
+            "u": -1,
+            "gu_sample_max": 137196,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 70,
+            "limit": 300,
+            "io_us_max": 87,
+            "intervals": [
+              {
+                "count": 243,
+                "device_us": 8195665
+              },
+              {
+                "count": 657,
+                "device_us": 22094397
+              },
+              {
+                "count": 145,
+                "device_us": 4882733
+              },
+              {
+                "count": 110,
+                "device_us": 3718455
+              },
+              {
+                "count": 54,
+                "device_us": 5021876
+              },
+              {
+                "count": 146,
+                "device_us": 5514926
+              },
+              {
+                "count": 52,
+                "device_us": 1740591
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 393,
+                "device_us": 17212455
+              },
+              {
+                "count": 98,
+                "device_us": 3999423
+              }
+            ]
+          },
+          {
+            "at_ms": 78480,
+            "continuity_epoch": 10,
+            "v": 1,
+            "run": 1,
+            "us": 147233014,
+            "begin": 73146167,
+            "frame": 1938,
+            "ctx": 1941,
+            "seed": "BE2494E7",
+            "race": 1000001,
+            "phase": 3,
+            "cam": 4,
+            "tier": 1,
+            "step": 1253,
+            "u": -1,
+            "gu_sample_max": 137196,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 71,
+            "limit": 300,
+            "io_us_max": 87,
+            "intervals": [
+              {
+                "count": 243,
+                "device_us": 8195665
+              },
+              {
+                "count": 657,
+                "device_us": 22094397
+              },
+              {
+                "count": 145,
+                "device_us": 4882733
+              },
+              {
+                "count": 110,
+                "device_us": 3718455
+              },
+              {
+                "count": 79,
+                "device_us": 6023421
+              },
+              {
+                "count": 146,
+                "device_us": 5514926
+              },
+              {
+                "count": 52,
+                "device_us": 1740591
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 393,
+                "device_us": 17212455
+              },
+              {
+                "count": 98,
+                "device_us": 3999423
+              }
+            ]
+          },
+          {
+            "at_ms": 79479,
+            "continuity_epoch": 10,
+            "v": 1,
+            "run": 1,
+            "us": 148234292,
+            "begin": 73146167,
+            "frame": 1963,
+            "ctx": 1966,
+            "seed": "BE2494E7",
+            "race": 1000001,
+            "phase": 3,
+            "cam": 4,
+            "tier": 1,
+            "step": 1253,
+            "u": -1,
+            "gu_sample_max": 137196,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 72,
+            "limit": 300,
+            "io_us_max": 87,
+            "intervals": [
+              {
+                "count": 243,
+                "device_us": 8195665
+              },
+              {
+                "count": 657,
+                "device_us": 22094397
+              },
+              {
+                "count": 145,
+                "device_us": 4882733
+              },
+              {
+                "count": 110,
+                "device_us": 3718455
+              },
+              {
+                "count": 104,
+                "device_us": 7024699
+              },
+              {
+                "count": 146,
+                "device_us": 5514926
+              },
+              {
+                "count": 52,
+                "device_us": 1740591
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 393,
+                "device_us": 17212455
+              },
+              {
+                "count": 98,
+                "device_us": 3999423
+              }
+            ]
+          },
+          {
+            "at_ms": 80539,
+            "continuity_epoch": 10,
+            "v": 1,
+            "run": 1,
+            "us": 149263981,
+            "begin": 73146167,
+            "frame": 1992,
+            "ctx": 1996,
+            "seed": "BE2494E7",
+            "race": 1000001,
+            "phase": 4,
+            "cam": 1,
+            "tier": 1,
+            "step": 1253,
+            "u": -1,
+            "gu_sample_max": 137196,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 73,
+            "limit": 300,
+            "io_us_max": 87,
+            "intervals": [
+              {
+                "count": 243,
+                "device_us": 8195665
+              },
+              {
+                "count": 680,
+                "device_us": 22857368
+              },
+              {
+                "count": 145,
+                "device_us": 4882733
+              },
+              {
+                "count": 110,
+                "device_us": 3718455
+              },
+              {
+                "count": 109,
+                "device_us": 7224538
+              },
+              {
+                "count": 146,
+                "device_us": 5514926
+              },
+              {
+                "count": 52,
+                "device_us": 1740591
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 393,
+                "device_us": 17212455
+              },
+              {
+                "count": 98,
+                "device_us": 3999423
+              }
+            ]
+          },
+          {
+            "at_ms": 81540,
+            "continuity_epoch": 10,
+            "v": 1,
+            "run": 1,
+            "us": 150272709,
+            "begin": 73146167,
+            "frame": 2022,
+            "ctx": 2026,
+            "seed": "BE2494E7",
+            "race": 1000001,
+            "phase": 4,
+            "cam": 1,
+            "tier": 1,
+            "step": 1253,
+            "u": -1,
+            "gu_sample_max": 137196,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 74,
+            "limit": 300,
+            "io_us_max": 87,
+            "intervals": [
+              {
+                "count": 243,
+                "device_us": 8195665
+              },
+              {
+                "count": 710,
+                "device_us": 23866096
+              },
+              {
+                "count": 145,
+                "device_us": 4882733
+              },
+              {
+                "count": 110,
+                "device_us": 3718455
+              },
+              {
+                "count": 109,
+                "device_us": 7224538
+              },
+              {
+                "count": 146,
+                "device_us": 5514926
+              },
+              {
+                "count": 52,
+                "device_us": 1740591
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 393,
+                "device_us": 17212455
+              },
+              {
+                "count": 98,
+                "device_us": 3999423
+              }
+            ]
+          },
+          {
+            "at_ms": 82537,
+            "continuity_epoch": 10,
+            "v": 1,
+            "run": 1,
+            "us": 151282075,
+            "begin": 73146167,
+            "frame": 2052,
+            "ctx": 2056,
+            "seed": "BE2494E7",
+            "race": 1000001,
+            "phase": 4,
+            "cam": 1,
+            "tier": 1,
+            "step": 1253,
+            "u": -1,
+            "gu_sample_max": 137196,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 75,
+            "limit": 300,
+            "io_us_max": 87,
+            "intervals": [
+              {
+                "count": 243,
+                "device_us": 8195665
+              },
+              {
+                "count": 740,
+                "device_us": 24875462
+              },
+              {
+                "count": 145,
+                "device_us": 4882733
+              },
+              {
+                "count": 110,
+                "device_us": 3718455
+              },
+              {
+                "count": 109,
+                "device_us": 7224538
+              },
+              {
+                "count": 146,
+                "device_us": 5514926
+              },
+              {
+                "count": 52,
+                "device_us": 1740591
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 393,
+                "device_us": 17212455
+              },
+              {
+                "count": 98,
+                "device_us": 3999423
+              }
+            ]
+          },
+          {
+            "at_ms": 83538,
+            "continuity_epoch": 10,
+            "v": 1,
+            "run": 1,
+            "us": 152286826,
+            "begin": 73146167,
+            "frame": 2082,
+            "ctx": 2086,
+            "seed": "BE2494E7",
+            "race": 1000001,
+            "phase": 4,
+            "cam": 1,
+            "tier": 1,
+            "step": 1253,
+            "u": -1,
+            "gu_sample_max": 137196,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 76,
+            "limit": 300,
+            "io_us_max": 87,
+            "intervals": [
+              {
+                "count": 243,
+                "device_us": 8195665
+              },
+              {
+                "count": 770,
+                "device_us": 25880213
+              },
+              {
+                "count": 145,
+                "device_us": 4882733
+              },
+              {
+                "count": 110,
+                "device_us": 3718455
+              },
+              {
+                "count": 109,
+                "device_us": 7224538
+              },
+              {
+                "count": 146,
+                "device_us": 5514926
+              },
+              {
+                "count": 52,
+                "device_us": 1740591
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 393,
+                "device_us": 17212455
+              },
+              {
+                "count": 98,
+                "device_us": 3999423
+              }
+            ]
+          },
+          {
+            "at_ms": 84537,
+            "continuity_epoch": 10,
+            "v": 1,
+            "run": 1,
+            "us": 153291623,
+            "begin": 73146167,
+            "frame": 2112,
+            "ctx": 2116,
+            "seed": "BE2494E7",
+            "race": 1000001,
+            "phase": 4,
+            "cam": 1,
+            "tier": 1,
+            "step": 1253,
+            "u": -1,
+            "gu_sample_max": 137196,
+            "cap": 163840,
+            "eval_used": 123480,
+            "eval_cap": 163840,
+            "refused": 0,
+            "seq": 77,
+            "limit": 300,
+            "io_us_max": 87,
+            "intervals": [
+              {
+                "count": 243,
+                "device_us": 8195665
+              },
+              {
+                "count": 800,
+                "device_us": 26885010
+              },
+              {
+                "count": 145,
+                "device_us": 4882733
+              },
+              {
+                "count": 110,
+                "device_us": 3718455
+              },
+              {
+                "count": 109,
+                "device_us": 7224538
+              },
+              {
+                "count": 146,
+                "device_us": 5514926
+              },
+              {
+                "count": 52,
+                "device_us": 1740591
+              },
+              {
+                "count": 0,
+                "device_us": 0
+              },
+              {
+                "count": 393,
+                "device_us": 17212455
+              },
+              {
+                "count": 98,
+                "device_us": 3999423
+              }
+            ]
+          }
+        ],
+        "events": [
+          {
+            "at_ms": 29763,
+            "kind": "camera",
+            "camera": 2
+          },
+          {
+            "at_ms": 34696,
+            "kind": "camera",
+            "camera": 8
+          },
+          {
+            "at_ms": 47202,
+            "kind": "camera",
+            "camera": 1
+          },
+          {
+            "at_ms": 49203,
+            "kind": "camera",
+            "camera": 8
+          },
+          {
+            "at_ms": 53971,
+            "kind": "camera",
+            "camera": 9
+          },
+          {
+            "at_ms": 56347,
+            "kind": "camera",
+            "camera": 1
+          },
+          {
+            "at_ms": 59540,
+            "kind": "camera",
+            "camera": 5
+          },
+          {
+            "at_ms": 65105,
+            "kind": "camera",
+            "camera": 9
+          },
+          {
+            "at_ms": 66854,
+            "kind": "camera",
+            "camera": 6
+          },
+          {
+            "at_ms": 68611,
+            "kind": "camera",
+            "camera": 3
+          }
+        ],
+        "quality": {
+          "missing": false,
+          "parse_errors": 0,
+          "seq_gaps": 0,
+          "missing_output_attempts": 0,
+          "seq_duplicates": 0,
+          "seq_regressions": 0,
+          "context_gaps": 4,
+          "counter_regressions": 0,
+          "run_changes": 0,
+          "refused_observed": false,
+          "limit_reached_observed": false,
+          "samples_truncated": false,
+          "events_truncated": false,
+          "report_byte_limit": false,
+          "truncated": false,
+          "invalid_clock": false,
+          "partial_line_or_fault_possible": false,
+          "final_write_outcome_unknown": true
+        },
+        "cameras": [
+          {
+            "camera": 0,
+            "tier": 1,
+            "valid_window_count": 7,
+            "valid_interval_count": 210,
+            "valid_device_us": 7089613,
+            "weighted_diagnostic_fps": 29.62079876574363,
+            "max_window_diagnostic_fps": 29.79376754108064,
+            "io_us_max_prior_writes": 82
+          },
+          {
+            "camera": 1,
+            "tier": 1,
+            "valid_window_count": 21,
+            "valid_interval_count": 630,
+            "valid_device_us": 21190860,
+            "weighted_diagnostic_fps": 29.729798601850042,
+            "max_window_diagnostic_fps": 29.968293545428935,
+            "io_us_max_prior_writes": 87
+          },
+          {
+            "camera": 2,
+            "tier": 1,
+            "valid_window_count": 3,
+            "valid_interval_count": 90,
+            "valid_device_us": 3033908,
+            "weighted_diagnostic_fps": 29.664709674782493,
+            "max_window_diagnostic_fps": 29.69535534946979,
+            "io_us_max_prior_writes": 82
+          },
+          {
+            "camera": 3,
+            "tier": 1,
+            "valid_window_count": 2,
+            "valid_interval_count": 60,
+            "valid_device_us": 2029181,
+            "weighted_diagnostic_fps": 29.568579638780374,
+            "max_window_diagnostic_fps": 29.61333863741132,
+            "io_us_max_prior_writes": 87
+          },
+          {
+            "camera": 4,
+            "tier": 1,
+            "valid_window_count": 5,
+            "valid_interval_count": 103,
+            "valid_device_us": 6985080,
+            "weighted_diagnostic_fps": 14.745715152868685,
+            "max_window_diagnostic_fps": 25.11497345057518,
+            "io_us_max_prior_writes": 87
+          },
+          {
+            "camera": 5,
+            "tier": 1,
+            "valid_window_count": 4,
+            "valid_interval_count": 108,
+            "valid_device_us": 4114127,
+            "weighted_diagnostic_fps": 26.251012669273457,
+            "max_window_diagnostic_fps": 26.420441201797374,
+            "io_us_max_prior_writes": 87
+          },
+          {
+            "camera": 6,
+            "tier": 1,
+            "valid_window_count": 1,
+            "valid_interval_count": 30,
+            "valid_device_us": 1006120,
+            "weighted_diagnostic_fps": 29.81751679720113,
+            "max_window_diagnostic_fps": 29.81751679720113,
+            "io_us_max_prior_writes": 87
+          },
+          {
+            "camera": 8,
+            "tier": 1,
+            "valid_window_count": 15,
+            "valid_interval_count": 349,
+            "valid_device_us": 15323794,
+            "weighted_diagnostic_fps": 22.775038609889954,
+            "max_window_diagnostic_fps": 24.078329695900326,
+            "io_us_max_prior_writes": 87
+          },
+          {
+            "camera": 9,
+            "tier": 1,
+            "valid_window_count": 3,
+            "valid_interval_count": 74,
+            "valid_device_us": 3045521,
+            "weighted_diagnostic_fps": 24.29797725906339,
+            "max_window_diagnostic_fps": 25.84349181357698,
+            "io_us_max_prior_writes": 87
+          }
+        ],
+        "sampled_heap_lower_bound_bytes": 137196,
+        "evaluation_checkpoints": [
+          {
+            "run": 1,
+            "used_bytes": 123480,
+            "cap_bytes": 163840,
+            "checkpoint_headroom_bytes": 40360
+          }
+        ],
+        "scope": "diagnostic_completed_context_throughput_and_sampled_guest_malloc_bytes",
+        "transport_perturbation": "USB_output_may_block_about_100ms_plus_tick_rounding_no_normal_firmware_extrapolation",
+        "physical_lcd_verified": false,
+        "allocator_peak_verified": false,
+        "complete_error_count_verified": false
+      },
+      "provenance": {
+        "schema_version": 1,
+        "binding_status": "captured",
+        "job_id": "derby-diag-9db14c88-post42-20261018",
+        "broker_epoch": "a9885f2c085e4727baa5c0e2902f388d",
+        "plan_hash": "a1c5509173e5b534eff74200717f7ee067f5acf54ce77eb741b926a8df208666",
+        "principal_id": "ephemeral:remote_mcp",
+        "device_fingerprint": "550115278762c26269354dc573729668a6647f42c7c8ffc9eb56967b958e51e5",
+        "configured_expected_firmware_sha256": "06b1c1c8aab37eb78e437304ea5fbe652df339bc73408ba7f9d5f6f9eb2c298d",
+        "serial_configuration_sha256": "574e4a768ca7ddf10c6ff4afc8f97e92ace8c93d83d4e1655ab6e5be0d397207",
+        "association": {
+          "status": "missing",
+          "reason": "durable_receipt_chain_unavailable"
+        }
+      }
+    }
+  },
+  "renewals": [
+    {
+      "utc": "2026-10-18 23:28:12 UTC",
+      "result": {
+        "ok": true,
+        "renewed": true,
+        "lease_seconds": 300
+      }
+    }
+  ]
+}

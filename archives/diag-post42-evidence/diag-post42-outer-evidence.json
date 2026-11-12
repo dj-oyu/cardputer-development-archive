@@ -1,0 +1,45 @@
+{
+  "broker_epoch": "a9885f2c085e4727baa5c0e2902f388d",
+  "collector_implementation_commit": "262a85ad7591c7068cab9d4827e8c8aea8d7d479",
+  "collector_merge": "fcff5895d1189b065e06fb7ea3aa08ce09735472",
+  "source_commit": "9db14c8825b389fba98b541b4b7b712574f9346e",
+  "source_tree": "93845b582924da52d34a13c31f2f720b62a9c0a5",
+  "build_job": "build-diag-9db14c88-20261018",
+  "flash_job": {
+    "ok": true,
+    "id": "flash-diag-9db14c88-post42-20261018",
+    "plan_hash": "cdf0376b59ec0151c21c23ec81de0e9f6af911dc16c9517c51249bb4357d711a",
+    "state": "succeeded",
+    "stage": "flash_boot_observe",
+    "result": "firmware_flash_completed",
+    "diagnostic": null,
+    "reviewed": 0,
+    "created": "2026-10-18 23:21:27",
+    "finished": "2026-10-18 23:26:15"
+  },
+  "flash_summary": {
+    "boot_log_matches_expected_artifact": true,
+    "boot_observed": true,
+    "boot_text_identity_verified": false,
+    "boot_text_is_cryptographic_proof": false,
+    "idf_version": "6.0.1",
+    "last_known_good_receipt": "b55d2cc1739b98389bb04e9f288ec3770b66d6f6036232026f5782e2e9d4e03e",
+    "observed_elf_sha256_prefix": "4a2a6a430",
+    "observed_idf_version": "6.0.1",
+    "passive_boot_verified": true,
+    "readback_verified": true,
+    "target": "esp32s3",
+    "verification_basis": "full_segment_sha256_readback_and_boot_elf_prefix"
+  },
+  "smoke_job": "derby-diag-9db14c88-post42-20261018",
+  "smoke_plan": "a1c5509173e5b534eff74200717f7ee067f5acf54ce77eb741b926a8df208666",
+  "same_device_fingerprint": "550115278762c26269354dc573729668a6647f42c7c8ffc9eb56967b958e51e5",
+  "normal_pr7_recovery_receipt_retained": "ddb78f689554471c252110ea33a998d0f074c58d39ccf6e1e1dc422a4fa3bc6f",
+  "collector_association": {
+    "status": "missing",
+    "reason": "durable_receipt_chain_unavailable"
+  },
+  "collector_association_rewritten": false,
+  "installed_state": "diagnostic ON remains installed; no rollback performed",
+  "scope_limit": "Diagnostic throughput and sampled heap only; LCD coherence/transfer and true allocator peak not verified"
+}

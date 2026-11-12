@@ -1,0 +1,125 @@
+
+/workspace/private-q7-certified-full-s3-20261106/build-on/cardputer_pocketjs.elf:     file format elf32-xtensa-le
+
+
+Disassembly of section .iram0.vectors:
+
+Disassembly of section .iram0.text:
+
+Disassembly of section .flash.text:
+
+4212ae24 <nextafter>:
+4212ae24:	008136        	entry	a1, 64
+4212ae27:	037d      	mov.n	a7, a3
+4212ae29:	e77a      	add.n	a14, a7, a7
+4212ae2b:	66a7a1        	l32r	a10, 421048c8 <pp_timer_process+0x1790> (7fefffff <_rtc_reserved_end+0x1fdfffff>)
+4212ae2e:	026d      	mov.n	a6, a2
+4212ae30:	41e1e0        	srli	a14, a14, 1
+4212ae33:	042d      	mov.n	a2, a4
+4212ae35:	053d      	mov.n	a3, a5
+4212ae37:	069d      	mov.n	a9, a6
+4212ae39:	0f3ae7        	bltu	a10, a14, 4212ae4c <nextafter+0x28>
+4212ae3c:	833a      	add.n	a8, a3, a3
+4212ae3e:	418180        	srli	a8, a8, 1
+4212ae41:	035d      	mov.n	a5, a3
+4212ae43:	024d      	mov.n	a4, a2
+4212ae45:	133a87        	bltu	a10, a8, 4212ae5c <nextafter+0x38>
+4212ae48:	000b86        	j	4212ae7a <nextafter+0x56>
+4212ae4b:	b08100        	addx8	a8, a1, a0
+4212ae4e:	8e8a67        	bany	a10, a6, 4212ade0 <log1p+0x3d4>
+4212ae51:	208860        	or	a8, a8, a6
+4212ae54:	fe4816        	beqz	a8, 4212ae3c <nextafter+0x18>
+4212ae57:	0002c6        	j	4212ae66 <nextafter+0x42>
+4212ae5a:	a10000        	sll	a0, a0
+4212ae5d:	67ac      	beqz.n	a7, 4212ae87 <nextafter+0x63>
+4212ae5f:	88aa      	add.n	a8, a8, a10
+4212ae61:	208820        	or	a8, a8, a2
+4212ae64:	289c      	beqz.n	a8, 4212ae7a <nextafter+0x56>
+4212ae66:	06cd      	mov.n	a12, a6
+4212ae68:	07dd      	mov.n	a13, a7
+4212ae6a:	02ad      	mov.n	a10, a2
+4212ae6c:	03bd      	mov.n	a11, a3
+4212ae6e:	669281        	l32r	a8, 421048b8 <pp_timer_process+0x1780> (40002184 <__adddf3>)
+4212ae71:	0008e0        	callx8	a8
+4212ae74:	003286        	j	4212af42 <nextafter+0x11e>
+4212ae77:	000000        	ill
+4212ae7a:	51e9      	s32i.n	a14, a1, 20
+4212ae7c:	4199      	s32i.n	a9, a1, 16
+4212ae7e:	02cd      	mov.n	a12, a2
+4212ae80:	03dd      	mov.n	a13, a3
+4212ae82:	06ad      	mov.n	a10, a6
+4212ae84:	07bd      	mov.n	a11, a7
+4212ae86:	66f981        	l32r	a8, 42104a6c <pp_timer_process+0x1934> (4000228c <__eqdf2>)
+4212ae89:	0008e0        	callx8	a8
+4212ae8c:	0b6a16        	beqz	a10, 4212af46 <nextafter+0x122>
+4212ae8f:	51e8      	l32i.n	a14, a1, 20
+4212ae91:	4198      	l32i.n	a9, a1, 16
+4212ae93:	20ee60        	or	a14, a14, a6
+4212ae96:	eefc      	bnez.n	a14, 4212aed8 <nextafter+0xb4>
+4212ae98:	120c      	movi.n	a2, 1
+4212ae9a:	053f50        	extui	a3, a5, 31, 1
+4212ae9d:	0020c0        	memw
+4212aea0:	0129      	s32i.n	a2, a1, 0
+4212aea2:	013310        	slli	a3, a3, 31
+4212aea5:	0020c0        	memw
+4212aea8:	1139      	s32i.n	a3, a1, 4
+4212aeaa:	0020c0        	memw
+4212aead:	01a8      	l32i.n	a10, a1, 0
+4212aeaf:	0020c0        	memw
+4212aeb2:	11b8      	l32i.n	a11, a1, 4
+4212aeb4:	20c220        	or	a12, a2, a2
+4212aeb7:	20d330        	or	a13, a3, a3
+4212aeba:	667e81        	l32r	a8, 421048b4 <pp_timer_process+0x177c> (40002418 <__muldf3>)
+4212aebd:	0008e0        	callx8	a8
+4212aec0:	0020c0        	memw
+4212aec3:	21a9      	s32i.n	a10, a1, 8
+4212aec5:	0020c0        	memw
+4212aec8:	31b9      	s32i.n	a11, a1, 12
+4212aeca:	0020c0        	memw
+4212aecd:	2188      	l32i.n	a8, a1, 8
+4212aecf:	0020c0        	memw
+4212aed2:	3198      	l32i.n	a9, a1, 12
+4212aed4:	001b86        	j	4212af46 <nextafter+0x122>
+4212aed7:	07ad00        	ee.stf.64.xp	f10, f0, a0, a13
+4212aeda:	00a796        	bltz	a7, 4212aee8 <nextafter+0xc4>
+4212aedd:	1f2577        	blt	a5, a7, 4212af00 <nextafter+0xdc>
+4212aee0:	269577        	bne	a5, a7, 4212af0a <nextafter+0xe6>
+4212aee3:	0004c6        	j	4212aefa <nextafter+0xd6>
+4212aee6:	d60000        	ee.ldf.64.xp	f0, f13, a0, a0
+4212aee9:	700145        	call0	4219af00 <js_string_split+0x160>
+4212aeec:	cc72b5        	call12	420f7618 <scan_cancel+0x70>
+4212aeef:	50eb      	addi.n	a5, a0, 14
+4212aef1:	0cc057        	bnall	a0, a5, 4212af01 <nextafter+0xdd>
+4212aef4:	5018      	l32i.n	a1, a0, 20
+4212aef6:	938b      	addi.n	a9, a3, 8
+4212aef8:	e88c      	beqz.n	a8, 4212af0a <nextafter+0xe6>
+4212aefa:	063467        	bltu	a4, a6, 4212af04 <nextafter+0xe0>
+4212aefd:	000246        	j	4212af0a <nextafter+0xe6>
+4212af00:	09cc      	bnez.n	a9, 4212af04 <nextafter+0xe0>
+4212af02:	a70b      	addi.n	a10, a7, -1
+4212af04:	860b      	addi.n	a8, a6, -1
+4212af06:	000186        	j	4212af10 <nextafter+0xec>
+4212af09:	861b00        	ee.ldf.64.xp	f1, f8, a0, a11
+4212af0c:	08cc      	bnez.n	a8, 4212af10 <nextafter+0xec>
+4212af0e:	a71b      	addi.n	a10, a7, 1
+4212af10:	ffa7b2        	movi	a11, 0x7ff
+4212af13:	a594a0        	extui	a9, a10, 20, 11
+4212af16:	01bbc0        	slli	a11, a11, 20
+4212af19:	0199c0        	slli	a9, a9, 20
+4212af1c:	0ccab7        	bnall	a10, a11, 4212af2c <nextafter+0x108>
+4212af1f:	05afa0        	extui	a10, a10, 31, 1
+4212af22:	201110        	or	a1, a1, a1
+4212af25:	006925        	call8	4212b5b8 <__math_oflow>
+4212af28:	000586        	j	4212af42 <nextafter+0x11e>
+4212af2b:	082d00        	lsx	f2, a13, a0
+4212af2e:	f87c      	movi.n	a8, -1
+4212af30:	418c80        	srli	a8, a8, 12
+4212af33:	0a3d      	mov.n	a3, a10
+4212af35:	0d2897        	blt	a8, a9, 4212af46 <nextafter+0x122>
+4212af38:	02ad      	mov.n	a10, a2
+4212af3a:	03bd      	mov.n	a11, a3
+4212af3c:	201110        	or	a1, a1, a1
+4212af3f:	006265        	call8	4212b564 <__math_denorm>
+4212af42:	0a2d      	mov.n	a2, a10
+4212af44:	0b3d      	mov.n	a3, a11
+4212af46:	f01d      	retw.n

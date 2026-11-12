@@ -1,0 +1,85 @@
+{
+  "status": "PASS",
+  "source_sha256": "f0f689433136ca625d2543c10750bdc9e4faa7757917bb2f2c1cf767209d8007",
+  "scope": "exact extracted caller boundary + real builder + exact owner release; synthetic snapshot copy, not production codec or complete native integration",
+  "cases_per_mode": 9,
+  "source_order_negative_controls": 2,
+  "results": [
+    {
+      "mode": "O0",
+      "command": [
+        "cc",
+        "-std=c11",
+        "-O0",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-Wno-misleading-indentation",
+        "/workspace/scratch/6d8dcdbcdc54/fox-v3-visibility-lifetime-reduction/tests/lifetime-results/boundary.generated.c",
+        "-lm",
+        "-o",
+        "/workspace/scratch/6d8dcdbcdc54/fox-v3-visibility-lifetime-reduction/tests/lifetime-results/O0"
+      ],
+      "result": "PASS: before-release count rejection; dispose rejection; 5 real builder allocation failures; success; fallback; poison/owned-copy; single release; publication gate"
+    },
+    {
+      "mode": "O0-asan-ubsan",
+      "command": [
+        "cc",
+        "-std=c11",
+        "-O0",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-Wno-misleading-indentation",
+        "/workspace/scratch/6d8dcdbcdc54/fox-v3-visibility-lifetime-reduction/tests/lifetime-results/boundary.generated.c",
+        "-lm",
+        "-o",
+        "/workspace/scratch/6d8dcdbcdc54/fox-v3-visibility-lifetime-reduction/tests/lifetime-results/O0-asan-ubsan",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer"
+      ],
+      "result": "PASS: before-release count rejection; dispose rejection; 5 real builder allocation failures; success; fallback; poison/owned-copy; single release; publication gate"
+    },
+    {
+      "mode": "O2",
+      "command": [
+        "cc",
+        "-std=c11",
+        "-O2",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-Wno-misleading-indentation",
+        "/workspace/scratch/6d8dcdbcdc54/fox-v3-visibility-lifetime-reduction/tests/lifetime-results/boundary.generated.c",
+        "-lm",
+        "-o",
+        "/workspace/scratch/6d8dcdbcdc54/fox-v3-visibility-lifetime-reduction/tests/lifetime-results/O2"
+      ],
+      "result": "PASS: before-release count rejection; dispose rejection; 5 real builder allocation failures; success; fallback; poison/owned-copy; single release; publication gate"
+    },
+    {
+      "mode": "O2-asan-ubsan",
+      "command": [
+        "cc",
+        "-std=c11",
+        "-O2",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-Wno-misleading-indentation",
+        "/workspace/scratch/6d8dcdbcdc54/fox-v3-visibility-lifetime-reduction/tests/lifetime-results/boundary.generated.c",
+        "-lm",
+        "-o",
+        "/workspace/scratch/6d8dcdbcdc54/fox-v3-visibility-lifetime-reduction/tests/lifetime-results/O2-asan-ubsan",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer"
+      ],
+      "result": "PASS: before-release count rejection; dispose rejection; 5 real builder allocation failures; success; fallback; poison/owned-copy; single release; publication gate"
+    }
+  ]
+}

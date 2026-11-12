@@ -1,0 +1,31 @@
+{
+  "seeds": [
+    11,
+    29
+  ],
+  "noCI": true,
+  "noAcceptance": true,
+  "noNewStableMask": true,
+  "noEnergyFitOrNegativeClipping": true,
+  "domains": {
+    "front": {
+      "originalV3Foreground": 5307,
+      "commonNativeFiniteDepth": 4687,
+      "chebyshev2InteriorCommon": 3424
+    },
+    "oblique": {
+      "originalV3Foreground": 5868,
+      "commonNativeFiniteDepth": 5148,
+      "chebyshev2InteriorCommon": 3743
+    }
+  },
+  "domainDefinition": "Original frozen v3 alpha>0; common=foreground AND unchanged native baseline/direction finite-depth mask; interior is radius2 Chebyshev binary erosion of common (all 25 neighbors required, outside frame false). Fixed across arms/seeds/cases.",
+  "remainingResidualDefinition": "Combined minus DirectDiffuse, IndirectDiffuse, DirectGloss, IndirectGloss, Emit and Env. Includes transmission/volume and recomposition error. Those two parts are also reported separately.",
+  "linearInteraction": "(ON_direction\u2212OFF_direction)\u2212(ON_baseline\u2212OFF_baseline), kept signed; no display transform or energy rescale.",
+  "displayScope": "Original Combined PNG8 ON vs OFF, same seed; exact integer luma +/-20000 with denominator2550000. Each seed separately, no 8-seed stability inference.",
+  "interpretation": "ON is source rich character material; OFF is source-rho Lambert roughness0. Material replacement changes diffuse weighting, specular, direct and indirect transport together. This is not isolated specular removal. Finite MC/MIS/adaptive changes and fixed sample_clamp_indirect=10 nonlinear bias remain inseparable with two seeds.",
+  "ablationNotLightGroupIsolation": "Rich-minus-Lambert is a paired rerender difference including changed BSDF/path/MIS/MC and indirect clamp; not an isolated component light-group.",
+  "foregroundCaveat": "Original foreground includes boundary and native-missing pixels. Ground is unchanged but may be visible there; full foreground is retained alongside conditional common/interior. No part-whole correlation establishes native repair.",
+  "richPixelsNeverNativeInputs": true,
+  "inputsUnchanged": true
+}

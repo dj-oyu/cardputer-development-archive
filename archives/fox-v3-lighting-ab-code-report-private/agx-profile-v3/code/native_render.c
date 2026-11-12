@@ -1,0 +1,51 @@
+#define _POSIX_C_SOURCE 200809L
+/* Host adapter only: production model evaluator, owned snapshot and raster unchanged. */
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
+#include <string.h>
+#include <math.h>
+#include <time.h>
+static unsigned long long ns(void){struct timespec t;clock_gettime(CLOCK_MONOTONIC,&t);return (unsigned long long)t.tv_sec*1000000000ull+t.tv_nsec;}
+#include "ayatsuri/ayatsuri_model.h"
+#include "ui/kasane/ksn_mesh_depth.h"
+static int fail(const char *s){fprintf(stderr,"NATIVE_GATE:%s\n",s);return 2;}
+static int load_disk(const char *path,FoxDiskScene *out){
+ FILE *f=fopen(path,"r");if(!f)return 0;char magic[10]={0};FoxDiskLightInput lights[3];memset(lights,0,sizeof lights);double world[3],strength;int ok=fscanf(f,"%9s",magic)==1&&!strcmp(magic,"FOXDISK1");
+ for(unsigned j=0;ok&&j<3;j++){lights[j].shape=FOX_DISK_SHAPE_DISK;for(unsigned k=0;ok&&k<3;k++)ok=fscanf(f,"%lf",&lights[j].center[k])==1;for(unsigned k=0;ok&&k<3;k++)ok=fscanf(f,"%lf",&lights[j].rotation_xyz[k])==1;for(unsigned k=0;ok&&k<3;k++)ok=fscanf(f,"%lf",&lights[j].color[k])==1;if(ok)ok=fscanf(f,"%lf %lf",&lights[j].power,&lights[j].diameter)==2;}
+ for(unsigned k=0;ok&&k<3;k++)ok=fscanf(f,"%lf",world+k)==1;if(ok)ok=fscanf(f,"%lf",&strength)==1;char extra;if(ok&&fscanf(f," %c",&extra)!=EOF)ok=0;fclose(f);return ok&&fox_disk_scene_init(out,lights,world,strength)==FOX_DISK_OK;
+}
+int main(int argc,char **argv){
+ if(argc!=19)return fail("arguments: model color depth reverse camera9 light6");
+ float cam[9],light[6];for(int i=0;i<9;i++)cam[i]=strtof(argv[4+i],NULL);for(int i=0;i<6;i++)light[i]=strtof(argv[13+i],NULL);
+ FILE *f=fopen(argv[1],"rb");if(!f)return fail("input");fseek(f,0,SEEK_END);long bytes=ftell(f);rewind(f);if(bytes<1||bytes>1048576)return fail("size");
+ uint8_t *data=malloc((size_t)bytes);if(!data||fread(data,1,(size_t)bytes,f)!=(size_t)bytes)return fail("read");fclose(f);
+ ayatsuri_model m;if(ayatsuri_model_open(data,(size_t)bytes,&m))return fail("model");
+ size_t ab=ayatsuri_model_instance_bytes(&m);void *arena=malloc(ab);int owner=0;ayatsuri_model_instance ins;
+ unsigned long long eval_start=ns();
+ const char *mode=getenv("HONE_LINEAR_LIGHT");unsigned enabled=mode&&strcmp(mode,"1")==0;
+ if(mode&&strcmp(mode,"0")&&strcmp(mode,"1"))return fail("linear-mode");
+ const char *profile_mode=getenv("HONE_AGX_PROFILE");unsigned profile=profile_mode&&!strcmp(profile_mode,"1");if(profile_mode&&strcmp(profile_mode,"0")&&strcmp(profile_mode,"1"))return fail("profile-mode");
+ const char *diskfile=getenv("HONE_DISK_FILE");bool physical=diskfile&&diskfile[0];FoxDiskScene disks;if(physical&&!load_disk(diskfile,&disks))return fail("disk-input");
+ if(!arena||ayatsuri_model_instance_init(&m,arena,ab,&owner,1,&ins)||ayatsuri_model_instance_linear_light(&ins,&owner,1,enabled)||ayatsuri_model_instance_disk_scene(&ins,&owner,1,physical?&disks:NULL)||ayatsuri_model_instance_agx_profile(&ins,&owner,1,profile)||ayatsuri_model_instance_evaluate(&ins,&owner,1,cam,light))return fail("evaluate");
+ unsigned long long eval_ns=ns()-eval_start;
+ uint8_t payload[65536];ksn_mesh_snapshot s={.packets={.data=payload,.capacity=sizeof payload},.work_limit=8000000,.enabled=true};
+ uint16_t ids[256];uint8_t kinds[256];unsigned count=0;uint32_t cursor=0;ayatsuri_model_packet p;ayatsuri_model_status rc;
+ while((rc=ayatsuri_model_instance_next(&ins,&owner,1,&cursor,&p))==AYATSURI_MODEL_OK){if(count==256||(p.kind!=4&&p.kind!=5))return fail("mesh-only");kinds[count]=p.kind;ids[count++]=p.node_id;}
+ if(rc!=AYATSURI_MODEL_DONE||!count)return fail("empty");
+ int reverse=atoi(argv[3]);
+ for(unsigned at=0;at<count;at++){
+  unsigned index=reverse?count-1-at:at;ksn_proc_gouraud_patch patch;const float *depth;const uint16_t *back=NULL;uint8_t bits[8]={0};
+  if(kinds[index]==5){ayatsuri_model_sided_mesh_view v;if(ayatsuri_model_instance_sided_mesh_view(&ins,&owner,1,ids[index],&v))return fail("sided-view");memcpy(&patch,v.patch,sizeof patch);depth=v.depth;back=v.back_colors;memcpy(bits,v.back_faces,8);}
+  else{ayatsuri_model_mesh_view v;if(ayatsuri_model_instance_mesh_view(&ins,&owner,1,ids[index],&v))return fail("view");memcpy(&patch,v.patch,sizeof patch);depth=v.depth;}
+  if(reverse){uint8_t rb[8]={0};for(unsigned t=0;t<patch.header.triangles;t++)if(bits[t/8]&(1u<<(t%8))){unsigned q=patch.header.triangles-1-t;rb[q/8]|=1u<<(q%8);}memcpy(bits,rb,8);for(unsigned a=0,b=patch.header.triangles?patch.header.triangles-1:0;a<b;a++,b--)for(unsigned k=0;k<3;k++){uint16_t q=patch.indices[3*a+k];patch.indices[3*a+k]=patch.indices[3*b+k];patch.indices[3*b+k]=q;}}
+  bool ok=back?ksn_mesh_append_sided(&s,&patch,depth,back,bits,ids[index]):ksn_mesh_append(&s,&patch,depth,ids[index]);if(!ok)return fail("append");
+ }
+ unsigned profile_evaluations=ins.profile_evaluations,profile_clamped=ins.profile_clamped;
+ if(ayatsuri_model_instance_dispose(&ins,&owner,1))return fail("dispose");memset(arena,0xa5,ab);memset(data,0xa5,(size_t)bytes);free(arena);free(data);
+ char path[4096];snprintf(path,sizeof path,"%s.u16le",argv[2]);FILE *c=fopen(path,"wb");snprintf(path,sizeof path,"%s.f32le",argv[2]);FILE *d=fopen(path,"wb");if(!c||!d)return fail("output");
+ uint16_t color[240*8];float z[240*8];unsigned long long render_ns=0;
+ for(unsigned y=0;y<135;y+=8){unsigned h=135-y<8?135-y:8;memset(color,0,sizeof color);unsigned long long begin=ns();if(!ksn_mesh_render(&s,color,y,h,z,8))return fail("render");render_ns+=ns()-begin;for(unsigned j=0;j<240*h;j++)if(isnan(z[j])||z[j]==INFINITY)return fail("nonfinite-depth");if(fwrite(color,2,240*h,c)!=240*h||fwrite(z,4,240*h,d)!=240*h)return fail("write");}fclose(c);fclose(d);
+ printf("{\"agxProfileEnabled\":%s,\"profile\":\"source-agx-medium-high-contrast-v1\",\"profileEvaluations\":%u,\"profileClamped\":%u,",profile?"true":"false",profile_evaluations,profile_clamped);
+ printf("\"physicalDiskEnabled\":%s,\"linearLightEnabled\":%s,\"instanceControlBytes\":%zu,\"records\":%u,\"logicalMeshes\":%u,\"evaluateNs\":%llu,\"camera\":[",physical?"true":"false",enabled?"true":"false",sizeof ins,s.packets.packets,count,eval_ns);for(int i=0;i<9;i++)printf("%s%.9g",i?",":"",cam[i]);printf("],\"light\":[");for(int i=0;i<6;i++)printf("%s%.9g",i?",":"",light[i]);printf("],\"coldBytes\":%ld,\"arenaBytes64bit\":%zu,\"snapshotBytes\":%zu,\"work\":%u,\"hostRenderNsFirstFrame\":%llu,\"depthScratchBytes\":7680,\"colorBandBytes\":3840,\"snapshotCapacity\":65536,\"disposedBeforeRender\":true,\"reverse\":%s}\n",bytes,ab,s.packets.size,s.work,render_ns,reverse?"true":"false");return 0;
+}

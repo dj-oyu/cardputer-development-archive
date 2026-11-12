@@ -1,0 +1,34 @@
+test_actual_echo_and_native_input_rejected_independently (__main__.CandidateTests.test_actual_echo_and_native_input_rejected_independently) ... ok
+test_bad_depth_rejected_after_hash_verifies (__main__.CandidateTests.test_bad_depth_rejected_after_hash_verifies) ... ok
+test_candidate_does_not_change_stability_and_false_positives_remain (__main__.CandidateTests.test_candidate_does_not_change_stability_and_false_positives_remain) ... ok
+test_coordinated_physical_source_config_echo_rehash_rejected (__main__.CandidateTests.test_coordinated_physical_source_config_echo_rehash_rejected) ... ok
+test_full_synthetic_score_matches_all_frozen_reference_masks (__main__.CandidateTests.test_full_synthetic_score_matches_all_frozen_reference_masks) ... ok
+test_linear_mode_boolean_matching_and_optional_legacy (__main__.CandidateTests.test_linear_mode_boolean_matching_and_optional_legacy) ... ok
+test_linear_mode_echo_mutation_rejected (__main__.CandidateTests.test_linear_mode_echo_mutation_rejected) ... ok
+test_linear_mode_non_boolean_config_rejected_after_rehash (__main__.CandidateTests.test_linear_mode_non_boolean_config_rejected_after_rehash) ... ok
+test_manifest_corruption_rejected (__main__.CandidateTests.test_manifest_corruption_rejected) ... ok
+test_missing_binary_rejected (__main__.CandidateTests.test_missing_binary_rejected) ... ok
+test_orphan_linear_echo_rejected (__main__.CandidateTests.test_orphan_linear_echo_rejected) ... ok
+test_output_must_be_fresh (__main__.CandidateTests.test_output_must_be_fresh) ... ok
+test_path_traversal_rejected (__main__.CandidateTests.test_path_traversal_rejected) ... ok
+test_physical_config_case_mutation_rejected (__main__.CandidateTests.test_physical_config_case_mutation_rejected) ... ok
+test_physical_field_when_disabled_rejected (__main__.CandidateTests.test_physical_field_when_disabled_rejected) ... ok
+test_physical_missing_hashed_source_rejected (__main__.CandidateTests.test_physical_missing_hashed_source_rejected) ... ok
+test_physical_mode_echo_mutation_rejected (__main__.CandidateTests.test_physical_mode_echo_mutation_rejected) ... ok
+test_physical_mode_off_on_and_legacy (__main__.CandidateTests.test_physical_mode_off_on_and_legacy) ... ok
+test_physical_native_input_mutation_rejected (__main__.CandidateTests.test_physical_native_input_mutation_rejected) ... ok
+test_physical_non_boolean_config_and_orphan_echo_rejected (__main__.CandidateTests.test_physical_non_boolean_config_and_orphan_echo_rejected) ... ok
+test_physical_source_mutations_rejected_after_rehash (__main__.CandidateTests.test_physical_source_mutations_rejected_after_rehash) ... ok
+test_rehashed_native_config_camera_corruption_rejected (__main__.CandidateTests.test_rehashed_native_config_camera_corruption_rejected) ... ok
+test_rehashed_physical_extractor_corruption_rejected (__main__.CandidateTests.test_rehashed_physical_extractor_corruption_rejected) ... ok
+test_size_corruption_rejected_even_with_rehashed_metadata (__main__.CandidateTests.test_size_corruption_rejected_even_with_rehashed_metadata) ... ok
+test_valid_synthetic_input_and_direct_decode (__main__.CandidateTests.test_valid_synthetic_input_and_direct_decode) ... ok
+test_decode_exact_channel_values_not_png8 (__main__.DecodeTests.test_decode_exact_channel_values_not_png8) ... ok
+test_depth_rejects_nonfinite_except_negative_infinity (__main__.DecodeTests.test_depth_rejects_nonfinite_except_negative_infinity) ... ok
+test_duplicate_json_and_nonfinite_numbers_rejected (__main__.DecodeTests.test_duplicate_json_and_nonfinite_numbers_rejected) ... ok
+test_shape_includes_extra_and_missing_across_frame (__main__.DecodeTests.test_shape_includes_extra_and_missing_across_frame) ... ok
+
+----------------------------------------------------------------------
+Ran 29 tests in 1.026s
+
+OK

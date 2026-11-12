@@ -1,0 +1,238 @@
+{
+  "scope": "Independent integer PNG8 and frozen reference domain metrics; no owner scorer imported and no rendering performed. Two oracle seeds are descriptive, no new stability estimates or native acceptance.",
+  "checkedNumericValues": 736,
+  "referenceMasksRecomputedExact": true,
+  "allEightPNGHashesAndHeaderChecks": true,
+  "allStatusesDescriptive": true,
+  "inputAndCodeFreezeHashesMatch": true,
+  "results": {
+    "front": {
+      "11": {
+        "brightIoU": 0.8406169665809768,
+        "darkIoU": 0.8944230094703612,
+        "brightFP": 145,
+        "brightFN": 103,
+        "uncertainPixels": 729,
+        "foregroundRGB": {
+          "baseline": 95.31041142361975,
+          "direction": 94.64305565654362
+        },
+        "fullFrameRGBDescriptive": {
+          "baseline": 99.03791606148631,
+          "direction": 98.92855694747034
+        },
+        "status": "RICH_ORACLE_DESCRIPTIVE_NOT_NATIVE_ACCEPTANCE",
+        "fullForegroundBrightIoU": 0.7587467362924282,
+        "fullForegroundDarkIoU": 0.8470245795601552,
+        "uncertainBrightIoUDescriptive": 0.403899721448468,
+        "uncertainDarkIoUDescriptive": 0.2863070539419087,
+        "brightCandidateAtExactPositiveThreshold": 11,
+        "darkCandidateAtExactNegativeThreshold": 5
+      },
+      "29": {
+        "brightIoU": 0.8432883750802826,
+        "darkIoU": 0.8892393971258324,
+        "brightFP": 146,
+        "brightFN": 98,
+        "uncertainPixels": 729,
+        "foregroundRGB": {
+          "baseline": 95.30295208508102,
+          "direction": 94.64098742092635
+        },
+        "fullFrameRGBDescriptive": {
+          "baseline": 99.03499102315824,
+          "direction": 98.92625927943193
+        },
+        "status": "RICH_ORACLE_DESCRIPTIVE_NOT_NATIVE_ACCEPTANCE",
+        "fullForegroundBrightIoU": 0.7572765072765073,
+        "fullForegroundDarkIoU": 0.8414082687338501,
+        "uncertainBrightIoUDescriptive": 0.3923705722070845,
+        "uncertainDarkIoUDescriptive": 0.27983539094650206,
+        "brightCandidateAtExactPositiveThreshold": 17,
+        "darkCandidateAtExactNegativeThreshold": 10
+      }
+    },
+    "oblique": {
+      "11": {
+        "brightIoU": 0.7190265486725663,
+        "darkIoU": 0.9083434099153567,
+        "brightFP": 195,
+        "brightFN": 59,
+        "uncertainPixels": 698,
+        "foregroundRGB": {
+          "baseline": 95.63661818917429,
+          "direction": 94.8311137419727
+        },
+        "fullFrameRGBDescriptive": {
+          "baseline": 98.97704903978052,
+          "direction": 98.86955942870975
+        },
+        "status": "RICH_ORACLE_DESCRIPTIVE_NOT_NATIVE_ACCEPTANCE",
+        "fullForegroundBrightIoU": 0.6228571428571429,
+        "fullForegroundDarkIoU": 0.8705346985210466,
+        "uncertainBrightIoUDescriptive": 0.35202492211838005,
+        "uncertainDarkIoUDescriptive": 0.2692307692307692,
+        "brightCandidateAtExactPositiveThreshold": 19,
+        "darkCandidateAtExactNegativeThreshold": 10
+      },
+      "29": {
+        "brightIoU": 0.7323628219484882,
+        "darkIoU": 0.9129172714078374,
+        "brightFP": 184,
+        "brightFN": 55,
+        "uncertainPixels": 698,
+        "foregroundRGB": {
+          "baseline": 95.62524467962795,
+          "direction": 94.8376354259777
+        },
+        "fullFrameRGBDescriptive": {
+          "baseline": 98.9749107358993,
+          "direction": 98.87049039780521
+        },
+        "status": "RICH_ORACLE_DESCRIPTIVE_NOT_NATIVE_ACCEPTANCE",
+        "fullForegroundBrightIoU": 0.6343283582089553,
+        "fullForegroundDarkIoU": 0.8728428701180745,
+        "uncertainBrightIoUDescriptive": 0.3546325878594249,
+        "uncertainDarkIoUDescriptive": 0.25925925925925924,
+        "brightCandidateAtExactPositiveThreshold": 17,
+        "darkCandidateAtExactNegativeThreshold": 14
+      }
+    }
+  },
+  "pairedDifferences": {
+    "front": {
+      "11": {
+        "foregroundRGBMAE": {
+          "baseline": 0.050528651885350585,
+          "direction": 0.0573550040580267
+        },
+        "formalStableDeltaRGBRMSE": 0.04583402703473113,
+        "formalStableDeltaLumaRMSE": 0.039911915589880664,
+        "notNewStabilityEstimate": true
+      },
+      "29": {
+        "foregroundRGBMAE": {
+          "baseline": 0.05053924339662377,
+          "direction": 0.057422740467331965
+        },
+        "formalStableDeltaRGBRMSE": 0.04576528878813901,
+        "formalStableDeltaLumaRMSE": 0.03977395415185879,
+        "notNewStabilityEstimate": true
+      }
+    },
+    "oblique": {
+      "11": {
+        "foregroundRGBMAE": {
+          "baseline": 0.04914212901702376,
+          "direction": 0.0555023145363576
+        },
+        "formalStableDeltaRGBRMSE": 0.04904481975128253,
+        "formalStableDeltaLumaRMSE": 0.042529336876835126,
+        "notNewStabilityEstimate": true
+      },
+      "29": {
+        "foregroundRGBMAE": {
+          "baseline": 0.049201384712030685,
+          "direction": 0.055542412375084095
+        },
+        "formalStableDeltaRGBRMSE": 0.0490868327048641,
+        "formalStableDeltaLumaRMSE": 0.04250793555305508,
+        "notNewStabilityEstimate": true
+      }
+    }
+  },
+  "seedDifferences": {
+    "front": {
+      "baseline": {
+        "foregroundRGBMAE": 0.00572360342918651,
+        "pixelsDifferent": 22880
+      },
+      "direction": {
+        "foregroundRGBMAE": 0.005923364258083109,
+        "pixelsDifferent": 22168
+      }
+    },
+    "oblique": {
+      "baseline": {
+        "foregroundRGBMAE": 0.00575938623574856,
+        "pixelsDifferent": 23562
+      },
+      "direction": {
+        "foregroundRGBMAE": 0.006324765761792106,
+        "pixelsDifferent": 22681
+      }
+    }
+  },
+  "fileHashes": {
+    "fox-reference-uncertainty-v3/images/foreground-front.png": "2a1c28451394a025d2e12ba4f716a63beb3b0b1e645479a430e900e346f3baab",
+    "fox-reference-uncertainty-v3/images/seed-11-front-baseline.png": "f15ad99e480a3dd7ddb4775cde30c1fc3d92af1cff4a4eef5562758f046ad780",
+    "fox-reference-uncertainty-v3/images/seed-29-front-baseline.png": "1d54f11d9b122246921d3069e494bc57bb9ad4aff752eda720b0bb7766b83157",
+    "fox-reference-uncertainty-v3/images/seed-47-front-baseline.png": "f87b9a546169be401ad3d65d0a857fb698d75b6a7e2011b2297380272ddfb334",
+    "fox-reference-uncertainty-v3/images/seed-71-front-baseline.png": "6c3034dd92784e5acd2ce64a52c3a768f8e256682776b6c4dabca3ee7cd47b7e",
+    "fox-reference-uncertainty-v3/images/seed-101-front-baseline.png": "023bfd7b6a230332486a5ae83bbf679b77db0cf9858257001d3d939a51786a4d",
+    "fox-reference-uncertainty-v3/images/seed-131-front-baseline.png": "2b5be1fde174b91a4b27d6e539fcc6a5dcaec5f5820439ebb2b29629c25a1b7c",
+    "fox-reference-uncertainty-v3/images/seed-173-front-baseline.png": "be93f4081d4956fb500f0b0c91e78e120250464c057be802655c02940add6a96",
+    "fox-reference-uncertainty-v3/images/seed-211-front-baseline.png": "a5b1cf3e289027b541b15c9c9932f25cbc8d54aac58b58acd3023f515c6af9cb",
+    "fox-reference-uncertainty-v3/images/seed-11-front-direction.png": "2d249fc96197e6eb099d5ccbf7d01c224f3740da3b65e3a0626778f1ba6e8a5d",
+    "fox-reference-uncertainty-v3/images/seed-29-front-direction.png": "dfc151ae7d8fba456737da9ed1c05cd002c6abbadd68eea499ab0f4dd7a976c1",
+    "fox-reference-uncertainty-v3/images/seed-47-front-direction.png": "791efbfe6a3cafe6b0d383af9711cfbc9321d7baff9da9ae0aa998d71ddfbccd",
+    "fox-reference-uncertainty-v3/images/seed-71-front-direction.png": "22bccaceff7d3c217ebedbb2ac0e7966e4216cea826785d75a8855b6d8625524",
+    "fox-reference-uncertainty-v3/images/seed-101-front-direction.png": "d09573f10e0fa40ca913723543e41b78b1ddfea8376d9f1cb70f1d337fa384d8",
+    "fox-reference-uncertainty-v3/images/seed-131-front-direction.png": "f7c530634c073ffce4c449a4414d39ee5707272799e023c3054fc5412eaafdf8",
+    "fox-reference-uncertainty-v3/images/seed-173-front-direction.png": "2a7fc67e7022bce479558bf79de07123336e46cc0418569581c868f8fa747dbf",
+    "fox-reference-uncertainty-v3/images/seed-211-front-direction.png": "b55858d2b2f0485729488650a7d62c66388f834ba9a27431e3b5d46db820c5c3",
+    "fox-v3-position-diagnostic/rich-oracle/images/seed-11-front-baseline.png": "b054c34f5cc4fa41b99bd76d216bbbf556e028b2d4ba7aef52b53cc4f1494226",
+    "fox-v3-position-diagnostic/rich-oracle/images/seed-11-front-direction.png": "9a3b6564daedcf5b7c02904f53949af9b66ff3407d28741477af21e42f11e254",
+    "fox-v3-position-diagnostic/rich-oracle/images/seed-29-front-baseline.png": "855bbf1c1e8d4e610e5d1854aac77c063a0f84f2166cecd039acc7574da79d1c",
+    "fox-v3-position-diagnostic/rich-oracle/images/seed-29-front-direction.png": "3edd64c9ceb432412b41ed163715b88aff193b2d688037afdcb85692285aa622",
+    "fox-reference-uncertainty-v3/images/foreground-oblique.png": "d4d5b4b5130b98543deb6eaea7ea23b4cb59cbb4ba40fd7a9dda580a97f89f17",
+    "fox-reference-uncertainty-v3/images/seed-11-oblique-baseline.png": "75c1f2abd88ba8a4d9ab05986dd179e20b4ae3e572e59865d128bc14401fef1f",
+    "fox-reference-uncertainty-v3/images/seed-29-oblique-baseline.png": "b30e72d72fb7b8611bc0df54c1263d597657d2a3cb8ff4e5211e51e529ba167d",
+    "fox-reference-uncertainty-v3/images/seed-47-oblique-baseline.png": "8027d97a8e0d44f54ca7cc3bfc33caeef1e2b93d3832689259441ad6066db3cf",
+    "fox-reference-uncertainty-v3/images/seed-71-oblique-baseline.png": "46436682d3b1e883d9622378f64ef1297dfd76948f6ee351f5fa5780037fa4cf",
+    "fox-reference-uncertainty-v3/images/seed-101-oblique-baseline.png": "6ca5be2592b89087580d32d807deb6bb2aea9002ffd7367842afa5362ea741a8",
+    "fox-reference-uncertainty-v3/images/seed-131-oblique-baseline.png": "c0ebbd8818e0632e124bb3127c83a9a7086cbe786093a37f1cd3685df5fd922b",
+    "fox-reference-uncertainty-v3/images/seed-173-oblique-baseline.png": "7e57c7bbce7c785510002ee78debf67d41da4e9e92f63a47d6336f859bee5c83",
+    "fox-reference-uncertainty-v3/images/seed-211-oblique-baseline.png": "1b74f8263d0ad48b98b728f30d973f8c8fd4cc151fe401f9e25db737965703dd",
+    "fox-reference-uncertainty-v3/images/seed-11-oblique-direction.png": "98152fddb0b55e348f64c566f50b098b9a428faf673431acb081d2adca4f21ed",
+    "fox-reference-uncertainty-v3/images/seed-29-oblique-direction.png": "ef443a2e9be6d8dce04b5ae13bc607b2231dd11bc3500d18432b0b96611f8d8f",
+    "fox-reference-uncertainty-v3/images/seed-47-oblique-direction.png": "0b7a9c66bdd6f4deff3f5f6dfdd093da9c512963221067bc9e5c8619655e1ac6",
+    "fox-reference-uncertainty-v3/images/seed-71-oblique-direction.png": "a00869c6e1849ef95427b997b8be6ea894f7ef5805e38a553a2719de27e08046",
+    "fox-reference-uncertainty-v3/images/seed-101-oblique-direction.png": "171b172de5fa6ccdae5cb5d8bb1ab2b191b9f94d0d27659dd1d59cee99a68102",
+    "fox-reference-uncertainty-v3/images/seed-131-oblique-direction.png": "57a8bd1b0d64f6187a52cb7464d0c942ee6848d4aed8decbdf721a0cb9423f1b",
+    "fox-reference-uncertainty-v3/images/seed-173-oblique-direction.png": "974e8d4b94b9c248a1a9f0c8781cf5f3fc4fd1ef96e8073a389f7015af3ebc9e",
+    "fox-reference-uncertainty-v3/images/seed-211-oblique-direction.png": "5c34f11deadc358c90c0cd66f112259214bf71b334cf6beacc3e7938ea0445e2",
+    "fox-v3-position-diagnostic/rich-oracle/images/seed-11-oblique-baseline.png": "fd562430887a6496a54f6d84a91345d49b04b9987cd4ddbcbec5b9fd124ba719",
+    "fox-v3-position-diagnostic/rich-oracle/images/seed-11-oblique-direction.png": "7c5c1b32c482dbdbd70050b1a1a818ca4ff2ceb4c0c93f59208475c90564c1a4",
+    "fox-v3-position-diagnostic/rich-oracle/images/seed-29-oblique-baseline.png": "5b1fc4282bb01d38c156fcbbaf3af32d8a37eeedc7e619e8d40b27518394bc07",
+    "fox-v3-position-diagnostic/rich-oracle/images/seed-29-oblique-direction.png": "dd7d30b1240317f2405a3292631f7ad2d67c6f81d8ff7cb9b4a83acb8fd08e58"
+  },
+  "materialGapIndependentChecks": 80,
+  "materialGapMaxAbsDifference": 0.014395971190870438,
+  "formerFloatCandidateClassificationDifferences": [
+    {
+      "view": "front",
+      "seed": 11,
+      "brightClassificationDifferences": 6,
+      "darkClassificationDifferences": 0
+    },
+    {
+      "view": "front",
+      "seed": 29,
+      "brightClassificationDifferences": 8,
+      "darkClassificationDifferences": 3
+    },
+    {
+      "view": "oblique",
+      "seed": 11,
+      "brightClassificationDifferences": 4,
+      "darkClassificationDifferences": 3
+    },
+    {
+      "view": "oblique",
+      "seed": 29,
+      "brightClassificationDifferences": 4,
+      "darkClassificationDifferences": 3
+    }
+  ]
+}

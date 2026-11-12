@@ -1,0 +1,14 @@
+{
+  "include": [
+    "analyze.py",
+    "background_contract.py",
+    "interior_components.py",
+    "analysis.json",
+    "background-contract.json",
+    "interior-components.json",
+    "REPORT.md",
+    "artifact-hashes.json",
+    "independent-review.json"
+  ],
+  "exclude": "All original/candidate images, source geometry, winner arrays, pixel masks and coordinates. No raw geometry is produced in this directory."
+}

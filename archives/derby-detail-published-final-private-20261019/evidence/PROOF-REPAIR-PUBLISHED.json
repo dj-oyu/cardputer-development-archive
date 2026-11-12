@@ -1,0 +1,161 @@
+{
+  "baseline": {
+    "root": "/workspace/derby-detail-recovery",
+    "base": "0c52600fc34deafbadc53bc48e4fc98931e404e4",
+    "branch": "feature/derby-detail-baseline-20261019",
+    "pr": 21,
+    "previous_remote_commit": "9b9e9ae46c08a6597f871419b280874d5e09033c",
+    "previous_tree": "fe90d7e2e78e680423f40131830071af99944225",
+    "local_head": "c90ee61b392de779e1438d2674087e7ccd9e1824",
+    "tree": "7753c5c8919ee36c24080ce08102438a285da6f2",
+    "original_clean_exit_candidate": "64a13d3eda0b205cd560f4791c8211b2c458de01",
+    "remote_commit": "37af4225ad329aac4c5e79c880d7d69760b770be",
+    "remote_git_commit": {
+      "sha": "37af4225ad329aac4c5e79c880d7d69760b770be",
+      "node_id": "C_kwDOUPhoVdoAKDM3YWY0MjI1YWQzMjlhYWM0YzVlNzljODgwZDdkNjk3NjBiNzcwYmU",
+      "url": "https://api.github.com/repos/dj-oyu/cardputer-adv-pocketjs/git/commits/37af4225ad329aac4c5e79c880d7d69760b770be",
+      "html_url": "https://github.com/dj-oyu/cardputer-adv-pocketjs/commit/37af4225ad329aac4c5e79c880d7d69760b770be",
+      "author": {
+        "name": "dj-oyu",
+        "email": "68707227+dj-oyu@users.noreply.github.com",
+        "date": "2026-10-19T22:01:33Z"
+      },
+      "committer": {
+        "name": "dj-oyu",
+        "email": "68707227+dj-oyu@users.noreply.github.com",
+        "date": "2026-10-19T22:01:33Z"
+      },
+      "tree": {
+        "sha": "7753c5c8919ee36c24080ce08102438a285da6f2",
+        "url": "https://api.github.com/repos/dj-oyu/cardputer-adv-pocketjs/git/trees/7753c5c8919ee36c24080ce08102438a285da6f2"
+      },
+      "message": "fix(derby): bind owner exit symbols to detailed build mode",
+      "parents": [
+        {
+          "sha": "9b9e9ae46c08a6597f871419b280874d5e09033c",
+          "url": "https://api.github.com/repos/dj-oyu/cardputer-adv-pocketjs/git/commits/9b9e9ae46c08a6597f871419b280874d5e09033c",
+          "html_url": "https://github.com/dj-oyu/cardputer-adv-pocketjs/commit/9b9e9ae46c08a6597f871419b280874d5e09033c"
+        }
+      ],
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "ref_updated": true,
+    "published_local_head": "37af4225ad329aac4c5e79c880d7d69760b770be",
+    "published_local_branch": "feature/derby-detail-baseline-20261019",
+    "local_candidate_checkpoint": "checkpoint/derby-detail-baseline-local-proof-repair-20261019",
+    "remote_commit_raw_sha256": "3e9bf355aedce1ebdfb6c44b653bbad91e01dce3ad13010ed5695a784c3a7fd2",
+    "pr_body": "固定120 contextsを3回再生するDERBY診断に、JS・procedural VM・描画・同期I/Oの詳細内訳を追加します。計測完了後の `pocket.app.exit()` が次のguest frameをinterruptし、APP ERRORになる終了経路も修正します。\n\n`0c52600fc34deafbadc53bc48e4fc98931e404e4` からの比較版です。nativeとbatchは独立版です。コードは仕様から再構成したもので、以前の未回収WIPと同一とは主張しません。\n\n- 26 elapsed stagesと13 eventを固定サイズで集計。owner task限定、ISRはscope stackに触れません。elapsedはpreemptionとwaitを含み、bytesは論理量です。\n- 詳細OFFの生成JSと主要Cの動作を保持。固定seed/camera、390→510の120 contexts、3 dependent replays、8 step/frameのtail、250ms guest watchdogと180秒sessionを維持します。\n- 最後のguest returnが成功し、DONE・exit要求・queueなし・stop要求なしを確認したownerが既存teardownへ進みます。期限超過は即timeoutにし、次turnの再armで成功扱いにしません。\n- ownerだけが一度 `DERBY_DETAIL_EXIT` を出し、strict parserはEND→EXIT→STOP→HOMEを要求します。正しいtagのESP-IDF markerに対応し、InternalError・watchdog・stop-hook失敗の拒否は維持します。最適化は追加していません。\n\nValidation: ローカルASan/UBSan・O2の3版ON/OFF計12実行、36 dependent windowsでwork/race/描画hash一致。owner lifecycle試験、38 parser負例、独立レビュー、Xtensa syntax18件/object6件も合格。これらはtarget速度や独立試行の証明ではありません。\n\nExact published head: `37af4225ad329aac4c5e79c880d7d69760b770be`。このheadのCI 9/9件が成功しました。3版合計29/29件で、詳細ON/OFF target link/mode proof全6件、ASan/UBSan・O2・m32 host検証を含みます。以前のheadのCI結果を流用しません。\n\n実機受入は保留です。以前のbaseline診断headのEND後exceptionを不合格のまま保持し、この修正で遡及的にPASSへ変更しません。新headのsource取得・flash・実機計測、main mergeは行っていません。実機生ログは公開しません。\n\nELF境界検査も実際の追加APIに合わせ、`df_detail_exit_record` を詳細ONで必須、OFFで禁止にしました。欠落・未知symbol・mode混在の拒否を維持しています。"
+  },
+  "native": {
+    "root": "/workspace/derby-detail-native",
+    "base": "44f9c56121b5aab4fb2eca0fcf9fbe54d833a276",
+    "branch": "feature/derby-detail-native-20261019",
+    "pr": 22,
+    "previous_remote_commit": "0e3a457f0bd1897ff147954104735a20b7735e52",
+    "previous_tree": "6648060e994f1f240a15db8a1f7e8fae1286bbf8",
+    "local_head": "3d861298f12c4aaf01ac520e0a795231e3135c1d",
+    "tree": "24f0575743c7de7d4873c531221db6e1fcf1f14f",
+    "original_clean_exit_candidate": "2b82842efd6762130a920600f3fb7f67aa57fd9a",
+    "remote_commit": "92e70b7fbb2c15d99734a518096dffdf046d2ae3",
+    "remote_git_commit": {
+      "sha": "92e70b7fbb2c15d99734a518096dffdf046d2ae3",
+      "node_id": "C_kwDOUPhoVdoAKDkyZTcwYjdmYmIyYzE1ZDk5NzM0YTUxODA5NmRmZmRmMDQ2ZDJhZTM",
+      "url": "https://api.github.com/repos/dj-oyu/cardputer-adv-pocketjs/git/commits/92e70b7fbb2c15d99734a518096dffdf046d2ae3",
+      "html_url": "https://github.com/dj-oyu/cardputer-adv-pocketjs/commit/92e70b7fbb2c15d99734a518096dffdf046d2ae3",
+      "author": {
+        "name": "dj-oyu",
+        "email": "68707227+dj-oyu@users.noreply.github.com",
+        "date": "2026-10-19T22:01:40Z"
+      },
+      "committer": {
+        "name": "dj-oyu",
+        "email": "68707227+dj-oyu@users.noreply.github.com",
+        "date": "2026-10-19T22:01:40Z"
+      },
+      "tree": {
+        "sha": "24f0575743c7de7d4873c531221db6e1fcf1f14f",
+        "url": "https://api.github.com/repos/dj-oyu/cardputer-adv-pocketjs/git/trees/24f0575743c7de7d4873c531221db6e1fcf1f14f"
+      },
+      "message": "fix(derby): bind owner exit symbols to detailed build mode",
+      "parents": [
+        {
+          "sha": "0e3a457f0bd1897ff147954104735a20b7735e52",
+          "url": "https://api.github.com/repos/dj-oyu/cardputer-adv-pocketjs/git/commits/0e3a457f0bd1897ff147954104735a20b7735e52",
+          "html_url": "https://github.com/dj-oyu/cardputer-adv-pocketjs/commit/0e3a457f0bd1897ff147954104735a20b7735e52"
+        }
+      ],
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "ref_updated": true,
+    "published_local_head": "92e70b7fbb2c15d99734a518096dffdf046d2ae3",
+    "published_local_branch": "feature/derby-detail-native-20261019",
+    "local_candidate_checkpoint": "checkpoint/derby-detail-native-local-proof-repair-20261019",
+    "remote_commit_raw_sha256": "71b71c1293a8be897bf6b60b6db8cb57dce63b08da8b0e17f9d9d0d559566f10",
+    "pr_body": "固定120 contextsを3回再生するDERBY診断に、JS・procedural VM・描画・同期I/Oの詳細内訳を追加します。計測完了後の `pocket.app.exit()` が次のguest frameをinterruptし、APP ERRORになる終了経路も修正します。\n\n`44f9c56121b5aab4fb2eca0fcf9fbe54d833a276` からの比較版です。nativeとbatchは独立版です。コードは仕様から再構成したもので、以前の未回収WIPと同一とは主張しません。\n\n- 26 elapsed stagesと13 eventを固定サイズで集計。owner task限定、ISRはscope stackに触れません。elapsedはpreemptionとwaitを含み、bytesは論理量です。\n- 詳細OFFの生成JSと主要Cの動作を保持。固定seed/camera、390→510の120 contexts、3 dependent replays、8 step/frameのtail、250ms guest watchdogと180秒sessionを維持します。\n- 最後のguest returnが成功し、DONE・exit要求・queueなし・stop要求なしを確認したownerが既存teardownへ進みます。期限超過は即timeoutにし、次turnの再armで成功扱いにしません。\n- ownerだけが一度 `DERBY_DETAIL_EXIT` を出し、strict parserはEND→EXIT→STOP→HOMEを要求します。正しいtagのESP-IDF markerに対応し、InternalError・watchdog・stop-hook失敗の拒否は維持します。最適化は追加していません。\n\nValidation: ローカルASan/UBSan・O2の3版ON/OFF計12実行、36 dependent windowsでwork/race/描画hash一致。owner lifecycle試験、38 parser負例、独立レビュー、Xtensa syntax18件/object6件も合格。これらはtarget速度や独立試行の証明ではありません。\n\nExact published head: `92e70b7fbb2c15d99734a518096dffdf046d2ae3`。このheadのCI 9/9件が成功しました。3版合計29/29件で、詳細ON/OFF target link/mode proof全6件、ASan/UBSan・O2・m32 host検証を含みます。以前のheadのCI結果を流用しません。\n\n実機受入は保留です。以前のbaseline診断headのEND後exceptionを不合格のまま保持し、この修正で遡及的にPASSへ変更しません。新headのsource取得・flash・実機計測、main mergeは行っていません。実機生ログは公開しません。\n\nELF境界検査も実際の追加APIに合わせ、`df_detail_exit_record` を詳細ONで必須、OFFで禁止にしました。欠落・未知symbol・mode混在の拒否を維持しています。"
+  },
+  "batch": {
+    "root": "/workspace/derby-detail-batch",
+    "base": "3a641d4d996938339b44fe735aba876ad031b3a2",
+    "branch": "feature/derby-detail-batch-20261019",
+    "pr": 23,
+    "previous_remote_commit": "efb9aa4ee71970ded23c80f8a4bc3eb375ea84fb",
+    "previous_tree": "020c8b038f7876adc458715f18552e065acc1dbc",
+    "local_head": "826c74a1676261fa9a086271678e61a90d0b88af",
+    "tree": "63bf0b2ee03168230de588f2a038e3e694b1d4d4",
+    "original_clean_exit_candidate": "8b4923614bc0d57909fcc32e225997de1cce628b",
+    "remote_commit": "ea64b0ec9c176f852c853cb10142581ee527d7fc",
+    "remote_git_commit": {
+      "sha": "ea64b0ec9c176f852c853cb10142581ee527d7fc",
+      "node_id": "C_kwDOUPhoVdoAKGVhNjRiMGVjOWMxNzZmODUyYzg1M2NiMTAxNDI1ODFlZTUyN2Q3ZmM",
+      "url": "https://api.github.com/repos/dj-oyu/cardputer-adv-pocketjs/git/commits/ea64b0ec9c176f852c853cb10142581ee527d7fc",
+      "html_url": "https://github.com/dj-oyu/cardputer-adv-pocketjs/commit/ea64b0ec9c176f852c853cb10142581ee527d7fc",
+      "author": {
+        "name": "dj-oyu",
+        "email": "68707227+dj-oyu@users.noreply.github.com",
+        "date": "2026-10-19T22:01:46Z"
+      },
+      "committer": {
+        "name": "dj-oyu",
+        "email": "68707227+dj-oyu@users.noreply.github.com",
+        "date": "2026-10-19T22:01:46Z"
+      },
+      "tree": {
+        "sha": "63bf0b2ee03168230de588f2a038e3e694b1d4d4",
+        "url": "https://api.github.com/repos/dj-oyu/cardputer-adv-pocketjs/git/trees/63bf0b2ee03168230de588f2a038e3e694b1d4d4"
+      },
+      "message": "fix(derby): bind owner exit symbols to detailed build mode",
+      "parents": [
+        {
+          "sha": "efb9aa4ee71970ded23c80f8a4bc3eb375ea84fb",
+          "url": "https://api.github.com/repos/dj-oyu/cardputer-adv-pocketjs/git/commits/efb9aa4ee71970ded23c80f8a4bc3eb375ea84fb",
+          "html_url": "https://github.com/dj-oyu/cardputer-adv-pocketjs/commit/efb9aa4ee71970ded23c80f8a4bc3eb375ea84fb"
+        }
+      ],
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "ref_updated": true,
+    "published_local_head": "ea64b0ec9c176f852c853cb10142581ee527d7fc",
+    "published_local_branch": "feature/derby-detail-batch-20261019",
+    "local_candidate_checkpoint": "checkpoint/derby-detail-batch-local-proof-repair-20261019",
+    "remote_commit_raw_sha256": "9a6b1d9460697fb060e46dafcaa2641980ca91d5c5fbee201705e32467ed3b82",
+    "pr_body": "固定120 contextsを3回再生するDERBY診断に、JS・procedural VM・描画・同期I/Oの詳細内訳を追加します。計測完了後の `pocket.app.exit()` が次のguest frameをinterruptし、APP ERRORになる終了経路も修正します。\n\n`3a641d4d996938339b44fe735aba876ad031b3a2` からの比較版です。nativeとbatchは独立版です。コードは仕様から再構成したもので、以前の未回収WIPと同一とは主張しません。\n\n- 26 elapsed stagesと13 eventを固定サイズで集計。owner task限定、ISRはscope stackに触れません。elapsedはpreemptionとwaitを含み、bytesは論理量です。\n- 詳細OFFの生成JSと主要Cの動作を保持。固定seed/camera、390→510の120 contexts、3 dependent replays、8 step/frameのtail、250ms guest watchdogと180秒sessionを維持します。\n- 最後のguest returnが成功し、DONE・exit要求・queueなし・stop要求なしを確認したownerが既存teardownへ進みます。期限超過は即timeoutにし、次turnの再armで成功扱いにしません。\n- ownerだけが一度 `DERBY_DETAIL_EXIT` を出し、strict parserはEND→EXIT→STOP→HOMEを要求します。正しいtagのESP-IDF markerに対応し、InternalError・watchdog・stop-hook失敗の拒否は維持します。最適化は追加していません。\n\nValidation: ローカルASan/UBSan・O2の3版ON/OFF計12実行、36 dependent windowsでwork/race/描画hash一致。owner lifecycle試験、38 parser負例、独立レビュー、Xtensa syntax18件/object6件も合格。これらはtarget速度や独立試行の証明ではありません。\n\nExact published head: `ea64b0ec9c176f852c853cb10142581ee527d7fc`。このheadのCI 11/11件が成功しました。3版合計29/29件で、詳細ON/OFF target link/mode proof全6件、ASan/UBSan・O2・m32 host検証を含みます。以前のheadのCI結果を流用しません。\n\n実機受入は保留です。以前のbaseline診断headのEND後exceptionを不合格のまま保持し、この修正で遡及的にPASSへ変更しません。新headのsource取得・flash・実機計測、main mergeは行っていません。実機生ログは公開しません。\n\nELF境界検査も実際の追加APIに合わせ、`df_detail_exit_record` を詳細ONで必須、OFFで禁止にしました。欠落・未知symbol・mode混在の拒否を維持しています。"
+  }
+}

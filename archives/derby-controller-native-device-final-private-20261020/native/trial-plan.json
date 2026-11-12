@@ -1,0 +1,53 @@
+{
+  "request": {
+    "job_id": "derby-controller-native-fixed-3fafcadb-20261020",
+    "test": "derby_fixed_workload",
+    "session": "[CAPABILITY OMITTED]"
+  },
+  "result": {
+    "ok": true,
+    "plan_hash": "2b4f8297a27e537147985e4f3f3b573d76ada47d93319725bc8adfa660d1df2c",
+    "plan": {
+      "version": 1,
+      "broker_epoch": "51bfd752bc2a460db00a835c45250282",
+      "session_id": "be152030d0c74e729f17ce64a6b463d5",
+      "device": "configured-cardputer",
+      "backend": "serial",
+      "job_id": "derby-controller-native-fixed-3fafcadb-20261020",
+      "test": "derby_fixed_workload",
+      "stages": [
+        "serial_open",
+        "derby_fixed_workload",
+        "serial_close"
+      ],
+      "port": "COM3",
+      "device_fingerprint": "550115278762c26269354dc573729668a6647f42c7c8ffc9eb56967b958e51e5",
+      "protocol": "pocketjs-derby-fixed-v2",
+      "expected_firmware_sha256": "06b1c1c8aab37eb78e437304ea5fbe652df339bc73408ba7f9d5f6f9eb2c298d",
+      "firmware_verification": "configured_expected_hash_only",
+      "observe_seconds": null,
+      "effects": [
+        "Operator verifies HOME and the exact fixed-workload firmware; no physical input",
+        "Opens/closes the owned serial port; control lines may reset the device",
+        "Fixed Esc/a/u x16/d x12/e navigation launches local.derby once",
+        "Collects at most 64 KiB for 200 seconds with 1024-byte lines and no retry",
+        "Requires three ordered repetitions, END, matching owner EXIT, APP_STOPPED and HOME_READY",
+        "Stores raw transport privately for the requesting principal with its SHA-256",
+        "Host checks transport and known work; device quality fields are not a receipt",
+        "Cancellation or lease loss stops I/O; no automatic reopen or flash operation"
+      ],
+      "fixed_workload": {
+        "fixture": "oval-pan8-390-510-v1",
+        "parser_commit": "4d60de5e82193975596bc23981d3189e2e6bf78d",
+        "max_seconds": 200,
+        "max_bytes": 65536,
+        "max_line_bytes": 1024,
+        "repetitions": 3,
+        "retry": 0,
+        "terminal_contract": "end_owner_exit_stop_home_v2",
+        "owner_exit_wire_commit": "9b9e9ae46c08a6597f871419b280874d5e09033c"
+      }
+    },
+    "approval_required": false
+  }
+}

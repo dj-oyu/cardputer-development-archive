@@ -1,0 +1,44 @@
+{
+  "scope": "Host linked ELF whole-program sections; includes diagnostic adapters and strings, not device fit or isolated kernel size",
+  "baseline": "actual-A2/native-render",
+  "candidate": "actual-002/native-render",
+  "sections": {
+    "text": {
+      "baseline": 133225,
+      "candidate": 167017,
+      "delta": 33792
+    },
+    "rodata": {
+      "baseline": 15040,
+      "candidate": 24288,
+      "delta": 9248
+    },
+    "dataRelRo": {
+      "baseline": 200,
+      "candidate": 584,
+      "delta": 384
+    },
+    "data": {
+      "baseline": 16,
+      "candidate": 16,
+      "delta": 0
+    },
+    "bss": {
+      "baseline": 16,
+      "candidate": 16,
+      "delta": 0
+    }
+  },
+  "namedNewReadOnlyTables": {
+    "fixedCameraMaterial20Rows": 4960,
+    "coreLimits2Views2Modes20Categories": 640,
+    "geometryMaskFingerprints": 16
+  },
+  "namedNewTablesTotal": 5616,
+  "oldIdentityAndPreflightTablesUnchanged": true,
+  "diagnosticMainStackBytes": 86640,
+  "oldDiagnosticMainStackBytes": 81776,
+  "diagnosticMainStackDelta": 4864,
+  "mainStackNotIncludedIn4096NamedCallbackCap": true,
+  "underlyingCompilerAndPlatform": "same O2 C11 flags, 64-bit host; ELF section inspection and stack-usage output"
+}

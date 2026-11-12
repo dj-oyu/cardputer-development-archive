@@ -1,0 +1,98 @@
+[
+  {
+    "view": "front",
+    "case": "baseline",
+    "selectedPoints": 56,
+    "oldAllBuffersAndMetadataExact": true,
+    "allOriginal16PreflightExact": true,
+    "complete": true,
+    "completeQueries": 280,
+    "failedQueries": 0,
+    "unattemptedQueries": 0,
+    "directUsed": [
+      6735,
+      487085,
+      142290
+    ],
+    "transportUsed": [
+      541620,
+      42822628,
+      14239610
+    ],
+    "wallSecondsIncludingControlRenderDumpAndReplay": 9.818274525998277,
+    "resultsFile": "replay-001/native-front-baseline-point-results.json",
+    "resultsSHA256": "9183027816cd47ab11f9afc06a70b327437d7f224638b527a568c7f2aafc9f7e"
+  },
+  {
+    "view": "front",
+    "case": "direction",
+    "selectedPoints": 56,
+    "oldAllBuffersAndMetadataExact": true,
+    "allOriginal16PreflightExact": true,
+    "complete": true,
+    "completeQueries": 280,
+    "failedQueries": 0,
+    "unattemptedQueries": 0,
+    "directUsed": [
+      6475,
+      497115,
+      144205
+    ],
+    "transportUsed": [
+      550996,
+      43181275,
+      14445409
+    ],
+    "wallSecondsIncludingControlRenderDumpAndReplay": 9.930442228003812,
+    "resultsFile": "replay-001/native-front-direction-point-results.json",
+    "resultsSHA256": "b148af1d754ca770641824f226ab3dbc527b43f585006ba08bba47357c398d54"
+  },
+  {
+    "view": "oblique",
+    "case": "baseline",
+    "selectedPoints": 56,
+    "oldAllBuffersAndMetadataExact": true,
+    "allOriginal16PreflightExact": true,
+    "complete": true,
+    "completeQueries": 280,
+    "failedQueries": 0,
+    "unattemptedQueries": 0,
+    "directUsed": [
+      7050,
+      475460,
+      139965
+    ],
+    "transportUsed": [
+      599773,
+      45801988,
+      15182393
+    ],
+    "wallSecondsIncludingControlRenderDumpAndReplay": 9.66352759199799,
+    "resultsFile": "replay-001/native-oblique-baseline-point-results.json",
+    "resultsSHA256": "4855ab5ff8ac3cf9cf83f26aaa4d8310aa9309669f71d9e91f6667495f188954"
+  },
+  {
+    "view": "oblique",
+    "case": "direction",
+    "selectedPoints": 56,
+    "oldAllBuffersAndMetadataExact": true,
+    "allOriginal16PreflightExact": true,
+    "complete": true,
+    "completeQueries": 280,
+    "failedQueries": 0,
+    "unattemptedQueries": 0,
+    "directUsed": [
+      5695,
+      370940,
+      113940
+    ],
+    "transportUsed": [
+      604408,
+      46284576,
+      15435579
+    ],
+    "wallSecondsIncludingControlRenderDumpAndReplay": 9.800544222998724,
+    "resultsFile": "replay-001/native-oblique-direction-point-results.json",
+    "resultsSHA256": "ec0e74f2439ecf6352388bfb9fd86e33f0dba24d155ae45cade532c6297434eb"
+  }
+]

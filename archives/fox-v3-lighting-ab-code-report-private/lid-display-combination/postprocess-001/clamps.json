@@ -1,0 +1,1002 @@
+[
+  {
+    "view": "front",
+    "case": "baseline",
+    "arm": "point-off",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0
+  },
+  {
+    "view": "front",
+    "case": "baseline",
+    "arm": "point-on",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0
+  },
+  {
+    "view": "front",
+    "case": "baseline",
+    "arm": "filter3-off",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5353,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27047,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0
+  },
+  {
+    "view": "front",
+    "case": "baseline",
+    "arm": "filter3-on",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5353,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27047,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0
+  },
+  {
+    "view": "front",
+    "case": "direction",
+    "arm": "point-off",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0
+  },
+  {
+    "view": "front",
+    "case": "direction",
+    "arm": "point-on",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0
+  },
+  {
+    "view": "front",
+    "case": "direction",
+    "arm": "filter3-off",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5353,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27047,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0
+  },
+  {
+    "view": "front",
+    "case": "direction",
+    "arm": "filter3-on",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5353,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27047,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0
+  },
+  {
+    "view": "front",
+    "case": "intensity",
+    "arm": "point-off",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0
+  },
+  {
+    "view": "front",
+    "case": "intensity",
+    "arm": "point-on",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0
+  },
+  {
+    "view": "front",
+    "case": "intensity",
+    "arm": "filter3-off",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5353,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27047,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0
+  },
+  {
+    "view": "front",
+    "case": "intensity",
+    "arm": "filter3-on",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5353,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27047,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0
+  },
+  {
+    "view": "front",
+    "case": "ambient",
+    "arm": "point-off",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0
+  },
+  {
+    "view": "front",
+    "case": "ambient",
+    "arm": "point-on",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0
+  },
+  {
+    "view": "front",
+    "case": "ambient",
+    "arm": "filter3-off",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5353,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27047,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0
+  },
+  {
+    "view": "front",
+    "case": "ambient",
+    "arm": "filter3-on",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5353,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27047,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0
+  },
+  {
+    "view": "front",
+    "case": "albedo",
+    "arm": "point-off",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0
+  },
+  {
+    "view": "front",
+    "case": "albedo",
+    "arm": "point-on",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0
+  },
+  {
+    "view": "front",
+    "case": "albedo",
+    "arm": "filter3-off",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5353,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27047,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0
+  },
+  {
+    "view": "front",
+    "case": "albedo",
+    "arm": "filter3-on",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5353,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27047,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0
+  },
+  {
+    "view": "oblique",
+    "case": "baseline",
+    "arm": "point-off",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0
+  },
+  {
+    "view": "oblique",
+    "case": "baseline",
+    "arm": "point-on",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0
+  },
+  {
+    "view": "oblique",
+    "case": "baseline",
+    "arm": "filter3-off",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5900,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 26500,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0
+  },
+  {
+    "view": "oblique",
+    "case": "baseline",
+    "arm": "filter3-on",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5900,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 26500,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0
+  },
+  {
+    "view": "oblique",
+    "case": "direction",
+    "arm": "point-off",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0
+  },
+  {
+    "view": "oblique",
+    "case": "direction",
+    "arm": "point-on",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0
+  },
+  {
+    "view": "oblique",
+    "case": "direction",
+    "arm": "filter3-off",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5900,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 26500,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0
+  },
+  {
+    "view": "oblique",
+    "case": "direction",
+    "arm": "filter3-on",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5900,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 26500,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0
+  },
+  {
+    "view": "oblique",
+    "case": "intensity",
+    "arm": "point-off",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0
+  },
+  {
+    "view": "oblique",
+    "case": "intensity",
+    "arm": "point-on",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0
+  },
+  {
+    "view": "oblique",
+    "case": "intensity",
+    "arm": "filter3-off",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5900,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 26500,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0
+  },
+  {
+    "view": "oblique",
+    "case": "intensity",
+    "arm": "filter3-on",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5900,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 26500,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0
+  },
+  {
+    "view": "oblique",
+    "case": "ambient",
+    "arm": "point-off",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0
+  },
+  {
+    "view": "oblique",
+    "case": "ambient",
+    "arm": "point-on",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0
+  },
+  {
+    "view": "oblique",
+    "case": "ambient",
+    "arm": "filter3-off",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5900,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 26500,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0
+  },
+  {
+    "view": "oblique",
+    "case": "ambient",
+    "arm": "filter3-on",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5900,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 26500,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0
+  },
+  {
+    "view": "oblique",
+    "case": "albedo",
+    "arm": "point-off",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0
+  },
+  {
+    "view": "oblique",
+    "case": "albedo",
+    "arm": "point-on",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0
+  },
+  {
+    "view": "oblique",
+    "case": "albedo",
+    "arm": "filter3-off",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5900,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 26500,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0
+  },
+  {
+    "view": "oblique",
+    "case": "albedo",
+    "arm": "filter3-on",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5900,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 26500,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0
+  }
+]

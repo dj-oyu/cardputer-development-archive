@@ -1,0 +1,33 @@
+{
+  "sourceReportSHA256": "0a5cdf0a7e4cf5b26c78aabdd3481ff87070b73ed331fdb6f778016a850c9283",
+  "originalContract": "provisional explicit all-pixel 4neighbor objectIDs, nohit and outside sentinel -1, no source image/error read",
+  "finalInterpretation": "Originally provisional rule matches final PLAN-v2/v3 and exact actual all20 target masks; -1 in signed audit is the nohit/outside sentinel equivalent of uint16 65535. Geometry-only source-object comparison, no pixel arrays or geometry retained here.",
+  "views": {
+    "front": {
+      "inputSHA256": "a32847182478841121423a31588cf514bc2581c29a2bc9e618679e02cd853b1b",
+      "targets": 2385,
+      "coveredTarget": 1919,
+      "nohitTarget": 466,
+      "nonTargetPixels": 30015,
+      "nonTargetCovered": 2779,
+      "targetDueToOutOfFrameNeighbor": 0,
+      "partitionTargets": 2548,
+      "sourceOnlyTargets": 112,
+      "partitionOnlyTargets": 275,
+      "targetMaskSHA256": "eebd4a3432074c6e6d84cf7e6a03b34c7dbd9d4309bd3fbd003b7caa47eeb4f6"
+    },
+    "oblique": {
+      "inputSHA256": "e39244cab2ff1c0e119f6fa13a8f49509d5dd8f482db453ea8e6aee7fe61e8cf",
+      "targets": 2391,
+      "coveredTarget": 1851,
+      "nohitTarget": 540,
+      "nonTargetPixels": 30009,
+      "nonTargetCovered": 3306,
+      "targetDueToOutOfFrameNeighbor": 0,
+      "partitionTargets": 2688,
+      "sourceOnlyTargets": 116,
+      "partitionOnlyTargets": 413,
+      "targetMaskSHA256": "a7b9fb46c60810bb1047503c80b15e7e0cc84d546faadc3f8a2af988bf8550a0"
+    }
+  }
+}

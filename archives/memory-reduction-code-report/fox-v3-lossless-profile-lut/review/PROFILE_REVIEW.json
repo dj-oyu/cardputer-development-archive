@@ -1,0 +1,95 @@
+{
+  "pins_checked": 87,
+  "encoded_header_exact": true,
+  "encoded_bytes": 445248,
+  "synthetic_count": 460224,
+  "all_inputs_conversion_and_order_exact": true,
+  "all_inputs_sha256": "1edc7ad768ecf4e3a93748bc388ed38985a7dfd3a9f12d38f325ffd877fbafc6",
+  "producer_benchmark_recomputed": {
+    "old_ns": 133.45211791992188,
+    "new_ns": 3014.3873596191406,
+    "ratio": 22.587782094458237,
+    "trials": 7,
+    "paired_checksums": true
+  },
+  "original_manifest_pairs_checked": 40,
+  "status": "PASS_INDEPENDENT_STANDALONE_PROFILE_REPLAY",
+  "independent_replay": {
+    "corpus_samples": 1756224,
+    "synthetic_samples": 460224,
+    "retained_pixels": 1296000,
+    "additional_direct_f64_replay_pixels": 1296000,
+    "retained_frames": 40,
+    "status_float_bits_and_nearest565": "EXACT",
+    "invalid_samples": 18,
+    "clamped_samples": 85388,
+    "forced_decoder_failures_output_atomic": 16,
+    "invalid_skips_decode": true
+  },
+  "host_O2_resources": {
+    "flags": "-O2 -fPIC -fno-fast-math -ffp-contract=off",
+    "old_text": 848,
+    "new_profile_text": 963,
+    "decoder_text": 1619,
+    "text_increase": 1734,
+    "old_direct_frame": 144,
+    "new_profile_frame": 192,
+    "fetch_frame": 240,
+    "channel_frame": 56,
+    "new_conservative_direct_chain": 488,
+    "chain_increase": 344,
+    "old_ro_sections": 1647866,
+    "new_profile_plus_decoder_ro_sections": 445380,
+    "ro_reduction": 1202486,
+    "old_eh_frame": 104,
+    "new_eh_frame": 312,
+    "no_mutable_static_bytes": true
+  },
+  "producer_other_runs": {
+    "O0": "Full1756224 exact per RESULTS-O0.json, source/replay logic inspected, not independently rerun here.",
+    "ASan_UBSan": "Full1756224 PASS per sanitizers.log; leak detection disabled for ptrace compatibility. Codec ASan/UBSan independently rerun separately."
+  },
+  "limitations": [
+    "Only lossless storage and standalone evaluator wiring verified; actual renderer callback/admission/scratch-lifetime/failure-publication wiring is not integrated.",
+    "Finite corpus and exhaustive node recovery do not claim all-floating-environment equivalence or improve official-transform approximation accuracy.",
+    "No physical render, source-image/model/reference-input rerun, target SDK/device build or target runtime/flash/cache timing measured.",
+    "Slowdown is profile-only host cost; never multiply overall renderer timing by this ratio.",
+    "Stack figures exclude libm/libc frames and require separate whole-renderer/target accounting."
+  ],
+  "sha256": {
+    "fox-v3-lossless-profile-lut/profile/candidate_profile.c": "f2e720fcb581a1558a000e27ef16e854d81ae7b945afdcd546fe75fb5ebe30f3",
+    "fox-v3-lossless-profile-lut/profile/private/profile_data.h": "faa75109ed2a318d6ae48d3f67ae300142e281a9fd6db54bf73f380a2c420ffa",
+    "fox-v3-lossless-profile-lut/profile/INPUTS.json": "5dbffba90bbf562e231e509d60d40e3856419ee578fe2257d7418a2070ef529c",
+    "fox-v3-lossless-profile-lut/profile/RESULTS-O2.json": "6f41a2e630bc7e88286f2c3ce27b0afe493774b600cf1b81f9dfe9c203f843c7",
+    "fox-v3-lossless-profile-lut/profile/RESULTS-O0.json": "e145aacebceff1b86f2643d416bd58baad46c15e3faa8d8d2d467db1ebece45e",
+    "fox-v3-lossless-profile-lut/profile/sanitizers.log": "efd10bf603b5df683ed83589387adb2c0ed9a2d0837231c5c2c9cb2d138329f8",
+    "fox-v3-lossless-profile-lut/profile/run_compare.py": "963c3563eb3237244008881dd023542fd853c1beb83616a4156b741637c29f84",
+    "fox-v3-lossless-profile-lut/review/profile_replay.c": "d1d6dc77827188bd9fc91a281ae9bfa392ccb0db20ed63fcaf31bd408d23e94d",
+    "fox-v3-lossless-profile-lut/review/profile_failure.c": "342daa5bce2ccff6ccfe335db87d599bf19a2d4c42c487f2fd17d4c93560b3ca",
+    "fox-v3-lossless-profile-lut/review/profile_replay.log": "bec140f2ea6fdada3419441700f6aeac15255be5ce9f53a1c886305a545d0723",
+    "fox-v3-lossless-profile-lut/review/profile_size.txt": "08a612f1119051edcc5d814403f6aa5e6af641fdbbaec54e5fec62d6523a5879",
+    "fox-v3-lossless-profile-lut/profile/BENCHMARK.json": "c4f49710ec9c8fc80f11a9d56b3fd2c31900756a5623f7146bdc177544805404",
+    "fox-v3-lossless-profile-lut/profile/benchmark.py": "3c3898ecd72cfce8850de55ddd2e7d0147ebc497777972d5bb213cd37196cf03",
+    "fox-v3-lossless-profile-lut/profile/run_sanitizers.sh": "a78526001dbeb46e83c1571fe5e547a65fe0cd9cf3c6ec5231a7a759e02c57b7",
+    "fox-v3-lossless-profile-lut/profile/PROFILE_FREEZE.json": "d17bca397047891773da8a2fbb8ff6648d387f6d7642390b41440a56af1c72cb"
+  },
+  "expanded_benchmark_recomputed": {
+    "seededLogHDR": {
+      "median_old_ns": 118.12120056152344,
+      "median_new_ns": 2926.8696212768555,
+      "ratio": 24.77852923406747,
+      "input_hash_verified": true,
+      "paired_checksums_verified": true,
+      "nine_AB_BA_trials_verified": true
+    },
+    "retained40SeededPixels": {
+      "median_old_ns": 118.10882568359375,
+      "median_new_ns": 9976.214065551758,
+      "ratio": 84.46628783083001,
+      "input_hash_verified": true,
+      "paired_checksums_verified": true,
+      "nine_AB_BA_trials_verified": true
+    }
+  },
+  "producer_freeze_file_hashes_verified": 30
+}

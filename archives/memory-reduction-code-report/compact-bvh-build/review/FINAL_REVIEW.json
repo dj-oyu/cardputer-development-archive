@@ -1,0 +1,50 @@
+{
+  "status": "PASS_RETAINED_OUTPUT_INDEPENDENT_AUDIT",
+  "rerenders": 0,
+  "comparisons": {
+    "frames": 40,
+    "raw": 200,
+    "reports": 280,
+    "forwardReverse": 80
+  },
+  "allNonTimingReportsExact": true,
+  "timingExceptionsOnly": {
+    ".json": [
+      "transportBuildNs",
+      "visibilityBuildNs",
+      "appendNs",
+      "evaluateNs",
+      "hostRenderNsFirstFrame"
+    ],
+    ".background.json": [
+      "backgroundBuildNs"
+    ],
+    ".row.json": [
+      "backgroundBuildNs"
+    ]
+  },
+  "allSourceBinaryGateBaselineAndRuntimePinsVerified": true,
+  "sourceFreezeSHA256": "6161fd64a0ae4d2018592432264dbd6a6e75ddbb5f69fed93f7e8b4fc809fff9",
+  "candidateSourceSHA256": "8eb08314bd75441c1f77699a7b56a30a71986d8112dec0cf39e56be770dd42f8",
+  "sourceFiles": 108,
+  "compiledInputFiles": 68,
+  "baselinePins": 1019,
+  "uniqueRuntimeInputPins": 497,
+  "maximumObservedAA": 7804336,
+  "maximumProducerWork": 441776,
+  "limitsAndRuntimeQuerySourceUnchanged": true,
+  "memory": {
+    "baselineNamedPeak": 593184,
+    "candidateNamedPeak": 568880,
+    "saved": 24304,
+    "visibilityBuild": 505824,
+    "transportBuild": 520152,
+    "render": 568880,
+    "builderTemporary": 37584,
+    "builderLocalLargestAllocation": 65472,
+    "persistentVisibility": 106104
+  },
+  "memoryQualification": "Named conservative host accounting only; excludes allocator/libc/libm/unnamed constants and observer buffers. No device fit or speedup claim.",
+  "packagingWarning": "Existing PUBLIC_CODE_REPORT_ALLOWLIST includes INPUT_FREEZE despite exclusion wording. Use narrow review/AGGREGATE_CODE_ALLOWLIST.json instead; public persistence remains parent-controlled.",
+  "auditScriptSHA256": "8ae9b88fa2183f32d9f40c3b08040180caef27bc01fed86d8c8963496531e256"
+}

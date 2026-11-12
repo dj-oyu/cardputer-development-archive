@@ -1,0 +1,36 @@
+{
+  "status": "PASS_RUNNER_REVIEW_NOT_RENDER_AUTHORIZATION",
+  "runnerSHA256": "cceae99a25a04f53317f22b698d6ed9bdfa10e7cc3b57ece374b733f14b253b6",
+  "baselinePinsSHA256": "5a897e254c98873582afcdb78bef7edee302adf210d6a61063e2dfd496adc196",
+  "cases": 40,
+  "rawExact": [
+    ".u16le",
+    ".f32le",
+    ".snapshot",
+    ".targets.u8",
+    ".hdr.f64le"
+  ],
+  "reportExact": [
+    ".json",
+    ".aa.json",
+    ".floor.json",
+    ".background.json",
+    ".row.json",
+    ".floor-world.json",
+    ".hdr-observer.json"
+  ],
+  "onlyNontimingDifference": {
+    "arenaBytes64bit": [
+      81356,
+      81796
+    ]
+  },
+  "review": [
+    "Uses same completed baseline arm and order; source/reference inputs not modified",
+    "Fresh exclusive case prefixes, stdout pending until successful comparison, failed attempts retained",
+    "Pins checked before and after each run; required explicit reviewed gate hash and source/dependency/stack pins",
+    "Runtime model/camera/environment cloned from baseline command; inherited HONE variables removed",
+    "Forward/reverse exactness enforced on color/depth/targets/HDR after20 per arm",
+    "No render invocation performed by reviewer"
+  ]
+}

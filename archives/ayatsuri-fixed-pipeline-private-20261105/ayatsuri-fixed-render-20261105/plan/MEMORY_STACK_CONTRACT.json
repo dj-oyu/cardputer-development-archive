@@ -1,0 +1,15 @@
+{
+  "status": "UNCHANGED_RUNTIME_LAYOUT_NO_STACK_GROWTH",
+  "stackFilesExact": 16,
+  "stackFilesTotal": 16,
+  "growingOrNewFunctions": [],
+  "stackDeltaSHA256": "8574c697f391c3624e92f3aa1035a9fe49278269a1ffa551ea13b1d641c4c19b",
+  "originalMemoryLedgerSHA256": "a63c5d402acfe5a70b33589ef79192d853304082a6d9116d1c577db3782774f3",
+  "originalConstructionStackSHA256": "edc44cfbec144f75dcf351b5d5b754a4662517adb12aabac4e3f6a97f1272788",
+  "basis": "All runtime implementation source dependencies unchanged. Four generated data headers retain original struct types and array capacities; sizeof readonly AA rows+targets remains360 bytes. No runtime allocations, scratch buffers, observers or callbacks added. Every compiled function stack compared against original same-flags build; no growth or new function. Original named-stack/memory ceilings remain conservative. New Python metadata/canary comparison memory is host diagnostic process storage, not renderer scratch.",
+  "generatedHeaderReadonlyCapacity": "20 rows,3 initialized active rows,17 zero rows; original capacities retained",
+  "producerAndMemoryCapsUnchanged": true,
+  "newFullRenderObserver": false,
+  "diagnosticFullHDRBytes": 777600,
+  "diagnosticFullDepthBytes": 129600
+}

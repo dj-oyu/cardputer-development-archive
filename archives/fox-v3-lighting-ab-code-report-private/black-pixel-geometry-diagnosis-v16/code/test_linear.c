@@ -1,0 +1,12 @@
+#include "ayatsuri/ayatsuri_model.h"
+#include "ayatsuri/ayatsuri_shade.h"
+#include <assert.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main(int argc,char **argv){assert(argc==2);FILE*f=fopen(argv[1],"rb");assert(f);fseek(f,0,SEEK_END);size_t size=ftell(f);rewind(f);void*b=malloc(size);assert(b&&fread(b,1,size,f)==size);fclose(f);ayatsuri_model m;assert(ayatsuri_model_open(b,size,&m)==0);size_t n=ayatsuri_model_instance_bytes(&m);void*a=malloc(n);int owner=1,wrong=2;ayatsuri_model_instance i;assert(ayatsuri_model_instance_init(&m,a,n,&owner,1,&i)==0);assert(!i.linear_light);
+float cam[9]={-3.8f,-114,304,-15.2f,-69.16f,-6.84f,.740131579f,119.5f,67},light[6]={-3,-4.3f,4,1,.83f,.65f};assert(ayatsuri_model_instance_evaluate(&i,&owner,1,cam,light)==0);ayatsuri_model_instance old=i;
+assert(ayatsuri_model_instance_linear_light(&i,&owner,1,2)==AYATSURI_MODEL_INVALID);assert(!memcmp(&old,&i,sizeof i));assert(ayatsuri_model_instance_linear_light(&i,&wrong,1,1)==AYATSURI_MODEL_STATE);assert(!memcmp(&old,&i,sizeof i));assert(ayatsuri_model_instance_linear_light(&i,&owner,2,1)==AYATSURI_MODEL_STATE);assert(!memcmp(&old,&i,sizeof i));i.busy=true;assert(ayatsuri_model_instance_linear_light(&i,&owner,1,1)==AYATSURI_MODEL_BUSY);i.busy=false;
+assert(ayatsuri_model_instance_linear_light(&i,&owner,1,0)==0&&!memcmp(&old,&i,sizeof i));assert(ayatsuri_model_instance_linear_light(&i,&owner,1,1)==0&&i.linear_light&&!i.evaluated&&i.mutation_epoch==old.mutation_epoch+1);uint32_t cursor=0;ayatsuri_model_packet p;assert(ayatsuri_model_instance_next(&i,&owner,1,&cursor,&p)==AYATSURI_MODEL_STATE);assert(ayatsuri_model_instance_evaluate(&i,&owner,1,cam,light)==0);old=i;assert(ayatsuri_model_instance_linear_light(&i,&owner,1,1)==0&&!memcmp(&i,&old,sizeof i));assert(ayatsuri_model_instance_linear_light(&i,&owner,1,0)==0&&!i.evaluated);assert(ayatsuri_model_instance_evaluate(&i,&owner,1,cam,light)==0);assert(ayatsuri_model_instance_dispose(&i,&owner,1)==0);assert(ayatsuri_model_instance_linear_light(&i,&owner,1,1)==AYATSURI_MODEL_STATE);free(a);free(b);
+int16_t normal[3]={0,0,32767};float l[9]={0,0,1,0,0,1,1,1,1},mat[8]={1,0,0,1,0,1,1,1};ayatsuri_shade_basis basis;assert(ayatsuri_shade_prepare(l,&basis));for(unsigned c=0;c<65536;c++)assert(ayatsuri_shade_linear_sample(normal,c,255,l,mat,&basis)==c);
+printf("LINEAR_API_PASS owner generation busy invalid atomic cache no-op toggle dispose; 65536 ambient-only identity; sizeofInstance=%zu\n",sizeof(i));return 0;}

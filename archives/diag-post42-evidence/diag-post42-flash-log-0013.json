@@ -1,0 +1,506 @@
+{
+  "utc": "2026-10-18 23:26:27 UTC",
+  "logs": {
+    "ok": true,
+    "entries": [
+      {
+        "sequence": 164,
+        "text": "I (11265) wifi:wifi certification version: v7.0",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 165,
+        "text": "I (11266) wifi:config NVS flash: disabled",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 166,
+        "text": "I (11267) wifi:config nano formatting: disabled",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 167,
+        "text": "I (11269) wifi:Init data frame dynamic rx buffer num: 8",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 168,
+        "text": "I (11270) wifi:Init static rx mgmt buffer num: 5",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 169,
+        "text": "I (11271) wifi:Init management short buffer num: 8",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 170,
+        "text": "I (11272) wifi:Init dynamic tx buffer num: 8",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 171,
+        "text": "I (11273) wifi:Init static tx FG buffer num: 2",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 172,
+        "text": "I (11274) wifi:Init static rx buffer size: 1600",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 173,
+        "text": "I (11275) wifi:Init static rx buffer num: 4",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 174,
+        "text": "I (11276) wifi:Init dynamic rx buffer num: 8",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 175,
+        "text": "I (11278) wifi_init: accept mbox: 6",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 176,
+        "text": "I (11279) wifi_init: tcpip mbox: 16",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 177,
+        "text": "I (11281) wifi_init: udp mbox: 6",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 178,
+        "text": "I (11281) wifi_init: tcp mbox: 6",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 179,
+        "text": "I (11282) wifi_init: tcp tx win: 5760",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 180,
+        "text": "I (11283) wifi_init: tcp rx win: 5760",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 181,
+        "text": "I (11284) wifi_init: tcp mss: 1440",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 182,
+        "text": "I (11285) wifi: RADIO_INIT ok free=107136->79944 cost=27192 largest=63488",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 183,
+        "text": "W (11286) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 184,
+        "text": "I (11289) phy_init: phy_version 711,97bcf0a2,Aug 25 2025,19:04:10",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 185,
+        "text": "I (11295) background: PERF mode=3 async=1 clock=DEMO fps=29.7 draw=21.51 prep=0.86 loop=18.55 kernel=18.53 hud=0.05 (ovl=0.00 fmt=0.00 fps=0.00 menu=0.01) send=0.49",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 186,
+        "text": "I (11325) wifi:mode : sta (ac:a7:04:01:2e:80)",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 187,
+        "text": "I (11327) wifi:enable tsf",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 188,
+        "text": "I (12255) wifi:new:<8,1>, old:<1,0>, ap:<255,255>, sta:<8,1>, prof:1, snd_ch_cfg:0x0",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 189,
+        "text": "I (12257) wifi:state: init -> auth (0xb0)",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 190,
+        "text": "I (12270) wifi:state: auth -> assoc (0x0)",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 191,
+        "text": "I (12288) wifi:state: assoc -> run (0x10)",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 192,
+        "text": "I (12410) wifi:connected with IODATA-3385fc-2G, aid = 16, channel 8, 40U, bssid = 50:41:b9:33:85:fc",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 193,
+        "text": "I (12412) wifi:security: WPA2-PSK, phy: bgn, rssi: -47, cipher(pairwise:0x3, group:0x3), pmf:0",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 194,
+        "text": "I (12414) wifi:pm start, type: 1",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 195,
+        "text": "",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 196,
+        "text": "I (12415) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 197,
+        "text": "I (12417) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 198,
+        "text": "I (12496) motion: ACC -158 9348 2468 mm/s2 GYR 0 0 0 mrad/s (off) seq=533 drop=5 TILT -4 0",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 199,
+        "text": "I (12501) wifi:AP's beacon interval = 102400 us, DTIM period = 1",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 200,
+        "text": "I (13303) background: PERF mode=3 async=1 clock=DEMO fps=29.9 draw=21.68 prep=0.90 loop=18.64 kernel=18.61 hud=0.05 (ovl=0.00 fmt=0.00 fps=0.00 menu=0.01) send=0.50",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 201,
+        "text": "I (14516) motion: ACC -158 9339 2476 mm/s2 GYR 0 0 0 mrad/s (off) seq=629 drop=5 TILT -4 0",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 202,
+        "text": "I (14734) esp_netif_handlers: sta ip: 192.168.1.42, mask: 255.255.255.0, gw: 192.168.1.1",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 203,
+        "text": "I (14736) wifi: LINK_UP free=76288",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 204,
+        "text": "I (14772) net_service: NET_RELEASE time holders=0",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 205,
+        "text": "I (14987) wifi:state: run -> init (0x0)",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 206,
+        "text": "I (14989) wifi:pm stop, total sleep time: 1869449 us / 2573395 us",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 207,
+        "text": "",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 208,
+        "text": "I (14990) wifi:new:<8,0>, old:<8,1>, ap:<255,255>, sta:<8,1>, prof:1, snd_ch_cfg:0x0",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 209,
+        "text": "I (14994) wifi:flush txq",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 210,
+        "text": "I (14995) wifi:stop sw txq",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 211,
+        "text": "I (14996) wifi:lmac stop hw txq",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 212,
+        "text": "I (14998) wifi:Deinit lldesc rx mblock:4",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 213,
+        "text": "I (15002) wifi: LINK_DOWN state=0 free=109952",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 214,
+        "text": "I (15010) autosync: AUTOSYNC_DONE ok stage=assoc ms=3754 free_before=119904 min_free=72508 free_after=114300",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 215,
+        "text": "I (15030) autosync: AUTOSYNC_NEXT in_s=43200",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 216,
+        "text": "I (15329) background: PERF mode=3 async=1 clock=DEMO fps=30.1 draw=21.87 prep=0.88 loop=18.81 kernel=18.78 hud=0.05 (ovl=0.00 fmt=0.00 fps=0.00 menu=0.01) send=0.53",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 217,
+        "text": "I (16534) motion: ACC -151 9341 2482 mm/s2 GYR 0 0 0 mrad/s (off) seq=725 drop=5 TILT -4 0",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 218,
+        "text": "I (17359) background: PERF mode=3 async=1 clock=DEMO fps=30.1 draw=21.99 prep=0.88 loop=19.03 kernel=19.00 hud=0.05 (ovl=0.00 fmt=0.00 fps=0.00 menu=0.01) send=0.49",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 219,
+        "text": "I (18552) motion: ACC -152 9351 2479 mm/s2 GYR 0 0 0 mrad/s (off) seq=821 drop=5 TILT -4 0",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 220,
+        "text": "I (19380) background: PERF mode=3 async=1 clock=DEMO fps=29.7 draw=21.86 prep=0.87 loop=18.89 kernel=18.86 hud=0.05 (ovl=0.00 fmt=0.00 fps=0.00 menu=0.01) send=0.49",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 221,
+        "text": "I (20570) motion: ACC -152 9353 2475 mm/s2 GYR 0 0 0 mrad/s (off) seq=917 drop=5 TILT -4 0",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 222,
+        "text": "I (21382) background: PERF mode=3 async=1 clock=DEMO fps=29.5 draw=22.05 prep=0.87 loop=19.08 kernel=19.05 hud=0.05 (ovl=0.00 fmt=0.00 fps=0.00 menu=0.01) send=0.49",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 223,
+        "text": "I (22588) motion: ACC -149 9348 2469 mm/s2 GYR 0 0 0 mrad/s (off) seq=1013 drop=5 TILT -4 0",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 224,
+        "text": "I (23416) background: PERF mode=3 async=1 clock=DEMO fps=29.5 draw=21.51 prep=0.87 loop=18.55 kernel=18.52 hud=0.05 (ovl=0.00 fmt=0.00 fps=0.00 menu=0.01) send=0.49",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 225,
+        "text": "I (24606) motion: ACC -156 9350 2461 mm/s2 GYR 0 0 0 mrad/s (off) seq=1109 drop=5 TILT -4 0",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 226,
+        "text": "I (25420) background: PERF mode=3 async=1 clock=DEMO fps=29.4 draw=21.09 prep=0.87 loop=18.16 kernel=18.14 hud=0.05 (ovl=0.00 fmt=0.00 fps=0.00 menu=0.01) send=0.48",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 227,
+        "text": "I (26624) motion: ACC -158 9349 2473 mm/s2 GYR 0 0 0 mrad/s (off) seq=1205 drop=5 TILT -4 0",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 228,
+        "text": "I (27452) background: PERF mode=3 async=1 clock=DEMO fps=30.0 draw=21.55 prep=0.87 loop=18.63 kernel=18.60 hud=0.05 (ovl=0.00 fmt=0.00 fps=0.00 menu=0.01) send=0.47",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 229,
+        "text": "I (28642) motion: ACC -166 9346 2477 mm/s2 GYR 0 0 0 mrad/s (off) seq=1301 drop=5 TILT -4 0",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 230,
+        "text": "I (29485) background: PERF mode=3 async=1 clock=DEMO fps=29.5 draw=22.14 prep=0.86 loop=19.23 kernel=19.20 hud=0.05 (ovl=0.00 fmt=0.00 fps=0.00 menu=0.01) send=0.48",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": false
+      },
+      {
+        "sequence": 231,
+        "text": "-- Flash operation completed; verified receipt/observations recorded",
+        "level": "unknown",
+        "stream": "stdout",
+        "progress": true
+      }
+    ],
+    "expired": false,
+    "gap": false,
+    "oldest_sequence": 1,
+    "next_cursor": {
+      "epoch": "01372e4d27c74bdca41b06da6e0721b2",
+      "sequence": 231
+    },
+    "has_more": false,
+    "flash_summary": {
+      "boot_log_matches_expected_artifact": true,
+      "boot_observed": true,
+      "boot_text_identity_verified": false,
+      "boot_text_is_cryptographic_proof": false,
+      "idf_version": "6.0.1",
+      "last_known_good_receipt": "b55d2cc1739b98389bb04e9f288ec3770b66d6f6036232026f5782e2e9d4e03e",
+      "observed_elf_sha256_prefix": "4a2a6a430",
+      "observed_idf_version": "6.0.1",
+      "passive_boot_verified": true,
+      "readback_verified": true,
+      "target": "esp32s3",
+      "verification_basis": "full_segment_sha256_readback_and_boot_elf_prefix"
+    }
+  }
+}

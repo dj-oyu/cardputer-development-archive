@@ -1,0 +1,33 @@
+{
+  "status": "ALL40_EXACT_COMPLETE",
+  "actualFrames": 40,
+  "rawComparisons": 200,
+  "sameArmSameOrderNonTimingReportsExact": true,
+  "retainedIndependentAudit": "PASS",
+  "arms": {
+    "off": {
+      "manifestSHA256": "1795d9433623ecabd23ff6d5331dbdb373e4564937657cd1a0619250f95a9510",
+      "frames": 20,
+      "forwardReverseExact": true
+    },
+    "on": {
+      "manifestSHA256": "d7185657d95965e434215bc2fd421c33f29cd7d1110bcd35abb290c4a3ee69b4",
+      "frames": 20,
+      "forwardReverseExact": true
+    }
+  },
+  "sourceFreezeSHA256": "6161fd64a0ae4d2018592432264dbd6a6e75ddbb5f69fed93f7e8b4fc809fff9",
+  "gateSHA256": "5168b6d8e8ddee953fff03ae8a939b09c189f8a9705479f744db7f847677a26b",
+  "memory": {
+    "baselineNamedPeak": 593184,
+    "candidateNamedPeak": 568880,
+    "saved": 24304,
+    "visibilityBuild": 505824,
+    "transportBuild": 520152,
+    "render": 568880,
+    "builderTemporary": 37584,
+    "builderLocalLargestAllocation": 65472,
+    "persistentVisibility": 106104
+  },
+  "independentReviewSHA256": "41de02c8522b115dacf48f2b3ee919a08e8fae68294a1e374387dd5b8f8681d9"
+}

@@ -1,0 +1,20 @@
+{
+  "off": {
+    "forwardReverseBufferPairsExact": 20,
+    "oldDepthAll10Exact": true,
+    "oldRGBAndDepth40Exact": true,
+    "inputsUnchanged": true
+  },
+  "control": {
+    "forwardReverseBufferPairsExact": 20,
+    "oldDepthAll10Exact": true,
+    "oldRGBAndDepth40Exact": "NOT_REQUIRED_NEW_LIGHTING",
+    "inputsUnchanged": true
+  },
+  "le": {
+    "forwardReverseBufferPairsExact": 20,
+    "oldDepthAll10Exact": true,
+    "oldRGBAndDepth40Exact": "NOT_REQUIRED_NEW_LIGHTING",
+    "inputsUnchanged": true
+  }
+}

@@ -1,0 +1,1609 @@
+{
+  "selectionSHA256": "d0d2a7031bd65a41445c036944ff2d74b846f1e7e431c4b36a094074c8d71044",
+  "status": "ANNOTATION_ONLY_NO_RESELECTION",
+  "referenceLabelInputHashes": {
+    "fox-reference-uncertainty-v3/images/foreground-front.png": "2a1c28451394a025d2e12ba4f716a63beb3b0b1e645479a430e900e346f3baab",
+    "fox-reference-uncertainty-v3/evaluation-masks/front-direction-response.npz": "bea26305000cd8358faea8b65617870480c964a090dd20aab5c13e27260109ed",
+    "fox-reference-uncertainty-v3/evaluation-masks/front-baseline-color.npz": "f36417190505665509713f1c981b0b5c685f6e73a1f42ad490ce59987805c925",
+    "fox-reference-uncertainty-v3/evaluation-masks/front-direction-color.npz": "03e25885ca4cb4983c655d604095d5d2d080bca265e3f30b2acef8f1a4528735",
+    "fox-reference-uncertainty-v3/images/foreground-oblique.png": "d4d5b4b5130b98543deb6eaea7ea23b4cb59cbb4ba40fd7a9dda580a97f89f17",
+    "fox-reference-uncertainty-v3/evaluation-masks/oblique-direction-response.npz": "a980eb9c615dc652d5e041c441698d0b804f794098a7ab0e9bda9604fd7561cc",
+    "fox-reference-uncertainty-v3/evaluation-masks/oblique-baseline-color.npz": "72601392101294720ed6abf9768f74a21a7ab7d29ebd7cd007042d0a0f9202bf",
+    "fox-reference-uncertainty-v3/evaluation-masks/oblique-direction-color.npz": "63165f7bd98f526f7e49b8f42bf3b68f10ba1b6c290b7ff94b376f4a73d7ecc7"
+  },
+  "points": [
+    {
+      "view": "front",
+      "x": 141,
+      "y": 74,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "bright",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "front",
+      "x": 140,
+      "y": 98,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "inactive",
+      "colorPrecisionLabels": {
+        "baseline": "uncertain",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "front",
+      "x": 141,
+      "y": 80,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "bright",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "front",
+      "x": 123,
+      "y": 97,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "bright",
+      "colorPrecisionLabels": {
+        "baseline": "uncertain",
+        "direction": "uncertain"
+      }
+    },
+    {
+      "view": "front",
+      "x": 138,
+      "y": 81,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "bright",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "front",
+      "x": 133,
+      "y": 87,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "uncertain",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "front",
+      "x": 114,
+      "y": 62,
+      "sourceAlpha8": 245,
+      "sourceForeground": true,
+      "sourcePartialAlpha": true,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "dark",
+      "colorPrecisionLabels": {
+        "baseline": "uncertain",
+        "direction": "uncertain"
+      }
+    },
+    {
+      "view": "front",
+      "x": 128,
+      "y": 76,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "dark",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "front",
+      "x": 136,
+      "y": 59,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "bright",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "front",
+      "x": 125,
+      "y": 54,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "dark",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "front",
+      "x": 129,
+      "y": 52,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "uncertain",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "front",
+      "x": 121,
+      "y": 62,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "dark",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "front",
+      "x": 131,
+      "y": 58,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "bright",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "front",
+      "x": 132,
+      "y": 66,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "inactive",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "front",
+      "x": 130,
+      "y": 63,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "dark",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "front",
+      "x": 138,
+      "y": 58,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "bright",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "front",
+      "x": 137,
+      "y": 51,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "uncertain",
+      "colorPrecisionLabels": {
+        "baseline": "uncertain",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "front",
+      "x": 138,
+      "y": 51,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "inactive",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "front",
+      "x": 122,
+      "y": 52,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "dark",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "front",
+      "x": 138,
+      "y": 53,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "dark",
+      "colorPrecisionLabels": {
+        "baseline": "uncertain",
+        "direction": "uncertain"
+      }
+    },
+    {
+      "view": "front",
+      "x": 142,
+      "y": 55,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "bright",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "front",
+      "x": 119,
+      "y": 53,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "dark",
+      "colorPrecisionLabels": {
+        "baseline": "uncertain",
+        "direction": "uncertain"
+      }
+    },
+    {
+      "view": "front",
+      "x": 125,
+      "y": 50,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "uncertain",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "front",
+      "x": 123,
+      "y": 47,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "uncertain",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "front",
+      "x": 111,
+      "y": 30,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "dark",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "front",
+      "x": 110,
+      "y": 30,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "dark",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "front",
+      "x": 113,
+      "y": 30,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "dark",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "front",
+      "x": 150,
+      "y": 29,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "bright",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "front",
+      "x": 115,
+      "y": 30,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "uncertain",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "front",
+      "x": 153,
+      "y": 31,
+      "sourceAlpha8": 203,
+      "sourceForeground": true,
+      "sourcePartialAlpha": true,
+      "nativeSilhouetteBoundary": true,
+      "directionResponseLabel": "bright",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "front",
+      "x": 148,
+      "y": 43,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "bright",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "front",
+      "x": 108,
+      "y": 28,
+      "sourceAlpha8": 251,
+      "sourceForeground": true,
+      "sourcePartialAlpha": true,
+      "nativeSilhouetteBoundary": true,
+      "directionResponseLabel": "dark",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "front",
+      "x": 90,
+      "y": 56,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "dark",
+      "colorPrecisionLabels": {
+        "baseline": "uncertain",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "front",
+      "x": 86,
+      "y": 50,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "dark",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "uncertain"
+      }
+    },
+    {
+      "view": "front",
+      "x": 92,
+      "y": 66,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "dark",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "uncertain"
+      }
+    },
+    {
+      "view": "front",
+      "x": 93,
+      "y": 76,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "dark",
+      "colorPrecisionLabels": {
+        "baseline": "uncertain",
+        "direction": "uncertain"
+      }
+    },
+    {
+      "view": "front",
+      "x": 102,
+      "y": 90,
+      "sourceAlpha8": 211,
+      "sourceForeground": true,
+      "sourcePartialAlpha": true,
+      "nativeSilhouetteBoundary": true,
+      "directionResponseLabel": "dark",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "front",
+      "x": 92,
+      "y": 38,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "dark",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "front",
+      "x": 85,
+      "y": 42,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "dark",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "front",
+      "x": 100,
+      "y": 89,
+      "sourceAlpha8": 249,
+      "sourceForeground": true,
+      "sourcePartialAlpha": true,
+      "nativeSilhouetteBoundary": true,
+      "directionResponseLabel": "dark",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "uncertain"
+      }
+    },
+    {
+      "view": "front",
+      "x": 120,
+      "y": 119,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "uncertain",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "front",
+      "x": 116,
+      "y": 115,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "dark",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "uncertain"
+      }
+    },
+    {
+      "view": "front",
+      "x": 145,
+      "y": 103,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "bright",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "front",
+      "x": 123,
+      "y": 109,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "bright",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "front",
+      "x": 117,
+      "y": 113,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "dark",
+      "colorPrecisionLabels": {
+        "baseline": "uncertain",
+        "direction": "uncertain"
+      }
+    },
+    {
+      "view": "front",
+      "x": 124,
+      "y": 105,
+      "sourceAlpha8": 203,
+      "sourceForeground": true,
+      "sourcePartialAlpha": true,
+      "nativeSilhouetteBoundary": true,
+      "directionResponseLabel": "bright",
+      "colorPrecisionLabels": {
+        "baseline": "uncertain",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "front",
+      "x": 140,
+      "y": 120,
+      "sourceAlpha8": 233,
+      "sourceForeground": true,
+      "sourcePartialAlpha": true,
+      "nativeSilhouetteBoundary": true,
+      "directionResponseLabel": "uncertain",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "front",
+      "x": 121,
+      "y": 113,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "uncertain",
+      "colorPrecisionLabels": {
+        "baseline": "uncertain",
+        "direction": "uncertain"
+      }
+    },
+    {
+      "view": "front",
+      "x": 126,
+      "y": 76,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "dark",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "front",
+      "x": 126,
+      "y": 79,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "dark",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "front",
+      "x": 124,
+      "y": 75,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "dark",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "front",
+      "x": 136,
+      "y": 35,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "bright",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "front",
+      "x": 129,
+      "y": 33,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "uncertain",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "front",
+      "x": 127,
+      "y": 75,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "dark",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "front",
+      "x": 109,
+      "y": 61,
+      "sourceAlpha8": 235,
+      "sourceForeground": true,
+      "sourcePartialAlpha": true,
+      "nativeSilhouetteBoundary": true,
+      "directionResponseLabel": "dark",
+      "colorPrecisionLabels": {
+        "baseline": "uncertain",
+        "direction": "uncertain"
+      }
+    },
+    {
+      "view": "front",
+      "x": 135,
+      "y": 77,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "uncertain",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "oblique",
+      "x": 123,
+      "y": 47,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "dark",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "oblique",
+      "x": 106,
+      "y": 77,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "dark",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "oblique",
+      "x": 129,
+      "y": 85,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "dark",
+      "colorPrecisionLabels": {
+        "baseline": "uncertain",
+        "direction": "uncertain"
+      }
+    },
+    {
+      "view": "oblique",
+      "x": 126,
+      "y": 73,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "dark",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "uncertain"
+      }
+    },
+    {
+      "view": "oblique",
+      "x": 105,
+      "y": 70,
+      "sourceAlpha8": 52,
+      "sourceForeground": true,
+      "sourcePartialAlpha": true,
+      "nativeSilhouetteBoundary": true,
+      "directionResponseLabel": "inactive",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "oblique",
+      "x": 120,
+      "y": 46,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "dark",
+      "colorPrecisionLabels": {
+        "baseline": "uncertain",
+        "direction": "uncertain"
+      }
+    },
+    {
+      "view": "oblique",
+      "x": 136,
+      "y": 90,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "dark",
+      "colorPrecisionLabels": {
+        "baseline": "uncertain",
+        "direction": "uncertain"
+      }
+    },
+    {
+      "view": "oblique",
+      "x": 115,
+      "y": 95,
+      "sourceAlpha8": 237,
+      "sourceForeground": true,
+      "sourcePartialAlpha": true,
+      "nativeSilhouetteBoundary": true,
+      "directionResponseLabel": "uncertain",
+      "colorPrecisionLabels": {
+        "baseline": "uncertain",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "oblique",
+      "x": 132,
+      "y": 61,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "dark",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "oblique",
+      "x": 126,
+      "y": 58,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "dark",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "oblique",
+      "x": 144,
+      "y": 53,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "uncertain",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "oblique",
+      "x": 127,
+      "y": 61,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "dark",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "oblique",
+      "x": 128,
+      "y": 57,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "dark",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "oblique",
+      "x": 126,
+      "y": 57,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "dark",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "oblique",
+      "x": 147,
+      "y": 54,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "bright",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "oblique",
+      "x": 123,
+      "y": 59,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "dark",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "oblique",
+      "x": 150,
+      "y": 49,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "uncertain",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "uncertain"
+      }
+    },
+    {
+      "view": "oblique",
+      "x": 150,
+      "y": 50,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "uncertain",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "oblique",
+      "x": 135,
+      "y": 53,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "uncertain",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "oblique",
+      "x": 132,
+      "y": 55,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "dark",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "oblique",
+      "x": 145,
+      "y": 48,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "uncertain",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "oblique",
+      "x": 151,
+      "y": 52,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "bright",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "oblique",
+      "x": 130,
+      "y": 52,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "dark",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "oblique",
+      "x": 133,
+      "y": 51,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "dark",
+      "colorPrecisionLabels": {
+        "baseline": "uncertain",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "oblique",
+      "x": 116,
+      "y": 39,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "dark",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "oblique",
+      "x": 120,
+      "y": 35,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "dark",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "oblique",
+      "x": 119,
+      "y": 40,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "dark",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "oblique",
+      "x": 151,
+      "y": 28,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "bright",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "oblique",
+      "x": 154,
+      "y": 24,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": true,
+      "directionResponseLabel": "bright",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "oblique",
+      "x": 153,
+      "y": 38,
+      "sourceAlpha8": 239,
+      "sourceForeground": true,
+      "sourcePartialAlpha": true,
+      "nativeSilhouetteBoundary": true,
+      "directionResponseLabel": "bright",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "oblique",
+      "x": 124,
+      "y": 37,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "dark",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "oblique",
+      "x": 154,
+      "y": 30,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": true,
+      "directionResponseLabel": "bright",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "oblique",
+      "x": 81,
+      "y": 69,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "dark",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "uncertain"
+      }
+    },
+    {
+      "view": "oblique",
+      "x": 58,
+      "y": 73,
+      "sourceAlpha8": 215,
+      "sourceForeground": true,
+      "sourcePartialAlpha": true,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "uncertain",
+      "colorPrecisionLabels": {
+        "baseline": "uncertain",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "oblique",
+      "x": 87,
+      "y": 82,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "dark",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "uncertain"
+      }
+    },
+    {
+      "view": "oblique",
+      "x": 77,
+      "y": 87,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "dark",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "oblique",
+      "x": 86,
+      "y": 60,
+      "sourceAlpha8": 86,
+      "sourceForeground": true,
+      "sourcePartialAlpha": true,
+      "nativeSilhouetteBoundary": true,
+      "directionResponseLabel": "uncertain",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "oblique",
+      "x": 89,
+      "y": 41,
+      "sourceAlpha8": 163,
+      "sourceForeground": true,
+      "sourcePartialAlpha": true,
+      "nativeSilhouetteBoundary": true,
+      "directionResponseLabel": "uncertain",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "oblique",
+      "x": 76,
+      "y": 44,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "dark",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "oblique",
+      "x": 75,
+      "y": 42,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "dark",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "oblique",
+      "x": 141,
+      "y": 115,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "dark",
+      "colorPrecisionLabels": {
+        "baseline": "uncertain",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "oblique",
+      "x": 129,
+      "y": 118,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "dark",
+      "colorPrecisionLabels": {
+        "baseline": "uncertain",
+        "direction": "uncertain"
+      }
+    },
+    {
+      "view": "oblique",
+      "x": 110,
+      "y": 112,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "dark",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "oblique",
+      "x": 129,
+      "y": 114,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "dark",
+      "colorPrecisionLabels": {
+        "baseline": "uncertain",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "oblique",
+      "x": 123,
+      "y": 117,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": true,
+      "directionResponseLabel": "dark",
+      "colorPrecisionLabels": {
+        "baseline": "uncertain",
+        "direction": "uncertain"
+      }
+    },
+    {
+      "view": "oblique",
+      "x": 133,
+      "y": 115,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": true,
+      "directionResponseLabel": "bright",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "uncertain"
+      }
+    },
+    {
+      "view": "oblique",
+      "x": 140,
+      "y": 113,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "dark",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "uncertain"
+      }
+    },
+    {
+      "view": "oblique",
+      "x": 122,
+      "y": 100,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "dark",
+      "colorPrecisionLabels": {
+        "baseline": "uncertain",
+        "direction": "uncertain"
+      }
+    },
+    {
+      "view": "oblique",
+      "x": 132,
+      "y": 35,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "dark",
+      "colorPrecisionLabels": {
+        "baseline": "uncertain",
+        "direction": "uncertain"
+      }
+    },
+    {
+      "view": "oblique",
+      "x": 119,
+      "y": 56,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "dark",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "oblique",
+      "x": 136,
+      "y": 77,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "dark",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "oblique",
+      "x": 137,
+      "y": 33,
+      "sourceAlpha8": 253,
+      "sourceForeground": true,
+      "sourcePartialAlpha": true,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "bright",
+      "colorPrecisionLabels": {
+        "baseline": "uncertain",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "oblique",
+      "x": 118,
+      "y": 53,
+      "sourceAlpha8": 235,
+      "sourceForeground": true,
+      "sourcePartialAlpha": true,
+      "nativeSilhouetteBoundary": true,
+      "directionResponseLabel": "dark",
+      "colorPrecisionLabels": {
+        "baseline": "uncertain",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "oblique",
+      "x": 142,
+      "y": 33,
+      "sourceAlpha8": 249,
+      "sourceForeground": true,
+      "sourcePartialAlpha": true,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "bright",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "oblique",
+      "x": 134,
+      "y": 70,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "dark",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    },
+    {
+      "view": "oblique",
+      "x": 143,
+      "y": 76,
+      "sourceAlpha8": 255,
+      "sourceForeground": true,
+      "sourcePartialAlpha": false,
+      "nativeSilhouetteBoundary": false,
+      "directionResponseLabel": "inactive",
+      "colorPrecisionLabels": {
+        "baseline": "stable",
+        "direction": "stable"
+      }
+    }
+  ],
+  "wholeImageCoverage": [
+    {
+      "view": "front",
+      "sourceForeground": 5307,
+      "nativeCovered": 4698,
+      "sourceNativeOverlap": 4687,
+      "sourceForegroundNoNativeHit": 620,
+      "nativeExtraOutsideSource": 11,
+      "sourcePartialAlphaTotal": 1148,
+      "sourcePartialAlphaNativeCovered": 528,
+      "sourcePartialAlphaNoNativeHit": 620
+    },
+    {
+      "view": "oblique",
+      "sourceForeground": 5868,
+      "nativeCovered": 5157,
+      "sourceNativeOverlap": 5149,
+      "sourceForegroundNoNativeHit": 719,
+      "nativeExtraOutsideSource": 8,
+      "sourcePartialAlphaTotal": 1285,
+      "sourcePartialAlphaNativeCovered": 586,
+      "sourcePartialAlphaNoNativeHit": 699
+    }
+  ],
+  "notPopulationWeighted": true
+}

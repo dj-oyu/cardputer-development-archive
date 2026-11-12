@@ -1,0 +1,850 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:fox-candidate:rgb565:v1",
+  "title": "Frozen-v3 candidate input manifest",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "candidate",
+    "reference",
+    "resolution",
+    "rgb565Format",
+    "depthFormat",
+    "frames"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "fox-candidate-rgb565-v1"
+    },
+    "candidate": {
+      "type": "object",
+      "required": [
+        "label",
+        "sourceLabel",
+        "head",
+        "sourceFiles"
+      ],
+      "properties": {
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourceLabel": {
+          "type": "string",
+          "minLength": 1
+        },
+        "head": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourceFiles": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/file"
+          }
+        }
+      }
+    },
+    "reference": {
+      "type": "object",
+      "required": [
+        "version",
+        "configSHA256"
+      ],
+      "properties": {
+        "version": {
+          "const": "new-reference-uncertainty-v3"
+        },
+        "configSHA256": {
+          "const": "4a9d836a4dae2fc570f5f0fb99690ab0f13fbe394589f785b56e891e0573dc40"
+        }
+      }
+    },
+    "resolution": {
+      "const": [
+        240,
+        135
+      ]
+    },
+    "rgb565Format": {
+      "const": "RGB565_U16_LE_ROW_MAJOR"
+    },
+    "depthFormat": {
+      "const": "FLOAT32_LE_ROW_MAJOR_NEG_INF_BACKGROUND"
+    },
+    "frames": {
+      "type": "array",
+      "minItems": 10,
+      "maxItems": 10,
+      "items": {
+        "type": "object",
+        "required": [
+          "view",
+          "case",
+          "rgb565",
+          "depth",
+          "metadata"
+        ],
+        "properties": {
+          "view": {
+            "enum": [
+              "front",
+              "oblique"
+            ]
+          },
+          "case": {
+            "enum": [
+              "baseline",
+              "direction",
+              "intensity",
+              "ambient",
+              "albedo"
+            ]
+          },
+          "rgb565": {
+            "$ref": "#/$defs/file"
+          },
+          "depth": {
+            "$ref": "#/$defs/file"
+          },
+          "metadata": {
+            "type": "object",
+            "required": [
+              "resolution",
+              "nativeCamera",
+              "scenario",
+              "sourceLabel",
+              "head",
+              "actual",
+              "nativeInput"
+            ],
+            "properties": {
+              "resolution": {
+                "const": [
+                  240,
+                  135
+                ]
+              },
+              "nativeCamera": {
+                "type": "array",
+                "minItems": 9,
+                "maxItems": 9,
+                "items": {
+                  "type": "number"
+                }
+              },
+              "scenario": {
+                "type": "object"
+              },
+              "sourceLabel": {
+                "type": "string",
+                "minLength": 1
+              },
+              "head": {
+                "type": "string",
+                "minLength": 1
+              },
+              "nativeInput": {
+                "type": "object",
+                "description": "Exact scenario object from hashed inputs/candidate-config.json."
+              },
+              "actual": {
+                "type": "object",
+                "required": [
+                  "camera",
+                  "light",
+                  "visibilityEnabled",
+                  "visibilityComplete",
+                  "visibilitySceneBytes",
+                  "visibilitySceneNodes",
+                  "visibilityTriangles",
+                  "visibilityVertices",
+                  "visibilityBuildNs",
+                  "visibilityTemporaryBytes",
+                  "visibilityRays",
+                  "visibilityNodeVisits",
+                  "visibilityTriangleTests",
+                  "visibilityRayLimit",
+                  "visibilityNodeLimit",
+                  "visibilityTriangleLimit",
+                  "visibilitySceneLimit",
+                  "visibilityGeneration",
+                  "visibilityGeometryFingerprint",
+                  "visibilitySnapshotFingerprint",
+                  "visibilityBindingBytes",
+                  "visibilityBudgetBytes",
+                  "transportMode",
+                  "transportComplete",
+                  "outerSamples",
+                  "innerSamples",
+                  "materialGeneration",
+                  "materialFingerprint",
+                  "transportContextBytes",
+                  "transportBudgetBytes",
+                  "transportRayLimit",
+                  "transportNodeLimit",
+                  "transportTriangleLimit",
+                  "transportSceneLimit",
+                  "transportSceneBytes",
+                  "transportTemporaryBytes",
+                  "transportBuildNs",
+                  "transportRays",
+                  "transportNodeVisits",
+                  "transportTriangleTests",
+                  "primary_rays",
+                  "primary_hits",
+                  "primary_misses",
+                  "secondary_world_rays",
+                  "primary_direct_queries",
+                  "secondary_direct_queries",
+                  "zero_reflection_ns_v",
+                  "back_single_discard",
+                  "grazing_ng_v"
+                ],
+                "properties": {
+                  "camera": {
+                    "type": "array",
+                    "minItems": 9,
+                    "maxItems": 9,
+                    "items": {
+                      "type": "number"
+                    }
+                  },
+                  "light": {
+                    "type": "array",
+                    "minItems": 6,
+                    "maxItems": 6,
+                    "items": {
+                      "type": "number"
+                    }
+                  },
+                  "linearLightEnabled": {
+                    "type": "boolean",
+                    "description": "Required exactly when hashed candidate-config declares the same boolean mode."
+                  },
+                  "physicalDiskEnabled": {
+                    "type": "boolean",
+                    "description": "Required exactly when hashed candidate-config declares physical mode. Must equal its boolean value."
+                  },
+                  "pixelLightEnabled": {
+                    "type": "boolean",
+                    "description": "Optional legacy extension, required exactly when hashed config declares same strict boolean. ON requires linear and physical modes."
+                  },
+                  "agxProfileEnabled": {
+                    "type": "boolean",
+                    "description": "Must be present and false when pixelLightEnabled is declared, including OFF."
+                  },
+                  "shadeUpdates": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "description": "Strict runtime-audit integer required when pixel mode is declared; Python validator enforces budgets, exact sizes and relationships."
+                  },
+                  "diskSamples": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "description": "Strict runtime-audit integer required when pixel mode is declared; Python validator enforces budgets, exact sizes and relationships."
+                  },
+                  "snapshotBytes": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "description": "Strict runtime-audit integer required when pixel mode is declared; Python validator enforces budgets, exact sizes and relationships."
+                  },
+                  "snapshotCapacity": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "description": "Strict runtime-audit integer required when pixel mode is declared; Python validator enforces budgets, exact sizes and relationships."
+                  },
+                  "work": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "description": "Strict runtime-audit integer required when pixel mode is declared; Python validator enforces budgets, exact sizes and relationships."
+                  },
+                  "snapshotControlBytes": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "description": "Strict runtime-audit integer required when pixel mode is declared; Python validator enforces budgets, exact sizes and relationships."
+                  },
+                  "rawFieldScratchBytes": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "description": "Strict runtime-audit integer required when pixel mode is declared; Python validator enforces budgets, exact sizes and relationships."
+                  },
+                  "visibilityEnabled": {
+                    "type": "boolean",
+                    "description": "Must match hashed config visibilityEnabled, default false when omitted in config."
+                  },
+                  "visibilityComplete": {
+                    "const": true
+                  },
+                  "visibilitySceneBytes": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 524288
+                  },
+                  "visibilitySceneNodes": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "visibilityTriangles": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "visibilityVertices": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "visibilityBuildNs": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "visibilityTemporaryBytes": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "visibilityRays": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 1000000
+                  },
+                  "visibilityNodeVisits": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 100000000
+                  },
+                  "visibilityTriangleTests": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 50000000
+                  },
+                  "visibilityRayLimit": {
+                    "type": "integer",
+                    "const": 1000000
+                  },
+                  "visibilityNodeLimit": {
+                    "type": "integer",
+                    "const": 100000000
+                  },
+                  "visibilityTriangleLimit": {
+                    "type": "integer",
+                    "const": 50000000
+                  },
+                  "visibilitySceneLimit": {
+                    "type": "integer",
+                    "const": 524288
+                  },
+                  "visibilityGeneration": {
+                    "type": "array",
+                    "minItems": 3,
+                    "maxItems": 3,
+                    "items": {
+                      "type": "integer"
+                    }
+                  },
+                  "visibilityGeometryFingerprint": {
+                    "type": "string",
+                    "pattern": "^[0-9a-f]{16}$"
+                  },
+                  "visibilitySnapshotFingerprint": {
+                    "type": "string",
+                    "pattern": "^[0-9a-f]{16}$"
+                  },
+                  "visibilityBindingBytes": {
+                    "type": "integer",
+                    "const": 48
+                  },
+                  "visibilityBudgetBytes": {
+                    "type": "integer",
+                    "const": 48
+                  },
+                  "transportMode": {
+                    "type": "integer",
+                    "enum": [
+                      0,
+                      1,
+                      2
+                    ]
+                  },
+                  "transportComplete": {
+                    "const": true
+                  },
+                  "outerSamples": {
+                    "type": "integer",
+                    "enum": [
+                      16,
+                      64
+                    ]
+                  },
+                  "innerSamples": {
+                    "type": "integer",
+                    "const": 16
+                  },
+                  "materialGeneration": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "materialFingerprint": {
+                    "type": "string",
+                    "pattern": "^[0-9a-f]{16}$"
+                  },
+                  "transportContextBytes": {
+                    "type": "integer",
+                    "const": 184
+                  },
+                  "transportBudgetBytes": {
+                    "type": "integer",
+                    "const": 48
+                  },
+                  "transportRayLimit": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "const": 20000000
+                  },
+                  "transportNodeLimit": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "const": 800000000
+                  },
+                  "transportTriangleLimit": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "const": 300000000
+                  },
+                  "transportSceneLimit": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "const": 262144
+                  },
+                  "transportSceneBytes": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 262144
+                  },
+                  "transportTemporaryBytes": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "transportBuildNs": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "transportRays": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 20000000
+                  },
+                  "transportNodeVisits": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 800000000
+                  },
+                  "transportTriangleTests": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 300000000
+                  },
+                  "primary_rays": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "primary_hits": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "primary_misses": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "secondary_world_rays": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "primary_direct_queries": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "secondary_direct_queries": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "zero_reflection_ns_v": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "back_single_discard": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "grazing_ng_v": {
+                    "type": "integer",
+                    "minimum": 0
+                  }
+                },
+                "allOf": [
+                  {
+                    "if": {
+                      "required": [
+                        "pixelLightEnabled"
+                      ]
+                    },
+                    "then": {
+                      "required": [
+                        "agxProfileEnabled",
+                        "shadeUpdates",
+                        "diskSamples",
+                        "snapshotBytes",
+                        "snapshotCapacity",
+                        "work",
+                        "snapshotControlBytes",
+                        "rawFieldScratchBytes"
+                      ],
+                      "properties": {
+                        "agxProfileEnabled": {
+                          "const": false
+                        },
+                        "snapshotBytes": {
+                          "maximum": 65536
+                        },
+                        "snapshotCapacity": {
+                          "const": 65536
+                        },
+                        "work": {
+                          "maximum": 8000000
+                        },
+                        "rawFieldScratchBytes": {
+                          "const": 2080
+                        }
+                      },
+                      "allOf": [
+                        {
+                          "if": {
+                            "properties": {
+                              "pixelLightEnabled": {
+                                "const": true
+                              }
+                            }
+                          },
+                          "then": {
+                            "properties": {
+                              "linearLightEnabled": {
+                                "const": true
+                              },
+                              "physicalDiskEnabled": {
+                                "const": true
+                              },
+                              "shadeUpdates": {
+                                "minimum": 1
+                              },
+                              "snapshotBytes": {
+                                "minimum": 416
+                              },
+                              "snapshotControlBytes": {
+                                "const": 64
+                              }
+                            },
+                            "required": [
+                              "linearLightEnabled",
+                              "physicalDiskEnabled"
+                            ]
+                          },
+                          "else": {
+                            "properties": {
+                              "shadeUpdates": {
+                                "const": 0
+                              },
+                              "diskSamples": {
+                                "const": 0
+                              },
+                              "snapshotControlBytes": {
+                                "const": 48
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "if": {
+                      "properties": {
+                        "visibilityEnabled": {
+                          "const": true
+                        }
+                      }
+                    },
+                    "then": {
+                      "required": [
+                        "pixelLightEnabled",
+                        "linearLightEnabled",
+                        "physicalDiskEnabled",
+                        "agxProfileEnabled"
+                      ],
+                      "properties": {
+                        "pixelLightEnabled": {
+                          "const": true
+                        },
+                        "linearLightEnabled": {
+                          "const": true
+                        },
+                        "physicalDiskEnabled": {
+                          "const": true
+                        },
+                        "agxProfileEnabled": {
+                          "const": false
+                        },
+                        "visibilitySceneBytes": {
+                          "const": 326496
+                        },
+                        "visibilitySceneNodes": {
+                          "minimum": 1,
+                          "maximum": 2331
+                        },
+                        "visibilityBuildNs": {
+                          "minimum": 1
+                        },
+                        "visibilityTemporaryBytes": {
+                          "const": 34368
+                        },
+                        "visibilityTriangles": {
+                          "const": 1166
+                        },
+                        "visibilityVertices": {
+                          "const": 849
+                        },
+                        "visibilityGeneration": {
+                          "const": [
+                            1,
+                            1,
+                            1
+                          ]
+                        },
+                        "visibilityGeometryFingerprint": {
+                          "not": {
+                            "const": "0000000000000000"
+                          }
+                        },
+                        "visibilitySnapshotFingerprint": {
+                          "not": {
+                            "const": "0000000000000000"
+                          }
+                        },
+                        "visibilityRays": {
+                          "minimum": 1
+                        },
+                        "visibilityTriangleTests": {
+                          "minimum": 1
+                        }
+                      }
+                    },
+                    "else": {
+                      "properties": {
+                        "visibilitySceneBytes": {
+                          "const": 0
+                        },
+                        "visibilitySceneNodes": {
+                          "const": 0
+                        },
+                        "visibilityTriangles": {
+                          "const": 0
+                        },
+                        "visibilityVertices": {
+                          "const": 0
+                        },
+                        "visibilityBuildNs": {
+                          "const": 0
+                        },
+                        "visibilityTemporaryBytes": {
+                          "const": 0
+                        },
+                        "visibilityRays": {
+                          "const": 0
+                        },
+                        "visibilityNodeVisits": {
+                          "const": 0
+                        },
+                        "visibilityTriangleTests": {
+                          "const": 0
+                        },
+                        "visibilityGeneration": {
+                          "const": [
+                            0,
+                            0,
+                            0
+                          ]
+                        },
+                        "visibilityGeometryFingerprint": {
+                          "const": "0000000000000000"
+                        },
+                        "visibilitySnapshotFingerprint": {
+                          "const": "0000000000000000"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "if": {
+                      "properties": {
+                        "transportMode": {
+                          "const": 0
+                        }
+                      }
+                    },
+                    "then": {
+                      "properties": {
+                        "transportSceneBytes": {
+                          "const": 0
+                        },
+                        "transportTemporaryBytes": {
+                          "const": 0
+                        },
+                        "transportBuildNs": {
+                          "const": 0
+                        },
+                        "transportRays": {
+                          "const": 0
+                        },
+                        "transportNodeVisits": {
+                          "const": 0
+                        },
+                        "transportTriangleTests": {
+                          "const": 0
+                        },
+                        "primary_rays": {
+                          "const": 0
+                        },
+                        "primary_hits": {
+                          "const": 0
+                        },
+                        "primary_misses": {
+                          "const": 0
+                        },
+                        "secondary_world_rays": {
+                          "const": 0
+                        },
+                        "primary_direct_queries": {
+                          "const": 0
+                        },
+                        "secondary_direct_queries": {
+                          "const": 0
+                        },
+                        "zero_reflection_ns_v": {
+                          "const": 0
+                        },
+                        "back_single_discard": {
+                          "const": 0
+                        },
+                        "grazing_ng_v": {
+                          "const": 0
+                        },
+                        "materialGeneration": {
+                          "const": 0
+                        },
+                        "materialFingerprint": {
+                          "const": "0000000000000000"
+                        }
+                      }
+                    },
+                    "else": {
+                      "required": [
+                        "visibilityEnabled",
+                        "pixelLightEnabled",
+                        "linearLightEnabled",
+                        "physicalDiskEnabled",
+                        "agxProfileEnabled"
+                      ],
+                      "properties": {
+                        "visibilityEnabled": {
+                          "const": true
+                        },
+                        "pixelLightEnabled": {
+                          "const": true
+                        },
+                        "linearLightEnabled": {
+                          "const": true
+                        },
+                        "physicalDiskEnabled": {
+                          "const": true
+                        },
+                        "agxProfileEnabled": {
+                          "const": false
+                        },
+                        "transportSceneBytes": {
+                          "const": 75128
+                        },
+                        "transportTemporaryBytes": {
+                          "const": 74624
+                        },
+                        "transportBuildNs": {
+                          "minimum": 1
+                        },
+                        "materialGeneration": {
+                          "const": 1
+                        },
+                        "materialFingerprint": {
+                          "not": {
+                            "const": "0000000000000000"
+                          }
+                        },
+                        "transportTriangleTests": {
+                          "minimum": 1
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "if": {
+                      "properties": {
+                        "transportMode": {
+                          "const": 1
+                        }
+                      }
+                    },
+                    "then": {
+                      "properties": {
+                        "secondary_world_rays": {
+                          "const": 0
+                        },
+                        "secondary_direct_queries": {
+                          "const": 0
+                        },
+                        "zero_reflection_ns_v": {
+                          "const": 0
+                        },
+                        "back_single_discard": {
+                          "const": 0
+                        },
+                        "grazing_ng_v": {
+                          "const": 0
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "file": {
+      "type": "object",
+      "required": [
+        "file",
+        "sha256"
+      ],
+      "properties": {
+        "file": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Normalized relative path within manifest directory; no absolute paths, parent traversal or reused paths."
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      }
+    }
+  }
+}

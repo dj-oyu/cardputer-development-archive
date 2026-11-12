@@ -1,0 +1,193 @@
+{
+  "review_version": 1,
+  "reviewed_utc": "2026-10-20T05:52:42.062069+00:00",
+  "verdict": "PRELIMINARY_SAVED_PREFLIGHT_CONSISTENT_RUNNING_NOT_HARDWARE_PASS",
+  "scope": "Local saved files only. No API/MCP/USB/job/source/build/config/code actions; no new tests.",
+  "authorization_scope": {
+    "source_thread": "01a15560-53fc-74be-bdcc-e2ec8c3d200a",
+    "new_relevant_evidence": "Parent independently reviewed current MCP88890ed7. Prior failure before driver.write; incorrect current-comparison receipt. Correct registered batch receipt passes same gate only if actual bytes match.",
+    "authorization": "one new exact baseline flash using full registered batch receipt, then normal boot and one ON fixed trial only",
+    "trusted_user_authorization": "Sentinel_6d31198677008191b9da5dcd3fe82738: y, for corrected baseline build/write/re-measure with recovery preserved and stop on baseline error",
+    "stop_on": "uncertainty, explicit safety refusal, current bytes mismatch, fatal/OOM; no alternate receipt guesses/retry",
+    "forbidden": "native/batch/OFF, backup/restore without separate decision, config/auth/SDK changes, gate bypass, history rewrite, direct USB",
+    "physical_actions_before_new_plan": 0
+  },
+  "flash_job_id": "derby-controller-baseline-flash-current-dc2c5e04-20261020",
+  "plan_hash": "829e0ae03117682955f0109d9f905ec4c591ead1994d4213df2df6dcef00f6a0",
+  "source_head": "dc2c5e044429a4904e91564aa7f9cb30d7d4cbbb",
+  "source_tree": "d72a737240d48def898899bf6dc71e0ac627c7f8",
+  "source_sha256": "0ce2035d523c75ff15a62f9c322a0adbd9a1938ff3fbf0e6422ff1c5761f61c6",
+  "build_job_id": "derby-controller-baseline-build-dc2c5e04-20261020",
+  "manifest_sha256": "0a6a2a8c37f9902751d53b6b5fbcc56ab78064adf4e2749673a67dfcd52b9299",
+  "expected_app_bin_sha256": "ae7ec8ec1fddd0238003c903fafe7c6de47ffe3c1e7df7c3b7b08a94f861578b",
+  "expected_elf_sha256": "f149d372f186a0e6642d2d929db1cbf1ae6cd2f8163458832b2024f0074c7962",
+  "broker_epoch": "51bfd752bc2a460db00a835c45250282",
+  "current_comparison_receipt": "5e1fa311d4a565672d27b5bff976fb04e30c92ff993bcf51f05fe07693a70b22",
+  "normal_rollback_receipt_separate": "e9a33d3e3d0a9c1809a4238efc42c85cf440837ec62466c5c52326ddd69c761a",
+  "changed_plan_fields_vs_failed_attempt": [
+    "job_id",
+    "session_id",
+    "fingerprint",
+    "lkg_receipt",
+    "backup_sha256"
+  ],
+  "snapshot": {
+    "file": "flash-poll-002-job.json",
+    "state": "running",
+    "stage": "flash_backup_prewrite_check",
+    "log_sequence": [
+      1,
+      17
+    ],
+    "old_22528B_and_3072B_rom_reads_complete": true,
+    "old_app_read_progress": 934912,
+    "old_app_region_bytes": 2298336,
+    "all_current_regions_compared": false,
+    "write_observed_in_snapshot": false,
+    "flash_success": false,
+    "hardware_accepted": false,
+    "limit": "ROM reads succeeding is consistent with progress past earlier checks, but saved logs do not print individual region comparison verdicts. Do not claim all current-image comparisons or flash/readback/normal boot complete."
+  },
+  "preservation": {
+    "old_OOM_result_raw_identical": true,
+    "old_failed_gate_packet_local_sha_verified": true,
+    "old_normal_rollback_receipt_retained": true,
+    "historical_normal_trial_strict_pass": true,
+    "Library_remote_retrieval_performed": false
+  },
+  "checks": {
+    "new_explicit_scope": true,
+    "same_scope_stop_contract": true,
+    "prior_idle_preflight": true,
+    "epoch_binding": true,
+    "current_receipt_exact": true,
+    "registered_prior_batch_provenance": true,
+    "no_guard_image_changes_from_old_plan": true,
+    "source_exact": true,
+    "build_exact": true,
+    "manifest_verified": true,
+    "manifest_canonical_sha": true,
+    "bin_elf_expected": true,
+    "modes_on": true,
+    "normal_rollback_separate_retained": true,
+    "historical_normal_trial_accepted": true,
+    "old_failed_trial_preserved": true,
+    "prior_gate_private_packet_local_sha": true,
+    "fresh_job_ids": true,
+    "prepare_execute_new_chain": true,
+    "running_not_success_snapshot": true,
+    "registered_flash_no_profile_override": true,
+    "snapshot_logs_contiguous": true,
+    "first_two_rom_reads_complete": true,
+    "app_read_incomplete_snapshot": true
+  },
+  "input_sha256": {
+    "/workspace/derby-evidence/controller-baseline-current-receipt-20261020/AUTHORIZATION-SCOPE.json": {
+      "sha256": "516bdb2d29df003b5ae22833df5d9c702a14517fc3247f0262934d9eefd630ed",
+      "bytes": 914
+    },
+    "/workspace/derby-evidence/controller-baseline-current-receipt-20261020/flash-plan.json": {
+      "sha256": "f55140a08ee67fea6cf55881f21d3f70d43b908ae94b59ec5ece5b44f6ed67ab",
+      "bytes": 3844
+    },
+    "/workspace/derby-evidence/controller-baseline-current-receipt-20261020/flash-execute.json": {
+      "sha256": "9dbfa5acff3f4911c73d8e4c066fec5d4f1034f3cf4a57cb58e95ecb82763a38",
+      "bytes": 590
+    },
+    "/workspace/derby-evidence/controller-baseline-current-receipt-20261020/flash-poll-001-logs.json": {
+      "sha256": "ff6e2642791e311f27fc953565713dfed684cd79ead19bd2781f1a7150ae8665",
+      "bytes": 2136
+    },
+    "/workspace/derby-evidence/controller-baseline-current-receipt-20261020/flash-poll-002-logs.json": {
+      "sha256": "fe44ab371637974395fc9b877169676b37b729afefe3064dbcfd3d7ee1de5d51",
+      "bytes": 1253
+    },
+    "/workspace/derby-evidence/controller-baseline-current-receipt-20261020/flash-poll-002-job.json": {
+      "sha256": "a4644530abefc436768df463f2604461e41e714cc65d39983bc6e098bff26327",
+      "bytes": 591
+    },
+    "/workspace/derby-evidence/controller-baseline-current-receipt-20261020/preflight-status.json": {
+      "sha256": "69e46b297a146106e18f3f254896d626c0e582db0e8158645a3f8ebe097c9b13",
+      "bytes": 1116
+    },
+    "/workspace/derby-evidence/controller-baseline-current-receipt-20261020/preflight-baseline_build.json": {
+      "sha256": "23720e94f5c6d609b2fc66de370acf643a2b0b7f18ceb571a96fe313e4d7f5f2",
+      "bytes": 615
+    },
+    "/workspace/derby-evidence/controller-baseline-current-receipt-20261020/preflight-baseline_manifest.json": {
+      "sha256": "7de07742370fda42c49d6c7bf52d102e8e312480facb65d334776074994e45a1",
+      "bytes": 5232
+    },
+    "/workspace/derby-evidence/controller-baseline-current-receipt-20261020/preflight-batch_recovery.json": {
+      "sha256": "89e5bb52461abe40cc1c357ed7c2e500b0f0fe0f81eaf1e913a5b0b9f1beb39d",
+      "bytes": 749
+    },
+    "/workspace/derby-evidence/controller-baseline-current-receipt-20261020/preflight-batch_history.json": {
+      "sha256": "df2b1c368e7ba5f4964770dfb6a198f36e6c9294bc03750e6235b498d29d85ca",
+      "bytes": 604
+    },
+    "/workspace/derby-evidence/controller-baseline-current-receipt-20261020/preflight-normal_rollback.json": {
+      "sha256": "176ec1745c877cb95e73fe44cd871c66b9d37b070c22819af92fc6b53500b705",
+      "bytes": 749
+    },
+    "/workspace/derby-evidence/controller-baseline-current-receipt-20261020/normal-old-baseline-rollback.json": {
+      "sha256": "3f0a45e443b010a0b3f553bdfb5202708d930005b494e920eced2dddb6e8464c",
+      "bytes": 4844
+    },
+    "/workspace/derby-evidence/controller-baseline-current-receipt-20261020/prior-batch-failure-result.json": {
+      "sha256": "6e04fb0928a522d706d5621ecac11e00931c441c160701657ee01b214f1b8e82",
+      "bytes": 4397
+    },
+    "/workspace/derby-evidence/controller-baseline-current-receipt-20261020/prior-batch-failure-raw-private.log": {
+      "sha256": "92b8e47e55c6aeeccc57e2e622154319b5c243499613418bb14b7020ca8232f6",
+      "bytes": 902
+    },
+    "/workspace/derby-evidence/controller-baseline-current-receipt-20261020/PRIOR-GATE-REVIEW-LIBRARY-V1.json": {
+      "sha256": "bf700a8b2c79c65a11d2bf09120b6eb1b817f230286013bd60702029d84647c1",
+      "bytes": 1364
+    },
+    "/workspace/derby-evidence/controller-baseline-current-receipt-20261020/preflight-duplicate_flash.json": {
+      "sha256": "379daf212f86c7f512f4326f61d48c8c169fc8a602838d510856c5499fed9a7d",
+      "bytes": 46
+    },
+    "/workspace/derby-evidence/controller-baseline-current-receipt-20261020/preflight-duplicate_trial.json": {
+      "sha256": "379daf212f86c7f512f4326f61d48c8c169fc8a602838d510856c5499fed9a7d",
+      "bytes": 46
+    },
+    "/workspace/derby-evidence/controller-baseline-mcp-resume-20261020/SOURCE-BUILD-PROOF.json": {
+      "sha256": "96c1c7a1a9b41d0a37b0722071f04604437200cbfb319489a8e7764b3ecb0263",
+      "bytes": 11211
+    },
+    "/workspace/derby-evidence/controller-baseline-device-gate-20261020/flash-plan.json": {
+      "sha256": "821210cca90eee8756d31ed6da1c185a41eeb3b2e10c805f81ab137bbe06bf01",
+      "bytes": 3828
+    },
+    "/workspace/derby-evidence/device-v2-20261020/batch-flash-receipt.json": {
+      "sha256": "10b166252305ef3aa5f29b876c3fa0e3a53f7eaa5d733e7d774341c8cab36d12",
+      "bytes": 4832
+    },
+    "/workspace/derby-evidence/device-v2-20261020/baseline-strict-result.json": {
+      "sha256": "82167bbdf6f79fe2625d1219afafbd7d5979d37975a982447e74c26fae733356",
+      "bytes": 22546
+    },
+    "/workspace/derby-evidence/device-v2-20261020/baseline-fixed-result.json": {
+      "sha256": "e7be2d9acf89812c7d20081bfb2c47543584f775243f19eda2e5b9dd51542c4d",
+      "bytes": 47972
+    },
+    "/workspace/derby-evidence/derby-controller-baseline-device-gate-review-private-20261020.zip": {
+      "sha256": "e7d4158dc169ea2e2f46b223c94cef876a75139a7dc4f46b8f62f0c9035e5c20",
+      "bytes": 79008
+    }
+  },
+  "pending": [
+    "Flash terminal/readback/normal boot evidence not included in this preliminary snapshot.",
+    "New baseline ON finite trial not assessed; only after successful exact flash/boot under owner execution and the stated stop gates."
+  ],
+  "notes": [
+    "New explicit authorization/evidence permits the corrected one-time exact plan; previous stop review/history remains immutable.",
+    "MCP prepare approval_required=false and historical needs_review status do not independently authorize work.",
+    "No alternate guessed receipt, guard relaxation or profile changes appear: new/old plan fields differ only in job/session/fingerprint and exact current receipt/backup hash.",
+    "Old batch is a valid current-image comparison/recovery receipt but remains an OOM-failing application image; it is not reclassified healthy. Normal baseline rollback data remains separate.",
+    "These files prove receipt/provenance retention and prior packet content hash; no independent live broker artifact bytes or rollback restore was tested by this reviewer."
+  ]
+}

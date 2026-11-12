@@ -1,0 +1,14 @@
+{
+  "status": "PASS_PREACTUAL_COMPARISON_TESTS",
+  "actualFrames": 0,
+  "strictContractUnitTests": 10,
+  "declaredCaseTransformations": 42,
+  "declaredReportTransformations": 336,
+  "unannouncedFieldRejections": 336,
+  "candidateActualOutputsRead": 0,
+  "source": "All case transforms derive only from completed cached baseline and predeclared source-reviewed changes",
+  "testFiles": {
+    "test_contract.py": "c625ba3ec2df8eb3273d6b9e32d9a661dcedde7720702a005e1c09b8e895a6d5",
+    "test_predeclared_cases.py": "a63dae50f6dbb25ce76b2baece599bbdf31caad9914829d8662b3ce71ea8413c"
+  }
+}

@@ -1,0 +1,140 @@
+CONFIG_IDF_TARGET="esp32s3"
+CONFIG_ESPTOOLPY_FLASHSIZE_8MB=y
+CONFIG_PARTITION_TABLE_CUSTOM=y
+CONFIG_PARTITION_TABLE_CUSTOM_FILENAME="partitions.csv"
+CONFIG_COMPILER_OPTIMIZATION_SIZE=y
+CONFIG_ESP_DEFAULT_CPU_FREQ_MHZ_240=y
+CONFIG_ESP_CONSOLE_USB_SERIAL_JTAG=y
+CONFIG_ESP_CONSOLE_SECONDARY_NONE=y
+CONFIG_ESP_MAIN_TASK_STACK_SIZE=8192
+CONFIG_FREERTOS_HZ=1000
+CONFIG_LOG_DEFAULT_LEVEL_INFO=y
+# CONFIG_SPIRAM is not set
+
+# --- Wi-Fi: one clock sync, then off again (main/wifi_time.c) ---------------
+# The radio exists to fetch the time and is stopped again; nothing in this
+# firmware streams. Every value below trades throughput the device never uses
+# for DRAM and flash, which are what an ESP32-S3FN8 without PSRAM runs out of.
+#
+# IRAM_OPT/RX_IRAM_OPT keep the Wi-Fi hot paths in flash instead of IRAM. On the
+# S3 that IRAM comes out of the same DIRAM pool as the guest heap, and a single
+# SNTP exchange does not care how fast it is served.
+CONFIG_ESP_WIFI_IRAM_OPT=n
+CONFIG_ESP_WIFI_RX_IRAM_OPT=n
+# STA only: there is no AP mode in the product.
+CONFIG_ESP_WIFI_SOFTAP_SUPPORT=n
+# The credentials live in this project's own "wifi" namespace and are handed to
+# the driver as WIFI_STORAGE_RAM, so the driver's own NVS copy is dead weight —
+# and a second copy of a passphrase that nothing here could erase.
+CONFIG_ESP_WIFI_NVS_ENABLED=n
+# Buffers for a handshake, a DHCP lease and one 48 byte NTP packet.
+CONFIG_ESP_WIFI_STATIC_RX_BUFFER_NUM=4
+CONFIG_ESP_WIFI_DYNAMIC_RX_BUFFER_NUM=8
+CONFIG_ESP_WIFI_DYNAMIC_TX_BUFFER_NUM=8
+CONFIG_ESP_WIFI_MGMT_SBUF_NUM=8
+# Aggregation only pays off over a sustained transfer.
+CONFIG_ESP_WIFI_AMPDU_TX_ENABLED=n
+CONFIG_ESP_WIFI_AMPDU_RX_ENABLED=n
+# One IPv4 UDP conversation with one server. DHCPS is the server half.
+CONFIG_LWIP_IPV6=n
+CONFIG_LWIP_DHCPS=n
+CONFIG_LWIP_MAX_SOCKETS=4
+CONFIG_LWIP_TCPIP_RECVMBOX_SIZE=16
+# RFC 4330 asks for a random 0-5000 ms delay before the first NTP request, so
+# that a street full of devices powering up together does not hit a public
+# pool at once. This device syncs once, when a person presses a key, and the
+# draw decided whether the 10 s wait was met: the same credentials synced and
+# then timed out at stage=sntp on the next attempt. Off.
+CONFIG_LWIP_SNTP_STARTUP_DELAY=n
+
+# Not an optimization: the console is USB Serial/JTAG (see above) and the S3's
+# PHY needs this workaround to leave it working while the radio is on.
+CONFIG_ESP_PHY_ENABLE_USB=y
+
+# TLS from an app is the tightest allocation on this board. Measured 2026-09-08:
+# esp_http_client_open reached mbedtls_ssl_setup with 27,232 bytes free and
+# 18,432 in the largest block, and it returned -0x008D (ALLOC_FAILED). The
+# demand is the 16 KiB SSL_IN_CONTENT_LEN plus 4 KiB out plus the context, and
+# the supply cannot be raised by 20 KiB on a 341,760 byte board with no PSRAM.
+# The dynamic buffer shrinks the record buffers once the handshake is over,
+# which suits pocket.net's one-request-at-a-time shape, and unlike lowering
+# SSL_IN_CONTENT_LEN it does not decide in advance which servers this device can
+# talk to.
+CONFIG_MBEDTLS_DYNAMIC_BUFFER=y
+
+# --- SD (fs.volume.sd): FATFS sizing ----------------------------------------
+# Inert until something REQUIRES the fatfs component: MINIMAL_BUILD keeps bt and
+# fatfs out of the build unless a component asks for them, and a CONFIG_ whose
+# Kconfig never loads is dropped in silence. That is how the first BLE
+# measurement here came back as +48 bytes, so it is worth saying once: these
+# three lines change nothing until pocket_fs.c requires fatfs.
+#
+# NOT set here: any sector-size override. Measured on the board 2026-09-08, a
+# mount costs 7,036 bytes at FF_MAX_SS=512 and 7,048 at 4096 -- twelve bytes,
+# and those twelve are a `WORD ssize` field that ff.h adds only when
+# FF_MAX_SS != FF_MIN_SS, plus alignment. FF_MAX_SS buys nothing at runtime
+# because CONFIG_FATFS_USE_DYN_BUFFERS defaults to y, which makes FATFS.win and
+# FIL.buf POINTERS allocated to the medium's real sector size -- 512 on an SD
+# card -- rather than arrays sized by FF_MAX_SS.
+#
+# Recorded because the obvious reading of the header is wrong twice over:
+# CONFIG_FATFS_SECTOR_* configures the fatfsgen.py image generator and not the
+# driver, and the symbol that does reach FF_MAX_SS (CONFIG_WL_SECTOR_SIZE) is
+# then defeated by the dynamic buffers. An earlier version of this comment
+# claimed ~12 KiB of savings from arithmetic on ffconf.h. The board said 12
+# bytes. Sector size is a non-issue on this hardware.
+# pocket_fs.c's name_ok() already refuses a name that would "become a different
+# name on an SD card later". The default ANSI/OEM encoding does exactly that,
+# silently, to every non-ASCII name. The validator and the encoding have to
+# agree or the validation is theatre.
+CONFIG_FATFS_API_ENCODING_UTF_8=y
+# sd: is the only FATFS volume on this board.
+CONFIG_FATFS_VOLUME_COUNT=1
+
+# The instruction cache, doubled, and it is the largest single change ever made
+# to this scene's frame time -- without touching a line of the scene.
+#
+# 16 KB / 8 ways / 32 B lines is 64 sets, so the set index is (addr >> 5) & 63
+# and addresses alias every 2,048 bytes. FLOWER touches about 20.6 KB of
+# instructions in a frame: 643 lines, 10.1 per set against 8 ways. Conflict
+# misses were structural, and which line evicted which was decided by address
+# mod 2048 -- so moving any function by a non-multiple of 2,048 reshuffled every
+# function after it. A pixel-identical change that removed 354 bytes was
+# measured moving the frame by 5.5 ms, about 20%.
+#
+# 32 KB gives 128 sets and 5.0 lines per set, under the 8 ways. draw 26.4 -> 21.1
+# ms at a pinned species and view, and -- the reason this is worth 16 KiB of
+# DRAM rather than the 5.3 ms alone -- the sample spread collapses from 3.2 ms
+# to 1.4 and the frame time stops depending on where the compiler put things.
+#
+# This is what CLAUDE.md's standing "the same kernel moves 15% between builds"
+# always was. The full measurement, including four commits of timings retracted
+# on the way to finding it, is docs/perf/ray-stall-census.md 2.5-2.11.
+#
+# The cost is 16 KiB of DRAM: idle_free 250,032 -> 233,632 and the largest
+# contiguous block an app can get 110,592 -> 94,208. All four JS apps still
+# evaluate.
+#
+# NOTE for whoever changes a default next: adding a line here did NOT change an
+# existing build. sdkconfig already carried CONFIG_ESP32S3_INSTRUCTION_CACHE_16KB
+# and an existing sdkconfig wins over sdkconfig.defaults for options it already
+# names -- defaults only supply options sdkconfig has not got. CLAUDE.md's
+# "sdkconfig.defaults の変更は全ビルドディレクトリの次回ビルドに効く" holds for a
+# fresh sdkconfig and not for an existing one, so this needed the same three
+# lines edited in sdkconfig itself. A fresh checkout gets it from here.
+CONFIG_ESP32S3_INSTRUCTION_CACHE_32KB=y
+
+# Flash in QIO instead of DIO. The JS turn waits on the flash cache for 70% of
+# its cycles even with the 32 KB cache above (I_STALL_BUSY, which on this chip
+# is the flash-cache miss wait: docs/perf/ray-stall-census.md 2.5): a frame's
+# interpreter code is ~65-84 KB against the cache's 32 (estimate, host call
+# graph against the device's symbol sizes). A quad read moves a line in half the
+# clocks of a dual one, and on the same binary layout (JS_CallInternal at the
+# same address) STRESS LV1's JS per frame went 10.78 -> 7.25 ms and render
+# 6.61 -> 6.16 ms, measured with CONFIG_POCKET_VM_TURNPERF (docs/vm/turn-cpi.md).
+# The part is an XMC 0x4017 with the eFuse flash type set to quad (esptool
+# flash-id). No code and no DRAM: the bootloader switches the mode.
+#
+# As with the cache size above, an existing sdkconfig keeps its DIO line; edit
+# CONFIG_ESPTOOLPY_FLASHMODE_* there too (or start that build_* directory fresh).
+CONFIG_ESPTOOLPY_FLASHMODE_QIO=y

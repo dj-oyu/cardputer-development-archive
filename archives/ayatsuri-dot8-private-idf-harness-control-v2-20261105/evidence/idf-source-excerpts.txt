@@ -1,0 +1,345 @@
+
+/workspace/.setup/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c
+1964:     void vTaskSuspend( TaskHandle_t xTaskToSuspend )
+1965:     {
+1966:         TCB_t * pxTCB;
+1967: 
+1968:         taskENTER_CRITICAL( &xKernelLock );
+1969:         {
+1970:             /* Get current core ID as we can no longer be preempted. */
+1971:             const BaseType_t xCurCoreID = portGET_CORE_ID();
+1972: 
+1973:             /* If null is passed in here then it is the running task that is
+1974:              * being suspended. */
+1975:             pxTCB = prvGetTCBFromHandle( xTaskToSuspend );
+1976: 
+1977:             traceTASK_SUSPEND( pxTCB );
+1978: 
+1979:             /* Remove task from the ready/delayed list and place in the
+1980:              * suspended list. */
+1981:             if( uxListRemove( &( pxTCB->xStateListItem ) ) == ( UBaseType_t ) 0 )
+1982:             {
+1983:                 taskRESET_READY_PRIORITY( pxTCB->uxPriority );
+1984:             }
+1985:             else
+1986:             {
+1987:                 mtCOVERAGE_TEST_MARKER();
+1988:             }
+1989: 
+1990:             /* Is the task waiting on an event also? */
+1991:             if( listLIST_ITEM_CONTAINER( &( pxTCB->xEventListItem ) ) != NULL )
+1992:             {
+1993:                 ( void ) uxListRemove( &( pxTCB->xEventListItem ) );
+1994:             }
+1995:             else
+1996:             {
+1997:                 mtCOVERAGE_TEST_MARKER();
+1998:             }
+1999: 
+2000:             vListInsertEnd( &xSuspendedTaskList, &( pxTCB->xStateListItem ) );
+2001: 
+2002:             #if ( configUSE_TASK_NOTIFICATIONS == 1 )
+2003:             {
+2004:                 BaseType_t x;
+2005: 
+2006:                 for( x = 0; x < configTASK_NOTIFICATION_ARRAY_ENTRIES; x++ )
+2007:                 {
+2008:                     if( pxTCB->ucNotifyState[ x ] == taskWAITING_NOTIFICATION )
+2009:                     {
+2010:                         /* The task was blocked to wait for a notification, but is
+2011:                          * now suspended, so no notification was received. */
+2012:                         pxTCB->ucNotifyState[ x ] = taskNOT_WAITING_NOTIFICATION;
+2013:                     }
+2014:                 }
+2015:             }
+2016:             #endif /* if ( configUSE_TASK_NOTIFICATIONS == 1 ) */
+2017: 
+2018:             if( xSchedulerRunning != pdFALSE )
+2019:             {
+2020:                 /* Reset the next expected unblock time in case it referred to the
+2021:                  * task that is now in the Suspended state. */
+2022:                 prvResetNextTaskUnblockTime();
+2023:             }
+2024:             else
+2025:             {
+2026:                 mtCOVERAGE_TEST_MARKER();
+2027:             }
+2028: 
+2029:             if( taskIS_CURRENTLY_RUNNING_ON_CORE( pxTCB, xCurCoreID ) == pdTRUE )
+2030:             {
+2031:                 if( xSchedulerRunning != pdFALSE )
+2032:                 {
+2033:                     /* The current task has just been suspended. */
+2034:                     configASSERT( uxSchedulerSuspended[ xCurCoreID ] == 0 );
+2035:                     portYIELD_WITHIN_API();
+2036:                 }
+2037:                 else
+2038:                 {
+2039:                     /* The scheduler is not running, but the task that was pointed
+2040:                      * to by pxCurrentTCBs has just been suspended and pxCurrentTCBs
+2041:                      * must be adjusted to point to a different task. */
+2042:                     if( listCURRENT_LIST_LENGTH( &xSuspendedTaskList ) == uxCurrentNumberOfTasks ) /*lint !e931 Right has no side effect, just volatile. */
+2043:                     {
+2044:                         /* No other tasks are ready, so set pxCurrentTCBs back to
+2045:                          * NULL so when the next task is created pxCurrentTCBs will
+2046:                          * be set to point to it no matter what its relative priority
+2047:                          * is. */
+2048:                         pxCurrentTCBs[ xCurCoreID ] = NULL;
+2049:                     }
+2050:                     else
+2051:                     {
+2052:                         vTaskSwitchContext();
+2053:                     }
+2054:                 }
+2055:             }
+2056: 
+2057:             #if ( configNUMBER_OF_CORES > 1 )
+2058:                 else if( taskIS_CURRENTLY_RUNNING_ON_CORE( pxTCB, !xCurCoreID ) == pdTRUE )
+
+/workspace/.setup/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S
+637: 
+638:     #if XCHAL_CP_NUM > 0
+639:     /* Save CPENABLE in task's co-processor save area, and clear CPENABLE.  */
+640:     movi    a2, pxCurrentTCBs           /* cp_state =                       */
+641:     getcoreid a3
+642:     addx4   a2, a3, a2
+643:     l32i    a2, a2, 0
+644: 
+645:     get_cpsa_from_tcb a2, a3            /* After this, pointer to CP save area is in a2, a3 is destroyed */
+646: 
+647:     rsr     a3, XT_REG_CPENABLE
+648:     s16i    a3, a2, XT_CPENABLE         /* cp_state->cpenable = CPENABLE;   */
+649:     movi    a3, 0
+650:     wsr     a3, XT_REG_CPENABLE         /* disable all co-processors        */
+651:     #endif
+652: 
+653:     #ifdef __XTENSA_CALL0_ABI__
+654:     /* Tail-call dispatcher. */
+655:     call0   _frxt_dispatch
+656:     /* Never reaches here. */
+657:     #else
+658:     RET(16)
+659:     #endif
+660: 
+661: /*
+662: **********************************************************************************************************
+663: *                                        _frxt_task_coproc_state
+664: *                                   void _frxt_task_coproc_state(void)
+665: *
+666: * Implements the Xtensa RTOS porting layer's XT_RTOS_CP_STATE function for FreeRTOS.
+667: *
+668: * May only be called when a task is running, not within an interrupt handler (returns 0 in that case).
+669: * May only be called from assembly code by the 'call0' instruction. Does NOT obey ABI conventions.
+670: * Returns in A15 a pointer to the base of the co-processor state save area for the current task.
+671: * See the detailed description of the XT_RTOS_ENTER macro in xtensa_rtos.h.
+672: *
+673: **********************************************************************************************************
+674: */
+675: #if XCHAL_CP_NUM > 0
+676: 
+677:     .globl  _frxt_task_coproc_state
+678:     .type   _frxt_task_coproc_state,@function
+679:     .align  4
+680: _frxt_task_coproc_state:
+681: 
+682: 
+683:     /* We can use a3 as a scratchpad, the instances of code calling XT_RTOS_CP_STATE don't seem to need it saved. */
+684:     getcoreid a3
+685:     movi    a15, port_xSchedulerRunning /* if (port_xSchedulerRunning              */
+686:     addx4   a15, a3,a15
+687:     l32i    a15, a15, 0
+688:     beqz    a15, 1f
+689:     movi    a15, port_interruptNesting  /* && port_interruptNesting == 0           */
+690:     addx4   a15, a3, a15
+691:     l32i    a15, a15, 0
+692:     bnez    a15, 1f
+693: 
+694:     movi    a15, pxCurrentTCBs
+695:     addx4   a15, a3, a15
+696:     l32i    a15, a15, 0                 /* && pxCurrentTCBs != 0) {                 */
+697: 
+698:     beqz    a15, 2f
+699:     get_cpsa_from_tcb a15, a3           /* After this, pointer to CP save area is in a15, a3 is destroyed */
+700:     ret
+701: 
+702: 1:  movi    a15, 0
+703: 2:  ret
+704: 
+705: #endif /* XCHAL_CP_NUM > 0 */
+706: 
+707: /*
+708: **********************************************************************************************************
+709: *                                        _frxt_coproc_exc_hook
+710: *                                   void _frxt_coproc_exc_hook(void)
+711: *
+712: * Implements the Xtensa RTOS porting layer's XT_RTOS_CP_EXC_HOOK function for FreeRTOS.
+713: *
+714: * May only be called from assembly code by the 'call0' instruction. Does NOT obey ABI conventions.
+715: * May only only use a2-4, a15 (all other regs must be preserved).
+716: * See the detailed description of the XT_RTOS_ENTER macro in xtensa_rtos.h.
+717: *
+718: **********************************************************************************************************
+719: */
+720: #if XCHAL_CP_NUM > 0
+721: 
+722:     .globl  _frxt_coproc_exc_hook
+723:     .type   _frxt_coproc_exc_hook,@function
+724:     .align  4
+725: _frxt_coproc_exc_hook:
+726: 
+727:     #if configNUM_CORES > 1
+728:     getcoreid a2                            /* a2 = xCurCoreID */
+729:     /* if (port_xSchedulerRunning[xCurCoreID] == 0) */
+730:     movi    a3, port_xSchedulerRunning
+731:     addx4   a3, a2, a3
+732:     l32i    a3, a3, 0
+733:     beqz    a3, 1f                          /* Scheduler hasn't started yet. Return. */
+734:     /* if (port_interruptNesting[xCurCoreID] != 0) */
+735:     movi    a3, port_interruptNesting
+736:     addx4   a3, a2, a3
+737:     l32i    a3, a3, 0
+738:     bnez    a3, 1f                          /* We are in an interrupt. Return*/
+739:     /* CP operations are incompatible with unpinned tasks. Thus we pin the task
+740:     to the current running core. */
+741:     movi    a3, pxCurrentTCBs
+742:     addx4   a3, a2, a3
+743:     l32i    a3, a3, 0                       /* a3 = pxCurrentTCBs[xCurCoreID] */
+744:     movi    a4, offset_xCoreID
+745:     l32i    a4, a4, 0                       /* a4 = offset_xCoreID */
+746:     add     a3, a3, a4                      /* a3 = &TCB.xCoreID */
+747:     s32i    a2, a3, 0                       /* TCB.xCoreID = xCurCoreID */
+748: 1:
+749:     #endif /* configNUM_CORES > 1 */
+750: 
+
+/workspace/.setup/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie-asm.h
+280:      *                  (register must contain a 16 byte aligned address).
+281:      *      at1..at4    Four temporary address registers (first XCHAL_CP3_NUM_ATMPS
+282:      *                  registers are clobbered, the remaining are unused).
+283:      *  Optional parameters are the same as for xchal_ncp_store.
+284:      */
+285: #define xchal_cp_cop_ai_store	xchal_cp3_store
+286:     .macro	xchal_cp3_store  ptr at1 at2 at3 at4  continue=0 ofs=-1 select=XTHAL_SAS_ALL alloc=0
+287: 	xchal_sa_start \continue, \ofs
+288: 	// Custom caller-saved registers not used by default by the compiler:
+289: 	.ifeq (XTHAL_SAS_TIE | XTHAL_SAS_NOCC | XTHAL_SAS_CALR) & ~(\select)
+290: 	xchal_sa_align	\ptr, 0, 0, 16, 16
+291: 	rur.ACCX_0	\at1		// ureg 0
+292: 	s32i	\at1, \ptr, .Lxchal_ofs_+0
+293: 	rur.ACCX_1	\at1		// ureg 1
+294: 	s32i	\at1, \ptr, .Lxchal_ofs_+4
+295: 	rur.QACC_H_0	\at1		// ureg 2
+296: 	s32i	\at1, \ptr, .Lxchal_ofs_+8
+297: 	rur.QACC_H_1	\at1		// ureg 3
+298: 	s32i	\at1, \ptr, .Lxchal_ofs_+12
+299: 	rur.QACC_H_2	\at1		// ureg 4
+300: 	s32i	\at1, \ptr, .Lxchal_ofs_+16
+301: 	rur.QACC_H_3	\at1		// ureg 5
+302: 	s32i	\at1, \ptr, .Lxchal_ofs_+20
+303: 	rur.QACC_H_4	\at1		// ureg 6
+304: 	s32i	\at1, \ptr, .Lxchal_ofs_+24
+305: 	rur.QACC_L_0	\at1		// ureg 7
+306: 	s32i	\at1, \ptr, .Lxchal_ofs_+28
+307: 	rur.QACC_L_1	\at1		// ureg 8
+308: 	s32i	\at1, \ptr, .Lxchal_ofs_+32
+309: 	rur.QACC_L_2	\at1		// ureg 9
+310: 	s32i	\at1, \ptr, .Lxchal_ofs_+36
+311: 	rur.QACC_L_3	\at1		// ureg 10
+312: 	s32i	\at1, \ptr, .Lxchal_ofs_+40
+313: 	rur.QACC_L_4	\at1		// ureg 11
+314: 	s32i	\at1, \ptr, .Lxchal_ofs_+44
+315: 	rur.SAR_BYTE	\at1		// ureg 13
+316: 	s32i	\at1, \ptr, .Lxchal_ofs_+48
+317: 	rur.FFT_BIT_WIDTH	\at1		// ureg 14
+318: 	s32i	\at1, \ptr, .Lxchal_ofs_+52
+319: 	rur.UA_STATE_0	\at1		// ureg 15
+320: 	s32i	\at1, \ptr, .Lxchal_ofs_+56
+321: 	rur.UA_STATE_1	\at1		// ureg 16
+322: 	s32i	\at1, \ptr, .Lxchal_ofs_+60
+323: 	rur.UA_STATE_2	\at1		// ureg 17
+324: 	s32i	\at1, \ptr, .Lxchal_ofs_+64
+325: 	rur.UA_STATE_3	\at1		// ureg 18
+326: 	s32i	\at1, \ptr, .Lxchal_ofs_+68
+327: 	st.qr	q0, \ptr, .Lxchal_ofs_+80
+328: 	st.qr	q1, \ptr, .Lxchal_ofs_+96
+329: 	st.qr	q2, \ptr, .Lxchal_ofs_+112
+330: 	addi	\ptr, \ptr, 128
+331: 	st.qr	q3, \ptr, .Lxchal_ofs_+0
+332: 	st.qr	q4, \ptr, .Lxchal_ofs_+16
+333: 	st.qr	q5, \ptr, .Lxchal_ofs_+32
+334: 	st.qr	q6, \ptr, .Lxchal_ofs_+48
+335: 	st.qr	q7, \ptr, .Lxchal_ofs_+64
+336: 	.set	.Lxchal_pofs_, .Lxchal_pofs_ + 128
+337: 	.set	.Lxchal_ofs_, .Lxchal_ofs_ + 80
+338: 	.elseif ((XTHAL_SAS_TIE | XTHAL_SAS_NOCC | XTHAL_SAS_CALR) & ~(\alloc)) == 0
+339: 	xchal_sa_align	\ptr, 0, 0, 16, 16
+340: 	.set	.Lxchal_ofs_, .Lxchal_ofs_ + 208
+341: 	.endif
+342:     .endm	// xchal_cp3_store
+343: 
+344:     /*
+345:      *  Macro to load the state of TIE coprocessor cop_ai.
+346:      *  Required parameters:
+347:      *      ptr         Save area pointer address register (clobbered)
+348:      *                  (register must contain a 16 byte aligned address).
+349:      *      at1..at4    Four temporary address registers (first XCHAL_CP3_NUM_ATMPS
+350:      *                  registers are clobbered, the remaining are unused).
+351:      *  Optional parameters are the same as for xchal_ncp_load.
+352:      */
+353: #define xchal_cp_cop_ai_load	xchal_cp3_load
+354:     .macro	xchal_cp3_load  ptr at1 at2 at3 at4  continue=0 ofs=-1 select=XTHAL_SAS_ALL alloc=0
+355: 	xchal_sa_start \continue, \ofs
+356: 	// Custom caller-saved registers not used by default by the compiler:
+357: 	.ifeq (XTHAL_SAS_TIE | XTHAL_SAS_NOCC | XTHAL_SAS_CALR) & ~(\select)
+358: 	xchal_sa_align	\ptr, 0, 0, 16, 16
+359: 	l32i	\at1, \ptr, .Lxchal_ofs_+0
+360: 	wur.ACCX_0	\at1		// ureg 0
+361: 	l32i	\at1, \ptr, .Lxchal_ofs_+4
+362: 	wur.ACCX_1	\at1		// ureg 1
+363: 	l32i	\at1, \ptr, .Lxchal_ofs_+8
+364: 	wur.QACC_H_0	\at1		// ureg 2
+365: 	l32i	\at1, \ptr, .Lxchal_ofs_+12
+366: 	wur.QACC_H_1	\at1		// ureg 3
+367: 	l32i	\at1, \ptr, .Lxchal_ofs_+16
+368: 	wur.QACC_H_2	\at1		// ureg 4
+369: 	l32i	\at1, \ptr, .Lxchal_ofs_+20
+370: 	wur.QACC_H_3	\at1		// ureg 5
+371: 	l32i	\at1, \ptr, .Lxchal_ofs_+24
+372: 	wur.QACC_H_4	\at1		// ureg 6
+373: 	l32i	\at1, \ptr, .Lxchal_ofs_+28
+374: 	wur.QACC_L_0	\at1		// ureg 7
+375: 	l32i	\at1, \ptr, .Lxchal_ofs_+32
+376: 	wur.QACC_L_1	\at1		// ureg 8
+377: 	l32i	\at1, \ptr, .Lxchal_ofs_+36
+378: 	wur.QACC_L_2	\at1		// ureg 9
+379: 	l32i	\at1, \ptr, .Lxchal_ofs_+40
+380: 	wur.QACC_L_3	\at1		// ureg 10
+381: 	l32i	\at1, \ptr, .Lxchal_ofs_+44
+382: 	wur.QACC_L_4	\at1		// ureg 11
+383: 	l32i	\at1, \ptr, .Lxchal_ofs_+48
+384: 	wur.SAR_BYTE	\at1		// ureg 13
+385: 	l32i	\at1, \ptr, .Lxchal_ofs_+52
+386: 	wur.FFT_BIT_WIDTH	\at1		// ureg 14
+387: 	l32i	\at1, \ptr, .Lxchal_ofs_+56
+388: 	wur.UA_STATE_0	\at1		// ureg 15
+389: 	l32i	\at1, \ptr, .Lxchal_ofs_+60
+390: 	wur.UA_STATE_1	\at1		// ureg 16
+391: 	l32i	\at1, \ptr, .Lxchal_ofs_+64
+392: 	wur.UA_STATE_2	\at1		// ureg 17
+393: 	l32i	\at1, \ptr, .Lxchal_ofs_+68
+394: 	wur.UA_STATE_3	\at1		// ureg 18
+395: 	ld.qr	q0, \ptr, .Lxchal_ofs_+80
+396: 	ld.qr	q1, \ptr, .Lxchal_ofs_+96
+397: 	ld.qr	q2, \ptr, .Lxchal_ofs_+112
+398: 	addi	\ptr, \ptr, 128
+399: 	ld.qr	q3, \ptr, .Lxchal_ofs_+0
+400: 	ld.qr	q4, \ptr, .Lxchal_ofs_+16
+401: 	ld.qr	q5, \ptr, .Lxchal_ofs_+32
+402: 	ld.qr	q6, \ptr, .Lxchal_ofs_+48
+403: 	ld.qr	q7, \ptr, .Lxchal_ofs_+64
+404: 	.set	.Lxchal_pofs_, .Lxchal_pofs_ + 128
+405: 	.set	.Lxchal_ofs_, .Lxchal_ofs_ + 80
+406: 	.elseif ((XTHAL_SAS_TIE | XTHAL_SAS_NOCC | XTHAL_SAS_CALR) & ~(\alloc)) == 0
+407: 	xchal_sa_align	\ptr, 0, 0, 16, 16
+408: 	.set	.Lxchal_ofs_, .Lxchal_ofs_ + 208
+409: 	.endif

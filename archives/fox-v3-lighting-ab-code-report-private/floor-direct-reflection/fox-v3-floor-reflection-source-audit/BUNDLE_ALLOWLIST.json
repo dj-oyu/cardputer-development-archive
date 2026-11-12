@@ -1,0 +1,12 @@
+{
+  "include": [
+    "check_weight_socket.py",
+    "audit.py",
+    "official-weight-evidence.json",
+    "REPORT.md",
+    "summary.json",
+    "weight-socket-check.json",
+    "hashes.json"
+  ],
+  "exclude": "source blend/geometry/images/raw buffers; none created here"
+}

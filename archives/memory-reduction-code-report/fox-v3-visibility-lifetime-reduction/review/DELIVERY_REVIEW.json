@@ -1,0 +1,17 @@
+{
+  "status": "PASS_INDEPENDENT_DELIVERY_REVIEW",
+  "allowlistedFiles": 463,
+  "numericFrameReports": 378,
+  "frozenFilesUnchanged": 187,
+  "reviewedArtifacts": {
+    "FINAL_REPORT.md": "0792bb9690e4d64b63a3d2cc03bca733d5d7fa8372108f824684780b51fd0c62",
+    "FINAL_RESULT.json": "094a94d407ffeae7c1d18e61357a84a9295ff34a9e2cf4bf77b57e1c18eaea5d",
+    "AGGREGATE_CODE_ALLOWLIST.json": "bf4b6c3ddc1e9f30bf0e41a98a4e14ce1892d575256541d8051398dfd55057f0"
+  },
+  "coverageClaimsAccurate": true,
+  "namedMemoryAndLimitsAccurate": true,
+  "timingDescriptiveOnly": true,
+  "failurePublicationAndLSanLimitsAccurate": true,
+  "noRawAssetsBinariesCommandsOrGeneratedLUTArrays": true,
+  "noRerendersOrCodeEdits": true
+}

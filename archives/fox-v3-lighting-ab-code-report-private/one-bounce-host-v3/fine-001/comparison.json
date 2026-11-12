@@ -1,0 +1,21 @@
+{
+  "scope": "outer16 versus64, baseline only; direction fine render failed, no response-convergence estimate",
+  "coveragePixels": 5156,
+  "changed565Pixels": 1512,
+  "RGB_MAE": [
+    0.005080207212392648,
+    0.0031124164173039173,
+    0.0015140519032007796
+  ],
+  "RGB_max": [
+    0.12903225806451613,
+    0.09523809523809523,
+    0.06451612903225812
+  ],
+  "RGB_RMSE": [
+    0.013611412398147834,
+    0.008016150690388616,
+    0.007103164233081378
+  ],
+  "depthExact": true
+}

@@ -1,0 +1,25 @@
+{
+  "status": "PASS_SYNTHETIC_ONLY",
+  "actualFrames": 0,
+  "candidateSourceSHA256": "f0f689433136ca625d2543c10750bdc9e4faa7757917bb2f2c1cf767209d8007",
+  "adapterSuites": "normal and ASan/UBSan: admission, cache, stream and prefix tests passed",
+  "legacyExactSuites": "Fresh ring80 exact cases both depth/nondepth, synthetic producer and negative cases; shader/profile/query order exact.",
+  "lifetimeBoundary": "9 scenarios x4 configurations; exact extracted source boundary and real visibility builder, five builder allocation failures, two negative source-order controls.",
+  "codecOwnership": "Real begin/mode4/mode5 append and decode after synthetic source poison/free; O0/O2 normal+ASanUBSan all pass.",
+  "limitations": [
+    "Boundary publication assertion is a surrogate gate plus source-order check, not full native integration.",
+    "LeakSanitizer disabled for known ptrace environment; tracked model and builder allocations independently checked.",
+    "Baseline process-return leaks not rewritten.",
+    "No actual renders or device/SDK work."
+  ],
+  "evidence": {
+    "adapter-tests.log": "769d871e955367aafe6e9b13a96a59d6ced3db46fcb28309e8731e60b4b31bcc",
+    "adapter-san.log": "769d871e955367aafe6e9b13a96a59d6ced3db46fcb28309e8731e60b4b31bcc",
+    "legacy-tests.log": "9d1ac33032ec4b555d31585e994a954e3df442a8e7f34a2b98a9907a9b0d99af",
+    "legacy-san.log": "9d1ac33032ec4b555d31585e994a954e3df442a8e7f34a2b98a9907a9b0d99af",
+    "tests/lifetime-results/results.json": "7e1d642d9f5033092415cb0ac80d4929fa4886a85326be9ac7d1f9ca743cec44",
+    "tests/lifetime-results/codec-results.json": "68609679ae13d9a94354e4fceea9d2b6498939a8749fa0f20a80dae174536622",
+    "SOURCE_DELTA.json": "f3d57863a0bdc3deb0ada59629b363a610da16afcf69900de7b4356122a2c14d",
+    "BASE_TEST_EVIDENCE.json": "00af20e13de8d831cf120f59f084ea4a8994f4cfb7b3257f5dd7713080a73b52"
+  }
+}

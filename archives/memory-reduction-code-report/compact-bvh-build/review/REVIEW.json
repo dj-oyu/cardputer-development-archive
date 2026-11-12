@@ -1,0 +1,79 @@
+{
+  "result": "PASS same-optimization exactness and synthetic safety; actual40 not run",
+  "candidate_sha256": "8eb08314bd75441c1f77699a7b56a30a71986d8112dec0cf39e56be770dd42f8",
+  "case_count": 544,
+  "counts": [
+    1,
+    2,
+    4,
+    5,
+    7,
+    8,
+    9,
+    15,
+    17,
+    31,
+    63,
+    127,
+    257,
+    513,
+    1025,
+    1566,
+    2048
+  ],
+  "coverage": [
+    "duplicate centers and original ordinal tie-breaks",
+    "all eight signed-zero combinations across each of three axes",
+    "finite extreme magnitudes up to 5e49 and tiny 1e-40",
+    "degenerate rejection and overrange rejection",
+    "all five allocation failures retain old scene",
+    "invalid input/slot alias",
+    "own xyz used as replacement input",
+    "retained old scene/binding after publication",
+    "caller xyz mutation after build",
+    "nearest/segment result status bytes and budget counters at four limits"
+  ],
+  "comparison_bytes_per_variant": 162211176,
+  "same_optimization_O0": "PASS",
+  "same_optimization_O2": "PASS",
+  "same_optimization_O2_ASan_UBSan": "PASS",
+  "leak_sanitizer": "Unavailable under ptrace; leak detection disabled for sanitizer run. Allocation cleanup source-reviewed; not an LSan pass.",
+  "baseline_cross_optimization": "O0 and O2 differ on signed-zero bytes; not normalized. Candidate matches corresponding baseline.",
+  "stack_host_O2": {
+    "baseline_build": 336,
+    "baseline_node": 176,
+    "candidate_build": 336,
+    "candidate_node": 192,
+    "candidate_bounds": 176,
+    "max_10_frame_baseline_chain": 2096,
+    "max_10_frame_candidate_chain": 2432,
+    "delta": 336,
+    "limitation": "Compiler .su frame sums for builder chain, not device or whole-pipeline stack claim."
+  },
+  "memory_actual_shape": {
+    "triangles": 1566,
+    "temporary_before": 125280,
+    "temporary_after": 37584,
+    "heap_saving": 87696,
+    "builder_largest_before": 125280,
+    "builder_largest_after": 65472,
+    "persistent_unchanged": 106104,
+    "overall_arena_unchanged": 129064,
+    "depth_unchanged": 129600
+  },
+  "operation_accounting": {
+    "1566": {
+      "extra_triangle_bound_recomputations": 15660,
+      "extra_owned_xyz_double_loads": 140940,
+      "sort_record_bytes_before": 80,
+      "sort_record_bytes_after": 8
+    },
+    "2048": {
+      "extra_triangle_bound_recomputations": 20480,
+      "extra_owned_xyz_double_loads": 184320,
+      "sort_record_bytes_before": 80,
+      "sort_record_bytes_after": 8
+    }
+  },
+  "scope": "No actual renders, models, public changes, device, SDK, prohibited source or reference reads."
+}

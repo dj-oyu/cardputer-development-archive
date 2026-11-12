@@ -1,0 +1,2807 @@
+
+/workspace/ayatsuri-s3-fixed-arithmetic-objects-20261105/q24-Os/material.o:     file format elf32-xtensa-le
+
+
+Disassembly of section .literal.rawmul:
+
+00000000 <.literal.rawmul>:
+   0:	
+
+Disassembly of section .literal.sq:
+
+00000000 <.literal.sq>:
+   0:	
+
+Disassembly of section .literal.roundiv$part$0:
+
+00000000 <.literal.roundiv$part$0>:
+   0:	
+	...
+
+Disassembly of section .literal.di:
+
+00000000 <.literal.di>:
+	...
+
+Disassembly of section .literal.mu:
+
+00000000 <.literal.mu>:
+	...
+
+Disassembly of section .literal.uniform_left$constprop$0:
+
+00000000 <.literal.uniform_left$constprop$0>:
+   0:	
+   4:	
+   8:	
+   c:	
+  10:	
+  14:	
+  18:	
+  1c:	
+  20:	
+  24:	
+  28:	
+  2c:	
+  30:	
+  34:	
+  38:	
+  3c:	
+	...
+
+Disassembly of section .literal.ramp$constprop$0:
+
+00000000 <.literal.ramp$constprop$0>:
+   0:	
+   4:	
+   8:	
+	...
+
+Disassembly of section .literal.mc_eval$part$0:
+
+00000000 <.literal.mc_eval$part$0>:
+	...
+   8:	
+   c:	
+  10:	
+  14:	
+  18:	
+  1c:	
+  20:	
+  24:	
+  28:	
+  2c:	
+  30:	
+  34:	
+  38:	
+  3c:	
+  40:	
+  44:	
+  48:	
+  4c:	
+  50:	
+  54:	
+  58:	
+  5c:	
+  60:	
+	...
+
+Disassembly of section .literal.mc_prepare:
+
+00000000 <.literal.mc_prepare>:
+   0:	
+   4:	
+	...
+
+Disassembly of section .literal.mc_eval:
+
+00000000 <.literal.mc_eval>:
+   0:	
+   4:	
+
+Disassembly of section .literal.mc_block:
+
+00000000 <.literal.mc_block>:
+	...
+
+Disassembly of section .text.ad:
+
+00000000 <ad>:
+   0:	entry	a1, 32
+   3:	mov.n	a8, a3
+   5:	bgei	a5, 1, c <ad+0xc>
+   8:	bnez.n	a5, 2c <ad+0x2c>
+   a:	beqz.n	a4, 2c <ad+0x2c>
+   c:	movi.n	a9, -1
+   e:	srli	a9, a9, 1
+  11:	movi.n	a10, -1
+  13:	sub	a9, a9, a5
+  16:	xor	a10, a4, a10
+  19:	blt	a9, a8, 22 <ad+0x22>
+  1c:	bne	a8, a9, 49 <ad+0x49>
+  1f:	bgeu	a10, a2, 49 <ad+0x49>
+  22:	movi.n	a8, 4
+  24:	s32i.n	a8, a6, 0
+  26:	movi.n	a2, 0
+  28:	movi.n	a3, 0
+  2a:	retw.n
+  2c:	or	a9, a4, a5
+  2f:	beqz.n	a9, 49 <ad+0x49>
+  31:	movi.n	a9, -1
+  33:	slli	a9, a9, 31
+  36:	sub	a9, a9, a5
+  39:	beqz.n	a4, 3d <ad+0x3d>
+  3b:	addi.n	a9, a9, -1
+  3d:	neg	a10, a4
+  40:	blt	a8, a9, 22 <ad+0x22>
+  43:	bne	a9, a8, 49 <ad+0x49>
+  46:	bltu	a2, a10, 22 <ad+0x22>
+  49:	add.n	a2, a4, a2
+  4b:	add.n	a3, a5, a8
+  4d:	bgeu	a2, a4, 2a <ad+0x2a>
+  50:	addi.n	a3, a3, 1
+  52:	j	2a <ad+0x2a>
+
+Disassembly of section .text.su:
+
+00000000 <su>:
+   0:	entry	a1, 32
+   3:	bgez	a5, 26 <su+0x26>
+   6:	movi.n	a8, -1
+   8:	srli	a8, a8, 1
+   b:	add.n	a8, a5, a8
+   d:	addi.n	a9, a4, -1
+   f:	beqz.n	a4, 13 <su+0x13>
+  11:	addi.n	a8, a8, 1
+  13:	blt	a8, a3, 1c <su+0x1c>
+  16:	bne	a3, a8, 3b <su+0x3b>
+  19:	bgeu	a9, a2, 3b <su+0x3b>
+  1c:	movi.n	a8, 4
+  1e:	s32i.n	a8, a6, 0
+  20:	movi.n	a2, 0
+  22:	movi.n	a3, 0
+  24:	retw.n
+  26:	or	a8, a4, a5
+  29:	beqz.n	a8, 3b <su+0x3b>
+  2b:	movi.n	a8, -1
+  2d:	slli	a8, a8, 31
+  30:	add.n	a8, a5, a8
+  32:	blt	a3, a8, 1c <su+0x1c>
+  35:	bne	a8, a3, 3b <su+0x3b>
+  38:	bltu	a2, a4, 1c <su+0x1c>
+  3b:	sub	a3, a3, a5
+  3e:	bgeu	a2, a4, 43 <su+0x43>
+  41:	addi.n	a3, a3, -1
+  43:	sub	a2, a2, a4
+  46:	j	24 <su+0x24>
+
+Disassembly of section .text.rawmul:
+
+00000000 <rawmul>:
+   0:	entry	a1, 48
+   3:	srai	a8, a3, 31
+   6:	mov.n	a14, a6
+   8:	xor	a15, a8, a3
+   b:	xor	a6, a8, a2
+   e:	sub	a15, a15, a8
+  11:	bgeu	a6, a8, 16 <rawmul+0x16>
+  14:	addi.n	a15, a15, -1
+  16:	srai	a9, a5, 31
+  19:	sub	a6, a6, a8
+  1c:	xor	a4, a9, a4
+  1f:	xor	a8, a9, a5
+  22:	sub	a2, a8, a9
+  25:	bgeu	a4, a9, 2a <rawmul+0x2a>
+  28:	addi.n	a2, a2, -1
+  2a:	sub	a4, a4, a9
+  2d:	or	a9, a4, a2
+  30:	mov.n	a8, a2
+  32:	xor	a5, a3, a5
+  35:	beqz	a9, aa <rawmul+0xaa>
+  38:	movi.n	a8, -1
+  3a:	movi.n	a3, 0
+  3c:	srai	a9, a5, 31
+  3f:	xor	a9, a9, a8
+  42:	movltz	a3, a8, a5
+  45:	movi.n	a8, -1
+  47:	srli	a8, a8, 1
+  4a:	xor	a3, a3, a8
+  4d:	s32i.n	a14, a1, 4
+  4f:	s32i.n	a15, a1, 8
+  51:	mov.n	a12, a4
+  53:	mov.n	a13, a2
+  55:	mov.n	a10, a9
+  57:	s32i.n	a9, a1, 0
+  59:	mov.n	a11, a3
+  5b:	l32r	a8, fffc005c <rawmul+0xfffc005c>
+  5e:	callx8	a8
+  61:	l32i.n	a15, a1, 8
+  63:	l32i.n	a14, a1, 4
+  65:	extui	a7, a5, 31, 1
+  68:	bltu	a11, a15, 73 <rawmul+0x73>
+  6b:	l32i.n	a9, a1, 0
+  6d:	bne	a15, a11, 7d <rawmul+0x7d>
+  70:	bgeu	a10, a6, 7d <rawmul+0x7d>
+  73:	movi.n	a8, 4
+  75:	s32i.n	a8, a14, 0
+  77:	movi.n	a2, 0
+  79:	movi.n	a3, 0
+  7b:	retw.n
+  7d:	mull	a15, a15, a4
+  80:	mull	a2, a2, a6
+  83:	muluh	a8, a4, a6
+  86:	mull	a10, a4, a6
+  89:	add.n	a2, a2, a15
+  8b:	add.n	a8, a2, a8
+  8d:	mov.n	a4, a10
+  8f:	bltu	a3, a8, 73 <rawmul+0x73>
+  92:	bne	a8, a3, 98 <rawmul+0x98>
+  95:	bltu	a9, a10, 73 <rawmul+0x73>
+  98:	movi.n	a3, -1
+  9a:	slli	a3, a3, 31
+  9d:	xor	a9, a8, a3
+  a0:	or	a10, a10, a9
+  a3:	bnez.n	a10, aa <rawmul+0xaa>
+  a5:	movi.n	a2, 0
+  a7:	bnez	a7, 7b <rawmul+0x7b>
+  aa:	mov.n	a2, a4
+  ac:	mov.n	a3, a8
+  ae:	bgez	a5, 7b <rawmul+0x7b>
+  b1:	neg	a3, a8
+  b4:	beqz.n	a4, b8 <rawmul+0xb8>
+  b6:	addi.n	a3, a3, -1
+  b8:	neg	a2, a4
+  bb:	j	7b <rawmul+0x7b>
+
+Disassembly of section .text.sq:
+
+00000000 <sq>:
+   0:	entry	a1, 32
+   3:	mov.n	a10, a2
+   5:	mov.n	a11, a3
+   7:	bgez	a3, e <sq+0xe>
+   a:	movi.n	a10, 0
+   c:	movi.n	a11, 0
+   e:	movi.n	a12, 1
+  10:	mov.n	a14, a4
+  12:	slli	a12, a12, 24
+  15:	movi.n	a13, 0
+  17:	l32r	a8, fffc0018 <sq+0xfffc0018>
+  1a:	callx8	a8
+  1d:	l32i.n	a8, a4, 0
+  1f:	movi.n	a2, 0
+  21:	movi.n	a3, 0
+  23:	bnez	a8, 6c <sq+0x6c>
+  26:	movi.n	a8, 1
+  28:	movi.n	a9, 0
+  2a:	slli	a8, a8, 30
+  2d:	bltu	a11, a8, 6e <sq+0x6e>
+  30:	bne	a8, a11, 36 <sq+0x36>
+  33:	bltu	a10, a9, 6e <sq+0x6e>
+  36:	mov.n	a14, a10
+  38:	mov.n	a15, a11
+  3a:	movi.n	a2, 0
+  3c:	movi.n	a3, 0
+  3e:	or	a12, a9, a8
+  41:	bnez.n	a12, 7a <sq+0x7a>
+  43:	mull	a8, a3, a2
+  46:	muluh	a12, a2, a2
+  49:	mull	a9, a2, a2
+  4c:	addx2	a8, a8, a12
+  4f:	sub	a11, a11, a8
+  52:	bgeu	a10, a9, 57 <sq+0x57>
+  55:	addi.n	a11, a11, -1
+  57:	sub	a10, a10, a9
+  5a:	bltu	a3, a11, 63 <sq+0x63>
+  5d:	bne	a11, a3, 6c <sq+0x6c>
+  60:	bgeu	a2, a10, 6c <sq+0x6c>
+  63:	addi.n	a8, a2, 1
+  65:	saltu	a9, a8, a2
+  68:	add.n	a3, a9, a3
+  6a:	mov.n	a2, a8
+  6c:	retw.n
+  6e:	ssai	2
+  71:	src	a9, a8, a9
+  74:	srli	a8, a8, 2
+  77:	j	2d <sq+0x2d>
+  7a:	add.n	a7, a2, a9
+  7c:	add.n	a12, a3, a8
+  7e:	bgeu	a7, a9, 83 <sq+0x83>
+  81:	addi.n	a12, a12, 1
+  83:	ssai	1
+  86:	src	a13, a3, a2
+  89:	srli	a4, a3, 1
+  8c:	mov.n	a2, a13
+  8e:	mov.n	a3, a4
+  90:	bltu	a15, a12, af <sq+0xaf>
+  93:	bne	a12, a15, 99 <sq+0x99>
+  96:	bltu	a14, a7, af <sq+0xaf>
+  99:	sub	a12, a15, a12
+  9c:	bgeu	a14, a7, a1 <sq+0xa1>
+  9f:	addi.n	a12, a12, -1
+  a1:	add.n	a2, a13, a9
+  a3:	saltu	a13, a2, a13
+  a6:	add.n	a4, a4, a8
+  a8:	sub	a14, a14, a7
+  ab:	mov.n	a15, a12
+  ad:	add.n	a3, a13, a4
+  af:	ssai	2
+  b2:	src	a9, a8, a9
+  b5:	srli	a8, a8, 2
+  b8:	j	3e <sq+0x3e>
+
+Disassembly of section .text.roundiv$part$0:
+
+00000000 <roundiv$part$0>:
+   0:	entry	a1, 48
+   3:	srai	a8, a3, 31
+   6:	xor	a14, a8, a3
+   9:	xor	a9, a8, a2
+   c:	mov.n	a7, a6
+   e:	sub	a14, a14, a8
+  11:	bgeu	a9, a8, 16 <roundiv$part$0+0x16>
+  14:	addi.n	a14, a14, -1
+  16:	sub	a9, a9, a8
+  19:	srai	a8, a5, 31
+  1c:	xor	a2, a8, a5
+  1f:	xor	a4, a8, a4
+  22:	sub	a2, a2, a8
+  25:	bgeu	a4, a8, 2a <roundiv$part$0+0x2a>
+  28:	addi.n	a2, a2, -1
+  2a:	sub	a4, a4, a8
+  2d:	mov.n	a13, a2
+  2f:	mov.n	a12, a4
+  31:	mov.n	a10, a9
+  33:	s32i.n	a9, a1, 8
+  35:	mov.n	a11, a14
+  37:	s32i.n	a14, a1, 4
+  39:	l32r	a8, fffc003c <roundiv$part$0+0xfffc003c>
+  3c:	callx8	a8
+  3f:	s32i.n	a11, a1, 0
+  41:	mov.n	a6, a10
+  43:	l32i.n	a11, a1, 4
+  45:	l32i.n	a10, a1, 8
+  47:	mov.n	a13, a2
+  49:	mov.n	a12, a4
+  4b:	l32r	a8, fffc004c <roundiv$part$0+0xfffc004c>
+  4e:	callx8	a8
+  51:	l32i.n	a8, a1, 0
+  53:	sub	a2, a2, a11
+  56:	bgeu	a4, a10, 5b <roundiv$part$0+0x5b>
+  59:	addi.n	a2, a2, -1
+  5b:	sub	a4, a4, a10
+  5e:	bltu	a2, a11, 75 <roundiv$part$0+0x75>
+  61:	bne	a11, a2, 67 <roundiv$part$0+0x67>
+  64:	bltu	a4, a10, 75 <roundiv$part$0+0x75>
+  67:	bne	a10, a4, 70 <roundiv$part$0+0x70>
+  6a:	extui	a9, a6, 0, 1
+  6d:	beq	a11, a2, 77 <roundiv$part$0+0x77>
+  70:	movi.n	a9, 0
+  72:	j	77 <roundiv$part$0+0x77>
+  75:	movi.n	a9, 1
+  77:	add.n	a6, a9, a6
+  79:	mov.n	a11, a8
+  7b:	bgeu	a6, a9, 80 <roundiv$part$0+0x80>
+  7e:	addi.n	a11, a8, 1
+  80:	xor	a5, a3, a5
+  83:	srai	a8, a5, 31
+  86:	addi.n	a8, a8, 1
+  88:	movi.n	a10, -1
+  8a:	movi.n	a9, 0
+  8c:	movgez	a9, a10, a5
+  8f:	neg	a10, a8
+  92:	l32r	a8, fffc0094 <roundiv$part$0+0xfffc0094>
+  95:	xor	a9, a9, a8
+  98:	bltu	a9, a11, a1 <roundiv$part$0+0xa1>
+  9b:	bne	a11, a9, ab <roundiv$part$0+0xab>
+  9e:	bgeu	a10, a6, ab <roundiv$part$0+0xab>
+  a1:	movi.n	a8, 4
+  a3:	s32i.n	a8, a7, 0
+  a5:	movi.n	a2, 0
+  a7:	movi.n	a3, 0
+  a9:	retw.n
+  ab:	bgez	a5, b6 <roundiv$part$0+0xb6>
+  ae:	xor	a8, a11, a8
+  b1:	or	a8, a6, a8
+  b4:	beqz.n	a8, ca <roundiv$part$0+0xca>
+  b6:	mov.n	a2, a6
+  b8:	mov.n	a3, a11
+  ba:	bgez	a5, a9 <roundiv$part$0+0xa9>
+  bd:	neg	a3, a11
+  c0:	beqz.n	a6, c4 <roundiv$part$0+0xc4>
+  c2:	addi.n	a3, a3, -1
+  c4:	neg	a2, a6
+  c7:	j	a9 <roundiv$part$0+0xa9>
+  ca:	l32r	a3, fffc00cc <roundiv$part$0+0xfffc00cc>
+  cd:	movi.n	a2, 0
+  cf:	j	a9 <roundiv$part$0+0xa9>
+
+Disassembly of section .text.di:
+
+00000000 <di>:
+   0:	entry	a1, 32
+   3:	movi.n	a12, 1
+   5:	mov.n	a10, a2
+   7:	mov.n	a11, a3
+   9:	mov.n	a14, a6
+   b:	slli	a12, a12, 24
+   e:	movi.n	a13, 0
+  10:	l32r	a8, fffc0010 <di+0xfffc0010>
+  13:	callx8	a8
+  16:	or	a8, a4, a5
+  19:	mov.n	a2, a4
+  1b:	mov.n	a3, a5
+  1d:	bnez.n	a8, 25 <di+0x25>
+  1f:	movi.n	a8, 5
+  21:	s32i.n	a8, a6, 0
+  23:	retw.n
+  25:	mov.n	a14, a6
+  27:	mov.n	a12, a4
+  29:	mov.n	a13, a5
+  2b:	l32r	a8, fffc002c <di+0xfffc002c>
+  2e:	callx8	a8
+  31:	mov.n	a2, a10
+  33:	mov.n	a3, a11
+  35:	j	23 <di+0x23>
+
+Disassembly of section .text.mu:
+
+00000000 <mu>:
+   0:	entry	a1, 32
+   3:	mov.n	a12, a4
+   5:	mov.n	a13, a5
+   7:	mov.n	a14, a6
+   9:	mov.n	a10, a2
+   b:	mov.n	a11, a3
+   d:	l32r	a8, fffc0010 <mu+0xfffc0010>
+  10:	callx8	a8
+  13:	movi.n	a12, 1
+  15:	mov.n	a14, a6
+  17:	slli	a12, a12, 24
+  1a:	movi.n	a13, 0
+  1c:	l32r	a8, fffc001c <mu+0xfffc001c>
+  1f:	callx8	a8
+  22:	mov.n	a2, a10
+  24:	mov.n	a3, a11
+  26:	retw.n
+
+Disassembly of section .text.uniform_left$constprop$0:
+
+00000000 <uniform_left$constprop$0>:
+   0:	entry	a1, 144
+   3:	l32i.n	a9, a3, 12
+   5:	mov.n	a6, a3
+   7:	bltz	a9, 383 <uniform_left$constprop$0+0x383>
+   a:	movi.n	a8, 1
+   c:	slli	a8, a8, 23
+   f:	bltu	a8, a9, 15 <uniform_left$constprop$0+0x15>
+  12:	j	383 <uniform_left$constprop$0+0x383>
+  15:	l32r	a8, fffc0018 <uniform_left$constprop$0+0xfffc0018>
+  18:	l32r	a10, fffc0018 <uniform_left$constprop$0+0xfffc0018>
+  1b:	saltu	a8, a8, a9
+  1e:	addi.n	a8, a8, -1
+  20:	neg	a8, a8
+  23:	srli	a9, a8, 8
+  26:	slli	a8, a8, 24
+  29:	s32i.n	a9, a1, 24
+  2b:	s32i.n	a8, a1, 20
+  2d:	l32i.n	a12, a1, 20
+  2f:	l32i.n	a13, a1, 24
+  31:	mov.n	a14, a4
+  33:	movi.n	a11, 0
+  35:	l32r	a8, fffc0038 <uniform_left$constprop$0+0xfffc0038>
+  38:	callx8	a8
+  3b:	mov.n	a12, a10
+  3d:	s32i.n	a10, a1, 28
+  3f:	l32r	a10, fffc0040 <uniform_left$constprop$0+0xfffc0040>
+  42:	mov.n	a13, a11
+  44:	s32i.n	a11, a1, 32
+  46:	mov.n	a14, a4
+  48:	movi.n	a11, 0
+  4a:	l32r	a8, fffc004c <uniform_left$constprop$0+0xfffc004c>
+  4d:	callx8	a8
+  50:	l32i.n	a8, a6, 4
+  52:	l32i.n	a5, a6, 20
+  54:	s32i.n	a8, a1, 12
+  56:	srai	a8, a8, 31
+  59:	s32i.n	a8, a1, 0
+  5b:	l32i.n	a8, a6, 8
+  5d:	s32i.n	a10, a1, 40
+  5f:	srai	a15, a8, 31
+  62:	s32i.n	a8, a1, 16
+  64:	l32r	a10, fffc0064 <uniform_left$constprop$0+0xfffc0064>
+  67:	srai	a8, a5, 31
+  6a:	mov.n	a13, a8
+  6c:	mov.n	a12, a5
+  6e:	s32i.n	a11, a1, 44
+  70:	mov.n	a14, a4
+  72:	movi.n	a11, 0
+  74:	s32i	a15, a1, 100
+  77:	s32i.n	a8, a1, 52
+  79:	l32r	a8, fffc007c <uniform_left$constprop$0+0xfffc007c>
+  7c:	callx8	a8
+  7f:	mov.n	a12, a10
+  81:	l32r	a10, fffc0084 <uniform_left$constprop$0+0xfffc0084>
+  84:	mov.n	a13, a11
+  86:	mov.n	a14, a4
+  88:	movi.n	a11, 0
+  8a:	l32r	a8, fffc008c <uniform_left$constprop$0+0xfffc008c>
+  8d:	callx8	a8
+  90:	l32i.n	a7, a6, 24
+  92:	mov.n	a14, a4
+  94:	srai	a3, a7, 31
+  97:	mov.n	a12, a7
+  99:	mov.n	a13, a3
+  9b:	l32r	a8, fffc009c <uniform_left$constprop$0+0xfffc009c>
+  9e:	callx8	a8
+  a1:	mov.n	a12, a10
+  a3:	l32r	a10, fffc00a4 <uniform_left$constprop$0+0xfffc00a4>
+  a6:	mov.n	a13, a11
+  a8:	mov.n	a14, a4
+  aa:	movi.n	a11, 0
+  ac:	l32r	a8, fffc00ac <uniform_left$constprop$0+0xfffc00ac>
+  af:	callx8	a8
+  b2:	mov.n	a14, a4
+  b4:	mov.n	a12, a10
+  b6:	mov.n	a13, a11
+  b8:	s32i.n	a10, a1, 4
+  ba:	s32i.n	a11, a1, 8
+  bc:	l32r	a8, fffc00bc <uniform_left$constprop$0+0xfffc00bc>
+  bf:	callx8	a8
+  c2:	l32i.n	a13, a1, 52
+  c4:	s32i.n	a10, a1, 36
+  c6:	l32r	a10, fffc00c8 <uniform_left$constprop$0+0xfffc00c8>
+  c9:	mov.n	a12, a5
+  cb:	s32i.n	a11, a1, 48
+  cd:	mov.n	a14, a4
+  cf:	movi.n	a11, 0
+  d1:	l32r	a8, fffc00d4 <uniform_left$constprop$0+0xfffc00d4>
+  d4:	callx8	a8
+  d7:	mov.n	a12, a10
+  d9:	l32r	a10, fffc00dc <uniform_left$constprop$0+0xfffc00dc>
+  dc:	mov.n	a13, a11
+  de:	mov.n	a14, a4
+  e0:	movi.n	a11, 0
+  e2:	l32r	a8, fffc00e4 <uniform_left$constprop$0+0xfffc00e4>
+  e5:	callx8	a8
+  e8:	mov.n	a12, a7
+  ea:	mov.n	a13, a3
+  ec:	mov.n	a14, a4
+  ee:	l32r	a8, fffc00f0 <uniform_left$constprop$0+0xfffc00f0>
+  f1:	callx8	a8
+  f4:	mov.n	a12, a10
+  f6:	l32r	a10, fffc00f8 <uniform_left$constprop$0+0xfffc00f8>
+  f9:	mov.n	a13, a11
+  fb:	mov.n	a14, a4
+  fd:	movi.n	a11, 0
+  ff:	l32r	a8, fffc0100 <uniform_left$constprop$0+0xfffc0100>
+ 102:	callx8	a8
+ 105:	mov.n	a14, a4
+ 107:	mov.n	a12, a10
+ 109:	mov.n	a13, a11
+ 10b:	mov.n	a7, a10
+ 10d:	mov.n	a3, a11
+ 10f:	l32r	a8, fffc0110 <uniform_left$constprop$0+0xfffc0110>
+ 112:	callx8	a8
+ 115:	mov.n	a12, a10
+ 117:	mov.n	a13, a11
+ 119:	l32i.n	a10, a1, 36
+ 11b:	l32i.n	a11, a1, 48
+ 11d:	mov.n	a14, a4
+ 11f:	l32r	a8, fffc0120 <uniform_left$constprop$0+0xfffc0120>
+ 122:	callx8	a8
+ 125:	mov.n	a5, a11
+ 127:	s32i.n	a10, a1, 36
+ 129:	l32i.n	a11, a1, 8
+ 12b:	l32i.n	a10, a1, 4
+ 12d:	mov.n	a12, a7
+ 12f:	mov.n	a13, a3
+ 131:	mov.n	a14, a4
+ 133:	l32r	a8, fffc0134 <uniform_left$constprop$0+0xfffc0134>
+ 136:	callx8	a8
+ 139:	mov.n	a12, a10
+ 13b:	l32i.n	a10, a1, 36
+ 13d:	mov.n	a13, a11
+ 13f:	mov.n	a14, a4
+ 141:	mov.n	a11, a5
+ 143:	l32r	a8, fffc0144 <uniform_left$constprop$0+0xfffc0144>
+ 146:	callx8	a8
+ 149:	mov.n	a12, a4
+ 14b:	l32r	a8, fffc014c <uniform_left$constprop$0+0xfffc014c>
+ 14e:	callx8	a8
+ 151:	l32r	a12, fffc0154 <uniform_left$constprop$0+0xfffc0154>
+ 154:	mov.n	a14, a4
+ 156:	movi.n	a13, 0
+ 158:	mov.n	a5, a11
+ 15a:	s32i.n	a10, a1, 56
+ 15c:	l32r	a8, fffc015c <uniform_left$constprop$0+0xfffc015c>
+ 15f:	callx8	a8
+ 162:	mov.n	a12, a10
+ 164:	s32i.n	a10, a1, 36
+ 166:	l32r	a10, fffc0168 <uniform_left$constprop$0+0xfffc0168>
+ 169:	mov.n	a13, a11
+ 16b:	mov.n	a14, a4
+ 16d:	s32i	a11, a1, 72
+ 170:	movi.n	a11, 0
+ 172:	l32r	a8, fffc0174 <uniform_left$constprop$0+0xfffc0174>
+ 175:	callx8	a8
+ 178:	l32r	a12, fffc0178 <uniform_left$constprop$0+0xfffc0178>
+ 17b:	s32i.n	a10, a1, 48
+ 17d:	l32i.n	a10, a1, 56
+ 17f:	s32i.n	a11, a1, 52
+ 181:	mov.n	a14, a4
+ 183:	movi.n	a13, -1
+ 185:	mov.n	a11, a5
+ 187:	l32r	a8, fffc0188 <uniform_left$constprop$0+0xfffc0188>
+ 18a:	callx8	a8
+ 18d:	mov.n	a12, a10
+ 18f:	s32i	a10, a1, 76
+ 192:	l32r	a10, fffc0194 <uniform_left$constprop$0+0xfffc0194>
+ 195:	mov.n	a5, a11
+ 197:	mov.n	a13, a11
+ 199:	mov.n	a14, a4
+ 19b:	movi.n	a11, -1
+ 19d:	l32r	a8, fffc01a0 <uniform_left$constprop$0+0xfffc01a0>
+ 1a0:	callx8	a8
+ 1a3:	l32i.n	a12, a1, 4
+ 1a5:	l32i.n	a13, a1, 8
+ 1a7:	s32i.n	a10, a1, 56
+ 1a9:	s32i.n	a11, a1, 60
+ 1ab:	mov.n	a14, a4
+ 1ad:	mov.n	a10, a12
+ 1af:	mov.n	a11, a13
+ 1b1:	l32r	a8, fffc01b4 <uniform_left$constprop$0+0xfffc01b4>
+ 1b4:	callx8	a8
+ 1b7:	l32i.n	a12, a1, 36
+ 1b9:	l32i	a13, a1, 72
+ 1bc:	s32i	a10, a1, 64
+ 1bf:	l32r	a10, fffc01c0 <uniform_left$constprop$0+0xfffc01c0>
+ 1c2:	s32i	a11, a1, 68
+ 1c5:	mov.n	a14, a4
+ 1c7:	movi.n	a11, 0
+ 1c9:	l32r	a8, fffc01cc <uniform_left$constprop$0+0xfffc01cc>
+ 1cc:	callx8	a8
+ 1cf:	l32i	a12, a1, 76
+ 1d2:	s32i.n	a10, a1, 36
+ 1d4:	l32r	a10, fffc01d4 <uniform_left$constprop$0+0xfffc01d4>
+ 1d7:	mov.n	a13, a5
+ 1d9:	s32i	a11, a1, 72
+ 1dc:	mov.n	a14, a4
+ 1de:	movi.n	a11, -1
+ 1e0:	l32r	a8, fffc01e0 <uniform_left$constprop$0+0xfffc01e0>
+ 1e3:	callx8	a8
+ 1e6:	mov.n	a12, a7
+ 1e8:	mov.n	a13, a3
+ 1ea:	s32i	a10, a1, 76
+ 1ed:	s32i	a11, a1, 80
+ 1f0:	mov.n	a14, a4
+ 1f2:	mov.n	a10, a7
+ 1f4:	mov.n	a11, a3
+ 1f6:	l32r	a8, fffc01f8 <uniform_left$constprop$0+0xfffc01f8>
+ 1f9:	callx8	a8
+ 1fc:	s32i	a10, a1, 84
+ 1ff:	s32i	a11, a1, 88
+ 202:	l32i.n	a10, a1, 4
+ 204:	l32i.n	a11, a1, 8
+ 206:	mov.n	a12, a7
+ 208:	mov.n	a13, a3
+ 20a:	mov.n	a14, a4
+ 20c:	l32r	a8, fffc020c <uniform_left$constprop$0+0xfffc020c>
+ 20f:	callx8	a8
+ 212:	l32i.n	a5, a6, 16
+ 214:	l32i.n	a3, a6, 0
+ 216:	srai	a8, a5, 31
+ 219:	s32i.n	a10, a1, 8
+ 21b:	s32i.n	a8, a1, 4
+ 21d:	l32r	a10, fffc0220 <uniform_left$constprop$0+0xfffc0220>
+ 220:	srai	a8, a3, 31
+ 223:	mov.n	a13, a8
+ 225:	s32i	a11, a1, 92
+ 228:	mov.n	a14, a4
+ 22a:	mov.n	a12, a3
+ 22c:	movi.n	a11, 0
+ 22e:	s32i	a8, a1, 96
+ 231:	l32r	a8, fffc0234 <uniform_left$constprop$0+0xfffc0234>
+ 234:	callx8	a8
+ 237:	mov.n	a12, a10
+ 239:	l32r	a10, fffc023c <uniform_left$constprop$0+0xfffc023c>
+ 23c:	mov.n	a13, a11
+ 23e:	mov.n	a14, a4
+ 240:	movi.n	a11, 0
+ 242:	l32r	a8, fffc0244 <uniform_left$constprop$0+0xfffc0244>
+ 245:	callx8	a8
+ 248:	mov.n	a7, a11
+ 24a:	movi.n	a12, 25
+ 24c:	l32i	a11, a1, 96
+ 24f:	slli	a12, a12, 25
+ 252:	movi.n	a13, 0
+ 254:	mov.n	a6, a10
+ 256:	mov.n	a14, a4
+ 258:	mov.n	a10, a3
+ 25a:	l32r	a8, fffc025c <uniform_left$constprop$0+0xfffc025c>
+ 25d:	callx8	a8
+ 260:	l32i	a15, a1, 100
+ 263:	mov.n	a12, a10
+ 265:	mov.n	a13, a11
+ 267:	bgei	a11, 1, 272 <uniform_left$constprop$0+0x272>
+ 26a:	bnez.n	a11, 277 <uniform_left$constprop$0+0x277>
+ 26c:	l32r	a8, fffc026c <uniform_left$constprop$0+0xfffc026c>
+ 26f:	bgeu	a8, a10, 277 <uniform_left$constprop$0+0x277>
+ 272:	l32r	a12, fffc0274 <uniform_left$constprop$0+0xfffc0274>
+ 275:	movi.n	a13, 0
+ 277:	l32r	a10, fffc0278 <uniform_left$constprop$0+0xfffc0278>
+ 27a:	mov.n	a14, a4
+ 27c:	movi.n	a11, 0
+ 27e:	s32i	a15, a1, 96
+ 281:	l32r	a8, fffc0284 <uniform_left$constprop$0+0xfffc0284>
+ 284:	callx8	a8
+ 287:	l32i.n	a8, a1, 28
+ 289:	l32r	a12, fffc028c <uniform_left$constprop$0+0xfffc028c>
+ 28c:	s32i.n	a8, a2, 0
+ 28e:	l32i.n	a8, a1, 32
+ 290:	l32i.n	a9, a1, 12
+ 292:	s32i.n	a8, a2, 4
+ 294:	l32i.n	a8, a1, 40
+ 296:	add.n	a9, a9, a12
+ 298:	s32i.n	a8, a2, 8
+ 29a:	l32i.n	a8, a1, 44
+ 29c:	l32i	a15, a1, 96
+ 29f:	s32i.n	a8, a2, 12
+ 2a1:	l32i.n	a8, a1, 12
+ 2a3:	s32i.n	a8, a2, 16
+ 2a5:	l32i.n	a8, a1, 0
+ 2a7:	s32i.n	a8, a2, 20
+ 2a9:	addi.n	a8, a8, -1
+ 2ab:	bgeu	a9, a12, 2b0 <uniform_left$constprop$0+0x2b0>
+ 2ae:	l32i.n	a8, a1, 0
+ 2b0:	l32r	a12, fffc02b0 <uniform_left$constprop$0+0xfffc02b0>
+ 2b3:	s32i.n	a9, a2, 24
+ 2b5:	s32i.n	a8, a2, 28
+ 2b7:	l32i.n	a9, a1, 16
+ 2b9:	l32i.n	a8, a1, 16
+ 2bb:	s32i.n	a15, a2, 36
+ 2bd:	s32i.n	a8, a2, 32
+ 2bf:	add.n	a9, a9, a12
+ 2c1:	addi.n	a8, a15, -1
+ 2c3:	bgeu	a9, a12, 2c8 <uniform_left$constprop$0+0x2c8>
+ 2c6:	mov.n	a8, a15
+ 2c8:	s32i.n	a8, a2, 44
+ 2ca:	l32i.n	a8, a1, 48
+ 2cc:	s32i.n	a9, a2, 40
+ 2ce:	s32i.n	a8, a2, 48
+ 2d0:	l32i.n	a8, a1, 52
+ 2d2:	movi.n	a9, 0
+ 2d4:	s32i.n	a8, a2, 52
+ 2d6:	l32i.n	a8, a1, 56
+ 2d8:	s32i.n	a8, a2, 56
+ 2da:	l32i.n	a8, a1, 60
+ 2dc:	s32i.n	a8, a2, 60
+ 2de:	l32i	a8, a1, 64
+ 2e1:	s32i	a8, a2, 64
+ 2e4:	l32i	a8, a1, 68
+ 2e7:	s32i	a8, a2, 68
+ 2ea:	l32i.n	a8, a1, 36
+ 2ec:	s32i	a8, a2, 72
+ 2ef:	l32i	a8, a1, 72
+ 2f2:	s32i	a8, a2, 76
+ 2f5:	l32i	a8, a1, 76
+ 2f8:	s32i	a8, a2, 80
+ 2fb:	l32i	a8, a1, 80
+ 2fe:	s32i	a8, a2, 84
+ 301:	l32i	a8, a1, 84
+ 304:	s32i	a8, a2, 88
+ 307:	l32i	a8, a1, 88
+ 30a:	s32i	a8, a2, 92
+ 30d:	l32i.n	a8, a1, 8
+ 30f:	s32i	a8, a2, 96
+ 312:	l32i	a8, a1, 92
+ 315:	s32i	a8, a2, 100
+ 318:	l32r	a8, fffc0318 <uniform_left$constprop$0+0xfffc0318>
+ 31b:	s32i	a8, a2, 104
+ 31e:	s32i	a9, a2, 108
+ 321:	l32i.n	a9, a1, 4
+ 323:	l32i.n	a12, a1, 12
+ 325:	s32i	a9, a2, 116
+ 328:	s32i	a5, a2, 112
+ 32b:	add.n	a12, a12, a8
+ 32d:	l32i.n	a9, a1, 0
+ 32f:	bgeu	a12, a8, 334 <uniform_left$constprop$0+0x334>
+ 332:	addi.n	a9, a9, 1
+ 334:	s32i	a12, a2, 120
+ 337:	s32i	a9, a2, 124
+ 33a:	l32r	a12, fffc033c <uniform_left$constprop$0+0xfffc033c>
+ 33d:	l32i.n	a9, a1, 16
+ 33f:	mov.n	a8, a15
+ 341:	add.n	a9, a9, a12
+ 343:	bgeu	a9, a12, 348 <uniform_left$constprop$0+0x348>
+ 346:	addi.n	a8, a15, 1
+ 348:	s32i	a8, a2, 132
+ 34b:	l32r	a8, fffc034c <uniform_left$constprop$0+0xfffc034c>
+ 34e:	s32i	a9, a2, 128
+ 351:	s32i	a8, a2, 136
+ 354:	movi.n	a8, -1
+ 356:	s32i	a8, a2, 140
+ 359:	l32i.n	a8, a1, 20
+ 35b:	s32i	a15, a2, 164
+ 35e:	s32i	a8, a2, 144
+ 361:	l32i.n	a8, a1, 24
+ 363:	s32i	a6, a2, 168
+ 366:	s32i	a8, a2, 148
+ 369:	l32i.n	a8, a1, 12
+ 36b:	s32i	a7, a2, 172
+ 36e:	s32i	a8, a2, 152
+ 371:	l32i.n	a8, a1, 0
+ 373:	s32i	a10, a2, 176
+ 376:	s32i	a8, a2, 156
+ 379:	l32i.n	a8, a1, 16
+ 37b:	s32i	a11, a2, 180
+ 37e:	s32i	a8, a2, 160
+ 381:	retw.n
+ 383:	l32r	a8, fffc0384 <uniform_left$constprop$0+0xfffc0384>
+ 386:	movi.n	a10, 0
+ 388:	s32i.n	a8, a1, 20
+ 38a:	movi.n	a8, 0
+ 38c:	s32i.n	a8, a1, 24
+ 38e:	j	2d <uniform_left$constprop$0+0x2d>
+
+Disassembly of section .text.ramp$constprop$0:
+
+00000000 <ramp$constprop$0>:
+   0:	entry	a1, 32
+   3:	mov.n	a8, a4
+   5:	mov.n	a4, a5
+   7:	bgez	a3, 18 <ramp$constprop$0+0x18>
+   a:	movi.n	a2, 0
+   c:	l32r	a9, fffc000c <ramp$constprop$0+0xfffc000c>
+   f:	bgeu	a9, a2, 1e <ramp$constprop$0+0x1e>
+  12:	l32r	a2, fffc0014 <ramp$constprop$0+0xfffc0014>
+  15:	j	1e <ramp$constprop$0+0x1e>
+  18:	bgei	a3, 1, 12 <ramp$constprop$0+0x12>
+  1b:	beqz	a3, c <ramp$constprop$0+0xc>
+  1e:	extui	a9, a2, 24, 8
+  21:	slli	a2, a2, 8
+  24:	slli	a3, a2, 8
+  27:	ssai	24
+  2a:	src	a2, a9, a2
+  2d:	extui	a2, a2, 0, 16
+  30:	addx2	a2, a2, a2
+  33:	slli	a5, a2, 2
+  36:	extui	a2, a8, 0, 16
+  39:	l32r	a8, fffc003c <ramp$constprop$0+0xfffc003c>
+  3c:	slli	a2, a2, 2
+  3f:	add.n	a8, a8, a2
+  41:	add.n	a8, a8, a5
+  43:	srli	a3, a3, 8
+  46:	l32i.n	a12, a8, 0
+  48:	movi.n	a11, 0
+  4a:	beqz	a3, 97 <ramp$constprop$0+0x97>
+  4d:	l32r	a10, fffc0050 <ramp$constprop$0+0xfffc0050>
+  50:	mov.n	a14, a4
+  52:	movi.n	a13, 0
+  54:	sub	a10, a10, a3
+  57:	l32r	a8, fffc0058 <ramp$constprop$0+0xfffc0058>
+  5a:	callx8	a8
+  5d:	l32r	a8, fffc0060 <ramp$constprop$0+0xfffc0060>
+  60:	mov.n	a7, a10
+  62:	add.n	a8, a8, a2
+  64:	add.n	a8, a8, a5
+  66:	l32i.n	a12, a8, 0
+  68:	mov.n	a6, a11
+  6a:	mov.n	a14, a4
+  6c:	movi.n	a13, 0
+  6e:	mov.n	a10, a3
+  70:	movi.n	a11, 0
+  72:	l32r	a8, fffc0074 <ramp$constprop$0+0xfffc0074>
+  75:	callx8	a8
+  78:	mov.n	a12, a10
+  7a:	mov.n	a13, a11
+  7c:	mov.n	a14, a4
+  7e:	mov.n	a10, a7
+  80:	mov.n	a11, a6
+  82:	l32r	a8, fffc0084 <ramp$constprop$0+0xfffc0084>
+  85:	callx8	a8
+  88:	l32r	a12, fffc0088 <ramp$constprop$0+0xfffc0088>
+  8b:	mov.n	a14, a4
+  8d:	movi.n	a13, 0
+  8f:	l32r	a8, fffc0090 <ramp$constprop$0+0xfffc0090>
+  92:	callx8	a8
+  95:	mov.n	a12, a10
+  97:	mov.n	a2, a12
+  99:	mov.n	a3, a11
+  9b:	retw.n
+
+Disassembly of section .text.mc_eval$part$0:
+
+00000000 <mc_eval$part$0>:
+       0:	entry	a1, 0x210
+       3:	l32r	a9, fffc0004 <mc_eval$part$0+0xfffc0004>
+       6:	l32i.n	a8, a3, 0
+       8:	s32i	a2, a1, 0x178
+       b:	add.n	a8, a8, a9
+       d:	movi.n	a9, 1
+       f:	s32i	a4, a1, 0x1e0
+      12:	slli	a9, a9, 25
+      15:	movi.n	a2, 2
+      17:	bgeu	a9, a8, 1d <mc_eval$part$0+0x1d>
+      1a:	j	11b2 <mc_eval$part$0+0x11b2>
+      1d:	l32i.n	a8, a3, 4
+      1f:	sub	a8, a8, a9
+      22:	l32r	a9, fffc0024 <mc_eval$part$0+0xfffc0024>
+      25:	bgeu	a9, a8, 2b <mc_eval$part$0+0x2b>
+      28:	j	11b2 <mc_eval$part$0+0x11b2>
+      2b:	l32i	a11, a1, 0x178
+      2e:	movi.n	a8, 0
+      30:	movi	a12, 184
+      33:	mov.n	a10, a1
+      35:	s32i	a8, a1, 0x128
+      38:	l32r	a8, fffc0038 <mc_eval$part$0+0xfffc0038>
+      3b:	callx8	a8
+      3e:	l32i	a8, a1, 0x178
+      41:	l32i.n	a9, a1, 12
+      43:	l32i	a8, a8, 196
+      46:	s32i	a9, a1, 0x14c
+      49:	s32i	a8, a1, 0x17c
+      4c:	l32i.n	a8, a3, 0
+      4e:	l32i.n	a9, a1, 20
+      50:	s32i	a8, a1, 0x138
+      53:	srai	a8, a8, 31
+      56:	s32i	a8, a1, 0x13c
+      59:	l32i.n	a8, a3, 4
+      5b:	s32i	a9, a1, 0x16c
+      5e:	s32i	a8, a1, 0x134
+      61:	srai	a8, a8, 31
+      64:	s32i	a8, a1, 0x130
+      67:	l32i.n	a8, a1, 8
+      69:	l32i.n	a9, a1, 52
+      6b:	s32i	a8, a1, 0x148
+      6e:	l32i.n	a8, a1, 16
+      70:	s32i	a9, a1, 0x174
+      73:	s32i	a8, a1, 0x168
+      76:	l32i.n	a8, a1, 48
+      78:	l32i.n	a9, a1, 36
+      7a:	s32i	a8, a1, 0x170
+      7d:	l32i.n	a8, a1, 32
+      7f:	s32i	a9, a1, 0x184
+      82:	s32i	a8, a1, 0x180
+      85:	l32i.n	a8, a1, 56
+      87:	l32i.n	a9, a1, 60
+      89:	s32i	a8, a1, 0x188
+      8c:	l32i.n	a12, a1, 24
+      8e:	l32i.n	a13, a1, 28
+      90:	l32i.n	a2, a1, 40
+      92:	l32i.n	a3, a1, 44
+      94:	s32i	a9, a1, 0x18c
+      97:	l32i	a8, a1, 64
+      9a:	l32i	a9, a1, 68
+      9d:	s32i	a8, a1, 0x190
+      a0:	l32i	a8, a1, 72
+      a3:	s32i	a9, a1, 0x194
+      a6:	s32i	a8, a1, 0x198
+      a9:	l32i	a8, a1, 80
+      ac:	l32i	a9, a1, 76
+      af:	s32i	a8, a1, 0x1a0
+      b2:	l32i	a8, a1, 88
+      b5:	s32i	a9, a1, 0x19c
+      b8:	s32i	a8, a1, 0x1a8
+      bb:	l32i	a9, a1, 84
+      be:	l32i	a8, a1, 96
+      c1:	s32i	a9, a1, 0x1a4
+      c4:	s32i	a8, a1, 0x1b0
+      c7:	l32i	a9, a1, 92
+      ca:	l32i	a8, a1, 104
+      cd:	s32i	a9, a1, 0x1ac
+      d0:	s32i	a8, a1, 0x1d8
+      d3:	l32i	a9, a1, 100
+      d6:	l32i	a8, a1, 108
+      d9:	s32i	a9, a1, 0x1b4
+      dc:	s32i	a8, a1, 0x160
+      df:	l32i.n	a9, a1, 4
+      e1:	l32i.n	a8, a1, 0
+      e3:	s32i	a9, a1, 0x154
+      e6:	s32i	a8, a1, 0x150
+      e9:	l32i	a9, a1, 116
+      ec:	l32i	a8, a1, 112
+      ef:	s32i	a9, a1, 0x15c
+      f2:	s32i	a8, a1, 0x158
+      f5:	l32i	a8, a1, 120
+      f8:	l32i	a9, a1, 124
+      fb:	s32i	a8, a1, 0x1b8
+      fe:	l32i	a8, a1, 128
+     101:	s32i	a9, a1, 0x1bc
+     104:	s32i	a8, a1, 0x1c0
+     107:	l32i	a8, a1, 136
+     10a:	l32i	a9, a1, 132
+     10d:	s32i	a8, a1, 0x1dc
+     110:	l32i	a8, a1, 140
+     113:	s32i	a9, a1, 0x1c4
+     116:	s32i	a8, a1, 0x164
+     119:	l32i	a8, a1, 152
+     11c:	l32i	a9, a1, 156
+     11f:	s32i	a8, a1, 0x1c8
+     122:	l32i	a8, a1, 160
+     125:	s32i	a9, a1, 0x1cc
+     128:	s32i	a8, a1, 0x1d0
+     12b:	l32i	a8, a1, 144
+     12e:	l32i	a9, a1, 164
+     131:	s32i	a8, a1, 0x144
+     134:	l32i	a8, a1, 148
+     137:	s32i	a9, a1, 0x1d4
+     13a:	s32i	a8, a1, 0x140
+     13d:	bgez	a8, 15f <mc_eval$part$0+0x15f>
+     140:	movi.n	a8, 0
+     142:	s32i	a8, a1, 0x144
+     145:	s32i	a8, a1, 0x140
+     148:	l32r	a8, fffc0148 <mc_eval$part$0+0xfffc0148>
+     14b:	l32i	a9, a1, 0x144
+     14e:	bgeu	a8, a9, 168 <mc_eval$part$0+0x168>
+     151:	l32r	a8, fffc0154 <mc_eval$part$0+0xfffc0154>
+     154:	s32i	a8, a1, 0x144
+     157:	movi.n	a8, 0
+     159:	s32i	a8, a1, 0x140
+     15c:	j	168 <mc_eval$part$0+0x168>
+     15f:	l32i	a8, a1, 0x140
+     162:	bgei	a8, 1, 151 <mc_eval$part$0+0x151>
+     165:	beqz	a8, 148 <mc_eval$part$0+0x148>
+     168:	l32i	a8, a1, 0x17c
+     16b:	bltz	a8, 171 <mc_eval$part$0+0x171>
+     16e:	j	a1a <mc_eval$part$0+0xa1a>
+     171:	l32i	a8, a1, 0x138
+     174:	l32i	a10, a1, 0x138
+     177:	s32i	a8, a1, 184
+     17a:	l32i	a8, a1, 0x13c
+     17d:	l32i	a11, a1, 0x13c
+     180:	s32i	a8, a1, 188
+     183:	movi.n	a8, 0
+     185:	s32i	a8, a1, 192
+     188:	s32i	a8, a1, 196
+     18b:	l32i	a8, a1, 0x134
+     18e:	s32i	a8, a1, 200
+     191:	l32i	a8, a1, 0x130
+     194:	s32i	a8, a1, 204
+     197:	l32i	a8, a1, 0x138
+     19a:	s32i	a8, a1, 208
+     19d:	l32i	a8, a1, 0x13c
+     1a0:	s32i	a8, a1, 212
+     1a3:	l32i	a8, a1, 0x134
+     1a6:	s32i	a8, a1, 216
+     1a9:	l32i	a8, a1, 0x130
+     1ac:	s32i	a8, a1, 220
+     1af:	movi	a8, 0x128
+     1b2:	add.n	a7, a1, a8
+     1b4:	mov.n	a14, a7
+     1b6:	l32r	a8, fffc01b8 <mc_eval$part$0+0xfffc01b8>
+     1b9:	callx8	a8
+     1bc:	l32r	a12, fffc01bc <mc_eval$part$0+0xfffc01bc>
+     1bf:	mov.n	a14, a7
+     1c1:	movi.n	a13, 0
+     1c3:	l32r	a8, fffc01c4 <mc_eval$part$0+0xfffc01c4>
+     1c6:	callx8	a8
+     1c9:	mov.n	a14, a7
+     1cb:	mov.n	a12, a10
+     1cd:	mov.n	a13, a11
+     1cf:	l32r	a8, fffc01d0 <mc_eval$part$0+0xfffc01d0>
+     1d2:	callx8	a8
+     1d5:	mov.n	a5, a10
+     1d7:	mov.n	a6, a11
+     1d9:	s32i	a10, a1, 224
+     1dc:	s32i	a11, a1, 228
+     1df:	l32i	a10, a1, 0x134
+     1e2:	l32i	a11, a1, 0x130
+     1e5:	mov.n	a14, a7
+     1e7:	mov.n	a12, a2
+     1e9:	mov.n	a13, a3
+     1eb:	l32r	a8, fffc01ec <mc_eval$part$0+0xfffc01ec>
+     1ee:	callx8	a8
+     1f1:	l32r	a12, fffc01f4 <mc_eval$part$0+0xfffc01f4>
+     1f4:	mov.n	a14, a7
+     1f6:	movi.n	a13, 0
+     1f8:	l32r	a8, fffc01f8 <mc_eval$part$0+0xfffc01f8>
+     1fb:	callx8	a8
+     1fe:	mov.n	a14, a7
+     200:	mov.n	a12, a10
+     202:	mov.n	a13, a11
+     204:	l32r	a8, fffc0204 <mc_eval$part$0+0xfffc0204>
+     207:	callx8	a8
+     20a:	mov.n	a12, a10
+     20c:	mov.n	a13, a11
+     20e:	mov.n	a14, a7
+     210:	mov.n	a10, a5
+     212:	mov.n	a11, a6
+     214:	l32r	a8, fffc0214 <mc_eval$part$0+0xfffc0214>
+     217:	callx8	a8
+     21a:	movi.n	a12, 1
+     21c:	bgei	a11, 1, 227 <mc_eval$part$0+0x227>
+     21f:	bnez.n	a11, 229 <mc_eval$part$0+0x229>
+     221:	l32r	a8, fffc0224 <mc_eval$part$0+0xfffc0224>
+     224:	bgeu	a8, a10, 229 <mc_eval$part$0+0x229>
+     227:	movi.n	a12, 0
+     229:	l32i	a10, a1, 0x148
+     22c:	l32i	a11, a1, 0x14c
+     22f:	mov.n	a14, a7
+     231:	slli	a12, a12, 24
+     234:	movi.n	a13, 0
+     236:	l32r	a8, fffc0238 <mc_eval$part$0+0xfffc0238>
+     239:	callx8	a8
+     23c:	movi	a8, 0x128
+     23f:	add.n	a7, a1, a8
+     241:	l32i	a12, a1, 0x168
+     244:	l32i	a13, a1, 0x16c
+     247:	s32i	a10, a1, 0x1e4
+     24a:	s32i	a11, a1, 0x1e8
+     24d:	l32i	a10, a1, 0x138
+     250:	l32i	a11, a1, 0x13c
+     253:	mov.n	a14, a7
+     255:	l32r	a8, fffc0258 <mc_eval$part$0+0xfffc0258>
+     258:	callx8	a8
+     25b:	l32r	a12, fffc025c <mc_eval$part$0+0xfffc025c>
+     25e:	mov.n	a14, a7
+     260:	movi.n	a13, 0
+     262:	l32r	a8, fffc0264 <mc_eval$part$0+0xfffc0264>
+     265:	callx8	a8
+     268:	l32i	a12, a1, 0x170
+     26b:	l32i	a13, a1, 0x174
+     26e:	mov.n	a14, a7
+     270:	mov.n	a3, a11
+     272:	s32i	a10, a1, 0x168
+     275:	l32r	a8, fffc0278 <mc_eval$part$0+0xfffc0278>
+     278:	callx8	a8
+     27b:	mov.n	a14, a7
+     27d:	mov.n	a12, a10
+     27f:	mov.n	a13, a11
+     281:	l32r	a8, fffc0284 <mc_eval$part$0+0xfffc0284>
+     284:	callx8	a8
+     287:	mov.n	a4, a10
+     289:	mov.n	a5, a11
+     28b:	l32i	a12, a1, 0x180
+     28e:	l32i	a13, a1, 0x184
+     291:	l32i	a10, a1, 0x134
+     294:	l32i	a11, a1, 0x130
+     297:	mov.n	a14, a7
+     299:	l32r	a8, fffc029c <mc_eval$part$0+0xfffc029c>
+     29c:	callx8	a8
+     29f:	l32r	a12, fffc02a0 <mc_eval$part$0+0xfffc02a0>
+     2a2:	mov.n	a14, a7
+     2a4:	movi.n	a13, 0
+     2a6:	l32r	a8, fffc02a8 <mc_eval$part$0+0xfffc02a8>
+     2a9:	callx8	a8
+     2ac:	l32i	a12, a1, 0x188
+     2af:	l32i	a13, a1, 0x18c
+     2b2:	mov.n	a14, a7
+     2b4:	mov.n	a6, a10
+     2b6:	s32i	a11, a1, 0x170
+     2b9:	l32r	a8, fffc02bc <mc_eval$part$0+0xfffc02bc>
+     2bc:	callx8	a8
+     2bf:	mov.n	a14, a7
+     2c1:	mov.n	a12, a10
+     2c3:	mov.n	a13, a11
+     2c5:	l32r	a8, fffc02c8 <mc_eval$part$0+0xfffc02c8>
+     2c8:	callx8	a8
+     2cb:	mov.n	a14, a7
+     2cd:	mov.n	a12, a10
+     2cf:	mov.n	a13, a11
+     2d1:	mov.n	a10, a4
+     2d3:	mov.n	a11, a5
+     2d5:	l32r	a8, fffc02d8 <mc_eval$part$0+0xfffc02d8>
+     2d8:	callx8	a8
+     2db:	l32i	a12, a1, 0x190
+     2de:	l32i	a13, a1, 0x194
+     2e1:	mov.n	a14, a7
+     2e3:	l32r	a8, fffc02e4 <mc_eval$part$0+0xfffc02e4>
+     2e6:	callx8	a8
+     2e9:	mov.n	a2, a10
+     2eb:	l32i	a12, a1, 0x198
+     2ee:	l32i	a13, a1, 0x19c
+     2f1:	l32i	a10, a1, 0x168
+     2f4:	mov.n	a5, a11
+     2f6:	mov.n	a14, a7
+     2f8:	mov.n	a11, a3
+     2fa:	l32r	a8, fffc02fc <mc_eval$part$0+0xfffc02fc>
+     2fd:	callx8	a8
+     300:	mov.n	a14, a7
+     302:	mov.n	a12, a10
+     304:	mov.n	a13, a11
+     306:	l32r	a8, fffc0308 <mc_eval$part$0+0xfffc0308>
+     309:	callx8	a8
+     30c:	mov.n	a4, a11
+     30e:	l32i	a12, a1, 0x1a0
+     311:	l32i	a13, a1, 0x1a4
+     314:	l32i	a11, a1, 0x170
+     317:	mov.n	a14, a7
+     319:	s32i	a10, a1, 0x180
+     31c:	mov.n	a10, a6
+     31e:	l32r	a8, fffc0320 <mc_eval$part$0+0xfffc0320>
+     321:	callx8	a8
+     324:	mov.n	a14, a7
+     326:	mov.n	a12, a10
+     328:	mov.n	a13, a11
+     32a:	l32r	a8, fffc032c <mc_eval$part$0+0xfffc032c>
+     32d:	callx8	a8
+     330:	mov.n	a12, a10
+     332:	l32i	a10, a1, 0x180
+     335:	mov.n	a14, a7
+     337:	mov.n	a13, a11
+     339:	mov.n	a11, a4
+     33b:	l32r	a8, fffc033c <mc_eval$part$0+0xfffc033c>
+     33e:	callx8	a8
+     341:	l32i	a12, a1, 0x1a8
+     344:	l32i	a13, a1, 0x1ac
+     347:	mov.n	a14, a7
+     349:	l32r	a8, fffc034c <mc_eval$part$0+0xfffc034c>
+     34c:	callx8	a8
+     34f:	extui	a8, a11, 31, 1
+     352:	extui	a7, a5, 31, 1
+     355:	slli	a8, a8, 24
+     358:	slli	a7, a7, 24
+     35b:	maxu	a7, a7, a8
+     35e:	movi.n	a8, 0
+     360:	s32i	a8, a1, 76
+     363:	movi	a8, 0x128
+     366:	add.n	a4, a1, a8
+     368:	mov.n	a12, a10
+     36a:	mov.n	a13, a11
+     36c:	s32i	a10, a1, 64
+     36f:	s32i	a11, a1, 68
+     372:	l32i	a10, a1, 0x1b0
+     375:	l32i	a11, a1, 0x1b4
+     378:	mov.n	a14, a4
+     37a:	s32i	a7, a1, 72
+     37d:	l32r	a8, fffc0380 <mc_eval$part$0+0xfffc0380>
+     380:	callx8	a8
+     383:	mov.n	a12, a10
+     385:	mov.n	a13, a11
+     387:	mov.n	a10, a2
+     389:	mov.n	a14, a4
+     38b:	mov.n	a11, a5
+     38d:	l32r	a8, fffc0390 <mc_eval$part$0+0xfffc0390>
+     390:	callx8	a8
+     393:	l32i	a8, a1, 0x160
+     396:	s32i	a10, a1, 0x180
+     399:	mov.n	a2, a11
+     39b:	movi.n	a12, 1
+     39d:	blt	a8, a11, 3ab <mc_eval$part$0+0x3ab>
+     3a0:	bne	a11, a8, 3a9 <mc_eval$part$0+0x3a9>
+     3a3:	l32i	a8, a1, 0x1d8
+     3a6:	bltu	a8, a10, 3ab <mc_eval$part$0+0x3ab>
+     3a9:	movi.n	a12, 0
+     3ab:	mov.n	a14, a4
+     3ad:	slli	a12, a12, 24
+     3b0:	movi.n	a13, 0
+     3b2:	mov.n	a10, a7
+     3b4:	movi.n	a11, 0
+     3b6:	l32r	a8, fffc03b8 <mc_eval$part$0+0xfffc03b8>
+     3b9:	callx8	a8
+     3bc:	movi	a8, 0x128
+     3bf:	l32i	a12, a1, 0x168
+     3c2:	add.n	a5, a1, a8
+     3c4:	mov.n	a13, a3
+     3c6:	s32i	a11, a1, 0x188
+     3c9:	mov.n	a14, a5
+     3cb:	mov.n	a11, a3
+     3cd:	mov.n	a4, a10
+     3cf:	mov.n	a10, a12
+     3d1:	l32r	a8, fffc03d4 <mc_eval$part$0+0xfffc03d4>
+     3d4:	callx8	a8
+     3d7:	l32i	a13, a1, 0x170
+     3da:	mov.n	a3, a11
+     3dc:	s32i	a10, a1, 0x160
+     3df:	mov.n	a14, a5
+     3e1:	mov.n	a12, a6
+     3e3:	mov.n	a11, a13
+     3e5:	mov.n	a10, a6
+     3e7:	l32r	a8, fffc03e8 <mc_eval$part$0+0xfffc03e8>
+     3ea:	callx8	a8
+     3ed:	mov.n	a12, a10
+     3ef:	l32i	a10, a1, 0x160
+     3f2:	mov.n	a13, a11
+     3f4:	mov.n	a14, a5
+     3f6:	mov.n	a11, a3
+     3f8:	l32r	a8, fffc03f8 <mc_eval$part$0+0xfffc03f8>
+     3fb:	callx8	a8
+     3fe:	movi.n	a3, 1
+     400:	bgei	a11, 1, 40b <mc_eval$part$0+0x40b>
+     403:	bnez.n	a11, 40d <mc_eval$part$0+0x40d>
+     405:	l32r	a8, fffc0408 <mc_eval$part$0+0xfffc0408>
+     408:	bgeu	a8, a10, 40d <mc_eval$part$0+0x40d>
+     40b:	movi.n	a3, 0
+     40d:	srli	a8, a3, 8
+     410:	s32i	a8, a1, 0x160
+     413:	movi	a8, 0x128
+     416:	add.n	a6, a1, a8
+     418:	l32i	a13, a1, 0x160
+     41b:	l32i	a11, a1, 0x188
+     41e:	slli	a3, a3, 24
+     421:	mov.n	a14, a6
+     423:	mov.n	a12, a3
+     425:	mov.n	a10, a4
+     427:	l32r	a8, fffc0428 <mc_eval$part$0+0xfffc0428>
+     42a:	callx8	a8
+     42d:	mov.n	a12, a10
+     42f:	mov.n	a13, a11
+     431:	l32i	a10, a1, 0x150
+     434:	l32i	a11, a1, 0x154
+     437:	mov.n	a14, a6
+     439:	l32r	a8, fffc043c <mc_eval$part$0+0xfffc043c>
+     43c:	callx8	a8
+     43f:	mov.n	a12, a10
+     441:	mov.n	a13, a11
+     443:	l32i	a10, a1, 0x1e4
+     446:	l32i	a11, a1, 0x1e8
+     449:	mov.n	a14, a6
+     44b:	l32r	a8, fffc044c <mc_eval$part$0+0xfffc044c>
+     44e:	callx8	a8
+     451:	l32i	a12, a1, 0x158
+     454:	l32i	a13, a1, 0x15c
+     457:	mov.n	a14, a6
+     459:	l32r	a8, fffc045c <mc_eval$part$0+0xfffc045c>
+     45c:	callx8	a8
+     45f:	l32i	a12, a1, 0x1b8
+     462:	l32i	a13, a1, 0x1bc
+     465:	s32i	a10, a1, 0x168
+     468:	s32i	a11, a1, 0x170
+     46b:	l32i	a10, a1, 0x138
+     46e:	l32i	a11, a1, 0x13c
+     471:	mov.n	a14, a6
+     473:	l32r	a8, fffc0474 <mc_eval$part$0+0xfffc0474>
+     476:	callx8	a8
+     479:	l32r	a12, fffc047c <mc_eval$part$0+0xfffc047c>
+     47c:	mov.n	a14, a6
+     47e:	movi.n	a13, 0
+     480:	l32r	a8, fffc0480 <mc_eval$part$0+0xfffc0480>
+     483:	callx8	a8
+     486:	mov.n	a14, a6
+     488:	mov.n	a12, a10
+     48a:	mov.n	a13, a11
+     48c:	l32r	a8, fffc048c <mc_eval$part$0+0xfffc048c>
+     48f:	callx8	a8
+     492:	l32i	a12, a1, 0x1c0
+     495:	l32i	a13, a1, 0x1c4
+     498:	mov.n	a4, a10
+     49a:	mov.n	a5, a11
+     49c:	l32i	a10, a1, 0x134
+     49f:	l32i	a11, a1, 0x130
+     4a2:	mov.n	a14, a6
+     4a4:	l32r	a8, fffc04a4 <mc_eval$part$0+0xfffc04a4>
+     4a7:	callx8	a8
+     4aa:	l32r	a12, fffc04ac <mc_eval$part$0+0xfffc04ac>
+     4ad:	mov.n	a14, a6
+     4af:	movi.n	a13, 0
+     4b1:	l32r	a8, fffc04b4 <mc_eval$part$0+0xfffc04b4>
+     4b4:	callx8	a8
+     4b7:	mov.n	a14, a6
+     4b9:	mov.n	a12, a10
+     4bb:	mov.n	a13, a11
+     4bd:	l32r	a8, fffc04c0 <mc_eval$part$0+0xfffc04c0>
+     4c0:	callx8	a8
+     4c3:	mov.n	a12, a10
+     4c5:	mov.n	a13, a11
+     4c7:	mov.n	a14, a6
+     4c9:	mov.n	a10, a4
+     4cb:	mov.n	a11, a5
+     4cd:	l32r	a8, fffc04d0 <mc_eval$part$0+0xfffc04d0>
+     4d0:	callx8	a8
+     4d3:	movi.n	a12, 1
+     4d5:	bgei	a11, 1, 4e0 <mc_eval$part$0+0x4e0>
+     4d8:	bnez.n	a11, 4e2 <mc_eval$part$0+0x4e2>
+     4da:	l32r	a8, fffc04dc <mc_eval$part$0+0xfffc04dc>
+     4dd:	bgeu	a8, a10, 4e2 <mc_eval$part$0+0x4e2>
+     4e0:	movi.n	a12, 0
+     4e2:	l32i	a10, a1, 0x148
+     4e5:	l32i	a11, a1, 0x14c
+     4e8:	mov.n	a14, a6
+     4ea:	slli	a12, a12, 24
+     4ed:	movi.n	a13, 0
+     4ef:	l32r	a8, fffc04f0 <mc_eval$part$0+0xfffc04f0>
+     4f2:	callx8	a8
+     4f5:	l32i	a8, a1, 0x164
+     4f8:	mov.n	a5, a10
+     4fa:	mov.n	a6, a11
+     4fc:	movi.n	a12, 1
+     4fe:	blt	a2, a8, 50f <mc_eval$part$0+0x50f>
+     501:	bne	a8, a2, 50d <mc_eval$part$0+0x50d>
+     504:	l32i	a8, a1, 0x180
+     507:	l32i	a9, a1, 0x1dc
+     50a:	bltu	a8, a9, 50f <mc_eval$part$0+0x50f>
+     50d:	movi.n	a12, 0
+     50f:	movi	a4, 0x128
+     512:	add.n	a14, a1, a4
+     514:	slli	a12, a12, 24
+     517:	movi.n	a13, 0
+     519:	mov.n	a10, a7
+     51b:	movi.n	a11, 0
+     51d:	l32r	a8, fffc0520 <mc_eval$part$0+0xfffc0520>
+     520:	callx8	a8
+     523:	add.n	a7, a1, a4
+     525:	l32i	a13, a1, 0x160
+     528:	mov.n	a14, a7
+     52a:	mov.n	a12, a3
+     52c:	l32r	a8, fffc052c <mc_eval$part$0+0xfffc052c>
+     52f:	callx8	a8
+     532:	mov.n	a12, a10
+     534:	mov.n	a13, a11
+     536:	l32i	a10, a1, 0x150
+     539:	l32i	a11, a1, 0x154
+     53c:	mov.n	a14, a7
+     53e:	l32r	a8, fffc0540 <mc_eval$part$0+0xfffc0540>
+     541:	callx8	a8
+     544:	mov.n	a14, a7
+     546:	mov.n	a12, a10
+     548:	mov.n	a13, a11
+     54a:	mov.n	a10, a5
+     54c:	mov.n	a11, a6
+     54e:	l32r	a8, fffc0550 <mc_eval$part$0+0xfffc0550>
+     551:	callx8	a8
+     554:	l32i	a12, a1, 0x158
+     557:	l32i	a13, a1, 0x15c
+     55a:	mov.n	a14, a7
+     55c:	l32r	a8, fffc055c <mc_eval$part$0+0xfffc055c>
+     55f:	callx8	a8
+     562:	l32i	a12, a1, 0x1c8
+     565:	l32i	a13, a1, 0x1cc
+     568:	s32i	a10, a1, 0x158
+     56b:	s32i	a11, a1, 0x160
+     56e:	l32i	a10, a1, 0x138
+     571:	l32i	a11, a1, 0x13c
+     574:	mov.n	a14, a7
+     576:	l32r	a8, fffc0578 <mc_eval$part$0+0xfffc0578>
+     579:	callx8	a8
+     57c:	l32r	a12, fffc057c <mc_eval$part$0+0xfffc057c>
+     57f:	mov.n	a14, a7
+     581:	movi.n	a13, 0
+     583:	l32r	a8, fffc0584 <mc_eval$part$0+0xfffc0584>
+     586:	callx8	a8
+     589:	mov.n	a14, a7
+     58b:	mov.n	a12, a10
+     58d:	mov.n	a13, a11
+     58f:	l32r	a8, fffc0590 <mc_eval$part$0+0xfffc0590>
+     592:	callx8	a8
+     595:	mov.n	a5, a10
+     597:	mov.n	a6, a11
+     599:	l32i	a12, a1, 0x1d0
+     59c:	l32i	a13, a1, 0x1d4
+     59f:	l32i	a10, a1, 0x134
+     5a2:	l32i	a11, a1, 0x130
+     5a5:	mov.n	a14, a7
+     5a7:	l32r	a8, fffc05a8 <mc_eval$part$0+0xfffc05a8>
+     5aa:	callx8	a8
+     5ad:	l32r	a12, fffc05b0 <mc_eval$part$0+0xfffc05b0>
+     5b0:	mov.n	a14, a7
+     5b2:	movi.n	a13, 0
+     5b4:	l32r	a8, fffc05b4 <mc_eval$part$0+0xfffc05b4>
+     5b7:	callx8	a8
+     5ba:	mov.n	a14, a7
+     5bc:	mov.n	a12, a10
+     5be:	mov.n	a13, a11
+     5c0:	l32r	a8, fffc05c0 <mc_eval$part$0+0xfffc05c0>
+     5c3:	callx8	a8
+     5c6:	mov.n	a14, a7
+     5c8:	mov.n	a12, a10
+     5ca:	mov.n	a13, a11
+     5cc:	mov.n	a10, a5
+     5ce:	mov.n	a11, a6
+     5d0:	l32r	a8, fffc05d0 <mc_eval$part$0+0xfffc05d0>
+     5d3:	callx8	a8
+     5d6:	mov.n	a13, a7
+     5d8:	movi.n	a12, 0
+     5da:	mov.n	a3, a10
+     5dc:	mov.n	a5, a11
+     5de:	l32r	a8, fffc05e0 <mc_eval$part$0+0xfffc05e0>
+     5e1:	callx8	a8
+     5e4:	mov.n	a13, a7
+     5e6:	s32i	a11, a1, 0x148
+     5e9:	movi.n	a12, 1
+     5eb:	mov.n	a2, a10
+     5ed:	mov.n	a11, a5
+     5ef:	mov.n	a10, a3
+     5f1:	l32r	a8, fffc05f4 <mc_eval$part$0+0xfffc05f4>
+     5f4:	callx8	a8
+     5f7:	mov.n	a13, a7
+     5f9:	mov.n	a6, a10
+     5fb:	mov.n	a4, a11
+     5fd:	mov.n	a10, a3
+     5ff:	movi.n	a12, 2
+     601:	mov.n	a11, a5
+     603:	l32r	a8, fffc0604 <mc_eval$part$0+0xfffc0604>
+     606:	callx8	a8
+     609:	l32i	a9, a1, 0x148
+     60c:	mov.n	a7, a10
+     60e:	abs	a10, a9
+     611:	mov.n	a3, a11
+     613:	bbsi	a10, 31, 619 <mc_eval$part$0+0x619>
+     616:	j	6f1 <mc_eval$part$0+0x6f1>
+     619:	l32r	a10, fffc061c <mc_eval$part$0+0xfffc061c>
+     61c:	bltu	a2, a10, 622 <mc_eval$part$0+0x622>
+     61f:	j	6f1 <mc_eval$part$0+0x6f1>
+     622:	movi.n	a9, 4
+     624:	s32i	a9, a1, 0x128
+     627:	movi.n	a12, 0
+     629:	movi.n	a13, 0
+     62b:	movi	a8, 0x128
+     62e:	add.n	a5, a1, a8
+     630:	l32i	a10, a1, 0x144
+     633:	l32i	a11, a1, 0x140
+     636:	mov.n	a14, a5
+     638:	l32r	a8, fffc0638 <mc_eval$part$0+0xfffc0638>
+     63b:	callx8	a8
+     63e:	mov.n	a12, a10
+     640:	l32r	a10, fffc0640 <mc_eval$part$0+0xfffc0640>
+     643:	mov.n	a13, a11
+     645:	mov.n	a14, a5
+     647:	movi.n	a11, 0
+     649:	l32r	a8, fffc064c <mc_eval$part$0+0xfffc064c>
+     64c:	callx8	a8
+     64f:	s32i	a10, a1, 0x148
+     652:	s32i	a11, a1, 0x150
+     655:	abs	a9, a4
+     658:	bbsi	a9, 31, 65e <mc_eval$part$0+0x65e>
+     65b:	j	703 <mc_eval$part$0+0x703>
+     65e:	l32r	a9, fffc0660 <mc_eval$part$0+0xfffc0660>
+     661:	bltu	a6, a9, 667 <mc_eval$part$0+0x667>
+     664:	j	703 <mc_eval$part$0+0x703>
+     667:	movi.n	a8, 4
+     669:	s32i	a8, a1, 0x128
+     66c:	movi.n	a12, 0
+     66e:	movi.n	a13, 0
+     670:	movi	a8, 0x128
+     673:	add.n	a6, a1, a8
+     675:	l32i	a10, a1, 0x144
+     678:	l32i	a11, a1, 0x140
+     67b:	mov.n	a14, a6
+     67d:	l32r	a8, fffc0680 <mc_eval$part$0+0xfffc0680>
+     680:	callx8	a8
+     683:	mov.n	a12, a10
+     685:	l32r	a10, fffc0688 <mc_eval$part$0+0xfffc0688>
+     688:	mov.n	a14, a6
+     68a:	mov.n	a13, a11
+     68c:	movi.n	a11, 0
+     68e:	l32r	a8, fffc0690 <mc_eval$part$0+0xfffc0690>
+     691:	callx8	a8
+     694:	abs	a8, a3
+     697:	mov.n	a6, a10
+     699:	mov.n	a5, a11
+     69b:	bbci	a8, 31, 715 <mc_eval$part$0+0x715>
+     69e:	l32r	a8, fffc06a0 <mc_eval$part$0+0xfffc06a0>
+     6a1:	bgeu	a7, a8, 715 <mc_eval$part$0+0x715>
+     6a4:	movi.n	a8, 4
+     6a6:	s32i	a8, a1, 0x128
+     6a9:	movi.n	a12, 0
+     6ab:	movi.n	a13, 0
+     6ad:	movi	a8, 0x128
+     6b0:	add.n	a7, a1, a8
+     6b2:	l32i	a10, a1, 0x144
+     6b5:	l32i	a11, a1, 0x140
+     6b8:	mov.n	a14, a7
+     6ba:	l32r	a8, fffc06bc <mc_eval$part$0+0xfffc06bc>
+     6bd:	callx8	a8
+     6c0:	mov.n	a12, a10
+     6c2:	l32r	a10, fffc06c4 <mc_eval$part$0+0xfffc06c4>
+     6c5:	mov.n	a13, a11
+     6c7:	mov.n	a14, a7
+     6c9:	movi.n	a11, 0
+     6cb:	l32r	a8, fffc06cc <mc_eval$part$0+0xfffc06cc>
+     6ce:	callx8	a8
+     6d1:	l32i	a3, a1, 0x160
+     6d4:	s32i	a10, a1, 0x140
+     6d7:	l32i	a4, a1, 0x158
+     6da:	mov.n	a2, a11
+     6dc:	bgez	a3, 724 <mc_eval$part$0+0x724>
+     6df:	movi.n	a4, 0
+     6e1:	movi.n	a3, 0
+     6e3:	l32r	a9, fffc06e4 <mc_eval$part$0+0xfffc06e4>
+     6e6:	bgeu	a9, a4, 72a <mc_eval$part$0+0x72a>
+     6e9:	l32r	a4, fffc06ec <mc_eval$part$0+0xfffc06ec>
+     6ec:	movi.n	a3, 0
+     6ee:	j	72a <mc_eval$part$0+0x72a>
+     6f1:	l32r	a10, fffc06f4 <mc_eval$part$0+0xfffc06f4>
+     6f4:	addi.n	a13, a9, -1
+     6f6:	add.n	a12, a2, a10
+     6f8:	bltu	a12, a10, 6fe <mc_eval$part$0+0x6fe>
+     6fb:	j	62b <mc_eval$part$0+0x62b>
+     6fe:	mov.n	a13, a9
+     700:	j	62b <mc_eval$part$0+0x62b>
+     703:	l32r	a9, fffc0704 <mc_eval$part$0+0xfffc0704>
+     706:	addi.n	a13, a4, -1
+     708:	add.n	a12, a6, a9
+     70a:	bltu	a12, a9, 710 <mc_eval$part$0+0x710>
+     70d:	j	670 <mc_eval$part$0+0x670>
+     710:	mov.n	a13, a4
+     712:	j	670 <mc_eval$part$0+0x670>
+     715:	l32r	a8, fffc0718 <mc_eval$part$0+0xfffc0718>
+     718:	addi.n	a13, a3, -1
+     71a:	add.n	a12, a7, a8
+     71c:	bgeu	a12, a8, 6ad <mc_eval$part$0+0x6ad>
+     71f:	mov.n	a13, a3
+     721:	j	6ad <mc_eval$part$0+0x6ad>
+     724:	bgei	a3, 1, 6e9 <mc_eval$part$0+0x6e9>
+     727:	beqz	a3, 6e3 <mc_eval$part$0+0x6e3>
+     72a:	movi	a8, 0x128
+     72d:	add.n	a7, a1, a8
+     72f:	l32i	a12, a1, 0x148
+     732:	l32i	a13, a1, 0x150
+     735:	l32r	a10, fffc0738 <mc_eval$part$0+0xfffc0738>
+     738:	mov.n	a14, a7
+     73a:	movi.n	a11, 0
+     73c:	l32r	a8, fffc073c <mc_eval$part$0+0xfffc073c>
+     73f:	callx8	a8
+     742:	mov.n	a14, a7
+     744:	mov.n	a12, a10
+     746:	mov.n	a13, a11
+     748:	mov.n	a10, a4
+     74a:	mov.n	a11, a3
+     74c:	l32r	a8, fffc074c <mc_eval$part$0+0xfffc074c>
+     74f:	callx8	a8
+     752:	mov.n	a12, a10
+     754:	mov.n	a13, a11
+     756:	l32i	a10, a1, 0x148
+     759:	l32i	a11, a1, 0x150
+     75c:	mov.n	a14, a7
+     75e:	l32r	a8, fffc0760 <mc_eval$part$0+0xfffc0760>
+     761:	callx8	a8
+     764:	s32i	a10, a1, 0x144
+     767:	l32r	a10, fffc0768 <mc_eval$part$0+0xfffc0768>
+     76a:	mov.n	a14, a7
+     76c:	mov.n	a12, a6
+     76e:	mov.n	a13, a5
+     770:	s32i	a11, a1, 0x148
+     773:	movi.n	a11, 0
+     775:	l32r	a8, fffc0778 <mc_eval$part$0+0xfffc0778>
+     778:	callx8	a8
+     77b:	mov.n	a14, a7
+     77d:	mov.n	a12, a10
+     77f:	mov.n	a13, a11
+     781:	mov.n	a10, a4
+     783:	mov.n	a11, a3
+     785:	l32r	a8, fffc0788 <mc_eval$part$0+0xfffc0788>
+     788:	callx8	a8
+     78b:	mov.n	a14, a7
+     78d:	mov.n	a12, a10
+     78f:	mov.n	a13, a11
+     791:	mov.n	a10, a6
+     793:	mov.n	a11, a5
+     795:	l32r	a8, fffc0798 <mc_eval$part$0+0xfffc0798>
+     798:	callx8	a8
+     79b:	l32i	a12, a1, 0x140
+     79e:	mov.n	a5, a10
+     7a0:	l32r	a10, fffc07a0 <mc_eval$part$0+0xfffc07a0>
+     7a3:	mov.n	a14, a7
+     7a5:	mov.n	a13, a2
+     7a7:	mov.n	a6, a11
+     7a9:	movi.n	a11, 0
+     7ab:	l32r	a8, fffc07ac <mc_eval$part$0+0xfffc07ac>
+     7ae:	callx8	a8
+     7b1:	mov.n	a14, a7
+     7b3:	mov.n	a12, a10
+     7b5:	mov.n	a13, a11
+     7b7:	mov.n	a10, a4
+     7b9:	mov.n	a11, a3
+     7bb:	l32r	a8, fffc07bc <mc_eval$part$0+0xfffc07bc>
+     7be:	callx8	a8
+     7c1:	mov.n	a12, a10
+     7c3:	l32i	a10, a1, 0x140
+     7c6:	mov.n	a14, a7
+     7c8:	mov.n	a13, a11
+     7ca:	mov.n	a11, a2
+     7cc:	l32r	a8, fffc07cc <mc_eval$part$0+0xfffc07cc>
+     7cf:	callx8	a8
+     7d2:	l32i	a7, a1, 0x170
+     7d5:	s32i	a10, a1, 0x140
+     7d8:	l32i	a3, a1, 0x168
+     7db:	mov.n	a2, a11
+     7dd:	bgez	a7, 7f2 <mc_eval$part$0+0x7f2>
+     7e0:	movi.n	a3, 0
+     7e2:	movi.n	a7, 0
+     7e4:	l32r	a9, fffc07e4 <mc_eval$part$0+0xfffc07e4>
+     7e7:	bgeu	a9, a3, 7f8 <mc_eval$part$0+0x7f8>
+     7ea:	l32r	a3, fffc07ec <mc_eval$part$0+0xfffc07ec>
+     7ed:	movi.n	a7, 0
+     7ef:	j	7f8 <mc_eval$part$0+0x7f8>
+     7f2:	bgei	a7, 1, 7ea <mc_eval$part$0+0x7ea>
+     7f5:	beqz	a7, 7e4 <mc_eval$part$0+0x7e4>
+     7f8:	movi	a8, 0x128
+     7fb:	add.n	a4, a1, a8
+     7fd:	l32i	a12, a1, 0x144
+     800:	l32i	a13, a1, 0x148
+     803:	l32r	a10, fffc0804 <mc_eval$part$0+0xfffc0804>
+     806:	mov.n	a14, a4
+     808:	movi.n	a11, 0
+     80a:	l32r	a8, fffc080c <mc_eval$part$0+0xfffc080c>
+     80d:	callx8	a8
+     810:	mov.n	a12, a10
+     812:	mov.n	a13, a11
+     814:	mov.n	a14, a4
+     816:	mov.n	a10, a3
+     818:	mov.n	a11, a7
+     81a:	l32r	a8, fffc081c <mc_eval$part$0+0xfffc081c>
+     81d:	callx8	a8
+     820:	mov.n	a12, a10
+     822:	mov.n	a13, a11
+     824:	l32i	a10, a1, 0x144
+     827:	l32i	a11, a1, 0x148
+     82a:	mov.n	a14, a4
+     82c:	l32r	a8, fffc082c <mc_eval$part$0+0xfffc082c>
+     82f:	callx8	a8
+     832:	s32i.n	a10, a1, 8
+     834:	l32r	a10, fffc0834 <mc_eval$part$0+0xfffc0834>
+     837:	s32i.n	a11, a1, 12
+     839:	mov.n	a14, a4
+     83b:	mov.n	a12, a5
+     83d:	mov.n	a13, a6
+     83f:	movi.n	a11, 0
+     841:	l32r	a8, fffc0844 <mc_eval$part$0+0xfffc0844>
+     844:	callx8	a8
+     847:	mov.n	a12, a10
+     849:	mov.n	a13, a11
+     84b:	mov.n	a14, a4
+     84d:	mov.n	a10, a3
+     84f:	mov.n	a11, a7
+     851:	l32r	a8, fffc0854 <mc_eval$part$0+0xfffc0854>
+     854:	callx8	a8
+     857:	mov.n	a12, a10
+     859:	mov.n	a13, a11
+     85b:	mov.n	a14, a4
+     85d:	mov.n	a10, a5
+     85f:	mov.n	a11, a6
+     861:	l32r	a8, fffc0864 <mc_eval$part$0+0xfffc0864>
+     864:	callx8	a8
+     867:	l32i	a12, a1, 0x140
+     86a:	s32i.n	a10, a1, 16
+     86c:	l32r	a10, fffc086c <mc_eval$part$0+0xfffc086c>
+     86f:	s32i.n	a11, a1, 20
+     871:	mov.n	a14, a4
+     873:	mov.n	a13, a2
+     875:	movi.n	a11, 0
+     877:	l32r	a8, fffc0878 <mc_eval$part$0+0xfffc0878>
+     87a:	callx8	a8
+     87d:	mov.n	a12, a10
+     87f:	mov.n	a13, a11
+     881:	mov.n	a14, a4
+     883:	mov.n	a10, a3
+     885:	mov.n	a11, a7
+     887:	l32r	a8, fffc0888 <mc_eval$part$0+0xfffc0888>
+     88a:	callx8	a8
+     88d:	mov.n	a12, a10
+     88f:	l32i	a10, a1, 0x140
+     892:	mov.n	a13, a11
+     894:	mov.n	a14, a4
+     896:	mov.n	a11, a2
+     898:	l32r	a8, fffc0898 <mc_eval$part$0+0xfffc0898>
+     89b:	callx8	a8
+     89e:	l32r	a8, fffc08a0 <mc_eval$part$0+0xfffc08a0>
+     8a1:	l32i	a9, a1, 0x138
+     8a4:	s32i.n	a10, a1, 24
+     8a6:	s32i.n	a11, a1, 28
+     8a8:	add.n	a10, a9, a8
+     8aa:	l32i	a11, a1, 0x13c
+     8ad:	bgeu	a10, a8, 8b2 <mc_eval$part$0+0x8b2>
+     8b0:	addi.n	a11, a11, 1
+     8b2:	l32r	a12, fffc08b4 <mc_eval$part$0+0xfffc08b4>
+     8b5:	mov.n	a14, a4
+     8b7:	movi.n	a13, 0
+     8b9:	l32r	a8, fffc08bc <mc_eval$part$0+0xfffc08bc>
+     8bc:	callx8	a8
+     8bf:	movi	a8, 0x128
+     8c2:	add.n	a7, a1, a8
+     8c4:	l32r	a12, fffc08c4 <mc_eval$part$0+0xfffc08c4>
+     8c7:	mov.n	a3, a10
+     8c9:	mov.n	a4, a11
+     8cb:	mov.n	a14, a7
+     8cd:	movi.n	a13, -1
+     8cf:	mov.n	a10, a3
+     8d1:	mov.n	a11, a4
+     8d3:	l32r	a8, fffc08d4 <mc_eval$part$0+0xfffc08d4>
+     8d6:	callx8	a8
+     8d9:	mov.n	a12, a10
+     8db:	l32r	a10, fffc08dc <mc_eval$part$0+0xfffc08dc>
+     8de:	mov.n	a13, a11
+     8e0:	mov.n	a14, a7
+     8e2:	movi.n	a11, 0
+     8e4:	l32r	a8, fffc08e4 <mc_eval$part$0+0xfffc08e4>
+     8e7:	callx8	a8
+     8ea:	s32i.n	a10, a1, 48
+     8ec:	s32i.n	a11, a1, 52
+     8ee:	mov.n	a14, a7
+     8f0:	mov.n	a12, a3
+     8f2:	mov.n	a13, a4
+     8f4:	mov.n	a5, a10
+     8f6:	mov.n	a6, a11
+     8f8:	mov.n	a10, a3
+     8fa:	mov.n	a11, a4
+     8fc:	l32r	a8, fffc08fc <mc_eval$part$0+0xfffc08fc>
+     8ff:	callx8	a8
+     902:	mov.n	a12, a10
+     904:	l32r	a10, fffc0904 <mc_eval$part$0+0xfffc0904>
+     907:	mov.n	a13, a11
+     909:	mov.n	a14, a7
+     90b:	movi.n	a11, 0
+     90d:	l32r	a8, fffc0910 <mc_eval$part$0+0xfffc0910>
+     910:	callx8	a8
+     913:	bgez	a11, 91a <mc_eval$part$0+0x91a>
+     916:	movi.n	a10, 0
+     918:	movi.n	a11, 0
+     91a:	mov.n	a12, a7
+     91c:	l32r	a8, fffc091c <mc_eval$part$0+0xfffc091c>
+     91f:	callx8	a8
+     922:	movi	a8, 0x128
+     925:	add.n	a7, a1, a8
+     927:	mov.n	a12, a10
+     929:	mov.n	a13, a11
+     92b:	l32i	a10, a1, 168
+     92e:	l32i	a11, a1, 172
+     931:	mov.n	a14, a7
+     933:	l32r	a8, fffc0934 <mc_eval$part$0+0xfffc0934>
+     936:	callx8	a8
+     939:	mov.n	a14, a7
+     93b:	mov.n	a12, a10
+     93d:	mov.n	a13, a11
+     93f:	mov.n	a2, a10
+     941:	mov.n	a3, a11
+     943:	mov.n	a10, a5
+     945:	mov.n	a11, a6
+     947:	l32r	a8, fffc0948 <mc_eval$part$0+0xfffc0948>
+     94a:	callx8	a8
+     94d:	l32i	a8, a1, 0x130
+     950:	movi.n	a7, 1
+     952:	blt	a8, a11, 960 <mc_eval$part$0+0x960>
+     955:	bne	a11, a8, 95e <mc_eval$part$0+0x95e>
+     958:	l32i	a8, a1, 0x134
+     95b:	bltu	a8, a10, 960 <mc_eval$part$0+0x960>
+     95e:	movi.n	a7, 0
+     960:	movi	a8, 0x128
+     963:	srli	a4, a7, 8
+     966:	add.n	a14, a1, a8
+     968:	mov.n	a12, a2
+     96a:	slli	a7, a7, 24
+     96d:	mov.n	a13, a3
+     96f:	mov.n	a10, a5
+     971:	mov.n	a11, a6
+     973:	s32i.n	a7, a1, 56
+     975:	s32i.n	a4, a1, 60
+     977:	l32r	a8, fffc0978 <mc_eval$part$0+0xfffc0978>
+     97a:	callx8	a8
+     97d:	l32i	a8, a1, 0x130
+     980:	movi.n	a12, 1
+     982:	blt	a11, a8, 990 <mc_eval$part$0+0x990>
+     985:	bne	a8, a11, 98e <mc_eval$part$0+0x98e>
+     988:	l32i	a8, a1, 0x134
+     98b:	bltu	a10, a8, 990 <mc_eval$part$0+0x990>
+     98e:	movi.n	a12, 0
+     990:	movi	a8, 0x128
+     993:	srli	a13, a12, 8
+     996:	add.n	a14, a1, a8
+     998:	slli	a12, a12, 24
+     99b:	mov.n	a10, a7
+     99d:	mov.n	a11, a4
+     99f:	s32i.n	a12, a1, 40
+     9a1:	s32i.n	a13, a1, 44
+     9a3:	l32r	a8, fffc09a4 <mc_eval$part$0+0xfffc09a4>
+     9a6:	callx8	a8
+     9a9:	l32i	a8, a1, 180
+     9ac:	s32i.n	a10, a1, 0
+     9ae:	s32i.n	a11, a1, 4
+     9b0:	l32i	a9, a1, 176
+     9b3:	blt	a8, a11, 9bc <mc_eval$part$0+0x9bc>
+     9b6:	bne	a11, a8, 9c0 <mc_eval$part$0+0x9c0>
+     9b9:	bgeu	a9, a10, 9c0 <mc_eval$part$0+0x9c0>
+     9bc:	mov.n	a9, a10
+     9be:	mov.n	a8, a11
+     9c0:	l32i	a2, a1, 0x128
+     9c3:	s32i.n	a9, a1, 32
+     9c5:	s32i.n	a8, a1, 36
+     9c7:	bnez	a2, 11b2 <mc_eval$part$0+0x11b2>
+     9ca:	l32i	a10, a1, 0x17c
+     9cd:	l32r	a14, fffc09d0 <mc_eval$part$0+0xfffc09d0>
+     9d0:	bgez	a10, 9d6 <mc_eval$part$0+0x9d6>
+     9d3:	l32r	a14, fffc09d4 <mc_eval$part$0+0xfffc09d4>
+     9d6:	movi	a10, 232
+     9d9:	add.n	a12, a1, a10
+     9db:	movi.n	a13, 0
+     9dd:	add.n	a10, a14, a13
+     9df:	l32i.n	a10, a10, 0
+     9e1:	addx8	a10, a10, a1
+     9e4:	l32i.n	a11, a10, 4
+     9e6:	l32i.n	a10, a10, 0
+     9e8:	s32i.n	a11, a12, 4
+     9ea:	s32i.n	a10, a12, 0
+     9ec:	l32i	a10, a1, 0x178
+     9ef:	addi.n	a12, a12, 8
+     9f1:	add.n	a10, a10, a13
+     9f3:	l32i	a10, a10, 184
+     9f6:	addi.n	a13, a13, 4
+     9f8:	s32i.n	a10, a12, 32
+     9fa:	srai	a10, a10, 31
+     9fd:	s32i.n	a10, a12, 36
+     9ff:	bnei	a13, 12, 9dd <mc_eval$part$0+0x9dd>
+     a02:	bgez	a8, 117e <mc_eval$part$0+0x117e>
+     a05:	movi.n	a9, 0
+     a07:	movi.n	a8, 0
+     a09:	l32r	a10, fffc0a0c <mc_eval$part$0+0xfffc0a0c>
+     a0c:	bltu	a10, a9, a12 <mc_eval$part$0+0xa12>
+     a0f:	j	1187 <mc_eval$part$0+0x1187>
+     a12:	l32r	a9, fffc0a14 <mc_eval$part$0+0xfffc0a14>
+     a15:	movi.n	a8, 0
+     a17:	j	1187 <mc_eval$part$0+0x1187>
+     a1a:	l32i	a8, a1, 0x138
+     a1d:	l32i	a10, a1, 0x138
+     a20:	s32i	a8, a1, 184
+     a23:	l32i	a8, a1, 0x13c
+     a26:	l32i	a11, a1, 0x13c
+     a29:	s32i	a8, a1, 188
+     a2c:	movi.n	a8, 0
+     a2e:	s32i	a8, a1, 192
+     a31:	s32i	a8, a1, 196
+     a34:	l32i	a8, a1, 0x134
+     a37:	s32i	a8, a1, 200
+     a3a:	l32i	a8, a1, 0x130
+     a3d:	s32i	a8, a1, 204
+     a40:	l32i	a8, a1, 0x138
+     a43:	s32i	a8, a1, 208
+     a46:	l32i	a8, a1, 0x13c
+     a49:	s32i	a8, a1, 212
+     a4c:	l32i	a8, a1, 0x134
+     a4f:	s32i	a8, a1, 216
+     a52:	l32i	a8, a1, 0x130
+     a55:	s32i	a8, a1, 220
+     a58:	movi	a8, 0x128
+     a5b:	add.n	a7, a1, a8
+     a5d:	mov.n	a14, a7
+     a5f:	l32r	a8, fffc0a60 <mc_eval$part$0+0xfffc0a60>
+     a62:	callx8	a8
+     a65:	l32r	a12, fffc0a68 <mc_eval$part$0+0xfffc0a68>
+     a68:	mov.n	a14, a7
+     a6a:	movi.n	a13, 0
+     a6c:	l32r	a8, fffc0a6c <mc_eval$part$0+0xfffc0a6c>
+     a6f:	callx8	a8
+     a72:	mov.n	a14, a7
+     a74:	mov.n	a12, a10
+     a76:	mov.n	a13, a11
+     a78:	l32r	a8, fffc0a78 <mc_eval$part$0+0xfffc0a78>
+     a7b:	callx8	a8
+     a7e:	mov.n	a5, a10
+     a80:	mov.n	a6, a11
+     a82:	s32i	a10, a1, 224
+     a85:	s32i	a11, a1, 228
+     a88:	l32i	a10, a1, 0x134
+     a8b:	l32i	a11, a1, 0x130
+     a8e:	mov.n	a14, a7
+     a90:	mov.n	a12, a2
+     a92:	mov.n	a13, a3
+     a94:	l32r	a8, fffc0a94 <mc_eval$part$0+0xfffc0a94>
+     a97:	callx8	a8
+     a9a:	l32r	a12, fffc0a9c <mc_eval$part$0+0xfffc0a9c>
+     a9d:	mov.n	a14, a7
+     a9f:	movi.n	a13, 0
+     aa1:	l32r	a8, fffc0aa4 <mc_eval$part$0+0xfffc0aa4>
+     aa4:	callx8	a8
+     aa7:	mov.n	a14, a7
+     aa9:	mov.n	a12, a10
+     aab:	mov.n	a13, a11
+     aad:	l32r	a8, fffc0ab0 <mc_eval$part$0+0xfffc0ab0>
+     ab0:	callx8	a8
+     ab3:	mov.n	a12, a10
+     ab5:	mov.n	a13, a11
+     ab7:	mov.n	a14, a7
+     ab9:	mov.n	a10, a5
+     abb:	mov.n	a11, a6
+     abd:	l32r	a8, fffc0ac0 <mc_eval$part$0+0xfffc0ac0>
+     ac0:	callx8	a8
+     ac3:	movi.n	a12, 1
+     ac5:	bgei	a11, 1, ad0 <mc_eval$part$0+0xad0>
+     ac8:	bnez.n	a11, ad2 <mc_eval$part$0+0xad2>
+     aca:	l32r	a8, fffc0acc <mc_eval$part$0+0xfffc0acc>
+     acd:	bgeu	a8, a10, ad2 <mc_eval$part$0+0xad2>
+     ad0:	movi.n	a12, 0
+     ad2:	l32i	a10, a1, 0x148
+     ad5:	l32i	a11, a1, 0x14c
+     ad8:	mov.n	a14, a7
+     ada:	slli	a12, a12, 24
+     add:	movi.n	a13, 0
+     adf:	l32r	a8, fffc0ae0 <mc_eval$part$0+0xfffc0ae0>
+     ae2:	callx8	a8
+     ae5:	movi	a8, 0x128
+     ae8:	add.n	a7, a1, a8
+     aea:	l32i	a12, a1, 0x168
+     aed:	l32i	a13, a1, 0x16c
+     af0:	s32i	a10, a1, 0x1e4
+     af3:	s32i	a11, a1, 0x1e8
+     af6:	l32i	a10, a1, 0x138
+     af9:	l32i	a11, a1, 0x13c
+     afc:	mov.n	a14, a7
+     afe:	l32r	a8, fffc0b00 <mc_eval$part$0+0xfffc0b00>
+     b01:	callx8	a8
+     b04:	l32r	a12, fffc0b04 <mc_eval$part$0+0xfffc0b04>
+     b07:	mov.n	a14, a7
+     b09:	movi.n	a13, 0
+     b0b:	l32r	a8, fffc0b0c <mc_eval$part$0+0xfffc0b0c>
+     b0e:	callx8	a8
+     b11:	l32i	a12, a1, 0x170
+     b14:	l32i	a13, a1, 0x174
+     b17:	mov.n	a14, a7
+     b19:	mov.n	a3, a11
+     b1b:	s32i	a10, a1, 0x168
+     b1e:	l32r	a8, fffc0b20 <mc_eval$part$0+0xfffc0b20>
+     b21:	callx8	a8
+     b24:	mov.n	a14, a7
+     b26:	mov.n	a12, a10
+     b28:	mov.n	a13, a11
+     b2a:	l32r	a8, fffc0b2c <mc_eval$part$0+0xfffc0b2c>
+     b2d:	callx8	a8
+     b30:	mov.n	a4, a10
+     b32:	mov.n	a5, a11
+     b34:	l32i	a12, a1, 0x180
+     b37:	l32i	a13, a1, 0x184
+     b3a:	l32i	a10, a1, 0x134
+     b3d:	l32i	a11, a1, 0x130
+     b40:	mov.n	a14, a7
+     b42:	l32r	a8, fffc0b44 <mc_eval$part$0+0xfffc0b44>
+     b45:	callx8	a8
+     b48:	l32r	a12, fffc0b48 <mc_eval$part$0+0xfffc0b48>
+     b4b:	mov.n	a14, a7
+     b4d:	movi.n	a13, 0
+     b4f:	l32r	a8, fffc0b50 <mc_eval$part$0+0xfffc0b50>
+     b52:	callx8	a8
+     b55:	l32i	a12, a1, 0x188
+     b58:	l32i	a13, a1, 0x18c
+     b5b:	mov.n	a14, a7
+     b5d:	mov.n	a6, a10
+     b5f:	s32i	a11, a1, 0x170
+     b62:	l32r	a8, fffc0b64 <mc_eval$part$0+0xfffc0b64>
+     b65:	callx8	a8
+     b68:	mov.n	a14, a7
+     b6a:	mov.n	a12, a10
+     b6c:	mov.n	a13, a11
+     b6e:	l32r	a8, fffc0b70 <mc_eval$part$0+0xfffc0b70>
+     b71:	callx8	a8
+     b74:	mov.n	a14, a7
+     b76:	mov.n	a12, a10
+     b78:	mov.n	a13, a11
+     b7a:	mov.n	a10, a4
+     b7c:	mov.n	a11, a5
+     b7e:	l32r	a8, fffc0b80 <mc_eval$part$0+0xfffc0b80>
+     b81:	callx8	a8
+     b84:	l32i	a12, a1, 0x190
+     b87:	l32i	a13, a1, 0x194
+     b8a:	mov.n	a14, a7
+     b8c:	l32r	a8, fffc0b8c <mc_eval$part$0+0xfffc0b8c>
+     b8f:	callx8	a8
+     b92:	mov.n	a2, a10
+     b94:	l32i	a12, a1, 0x198
+     b97:	l32i	a13, a1, 0x19c
+     b9a:	l32i	a10, a1, 0x168
+     b9d:	mov.n	a5, a11
+     b9f:	mov.n	a14, a7
+     ba1:	mov.n	a11, a3
+     ba3:	l32r	a8, fffc0ba4 <mc_eval$part$0+0xfffc0ba4>
+     ba6:	callx8	a8
+     ba9:	mov.n	a14, a7
+     bab:	mov.n	a12, a10
+     bad:	mov.n	a13, a11
+     baf:	l32r	a8, fffc0bb0 <mc_eval$part$0+0xfffc0bb0>
+     bb2:	callx8	a8
+     bb5:	mov.n	a4, a11
+     bb7:	l32i	a12, a1, 0x1a0
+     bba:	l32i	a13, a1, 0x1a4
+     bbd:	l32i	a11, a1, 0x170
+     bc0:	mov.n	a14, a7
+     bc2:	s32i	a10, a1, 0x180
+     bc5:	mov.n	a10, a6
+     bc7:	l32r	a8, fffc0bc8 <mc_eval$part$0+0xfffc0bc8>
+     bca:	callx8	a8
+     bcd:	mov.n	a14, a7
+     bcf:	mov.n	a12, a10
+     bd1:	mov.n	a13, a11
+     bd3:	l32r	a8, fffc0bd4 <mc_eval$part$0+0xfffc0bd4>
+     bd6:	callx8	a8
+     bd9:	mov.n	a12, a10
+     bdb:	l32i	a10, a1, 0x180
+     bde:	mov.n	a14, a7
+     be0:	mov.n	a13, a11
+     be2:	mov.n	a11, a4
+     be4:	l32r	a8, fffc0be4 <mc_eval$part$0+0xfffc0be4>
+     be7:	callx8	a8
+     bea:	l32i	a12, a1, 0x1a8
+     bed:	l32i	a13, a1, 0x1ac
+     bf0:	mov.n	a14, a7
+     bf2:	l32r	a8, fffc0bf4 <mc_eval$part$0+0xfffc0bf4>
+     bf5:	callx8	a8
+     bf8:	extui	a8, a11, 31, 1
+     bfb:	extui	a7, a5, 31, 1
+     bfe:	slli	a8, a8, 24
+     c01:	slli	a7, a7, 24
+     c04:	maxu	a7, a7, a8
+     c07:	movi.n	a8, 0
+     c09:	s32i	a8, a1, 76
+     c0c:	movi	a8, 0x128
+     c0f:	add.n	a4, a1, a8
+     c11:	mov.n	a12, a10
+     c13:	mov.n	a13, a11
+     c15:	s32i	a10, a1, 64
+     c18:	s32i	a11, a1, 68
+     c1b:	l32i	a10, a1, 0x1b0
+     c1e:	l32i	a11, a1, 0x1b4
+     c21:	mov.n	a14, a4
+     c23:	s32i	a7, a1, 72
+     c26:	l32r	a8, fffc0c28 <mc_eval$part$0+0xfffc0c28>
+     c29:	callx8	a8
+     c2c:	mov.n	a12, a10
+     c2e:	mov.n	a13, a11
+     c30:	mov.n	a10, a2
+     c32:	mov.n	a14, a4
+     c34:	mov.n	a11, a5
+     c36:	l32r	a8, fffc0c38 <mc_eval$part$0+0xfffc0c38>
+     c39:	callx8	a8
+     c3c:	l32i	a8, a1, 0x160
+     c3f:	s32i	a10, a1, 0x180
+     c42:	mov.n	a2, a11
+     c44:	movi.n	a12, 1
+     c46:	blt	a8, a11, c54 <mc_eval$part$0+0xc54>
+     c49:	bne	a11, a8, c52 <mc_eval$part$0+0xc52>
+     c4c:	l32i	a8, a1, 0x1d8
+     c4f:	bltu	a8, a10, c54 <mc_eval$part$0+0xc54>
+     c52:	movi.n	a12, 0
+     c54:	mov.n	a14, a4
+     c56:	slli	a12, a12, 24
+     c59:	movi.n	a13, 0
+     c5b:	mov.n	a10, a7
+     c5d:	movi.n	a11, 0
+     c5f:	l32r	a8, fffc0c60 <mc_eval$part$0+0xfffc0c60>
+     c62:	callx8	a8
+     c65:	movi	a8, 0x128
+     c68:	l32i	a12, a1, 0x168
+     c6b:	add.n	a5, a1, a8
+     c6d:	mov.n	a13, a3
+     c6f:	s32i	a11, a1, 0x188
+     c72:	mov.n	a14, a5
+     c74:	mov.n	a11, a3
+     c76:	mov.n	a4, a10
+     c78:	mov.n	a10, a12
+     c7a:	l32r	a8, fffc0c7c <mc_eval$part$0+0xfffc0c7c>
+     c7d:	callx8	a8
+     c80:	l32i	a13, a1, 0x170
+     c83:	mov.n	a3, a11
+     c85:	s32i	a10, a1, 0x160
+     c88:	mov.n	a14, a5
+     c8a:	mov.n	a12, a6
+     c8c:	mov.n	a11, a13
+     c8e:	mov.n	a10, a6
+     c90:	l32r	a8, fffc0c90 <mc_eval$part$0+0xfffc0c90>
+     c93:	callx8	a8
+     c96:	mov.n	a12, a10
+     c98:	l32i	a10, a1, 0x160
+     c9b:	mov.n	a13, a11
+     c9d:	mov.n	a14, a5
+     c9f:	mov.n	a11, a3
+     ca1:	l32r	a8, fffc0ca4 <mc_eval$part$0+0xfffc0ca4>
+     ca4:	callx8	a8
+     ca7:	movi.n	a3, 1
+     ca9:	bgei	a11, 1, cb4 <mc_eval$part$0+0xcb4>
+     cac:	bnez.n	a11, cb6 <mc_eval$part$0+0xcb6>
+     cae:	l32r	a8, fffc0cb0 <mc_eval$part$0+0xfffc0cb0>
+     cb1:	bgeu	a8, a10, cb6 <mc_eval$part$0+0xcb6>
+     cb4:	movi.n	a3, 0
+     cb6:	srli	a8, a3, 8
+     cb9:	s32i	a8, a1, 0x160
+     cbc:	movi	a8, 0x128
+     cbf:	add.n	a6, a1, a8
+     cc1:	l32i	a13, a1, 0x160
+     cc4:	l32i	a11, a1, 0x188
+     cc7:	slli	a3, a3, 24
+     cca:	mov.n	a14, a6
+     ccc:	mov.n	a12, a3
+     cce:	mov.n	a10, a4
+     cd0:	l32r	a8, fffc0cd0 <mc_eval$part$0+0xfffc0cd0>
+     cd3:	callx8	a8
+     cd6:	mov.n	a12, a10
+     cd8:	mov.n	a13, a11
+     cda:	l32i	a10, a1, 0x150
+     cdd:	l32i	a11, a1, 0x154
+     ce0:	mov.n	a14, a6
+     ce2:	l32r	a8, fffc0ce4 <mc_eval$part$0+0xfffc0ce4>
+     ce5:	callx8	a8
+     ce8:	mov.n	a12, a10
+     cea:	mov.n	a13, a11
+     cec:	l32i	a10, a1, 0x1e4
+     cef:	l32i	a11, a1, 0x1e8
+     cf2:	mov.n	a14, a6
+     cf4:	l32r	a8, fffc0cf4 <mc_eval$part$0+0xfffc0cf4>
+     cf7:	callx8	a8
+     cfa:	l32i	a12, a1, 0x158
+     cfd:	l32i	a13, a1, 0x15c
+     d00:	mov.n	a14, a6
+     d02:	l32r	a8, fffc0d04 <mc_eval$part$0+0xfffc0d04>
+     d05:	callx8	a8
+     d08:	l32i	a12, a1, 0x1b8
+     d0b:	l32i	a13, a1, 0x1bc
+     d0e:	s32i	a10, a1, 0x168
+     d11:	s32i	a11, a1, 0x170
+     d14:	l32i	a10, a1, 0x138
+     d17:	l32i	a11, a1, 0x13c
+     d1a:	mov.n	a14, a6
+     d1c:	l32r	a8, fffc0d1c <mc_eval$part$0+0xfffc0d1c>
+     d1f:	callx8	a8
+     d22:	l32r	a12, fffc0d24 <mc_eval$part$0+0xfffc0d24>
+     d25:	mov.n	a14, a6
+     d27:	movi.n	a13, 0
+     d29:	l32r	a8, fffc0d2c <mc_eval$part$0+0xfffc0d2c>
+     d2c:	callx8	a8
+     d2f:	mov.n	a14, a6
+     d31:	mov.n	a12, a10
+     d33:	mov.n	a13, a11
+     d35:	l32r	a8, fffc0d38 <mc_eval$part$0+0xfffc0d38>
+     d38:	callx8	a8
+     d3b:	l32i	a12, a1, 0x1c0
+     d3e:	l32i	a13, a1, 0x1c4
+     d41:	mov.n	a4, a10
+     d43:	mov.n	a5, a11
+     d45:	l32i	a10, a1, 0x134
+     d48:	l32i	a11, a1, 0x130
+     d4b:	mov.n	a14, a6
+     d4d:	l32r	a8, fffc0d50 <mc_eval$part$0+0xfffc0d50>
+     d50:	callx8	a8
+     d53:	l32r	a12, fffc0d54 <mc_eval$part$0+0xfffc0d54>
+     d56:	mov.n	a14, a6
+     d58:	movi.n	a13, 0
+     d5a:	l32r	a8, fffc0d5c <mc_eval$part$0+0xfffc0d5c>
+     d5d:	callx8	a8
+     d60:	mov.n	a14, a6
+     d62:	mov.n	a12, a10
+     d64:	mov.n	a13, a11
+     d66:	l32r	a8, fffc0d68 <mc_eval$part$0+0xfffc0d68>
+     d69:	callx8	a8
+     d6c:	mov.n	a12, a10
+     d6e:	mov.n	a13, a11
+     d70:	mov.n	a14, a6
+     d72:	mov.n	a10, a4
+     d74:	mov.n	a11, a5
+     d76:	l32r	a8, fffc0d78 <mc_eval$part$0+0xfffc0d78>
+     d79:	callx8	a8
+     d7c:	movi.n	a12, 1
+     d7e:	bgei	a11, 1, d89 <mc_eval$part$0+0xd89>
+     d81:	bnez.n	a11, d8b <mc_eval$part$0+0xd8b>
+     d83:	l32r	a8, fffc0d84 <mc_eval$part$0+0xfffc0d84>
+     d86:	bgeu	a8, a10, d8b <mc_eval$part$0+0xd8b>
+     d89:	movi.n	a12, 0
+     d8b:	l32i	a10, a1, 0x148
+     d8e:	l32i	a11, a1, 0x14c
+     d91:	mov.n	a14, a6
+     d93:	slli	a12, a12, 24
+     d96:	movi.n	a13, 0
+     d98:	l32r	a8, fffc0d98 <mc_eval$part$0+0xfffc0d98>
+     d9b:	callx8	a8
+     d9e:	l32i	a8, a1, 0x164
+     da1:	mov.n	a5, a10
+     da3:	mov.n	a6, a11
+     da5:	movi.n	a12, 1
+     da7:	blt	a2, a8, db8 <mc_eval$part$0+0xdb8>
+     daa:	bne	a8, a2, db6 <mc_eval$part$0+0xdb6>
+     dad:	l32i	a8, a1, 0x180
+     db0:	l32i	a9, a1, 0x1dc
+     db3:	bltu	a8, a9, db8 <mc_eval$part$0+0xdb8>
+     db6:	movi.n	a12, 0
+     db8:	movi	a4, 0x128
+     dbb:	add.n	a14, a1, a4
+     dbd:	slli	a12, a12, 24
+     dc0:	movi.n	a13, 0
+     dc2:	mov.n	a10, a7
+     dc4:	movi.n	a11, 0
+     dc6:	l32r	a8, fffc0dc8 <mc_eval$part$0+0xfffc0dc8>
+     dc9:	callx8	a8
+     dcc:	add.n	a7, a1, a4
+     dce:	l32i	a13, a1, 0x160
+     dd1:	mov.n	a14, a7
+     dd3:	mov.n	a12, a3
+     dd5:	l32r	a8, fffc0dd8 <mc_eval$part$0+0xfffc0dd8>
+     dd8:	callx8	a8
+     ddb:	mov.n	a12, a10
+     ddd:	mov.n	a13, a11
+     ddf:	l32i	a10, a1, 0x150
+     de2:	l32i	a11, a1, 0x154
+     de5:	mov.n	a14, a7
+     de7:	l32r	a8, fffc0de8 <mc_eval$part$0+0xfffc0de8>
+     dea:	callx8	a8
+     ded:	mov.n	a14, a7
+     def:	mov.n	a12, a10
+     df1:	mov.n	a13, a11
+     df3:	mov.n	a10, a5
+     df5:	mov.n	a11, a6
+     df7:	l32r	a8, fffc0df8 <mc_eval$part$0+0xfffc0df8>
+     dfa:	callx8	a8
+     dfd:	l32i	a12, a1, 0x158
+     e00:	l32i	a13, a1, 0x15c
+     e03:	mov.n	a14, a7
+     e05:	l32r	a8, fffc0e08 <mc_eval$part$0+0xfffc0e08>
+     e08:	callx8	a8
+     e0b:	l32i	a12, a1, 0x1c8
+     e0e:	l32i	a13, a1, 0x1cc
+     e11:	s32i	a10, a1, 0x158
+     e14:	s32i	a11, a1, 0x160
+     e17:	l32i	a10, a1, 0x138
+     e1a:	l32i	a11, a1, 0x13c
+     e1d:	mov.n	a14, a7
+     e1f:	l32r	a8, fffc0e20 <mc_eval$part$0+0xfffc0e20>
+     e22:	callx8	a8
+     e25:	l32r	a12, fffc0e28 <mc_eval$part$0+0xfffc0e28>
+     e28:	mov.n	a14, a7
+     e2a:	movi.n	a13, 0
+     e2c:	l32r	a8, fffc0e2c <mc_eval$part$0+0xfffc0e2c>
+     e2f:	callx8	a8
+     e32:	mov.n	a14, a7
+     e34:	mov.n	a12, a10
+     e36:	mov.n	a13, a11
+     e38:	l32r	a8, fffc0e38 <mc_eval$part$0+0xfffc0e38>
+     e3b:	callx8	a8
+     e3e:	mov.n	a5, a10
+     e40:	mov.n	a6, a11
+     e42:	l32i	a12, a1, 0x1d0
+     e45:	l32i	a13, a1, 0x1d4
+     e48:	l32i	a10, a1, 0x134
+     e4b:	l32i	a11, a1, 0x130
+     e4e:	mov.n	a14, a7
+     e50:	l32r	a8, fffc0e50 <mc_eval$part$0+0xfffc0e50>
+     e53:	callx8	a8
+     e56:	l32r	a12, fffc0e58 <mc_eval$part$0+0xfffc0e58>
+     e59:	mov.n	a14, a7
+     e5b:	movi.n	a13, 0
+     e5d:	l32r	a8, fffc0e60 <mc_eval$part$0+0xfffc0e60>
+     e60:	callx8	a8
+     e63:	mov.n	a14, a7
+     e65:	mov.n	a12, a10
+     e67:	mov.n	a13, a11
+     e69:	l32r	a8, fffc0e6c <mc_eval$part$0+0xfffc0e6c>
+     e6c:	callx8	a8
+     e6f:	mov.n	a14, a7
+     e71:	mov.n	a12, a10
+     e73:	mov.n	a13, a11
+     e75:	mov.n	a10, a5
+     e77:	mov.n	a11, a6
+     e79:	l32r	a8, fffc0e7c <mc_eval$part$0+0xfffc0e7c>
+     e7c:	callx8	a8
+     e7f:	mov.n	a13, a7
+     e81:	movi.n	a12, 0
+     e83:	mov.n	a5, a11
+     e85:	mov.n	a4, a10
+     e87:	l32r	a8, fffc0e88 <mc_eval$part$0+0xfffc0e88>
+     e8a:	callx8	a8
+     e8d:	mov.n	a13, a7
+     e8f:	s32i	a11, a1, 0x148
+     e92:	movi.n	a12, 1
+     e94:	mov.n	a11, a5
+     e96:	mov.n	a3, a10
+     e98:	mov.n	a10, a4
+     e9a:	l32r	a8, fffc0e9c <mc_eval$part$0+0xfffc0e9c>
+     e9d:	callx8	a8
+     ea0:	mov.n	a13, a7
+     ea2:	mov.n	a6, a10
+     ea4:	mov.n	a2, a11
+     ea6:	movi.n	a12, 2
+     ea8:	mov.n	a11, a5
+     eaa:	mov.n	a10, a4
+     eac:	l32r	a8, fffc0eac <mc_eval$part$0+0xfffc0eac>
+     eaf:	callx8	a8
+     eb2:	l32i	a8, a1, 0x148
+     eb5:	mov.n	a7, a10
+     eb7:	abs	a9, a8
+     eba:	mov.n	a5, a11
+     ebc:	bbsi	a9, 31, ec2 <mc_eval$part$0+0xec2>
+     ebf:	j	f9a <mc_eval$part$0+0xf9a>
+     ec2:	l32r	a9, fffc0ec4 <mc_eval$part$0+0xfffc0ec4>
+     ec5:	bltu	a3, a9, ecb <mc_eval$part$0+0xecb>
+     ec8:	j	f9a <mc_eval$part$0+0xf9a>
+     ecb:	movi.n	a8, 4
+     ecd:	s32i	a8, a1, 0x128
+     ed0:	movi.n	a12, 0
+     ed2:	movi.n	a13, 0
+     ed4:	movi	a8, 0x128
+     ed7:	add.n	a4, a1, a8
+     ed9:	l32i	a10, a1, 0x144
+     edc:	l32i	a11, a1, 0x140
+     edf:	mov.n	a14, a4
+     ee1:	l32r	a8, fffc0ee4 <mc_eval$part$0+0xfffc0ee4>
+     ee4:	callx8	a8
+     ee7:	mov.n	a12, a10
+     ee9:	l32r	a10, fffc0eec <mc_eval$part$0+0xfffc0eec>
+     eec:	mov.n	a13, a11
+     eee:	mov.n	a14, a4
+     ef0:	movi.n	a11, 0
+     ef2:	l32r	a8, fffc0ef4 <mc_eval$part$0+0xfffc0ef4>
+     ef5:	callx8	a8
+     ef8:	s32i	a10, a1, 0x148
+     efb:	s32i	a11, a1, 0x150
+     efe:	abs	a8, a2
+     f01:	bbsi	a8, 31, f07 <mc_eval$part$0+0xf07>
+     f04:	j	fac <mc_eval$part$0+0xfac>
+     f07:	l32r	a8, fffc0f08 <mc_eval$part$0+0xfffc0f08>
+     f0a:	bltu	a6, a8, f10 <mc_eval$part$0+0xf10>
+     f0d:	j	fac <mc_eval$part$0+0xfac>
+     f10:	movi.n	a8, 4
+     f12:	s32i	a8, a1, 0x128
+     f15:	movi.n	a12, 0
+     f17:	movi.n	a13, 0
+     f19:	movi	a8, 0x128
+     f1c:	add.n	a6, a1, a8
+     f1e:	l32i	a10, a1, 0x144
+     f21:	l32i	a11, a1, 0x140
+     f24:	mov.n	a14, a6
+     f26:	l32r	a8, fffc0f28 <mc_eval$part$0+0xfffc0f28>
+     f29:	callx8	a8
+     f2c:	mov.n	a12, a10
+     f2e:	l32r	a10, fffc0f30 <mc_eval$part$0+0xfffc0f30>
+     f31:	mov.n	a13, a11
+     f33:	mov.n	a14, a6
+     f35:	movi.n	a11, 0
+     f37:	l32r	a8, fffc0f38 <mc_eval$part$0+0xfffc0f38>
+     f3a:	callx8	a8
+     f3d:	abs	a8, a5
+     f40:	mov.n	a3, a10
+     f42:	mov.n	a2, a11
+     f44:	bbci	a8, 31, fbe <mc_eval$part$0+0xfbe>
+     f47:	l32r	a8, fffc0f48 <mc_eval$part$0+0xfffc0f48>
+     f4a:	bgeu	a7, a8, fbe <mc_eval$part$0+0xfbe>
+     f4d:	movi.n	a8, 4
+     f4f:	s32i	a8, a1, 0x128
+     f52:	movi.n	a12, 0
+     f54:	movi.n	a13, 0
+     f56:	movi	a8, 0x128
+     f59:	add.n	a7, a1, a8
+     f5b:	l32i	a10, a1, 0x144
+     f5e:	l32i	a11, a1, 0x140
+     f61:	mov.n	a14, a7
+     f63:	l32r	a8, fffc0f64 <mc_eval$part$0+0xfffc0f64>
+     f66:	callx8	a8
+     f69:	mov.n	a12, a10
+     f6b:	l32r	a10, fffc0f6c <mc_eval$part$0+0xfffc0f6c>
+     f6e:	mov.n	a13, a11
+     f70:	mov.n	a14, a7
+     f72:	movi.n	a11, 0
+     f74:	l32r	a8, fffc0f74 <mc_eval$part$0+0xfffc0f74>
+     f77:	callx8	a8
+     f7a:	l32i	a5, a1, 0x160
+     f7d:	s32i	a10, a1, 0x140
+     f80:	l32i	a6, a1, 0x158
+     f83:	mov.n	a4, a11
+     f85:	bgez	a5, fcd <mc_eval$part$0+0xfcd>
+     f88:	movi.n	a6, 0
+     f8a:	movi.n	a5, 0
+     f8c:	l32r	a9, fffc0f8c <mc_eval$part$0+0xfffc0f8c>
+     f8f:	bgeu	a9, a6, fd3 <mc_eval$part$0+0xfd3>
+     f92:	l32r	a6, fffc0f94 <mc_eval$part$0+0xfffc0f94>
+     f95:	movi.n	a5, 0
+     f97:	j	fd3 <mc_eval$part$0+0xfd3>
+     f9a:	l32r	a9, fffc0f9c <mc_eval$part$0+0xfffc0f9c>
+     f9d:	addi.n	a13, a8, -1
+     f9f:	add.n	a12, a3, a9
+     fa1:	bltu	a12, a9, fa7 <mc_eval$part$0+0xfa7>
+     fa4:	j	ed4 <mc_eval$part$0+0xed4>
+     fa7:	mov.n	a13, a8
+     fa9:	j	ed4 <mc_eval$part$0+0xed4>
+     fac:	l32r	a8, fffc0fac <mc_eval$part$0+0xfffc0fac>
+     faf:	addi.n	a13, a2, -1
+     fb1:	add.n	a12, a6, a8
+     fb3:	bltu	a12, a8, fb9 <mc_eval$part$0+0xfb9>
+     fb6:	j	f19 <mc_eval$part$0+0xf19>
+     fb9:	mov.n	a13, a2
+     fbb:	j	f19 <mc_eval$part$0+0xf19>
+     fbe:	l32r	a8, fffc0fc0 <mc_eval$part$0+0xfffc0fc0>
+     fc1:	addi.n	a13, a5, -1
+     fc3:	add.n	a12, a7, a8
+     fc5:	bgeu	a12, a8, f56 <mc_eval$part$0+0xf56>
+     fc8:	mov.n	a13, a5
+     fca:	j	f56 <mc_eval$part$0+0xf56>
+     fcd:	bgei	a5, 1, f92 <mc_eval$part$0+0xf92>
+     fd0:	beqz	a5, f8c <mc_eval$part$0+0xf8c>
+     fd3:	movi	a8, 0x128
+     fd6:	add.n	a7, a1, a8
+     fd8:	l32i	a12, a1, 0x148
+     fdb:	l32i	a13, a1, 0x150
+     fde:	l32r	a10, fffc0fe0 <mc_eval$part$0+0xfffc0fe0>
+     fe1:	mov.n	a14, a7
+     fe3:	movi.n	a11, 0
+     fe5:	l32r	a8, fffc0fe8 <mc_eval$part$0+0xfffc0fe8>
+     fe8:	callx8	a8
+     feb:	mov.n	a12, a10
+     fed:	mov.n	a13, a11
+     fef:	mov.n	a14, a7
+     ff1:	mov.n	a10, a6
+     ff3:	mov.n	a11, a5
+     ff5:	l32r	a8, fffc0ff8 <mc_eval$part$0+0xfffc0ff8>
+     ff8:	callx8	a8
+     ffb:	mov.n	a12, a10
+     ffd:	mov.n	a13, a11
+     fff:	l32i	a10, a1, 0x148
+    1002:	l32i	a11, a1, 0x150
+    1005:	mov.n	a14, a7
+    1007:	l32r	a8, fffc1008 <mc_eval$part$0+0xfffc1008>
+    100a:	callx8	a8
+    100d:	s32i	a10, a1, 0x144
+    1010:	l32r	a10, fffc1010 <mc_eval$part$0+0xfffc1010>
+    1013:	mov.n	a12, a3
+    1015:	mov.n	a13, a2
+    1017:	s32i	a11, a1, 0x148
+    101a:	mov.n	a14, a7
+    101c:	movi.n	a11, 0
+    101e:	l32r	a8, fffc1020 <mc_eval$part$0+0xfffc1020>
+    1021:	callx8	a8
+    1024:	mov.n	a12, a10
+    1026:	mov.n	a13, a11
+    1028:	mov.n	a14, a7
+    102a:	mov.n	a10, a6
+    102c:	mov.n	a11, a5
+    102e:	l32r	a8, fffc1030 <mc_eval$part$0+0xfffc1030>
+    1031:	callx8	a8
+    1034:	mov.n	a12, a10
+    1036:	mov.n	a13, a11
+    1038:	mov.n	a14, a7
+    103a:	mov.n	a10, a3
+    103c:	mov.n	a11, a2
+    103e:	l32r	a8, fffc1040 <mc_eval$part$0+0xfffc1040>
+    1041:	callx8	a8
+    1044:	l32i	a12, a1, 0x140
+    1047:	mov.n	a2, a10
+    1049:	l32r	a10, fffc104c <mc_eval$part$0+0xfffc104c>
+    104c:	mov.n	a13, a4
+    104e:	mov.n	a14, a7
+    1050:	mov.n	a3, a11
+    1052:	movi.n	a11, 0
+    1054:	l32r	a8, fffc1054 <mc_eval$part$0+0xfffc1054>
+    1057:	callx8	a8
+    105a:	mov.n	a12, a10
+    105c:	mov.n	a13, a11
+    105e:	mov.n	a14, a7
+    1060:	mov.n	a10, a6
+    1062:	mov.n	a11, a5
+    1064:	l32r	a8, fffc1064 <mc_eval$part$0+0xfffc1064>
+    1067:	callx8	a8
+    106a:	mov.n	a12, a10
+    106c:	l32i	a10, a1, 0x140
+    106f:	mov.n	a13, a11
+    1071:	mov.n	a14, a7
+    1073:	mov.n	a11, a4
+    1075:	l32r	a8, fffc1078 <mc_eval$part$0+0xfffc1078>
+    1078:	callx8	a8
+    107b:	l32i	a5, a1, 0x170
+    107e:	s32i	a11, a1, 0x140
+    1081:	l32i	a6, a1, 0x168
+    1084:	mov.n	a4, a10
+    1086:	bgez	a5, 109b <mc_eval$part$0+0x109b>
+    1089:	movi.n	a6, 0
+    108b:	movi.n	a5, 0
+    108d:	l32r	a9, fffc1090 <mc_eval$part$0+0xfffc1090>
+    1090:	bgeu	a9, a6, 10a1 <mc_eval$part$0+0x10a1>
+    1093:	l32r	a6, fffc1094 <mc_eval$part$0+0xfffc1094>
+    1096:	movi.n	a5, 0
+    1098:	j	10a1 <mc_eval$part$0+0x10a1>
+    109b:	bgei	a5, 1, 1093 <mc_eval$part$0+0x1093>
+    109e:	beqz	a5, 108d <mc_eval$part$0+0x108d>
+    10a1:	movi	a8, 0x128
+    10a4:	add.n	a7, a1, a8
+    10a6:	l32i	a12, a1, 0x144
+    10a9:	l32i	a13, a1, 0x148
+    10ac:	l32r	a10, fffc10ac <mc_eval$part$0+0xfffc10ac>
+    10af:	mov.n	a14, a7
+    10b1:	movi.n	a11, 0
+    10b3:	l32r	a8, fffc10b4 <mc_eval$part$0+0xfffc10b4>
+    10b6:	callx8	a8
+    10b9:	mov.n	a12, a10
+    10bb:	mov.n	a13, a11
+    10bd:	mov.n	a14, a7
+    10bf:	mov.n	a10, a6
+    10c1:	mov.n	a11, a5
+    10c3:	l32r	a8, fffc10c4 <mc_eval$part$0+0xfffc10c4>
+    10c6:	callx8	a8
+    10c9:	mov.n	a12, a10
+    10cb:	mov.n	a13, a11
+    10cd:	l32i	a10, a1, 0x144
+    10d0:	l32i	a11, a1, 0x148
+    10d3:	mov.n	a14, a7
+    10d5:	l32r	a8, fffc10d8 <mc_eval$part$0+0xfffc10d8>
+    10d8:	callx8	a8
+    10db:	s32i.n	a10, a1, 8
+    10dd:	l32r	a10, fffc10e0 <mc_eval$part$0+0xfffc10e0>
+    10e0:	s32i.n	a11, a1, 12
+    10e2:	mov.n	a14, a7
+    10e4:	mov.n	a12, a2
+    10e6:	mov.n	a13, a3
+    10e8:	movi.n	a11, 0
+    10ea:	l32r	a8, fffc10ec <mc_eval$part$0+0xfffc10ec>
+    10ed:	callx8	a8
+    10f0:	mov.n	a12, a10
+    10f2:	mov.n	a13, a11
+    10f4:	mov.n	a14, a7
+    10f6:	mov.n	a10, a6
+    10f8:	mov.n	a11, a5
+    10fa:	l32r	a8, fffc10fc <mc_eval$part$0+0xfffc10fc>
+    10fd:	callx8	a8
+    1100:	mov.n	a12, a10
+    1102:	mov.n	a13, a11
+    1104:	mov.n	a14, a7
+    1106:	mov.n	a10, a2
+    1108:	mov.n	a11, a3
+    110a:	l32r	a8, fffc110c <mc_eval$part$0+0xfffc110c>
+    110d:	callx8	a8
+    1110:	l32i	a13, a1, 0x140
+    1113:	s32i.n	a10, a1, 16
+    1115:	l32r	a10, fffc1118 <mc_eval$part$0+0xfffc1118>
+    1118:	s32i.n	a11, a1, 20
+    111a:	mov.n	a14, a7
+    111c:	mov.n	a12, a4
+    111e:	movi.n	a11, 0
+    1120:	l32r	a8, fffc1120 <mc_eval$part$0+0xfffc1120>
+    1123:	callx8	a8
+    1126:	mov.n	a12, a10
+    1128:	mov.n	a13, a11
+    112a:	mov.n	a14, a7
+    112c:	mov.n	a10, a6
+    112e:	mov.n	a11, a5
+    1130:	l32r	a8, fffc1130 <mc_eval$part$0+0xfffc1130>
+    1133:	callx8	a8
+    1136:	mov.n	a13, a11
+    1138:	l32i	a11, a1, 0x140
+    113b:	mov.n	a12, a10
+    113d:	mov.n	a14, a7
+    113f:	mov.n	a10, a4
+    1141:	l32r	a8, fffc1144 <mc_eval$part$0+0xfffc1144>
+    1144:	callx8	a8
+    1147:	l32i	a9, a1, 0x13c
+    114a:	l32r	a8, fffc114c <mc_eval$part$0+0xfffc114c>
+    114d:	s32i.n	a11, a1, 28
+    114f:	addi.n	a11, a9, -1
+    1151:	l32i	a9, a1, 0x138
+    1154:	s32i.n	a10, a1, 24
+    1156:	add.n	a10, a9, a8
+    1158:	bgeu	a10, a8, 115e <mc_eval$part$0+0x115e>
+    115b:	l32i	a11, a1, 0x13c
+    115e:	l32r	a12, fffc1160 <mc_eval$part$0+0xfffc1160>
+    1161:	mov.n	a14, a7
+    1163:	movi.n	a13, 0
+    1165:	l32r	a8, fffc1168 <mc_eval$part$0+0xfffc1168>
+    1168:	callx8	a8
+    116b:	movi	a8, 0x128
+    116e:	add.n	a7, a1, a8
+    1170:	l32r	a12, fffc1170 <mc_eval$part$0+0xfffc1170>
+    1173:	mov.n	a3, a10
+    1175:	mov.n	a4, a11
+    1177:	mov.n	a14, a7
+    1179:	movi.n	a13, 0
+    117b:	j	8cf <mc_eval$part$0+0x8cf>
+    117e:	blti	a8, 1, 1184 <mc_eval$part$0+0x1184>
+    1181:	j	a12 <mc_eval$part$0+0xa12>
+    1184:	beqz	a8, a09 <mc_eval$part$0+0xa09>
+    1187:	movi	a10, 232
+    118a:	add.n	a10, a1, a10
+    118c:	l32r	a11, fffc118c <mc_eval$part$0+0xfffc118c>
+    118f:	s32i.n	a8, a10, 28
+    1191:	s32i.n	a9, a10, 24
+    1193:	neg	a8, a8
+    1196:	bgeu	a11, a9, 119b <mc_eval$part$0+0x119b>
+    1199:	addi.n	a8, a8, -1
+    119b:	sub	a11, a11, a9
+    119e:	s32i.n	a11, a10, 32
+    11a0:	s32i.n	a8, a10, 36
+    11a2:	movi	a8, 232
+    11a5:	l32i	a10, a1, 0x1e0
+    11a8:	movi.n	a12, 64
+    11aa:	add.n	a11, a1, a8
+    11ac:	l32r	a8, fffc11ac <mc_eval$part$0+0xfffc11ac>
+    11af:	callx8	a8
+    11b2:	retw.n
+
+Disassembly of section .text.mc_bits:
+
+00000000 <mc_bits>:
+   0:	entry	a1, 32
+   3:	movi.n	a2, 24
+   5:	retw.n
+
+Disassembly of section .text.mc_prepare:
+
+00000000 <mc_prepare>:
+   0:	entry	a1, 0x130
+   3:	mov.n	a10, a2
+   5:	mov.n	a11, a3
+   7:	mov.n	a13, a4
+   9:	mov.n	a3, a5
+   b:	movi.n	a2, 1
+   d:	beqz	a5, 6d <mc_prepare+0x6d>
+  10:	movi	a8, 208
+  13:	add.n	a5, a1, a8
+  15:	mov.n	a14, a5
+  17:	movi.n	a12, 24
+  19:	s32i	a11, a1, 0x100
+  1c:	l32r	a8, fffc001c <mc_prepare+0xfffc001c>
+  1f:	callx8	a8
+  22:	s32i	a10, a1, 240
+  25:	mov.n	a2, a10
+  27:	bnez	a10, 6d <mc_prepare+0x6d>
+  2a:	l32r	a8, fffc002c <mc_prepare+0xfffc002c>
+  2d:	l32i	a11, a1, 0x100
+  30:	s32i	a8, a1, 200
+  33:	l32r	a8, fffc0034 <mc_prepare+0xfffc0034>
+  36:	s32i	a10, a1, 204
+  39:	s32i	a8, a1, 184
+  3c:	movi.n	a8, 3
+  3e:	slli	a8, a8, 23
+  41:	s32i	a8, a1, 188
+  44:	l32i.n	a8, a5, 28
+  46:	s32i	a11, a1, 196
+  49:	s32i	a8, a1, 192
+  4c:	movi	a8, 240
+  4f:	add.n	a12, a1, a8
+  51:	mov.n	a11, a5
+  53:	mov.n	a10, a1
+  55:	l32r	a8, fffc0058 <mc_prepare+0xfffc0058>
+  58:	callx8	a8
+  5b:	l32i	a2, a1, 240
+  5e:	bnez.n	a2, 6d <mc_prepare+0x6d>
+  60:	movi	a12, 208
+  63:	mov.n	a11, a1
+  65:	mov.n	a10, a3
+  67:	l32r	a8, fffc0068 <mc_prepare+0xfffc0068>
+  6a:	callx8	a8
+  6d:	retw.n
+
+Disassembly of section .text.mc_eval:
+
+00000000 <mc_eval>:
+   0:	entry	a1, 32
+   3:	movi.n	a13, 0
+   5:	movi.n	a8, 1
+   7:	mov.n	a9, a13
+   9:	moveqz	a9, a8, a3
+   c:	moveqz	a13, a8, a4
+   f:	or	a9, a9, a13
+  12:	mov.n	a10, a2
+  14:	mov.n	a11, a3
+  16:	mov.n	a12, a4
+  18:	bnez.n	a9, 3e <mc_eval+0x3e>
+  1a:	movnez	a8, a9, a2
+  1d:	bnez.n	a8, 3e <mc_eval+0x3e>
+  1f:	l32i	a9, a2, 200
+  22:	l32r	a8, fffc0024 <mc_eval+0xfffc0024>
+  25:	movi.n	a2, 1
+  27:	bne	a9, a8, 3c <mc_eval+0x3c>
+  2a:	l32i	a8, a10, 196
+  2d:	movi.n	a9, -3
+  2f:	addi.n	a8, a8, 1
+  31:	bany	a8, a9, 3c <mc_eval+0x3c>
+  34:	l32r	a8, fffc0034 <mc_eval+0xfffc0034>
+  37:	callx8	a8
+  3a:	mov.n	a2, a10
+  3c:	retw.n
+  3e:	movi.n	a2, 1
+  40:	j	3c <mc_eval+0x3c>
+
+Disassembly of section .text.mc_block:
+
+00000000 <mc_block>:
+   0:	entry	a1, 0x220
+   3:	nsau	a8, a5
+   6:	mov.n	a6, a2
+   8:	mov.n	a7, a3
+   a:	movi.n	a9, 1
+   c:	srli	a8, a8, 5
+   f:	beqz.n	a5, 4f <mc_block+0x4f>
+  11:	moveqz	a8, a9, a3
+  14:	bnez.n	a8, 4f <mc_block+0x4f>
+  16:	addi	a8, a4, -4
+  19:	movi.n	a10, -5
+  1b:	bnone	a8, a10, 25 <mc_block+0x25>
+  1e:	addi.n	a8, a4, -1
+  20:	movi.n	a2, 1
+  22:	bltu	a9, a8, 4d <mc_block+0x4d>
+  25:	movi.n	a3, 0
+  27:	slli	a12, a3, 6
+  2a:	add.n	a12, a1, a12
+  2c:	addx8	a11, a3, a7
+  2f:	mov.n	a10, a6
+  31:	l32r	a8, fffc0034 <mc_block+0xfffc0034>
+  34:	callx8	a8
+  37:	mov.n	a2, a10
+  39:	bnez.n	a10, 4d <mc_block+0x4d>
+  3b:	addi.n	a3, a3, 1
+  3d:	bltu	a3, a4, 27 <mc_block+0x27>
+  40:	slli	a12, a4, 6
+  43:	mov.n	a11, a1
+  45:	mov.n	a10, a5
+  47:	l32r	a8, fffc0048 <mc_block+0xfffc0048>
+  4a:	callx8	a8
+  4d:	retw.n
+  4f:	movi.n	a2, 1
+  51:	j	4d <mc_block+0x4d>

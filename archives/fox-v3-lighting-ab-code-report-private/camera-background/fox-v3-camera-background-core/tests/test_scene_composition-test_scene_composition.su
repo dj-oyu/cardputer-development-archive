@@ -1,0 +1,7 @@
+tests/test_scene_composition.c:26:13:shade	8	static
+tests/test_scene_composition.c:49:13:composite	144	dynamic,bounded
+tests/test_scene_composition.c:30:13:compose	64	static
+tests/test_scene_composition.c:48:13:report_ok	48	static
+tests/test_scene_composition.c:41:13:observer	8	static
+tests/test_scene_composition.c:29:13:owned_overlap	8	static
+tests/test_scene_composition.c:50:5:main	7024	dynamic,bounded

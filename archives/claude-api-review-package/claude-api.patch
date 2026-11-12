@@ -1,0 +1,1949 @@
+diff --git a/.claude/rules/security.md b/.claude/rules/security.md
+index 7f51a3e337954e77444012f6ba86454b2e156b0f..53e52ac4f427c2c738c13018e7b3c3437d0078a2 100644
+--- a/.claude/rules/security.md
++++ b/.claude/rules/security.md
+@@ -20,6 +20,7 @@ All secrets are stored in AWS Secrets Manager and referenced by name:
+ - `LINE_CHANNEL_ACCESS_TOKEN`
+ - `SAMBA_NOVA_API_KEY`
+ - `GROQ_API_KEY`
++- `ANTHROPIC_API_KEY`
+ - `XAI_API_KEY`
+ 
+ ### Environment Variables
+@@ -73,4 +74,5 @@ Required secrets in GitHub repository settings:
+ - `CHANNEL_ACCESS_TOKEN`
+ - `SAMBA_NOVA_API_KEY`
+ - `GROQ_API_KEY`
++- `ANTHROPIC_API_KEY`
+ - `XAI_API_KEY`
+diff --git a/.env.example b/.env.example
+index dcea2f5edc78ed28b5e6a8f8ed53518e9462a60e..f5cf10f21a53807c65be23c625283455812c2d3b 100644
+--- a/.env.example
++++ b/.env.example
+@@ -5,3 +5,8 @@ SAMBA_NOVA_API_KEY="xxxx"
+ GROQ_API_KEY="xxxx"
+ XAI_API_KEY="xxxx"
+ AI_BACKEND="groq"
++ANTHROPIC_API_KEY="PLACEHOLDER_NOT_A_VALID_ANTHROPIC_API_KEY_REPLACE_IN_GITHUB_ENV_ENV"
++ANTHROPIC_API_KEY_NAME="ANTHROPIC_API_KEY"
++CLAUDE_MODEL="claude-haiku-5-5"
++CLAUDE_EFFORT="low"
++CLAUDE_MAX_TOKENS="2000"
+diff --git a/.github/CLAUDE.md b/.github/CLAUDE.md
+index b5e71023b9aab1059828cc7faf7366e7f51e25dd..e69bcec68d4a7214756737838f54aade19c72154 100644
+--- a/.github/CLAUDE.md
++++ b/.github/CLAUDE.md
+@@ -64,6 +64,7 @@ mainブランチへのpush時に実行。
+ |--------|-------------|
+ | `SAMBA_NOVA_API_KEY` | SambaNova Cloud APIキー |
+ | `GROQ_API_KEY` | Groq APIキー |
++| `ANTHROPIC_API_KEY` | Anthropic 直接 API キー（Environment `env`） |
+ | `XAI_API_KEY` | xAI APIキー |
+ 
+ ## AWS Secrets Manager
+@@ -82,6 +83,7 @@ aws secretsmanager create-secret --name NAME --secret-string 'VALUE'
+ | LINE_CHANNEL_ACCESS_TOKEN | CHANNEL_ACCESS_TOKEN |
+ | SAMBA_NOVA_API_KEY | SAMBA_NOVA_API_KEY |
+ | GROQ_API_KEY | GROQ_API_KEY |
++| ANTHROPIC_API_KEY | ANTHROPIC_API_KEY (raw string、空値は無効プレースホルダー) |
+ | XAI_API_KEY | XAI_API_KEY (JSON format) |
+ 
+ ## Environment
+@@ -92,6 +94,10 @@ environment: env
+ ```
+ 
+ GitHub Settings > Environments で設定可能。
++Claude の選択は同じ `env` の Variables に `AI_BACKEND=claude` を設定してからデプロイする。
++`CLAUDE_MODEL`（既定 `claude-haiku-5-5`）、`CLAUDE_EFFORT`（`low`）、
++`CLAUDE_MAX_TOKENS`（`2000`）も Variables で変更可能。既定 provider は Groq のまま。
++[Claude 設定と検証](../docs/claude.md) を参照。
+ 
+ ## AWS Region
+ 
+diff --git a/.github/workflows/deploy.yml b/.github/workflows/deploy.yml
+index f87d85b00397f86e386ffaecca1d6458ab9ea1d1..689a729e4476cad216e3438e1cdb360311bc4709 100644
+--- a/.github/workflows/deploy.yml
++++ b/.github/workflows/deploy.yml
+@@ -94,6 +94,10 @@ jobs:
+         
+     - name: CDK Synthesize
+       env:
++        AI_BACKEND: ${{ vars.AI_BACKEND }}
++        CLAUDE_MODEL: ${{ vars.CLAUDE_MODEL }}
++        CLAUDE_EFFORT: ${{ vars.CLAUDE_EFFORT }}
++        CLAUDE_MAX_TOKENS: ${{ vars.CLAUDE_MAX_TOKENS }}
+         SAMBANOVA_MODEL: ${{ vars.SAMBANOVA_MODEL }}
+         GROQ_MODEL: ${{ vars.GROQ_MODEL }}
+         GROQ_REASONING_EFFORT: ${{ vars.GROQ_REASONING_EFFORT }}
+@@ -171,9 +175,36 @@ jobs:
+         aws secretsmanager create-secret --name GROQ_API_KEY --secret-string '${{ secrets.GROQ_API_KEY }}'
+         aws secretsmanager update-secret --secret-id XAI_API_KEY --secret-string '{"XAI_API_KEY":"${{ secrets.XAI_API_KEY }}"}' ||
+         aws secretsmanager create-secret --name XAI_API_KEY --secret-string '{"XAI_API_KEY":"${{ secrets.XAI_API_KEY }}"}'
++
++    - name: Update or Create Claude Secret
++      env:
++        ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
++      run: |
++        # Pass via a private file, keeping the value out of shell interpolation,
++        # command arguments, logs and AWS CLI response output. Missing GitHub
++        # values preserve an existing AWS secret; only a new secret gets a dummy.
++        set -euo pipefail
++        umask 077
++        secret_file=$(mktemp)
++        trap 'rm -f "$secret_file"' EXIT
++        if aws secretsmanager describe-secret --secret-id ANTHROPIC_API_KEY >/dev/null 2>&1; then
++          if [ -n "${ANTHROPIC_API_KEY:-}" ]; then
++            printf '%s' "$ANTHROPIC_API_KEY" > "$secret_file"
++            aws secretsmanager update-secret --secret-id ANTHROPIC_API_KEY --secret-string "file://$secret_file" >/dev/null
++          else
++            echo 'Claude GitHub Secret absent: preserving existing AWS Secret.'
++          fi
++        else
++          printf '%s' "${ANTHROPIC_API_KEY:-PLACEHOLDER_NOT_A_VALID_ANTHROPIC_API_KEY_REPLACE_IN_GITHUB_ENV_ENV}" > "$secret_file"
++          aws secretsmanager create-secret --name ANTHROPIC_API_KEY --secret-string "file://$secret_file" >/dev/null
++        fi
+         
+     - name: Deploy to AWS
+       env:
++        AI_BACKEND: ${{ vars.AI_BACKEND }}
++        CLAUDE_MODEL: ${{ vars.CLAUDE_MODEL }}
++        CLAUDE_EFFORT: ${{ vars.CLAUDE_EFFORT }}
++        CLAUDE_MAX_TOKENS: ${{ vars.CLAUDE_MAX_TOKENS }}
+         SAMBANOVA_MODEL: ${{ vars.SAMBANOVA_MODEL }}
+         GROQ_MODEL: ${{ vars.GROQ_MODEL }}
+         GROQ_REASONING_EFFORT: ${{ vars.GROQ_REASONING_EFFORT }}
+diff --git a/.github/workflows/dialect-ab.yml b/.github/workflows/dialect-ab.yml
+index 0abbcf7a2c0bafb6f9adf9e24b97adf6e3d3dda8..3e73e584d43caa743d4d736c109cd4190ed78e43 100644
+--- a/.github/workflows/dialect-ab.yml
++++ b/.github/workflows/dialect-ab.yml
+@@ -1,7 +1,13 @@
+-name: Kansai dialect prompt pilot
++name: Manual provider prompt pilot
+ 
+ on:
+   workflow_dispatch:
++    inputs:
++      provider:
++        description: 'Reviewed provider pilot (Claude: at most 10 calls, no search or LINE)'
++        type: choice
++        options: [groq, claude]
++        default: groq
+ 
+ permissions:
+   contents: read
+@@ -33,14 +39,27 @@ jobs:
+           uv run --frozen --no-sync python -c 'import openai; assert openai.__version__ == "3.6.0"'
+           uv run --frozen --no-sync python -m unittest discover -s scripts/tests -p 'test_*.py' -v
+       - name: Run 40 bounded Groq requests
++        if: inputs.provider != 'claude'
+         env:
+           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+         run: uv run --frozen --no-sync python scripts/dialect_ab.py --execute
++      - name: Build and verify Linux Lambda Layer (no credentials)
++        if: inputs.provider == 'claude'
++        run: |
++          ./scripts/build-layer.sh
++          python scripts/verify-layer-imports.py
++      - name: Run bounded Claude routing pilot
++        if: inputs.provider == 'claude'
++        env:
++          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
++        run: uv run --frozen --no-sync python scripts/claude_live_pilot.py --execute
+       - name: Save synthetic evaluation results
+         if: always()
+         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+         with:
+-          name: dialect-ab-${{ github.run_id }}
+-          path: dialect-ab-results/*.json
++          name: provider-pilot-${{ github.run_id }}
++          path: |
++            dialect-ab-results/*.json
++            claude-pilot-results/*.json
+           if-no-files-found: error
+           retention-days: 7
+diff --git a/CLAUDE.md b/CLAUDE.md
+index fbe5e099dbb84db242ea926641ab1126c1f9ce04..b75193b6111551d96f54bc8cf879596a5b666af6 100644
+--- a/CLAUDE.md
++++ b/CLAUDE.md
+@@ -23,7 +23,7 @@ echo-line-bot/
+ | Package Managers | uv (Python), pnpm (CDK) |
+ | Infrastructure | AWS CDK (TypeScript) |
+ | Cloud Services | Lambda, API Gateway, DynamoDB, Step Functions, Secrets Manager |
+-| AI Providers | SambaNova, Groq, xAI (Grok-4) |
++| AI Providers | SambaNova, Groq, Claude (Haiku 5.5), xAI (Grok-4) |
+ | CI/CD | GitHub Actions |
+ | Region | ap-northeast-1 |
+ 
+@@ -87,6 +87,7 @@ cd cdk && pnpm run cdk deploy
+ - [AWS CDK](docs/aws-cdk/index.md)
+ - [SambaNova Cloud](docs/sambanova-cloud/index.md)
+ - [xAI Grok](docs/xai/grok_integration.md)
++- [Claude API 設定・オフライン検証](docs/claude.md)
+ - [Backend Knowledge](docs/backend-knowledge/index.md)
+ - [CI/CD Setup](docs/cicd.md)
+ 
+diff --git a/README.md b/README.md
+index 315e3b1abb21472a9fc38d0a72cacd255d961df5..fb6c769089dd2984741b6295a5a1edb62708ee61 100644
+--- a/README.md
++++ b/README.md
+@@ -1,10 +1,10 @@
+ # LINE AI チャットボット
+ 
+-Groq の Qwen3.6 モデルと xAI の Grok を使用した、会話記憶機能付きの AI チャットボットです。関西弁で話す「あいちゃん」として設計されています。
++Groq / SambaNova / Claude による通常応答と xAI Grok による検索を備えた、会話記憶機能付きの AI チャットボットです。関西弁で話す「あいちゃん」として設計されています。
+ 
+ ## 機能
+ 
+-- **デュアル AI 機能**: Groq の Qwen3.6-27B（既定）/ SambaNova Cloud の DeepSeek-V3.2 + xAI Grok-4.6 による高性能な会話
++- **AI provider 選択**: コードの既定は Groq `openai/gpt-oss-20b`。SambaNova `DeepSeek-V3.2`、Claude `claude-haiku-5-5` も選択可能。モデルは設定で変更でき、検索は xAI Grok-4.6 が担当（[Claude の設定・検証](docs/claude.md)）
+ - **検索連携機能**: Grok の Agent Tools API（`web_search`）によるリアルタイム情報検索
+ - **会話記憶**: DynamoDB を使用した文脈を考慮した会話継続（30分間）
+ - **関西弁キャラクター**: 「あいちゃん」として関西弁で親しみやすく応答
+@@ -249,7 +249,7 @@ pnpm run cdk deploy --require-approval never --ci -c useExistingTable=true
+ 4. **Step Functions**がAI 処理ワークフローを開始
+ 
+ ### AI処理フロー
+-5. **AI Processor Lambda**が会話履歴を取得し、Groq API（既定。`AI_BACKEND` で SambaNova に切替可）で応答を生成
++5. **AI Processor Lambda**が会話履歴を取得し、Groq API（コードの既定。`AI_BACKEND` で SambaNova / Claude に切替可）で応答を生成
+ 6. Tool Call（検索要求）の有無を判定
+    - **Tool Call あり**: 中間通知→Grok検索→検索結果を送信
+    - **Tool Call なし**: 直接応答
+@@ -289,7 +289,7 @@ pnpm run cdk deploy --require-approval never --ci -c useExistingTable=true
+ 
+ ## AI の特徴
+ 
+-- **デュアルAIエンジン**: Groq Qwen3.6-27B / SambaNova DeepSeek-V3.2（基本会話）+ xAI Grok-4.6（検索連携）
++- **AI provider 選択**: Groq `openai/gpt-oss-20b`（コードの既定）/ SambaNova `DeepSeek-V3.2` / Claude `claude-haiku-5-5`（通常応答）+ xAI Grok-4.6（検索連携）
+ - **キャラクター**: 関西弁で話す「あいちゃん」
+ - **会話記憶**: 30分間の会話セッションを維持
+ - **検索連携**: リアルタイム情報検索とTool Calling
+@@ -400,4 +400,4 @@ pnpm test       # 10テスト実行
+ - **AWS CDK**: [AWS CDK ドキュメント](https://docs.aws.amazon.com/cdk/)をご参照ください
+ - **SambaNova Cloud**: [SambaNova Cloud ドキュメント](https://sambanova.ai/)をご参照ください
+ - **xAI**: [xAI ドキュメント](https://docs.x.ai/)をご参照ください
+-- **このプロジェクト**: このリポジトリで Issue を作成してください
+\ No newline at end of file
++- **このプロジェクト**: このリポジトリで Issue を作成してください
+diff --git a/cdk/CLAUDE.md b/cdk/CLAUDE.md
+index a3af3a47d3852d088a9c13645c000b68a2a89275..297c6bc1bf90ccd0021beda66700b56a47838ef0 100644
+--- a/cdk/CLAUDE.md
++++ b/cdk/CLAUDE.md
+@@ -48,6 +48,7 @@ cdk/
+ - `LINE_CHANNEL_ACCESS_TOKEN`
+ - `SAMBA_NOVA_API_KEY`
+ - `GROQ_API_KEY`
++- `ANTHROPIC_API_KEY`（AiProcessor のみ読み取り）
+ - `XAI_API_KEY`
+ 
+ ## Development Commands
+@@ -138,7 +139,7 @@ Lambda関数に渡される環境変数:
+ | Lambda | Variables |
+ |--------|-----------|
+ | WebhookHandler | CONVERSATION_TABLE_NAME, CHANNEL_SECRET_NAME, CHANNEL_ACCESS_TOKEN_NAME, STEP_FUNCTION_ARN |
+-| AiProcessor | CONVERSATION_TABLE_NAME, SAMBA_NOVA_API_KEY_NAME, GROQ_API_KEY_NAME, AI_BACKEND, SAMBANOVA_MODEL, GROQ_MODEL, GROQ_REASONING_EFFORT |
++| AiProcessor | CONVERSATION_TABLE_NAME, SAMBA_NOVA_API_KEY_NAME, GROQ_API_KEY_NAME, ANTHROPIC_API_KEY_NAME, AI_BACKEND, SAMBANOVA_MODEL, GROQ_MODEL, GROQ_REASONING_EFFORT, CLAUDE_MODEL, CLAUDE_EFFORT, CLAUDE_MAX_TOKENS |
+ | GrokProcessor | XAI_API_KEY_SECRET_NAME, XAI_MODEL, CHANNEL_ACCESS_TOKEN_NAME, CONVERSATION_TABLE_NAME |
+ | ResponseSender | CHANNEL_ACCESS_TOKEN_NAME |
+ 
+diff --git a/cdk/lib/lambda-stack.ts b/cdk/lib/lambda-stack.ts
+index a75308108d6c4497027e7f7db0cae239525746f9..b2b99b62f92185eac5ef5297cbf57614abfa7e09 100644
+--- a/cdk/lib/lambda-stack.ts
++++ b/cdk/lib/lambda-stack.ts
+@@ -109,6 +109,7 @@ export class LineEchoStack extends cdk.Stack {
+       lineChannelAccessToken: secretsmanager.Secret.fromSecretNameV2(this, 'LineChannelAccessToken', 'LINE_CHANNEL_ACCESS_TOKEN'),
+       sambaNovaApiKey: secretsmanager.Secret.fromSecretNameV2(this, 'SambaNovaApiKey', 'SAMBA_NOVA_API_KEY'),
+       groqApiKeySecret: secretsmanager.Secret.fromSecretNameV2(this, 'GroqApiKeySecret', 'GROQ_API_KEY'),
++      anthropicApiKeySecret: secretsmanager.Secret.fromSecretNameV2(this, 'AnthropicApiKeySecret', 'ANTHROPIC_API_KEY'),
+       xaiApiKeySecret: secretsmanager.Secret.fromSecretNameV2(this, 'XaiApiKeySecret', 'XAI_API_KEY'),
+     };
+   }
+@@ -179,11 +180,15 @@ export class LineEchoStack extends cdk.Stack {
+         CONVERSATION_TABLE_NAME: conversationTable.tableName,
+         SAMBA_NOVA_API_KEY_NAME: secrets.sambaNovaApiKey.secretName,
+         GROQ_API_KEY_NAME: secrets.groqApiKeySecret.secretName,
++        ANTHROPIC_API_KEY_NAME: secrets.anthropicApiKeySecret.secretName,
+         // Used only when a tool call fires, to tell the user a search started
+         CHANNEL_ACCESS_TOKEN_NAME: secrets.lineChannelAccessToken.secretName,
+         AI_BACKEND: process.env.AI_BACKEND || 'groq',
+         SAMBANOVA_MODEL: process.env.SAMBANOVA_MODEL || 'DeepSeek-V3.2',
+         GROQ_MODEL: process.env.GROQ_MODEL || 'openai/gpt-oss-20b',
++        CLAUDE_MODEL: process.env.CLAUDE_MODEL || 'claude-haiku-5-5',
++        CLAUDE_EFFORT: process.env.CLAUDE_EFFORT || 'low',
++        CLAUDE_MAX_TOKENS: process.env.CLAUDE_MAX_TOKENS || '2000',
+         // Only forwarded when explicitly set: otherwise ai_processor derives a
+         // value the configured model accepts (the vocabularies are disjoint).
+         ...(process.env.GROQ_REASONING_EFFORT
+@@ -193,6 +198,7 @@ export class LineEchoStack extends cdk.Stack {
+     });
+     secrets.sambaNovaApiKey.grantRead(aiProcessorLambda);
+     secrets.groqApiKeySecret.grantRead(aiProcessorLambda);
++    secrets.anthropicApiKeySecret.grantRead(aiProcessorLambda);
+     secrets.lineChannelAccessToken.grantRead(aiProcessorLambda);
+ 
+     const grokProcessorLambda = new lambda.Function(this, 'GrokProcessor', {
+@@ -289,4 +295,4 @@ export class LineEchoStack extends cdk.Stack {
+       stateMachineType: stepfunctions.StateMachineType.STANDARD,
+     });
+   }
+-}
+\ No newline at end of file
++}
+diff --git a/cdk/test/__snapshots__/line-echo-stack.snapshot.test.ts.snap b/cdk/test/__snapshots__/line-echo-stack.snapshot.test.ts.snap
+index 6e1f575a5ebe4cb4ed96855cdc771d431353e541..3df70500810600447910487d5939eea0e7ca22d9 100644
+--- a/cdk/test/__snapshots__/line-echo-stack.snapshot.test.ts.snap
++++ b/cdk/test/__snapshots__/line-echo-stack.snapshot.test.ts.snap
+@@ -300,7 +300,11 @@ exports[`LINE Echo Stack - Snapshot Tests CloudFormation Template Snapshots shou
+         "Environment": {
+           "Variables": {
+             "AI_BACKEND": "groq",
++            "ANTHROPIC_API_KEY_NAME": "ANTHROPIC_API_KEY",
+             "CHANNEL_ACCESS_TOKEN_NAME": "LINE_CHANNEL_ACCESS_TOKEN",
++            "CLAUDE_EFFORT": "low",
++            "CLAUDE_MAX_TOKENS": "2000",
++            "CLAUDE_MODEL": "claude-haiku-5-5",
+             "CONVERSATION_TABLE_NAME": {
+               "Ref": "ConversationHistoryD9612A4F",
+             },
+@@ -417,6 +421,33 @@ exports[`LINE Echo Stack - Snapshot Tests CloudFormation Template Snapshots shou
+                 ],
+               },
+             },
++            {
++              "Action": [
++                "secretsmanager:GetSecretValue",
++                "secretsmanager:DescribeSecret",
++              ],
++              "Effect": "Allow",
++              "Resource": {
++                "Fn::Join": [
++                  "",
++                  [
++                    "arn:",
++                    {
++                      "Ref": "AWS::Partition",
++                    },
++                    ":secretsmanager:",
++                    {
++                      "Ref": "AWS::Region",
++                    },
++                    ":",
++                    {
++                      "Ref": "AWS::AccountId",
++                    },
++                    ":secret:ANTHROPIC_API_KEY-??????",
++                  ],
++                ],
++              },
++            },
+             {
+               "Action": [
+                 "secretsmanager:GetSecretValue",
+@@ -1574,6 +1605,33 @@ exports[`LINE Echo Stack - Snapshot Tests CloudFormation Template Snapshots shou
+                 ],
+               },
+             },
++            {
++              "Action": [
++                "secretsmanager:GetSecretValue",
++                "secretsmanager:DescribeSecret",
++              ],
++              "Effect": "Allow",
++              "Resource": {
++                "Fn::Join": [
++                  "",
++                  [
++                    "arn:",
++                    {
++                      "Ref": "AWS::Partition",
++                    },
++                    ":secretsmanager:",
++                    {
++                      "Ref": "AWS::Region",
++                    },
++                    ":",
++                    {
++                      "Ref": "AWS::AccountId",
++                    },
++                    ":secret:ANTHROPIC_API_KEY-??????",
++                  ],
++                ],
++              },
++            },
+             {
+               "Action": [
+                 "secretsmanager:GetSecretValue",
+@@ -2080,7 +2138,11 @@ exports[`LINE Echo Stack - Snapshot Tests CloudFormation Template Snapshots shou
+       "Environment": {
+         "Variables": [
+           "AI_BACKEND",
++          "ANTHROPIC_API_KEY_NAME",
+           "CHANNEL_ACCESS_TOKEN_NAME",
++          "CLAUDE_EFFORT",
++          "CLAUDE_MAX_TOKENS",
++          "CLAUDE_MODEL",
+           "CONVERSATION_TABLE_NAME",
+           "GROQ_API_KEY_NAME",
+           "GROQ_MODEL",
+@@ -2290,6 +2352,14 @@ exports[`LINE Echo Stack - Snapshot Tests Security Configuration Snapshots shoul
+       "Effect": "Allow",
+       "Resources": 1,
+     },
++    {
++      "Actions": [
++        "secretsmanager:DescribeSecret",
++        "secretsmanager:GetSecretValue",
++      ],
++      "Effect": "Allow",
++      "Resources": 1,
++    },
+     {
+       "Actions": [
+         "dynamodb:BatchGetItem",
+diff --git a/cdk/test/claude-provider.test.ts b/cdk/test/claude-provider.test.ts
+new file mode 100644
+index 0000000000000000000000000000000000000000..c26b7872a56afebeae5b3f40c962db0fb81c4e15
+--- /dev/null
++++ b/cdk/test/claude-provider.test.ts
+@@ -0,0 +1,77 @@
++import * as cdk from 'aws-cdk-lib';
++import { Template, Match } from 'aws-cdk-lib/assertions';
++import { LineEchoStack } from '../lib/lambda-stack';
++
++describe('Claude provider configuration', () => {
++  const keys = ['AI_BACKEND', 'CLAUDE_MODEL', 'CLAUDE_EFFORT', 'CLAUDE_MAX_TOKENS'] as const;
++  let originals: Map<string, string | undefined>;
++
++  beforeEach(() => {
++    originals = new Map(keys.map(key => [key, process.env[key]]));
++    keys.forEach(key => delete process.env[key]);
++  });
++
++  afterEach(() => {
++    originals.forEach((value, key) => {
++      if (value === undefined) delete process.env[key];
++      else process.env[key] = value;
++    });
++  });
++
++  const synthesize = (): Template => Template.fromStack(new LineEchoStack(new cdk.App(), 'ClaudeTest'));
++
++  test('keeps Groq as default and passes only the Claude secret name', () => {
++    const template = synthesize();
++    template.hasResourceProperties('AWS::Lambda::Function', {
++      Handler: 'ai_processor.lambda_handler',
++      Environment: { Variables: Match.objectLike({
++        AI_BACKEND: 'groq',
++        ANTHROPIC_API_KEY_NAME: 'ANTHROPIC_API_KEY',
++        CLAUDE_MODEL: 'claude-haiku-5-5',
++        CLAUDE_EFFORT: 'low',
++        CLAUDE_MAX_TOKENS: '2000',
++      }) },
++    });
++    template.resourceCountIs('AWS::SecretsManager::Secret', 0);
++    template.resourceCountIs('AWS::Lambda::Function', 4);
++    template.resourceCountIs('AWS::StepFunctions::StateMachine', 1);
++  });
++
++  test('forwards explicit Claude selection and model configuration', () => {
++    process.env.AI_BACKEND = 'claude';
++    process.env.CLAUDE_MODEL = 'claude-sonnet-5-5';
++    process.env.CLAUDE_EFFORT = 'medium';
++    process.env.CLAUDE_MAX_TOKENS = '4000';
++    synthesize().hasResourceProperties('AWS::Lambda::Function', {
++      Handler: 'ai_processor.lambda_handler',
++      Environment: { Variables: Match.objectLike({
++        AI_BACKEND: 'claude', CLAUDE_MODEL: 'claude-sonnet-5-5',
++        CLAUDE_EFFORT: 'medium', CLAUDE_MAX_TOKENS: '4000',
++      }) },
++    });
++  });
++
++  test('grants Claude secret read access only to the first-stage processor', () => {
++    const template = synthesize();
++    const policies = template.findResources('AWS::IAM::Policy');
++    const matches = Object.entries(policies).filter(([, policy]) =>
++      JSON.stringify(policy.Properties.PolicyDocument).includes(':secret:ANTHROPIC_API_KEY-??????')
++    );
++    expect(matches).toHaveLength(1);
++    expect(matches[0][0]).toMatch(/^AiProcessorServiceRoleDefaultPolicy/);
++    template.hasResourceProperties('AWS::IAM::Policy', {
++      PolicyDocument: { Statement: Match.arrayWith([Match.objectLike({
++        Effect: 'Allow',
++        Action: ['secretsmanager:GetSecretValue', 'secretsmanager:DescribeSecret'],
++        Resource: { 'Fn::Join': ['', Match.arrayWith([':secret:ANTHROPIC_API_KEY-??????'])] },
++      })]) },
++    });
++    const functions = template.findResources('AWS::Lambda::Function');
++    Object.values(functions).forEach(func => {
++      expect(func.Properties.Environment.Variables).not.toHaveProperty('ANTHROPIC_API_KEY');
++      if (func.Properties.Handler !== 'ai_processor.lambda_handler') {
++        expect(func.Properties.Environment.Variables).not.toHaveProperty('ANTHROPIC_API_KEY_NAME');
++      }
++    });
++  });
++});
+diff --git a/docs/README.md b/docs/README.md
+index 549be0848252dde2106e2c06d3c61f664e4a6867..e4708a53a2c8834a68a1c751cf9cff471d5da324 100644
+--- a/docs/README.md
++++ b/docs/README.md
+@@ -7,4 +7,5 @@ This directory contains in-depth documentation about the core SDKs and libraries
+ - [**LINE Bot SDK**](./line-bot-sdk/index.md): Detailed documentation on the Python SDK for the LINE Messaging API.
+ - [**AWS CDK**](./aws-cdk/index.md): Detailed documentation on the AWS Cloud Development Kit for infrastructure as code.
+ - [**SambaNova Cloud Integration**](./sambanova-cloud/index.md): Documentation on integrating with SambaNova Cloud for advanced AI capabilities.
+-- [**Backend Knowledge for Chatbots**](./backend-knowledge/index.md): Essential backend concepts and AWS services for building robust and scalable chatbots.
+\ No newline at end of file
++- [**Claude API**](./claude.md): Haiku 5.5 configuration, Secrets Manager wiring, tool calling, and offline verification.
++- [**Backend Knowledge for Chatbots**](./backend-knowledge/index.md): Essential backend concepts and AWS services for building robust and scalable chatbots.
+diff --git a/docs/cicd.md b/docs/cicd.md
+index ea2359aa3bbde377df8cc542b39291ef02fcd702..5e8ed09809a5f502e523edb2e9381d4a9778c9ac 100644
+--- a/docs/cicd.md
++++ b/docs/cicd.md
+@@ -2,7 +2,7 @@
+ 
+ ## GitHub Secretsの設定
+ 
+-以下のシークレットをGitHubリポジトリの Settings > Secrets and variables > Actions で設定してください：
++デプロイは Environment `env` を使います。以下のシークレットを Settings > Environments > env の Environment secrets で設定してください：
+ 
+ ### AWS認証情報
+ - `AWS_ACCESS_KEY_ID`: AWS アクセスキーID
+@@ -18,6 +18,12 @@
+ ### Groq API認証情報
+ - `GROQ_API_KEY`: Groq APIキー
+ 
++### Claude API認証情報
++- `ANTHROPIC_API_KEY`: Anthropic の直接 API キー。既存項目がある場合は編集します。
++- Claude 選択とモデル・effort・出力上限は同じ Environment の Variables に設定します。
++  設定変更後の AWS 同期にはデプロイが必要です。既定 provider は Groq のままです。
++  [Claude の設定と検証](claude.md) を参照してください。
++
+ ## ワークフローの動作
+ 
+ ### Pull Request時
+@@ -71,4 +77,4 @@ graph LR
+ 
+ - GitHub Secretsは暗号化されて保存されます
+ - secretsの値はワークフローログに出力されません
+-- 本番環境の認証情報は適切に管理してください
+\ No newline at end of file
++- 本番環境の認証情報は適切に管理してください
+diff --git a/docs/claude.md b/docs/claude.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..e79731703eebb5f32ff35998282e2dcd27bb189d
+--- /dev/null
++++ b/docs/claude.md
+@@ -0,0 +1,121 @@
++# Claude API の設定と検証
++
++通常応答の provider に直接 Claude Messages API を追加しました。コードの既定は引き続き
++`AI_BACKEND=groq` です。Claude 選択時の既定モデルは `claude-haiku-5-5` です。
++
++## Secret と選択方法
++
++1. `dj-oyu/echo-line-bot` の **Settings > Environments > env > Environment secrets**
++   にある `ANTHROPIC_API_KEY` を編集し、実キーを設定します。同名の項目がある場合は
++   Add secret ではなく既存項目を編集します。repository scope に重複登録する必要はありません。
++2. Claude を本番で使うと決めた時点で、同じ Environment の **Variables** に
++   `AI_BACKEND=claude` を設定します。今回の実装では GitHub Variables は変更しません。
++3. 必要に応じて以下の Variables を設定し、レビュー・承認後に通常のデプロイを行います。
++   GitHub Secret の変更だけでは AWS Secret や Lambda の設定は更新されません。
++
++| Variable | 既定値 | 用途 |
++| --- | --- | --- |
++| `AI_BACKEND` | `groq` | `groq` / `sambanova` / `claude` |
++| `CLAUDE_MODEL` | `claude-haiku-5-5` | Anthropic の直接 API のモデル ID |
++| `CLAUDE_EFFORT` | `low` | `low` / `medium` / `high` / `xhigh` / `max`。変更先モデルの対応範囲に合わせる |
++| `CLAUDE_MAX_TOKENS` | `2000` | thinking を含む総出力上限。1～128000 の整数。変更先モデルの上限以下にする |
++
++workflow は `env` の Secret を AWS Secrets Manager の `ANTHROPIC_API_KEY` に同期します。
++値はシェルへの直接埋め込みやコマンド引数に置かず、権限を制限した一時ファイルから渡します。
++CDK は `ANTHROPIC_API_KEY_NAME=ANTHROPIC_API_KEY` と設定値を渡し、AiProcessor だけに
++Secret の読み取り権限を付与します。値はテンプレートや Lambda 環境変数に入りません。
++
++Secret が未設定の場合は明示的な無効プレースホルダーを同期します。アプリは Secret 名未設定、
++空値、`placeholder` / `dummy` / `replace` などの仮値をクライアント生成前に拒否します。
++既存の Groq/SambaNova 経路には Claude SDK の読み込みや Secret 取得を追加していません。
++
++## モデルとリクエスト
++
++Haiku 5.5 の API ID、adaptive thinking、sampling パラメータの制約は
++[公式モデル資料](https://platform.claude.com/docs/ja/models/haiku-5-5/overview) と
++[移行ガイド](https://platform.claude.com/docs/ja/models/haiku-5-5/migration-guide) で確認しました。
++`temperature`、`top_p`、`top_k` は送りません。thinking は API 既定の adaptive を使います。
++`output_config.effort=low` は短い会話とツール処理の低遅延を優先した設定です。
++[公式 effort 資料](https://platform.claude.com/docs/en/build-with-claude/effort) にある通り、
++低い effort では検索の省略などが起きる可能性があり、実モデルの検索判断は別途評価が必要です。
++総出力上限は thinking の余裕を含めて 2000 とし、必要なら設定で変更できます。
++
++既存 `prepare_messages_for_api` が作る system 文字列を、そのままトップレベル `system` に
++移します。user/assistant の role・content・順序は保持し、既存と同様に timestamp は送りません。
++不正な role、tool result だけの履歴、assistant prefill は書き換えず制御された失敗にします。
++
++## Tool calling の契約
++
++同じ `search_with_grok` の名前・説明・引数 schema を Claude の `input_schema` に変換します。
++`tool_choice={type: auto, disable_parallel_tool_use: true}` で検索の任意性と1件以下の呼び出しを維持します。
++[公式 tool 定義](https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools) と
++[tool call 処理](https://platform.claude.com/docs/en/agents-and-tools/tool-use/handle-tool-calls) を参照しています。
++
++- `stop_reason=tool_use` のときだけ、1個の既知ツールと非空の ID、object の input を受け付けます。
++- `query` は空白だけではない string、`prompt` は省略または string を許可します。
++- 未知ツール、複数 tool_use、空／型違いの引数、`Ask location` / `No search needed` などの
++  ルーティング用仮文字列、不整合な stop reason は既存の失敗メッセージに戻します。
++- `max_tokens`、`refusal`、thinking だけ、空の end_turn では検索を実行しません。
++- text は出現順に連結して既存の LINE 用レンダラーに渡します。thinking、signature、
++  redacted thinking、検索前置きは表示・履歴保存しません。
++
++検索要求は既存の `hasToolCall / toolName / toolQuery / toolPrompt` に変換し、Step Functions の
++既存 Grok 分岐へ渡します。xAI 段が検索回答を送信し、引用を除いた通常の assistant 本文だけを保存します。
++Claude の tool_use ID を履歴に保存せず、Claude に tool_result を返す2回目の呼び出しも行いません。
++このため時刻更新・履歴トリム・provider 切り替えによる thinking 署名の replay 不整合を持ち込みません。
++
++SDK は30秒 timeout、retry 0、redirect 無効です。エラー本文・認証ヘッダーはログや応答に出しません。
++同じ Lambda 実行内の SDK 再試行はありません。Step Functions の既存再実行や送信失敗による
++Lambda 再呼び出しでは推論が再実行される可能性がありますが、LINE 配信キーは既存方式で安定させます。
++
++## オフライン検証と残る確認
++
++```sh
++uv run pytest lambda/tests -q
++uv run ruff check lambda/ai_processor.py lambda/claude_provider.py lambda/tests/test_claude_provider.py
++uv run mypy --follow-imports=silent lambda/ai_processor.py lambda/claude_provider.py
++uv run python -m unittest discover -s scripts/tests -p 'test_*.py' -v
++uv run python scripts/claude_tool_plan.py --output claude-routing-plan.json
++cd cdk && pnpm run build && pnpm test && pnpm run cdk synth
++```
++
++`test_claude_provider.py` は実 SDK の mock transport で JSON 変換、1リクエスト、検索引き継ぎ、
++thinking 混在、引数検証、HTTP 401/429/5xx、timeout、キーを含むエラー本文の非露出を確認します。
++実 API、LINE、AWS 呼び出しは mock です。Layer の検証スクリプトは Claude SDK の import も確認します。
++
++`claude_tool_plan.py` は既存 A/B の固定日時・プロンプト・schema とソース基準を再利用し、
++挨拶、場所未指定の飲食店、梅田の明示、当日の東京の天気を A/B 各1件ずつ準備するだけです。
++この8件の準備コマンドは API を呼びません。既存 Groq の40件比較条件も維持します。
++
++mock テストは API 形式とアプリの分岐を保証します。挨拶で不要検索をしない、場所未指定で大阪を
++補わない、検索を適切に選ぶなどの **実モデルの判断品質、レイテンシ、実キーの有効性は未検証** です。
++有料検証は明示的な承認を受けてから行います。main マージ・本番デプロイは別の操作です。
++
++## 承認済みの少数実API試験
++
++既存の manual-only `dialect-ab.yml` を feature branch で起動し、`provider=claude` を指定します。
++GitHub Environment `env` の `ANTHROPIC_API_KEY` は実行ステップにだけ注入します。
++AWS 認証、Secret 値の取得・表示・成果物保存、LINE 送信、xAI 検索、deploy は行いません。
++
++`claude_live_pilot.py` は既存 A/B のソース固定、日時、方言だけを除く変換、tool schema を再利用します。
++5ケース（挨拶、場所未指定の飲食店、梅田の営業検索、履歴で京都駅へ場所訂正、単純会話）を
++A/B 各1回、最大10回だけ実行します。先頭の A 挨拶が正常に完了してから残りへ進みます。
++各 response は本番アダプターの同じ parser で検証し、tool が返っても検索を実行せず記録して止めます。
++品質上の期待と異なるが契約に適合した response は記録して比較を続けます。
++
++- 固定モデル `claude-haiku-5-5`、effort `low`、出力上限2,000（thinking 込み）。
++- JSON 8,192 bytes 以下。無料の count_tokens で入力4,096以下を確認。
++- 計数は推定なので入力8,192分を予約し、さらに100k超の高料金 $0.50/$2.50 per MTok を
++  使って見積もる。最大10回でも **$0.090960**。通常の小入力料金では **$0.018192** 以下の目安。
++- SDK retry 0、redirect 無効、30秒 timeout。API エラー・契約違反は停止し、再試行しない。
++- Actions の手動起動、指定 feature branch、初回 attempt のみ。自動 push 実行や rerun は拒否。
++- 成果物は可視の合成回答、tool 名と引数、stop reason、token、応答時間、thinking の有無と
++  料金推定のみ。thinking 本文・signature・認証ヘッダー・エラー本文を除外し、キー混入も拒否。
++
++価格は [公式料金表](https://platform.claude.com/docs/en/about-claude/pricing)、計数の推定値と無料性は
++[公式 token counting](https://platform.claude.com/docs/en/build-with-claude/token-counting) を参照。
++この少数試験は品質の統計的な保証にはなりません。キー有効性、モデル契約、tool 判断の傾向を確認します。
++
++デプロイ時に GitHub の Claude Secret が空なら、存在する AWS Secret は更新しません。
++存在しない場合だけアプリが拒否する placeholder を作成します。他 provider の起動時は Claude の
++key fetch を行いません。実キーを GitHub に設定しただけでは AWS は更新されず、後の deploy で同期します。
+diff --git a/docs/dialect-ab-pilot.md b/docs/dialect-ab-pilot.md
+index 184c077eb4cb01cda04a986bbd8a530eb04a14b2..a1b72016e5c5403d7dad5b3a876d98a1921a9cc4 100644
+--- a/docs/dialect-ab-pilot.md
++++ b/docs/dialect-ab-pilot.md
+@@ -15,6 +15,18 @@
+ - 現行のツール定義と `tool_choice: auto` を使用。ツール呼び出しは記録だけ行う
+ - 現行ソースのSHA-256を確認し、想定した基準コードと違えば送信前に停止
+ 
++Claude provider 追加時に `ai_processor.py` 全体の基準を実装コミット
++`2b6c45e10c3b3dbccd5bfe3e14d297b4b5fb5cdc` に更新しました。main `b93459d` と
++AST を比較し、プロンプト・履歴整形とツール schema が同一であることを確認しています。
++Groq のモデル・40件の比較条件・予算・手動実行ガードは変更していません。
++
++Claude の検索判断には別の **オフライン準備専用** スクリプトを用意しました。
++`python scripts/claude_tool_plan.py --output claude-routing-plan.json` で、同じ A/B プロンプトを
++使った挨拶、場所未指定、梅田の明示、当日の東京の天気の8件を準備できます。
++空 query、`Ask location` / `No search needed`、型違いの引数はアプリの mock テストで拒否を確認します。
++このスクリプトに API 実行機能はありません。既存の有料 Groq workflow も起動しません。
++[Claude の設定・検証範囲](claude.md) を参照してください。
++
+ ## 起動と安全策
+ 
+ ```sh
+diff --git a/lambda/CLAUDE.md b/lambda/CLAUDE.md
+index f26ec676d275c64214dd514cf5c0304a3a0a99f4..c487d1da0e168b75097bd6bd5405feaa61c51dc8 100644
+--- a/lambda/CLAUDE.md
++++ b/lambda/CLAUDE.md
+@@ -103,8 +103,13 @@ dependencies = [
+ 環境変数 `AI_BACKEND` で切り替え:
+ - `groq` (デフォルト): Groq API使用
+ - `sambanova`: SambaNova API使用
++- `claude`: Anthropic の直接 Messages API 使用（既定モデル `claude-haiku-5-5`）。
++  `CLAUDE_MODEL`、`CLAUDE_EFFORT`（既定 `low`）、`CLAUDE_MAX_TOKENS`（既定 `2000`）を設定可能。
++  `ANTHROPIC_API_KEY_NAME` は AWS Secret 名。仮キーは送信前に拒否する。
+ 
+-両方ともOpenAI互換APIを提供。
++Groq/SambaNova は OpenAI 互換API、Claude は native Messages API を使う。
++プロンプト・会話履歴と検索ツールの契約は共通で、検索後に Claude を再呼び出さない。
++詳細と Haiku 5.5 の制約・検証範囲は [Claude 設定ガイド](../docs/claude.md) を参照。
+ 
+ ### モデル設定
+ 
+diff --git a/lambda/ai_processor.py b/lambda/ai_processor.py
+index aa19f30fcd9f0a0b6da93c7283bf994041ac78e9..078e83cc00e858485e420547c9dc272866651599 100644
+--- a/lambda/ai_processor.py
++++ b/lambda/ai_processor.py
+@@ -2,7 +2,7 @@ import json
+ import logging
+ import os
+ import re
+-from datetime import datetime, timezone
++from datetime import datetime
+ 
+ import openai
+ import pytz
+@@ -19,7 +19,7 @@ GROQ_API_KEY_NAME = os.environ.get("GROQ_API_KEY_NAME", "")
+ CONVERSATION_TABLE_NAME = os.environ.get("CONVERSATION_TABLE_NAME", "")
+ CHANNEL_ACCESS_TOKEN_NAME = os.environ.get("CHANNEL_ACCESS_TOKEN_NAME", "")
+ 
+-AI_SELECT = os.environ.get("AI_BACKEND", "groq")  # Options: "groq" or "sambanova"
++AI_SELECT = os.environ.get("AI_BACKEND", "groq")  # Options: groq, sambanova, claude
+ SAMBANOVA_MODEL = os.environ.get("SAMBANOVA_MODEL", "DeepSeek-V3.2")
+ GROQ_MODEL = os.environ.get("GROQ_MODEL", "openai/gpt-oss-20b")
+ 
+@@ -165,7 +165,7 @@ def get_ai_response(messages: list) -> dict:
+         Dict containing either tool call info or direct AI response
+     """
+     try:
+-        backend_name = "SambaNova" if AI_SELECT == "sambanova" else "Groq"
++        backend_name = {"sambanova": "SambaNova", "claude": "Claude"}.get(AI_SELECT, "Groq")
+         logger.info(f"Calling {backend_name} API with {len(messages)} messages")
+         api_messages = prepare_messages_for_api(messages)
+ 
+@@ -190,6 +190,13 @@ def get_ai_response(messages: list) -> dict:
+             }
+         ]
+ 
++        if AI_SELECT == "claude":
++            # Keep the prompt, history and search handoff shared across providers.
++            # Import the SDK only on the Claude path to preserve other cold starts.
++            from claude_provider import get_claude_response
++
++            return get_claude_response(api_messages, tools)
++
+         if AI_SELECT == "sambanova":
+             response = get_sambanova_client().chat.completions.create(  # type: ignore[call-overload]
+                 model=SAMBANOVA_MODEL,
+@@ -233,7 +240,8 @@ def get_ai_response(messages: list) -> dict:
+         return {"hasToolCall": False, "aiResponse": plain}
+ 
+     except Exception as e:
+-        logger.error(f"Error calling SambaNova API: {e}")
++        # Provider error bodies may contain credentials; log only the type.
++        logger.error("Error calling %s API: %s", AI_SELECT, type(e).__name__)
+         return {
+             "hasToolCall": False,
+             "aiResponse": "あかん〜😅 あいちゃんの頭がちょっとこんがらがってもうたわ！もうちょっと時間置いてもう一回試してもらえる？",
+diff --git a/lambda/claude_provider.py b/lambda/claude_provider.py
+new file mode 100644
+index 0000000000000000000000000000000000000000..e06b2947a85dd899999437b2a7b9caa44ae60aae
+--- /dev/null
++++ b/lambda/claude_provider.py
+@@ -0,0 +1,123 @@
++"""Direct Claude Messages API adapter for the existing first-stage contract."""
++
++import os
++from typing import Any, Literal, cast
++
++import anthropic
++from anthropic.types import Message, MessageParam, ToolParam
++
++import line_messaging
++from markdown_to_line import render_to_line
++
++ANTHROPIC_API_KEY_NAME = os.environ.get("ANTHROPIC_API_KEY_NAME", "")
++CLAUDE_MODEL = os.environ.get("CLAUDE_MODEL") or "claude-haiku-5-5"
++CLAUDE_EFFORT = os.environ.get("CLAUDE_EFFORT") or "low"
++CLAUDE_MAX_TOKENS = os.environ.get("CLAUDE_MAX_TOKENS") or "2000"
++ClaudeEffort = Literal["low", "medium", "high", "xhigh", "max"]
++
++_client: anthropic.Anthropic | None = None
++
++
++def get_claude_client() -> anthropic.Anthropic:
++    """Cache the client only after rejecting missing and dummy credentials."""
++    global _client
++    if _client is None:
++        if not ANTHROPIC_API_KEY_NAME:
++            raise ValueError("ANTHROPIC_API_KEY_NAME is not configured")
++        key = line_messaging.get_secret(ANTHROPIC_API_KEY_NAME).strip()
++        if not key or any(
++            marker in key.lower()
++            for marker in ("placeholder", "dummy", "replace", "your_api_key", "xxxx")
++        ):
++            raise ValueError("ANTHROPIC_API_KEY is missing or a placeholder")
++        _client = anthropic.Anthropic(
++            api_key=key,
++            base_url="https://api.anthropic.com",
++            timeout=30.0,
++            max_retries=0,
++            http_client=anthropic.DefaultHttpxClient(follow_redirects=False),
++        )
++    return _client
++
++
++def get_claude_response(api_messages: list[dict], tools: list[dict]) -> dict[str, Any]:
++    """Make one request, preserving the prompt/history and Grok search contract.
++
++    Claude accepts the initial system prompt separately from user/assistant
++    history. Client tool use is handed to the existing Grok stage; there is no
++    tool-result round trip back to Claude.
++    """
++    if CLAUDE_EFFORT not in ("low", "medium", "high", "xhigh", "max"):
++        raise ValueError("Invalid CLAUDE_EFFORT")
++    max_tokens = int(CLAUDE_MAX_TOKENS)
++    if not 1 <= max_tokens <= 128000:
++        raise ValueError("Invalid CLAUDE_MAX_TOKENS")
++    if (
++        len(api_messages) < 2
++        or api_messages[0].get("role") != "system"
++        or api_messages[-1].get("role") != "user"
++        or any(message.get("role") not in ("user", "assistant") for message in api_messages[1:])
++        or any(not isinstance(message.get("content"), str) for message in api_messages)
++    ):
++        raise ValueError("Invalid Claude conversation roles or content")
++    claude_tools: list[ToolParam] = [
++        {
++            "name": tool["function"]["name"],
++            "description": tool["function"]["description"],
++            "input_schema": tool["function"]["parameters"],
++        }
++        for tool in tools
++    ]
++    response = get_claude_client().messages.create(
++        model=CLAUDE_MODEL,
++        system=api_messages[0]["content"],
++        messages=cast(list[MessageParam], api_messages[1:]),
++        max_tokens=max_tokens,
++        output_config={"effort": cast(ClaudeEffort, CLAUDE_EFFORT)},
++        tools=claude_tools,
++        tool_choice={"type": "auto", "disable_parallel_tool_use": True},
++    )
++
++    return parse_claude_response(response)
++
++
++def parse_claude_response(response: Message) -> dict[str, Any]:
++    """Validate a completed native response without exposing thinking blocks."""
++    # Never forward incomplete tool JSON when the output budget is exhausted.
++    if response.stop_reason == "tool_use":
++        calls = [block for block in response.content if block.type == "tool_use"]
++        if (
++            len(calls) != 1 or calls[0].name != "search_with_grok"
++            or not isinstance(calls[0].id, str) or not calls[0].id.strip()
++        ):
++            raise ValueError("Unexpected Claude tool call")
++        arguments = calls[0].input
++        if not isinstance(arguments, dict):
++            raise ValueError("Invalid Claude tool arguments")
++        query = arguments.get("query")
++        prompt = arguments.get("prompt", "")
++        if not isinstance(query, str) or not query.strip() or not isinstance(prompt, str):
++            raise ValueError("Invalid Claude search arguments")
++        # These are routing notes, not search queries. Do not send a model's
++        # placeholder instruction to xAI; preserve the existing failure path.
++        sentinels = {"ask location", "no search needed", "ask location / no search needed"}
++        if any(" ".join(value.casefold().replace("_", " ").split()) in sentinels for value in (query, prompt)):
++            raise ValueError("Claude search contains a routing placeholder")
++        return {
++            "hasToolCall": True,
++            "toolName": "search_with_grok",
++            "toolQuery": query,
++            "toolPrompt": prompt,
++        }
++
++    if response.stop_reason != "end_turn":
++        raise ValueError("Claude response did not complete")
++    if any(block.type == "tool_use" for block in response.content):
++        raise ValueError("Claude tool call has an inconsistent stop reason")
++    text = "".join(block.text for block in response.content if block.type == "text")
++    if not text.strip():
++        raise ValueError("Claude response contains no text")
++    plain, _ = render_to_line(text)
++    if not plain.strip():
++        raise ValueError("Claude response contains no visible text")
++    return {"hasToolCall": False, "aiResponse": plain}
+diff --git a/lambda/requirements.txt b/lambda/requirements.txt
+index a2fb9dc2de3456cbdcf33ed37227583d4a4212ca..831b03a96902e54691065ed2eb43faf9eeaef1c3 100644
+--- a/lambda/requirements.txt
++++ b/lambda/requirements.txt
+@@ -1,5 +1,7 @@
+ line-bot-sdk>=3.17.1
+ openai>=1.0.0
++anthropic>=1.0.0,<2.0.0
+ boto3>=1.28.0
+ pytz>=2023.3
+-langchain_xai>=0.1.2
++xai-sdk>=1.0.0
++markdown-it-py>=3.0.0
+diff --git a/lambda/tests/test_claude_provider.py b/lambda/tests/test_claude_provider.py
+new file mode 100644
+index 0000000000000000000000000000000000000000..ffc54df133cacf961be50d912ff7fc0466905a5e
+--- /dev/null
++++ b/lambda/tests/test_claude_provider.py
+@@ -0,0 +1,366 @@
++"""Offline Claude SDK transport tests; no real credentials or network access."""
++
++import copy
++import json
++import os
++import sys
++import unittest
++from pathlib import Path
++from unittest.mock import MagicMock, patch
++
++import anthropic
++import httpx2
++
++sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
++import ai_processor
++import claude_provider
++
++
++def response_body(content, stop_reason="end_turn"):
++    return {
++        "id": "msg_offline",
++        "type": "message",
++        "role": "assistant",
++        "model": "claude-haiku-5-5",
++        "content": content,
++        "stop_reason": stop_reason,
++        "stop_sequence": None,
++        "usage": {"input_tokens": 100, "output_tokens": 20},
++    }
++
++
++def search_block(**arguments):
++    return {"type": "tool_use", "id": "toolu_offline", "name": "search_with_grok", "input": arguments}
++
++
++class TestClaudeTransport(unittest.TestCase):
++    def setUp(self):
++        self.requests = []
++        self.body = response_body([{"type": "text", "text": "**まいど！**"}])
++        self.status = 200
++        self.transport_error = None
++        self.client = anthropic.Anthropic(
++            api_key="SYNTHETIC_OFFLINE_CREDENTIAL",
++            base_url="https://api.anthropic.com",
++            max_retries=0,
++            timeout=30,
++            http_client=anthropic.DefaultHttpxClient(
++                transport=httpx2.MockTransport(self.handle), follow_redirects=False
++            ),
++        )
++        self.addCleanup(self.client.close)
++        self.patch_value(ai_processor, "AI_SELECT", "claude")
++        self.patch_value(claude_provider, "_client", self.client)
++        self.patch_value(claude_provider, "CLAUDE_MODEL", "claude-haiku-5-5")
++        self.patch_value(claude_provider, "CLAUDE_EFFORT", "low")
++        self.patch_value(claude_provider, "CLAUDE_MAX_TOKENS", "2000")
++        self.messages = [
++            {"role": "user", "content": "前の質問"},
++            {"role": "assistant", "content": "前の回答"},
++            {"role": "user", "content": "@bot やあ"},
++        ]
++
++    def patch_value(self, target, name, value):
++        patcher = patch.object(target, name, value)
++        patcher.start()
++        self.addCleanup(patcher.stop)
++
++    def handle(self, request):
++        # Retain only the JSON body and URL, never auth headers.
++        self.requests.append((str(request.url), json.loads(request.content)))
++        if self.transport_error:
++            raise self.transport_error
++        return httpx2.Response(self.status, json=self.body)
++
++    def ask(self):
++        return ai_processor.get_ai_response(self.messages)
++
++    def test_one_direct_request_preserves_prompt_and_full_history(self):
++        original = copy.deepcopy(self.messages)
++        with patch("ai_processor.get_time_based_greeting", return_value="固定の挨拶"), patch(
++            "ai_processor.get_current_date_info",
++            return_value={"date": "固定の日付", "weekday": "木", "time": "固定の時刻", "season": "秋"},
++        ):
++            expected = ai_processor.prepare_messages_for_api(self.messages)
++            result = self.ask()
++        self.assertEqual(result, {"hasToolCall": False, "aiResponse": "まいど！"})
++        self.assertEqual(len(self.requests), 1)
++        url, body = self.requests[0]
++        self.assertEqual(url, "https://api.anthropic.com/v1/messages")
++        self.assertEqual(body["system"], expected[0]["content"])
++        self.assertEqual(body["messages"], expected[1:])
++        self.assertEqual(self.messages, original)
++        self.assertEqual(body["model"], "claude-haiku-5-5")
++        self.assertEqual(body["max_tokens"], 2000)
++        self.assertEqual(body["output_config"], {"effort": "low"})
++        self.assertEqual(body["tool_choice"], {"type": "auto", "disable_parallel_tool_use": True})
++        self.assertNotIn("temperature", body)  # Current models reject sampling parameters.
++        self.assertNotIn("top_p", body)
++        self.assertNotIn("top_k", body)
++        self.assertNotIn("reasoning_effort", body)
++        self.assertNotIn("thinking", body)
++
++    def test_search_is_handed_to_existing_grok_contract_without_second_call(self):
++        self.body = response_body(
++            [{"type": "text", "text": "調べるで"}, search_block(query="最新のAWS", prompt="詳しく")],
++            "tool_use",
++        )
++        result = self.ask()
++        self.assertEqual(result, {
++            "hasToolCall": True, "toolName": "search_with_grok",
++            "toolQuery": "最新のAWS", "toolPrompt": "詳しく",
++        })
++        self.assertEqual(len(self.requests), 1)
++        tool = self.requests[0][1]["tools"][0]
++        self.assertEqual(tool["name"], "search_with_grok")
++        self.assertEqual(tool["description"], "リアルタイムのWeb情報が必要な、専門的または複雑な質問に答えるために使用します。")
++        self.assertEqual(tool["input_schema"]["required"], ["query"])
++        self.assertEqual(set(tool["input_schema"]["properties"]), {"query", "prompt"})
++
++    def test_search_optional_prompt_defaults_to_empty(self):
++        self.body = response_body([search_block(query="天気")], "tool_use")
++        self.assertEqual(self.ask()["toolPrompt"], "")
++
++    def test_model_can_be_overridden(self):
++        self.patch_value(claude_provider, "CLAUDE_MODEL", "claude-sonnet-5-5")
++        self.ask()
++        self.assertEqual(self.requests[0][1]["model"], "claude-sonnet-5-5")
++
++    def test_multiple_text_blocks_render_together(self):
++        self.body = response_body([
++            {"type": "text", "text": "まいど！\n"}, {"type": "text", "text": "**ようこそ**"},
++        ])
++        self.assertEqual(self.ask()["aiResponse"], "まいど！\nようこそ")
++
++    def test_thinking_blocks_are_excluded_from_direct_and_search_results(self):
++        thinking = {"type": "thinking", "thinking": "PRIVATE_THOUGHT", "signature": "PRIVATE_SIGNATURE"}
++        redacted = {"type": "redacted_thinking", "data": "PRIVATE_REDACTED_DATA"}
++        for blocks, stop in (
++            ([thinking, redacted, {"type": "text", "text": "まいど！"}], "end_turn"),
++            ([thinking, search_block(query="AWS")], "tool_use"),
++        ):
++            with self.subTest(stop=stop):
++                self.body = response_body(blocks, stop)
++                with self.assertLogs(level="INFO") as captured:
++                    result = self.ask()
++                self.assertNotIn("PRIVATE_", str(result) + str(captured.output))
++                self.assertEqual(result["hasToolCall"], stop == "tool_use")
++
++    def test_effort_is_configurable_and_invalid_values_make_no_request(self):
++        for effort in ("medium", "high", "xhigh", "max"):
++            self.patch_value(claude_provider, "CLAUDE_EFFORT", effort)
++            self.ask()
++            self.assertEqual(self.requests[-1][1]["output_config"], {"effort": effort})
++        before = len(self.requests)
++        self.patch_value(claude_provider, "CLAUDE_EFFORT", "invalid")
++        self.assertFalse(self.ask()["hasToolCall"])
++        self.assertEqual(len(self.requests), before)
++
++    def test_output_budget_is_configurable_and_invalid_values_make_no_request(self):
++        self.patch_value(claude_provider, "CLAUDE_MAX_TOKENS", "4000")
++        self.ask()
++        self.assertEqual(self.requests[-1][1]["max_tokens"], 4000)
++        for value in ("invalid", "0", "-1", "128001"):
++            self.patch_value(claude_provider, "CLAUDE_MAX_TOKENS", value)
++            self.assertFalse(self.ask()["hasToolCall"])
++        self.assertEqual(len(self.requests), 1)
++
++    def test_malformed_or_unknown_search_uses_existing_failure_response(self):
++        invalid_blocks = [
++            search_block(), search_block(query=""), search_block(query=42),
++            search_block(query="x", prompt=None),
++            search_block(query="Ask location"), search_block(query="No search needed"),
++            search_block(query="x", prompt="Ask location / No search needed"),
++            {**search_block(query="x"), "name": "unknown_tool"},
++            {**search_block(query="x"), "input": []},
++        ]
++        for block in invalid_blocks:
++            with self.subTest(block=block):
++                self.body = response_body([block], "tool_use")
++                self.assertFalse(self.ask()["hasToolCall"])
++        self.assertEqual(len(self.requests), len(invalid_blocks))
++
++    def test_parallel_search_calls_are_rejected(self):
++        self.body = response_body([search_block(query="a"), search_block(query="b")], "tool_use")
++        self.assertFalse(self.ask()["hasToolCall"])
++        self.assertEqual(len(self.requests), 1)
++
++    def test_tool_id_and_stop_reason_are_checked(self):
++        for content, stop in (
++            ([{**search_block(query="x"), "id": ""}], "tool_use"),
++            ([search_block(query="x"), {"type": "text", "text": "text"}], "end_turn"),
++        ):
++            with self.subTest(stop=stop):
++                self.body = response_body(content, stop)
++                self.assertFalse(self.ask()["hasToolCall"])
++
++    def test_invalid_history_is_rejected_without_rewriting_or_request(self):
++        for messages in (
++            [{"role": "assistant", "content": "prefill"}],
++            [{"role": "tool", "content": "unpaired tool result"}, {"role": "user", "content": "x"}],
++            [{"role": "system", "content": "unexpected system"}, {"role": "user", "content": "x"}],
++        ):
++            with self.subTest(messages=messages):
++                original = copy.deepcopy(messages)
++                self.assertFalse(ai_processor.get_ai_response(messages)["hasToolCall"])
++                self.assertEqual(messages, original)
++        self.assertEqual(self.requests, [])
++
++    @patch("line_messaging.append_and_save")
++    @patch("line_messaging.push_text")
++    def test_search_payload_flows_through_xai_and_only_final_text_is_saved(self, push, save):
++        with patch.dict(os.environ, {"XAI_API_KEY_SECRET_NAME": "test-xai"}):
++            import grok_processor
++        self.body = response_body([search_block(query="最新のAWS", prompt="詳しく")], "tool_use")
++        event = {"userId": "offline-user", "executionName": "same-execution",
++                 "conversationContext": {"messages": self.messages}}
++        routed = ai_processor.lambda_handler(copy.deepcopy(event), None)
++        chat = MagicMock()
++        chat.sample.return_value.content = "**検索結果**"
++        chat.sample.return_value.citations = []
++        xai = MagicMock()
++        xai.chat.create.return_value = chat
++        with patch("grok_processor.get_xai_client", return_value=xai):
++            result = grok_processor.lambda_handler(routed, None)
++        self.assertIn("最新のAWS", str(chat.append.call_args.args[0]))
++        self.assertIn("詳しく", str(chat.append.call_args.args[0]))
++        chat.sample.assert_called_once()
++        self.assertEqual(result["grokBody"], "検索結果")
++        self.assertEqual(result["conversationContext"], event["conversationContext"])
++        save.assert_called_once_with("offline-user", event["conversationContext"], "検索結果")
++        self.assertEqual(push.call_count, 2)
++        self.assertEqual(push.call_args.kwargs["retry_key"], "same-execution")
++        self.assertEqual(len(self.requests), 1)
++        self.assertNotIn("tool_result", json.dumps(self.requests[0][1], ensure_ascii=False))
++
++    @patch("line_messaging.push_text")
++    def test_replayed_execution_uses_the_same_interim_delivery_key(self, push):
++        self.body = response_body([search_block(query="AWS")], "tool_use")
++        event = {"userId": "offline-user", "executionName": "same-execution",
++                 "conversationContext": {"messages": self.messages}}
++        for _ in range(2):
++            ai_processor.lambda_handler(copy.deepcopy(event), None)
++        self.assertEqual(push.call_args_list[0].kwargs["retry_key"], push.call_args_list[1].kwargs["retry_key"])
++        self.assertEqual(len(self.requests), 2)  # SDK retries are zero, Lambda invocations can repeat.
++
++    def test_incomplete_or_refused_response_is_not_a_search(self):
++        for stop in ("max_tokens", "refusal", "pause_turn", "stop_sequence",
++                     "model_context_window_exceeded", None, "unknown_future_reason"):
++            with self.subTest(stop=stop):
++                self.body = response_body([search_block(query="x")], stop)
++                self.assertFalse(self.ask()["hasToolCall"])
++
++    def test_empty_response_uses_failure_message(self):
++        self.body = response_body([])
++        self.assertFalse(self.ask()["hasToolCall"])
++        self.assertTrue(self.ask()["aiResponse"])
++
++    def test_blank_or_markup_only_text_never_sends_an_empty_answer(self):
++        for text in (" ", "\n\t", "---"):
++            with self.subTest(text=text):
++                self.body = response_body([{"type": "text", "text": text}])
++                result = self.ask()
++                self.assertTrue(result["aiResponse"].strip())
++                self.assertFalse(result["hasToolCall"])
++
++    def test_thinking_only_or_missing_tool_call_uses_failure_message(self):
++        for content, stop in (
++            ([{"type": "thinking", "thinking": "", "signature": "PRIVATE_SIGNATURE"}], "end_turn"),
++            ([{"type": "text", "text": "調べるで"}], "tool_use"),
++        ):
++            with self.subTest(stop=stop):
++                self.body = response_body(content, stop)
++                result = self.ask()
++                self.assertFalse(result["hasToolCall"])
++                self.assertNotIn("調べるで", result["aiResponse"])
++                self.assertNotIn("PRIVATE_SIGNATURE", str(result))
++
++    def test_http_errors_have_no_retry_or_secret_in_logs_and_result(self):
++        for status in (401, 429, 500):
++            with self.subTest(status=status):
++                self.status = status
++                self.body = {"type": "error", "error": {
++                    "type": "authentication_error", "message": "SYNTHETIC_OFFLINE_CREDENTIAL",
++                }}
++                before = len(self.requests)
++                with self.assertLogs(level="ERROR") as captured:
++                    result = self.ask()
++                self.assertEqual(len(self.requests), before + 1)
++                self.assertNotIn("SYNTHETIC_OFFLINE_CREDENTIAL", str(captured.output) + str(result))
++                self.assertFalse(result["hasToolCall"])
++
++    def test_timeout_has_no_retry(self):
++        self.transport_error = httpx2.ReadTimeout("SYNTHETIC_OFFLINE_CREDENTIAL")
++        with self.assertLogs(level="ERROR") as captured:
++            result = self.ask()
++        self.assertEqual(len(self.requests), 1)
++        self.assertNotIn("SYNTHETIC_OFFLINE_CREDENTIAL", str(captured.output) + str(result))
++
++    @patch("line_messaging.append_and_save")
++    @patch("line_messaging.push_text")
++    def test_handler_sends_direct_answer_or_interim_using_existing_delivery(self, push, save):
++        event = {"userId": "offline-user", "executionName": "offline-execution",
++                 "conversationContext": {"messages": self.messages}}
++        result = ai_processor.lambda_handler(copy.deepcopy(event), None)
++        self.assertFalse(result["hasToolCall"])
++        push.assert_called_once_with(result, "まいど！", retry_key="offline-execution")
++        save.assert_called_once()
++        push.reset_mock()
++        save.reset_mock()
++        self.body = response_body([search_block(query="AWS")], "tool_use")
++        result = ai_processor.lambda_handler(copy.deepcopy(event), None)
++        self.assertTrue(result["hasToolCall"])
++        self.assertEqual(push.call_args.args[1], ai_processor.INTERIM_MESSAGE)
++        self.assertTrue(push.call_args.kwargs["show_loading"])
++        save.assert_not_called()
++        self.assertEqual(len(self.requests), 2)  # One per user turn.
++
++
++class TestClaudeCredentials(unittest.TestCase):
++    @patch("claude_provider.get_claude_client")
++    @patch("ai_processor.get_groq_client")
++    def test_other_provider_does_not_fetch_or_construct_claude(self, groq, claude):
++        message = MagicMock(content="こんにちは", tool_calls=None)
++        groq.return_value.chat.completions.create.return_value.choices = [MagicMock(message=message)]
++        with patch.object(ai_processor, "AI_SELECT", "groq"), patch.object(
++            claude_provider, "ANTHROPIC_API_KEY_NAME", ""
++        ):
++            result = ai_processor.get_ai_response([{"role": "user", "content": "やあ"}])
++        self.assertFalse(result["hasToolCall"])
++        groq.assert_called_once()
++        claude.assert_not_called()
++
++    @patch("claude_provider.anthropic.Anthropic")
++    @patch("claude_provider.line_messaging.get_secret")
++    def test_missing_name_and_dummy_values_never_construct_client(self, secret, constructor):
++        with patch.object(claude_provider, "_client", None), patch.object(
++            claude_provider, "ANTHROPIC_API_KEY_NAME", ""
++        ), self.assertRaises(ValueError):
++            claude_provider.get_claude_client()
++        secret.assert_not_called()
++        values = ("", "  ", "PLACEHOLDER_NOT_A_VALID_ANTHROPIC_API_KEY_REPLACE_IN_GITHUB_ENV_ENV",
++                  "dummy", "xxxx", "your_api_key", "sk-ant-dummy-key")
++        for value in values:
++            with self.subTest(value=value), patch.object(claude_provider, "_client", None), patch.object(
++                claude_provider, "ANTHROPIC_API_KEY_NAME", "ANTHROPIC_API_KEY"
++            ):
++                secret.return_value = value
++                with self.assertRaises(ValueError):
++                    claude_provider.get_claude_client()
++        constructor.assert_not_called()
++
++    @patch("claude_provider.anthropic.DefaultHttpxClient")
++    @patch("claude_provider.anthropic.Anthropic")
++    @patch("claude_provider.line_messaging.get_secret", return_value="SYNTHETIC_OFFLINE_CREDENTIAL")
++    def test_client_is_cached_with_fixed_direct_endpoint_and_no_retries(self, secret, constructor, http):
++        constructor.return_value = MagicMock()
++        with patch.object(claude_provider, "_client", None), patch.object(
++            claude_provider, "ANTHROPIC_API_KEY_NAME", "ANTHROPIC_API_KEY"
++        ), patch.dict(os.environ, {"ANTHROPIC_BASE_URL": "https://unexpected.invalid"}):
++            self.assertIs(claude_provider.get_claude_client(), claude_provider.get_claude_client())
++        secret.assert_called_once_with("ANTHROPIC_API_KEY")
++        constructor.assert_called_once_with(
++            api_key="SYNTHETIC_OFFLINE_CREDENTIAL", base_url="https://api.anthropic.com",
++            timeout=30.0, max_retries=0, http_client=http.return_value,
++        )
++        http.assert_called_once_with(follow_redirects=False)
+diff --git a/pyproject.toml b/pyproject.toml
+index bfac5e3083996539f64cd44d9753cd71b6fb03ad..f5271bb934eb39c69e380c5c7cdce3a07431adc7 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -7,6 +7,7 @@ requires-python = ">=3.14"
+ dependencies = [
+     "line-bot-sdk>=3.17.1",
+     "openai>=1.0.0",
++    "anthropic>=1.0.0,<2.0.0",
+     "boto3>=1.28.0",
+     "pytz>=2023.3",
+     "xai-sdk>=1.0.0",
+@@ -35,6 +36,9 @@ line-length = 100
+ select = ["E", "F", "I", "W"]
+ ignore = ["E501"]
+ 
++[tool.ruff.lint.isort]
++known-first-party = ["line_messaging", "markdown_to_line"]
++
+ [tool.mypy]
+ python_version = "3.14"
+ warn_return_any = true
+diff --git a/scripts/claude_live_pilot.py b/scripts/claude_live_pilot.py
+new file mode 100644
+index 0000000000000000000000000000000000000000..92eb454eb77089fe31dae0771dd803514a2ae985
+--- /dev/null
++++ b/scripts/claude_live_pilot.py
+@@ -0,0 +1,208 @@
++"""Manual-only bounded synthetic Claude A/B pilot; never invoke LINE or xAI."""
++
++import argparse
++import json
++import os
++import re
++import sys
++import time
++from pathlib import Path
++
++import anthropic
++import dialect_ab
++
++MODEL = "claude-haiku-5-5"
++MAX_CALLS = 10
++MAX_REQUEST_BYTES = 8192
++MAX_COUNTED_INPUT = 4096
++MAX_BILLED_INPUT = 8192  # 2x token-count estimate headroom, far below 100k.
++MAX_OUTPUT = 2000  # Includes native thinking.
++BUDGET_USD = 0.10
++INPUT_RATE = 0.10 / 1_000_000
++OUTPUT_RATE = 0.50 / 1_000_000
++# Reserve the more expensive >100k rates despite enforcing much smaller input.
++RESERVE_PER_CALL = MAX_BILLED_INPUT * 0.50 / 1_000_000 + MAX_OUTPUT * 2.50 / 1_000_000
++CASES = (
++    ("greeting", [{"role": "user", "content": dialect_ab.INPUTS[0]}], False),
++    ("missing_location", [{"role": "user", "content": dialect_ab.INPUTS[1]}], False),
++    ("explicit_location", [{"role": "user", "content": "梅田で今夜営業している飲食店を調べて"}], True),
++    ("corrected_location", [
++        {"role": "user", "content": "梅田でご飯を食べたい"},
++        {"role": "assistant", "content": "どんなお店がええ？"},
++        {"role": "user", "content": "場所を訂正、梅田じゃなく京都駅周辺で今夜営業中の飲食店を調べて"},
++    ], True),
++    ("simple_chat", [{"role": "user", "content": "今日は仕事が終わってほっとしたよ"}], False),
++)
++
++
++def make_plan(source: Path) -> list[dict]:
++    prompt, tools = dialect_ab.extract_source(source)
++    native_tools = [{"name": t["function"]["name"], "description": t["function"]["description"],
++                     "input_schema": t["function"]["parameters"]} for t in tools]
++    plan = []
++    for case, messages, expected_search in CASES:
++        for variant, system in (("A", prompt), ("B", dialect_ab.without_dialect(prompt))):
++            request = {
++                "model": MODEL, "max_tokens": MAX_OUTPUT, "system": system,
++                "messages": messages, "tools": native_tools,
++                "output_config": {"effort": "low"},
++                "tool_choice": {"type": "auto", "disable_parallel_tool_use": True},
++            }
++            if len(json.dumps(request, ensure_ascii=False).encode()) > MAX_REQUEST_BYTES:
++                raise ValueError("Synthetic request exceeds size bound")
++            plan.append({"case": case, "variant": variant, "expected_search": expected_search,
++                         "request": request})
++    if len(plan) != MAX_CALLS or MAX_CALLS * RESERVE_PER_CALL > BUDGET_USD:
++        raise ValueError("Pilot exceeds total budget")
++    return plan
++
++
++def safe_error(exc: Exception) -> dict:
++    """Allowlist status/type only; never serialize an exception or error body."""
++    category = "invalid_response_or_guard"
++    if isinstance(exc, anthropic.APIStatusError):
++        status = exc.status_code
++        category = {401: "authentication_failed", 403: "permission_or_billing_denied",
++                    404: "model_or_endpoint_not_available", 429: "quota_or_rate_limit",
++                    500: "provider_error", 529: "provider_overloaded"}.get(status, "api_rejected")
++        body = exc.body if isinstance(exc.body, dict) else {}
++        error = body.get("error", body)
++        error = error if isinstance(error, dict) else {}
++        # Inspect only in memory to distinguish a common paid-account blocker.
++        if any(term in str(error.get("message", "")).lower()
++               for term in ("credit balance", "insufficient credit", "billing", "quota")):
++            category = "billing_or_quota_unavailable"
++        kind = error.get("type")
++        result = {"category": category, "http_status": status}
++        if isinstance(kind, str) and re.fullmatch(r"[a-z_]{1,64}", kind):
++            result["api_error_type"] = kind
++        return result
++    if isinstance(exc, anthropic.APITimeoutError):
++        category = "timeout_no_retry"
++    elif isinstance(exc, anthropic.APIConnectionError):
++        category = "connection_failed_no_retry"
++    return {"category": category}
++
++
++def measure_response(response, item: dict, parse_response) -> dict:
++    """Retain visible synthetic output and measurements, exclude all thinking."""
++    usage = response.usage
++    input_tokens, output_tokens = usage.input_tokens, usage.output_tokens
++    if (type(input_tokens) is not int or type(output_tokens) is not int
++            or not 0 <= input_tokens <= MAX_BILLED_INPUT or not 0 <= output_tokens <= MAX_OUTPUT
++            or response.model != MODEL
++            or (usage.cache_creation_input_tokens or 0) != 0
++            or (usage.cache_read_input_tokens or 0) != 0):
++        raise ValueError("Unexpected model or token accounting")
++    record = {
++        "stop_reason": response.stop_reason,
++        "input_tokens": input_tokens, "output_tokens": output_tokens,
++        "thinking_present": any(b.type in ("thinking", "redacted_thinking") for b in response.content),
++        "estimated_usd": round(input_tokens * INPUT_RATE + output_tokens * OUTPUT_RATE, 9),
++    }
++    try:
++        parsed = parse_response(response)
++    except ValueError:
++        record["contract_valid"] = False
++        return record
++    record["contract_valid"] = True
++    record["result"] = parsed
++    record["expected_search_matched"] = parsed["hasToolCall"] == item["expected_search"]
++    return record
++
++
++def run(plan: list[dict], client, output: Path, key: str, parse_response) -> int:
++    records = []
++    report = {
++        "status": "running", "model": MODEL, "effort": "low", "max_tokens": MAX_OUTPUT,
++        "max_calls": MAX_CALLS, "budget_usd": BUDGET_USD,
++        "maximum_reserved_usd": round(MAX_CALLS * RESERVE_PER_CALL, 6),
++        "source_commit": dialect_ab.SOURCE_COMMIT, "source_sha256": dialect_ab.SOURCE_SHA256,
++        "count_token_calls": 0, "model_calls_started": 0, "records": records,
++        "search_executed": False, "line_sent": False, "sdk_retries": 0,
++    }
++    output.mkdir(parents=True, exist_ok=True)
++    for index, item in enumerate(plan):
++        if index >= MAX_CALLS or (index + 1) * RESERVE_PER_CALL > BUDGET_USD:
++            report["status"] = "budget_guard_stopped"
++            break
++        record = {"index": index, "case": item["case"], "variant": item["variant"]}
++        records.append(record)
++        started = time.monotonic()
++        try:
++            request = item["request"]
++            counted = client.messages.count_tokens(**{k: request[k] for k in
++                ("model", "system", "messages", "tools", "tool_choice")})
++            report["count_token_calls"] += 1
++            if type(counted.input_tokens) is not int or not 0 <= counted.input_tokens <= MAX_COUNTED_INPUT:
++                raise ValueError("Input exceeds token guard")
++            record["counted_input_tokens"] = counted.input_tokens
++            report["model_calls_started"] += 1  # Reserve before the network request, even on error.
++            before = time.monotonic()
++            response = client.messages.create(**request)
++            record["api_latency_seconds"] = round(time.monotonic() - before, 4)
++            record.update(measure_response(response, item, parse_response))
++            if key in json.dumps(record, ensure_ascii=False):
++                record.clear()
++                record.update({"index": index, "case": item["case"], "variant": item["variant"]})
++                raise ValueError("Sensitive output rejected")
++            if not record["contract_valid"]:
++                report["status"] = "invalid_contract_stopped_no_retry"
++            # First original-prompt greeting is the sole authentication/model smoke call.
++            # Only a complete visible greeting without a tool continues to the remaining cases.
++            if index == 0 and not record.get("expected_search_matched", False):
++                report["status"] = "smoke_failed_stopped_no_retry"
++        except Exception as exc:
++            record["error"] = safe_error(exc)
++            report["status"] = "api_or_guard_error_stopped_no_retry"
++        record["total_latency_seconds"] = round(time.monotonic() - started, 4)
++        report["estimated_total_usd"] = round(sum(r.get("estimated_usd", 0) for r in records), 9)
++        serialized = json.dumps(report, ensure_ascii=False, indent=2) + "\n"
++        if key in serialized:
++            raise ValueError("Sensitive report rejected")
++        (output / "results.json").write_text(serialized, encoding="utf-8")
++        print(f"case {index + 1}/{MAX_CALLS}: {item['case']} {item['variant']}; {report['status']}")
++        if report["status"] != "running":
++            return 1
++    report["status"] = "complete" if len(records) == MAX_CALLS else report["status"]
++    (output / "results.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
++    return 0 if report["status"] == "complete" else 1
++
++
++def execution_allowed() -> bool:
++    return (dialect_ab.live_execution_allowed()
++            and os.environ.get("GITHUB_REF") == "refs/heads/feature/claude-api")
++
++
++def main() -> int:
++    parser = argparse.ArgumentParser(description=__doc__)
++    parser.add_argument("--execute", action="store_true")
++    args = parser.parse_args()
++    source = Path(__file__).resolve().parents[1] / "lambda" / "ai_processor.py"
++    plan = make_plan(source)
++    if not args.execute:
++        print(f"Prepared {len(plan)} synthetic calls; reserved upper bound ${MAX_CALLS * RESERVE_PER_CALL:.6f}; no API calls")
++        return 0
++    if not execution_allowed():
++        print("Execution requires first-attempt manual Actions dispatch on reviewed feature branch")
++        return 1
++    key = os.environ.pop("ANTHROPIC_API_KEY", "").strip()
++    if not key or any(marker in key.lower() for marker in ("placeholder", "dummy", "replace", "xxxx")):
++        print("Anthropic Environment Secret is absent or a placeholder; no request made")
++        return 1
++    # Only import the pure response parser; no production handler, AWS client,
++    # LINE sender or Grok processor is invoked, and the key stays in memory.
++    sys.path.insert(0, str(source.parent))
++    from claude_provider import parse_claude_response
++    with anthropic.Anthropic(api_key=key, base_url="https://api.anthropic.com", timeout=30,
++                             max_retries=0, http_client=anthropic.DefaultHttpxClient(
++                                 follow_redirects=False, trust_env=False)) as client:
++        return run(plan, client, Path("claude-pilot-results"), key, parse_claude_response)
++
++
++if __name__ == "__main__":
++    try:
++        raise SystemExit(main())
++    except Exception as failure:
++        print(json.dumps({"pilot_stopped": True, **safe_error(failure)}))
++        raise SystemExit(1) from None
+diff --git a/scripts/claude_tool_plan.py b/scripts/claude_tool_plan.py
+new file mode 100644
+index 0000000000000000000000000000000000000000..6af84507b360d4f6938957a37df866ca344c60b7
+--- /dev/null
++++ b/scripts/claude_tool_plan.py
+@@ -0,0 +1,83 @@
++"""Prepare a Claude routing A/B review plan without importing handlers or APIs."""
++
++import argparse
++import json
++from pathlib import Path
++
++import dialect_ab
++
++CASES = (
++    {
++        "id": "greeting",
++        "input": "やっほい",
++        "review": "Direct greeting; no search_with_grok call.",
++    },
++    {
++        "id": "missing_location",
++        "input": "おすすめの飲食店ある?",
++        "review": "Ask the user's location; do not infer Osaka from the character's dialect.",
++    },
++    {
++        "id": "explicit_location",
++        "input": "梅田で今夜営業している飲食店を調べて",
++        "review": "One search_with_grok call with a nonblank query grounded in Umeda and tonight.",
++    },
++    {
++        "id": "current_information",
++        "input": "今日の東京の天気を調べて",
++        "review": "One search_with_grok call grounded in Tokyo and today's weather.",
++    },
++)
++
++
++def make_plan(source: Path) -> dict:
++    """Reuse the pinned A/B prompts and schema; prepare requests, never send them."""
++    prompt, tools = dialect_ab.extract_source(source)
++    prompts = {"A": prompt, "B": dialect_ab.without_dialect(prompt)}
++    claude_tools = [
++        {
++            "name": tool["function"]["name"],
++            "description": tool["function"]["description"],
++            "input_schema": tool["function"]["parameters"],
++        }
++        for tool in tools
++    ]
++    schedule = []
++    for case in CASES:
++        for variant, system in prompts.items():
++            schedule.append({
++                "case": case["id"], "variant": variant, "review": case["review"],
++                "request": {
++                    "model": "claude-haiku-5-5", "max_tokens": 2000,
++                    "output_config": {"effort": "low"}, "system": system,
++                    "messages": [{"role": "user", "content": case["input"]}],
++                    "tools": claude_tools,
++                    "tool_choice": {"type": "auto", "disable_parallel_tool_use": True},
++                },
++            })
++    return {
++        "status": "prepared_no_requests", "provider": "claude",
++        "source_commit": dialect_ab.SOURCE_COMMIT, "source_sha256": dialect_ab.SOURCE_SHA256,
++        "schedule": schedule,
++        "invalid_tool_inputs": [
++            {"query": ""}, {"query": "Ask location"}, {"query": "No search needed"},
++            {"query": "Ask location / No search needed"}, {"query": 42},
++            {"query": "東京 天気", "prompt": None},
++        ],
++        "live_review": "Model routing and location assumptions require separate approval for paid API testing.",
++    }
++
++
++def main() -> int:
++    parser = argparse.ArgumentParser(description=__doc__)
++    parser.add_argument("--output", type=Path, required=True)
++    args = parser.parse_args()
++    source = Path(__file__).resolve().parents[1] / "lambda" / "ai_processor.py"
++    plan = make_plan(source)
++    args.output.write_text(json.dumps(plan, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
++    print("Prepared 8 Claude routing requests; no network calls made")
++    return 0
++
++
++if __name__ == "__main__":
++    raise SystemExit(main())
+diff --git a/scripts/dialect_ab.py b/scripts/dialect_ab.py
+index ff30480b18cb7a0cafb0a6049b153fee0fc0b93c..ba16985ac5b5fdc5f881b2ba9db0e9f721c4ad1d 100644
+--- a/scripts/dialect_ab.py
++++ b/scripts/dialect_ab.py
+@@ -11,8 +11,8 @@ import random
+ import re
+ import time
+ 
+-SOURCE_COMMIT = "3ef6fdc1794cd7952b3ce25c41af8ed4e5ed5185"
+-SOURCE_SHA256 = "eaed80e0c2ecd0841c267d85d36948b2a7dbacad92dff6adb9afd9ca1fe68ca1"
++SOURCE_COMMIT = "2b6c45e10c3b3dbccd5bfe3e14d297b4b5fb5cdc"
++SOURCE_SHA256 = "4f63708f46ed1892d4487d6182f86d8281a7c8d01bb5112261094d906a070e9d"
+ INPUTS = ("やっほい", "おすすめの飲食店ある?")
+ SETTINGS = {
+     "model": "openai/gpt-oss-20b",
+diff --git a/scripts/tests/test_claude_live_pilot.py b/scripts/tests/test_claude_live_pilot.py
+new file mode 100644
+index 0000000000000000000000000000000000000000..a2991c1c4c56f00e0c62317b247e8e59dbf6c573
+--- /dev/null
++++ b/scripts/tests/test_claude_live_pilot.py
+@@ -0,0 +1,163 @@
++"""Real SDK mocked transport and in-memory files; never use credentials/network."""
++
++import json
++import os
++import sys
++import unittest
++from pathlib import Path
++from unittest.mock import patch
++
++import anthropic
++import httpx2
++
++ROOT = Path(__file__).resolve().parents[2]
++sys.path.insert(0, str(ROOT / "scripts"))
++sys.path.insert(0, str(ROOT / "lambda"))
++import claude_live_pilot as pilot  # noqa: E402
++from claude_provider import parse_claude_response  # noqa: E402
++
++
++class MemoryOutput:
++    def __init__(self):
++        self.text = ""
++
++    def mkdir(self, **kwargs):
++        pass
++
++    def __truediv__(self, name):
++        if name != "results.json":
++            raise AssertionError("Unexpected file")
++        return self
++
++    def write_text(self, text, **kwargs):
++        self.text = text
++
++
++class TestClaudeLivePilot(unittest.TestCase):
++    def setUp(self):
++        self.plan = pilot.make_plan(ROOT / "lambda" / "ai_processor.py")
++        self.requests = []
++        self.status = 200
++        self.creation_status = 200
++        self.count = 1000
++        self.force_tool = False
++        self.visible_text = "こんにちは"
++        self.output = MemoryOutput()
++        self.client = anthropic.Anthropic(
++            api_key="SYNTHETIC_OFFLINE_CREDENTIAL", max_retries=0,
++            http_client=anthropic.DefaultHttpxClient(transport=httpx2.MockTransport(self.handle)),
++        )
++        self.addCleanup(self.client.close)
++
++    def handle(self, request):
++        data = json.loads(request.content)
++        self.requests.append((request.url.path, data))
++        if self.status != 200:
++            return httpx2.Response(self.status, json={"type": "error", "error": {
++                "type": "authentication_error", "message": "SYNTHETIC_OFFLINE_CREDENTIAL",
++            }})
++        if request.url.path.endswith("count_tokens"):
++            return httpx2.Response(200, json={"input_tokens": self.count})
++        if self.creation_status != 200:
++            return httpx2.Response(self.creation_status, json={"type": "error", "error": {
++                "type": "invalid_request_error", "message": "SYNTHETIC_OFFLINE_CREDENTIAL",
++            }})
++        item = self.plan[sum(path == "/v1/messages" for path, _ in self.requests) - 1]
++        content = [{"type": "thinking", "thinking": "PRIVATE_THOUGHT", "signature": "PRIVATE_SIGNATURE"}]
++        if item["expected_search"] or self.force_tool:
++            content.append({"type": "tool_use", "name": "search_with_grok", "id": "toolu_test",
++                            "input": {"query": "京都駅周辺 今夜 営業", "prompt": "候補を教えて"}})
++        else:
++            content.append({"type": "text", "text": self.visible_text})
++        return httpx2.Response(200, json={
++            "id": "msg_synthetic", "type": "message", "role": "assistant", "model": pilot.MODEL,
++            "content": content, "stop_reason": "tool_use" if item["expected_search"] or self.force_tool else "end_turn",
++            "stop_sequence": None, "usage": {"input_tokens": 1000, "output_tokens": 100},
++        })
++
++    def run_pilot(self):
++        return pilot.run(self.plan, self.client, self.output, "SYNTHETIC_OFFLINE_CREDENTIAL", parse_claude_response)
++
++    def test_plan_balances_original_ab_and_history_with_bounded_cost(self):
++        self.assertEqual(len(self.plan), 10)
++        self.assertLess(pilot.MAX_CALLS * pilot.RESERVE_PER_CALL, 0.10)
++        for index in range(0, 10, 2):
++            a, b = self.plan[index:index + 2]
++            self.assertEqual((a["variant"], b["variant"]), ("A", "B"))
++            self.assertEqual(a["request"]["messages"], b["request"]["messages"])
++            self.assertEqual(a["request"]["tools"], b["request"]["tools"])
++            self.assertEqual(a["request"]["max_tokens"], 2000)
++        self.assertEqual(self.plan[6]["request"]["messages"][-1]["role"], "user")
++        self.assertEqual(len(self.plan[6]["request"]["messages"]), 3)
++
++    def test_complete_real_sdk_mock_excludes_secret_and_thinking(self):
++        self.assertEqual(self.run_pilot(), 0)
++        result = json.loads(self.output.text)
++        self.assertEqual(result["model_calls_started"], 10)
++        self.assertEqual(result["count_token_calls"], 10)
++        self.assertEqual(len(self.requests), 20)
++        self.assertFalse(result["search_executed"])
++        self.assertFalse(result["line_sent"])
++        self.assertNotIn("PRIVATE_", self.output.text)
++        self.assertNotIn("SYNTHETIC_OFFLINE_CREDENTIAL", self.output.text)
++        self.assertTrue(all(r["contract_valid"] for r in result["records"]))
++
++    def test_http_error_stops_at_first_request_with_no_body_export_or_retry(self):
++        for status in (400, 401, 404, 429, 500, 529):
++            with self.subTest(status=status):
++                self.requests.clear()
++                self.status = status
++                self.assertEqual(self.run_pilot(), 1)
++                self.assertEqual(len(self.requests), 1)
++                self.assertNotIn("SYNTHETIC_OFFLINE_CREDENTIAL", self.output.text)
++                self.assertEqual(json.loads(self.output.text)["model_calls_started"], 0)
++
++    def test_count_guard_prevents_any_paid_call(self):
++        self.count = pilot.MAX_COUNTED_INPUT + 1
++        self.assertEqual(self.run_pilot(), 1)
++        self.assertEqual(len(self.requests), 1)
++        self.assertEqual(json.loads(self.output.text)["model_calls_started"], 0)
++
++    def test_paid_api_error_stops_after_one_attempt_without_retry(self):
++        for status in (400, 401, 429, 500):
++            with self.subTest(status=status):
++                self.requests.clear()
++                self.creation_status = status
++                self.assertEqual(self.run_pilot(), 1)
++                self.assertEqual(len(self.requests), 2)
++                self.assertEqual(json.loads(self.output.text)["model_calls_started"], 1)
++                self.assertNotIn("SYNTHETIC_OFFLINE_CREDENTIAL", self.output.text)
++
++    def test_smoke_unexpected_tool_stops_after_one_paid_call(self):
++        self.force_tool = True
++        self.assertEqual(self.run_pilot(), 1)
++        result = json.loads(self.output.text)
++        self.assertEqual(result["status"], "smoke_failed_stopped_no_retry")
++        self.assertEqual(result["model_calls_started"], 1)
++        self.assertEqual(len(self.requests), 2)
++
++    def test_secret_returned_as_visible_output_is_never_saved(self):
++        self.visible_text = "SYNTHETIC_OFFLINE_CREDENTIAL"
++        self.assertEqual(self.run_pilot(), 1)
++        self.assertNotIn(self.visible_text, self.output.text)
++        self.assertEqual(len(self.requests), 2)
++
++    def test_dispatch_and_feature_branch_required_no_rerun(self):
++        environment = {"GITHUB_ACTIONS": "true", "GITHUB_EVENT_NAME": "workflow_dispatch",
++                       "GITHUB_RUN_ATTEMPT": "1", "GITHUB_REPOSITORY": "dj-oyu/echo-line-bot",
++                       "GITHUB_REF": "refs/heads/feature/claude-api"}
++        with patch.dict(os.environ, environment):
++            self.assertTrue(pilot.execution_allowed())
++            for key, value in (("GITHUB_REF", "refs/heads/main"), ("GITHUB_RUN_ATTEMPT", "2"),
++                               ("GITHUB_EVENT_NAME", "push")):
++                with patch.dict(os.environ, {key: value}):
++                    self.assertFalse(pilot.execution_allowed())
++
++    def test_main_offline_preparation_never_constructs_client(self):
++        with patch.object(sys, "argv", ["claude_live_pilot.py"]), patch.object(anthropic, "Anthropic") as client:
++            self.assertEqual(pilot.main(), 0)
++            client.assert_not_called()
++
++
++if __name__ == "__main__":
++    unittest.main()
+diff --git a/scripts/tests/test_claude_secret_sync.py b/scripts/tests/test_claude_secret_sync.py
+new file mode 100644
+index 0000000000000000000000000000000000000000..4a39284c93023051073714c672f3974ae79d113f
+--- /dev/null
++++ b/scripts/tests/test_claude_secret_sync.py
+@@ -0,0 +1,48 @@
++"""Exercise the exact deployment shell step with fake AWS, on supported POSIX."""
++
++import os
++import subprocess
++import unittest
++from pathlib import Path
++
++ROOT = Path(__file__).resolve().parents[2]
++
++
++@unittest.skipUnless(os.name == "posix", "Deployment step requires the normal Linux shell")
++class TestClaudeSecretSync(unittest.TestCase):
++    def test_missing_and_present_values_preserve_existing_secret(self):
++        source = (ROOT / ".github" / "workflows" / "deploy.yml").read_text(encoding="utf-8")
++        step = source.split("    - name: Update or Create Claude Secret\n", 1)[1]
++        step = step.split("      run: |\n", 1)[1].split("    - name: Deploy to AWS", 1)[0]
++        code = "\n".join(line[8:] for line in step.splitlines() if line.startswith("        "))
++        for exists, value, expected in (
++            (True, "", ""), (False, "", "create-secret"),
++            (True, "SYNTHETIC_TEST_VALUE", "update-secret"),
++            (False, "SYNTHETIC_TEST_VALUE", "create-secret"),
++        ):
++            with self.subTest(exists=exists, has_value=bool(value)):
++                fake = '''aws() {
++                  [ "$1" = secretsmanager ] || return 99
++                  if [ "$2" = describe-secret ]; then return "$EXISTS_STATUS"; fi
++                  case "$2" in
++                    update-secret|create-secret)
++                      [ "$5" = --secret-string ] || return 98
++                      payload_file="${6#file://}"
++                      [ "$(cat "$payload_file")" = "$EXPECTED_PAYLOAD" ] || return 97
++                      echo "$2" >&2;;
++                    *) return 96;;
++                  esac
++                }
++                '''
++                environment = {**os.environ, "ANTHROPIC_API_KEY": value,
++                               "EXISTS_STATUS": "0" if exists else "1",
++                               "EXPECTED_PAYLOAD": value or "PLACEHOLDER_NOT_A_VALID_ANTHROPIC_API_KEY_REPLACE_IN_GITHUB_ENV_ENV"}
++                result = subprocess.run(["bash", "-s"], input=fake + code, env=environment,
++                                        capture_output=True, text=True, timeout=10)
++                self.assertEqual(result.returncode, 0, result.stderr)
++                self.assertEqual(result.stderr.strip(), expected)
++                self.assertNotIn("SYNTHETIC_TEST_VALUE", result.stdout + result.stderr)
++
++
++if __name__ == "__main__":
++    unittest.main()
+diff --git a/scripts/tests/test_claude_tool_plan.py b/scripts/tests/test_claude_tool_plan.py
+new file mode 100644
+index 0000000000000000000000000000000000000000..43d5d9996e585534c6a3b85343d94093d80acd21
+--- /dev/null
++++ b/scripts/tests/test_claude_tool_plan.py
+@@ -0,0 +1,35 @@
++"""Review-plan tests are offline; no production modules or credentials."""
++
++import sys
++import unittest
++from pathlib import Path
++
++ROOT = Path(__file__).resolve().parents[2]
++sys.path.insert(0, str(ROOT / "scripts"))
++import claude_tool_plan  # noqa: E402 - load the script directory without application imports
++import dialect_ab  # noqa: E402
++
++
++class TestClaudeToolPlan(unittest.TestCase):
++    def test_cases_cover_greeting_location_and_current_information(self):
++        plan = claude_tool_plan.make_plan(ROOT / "lambda" / "ai_processor.py")
++        self.assertEqual(plan["status"], "prepared_no_requests")
++        self.assertEqual(len(plan["schedule"]), 8)
++        self.assertEqual({case["case"] for case in plan["schedule"]}, {
++            "greeting", "missing_location", "explicit_location", "current_information",
++        })
++        self.assertEqual(plan["source_sha256"], dialect_ab.SOURCE_SHA256)
++        self.assertEqual(len(plan["invalid_tool_inputs"]), 6)
++
++    def test_same_prompts_and_tools_are_used_with_claude_native_parameters(self):
++        prompt, tools = dialect_ab.extract_source(ROOT / "lambda" / "ai_processor.py")
++        plan = claude_tool_plan.make_plan(ROOT / "lambda" / "ai_processor.py")
++        for case in plan["schedule"]:
++            request = case["request"]
++            expected = prompt if case["variant"] == "A" else dialect_ab.without_dialect(prompt)
++            self.assertEqual(request["system"], expected)
++            self.assertEqual(request["model"], "claude-haiku-5-5")
++            self.assertEqual(request["tools"][0]["input_schema"], tools[0]["function"]["parameters"])
++            self.assertNotIn("temperature", request)
++            self.assertNotIn("reasoning_effort", request)
++            self.assertEqual(request["tool_choice"], {"type": "auto", "disable_parallel_tool_use": True})
+diff --git a/scripts/verify-layer-imports.py b/scripts/verify-layer-imports.py
+index df69c601c46be5b02a67d007987141600ad41031..39e979085f89da5737bcd34098030b445047147b 100644
+--- a/scripts/verify-layer-imports.py
++++ b/scripts/verify-layer-imports.py
+@@ -20,6 +20,7 @@ import sys
+ import unittest.mock
+ 
+ HANDLERS = [
++    "claude_provider",
+     "ai_processor",
+     "grok_processor",
+     "response_sender",
+diff --git a/uv.lock b/uv.lock
+index bc8b96907468fee8cae0cd8c745fe9fc7c6ddf61..c6087f58c4a3f8bc61bc318168abd62eced06402 100644
+--- a/uv.lock
++++ b/uv.lock
+@@ -1,5 +1,5 @@
+ version = 1
+-revision = 3
++revision = 5
+ requires-python = ">=3.14"
+ resolution-markers = [
+     "python_full_version >= '3.15'",
+@@ -103,6 +103,24 @@ wheels = [
+     { url = "https://files.pythonhosted.org/packages/99/91/8acff4f5e50511b911bbccb72b8628a49c68ce14148cd9f6431094859a90/annotated_types-0.8.0-py3-none-any.whl", hash = "sha256:f072f4d804ea359e4eaf198b1af7a8b0943881a87f31bb764f8bf219bb9419e0", size = 13427, upload-time = "2026-07-23T20:16:12.938Z" },
+ ]
+ 
++[[package]]
++name = "anthropic"
++version = "1.12.0"
++source = { registry = "https://pypi.org/simple" }
++dependencies = [
++    { name = "anyio" },
++    { name = "docstring-parser" },
++    { name = "httpx2" },
++    { name = "jiter" },
++    { name = "pydantic" },
++    { name = "sniffio" },
++    { name = "typing-extensions" },
++]
++sdist = { url = "https://files.pythonhosted.org/packages/9e/12/8d257f79868dca43175b1860618273ef52bb6c241bef29adf8808c8836ec/anthropic-1.12.0.tar.gz", hash = "sha256:a54f6a63e3a4ad94acca6fc9528da531a523bfc846d304d02d7f190d6b7c9b48", size = 1556079, upload-time = "2026-10-07T17:57:19.831Z" }
++wheels = [
++    { url = "https://files.pythonhosted.org/packages/ef/f8/799d742b26ebfc6dc67800fe4f17a5851c1c694c719cfa668de75a910be8/anthropic-1.12.0-py3-none-any.whl", hash = "sha256:e7781a0c88452e695ff5524b9daa490e9c0d47c1529cd0bc14370973e48b12d4", size = 1919670, upload-time = "2026-10-07T17:57:18.042Z" },
++]
++
+ [[package]]
+ name = "anyio"
+ version = "4.14.2"
+@@ -373,11 +391,21 @@ wheels = [
+     { url = "https://files.pythonhosted.org/packages/84/d0/205d54408c08b13550c733c4b85429e7ead111c7f0014309637425520a9a/deprecated-1.3.1-py2.py3-none-any.whl", hash = "sha256:597bfef186b6f60181535a29fbe44865ce137a5079f295b479886c82729d5f3f", size = 11298, upload-time = "2025-10-30T08:19:00.758Z" },
+ ]
+ 
++[[package]]
++name = "docstring-parser"
++version = "0.18.0"
++source = { registry = "https://pypi.org/simple" }
++sdist = { url = "https://files.pythonhosted.org/packages/e0/4d/f332313098c1de1b2d2ff91cf2674415cc7cddab2ca1b01ae29774bd5fdf/docstring_parser-0.18.0.tar.gz", hash = "sha256:292510982205c12b1248696f44959db3cdd1740237a968ea1e2e7a900eeb2015", size = 29341, upload-time = "2026-04-14T04:09:19.867Z" }
++wheels = [
++    { url = "https://files.pythonhosted.org/packages/a7/5f/ed01f9a3cdffbd5a008556fc7b2a08ddb1cc6ace7effa7340604b1d16699/docstring_parser-0.18.0-py3-none-any.whl", hash = "sha256:b3fcbed555c47d8479be0796ef7e19c2670d428d72e96da63f3a40122860374b", size = 22484, upload-time = "2026-04-14T04:09:18.638Z" },
++]
++
+ [[package]]
+ name = "echo-line-bot"
+ version = "0.1.0"
+ source = { virtual = "." }
+ dependencies = [
++    { name = "anthropic" },
+     { name = "boto3" },
+     { name = "line-bot-sdk" },
+     { name = "markdown-it-py" },
+@@ -397,6 +425,7 @@ dev = [
+ 
+ [package.metadata]
+ requires-dist = [
++    { name = "anthropic", specifier = ">=1.0.0,<2.0.0" },
+     { name = "boto3", specifier = ">=1.28.0" },
+     { name = "line-bot-sdk", specifier = ">=3.17.1" },
+     { name = "markdown-it-py", specifier = ">=3.0.0" },

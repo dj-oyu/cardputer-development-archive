@@ -1,0 +1,26 @@
+{
+  "16": {
+    "maxDifference": 1048576,
+    "tripleMagnitudeBound": 6917529027641081856,
+    "signedBitsForBound": 64,
+    "ratioCrossProductBound": 47852207848256971424537054170092404736,
+    "signedBitsForCrossProduct": 127,
+    "normalCrossComponentBound": 2199023255552,
+    "lengthSquaredBound": 3298534883328,
+    "epsilonTicks": 0.65536
+  },
+  "20": {
+    "maxDifference": 16777216,
+    "tripleMagnitudeBound": 28334198897217871282176,
+    "signedBitsForBound": 76,
+    "ratioCrossProductBound": 802826827147102433095285857815341014215294976,
+    "signedBitsForCrossProduct": 151,
+    "normalCrossComponentBound": 562949953421312,
+    "lengthSquaredBound": 844424930131968,
+    "epsilonTicks": 10.48576
+  },
+  "sourceHashes": {
+    "fox-v3-indexed-bvh-bounds/private-build/visibility/visibility.c": "a516325cb207a50e4dd34d0fa4e28d321499b2c43d2ad617587ca00bed037b88",
+    "fox-v3-indexed-bvh-bounds/private-build/visibility/visibility.h": "5744b70731fa86fdce43d9d6092c4b7cb759a4a96056fd1a2be2eb8b07e8d1ce"
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "front": {
+    "11": {
+      "directSpecular": {
+        "foregroundRadianceFractionByCase": {
+          "baseline": 0.07170991683419675,
+          "direction": 0.07641798318427417
+        },
+        "stableDeltaLumaL2RelativeToCombined": 0.06386367862806401,
+        "notAdditiveExplainedVariance": true
+      },
+      "indirectDiffuse": {
+        "foregroundRadianceFractionByCase": {
+          "baseline": 0.22251376304104117,
+          "direction": 0.22650906747673694
+        },
+        "stableDeltaLumaL2RelativeToCombined": 0.13513671513437636,
+        "notAdditiveExplainedVariance": true
+      }
+    },
+    "29": {
+      "directSpecular": {
+        "foregroundRadianceFractionByCase": {
+          "baseline": 0.07183111989951547,
+          "direction": 0.07651262304497099
+        },
+        "stableDeltaLumaL2RelativeToCombined": 0.06454797171943935,
+        "notAdditiveExplainedVariance": true
+      },
+      "indirectDiffuse": {
+        "foregroundRadianceFractionByCase": {
+          "baseline": 0.22221252502474576,
+          "direction": 0.22650720951677403
+        },
+        "stableDeltaLumaL2RelativeToCombined": 0.13443156135479656,
+        "notAdditiveExplainedVariance": true
+      }
+    }
+  },
+  "oblique": {
+    "11": {
+      "directSpecular": {
+        "foregroundRadianceFractionByCase": {
+          "baseline": 0.07286678057096763,
+          "direction": 0.08241210493855326
+        },
+        "stableDeltaLumaL2RelativeToCombined": 0.06708537959452636,
+        "notAdditiveExplainedVariance": true
+      },
+      "indirectDiffuse": {
+        "foregroundRadianceFractionByCase": {
+          "baseline": 0.21848500976218066,
+          "direction": 0.22453840146921025
+        },
+        "stableDeltaLumaL2RelativeToCombined": 0.14066035991807377,
+        "notAdditiveExplainedVariance": true
+      }
+    },
+    "29": {
+      "directSpecular": {
+        "foregroundRadianceFractionByCase": {
+          "baseline": 0.07282613046933098,
+          "direction": 0.08242724566899275
+        },
+        "stableDeltaLumaL2RelativeToCombined": 0.06717399916960377,
+        "notAdditiveExplainedVariance": true
+      },
+      "indirectDiffuse": {
+        "foregroundRadianceFractionByCase": {
+          "baseline": 0.21845771203005598,
+          "direction": 0.2244806656091455
+        },
+        "stableDeltaLumaL2RelativeToCombined": 0.14069880192826476,
+        "notAdditiveExplainedVariance": true
+      }
+    }
+  }
+}

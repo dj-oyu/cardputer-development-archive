@@ -1,0 +1,22 @@
+0000000000000e60 <co_append_pixel>:
+     e60:	31 d2                	xor    %edx,%edx
+     e62:	e9 79 f2 ff ff       	jmp    e0 <append_pixel>
+     e67:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+     e6e:	00 00 
+
+0000000000000e70 <co_append_pixel_normal_pair>:
+     e70:	ba 01 00 00 00       	mov    $0x1,%edx
+     e75:	e9 66 f2 ff ff       	jmp    e0 <append_pixel>
+     e7a:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+
+0000000000002290 <ksn_mesh_pixel_append>:
+    2290:	45 31 c9             	xor    %r9d,%r9d
+    2293:	45 0f b7 c0          	movzwl %r8w,%r8d
+    2297:	e9 a4 df ff ff       	jmp    240 <pixel_append>
+    229c:	0f 1f 40 00          	nopl   0x0(%rax)
+
+00000000000022a0 <ksn_mesh_pixel_append_normal_pair>:
+    22a0:	41 b9 01 00 00 00    	mov    $0x1,%r9d
+    22a6:	45 0f b7 c0          	movzwl %r8w,%r8d
+    22aa:	e9 91 df ff ff       	jmp    240 <pixel_append>
+    22af:	90                   	nop

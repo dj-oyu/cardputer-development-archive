@@ -1,0 +1,282 @@
+{
+  "fox-v3-boundary-bh-ab-core/OFFSET_ONLY.diff": {
+    "sha256": "12c3b13355f1c7f53be7f8a71f85a659b6ea6165c7badce6f7d9e63cce1b9010",
+    "bytes": 1408
+  },
+  "fox-v3-boundary-bh-ab-core/SOURCE_FREEZE.json": {
+    "sha256": "8ce9d1d376db50d254bab3db6c2f1ee1da2d52a5e6d46dfeea54a6828aad5323",
+    "bytes": 8808
+  },
+  "fox-v3-boundary-bh-ab-core/product/main/ui/kasane/ksn_boundary_aa_impl.inc": {
+    "sha256": "9ac3d50f5beedd1c62df8bf79c913a5af217ea6fc7821ec7e9a72a18ef1a796c",
+    "bytes": 15378
+  },
+  "fox-v3-boundary-bh-ab-core/tests/run.sh": {
+    "sha256": "1edeafd9054fc4b474197da7088eb92f7fa8c796eedacaea6081c4390d5ead0b",
+    "bytes": 434
+  },
+  "fox-v3-boundary-bh-ab-core/tests/sanitizer-result.json": {
+    "sha256": "fb001511d37cae57ba9bf09a891f961a2772a0bd5c7ce89aaf6bd800b130ed85",
+    "bytes": 406
+  },
+  "fox-v3-boundary-bh-ab-core/tests/test_boundary_aa.c": {
+    "sha256": "6e60efadd62d5b04342c7fe5e47879fc5fa93b3ff35e23eb59cb09bc36b6d59d",
+    "bytes": 9631
+  },
+  "fox-v3-boundary-bh-ab-core/tests/test_boundary_aa.json": {
+    "sha256": "fb001511d37cae57ba9bf09a891f961a2772a0bd5c7ce89aaf6bd800b130ed85",
+    "bytes": 406
+  },
+  "fox-v3-boundary-bh-ab-core/tests/test_hidden_failure.c": {
+    "sha256": "30282246b350b7cd1aaa08e0240cd7bfeb13dc1a4e3439880af9399bd40d8954",
+    "bytes": 3926
+  },
+  "fox-v3-boundary-bh-ab-core/tests/test_hidden_failure.json": {
+    "sha256": "aa5980650afb34b9ca8f97fa0dbaebbcdafe720fc884d2a303ca568169817a77",
+    "bytes": 475
+  },
+  "fox-v3-boundary-bh-ab-evaluation/AB_CONTRACT.json": {
+    "sha256": "a98de09d445d384b8dc2392a07e7ea5a38c88d596a5f0cd72e9b2293ccab34a8",
+    "bytes": 1090
+  },
+  "fox-v3-boundary-bh-ab-evaluation/A_REPLAY_PROOF.json": {
+    "sha256": "7be776bd46ea12340e2c5d8fa5c04725080ece10c794e691911925abe059f9ab",
+    "bytes": 20210
+  },
+  "fox-v3-boundary-bh-ab-evaluation/INTEGRATION_FREEZE-v1.json": {
+    "sha256": "882b0de8ad82c264704aef917122a85597daed6ca70084c2ad795ac951609adb",
+    "bytes": 2016
+  },
+  "fox-v3-boundary-bh-ab-evaluation/INTEGRATION_FREEZE.json": {
+    "sha256": "c17501d3c8ef2391044ace25cc99a865456cd2e7f375456d38fe22aa3400d3d5",
+    "bytes": 2027
+  },
+  "fox-v3-boundary-bh-ab-evaluation/REPORT.md": {
+    "sha256": "b408cbbd899564f5b2c9f30c991bec775ab24412e18dea83dfdef94ab3fe713a",
+    "bytes": 4808
+  },
+  "fox-v3-boundary-bh-ab-evaluation/RHO_GUARD_REPRODUCTION.json": {
+    "sha256": "bce53667562a9b075ec6cd1c64a40b2f901708591330ee65c56d65627e5be836",
+    "bytes": 263
+  },
+  "fox-v3-boundary-bh-ab-evaluation/actual-A/PREPARED.json": {
+    "sha256": "7f6e680da181bdc8da81b1e40f5f48b83d32fc9b2e228a686d6fd288074b5673",
+    "bytes": 588
+  },
+  "fox-v3-boundary-bh-ab-evaluation/actual-A/input-hashes.json": {
+    "sha256": "bdee1b91c5da2d3a092d28433f51b3d785b1a294156c7e61c02b38e586c6cb81",
+    "bytes": 17912
+  },
+  "fox-v3-boundary-bh-ab-evaluation/actual-A/ledger-contract.json": {
+    "sha256": "c03e71406643a96d2080015570f920f19a03ae3287ffbbf96ce075829d875064",
+    "bytes": 1929
+  },
+  "fox-v3-boundary-bh-ab-evaluation/actual-A/off/COMPLETED.json": {
+    "sha256": "39969fb2136ff62039fd86f0994546cc32bdac5e1600ede06f28db2167b1a3c3",
+    "bytes": 83178
+  },
+  "fox-v3-boundary-bh-ab-evaluation/actual-A/on/COMPLETED.json": {
+    "sha256": "ac6030b26dc9c0fa4f9db9513d11cbbdd119929989e7ac06b50b045f6bdf3c6d",
+    "bytes": 83276
+  },
+  "fox-v3-boundary-bh-ab-evaluation/actual-B/PREPARED.json": {
+    "sha256": "6427dff03f1be541960c07a27acc09b5bf9a4b03a4e41ca17e0bd33a5ef3eed9",
+    "bytes": 588
+  },
+  "fox-v3-boundary-bh-ab-evaluation/actual-B/input-hashes.json": {
+    "sha256": "fc8729fcbc6b0bb7e5c3ef43abcdf81a5d70915b0559466bc2b961d57b2d2d32",
+    "bytes": 17912
+  },
+  "fox-v3-boundary-bh-ab-evaluation/actual-B/ledger-contract.json": {
+    "sha256": "0e638c2137773f623f61b6d1e7d1484b044be4737cdecce763657ef93aefc0b3",
+    "bytes": 1881
+  },
+  "fox-v3-boundary-bh-ab-evaluation/actual-B/off/COMPLETED.json": {
+    "sha256": "3733053537b1dff2e1ddf44723abad95b9a1de7acd52225f17604b037e4d15a8",
+    "bytes": 83182
+  },
+  "fox-v3-boundary-bh-ab-evaluation/actual-B/on/FAILED.json": {
+    "sha256": "08c2c48a99e9cd6771689ef89a64cab01e5891306999e73ea8235c9392bcae52",
+    "bytes": 530
+  },
+  "fox-v3-boundary-bh-ab-evaluation/actual-B/on/private-partial/native-front-baseline.aa.json": {
+    "sha256": "9e4184159790530048dc660f36de088f61df6a4ea869e19df770a3e3cc9530ab",
+    "bytes": 1788
+  },
+  "fox-v3-boundary-bh-ab-evaluation/code/aa_contract.py": {
+    "sha256": "baad740f12bc935daf5e167de84e8c68a80fc3930cf1a235cd002b50c9e81b1e",
+    "bytes": 3114
+  },
+  "fox-v3-boundary-bh-ab-evaluation/code/audit_sample_positions.py": {
+    "sha256": "3f19ffc938ce9e2ae68833a24966de331c169eefa78afd74943e100592995520",
+    "bytes": 2527
+  },
+  "fox-v3-boundary-bh-ab-evaluation/code/audit_samples.py": {
+    "sha256": "5def1fbb05e26ecb5c30ed26357ee87e23be3e024ad0cabc64f8d3928b441a35",
+    "bytes": 4410
+  },
+  "fox-v3-boundary-bh-ab-evaluation/code/benchmark.py": {
+    "sha256": "c85c7bb8953b33c19f161d6d364975566c1b490e5bcaffcd4d3d2311fa76be8e",
+    "bytes": 3185
+  },
+  "fox-v3-boundary-bh-ab-evaluation/code/benchmark_ab.py": {
+    "sha256": "aae9b196f5773fa8f4d8c7596b150fcb282e48ff6a5a32e00a81f7eefade5ff6",
+    "bytes": 3592
+  },
+  "fox-v3-boundary-bh-ab-evaluation/code/close_ab.py": {
+    "sha256": "a57059b1ed9e9ab285bdca31b90fac958dbb36d5c4636521d0dd226abf470c6a",
+    "bytes": 1860
+  },
+  "fox-v3-boundary-bh-ab-evaluation/code/compare_metrics.py": {
+    "sha256": "53afec9f6ca41edd5122ec0be6ca96976af03d217f234eb7d600937a764cf6b7",
+    "bytes": 1816
+  },
+  "fox-v3-boundary-bh-ab-evaluation/code/diagnose_failure.py": {
+    "sha256": "1759f3d7df9918fea687a1d8cd2659bfcce101960f46b49ab7a46d092bf119d0",
+    "bytes": 1549
+  },
+  "fox-v3-boundary-bh-ab-evaluation/code/diagnose_failure_canonical.py": {
+    "sha256": "2b48fae04e2f2cd141f882ffa7b23f6e9f5a107e85a08e85871f7cb5f260867a",
+    "bytes": 1629
+  },
+  "fox-v3-boundary-bh-ab-evaluation/code/freeze_bundle.py": {
+    "sha256": "936f3888bdb4f40bee080fa1c2ac39af23a8a7cbc8a8554c75103580f43a4eb2",
+    "bytes": 2725
+  },
+  "fox-v3-boundary-bh-ab-evaluation/code/generate_identity.py": {
+    "sha256": "e4897cb93678b33a03f9a0a4523716b527ef7bb3b8c9a3ce00d259f3d86710e0",
+    "bytes": 3738
+  },
+  "fox-v3-boundary-bh-ab-evaluation/code/prepare_a.py": {
+    "sha256": "11441c145b31734f2a88964a4e469ca142591f9d53e1c41839a70f5dbd90d634",
+    "bytes": 4075
+  },
+  "fox-v3-boundary-bh-ab-evaluation/code/prepare_run.py": {
+    "sha256": "3ce70bc78d7e9565c429fcb583c923f78673e263d4dae2a1b1c4ea3862cf238e",
+    "bytes": 4072
+  },
+  "fox-v3-boundary-bh-ab-evaluation/code/reproduce_rho_guard.c": {
+    "sha256": "1c5a245956bde5dc084753da863ec912659977ea676263ecbfd170b39e59b483",
+    "bytes": 1686
+  },
+  "fox-v3-boundary-bh-ab-evaluation/code/run_actual.py": {
+    "sha256": "340aca0afcf8fa643cb8c0e70cbe7192d9340c6e04bce17c98a1540b77a3f363",
+    "bytes": 6379
+  },
+  "fox-v3-boundary-bh-ab-evaluation/code/score_actual.py": {
+    "sha256": "d86c3a4cd589cdeba92c8069c86ed765859a4e0200d7fe7b158ef782e5dc0435",
+    "bytes": 5600
+  },
+  "fox-v3-boundary-bh-ab-evaluation/code/score_actual_v2.py": {
+    "sha256": "6257b3cbfecc7c4537f3779d73b5e47fa0437b5c101c3d28ad06fc31f23a4c91",
+    "bytes": 4249
+  },
+  "fox-v3-boundary-bh-ab-evaluation/code/summarize.py": {
+    "sha256": "9fa15802aaf994be9d49552745eb4679877de2627af535c011978627e9257be3",
+    "bytes": 2828
+  },
+  "fox-v3-boundary-bh-ab-evaluation/code/summarize_ab.py": {
+    "sha256": "8719ebc26b099a937e7e866d5d203efb28bf468fa43707145f1007516ca610d1",
+    "bytes": 2924
+  },
+  "fox-v3-boundary-bh-ab-evaluation/failure-diagnostic/SUMMARY.json": {
+    "sha256": "84c25430d1f31ef3a2c3f8a708399c8f92d0786849ef61c491c7c9000b7c4160",
+    "bytes": 427
+  },
+  "fox-v3-boundary-bh-ab-evaluation/failure-diagnostic/instrument-only.diff": {
+    "sha256": "e4ced658a5ba7579a82d14df5ee271242215b234ede8284c81d4b946f8a233c7",
+    "bytes": 26632
+  },
+  "fox-v3-boundary-bh-ab-evaluation/reviews/core-asan.json": {
+    "sha256": "fb001511d37cae57ba9bf09a891f961a2772a0bd5c7ce89aaf6bd800b130ed85",
+    "bytes": 406
+  },
+  "fox-v3-boundary-bh-ab-evaluation/reviews/core-o2.json": {
+    "sha256": "fb001511d37cae57ba9bf09a891f961a2772a0bd5c7ce89aaf6bd800b130ed85",
+    "bytes": 406
+  },
+  "fox-v3-boundary-bh-ab-evaluation/reviews/core-pins.json": {
+    "sha256": "1e3bc513ef1c6187e734de4809f1833c4495408efb4f4f2e288ec551b003e54c",
+    "bytes": 186
+  },
+  "fox-v3-boundary-bh-ab-evaluation/reviews/failure-independent-summary.json": {
+    "sha256": "5da12e0ae2910762e1e990873dc79801509dcb89db2414960fff114d19851ae4",
+    "bytes": 269
+  },
+  "fox-v3-boundary-bh-ab-evaluation/reviews/preflight.json": {
+    "sha256": "42a4d4ecf829b8eed94ac1fab87ded730d4526de9feb750355a32ff044c3f48e",
+    "bytes": 27356
+  },
+  "fox-v3-boundary-bh-ab-plan/DEPENDENCY_PINS.json": {
+    "sha256": "60871e5eb406a43cf459f2b8c7bf7916218b251c165cd503b41f12ba25486c29",
+    "bytes": 479
+  },
+  "fox-v3-boundary-bh-ab-plan/PLAN.md": {
+    "sha256": "115ce2d6fba25a65d6fd8c88fe2112fdac40850e43824222da3d64b1d05dd29a",
+    "bytes": 6839
+  },
+  "fox-v3-boundary-bh-ab-plan/PREIMPLEMENTATION_FREEZE-v1.json": {
+    "sha256": "9e8ee0d59f44209f3be226bfa82084542aae2b6ed76c205fdce049ca29d3bc82",
+    "bytes": 1041
+  },
+  "fox-v3-boundary-bh-ab-plan/PREIMPLEMENTATION_FREEZE.json": {
+    "sha256": "1cf770dbaaadc04e27711db4e88ff537d8bf8331816d7912056190ce6c40c0f3",
+    "bytes": 1583
+  },
+  "fox-v3-boundary-bh-ab-plan/check_all_cases.py": {
+    "sha256": "ce9c24d3c21e1dccee4ace1596ba48cfa9a368061cc45c26a5be67d661efbdd4",
+    "bytes": 1612
+  },
+  "fox-v3-boundary-bh-ab-plan/estimate.json": {
+    "sha256": "f6db8b088e4b8c12feaa28bb0b969b4cceb2f2ff8de42ab7778c31006b404c89",
+    "bytes": 4398
+  },
+  "fox-v3-boundary-bh-ab-plan/estimate.py": {
+    "sha256": "fa69b8b3382710da0f86141865889cf19c32f8a1fed0326970c029245a721c4e",
+    "bytes": 3190
+  },
+  "fox-v3-boundary-bh-ab-plan/guard-and-projection-proof.json": {
+    "sha256": "20158e02c2df58f373a67e55135c8f057f0b5edccbce682767f84e0b38bcc77c",
+    "bytes": 7223
+  },
+  "fox-v3-boundary-bh-ab-plan/installed-blender-sha256.txt": {
+    "sha256": "7bd67e06f229d85190ce7268e97abac1a9019ef36c11e58a24f36f3ddcc69c50",
+    "bytes": 83
+  },
+  "fox-v3-boundary-bh-ab-plan/installed-blender-version.txt": {
+    "sha256": "e8c2acc53fbac585a6becc0dbed623c375ac68a570efb4dba6d1ddcc59593ecc",
+    "bytes": 14
+  },
+  "fox-v3-boundary-bh-ab-plan/ledger-provisional.json": {
+    "sha256": "0e638c2137773f623f61b6d1e7d1484b044be4737cdecce763657ef93aefc0b3",
+    "bytes": 1881
+  },
+  "fox-v3-boundary-bh-ab-plan/sample-rule.json": {
+    "sha256": "f186e3415a8cb973b95a2d380f8fa0575bc07d47f0892545530875b86d0cfbbf",
+    "bytes": 615
+  },
+  "fox-v3-boundary-bh-ab-plan/synthetic-results-v1.json": {
+    "sha256": "ae941243d2eea2e9018fac6e4a3d328c7b0bbf651517cbf7bbafb6e9a6e90068",
+    "bytes": 4119
+  },
+  "fox-v3-boundary-bh-ab-plan/synthetic-results.json": {
+    "sha256": "e84fc89dedb4b2ea70a989d94155fef129841b934772bbfe04d82cda7e041785",
+    "bytes": 4239
+  },
+  "fox-v3-boundary-bh-ab-plan/test_math.py": {
+    "sha256": "4f887ea8e83795613171fd83901663c6493703954b1ebaa9fa3ec276314ab433",
+    "bytes": 1310
+  },
+  "fox-v3-boundary-bh-ab-evaluation/BUNDLE_ALLOWLIST.txt": {
+    "sha256": "bdb3892333fcf38cf17a980361868b837f742c4e3dac36ec21e77e8e23c3f307",
+    "bytes": 3718
+  },
+  "fox-v3-boundary-bh-ab-evaluation/CODE_REPORT_FREEZE.json": {
+    "sha256": "1997e9e6fd409c5261db384fb2901b8731fc96bd5f2b511995afe6ea7a57abf3",
+    "bytes": 9083
+  },
+  "package.py": {
+    "sha256": "732a5260dfdece189f752e75292cdc80ffc9f95a70378f5e7bbf4b548523220b",
+    "bytes": 1583
+  }
+}

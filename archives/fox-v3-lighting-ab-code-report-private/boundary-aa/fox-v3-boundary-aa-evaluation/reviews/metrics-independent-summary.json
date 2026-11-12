@@ -1,0 +1,914 @@
+{
+  "status": "BOUNDARY_AA_FINAL_V3_METRICS_INDEPENDENTLY_MATCH",
+  "checkedMetricValues": 2980,
+  "frozenActualOutputSHA256": "b7bf9126d854008ca413233287ce3d1460b5fa50ca8eeaafd7741b77afa96df2",
+  "frozenActualFilesChecked": 163,
+  "scoreHashes": {
+    "off": "ce58ad2890e01898b7fb52630d217a110a98ad48c538741273be22067656d696",
+    "on": "bf54e1b7f90d45f20459868976ebfe5a9814fa3af4ce97999b0951d51de7bd9d"
+  },
+  "oldOFFAllConditionNumericsExact": true,
+  "all20MaskSetsOldReferenceAndCenterShapeExact": true,
+  "formalEightSeedMasksIndependentlyRecomputed": true,
+  "referenceCodeAndThresholdsUnchanged": true,
+  "allTenConditionsAndEightResponsesPerArmChecked": true,
+  "uncertainNeverPass": true,
+  "globalAcceptance": "NOT_ESTABLISHED",
+  "allDomainAndEachSeedRegressions": [
+    {
+      "path": "front-direction/response/stableSubset/brightening/centroidDistanceDiagonal",
+      "from": 0.008113957308095778,
+      "to": 0.009705820078382922,
+      "change": 0.0015918627702871443
+    },
+    {
+      "path": "front-direction/response/stableSubset/darkening/centroidDistanceDiagonal",
+      "from": 0.006400484937306087,
+      "to": 0.006985842634137446,
+      "change": 0.000585357696831359
+    },
+    {
+      "path": "front-direction/response/uncertainSubsetDescriptiveNotAcceptance/brightening/centroidDistanceDiagonal",
+      "from": 0.03195668409880793,
+      "to": 0.03985195244809281,
+      "change": 0.007895268349284876
+    },
+    {
+      "path": "front-direction/response/uncertainSubsetDescriptiveNotAcceptance/darkening/centroidDistanceDiagonal",
+      "from": 0.012325764603445968,
+      "to": 0.01582608047846626,
+      "change": 0.003500315875020291
+    },
+    {
+      "path": "front-direction/response/pooledFullForegroundDescriptive/brightening/centroidDistanceDiagonal",
+      "from": 0.011136436823181016,
+      "to": 0.013559611873539587,
+      "change": 0.002423175050358571
+    },
+    {
+      "path": "front-direction/response/pooledFullForegroundDescriptive/darkening/centroidDistanceDiagonal",
+      "from": 0.006639343267616455,
+      "to": 0.0073706160834421,
+      "change": 0.0007312728158256456
+    },
+    {
+      "path": "front-direction/response/eachReferenceSeedFullForeground/0/brightening/centroidDistanceDiagonal",
+      "from": 0.011351938454761821,
+      "to": 0.013797896705928323,
+      "change": 0.0024459582511665023
+    },
+    {
+      "path": "front-direction/response/eachReferenceSeedFullForeground/0/darkening/centroidDistanceDiagonal",
+      "from": 0.006012022246612721,
+      "to": 0.006706710123826796,
+      "change": 0.0006946878772140751
+    },
+    {
+      "path": "front-direction/response/eachReferenceSeedFullForeground/1/brightening/centroidDistanceDiagonal",
+      "from": 0.011372836724722665,
+      "to": 0.013794640449219612,
+      "change": 0.002421803724496947
+    },
+    {
+      "path": "front-direction/response/eachReferenceSeedFullForeground/1/darkening/centroidDistanceDiagonal",
+      "from": 0.00653664684421143,
+      "to": 0.007263413132531984,
+      "change": 0.0007267662883205543
+    },
+    {
+      "path": "front-direction/response/eachReferenceSeedFullForeground/2/brightening/centroidDistanceDiagonal",
+      "from": 0.01103429610588898,
+      "to": 0.01343463232346518,
+      "change": 0.0024003362175761996
+    },
+    {
+      "path": "front-direction/response/eachReferenceSeedFullForeground/2/darkening/centroidDistanceDiagonal",
+      "from": 0.006465431113080568,
+      "to": 0.007210689758131997,
+      "change": 0.0007452586450514284
+    },
+    {
+      "path": "front-direction/response/eachReferenceSeedFullForeground/3/brightening/centroidDistanceDiagonal",
+      "from": 0.011027457217493694,
+      "to": 0.013429608415436872,
+      "change": 0.0024021511979431774
+    },
+    {
+      "path": "front-direction/response/eachReferenceSeedFullForeground/3/darkening/centroidDistanceDiagonal",
+      "from": 0.006616279193883199,
+      "to": 0.007334189948745548,
+      "change": 0.0007179107548623493
+    },
+    {
+      "path": "front-direction/response/eachReferenceSeedFullForeground/4/brightening/centroidDistanceDiagonal",
+      "from": 0.011845268429660454,
+      "to": 0.014225274061951171,
+      "change": 0.0023800056322907173
+    },
+    {
+      "path": "front-direction/response/eachReferenceSeedFullForeground/4/darkening/centroidDistanceDiagonal",
+      "from": 0.006795904442151467,
+      "to": 0.007493042800710459,
+      "change": 0.0006971383585589923
+    },
+    {
+      "path": "front-direction/response/eachReferenceSeedFullForeground/5/brightening/centroidDistanceDiagonal",
+      "from": 0.010744662083238356,
+      "to": 0.013178176787474438,
+      "change": 0.002433514704236082
+    },
+    {
+      "path": "front-direction/response/eachReferenceSeedFullForeground/5/darkening/centroidDistanceDiagonal",
+      "from": 0.006791336682769837,
+      "to": 0.007514154987764263,
+      "change": 0.0007228183049944265
+    },
+    {
+      "path": "front-direction/response/eachReferenceSeedFullForeground/6/brightening/centroidDistanceDiagonal",
+      "from": 0.01159653687229623,
+      "to": 0.013969806749219035,
+      "change": 0.002373269876922806
+    },
+    {
+      "path": "front-direction/response/eachReferenceSeedFullForeground/6/darkening/centroidDistanceDiagonal",
+      "from": 0.0067957162644574865,
+      "to": 0.007529689119709658,
+      "change": 0.0007339728552521714
+    },
+    {
+      "path": "front-direction/response/eachReferenceSeedFullForeground/7/brightening/centroidDistanceDiagonal",
+      "from": 0.011782838356426012,
+      "to": 0.014237739081527446,
+      "change": 0.002454900725101433
+    },
+    {
+      "path": "front-direction/response/eachReferenceSeedFullForeground/7/darkening/centroidDistanceDiagonal",
+      "from": 0.006914767556926822,
+      "to": 0.007637426486891337,
+      "change": 0.0007226589299645153
+    },
+    {
+      "path": "front-intensity/response/stableSubset/responseMagnitudeAgreementPercent",
+      "from": 91.87166735193325,
+      "to": 89.66002948219916,
+      "change": -2.2116378697340906
+    },
+    {
+      "path": "front-intensity/response/stableSubset/darkening/centroidDistanceDiagonal",
+      "from": 0.015046250467620616,
+      "to": 0.015491947262718839,
+      "change": 0.00044569679509822227
+    },
+    {
+      "path": "front-intensity/response/uncertainSubsetDescriptiveNotAcceptance/deltaLumaRMSE",
+      "from": 0.011661291730669711,
+      "to": 0.012171574187820632,
+      "change": 0.0005102824571509203
+    },
+    {
+      "path": "front-intensity/response/uncertainSubsetDescriptiveNotAcceptance/deltaRGBRMSE",
+      "from": 0.013992775056883252,
+      "to": 0.014606661432934605,
+      "change": 0.0006138863760513525
+    },
+    {
+      "path": "front-intensity/response/uncertainSubsetDescriptiveNotAcceptance/responseMagnitudeAgreementPercent",
+      "from": 87.97369179200741,
+      "to": 77.4789313014806,
+      "change": -10.494760490526815
+    },
+    {
+      "path": "front-intensity/response/uncertainSubsetDescriptiveNotAcceptance/darkening/centroidDistanceDiagonal",
+      "from": 0.04440670420002275,
+      "to": 0.06778272558850652,
+      "change": 0.023376021388483777
+    },
+    {
+      "path": "front-intensity/response/pooledFullForegroundDescriptive/responseMagnitudeAgreementPercent",
+      "from": 91.86094072187502,
+      "to": 89.62085203725631,
+      "change": -2.240088684618712
+    },
+    {
+      "path": "front-intensity/response/pooledFullForegroundDescriptive/darkening/centroidDistanceDiagonal",
+      "from": 0.01897552623901849,
+      "to": 0.019505062189616534,
+      "change": 0.0005295359505980458
+    },
+    {
+      "path": "front-intensity/response/eachReferenceSeedFullForeground/0/responseMagnitudeAgreementPercent",
+      "from": 91.99927946074173,
+      "to": 89.7558172961527,
+      "change": -2.243462164589033
+    },
+    {
+      "path": "front-intensity/response/eachReferenceSeedFullForeground/0/darkening/centroidDistanceDiagonal",
+      "from": 0.019172175770509683,
+      "to": 0.01970150133251145,
+      "change": 0.0005293255620017652
+    },
+    {
+      "path": "front-intensity/response/eachReferenceSeedFullForeground/1/responseMagnitudeAgreementPercent",
+      "from": 91.94429269312744,
+      "to": 89.70217141656947,
+      "change": -2.242121276557967
+    },
+    {
+      "path": "front-intensity/response/eachReferenceSeedFullForeground/1/darkening/centroidDistanceDiagonal",
+      "from": 0.019148440625067705,
+      "to": 0.01969530190402992,
+      "change": 0.0005468612789622136
+    },
+    {
+      "path": "front-intensity/response/eachReferenceSeedFullForeground/2/responseMagnitudeAgreementPercent",
+      "from": 92.02995470490038,
+      "to": 89.78574450456516,
+      "change": -2.2442102003352176
+    },
+    {
+      "path": "front-intensity/response/eachReferenceSeedFullForeground/2/darkening/centroidDistanceDiagonal",
+      "from": 0.01921566100102264,
+      "to": 0.019732831467556805,
+      "change": 0.0005171704665341663
+    },
+    {
+      "path": "front-intensity/response/eachReferenceSeedFullForeground/3/responseMagnitudeAgreementPercent",
+      "from": 92.13639781250366,
+      "to": 89.88959192787625,
+      "change": -2.246805884627406
+    },
+    {
+      "path": "front-intensity/response/eachReferenceSeedFullForeground/3/darkening/centroidDistanceDiagonal",
+      "from": 0.01876159593100264,
+      "to": 0.019294329595739276,
+      "change": 0.0005327336647366378
+    },
+    {
+      "path": "front-intensity/response/eachReferenceSeedFullForeground/4/responseMagnitudeAgreementPercent",
+      "from": 92.0796055484381,
+      "to": 89.83418458004503,
+      "change": -2.245420968393063
+    },
+    {
+      "path": "front-intensity/response/eachReferenceSeedFullForeground/4/darkening/centroidDistanceDiagonal",
+      "from": 0.018818077908662485,
+      "to": 0.019357456524732523,
+      "change": 0.0005393786160700388
+    },
+    {
+      "path": "front-intensity/response/eachReferenceSeedFullForeground/5/responseMagnitudeAgreementPercent",
+      "from": 91.90846622350762,
+      "to": 89.66721859867339,
+      "change": -2.24124762483423
+    },
+    {
+      "path": "front-intensity/response/eachReferenceSeedFullForeground/5/darkening/centroidDistanceDiagonal",
+      "from": 0.01891607207274123,
+      "to": 0.019441669770594805,
+      "change": 0.0005255976978535762
+    },
+    {
+      "path": "front-intensity/response/eachReferenceSeedFullForeground/6/responseMagnitudeAgreementPercent",
+      "from": 92.09082635739085,
+      "to": 89.84513176228583,
+      "change": -2.2456945951050216
+    },
+    {
+      "path": "front-intensity/response/eachReferenceSeedFullForeground/6/darkening/centroidDistanceDiagonal",
+      "from": 0.018620590653171377,
+      "to": 0.019142257791711505,
+      "change": 0.0005216671385401273
+    },
+    {
+      "path": "front-intensity/response/eachReferenceSeedFullForeground/7/responseMagnitudeAgreementPercent",
+      "from": 92.02544616420334,
+      "to": 89.78134590756042,
+      "change": -2.2441002566429233
+    },
+    {
+      "path": "front-intensity/response/eachReferenceSeedFullForeground/7/darkening/centroidDistanceDiagonal",
+      "from": 0.018762732377856178,
+      "to": 0.019280232602454258,
+      "change": 0.0005175002245980803
+    },
+    {
+      "path": "front-ambient/response/uncertainSubsetDescriptiveNotAcceptance/deltaLumaRMSE",
+      "from": 0.009163184778910418,
+      "to": 0.009400837215708405,
+      "change": 0.00023765243679798632
+    },
+    {
+      "path": "front-ambient/response/uncertainSubsetDescriptiveNotAcceptance/deltaRGBRMSE",
+      "from": 0.012274288062496036,
+      "to": 0.013020543764790905,
+      "change": 0.0007462557022948693
+    },
+    {
+      "path": "front-ambient/response/uncertainSubsetDescriptiveNotAcceptance/signedCorrelation",
+      "from": 0.4872730524631844,
+      "to": 0.3810473278949258,
+      "change": -0.10622572456825863
+    },
+    {
+      "path": "front-albedo/response/stableSubset/signedCorrelation",
+      "from": 0.26747451749338685,
+      "to": 0.23457913154203305,
+      "change": -0.0328953859513538
+    },
+    {
+      "path": "front-albedo/response/stableSubset/darkening/centroidDistanceDiagonal",
+      "from": 0.0011314801511494285,
+      "to": 0.0015844554653721187,
+      "change": 0.0004529753142226902
+    },
+    {
+      "path": "front-albedo/response/pooledFullForegroundDescriptive/signedCorrelation",
+      "from": 0.26785821432594376,
+      "to": 0.2350693072764527,
+      "change": -0.032788907049491056
+    },
+    {
+      "path": "front-albedo/response/pooledFullForegroundDescriptive/darkening/centroidDistanceDiagonal",
+      "from": 0.0011303887614443919,
+      "to": 0.0015843591793984167,
+      "change": 0.00045397041795402484
+    },
+    {
+      "path": "front-albedo/response/eachReferenceSeedFullForeground/0/signedCorrelation",
+      "from": 0.2663035454672362,
+      "to": 0.23347099406112493,
+      "change": -0.0328325514061113
+    },
+    {
+      "path": "front-albedo/response/eachReferenceSeedFullForeground/0/darkening/centroidDistanceDiagonal",
+      "from": 0.0011303887614443919,
+      "to": 0.0015843591793984167,
+      "change": 0.00045397041795402484
+    },
+    {
+      "path": "front-albedo/response/eachReferenceSeedFullForeground/1/signedCorrelation",
+      "from": 0.26607846789150574,
+      "to": 0.23292508260061295,
+      "change": -0.03315338529089279
+    },
+    {
+      "path": "front-albedo/response/eachReferenceSeedFullForeground/1/darkening/centroidDistanceDiagonal",
+      "from": 0.0011303887614443919,
+      "to": 0.0015843591793984167,
+      "change": 0.00045397041795402484
+    },
+    {
+      "path": "front-albedo/response/eachReferenceSeedFullForeground/2/signedCorrelation",
+      "from": 0.2679566795471821,
+      "to": 0.23515150100228735,
+      "change": -0.03280517854489476
+    },
+    {
+      "path": "front-albedo/response/eachReferenceSeedFullForeground/2/darkening/centroidDistanceDiagonal",
+      "from": 0.0011303887614443919,
+      "to": 0.0015843591793984167,
+      "change": 0.00045397041795402484
+    },
+    {
+      "path": "front-albedo/response/eachReferenceSeedFullForeground/3/signedCorrelation",
+      "from": 0.2686890821350715,
+      "to": 0.23551282716937985,
+      "change": -0.033176254965691626
+    },
+    {
+      "path": "front-albedo/response/eachReferenceSeedFullForeground/3/darkening/centroidDistanceDiagonal",
+      "from": 0.0011303887614443919,
+      "to": 0.0015843591793984167,
+      "change": 0.00045397041795402484
+    },
+    {
+      "path": "front-albedo/response/eachReferenceSeedFullForeground/4/signedCorrelation",
+      "from": 0.2651528777280336,
+      "to": 0.23319508051089693,
+      "change": -0.03195779721713665
+    },
+    {
+      "path": "front-albedo/response/eachReferenceSeedFullForeground/4/darkening/centroidDistanceDiagonal",
+      "from": 0.0011265292010089751,
+      "to": 0.0015897399888695936,
+      "change": 0.00046321078786061847
+    },
+    {
+      "path": "front-albedo/response/eachReferenceSeedFullForeground/5/signedCorrelation",
+      "from": 0.2675036837356479,
+      "to": 0.235357830146607,
+      "change": -0.03214585358904093
+    },
+    {
+      "path": "front-albedo/response/eachReferenceSeedFullForeground/5/darkening/centroidDistanceDiagonal",
+      "from": 0.0011303887614443919,
+      "to": 0.0015843591793984167,
+      "change": 0.00045397041795402484
+    },
+    {
+      "path": "front-albedo/response/eachReferenceSeedFullForeground/6/signedCorrelation",
+      "from": 0.2655683658195605,
+      "to": 0.23320140490981184,
+      "change": -0.032366960909748665
+    },
+    {
+      "path": "front-albedo/response/eachReferenceSeedFullForeground/6/darkening/centroidDistanceDiagonal",
+      "from": 0.0011303887614443919,
+      "to": 0.0015843591793984167,
+      "change": 0.00045397041795402484
+    },
+    {
+      "path": "front-albedo/response/eachReferenceSeedFullForeground/7/signedCorrelation",
+      "from": 0.26530824364370226,
+      "to": 0.23269728021661135,
+      "change": -0.03261096342709091
+    },
+    {
+      "path": "front-albedo/response/eachReferenceSeedFullForeground/7/darkening/centroidDistanceDiagonal",
+      "from": 0.0011303887614443919,
+      "to": 0.0015843591793984167,
+      "change": 0.00045397041795402484
+    },
+    {
+      "path": "oblique-direction/response/stableSubset/brightening/centroidDistanceDiagonal",
+      "from": 0.039561957697409514,
+      "to": 0.040122877453840834,
+      "change": 0.0005609197564313204
+    },
+    {
+      "path": "oblique-direction/response/stableSubset/darkening/centroidDistanceDiagonal",
+      "from": 0.00859421660149571,
+      "to": 0.00923230772382037,
+      "change": 0.0006380911223246612
+    },
+    {
+      "path": "oblique-direction/response/uncertainSubsetDescriptiveNotAcceptance/brightening/centroidDistanceDiagonal",
+      "from": 0.04109610166514071,
+      "to": 0.0500073900849292,
+      "change": 0.008911288419788492
+    },
+    {
+      "path": "oblique-direction/response/uncertainSubsetDescriptiveNotAcceptance/darkening/centroidDistanceDiagonal",
+      "from": 0.014672572096152539,
+      "to": 0.019890054032866013,
+      "change": 0.005217481936713474
+    },
+    {
+      "path": "oblique-direction/response/pooledFullForegroundDescriptive/brightening/centroidDistanceDiagonal",
+      "from": 0.03919351012537432,
+      "to": 0.04178074526239355,
+      "change": 0.0025872351370192295
+    },
+    {
+      "path": "oblique-direction/response/pooledFullForegroundDescriptive/darkening/centroidDistanceDiagonal",
+      "from": 0.008493724689908966,
+      "to": 0.009613284797069863,
+      "change": 0.0011195601071608968
+    },
+    {
+      "path": "oblique-direction/response/eachReferenceSeedFullForeground/0/brightening/centroidDistanceDiagonal",
+      "from": 0.03726083746610067,
+      "to": 0.03980381861132728,
+      "change": 0.0025429811452266082
+    },
+    {
+      "path": "oblique-direction/response/eachReferenceSeedFullForeground/0/darkening/centroidDistanceDiagonal",
+      "from": 0.008496506097812166,
+      "to": 0.009628051116756011,
+      "change": 0.001131545018943846
+    },
+    {
+      "path": "oblique-direction/response/eachReferenceSeedFullForeground/1/brightening/centroidDistanceDiagonal",
+      "from": 0.03778653857255854,
+      "to": 0.04035121449489552,
+      "change": 0.00256467592233698
+    },
+    {
+      "path": "oblique-direction/response/eachReferenceSeedFullForeground/1/darkening/centroidDistanceDiagonal",
+      "from": 0.008121096085204267,
+      "to": 0.009247007804705826,
+      "change": 0.0011259117195015593
+    },
+    {
+      "path": "oblique-direction/response/eachReferenceSeedFullForeground/2/brightening/centroidDistanceDiagonal",
+      "from": 0.03879153597824508,
+      "to": 0.04130085065694333,
+      "change": 0.002509314678698256
+    },
+    {
+      "path": "oblique-direction/response/eachReferenceSeedFullForeground/2/darkening/centroidDistanceDiagonal",
+      "from": 0.008338342160013893,
+      "to": 0.009442603132322078,
+      "change": 0.0011042609723081846
+    },
+    {
+      "path": "oblique-direction/response/eachReferenceSeedFullForeground/3/brightening/centroidDistanceDiagonal",
+      "from": 0.03837482098096511,
+      "to": 0.04089774850551312,
+      "change": 0.0025229275245480104
+    },
+    {
+      "path": "oblique-direction/response/eachReferenceSeedFullForeground/3/darkening/centroidDistanceDiagonal",
+      "from": 0.008680944330931237,
+      "to": 0.009806370803857108,
+      "change": 0.0011254264729258709
+    },
+    {
+      "path": "oblique-direction/response/eachReferenceSeedFullForeground/4/brightening/centroidDistanceDiagonal",
+      "from": 0.03925265538138719,
+      "to": 0.04178112985396819,
+      "change": 0.002528474472580998
+    },
+    {
+      "path": "oblique-direction/response/eachReferenceSeedFullForeground/4/darkening/centroidDistanceDiagonal",
+      "from": 0.008458857604462675,
+      "to": 0.009583759303853575,
+      "change": 0.0011249016993909004
+    },
+    {
+      "path": "oblique-direction/response/eachReferenceSeedFullForeground/5/brightening/centroidDistanceDiagonal",
+      "from": 0.037278635219139086,
+      "to": 0.03982679098131723,
+      "change": 0.0025481557621781434
+    },
+    {
+      "path": "oblique-direction/response/eachReferenceSeedFullForeground/5/darkening/centroidDistanceDiagonal",
+      "from": 0.008354925908030716,
+      "to": 0.009496898481466858,
+      "change": 0.001141972573436142
+    },
+    {
+      "path": "oblique-direction/response/eachReferenceSeedFullForeground/6/brightening/centroidDistanceDiagonal",
+      "from": 0.03765581157737725,
+      "to": 0.0401572449216339,
+      "change": 0.0025014333442566553
+    },
+    {
+      "path": "oblique-direction/response/eachReferenceSeedFullForeground/6/darkening/centroidDistanceDiagonal",
+      "from": 0.008543025548351823,
+      "to": 0.009678240444681583,
+      "change": 0.0011352148963297594
+    },
+    {
+      "path": "oblique-direction/response/eachReferenceSeedFullForeground/7/brightening/centroidDistanceDiagonal",
+      "from": 0.03810334674534559,
+      "to": 0.040633667252269565,
+      "change": 0.0025303205069239776
+    },
+    {
+      "path": "oblique-direction/response/eachReferenceSeedFullForeground/7/darkening/centroidDistanceDiagonal",
+      "from": 0.008454991432318346,
+      "to": 0.00958290632596454,
+      "change": 0.0011279148936461942
+    },
+    {
+      "path": "oblique-intensity/response/stableSubset/responseMagnitudeAgreementPercent",
+      "from": 98.22625962702372,
+      "to": 96.22186483201726,
+      "change": -2.004394795006462
+    },
+    {
+      "path": "oblique-intensity/response/stableSubset/signedCorrelation",
+      "from": 0.5425997020606202,
+      "to": 0.5407129137302497,
+      "change": -0.0018867883303705923
+    },
+    {
+      "path": "oblique-intensity/response/stableSubset/darkening/centroidDistanceDiagonal",
+      "from": 0.010986250281234714,
+      "to": 0.011832921005044558,
+      "change": 0.0008466707238098444
+    },
+    {
+      "path": "oblique-intensity/response/uncertainSubsetDescriptiveNotAcceptance/deltaLumaRMSE",
+      "from": 0.011019132109052747,
+      "to": 0.01208524615565948,
+      "change": 0.0010661140466067323
+    },
+    {
+      "path": "oblique-intensity/response/uncertainSubsetDescriptiveNotAcceptance/deltaRGBRMSE",
+      "from": 0.01256829074762779,
+      "to": 0.014263257268582106,
+      "change": 0.0016949665209543153
+    },
+    {
+      "path": "oblique-intensity/response/uncertainSubsetDescriptiveNotAcceptance/darkening/centroidDistanceDiagonal",
+      "from": 0.01916347781370105,
+      "to": 0.023705738608267152,
+      "change": 0.004542260794566103
+    },
+    {
+      "path": "oblique-intensity/response/pooledFullForegroundDescriptive/responseMagnitudeAgreementPercent",
+      "from": 98.26439495873461,
+      "to": 96.21885258467772,
+      "change": -2.045542374056893
+    },
+    {
+      "path": "oblique-intensity/response/pooledFullForegroundDescriptive/signedCorrelation",
+      "from": 0.5945306611796981,
+      "to": 0.5928149240454955,
+      "change": -0.0017157371342025884
+    },
+    {
+      "path": "oblique-intensity/response/pooledFullForegroundDescriptive/darkening/centroidDistanceDiagonal",
+      "from": 0.011170859336525526,
+      "to": 0.012356379038064233,
+      "change": 0.0011855197015387068
+    },
+    {
+      "path": "oblique-intensity/response/eachReferenceSeedFullForeground/0/deltaLumaRMSE",
+      "from": 0.04191924827975159,
+      "to": 0.0419412610174042,
+      "change": 2.2012737652607473e-05
+    },
+    {
+      "path": "oblique-intensity/response/eachReferenceSeedFullForeground/0/responseMagnitudeAgreementPercent",
+      "from": 98.45363443102889,
+      "to": 96.40415271190624,
+      "change": -2.049481719122653
+    },
+    {
+      "path": "oblique-intensity/response/eachReferenceSeedFullForeground/0/signedCorrelation",
+      "from": 0.5908940473402582,
+      "to": 0.5882673780106865,
+      "change": -0.0026266693295716737
+    },
+    {
+      "path": "oblique-intensity/response/eachReferenceSeedFullForeground/0/darkening/centroidDistanceDiagonal",
+      "from": 0.011283992806368184,
+      "to": 0.012510393860375318,
+      "change": 0.001226401054007134
+    },
+    {
+      "path": "oblique-intensity/response/eachReferenceSeedFullForeground/1/responseMagnitudeAgreementPercent",
+      "from": 98.41881403490537,
+      "to": 96.37005716221138,
+      "change": -2.0487568726939855
+    },
+    {
+      "path": "oblique-intensity/response/eachReferenceSeedFullForeground/1/signedCorrelation",
+      "from": 0.5890731039347901,
+      "to": 0.5876041344790347,
+      "change": -0.0014689694557553645
+    },
+    {
+      "path": "oblique-intensity/response/eachReferenceSeedFullForeground/1/darkening/centroidDistanceDiagonal",
+      "from": 0.011072599056830178,
+      "to": 0.012286501035965831,
+      "change": 0.0012139019791356526
+    },
+    {
+      "path": "oblique-intensity/response/eachReferenceSeedFullForeground/2/responseMagnitudeAgreementPercent",
+      "from": 98.36926699063915,
+      "to": 96.32154152488151,
+      "change": -2.0477254657576367
+    },
+    {
+      "path": "oblique-intensity/response/eachReferenceSeedFullForeground/2/signedCorrelation",
+      "from": 0.593227293158772,
+      "to": 0.5916513792790471,
+      "change": -0.0015759138797248884
+    },
+    {
+      "path": "oblique-intensity/response/eachReferenceSeedFullForeground/2/darkening/centroidDistanceDiagonal",
+      "from": 0.01120328972031791,
+      "to": 0.01242129519436895,
+      "change": 0.001218005474051041
+    },
+    {
+      "path": "oblique-intensity/response/eachReferenceSeedFullForeground/3/responseMagnitudeAgreementPercent",
+      "from": 98.50617513793549,
+      "to": 96.45559969364018,
+      "change": -2.050575444295305
+    },
+    {
+      "path": "oblique-intensity/response/eachReferenceSeedFullForeground/3/signedCorrelation",
+      "from": 0.5896309538513065,
+      "to": 0.587924419382759,
+      "change": -0.001706534468547516
+    },
+    {
+      "path": "oblique-intensity/response/eachReferenceSeedFullForeground/3/darkening/centroidDistanceDiagonal",
+      "from": 0.011102792885882859,
+      "to": 0.012326201466950286,
+      "change": 0.0012234085810674273
+    },
+    {
+      "path": "oblique-intensity/response/eachReferenceSeedFullForeground/4/responseMagnitudeAgreementPercent",
+      "from": 98.29671006332049,
+      "to": 96.25049499478682,
+      "change": -2.0462150685336695
+    },
+    {
+      "path": "oblique-intensity/response/eachReferenceSeedFullForeground/4/signedCorrelation",
+      "from": 0.5918872509876715,
+      "to": 0.5901024615277801,
+      "change": -0.001784789459891356
+    },
+    {
+      "path": "oblique-intensity/response/eachReferenceSeedFullForeground/4/darkening/centroidDistanceDiagonal",
+      "from": 0.010869756852584997,
+      "to": 0.012020948960388541,
+      "change": 0.0011511921078035444
+    },
+    {
+      "path": "oblique-intensity/response/eachReferenceSeedFullForeground/5/responseMagnitudeAgreementPercent",
+      "from": 98.51409482794816,
+      "to": 96.46335452168513,
+      "change": -2.050740306263023
+    },
+    {
+      "path": "oblique-intensity/response/eachReferenceSeedFullForeground/5/signedCorrelation",
+      "from": 0.5915832934118418,
+      "to": 0.5897373263373247,
+      "change": -0.0018459670745171186
+    },
+    {
+      "path": "oblique-intensity/response/eachReferenceSeedFullForeground/5/darkening/centroidDistanceDiagonal",
+      "from": 0.011014103966613939,
+      "to": 0.01220394259268943,
+      "change": 0.0011898386260754904
+    },
+    {
+      "path": "oblique-intensity/response/eachReferenceSeedFullForeground/6/responseMagnitudeAgreementPercent",
+      "from": 98.49128603142185,
+      "to": 96.4410205294846,
+      "change": -2.050265501937247
+    },
+    {
+      "path": "oblique-intensity/response/eachReferenceSeedFullForeground/6/signedCorrelation",
+      "from": 0.5909982039887988,
+      "to": 0.5891853233465071,
+      "change": -0.001812880642291681
+    },
+    {
+      "path": "oblique-intensity/response/eachReferenceSeedFullForeground/6/darkening/centroidDistanceDiagonal",
+      "from": 0.011365362212583063,
+      "to": 0.012594769065301195,
+      "change": 0.0012294068527181328
+    },
+    {
+      "path": "oblique-intensity/response/eachReferenceSeedFullForeground/7/responseMagnitudeAgreementPercent",
+      "from": 98.50081177843862,
+      "to": 96.45034798169503,
+      "change": -2.0504637967435855
+    },
+    {
+      "path": "oblique-intensity/response/eachReferenceSeedFullForeground/7/signedCorrelation",
+      "from": 0.5883710783556914,
+      "to": 0.587555576361278,
+      "change": -0.0008155019944133812
+    },
+    {
+      "path": "oblique-intensity/response/eachReferenceSeedFullForeground/7/darkening/centroidDistanceDiagonal",
+      "from": 0.011339965423989589,
+      "to": 0.012550686148932615,
+      "change": 0.001210720724943026
+    },
+    {
+      "path": "oblique-ambient/response/stableSubset/signedCorrelation",
+      "from": -0.028490617437229082,
+      "to": -0.04156684951882938,
+      "change": -0.013076232081600296
+    },
+    {
+      "path": "oblique-ambient/response/uncertainSubsetDescriptiveNotAcceptance/signedCorrelation",
+      "from": 0.3861932671883678,
+      "to": 0.37501568344632313,
+      "change": -0.011177583742044639
+    },
+    {
+      "path": "oblique-ambient/response/pooledFullForegroundDescriptive/signedCorrelation",
+      "from": -0.01030247350936732,
+      "to": -0.02195041566475354,
+      "change": -0.011647942155386221
+    },
+    {
+      "path": "oblique-ambient/response/eachReferenceSeedFullForeground/0/signedCorrelation",
+      "from": -0.011135149752961043,
+      "to": -0.022340335768783692,
+      "change": -0.01120518601582265
+    },
+    {
+      "path": "oblique-ambient/response/eachReferenceSeedFullForeground/1/signedCorrelation",
+      "from": -0.00874595799500186,
+      "to": -0.021275236073725105,
+      "change": -0.012529278078723245
+    },
+    {
+      "path": "oblique-ambient/response/eachReferenceSeedFullForeground/2/signedCorrelation",
+      "from": -0.007971393728508917,
+      "to": -0.01922425946984345,
+      "change": -0.011252865741334533
+    },
+    {
+      "path": "oblique-ambient/response/eachReferenceSeedFullForeground/3/signedCorrelation",
+      "from": -0.012620012396768378,
+      "to": -0.022803442910608773,
+      "change": -0.010183430513840394
+    },
+    {
+      "path": "oblique-ambient/response/eachReferenceSeedFullForeground/4/signedCorrelation",
+      "from": -0.011138415230513647,
+      "to": -0.023250583048525574,
+      "change": -0.012112167818011927
+    },
+    {
+      "path": "oblique-ambient/response/eachReferenceSeedFullForeground/5/signedCorrelation",
+      "from": -0.008669290369786694,
+      "to": -0.019471823408748302,
+      "change": -0.010802533038961608
+    },
+    {
+      "path": "oblique-ambient/response/eachReferenceSeedFullForeground/6/signedCorrelation",
+      "from": -0.011062640028940824,
+      "to": -0.02124654287011386,
+      "change": -0.010183902841173036
+    },
+    {
+      "path": "oblique-ambient/response/eachReferenceSeedFullForeground/7/signedCorrelation",
+      "from": -0.009713508676456546,
+      "to": -0.02311746711170975,
+      "change": -0.013403958435253202
+    },
+    {
+      "path": "oblique-albedo/response/stableSubset/signedCorrelation",
+      "from": 0.23492291406064847,
+      "to": 0.1931853351626029,
+      "change": -0.04173757889804558
+    },
+    {
+      "path": "oblique-albedo/response/uncertainSubsetDescriptiveNotAcceptance/deltaLumaRMSE",
+      "from": 0.015762678038754394,
+      "to": 0.01599932483784656,
+      "change": 0.00023664679909216405
+    },
+    {
+      "path": "oblique-albedo/response/uncertainSubsetDescriptiveNotAcceptance/responseMagnitudeAgreementPercent",
+      "from": 72.51827024232946,
+      "to": 60.9723728203282,
+      "change": -11.545897422001268
+    },
+    {
+      "path": "oblique-albedo/response/pooledFullForegroundDescriptive/signedCorrelation",
+      "from": 0.23562634895847884,
+      "to": 0.1937773351289761,
+      "change": -0.041849013829502735
+    },
+    {
+      "path": "oblique-albedo/response/eachReferenceSeedFullForeground/0/signedCorrelation",
+      "from": 0.23443675898173916,
+      "to": 0.19290163267799243,
+      "change": -0.04153512630374673
+    },
+    {
+      "path": "oblique-albedo/response/eachReferenceSeedFullForeground/1/signedCorrelation",
+      "from": 0.23453654236037216,
+      "to": 0.1927023749683761,
+      "change": -0.04183416739199605
+    },
+    {
+      "path": "oblique-albedo/response/eachReferenceSeedFullForeground/2/signedCorrelation",
+      "from": 0.2347171038527229,
+      "to": 0.19368239528193218,
+      "change": -0.04103470857079072
+    },
+    {
+      "path": "oblique-albedo/response/eachReferenceSeedFullForeground/3/signedCorrelation",
+      "from": 0.23524014692947195,
+      "to": 0.19317476041144704,
+      "change": -0.04206538651802491
+    },
+    {
+      "path": "oblique-albedo/response/eachReferenceSeedFullForeground/4/signedCorrelation",
+      "from": 0.2347843031408065,
+      "to": 0.19337836153002164,
+      "change": -0.04140594161078487
+    },
+    {
+      "path": "oblique-albedo/response/eachReferenceSeedFullForeground/5/signedCorrelation",
+      "from": 0.23469275464698064,
+      "to": 0.19291384190514954,
+      "change": -0.0417789127418311
+    },
+    {
+      "path": "oblique-albedo/response/eachReferenceSeedFullForeground/6/signedCorrelation",
+      "from": 0.23476366258964992,
+      "to": 0.1932130707342231,
+      "change": -0.04155059185542681
+    },
+    {
+      "path": "oblique-albedo/response/eachReferenceSeedFullForeground/7/signedCorrelation",
+      "from": 0.2334448870211225,
+      "to": 0.19134727368084165,
+      "change": -0.042097613340280865
+    }
+  ],
+  "limitations": [
+    "New host API/work/error contract only; old API/work equivalence, embedded device totalRAM fit, and strictgeometry acceptance are not established.",
+    "AA support changes do not change geometry, center depth, or formal reference masks. Native misses620/719 remain in formalshape even when sample color fills them.",
+    "Unknown remains separate and notPASS; inactive false positives and all color/response regressions retained.",
+    "Four fixed subpixel samples in geometry-only boundarytargets, not full-image antialiasing, convergence, or source BH equivalence.",
+    "No rendering, no owner/source/reference mutation."
+  ]
+}

@@ -1,0 +1,345 @@
+{
+  "sourceSHA256": "9254eaebdfa61143dfdb9480330bc677ae47acfa710715bbfa31ab2943a16806",
+  "referenceConfigSHA256": "4a9d836a4dae2fc570f5f0fb99690ab0f13fbe394589f785b56e891e0573dc40",
+  "object": "Studio ground",
+  "matrixWorld": [
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "worldVertices": [
+    [
+      -100.0,
+      -100.0,
+      0.0
+    ],
+    [
+      100.0,
+      -100.0,
+      0.0
+    ],
+    [
+      -100.0,
+      100.0,
+      0.0
+    ],
+    [
+      100.0,
+      100.0,
+      0.0
+    ]
+  ],
+  "triangles": [
+    [
+      0,
+      1,
+      3
+    ],
+    [
+      0,
+      3,
+      2
+    ]
+  ],
+  "worldGeometricNormals": [
+    [
+      0.0,
+      0.0,
+      1.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "loopTriangleWorldNormals": [
+    [
+      0.0,
+      0.0,
+      1.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "linearLe": [
+    0.20999999344348907,
+    0.19499999284744263,
+    0.16249999403953552
+  ],
+  "sourceEmissionColor": [
+    0.8399999737739563,
+    0.7799999713897705,
+    0.6499999761581421,
+    1.0
+  ],
+  "sourceEmissionStrength": 0.25,
+  "materialState": {
+    "flags": {
+      "use_nodes": true,
+      "use_backface_culling": false,
+      "surface_render_method": "DITHERED",
+      "use_transparent_shadow": true
+    },
+    "nodes": {
+      "Principled BSDF": {
+        "type": "ShaderNodeBsdfPrincipled",
+        "inputs": {
+          "Base Color": [
+            0.8399999737739563,
+            0.7799999713897705,
+            0.6499999761581421,
+            1.0
+          ],
+          "Metallic": 0.0,
+          "Roughness": 0.6499999761581421,
+          "IOR": 1.5,
+          "Alpha": 1.0,
+          "Normal": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "Weight": 0.0,
+          "Diffuse Roughness": 0.0,
+          "Subsurface Weight": 0.0,
+          "Subsurface Radius": [
+            1.0,
+            0.20000000298023224,
+            0.10000000149011612
+          ],
+          "Subsurface Scale": 0.05000000074505806,
+          "Subsurface IOR": 1.399999976158142,
+          "Subsurface Anisotropy": 0.0,
+          "Specular IOR Level": 0.5,
+          "Specular Tint": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "Anisotropic": 0.0,
+          "Anisotropic Rotation": 0.0,
+          "Tangent": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "Transmission Weight": 0.0,
+          "Coat Weight": 0.0,
+          "Coat Roughness": 0.029999999329447746,
+          "Coat IOR": 1.5,
+          "Coat Tint": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "Coat Normal": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "Sheen Weight": 0.0,
+          "Sheen Roughness": 0.5,
+          "Sheen Tint": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "Emission Color": [
+            0.8399999737739563,
+            0.7799999713897705,
+            0.6499999761581421,
+            1.0
+          ],
+          "Emission Strength": 0.25,
+          "Thin Film Thickness": 0.0,
+          "Thin Film IOR": 1.3300000429153442
+        }
+      },
+      "Material Output": {
+        "type": "ShaderNodeOutputMaterial",
+        "inputs": {
+          "Displacement": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "Thickness": 0.0
+        }
+      }
+    },
+    "links": [
+      [
+        "Principled BSDF",
+        "BSDF",
+        "Material Output",
+        "Surface"
+      ]
+    ]
+  },
+  "objectFlags": {
+    "hide_render": false,
+    "visible_camera": true,
+    "visible_diffuse": true,
+    "visible_glossy": true,
+    "visible_transmission": true,
+    "visible_volume_scatter": true,
+    "visible_shadow": true
+  },
+  "scenarios": [
+    {
+      "name": "baseline",
+      "albedoScale": 1,
+      "actualGroundBaseColor": [
+        0.8399999737739563,
+        0.7799999713897705,
+        0.6499999761581421,
+        1.0
+      ],
+      "emissionColor": [
+        0.8399999737739563,
+        0.7799999713897705,
+        0.6499999761581421,
+        1.0
+      ],
+      "emissionStrength": 0.25,
+      "linearLe": [
+        0.20999999344348907,
+        0.19499999284744263,
+        0.16249999403953552
+      ],
+      "emissionUnchanged": true,
+      "richEnergyScale": 1,
+      "richWorldScale": 1
+    },
+    {
+      "name": "direction",
+      "albedoScale": 1,
+      "actualGroundBaseColor": [
+        0.8399999737739563,
+        0.7799999713897705,
+        0.6499999761581421,
+        1.0
+      ],
+      "emissionColor": [
+        0.8399999737739563,
+        0.7799999713897705,
+        0.6499999761581421,
+        1.0
+      ],
+      "emissionStrength": 0.25,
+      "linearLe": [
+        0.20999999344348907,
+        0.19499999284744263,
+        0.16249999403953552
+      ],
+      "emissionUnchanged": true,
+      "richEnergyScale": 1,
+      "richWorldScale": 1
+    },
+    {
+      "name": "intensity",
+      "albedoScale": 1,
+      "actualGroundBaseColor": [
+        0.8399999737739563,
+        0.7799999713897705,
+        0.6499999761581421,
+        1.0
+      ],
+      "emissionColor": [
+        0.8399999737739563,
+        0.7799999713897705,
+        0.6499999761581421,
+        1.0
+      ],
+      "emissionStrength": 0.25,
+      "linearLe": [
+        0.20999999344348907,
+        0.19499999284744263,
+        0.16249999403953552
+      ],
+      "emissionUnchanged": true,
+      "richEnergyScale": 0.45,
+      "richWorldScale": 1
+    },
+    {
+      "name": "ambient",
+      "albedoScale": 1,
+      "actualGroundBaseColor": [
+        0.8399999737739563,
+        0.7799999713897705,
+        0.6499999761581421,
+        1.0
+      ],
+      "emissionColor": [
+        0.8399999737739563,
+        0.7799999713897705,
+        0.6499999761581421,
+        1.0
+      ],
+      "emissionStrength": 0.25,
+      "linearLe": [
+        0.20999999344348907,
+        0.19499999284744263,
+        0.16249999403953552
+      ],
+      "emissionUnchanged": true,
+      "richEnergyScale": 1,
+      "richWorldScale": 2
+    },
+    {
+      "name": "albedo",
+      "albedoScale": 0.6,
+      "actualGroundBaseColor": [
+        0.5040000081062317,
+        0.46799999475479126,
+        0.38999998569488525,
+        1.0
+      ],
+      "emissionColor": [
+        0.8399999737739563,
+        0.7799999713897705,
+        0.6499999761581421,
+        1.0
+      ],
+      "emissionStrength": 0.25,
+      "linearLe": [
+        0.20999999344348907,
+        0.19499999284744263,
+        0.16249999403953552
+      ],
+      "emissionUnchanged": true,
+      "richEnergyScale": 1,
+      "richWorldScale": 1
+    }
+  ],
+  "referenceAlbedoAssignment": "for name, color in materials.items():\n    bpy.data.materials[name].node_tree.nodes.get('Principled BSDF').inputs['Base Color'].default_value = tuple((min(1, x * case['albedoScale']) for x in color[:3])) + (color[3],)",
+  "privateGeometryDoNotBundle": true
+}

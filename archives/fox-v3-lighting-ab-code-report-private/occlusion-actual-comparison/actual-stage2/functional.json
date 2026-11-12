@@ -1,0 +1,10 @@
+{
+  "orderExactAll10": true,
+  "groundMetadataAll10": true,
+  "reverseGroundMetadataAll10": true,
+  "disposedPoisonedBeforeRender": true,
+  "negativeTests": [
+    "nonfinite camera rejected before output"
+  ],
+  "inputsUnchanged": true
+}

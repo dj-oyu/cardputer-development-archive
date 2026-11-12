@@ -1,0 +1,30 @@
+{
+  "interpretation": "Static instruction-site counts across whole functions, including branches. %rbp is not assumed to be a frame pointer. %rsp operands may be deliberate arrays, arguments or spills; these counts alone cannot distinguish them. Does not count implicit call/return memory operations as explicit rsp operands. Not dynamic frequency or cycles.",
+  "functions": {
+    "ayatsuri_shade_from_terms.isra.0": {
+      "instructions": 115,
+      "rsp_memory_operand_instructions": 13,
+      "push_pop_instructions": 10,
+      "call_instructions": [
+        "b7:\te8 00 00 00 00       \tcall   bc <ayatsuri_shade_from_terms.isra.0+0xbc>",
+        "143:\te8 00 00 00 00       \tcall   148 <ayatsuri_shade_from_terms.isra.0+0x148>",
+        "1b8:\te8 00 00 00 00       \tcall   1bd <ayatsuri_shade_from_terms.isra.0+0x1bd>"
+      ]
+    },
+    "shade_pair": {
+      "instructions": 144,
+      "rsp_memory_operand_instructions": 29,
+      "push_pop_instructions": 12,
+      "call_instructions": [
+        "261:\te8 00 00 00 00       \tcall   266 <shade_pair+0x86>",
+        "277:\te8 00 00 00 00       \tcall   27c <shade_pair+0x9c>",
+        "2e0:\te8 00 00 00 00       \tcall   2e5 <shade_pair+0x105>",
+        "2ff:\te8 00 00 00 00       \tcall   304 <shade_pair+0x124>",
+        "355:\te8 00 00 00 00       \tcall   35a <shade_pair+0x17a>",
+        "368:\te8 00 00 00 00       \tcall   36d <shade_pair+0x18d>",
+        "3b2:\te8 49 fc ff ff       \tcall   0 <ayatsuri_shade_from_terms.isra.0>",
+        "3dc:\te8 1f fc ff ff       \tcall   0 <ayatsuri_shade_from_terms.isra.0>"
+      ]
+    }
+  }
+}

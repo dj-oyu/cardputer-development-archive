@@ -1,0 +1,30 @@
+{
+  "cases": [
+    {
+      "case": "baseline",
+      "seconds": 14.310511076999319,
+      "coveredPixels": 5156,
+      "uniqueVertexQueries": 523,
+      "rays": 134398,
+      "blocked": 43524,
+      "groundBlocked": 0,
+      "near": 169
+    },
+    {
+      "case": "direction",
+      "seconds": 14.48520304900012,
+      "coveredPixels": 5156,
+      "uniqueVertexQueries": 523,
+      "rays": 109799,
+      "blocked": 51356,
+      "groundBlocked": 0,
+      "near": 198
+    }
+  ],
+  "wallSeconds": 28.802294287999757,
+  "worldTermAbsent": true,
+  "groundEmissionAbsent": true,
+  "occluderTriangles": 1168,
+  "allInputsUnchanged": true,
+  "scope": "host direct-only C integration with geometry ray visibility, raw pixel and float vertex interpolation, source/565 rho; not product output"
+}

@@ -1,0 +1,112 @@
+{
+  "status": "PRODUCTION_CANARY_EXACT_COMPLETE",
+  "frames": [
+    {
+      "name": "native-front-baseline",
+      "view": "front",
+      "case": "baseline",
+      "reverse": false,
+      "arm": "off",
+      "mode": "production",
+      "status": "PASS",
+      "files": {
+        ".u16le": "fb373165478a9984e5be41ffd88c73df34be4480fdf6480bc2fe24f796123b9e",
+        ".snapshot": "006cfd92bda231a4ae7922f23aa125176f807967feaf444e2f3f8b19ef72cab0",
+        ".targets.u8": "eebd4a3432074c6e6d84cf7e6a03b34c7dbd9d4309bd3fbd003b7caa47eeb4f6",
+        ".hdr.f64le": "7b5a6dfa3cdcd2cd7f3427f366723aa2635d4d56998b06fd9f549aef7dba870d",
+        ".json": "42bd3d0b9d038ae6baea9321b995a012e6c5132b7f78a80f20889981fea96d8b",
+        ".aa.json": "b024ec623f7c0e140443c2cf9ca0a5a01712409fccb3d6c08ca49d3fcfde15bf",
+        ".floor.json": "102ec79849b8b5c882a528f4692774b04e10f186c511df46e0a7299096e10a38",
+        ".background.json": "69aae628e28cd652dfec616c24622971d5e2ada8743d87ff7fce4807e0d355bc",
+        ".row.json": "825c2b8a2825d66cae96f7013fc841a2a3a49ba37faae0cf248e4d0bd4069bed",
+        ".floor-world.json": "806e770efa438bda98e3a7b28525925f49498c91da6fad798e9cd890cc548f0d",
+        ".hdr-observer.json": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d",
+        ".cache.json": "54f00901d3a10c5cbadbdd5531884282d77d6abb73cd4a927b5849fb82711c4e",
+        ".depth-stream.json": "72ce2922c95e4179ab8ced1fb60b80bfeb0848dd0509d9c43781aea9f102dc89"
+      },
+      "reportObservations": {
+        ".json": {
+          "descriptiveTiming": {
+            "transportBuildNs": {
+              "baseline": 39407431,
+              "candidate": 37107933
+            },
+            "visibilityBuildNs": {
+              "baseline": 2155138,
+              "candidate": 2541002
+            },
+            "appendNs": {
+              "baseline": 42081904,
+              "candidate": 40209993
+            },
+            "evaluateNs": {
+              "baseline": 10035894,
+              "candidate": 9276685
+            },
+            "hostRenderNsFirstFrame": {
+              "baseline": 17281714689,
+              "candidate": 18914070246
+            }
+          },
+          "declaredNonTiming": [
+            {
+              "path": [
+                "visibilitySceneBytes"
+              ],
+              "baseline": 106104,
+              "candidate": 69276
+            }
+          ]
+        },
+        ".aa.json": {
+          "descriptiveTiming": {},
+          "declaredNonTiming": []
+        },
+        ".floor.json": {
+          "descriptiveTiming": {},
+          "declaredNonTiming": []
+        },
+        ".background.json": {
+          "descriptiveTiming": {
+            "backgroundBuildNs": {
+              "baseline": 85309,
+              "candidate": 127943
+            }
+          },
+          "declaredNonTiming": []
+        },
+        ".row.json": {
+          "descriptiveTiming": {
+            "backgroundBuildNs": {
+              "baseline": 85309,
+              "candidate": 127943
+            }
+          },
+          "declaredNonTiming": []
+        },
+        ".floor-world.json": {
+          "descriptiveTiming": {},
+          "declaredNonTiming": []
+        },
+        ".hdr-observer.json": {
+          "descriptiveTiming": {},
+          "declaredNonTiming": []
+        },
+        ".cache.json": {
+          "descriptiveTiming": {},
+          "declaredNonTiming": []
+        },
+        ".depth-stream.json": {
+          "descriptiveTiming": {},
+          "declaredNonTiming": []
+        }
+      },
+      "elapsedSecondsDescriptiveOnly": 18.96765220098314,
+      "hostUserCPUSeconds": 18.951033,
+      "hostSystemCPUSeconds": 0.0038139999999999997,
+      "hostPeakRSSKiB": 24684
+    }
+  ],
+  "actualNoDepthCaptureCases": 1,
+  "full40NoDepthCaptureCoverage": false
+}

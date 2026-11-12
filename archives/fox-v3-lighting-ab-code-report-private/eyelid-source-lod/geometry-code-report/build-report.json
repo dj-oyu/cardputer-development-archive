@@ -1,0 +1,102 @@
+{
+  "sourceUnchanged": true,
+  "sourceSha256": "9254eaebdfa61143dfdb9480330bc677ae47acfa710715bbfa31ab2943a16806",
+  "baselineSha256": "a0ba7e5b536aa292437e589ee44362d686c02ed2769aacb284d5e580cfdcab2b",
+  "planSha256": "12235a151a5fac9ce97ea365abec6b807b2fe0ee9e7954b4856dcfda2cbc1e4c",
+  "stages": [
+    {
+      "stage": "lid-8",
+      "path": "/workspace/scratch/6d8dcdbcdc54/fox-v3-lid-source-lod/lid-8.glb",
+      "sha256": "833ac7683872375f9e63f819618e0e25ed40e0ac761a35f7604cd45501207a8e",
+      "actualTriangles": 1564,
+      "deltaTrianglesVsEyeB": 150,
+      "changedVertices": 96,
+      "deltaSourceVerticesVsEyeB": 81,
+      "baselineBinaryPrefixByteIdentical": true,
+      "unrelatedMeshAccessorNormalMaterialNodeValuesUnchanged": true,
+      "sourceVertexAndNormalExportByteExactAfterAxisTransform": true,
+      "objects": [
+        {
+          "name": "Upper eyelid -1",
+          "vertices": 48,
+          "triangles": 84,
+          "normalSplits": 0,
+          "sourcePositionsAndUniqueCornerNormalsExact": true,
+          "greedySelectionMatchesPlan": true,
+          "boundaryLoops": [
+            6,
+            6
+          ],
+          "connectedCylinder": true,
+          "consistentWinding": true,
+          "minimumNgDotSourceNs": 0.7814245825727433,
+          "minimumDoubleArea": 0.0008328544519697965
+        },
+        {
+          "name": "Upper eyelid 1",
+          "vertices": 48,
+          "triangles": 84,
+          "normalSplits": 0,
+          "sourcePositionsAndUniqueCornerNormalsExact": true,
+          "greedySelectionMatchesPlan": true,
+          "boundaryLoops": [
+            6,
+            6
+          ],
+          "connectedCylinder": true,
+          "consistentWinding": true,
+          "minimumNgDotSourceNs": 0.7814238935050685,
+          "minimumDoubleArea": 0.0008328551286852927
+        }
+      ],
+      "actualCompileAndSnapshot": "Not run by geometry builder; parent evaluation owns admission"
+    },
+    {
+      "stage": "lid-9",
+      "path": "/workspace/scratch/6d8dcdbcdc54/fox-v3-lid-source-lod/lid-9.glb",
+      "sha256": "5e7ab10cf89a5cc79274e50cb83472f6086cd075de2743c81629a95fd051c5d8",
+      "actualTriangles": 1588,
+      "deltaTrianglesVsEyeB": 174,
+      "changedVertices": 108,
+      "deltaSourceVerticesVsEyeB": 93,
+      "baselineBinaryPrefixByteIdentical": true,
+      "unrelatedMeshAccessorNormalMaterialNodeValuesUnchanged": true,
+      "sourceVertexAndNormalExportByteExactAfterAxisTransform": true,
+      "objects": [
+        {
+          "name": "Upper eyelid -1",
+          "vertices": 54,
+          "triangles": 96,
+          "normalSplits": 0,
+          "sourcePositionsAndUniqueCornerNormalsExact": true,
+          "greedySelectionMatchesPlan": true,
+          "boundaryLoops": [
+            6,
+            6
+          ],
+          "connectedCylinder": true,
+          "consistentWinding": true,
+          "minimumNgDotSourceNs": 0.8393104711909228,
+          "minimumDoubleArea": 0.0005514003266678323
+        },
+        {
+          "name": "Upper eyelid 1",
+          "vertices": 54,
+          "triangles": 96,
+          "normalSplits": 0,
+          "sourcePositionsAndUniqueCornerNormalsExact": true,
+          "greedySelectionMatchesPlan": true,
+          "boundaryLoops": [
+            6,
+            6
+          ],
+          "connectedCylinder": true,
+          "consistentWinding": true,
+          "minimumNgDotSourceNs": 0.839311962312722,
+          "minimumDoubleArea": 0.0005514005369968979
+        }
+      ],
+      "actualCompileAndSnapshot": "Not run by geometry builder; parent evaluation owns admission"
+    }
+  ]
+}

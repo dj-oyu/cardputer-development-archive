@@ -1,0 +1,42 @@
+{
+  "front": {
+    "old": {
+      "brightTP": 884,
+      "brightFP": 194,
+      "brightFN": 527,
+      "brightIoU": 0.550778816199377,
+      "darkIoU": 0.7687373396353815,
+      "sourceDarkNativeBright": 149,
+      "sourceBrightNativeDark": 130
+    },
+    "pixel": {
+      "brightTP": 938,
+      "brightFP": 151,
+      "brightFN": 473,
+      "brightIoU": 0.6005121638924455,
+      "darkIoU": 0.7195249738037024,
+      "sourceDarkNativeBright": 110,
+      "sourceBrightNativeDark": 68
+    }
+  },
+  "oblique": {
+    "old": {
+      "brightTP": 275,
+      "brightFP": 216,
+      "brightFN": 434,
+      "brightIoU": 0.2972972972972973,
+      "darkIoU": 0.826805096743747,
+      "sourceDarkNativeBright": 178,
+      "sourceBrightNativeDark": 101
+    },
+    "pixel": {
+      "brightTP": 293,
+      "brightFP": 157,
+      "brightFN": 416,
+      "brightIoU": 0.33833718244803695,
+      "darkIoU": 0.7395180722891567,
+      "sourceDarkNativeBright": 119,
+      "sourceBrightNativeDark": 50
+    }
+  }
+}

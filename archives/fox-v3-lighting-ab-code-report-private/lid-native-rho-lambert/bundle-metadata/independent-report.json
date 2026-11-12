@@ -1,0 +1,17 @@
+{
+  "sourcePins": 10,
+  "parts": 54,
+  "rawCases": 2,
+  "snapshots": 4,
+  "verticesPerCase": 1163,
+  "triangles": 1564,
+  "uniformABExact": true,
+  "freshCFloatDecodeExact": true,
+  "priorPrivateGeometryPositionSNORMExact": true,
+  "freshAudit002": {
+    "status": "PASS",
+    "pins": 245,
+    "currentBeforeAfterExact": true,
+    "scope": "read-only artifact and source review, no independent Blender render"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "status": "FIXED40_AND_INDEPENDENT_RETAINED_AUDIT_PASS",
+  "actualFrames": 40,
+  "comparisons": {
+    "frames": 40,
+    "raw": 200,
+    "reports": 280,
+    "forwardReverse": 80
+  },
+  "onlyNonTimingDifference": {
+    ".json": {
+      "transportSceneBytes": [
+        100808,
+        28592
+      ]
+    }
+  },
+  "transportSceneBytes": 28592,
+  "legacyTransportSceneBytes": 100808,
+  "renderPhaseSaved": 72216,
+  "namedInitialLifecyclePeak": 505952,
+  "previousNamedPeak": 568352,
+  "namedPeakSaved": 62400,
+  "largestNamedConstructionAllocation": 100224,
+  "largestNamedRenderAllocation": 77312,
+  "namedStacks": {
+    "background": 4080,
+    "renderer": 5008,
+    "main": 83744
+  },
+  "independentRetainedReviewSHA256": "55cf38c03b73549a758a3a22afcdf049d1fe95937409197f89ec78e718e0cc6f",
+  "sourceFreezeSHA256": "7dea752867eaefb6b369ad5648b7fa3efb539e519fc4353d2c78fa0bf985567f",
+  "physicalGateSHA256": "825da2b11d84e276c4e186f331c560375bfc744b62a0a52d0d97ddfa18ce1ccc",
+  "completedManifestSHA256": {
+    "off": "1c191444447e6526ff014ff88676e0bbe481f49cd7b6dd8ece667d341fe58aaf",
+    "on": "ec3644bdfeb66a8818716330cfe5ef7e1d5123bbdee3c817dcf8a22e928147c6"
+  },
+  "rerenders": 0,
+  "retries": 0,
+  "sourceChangesAfterGate": 0,
+  "publicExport": false,
+  "qualification": "Named initial lifecycle only, exclusions in MEMORY_LEDGER. Original100224 caller attrs remain; generic compact may grow8192. No device/whole-host fit or speedup claim."
+}

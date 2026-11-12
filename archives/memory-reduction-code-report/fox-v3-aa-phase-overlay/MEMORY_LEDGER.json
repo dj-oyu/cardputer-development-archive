@@ -1,0 +1,131 @@
+{
+  "status": "AA_PHASE_OVERLAY_PREACTUAL_NAMED_HOST_LEDGER",
+  "actualFrames": 0,
+  "baseLedgerSHA256": "de759ae552c60be905129205cc0b74242fdc7cfe74cb936b3f0a6765f6d200cc",
+  "model": {
+    "nodes": 55,
+    "nodeLimit": 256,
+    "coldBytes": 47708,
+    "legacyBytes": 81356,
+    "metadataBytes": 1760,
+    "nodeTotalBytes": 80036,
+    "minNodeBytes": 84,
+    "maxNodeBytes": 1648,
+    "instanceBytes": 584,
+    "segmentedFlagOffset": 581,
+    "descriptorBytes": 16,
+    "pointerBytes": 8,
+    "payloadBytes": 81796,
+    "payloadDelta": 440,
+    "ownerControlBytes": 912,
+    "heapIncludingOwner": 82708,
+    "heapDeltaIncludingOwner": 1352,
+    "payloadAllocations": 56,
+    "allocationsIncludingOwner": 57,
+    "largestModelAllocation": 1760
+  },
+  "stack": {
+    "baselineMain": 83792,
+    "main": 83792,
+    "mainDelta": 0,
+    "rendererPeak": 5008,
+    "backgroundPeak": 4080,
+    "backgroundCap": 4096,
+    "backgroundMargin": 16
+  },
+  "phases": {
+    "render": {
+      "heap": {
+        "aaWorkspace": 72512,
+        "privateRGB565": 64800,
+        "privateDepth": 129600,
+        "sharedVisibilitySceneOnce": 106104,
+        "transportScene": 28592,
+        "backgroundScene": 976
+      },
+      "mainStack": 83792,
+      "namedChildStack": 5008,
+      "sumExcludingRO": 491384
+    },
+    "visibilityBuildConservative": {
+      "visibilityScene": 106104,
+      "visibilityBuildOnlyTemporary": 37584,
+      "callerGeometryTemporary": 46800,
+      "transportAttributes": 35868,
+      "mainStack": 83792,
+      "namedChildStackUpper": 2432,
+      "coldModelBytes": 47708,
+      "modelPayload": 81796,
+      "modelOwnerControl": 912,
+      "sumExcludingRO": 442996
+    },
+    "transportBuildConservative": {
+      "visibilityScene": 106104,
+      "transportScene": 28592,
+      "transportAttributes": 35868,
+      "mainStack": 83792,
+      "namedChildStackUpper": 464,
+      "coldModelBytes": 47708,
+      "modelPayload": 81796,
+      "modelOwnerControl": 912,
+      "sumExcludingRO": 385236
+    },
+    "backgroundBuildConservative": {
+      "visibilityScene": 106104,
+      "transportScene": 28592,
+      "backgroundScene": 976,
+      "mainStack": 83792,
+      "namedChildStackUpper": 1184,
+      "coldModelBytes": 47708,
+      "modelPayload": 81796,
+      "modelOwnerControl": 912,
+      "sumExcludingRO": 351064
+    }
+  },
+  "noWholeHostOrDeviceFitClaim": true,
+  "target32ABI": "Not measured; no new SDK or device access",
+  "allConsumersRecompiled": true,
+  "exclusions": [
+    "libc/libm and qsort internals",
+    "allocator metadata and fragmentation",
+    "executable and unnamed read-only compiler constants",
+    "test-only oracle buffers",
+    "unrelated caller state"
+  ],
+  "namedROReferenceBytesUnchanged": 1662416,
+  "baselineNamedPeak": 496184,
+  "namedPeak": 491384,
+  "namedPeakDelta": -4800,
+  "largestNamedAllocation": 72512,
+  "largestNamedAllocationOwner": "AA workspace",
+  "priorLargestNamedAllocation": 77312,
+  "maximumNodeCountBookkeeping": {
+    "nodes": 256,
+    "metadataBytes": 8192,
+    "ownerControlBytes": 4128,
+    "allocationAttemptsIncludingOwner": 258,
+    "nodeSlotBound": "Derived per immutable opened model;84..1648 is actual fox only, not a universal bound."
+  },
+  "diagnosticStack": 83776,
+  "newStorageWork": {
+    "pointerTableCopyBytes": 440,
+    "additionalZeroFillBytes": 1352,
+    "allocationAttempts": 57,
+    "unchangedInitCopyCounter": "Counts original node parameter copies only, excludes pointer table, zero fill and owner setup. Unchanged physical counters do not imply equal CPU work."
+  },
+  "storageLifetime": "Owner control, copied metadata table, all node slots and cold remain live through final snapshot extraction; dispose clears model access, helper frees independent saved pointers. All model storage gone before render.",
+  "accountingLimits": "Requested payload only; 57 malloc headers and fragmentation excluded, never interpreted as RAM saving. Main includes pointer/control locals; separately allocated owner table is charged once on heap. Render phase may change only with measured compiled main/renderer frames.",
+  "aaOverlay": {
+    "baselineBytes": 77312,
+    "candidateBytes": 72512,
+    "saved": 4800,
+    "pendingRowBytes": 5760,
+    "centerIDBytes": 4800,
+    "centerPhaseBytes": 10560,
+    "winnerUnionBytes": 13440,
+    "extraAllocations": 0,
+    "extraAdmissionPairs": 0,
+    "legacyGenericBytes": 137312,
+    "allConsumersRecompiled": true
+  }
+}

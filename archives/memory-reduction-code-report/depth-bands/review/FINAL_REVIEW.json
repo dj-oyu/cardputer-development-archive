@@ -1,0 +1,69 @@
+{
+  "status": "PASS_RETAINED_OUTPUT_INDEPENDENT_AUDIT",
+  "rerenders": 0,
+  "memoryLedgerAndGuardVerified": true,
+  "namedPeak": 568352,
+  "largestDepthBlock": 30720,
+  "backgroundStack": 4080,
+  "backgroundCap": 4096,
+  "guardUpperOffOn": [
+    927,
+    985
+  ],
+  "sourceFreezeSHA256": "93c5fe97440b0a3cbee57feb4cfb448633a833c35a13e6684b32ad8d080e3da8",
+  "gateSHA256": "63087f98a55f88ef3dcabf705a59a698b9b6bdd6af04688c6d76fdc48cbf898e",
+  "completedManifestSHA256": {
+    "off": "ca624c75ccf5169f4847787818f4abb6fcc3156eb93a61a7efe32fd0f32a29a3",
+    "on": "922df28d608ff42fd105e88b9ad05f8427ed9cbb6d07b023cfc456065ee17a31"
+  },
+  "comparisons": {
+    "frames": 40,
+    "raw": 200,
+    "reports": 280,
+    "forwardReverse": 80
+  },
+  "onlyNonTimingDifferences": {
+    ".row.json": {
+      "adapterSpanPairs": {
+        "off": [
+          276,
+          378
+        ],
+        "on": [
+          300,
+          406
+        ]
+      },
+      "producerUsed[RH_ADMISSION]": {
+        "off": [
+          396,
+          588
+        ],
+        "on": [
+          420,
+          616
+        ]
+      }
+    }
+  },
+  "timingExceptionsOnly": {
+    ".json": [
+      "transportBuildNs",
+      "visibilityBuildNs",
+      "appendNs",
+      "evaluateNs",
+      "hostRenderNsFirstFrame"
+    ],
+    ".background.json": [
+      "backgroundBuildNs"
+    ],
+    ".row.json": [
+      "backgroundBuildNs"
+    ]
+  },
+  "allPinsVerified": true,
+  "maximumObservedAA": 7804336,
+  "maximumProducerWork": 441972,
+  "auditScriptSHA256": "f4dd43ca688764324661802ace20f30bfe436accd1f1b78a952c0f7953bad95e",
+  "memoryQualification": "Fragmentation improvement only; full129600 depth payload remains. No device fit, total RAM reduction or speedup claim."
+}

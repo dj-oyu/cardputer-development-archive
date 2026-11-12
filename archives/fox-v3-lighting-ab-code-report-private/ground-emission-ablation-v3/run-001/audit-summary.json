@@ -1,0 +1,338 @@
+{
+  "sourceSHA256": "9254eaebdfa61143dfdb9480330bc677ae47acfa710715bbfa31ab2943a16806",
+  "sourceUnchanged": true,
+  "inputsUnchanged": true,
+  "onControlPassed": true,
+  "allONControlEXRChannelsBitExact": true,
+  "fullAuditsLocalOnlyDoNotBundle": true,
+  "cases": [
+    {
+      "seed": 11,
+      "view": "front",
+      "case": "baseline",
+      "beforeHash": "04d7448c5700e3c2b4c6df9dcadbe4787997239a6224e0b23967fa0e27f11749",
+      "copiedHash": "04d7448c5700e3c2b4c6df9dcadbe4787997239a6224e0b23967fa0e27f11749",
+      "afterHash": "93dcd690e722a047e5cffb760292a4704bf5267cebf3f279b33161e659f52af6",
+      "exactChanges": [
+        "/objects/Studio ground/materials/0/graph/nodes/Principled BSDF/inputs/28/value"
+      ],
+      "onlyEmissionStrengthChanged": true,
+      "ground": {
+        "object": "Studio ground",
+        "material": "Warm studio backdrop",
+        "nodeTypes": {
+          "Principled BSDF": "BSDF_PRINCIPLED",
+          "Material Output": "OUTPUT_MATERIAL"
+        },
+        "emissionColor": [
+          0.8399999737739563,
+          0.7799999713897705,
+          0.6499999761581421,
+          1.0
+        ],
+        "emissionStrengthON": 0.25,
+        "emissionStrengthOFF": 0,
+        "LeRGB_ON": [
+          0.20999999344348907,
+          0.19499999284744263,
+          0.16249999403953552
+        ],
+        "LeRGB_OFF": [
+          0,
+          0,
+          0
+        ],
+        "geometryHash": "642b4f7e431d2f5b67e973880c652772a41e12100121e62c55f414205ea69162"
+      },
+      "localFullAudit": "seed-11-front-baseline-off-audit.json",
+      "localFullAuditSHA256": "6625b9f94cb72c149591870ed956011a00132c11f7b86653835a5a685e6a5a6d"
+    },
+    {
+      "seed": 11,
+      "view": "oblique",
+      "case": "baseline",
+      "beforeHash": "9191667f491490bd9bb5b3aae011dbf173f34a7eb6588fc392a7cf4a45e5e7b7",
+      "copiedHash": "9191667f491490bd9bb5b3aae011dbf173f34a7eb6588fc392a7cf4a45e5e7b7",
+      "afterHash": "26bc7986439a210dca593cd6c62d0933a982fb7e66ae94f316b98dc1b2b5fa35",
+      "exactChanges": [
+        "/objects/Studio ground/materials/0/graph/nodes/Principled BSDF/inputs/28/value"
+      ],
+      "onlyEmissionStrengthChanged": true,
+      "ground": {
+        "object": "Studio ground",
+        "material": "Warm studio backdrop",
+        "nodeTypes": {
+          "Principled BSDF": "BSDF_PRINCIPLED",
+          "Material Output": "OUTPUT_MATERIAL"
+        },
+        "emissionColor": [
+          0.8399999737739563,
+          0.7799999713897705,
+          0.6499999761581421,
+          1.0
+        ],
+        "emissionStrengthON": 0.25,
+        "emissionStrengthOFF": 0,
+        "LeRGB_ON": [
+          0.20999999344348907,
+          0.19499999284744263,
+          0.16249999403953552
+        ],
+        "LeRGB_OFF": [
+          0,
+          0,
+          0
+        ],
+        "geometryHash": "642b4f7e431d2f5b67e973880c652772a41e12100121e62c55f414205ea69162"
+      },
+      "localFullAudit": "seed-11-oblique-baseline-off-audit.json",
+      "localFullAuditSHA256": "d1fc2c3d0f3a255f6847ec6139449e188802bf2d0feb77540b8348dbf88aeb48"
+    },
+    {
+      "seed": 11,
+      "view": "front",
+      "case": "direction",
+      "beforeHash": "768e973fc9849d4d0ea08ffb4df561f2a372454d35715561c1d0d0ea50e9564b",
+      "copiedHash": "768e973fc9849d4d0ea08ffb4df561f2a372454d35715561c1d0d0ea50e9564b",
+      "afterHash": "04b07a209db87f3e1938c434d96f5aaa6b2f1f372857ddca18f49b9e047e7896",
+      "exactChanges": [
+        "/objects/Studio ground/materials/0/graph/nodes/Principled BSDF/inputs/28/value"
+      ],
+      "onlyEmissionStrengthChanged": true,
+      "ground": {
+        "object": "Studio ground",
+        "material": "Warm studio backdrop",
+        "nodeTypes": {
+          "Principled BSDF": "BSDF_PRINCIPLED",
+          "Material Output": "OUTPUT_MATERIAL"
+        },
+        "emissionColor": [
+          0.8399999737739563,
+          0.7799999713897705,
+          0.6499999761581421,
+          1.0
+        ],
+        "emissionStrengthON": 0.25,
+        "emissionStrengthOFF": 0,
+        "LeRGB_ON": [
+          0.20999999344348907,
+          0.19499999284744263,
+          0.16249999403953552
+        ],
+        "LeRGB_OFF": [
+          0,
+          0,
+          0
+        ],
+        "geometryHash": "642b4f7e431d2f5b67e973880c652772a41e12100121e62c55f414205ea69162"
+      },
+      "localFullAudit": "seed-11-front-direction-off-audit.json",
+      "localFullAuditSHA256": "68867b6a1f4e4ec7f68bacdd004a1c9060da94e13ae5ce0f816b250616984372"
+    },
+    {
+      "seed": 11,
+      "view": "oblique",
+      "case": "direction",
+      "beforeHash": "64caa2857caf8acfc24777c65b3d35820456db1eaf1a7167af0cca278176402e",
+      "copiedHash": "64caa2857caf8acfc24777c65b3d35820456db1eaf1a7167af0cca278176402e",
+      "afterHash": "4cd99429d067233ff81108d14ae4cf677d1ff56be3c2334cc940845f2088cf02",
+      "exactChanges": [
+        "/objects/Studio ground/materials/0/graph/nodes/Principled BSDF/inputs/28/value"
+      ],
+      "onlyEmissionStrengthChanged": true,
+      "ground": {
+        "object": "Studio ground",
+        "material": "Warm studio backdrop",
+        "nodeTypes": {
+          "Principled BSDF": "BSDF_PRINCIPLED",
+          "Material Output": "OUTPUT_MATERIAL"
+        },
+        "emissionColor": [
+          0.8399999737739563,
+          0.7799999713897705,
+          0.6499999761581421,
+          1.0
+        ],
+        "emissionStrengthON": 0.25,
+        "emissionStrengthOFF": 0,
+        "LeRGB_ON": [
+          0.20999999344348907,
+          0.19499999284744263,
+          0.16249999403953552
+        ],
+        "LeRGB_OFF": [
+          0,
+          0,
+          0
+        ],
+        "geometryHash": "642b4f7e431d2f5b67e973880c652772a41e12100121e62c55f414205ea69162"
+      },
+      "localFullAudit": "seed-11-oblique-direction-off-audit.json",
+      "localFullAuditSHA256": "3b0995ebab0b69734e77fd2da3b4b5ca78be52e79721bd8a94e0352a02b97a37"
+    },
+    {
+      "seed": 29,
+      "view": "front",
+      "case": "baseline",
+      "beforeHash": "95c2adfb69363a8c2e722ca4ddb51fd831d23b19f02d155bc77d6236707e7600",
+      "copiedHash": "95c2adfb69363a8c2e722ca4ddb51fd831d23b19f02d155bc77d6236707e7600",
+      "afterHash": "9d2255ac7edaa37d0e678aafdb88427ce6ff0697c08a4f87f2ad6aae7b54a4e0",
+      "exactChanges": [
+        "/objects/Studio ground/materials/0/graph/nodes/Principled BSDF/inputs/28/value"
+      ],
+      "onlyEmissionStrengthChanged": true,
+      "ground": {
+        "object": "Studio ground",
+        "material": "Warm studio backdrop",
+        "nodeTypes": {
+          "Principled BSDF": "BSDF_PRINCIPLED",
+          "Material Output": "OUTPUT_MATERIAL"
+        },
+        "emissionColor": [
+          0.8399999737739563,
+          0.7799999713897705,
+          0.6499999761581421,
+          1.0
+        ],
+        "emissionStrengthON": 0.25,
+        "emissionStrengthOFF": 0,
+        "LeRGB_ON": [
+          0.20999999344348907,
+          0.19499999284744263,
+          0.16249999403953552
+        ],
+        "LeRGB_OFF": [
+          0,
+          0,
+          0
+        ],
+        "geometryHash": "642b4f7e431d2f5b67e973880c652772a41e12100121e62c55f414205ea69162"
+      },
+      "localFullAudit": "seed-29-front-baseline-off-audit.json",
+      "localFullAuditSHA256": "d4445bfff0e5c5cc8f112774e60f382cfc72bc83da3ec1c3c3c2e238030ac3bf"
+    },
+    {
+      "seed": 29,
+      "view": "oblique",
+      "case": "baseline",
+      "beforeHash": "8ebd32d8d479ed8611cc5b89bc9b053630ef8fd8f7aace63b4ee71a18602ea7d",
+      "copiedHash": "8ebd32d8d479ed8611cc5b89bc9b053630ef8fd8f7aace63b4ee71a18602ea7d",
+      "afterHash": "954982b5065a4ab98fe990a0d8fbe5e1edb8b15e907284e0d85b4b1a0ed2f602",
+      "exactChanges": [
+        "/objects/Studio ground/materials/0/graph/nodes/Principled BSDF/inputs/28/value"
+      ],
+      "onlyEmissionStrengthChanged": true,
+      "ground": {
+        "object": "Studio ground",
+        "material": "Warm studio backdrop",
+        "nodeTypes": {
+          "Principled BSDF": "BSDF_PRINCIPLED",
+          "Material Output": "OUTPUT_MATERIAL"
+        },
+        "emissionColor": [
+          0.8399999737739563,
+          0.7799999713897705,
+          0.6499999761581421,
+          1.0
+        ],
+        "emissionStrengthON": 0.25,
+        "emissionStrengthOFF": 0,
+        "LeRGB_ON": [
+          0.20999999344348907,
+          0.19499999284744263,
+          0.16249999403953552
+        ],
+        "LeRGB_OFF": [
+          0,
+          0,
+          0
+        ],
+        "geometryHash": "642b4f7e431d2f5b67e973880c652772a41e12100121e62c55f414205ea69162"
+      },
+      "localFullAudit": "seed-29-oblique-baseline-off-audit.json",
+      "localFullAuditSHA256": "6b129f86b4aaa3443292c94471a0eef39f0f0717bd633e9d8a7400d2406d0fdf"
+    },
+    {
+      "seed": 29,
+      "view": "front",
+      "case": "direction",
+      "beforeHash": "33e4add02e7cc1644a3db6293cbbd6e6e6f90abe565b45749ed0a3b3b97cd8ca",
+      "copiedHash": "33e4add02e7cc1644a3db6293cbbd6e6e6f90abe565b45749ed0a3b3b97cd8ca",
+      "afterHash": "79cba5749bcde767c1466159022e659d260758ad1b094399a33be5b3ce21c85a",
+      "exactChanges": [
+        "/objects/Studio ground/materials/0/graph/nodes/Principled BSDF/inputs/28/value"
+      ],
+      "onlyEmissionStrengthChanged": true,
+      "ground": {
+        "object": "Studio ground",
+        "material": "Warm studio backdrop",
+        "nodeTypes": {
+          "Principled BSDF": "BSDF_PRINCIPLED",
+          "Material Output": "OUTPUT_MATERIAL"
+        },
+        "emissionColor": [
+          0.8399999737739563,
+          0.7799999713897705,
+          0.6499999761581421,
+          1.0
+        ],
+        "emissionStrengthON": 0.25,
+        "emissionStrengthOFF": 0,
+        "LeRGB_ON": [
+          0.20999999344348907,
+          0.19499999284744263,
+          0.16249999403953552
+        ],
+        "LeRGB_OFF": [
+          0,
+          0,
+          0
+        ],
+        "geometryHash": "642b4f7e431d2f5b67e973880c652772a41e12100121e62c55f414205ea69162"
+      },
+      "localFullAudit": "seed-29-front-direction-off-audit.json",
+      "localFullAuditSHA256": "2dddfbf5d6c22c995ae2cf74cc5473db5516e638520404cd60ddb96ee2c4b564"
+    },
+    {
+      "seed": 29,
+      "view": "oblique",
+      "case": "direction",
+      "beforeHash": "d7701e8517e80c1cc8e5d1c62714a6ca006575ff16b18244ef42e9e0b4aea789",
+      "copiedHash": "d7701e8517e80c1cc8e5d1c62714a6ca006575ff16b18244ef42e9e0b4aea789",
+      "afterHash": "c33060d2eac57d736c50a45cda495749571f775a4f2e1f4ce25a7b3928716ce7",
+      "exactChanges": [
+        "/objects/Studio ground/materials/0/graph/nodes/Principled BSDF/inputs/28/value"
+      ],
+      "onlyEmissionStrengthChanged": true,
+      "ground": {
+        "object": "Studio ground",
+        "material": "Warm studio backdrop",
+        "nodeTypes": {
+          "Principled BSDF": "BSDF_PRINCIPLED",
+          "Material Output": "OUTPUT_MATERIAL"
+        },
+        "emissionColor": [
+          0.8399999737739563,
+          0.7799999713897705,
+          0.6499999761581421,
+          1.0
+        ],
+        "emissionStrengthON": 0.25,
+        "emissionStrengthOFF": 0,
+        "LeRGB_ON": [
+          0.20999999344348907,
+          0.19499999284744263,
+          0.16249999403953552
+        ],
+        "LeRGB_OFF": [
+          0,
+          0,
+          0
+        ],
+        "geometryHash": "642b4f7e431d2f5b67e973880c652772a41e12100121e62c55f414205ea69162"
+      },
+      "localFullAudit": "seed-29-oblique-direction-off-audit.json",
+      "localFullAuditSHA256": "154cb932f7cd5a9a7b31b7cc364791f9126b86e88fc61dce381fcfedd1c68ae2"
+    }
+  ]
+}

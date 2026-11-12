@@ -1,0 +1,50 @@
+[
+  {
+    "variant": "baseline",
+    "mode": "ON",
+    "head": "dc2c5e044429a4904e91564aa7f9cb30d7d4cbbb",
+    "job_id": 118416860534,
+    "conclusion": "success",
+    "log": "/workspace/derby-evidence/controller-split-20261020/ci-target/baseline-ON.log"
+  },
+  {
+    "variant": "baseline",
+    "mode": "OFF",
+    "head": "dc2c5e044429a4904e91564aa7f9cb30d7d4cbbb",
+    "job_id": 118416860637,
+    "conclusion": "success",
+    "log": "/workspace/derby-evidence/controller-split-20261020/ci-target/baseline-OFF.log"
+  },
+  {
+    "variant": "native",
+    "mode": "ON",
+    "head": "3fafcadbd72ecbd0d799cbe9d29f037ff62c05d5",
+    "job_id": 118416879464,
+    "conclusion": "success",
+    "log": "/workspace/derby-evidence/controller-split-20261020/ci-target/native-ON.log"
+  },
+  {
+    "variant": "native",
+    "mode": "OFF",
+    "head": "3fafcadbd72ecbd0d799cbe9d29f037ff62c05d5",
+    "job_id": 118416879479,
+    "conclusion": "success",
+    "log": "/workspace/derby-evidence/controller-split-20261020/ci-target/native-OFF.log"
+  },
+  {
+    "variant": "batch",
+    "mode": "ON",
+    "head": "711f94fa91c6e0d6ba7bc00def75ad686b724c7d",
+    "job_id": 118416896407,
+    "conclusion": "success",
+    "log": "/workspace/derby-evidence/controller-split-20261020/ci-target/batch-ON.log"
+  },
+  {
+    "variant": "batch",
+    "mode": "OFF",
+    "head": "711f94fa91c6e0d6ba7bc00def75ad686b724c7d",
+    "job_id": 118416896501,
+    "conclusion": "success",
+    "log": "/workspace/derby-evidence/controller-split-20261020/ci-target/batch-OFF.log"
+  }
+]

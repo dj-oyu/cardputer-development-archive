@@ -1,0 +1,20 @@
+{
+  "stage": "STOPPED_AT_LOCAL_STRICT_PARSER",
+  "on_flash_job": "derby-j1-on-flash-b561aea1-20261020",
+  "on_flash_state": "succeeded",
+  "on_current_firmware_receipt": "db1e10643f69ab8510dfd43df9d4649ddf26f91a03c081910cfec15f6de46a18",
+  "on_trial_job": "derby-j1-on-fixed-b561aea1-20261020",
+  "on_trial_official_state": "succeeded",
+  "on_trial_official_result": "derby_fixed_trial_verified",
+  "on_local_core_parsers": "project parse_collected and pinned v2 parser pass",
+  "on_local_completion_parser": "completion_missing_or_duplicate_marker",
+  "cause_observed": "APP_ID and DERBY READY are timestamp-prefixed on device; exact J1 local completion helper requires bare lines. END/ownerEXIT/STOP/HOME are present once in order.",
+  "ON_comparison_gate_accepted": false,
+  "OFF_jobs_created": [],
+  "OFF_started": false,
+  "physical_operation_active": false,
+  "lease": "Expired after collector completion; final broker idle/unowned. release returned invalid_session; no retry.",
+  "manual_config_or_permission_changes": false,
+  "automatic_retries": 0,
+  "automatic_rollback": false
+}

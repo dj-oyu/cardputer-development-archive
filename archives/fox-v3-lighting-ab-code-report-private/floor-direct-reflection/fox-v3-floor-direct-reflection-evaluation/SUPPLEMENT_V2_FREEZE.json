@@ -1,0 +1,11 @@
+{
+  "reason": "Supplement v1 incorrectly grouped sample-major adjacent rows; v2 uses explicit xy/sample keys, allfour unique keys and fixed targetset. Formal score/actual output unchanged.",
+  "unchangedActualOutputSHA256": "94fce652dc754dffee78a2436c92a6481effc3ff99af39baae456f5215b5387c",
+  "files": {
+    "code/target_samples.py": "da32008c545d98c62b1760834f785f463872e107d129cad707bb133791c6a8af",
+    "code/summarize_floor_components_v2.py": "9092c9cb7710290aa23c093744fcd3848e2c843e1b7d9ad09ed4c3eceed1afac",
+    "code/audit_floor_clipping_v2.py": "30f9982fbe15e54f268f151b700837cc7af2b4c31993f7447ac169aed12edb67",
+    "actual-002/FLOOR_COMPONENT_SUMMARY_V2.json": "eb9beaa7c420a9146bbf86a01148d77d24172172cce67847ad77e09344dd6409",
+    "actual-002/FLOOR_CLIPPING_SUMMARY_V2.json": "c4fae914cf0c2ad2e481167f70c1e2971d4f9be5cf810a3b656b6ba2e6e6c947"
+  }
+}

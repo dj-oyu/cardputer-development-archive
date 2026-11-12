@@ -1,0 +1,285 @@
+#ifndef KSN_CORE_H
+#define KSN_CORE_H
+#include "ksn_api.h"
+#include "ksn_ports.h"
+#include "ksn_composition_types.h"
+#define KSN_RESOURCES 16u
+#define KSN_APP_TRACKS 6u
+#define KSN_SYSTEM_TRACKS 2u
+#define KSN_TRACKS (KSN_APP_TRACKS+KSN_SYSTEM_TRACKS)
+typedef struct {
+    uint64_t started_us,sampled_us;
+    ksn_pose from,to;
+    ksn_animation id;ksn_ref target;
+    uint32_t duration_ms;
+    uint8_t easing,repeat,status,pad;
+} ksn_track;
+typedef struct { ksn_track tracks[KSN_TRACKS]; } ksn_core_animation_block;
+
+#define KSN_APP_COMMANDS 80u
+#define KSN_SYSTEM_COMMANDS 16u
+#define KSN_COMMANDS (KSN_APP_COMMANDS + KSN_SYSTEM_COMMANDS)
+#define KSN_APP_TEXT_BYTES 896u
+#define KSN_SYSTEM_TEXT_BYTES 128u
+#define KSN_TEXT_BYTES (KSN_APP_TEXT_BYTES + KSN_SYSTEM_TEXT_BYTES)
+#define KSN_CORE_STORAGE_BYTES 9216u
+
+/* Host storage layout, not a guest API. Do not access fields directly.
+ * A typed member avoids accessing a declared byte array as an unrelated struct. */
+typedef struct ksn_core_impl ksn_core_impl;
+typedef struct { ksn_core_impl *core; ksn_layer layer; } ksn_endpoint;
+/* Compact copy of the public port: the two one-byte metadata fields occupy
+ * what was padding after the resource ID, preserving the core's SRAM budget. */
+typedef struct {
+    void *ctx;
+    uint16_t width,height,variants,frames;
+    ksn_result (*read_span)(void *,uint16_t,uint16_t,uint16_t,uint16_t,uint16_t,
+                            uint16_t *,uint8_t *);
+    ksn_resource id;
+    uint8_t layer,opaque;
+} ksn_image_entry;
+typedef struct {
+    /* Keep clone_bank_metadata() in ksn_core.c in sync with logical fields
+     * added here. Physical block identity must never cross candidate banks. */
+    ksn_command_storage *commands; /* Owned physical block. */
+    ksn_command_storage *command_peer;
+    /* Per-slot owner: bit 0/1 selects physical command bank 0/1. A PATCH
+     * borrows sealed commands until a writer privatizes one slot. */
+    uint32_t command_owner[(KSN_COMMANDS+31u)/32u];
+    uint8_t physical_index;
+    uint8_t *text; /* Owned physical block; never changes after bind. */
+    /* A sealed layer may borrow the other logical bank's immutable text.
+     * Each pointer addresses that layer's own [0,text_limit) region. */
+    uint8_t *text_layer[2];
+    ksn_track *tracks;
+    ksn_track *track_peer;
+    /* One bit per animation slot selects immutable physical track bank 0/1.
+     * A candidate borrows unchanged slots and privatizes only a writer. */
+    uint8_t track_owner;
+    uint16_t count[2],text_used[2];
+    uint32_t generation[2];
+    ksn_rgba background[2];
+    bool background_set[2];
+} ksn_bank;
+struct ksn_core_impl {
+    ksn_bank banks[2];
+    ksn_endpoint endpoints[2];
+    ksn_image_entry images[KSN_RESOURCES];
+    uint8_t image_count;
+    uint64_t animation_now_us;
+    ksn_tx transaction;
+    ksn_submission outcome;
+    ksn_result poison;
+    ksn_layer layer;
+    ksn_update_mode mode;
+    uint8_t active,building_bank;
+    /* PATCH text slots already written into the candidate bank. The old
+     * contents of those slots need not be cloned at seal time. */
+    uint32_t text_written[(KSN_COMMANDS+31u)/32u];
+    uint8_t text_written_layers;
+    /* Two band sets, not one flag: `invalidated` is what an owner has asked for
+     * and prepare_frame has not taken yet, `repair_bands` is what the frame in
+     * flight owes. An unqualified invalidate sets every bit in both and so is
+     * the flag it used to be; a qualified one names the rows its overlay
+     * occupies, which is the difference between a keystroke repainting the
+     * field and a keystroke repainting the screen. */
+    uint32_t invalidated,repair_bands;
+    /* External pixels changed without a command change. Pending requests are
+     * moved to the in-flight set by prepare_frame; later requests survive ACK. */
+    uint32_t invalidated_rects,repair_rects;
+    int16_t invalid_x0[17],invalid_x1[17],repair_x0[17],repair_x1[17];
+    bool building,submitted,full_redraw,repairing;
+};
+
+/* Borrowed, immovable blocks. The core itself never allocates. */
+typedef struct { ksn_command_storage commands[KSN_COMMANDS]; } ksn_core_command_block;
+typedef struct { uint8_t bytes[KSN_TEXT_BYTES]; } ksn_core_text_block;
+typedef struct {
+    ksn_core_impl state;
+} ksn_core;
+#define KSN_CORE_RESERVED_BYTES (sizeof(ksn_core)+2*sizeof(ksn_core_command_block)+2*sizeof(ksn_core_text_block))
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+/* Bind distinct, non-overlapping blocks before first use. Failed validation
+ * leaves all blocks unchanged. Their lifetimes cover the entire core session. */
+ksn_result ksn_core_bind(ksn_core *,ksn_core_command_block *,ksn_core_command_block *,
+                         ksn_core_text_block *,ksn_core_text_block *);
+/* Reset an already bound core, preserving borrowed block addresses.
+ * Reinitialization invalidates handles; destroy guest callbacks first.
+ * All core instances share one owner task and process-lifetime ID counters
+ * (12 bytes outside this storage, included conservatively in each core's
+ * limits/stats). Storage must not be copied or relocated. */
+void ksn_core_init(ksn_core *core);
+/* Owner-only teardown outside rendering. Cancel this layer's builder/submission
+ * first. Clear both banks and image providers; preserve the other layer, even
+ * when it has pending work. Forces a full repaint without consuming an ID. */
+ksn_result ksn_core_reset_layer(ksn_core *,ksn_layer);
+ksn_client ksn_core_client(ksn_core *core,ksn_layer layer);
+/* Host-only append-only registration. Providers stay immutable/alive until
+ * init, which must run outside provider callbacks and invalidate all clients.
+ * Register only between submissions/builders. No per-frame retain/release. */
+ksn_result ksn_core_register_image(ksn_core *core,ksn_layer layer,const ksn_image_port *port,ksn_resource *out);
+/* Borrow a registered provider descriptor during the owner turn. */
+ksn_result ksn_core_image_port(const ksn_core *,ksn_layer,ksn_resource,ksn_image_port *);
+/* Read-only owner-turn validation against currently registered resources. */
+ksn_result ksn_core_check_draw(const ksn_core *,ksn_layer,const ksn_draw *);
+/* Optional caller-owned blocks, attached before the first animation. */
+ksn_result ksn_core_enable_animation(ksn_core *,ksn_core_animation_block *,ksn_core_animation_block *);
+ksn_result ksn_core_finish_animation(ksn_core *,ksn_layer,ksn_tx,ksn_animation);
+ksn_animation_status ksn_core_poll_animation(const ksn_core *,ksn_layer,ksn_animation);
+void ksn_core_start_animations(ksn_core *,uint64_t presented_us);
+void ksn_core_set_animation_time(ksn_core *,uint64_t now_us);
+uint64_t ksn_core_animation_deadline(const ksn_core *);
+ksn_result ksn_core_advance_animations(ksn_core *,uint64_t now_us,bool reduce_motion,ksn_tx *out);
+uint32_t ksn_core_animation_bytes(const ksn_core *);
+
+/* Host-only, synchronous owner-task interface. A submission ticket validates
+ * every read/ack, including across discard and reinitialization. No bank
+ * pointers escape. Read one command at a time into reusable caller storage. */
+typedef struct {
+    ksn_tx ticket;
+    ksn_capacity previous[2],next[2];
+    ksn_rgba previous_background,next_background;
+    bool full_redraw;
+} ksn_frame;
+typedef struct {
+    ksn_draw draw;
+    bool visible;
+    uint8_t reveal;
+    bool group_begin,group_end;
+    uint8_t group_opacity;
+    char text[128]; /* Counted UTF-8, not NUL terminated. draw points here. */
+} ksn_frame_command;
+bool ksn_core_has_submission(const ksn_core *core);
+/* Last submission only, retained across begin/abort. Poll before next end. */
+ksn_submission ksn_core_poll(const ksn_core *core);
+bool ksn_core_needs_repair(const ksn_core *core);
+/* Owner invalidation is independent of guest submissions. Requests received
+ * during a transfer remain pending until a subsequent complete frame. */
+void ksn_core_invalidate(ksn_core *core);
+/* The same request, limited to the 8-row bands named in `bands` (bit b is rows
+ * 8b..8b+7, bit 16 the last seven). Bits outside the panel are ignored and an
+ * empty set is a no-op. For an owner that composites over the strip and knows
+ * which rows it touched -- the text field of pocket_text.c is the one this
+ * exists for -- so that its damage costs what it covers. Unqualified
+ * invalidation stays available for owners that do not know. */
+#define KSN_BANDS_ALL ((1u<<17)-1u)
+void ksn_core_invalidate_bands(ksn_core *core,uint32_t bands);
+/* Owner damage for a half-open panel rectangle. Clipped to the display and
+ * merged by column range within each touched 8-row band. Requests made while
+ * a transfer is in flight remain pending for the following frame. */
+void ksn_core_invalidate_rect(ksn_core *core,ksn_rect rect);
+/* Invalidate the clipped display bounds of an image resource in both the
+ * committed bank and any submitted candidate. Returns false if absent. */
+bool ksn_core_invalidate_image(ksn_core *core,ksn_resource resource);
+/* Invalidate only image pixels inside source_rect for 1:1 unrotated nodes.
+ * Other transforms conservatively invalidate the node's displayed bounds. */
+bool ksn_core_invalidate_image_source_rect(ksn_core *core,ksn_resource resource,
+                                           ksn_rect source_rect);
+/* Full-width 8-row bands whose displayed SYSTEM layer is independent of the
+ * backdrop. Conservative: returns 0 while SYSTEM work/repair is in flight.
+ * This is a read-only occlusion hint, never a substitute for submission damage. */
+uint32_t ksn_core_opaque_system_bands(const ksn_core *core);
+
+/* What a frame owes the panel: the bands, and for each of them the half-open
+ * column range inside it. The columns are the union of the changed commands'
+ * clipped boxes on that band -- a counter that redraws six pixels of a caption
+ * dirties six columns, not two hundred and forty. Bands not in `bands` have no
+ * meaningful x0/x1. Repair and full-redraw bands carry [0,240) because the
+ * owner that asked for them does not describe columns. */
+typedef struct {
+    uint32_t bands;
+    int16_t x0[17],x1[17];
+} ksn_damage;
+/* Invalidate the image pixels a source-space damage names (its bands are the
+ * source's 8-row bands, each with its columns), on nodes that show the source
+ * 1:1: KSN_IMAGE_1X, or an unrotated stretch to its own size. Other nodes of
+ * the resource conservatively invalidate their displayed bounds. Returns
+ * false if the resource has no node or the damage is empty. */
+bool ksn_core_invalidate_image_source_damage(ksn_core *core,ksn_resource resource,
+                                             const ksn_damage *source);
+ksn_result ksn_core_discard_reason(ksn_core *core,ksn_tx ticket,ksn_result reason);
+/* Read-only transaction check for cache no-op updates. */
+ksn_result ksn_core_check_transaction(const ksn_core *core,ksn_tx ticket,ksn_layer layer);
+ksn_result ksn_core_check_builder(const ksn_core *core,ksn_tx ticket,ksn_layer layer,ksn_update_mode mode);
+ksn_result ksn_core_builder_usage(const ksn_core *core,ksn_tx ticket,ksn_capacity *out);
+/* One isolated group over a consecutive range; no overlaps/nesting. PATCH
+ * may change opacity only on the exact existing range. Owner-task API. */
+ksn_result ksn_core_group(ksn_core *core,ksn_layer layer,ksn_tx tx,ksn_ref first,
+                        uint16_t count,uint8_t opacity);
+ksn_result ksn_core_frame(const ksn_core *core,ksn_frame *out);
+/* Renderer-only start: consume the current invalidation request. If no guest
+ * submission exists, pin the committed bank with a private repair token.
+ * Repair never changes reference generations or the last guest outcome. */
+ksn_result ksn_core_prepare_frame(ksn_core *core,ksn_frame *out);
+/* Renderer preflight failed before any transfer. Release only a private
+ * repair pin, keeping invalidation pending; guest submissions stay sealed. */
+void ksn_core_defer_repair(ksn_core *core,ksn_tx ticket);
+ksn_result ksn_core_read(const ksn_core *core,ksn_tx ticket,bool previous,
+                       ksn_layer layer,uint16_t index,ksn_frame_command *out);
+/* Renderer-only read of a sealed ticket. Text is a read-only view into the
+ * selected bank, valid through this presentation attempt (including a retry),
+ * but not after presented/discarded/reset. The display port must not mutate
+ * the core or retain the pointer from a callback. Unlike ksn_core_read this
+ * does not copy text into out->text. */
+ksn_result ksn_core_read_borrowed(const ksn_core *core,ksn_tx ticket,bool previous,
+                                ksn_layer layer,uint16_t index,ksn_frame_command *out);
+/* Owner-only read of one committed reference. Text points directly into the
+ * active bank and is read-only until the next successful presentation/reset.
+ * It may be held only through that interval; never call from a display
+ * callback or retain it beyond presentation/reset. */
+ksn_result ksn_core_read_active_ref(const ksn_core *core,ksn_layer layer,
+                                    ksn_ref ref,ksn_frame_command *out);
+ksn_result ksn_core_image_span(const ksn_core *core,ksn_tx ticket,bool previous,
+                            ksn_layer layer,uint16_t index,uint16_t y,uint16_t x,
+                            uint16_t count,uint16_t *rgb565,uint8_t *alpha);
+/* Resolve a sealed image command once for repeated span reads during one
+ * presentation. The reader is a snapshot; do not retain it after present. */
+typedef struct {
+    void *ctx;
+    ksn_result (*read_span)(void *,uint16_t,uint16_t,uint16_t,uint16_t,uint16_t,
+                            uint16_t *,uint8_t *);
+    uint16_t width,height,variant,frame;
+    bool opaque;
+    /* The port's read_rows (ksn_ports.h), NULL when it has none. */
+    ksn_result (*read_rows)(void *,uint16_t,uint16_t,uint16_t,uint16_t,uint16_t,
+                            uint16_t,uint16_t *,uint16_t);
+} ksn_image_reader;
+ksn_result ksn_core_image_reader(const ksn_core *core,ksn_tx ticket,bool previous,
+                                 ksn_layer layer,uint16_t index,ksn_image_reader *out);
+static inline ksn_result ksn_image_reader_span(const ksn_image_reader *reader,
+                                               uint16_t y,uint16_t x,uint16_t count,
+                                               uint16_t *rgb565,uint8_t *alpha){
+    if(!reader||!reader->read_span||y>=reader->height||x>reader->width||
+       count>reader->width-x||(count&&(!rgb565||!alpha)))return KSN_INVALID;
+    if(!count)return KSN_OK;
+    return reader->read_span(reader->ctx,reader->variant,reader->frame,
+                             y,x,count,rgb565,alpha);
+}
+/* Read the registered provider's all-pixel opacity promise for a sealed image
+ * command. Invalid/stale tickets and non-image commands return false. */
+bool ksn_core_image_opaque(const ksn_core *core,ksn_tx ticket,ksn_layer layer,uint16_t index);
+/* Cardputer's 17 bands, last one 7 rows, each with its column range. No state
+ * mutation. A caller that cannot transfer a partial row widens every band to
+ * [0,240) itself before compositing -- the renderer's narrow arm has to be a
+ * decision made before pixels are written, not after. */
+ksn_result ksn_core_damage(const ksn_core *core,ksn_tx ticket,
+                           const ksn_text_port *text,ksn_damage *out);
+/* Call failed on any partial/uncertain LCD transfer, before retry or discard.
+ * presented attests that all required bands were transferred successfully. */
+ksn_result ksn_core_failed(ksn_core *core,ksn_tx ticket);
+ksn_result ksn_core_presented(ksn_core *core,ksn_tx ticket);
+ksn_result ksn_core_discard(ksn_core *core,ksn_tx ticket);
+ksn_capacity ksn_core_active_usage(const ksn_core *core,ksn_layer layer);
+ksn_capacity ksn_core_submission_usage(const ksn_core *core,ksn_layer layer);
+/* Host/cache bookkeeping only. Validates a consecutive range against the
+ * displayed bank without exposing that bank. */
+bool ksn_core_refs_active(const ksn_core *core,ksn_layer layer,ksn_ref first,uint16_t count);
+
+#ifdef __cplusplus
+}
+#endif
+#endif

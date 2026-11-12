@@ -1,0 +1,5 @@
+gcc (Debian 14.2.0-19) 14.2.0
+Synthetic reproduction: bash run_tests.sh
+Actual corpus reproduction: bash run_actual.sh
+Integer core inspection: gcc -std=c11 -O2 -fno-lto -fno-tree-vectorize -fno-tree-slp-vectorize -c core.c -o core.o; nm -u core.o
+Core source has integer types only; no sqrt/pow/hypot/float conversions. Host object has no undefined symbols.

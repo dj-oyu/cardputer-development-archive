@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "plan_hash": "9dd08ec35da89dec184abdbce438cb9abcfc381f4988122f0c8a4bdb5711546d",
+  "OFF_receipt": "95ae1faaddf01a4cb54b98249e578a55578b9911bfb3b0107863bb8d5d53ad0b",
+  "only_changed_plan_fields": [
+    "collector_binding",
+    "expected_firmware_sha256",
+    "flash_job_id",
+    "job_id",
+    "session_id"
+  ],
+  "same_owned_session_as_flash": true,
+  "same_once_only_strict_protocol": true
+}

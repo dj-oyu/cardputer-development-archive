@@ -1,0 +1,12 @@
+--- v32/product/main/ui/kasane/ksn_boundary_aa_impl.inc
++++ bh/product/main/ui/kasane/ksn_boundary_aa_impl.inc
+@@ -155,7 +155,8 @@
+  memset(w->center_id,0xff,sizeof w->center_id);ksn_mesh_pixel_stats stats={0};
+  for(unsigned y=0;y<135;y+=8){unsigned rows=135-y;if(rows>8)rows=8;if(!aa_charge(w,AA_CONTROL,1))return false;bool center_ok=aa_center_strip(&s->mesh,rgb+y*240,y,rows,depth+y*240,&scene,&stats,NULL,NULL,shader,context,w);w->report.center_shades=stats.shade_updates;if(!center_ok)return false;}
+  if(!aa_select(w))return false;
+- static const double dx[4]={-.25,.25,-.25,.25},dy[4]={-.25,-.25,.25,.25};
++ /* One-shot analytic BH CDF quartile rule; not Cycles finite-table parity. */
++ static const double dx[4]={-0x1.272062ae104d0p-2,0x1.272062ae104d0p-2,-0x1.272062ae104d0p-2,0x1.272062ae104d0p-2},dy[4]={-0x1.272062ae104d0p-2,-0x1.272062ae104d0p-2,0x1.272062ae104d0p-2,0x1.272062ae104d0p-2};
+  for(unsigned y=0;y<135;y+=8){unsigned rows=135-y;if(rows>8)rows=8;unsigned n=rows*240;if(!aa_charge(w,AA_CONTROL,1)||!aa_charge(w,AA_HDR_CLEAR,3*n))return false;memset(w->reuse.hdr,0,n*3*sizeof(double));
+   for(unsigned sample=0;sample<4;sample++)if(!aa_charge(w,AA_CONTROL,1)||!aa_geometry(s,w,y,rows,dx[sample],dy[sample])||!aa_shade_final(s,w,&scene,y,rows,sample,dx[sample],dy[sample],shader,context,observer,observer_context))return false;
+   if(!aa_guard(w,AA_FINAL_OUTPUT_SCAN,n))return false;

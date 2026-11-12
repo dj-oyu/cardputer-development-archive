@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "checks": {
+    "PRODUCT_NAMED_STACK.json": {
+      "allNamedFramesMatchHashedCompilerSU": true,
+      "allChainSumsExact": true,
+      "background": 4016,
+      "backgroundCap": 4096,
+      "renderer": 4944,
+      "rendererCap": 8192
+    },
+    "NAMED_STACK.json": {
+      "allNamedFramesMatchHashedCompilerSU": true,
+      "allChainSumsExact": true,
+      "background": 4016,
+      "backgroundCap": 4096,
+      "renderer": 4944,
+      "rendererCap": 8192
+    },
+    "ledger": {
+      "phaseSumsExact": true,
+      "renderPeak": 336724,
+      "buildPeak": 312580,
+      "conversionPeak": 301544,
+      "savedNamedBytes": 36828,
+      "constructorNamedBound": 2464,
+      "conversionInlinedNamedFrame": 368
+    },
+    "scope": "Compiler named requested-payload accounting only; libc/libm/allocator and whole process/device placement excluded; no actual renders."
+  }
+}

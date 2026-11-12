@@ -1,0 +1,364 @@
+
+/workspace/ayatsuri-s3-reconstructed-20261104/results/baseline/shade_pair.o:     file format elf32-xtensa-le
+
+
+Disassembly of section .literal.ayatsuri_shade_sample:
+
+00000000 <.literal.ayatsuri_shade_sample>:
+   0:	3f800000 	
+   4:	41f80000 	
+   8:	3d042108 	
+   c:	427c0000 	
+  10:	3c820821 	
+  14:	3b808081 	
+  18:	7f7fffff 	
+  1c:	38000100 	
+	...
+	20: R_XTENSA_32	fmaxf
+	24: R_XTENSA_32	fmaxf
+	28: R_XTENSA_32	fmaxf
+	2c: R_XTENSA_32	fmaxf
+	30: R_XTENSA_32	fmaxf
+	34: R_XTENSA_32	powf
+	38: R_XTENSA_32	lroundf
+	3c: R_XTENSA_32	lroundf
+	40: R_XTENSA_32	lroundf
+	44: R_XTENSA_32	__divsf3
+	48: R_XTENSA_32	__divsf3
+	4c: R_XTENSA_32	__divsf3
+	50: R_XTENSA_32	sqrtf
+	54: R_XTENSA_32	__divsf3
+	58: R_XTENSA_32	__divsf3
+	5c: R_XTENSA_32	__divsf3
+
+Disassembly of section .literal.shade_pair:
+
+00000000 <.literal.shade_pair>:
+	...
+	0: R_XTENSA_32	.text.ayatsuri_shade_sample
+	4: R_XTENSA_32	.text.ayatsuri_shade_sample
+
+Disassembly of section .text.ayatsuri_shade_sample:
+
+00000000 <ayatsuri_shade_sample>:
+   0:	008136        	entry	a1, 64
+   3:	029282        	l16si	a8, a2, 4
+   6:	019292        	l16si	a9, a2, 2
+   9:	0000a1        	l32r	a10, fffc000c <ayatsuri_shade_sample+0xfffc000c>	9: R_XTENSA_SLOT0_OP	.literal.ayatsuri_shade_sample+0x1c
+   c:	ca1800        	float.s	f1, a8, 0
+   f:	fa0a50        	wfr	f0, a10
+  12:	009282        	l16si	a8, a2, 0
+  15:	ca2900        	float.s	f2, a9, 0
+  18:	2a3100        	mul.s	f3, f1, f0
+  1b:	2a2200        	mul.s	f2, f2, f0
+  1e:	ca1800        	float.s	f1, a8, 0
+  21:	2a0100        	mul.s	f0, f1, f0
+  24:	fa4310        	abs.s	f4, f3
+  27:	fab440        	rfr	a11, f4
+  2a:	fa4210        	abs.s	f4, f2
+  2d:	faa440        	rfr	a10, f4
+  30:	024133        	ssi	f3, a1, 8
+  33:	014123        	ssi	f2, a1, 4
+  36:	004103        	ssi	f0, a1, 0
+  39:	000081        	l32r	a8, fffc003c <ayatsuri_shade_sample+0xfffc003c>	39: R_XTENSA_SLOT0_OP	.literal.ayatsuri_shade_sample+0x20
+	39: R_XTENSA_ASM_EXPAND	fmaxf
+  3c:	0008e0        	callx8	a8
+  3f:	000103        	lsi	f0, a1, 0
+  42:	0abd      	mov.n	a11, a10
+  44:	fa1010        	abs.s	f1, f0
+  47:	faa140        	rfr	a10, f1
+  4a:	000081        	l32r	a8, fffc004c <ayatsuri_shade_sample+0xfffc004c>	4a: R_XTENSA_SLOT0_OP	.literal.ayatsuri_shade_sample+0x24
+	4a: R_XTENSA_ASM_EXPAND	fmaxf
+  4d:	0008e0        	callx8	a8
+  50:	080c      	movi.n	a8, 0
+  52:	fa0a50        	wfr	f0, a10
+  55:	fa1850        	wfr	f1, a8
+  58:	4b0100        	olt.s	b0, f1, f0
+  5b:	0e0076        	bf	b0, 6d <ayatsuri_shade_sample+0x6d>	5b: R_XTENSA_SLOT0_OP	.text.ayatsuri_shade_sample+0x6d
+  5e:	000081        	l32r	a8, fffc0060 <ayatsuri_shade_sample+0xfffc0060>	5e: R_XTENSA_SLOT0_OP	.literal.ayatsuri_shade_sample+0x18
+  61:	fa1850        	wfr	f1, a8
+  64:	5b0100        	ult.s	b0, f1, f0
+  67:	021076        	bt	b0, 6d <ayatsuri_shade_sample+0x6d>	67: R_XTENSA_SLOT0_OP	.text.ayatsuri_shade_sample+0x6d
+  6a:	008a06        	j	296 <ayatsuri_shade_sample+0x296>	6a: R_XTENSA_SLOT0_OP	.text.ayatsuri_shade_sample+0x296
+  6d:	000713        	lsi	f1, a7, 0
+  70:	000103        	lsi	f0, a1, 0
+  73:	010723        	lsi	f2, a7, 4
+  76:	2a0010        	mul.s	f0, f0, f1
+  79:	010113        	lsi	f1, a1, 4
+  7c:	020133        	lsi	f3, a1, 8
+  7f:	2a2120        	mul.s	f2, f1, f2
+  82:	020743        	lsi	f4, a7, 8
+  85:	0b0c      	movi.n	a11, 0
+  87:	2a1340        	mul.s	f1, f3, f4
+  8a:	0a0020        	add.s	f0, f0, f2
+  8d:	0a0010        	add.s	f0, f0, f1
+  90:	faa040        	rfr	a10, f0
+  93:	034103        	ssi	f0, a1, 12
+  96:	000081        	l32r	a8, fffc0098 <ayatsuri_shade_sample+0xfffc0098>	96: R_XTENSA_SLOT0_OP	.literal.ayatsuri_shade_sample+0x28
+	96: R_XTENSA_ASM_EXPAND	fmaxf
+  99:	0008e0        	callx8	a8
+  9c:	030103        	lsi	f0, a1, 12
+  9f:	0a8d      	mov.n	a8, a10
+  a1:	fa2060        	neg.s	f2, f0
+  a4:	faa240        	rfr	a10, f2
+  a7:	0b0c      	movi.n	a11, 0
+  a9:	3189      	s32i.n	a8, a1, 12
+  ab:	000081        	l32r	a8, fffc00ac <ayatsuri_shade_sample+0xfffc00ac>	ab: R_XTENSA_SLOT0_OP	.literal.ayatsuri_shade_sample+0x2c
+	ab: R_XTENSA_ASM_EXPAND	fmaxf
+  ae:	0008e0        	callx8	a8
+  b1:	090c      	movi.n	a9, 0
+  b3:	180782        	l8ui	a8, a7, 24
+  b6:	fa2950        	wfr	f2, a9
+  b9:	fa4a50        	wfr	f4, a10
+  bc:	fa3200        	mov.s	f3, f2
+  bf:	05d816        	beqz	a8, 120 <ayatsuri_shade_sample+0x120>	bf: R_XTENSA_SLOT0_OP	.text.ayatsuri_shade_sample+0x120
+  c2:	030103        	lsi	f0, a1, 12
+  c5:	4b0200        	olt.s	b0, f2, f0
+  c8:	540076        	bf	b0, 120 <ayatsuri_shade_sample+0x120>	c8: R_XTENSA_SLOT0_OP	.text.ayatsuri_shade_sample+0x120
+  cb:	030723        	lsi	f2, a7, 12
+  ce:	000103        	lsi	f0, a1, 0
+  d1:	010113        	lsi	f1, a1, 4
+  d4:	2a0020        	mul.s	f0, f0, f2
+  d7:	040723        	lsi	f2, a7, 16
+  da:	020133        	lsi	f3, a1, 8
+  dd:	2a2120        	mul.s	f2, f1, f2
+  e0:	050713        	lsi	f1, a7, 20
+  e3:	51a9      	s32i.n	a10, a1, 20
+  e5:	2a1310        	mul.s	f1, f3, f1
+  e8:	0a0020        	add.s	f0, f0, f2
+  eb:	09bd      	mov.n	a11, a9
+  ed:	4199      	s32i.n	a9, a1, 16
+  ef:	0a0010        	add.s	f0, f0, f1
+  f2:	faa040        	rfr	a10, f0
+  f5:	000081        	l32r	a8, fffc00f8 <ayatsuri_shade_sample+0xfffc00f8>	f5: R_XTENSA_SLOT0_OP	.literal.ayatsuri_shade_sample+0x30
+	f5: R_XTENSA_ASM_EXPAND	fmaxf
+  f8:	0008e0        	callx8	a8
+  fb:	080c      	movi.n	a8, 0
+  fd:	fa1850        	wfr	f1, a8
+ 100:	fa0a50        	wfr	f0, a10
+ 103:	4b0100        	olt.s	b0, f1, f0
+ 106:	050143        	lsi	f4, a1, 20
+ 109:	fa3100        	mov.s	f3, f1
+ 10c:	100076        	bf	b0, 120 <ayatsuri_shade_sample+0x120>	10c: R_XTENSA_SLOT0_OP	.text.ayatsuri_shade_sample+0x120
+ 10f:	36b8      	l32i.n	a11, a6, 12
+ 111:	004143        	ssi	f4, a1, 0
+ 114:	000081        	l32r	a8, fffc0114 <ayatsuri_shade_sample+0xfffc0114>	114: R_XTENSA_SLOT0_OP	.literal.ayatsuri_shade_sample+0x34
+	114: R_XTENSA_ASM_EXPAND	powf
+ 117:	0008e0        	callx8	a8
+ 11a:	000143        	lsi	f4, a1, 0
+ 11d:	fa3a50        	wfr	f3, a10
+ 120:	000081        	l32r	a8, fffc0120 <ayatsuri_shade_sample+0xfffc0120>	120: R_XTENSA_SLOT0_OP	.literal.ayatsuri_shade_sample+0x14
+ 123:	ca0400        	float.s	f0, a4, 0
+ 126:	fa1850        	wfr	f1, a8
+ 129:	2a0010        	mul.s	f0, f0, f1
+ 12c:	000081        	l32r	a8, fffc012c <ayatsuri_shade_sample+0xfffc012c>	12c: R_XTENSA_SLOT0_OP	.literal.ayatsuri_shade_sample
+ 12f:	010623        	lsi	f2, a6, 4
+ 132:	fa1850        	wfr	f1, a8
+ 135:	1a0100        	sub.s	f0, f1, f0
+ 138:	030113        	lsi	f1, a1, 12
+ 13b:	060573        	lsi	f7, a5, 24
+ 13e:	2a1120        	mul.s	f1, f1, f2
+ 141:	040623        	lsi	f2, a6, 16
+ 144:	418b30        	srli	a8, a3, 11
+ 147:	2a0020        	mul.s	f0, f0, f2
+ 14a:	020623        	lsi	f2, a6, 8
+ 14d:	2a6710        	mul.s	f6, f7, f1
+ 150:	2a3320        	mul.s	f3, f3, f2
+ 153:	2a0040        	mul.s	f0, f0, f4
+ 156:	050643        	lsi	f4, a6, 20
+ 159:	ca2800        	float.s	f2, a8, 0
+ 15c:	000081        	l32r	a8, fffc015c <ayatsuri_shade_sample+0xfffc015c>	15c: R_XTENSA_SLOT0_OP	.literal.ayatsuri_shade_sample+0x8
+ 15f:	2a4040        	mul.s	f4, f0, f4
+ 162:	000653        	lsi	f5, a6, 0
+ 165:	fa8850        	wfr	f8, a8
+ 168:	2a2280        	mul.s	f2, f2, f8
+ 16b:	0a6650        	add.s	f6, f6, f5
+ 16e:	0a4430        	add.s	f4, f4, f3
+ 171:	080c      	movi.n	a8, 0
+ 173:	fa8850        	wfr	f8, a8
+ 176:	2a2260        	mul.s	f2, f2, f6
+ 179:	2a4470        	mul.s	f4, f4, f7
+ 17c:	0189      	s32i.n	a8, a1, 0
+ 17e:	0a2240        	add.s	f2, f2, f4
+ 181:	4b0280        	olt.s	b0, f2, f8
+ 184:	171076        	bt	b0, 19f <ayatsuri_shade_sample+0x19f>	184: R_XTENSA_SLOT0_OP	.text.ayatsuri_shade_sample+0x19f
+ 187:	000081        	l32r	a8, fffc0188 <ayatsuri_shade_sample+0xfffc0188>	187: R_XTENSA_SLOT0_OP	.literal.ayatsuri_shade_sample
+ 18a:	fa4850        	wfr	f4, a8
+ 18d:	000081        	l32r	a8, fffc0190 <ayatsuri_shade_sample+0xfffc0190>	18d: R_XTENSA_SLOT0_OP	.literal.ayatsuri_shade_sample+0x4
+ 190:	4b0420        	olt.s	b0, f4, f2
+ 193:	db2400        	movt.s	f2, f4, b0
+ 196:	fa4850        	wfr	f4, a8
+ 199:	2a2240        	mul.s	f2, f2, f4
+ 19c:	004123        	ssi	f2, a1, 0
+ 19f:	01a8      	l32i.n	a10, a1, 0
+ 1a1:	044103        	ssi	f0, a1, 16
+ 1a4:	034133        	ssi	f3, a1, 12
+ 1a7:	024113        	ssi	f1, a1, 8
+ 1aa:	014153        	ssi	f5, a1, 4
+ 1ad:	000081        	l32r	a8, fffc01b0 <ayatsuri_shade_sample+0xfffc01b0>	1ad: R_XTENSA_SLOT0_OP	.literal.ayatsuri_shade_sample+0x38
+	1ad: R_XTENSA_ASM_EXPAND	lroundf
+ 1b0:	0008e0        	callx8	a8
+ 1b3:	060623        	lsi	f2, a6, 24
+ 1b6:	040103        	lsi	f0, a1, 16
+ 1b9:	070573        	lsi	f7, a5, 28
+ 1bc:	548530        	extui	a8, a3, 5, 6
+ 1bf:	020113        	lsi	f1, a1, 8
+ 1c2:	2a4020        	mul.s	f4, f0, f2
+ 1c5:	ca2800        	float.s	f2, a8, 0
+ 1c8:	000081        	l32r	a8, fffc01c8 <ayatsuri_shade_sample+0xfffc01c8>	1c8: R_XTENSA_SLOT0_OP	.literal.ayatsuri_shade_sample+0x10
+ 1cb:	2a6710        	mul.s	f6, f7, f1
+ 1ce:	fa3850        	wfr	f3, a8
+ 1d1:	2a2230        	mul.s	f2, f2, f3
+ 1d4:	010153        	lsi	f5, a1, 4
+ 1d7:	030133        	lsi	f3, a1, 12
+ 1da:	0a6650        	add.s	f6, f6, f5
+ 1dd:	0a4430        	add.s	f4, f4, f3
+ 1e0:	080c      	movi.n	a8, 0
+ 1e2:	fa8850        	wfr	f8, a8
+ 1e5:	2a2260        	mul.s	f2, f2, f6
+ 1e8:	2a4470        	mul.s	f4, f4, f7
+ 1eb:	0189      	s32i.n	a8, a1, 0
+ 1ed:	0a7d      	mov.n	a7, a10
+ 1ef:	0a2240        	add.s	f2, f2, f4
+ 1f2:	4b0280        	olt.s	b0, f2, f8
+ 1f5:	171076        	bt	b0, 210 <ayatsuri_shade_sample+0x210>	1f5: R_XTENSA_SLOT0_OP	.text.ayatsuri_shade_sample+0x210
+ 1f8:	000081        	l32r	a8, fffc01f8 <ayatsuri_shade_sample+0xfffc01f8>	1f8: R_XTENSA_SLOT0_OP	.literal.ayatsuri_shade_sample
+ 1fb:	fa4850        	wfr	f4, a8
+ 1fe:	000081        	l32r	a8, fffc0200 <ayatsuri_shade_sample+0xfffc0200>	1fe: R_XTENSA_SLOT0_OP	.literal.ayatsuri_shade_sample+0xc
+ 201:	4b0420        	olt.s	b0, f4, f2
+ 204:	db2400        	movt.s	f2, f4, b0
+ 207:	fa4850        	wfr	f4, a8
+ 20a:	2a2240        	mul.s	f2, f2, f4
+ 20d:	004123        	ssi	f2, a1, 0
+ 210:	01a8      	l32i.n	a10, a1, 0
+ 212:	044103        	ssi	f0, a1, 16
+ 215:	034133        	ssi	f3, a1, 12
+ 218:	024113        	ssi	f1, a1, 8
+ 21b:	014153        	ssi	f5, a1, 4
+ 21e:	000081        	l32r	a8, fffc0220 <ayatsuri_shade_sample+0xfffc0220>	21e: R_XTENSA_SLOT0_OP	.literal.ayatsuri_shade_sample+0x3c
+	21e: R_XTENSA_ASM_EXPAND	lroundf
+ 221:	0008e0        	callx8	a8
+ 224:	080563        	lsi	f6, a5, 32
+ 227:	020113        	lsi	f1, a1, 8
+ 22a:	070623        	lsi	f2, a6, 28
+ 22d:	040103        	lsi	f0, a1, 16
+ 230:	2a1610        	mul.s	f1, f6, f1
+ 233:	2a0020        	mul.s	f0, f0, f2
+ 236:	000081        	l32r	a8, fffc0238 <ayatsuri_shade_sample+0xfffc0238>	236: R_XTENSA_SLOT0_OP	.literal.ayatsuri_shade_sample+0x8
+ 239:	010153        	lsi	f5, a1, 4
+ 23c:	443030        	extui	a3, a3, 0, 5
+ 23f:	ca2300        	float.s	f2, a3, 0
+ 242:	030133        	lsi	f3, a1, 12
+ 245:	0a4150        	add.s	f4, f1, f5
+ 248:	fa1850        	wfr	f1, a8
+ 24b:	2a2210        	mul.s	f2, f2, f1
+ 24e:	0a0030        	add.s	f0, f0, f3
+ 251:	080c      	movi.n	a8, 0
+ 253:	fa1850        	wfr	f1, a8
+ 256:	2a2240        	mul.s	f2, f2, f4
+ 259:	2a0060        	mul.s	f0, f0, f6
+ 25c:	0a6d      	mov.n	a6, a10
+ 25e:	0a0200        	add.s	f0, f2, f0
+ 261:	4b0010        	olt.s	b0, f0, f1
+ 264:	141076        	bt	b0, 27c <ayatsuri_shade_sample+0x27c>	264: R_XTENSA_SLOT0_OP	.text.ayatsuri_shade_sample+0x27c
+ 267:	000081        	l32r	a8, fffc0268 <ayatsuri_shade_sample+0xfffc0268>	267: R_XTENSA_SLOT0_OP	.literal.ayatsuri_shade_sample
+ 26a:	fa1850        	wfr	f1, a8
+ 26d:	000081        	l32r	a8, fffc0270 <ayatsuri_shade_sample+0xfffc0270>	26d: R_XTENSA_SLOT0_OP	.literal.ayatsuri_shade_sample+0x4
+ 270:	4b0100        	olt.s	b0, f1, f0
+ 273:	db0100        	movt.s	f0, f1, b0
+ 276:	fa1850        	wfr	f1, a8
+ 279:	2a1010        	mul.s	f1, f0, f1
+ 27c:	faa140        	rfr	a10, f1
+ 27f:	1166b0        	slli	a6, a6, 5
+ 282:	117750        	slli	a7, a7, 11
+ 285:	000081        	l32r	a8, fffc0288 <ayatsuri_shade_sample+0xfffc0288>	285: R_XTENSA_SLOT0_OP	.literal.ayatsuri_shade_sample+0x40
+	285: R_XTENSA_ASM_EXPAND	lroundf
+ 288:	0008e0        	callx8	a8
+ 28b:	207760        	or	a7, a7, a6
+ 28e:	2077a0        	or	a7, a7, a10
+ 291:	f42070        	extui	a2, a7, 0, 16
+ 294:	f01d      	retw.n
+ 296:	0abd      	mov.n	a11, a10
+ 298:	31a9      	s32i.n	a10, a1, 12
+ 29a:	01a8      	l32i.n	a10, a1, 0
+ 29c:	000081        	l32r	a8, fffc029c <ayatsuri_shade_sample+0xfffc029c>	29c: R_XTENSA_SLOT0_OP	.literal.ayatsuri_shade_sample+0x44
+	29c: R_XTENSA_ASM_EXPAND	__divsf3
+ 29f:	0008e0        	callx8	a8
+ 2a2:	0a8d      	mov.n	a8, a10
+ 2a4:	31b8      	l32i.n	a11, a1, 12
+ 2a6:	11a8      	l32i.n	a10, a1, 4
+ 2a8:	0189      	s32i.n	a8, a1, 0
+ 2aa:	000081        	l32r	a8, fffc02ac <ayatsuri_shade_sample+0xfffc02ac>	2aa: R_XTENSA_SLOT0_OP	.literal.ayatsuri_shade_sample+0x48
+	2aa: R_XTENSA_ASM_EXPAND	__divsf3
+ 2ad:	0008e0        	callx8	a8
+ 2b0:	0a8d      	mov.n	a8, a10
+ 2b2:	31b8      	l32i.n	a11, a1, 12
+ 2b4:	21a8      	l32i.n	a10, a1, 8
+ 2b6:	1189      	s32i.n	a8, a1, 4
+ 2b8:	000081        	l32r	a8, fffc02b8 <ayatsuri_shade_sample+0xfffc02b8>	2b8: R_XTENSA_SLOT0_OP	.literal.ayatsuri_shade_sample+0x4c
+	2b8: R_XTENSA_ASM_EXPAND	__divsf3
+ 2bb:	0008e0        	callx8	a8
+ 2be:	010113        	lsi	f1, a1, 4
+ 2c1:	000103        	lsi	f0, a1, 0
+ 2c4:	2a2110        	mul.s	f2, f1, f1
+ 2c7:	2a0000        	mul.s	f0, f0, f0
+ 2ca:	fa3a50        	wfr	f3, a10
+ 2cd:	2a1330        	mul.s	f1, f3, f3
+ 2d0:	21a9      	s32i.n	a10, a1, 8
+ 2d2:	0a0020        	add.s	f0, f0, f2
+ 2d5:	0a2010        	add.s	f2, f0, f1
+ 2d8:	faa240        	rfr	a10, f2
+ 2db:	000081        	l32r	a8, fffc02dc <ayatsuri_shade_sample+0xfffc02dc>	2db: R_XTENSA_SLOT0_OP	.literal.ayatsuri_shade_sample+0x50
+	2db: R_XTENSA_ASM_EXPAND	sqrtf
+ 2de:	0008e0        	callx8	a8
+ 2e1:	0a2d      	mov.n	a2, a10
+ 2e3:	0abd      	mov.n	a11, a10
+ 2e5:	01a8      	l32i.n	a10, a1, 0
+ 2e7:	000081        	l32r	a8, fffc02e8 <ayatsuri_shade_sample+0xfffc02e8>	2e7: R_XTENSA_SLOT0_OP	.literal.ayatsuri_shade_sample+0x54
+	2e7: R_XTENSA_ASM_EXPAND	__divsf3
+ 2ea:	0008e0        	callx8	a8
+ 2ed:	0a8d      	mov.n	a8, a10
+ 2ef:	11a8      	l32i.n	a10, a1, 4
+ 2f1:	02bd      	mov.n	a11, a2
+ 2f3:	0189      	s32i.n	a8, a1, 0
+ 2f5:	000081        	l32r	a8, fffc02f8 <ayatsuri_shade_sample+0xfffc02f8>	2f5: R_XTENSA_SLOT0_OP	.literal.ayatsuri_shade_sample+0x58
+	2f5: R_XTENSA_ASM_EXPAND	__divsf3
+ 2f8:	0008e0        	callx8	a8
+ 2fb:	0a8d      	mov.n	a8, a10
+ 2fd:	21a8      	l32i.n	a10, a1, 8
+ 2ff:	02bd      	mov.n	a11, a2
+ 301:	1189      	s32i.n	a8, a1, 4
+ 303:	000081        	l32r	a8, fffc0304 <ayatsuri_shade_sample+0xfffc0304>	303: R_XTENSA_SLOT0_OP	.literal.ayatsuri_shade_sample+0x5c
+	303: R_XTENSA_ASM_EXPAND	__divsf3
+ 306:	0008e0        	callx8	a8
+ 309:	21a9      	s32i.n	a10, a1, 8
+ 30b:	ff5786        	j	6d <ayatsuri_shade_sample+0x6d>	30b: R_XTENSA_SLOT0_OP	.text.ayatsuri_shade_sample+0x6d
+
+Disassembly of section .text.shade_pair:
+
+00000000 <shade_pair>:
+   0:	006136        	entry	a1, 48
+   3:	0013b2        	l16ui	a11, a3, 0
+   6:	744040        	extui	a4, a4, 0, 8
+   9:	06ed      	mov.n	a14, a6
+   b:	07fd      	mov.n	a15, a7
+   d:	0169      	s32i.n	a6, a1, 0
+   f:	05dd      	mov.n	a13, a5
+  11:	c168      	l32i.n	a6, a1, 48
+  13:	04cd      	mov.n	a12, a4
+  15:	02ad      	mov.n	a10, a2
+  17:	000081        	l32r	a8, fffc0018 <shade_pair+0xfffc0018>	17: R_XTENSA_SLOT0_OP	.literal.shade_pair
+	17: R_XTENSA_ASM_EXPAND	.text.ayatsuri_shade_sample
+  1a:	0008e0        	callx8	a8
+  1d:	0056a2        	s16i	a10, a6, 0
+  20:	0113b2        	l16ui	a11, a3, 2
+  23:	01e8      	l32i.n	a14, a1, 0
+  25:	07fd      	mov.n	a15, a7
+  27:	05dd      	mov.n	a13, a5
+  29:	04cd      	mov.n	a12, a4
+  2b:	02ad      	mov.n	a10, a2
+  2d:	000081        	l32r	a8, fffc0030 <shade_pair+0xfffc0030>	2d: R_XTENSA_SLOT0_OP	.literal.shade_pair+0x4
+	2d: R_XTENSA_ASM_EXPAND	.text.ayatsuri_shade_sample
+  30:	0008e0        	callx8	a8
+  33:	0156a2        	s16i	a10, a6, 2
+  36:	f01d      	retw.n

@@ -1,0 +1,982 @@
+{
+  "images": [
+    {
+      "seed": 11,
+      "view": "front",
+      "case": "baseline",
+      "renderSeconds": 3.232739343000503,
+      "combinedPNG": "images/seed-11-front-baseline-combined.png",
+      "combinedPNGSHA256": "73b5ca8520d8e1a0f101379fc0c646ad2b5618c125b69e877d0c5d3b53fac469",
+      "EXR": "images/seed-11-front-baseline.exr",
+      "EXRSHA256": "dcc6abe502d261aa35f80faf145a71ef7c44ea7ab2fe3c8cdacec666a11a3f4b",
+      "channels": [
+        "ViewLayer.Combined.A",
+        "ViewLayer.Combined.B",
+        "ViewLayer.Combined.G",
+        "ViewLayer.Combined.R",
+        "ViewLayer.DiffCol.B",
+        "ViewLayer.DiffCol.G",
+        "ViewLayer.DiffCol.R",
+        "ViewLayer.DiffDir.B",
+        "ViewLayer.DiffDir.G",
+        "ViewLayer.DiffDir.R",
+        "ViewLayer.DiffInd.B",
+        "ViewLayer.DiffInd.G",
+        "ViewLayer.DiffInd.R",
+        "ViewLayer.Emit.B",
+        "ViewLayer.Emit.G",
+        "ViewLayer.Emit.R",
+        "ViewLayer.Env.B",
+        "ViewLayer.Env.G",
+        "ViewLayer.Env.R",
+        "ViewLayer.GlossCol.B",
+        "ViewLayer.GlossCol.G",
+        "ViewLayer.GlossCol.R",
+        "ViewLayer.GlossDir.B",
+        "ViewLayer.GlossDir.G",
+        "ViewLayer.GlossDir.R",
+        "ViewLayer.GlossInd.B",
+        "ViewLayer.GlossInd.G",
+        "ViewLayer.GlossInd.R",
+        "ViewLayer.TransCol.B",
+        "ViewLayer.TransCol.G",
+        "ViewLayer.TransCol.R",
+        "ViewLayer.TransDir.B",
+        "ViewLayer.TransDir.G",
+        "ViewLayer.TransDir.R",
+        "ViewLayer.TransInd.B",
+        "ViewLayer.TransInd.G",
+        "ViewLayer.TransInd.R",
+        "ViewLayer.VolumeDir.B",
+        "ViewLayer.VolumeDir.G",
+        "ViewLayer.VolumeDir.R",
+        "ViewLayer.VolumeInd.B",
+        "ViewLayer.VolumeInd.G",
+        "ViewLayer.VolumeInd.R"
+      ],
+      "redisplayedPNG": "images/seed-11-front-baseline-redisplayed.png",
+      "redisplayedPNGSHA256": "aa0ffea8299fbf775ddb265ffe06226a04545bd26e9e123d34e7b90e086b0fb3",
+      "oldRecompositionGatePassed": false,
+      "oldRecompositionGateViolatingComponents": 62,
+      "unexplainedResidualRetained": true,
+      "residualMaxAbs": 3.0574557186469065e-05,
+      "residualRMSE": 2.703573386063561e-06,
+      "negative": {
+        "Combined": {
+          "negativeComponents": 0,
+          "minimum": 0.006939742714166641
+        },
+        "remove-direct-specular": {
+          "negativeComponents": 0,
+          "minimum": 0.003956426667777568
+        },
+        "remove-indirect-diffuse": {
+          "negativeComponents": 0,
+          "minimum": 0.005773225078161137
+        }
+      },
+      "outputs": {
+        "profile-native-srgb": {
+          "file": "images/seed-11-front-baseline-profile-native-srgb.png",
+          "sha256": "f3c41c8b5b519eaaa4f4abcc63fa531642f69ac7867deeca3ac0f5c9158e170d"
+        },
+        "remove-direct-specular": {
+          "file": "images/seed-11-front-baseline-remove-direct-specular.png",
+          "sha256": "f32eb196fb37acc253c30d47f33ed1f159ac919800d6ed351619463ae66b4046"
+        },
+        "remove-indirect-diffuse": {
+          "file": "images/seed-11-front-baseline-remove-indirect-diffuse.png",
+          "sha256": "8692b43d1173f83df4b162eaa2478f9987e980dcf4cdf1aa5408e3689131c14f"
+        }
+      },
+      "sourceSettings": {
+        "engine": "CYCLES",
+        "display": {
+          "view_transform": "AgX",
+          "look": "AgX - Medium High Contrast",
+          "exposure": 0.0,
+          "gamma": 1.0
+        },
+        "cycles": {
+          "use_denoising": false,
+          "use_adaptive_sampling": true,
+          "adaptive_threshold": 0.009999999776482582,
+          "adaptive_min_samples": 0,
+          "sample_clamp_direct": 0.0,
+          "sample_clamp_indirect": 10.0,
+          "blur_glossy": 1.0,
+          "pixel_filter_type": "BLACKMAN_HARRIS",
+          "filter_width": 1.5,
+          "use_animated_seed": false
+        },
+        "frame": 1,
+        "dither": 1.0,
+        "filmTransparent": false,
+        "colorDepth": "8",
+        "colorMode": "RGBA"
+      },
+      "originalShadingCompositorNodes": false,
+      "postprocessCompositorNodes": true,
+      "alphaAllOne": true,
+      "clampDirect": 0.0,
+      "clampIndirect": 10.0,
+      "sameRenderContributionOnly": true
+    },
+    {
+      "seed": 11,
+      "view": "oblique",
+      "case": "baseline",
+      "renderSeconds": 3.284686803999648,
+      "combinedPNG": "images/seed-11-oblique-baseline-combined.png",
+      "combinedPNGSHA256": "978a91fa47e1e53042f7e4fa823472a729c28df8b5ef327013e6afbfd2b869e0",
+      "EXR": "images/seed-11-oblique-baseline.exr",
+      "EXRSHA256": "b879ed2eec4f881caf9aecc97d5d270053645245e4050ae6597086e2696d6bad",
+      "channels": [
+        "ViewLayer.Combined.A",
+        "ViewLayer.Combined.B",
+        "ViewLayer.Combined.G",
+        "ViewLayer.Combined.R",
+        "ViewLayer.DiffCol.B",
+        "ViewLayer.DiffCol.G",
+        "ViewLayer.DiffCol.R",
+        "ViewLayer.DiffDir.B",
+        "ViewLayer.DiffDir.G",
+        "ViewLayer.DiffDir.R",
+        "ViewLayer.DiffInd.B",
+        "ViewLayer.DiffInd.G",
+        "ViewLayer.DiffInd.R",
+        "ViewLayer.Emit.B",
+        "ViewLayer.Emit.G",
+        "ViewLayer.Emit.R",
+        "ViewLayer.Env.B",
+        "ViewLayer.Env.G",
+        "ViewLayer.Env.R",
+        "ViewLayer.GlossCol.B",
+        "ViewLayer.GlossCol.G",
+        "ViewLayer.GlossCol.R",
+        "ViewLayer.GlossDir.B",
+        "ViewLayer.GlossDir.G",
+        "ViewLayer.GlossDir.R",
+        "ViewLayer.GlossInd.B",
+        "ViewLayer.GlossInd.G",
+        "ViewLayer.GlossInd.R",
+        "ViewLayer.TransCol.B",
+        "ViewLayer.TransCol.G",
+        "ViewLayer.TransCol.R",
+        "ViewLayer.TransDir.B",
+        "ViewLayer.TransDir.G",
+        "ViewLayer.TransDir.R",
+        "ViewLayer.TransInd.B",
+        "ViewLayer.TransInd.G",
+        "ViewLayer.TransInd.R",
+        "ViewLayer.VolumeDir.B",
+        "ViewLayer.VolumeDir.G",
+        "ViewLayer.VolumeDir.R",
+        "ViewLayer.VolumeInd.B",
+        "ViewLayer.VolumeInd.G",
+        "ViewLayer.VolumeInd.R"
+      ],
+      "redisplayedPNG": "images/seed-11-oblique-baseline-redisplayed.png",
+      "redisplayedPNGSHA256": "83d18bdd9c182aa51a584efcb2c8f3842a98c7eb350b8f7d299a22d9ffa369af",
+      "oldRecompositionGatePassed": false,
+      "oldRecompositionGateViolatingComponents": 44,
+      "unexplainedResidualRetained": true,
+      "residualMaxAbs": 2.958116748486006e-05,
+      "residualRMSE": 2.5380754957208378e-06,
+      "negative": {
+        "Combined": {
+          "negativeComponents": 0,
+          "minimum": 0.004448930267244577
+        },
+        "remove-direct-specular": {
+          "negativeComponents": 0,
+          "minimum": 0.0020456401349371323
+        },
+        "remove-indirect-diffuse": {
+          "negativeComponents": 0,
+          "minimum": 0.0037101772060794125
+        }
+      },
+      "outputs": {
+        "profile-native-srgb": {
+          "file": "images/seed-11-oblique-baseline-profile-native-srgb.png",
+          "sha256": "88f1de98d3aa51bd4e050dabd6d9dccd47c41ed44df6b7f1078dd2e8f76c5b2d"
+        },
+        "remove-direct-specular": {
+          "file": "images/seed-11-oblique-baseline-remove-direct-specular.png",
+          "sha256": "959f8218d9c98465a6c6c1cda114631deb1df166f67cca6fe497b274af3dd54e"
+        },
+        "remove-indirect-diffuse": {
+          "file": "images/seed-11-oblique-baseline-remove-indirect-diffuse.png",
+          "sha256": "92592289818e371d1cb98bc88a63385fb5cb1a7432117bf50238afaa1ffedaaa"
+        }
+      },
+      "sourceSettings": {
+        "engine": "CYCLES",
+        "display": {
+          "view_transform": "AgX",
+          "look": "AgX - Medium High Contrast",
+          "exposure": 0.0,
+          "gamma": 1.0
+        },
+        "cycles": {
+          "use_denoising": false,
+          "use_adaptive_sampling": true,
+          "adaptive_threshold": 0.009999999776482582,
+          "adaptive_min_samples": 0,
+          "sample_clamp_direct": 0.0,
+          "sample_clamp_indirect": 10.0,
+          "blur_glossy": 1.0,
+          "pixel_filter_type": "BLACKMAN_HARRIS",
+          "filter_width": 1.5,
+          "use_animated_seed": false
+        },
+        "frame": 1,
+        "dither": 1.0,
+        "filmTransparent": false,
+        "colorDepth": "8",
+        "colorMode": "RGBA"
+      },
+      "originalShadingCompositorNodes": false,
+      "postprocessCompositorNodes": true,
+      "alphaAllOne": true,
+      "clampDirect": 0.0,
+      "clampIndirect": 10.0,
+      "sameRenderContributionOnly": true
+    },
+    {
+      "seed": 11,
+      "view": "front",
+      "case": "direction",
+      "renderSeconds": 3.2375169070000993,
+      "combinedPNG": "images/seed-11-front-direction-combined.png",
+      "combinedPNGSHA256": "47a657c6293f4828a763efdd58fdac5b113b47c38ffc6f525de9955c4d1d59d3",
+      "EXR": "images/seed-11-front-direction.exr",
+      "EXRSHA256": "51dd9acf6a6348f1861a0bf3cf09e9082708705a9cd8a4cdbf1861b085629017",
+      "channels": [
+        "ViewLayer.Combined.A",
+        "ViewLayer.Combined.B",
+        "ViewLayer.Combined.G",
+        "ViewLayer.Combined.R",
+        "ViewLayer.DiffCol.B",
+        "ViewLayer.DiffCol.G",
+        "ViewLayer.DiffCol.R",
+        "ViewLayer.DiffDir.B",
+        "ViewLayer.DiffDir.G",
+        "ViewLayer.DiffDir.R",
+        "ViewLayer.DiffInd.B",
+        "ViewLayer.DiffInd.G",
+        "ViewLayer.DiffInd.R",
+        "ViewLayer.Emit.B",
+        "ViewLayer.Emit.G",
+        "ViewLayer.Emit.R",
+        "ViewLayer.Env.B",
+        "ViewLayer.Env.G",
+        "ViewLayer.Env.R",
+        "ViewLayer.GlossCol.B",
+        "ViewLayer.GlossCol.G",
+        "ViewLayer.GlossCol.R",
+        "ViewLayer.GlossDir.B",
+        "ViewLayer.GlossDir.G",
+        "ViewLayer.GlossDir.R",
+        "ViewLayer.GlossInd.B",
+        "ViewLayer.GlossInd.G",
+        "ViewLayer.GlossInd.R",
+        "ViewLayer.TransCol.B",
+        "ViewLayer.TransCol.G",
+        "ViewLayer.TransCol.R",
+        "ViewLayer.TransDir.B",
+        "ViewLayer.TransDir.G",
+        "ViewLayer.TransDir.R",
+        "ViewLayer.TransInd.B",
+        "ViewLayer.TransInd.G",
+        "ViewLayer.TransInd.R",
+        "ViewLayer.VolumeDir.B",
+        "ViewLayer.VolumeDir.G",
+        "ViewLayer.VolumeDir.R",
+        "ViewLayer.VolumeInd.B",
+        "ViewLayer.VolumeInd.G",
+        "ViewLayer.VolumeInd.R"
+      ],
+      "redisplayedPNG": "images/seed-11-front-direction-redisplayed.png",
+      "redisplayedPNGSHA256": "b10096163c06de4c07adc7d62bcbb17490dfa3a5d7f47069809740b2b2951446",
+      "oldRecompositionGatePassed": false,
+      "oldRecompositionGateViolatingComponents": 7,
+      "unexplainedResidualRetained": true,
+      "residualMaxAbs": 3.056203516527134e-05,
+      "residualRMSE": 2.62093875692227e-06,
+      "negative": {
+        "Combined": {
+          "negativeComponents": 0,
+          "minimum": 0.006717370357364416
+        },
+        "remove-direct-specular": {
+          "negativeComponents": 0,
+          "minimum": 0.0025906564337567772
+        },
+        "remove-indirect-diffuse": {
+          "negativeComponents": 0,
+          "minimum": 0.005419704410163068
+        }
+      },
+      "outputs": {
+        "profile-native-srgb": {
+          "file": "images/seed-11-front-direction-profile-native-srgb.png",
+          "sha256": "ef87db0060e5080a14423433c229d8bdbe1184b1fb11bf944cc3be59056f3b61"
+        },
+        "remove-direct-specular": {
+          "file": "images/seed-11-front-direction-remove-direct-specular.png",
+          "sha256": "bcf1ac7678e701fd6b2ee825df486394b46f0dc739092008901847608dc361be"
+        },
+        "remove-indirect-diffuse": {
+          "file": "images/seed-11-front-direction-remove-indirect-diffuse.png",
+          "sha256": "63c5b4005acae7a613a892214c36f3ed7ee600eb46462fb699bb9c66e00728b2"
+        }
+      },
+      "sourceSettings": {
+        "engine": "CYCLES",
+        "display": {
+          "view_transform": "AgX",
+          "look": "AgX - Medium High Contrast",
+          "exposure": 0.0,
+          "gamma": 1.0
+        },
+        "cycles": {
+          "use_denoising": false,
+          "use_adaptive_sampling": true,
+          "adaptive_threshold": 0.009999999776482582,
+          "adaptive_min_samples": 0,
+          "sample_clamp_direct": 0.0,
+          "sample_clamp_indirect": 10.0,
+          "blur_glossy": 1.0,
+          "pixel_filter_type": "BLACKMAN_HARRIS",
+          "filter_width": 1.5,
+          "use_animated_seed": false
+        },
+        "frame": 1,
+        "dither": 1.0,
+        "filmTransparent": false,
+        "colorDepth": "8",
+        "colorMode": "RGBA"
+      },
+      "originalShadingCompositorNodes": false,
+      "postprocessCompositorNodes": true,
+      "alphaAllOne": true,
+      "clampDirect": 0.0,
+      "clampIndirect": 10.0,
+      "sameRenderContributionOnly": true
+    },
+    {
+      "seed": 11,
+      "view": "oblique",
+      "case": "direction",
+      "renderSeconds": 3.412971366999045,
+      "combinedPNG": "images/seed-11-oblique-direction-combined.png",
+      "combinedPNGSHA256": "4a0b04c9127e35997045c8989e4ead66a56b3f1374edba2feb142b3065a3560e",
+      "EXR": "images/seed-11-oblique-direction.exr",
+      "EXRSHA256": "7f38790312adaf2e897c30be359b8d7e66d2a95fb310bdc819bdc02bd6c79b56",
+      "channels": [
+        "ViewLayer.Combined.A",
+        "ViewLayer.Combined.B",
+        "ViewLayer.Combined.G",
+        "ViewLayer.Combined.R",
+        "ViewLayer.DiffCol.B",
+        "ViewLayer.DiffCol.G",
+        "ViewLayer.DiffCol.R",
+        "ViewLayer.DiffDir.B",
+        "ViewLayer.DiffDir.G",
+        "ViewLayer.DiffDir.R",
+        "ViewLayer.DiffInd.B",
+        "ViewLayer.DiffInd.G",
+        "ViewLayer.DiffInd.R",
+        "ViewLayer.Emit.B",
+        "ViewLayer.Emit.G",
+        "ViewLayer.Emit.R",
+        "ViewLayer.Env.B",
+        "ViewLayer.Env.G",
+        "ViewLayer.Env.R",
+        "ViewLayer.GlossCol.B",
+        "ViewLayer.GlossCol.G",
+        "ViewLayer.GlossCol.R",
+        "ViewLayer.GlossDir.B",
+        "ViewLayer.GlossDir.G",
+        "ViewLayer.GlossDir.R",
+        "ViewLayer.GlossInd.B",
+        "ViewLayer.GlossInd.G",
+        "ViewLayer.GlossInd.R",
+        "ViewLayer.TransCol.B",
+        "ViewLayer.TransCol.G",
+        "ViewLayer.TransCol.R",
+        "ViewLayer.TransDir.B",
+        "ViewLayer.TransDir.G",
+        "ViewLayer.TransDir.R",
+        "ViewLayer.TransInd.B",
+        "ViewLayer.TransInd.G",
+        "ViewLayer.TransInd.R",
+        "ViewLayer.VolumeDir.B",
+        "ViewLayer.VolumeDir.G",
+        "ViewLayer.VolumeDir.R",
+        "ViewLayer.VolumeInd.B",
+        "ViewLayer.VolumeInd.G",
+        "ViewLayer.VolumeInd.R"
+      ],
+      "redisplayedPNG": "images/seed-11-oblique-direction-redisplayed.png",
+      "redisplayedPNGSHA256": "a07b1144393f794b1e610e510030e85a3af1adeaaf593a82995bce06195d30f4",
+      "oldRecompositionGatePassed": false,
+      "oldRecompositionGateViolatingComponents": 8,
+      "unexplainedResidualRetained": true,
+      "residualMaxAbs": 2.9171309763320608e-05,
+      "residualRMSE": 2.6588061720822014e-06,
+      "negative": {
+        "Combined": {
+          "negativeComponents": 0,
+          "minimum": 0.0018405630253255367
+        },
+        "remove-direct-specular": {
+          "negativeComponents": 0,
+          "minimum": 0.0011105790783347835
+        },
+        "remove-indirect-diffuse": {
+          "negativeComponents": 0,
+          "minimum": 0.0016909763482961977
+        }
+      },
+      "outputs": {
+        "profile-native-srgb": {
+          "file": "images/seed-11-oblique-direction-profile-native-srgb.png",
+          "sha256": "b6dbc09405e1969f3c0b23681b3e28114d034bd05423c5d1688b78cf45f9e085"
+        },
+        "remove-direct-specular": {
+          "file": "images/seed-11-oblique-direction-remove-direct-specular.png",
+          "sha256": "963f70f4d13950e311b3644098b518f62bd66309ba234213a8cfe10f04bcc520"
+        },
+        "remove-indirect-diffuse": {
+          "file": "images/seed-11-oblique-direction-remove-indirect-diffuse.png",
+          "sha256": "e0e0e109431b1530e869c938a57fa147fe150649f5cbd565253f1d749035c8f7"
+        }
+      },
+      "sourceSettings": {
+        "engine": "CYCLES",
+        "display": {
+          "view_transform": "AgX",
+          "look": "AgX - Medium High Contrast",
+          "exposure": 0.0,
+          "gamma": 1.0
+        },
+        "cycles": {
+          "use_denoising": false,
+          "use_adaptive_sampling": true,
+          "adaptive_threshold": 0.009999999776482582,
+          "adaptive_min_samples": 0,
+          "sample_clamp_direct": 0.0,
+          "sample_clamp_indirect": 10.0,
+          "blur_glossy": 1.0,
+          "pixel_filter_type": "BLACKMAN_HARRIS",
+          "filter_width": 1.5,
+          "use_animated_seed": false
+        },
+        "frame": 1,
+        "dither": 1.0,
+        "filmTransparent": false,
+        "colorDepth": "8",
+        "colorMode": "RGBA"
+      },
+      "originalShadingCompositorNodes": false,
+      "postprocessCompositorNodes": true,
+      "alphaAllOne": true,
+      "clampDirect": 0.0,
+      "clampIndirect": 10.0,
+      "sameRenderContributionOnly": true
+    },
+    {
+      "seed": 29,
+      "view": "front",
+      "case": "baseline",
+      "renderSeconds": 2.959934443999373,
+      "combinedPNG": "images/seed-29-front-baseline-combined.png",
+      "combinedPNGSHA256": "bba0e819ab6003f337e7eb7aa5b4bbd60a542defd2af8ede058badddb572b9cd",
+      "EXR": "images/seed-29-front-baseline.exr",
+      "EXRSHA256": "310dcc050a1609d1cc24936d8b2e1ffc436d8235cb8dc79bf9bba6abe182d32c",
+      "channels": [
+        "ViewLayer.Combined.A",
+        "ViewLayer.Combined.B",
+        "ViewLayer.Combined.G",
+        "ViewLayer.Combined.R",
+        "ViewLayer.DiffCol.B",
+        "ViewLayer.DiffCol.G",
+        "ViewLayer.DiffCol.R",
+        "ViewLayer.DiffDir.B",
+        "ViewLayer.DiffDir.G",
+        "ViewLayer.DiffDir.R",
+        "ViewLayer.DiffInd.B",
+        "ViewLayer.DiffInd.G",
+        "ViewLayer.DiffInd.R",
+        "ViewLayer.Emit.B",
+        "ViewLayer.Emit.G",
+        "ViewLayer.Emit.R",
+        "ViewLayer.Env.B",
+        "ViewLayer.Env.G",
+        "ViewLayer.Env.R",
+        "ViewLayer.GlossCol.B",
+        "ViewLayer.GlossCol.G",
+        "ViewLayer.GlossCol.R",
+        "ViewLayer.GlossDir.B",
+        "ViewLayer.GlossDir.G",
+        "ViewLayer.GlossDir.R",
+        "ViewLayer.GlossInd.B",
+        "ViewLayer.GlossInd.G",
+        "ViewLayer.GlossInd.R",
+        "ViewLayer.TransCol.B",
+        "ViewLayer.TransCol.G",
+        "ViewLayer.TransCol.R",
+        "ViewLayer.TransDir.B",
+        "ViewLayer.TransDir.G",
+        "ViewLayer.TransDir.R",
+        "ViewLayer.TransInd.B",
+        "ViewLayer.TransInd.G",
+        "ViewLayer.TransInd.R",
+        "ViewLayer.VolumeDir.B",
+        "ViewLayer.VolumeDir.G",
+        "ViewLayer.VolumeDir.R",
+        "ViewLayer.VolumeInd.B",
+        "ViewLayer.VolumeInd.G",
+        "ViewLayer.VolumeInd.R"
+      ],
+      "redisplayedPNG": "images/seed-29-front-baseline-redisplayed.png",
+      "redisplayedPNGSHA256": "27c67ad8a29ef9d19fd4e58725473963e6795b6443cabcacbf616497199a5842",
+      "oldRecompositionGatePassed": false,
+      "oldRecompositionGateViolatingComponents": 33,
+      "unexplainedResidualRetained": true,
+      "residualMaxAbs": 3.1032656990337415e-05,
+      "residualRMSE": 2.4311545244297992e-06,
+      "negative": {
+        "Combined": {
+          "negativeComponents": 0,
+          "minimum": 0.00811261497437954
+        },
+        "remove-direct-specular": {
+          "negativeComponents": 0,
+          "minimum": 0.004013939613479067
+        },
+        "remove-indirect-diffuse": {
+          "negativeComponents": 0,
+          "minimum": 0.0066781567987910795
+        }
+      },
+      "outputs": {
+        "profile-native-srgb": {
+          "file": "images/seed-29-front-baseline-profile-native-srgb.png",
+          "sha256": "9c1ec3602b9f32d50e44ad1db6ffc6d9a74ac5426c70405deb026da2be985d87"
+        },
+        "remove-direct-specular": {
+          "file": "images/seed-29-front-baseline-remove-direct-specular.png",
+          "sha256": "00003da487f49f1d3095db6be06179e89accdf87c15620c3c9aec29586a0ee2a"
+        },
+        "remove-indirect-diffuse": {
+          "file": "images/seed-29-front-baseline-remove-indirect-diffuse.png",
+          "sha256": "0dfd10634dd5b918ae30abbefb4bdc5a270d84b759f7de85e95aca1475d9d4e3"
+        }
+      },
+      "sourceSettings": {
+        "engine": "CYCLES",
+        "display": {
+          "view_transform": "AgX",
+          "look": "AgX - Medium High Contrast",
+          "exposure": 0.0,
+          "gamma": 1.0
+        },
+        "cycles": {
+          "use_denoising": false,
+          "use_adaptive_sampling": true,
+          "adaptive_threshold": 0.009999999776482582,
+          "adaptive_min_samples": 0,
+          "sample_clamp_direct": 0.0,
+          "sample_clamp_indirect": 10.0,
+          "blur_glossy": 1.0,
+          "pixel_filter_type": "BLACKMAN_HARRIS",
+          "filter_width": 1.5,
+          "use_animated_seed": false
+        },
+        "frame": 1,
+        "dither": 1.0,
+        "filmTransparent": false,
+        "colorDepth": "8",
+        "colorMode": "RGBA"
+      },
+      "originalShadingCompositorNodes": false,
+      "postprocessCompositorNodes": true,
+      "alphaAllOne": true,
+      "clampDirect": 0.0,
+      "clampIndirect": 10.0,
+      "sameRenderContributionOnly": true
+    },
+    {
+      "seed": 29,
+      "view": "oblique",
+      "case": "baseline",
+      "renderSeconds": 3.181667868999284,
+      "combinedPNG": "images/seed-29-oblique-baseline-combined.png",
+      "combinedPNGSHA256": "5f17d60a3da8b9906128c505af5a540211bc8187d526753fcc16fc7f742e1ce8",
+      "EXR": "images/seed-29-oblique-baseline.exr",
+      "EXRSHA256": "2938b98b7628d3d5cd76f6f8f54650dfe4c4f2f039a562fbc5aecec53bfe9954",
+      "channels": [
+        "ViewLayer.Combined.A",
+        "ViewLayer.Combined.B",
+        "ViewLayer.Combined.G",
+        "ViewLayer.Combined.R",
+        "ViewLayer.DiffCol.B",
+        "ViewLayer.DiffCol.G",
+        "ViewLayer.DiffCol.R",
+        "ViewLayer.DiffDir.B",
+        "ViewLayer.DiffDir.G",
+        "ViewLayer.DiffDir.R",
+        "ViewLayer.DiffInd.B",
+        "ViewLayer.DiffInd.G",
+        "ViewLayer.DiffInd.R",
+        "ViewLayer.Emit.B",
+        "ViewLayer.Emit.G",
+        "ViewLayer.Emit.R",
+        "ViewLayer.Env.B",
+        "ViewLayer.Env.G",
+        "ViewLayer.Env.R",
+        "ViewLayer.GlossCol.B",
+        "ViewLayer.GlossCol.G",
+        "ViewLayer.GlossCol.R",
+        "ViewLayer.GlossDir.B",
+        "ViewLayer.GlossDir.G",
+        "ViewLayer.GlossDir.R",
+        "ViewLayer.GlossInd.B",
+        "ViewLayer.GlossInd.G",
+        "ViewLayer.GlossInd.R",
+        "ViewLayer.TransCol.B",
+        "ViewLayer.TransCol.G",
+        "ViewLayer.TransCol.R",
+        "ViewLayer.TransDir.B",
+        "ViewLayer.TransDir.G",
+        "ViewLayer.TransDir.R",
+        "ViewLayer.TransInd.B",
+        "ViewLayer.TransInd.G",
+        "ViewLayer.TransInd.R",
+        "ViewLayer.VolumeDir.B",
+        "ViewLayer.VolumeDir.G",
+        "ViewLayer.VolumeDir.R",
+        "ViewLayer.VolumeInd.B",
+        "ViewLayer.VolumeInd.G",
+        "ViewLayer.VolumeInd.R"
+      ],
+      "redisplayedPNG": "images/seed-29-oblique-baseline-redisplayed.png",
+      "redisplayedPNGSHA256": "11fd5aef8d70a4d3584e8397656c4c8b8e8463f5c1db7334104c70e7959d9e1b",
+      "oldRecompositionGatePassed": false,
+      "oldRecompositionGateViolatingComponents": 29,
+      "unexplainedResidualRetained": true,
+      "residualMaxAbs": 2.9690077279820315e-05,
+      "residualRMSE": 2.5216723935192135e-06,
+      "negative": {
+        "Combined": {
+          "negativeComponents": 0,
+          "minimum": 0.006274212617427111
+        },
+        "remove-direct-specular": {
+          "negativeComponents": 0,
+          "minimum": 0.002032700640073992
+        },
+        "remove-indirect-diffuse": {
+          "negativeComponents": 0,
+          "minimum": 0.0054495721561418214
+        }
+      },
+      "outputs": {
+        "profile-native-srgb": {
+          "file": "images/seed-29-oblique-baseline-profile-native-srgb.png",
+          "sha256": "c4ee18db5cf911a52a024194de8bcebbb57d0e795767c4b78b0d4ca16dd229f1"
+        },
+        "remove-direct-specular": {
+          "file": "images/seed-29-oblique-baseline-remove-direct-specular.png",
+          "sha256": "2eb7b4bfd301f6eefc0f6c37e7d19cdcb5ca6b5202ca7284e146b2e02d942a22"
+        },
+        "remove-indirect-diffuse": {
+          "file": "images/seed-29-oblique-baseline-remove-indirect-diffuse.png",
+          "sha256": "e5236f1b9a763dccb66dac083c43b0519fa1e5d71d23ae2c24bb70f63523385a"
+        }
+      },
+      "sourceSettings": {
+        "engine": "CYCLES",
+        "display": {
+          "view_transform": "AgX",
+          "look": "AgX - Medium High Contrast",
+          "exposure": 0.0,
+          "gamma": 1.0
+        },
+        "cycles": {
+          "use_denoising": false,
+          "use_adaptive_sampling": true,
+          "adaptive_threshold": 0.009999999776482582,
+          "adaptive_min_samples": 0,
+          "sample_clamp_direct": 0.0,
+          "sample_clamp_indirect": 10.0,
+          "blur_glossy": 1.0,
+          "pixel_filter_type": "BLACKMAN_HARRIS",
+          "filter_width": 1.5,
+          "use_animated_seed": false
+        },
+        "frame": 1,
+        "dither": 1.0,
+        "filmTransparent": false,
+        "colorDepth": "8",
+        "colorMode": "RGBA"
+      },
+      "originalShadingCompositorNodes": false,
+      "postprocessCompositorNodes": true,
+      "alphaAllOne": true,
+      "clampDirect": 0.0,
+      "clampIndirect": 10.0,
+      "sameRenderContributionOnly": true
+    },
+    {
+      "seed": 29,
+      "view": "front",
+      "case": "direction",
+      "renderSeconds": 3.014673158999358,
+      "combinedPNG": "images/seed-29-front-direction-combined.png",
+      "combinedPNGSHA256": "6facd83a7ed166743238f2762165838c52f9ce811892a784a3f58fa94542ccaa",
+      "EXR": "images/seed-29-front-direction.exr",
+      "EXRSHA256": "b28b799f22cdf52885d945429eae4e368bbfb4fc3c94e30d66d1fe0b89c4a5a1",
+      "channels": [
+        "ViewLayer.Combined.A",
+        "ViewLayer.Combined.B",
+        "ViewLayer.Combined.G",
+        "ViewLayer.Combined.R",
+        "ViewLayer.DiffCol.B",
+        "ViewLayer.DiffCol.G",
+        "ViewLayer.DiffCol.R",
+        "ViewLayer.DiffDir.B",
+        "ViewLayer.DiffDir.G",
+        "ViewLayer.DiffDir.R",
+        "ViewLayer.DiffInd.B",
+        "ViewLayer.DiffInd.G",
+        "ViewLayer.DiffInd.R",
+        "ViewLayer.Emit.B",
+        "ViewLayer.Emit.G",
+        "ViewLayer.Emit.R",
+        "ViewLayer.Env.B",
+        "ViewLayer.Env.G",
+        "ViewLayer.Env.R",
+        "ViewLayer.GlossCol.B",
+        "ViewLayer.GlossCol.G",
+        "ViewLayer.GlossCol.R",
+        "ViewLayer.GlossDir.B",
+        "ViewLayer.GlossDir.G",
+        "ViewLayer.GlossDir.R",
+        "ViewLayer.GlossInd.B",
+        "ViewLayer.GlossInd.G",
+        "ViewLayer.GlossInd.R",
+        "ViewLayer.TransCol.B",
+        "ViewLayer.TransCol.G",
+        "ViewLayer.TransCol.R",
+        "ViewLayer.TransDir.B",
+        "ViewLayer.TransDir.G",
+        "ViewLayer.TransDir.R",
+        "ViewLayer.TransInd.B",
+        "ViewLayer.TransInd.G",
+        "ViewLayer.TransInd.R",
+        "ViewLayer.VolumeDir.B",
+        "ViewLayer.VolumeDir.G",
+        "ViewLayer.VolumeDir.R",
+        "ViewLayer.VolumeInd.B",
+        "ViewLayer.VolumeInd.G",
+        "ViewLayer.VolumeInd.R"
+      ],
+      "redisplayedPNG": "images/seed-29-front-direction-redisplayed.png",
+      "redisplayedPNGSHA256": "ed983cf4d87e38022a3fc7c0126da55f8eeeec73e3a1da2ce52bc380c871c86f",
+      "oldRecompositionGatePassed": false,
+      "oldRecompositionGateViolatingComponents": 21,
+      "unexplainedResidualRetained": true,
+      "residualMaxAbs": 3.8002203010201185e-05,
+      "residualRMSE": 2.7326365218555487e-06,
+      "negative": {
+        "Combined": {
+          "negativeComponents": 0,
+          "minimum": 0.006347200833261013
+        },
+        "remove-direct-specular": {
+          "negativeComponents": 0,
+          "minimum": 0.0022181343892274663
+        },
+        "remove-indirect-diffuse": {
+          "negativeComponents": 0,
+          "minimum": 0.005034814053578307
+        }
+      },
+      "outputs": {
+        "profile-native-srgb": {
+          "file": "images/seed-29-front-direction-profile-native-srgb.png",
+          "sha256": "3ffa1f62af136543b9d25ffc4c67a6cb734ba5ed3aa3d50579b2c5cf5eb4a23f"
+        },
+        "remove-direct-specular": {
+          "file": "images/seed-29-front-direction-remove-direct-specular.png",
+          "sha256": "6441559626fa40c4b4b7a349bc927dc7a0c8d05f3c6f633bbf205b73f975bc7f"
+        },
+        "remove-indirect-diffuse": {
+          "file": "images/seed-29-front-direction-remove-indirect-diffuse.png",
+          "sha256": "87957392562b0afa0d69495fcb367a1da8bc61b8b9497294f3ff50024a38494d"
+        }
+      },
+      "sourceSettings": {
+        "engine": "CYCLES",
+        "display": {
+          "view_transform": "AgX",
+          "look": "AgX - Medium High Contrast",
+          "exposure": 0.0,
+          "gamma": 1.0
+        },
+        "cycles": {
+          "use_denoising": false,
+          "use_adaptive_sampling": true,
+          "adaptive_threshold": 0.009999999776482582,
+          "adaptive_min_samples": 0,
+          "sample_clamp_direct": 0.0,
+          "sample_clamp_indirect": 10.0,
+          "blur_glossy": 1.0,
+          "pixel_filter_type": "BLACKMAN_HARRIS",
+          "filter_width": 1.5,
+          "use_animated_seed": false
+        },
+        "frame": 1,
+        "dither": 1.0,
+        "filmTransparent": false,
+        "colorDepth": "8",
+        "colorMode": "RGBA"
+      },
+      "originalShadingCompositorNodes": false,
+      "postprocessCompositorNodes": true,
+      "alphaAllOne": true,
+      "clampDirect": 0.0,
+      "clampIndirect": 10.0,
+      "sameRenderContributionOnly": true
+    },
+    {
+      "seed": 29,
+      "view": "oblique",
+      "case": "direction",
+      "renderSeconds": 3.5273294910002733,
+      "combinedPNG": "images/seed-29-oblique-direction-combined.png",
+      "combinedPNGSHA256": "ce209dd54345020a4c5ce21dd463a47b02fd72d801ad8ebfb613c6a7978225c9",
+      "EXR": "images/seed-29-oblique-direction.exr",
+      "EXRSHA256": "0d2ec3c581a78c99671acbdb4634a9ca9e9071074bf1f74d8268b2e425772016",
+      "channels": [
+        "ViewLayer.Combined.A",
+        "ViewLayer.Combined.B",
+        "ViewLayer.Combined.G",
+        "ViewLayer.Combined.R",
+        "ViewLayer.DiffCol.B",
+        "ViewLayer.DiffCol.G",
+        "ViewLayer.DiffCol.R",
+        "ViewLayer.DiffDir.B",
+        "ViewLayer.DiffDir.G",
+        "ViewLayer.DiffDir.R",
+        "ViewLayer.DiffInd.B",
+        "ViewLayer.DiffInd.G",
+        "ViewLayer.DiffInd.R",
+        "ViewLayer.Emit.B",
+        "ViewLayer.Emit.G",
+        "ViewLayer.Emit.R",
+        "ViewLayer.Env.B",
+        "ViewLayer.Env.G",
+        "ViewLayer.Env.R",
+        "ViewLayer.GlossCol.B",
+        "ViewLayer.GlossCol.G",
+        "ViewLayer.GlossCol.R",
+        "ViewLayer.GlossDir.B",
+        "ViewLayer.GlossDir.G",
+        "ViewLayer.GlossDir.R",
+        "ViewLayer.GlossInd.B",
+        "ViewLayer.GlossInd.G",
+        "ViewLayer.GlossInd.R",
+        "ViewLayer.TransCol.B",
+        "ViewLayer.TransCol.G",
+        "ViewLayer.TransCol.R",
+        "ViewLayer.TransDir.B",
+        "ViewLayer.TransDir.G",
+        "ViewLayer.TransDir.R",
+        "ViewLayer.TransInd.B",
+        "ViewLayer.TransInd.G",
+        "ViewLayer.TransInd.R",
+        "ViewLayer.VolumeDir.B",
+        "ViewLayer.VolumeDir.G",
+        "ViewLayer.VolumeDir.R",
+        "ViewLayer.VolumeInd.B",
+        "ViewLayer.VolumeInd.G",
+        "ViewLayer.VolumeInd.R"
+      ],
+      "redisplayedPNG": "images/seed-29-oblique-direction-redisplayed.png",
+      "redisplayedPNGSHA256": "1663f35565e4836496dff7d2c7e307906f791da6d99d3452a47605099f6851c6",
+      "oldRecompositionGatePassed": false,
+      "oldRecompositionGateViolatingComponents": 13,
+      "unexplainedResidualRetained": true,
+      "residualMaxAbs": 2.8297560813350664e-05,
+      "residualRMSE": 2.709540268012525e-06,
+      "negative": {
+        "Combined": {
+          "negativeComponents": 0,
+          "minimum": 0.0017416299087926745
+        },
+        "remove-direct-specular": {
+          "negativeComponents": 0,
+          "minimum": 0.0008930172019897126
+        },
+        "remove-indirect-diffuse": {
+          "negativeComponents": 0,
+          "minimum": 0.0015972473801916798
+        }
+      },
+      "outputs": {
+        "profile-native-srgb": {
+          "file": "images/seed-29-oblique-direction-profile-native-srgb.png",
+          "sha256": "ad078f9a015a8a6d4a0df9357c8401ff08a86e94e7726e28498304e0e3c5e71b"
+        },
+        "remove-direct-specular": {
+          "file": "images/seed-29-oblique-direction-remove-direct-specular.png",
+          "sha256": "64715840130cd03db6a5c059f424b795ef427178162058b3f6376fbd3c6764ab"
+        },
+        "remove-indirect-diffuse": {
+          "file": "images/seed-29-oblique-direction-remove-indirect-diffuse.png",
+          "sha256": "5cb4cd8553e133fd06013ec0e16a20659a85791e0c4e852f10bac08483887fcc"
+        }
+      },
+      "sourceSettings": {
+        "engine": "CYCLES",
+        "display": {
+          "view_transform": "AgX",
+          "look": "AgX - Medium High Contrast",
+          "exposure": 0.0,
+          "gamma": 1.0
+        },
+        "cycles": {
+          "use_denoising": false,
+          "use_adaptive_sampling": true,
+          "adaptive_threshold": 0.009999999776482582,
+          "adaptive_min_samples": 0,
+          "sample_clamp_direct": 0.0,
+          "sample_clamp_indirect": 10.0,
+          "blur_glossy": 1.0,
+          "pixel_filter_type": "BLACKMAN_HARRIS",
+          "filter_width": 1.5,
+          "use_animated_seed": false
+        },
+        "frame": 1,
+        "dither": 1.0,
+        "filmTransparent": false,
+        "colorDepth": "8",
+        "colorMode": "RGBA"
+      },
+      "originalShadingCompositorNodes": false,
+      "postprocessCompositorNodes": true,
+      "alphaAllOne": true,
+      "clampDirect": 0.0,
+      "clampIndirect": 10.0,
+      "sameRenderContributionOnly": true
+    }
+  ],
+  "wallSeconds": 46.392250981998586,
+  "scope": "Fixed3post-render comparisons; not physicalrerenders"
+}

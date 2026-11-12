@@ -1,0 +1,23 @@
+{
+  "corpusSamples": 1756224,
+  "invalidNoDecodes": 18,
+  "validProfiles": 1756206,
+  "RGBBlockDecodes": 7024824,
+  "channelDecodes": 21074472,
+  "reconstructedUint16Values": 1308223647,
+  "maxValuesPerProfile": 768,
+  "uniqueBlocksHistogram": {
+    "1": 576026,
+    "2": 1014771,
+    "3": 147404,
+    "4": 18005
+  },
+  "implementation": "Always four fetches for valid inputs, even when blocks coincide; no global cache. Each fetch independently decodes three channels.",
+  "worstPerValidProfile": {
+    "RGBBlockDecodes": 4,
+    "channelDecodes": 12,
+    "reconstructedUint16Values": 768,
+    "gatherCopiesUint16": 12
+  },
+  "scope": "Derived counts using original C coordinate/log/sort/index arithmetic compiled with same flags; not CPU instruction or elapsed-time counts."
+}

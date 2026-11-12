@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "tests": [
+    "constant interior",
+    "black zero-padding boundary loss, no renormalization",
+    "impulse nine weights",
+    "interior energy",
+    "black foreground support",
+    "corner impulse four support"
+  ],
+  "postprocessSHA256": "b01be3fd1c621e36f68750d8d6ba8dc6204157fac6e75a9b80a5bc69d4682e2c",
+  "aaMathSHA256": "1079e7f7f477e89281d4ae27536bed255deca49e9f0face873e1d1b349e9120d"
+}

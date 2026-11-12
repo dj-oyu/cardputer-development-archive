@@ -1,0 +1,20 @@
+{
+  "status": "HOST_CACHE_EXACT_AND_BENCHMARK_INDEPENDENT_PASS_NOT_INTEGRATED",
+  "rendererIntegrated": false,
+  "deviceProven": false,
+  "cacheBytes": 3224,
+  "blobBytes": 445248,
+  "hostTextBytes": 4543,
+  "hostROBytes": 445372,
+  "namedHostStackBytes": 520,
+  "speedupVsGatherRange": [
+    10.661,
+    11.286
+  ],
+  "slowdownVsRawRange": [
+    3.724,
+    3.927
+  ],
+  "privateCheckpointVersion": 21,
+  "independentReview": "review/REVIEW.json"
+}

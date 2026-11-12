@@ -1,0 +1,599 @@
+# WHEN YOU ADD A .c HERE, ADD IT BEFORE THE FIRST CALLER REFERENCES IT.
+# Several agents and the owner build against this tree continuously and there is
+# no signal that it has gone red except somebody else's build failing. On
+# 2026-09-09 opus_net.c existed on disk with every symbol defined, and the SRCS
+# row below arrived several minutes after the first call to opus_net_stop() went
+# into pocket_av.c. So every object compiled and only the ELF failed -- the most
+# confusing possible version of the mistake, because nothing looks wrong until
+# the last step, and it blocked an agent whose own work was fine.
+#
+# The rule: the row lands WITH the new file, before any caller. If a change
+# genuinely cannot be split that way, say up front that the tree is going red
+# and for roughly how long.
+file(MAKE_DIRECTORY "${CMAKE_BINARY_DIR}/generated")
+set(POCKET_RANDOM_SOURCES "pocket/random_seed.c" "pocket/pocket_random.c")
+# The BLE / Opus / SD diagnostic probes (main/*_probe.c). They run at boot when the
+# option is on, so the default is OFF: the probes are kept in the tree, the shipped
+# firmware does not carry their boot-time work.
+option(POCKET_PROBES "compile and run the BLE/Opus/SD diagnostic probes at boot" OFF)
+set(POCKET_PROBE_SOURCES "")
+if(POCKET_PROBES)
+    set(POCKET_PROBE_SOURCES "ble_probe.c" "opus_probe.c" "sd_probe.c")
+endif()
+set(POCKET_INPUT_SOURCES "pocket/pocket_input.c")
+set(SYSTEM_SOURCES "system/sys_state.c" "system/sys_device.c" "system/sys_clock.c" "system/sys_notify.c" "system/sys_timer.c" "system/sys_ringer.c" "system/sys_wall.c" "pocket/pocket_power.c" "pocket/pocket_clock_source.c" "pocket/pocket_clock.c" "pocket/pocket_mutex_arena.c" "pocket/pocket_av_output_source.c" "pocket/pocket_av_playback_source.c")
+set(KASANE_FONT_SOURCES "text/ksn_font.c")
+set(KASANE_PET_SOURCES "pet/ksn_pet.c" "pet/ksn_pet_builtin.c")
+set(KASANE_SOURCES "ui/kasane/ksn_runtime.c" "ui/kasane/ksn_schema.c" "ui/kasane/ksn_schema_session.c" "ui/kasane/ksn_source.c" "pocket/app_view_assets.c" "pocket/app_view_provider.c" "pocket/app_music_view.c" "pocket/app_legacy_presenter.c" "pocket/app_notice.c" "pocket/pocket_kasane.c" "ui/kasane/ksn_core.c" "ui/kasane/ksn_view.c" "ui/kasane/ksn_indicator.c" "ui/kasane/ksn_device_probe.c" "ui/kasane/ksn_render.c" "ui/kasane/ksn_blend_pie.c" "ui/kasane/ksn_cache.c" "ui/kasane/ksn_modal.c" "ui/kasane/ksn_frost.c" "ui/kasane/ksn_stress_probe.c")
+list(APPEND KASANE_SOURCES
+    "pocket/pocket_proc.c" "pocket/pocket_derby.c" "pocket/pocket_grid.c" "pocket/pocket_video.c" "pocket/pocket_pixel.c"
+    "pocket/pocket_video_stream.c" "pocket/pocket_video_sd_stream.c"
+    "ui/kasane/ksn_proc_grid.c" "ui/kasane/ksn_proc_grid_pie.c"
+    "ui/kasane/ksn_proc_grid_image.c" "ui/kasane/ksn_proc_grid_resize.c"
+    "ui/kasane/ksn_procedural.c" "ui/kasane/ksn_pixel_function.c"
+    "ui/kasane/ksn_pixel_span.c"
+    "ui/kasane/ksn_proc_analysis.c" "ui/kasane/ksn_proc_plan.c"
+    "ui/kasane/ksn_proc_plan_points.c" "ui/kasane/ksn_proc_points.c"
+    "ui/kasane/ksn_proc_points_pie.c" "ui/kasane/ksn_proc_points_dispatch.c")
+option(KASANE_PROC_DEVICE_PROBE "USB-triggered procedural display and load diagnostic" OFF)
+option(KASANE_FLOWER_FRAME_PROBE "Measure two captured FLOWER frames on the device" OFF)
+option(KASANE_FLOWER_D1_PROBE "Verify fixed FLOWER species and heap-pressure repair on device" OFF)
+option(KASANE_FLOWER_ALLOC_FAULT_PROBE "Inject one FLOWER candidate allocation failure after first ACK" OFF)
+option(KASANE_FLOWER_AUDIO_PROBE "Alternate FLOWER with a diagnostic audio tone and heap measurements" OFF)
+option(KASANE_MEGADEMO_DEVICE_PROBE "USB-triggered 48-frame procedural megademo display diagnostic" OFF)
+option(KASANE_PROC_JS_DIAGNOSTIC "Log JS procedural present backend counts" OFF)
+option(KASANE_MEGADEMO_TRACE "Per-turn MDT trace (JS/render/send/register/draw/heap) and '~' guest heap cap" OFF)
+option(KASANE_BGCOST_TRACE "BGC/BGP lines after MDT: VM steps, frame geometry, per-plan draw costs" OFF)
+if(KASANE_BGCOST_TRACE AND NOT KASANE_MEGADEMO_TRACE)
+    message(FATAL_ERROR "KASANE_BGCOST_TRACE requires KASANE_MEGADEMO_TRACE")
+endif()
+# The background-cost study (docs/kasane/derby-background-cost.md) runs its
+# measuring copies of DERBY WATCH, and a synthetic segment load, from the
+# DERBY WATCH row: a path relative to this file that replaces
+# apps/derby/derby_watch.js. The file must be named derby_watch.js, because
+# main.c finds the source by the symbol that name makes. Empty ships the app.
+set(DERBY_BGCOST_SOURCE "" CACHE STRING "Measuring source for the DERBY WATCH row (diagnostic only)")
+set(DERBY_WATCH_SOURCE "../apps/derby/derby_watch.js")
+if(DERBY_BGCOST_SOURCE)
+    set(DERBY_WATCH_SOURCE "${DERBY_BGCOST_SOURCE}")
+endif()
+option(KASANE_PROC_LIMITS_PROBE "USB-triggered procedural limits/lifecycle measurements ('{' native, '}' JS)" OFF)
+if(KASANE_PROC_LIMITS_PROBE)
+    list(APPEND KASANE_SOURCES "ui/kasane/ksn_proc_limits_device_probe.c")
+endif()
+if(KASANE_PROC_DEVICE_PROBE)
+    list(APPEND KASANE_SOURCES
+        "ui/kasane/ksn_procedural_surface.c"
+        "ui/kasane/ksn_procedural_layers.c" "ui/kasane/ksn_procedural_present.c"
+        "ui/kasane/ksn_procedural_device_probe.c"
+        "ui/kasane/ksn_pixel_span_device_probe.c"
+        "ui/kasane/ksn_proc_compiler_device_probe.c"
+        "ui/kasane/ksn_grid_scan_cost_device_probe.c")
+endif()
+if(KASANE_MEGADEMO_DEVICE_PROBE)
+    list(APPEND KASANE_SOURCES "ui/kasane/ksn_megademo_device_probe.c")
+endif()
+if(KASANE_FLOWER_D1_PROBE)
+    list(APPEND KASANE_SOURCES "scene/flower_d1_species_probe.c" "scene/flower_d1_pressure_probe.c")
+endif()
+list(APPEND KASANE_SOURCES "ui/kasane/ksn_source_pool.c")
+list(APPEND KASANE_SOURCES "ui/kasane/ksn_source_pool_adapter.c")
+list(APPEND KASANE_SOURCES "ui/kasane/ksn_video_frames.c"
+    "ui/kasane/ksn_depth_lines.c")
+option(KASANE_P0_PROBE "Instrument Kasane P0 device measurements (not for production)" OFF)
+option(KASANE_TEXT_PIE_DEVICE_PROBE "Toggle binary-text PIE over USB for same-image A/B (diagnostic only)" OFF)
+if(KASANE_TEXT_PIE_DEVICE_PROBE AND NOT KASANE_P0_PROBE)
+    message(FATAL_ERROR "KASANE_TEXT_PIE_DEVICE_PROBE requires KASANE_P0_PROBE")
+endif()
+# The fixed P0 timing gate excludes copy instrumentation. Opt in explicitly
+# for copy studies so a fresh diagnostic build cannot silently change workload.
+option(KASANE_P0_COPY_PROBE "Count Kasane logical copies in the P0 diagnostic build" OFF)
+option(KASANE_P0_BUS_PROBE "Split LCD transfer phases and SD overlap in P0 diagnostic builds" OFF)
+option(KASANE_P2_REPAIR_PROBE "Inject one Kasane LCD send failure and capture repair (not for production)" OFF)
+option(KASANE_P5_FAIRNESS_PROBE "Drive a fast native source under the deskclock overlay (diagnostic only)" OFF)
+option(KASANE_D6_VIDEO_OVERLAY_PROBE "Run JS video over the native FLOWER backdrop in the deskclock overlay (diagnostic only)" OFF)
+option(KASANE_D6_SD_AV_STREAM_PROBE "Run SD KSV1 and SD MP3 together over FLOWER (diagnostic only)" OFF)
+option(KASANE_D5_SD_STREAM_PROBE "Replace VIDEO LAB with temporary SD stream diagnostic" OFF)
+option(KASANE_D4_PIXEL_APP_PROBE "Replace VIDEO LAB with bounded pixel function APP and inject second-band failure" OFF)
+option(KASANE_D2_MULTI_SURFACE_PROBE "Replace VIDEO LAB with two independent procedural image surfaces" OFF)
+option(KASANE_D2_OVERLAY_PROC_PROBE "Run two procedural image surfaces over FLOWER with one LCD failure" OFF)
+if(KASANE_D2_OVERLAY_PROC_PROBE AND
+   (KASANE_D4_PIXEL_APP_PROBE OR KASANE_D6_VIDEO_OVERLAY_PROBE OR KASANE_D6_SD_AV_STREAM_PROBE))
+    message(FATAL_ERROR "D2 overlay procedural probe requires other overlay/pixel probes OFF")
+endif()
+if(KASANE_D2_MULTI_SURFACE_PROBE AND
+   (KASANE_D4_PIXEL_APP_PROBE OR KASANE_D5_SD_STREAM_PROBE OR KASANE_D6_SD_AV_STREAM_PROBE))
+    message(FATAL_ERROR "D2 multi-surface VIDEO LAB probe requires other VIDEO LAB probes OFF")
+endif()
+set(KASANE_VIDEO_LAB_SOURCE "../apps/kasane/video_lab.js")
+if(KASANE_D5_SD_STREAM_PROBE)
+    set(KASANE_VIDEO_LAB_SOURCE "../apps/kasane/video_stream_lab.js")
+endif()
+option(KASANE_P1_OUTPUT_OVERLAY_PROBE "Enable 33 ms output source while the music overlay remains visible (diagnostic only)" OFF)
+option(KASANE_P1_OVERLAY_STAGE_PROBE "Split music overlay source/guest timings (adds diagnostic histogram BSS)" OFF)
+option(KASANE_P1_VISIBLE_33MS_PROBE "Render centiseconds from the 33 ms output source in the foreground diagnostic app" OFF)
+if(KASANE_P1_OUTPUT_OVERLAY_PROBE AND NOT KASANE_P0_PROBE)
+    message(FATAL_ERROR "KASANE_P1_OUTPUT_OVERLAY_PROBE requires KASANE_P0_PROBE")
+endif()
+if(KASANE_P1_OVERLAY_STAGE_PROBE AND NOT KASANE_P1_OUTPUT_OVERLAY_PROBE)
+    message(FATAL_ERROR "KASANE_P1_OVERLAY_STAGE_PROBE requires KASANE_P1_OUTPUT_OVERLAY_PROBE")
+endif()
+if(KASANE_P1_VISIBLE_33MS_PROBE AND NOT KASANE_P0_PROBE)
+    message(FATAL_ERROR "KASANE_P1_VISIBLE_33MS_PROBE requires KASANE_P0_PROBE")
+endif()
+if(KASANE_P5_FAIRNESS_PROBE AND NOT KASANE_P0_PROBE)
+    message(FATAL_ERROR "KASANE_P5_FAIRNESS_PROBE requires KASANE_P0_PROBE")
+endif()
+option(KASANE_P5_LOWHEAP_PROBE "Reserve 16 KiB internal heap during music overlay playback (diagnostic only)" OFF)
+if(KASANE_P5_LOWHEAP_PROBE AND NOT KASANE_P0_PROBE)
+    message(FATAL_ERROR "KASANE_P5_LOWHEAP_PROBE requires KASANE_P0_PROBE")
+endif()
+option(KASANE_P5_NOTICE_PROBE "Post and clear a SYSTEM notice during music overlay playback (diagnostic only)" OFF)
+if(KASANE_P5_NOTICE_PROBE AND NOT KASANE_P0_PROBE)
+    message(FATAL_ERROR "KASANE_P5_NOTICE_PROBE requires KASANE_P0_PROBE")
+endif()
+option(KASANE_P5_OVERLAY_REPAIR_PROBE "Inject one partial music overlay LCD transfer failure (diagnostic only)" OFF)
+if(KASANE_P5_OVERLAY_REPAIR_PROBE AND NOT KASANE_P0_PROBE)
+    message(FATAL_ERROR "KASANE_P5_OVERLAY_REPAIR_PROBE requires KASANE_P0_PROBE")
+endif()
+option(KASANE_P5_SEND_PHASE_PROBE "Classify overlay send frames during injected repair (diagnostic only)" OFF)
+if(KASANE_P5_SEND_PHASE_PROBE AND NOT KASANE_P5_OVERLAY_REPAIR_PROBE)
+    message(FATAL_ERROR "KASANE_P5_SEND_PHASE_PROBE requires KASANE_P5_OVERLAY_REPAIR_PROBE")
+endif()
+option(KASANE_P4_DECODE_CYCLE_PROBE "Measure renderer view decode CPU cycles (diagnostic only)" OFF)
+if(KASANE_P4_DECODE_CYCLE_PROBE AND NOT KASANE_P0_PROBE)
+    message(FATAL_ERROR "KASANE_P4_DECODE_CYCLE_PROBE requires KASANE_P0_PROBE")
+endif()
+if(KASANE_P5_OVERLAY_REPAIR_PROBE AND KASANE_P2_REPAIR_PROBE)
+    message(FATAL_ERROR "The foreground and overlay repair probes both reserve USB %")
+endif()
+if(KASANE_P0_BUS_PROBE AND NOT KASANE_P0_PROBE)
+    message(FATAL_ERROR "KASANE_P0_BUS_PROBE requires KASANE_P0_PROBE")
+endif()
+option(KASANE_P1_LCD_ISR_CORE1 "Experiment: pin SPI2 LCD ISR to the UI core" OFF)
+if(KASANE_P1_LCD_ISR_CORE1 AND NOT KASANE_P0_BUS_PROBE)
+    message(FATAL_ERROR "KASANE_P1_LCD_ISR_CORE1 requires KASANE_P0_BUS_PROBE")
+endif()
+option(KASANE_P1_OUTPUT_CORE0 "Experiment: pin audio output to core 0" OFF)
+if(KASANE_P1_OUTPUT_CORE0 AND NOT KASANE_P0_BUS_PROBE)
+    message(FATAL_ERROR "P1 audio affinity experiments require KASANE_P0_BUS_PROBE")
+endif()
+if(KASANE_P0_PROBE)
+    list(APPEND KASANE_SOURCES "ui/kasane/ksn_p0_probe.c" "pocket/pocket_pool_probe.c")
+endif()
+# ``scene/fxmath.c`` and ``pocket/fir_pie.c`` sit in the first row rather than the
+# trailing variables because both are called from files listed beside them (the
+# scenes and mp3_decode.c) -- see the note at the top of this file about a row
+# arriving after its first caller.
+idf_component_register(SRCS "hal/fpu_latency.c" "scene/fxmath.c" "pocket/mp3_decode.c" "pocket/fir_pie.c" "pocket/mp3_feed.c" "pocket/mp3_sd_session.c" "pocket/pocket_memory.c" "main.c" "hal/board.c" "ui/shell.c" "scene/solar_sail.c" "scene/solar_time.c" "scene/scene_mem.c" "scene/stars.c" "app_session.c" "vm/vm_wake.c" "hal/motion.c" "hal/sound.c"
+    "hal/keymap.c" "hal/keystate.c" "text/jpfont.c" "text/skk_session.c" "ui/editor.c" "ui/codeedit.c" "ui/vimcmd.c" "text/srcstore.c" "ui/jsconsole.c" "text/jslex.c" "text/textfield.c" "pocket/pocket_api.c" "pocket/pocket_bridge.c" "pocket/pocket_storage.c" "pocket/pocket_fs.c" "pocket/pocket_imu.c" "pocket/pocket_av.c" "pocket/opus_feed.c" "pocket/opus_net.c" "pocket/pocket_capture.c" "pocket/pocket_io.c" "pocket/pocket_text.c" "pocket/pocket_app.c" "pocket/pocket_app_load.c" "pocket/pocket_workspace.c" "pocket/pocket_overlay.c" "ui/overlay.c" "ui/overlay_core.c" "pocket/app_registry.c" "pocket/sd_path.c" "pocket/sd_lease.c" "pocket/sd_media.c" "pocket/sd_picker.c" "pocket/file_picker.c" "ui/pickmodal.c" "ui/pickmodal_draw.c" "pocket/pocket_net.c" "pocket/pocket_tls_txfix.c" "pocket/pocket_ble.c" "pocket/wifi_time.c" "pocket/net_service.c" "pocket/net_autosync.c" "pocket/wifi_ui.c" "ui/lessons.c" "ui/tutorial.c" "ui/paint.c"
+    "pet/pet_pixels.c" "pet/pet_hub.c" "pet/pet_hub_core.c" "../.cache/bmi270/bmi2.c" "../.cache/bmi270/bmi270.c"
+    ${POCKET_RANDOM_SOURCES} ${POCKET_INPUT_SOURCES} ${KASANE_SOURCES} ${KASANE_FONT_SOURCES} ${KASANE_PET_SOURCES} ${SYSTEM_SOURCES} ${POCKET_PROBE_SOURCES}
+    INCLUDE_DIRS "." "hal" "pocket" "vm" "pet" "ui" "ui/kasane" "text" "scene" "${CMAKE_BINARY_DIR}/generated" "../.cache/bmi270"
+    REQUIRES pocketjs_guest
+             skk_core ime_core
+             esp_app_format esp_hw_support esp_driver_spi esp_driver_i2c esp_driver_gpio esp_driver_uart esp_driver_rmt esp_driver_usb_serial_jtag esp_timer esp_partition esp_driver_i2s esp_adc nvs_flash
+             esp_wifi esp_netif esp_event lwip esp_http_client esp-tls
+             fatfs esp_driver_sdspi sdmmc
+             opus minimp3
+    EMBED_TXTFILES "../apps/hello/main.js" "../apps/kasane/demo.js" "../apps/kasane/proc_megademo.js" "../apps/kasane/proc_news_zoom.js" "../apps/kasane/grid_fold.js" "../apps/kasane/grid_lab.js" ${KASANE_VIDEO_LAB_SOURCE} "../apps/imucal/imucal.js" "../apps/pet/pet.js" "../apps/companion/companion.js" "../apps/deskclock/deskclock.js" "../apps/player/player.js" "../apps/stress/stress.js" "../apps/lcdcatch/lcd_catch.js" ${DERBY_WATCH_SOURCE} "../apps/bigwave/big_wave.js"
+    EMBED_FILES "../apps/pet/assets/pets-compact.bin")
+target_link_libraries(${COMPONENT_LIB} INTERFACE
+    "-Wl,--wrap=xQueueCreateMutex" "-Wl,--wrap=vQueueDelete")
+execute_process(COMMAND "${PYTHON}" "${CMAKE_SOURCE_DIR}/tools/make_font.py" "${CMAKE_BINARY_DIR}/generated"
+    COMMAND_ERROR_IS_FATAL ANY)
+set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS "${CMAKE_SOURCE_DIR}/tools/make_font.py")
+# The click PCM and the tone sine table used to be built into .bss at boot; they
+# depend on nothing but compile-time constants, so they are baked here and land
+# in .rodata instead. tools/test_sfx.py diffs the output against the synthesis
+# that produced it (main/hal/sfx_synth.h).
+execute_process(COMMAND "${PYTHON}" "${CMAKE_SOURCE_DIR}/tools/make_sfx.py" "${CMAKE_BINARY_DIR}/generated"
+    COMMAND_ERROR_IS_FATAL ANY)
+set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS "${CMAKE_SOURCE_DIR}/tools/make_sfx.py")
+# The same argument for the home screen's three constant scene tables: sine,
+# softness and wave_lut were 1,484 B of .bss built once at the first frame from
+# nothing but literals. tools/test_scene_tables.py diffs the baked values
+# against the C expressions that used to build them.
+execute_process(COMMAND "${PYTHON}" "${CMAKE_SOURCE_DIR}/tools/make_scene_tables.py" "${CMAKE_BINARY_DIR}/generated"
+    COMMAND_ERROR_IS_FATAL ANY)
+set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS "${CMAKE_SOURCE_DIR}/tools/make_scene_tables.py")
+# The probes live behind the same option as their sources: with POCKET_PROBES=OFF the
+# firmware compiles and links exactly as before, and main.c's calls are compiled out.
+if(POCKET_PROBES)
+    target_compile_definitions(${COMPONENT_LIB} PRIVATE POCKET_PROBES=1)
+endif()
+if(KASANE_PROC_DEVICE_PROBE)
+    target_compile_definitions(${COMPONENT_LIB} PRIVATE KASANE_PROC_DEVICE_PROBE=1)
+endif()
+if(KASANE_FLOWER_FRAME_PROBE)
+    target_compile_definitions(${COMPONENT_LIB} PRIVATE KASANE_FLOWER_FRAME_PROBE=1)
+endif()
+if(KASANE_FLOWER_D1_PROBE)
+    target_compile_definitions(${COMPONENT_LIB} PRIVATE KASANE_FLOWER_D1_PROBE=1)
+endif()
+if(KASANE_FLOWER_ALLOC_FAULT_PROBE)
+    target_compile_definitions(${COMPONENT_LIB} PRIVATE KASANE_FLOWER_ALLOC_FAULT_PROBE=1)
+endif()
+if(KASANE_FLOWER_AUDIO_PROBE)
+    target_compile_definitions(${COMPONENT_LIB} PRIVATE KASANE_FLOWER_AUDIO_PROBE=1)
+endif()
+if(KASANE_MEGADEMO_DEVICE_PROBE)
+    target_include_directories(${COMPONENT_LIB} PRIVATE "${CMAKE_CURRENT_LIST_DIR}/../tools/kasane_contract")
+    target_compile_definitions(${COMPONENT_LIB} PRIVATE KASANE_MEGADEMO_DEVICE_PROBE=1)
+endif()
+if(KASANE_PROC_JS_DIAGNOSTIC)
+    target_compile_definitions(${COMPONENT_LIB} PRIVATE KASANE_PROC_JS_DIAGNOSTIC=1)
+endif()
+if(KASANE_MEGADEMO_TRACE)
+    target_compile_definitions(${COMPONENT_LIB} PRIVATE KASANE_MEGADEMO_TRACE=1)
+endif()
+if(KASANE_BGCOST_TRACE)
+    target_compile_definitions(${COMPONENT_LIB} PRIVATE KASANE_BGCOST_TRACE=1)
+endif()
+# The pocket.input.keys diagnostic (docs/platform/keystate.md): the key test app
+# on USB 'r', and US-framed key injection on the same USB stream. OFF by default
+# so the shipping USB byte table and flash layout are unchanged.
+option(POCKET_KEYTEST "USB 'r' key test app and USB key injection (diagnostic only)" OFF)
+if(POCKET_KEYTEST)
+    target_compile_definitions(${COMPONENT_LIB} PRIVATE POCKET_KEYTEST=1)
+    target_add_binary_data(${COMPONENT_LIB} "${CMAKE_CURRENT_LIST_DIR}/../apps/keytest/keytest.js" TEXT)
+endif()
+# The evaluation heap probe (docs/vm/spread-eval-oom.md): apps/heapprobe's
+# variants, each a separate source started over USB ('Q<index>[,<limit>]\n')
+# through the same path a menu app takes, with the guest's heap reported after
+# the evaluation. OFF by default: no menu row, no USB byte, no flash.
+option(POCKET_HEAPPROBE "USB 'Q' evaluation heap probe (diagnostic only)" OFF)
+if(POCKET_HEAPPROBE)
+    target_compile_definitions(${COMPONENT_LIB} PRIVATE POCKET_HEAPPROBE=1)
+    target_add_binary_data(${COMPONENT_LIB} "${CMAKE_CURRENT_LIST_DIR}/../apps/heapprobe/heapprobe.js" TEXT)
+    # DERBY WATCH with GK built by the spread again, the source that ran out
+    # of heap. Generated into flash rather than patched into a DRAM copy at
+    # run time: a 32 KB copy held through the evaluation took the room the
+    # Kasane frame needs ("frame allocation failed"), a failure of its own.
+    # These variants (spread, flat, split, load3/4) are made from DERBY WATCH
+    # as one script, frozen before it became chunks (e15e6eb); the "derby"
+    # variant runs the shipped entry, chunks and all.
+    set(_hp_derby "${CMAKE_CURRENT_LIST_DIR}/../apps/heapprobe/derby_v0/derby_watch.js")
+    set(_hp_spread "${CMAKE_CURRENT_BINARY_DIR}/heapprobe_derby_spread.js")
+    set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS "${_hp_derby}")
+    file(READ "${_hp_derby}" _hp_src)
+    string(FIND "${_hp_src}" "'a d e s r 1 , / tab'.split(' ')" _hp_at)
+    if(_hp_at LESS 0)
+        message(FATAL_ERROR "POCKET_HEAPPROBE: GK's split is gone from derby_watch.js")
+    endif()
+    string(REPLACE "'a d e s r 1 , / tab'.split(' ')" "[...'adesr1,/', 'tab']" _hp_src "${_hp_src}")
+    file(WRITE "${_hp_spread}" "${_hp_src}")
+    target_add_binary_data(${COMPONENT_LIB} "${_hp_spread}" TEXT)
+    # The same app unwrapped into one global script (flat) and cut into 3 and
+    # 4 global scripts (tools/heapprobe_split.py): the chunked-evaluation
+    # spike. Directories per count so the file names, and with them the
+    # embedded symbols, say which set a chunk belongs to. The chunks are
+    # embedded by the pocket.app.load() table below, as local.derby's
+    # s3c1..s3c3 and s4c1..s4c4 -- in this image only -- so the spike's
+    # __hpLoad(k) and the product's pocket.app.load('s3c1') read the same
+    # bytes under the same symbols.
+    execute_process(COMMAND "${PYTHON}" "${CMAKE_SOURCE_DIR}/tools/heapprobe_split.py"
+                    "${_hp_derby}" 1 "${CMAKE_CURRENT_BINARY_DIR}/hp" --flat
+                    RESULT_VARIABLE _hp_rc OUTPUT_QUIET)
+    if(NOT _hp_rc EQUAL 0)
+        message(FATAL_ERROR "POCKET_HEAPPROBE: heapprobe_split.py failed")
+    endif()
+    target_add_binary_data(${COMPONENT_LIB} "${CMAKE_CURRENT_BINARY_DIR}/hp/derby_watch_flat.js" TEXT)
+    foreach(_hp_n 3 4)
+        set(_hp_dir "${CMAKE_CURRENT_BINARY_DIR}/hp${_hp_n}")
+        execute_process(COMMAND "${PYTHON}" "${CMAKE_SOURCE_DIR}/tools/heapprobe_split.py"
+                        "${_hp_derby}" ${_hp_n} "${_hp_dir}" RESULT_VARIABLE _hp_rc OUTPUT_QUIET)
+        if(NOT _hp_rc EQUAL 0)
+            message(FATAL_ERROR "POCKET_HEAPPROBE: heapprobe_split.py failed")
+        endif()
+        foreach(_hp_k RANGE 1 ${_hp_n})
+            file(RENAME "${_hp_dir}/derby_watch_c${_hp_k}.js" "${_hp_dir}/hp${_hp_n}_c${_hp_k}.js")
+            string(APPEND _hp_list "s${_hp_n}c${_hp_k} hp${_hp_n}/hp${_hp_n}_c${_hp_k}.js\n")
+        endforeach()
+    endforeach()
+    file(WRITE "${CMAKE_CURRENT_BINARY_DIR}/hp_chunks.txt" "app local.derby\n${_hp_list}")
+    # pocket.app.load()'s own device check (apps/heapprobe/appload_*.js):
+    # the error paths, and DERBY WATCH's first third as `big` for a load from
+    # frame(), as HELLO WORLD's chunks -- the identity the small variants run
+    # under.
+    file(WRITE "${CMAKE_CURRENT_BINARY_DIR}/hp_hello_chunks.txt" "app local.hello\nbig hp3/hp3_c1.js\n")
+    list(APPEND POCKET_APP_CHUNK_LISTS "${CMAKE_CURRENT_BINARY_DIR}/hp_chunks.txt"
+         "${CMAKE_CURRENT_BINARY_DIR}/hp_hello_chunks.txt"
+         "${CMAKE_CURRENT_LIST_DIR}/../apps/heapprobe/appload_chunks.txt")
+    # Static import (docs/vm/eval-peak.md section 9): one generated program as
+    # one script, as three load()ed scripts and as three imported modules
+    # (tools/heapprobe_import_gen.py) -- the parts are HELLO WORLD's chunks
+    # imps1..3 and impm1..3 -- and the import checks' own small modules.
+    set(_hp_imp "${CMAKE_CURRENT_BINARY_DIR}/imp")
+    execute_process(COMMAND "${PYTHON}" "${CMAKE_SOURCE_DIR}/tools/heapprobe_import_gen.py"
+                    "${_hp_imp}" RESULT_VARIABLE _hp_rc OUTPUT_QUIET)
+    if(NOT _hp_rc EQUAL 0)
+        message(FATAL_ERROR "POCKET_HEAPPROBE: heapprobe_import_gen.py failed")
+    endif()
+    set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS
+                 "${CMAKE_SOURCE_DIR}/tools/heapprobe_import_gen.py")
+    foreach(_hp_f imp_all.js imp_entry_load.js imp_entry_import.mjs)
+        target_add_binary_data(${COMPONENT_LIB} "${_hp_imp}/${_hp_f}" TEXT)
+    endforeach()
+    list(APPEND POCKET_APP_CHUNK_LISTS "${_hp_imp}/imp_chunks.txt"
+         "${CMAKE_CURRENT_LIST_DIR}/../apps/heapprobe/import_chunks.txt")
+    # Precompiled DERBY WATCH, if the host has made it (WSL:
+    #   python3 tools/vmtest/compile_peak.py apps/heapprobe/derby_v0/derby_watch.js --write .cache/compile_peak/derby.bc)
+    # from this same quickjs.c. Absent: the derby-bc variants report no loader.
+    set(_hp_bc "${CMAKE_SOURCE_DIR}/.cache/compile_peak/derby.bc")
+    if(EXISTS "${_hp_bc}")
+        set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS "${_hp_bc}")
+        target_add_binary_data(${COMPONENT_LIB} "${_hp_bc}" BINARY)
+        target_compile_definitions(${COMPONENT_LIB} PRIVATE HP_HAVE_BC=1)
+    endif()
+endif()
+# pocket.app.load()'s chunks (main/pocket/app_chunks.h, docs/vm/eval-peak.md
+# section 7): every apps/*/chunks.txt, plus any list a diagnostic option above
+# appended to POCKET_APP_CHUNK_LISTS. An app gains chunks by gaining a
+# chunks.txt; nothing in this file names them. The table is generated at
+# configure time and records symbols, not lengths, so editing a chunk needs no
+# reconfigure -- adding or renaming one does, and the lists are configure
+# dependencies for that (GLOB CONFIGURE_DEPENDS catches a new chunks.txt).
+file(GLOB _app_chunk_lists CONFIGURE_DEPENDS "${CMAKE_CURRENT_LIST_DIR}/../apps/*/chunks.txt")
+list(APPEND _app_chunk_lists ${POCKET_APP_CHUNK_LISTS})
+execute_process(COMMAND "${PYTHON}" "${CMAKE_SOURCE_DIR}/tools/make_app_chunks.py"
+                "${CMAKE_BINARY_DIR}/generated" ${_app_chunk_lists}
+                COMMAND_ERROR_IS_FATAL ANY)
+set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS
+             "${CMAKE_SOURCE_DIR}/tools/make_app_chunks.py" ${_app_chunk_lists})
+include("${CMAKE_BINARY_DIR}/generated/app_chunks.cmake")
+target_sources(${COMPONENT_LIB} PRIVATE "${CMAKE_BINARY_DIR}/generated/app_chunks.c")
+# A chunk with @plan functions (procedural plans written as JS,
+# docs/kasane/js-to-ir.md section 5) is embedded lowered: at build time,
+# tools/kasane_ir/lower_plans.mjs replaces each plan by its compiled IR and
+# the @planDecoder by the decoder, into build/generated/apps/<app>/ under the
+# same base name, so the symbol and the chunk table do not change. Editing
+# the chunk re-lowers it without a reconfigure. Only then does the build need
+# Node, 16 or later (docs/platform/build-environment.md); without @plan it
+# does not look for it.
+if(APP_CHUNK_LOWER)
+    find_program(POCKET_NODE node)
+    set(_node_version "")
+    if(POCKET_NODE)
+        execute_process(COMMAND "${POCKET_NODE}" --version OUTPUT_VARIABLE _node_version
+                        OUTPUT_STRIP_TRAILING_WHITESPACE ERROR_QUIET)
+    endif()
+    if(NOT _node_version MATCHES "^v([0-9]+)\\." OR CMAKE_MATCH_1 LESS 16)
+        string(REPLACE ";" ", " _plans "${APP_CHUNK_PLANS}")
+        set(_found "no node on PATH")
+        if(POCKET_NODE)
+            set(_found "${POCKET_NODE} is ${_node_version}")
+        endif()
+        # Searched again at the next configure, after PATH is fixed.
+        unset(POCKET_NODE CACHE)
+        message(FATAL_ERROR "The app chunks ${_plans} have @plan functions, which the build "
+                "compiles with tools/kasane_ir/lower_plans.mjs: that needs Node 16 or later on PATH "
+                "(${_found}). Install Node (this project's machine uses Volta's Node v24) and put it "
+                "on the PATH of the shell that runs idf.py, or pass -DPOCKET_NODE=<path to node>; "
+                "then reconfigure. See docs/platform/build-environment.md.")
+    endif()
+    set(_kir "${CMAKE_SOURCE_DIR}/tools/kasane_ir")
+    set(_lower ${APP_CHUNK_LOWER})
+    while(_lower)
+        # how: packed (the plans as packed strings and their decoder), or
+        # rom:APP (the plans removed; they ship as the table below).
+        list(POP_FRONT _lower _src _dst _how)
+        set(_mode "")
+        if(_how MATCHES "^rom:(.+)$")
+            set(_mode --rom "${CMAKE_MATCH_1}")
+        endif()
+        add_custom_command(OUTPUT "${_dst}"
+            COMMAND "${POCKET_NODE}" "${_kir}/lower_plans.mjs" ${_mode} --file "${_src}" "${_dst}"
+            DEPENDS "${_src}" "${_kir}/lower_plans.mjs" "${_kir}/plan_js.mjs" "${_kir}/kir.mjs" "${_kir}/pack.mjs"
+            COMMENT "Compiling the @plan functions of ${_src}"
+            VERBATIM)
+    endwhile()
+    # The built-in plans (docs/kasane/flash-plan.md section 2): the rom apps'
+    # @plan functions as a const table in flash, made from the same sources
+    # in the same build as the JS that names them, so the two cannot drift.
+    if(APP_CHUNK_ROM)
+        add_custom_command(OUTPUT "${APP_CHUNK_ROM_C}"
+            COMMAND "${POCKET_NODE}" "${_kir}/emit_rom_plans.mjs" "${APP_CHUNK_ROM_C}" ${APP_CHUNK_ROM}
+            DEPENDS ${APP_CHUNK_ROM_SOURCES} "${_kir}/emit_rom_plans.mjs" "${_kir}/plan_js.mjs"
+                    "${_kir}/kir.mjs" "${_kir}/pack.mjs"
+            COMMENT "Compiling the built-in plans"
+            VERBATIM)
+    endif()
+endif()
+# The built-in plan table app_session.c hands to pocket.kasane.procedural:
+# the generated one above, or make_app_chunks.py's empty one.
+target_sources(${COMPONENT_LIB} PRIVATE "${APP_CHUNK_ROM_C}")
+# Build-only precompile experiments use the final lowered sources. Bytecode
+# is not a firmware input until exact host/target compatibility is proven;
+# source loading remains the shipping path even when this option is enabled.
+option(POCKET_APP_PRECOMPILE_EXPERIMENT "Generate experimental host bytecode (no runtime change)" OFF)
+if(POCKET_APP_PRECOMPILE_EXPERIMENT)
+    find_program(POCKET_APP_HOST_CC NAMES gcc clang REQUIRED)
+    set(_bc_outputs)
+    foreach(_app_chunk IN LISTS APP_CHUNK_FILES)
+        get_filename_component(_bc_name "${_app_chunk}" NAME)
+        if(_bc_name MATCHES "\\.mjs$")
+            message(FATAL_ERROR "Experimental precompile does not support module graphs; retain source loading")
+        endif()
+        list(APPEND _bc_outputs "${CMAKE_BINARY_DIR}/experimental-bytecode/${_bc_name}.bc"
+                                "${CMAKE_BINARY_DIR}/experimental-bytecode/${_bc_name}.bc.json")
+    endforeach()
+    if(APP_CHUNK_FILES)
+        file(GLOB _bc_engine CONFIGURE_DEPENDS
+             "${CMAKE_SOURCE_DIR}/components/quickjs-ng/quickjs-ng/*.c"
+             "${CMAKE_SOURCE_DIR}/components/quickjs-ng/quickjs-ng/*.h")
+        file(GLOB_RECURSE _bc_guest_headers CONFIGURE_DEPENDS
+             "${CMAKE_SOURCE_DIR}/components/pocketjs_guest/include/*.h")
+        add_custom_command(OUTPUT ${_bc_outputs}
+            COMMAND "${PYTHON}" "${CMAKE_SOURCE_DIR}/tools/precompile_apps.py"
+                    --cc "${POCKET_APP_HOST_CC}"
+                    --outdir "${CMAKE_BINARY_DIR}/experimental-bytecode" ${APP_CHUNK_FILES}
+            DEPENDS ${APP_CHUNK_FILES} ${_bc_engine} ${_bc_guest_headers}
+                    "${CMAKE_SOURCE_DIR}/components/quickjs-ng/CMakeLists.txt"
+                    "${CMAKE_SOURCE_DIR}/tools/precompile_app.c"
+                    "${CMAKE_SOURCE_DIR}/tools/precompile_apps.py"
+            COMMENT "Experimental app precompile (firmware retains source loader)"
+            VERBATIM)
+        add_custom_target(pocket_app_precompile_experiment ALL DEPENDS ${_bc_outputs})
+    endif()
+endif()
+foreach(_app_chunk IN LISTS APP_CHUNK_FILES)
+    target_add_binary_data(${COMPONENT_LIB} "${_app_chunk}" TEXT)
+endforeach()
+if(KASANE_PROC_LIMITS_PROBE)
+    target_compile_definitions(${COMPONENT_LIB} PRIVATE KASANE_PROC_LIMITS_PROBE=1)
+    # Embedded only in the probe image, so a normal build's EMBED list and
+    # flash layout are unchanged.
+    target_add_binary_data(${COMPONENT_LIB} "${CMAKE_CURRENT_LIST_DIR}/../apps/kasane/proc_limits_probe.js" TEXT)
+endif()
+if(KASANE_P0_PROBE)
+    target_compile_definitions(${COMPONENT_LIB} PRIVATE KASANE_P0_PROBE=1)
+    if(KASANE_TEXT_PIE_DEVICE_PROBE)
+        target_compile_definitions(${COMPONENT_LIB} PRIVATE KASANE_TEXT_PIE_DEVICE_PROBE=1)
+    endif()
+    if(KASANE_P1_OUTPUT_OVERLAY_PROBE)
+        target_compile_definitions(${COMPONENT_LIB} PRIVATE KASANE_P1_OUTPUT_OVERLAY_PROBE=1)
+    endif()
+    if(KASANE_P1_OVERLAY_STAGE_PROBE)
+        target_compile_definitions(${COMPONENT_LIB} PRIVATE KASANE_P1_OVERLAY_STAGE_PROBE=1)
+    endif()
+    if(KASANE_P1_VISIBLE_33MS_PROBE)
+        target_compile_definitions(${COMPONENT_LIB} PRIVATE KASANE_P1_VISIBLE_33MS_PROBE=1)
+    endif()
+    target_add_binary_data(${COMPONENT_LIB} "${CMAKE_CURRENT_LIST_DIR}/../apps/kasane/wall_source_probe.js" TEXT)
+    target_add_binary_data(${COMPONENT_LIB} "${CMAKE_CURRENT_LIST_DIR}/../apps/kasane/pool_source_probe.js" TEXT)
+    target_add_binary_data(${COMPONENT_LIB} "${CMAKE_CURRENT_LIST_DIR}/../apps/kasane/output_source_probe.js" TEXT)
+    target_add_binary_data(${COMPONENT_LIB} "${CMAKE_CURRENT_LIST_DIR}/../apps/kasane/output_source_probe_hidden.js" TEXT)
+    target_add_binary_data(${COMPONENT_LIB} "${CMAKE_CURRENT_LIST_DIR}/../apps/kasane/output_source_probe_dual.js" TEXT)
+    target_add_binary_data(${COMPONENT_LIB} "${CMAKE_CURRENT_LIST_DIR}/../apps/kasane/output_source_probe_long.js" TEXT)
+    target_add_binary_data(${COMPONENT_LIB} "${CMAKE_CURRENT_LIST_DIR}/../apps/kasane/output_source_probe_seek.js" TEXT)
+    target_add_binary_data(${COMPONENT_LIB} "${CMAKE_CURRENT_LIST_DIR}/../apps/kasane/output_source_probe_lowheap.js" TEXT)
+    target_add_binary_data(${COMPONENT_LIB} "${CMAKE_CURRENT_LIST_DIR}/../apps/kasane/playback_source_probe.js" TEXT)
+    target_add_binary_data(${COMPONENT_LIB} "${CMAKE_CURRENT_LIST_DIR}/../apps/kasane/music_bar_probe.js" TEXT)
+    target_add_binary_data(${COMPONENT_LIB} "${CMAKE_CURRENT_LIST_DIR}/../apps/kasane/dirty24_probe.js" TEXT)
+    target_add_binary_data(${COMPONENT_LIB} "${CMAKE_CURRENT_LIST_DIR}/../apps/kasane/text23_probe.js" TEXT)
+    if(KASANE_TEXT_PIE_DEVICE_PROBE)
+        target_add_binary_data(${COMPONENT_LIB} "${CMAKE_CURRENT_LIST_DIR}/../apps/kasane/text_pie_probe.js" TEXT)
+    endif()
+    if(KASANE_P5_OVERLAY_REPAIR_PROBE)
+        target_compile_definitions(${COMPONENT_LIB} PRIVATE KASANE_P5_OVERLAY_REPAIR_PROBE=1)
+    endif()
+    if(KASANE_P5_SEND_PHASE_PROBE)
+        target_compile_definitions(${COMPONENT_LIB} PRIVATE KASANE_P5_SEND_PHASE_PROBE=1)
+    endif()
+    if(KASANE_P4_DECODE_CYCLE_PROBE)
+        target_compile_definitions(${COMPONENT_LIB} PRIVATE KASANE_P4_DECODE_CYCLE_PROBE=1)
+    endif()
+    if(KASANE_P5_FAIRNESS_PROBE)
+        target_compile_definitions(${COMPONENT_LIB} PRIVATE KASANE_P5_FAIRNESS_PROBE=1)
+        target_add_binary_data(${COMPONENT_LIB} "${CMAKE_CURRENT_LIST_DIR}/../apps/kasane/overlay_fairness_probe.js" TEXT)
+    endif()
+    if(KASANE_P5_LOWHEAP_PROBE)
+        target_compile_definitions(${COMPONENT_LIB} PRIVATE KASANE_P5_LOWHEAP_PROBE=1)
+    endif()
+    if(KASANE_P5_NOTICE_PROBE)
+        target_compile_definitions(${COMPONENT_LIB} PRIVATE KASANE_P5_NOTICE_PROBE=1)
+    endif()
+    if(KASANE_P0_COPY_PROBE)
+        target_add_binary_data(${COMPONENT_LIB} "${CMAKE_CURRENT_LIST_DIR}/../apps/kasane/output_source_probe_exhaust.js" TEXT)
+    endif()
+    target_add_binary_data(${COMPONENT_LIB} "${CMAKE_CURRENT_LIST_DIR}/../apps/kasane/output_source_probe_off.js" TEXT)
+    if(KASANE_P0_COPY_PROBE)
+        target_compile_definitions(${COMPONENT_LIB} PRIVATE KASANE_P0_COPY_PROBE=1)
+    endif()
+endif()
+if(KASANE_D6_VIDEO_OVERLAY_PROBE)
+    target_compile_definitions(${COMPONENT_LIB} PRIVATE KASANE_D6_VIDEO_OVERLAY_PROBE=1)
+    target_add_binary_data(${COMPONENT_LIB} "${CMAKE_CURRENT_LIST_DIR}/../apps/kasane/overlay_video_probe.js" TEXT)
+endif()
+if(KASANE_D6_SD_AV_STREAM_PROBE)
+    target_compile_definitions(${COMPONENT_LIB} PRIVATE KASANE_D6_SD_AV_STREAM_PROBE=1)
+    target_add_binary_data(${COMPONENT_LIB} "${CMAKE_CURRENT_LIST_DIR}/../apps/kasane/overlay_video_sd_stream_probe.js" TEXT)
+    target_add_binary_data(${COMPONENT_LIB} "${CMAKE_CURRENT_LIST_DIR}/../apps/kasane/video_sd_av_stage.js" TEXT)
+    target_add_binary_data(${COMPONENT_LIB} "${CMAKE_CURRENT_LIST_DIR}/../apps/kasane/video_sd_av_cleanup.js" TEXT)
+endif()
+if(KASANE_D5_SD_STREAM_PROBE)
+    target_compile_definitions(${COMPONENT_LIB} PRIVATE KASANE_D5_SD_STREAM_PROBE=1)
+endif()
+if(KASANE_D4_PIXEL_APP_PROBE)
+    target_compile_definitions(${COMPONENT_LIB} PRIVATE KASANE_D4_PIXEL_APP_PROBE=1)
+    target_add_binary_data(${COMPONENT_LIB} "${CMAKE_CURRENT_LIST_DIR}/../apps/kasane/pixel_lab_probe.js" TEXT)
+endif()
+if(KASANE_D2_MULTI_SURFACE_PROBE)
+    target_compile_definitions(${COMPONENT_LIB} PRIVATE KASANE_D2_MULTI_SURFACE_PROBE=1)
+    target_add_binary_data(${COMPONENT_LIB} "${CMAKE_CURRENT_LIST_DIR}/../apps/kasane/proc_multi_surface_probe.js" TEXT)
+endif()
+if(KASANE_D2_OVERLAY_PROC_PROBE)
+    target_compile_definitions(${COMPONENT_LIB} PRIVATE KASANE_D2_OVERLAY_PROC_PROBE=1)
+    target_add_binary_data(${COMPONENT_LIB} "${CMAKE_CURRENT_LIST_DIR}/../apps/kasane/overlay_proc_multi_probe.js" TEXT)
+endif()
+if(KASANE_P0_BUS_PROBE)
+    target_compile_definitions(${COMPONENT_LIB} PRIVATE KASANE_P0_BUS_PROBE=1)
+endif()
+if(KASANE_P2_REPAIR_PROBE)
+    target_compile_definitions(${COMPONENT_LIB} PRIVATE KASANE_P2_REPAIR_PROBE=1)
+endif()
+if(KASANE_P1_LCD_ISR_CORE1)
+    target_compile_definitions(${COMPONENT_LIB} PRIVATE KASANE_P1_LCD_ISR_CORE1=1)
+endif()
+if(KASANE_P1_OUTPUT_CORE0)
+    target_compile_definitions(${COMPONENT_LIB} PRIVATE KASANE_P1_OUTPUT_CORE0=1)
+endif()
+target_compile_options(${COMPONENT_LIB} PRIVATE -Wall -Wextra)
+# The small procedural renderer benefits from speed optimization; the JS engine
+# and other components retain the project's size optimization.
+target_sources(${COMPONENT_LIB} PRIVATE "scene/flower.c" "scene/flower_species.c" "scene/glass_rain.c" "scene/wave.c" "scene/ocean.c" "scene/garden.c" "scene/canopy_pie.c" "scene/garden_decor_pie.c")
+set_source_files_properties(ui/shell.c scene/solar_sail.c scene/flower.c scene/flower_species.c scene/glass_rain.c scene/wave.c scene/ocean.c scene/garden.c scene/canopy_pie.c scene/garden_decor_pie.c PROPERTIES COMPILE_OPTIONS "-O2")
+set_source_files_properties(ui/kasane/ksn_procedural.c
+    ui/kasane/ksn_proc_analysis.c ui/kasane/ksn_proc_plan.c
+    ui/kasane/ksn_proc_plan_points.c ui/kasane/ksn_proc_points.c
+    ui/kasane/ksn_proc_points_pie.c ui/kasane/ksn_proc_points_dispatch.c
+    PROPERTIES COMPILE_OPTIONS "-O2")
+# DERBY's series in C must give the JS's draw inputs bit for bit
+# (docs/apps/derby-ser-native.md): no fused or reordered floating point.
+set_source_files_properties(pocket/pocket_derby.c PROPERTIES COMPILE_OPTIONS "-O2;-ffp-contract=off")
+if(KASANE_PROC_DEVICE_PROBE)
+    set_source_files_properties(ui/kasane/ksn_procedural_surface.c
+        ui/kasane/ksn_procedural_layers.c
+        ui/kasane/ksn_procedural_present.c ui/kasane/ksn_procedural_device_probe.c
+        ui/kasane/ksn_proc_compiler_device_probe.c
+        ui/kasane/ksn_grid_scan_cost_device_probe.c
+        PROPERTIES COMPILE_OPTIONS "-O2")
+endif()
+if(KASANE_MEGADEMO_DEVICE_PROBE)
+    set_source_files_properties(ui/kasane/ksn_megademo_device_probe.c
+        PROPERTIES COMPILE_OPTIONS "-O2")
+endif()
+
+# The VM probe (docs/vm/quickjs-freertos-vm-spec.md sec.5), off by default
+# (main/Kconfig.projbuild's CONFIG_POCKET_VM_PROBE). Both the source file and
+# the six workload apps are added ONLY in this branch -- not just guarded by
+# #ifdef inside them -- so a normal build embeds none of it: same object
+# files, same EMBED_TXTFILES, same DIRAM. The harness is permanent rather than
+# something a measuring branch restores from the vm-L0 tag each time: after L1
+# trimmed vmprobe.h that tag-restore recipe no longer compiled, and nobody
+# noticed because a probe-off build never builds the file. CONFIG_POCKET_VM_PROBE
+# reaches this file as an ordinary CMake variable; ESP-IDF injects every
+# sdkconfig value that way for every component's CMakeLists.txt.
+if(CONFIG_POCKET_VM_SELFTEST)
+    target_sources(${COMPONENT_LIB} PRIVATE "../tools/vmtest/lifecycle.c" "../tools/vmtest/guest_lifecycle.c")
+endif()
+
+if(CONFIG_POCKET_VM_OOMPROBE)
+    target_sources(${COMPONENT_LIB} PRIVATE "pocket/oomprobe.c")
+endif()
+
+
+if(CONFIG_POCKET_VM_PROBE)
+    target_sources(${COMPONENT_LIB} PRIVATE "pocket/vmprobe.c")
+    target_add_binary_data(${COMPONENT_LIB} "${CMAKE_CURRENT_LIST_DIR}/../apps/vmprobe/sync_loop.js" TEXT)
+    target_add_binary_data(${COMPONENT_LIB} "${CMAKE_CURRENT_LIST_DIR}/../apps/vmprobe/deep_recursion.js" TEXT)
+    target_add_binary_data(${COMPONENT_LIB} "${CMAKE_CURRENT_LIST_DIR}/../apps/vmprobe/closures.js" TEXT)
+    target_add_binary_data(${COMPONENT_LIB} "${CMAKE_CURRENT_LIST_DIR}/../apps/vmprobe/promise_chain.js" TEXT)
+    target_add_binary_data(${COMPONENT_LIB} "${CMAKE_CURRENT_LIST_DIR}/../apps/vmprobe/io_wait.js" TEXT)
+    target_add_binary_data(${COMPONENT_LIB} "${CMAKE_CURRENT_LIST_DIR}/../apps/vmprobe/async_generator.js" TEXT)
+    # Not a workload: the contention conditions, evaluated on top of one.
+    target_add_binary_data(${COMPONENT_LIB} "${CMAKE_CURRENT_LIST_DIR}/../apps/vmprobe/condition.js" TEXT)
+endif()
+
+target_link_libraries(${COMPONENT_LIB} INTERFACE "-Wl,--wrap=esp_mbedtls_add_tx_buffer" "-Wl,-u,__wrap_esp_mbedtls_add_tx_buffer")

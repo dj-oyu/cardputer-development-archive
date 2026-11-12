@@ -1,0 +1,135 @@
+{
+  "scope": "Only AA target four-HDR mean. >1 denotes legacy sRGB clamp, not AgX domain or whole-frame clipping. No response mask selection or fitting.",
+  "frames": {
+    "off-front-baseline": {
+      "AAOnlyTargetPixels": 2385,
+      "aboveOnePixels": 534,
+      "aboveOneChannels": 713,
+      "maxMeanHDR": 5.296982347707909
+    },
+    "off-oblique-baseline": {
+      "AAOnlyTargetPixels": 2391,
+      "aboveOnePixels": 506,
+      "aboveOneChannels": 644,
+      "maxMeanHDR": 5.412154337405894
+    },
+    "off-front-direction": {
+      "AAOnlyTargetPixels": 2385,
+      "aboveOnePixels": 483,
+      "aboveOneChannels": 687,
+      "maxMeanHDR": 5.094886620025619
+    },
+    "off-oblique-direction": {
+      "AAOnlyTargetPixels": 2391,
+      "aboveOnePixels": 370,
+      "aboveOneChannels": 500,
+      "maxMeanHDR": 5.166881800960841
+    },
+    "off-front-intensity": {
+      "AAOnlyTargetPixels": 2385,
+      "aboveOnePixels": 220,
+      "aboveOneChannels": 295,
+      "maxMeanHDR": 5.004860321496977
+    },
+    "off-oblique-intensity": {
+      "AAOnlyTargetPixels": 2391,
+      "aboveOnePixels": 185,
+      "aboveOneChannels": 236,
+      "maxMeanHDR": 5.131283439792456
+    },
+    "off-front-ambient": {
+      "AAOnlyTargetPixels": 2385,
+      "aboveOnePixels": 655,
+      "aboveOneChannels": 880,
+      "maxMeanHDR": 5.621845689586674
+    },
+    "off-oblique-ambient": {
+      "AAOnlyTargetPixels": 2391,
+      "aboveOnePixels": 607,
+      "aboveOneChannels": 793,
+      "maxMeanHDR": 5.73701767928466
+    },
+    "off-front-albedo": {
+      "AAOnlyTargetPixels": 2385,
+      "aboveOnePixels": 85,
+      "aboveOneChannels": 109,
+      "maxMeanHDR": 3.2015788261374527
+    },
+    "off-oblique-albedo": {
+      "AAOnlyTargetPixels": 2391,
+      "aboveOnePixels": 95,
+      "aboveOneChannels": 115,
+      "maxMeanHDR": 3.2711905747476306
+    },
+    "on-front-baseline": {
+      "AAOnlyTargetPixels": 2385,
+      "aboveOnePixels": 793,
+      "aboveOneChannels": 1052,
+      "maxMeanHDR": 5.296982347707909
+    },
+    "on-oblique-baseline": {
+      "AAOnlyTargetPixels": 2391,
+      "aboveOnePixels": 704,
+      "aboveOneChannels": 906,
+      "maxMeanHDR": 5.412154337405894
+    },
+    "on-front-direction": {
+      "AAOnlyTargetPixels": 2385,
+      "aboveOnePixels": 657,
+      "aboveOneChannels": 925,
+      "maxMeanHDR": 5.094886620025619
+    },
+    "on-oblique-direction": {
+      "AAOnlyTargetPixels": 2391,
+      "aboveOnePixels": 507,
+      "aboveOneChannels": 655,
+      "maxMeanHDR": 5.166881800960841
+    },
+    "on-front-intensity": {
+      "AAOnlyTargetPixels": 2385,
+      "aboveOnePixels": 362,
+      "aboveOneChannels": 458,
+      "maxMeanHDR": 5.004860321496977
+    },
+    "on-oblique-intensity": {
+      "AAOnlyTargetPixels": 2391,
+      "aboveOnePixels": 283,
+      "aboveOneChannels": 338,
+      "maxMeanHDR": 5.131283439792456
+    },
+    "on-front-ambient": {
+      "AAOnlyTargetPixels": 2385,
+      "aboveOnePixels": 909,
+      "aboveOneChannels": 1241,
+      "maxMeanHDR": 5.621845689586674
+    },
+    "on-oblique-ambient": {
+      "AAOnlyTargetPixels": 2391,
+      "aboveOnePixels": 815,
+      "aboveOneChannels": 1067,
+      "maxMeanHDR": 5.73701767928466
+    },
+    "on-front-albedo": {
+      "AAOnlyTargetPixels": 2385,
+      "aboveOnePixels": 95,
+      "aboveOneChannels": 120,
+      "maxMeanHDR": 3.2015788261374527
+    },
+    "on-oblique-albedo": {
+      "AAOnlyTargetPixels": 2391,
+      "aboveOnePixels": 102,
+      "aboveOneChannels": 123,
+      "maxMeanHDR": 3.2711905747476306
+    }
+  },
+  "ambientRawResponse": {
+    "front": {
+      "maxAbsDeltaDifference": 8.881784197001252e-16,
+      "scope": "Fixed AA target averaged HDR; unchanged new-floor ambient component plus unchanged old linear response up to rounding. Display remains nonlinear; no claim about unobserved non-target HDR."
+    },
+    "oblique": {
+      "maxAbsDeltaDifference": 8.881784197001252e-16,
+      "scope": "Fixed AA target averaged HDR; unchanged new-floor ambient component plus unchanged old linear response up to rounding. Display remains nonlinear; no claim about unobserved non-target HDR."
+    }
+  }
+}

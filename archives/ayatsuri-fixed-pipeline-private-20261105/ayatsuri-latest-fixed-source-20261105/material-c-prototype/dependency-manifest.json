@@ -1,0 +1,20 @@
+{
+  "blender_revision": "32f5fdce0a0a571a39198edf8d7b5d719bf59f2c",
+  "binding": "standalone file SHA256, no renderer HEAD integration",
+  "dependencies_sha256": {
+    "latest-fox-source-readonly/fox-bubble-bold.blend": "d15a3316e1be75a9707a92ac44027f713306011dc3adf3fe7a9cc9a538122c1a",
+    "fox-cardputer-latest-private/fox-cardputer-2k-v2.blend": "384ada0c37da16d625b1e6612a0d2f7ca538c29fe0d8dff43a929841ec63fba8",
+    "fox-cardputer-latest-private/2k-v2-neutral-sidecar.json": "00a81fbcd19c79c578bbbbd7ab077ee6f63048a106c5594675ff208670d5e85e",
+    "ayatsuri-latest-fixed-source-20261105/inventory.json": "24272d18b450c05991d443a8f4d9be6c7817e05f463a3f366cf067da1d361e17",
+    "ayatsuri-latest-fixed-source-20261105/supplement.json": "c3295f412ecf11aa34fea229f7749165294a99ea5a52a6f7c29a4d8aba2bfb7d",
+    "ayatsuri-latest-fixed-source-20261105/material-prototype/model.py": "db99df4ae6899b223424ec2c2e433ed088fbab92f331fa46ce8d28df9defa8d0",
+    "ayatsuri-latest-fixed-source-20261105/material-prototype/run_experiment.py": "a98bf2b995a6bc1462bb110d26b6a62411096f734cfffd32cf8611fe9afbf9a0",
+    "ayatsuri-latest-fixed-source-20261105/material-prototype/control-fixtures.json": "d9836c7dacf0f5f2cef8ba26b3ffa89e52576309e02875be675fe022c8e06ee3",
+    "ayatsuri-latest-fixed-source-20261105/control-prototype/control.c": "5802202da52a810b0a6d81c32c87688253b452333dd82dd80c3b911c1dfc723e",
+    "ayatsuri-latest-fixed-source-20261105/control-prototype/control.h": "05cd432f8736c73e71e641389ef7949961c23e8ac44825e9fa47410c16e1223a",
+    "ayatsuri-latest-fixed-source-20261105/material-plan/primary-source-manifest.json": "41133592deeac1f00890096984e2ba53acb9dccbab445bd43938be0aa2661daa"
+  },
+  "compiler": "cc (Debian 14.2.0-19) 14.2.0",
+  "python": "3.12.14",
+  "commands": "README.md exact commands; no LTO/fast-math"
+}

@@ -1,0 +1,20 @@
+{
+  "status": "PASS_PREACTUAL_RUNNER_REVIEW",
+  "actualFrames": 0,
+  "comparisonFreezeSHA256": "412a456ad1089e920076d1145bcc24370df4b833e2cb2b357683a55492382500",
+  "contractSHA256": "43c5c124e15f9615c01b998600e0ea6c56708db500b084d5fb589ae089cf23f7",
+  "runnerSHA256": "095aa46e308d3f966711d853ac997054fc9cbfe94cf2072c8fa3f76f41153a62",
+  "independentUnitTests": 20,
+  "testLogSHA256": "edb8e6291c4b3f020073b6a227a11fe153335450808c60003dd263dce1058b29",
+  "checks": [
+    "All comparison freeze hashes verified.",
+    "All42 predeclared cases permit only visibilitySceneBytes106104->69276 outside prior exact timing keys.",
+    "Comparator hardcodes approved path and checks baseline-36*node_count; all other9 report fields/types exact, no new sidecars.",
+    "Caller geometry temporary46800 remains exact, internal74412 ledger only.",
+    "Runner verifies gate, source/build/review hashes, immutable baseline pins and ledger before each frame and publication.",
+    "No HONE environment changes, fixed40+2 schedule, no overwrite of existing attempts; canary before remaining per arm.",
+    "Full-depth raw equality40 frames, no-depth HDR canaries2; final audit checks208 raws,378 reports,80 forward/reverse.",
+    "Stdout report publication after successful validation; partial raw outputs may remain on failure, no multifile atomicity claim."
+  ],
+  "approval": "Comparison implementation accepted for parent gate consideration only. Parent explicit GO still required; this review launches no render."
+}

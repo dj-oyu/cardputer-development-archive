@@ -1,0 +1,29 @@
+{
+  "status": "PASS_PREREQUISITES_ONLY",
+  "actualFramesRunByReviewer": 0,
+  "checkedFrozenCodeHarnessFiles": 34,
+  "sourceFreezeSHA256": "63358b04f50a9c2e0757abe36e94c6f64e76daf0b7be4403df5b0e9352f96bd9",
+  "renderBytes": 568880,
+  "overallNamedPeakBytes": 593184,
+  "workspaceSavingBytes": 60000,
+  "renderSavingBytes": 59312,
+  "overallSavingBytes": 35008,
+  "backgroundNamedPeak": 4016,
+  "rendererNamedPeak": 5664,
+  "independentTests": [
+    "symbolic403 neighbor lifetimes",
+    "compiled ABI layout",
+    "seven normalized helper bodies",
+    "ASanUBSan40exact",
+    "ASanUBSan71negatives",
+    "O2sourceID0and91 exact40",
+    "rerun sanitized adapter91 PASS zero physicalShaderCalls",
+    "rerun sanitized prefix2 PASS"
+  ],
+  "caveat": "Actual output40 still requires parent explicit gate; no actual render executed. Named memory excludes runtime/library stacks and metadata.",
+  "sanitizerEvidence": "nm imports __asan_init and __ubsan handlers; reruns exit0; detect_leaks=0, not leak proof",
+  "sanitizedBinaryHashes": {
+    "test_adapter": "3cb751775e59ec91c06fa5693abf1697d13722b3649d36c6e24698989eea627e",
+    "test_prefix": "b78768fb6db1a7379ad58a1d3540fbef150c1e1346b3303ec6a62aebc4d6051c"
+  }
+}

@@ -1,0 +1,24 @@
+--- frozen/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c
++++ format-only/ayatsuri-latest-fixed-source-20261105/kernel-chain-compact/compact.c
+@@ -17,7 +17,9 @@
+ #elif MBITS == 24
+ q20*=16;
+ #endif
+-if(q20<INT32_MIN||q20>INT32_MAX)return KC_INVALID;local[k]=(int32_t)q20;}
++if(q20<INT32_MIN||q20>INT32_MAX)return KC_INVALID;
++local[k]=(int32_t)q20;
++}
+   if(mc_eval(f,local,&material))return KC_MATERIAL;
+   if(material.mix!=(INT64_C(1)<<MBITS))return KC_NONOPAQUE;
+   for(unsigned k=0;k<3;k++)if(compact_rho(material.color[k],&rho[k]))return KC_RHO;
+--- frozen/ayatsuri-fixed-integer-light-20261105/normal_bridge.h
++++ format-only/ayatsuri-fixed-integer-light-20261105/normal_bridge.h
+@@ -15,6 +15,7 @@
+   result[k]=(int16_t)v;result_sq+=(uint64_t)(v*v);
+  }
+  if(result_sq<UINT64_C(32762)*32762||result_sq>UINT64_C(32772)*32772)return IL_NORMAL_RANGE;
+- for(unsigned k=0;k<3;k++)out[k]=result[k];return IL_NORMAL_OK;
++ for(unsigned k=0;k<3;k++)out[k]=result[k];
++ return IL_NORMAL_OK;
+ }
+ #endif

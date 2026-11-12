@@ -1,0 +1,19 @@
+{
+  "ok": true,
+  "id": "derby-v2-batch-flash-ea64b0ec-20261020",
+  "plan_hash": "2a736491e5d1fe72926a20881299089e7bd6606c79eb37877bd5fb555fa02af6",
+  "state": "succeeded",
+  "stage": "flash_boot_observe",
+  "result": "firmware_flash_completed",
+  "diagnostic": null,
+  "reviewed": 0,
+  "created": "2026-10-20 01:37:20",
+  "finished": "2026-10-20 01:43:10",
+  "review": {
+    "historical_failure": false,
+    "uncertainty_resolved": false,
+    "failure_result_preserved": false,
+    "required_action": "consult_current_resource_status",
+    "physical_device_state": "not_inferred_from_job_history"
+  }
+}

@@ -1,0 +1,713 @@
+{
+  "ok": true,
+  "entries": [
+    {
+      "sequence": 1847,
+      "text": "[1008/1190] Generating ../../derby_demo.js.S",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1848,
+      "text": "[1009/1190] Compiling the built-in plans",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1849,
+      "text": "emit_rom_plans: 20 plans, 774 instructions, 32 patches -> C:/Users/core/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/b-c83/o/d9f93962f8ad2d6371497ced2c533c12abf61198e1a7321b07c4a03e0a4269e5/generated/ksn_proc_rom_plans.c",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 1850,
+      "text": "[1010/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/pocket/derby_measure_device.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1851,
+      "text": "[1011/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/scene/fxmath.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1852,
+      "text": "[1012/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/pocket/derby_fixed_workload_device.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1853,
+      "text": "[1013/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/pocket/fir_pie.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1854,
+      "text": "[1014/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/pocket/mp3_decode.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1855,
+      "text": "[1015/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/hal/fpu_latency.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1856,
+      "text": "[1016/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/pocket/derby_fixed_workload.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1857,
+      "text": "[1017/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/pocket/derby_measure.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1858,
+      "text": "[1018/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/hal/usb_console.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1859,
+      "text": "[1019/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/pocket/mp3_feed.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1860,
+      "text": "[1020/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/scene/scene_mem.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1861,
+      "text": "[1021/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/scene/solar_time.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1862,
+      "text": "[1022/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/pocket/mp3_sd_session.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1863,
+      "text": "[1023/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/pocket/pocket_memory.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1864,
+      "text": "[1024/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1865,
+      "text": "[1025/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/hal/board.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1866,
+      "text": "[1026/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/scene/stars.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1867,
+      "text": "[1027/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/scene/solar_sail.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1868,
+      "text": "[1028/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/hal/keymap.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1869,
+      "text": "[1029/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/shell.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1870,
+      "text": "[1030/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/vm/vm_wake.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1871,
+      "text": "[1031/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/hal/motion.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1872,
+      "text": "[1032/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/text/skk_session.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1873,
+      "text": "[1033/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/app_session.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1874,
+      "text": "[1034/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/text/jpfont.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1875,
+      "text": "[1035/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/hal/keystate.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1876,
+      "text": "[1036/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/editor.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1877,
+      "text": "[1037/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/text/srcstore.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1878,
+      "text": "[1038/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/hal/sound.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1879,
+      "text": "[1039/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/text/jslex.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1880,
+      "text": "[1040/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/text/textfield.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1881,
+      "text": "[1041/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/jsconsole.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1882,
+      "text": "[1042/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/vimcmd.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1883,
+      "text": "[1043/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/codeedit.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1884,
+      "text": "[1044/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/pocket/pocket_imu.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1885,
+      "text": "[1045/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/pocket/pocket_bridge.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1886,
+      "text": "[1046/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/pocket/pocket_storage.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1887,
+      "text": "[1047/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/pocket/pocket_api.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1888,
+      "text": "[1048/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/pocket/opus_feed.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1889,
+      "text": "[1049/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/pocket/pocket_capture.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1890,
+      "text": "[1050/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/pocket/opus_net.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1891,
+      "text": "[1051/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/pocket/pocket_av.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1892,
+      "text": "[1052/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/pocket/pocket_app_load.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1893,
+      "text": "[1053/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/pocket/pocket_text.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1894,
+      "text": "[1054/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/pocket/pocket_io.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1895,
+      "text": "[1055/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/overlay_core.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1896,
+      "text": "[1056/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/pocket/pocket_app.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1897,
+      "text": "[1057/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/pocket/pocket_overlay.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1898,
+      "text": "[1058/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/pocket/pocket_workspace.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1899,
+      "text": "[1059/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/pocket/sd_path.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1900,
+      "text": "[1060/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/pocket/sd_lease.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1901,
+      "text": "[1061/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/overlay.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1902,
+      "text": "[1062/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/pocket/app_registry.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1903,
+      "text": "[1063/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/pocket/pocket_fs.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1904,
+      "text": "[1064/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/pickmodal.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1905,
+      "text": "[1065/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/pickmodal_draw.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1906,
+      "text": "[1066/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/pocket/sd_picker.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1907,
+      "text": "[1067/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/pocket/pocket_ble.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1908,
+      "text": "[1068/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/pocket/sd_media.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1909,
+      "text": "[1069/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/pocket/file_picker.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1910,
+      "text": "[1070/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/pocket/net_service.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1911,
+      "text": "[1071/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/lessons.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1912,
+      "text": "[1072/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/pocket/pocket_tls_txfix.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1913,
+      "text": "[1073/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/pocket/wifi_time.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1914,
+      "text": "[1074/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/pocket/net_autosync.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1915,
+      "text": "[1075/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/pocket/wifi_ui.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1916,
+      "text": "[1076/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/paint.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1917,
+      "text": "[1077/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/tutorial.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1918,
+      "text": "[1078/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/pet/pet_pixels.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1919,
+      "text": "[1079/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/pet/pet_hub_core.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1920,
+      "text": "[1080/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/pocket/random_seed.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1921,
+      "text": "[1081/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/pet/pet_hub.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1922,
+      "text": "[1082/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/pocket/pocket_net.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1923,
+      "text": "[1083/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/pocket/pocket_random.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1924,
+      "text": "[1084/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/kasane/ksn_runtime.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1925,
+      "text": "[1085/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/pocket/pocket_input.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1926,
+      "text": "[1086/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/__/third_party/bmi270/bmi270.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1927,
+      "text": "[1087/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/kasane/ksn_schema_session.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1928,
+      "text": "[1088/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/pocket/app_view_assets.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1929,
+      "text": "[1089/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/pocket/app_notice.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1930,
+      "text": "[1090/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/kasane/ksn_source.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1931,
+      "text": "[1091/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/pocket/app_view_provider.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1932,
+      "text": "[1092/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/kasane/ksn_schema.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1933,
+      "text": "[1093/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/pocket/app_legacy_presenter.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1934,
+      "text": "[1094/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/pocket/app_music_view.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1935,
+      "text": "[1095/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/kasane/ksn_device_probe.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1936,
+      "text": "[1096/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/kasane/ksn_indicator.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1937,
+      "text": "[1097/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/kasane/ksn_view.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1938,
+      "text": "[1098/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/kasane/ksn_blend_pie.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1939,
+      "text": "[1099/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/__/third_party/bmi270/bmi2.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1940,
+      "text": "[1100/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/kasane/ksn_modal.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1941,
+      "text": "[1101/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/kasane/ksn_stress_probe.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1942,
+      "text": "[1102/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/kasane/ksn_frost.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1943,
+      "text": "[1103/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/kasane/ksn_cache.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1944,
+      "text": "[1104/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/kasane/ksn_core.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1945,
+      "text": "[1105/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/pocket/pocket_video.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 1946,
+      "text": "[1106/1190] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/pocket/pocket_pixel.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    }
+  ],
+  "expired": false,
+  "gap": false,
+  "oldest_sequence": 70,
+  "next_cursor": {
+    "epoch": "679b080a14f74643986be260f20f24cc",
+    "sequence": 1946
+  },
+  "has_more": true
+}

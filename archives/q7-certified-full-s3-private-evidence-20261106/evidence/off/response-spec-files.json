@@ -1,0 +1,7 @@
+{
+  "/workspace/private-q7-certified-full-s3-20261106/build-off/toolchain/cflags": {
+    "sha256": "376e0b799d9dc5120a8419b83e5399a25dd8c177bcbdd45b9f3ca1b18cdf7d0c",
+    "bytes": 160,
+    "content": "-mlongcalls\n-fno-builtin-memcpy\n-fno-builtin-memset\n-fno-builtin-bzero\n\"-specs=/workspace/private-q7-certified-full-s3-20261106/build-off/specs/picolibc.specs\"\n"
+  }
+}

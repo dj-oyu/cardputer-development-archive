@@ -1,0 +1,30 @@
+{
+  "command": [
+    "/workspace/scratch/6d8dcdbcdc54/qemu-esp32s3-20261111/bin/qemu-system-xtensa",
+    "-machine",
+    "esp32s3",
+    "-display",
+    "none",
+    "-monitor",
+    "none",
+    "-nic",
+    "none",
+    "-snapshot",
+    "-drive",
+    "file=/workspace/scratch/6d8dcdbcdc54/qemu-render-20261111/tools/qemu_q7/build-target/virtual-flash.bin,if=mtd,format=raw",
+    "-serial",
+    "file:/workspace/scratch/6d8dcdbcdc54/qemu-render-20261111/tools/qemu_q7/build-target/uart.log",
+    "-icount",
+    "shift=2"
+  ],
+  "qemu_version": "QEMU emulator version 9.2.2 (esp_develop_9.2.2_20250817)\nCopyright (c) 2003-2024 Fabrice Bellard and the QEMU Project developers\n",
+  "reason": "completed",
+  "elapsed_host_seconds": 16.87811039799999,
+  "returncode": 0,
+  "sha256": {
+    "virtual-flash.bin": "b7cd5d1ca630cbfb949fe4c83b43c4689f6e3d5e0df647f769072c968654b1cf",
+    "qemu_q7.elf": "140a5b6f5a13a36fb6446d02c7367eb238fde3155d9718010bbcd96b70efedb9",
+    "sdkconfig": "5e43e51a8306592036cfac288ebdf387f152724efac86473c07b9bbffb3953be",
+    "uart.log": "4d737e5710764304e6d921d8f4b698f3902cfed2402f9d53df3695076aebe0c4"
+  }
+}

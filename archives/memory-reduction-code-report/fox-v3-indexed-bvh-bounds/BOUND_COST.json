@@ -1,0 +1,34 @@
+{
+  "status": "SOURCE_BOUNDED_COST_AND_SYNTHETIC_BUILD_TIMING",
+  "actualFrames": 0,
+  "fixtureTriangles": 1566,
+  "fixtureNodes": 1023,
+  "triangleNodeMemberships": 15660,
+  "maxWitnessByteComparisons": 281880,
+  "comparisonBytesEach": 8,
+  "rightmostLeafStepsUpper": 10230,
+  "compactRecordWritesBytes": 28644,
+  "oldBuilderArithmeticSourceUnchanged": true,
+  "allocationAttemptsBefore": 5,
+  "allocationAttemptsAfter": 6,
+  "additionalSuccessfulFreeCalls": 1,
+  "queryOwnedCoordinateLoadsPerVisitedNodeUpper": 6,
+  "rootExtentLoadsPerNearestRay": 6,
+  "newPersistentCaches": 0,
+  "budgetsRaised": false,
+  "physicalRayNodeTriangleCountersMustRemainExact": true,
+  "syntheticCPUSecondsPerBuild": {
+    "baseline": [
+      0.002899195,
+      0.00267356,
+      0.00261846
+    ],
+    "candidate": [
+      0.002300475,
+      0.00223486,
+      0.002484655
+    ]
+  },
+  "timingMethod": "Each number is clock() average over200 construction+release cycles;3 independent process repetitions, synthetic1167vertices/1566triangles only. Not end-to-end render timing or target speed claim.",
+  "costWarning": "Saved storage adds owned-coordinate indirection during traversal and a bounded postbuild witness scan. Original sort/build remains, physical counters exclude these instructions."
+}

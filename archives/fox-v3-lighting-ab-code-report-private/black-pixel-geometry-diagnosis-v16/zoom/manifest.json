@@ -1,0 +1,176 @@
+[
+  {
+    "name": "original-rich-bh",
+    "seconds": 7.085817480001424,
+    "cameraMatrix": [
+      [
+        0.8679840564727783,
+        0.08243460208177567,
+        -0.4897021949291229,
+        -4.377809524536133
+      ],
+      [
+        -0.49659207463264465,
+        0.14408594369888306,
+        -0.8559412956237793,
+        -8.201269149780273
+      ],
+      [
+        2.2936710308840702e-08,
+        0.986125648021698,
+        0.16600067913532257,
+        4.197666168212891
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orthoScale": 4.266666889190674,
+    "settings": {
+      "engine": "CYCLES",
+      "display": {
+        "view_transform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": 0.0,
+        "gamma": 1.0
+      },
+      "cycles": {
+        "use_denoising": false,
+        "use_adaptive_sampling": true,
+        "adaptive_threshold": 0.009999999776482582,
+        "adaptive_min_samples": 0,
+        "sample_clamp_direct": 0.0,
+        "sample_clamp_indirect": 10.0,
+        "blur_glossy": 1.0,
+        "pixel_filter_type": "BLACKMAN_HARRIS",
+        "filter_width": 1.5,
+        "use_animated_seed": false
+      },
+      "frame": 1,
+      "dither": 1.0,
+      "filmTransparent": false,
+      "colorDepth": "8",
+      "colorMode": "RGBA"
+    },
+    "pngSHA": "eaf4aa89046ca917f23cada3433e8e6a8db0da9d980ed5362492f1e35591de8b"
+  },
+  {
+    "name": "coarse-rich-bh",
+    "seconds": 3.571720923999237,
+    "cameraMatrix": [
+      [
+        0.8679840564727783,
+        0.08243460208177567,
+        -0.4897021949291229,
+        -4.377809524536133
+      ],
+      [
+        -0.49659207463264465,
+        0.14408594369888306,
+        -0.8559412956237793,
+        -8.201269149780273
+      ],
+      [
+        2.2936710308840702e-08,
+        0.986125648021698,
+        0.16600067913532257,
+        4.197666168212891
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orthoScale": 4.266666889190674,
+    "settings": {
+      "engine": "CYCLES",
+      "display": {
+        "view_transform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": 0.0,
+        "gamma": 1.0
+      },
+      "cycles": {
+        "use_denoising": false,
+        "use_adaptive_sampling": true,
+        "adaptive_threshold": 0.009999999776482582,
+        "adaptive_min_samples": 0,
+        "sample_clamp_direct": 0.0,
+        "sample_clamp_indirect": 10.0,
+        "blur_glossy": 1.0,
+        "pixel_filter_type": "BLACKMAN_HARRIS",
+        "filter_width": 1.5,
+        "use_animated_seed": false
+      },
+      "frame": 1,
+      "dither": 1.0,
+      "filmTransparent": false,
+      "colorDepth": "8",
+      "colorMode": "RGBA"
+    },
+    "pngSHA": "eb52b75cf56080a2ba18a261d807e6576a9bc87c581995a006104f2b5f8ef1dd"
+  },
+  {
+    "name": "coarse-rich-box",
+    "seconds": 3.519165466997947,
+    "cameraMatrix": [
+      [
+        0.8679840564727783,
+        0.08243460208177567,
+        -0.4897021949291229,
+        -4.377809524536133
+      ],
+      [
+        -0.49659207463264465,
+        0.14408594369888306,
+        -0.8559412956237793,
+        -8.201269149780273
+      ],
+      [
+        2.2936710308840702e-08,
+        0.986125648021698,
+        0.16600067913532257,
+        4.197666168212891
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "orthoScale": 4.266666889190674,
+    "settings": {
+      "engine": "CYCLES",
+      "display": {
+        "view_transform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": 0.0,
+        "gamma": 1.0
+      },
+      "cycles": {
+        "use_denoising": false,
+        "use_adaptive_sampling": true,
+        "adaptive_threshold": 0.009999999776482582,
+        "adaptive_min_samples": 0,
+        "sample_clamp_direct": 0.0,
+        "sample_clamp_indirect": 10.0,
+        "blur_glossy": 1.0,
+        "pixel_filter_type": "BOX",
+        "filter_width": 0.009999999776482582,
+        "use_animated_seed": false
+      },
+      "frame": 1,
+      "dither": 1.0,
+      "filmTransparent": false,
+      "colorDepth": "8",
+      "colorMode": "RGBA"
+    },
+    "pngSHA": "ba79254334b78c759db21398f3689e2e40b901a81ce6d256d31116905c85f3dd"
+  }
+]

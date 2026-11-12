@@ -1,0 +1,649 @@
+BODY_MEMORY cold=25032 arena=34996 arena_padding=7 skin=5496 positions=2748 normals=2748 normal_scratch=5496 scatter=16824 descriptors=368 snapshot_capacity=32768 row=480 depth=960 input_const=9160 globals_const=6144 topology_const=5448
+BODY_FRAME pose=63 view=0 oracle=0 hash=40aff5d7 covered=4417 packet=9180 work=11778
+BODY_FRAME pose=63 view=0 oracle=0 hash=40aff5d7 covered=4417 packet=9180 work=11778
+BODY_FRAME pose=63 view=0 oracle=0 hash=40aff5d7 covered=4417 packet=9180 work=11778
+BODY_REJECT_PASS late_nan unchanged_actor unchanged_arena ready_packet retained_snapshot_pixels recovery_repeat
+BODY_FRAME pose=0 view=0 oracle=0 hash=53aafdde covered=4405 packet=9252 work=11867
+BODY_FRAME pose=1 view=0 oracle=0 hash=6d492933 covered=4409 packet=9252 work=11899
+BODY_FRAME pose=2 view=0 oracle=0 hash=6194f227 covered=4410 packet=9252 work=11901
+BODY_FRAME pose=3 view=0 oracle=0 hash=9d049566 covered=4412 packet=9228 work=11829
+BODY_FRAME pose=4 view=0 oracle=0 hash=73d1f0f2 covered=4411 packet=9228 work=11775
+BODY_FRAME pose=5 view=0 oracle=0 hash=b1862336 covered=4414 packet=9180 work=11724
+BODY_FRAME pose=6 view=0 oracle=0 hash=f8ca4004 covered=4420 packet=9180 work=11712
+BODY_FRAME pose=7 view=0 oracle=0 hash=8f02fa3f covered=4413 packet=9156 work=11687
+BODY_FRAME pose=8 view=0 oracle=0 hash=4aa7a954 covered=4415 packet=9156 work=11677
+BODY_FRAME pose=9 view=0 oracle=0 hash=149e5f4c covered=4419 packet=9156 work=11712
+BODY_FRAME pose=10 view=0 oracle=0 hash=dcc7d499 covered=4423 packet=9180 work=11675
+BODY_FRAME pose=11 view=0 oracle=0 hash=f3334574 covered=4414 packet=9140 work=11701
+BODY_FRAME pose=12 view=0 oracle=0 hash=0f630966 covered=4414 packet=9140 work=11696
+BODY_FRAME pose=13 view=0 oracle=0 hash=71d02ebc covered=4411 packet=9140 work=11716
+BODY_FRAME pose=14 view=0 oracle=0 hash=da630a07 covered=4409 packet=9204 work=11701
+BODY_FRAME pose=15 view=0 oracle=0 hash=876a4df3 covered=4414 packet=9204 work=11725
+BODY_FRAME pose=16 view=0 oracle=0 hash=73d0a900 covered=4412 packet=9204 work=11702
+BODY_FRAME pose=17 view=0 oracle=0 hash=bc1113c0 covered=4402 packet=9204 work=11695
+BODY_FRAME pose=18 view=0 oracle=0 hash=bc76d68f covered=4401 packet=9224 work=11673
+BODY_FRAME pose=19 view=0 oracle=0 hash=d0e58def covered=4411 packet=9204 work=11716
+BODY_FRAME pose=20 view=0 oracle=0 hash=54dc9afc covered=4391 packet=9204 work=11648
+BODY_FRAME pose=21 view=0 oracle=0 hash=4b70dca0 covered=4400 packet=9252 work=11868
+BODY_FRAME pose=22 view=0 oracle=0 hash=0503b4ca covered=4405 packet=9252 work=11927
+BODY_FRAME pose=23 view=0 oracle=0 hash=61708e42 covered=4407 packet=9228 work=11890
+BODY_FRAME pose=24 view=0 oracle=0 hash=3c7b5ba5 covered=4408 packet=9204 work=11846
+BODY_FRAME pose=25 view=0 oracle=0 hash=05e484f9 covered=4410 packet=9204 work=11775
+BODY_FRAME pose=26 view=0 oracle=0 hash=be12fe5e covered=4411 packet=9180 work=11759
+BODY_FRAME pose=27 view=0 oracle=0 hash=8e24ae6d covered=4416 packet=9180 work=11729
+BODY_FRAME pose=28 view=0 oracle=0 hash=9cb93a05 covered=4414 packet=9180 work=11761
+BODY_FRAME pose=29 view=0 oracle=0 hash=633fd6fc covered=4416 packet=9180 work=11701
+BODY_FRAME pose=30 view=0 oracle=0 hash=bb9e50e2 covered=4416 packet=9156 work=11748
+BODY_FRAME pose=31 view=0 oracle=0 hash=40aff5d7 covered=4417 packet=9180 work=11778
+BODY_FRAME pose=32 view=0 oracle=0 hash=0527172c covered=4418 packet=9140 work=11812
+BODY_FRAME pose=33 view=0 oracle=0 hash=f8de356e covered=4415 packet=9140 work=11702
+BODY_FRAME pose=34 view=0 oracle=0 hash=f5324f30 covered=4412 packet=9140 work=11798
+BODY_FRAME pose=35 view=0 oracle=0 hash=338dcd28 covered=4414 packet=9204 work=11778
+BODY_FRAME pose=36 view=0 oracle=0 hash=3b95ada4 covered=4415 packet=9204 work=11737
+BODY_FRAME pose=37 view=0 oracle=0 hash=df8707a9 covered=4411 packet=9204 work=11773
+BODY_FRAME pose=38 view=0 oracle=0 hash=f78be0ae covered=4406 packet=9204 work=11747
+BODY_FRAME pose=39 view=0 oracle=0 hash=c364fe4f covered=4406 packet=9204 work=11689
+BODY_FRAME pose=40 view=0 oracle=0 hash=beab5c78 covered=4405 packet=9204 work=11727
+BODY_FRAME pose=41 view=0 oracle=0 hash=ebe6b250 covered=4403 packet=9196 work=11741
+BODY_FRAME pose=42 view=0 oracle=0 hash=cfc0682c covered=4399 packet=9228 work=11882
+BODY_FRAME pose=43 view=0 oracle=0 hash=f9c729e5 covered=4400 packet=9204 work=11837
+BODY_FRAME pose=44 view=0 oracle=0 hash=9d12a63a covered=4409 packet=9204 work=11850
+BODY_FRAME pose=45 view=0 oracle=0 hash=b2e02f69 covered=4407 packet=9204 work=11842
+BODY_FRAME pose=46 view=0 oracle=0 hash=2d2b5d05 covered=4405 packet=9180 work=11794
+BODY_FRAME pose=47 view=0 oracle=0 hash=2d73d3da covered=4411 packet=9180 work=11764
+BODY_FRAME pose=48 view=0 oracle=0 hash=64d839cb covered=4415 packet=9180 work=11771
+BODY_FRAME pose=49 view=0 oracle=0 hash=dab13f18 covered=4417 packet=9180 work=11787
+BODY_FRAME pose=50 view=0 oracle=0 hash=d12c1183 covered=4417 packet=9180 work=11769
+BODY_FRAME pose=51 view=0 oracle=0 hash=84c4d130 covered=4417 packet=9180 work=11750
+BODY_FRAME pose=52 view=0 oracle=0 hash=8820cca0 covered=4419 packet=9180 work=11724
+BODY_FRAME pose=53 view=0 oracle=0 hash=446eacd7 covered=4422 packet=9140 work=11773
+BODY_FRAME pose=54 view=0 oracle=0 hash=7eee504c covered=4412 packet=9140 work=11728
+BODY_FRAME pose=55 view=0 oracle=0 hash=c72f00f9 covered=4418 packet=9140 work=11742
+BODY_FRAME pose=56 view=0 oracle=0 hash=82158317 covered=4411 packet=9204 work=11782
+BODY_FRAME pose=57 view=0 oracle=0 hash=98a475b2 covered=4412 packet=9204 work=11786
+BODY_FRAME pose=58 view=0 oracle=0 hash=c7f884db covered=4413 packet=9204 work=11738
+BODY_FRAME pose=59 view=0 oracle=0 hash=f512d86d covered=4416 packet=9204 work=11779
+BODY_FRAME pose=60 view=0 oracle=0 hash=cdd1e93c covered=4406 packet=9204 work=11697
+BODY_FRAME pose=61 view=0 oracle=0 hash=f611fd05 covered=4409 packet=9200 work=11724
+BODY_FRAME pose=62 view=0 oracle=0 hash=b38dc42d covered=4415 packet=9196 work=11716
+BODY_FRAME pose=63 view=0 oracle=0 hash=40aff5d7 covered=4417 packet=9180 work=11778
+BODY_FRAME pose=63 view=0 oracle=0 hash=40aff5d7 covered=4417 packet=9180 work=11778
+BODY_FRAME pose=62 view=0 oracle=0 hash=b38dc42d covered=4415 packet=9196 work=11716
+BODY_FRAME pose=61 view=0 oracle=0 hash=f611fd05 covered=4409 packet=9200 work=11724
+BODY_FRAME pose=60 view=0 oracle=0 hash=cdd1e93c covered=4406 packet=9204 work=11697
+BODY_FRAME pose=59 view=0 oracle=0 hash=f512d86d covered=4416 packet=9204 work=11779
+BODY_FRAME pose=58 view=0 oracle=0 hash=c7f884db covered=4413 packet=9204 work=11738
+BODY_FRAME pose=57 view=0 oracle=0 hash=98a475b2 covered=4412 packet=9204 work=11786
+BODY_FRAME pose=56 view=0 oracle=0 hash=82158317 covered=4411 packet=9204 work=11782
+BODY_FRAME pose=55 view=0 oracle=0 hash=c72f00f9 covered=4418 packet=9140 work=11742
+BODY_FRAME pose=54 view=0 oracle=0 hash=7eee504c covered=4412 packet=9140 work=11728
+BODY_FRAME pose=53 view=0 oracle=0 hash=446eacd7 covered=4422 packet=9140 work=11773
+BODY_FRAME pose=52 view=0 oracle=0 hash=8820cca0 covered=4419 packet=9180 work=11724
+BODY_FRAME pose=51 view=0 oracle=0 hash=84c4d130 covered=4417 packet=9180 work=11750
+BODY_FRAME pose=50 view=0 oracle=0 hash=d12c1183 covered=4417 packet=9180 work=11769
+BODY_FRAME pose=49 view=0 oracle=0 hash=dab13f18 covered=4417 packet=9180 work=11787
+BODY_FRAME pose=48 view=0 oracle=0 hash=64d839cb covered=4415 packet=9180 work=11771
+BODY_FRAME pose=47 view=0 oracle=0 hash=2d73d3da covered=4411 packet=9180 work=11764
+BODY_FRAME pose=46 view=0 oracle=0 hash=2d2b5d05 covered=4405 packet=9180 work=11794
+BODY_FRAME pose=45 view=0 oracle=0 hash=b2e02f69 covered=4407 packet=9204 work=11842
+BODY_FRAME pose=44 view=0 oracle=0 hash=9d12a63a covered=4409 packet=9204 work=11850
+BODY_FRAME pose=43 view=0 oracle=0 hash=f9c729e5 covered=4400 packet=9204 work=11837
+BODY_FRAME pose=42 view=0 oracle=0 hash=cfc0682c covered=4399 packet=9228 work=11882
+BODY_FRAME pose=41 view=0 oracle=0 hash=ebe6b250 covered=4403 packet=9196 work=11741
+BODY_FRAME pose=40 view=0 oracle=0 hash=beab5c78 covered=4405 packet=9204 work=11727
+BODY_FRAME pose=39 view=0 oracle=0 hash=c364fe4f covered=4406 packet=9204 work=11689
+BODY_FRAME pose=38 view=0 oracle=0 hash=f78be0ae covered=4406 packet=9204 work=11747
+BODY_FRAME pose=37 view=0 oracle=0 hash=df8707a9 covered=4411 packet=9204 work=11773
+BODY_FRAME pose=36 view=0 oracle=0 hash=3b95ada4 covered=4415 packet=9204 work=11737
+BODY_FRAME pose=35 view=0 oracle=0 hash=338dcd28 covered=4414 packet=9204 work=11778
+BODY_FRAME pose=34 view=0 oracle=0 hash=f5324f30 covered=4412 packet=9140 work=11798
+BODY_FRAME pose=33 view=0 oracle=0 hash=f8de356e covered=4415 packet=9140 work=11702
+BODY_FRAME pose=32 view=0 oracle=0 hash=0527172c covered=4418 packet=9140 work=11812
+BODY_FRAME pose=31 view=0 oracle=0 hash=40aff5d7 covered=4417 packet=9180 work=11778
+BODY_FRAME pose=30 view=0 oracle=0 hash=bb9e50e2 covered=4416 packet=9156 work=11748
+BODY_FRAME pose=29 view=0 oracle=0 hash=633fd6fc covered=4416 packet=9180 work=11701
+BODY_FRAME pose=28 view=0 oracle=0 hash=9cb93a05 covered=4414 packet=9180 work=11761
+BODY_FRAME pose=27 view=0 oracle=0 hash=8e24ae6d covered=4416 packet=9180 work=11729
+BODY_FRAME pose=26 view=0 oracle=0 hash=be12fe5e covered=4411 packet=9180 work=11759
+BODY_FRAME pose=25 view=0 oracle=0 hash=05e484f9 covered=4410 packet=9204 work=11775
+BODY_FRAME pose=24 view=0 oracle=0 hash=3c7b5ba5 covered=4408 packet=9204 work=11846
+BODY_FRAME pose=23 view=0 oracle=0 hash=61708e42 covered=4407 packet=9228 work=11890
+BODY_FRAME pose=22 view=0 oracle=0 hash=0503b4ca covered=4405 packet=9252 work=11927
+BODY_FRAME pose=21 view=0 oracle=0 hash=4b70dca0 covered=4400 packet=9252 work=11868
+BODY_FRAME pose=20 view=0 oracle=0 hash=54dc9afc covered=4391 packet=9204 work=11648
+BODY_FRAME pose=19 view=0 oracle=0 hash=d0e58def covered=4411 packet=9204 work=11716
+BODY_FRAME pose=18 view=0 oracle=0 hash=bc76d68f covered=4401 packet=9224 work=11673
+BODY_FRAME pose=17 view=0 oracle=0 hash=bc1113c0 covered=4402 packet=9204 work=11695
+BODY_FRAME pose=16 view=0 oracle=0 hash=73d0a900 covered=4412 packet=9204 work=11702
+BODY_FRAME pose=15 view=0 oracle=0 hash=876a4df3 covered=4414 packet=9204 work=11725
+BODY_FRAME pose=14 view=0 oracle=0 hash=da630a07 covered=4409 packet=9204 work=11701
+BODY_FRAME pose=13 view=0 oracle=0 hash=71d02ebc covered=4411 packet=9140 work=11716
+BODY_FRAME pose=12 view=0 oracle=0 hash=0f630966 covered=4414 packet=9140 work=11696
+BODY_FRAME pose=11 view=0 oracle=0 hash=f3334574 covered=4414 packet=9140 work=11701
+BODY_FRAME pose=10 view=0 oracle=0 hash=dcc7d499 covered=4423 packet=9180 work=11675
+BODY_FRAME pose=9 view=0 oracle=0 hash=149e5f4c covered=4419 packet=9156 work=11712
+BODY_FRAME pose=8 view=0 oracle=0 hash=4aa7a954 covered=4415 packet=9156 work=11677
+BODY_FRAME pose=7 view=0 oracle=0 hash=8f02fa3f covered=4413 packet=9156 work=11687
+BODY_FRAME pose=6 view=0 oracle=0 hash=f8ca4004 covered=4420 packet=9180 work=11712
+BODY_FRAME pose=5 view=0 oracle=0 hash=b1862336 covered=4414 packet=9180 work=11724
+BODY_FRAME pose=4 view=0 oracle=0 hash=73d1f0f2 covered=4411 packet=9228 work=11775
+BODY_FRAME pose=3 view=0 oracle=0 hash=9d049566 covered=4412 packet=9228 work=11829
+BODY_FRAME pose=2 view=0 oracle=0 hash=6194f227 covered=4410 packet=9252 work=11901
+BODY_FRAME pose=1 view=0 oracle=0 hash=6d492933 covered=4409 packet=9252 work=11899
+BODY_FRAME pose=0 view=0 oracle=0 hash=53aafdde covered=4405 packet=9252 work=11867
+BODY_FRAME pose=63 view=0 oracle=0 hash=40aff5d7 covered=4417 packet=9180 work=11778
+BODY_FRAME pose=0 view=0 oracle=0 hash=53aafdde covered=4405 packet=9252 work=11867
+BODY_FRAME pose=0 view=0 oracle=1 hash=53aafdde covered=4405 packet=9252 work=11867
+BODY_COMPARE pose=0 view=0 differing_pixels=0
+BODY_FRAME pose=1 view=0 oracle=0 hash=6d492933 covered=4409 packet=9252 work=11899
+BODY_FRAME pose=1 view=0 oracle=1 hash=6d492933 covered=4409 packet=9252 work=11899
+BODY_COMPARE pose=1 view=0 differing_pixels=0
+BODY_FRAME pose=2 view=0 oracle=0 hash=6194f227 covered=4410 packet=9252 work=11901
+BODY_FRAME pose=2 view=0 oracle=1 hash=6194f227 covered=4410 packet=9252 work=11901
+BODY_COMPARE pose=2 view=0 differing_pixels=0
+BODY_FRAME pose=3 view=0 oracle=0 hash=9d049566 covered=4412 packet=9228 work=11829
+BODY_FRAME pose=3 view=0 oracle=1 hash=9d049566 covered=4412 packet=9228 work=11829
+BODY_COMPARE pose=3 view=0 differing_pixels=0
+BODY_FRAME pose=4 view=0 oracle=0 hash=73d1f0f2 covered=4411 packet=9228 work=11775
+BODY_FRAME pose=4 view=0 oracle=1 hash=73d1f0f2 covered=4411 packet=9228 work=11775
+BODY_COMPARE pose=4 view=0 differing_pixels=0
+BODY_FRAME pose=5 view=0 oracle=0 hash=b1862336 covered=4414 packet=9180 work=11724
+BODY_FRAME pose=5 view=0 oracle=1 hash=b1862336 covered=4414 packet=9180 work=11724
+BODY_COMPARE pose=5 view=0 differing_pixels=0
+BODY_FRAME pose=6 view=0 oracle=0 hash=f8ca4004 covered=4420 packet=9180 work=11712
+BODY_FRAME pose=6 view=0 oracle=1 hash=f8ca4004 covered=4420 packet=9180 work=11712
+BODY_COMPARE pose=6 view=0 differing_pixels=0
+BODY_FRAME pose=7 view=0 oracle=0 hash=8f02fa3f covered=4413 packet=9156 work=11687
+BODY_FRAME pose=7 view=0 oracle=1 hash=8f02fa3f covered=4413 packet=9156 work=11687
+BODY_COMPARE pose=7 view=0 differing_pixels=0
+BODY_FRAME pose=8 view=0 oracle=0 hash=4aa7a954 covered=4415 packet=9156 work=11677
+BODY_FRAME pose=8 view=0 oracle=1 hash=4aa7a954 covered=4415 packet=9156 work=11677
+BODY_COMPARE pose=8 view=0 differing_pixels=0
+BODY_FRAME pose=9 view=0 oracle=0 hash=149e5f4c covered=4419 packet=9156 work=11712
+BODY_FRAME pose=9 view=0 oracle=1 hash=149e5f4c covered=4419 packet=9156 work=11712
+BODY_COMPARE pose=9 view=0 differing_pixels=0
+BODY_FRAME pose=10 view=0 oracle=0 hash=dcc7d499 covered=4423 packet=9180 work=11675
+BODY_FRAME pose=10 view=0 oracle=1 hash=dcc7d499 covered=4423 packet=9180 work=11675
+BODY_COMPARE pose=10 view=0 differing_pixels=0
+BODY_FRAME pose=11 view=0 oracle=0 hash=f3334574 covered=4414 packet=9140 work=11701
+BODY_FRAME pose=11 view=0 oracle=1 hash=f3334574 covered=4414 packet=9140 work=11701
+BODY_COMPARE pose=11 view=0 differing_pixels=0
+BODY_FRAME pose=12 view=0 oracle=0 hash=0f630966 covered=4414 packet=9140 work=11696
+BODY_FRAME pose=12 view=0 oracle=1 hash=0f630966 covered=4414 packet=9140 work=11696
+BODY_COMPARE pose=12 view=0 differing_pixels=0
+BODY_FRAME pose=13 view=0 oracle=0 hash=71d02ebc covered=4411 packet=9140 work=11716
+BODY_FRAME pose=13 view=0 oracle=1 hash=71d02ebc covered=4411 packet=9140 work=11716
+BODY_COMPARE pose=13 view=0 differing_pixels=0
+BODY_FRAME pose=14 view=0 oracle=0 hash=da630a07 covered=4409 packet=9204 work=11701
+BODY_FRAME pose=14 view=0 oracle=1 hash=da630a07 covered=4409 packet=9204 work=11701
+BODY_COMPARE pose=14 view=0 differing_pixels=0
+BODY_FRAME pose=15 view=0 oracle=0 hash=876a4df3 covered=4414 packet=9204 work=11725
+BODY_FRAME pose=15 view=0 oracle=1 hash=876a4df3 covered=4414 packet=9204 work=11725
+BODY_COMPARE pose=15 view=0 differing_pixels=0
+BODY_FRAME pose=16 view=0 oracle=0 hash=73d0a900 covered=4412 packet=9204 work=11702
+BODY_FRAME pose=16 view=0 oracle=1 hash=73d0a900 covered=4412 packet=9204 work=11702
+BODY_COMPARE pose=16 view=0 differing_pixels=0
+BODY_FRAME pose=17 view=0 oracle=0 hash=bc1113c0 covered=4402 packet=9204 work=11695
+BODY_FRAME pose=17 view=0 oracle=1 hash=bc1113c0 covered=4402 packet=9204 work=11695
+BODY_COMPARE pose=17 view=0 differing_pixels=0
+BODY_FRAME pose=18 view=0 oracle=0 hash=bc76d68f covered=4401 packet=9224 work=11673
+BODY_FRAME pose=18 view=0 oracle=1 hash=bc76d68f covered=4401 packet=9224 work=11673
+BODY_COMPARE pose=18 view=0 differing_pixels=0
+BODY_FRAME pose=19 view=0 oracle=0 hash=d0e58def covered=4411 packet=9204 work=11716
+BODY_FRAME pose=19 view=0 oracle=1 hash=d0e58def covered=4411 packet=9204 work=11716
+BODY_COMPARE pose=19 view=0 differing_pixels=0
+BODY_FRAME pose=20 view=0 oracle=0 hash=54dc9afc covered=4391 packet=9204 work=11648
+BODY_FRAME pose=20 view=0 oracle=1 hash=54dc9afc covered=4391 packet=9204 work=11648
+BODY_COMPARE pose=20 view=0 differing_pixels=0
+BODY_FRAME pose=21 view=0 oracle=0 hash=4b70dca0 covered=4400 packet=9252 work=11868
+BODY_FRAME pose=21 view=0 oracle=1 hash=4b70dca0 covered=4400 packet=9252 work=11868
+BODY_COMPARE pose=21 view=0 differing_pixels=0
+BODY_FRAME pose=22 view=0 oracle=0 hash=0503b4ca covered=4405 packet=9252 work=11927
+BODY_FRAME pose=22 view=0 oracle=1 hash=0503b4ca covered=4405 packet=9252 work=11927
+BODY_COMPARE pose=22 view=0 differing_pixels=0
+BODY_FRAME pose=23 view=0 oracle=0 hash=61708e42 covered=4407 packet=9228 work=11890
+BODY_FRAME pose=23 view=0 oracle=1 hash=61708e42 covered=4407 packet=9228 work=11890
+BODY_COMPARE pose=23 view=0 differing_pixels=0
+BODY_FRAME pose=24 view=0 oracle=0 hash=3c7b5ba5 covered=4408 packet=9204 work=11846
+BODY_FRAME pose=24 view=0 oracle=1 hash=3c7b5ba5 covered=4408 packet=9204 work=11846
+BODY_COMPARE pose=24 view=0 differing_pixels=0
+BODY_FRAME pose=25 view=0 oracle=0 hash=05e484f9 covered=4410 packet=9204 work=11775
+BODY_FRAME pose=25 view=0 oracle=1 hash=05e484f9 covered=4410 packet=9204 work=11775
+BODY_COMPARE pose=25 view=0 differing_pixels=0
+BODY_FRAME pose=26 view=0 oracle=0 hash=be12fe5e covered=4411 packet=9180 work=11759
+BODY_FRAME pose=26 view=0 oracle=1 hash=be12fe5e covered=4411 packet=9180 work=11759
+BODY_COMPARE pose=26 view=0 differing_pixels=0
+BODY_FRAME pose=27 view=0 oracle=0 hash=8e24ae6d covered=4416 packet=9180 work=11729
+BODY_FRAME pose=27 view=0 oracle=1 hash=8e24ae6d covered=4416 packet=9180 work=11729
+BODY_COMPARE pose=27 view=0 differing_pixels=0
+BODY_FRAME pose=28 view=0 oracle=0 hash=9cb93a05 covered=4414 packet=9180 work=11761
+BODY_FRAME pose=28 view=0 oracle=1 hash=9cb93a05 covered=4414 packet=9180 work=11761
+BODY_COMPARE pose=28 view=0 differing_pixels=0
+BODY_FRAME pose=29 view=0 oracle=0 hash=633fd6fc covered=4416 packet=9180 work=11701
+BODY_FRAME pose=29 view=0 oracle=1 hash=633fd6fc covered=4416 packet=9180 work=11701
+BODY_COMPARE pose=29 view=0 differing_pixels=0
+BODY_FRAME pose=30 view=0 oracle=0 hash=bb9e50e2 covered=4416 packet=9156 work=11748
+BODY_FRAME pose=30 view=0 oracle=1 hash=bb9e50e2 covered=4416 packet=9156 work=11748
+BODY_COMPARE pose=30 view=0 differing_pixels=0
+BODY_FRAME pose=31 view=0 oracle=0 hash=40aff5d7 covered=4417 packet=9180 work=11778
+BODY_FRAME pose=31 view=0 oracle=1 hash=40aff5d7 covered=4417 packet=9180 work=11778
+BODY_COMPARE pose=31 view=0 differing_pixels=0
+BODY_FRAME pose=32 view=0 oracle=0 hash=0527172c covered=4418 packet=9140 work=11812
+BODY_FRAME pose=32 view=0 oracle=1 hash=0527172c covered=4418 packet=9140 work=11812
+BODY_COMPARE pose=32 view=0 differing_pixels=0
+BODY_FRAME pose=33 view=0 oracle=0 hash=f8de356e covered=4415 packet=9140 work=11702
+BODY_FRAME pose=33 view=0 oracle=1 hash=f8de356e covered=4415 packet=9140 work=11702
+BODY_COMPARE pose=33 view=0 differing_pixels=0
+BODY_FRAME pose=34 view=0 oracle=0 hash=f5324f30 covered=4412 packet=9140 work=11798
+BODY_FRAME pose=34 view=0 oracle=1 hash=f5324f30 covered=4412 packet=9140 work=11798
+BODY_COMPARE pose=34 view=0 differing_pixels=0
+BODY_FRAME pose=35 view=0 oracle=0 hash=338dcd28 covered=4414 packet=9204 work=11778
+BODY_FRAME pose=35 view=0 oracle=1 hash=338dcd28 covered=4414 packet=9204 work=11778
+BODY_COMPARE pose=35 view=0 differing_pixels=0
+BODY_FRAME pose=36 view=0 oracle=0 hash=3b95ada4 covered=4415 packet=9204 work=11737
+BODY_FRAME pose=36 view=0 oracle=1 hash=3b95ada4 covered=4415 packet=9204 work=11737
+BODY_COMPARE pose=36 view=0 differing_pixels=0
+BODY_FRAME pose=37 view=0 oracle=0 hash=df8707a9 covered=4411 packet=9204 work=11773
+BODY_FRAME pose=37 view=0 oracle=1 hash=df8707a9 covered=4411 packet=9204 work=11773
+BODY_COMPARE pose=37 view=0 differing_pixels=0
+BODY_FRAME pose=38 view=0 oracle=0 hash=f78be0ae covered=4406 packet=9204 work=11747
+BODY_FRAME pose=38 view=0 oracle=1 hash=f78be0ae covered=4406 packet=9204 work=11747
+BODY_COMPARE pose=38 view=0 differing_pixels=0
+BODY_FRAME pose=39 view=0 oracle=0 hash=c364fe4f covered=4406 packet=9204 work=11689
+BODY_FRAME pose=39 view=0 oracle=1 hash=c364fe4f covered=4406 packet=9204 work=11689
+BODY_COMPARE pose=39 view=0 differing_pixels=0
+BODY_FRAME pose=40 view=0 oracle=0 hash=beab5c78 covered=4405 packet=9204 work=11727
+BODY_FRAME pose=40 view=0 oracle=1 hash=beab5c78 covered=4405 packet=9204 work=11727
+BODY_COMPARE pose=40 view=0 differing_pixels=0
+BODY_FRAME pose=41 view=0 oracle=0 hash=ebe6b250 covered=4403 packet=9196 work=11741
+BODY_FRAME pose=41 view=0 oracle=1 hash=ebe6b250 covered=4403 packet=9196 work=11741
+BODY_COMPARE pose=41 view=0 differing_pixels=0
+BODY_FRAME pose=42 view=0 oracle=0 hash=cfc0682c covered=4399 packet=9228 work=11882
+BODY_FRAME pose=42 view=0 oracle=1 hash=cfc0682c covered=4399 packet=9228 work=11882
+BODY_COMPARE pose=42 view=0 differing_pixels=0
+BODY_FRAME pose=43 view=0 oracle=0 hash=f9c729e5 covered=4400 packet=9204 work=11837
+BODY_FRAME pose=43 view=0 oracle=1 hash=f9c729e5 covered=4400 packet=9204 work=11837
+BODY_COMPARE pose=43 view=0 differing_pixels=0
+BODY_FRAME pose=44 view=0 oracle=0 hash=9d12a63a covered=4409 packet=9204 work=11850
+BODY_FRAME pose=44 view=0 oracle=1 hash=9d12a63a covered=4409 packet=9204 work=11850
+BODY_COMPARE pose=44 view=0 differing_pixels=0
+BODY_FRAME pose=45 view=0 oracle=0 hash=b2e02f69 covered=4407 packet=9204 work=11842
+BODY_FRAME pose=45 view=0 oracle=1 hash=b2e02f69 covered=4407 packet=9204 work=11842
+BODY_COMPARE pose=45 view=0 differing_pixels=0
+BODY_FRAME pose=46 view=0 oracle=0 hash=2d2b5d05 covered=4405 packet=9180 work=11794
+BODY_FRAME pose=46 view=0 oracle=1 hash=2d2b5d05 covered=4405 packet=9180 work=11794
+BODY_COMPARE pose=46 view=0 differing_pixels=0
+BODY_FRAME pose=47 view=0 oracle=0 hash=2d73d3da covered=4411 packet=9180 work=11764
+BODY_FRAME pose=47 view=0 oracle=1 hash=2d73d3da covered=4411 packet=9180 work=11764
+BODY_COMPARE pose=47 view=0 differing_pixels=0
+BODY_FRAME pose=48 view=0 oracle=0 hash=64d839cb covered=4415 packet=9180 work=11771
+BODY_FRAME pose=48 view=0 oracle=1 hash=64d839cb covered=4415 packet=9180 work=11771
+BODY_COMPARE pose=48 view=0 differing_pixels=0
+BODY_FRAME pose=49 view=0 oracle=0 hash=dab13f18 covered=4417 packet=9180 work=11787
+BODY_FRAME pose=49 view=0 oracle=1 hash=2af424f8 covered=4417 packet=9180 work=11787
+BODY_COMPARE pose=49 view=0 differing_pixels=1
+BODY_FRAME pose=50 view=0 oracle=0 hash=d12c1183 covered=4417 packet=9180 work=11769
+BODY_FRAME pose=50 view=0 oracle=1 hash=d12c1183 covered=4417 packet=9180 work=11769
+BODY_COMPARE pose=50 view=0 differing_pixels=0
+BODY_FRAME pose=51 view=0 oracle=0 hash=84c4d130 covered=4417 packet=9180 work=11750
+BODY_FRAME pose=51 view=0 oracle=1 hash=84c4d130 covered=4417 packet=9180 work=11750
+BODY_COMPARE pose=51 view=0 differing_pixels=0
+BODY_FRAME pose=52 view=0 oracle=0 hash=8820cca0 covered=4419 packet=9180 work=11724
+BODY_FRAME pose=52 view=0 oracle=1 hash=8820cca0 covered=4419 packet=9180 work=11724
+BODY_COMPARE pose=52 view=0 differing_pixels=0
+BODY_FRAME pose=53 view=0 oracle=0 hash=446eacd7 covered=4422 packet=9140 work=11773
+BODY_FRAME pose=53 view=0 oracle=1 hash=446eacd7 covered=4422 packet=9140 work=11773
+BODY_COMPARE pose=53 view=0 differing_pixels=0
+BODY_FRAME pose=54 view=0 oracle=0 hash=7eee504c covered=4412 packet=9140 work=11728
+BODY_FRAME pose=54 view=0 oracle=1 hash=7eee504c covered=4412 packet=9140 work=11728
+BODY_COMPARE pose=54 view=0 differing_pixels=0
+BODY_FRAME pose=55 view=0 oracle=0 hash=c72f00f9 covered=4418 packet=9140 work=11742
+BODY_FRAME pose=55 view=0 oracle=1 hash=c72f00f9 covered=4418 packet=9140 work=11742
+BODY_COMPARE pose=55 view=0 differing_pixels=0
+BODY_FRAME pose=56 view=0 oracle=0 hash=82158317 covered=4411 packet=9204 work=11782
+BODY_FRAME pose=56 view=0 oracle=1 hash=82158317 covered=4411 packet=9204 work=11782
+BODY_COMPARE pose=56 view=0 differing_pixels=0
+BODY_FRAME pose=57 view=0 oracle=0 hash=98a475b2 covered=4412 packet=9204 work=11786
+BODY_FRAME pose=57 view=0 oracle=1 hash=98a475b2 covered=4412 packet=9204 work=11786
+BODY_COMPARE pose=57 view=0 differing_pixels=0
+BODY_FRAME pose=58 view=0 oracle=0 hash=c7f884db covered=4413 packet=9204 work=11738
+BODY_FRAME pose=58 view=0 oracle=1 hash=c7f884db covered=4413 packet=9204 work=11738
+BODY_COMPARE pose=58 view=0 differing_pixels=0
+BODY_FRAME pose=59 view=0 oracle=0 hash=f512d86d covered=4416 packet=9204 work=11779
+BODY_FRAME pose=59 view=0 oracle=1 hash=f512d86d covered=4416 packet=9204 work=11779
+BODY_COMPARE pose=59 view=0 differing_pixels=0
+BODY_FRAME pose=60 view=0 oracle=0 hash=cdd1e93c covered=4406 packet=9204 work=11697
+BODY_FRAME pose=60 view=0 oracle=1 hash=a383011c covered=4406 packet=9204 work=11697
+BODY_COMPARE pose=60 view=0 differing_pixels=1
+BODY_FRAME pose=61 view=0 oracle=0 hash=f611fd05 covered=4409 packet=9200 work=11724
+BODY_FRAME pose=61 view=0 oracle=1 hash=f611fd05 covered=4409 packet=9200 work=11724
+BODY_COMPARE pose=61 view=0 differing_pixels=0
+BODY_FRAME pose=62 view=0 oracle=0 hash=b38dc42d covered=4415 packet=9196 work=11716
+BODY_FRAME pose=62 view=0 oracle=1 hash=b38dc42d covered=4415 packet=9196 work=11716
+BODY_COMPARE pose=62 view=0 differing_pixels=0
+BODY_FRAME pose=63 view=0 oracle=0 hash=40aff5d7 covered=4417 packet=9180 work=11778
+BODY_FRAME pose=63 view=0 oracle=1 hash=40aff5d7 covered=4417 packet=9180 work=11778
+BODY_COMPARE pose=63 view=0 differing_pixels=0
+BODY_FRAME pose=0 view=1 oracle=0 hash=240d0fb1 covered=4186 packet=9256 work=13080
+BODY_FRAME pose=1 view=1 oracle=0 hash=96e0bba2 covered=4196 packet=9240 work=13082
+BODY_FRAME pose=2 view=1 oracle=0 hash=2b919085 covered=4207 packet=9240 work=13085
+BODY_FRAME pose=3 view=1 oracle=0 hash=37282971 covered=4209 packet=9304 work=13164
+BODY_FRAME pose=4 view=1 oracle=0 hash=209ea9cb covered=4210 packet=9344 work=13209
+BODY_FRAME pose=5 view=1 oracle=0 hash=057e0fdb covered=4218 packet=9324 work=13128
+BODY_FRAME pose=6 view=1 oracle=0 hash=4506a512 covered=4220 packet=9328 work=13197
+BODY_FRAME pose=7 view=1 oracle=0 hash=95f79400 covered=4220 packet=9372 work=13112
+BODY_FRAME pose=8 view=1 oracle=0 hash=9ccb4e93 covered=4226 packet=9372 work=13196
+BODY_FRAME pose=9 view=1 oracle=0 hash=285f507a covered=4229 packet=9372 work=13208
+BODY_FRAME pose=10 view=1 oracle=0 hash=c9ba3841 covered=4231 packet=9412 work=13222
+BODY_FRAME pose=11 view=1 oracle=0 hash=c75fe228 covered=4231 packet=9412 work=13153
+BODY_FRAME pose=12 view=1 oracle=0 hash=4da744ff covered=4241 packet=9440 work=13237
+BODY_FRAME pose=13 view=1 oracle=0 hash=6e5aa5a8 covered=4238 packet=9440 work=13243
+BODY_FRAME pose=14 view=1 oracle=0 hash=212db577 covered=4239 packet=9440 work=13307
+BODY_FRAME pose=15 view=1 oracle=0 hash=f68becbc covered=4247 packet=9440 work=13233
+BODY_FRAME pose=16 view=1 oracle=0 hash=6c627e3c covered=4246 packet=9416 work=13184
+BODY_FRAME pose=17 view=1 oracle=0 hash=4d176e7c covered=4252 packet=9416 work=13244
+BODY_FRAME pose=18 view=1 oracle=0 hash=1021341d covered=4253 packet=9368 work=13247
+BODY_FRAME pose=19 view=1 oracle=0 hash=33c70d10 covered=4257 packet=9368 work=13324
+BODY_FRAME pose=20 view=1 oracle=0 hash=f3f83938 covered=4259 packet=9300 work=13233
+BODY_FRAME pose=21 view=1 oracle=0 hash=8b587364 covered=4187 packet=9320 work=13188
+BODY_FRAME pose=22 view=1 oracle=0 hash=17942830 covered=4182 packet=9368 work=13188
+BODY_FRAME pose=23 view=1 oracle=0 hash=af294622 covered=4195 packet=9368 work=13306
+BODY_FRAME pose=24 view=1 oracle=0 hash=54e74961 covered=4202 packet=9368 work=13226
+BODY_FRAME pose=25 view=1 oracle=0 hash=d93b4d8d covered=4201 packet=9368 work=13243
+BODY_FRAME pose=26 view=1 oracle=0 hash=52494e23 covered=4204 packet=9496 work=13275
+BODY_FRAME pose=27 view=1 oracle=0 hash=cf26401c covered=4213 packet=9496 work=13317
+BODY_FRAME pose=28 view=1 oracle=0 hash=0e580975 covered=4214 packet=9496 work=13303
+BODY_FRAME pose=29 view=1 oracle=0 hash=fe8f4853 covered=4214 packet=9476 work=13174
+BODY_FRAME pose=30 view=1 oracle=0 hash=f532241a covered=4223 packet=9516 work=13267
+BODY_FRAME pose=31 view=1 oracle=0 hash=9718a02c covered=4228 packet=9520 work=13208
+BODY_FRAME pose=32 view=1 oracle=0 hash=a6060ec0 covered=4226 packet=9520 work=13244
+BODY_FRAME pose=33 view=1 oracle=0 hash=34dc5fef covered=4223 packet=9544 work=13228
+BODY_FRAME pose=34 view=1 oracle=0 hash=ef7162e3 covered=4234 packet=9544 work=13209
+BODY_FRAME pose=35 view=1 oracle=0 hash=87a453f1 covered=4241 packet=9520 work=13175
+BODY_FRAME pose=36 view=1 oracle=0 hash=6075631b covered=4240 packet=9520 work=13227
+BODY_FRAME pose=37 view=1 oracle=0 hash=9f8bc7de covered=4242 packet=9496 work=13249
+BODY_FRAME pose=38 view=1 oracle=0 hash=a228c9f3 covered=4246 packet=9496 work=13254
+BODY_FRAME pose=39 view=1 oracle=0 hash=dfa5e932 covered=4251 packet=9408 work=13227
+BODY_FRAME pose=40 view=1 oracle=0 hash=30b61943 covered=4249 packet=9408 work=13246
+BODY_FRAME pose=41 view=1 oracle=0 hash=27651776 covered=4251 packet=9364 work=13230
+BODY_FRAME pose=42 view=1 oracle=0 hash=b2c7cbe1 covered=4174 packet=9392 work=13294
+BODY_FRAME pose=43 view=1 oracle=0 hash=99942bf6 covered=4181 packet=9392 work=13287
+BODY_FRAME pose=44 view=1 oracle=0 hash=046b69e7 covered=4182 packet=9392 work=13358
+BODY_FRAME pose=45 view=1 oracle=0 hash=c68fc6cd covered=4189 packet=9392 work=13297
+BODY_FRAME pose=46 view=1 oracle=0 hash=d1666e58 covered=4192 packet=9412 work=13272
+BODY_FRAME pose=47 view=1 oracle=0 hash=d94b1fa8 covered=4198 packet=9412 work=13277
+BODY_FRAME pose=48 view=1 oracle=0 hash=58c6e762 covered=4201 packet=9452 work=13303
+BODY_FRAME pose=49 view=1 oracle=0 hash=80833e5b covered=4210 packet=9452 work=13276
+BODY_FRAME pose=50 view=1 oracle=0 hash=e75a69ca covered=4211 packet=9536 work=13343
+BODY_FRAME pose=51 view=1 oracle=0 hash=b4d323ed covered=4210 packet=9540 work=13257
+BODY_FRAME pose=52 view=1 oracle=0 hash=307c7412 covered=4215 packet=9520 work=13217
+BODY_FRAME pose=53 view=1 oracle=0 hash=dfa83b36 covered=4221 packet=9520 work=13230
+BODY_FRAME pose=54 view=1 oracle=0 hash=cb3e5ed8 covered=4228 packet=9496 work=13197
+BODY_FRAME pose=55 view=1 oracle=0 hash=b2211d21 covered=4223 packet=9496 work=13139
+BODY_FRAME pose=56 view=1 oracle=0 hash=9d24ba2a covered=4231 packet=9496 work=13185
+BODY_FRAME pose=57 view=1 oracle=0 hash=4f1ce5c8 covered=4242 packet=9496 work=13210
+BODY_FRAME pose=58 view=1 oracle=0 hash=1b29425a covered=4238 packet=9496 work=13187
+BODY_FRAME pose=59 view=1 oracle=0 hash=8cc81771 covered=4231 packet=9408 work=13159
+BODY_FRAME pose=60 view=1 oracle=0 hash=f294165a covered=4249 packet=9408 work=13254
+BODY_FRAME pose=61 view=1 oracle=0 hash=211387ac covered=4245 packet=9364 work=13236
+BODY_FRAME pose=62 view=1 oracle=0 hash=7779990f covered=4238 packet=9340 work=13194
+BODY_FRAME pose=63 view=1 oracle=0 hash=9718a02c covered=4228 packet=9520 work=13208
+BODY_FRAME pose=63 view=1 oracle=0 hash=9718a02c covered=4228 packet=9520 work=13208
+BODY_FRAME pose=62 view=1 oracle=0 hash=7779990f covered=4238 packet=9340 work=13194
+BODY_FRAME pose=61 view=1 oracle=0 hash=211387ac covered=4245 packet=9364 work=13236
+BODY_FRAME pose=60 view=1 oracle=0 hash=f294165a covered=4249 packet=9408 work=13254
+BODY_FRAME pose=59 view=1 oracle=0 hash=8cc81771 covered=4231 packet=9408 work=13159
+BODY_FRAME pose=58 view=1 oracle=0 hash=1b29425a covered=4238 packet=9496 work=13187
+BODY_FRAME pose=57 view=1 oracle=0 hash=4f1ce5c8 covered=4242 packet=9496 work=13210
+BODY_FRAME pose=56 view=1 oracle=0 hash=9d24ba2a covered=4231 packet=9496 work=13185
+BODY_FRAME pose=55 view=1 oracle=0 hash=b2211d21 covered=4223 packet=9496 work=13139
+BODY_FRAME pose=54 view=1 oracle=0 hash=cb3e5ed8 covered=4228 packet=9496 work=13197
+BODY_FRAME pose=53 view=1 oracle=0 hash=dfa83b36 covered=4221 packet=9520 work=13230
+BODY_FRAME pose=52 view=1 oracle=0 hash=307c7412 covered=4215 packet=9520 work=13217
+BODY_FRAME pose=51 view=1 oracle=0 hash=b4d323ed covered=4210 packet=9540 work=13257
+BODY_FRAME pose=50 view=1 oracle=0 hash=e75a69ca covered=4211 packet=9536 work=13343
+BODY_FRAME pose=49 view=1 oracle=0 hash=80833e5b covered=4210 packet=9452 work=13276
+BODY_FRAME pose=48 view=1 oracle=0 hash=58c6e762 covered=4201 packet=9452 work=13303
+BODY_FRAME pose=47 view=1 oracle=0 hash=d94b1fa8 covered=4198 packet=9412 work=13277
+BODY_FRAME pose=46 view=1 oracle=0 hash=d1666e58 covered=4192 packet=9412 work=13272
+BODY_FRAME pose=45 view=1 oracle=0 hash=c68fc6cd covered=4189 packet=9392 work=13297
+BODY_FRAME pose=44 view=1 oracle=0 hash=046b69e7 covered=4182 packet=9392 work=13358
+BODY_FRAME pose=43 view=1 oracle=0 hash=99942bf6 covered=4181 packet=9392 work=13287
+BODY_FRAME pose=42 view=1 oracle=0 hash=b2c7cbe1 covered=4174 packet=9392 work=13294
+BODY_FRAME pose=41 view=1 oracle=0 hash=27651776 covered=4251 packet=9364 work=13230
+BODY_FRAME pose=40 view=1 oracle=0 hash=30b61943 covered=4249 packet=9408 work=13246
+BODY_FRAME pose=39 view=1 oracle=0 hash=dfa5e932 covered=4251 packet=9408 work=13227
+BODY_FRAME pose=38 view=1 oracle=0 hash=a228c9f3 covered=4246 packet=9496 work=13254
+BODY_FRAME pose=37 view=1 oracle=0 hash=9f8bc7de covered=4242 packet=9496 work=13249
+BODY_FRAME pose=36 view=1 oracle=0 hash=6075631b covered=4240 packet=9520 work=13227
+BODY_FRAME pose=35 view=1 oracle=0 hash=87a453f1 covered=4241 packet=9520 work=13175
+BODY_FRAME pose=34 view=1 oracle=0 hash=ef7162e3 covered=4234 packet=9544 work=13209
+BODY_FRAME pose=33 view=1 oracle=0 hash=34dc5fef covered=4223 packet=9544 work=13228
+BODY_FRAME pose=32 view=1 oracle=0 hash=a6060ec0 covered=4226 packet=9520 work=13244
+BODY_FRAME pose=31 view=1 oracle=0 hash=9718a02c covered=4228 packet=9520 work=13208
+BODY_FRAME pose=30 view=1 oracle=0 hash=f532241a covered=4223 packet=9516 work=13267
+BODY_FRAME pose=29 view=1 oracle=0 hash=fe8f4853 covered=4214 packet=9476 work=13174
+BODY_FRAME pose=28 view=1 oracle=0 hash=0e580975 covered=4214 packet=9496 work=13303
+BODY_FRAME pose=27 view=1 oracle=0 hash=cf26401c covered=4213 packet=9496 work=13317
+BODY_FRAME pose=26 view=1 oracle=0 hash=52494e23 covered=4204 packet=9496 work=13275
+BODY_FRAME pose=25 view=1 oracle=0 hash=d93b4d8d covered=4201 packet=9368 work=13243
+BODY_FRAME pose=24 view=1 oracle=0 hash=54e74961 covered=4202 packet=9368 work=13226
+BODY_FRAME pose=23 view=1 oracle=0 hash=af294622 covered=4195 packet=9368 work=13306
+BODY_FRAME pose=22 view=1 oracle=0 hash=17942830 covered=4182 packet=9368 work=13188
+BODY_FRAME pose=21 view=1 oracle=0 hash=8b587364 covered=4187 packet=9320 work=13188
+BODY_FRAME pose=20 view=1 oracle=0 hash=f3f83938 covered=4259 packet=9300 work=13233
+BODY_FRAME pose=19 view=1 oracle=0 hash=33c70d10 covered=4257 packet=9368 work=13324
+BODY_FRAME pose=18 view=1 oracle=0 hash=1021341d covered=4253 packet=9368 work=13247
+BODY_FRAME pose=17 view=1 oracle=0 hash=4d176e7c covered=4252 packet=9416 work=13244
+BODY_FRAME pose=16 view=1 oracle=0 hash=6c627e3c covered=4246 packet=9416 work=13184
+BODY_FRAME pose=15 view=1 oracle=0 hash=f68becbc covered=4247 packet=9440 work=13233
+BODY_FRAME pose=14 view=1 oracle=0 hash=212db577 covered=4239 packet=9440 work=13307
+BODY_FRAME pose=13 view=1 oracle=0 hash=6e5aa5a8 covered=4238 packet=9440 work=13243
+BODY_FRAME pose=12 view=1 oracle=0 hash=4da744ff covered=4241 packet=9440 work=13237
+BODY_FRAME pose=11 view=1 oracle=0 hash=c75fe228 covered=4231 packet=9412 work=13153
+BODY_FRAME pose=10 view=1 oracle=0 hash=c9ba3841 covered=4231 packet=9412 work=13222
+BODY_FRAME pose=9 view=1 oracle=0 hash=285f507a covered=4229 packet=9372 work=13208
+BODY_FRAME pose=8 view=1 oracle=0 hash=9ccb4e93 covered=4226 packet=9372 work=13196
+BODY_FRAME pose=7 view=1 oracle=0 hash=95f79400 covered=4220 packet=9372 work=13112
+BODY_FRAME pose=6 view=1 oracle=0 hash=4506a512 covered=4220 packet=9328 work=13197
+BODY_FRAME pose=5 view=1 oracle=0 hash=057e0fdb covered=4218 packet=9324 work=13128
+BODY_FRAME pose=4 view=1 oracle=0 hash=209ea9cb covered=4210 packet=9344 work=13209
+BODY_FRAME pose=3 view=1 oracle=0 hash=37282971 covered=4209 packet=9304 work=13164
+BODY_FRAME pose=2 view=1 oracle=0 hash=2b919085 covered=4207 packet=9240 work=13085
+BODY_FRAME pose=1 view=1 oracle=0 hash=96e0bba2 covered=4196 packet=9240 work=13082
+BODY_FRAME pose=0 view=1 oracle=0 hash=240d0fb1 covered=4186 packet=9256 work=13080
+BODY_FRAME pose=63 view=1 oracle=0 hash=9718a02c covered=4228 packet=9520 work=13208
+BODY_FRAME pose=0 view=1 oracle=0 hash=240d0fb1 covered=4186 packet=9256 work=13080
+BODY_FRAME pose=0 view=1 oracle=1 hash=240d0fb1 covered=4186 packet=9256 work=13080
+BODY_COMPARE pose=0 view=1 differing_pixels=0
+BODY_FRAME pose=1 view=1 oracle=0 hash=96e0bba2 covered=4196 packet=9240 work=13082
+BODY_FRAME pose=1 view=1 oracle=1 hash=96e0bba2 covered=4196 packet=9240 work=13082
+BODY_COMPARE pose=1 view=1 differing_pixels=0
+BODY_FRAME pose=2 view=1 oracle=0 hash=2b919085 covered=4207 packet=9240 work=13085
+BODY_FRAME pose=2 view=1 oracle=1 hash=2b919085 covered=4207 packet=9240 work=13085
+BODY_COMPARE pose=2 view=1 differing_pixels=0
+BODY_FRAME pose=3 view=1 oracle=0 hash=37282971 covered=4209 packet=9304 work=13164
+BODY_FRAME pose=3 view=1 oracle=1 hash=37282971 covered=4209 packet=9304 work=13164
+BODY_COMPARE pose=3 view=1 differing_pixels=0
+BODY_FRAME pose=4 view=1 oracle=0 hash=209ea9cb covered=4210 packet=9344 work=13209
+BODY_FRAME pose=4 view=1 oracle=1 hash=209ea9cb covered=4210 packet=9344 work=13209
+BODY_COMPARE pose=4 view=1 differing_pixels=0
+BODY_FRAME pose=5 view=1 oracle=0 hash=057e0fdb covered=4218 packet=9324 work=13128
+BODY_FRAME pose=5 view=1 oracle=1 hash=057e0fdb covered=4218 packet=9324 work=13128
+BODY_COMPARE pose=5 view=1 differing_pixels=0
+BODY_FRAME pose=6 view=1 oracle=0 hash=4506a512 covered=4220 packet=9328 work=13197
+BODY_FRAME pose=6 view=1 oracle=1 hash=4506a512 covered=4220 packet=9328 work=13197
+BODY_COMPARE pose=6 view=1 differing_pixels=0
+BODY_FRAME pose=7 view=1 oracle=0 hash=95f79400 covered=4220 packet=9372 work=13112
+BODY_FRAME pose=7 view=1 oracle=1 hash=95f79400 covered=4220 packet=9372 work=13112
+BODY_COMPARE pose=7 view=1 differing_pixels=0
+BODY_FRAME pose=8 view=1 oracle=0 hash=9ccb4e93 covered=4226 packet=9372 work=13196
+BODY_FRAME pose=8 view=1 oracle=1 hash=9ccb4e93 covered=4226 packet=9372 work=13196
+BODY_COMPARE pose=8 view=1 differing_pixels=0
+BODY_FRAME pose=9 view=1 oracle=0 hash=285f507a covered=4229 packet=9372 work=13208
+BODY_FRAME pose=9 view=1 oracle=1 hash=285f507a covered=4229 packet=9372 work=13208
+BODY_COMPARE pose=9 view=1 differing_pixels=0
+BODY_FRAME pose=10 view=1 oracle=0 hash=c9ba3841 covered=4231 packet=9412 work=13222
+BODY_FRAME pose=10 view=1 oracle=1 hash=c9ba3841 covered=4231 packet=9412 work=13222
+BODY_COMPARE pose=10 view=1 differing_pixels=0
+BODY_FRAME pose=11 view=1 oracle=0 hash=c75fe228 covered=4231 packet=9412 work=13153
+BODY_FRAME pose=11 view=1 oracle=1 hash=c75fe228 covered=4231 packet=9412 work=13153
+BODY_COMPARE pose=11 view=1 differing_pixels=0
+BODY_FRAME pose=12 view=1 oracle=0 hash=4da744ff covered=4241 packet=9440 work=13237
+BODY_FRAME pose=12 view=1 oracle=1 hash=4da744ff covered=4241 packet=9440 work=13237
+BODY_COMPARE pose=12 view=1 differing_pixels=0
+BODY_FRAME pose=13 view=1 oracle=0 hash=6e5aa5a8 covered=4238 packet=9440 work=13243
+BODY_FRAME pose=13 view=1 oracle=1 hash=6e5aa5a8 covered=4238 packet=9440 work=13243
+BODY_COMPARE pose=13 view=1 differing_pixels=0
+BODY_FRAME pose=14 view=1 oracle=0 hash=212db577 covered=4239 packet=9440 work=13307
+BODY_FRAME pose=14 view=1 oracle=1 hash=212db577 covered=4239 packet=9440 work=13307
+BODY_COMPARE pose=14 view=1 differing_pixels=0
+BODY_FRAME pose=15 view=1 oracle=0 hash=f68becbc covered=4247 packet=9440 work=13233
+BODY_FRAME pose=15 view=1 oracle=1 hash=f68becbc covered=4247 packet=9440 work=13233
+BODY_COMPARE pose=15 view=1 differing_pixels=0
+BODY_FRAME pose=16 view=1 oracle=0 hash=6c627e3c covered=4246 packet=9416 work=13184
+BODY_FRAME pose=16 view=1 oracle=1 hash=6c627e3c covered=4246 packet=9416 work=13184
+BODY_COMPARE pose=16 view=1 differing_pixels=0
+BODY_FRAME pose=17 view=1 oracle=0 hash=4d176e7c covered=4252 packet=9416 work=13244
+BODY_FRAME pose=17 view=1 oracle=1 hash=4d176e7c covered=4252 packet=9416 work=13244
+BODY_COMPARE pose=17 view=1 differing_pixels=0
+BODY_FRAME pose=18 view=1 oracle=0 hash=1021341d covered=4253 packet=9368 work=13247
+BODY_FRAME pose=18 view=1 oracle=1 hash=1021341d covered=4253 packet=9368 work=13247
+BODY_COMPARE pose=18 view=1 differing_pixels=0
+BODY_FRAME pose=19 view=1 oracle=0 hash=33c70d10 covered=4257 packet=9368 work=13324
+BODY_FRAME pose=19 view=1 oracle=1 hash=33c70d10 covered=4257 packet=9368 work=13324
+BODY_COMPARE pose=19 view=1 differing_pixels=0
+BODY_FRAME pose=20 view=1 oracle=0 hash=f3f83938 covered=4259 packet=9300 work=13233
+BODY_FRAME pose=20 view=1 oracle=1 hash=f3f83938 covered=4259 packet=9300 work=13233
+BODY_COMPARE pose=20 view=1 differing_pixels=0
+BODY_FRAME pose=21 view=1 oracle=0 hash=8b587364 covered=4187 packet=9320 work=13188
+BODY_FRAME pose=21 view=1 oracle=1 hash=8b587364 covered=4187 packet=9320 work=13188
+BODY_COMPARE pose=21 view=1 differing_pixels=0
+BODY_FRAME pose=22 view=1 oracle=0 hash=17942830 covered=4182 packet=9368 work=13188
+BODY_FRAME pose=22 view=1 oracle=1 hash=17942830 covered=4182 packet=9368 work=13188
+BODY_COMPARE pose=22 view=1 differing_pixels=0
+BODY_FRAME pose=23 view=1 oracle=0 hash=af294622 covered=4195 packet=9368 work=13306
+BODY_FRAME pose=23 view=1 oracle=1 hash=af294622 covered=4195 packet=9368 work=13306
+BODY_COMPARE pose=23 view=1 differing_pixels=0
+BODY_FRAME pose=24 view=1 oracle=0 hash=54e74961 covered=4202 packet=9368 work=13226
+BODY_FRAME pose=24 view=1 oracle=1 hash=54e74961 covered=4202 packet=9368 work=13226
+BODY_COMPARE pose=24 view=1 differing_pixels=0
+BODY_FRAME pose=25 view=1 oracle=0 hash=d93b4d8d covered=4201 packet=9368 work=13243
+BODY_FRAME pose=25 view=1 oracle=1 hash=d93b4d8d covered=4201 packet=9368 work=13243
+BODY_COMPARE pose=25 view=1 differing_pixels=0
+BODY_FRAME pose=26 view=1 oracle=0 hash=52494e23 covered=4204 packet=9496 work=13275
+BODY_FRAME pose=26 view=1 oracle=1 hash=52494e23 covered=4204 packet=9496 work=13275
+BODY_COMPARE pose=26 view=1 differing_pixels=0
+BODY_FRAME pose=27 view=1 oracle=0 hash=cf26401c covered=4213 packet=9496 work=13317
+BODY_FRAME pose=27 view=1 oracle=1 hash=cf26401c covered=4213 packet=9496 work=13317
+BODY_COMPARE pose=27 view=1 differing_pixels=0
+BODY_FRAME pose=28 view=1 oracle=0 hash=0e580975 covered=4214 packet=9496 work=13303
+BODY_FRAME pose=28 view=1 oracle=1 hash=0e580975 covered=4214 packet=9496 work=13303
+BODY_COMPARE pose=28 view=1 differing_pixels=0
+BODY_FRAME pose=29 view=1 oracle=0 hash=fe8f4853 covered=4214 packet=9476 work=13174
+BODY_FRAME pose=29 view=1 oracle=1 hash=fe8f4853 covered=4214 packet=9476 work=13174
+BODY_COMPARE pose=29 view=1 differing_pixels=0
+BODY_FRAME pose=30 view=1 oracle=0 hash=f532241a covered=4223 packet=9516 work=13267
+BODY_FRAME pose=30 view=1 oracle=1 hash=f532241a covered=4223 packet=9516 work=13267
+BODY_COMPARE pose=30 view=1 differing_pixels=0
+BODY_FRAME pose=31 view=1 oracle=0 hash=9718a02c covered=4228 packet=9520 work=13208
+BODY_FRAME pose=31 view=1 oracle=1 hash=9718a02c covered=4228 packet=9520 work=13208
+BODY_COMPARE pose=31 view=1 differing_pixels=0
+BODY_FRAME pose=32 view=1 oracle=0 hash=a6060ec0 covered=4226 packet=9520 work=13244
+BODY_FRAME pose=32 view=1 oracle=1 hash=a6060ec0 covered=4226 packet=9520 work=13244
+BODY_COMPARE pose=32 view=1 differing_pixels=0
+BODY_FRAME pose=33 view=1 oracle=0 hash=34dc5fef covered=4223 packet=9544 work=13228
+BODY_FRAME pose=33 view=1 oracle=1 hash=34dc5fef covered=4223 packet=9544 work=13228
+BODY_COMPARE pose=33 view=1 differing_pixels=0
+BODY_FRAME pose=34 view=1 oracle=0 hash=ef7162e3 covered=4234 packet=9544 work=13209
+BODY_FRAME pose=34 view=1 oracle=1 hash=ef7162e3 covered=4234 packet=9544 work=13209
+BODY_COMPARE pose=34 view=1 differing_pixels=0
+BODY_FRAME pose=35 view=1 oracle=0 hash=87a453f1 covered=4241 packet=9520 work=13175
+BODY_FRAME pose=35 view=1 oracle=1 hash=87a453f1 covered=4241 packet=9520 work=13175
+BODY_COMPARE pose=35 view=1 differing_pixels=0
+BODY_FRAME pose=36 view=1 oracle=0 hash=6075631b covered=4240 packet=9520 work=13227
+BODY_FRAME pose=36 view=1 oracle=1 hash=6075631b covered=4240 packet=9520 work=13227
+BODY_COMPARE pose=36 view=1 differing_pixels=0
+BODY_FRAME pose=37 view=1 oracle=0 hash=9f8bc7de covered=4242 packet=9496 work=13249
+BODY_FRAME pose=37 view=1 oracle=1 hash=9f8bc7de covered=4242 packet=9496 work=13249
+BODY_COMPARE pose=37 view=1 differing_pixels=0
+BODY_FRAME pose=38 view=1 oracle=0 hash=a228c9f3 covered=4246 packet=9496 work=13254
+BODY_FRAME pose=38 view=1 oracle=1 hash=a228c9f3 covered=4246 packet=9496 work=13254
+BODY_COMPARE pose=38 view=1 differing_pixels=0
+BODY_FRAME pose=39 view=1 oracle=0 hash=dfa5e932 covered=4251 packet=9408 work=13227
+BODY_FRAME pose=39 view=1 oracle=1 hash=dfa5e932 covered=4251 packet=9408 work=13227
+BODY_COMPARE pose=39 view=1 differing_pixels=0
+BODY_FRAME pose=40 view=1 oracle=0 hash=30b61943 covered=4249 packet=9408 work=13246
+BODY_FRAME pose=40 view=1 oracle=1 hash=30b61943 covered=4249 packet=9408 work=13246
+BODY_COMPARE pose=40 view=1 differing_pixels=0
+BODY_FRAME pose=41 view=1 oracle=0 hash=27651776 covered=4251 packet=9364 work=13230
+BODY_FRAME pose=41 view=1 oracle=1 hash=27651776 covered=4251 packet=9364 work=13230
+BODY_COMPARE pose=41 view=1 differing_pixels=0
+BODY_FRAME pose=42 view=1 oracle=0 hash=b2c7cbe1 covered=4174 packet=9392 work=13294
+BODY_FRAME pose=42 view=1 oracle=1 hash=b2c7cbe1 covered=4174 packet=9392 work=13294
+BODY_COMPARE pose=42 view=1 differing_pixels=0
+BODY_FRAME pose=43 view=1 oracle=0 hash=99942bf6 covered=4181 packet=9392 work=13287
+BODY_FRAME pose=43 view=1 oracle=1 hash=99942bf6 covered=4181 packet=9392 work=13287
+BODY_COMPARE pose=43 view=1 differing_pixels=0
+BODY_FRAME pose=44 view=1 oracle=0 hash=046b69e7 covered=4182 packet=9392 work=13358
+BODY_FRAME pose=44 view=1 oracle=1 hash=046b69e7 covered=4182 packet=9392 work=13358
+BODY_COMPARE pose=44 view=1 differing_pixels=0
+BODY_FRAME pose=45 view=1 oracle=0 hash=c68fc6cd covered=4189 packet=9392 work=13297
+BODY_FRAME pose=45 view=1 oracle=1 hash=c68fc6cd covered=4189 packet=9392 work=13297
+BODY_COMPARE pose=45 view=1 differing_pixels=0
+BODY_FRAME pose=46 view=1 oracle=0 hash=d1666e58 covered=4192 packet=9412 work=13272
+BODY_FRAME pose=46 view=1 oracle=1 hash=d1666e58 covered=4192 packet=9412 work=13272
+BODY_COMPARE pose=46 view=1 differing_pixels=0
+BODY_FRAME pose=47 view=1 oracle=0 hash=d94b1fa8 covered=4198 packet=9412 work=13277
+BODY_FRAME pose=47 view=1 oracle=1 hash=d94b1fa8 covered=4198 packet=9412 work=13277
+BODY_COMPARE pose=47 view=1 differing_pixels=0
+BODY_FRAME pose=48 view=1 oracle=0 hash=58c6e762 covered=4201 packet=9452 work=13303
+BODY_FRAME pose=48 view=1 oracle=1 hash=58c6e762 covered=4201 packet=9452 work=13303
+BODY_COMPARE pose=48 view=1 differing_pixels=0
+BODY_FRAME pose=49 view=1 oracle=0 hash=80833e5b covered=4210 packet=9452 work=13276
+BODY_FRAME pose=49 view=1 oracle=1 hash=80833e5b covered=4210 packet=9452 work=13276
+BODY_COMPARE pose=49 view=1 differing_pixels=0
+BODY_FRAME pose=50 view=1 oracle=0 hash=e75a69ca covered=4211 packet=9536 work=13343
+BODY_FRAME pose=50 view=1 oracle=1 hash=e75a69ca covered=4211 packet=9536 work=13343
+BODY_COMPARE pose=50 view=1 differing_pixels=0
+BODY_FRAME pose=51 view=1 oracle=0 hash=b4d323ed covered=4210 packet=9540 work=13257
+BODY_FRAME pose=51 view=1 oracle=1 hash=b4d323ed covered=4210 packet=9540 work=13257
+BODY_COMPARE pose=51 view=1 differing_pixels=0
+BODY_FRAME pose=52 view=1 oracle=0 hash=307c7412 covered=4215 packet=9520 work=13217
+BODY_FRAME pose=52 view=1 oracle=1 hash=307c7412 covered=4215 packet=9520 work=13217
+BODY_COMPARE pose=52 view=1 differing_pixels=0
+BODY_FRAME pose=53 view=1 oracle=0 hash=dfa83b36 covered=4221 packet=9520 work=13230
+BODY_FRAME pose=53 view=1 oracle=1 hash=dfa83b36 covered=4221 packet=9520 work=13230
+BODY_COMPARE pose=53 view=1 differing_pixels=0
+BODY_FRAME pose=54 view=1 oracle=0 hash=cb3e5ed8 covered=4228 packet=9496 work=13197
+BODY_FRAME pose=54 view=1 oracle=1 hash=cb3e5ed8 covered=4228 packet=9496 work=13197
+BODY_COMPARE pose=54 view=1 differing_pixels=0
+BODY_FRAME pose=55 view=1 oracle=0 hash=b2211d21 covered=4223 packet=9496 work=13139
+BODY_FRAME pose=55 view=1 oracle=1 hash=b2211d21 covered=4223 packet=9496 work=13139
+BODY_COMPARE pose=55 view=1 differing_pixels=0
+BODY_FRAME pose=56 view=1 oracle=0 hash=9d24ba2a covered=4231 packet=9496 work=13185
+BODY_FRAME pose=56 view=1 oracle=1 hash=9d24ba2a covered=4231 packet=9496 work=13185
+BODY_COMPARE pose=56 view=1 differing_pixels=0
+BODY_FRAME pose=57 view=1 oracle=0 hash=4f1ce5c8 covered=4242 packet=9496 work=13210
+BODY_FRAME pose=57 view=1 oracle=1 hash=4f1ce5c8 covered=4242 packet=9496 work=13210
+BODY_COMPARE pose=57 view=1 differing_pixels=0
+BODY_FRAME pose=58 view=1 oracle=0 hash=1b29425a covered=4238 packet=9496 work=13187
+BODY_FRAME pose=58 view=1 oracle=1 hash=1b29425a covered=4238 packet=9496 work=13187
+BODY_COMPARE pose=58 view=1 differing_pixels=0
+BODY_FRAME pose=59 view=1 oracle=0 hash=8cc81771 covered=4231 packet=9408 work=13159
+BODY_FRAME pose=59 view=1 oracle=1 hash=8cc81771 covered=4231 packet=9408 work=13159
+BODY_COMPARE pose=59 view=1 differing_pixels=0
+BODY_FRAME pose=60 view=1 oracle=0 hash=f294165a covered=4249 packet=9408 work=13254
+BODY_FRAME pose=60 view=1 oracle=1 hash=f294165a covered=4249 packet=9408 work=13254
+BODY_COMPARE pose=60 view=1 differing_pixels=0
+BODY_FRAME pose=61 view=1 oracle=0 hash=211387ac covered=4245 packet=9364 work=13236
+BODY_FRAME pose=61 view=1 oracle=1 hash=211387ac covered=4245 packet=9364 work=13236
+BODY_COMPARE pose=61 view=1 differing_pixels=0
+BODY_FRAME pose=62 view=1 oracle=0 hash=7779990f covered=4238 packet=9340 work=13194
+BODY_FRAME pose=62 view=1 oracle=1 hash=7779990f covered=4238 packet=9340 work=13194
+BODY_COMPARE pose=62 view=1 differing_pixels=0
+BODY_FRAME pose=63 view=1 oracle=0 hash=9718a02c covered=4228 packet=9520 work=13208
+BODY_FRAME pose=63 view=1 oracle=1 hash=9718a02c covered=4228 packet=9520 work=13208
+BODY_COMPARE pose=63 view=1 differing_pixels=0
+BODY_PASS views=2 poses=64 reverse=128 pause=2 oracle_frames=128 differing_pixels_total=2 max_per_frame=1
+BODY_PEAK packet=9544

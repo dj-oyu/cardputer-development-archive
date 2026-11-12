@@ -1,0 +1,55 @@
+{
+  "status": "PASS_INDEPENDENT_RETAINED_FIXED42",
+  "counts": {
+    "captureFrames": 40,
+    "noCaptureHDRFrames": 2,
+    "raw": 208,
+    "reports": 336,
+    "depthSidecars": 42,
+    "forwardReverse": 80
+  },
+  "physicalRerenders": 0,
+  "maxima": {
+    "admission": 595,
+    "producerIncludingDepthCopies": 478224,
+    "guards": 43604
+  },
+  "capsUnchanged": {
+    "admission": 1024,
+    "producerIncludingDepthCopies": 637599,
+    "guards": 100000,
+    "backgroundNamedStack": 4096
+  },
+  "namedMemory": {
+    "productRender": 373552,
+    "productLifecyclePeak": 442964,
+    "dominantPhase": "visibilityBuildConservative",
+    "peakDeltaFromCached": -51644,
+    "largestBlockUnchanged": 72512,
+    "diagnosticCaptureHDRPeak": 1280792,
+    "noDepthCaptureHDRPeak": 1151192
+  },
+  "conclusions": [
+    "40 full-depth captures are bit-exact, not42 depth-frame comparisons.",
+    "Both no-depth-capture HDR canaries match RGB/snapshot/mask/HDR and do not emit depth artifacts.",
+    "No claim of full40 no-depth actual coverage, target fit, whole-process RAM or speed improvement.",
+    "All frozen source, build, gate, baseline and comparison hashes remain valid."
+  ],
+  "pins": {
+    "SOURCE_FREEZE.json": "83e01a018e3f3839d26161b861b20c674b954ccd60f8b8b77332e890634604f0",
+    "PHYSICAL_EXECUTION_GATE.json": "7f2d50f1a927febf211d153534e34b5369b13400a491f62f6686ffab3bc72c5e",
+    "comparison/FIXED42_RESULT.json": "d589f87af655a759defb80c025c87fe380df95d719623372e21249b9b21cf83f",
+    "comparison/REPORT_CONTRACT.json": "c711b96f0fee22e271984b1d1e05cf83f5c885685a778915f33b0a10a9ce455e",
+    "MEMORY_LEDGER.json": "54e891de775d36070dcb078f875407cb551d45c74e1086e60f377c25eb5128e2",
+    "actual-off-001/COMPLETED.json": "01c5565633f2e9cd5a3eb470afcd90cf850d73251251960ea3fc6bb1a9da3784",
+    "production-off-001/COMPLETED.json": "cf49295c6f7959209f5da488146cc24888850cb61c7b0c1c6a48c5ec1711f925",
+    "actual-on-001/COMPLETED.json": "8196672946e4b42710a67f1e713ca1d3bb8610b1d152d42da6a6907b458ae8da",
+    "production-on-001/COMPLETED.json": "bb99d4308fbd2fc1d4424fe0c0aecbef2c840506fd11a0190ff3cf76cbae9f97"
+  },
+  "admissionValues": [
+    521,
+    548,
+    567,
+    595
+  ]
+}

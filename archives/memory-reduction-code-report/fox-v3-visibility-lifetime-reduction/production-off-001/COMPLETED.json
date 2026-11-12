@@ -1,0 +1,104 @@
+{
+  "status": "PRODUCTION_CANARY_EXACT_COMPLETE",
+  "frames": [
+    {
+      "name": "native-front-baseline",
+      "view": "front",
+      "case": "baseline",
+      "reverse": false,
+      "arm": "off",
+      "mode": "production",
+      "status": "PASS",
+      "files": {
+        ".u16le": "fb373165478a9984e5be41ffd88c73df34be4480fdf6480bc2fe24f796123b9e",
+        ".snapshot": "006cfd92bda231a4ae7922f23aa125176f807967feaf444e2f3f8b19ef72cab0",
+        ".targets.u8": "eebd4a3432074c6e6d84cf7e6a03b34c7dbd9d4309bd3fbd003b7caa47eeb4f6",
+        ".hdr.f64le": "7b5a6dfa3cdcd2cd7f3427f366723aa2635d4d56998b06fd9f549aef7dba870d",
+        ".json": "d3984bfefa535c2690062c9d2116c703d4f3bdef1905fb19be1f3cdd56cc1a21",
+        ".aa.json": "b024ec623f7c0e140443c2cf9ca0a5a01712409fccb3d6c08ca49d3fcfde15bf",
+        ".floor.json": "102ec79849b8b5c882a528f4692774b04e10f186c511df46e0a7299096e10a38",
+        ".background.json": "486816248bb804cd517a24d4ab7f763e1839b8cd7164248e03b0c3e9f6bcf9f4",
+        ".row.json": "5800f0a9f2fbb25d893b365b5efe8b26070d0e50cede3a735a301da6dbe1afed",
+        ".floor-world.json": "806e770efa438bda98e3a7b28525925f49498c91da6fad798e9cd890cc548f0d",
+        ".hdr-observer.json": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d",
+        ".cache.json": "54f00901d3a10c5cbadbdd5531884282d77d6abb73cd4a927b5849fb82711c4e",
+        ".depth-stream.json": "72ce2922c95e4179ab8ced1fb60b80bfeb0848dd0509d9c43781aea9f102dc89"
+      },
+      "reportObservations": {
+        ".json": {
+          "descriptiveTiming": {
+            "transportBuildNs": {
+              "baseline": 34603800,
+              "candidate": 39407431
+            },
+            "visibilityBuildNs": {
+              "baseline": 2195190,
+              "candidate": 2155138
+            },
+            "appendNs": {
+              "baseline": 37328670,
+              "candidate": 42081904
+            },
+            "evaluateNs": {
+              "baseline": 9384272,
+              "candidate": 10035894
+            },
+            "hostRenderNsFirstFrame": {
+              "baseline": 16555110091,
+              "candidate": 17281714689
+            }
+          },
+          "declaredNonTiming": []
+        },
+        ".aa.json": {
+          "descriptiveTiming": {},
+          "declaredNonTiming": []
+        },
+        ".floor.json": {
+          "descriptiveTiming": {},
+          "declaredNonTiming": []
+        },
+        ".background.json": {
+          "descriptiveTiming": {
+            "backgroundBuildNs": {
+              "baseline": 83886,
+              "candidate": 85309
+            }
+          },
+          "declaredNonTiming": []
+        },
+        ".row.json": {
+          "descriptiveTiming": {
+            "backgroundBuildNs": {
+              "baseline": 83886,
+              "candidate": 85309
+            }
+          },
+          "declaredNonTiming": []
+        },
+        ".floor-world.json": {
+          "descriptiveTiming": {},
+          "declaredNonTiming": []
+        },
+        ".hdr-observer.json": {
+          "descriptiveTiming": {},
+          "declaredNonTiming": []
+        },
+        ".cache.json": {
+          "descriptiveTiming": {},
+          "declaredNonTiming": []
+        },
+        ".depth-stream.json": {
+          "descriptiveTiming": {},
+          "declaredNonTiming": []
+        }
+      },
+      "elapsedSecondsDescriptiveOnly": 17.338088858989067,
+      "hostUserCPUSeconds": 17.334488,
+      "hostSystemCPUSeconds": 0.0,
+      "hostPeakRSSKiB": 24708
+    }
+  ],
+  "actualNoDepthCaptureCases": 1,
+  "full40NoDepthCaptureCoverage": false
+}

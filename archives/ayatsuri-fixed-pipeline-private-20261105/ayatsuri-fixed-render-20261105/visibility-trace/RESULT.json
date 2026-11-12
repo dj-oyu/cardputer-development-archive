@@ -1,0 +1,87 @@
+{
+  "status": "COMPLETE_NEW_QUERY_ALIGNED_TRACE",
+  "freezeSHA256": "672dd3d70861682cdfcec3549396f4b3386d8b585a3fa3fd7073b398140ced73",
+  "rows": [
+    {
+      "variant": "baseline",
+      "counters": {
+        "rays": 273120,
+        "nodes": 21883182,
+        "triangles": 7442309,
+        "groundHits": 70342,
+        "characterHits": 115756,
+        "misses": 87022,
+        "events": 17070,
+        "sceneBytes": 69276
+      },
+      "traceSHA256": "e6677bfae8bec87fd86ba28959d6267c5020409bcb38a6dc270b589f74fdff9d"
+    },
+    {
+      "variant": "q16",
+      "counters": {
+        "rays": 273120,
+        "nodes": 21921502,
+        "triangles": 7445834,
+        "groundHits": 70342,
+        "characterHits": 115756,
+        "misses": 87022,
+        "events": 17070,
+        "sceneBytes": 69276
+      },
+      "traceSHA256": "3c91dfcf040308571b52829dc0d62f9bb8a54626818ae125be77a9336249f6f8"
+    },
+    {
+      "variant": "q20",
+      "counters": {
+        "rays": 273120,
+        "nodes": 21923864,
+        "triangles": 7432466,
+        "groundHits": 70341,
+        "characterHits": 115757,
+        "misses": 87022,
+        "events": 17070,
+        "sceneBytes": 69276
+      },
+      "traceSHA256": "f802b1e7ceeb10896af6c8bcaee10abc24ef06e89576cd397040722f1feee5b1"
+    }
+  ],
+  "comparisons": [
+    {
+      "variant": "q16",
+      "foundChanges": 10,
+      "classificationChanges": 14,
+      "triangleChanges": 40,
+      "distanceChanges": 186103,
+      "directionChanges": 273079,
+      "groundDelta": 0,
+      "classificationChangesByDisposition": {
+        "center-replaced-by-AA": 3,
+        "final-quarter": 11
+      },
+      "triangleChangesByDisposition": {
+        "center-replaced-by-AA": 6,
+        "overwritten-center": 10,
+        "retained-center": 3,
+        "final-quarter": 21
+      }
+    },
+    {
+      "variant": "q20",
+      "foundChanges": 0,
+      "classificationChanges": 1,
+      "triangleChanges": 6,
+      "distanceChanges": 186098,
+      "directionChanges": 271770,
+      "groundDelta": -1,
+      "classificationChangesByDisposition": {
+        "center-replaced-by-AA": 1
+      },
+      "triangleChangesByDisposition": {
+        "overwritten-center": 1,
+        "center-replaced-by-AA": 1,
+        "final-quarter": 4
+      }
+    }
+  ],
+  "warning": "Primary nearest directions only, no secondary visibility, direct shadow segments or shaded frames"
+}

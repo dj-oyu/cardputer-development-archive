@@ -1,0 +1,470 @@
+[
+  {
+    "queryKey": [
+      0,
+      119,
+      47,
+      1,
+      1
+    ],
+    "disposition": "overwritten-center",
+    "baselineInput": {
+      "key": [
+        0,
+        119,
+        47,
+        1
+      ],
+      "originalEventIndex": 1823,
+      "disposition": "overwritten-center",
+      "targetPixel": true,
+      "primitiveInput": {
+        "recordOffset": 32364,
+        "node": 26,
+        "face": 9,
+        "sourceId": 40,
+        "back": false
+      },
+      "depth": 42.6692467,
+      "rho": [
+        0.5610070824623108,
+        0.09084173291921616,
+        0.009529477916657925
+      ]
+    },
+    "candidateInput": {
+      "key": [
+        0,
+        119,
+        47,
+        1
+      ],
+      "originalEventIndex": 1823,
+      "disposition": "overwritten-center",
+      "targetPixel": true,
+      "primitiveInput": {
+        "recordOffset": 32364,
+        "node": 26,
+        "face": 9,
+        "sourceId": 40,
+        "back": false
+      },
+      "depth": 42.6692467,
+      "rho": [
+        0.5610070824623108,
+        0.09084173291921617,
+        0.009529477916657925
+      ]
+    },
+    "baseline": {
+      "class": 1,
+      "triangle": 732,
+      "distance": 0.036079230553997414,
+      "direction": [
+        -0.33197889494413085,
+        -0.03059830028016874,
+        0.9427904100761942
+      ]
+    },
+    "candidate": {
+      "class": 1,
+      "triangle": 746,
+      "distance": 0.03607856007174814,
+      "direction": [
+        -0.3319796230136075,
+        -0.03059782824814267,
+        0.9427901690250277
+      ]
+    }
+  },
+  {
+    "queryKey": [
+      0,
+      120,
+      45,
+      3,
+      0
+    ],
+    "disposition": "center-replaced-by-AA",
+    "baselineInput": {
+      "key": [
+        0,
+        120,
+        45,
+        3
+      ],
+      "originalEventIndex": 1853,
+      "disposition": "center-replaced-by-AA",
+      "targetPixel": true,
+      "primitiveInput": {
+        "recordOffset": 35840,
+        "node": 31,
+        "face": 33,
+        "sourceId": 46,
+        "back": false
+      },
+      "depth": 44.250061,
+      "rho": [
+        0.031130090355873108,
+        0.009299643337726593,
+        0.002496754052117467
+      ]
+    },
+    "candidateInput": {
+      "key": [
+        0,
+        120,
+        45,
+        3
+      ],
+      "originalEventIndex": 1853,
+      "disposition": "center-replaced-by-AA",
+      "targetPixel": true,
+      "primitiveInput": {
+        "recordOffset": 35840,
+        "node": 31,
+        "face": 33,
+        "sourceId": 46,
+        "back": false
+      },
+      "depth": 44.2500343,
+      "rho": [
+        0.031130090355873108,
+        0.009299643337726593,
+        0.002496754052117467
+      ]
+    },
+    "baseline": {
+      "class": 2,
+      "triangle": 1564,
+      "distance": 3.2740567764969346,
+      "direction": [
+        0.1683409285360961,
+        -0.5107227783501773,
+        -0.8431035378017818
+      ]
+    },
+    "candidate": {
+      "class": 1,
+      "triangle": 801,
+      "distance": 0.10987985850994768,
+      "direction": [
+        0.16835556429515905,
+        -0.5106792764149557,
+        -0.8431269658901651
+      ]
+    }
+  },
+  {
+    "queryKey": [
+      2,
+      127,
+      67,
+      0,
+      8
+    ],
+    "disposition": "final-quarter",
+    "baselineInput": {
+      "key": [
+        2,
+        127,
+        67,
+        0
+      ],
+      "originalEventIndex": 12618,
+      "disposition": "final-quarter",
+      "targetPixel": true,
+      "primitiveInput": {
+        "recordOffset": 1692,
+        "node": 2,
+        "face": 20,
+        "sourceId": 0,
+        "back": false
+      },
+      "depth": 30.109436,
+      "rho": [
+        0.5610070824623108,
+        0.09084173291921616,
+        0.009529477916657925
+      ]
+    },
+    "candidateInput": {
+      "key": [
+        2,
+        127,
+        67,
+        0
+      ],
+      "originalEventIndex": 12618,
+      "disposition": "final-quarter",
+      "targetPixel": true,
+      "primitiveInput": {
+        "recordOffset": 1692,
+        "node": 2,
+        "face": 20,
+        "sourceId": 0,
+        "back": false
+      },
+      "depth": 30.1094398,
+      "rho": [
+        0.5610070824623108,
+        0.09084173291921616,
+        0.009529477916657925
+      ]
+    },
+    "baseline": {
+      "class": 1,
+      "triangle": 325,
+      "distance": 0.029913715043812752,
+      "direction": [
+        0.2534372769297028,
+        -0.13586428368679004,
+        -0.9577632500157502
+      ]
+    },
+    "candidate": {
+      "class": 1,
+      "triangle": 312,
+      "distance": 0.029913618425011338,
+      "direction": [
+        0.2534373882858654,
+        -0.1358645434290069,
+        -0.957763183703397
+      ]
+    }
+  },
+  {
+    "queryKey": [
+      2,
+      136,
+      47,
+      0,
+      13
+    ],
+    "disposition": "final-quarter",
+    "baselineInput": {
+      "key": [
+        2,
+        136,
+        47,
+        0
+      ],
+      "originalEventIndex": 11969,
+      "disposition": "final-quarter",
+      "targetPixel": true,
+      "primitiveInput": {
+        "recordOffset": 39760,
+        "node": 34,
+        "face": 13,
+        "sourceId": 49,
+        "back": false
+      },
+      "depth": 44.4377441,
+      "rho": [
+        1,
+        0.9292965531349182,
+        0.7938108444213867
+      ]
+    },
+    "candidateInput": {
+      "key": [
+        2,
+        136,
+        47,
+        0
+      ],
+      "originalEventIndex": 11969,
+      "disposition": "final-quarter",
+      "targetPixel": true,
+      "primitiveInput": {
+        "recordOffset": 39760,
+        "node": 34,
+        "face": 13,
+        "sourceId": 49,
+        "back": false
+      },
+      "depth": 44.4377441,
+      "rho": [
+        1,
+        0.9292965531349182,
+        0.7938108444213867
+      ]
+    },
+    "baseline": {
+      "class": 1,
+      "triangle": 1014,
+      "distance": 0.0751773266899124,
+      "direction": [
+        -0.9179042667044989,
+        -0.03413025165888183,
+        0.3953313585934938
+      ]
+    },
+    "candidate": {
+      "class": 1,
+      "triangle": 1017,
+      "distance": 0.07517692394840363,
+      "direction": [
+        -0.9179052818949295,
+        -0.034123817090794366,
+        0.3953295569225046
+      ]
+    }
+  },
+  {
+    "queryKey": [
+      3,
+      134,
+      52,
+      0,
+      11
+    ],
+    "disposition": "final-quarter",
+    "baselineInput": {
+      "key": [
+        3,
+        134,
+        52,
+        0
+      ],
+      "originalEventIndex": 14142,
+      "disposition": "final-quarter",
+      "targetPixel": true,
+      "primitiveInput": {
+        "recordOffset": 19372,
+        "node": 16,
+        "face": 2,
+        "sourceId": 32,
+        "back": false
+      },
+      "depth": 44.2727242,
+      "rho": [
+        0.6715303063392639,
+        0.13065429031848907,
+        0.009529477916657925
+      ]
+    },
+    "candidateInput": {
+      "key": [
+        3,
+        134,
+        52,
+        0
+      ],
+      "originalEventIndex": 14142,
+      "disposition": "final-quarter",
+      "targetPixel": true,
+      "primitiveInput": {
+        "recordOffset": 19372,
+        "node": 16,
+        "face": 2,
+        "sourceId": 32,
+        "back": false
+      },
+      "depth": 44.2727699,
+      "rho": [
+        0.6715303063392639,
+        0.13065429031848907,
+        0.009529477916657925
+      ]
+    },
+    "baseline": {
+      "class": 1,
+      "triangle": 1004,
+      "distance": 0.18181901717417254,
+      "direction": [
+        -0.1249071136609363,
+        0.17258791563840178,
+        0.9770422837996756
+      ]
+    },
+    "candidate": {
+      "class": 1,
+      "triangle": 1005,
+      "distance": 0.18181650812646194,
+      "direction": [
+        -0.12490875102621132,
+        0.1725856958862344,
+        0.9770424665758066
+      ]
+    }
+  },
+  {
+    "queryKey": [
+      4,
+      134,
+      37,
+      0,
+      7
+    ],
+    "disposition": "final-quarter",
+    "baselineInput": {
+      "key": [
+        4,
+        134,
+        37,
+        0
+      ],
+      "originalEventIndex": 15476,
+      "disposition": "final-quarter",
+      "targetPixel": true,
+      "primitiveInput": {
+        "recordOffset": 0,
+        "node": 1,
+        "face": 20,
+        "sourceId": 0,
+        "back": false
+      },
+      "depth": 30.1537189,
+      "rho": [
+        0.5610070824623108,
+        0.09084173291921616,
+        0.009529477916657925
+      ]
+    },
+    "candidateInput": {
+      "key": [
+        4,
+        134,
+        37,
+        0
+      ],
+      "originalEventIndex": 15476,
+      "disposition": "final-quarter",
+      "targetPixel": true,
+      "primitiveInput": {
+        "recordOffset": 0,
+        "node": 1,
+        "face": 20,
+        "sourceId": 0,
+        "back": false
+      },
+      "depth": 30.1537323,
+      "rho": [
+        0.5610070824623108,
+        0.09084173291921616,
+        0.009529477916657925
+      ]
+    },
+    "baseline": {
+      "class": 1,
+      "triangle": 1230,
+      "distance": 0.012166285602622992,
+      "direction": [
+        0.5017289485732703,
+        -0.3556589627379116,
+        0.7885269585675264
+      ]
+    },
+    "candidate": {
+      "class": 1,
+      "triangle": 1229,
+      "distance": 0.012166109293597136,
+      "direction": [
+        0.501729212784668,
+        -0.35565921450159454,
+        0.7885266768972284
+      ]
+    }
+  }
+]

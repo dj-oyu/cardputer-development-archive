@@ -1,0 +1,157 @@
+{
+  "status": "COMPLETE_AUTHENTIC_METADATA",
+  "kind": "baseline",
+  "view": "front",
+  "sourceFreezeSHA256": "582ad3308f8b454ba4775ebd5bbcb9de9b88e7b03abcfd124a6a54bb1e4a11c8",
+  "snapshotSHA256": "006cfd92bda231a4ae7922f23aa125176f807967feaf444e2f3f8b19ef72cab0",
+  "snapshotFNV": "017e6671f56c3bd8",
+  "targetPackedFNV": "dd51bcec009b27b1",
+  "targetPackedSHA256": "89c203d3fb243396306639762a0504f903ae6c792d46bd4eff5658a4547b3cff",
+  "targets": 2385,
+  "quarterHits": [
+    1922,
+    1920,
+    1933,
+    1903
+  ],
+  "shaders": 17070,
+  "floorHits": 70342,
+  "floorRayCounters": {
+    "rays": 273120,
+    "nodes": 21883182,
+    "triangles": 7442309,
+    "groundHits": 70342,
+    "characterHits": 115756,
+    "misses": 87022,
+    "events": 17070,
+    "sceneBytes": 69276
+  },
+  "floorCategoryLimits": [
+    1092480,
+    1092480,
+    9003776,
+    54022656,
+    20258496,
+    432181248,
+    324135936,
+    9003776,
+    4501888,
+    4501888
+  ],
+  "floorWorkLimit": 859794624,
+  "floorWorldWorkLimit": 442277504,
+  "background": {
+    "slots": 39555,
+    "emptySlots": 29098,
+    "overrides": 2,
+    "shadeLimit": 29100,
+    "floor": 29100,
+    "world": 0,
+    "keep": 10455,
+    "quarterMisses": 1862,
+    "quarterOverrides": 2,
+    "centerReplacements": 27236,
+    "workLimit": 1150628352
+  },
+  "sceneCategoryLimits": [
+    512,
+    0,
+    4050,
+    60030,
+    0,
+    0,
+    0,
+    237330,
+    197775,
+    39555,
+    118665,
+    118665,
+    79110,
+    5592,
+    11172,
+    0,
+    217888,
+    0,
+    268312,
+    16384
+  ],
+  "sceneReservedTotal": 1375040,
+  "fullShadingExecuted": false,
+  "nearestRayQueriesExecuted": true,
+  "sourceCameraFields": {
+    "nativeCameraF32": [
+      -3.799999952316284,
+      -114.0,
+      304.0,
+      -15.199999809265137,
+      -69.16000366210938,
+      -6.840000152587891,
+      0.7401315569877625,
+      119.5,
+      67.0
+    ],
+    "sourceOrigin": [
+      -0.10000000149011612,
+      -8.0,
+      3.0
+    ],
+    "sourceUnitView": [
+      -0.0362752010448412,
+      0.9891035692868403,
+      -0.14268230098084736
+    ],
+    "near": 0.10000000149011612,
+    "far": 1000.0,
+    "rho": [
+      0.8399999737739563,
+      0.7799999713897705,
+      0.6499999761581421
+    ],
+    "floorWorld": [
+      [
+        -100.0,
+        -100.0,
+        0.0
+      ],
+      [
+        100.0,
+        -100.0,
+        0.0
+      ],
+      [
+        -100.0,
+        100.0,
+        0.0
+      ],
+      [
+        100.0,
+        100.0,
+        0.0
+      ]
+    ],
+    "floorTriangles": [
+      [
+        0,
+        1,
+        3
+      ],
+      [
+        0,
+        3,
+        2
+      ]
+    ],
+    "le": [
+      0.20999999344348907,
+      0.19499999284744263,
+      0.16249999403953552
+    ],
+    "worldRGB": [
+      1.0,
+      0.8799999952316284,
+      0.6899999976158142
+    ],
+    "worldStrength": 0.3499999940395355
+  },
+  "baselineExistingCountsAndLedgersExact": true
+}

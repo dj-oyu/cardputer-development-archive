@@ -1,0 +1,335 @@
+{
+  "baselineMetricsExactlyEqualLinearOff": true,
+  "conditions": {
+    "front-baseline": {
+      "colorStableOff": 58.95681969312858,
+      "colorStableOn": 66.52514035020867,
+      "colorStableDeltaPoints": 7.568320657080093,
+      "colorFullOff": 60.459835680494976,
+      "colorFullOn": 67.69471053615923,
+      "shapeIoUOff": 0.8813463708160962,
+      "shapeIoUOn": 0.8813463708160962
+    },
+    "front-direction": {
+      "colorStableOff": 61.57025017874732,
+      "colorStableOn": 68.8288394356994,
+      "colorStableDeltaPoints": 7.258589256952071,
+      "colorFullOff": 63.893165656614734,
+      "colorFullOn": 70.92770303002108,
+      "shapeIoUOff": 0.8813463708160962,
+      "shapeIoUOn": 0.8813463708160962,
+      "stableResponse": {
+        "responseMagnitudeAgreementPercent": {
+          "off": 95.02103065274166,
+          "on": 61.23832240296339,
+          "delta": -33.78270824977827
+        },
+        "directionAgreementPercent": {
+          "off": 75.81910475311491,
+          "on": 76.68513388734995,
+          "delta": 0.8660291342350348
+        },
+        "deltaLumaRMSE": {
+          "off": 0.07828432455591813,
+          "on": 0.069301644377226,
+          "delta": -0.008982680178692137
+        },
+        "deltaRGBRMSE": {
+          "off": 0.10520461394864135,
+          "on": 0.08730635607149381,
+          "delta": -0.017898257877147536
+        },
+        "brighteningIoU": {
+          "off": 0.5715789473684211,
+          "on": 0.5674646354733406
+        },
+        "darkeningIoU": {
+          "off": 0.7043327556325824,
+          "on": 0.6849600555748524
+        }
+      }
+    },
+    "front-intensity": {
+      "colorStableOff": 56.87033845536551,
+      "colorStableOn": 66.99586557650436,
+      "colorStableDeltaPoints": 10.125527121138845,
+      "colorFullOff": 60.27628749637095,
+      "colorFullOn": 69.71919795376982,
+      "shapeIoUOff": 0.8813463708160962,
+      "shapeIoUOn": 0.8813463708160962,
+      "stableResponse": {
+        "responseMagnitudeAgreementPercent": {
+          "off": 80.79588893698688,
+          "on": 73.75537283817452,
+          "delta": -7.040516098812361
+        },
+        "directionAgreementPercent": {
+          "off": 90.98850574712644,
+          "on": 90.58606368251039,
+          "delta": -0.4024420646160536
+        },
+        "deltaLumaRMSE": {
+          "off": 0.05797603141010693,
+          "on": 0.04520283055746084,
+          "delta": -0.012773200852646091
+        },
+        "deltaRGBRMSE": {
+          "off": 0.08152844132562513,
+          "on": 0.0662126834849475,
+          "delta": -0.015315757840677638
+        },
+        "brighteningIoU": {
+          "off": null,
+          "on": null
+        },
+        "darkeningIoU": {
+          "off": 0.8652873563218391,
+          "on": 0.8387171204430087
+        }
+      }
+    },
+    "front-ambient": {
+      "colorStableOff": 69.26930955321197,
+      "colorStableOn": 70.59022626685083,
+      "colorStableDeltaPoints": 1.3209167136388658,
+      "colorFullOff": 70.21679445957074,
+      "colorFullOn": 71.53439906381226,
+      "shapeIoUOff": 0.8813463708160962,
+      "shapeIoUOn": 0.8813463708160962,
+      "stableResponse": {
+        "responseMagnitudeAgreementPercent": {
+          "off": 20.242258750126013,
+          "on": 35.407603900884084,
+          "delta": 15.165345150758071
+        },
+        "directionAgreementPercent": {
+          "off": 88.19033059430537,
+          "on": 88.19033059430537,
+          "delta": 0.0
+        },
+        "deltaLumaRMSE": {
+          "off": 0.15153469394685046,
+          "on": 0.08030019608201117,
+          "delta": -0.07123449786483929
+        },
+        "deltaRGBRMSE": {
+          "off": 0.16779624790003916,
+          "on": 0.08908196473385915,
+          "delta": -0.07871428316618001
+        },
+        "brighteningIoU": {
+          "off": 0.8807567360978407,
+          "on": 0.8807567360978407
+        },
+        "darkeningIoU": {
+          "off": null,
+          "on": null
+        }
+      }
+    },
+    "front-albedo": {
+      "colorStableOff": 63.277812574134586,
+      "colorStableOn": 68.93847301727205,
+      "colorStableDeltaPoints": 5.660660443137459,
+      "colorFullOff": 65.91402850000388,
+      "colorFullOn": 71.28110865540378,
+      "shapeIoUOff": 0.8813463708160962,
+      "shapeIoUOn": 0.8813463708160962,
+      "stableResponse": {
+        "responseMagnitudeAgreementPercent": {
+          "off": 59.05529280294809,
+          "on": 77.49213759241913,
+          "delta": 18.43684478947104
+        },
+        "directionAgreementPercent": {
+          "off": 88.16211121583412,
+          "on": 88.3129123468426,
+          "delta": 0.15080113100847825
+        },
+        "deltaLumaRMSE": {
+          "off": 0.07264564061337564,
+          "on": 0.06237731224850536,
+          "delta": -0.01026832836487028
+        },
+        "deltaRGBRMSE": {
+          "off": 0.08838468962125638,
+          "on": 0.08212269019522053,
+          "delta": -0.00626199942603585
+        },
+        "brighteningIoU": {
+          "off": null,
+          "on": null
+        },
+        "darkeningIoU": {
+          "off": 0.8787935909519321,
+          "on": 0.883129123468426
+        }
+      }
+    },
+    "oblique-baseline": {
+      "colorStableOff": 60.01008699482392,
+      "colorStableOn": 66.93153829163145,
+      "colorStableDeltaPoints": 6.921451296807533,
+      "colorFullOff": 62.11513028125886,
+      "colorFullOn": 68.71981254332255,
+      "shapeIoUOff": 0.8761061946902655,
+      "shapeIoUOn": 0.8761061946902655
+    },
+    "oblique-direction": {
+      "colorStableOff": 61.36206366700632,
+      "colorStableOn": 69.20378962069134,
+      "colorStableDeltaPoints": 7.841725953685021,
+      "colorFullOff": 65.1272893366214,
+      "colorFullOn": 72.66638811706197,
+      "shapeIoUOff": 0.8761061946902655,
+      "shapeIoUOn": 0.8761061946902655,
+      "stableResponse": {
+        "responseMagnitudeAgreementPercent": {
+          "off": 83.80799339677607,
+          "on": 55.1740623105651,
+          "delta": -28.63393108621097
+        },
+        "directionAgreementPercent": {
+          "off": 78.43534657478719,
+          "on": 78.56997765590087,
+          "delta": 0.13463108111368172
+        },
+        "deltaLumaRMSE": {
+          "off": 0.0787223782661843,
+          "on": 0.07612769658282496,
+          "delta": -0.002594681683359343
+        },
+        "deltaRGBRMSE": {
+          "off": 0.11024838330369335,
+          "on": 0.09692204368751582,
+          "delta": -0.013326339616177532
+        },
+        "brighteningIoU": {
+          "off": 0.2830349531116795,
+          "on": 0.28902765388046386
+        },
+        "darkeningIoU": {
+          "off": 0.8082454458293384,
+          "on": 0.7884753901560624
+        }
+      }
+    },
+    "oblique-intensity": {
+      "colorStableOff": 57.942340066680266,
+      "colorStableOn": 67.57194797315672,
+      "colorStableDeltaPoints": 9.629607906476458,
+      "colorFullOff": 62.429130094156136,
+      "colorFullOn": 71.39724056498163,
+      "shapeIoUOff": 0.8761061946902655,
+      "shapeIoUOn": 0.8761061946902655,
+      "stableResponse": {
+        "responseMagnitudeAgreementPercent": {
+          "off": 86.5366821787635,
+          "on": 68.73986819321289,
+          "delta": -17.796813985550614
+        },
+        "directionAgreementPercent": {
+          "off": 92.51567398119123,
+          "on": 91.3171305370443,
+          "delta": -1.198543444146921
+        },
+        "deltaLumaRMSE": {
+          "off": 0.05801734123532581,
+          "on": 0.04819260853435104,
+          "delta": -0.009824732700974767
+        },
+        "deltaRGBRMSE": {
+          "off": 0.083514134862879,
+          "on": 0.07109335128443786,
+          "delta": -0.012420783578441133
+        },
+        "brighteningIoU": {
+          "off": null,
+          "on": null
+        },
+        "darkeningIoU": {
+          "off": 0.8924373040752351,
+          "on": 0.8592708741669933
+        }
+      }
+    },
+    "oblique-ambient": {
+      "colorStableOff": 69.67632668468924,
+      "colorStableOn": 70.5888284862189,
+      "colorStableDeltaPoints": 0.9125018015296575,
+      "colorFullOff": 71.25775566644433,
+      "colorFullOn": 72.20822166300827,
+      "shapeIoUOff": 0.8761061946902655,
+      "shapeIoUOn": 0.8761061946902655,
+      "stableResponse": {
+        "responseMagnitudeAgreementPercent": {
+          "off": 20.593473215268816,
+          "on": 36.34082427370523,
+          "delta": 15.747351058436415
+        },
+        "directionAgreementPercent": {
+          "off": 87.65304362821176,
+          "on": 87.65304362821176,
+          "delta": 0.0
+        },
+        "deltaLumaRMSE": {
+          "off": 0.14246491128036354,
+          "on": 0.07346408503573994,
+          "delta": -0.0690008262446236
+        },
+        "deltaRGBRMSE": {
+          "off": 0.16115958689569646,
+          "on": 0.08337540010130683,
+          "delta": -0.07778418679438963
+        },
+        "brighteningIoU": {
+          "off": 0.873426452836696,
+          "on": 0.873426452836696
+        },
+        "darkeningIoU": {
+          "off": null,
+          "on": null
+        }
+      }
+    },
+    "oblique-albedo": {
+      "colorStableOff": 64.2849052416874,
+      "colorStableOn": 69.36693580856115,
+      "colorStableDeltaPoints": 5.082030566873755,
+      "colorFullOff": 67.87180313325155,
+      "colorFullOn": 72.78371305264587,
+      "shapeIoUOff": 0.8761061946902655,
+      "shapeIoUOn": 0.8761061946902655,
+      "stableResponse": {
+        "responseMagnitudeAgreementPercent": {
+          "off": 56.83374298426576,
+          "on": 73.0663546183854,
+          "delta": 16.232611634119642
+        },
+        "directionAgreementPercent": {
+          "off": 87.62148337595907,
+          "on": 87.7237851662404,
+          "delta": 0.1023017902813308
+        },
+        "deltaLumaRMSE": {
+          "off": 0.07627899653868046,
+          "on": 0.06619384018534956,
+          "delta": -0.010085156353330904
+        },
+        "deltaRGBRMSE": {
+          "off": 0.09422674925786392,
+          "on": 0.08786873997916976,
+          "delta": -0.006358009278694163
+        },
+        "brighteningIoU": {
+          "off": null,
+          "on": null
+        },
+        "darkeningIoU": {
+          "off": 0.8736572890025576,
+          "on": 0.8772378516624041
+        }
+      }
+    }
+  }
+}

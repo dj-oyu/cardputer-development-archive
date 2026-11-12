@@ -1,0 +1,87 @@
+{
+  "scope": "same export/compiler/render operations after spatial/topology edit; no code/index/order fixes",
+  "rows": [
+    {
+      "revision": "before",
+      "exportAllSevenGLBsWallMsIncludingBlenderLaunch": 1603.903249000041,
+      "neutralCompileWallMsIncludingNodeLaunch": 53.235281000070245,
+      "allGLBByteReplayEqual": {
+        "blink-half.glb": true,
+        "blink.glb": true,
+        "combined.glb": true,
+        "jaw-half.glb": true,
+        "jaw.glb": true,
+        "neutral.glb": true,
+        "with-morph.glb": true
+      },
+      "neutralAynmReplayEqual": true,
+      "nativePixelReplayEqual": {
+        "0": {
+          "files": {
+            "pixels.u16le": true,
+            "coverage.u16le": true,
+            "visible-triangles.u16le": true
+          },
+          "nativeProcessMsIncludingAllDiagnosticPasses": 6.076172000121005
+        },
+        "-35": {
+          "files": {
+            "pixels.u16le": true,
+            "coverage.u16le": true,
+            "visible-triangles.u16le": true
+          },
+          "nativeProcessMsIncludingAllDiagnosticPasses": 5.845450000151686
+        },
+        "35": {
+          "files": {
+            "pixels.u16le": true,
+            "coverage.u16le": true,
+            "visible-triangles.u16le": true
+          },
+          "nativeProcessMsIncludingAllDiagnosticPasses": 5.594598000016049
+        }
+      }
+    },
+    {
+      "revision": "after",
+      "exportAllSevenGLBsWallMsIncludingBlenderLaunch": 1350.9777659999145,
+      "neutralCompileWallMsIncludingNodeLaunch": 63.884199999847624,
+      "allGLBByteReplayEqual": {
+        "blink-half.glb": true,
+        "blink.glb": true,
+        "combined.glb": true,
+        "jaw-half.glb": true,
+        "jaw.glb": true,
+        "neutral.glb": true,
+        "with-morph.glb": true
+      },
+      "neutralAynmReplayEqual": true,
+      "nativePixelReplayEqual": {
+        "0": {
+          "files": {
+            "pixels.u16le": true,
+            "coverage.u16le": true,
+            "visible-triangles.u16le": true
+          },
+          "nativeProcessMsIncludingAllDiagnosticPasses": 5.8463519999349955
+        },
+        "-35": {
+          "files": {
+            "pixels.u16le": true,
+            "coverage.u16le": true,
+            "visible-triangles.u16le": true
+          },
+          "nativeProcessMsIncludingAllDiagnosticPasses": 7.43661899991821
+        },
+        "35": {
+          "files": {
+            "pixels.u16le": true,
+            "coverage.u16le": true,
+            "visible-triangles.u16le": true
+          },
+          "nativeProcessMsIncludingAllDiagnosticPasses": 5.685824000011053
+        }
+      }
+    }
+  ]
+}

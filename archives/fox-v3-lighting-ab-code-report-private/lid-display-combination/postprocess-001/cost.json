@@ -1,0 +1,1862 @@
+[
+  {
+    "view": "front",
+    "case": "baseline",
+    "arm": "point-off",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "minNs": 491564,
+      "medianNs": 570243.0,
+      "maxNs": 738677
+    },
+    "filterRepeatTimingHostOnly": null,
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "view": "front",
+    "case": "baseline",
+    "arm": "point-on",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "minNs": 1822738,
+      "medianNs": 2038164.0,
+      "maxNs": 2432842
+    },
+    "filterRepeatTimingHostOnly": null,
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "view": "front",
+    "case": "baseline",
+    "arm": "filter3-off",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5353,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27047,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "minNs": 580609,
+      "medianNs": 679638.0,
+      "maxNs": 920954
+    },
+    "filterRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "minNs": 723755,
+      "medianNs": 830506.0,
+      "maxNs": 1129349
+    },
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "view": "front",
+    "case": "baseline",
+    "arm": "filter3-on",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5353,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27047,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "minNs": 1880085,
+      "medianNs": 2128932.0,
+      "maxNs": 2449376
+    },
+    "filterRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "minNs": 723755,
+      "medianNs": 830506.0,
+      "maxNs": 1129349
+    },
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "view": "front",
+    "case": "direction",
+    "arm": "point-off",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "minNs": 507748,
+      "medianNs": 593959.0,
+      "maxNs": 757987
+    },
+    "filterRepeatTimingHostOnly": null,
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "view": "front",
+    "case": "direction",
+    "arm": "point-on",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "minNs": 1880345,
+      "medianNs": 2214441.0,
+      "maxNs": 2496428
+    },
+    "filterRepeatTimingHostOnly": null,
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "view": "front",
+    "case": "direction",
+    "arm": "filter3-off",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5353,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27047,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "minNs": 492245,
+      "medianNs": 547709.0,
+      "maxNs": 802143
+    },
+    "filterRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "minNs": 720070,
+      "medianNs": 899431.0,
+      "maxNs": 1134106
+    },
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "view": "front",
+    "case": "direction",
+    "arm": "filter3-on",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5353,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27047,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "minNs": 1936450,
+      "medianNs": 2194782.0,
+      "maxNs": 2585663
+    },
+    "filterRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "minNs": 720070,
+      "medianNs": 899431.0,
+      "maxNs": 1134106
+    },
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "view": "front",
+    "case": "intensity",
+    "arm": "point-off",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "minNs": 489020,
+      "medianNs": 532156.0,
+      "maxNs": 779730
+    },
+    "filterRepeatTimingHostOnly": null,
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "view": "front",
+    "case": "intensity",
+    "arm": "point-on",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "minNs": 1848738,
+      "medianNs": 1942960.0,
+      "maxNs": 2284447
+    },
+    "filterRepeatTimingHostOnly": null,
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "view": "front",
+    "case": "intensity",
+    "arm": "filter3-off",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5353,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27047,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "minNs": 497153,
+      "medianNs": 599046.0,
+      "maxNs": 832220
+    },
+    "filterRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "minNs": 704957,
+      "medianNs": 747972.0,
+      "maxNs": 1266647
+    },
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "view": "front",
+    "case": "intensity",
+    "arm": "filter3-on",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5353,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27047,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "minNs": 1997773,
+      "medianNs": 2193289.0,
+      "maxNs": 3007231
+    },
+    "filterRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "minNs": 704957,
+      "medianNs": 747972.0,
+      "maxNs": 1266647
+    },
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "view": "front",
+    "case": "ambient",
+    "arm": "point-off",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "minNs": 492125,
+      "medianNs": 531565.0,
+      "maxNs": 637775
+    },
+    "filterRepeatTimingHostOnly": null,
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "view": "front",
+    "case": "ambient",
+    "arm": "point-on",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "minNs": 1858262,
+      "medianNs": 2160650.0,
+      "maxNs": 2981071
+    },
+    "filterRepeatTimingHostOnly": null,
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "view": "front",
+    "case": "ambient",
+    "arm": "filter3-off",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5353,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27047,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "minNs": 497053,
+      "medianNs": 534960.0,
+      "maxNs": 634530
+    },
+    "filterRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "minNs": 751698,
+      "medianNs": 854192.0,
+      "maxNs": 1594212
+    },
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "view": "front",
+    "case": "ambient",
+    "arm": "filter3-on",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5353,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27047,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "minNs": 1901328,
+      "medianNs": 1981258.0,
+      "maxNs": 2360392
+    },
+    "filterRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "minNs": 751698,
+      "medianNs": 854192.0,
+      "maxNs": 1594212
+    },
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "view": "front",
+    "case": "albedo",
+    "arm": "point-off",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "minNs": 488720,
+      "medianNs": 519406.0,
+      "maxNs": 844668
+    },
+    "filterRepeatTimingHostOnly": null,
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "view": "front",
+    "case": "albedo",
+    "arm": "point-on",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "minNs": 1805573,
+      "medianNs": 1997613.0,
+      "maxNs": 2284778
+    },
+    "filterRepeatTimingHostOnly": null,
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "view": "front",
+    "case": "albedo",
+    "arm": "filter3-off",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5353,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27047,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "minNs": 494148,
+      "medianNs": 562251.0,
+      "maxNs": 673429
+    },
+    "filterRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "minNs": 719649,
+      "medianNs": 797817.0,
+      "maxNs": 1341590
+    },
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "view": "front",
+    "case": "albedo",
+    "arm": "filter3-on",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 4698,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27702,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5353,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27047,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "minNs": 1868488,
+      "medianNs": 1958073.0,
+      "maxNs": 2167400
+    },
+    "filterRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "minNs": 719649,
+      "medianNs": 797817.0,
+      "maxNs": 1341590
+    },
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "view": "oblique",
+    "case": "baseline",
+    "arm": "point-off",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "minNs": 493928,
+      "medianNs": 513677.0,
+      "maxNs": 1633251
+    },
+    "filterRepeatTimingHostOnly": null,
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "view": "oblique",
+    "case": "baseline",
+    "arm": "point-on",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "minNs": 1915668,
+      "medianNs": 2043562.0,
+      "maxNs": 2533464
+    },
+    "filterRepeatTimingHostOnly": null,
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "view": "oblique",
+    "case": "baseline",
+    "arm": "filter3-off",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5900,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 26500,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "minNs": 498073,
+      "medianNs": 518334.0,
+      "maxNs": 704446
+    },
+    "filterRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "minNs": 708062,
+      "medianNs": 727531.0,
+      "maxNs": 1244263
+    },
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "view": "oblique",
+    "case": "baseline",
+    "arm": "filter3-on",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5900,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 26500,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "minNs": 1962500,
+      "medianNs": 2028340.0,
+      "maxNs": 2258147
+    },
+    "filterRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "minNs": 708062,
+      "medianNs": 727531.0,
+      "maxNs": 1244263
+    },
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "view": "oblique",
+    "case": "direction",
+    "arm": "point-off",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "minNs": 488499,
+      "medianNs": 500908.0,
+      "maxNs": 535790
+    },
+    "filterRepeatTimingHostOnly": null,
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "view": "oblique",
+    "case": "direction",
+    "arm": "point-on",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "minNs": 1834837,
+      "medianNs": 1869709.0,
+      "maxNs": 6004938
+    },
+    "filterRepeatTimingHostOnly": null,
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "view": "oblique",
+    "case": "direction",
+    "arm": "filter3-off",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5900,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 26500,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "minNs": 494238,
+      "medianNs": 508249.0,
+      "maxNs": 4585229
+    },
+    "filterRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "minNs": 717636,
+      "medianNs": 896346.0,
+      "maxNs": 985722
+    },
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "view": "oblique",
+    "case": "direction",
+    "arm": "filter3-on",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5900,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 26500,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "minNs": 1887987,
+      "medianNs": 2026176.0,
+      "maxNs": 5729780
+    },
+    "filterRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "minNs": 717636,
+      "medianNs": 896346.0,
+      "maxNs": 985722
+    },
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "view": "oblique",
+    "case": "intensity",
+    "arm": "point-off",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "minNs": 492716,
+      "medianNs": 533327.0,
+      "maxNs": 805439
+    },
+    "filterRepeatTimingHostOnly": null,
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "view": "oblique",
+    "case": "intensity",
+    "arm": "point-on",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "minNs": 1835698,
+      "medianNs": 1866795.0,
+      "maxNs": 6022243
+    },
+    "filterRepeatTimingHostOnly": null,
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "view": "oblique",
+    "case": "intensity",
+    "arm": "filter3-off",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5900,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 26500,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "minNs": 496201,
+      "medianNs": 511805.0,
+      "maxNs": 652367
+    },
+    "filterRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "minNs": 720040,
+      "medianNs": 780471.0,
+      "maxNs": 4920967
+    },
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "view": "oblique",
+    "case": "intensity",
+    "arm": "filter3-on",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5900,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 26500,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "minNs": 1899935,
+      "medianNs": 1962770.0,
+      "maxNs": 7007765
+    },
+    "filterRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "minNs": 720040,
+      "medianNs": 780471.0,
+      "maxNs": 4920967
+    },
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "view": "oblique",
+    "case": "ambient",
+    "arm": "point-off",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "minNs": 493367,
+      "medianNs": 508890.0,
+      "maxNs": 649362
+    },
+    "filterRepeatTimingHostOnly": null,
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "view": "oblique",
+    "case": "ambient",
+    "arm": "point-on",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "minNs": 1838752,
+      "medianNs": 1941248.0,
+      "maxNs": 5999819
+    },
+    "filterRepeatTimingHostOnly": null,
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "view": "oblique",
+    "case": "ambient",
+    "arm": "filter3-off",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5900,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 26500,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "minNs": 500217,
+      "medianNs": 515720.0,
+      "maxNs": 560108
+    },
+    "filterRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "minNs": 702844,
+      "medianNs": 766850.0,
+      "maxNs": 4849539
+    },
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "view": "oblique",
+    "case": "ambient",
+    "arm": "filter3-on",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5900,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 26500,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "minNs": 1877011,
+      "medianNs": 1930040.0,
+      "maxNs": 4010530
+    },
+    "filterRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "minNs": 702844,
+      "medianNs": 766850.0,
+      "maxNs": 4849539
+    },
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "view": "oblique",
+    "case": "albedo",
+    "arm": "point-off",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "minNs": 489631,
+      "medianNs": 510673.0,
+      "maxNs": 570774
+    },
+    "filterRepeatTimingHostOnly": null,
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "view": "oblique",
+    "case": "albedo",
+    "arm": "point-on",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "minNs": 1821427,
+      "medianNs": 1859174.0,
+      "maxNs": 3945000
+    },
+    "filterRepeatTimingHostOnly": null,
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "view": "oblique",
+    "case": "albedo",
+    "arm": "filter3-off",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5900,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 26500,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "minNs": 509270,
+      "medianNs": 631916.0,
+      "maxNs": 871198
+    },
+    "filterRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "minNs": 718948,
+      "medianNs": 955096.0,
+      "maxNs": 4937572
+    },
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  },
+  {
+    "view": "oblique",
+    "case": "albedo",
+    "arm": "filter3-on",
+    "clampedPixels": 0,
+    "clampAttributionUntimed": {
+      "nativeCovered": {
+        "pixels": 5157,
+        "clampedPixels": 0
+      },
+      "nativeBackground": {
+        "pixels": 27243,
+        "clampedPixels": 0
+      },
+      "displaySupport": {
+        "pixels": 5900,
+        "clampedPixels": 0
+      },
+      "outsideDisplaySupport": {
+        "pixels": 26500,
+        "clampedPixels": 0
+      }
+    },
+    "blackInputClampFlag": 0,
+    "displayRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "minNs": 1973697,
+      "medianNs": 2083223.0,
+      "maxNs": 2901251
+    },
+    "filterRepeatTimingHostOnly": {
+      "repetitions": 11,
+      "minNs": 718948,
+      "medianNs": 955096.0,
+      "maxNs": 4937572
+    },
+    "rawHDRBytes": 777600,
+    "filteredHDRBytes": 777600,
+    "output565Bytes": 64800,
+    "filterTemporarySampleHDRBytes": 777600,
+    "nativeDepthBytes": 129600,
+    "nativeCoverageBytes": 32400,
+    "filterUnionSupportBytes": 32400,
+    "filterTemporaryCoveredMaskBytes": 32400,
+    "displayRepeatControlBytes": 64800,
+    "observerStaticHDRBytesSeparate": 777600,
+    "profileReadOnlyTableBytes": 3295500,
+    "productFitEstablished": false
+  }
+]

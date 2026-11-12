@@ -1,0 +1,45 @@
+{
+  "planSHA256": "0e7b07ce2e4aee68ec57561c62448fcfcc257bb05486f28d6d9ba473ecb8b6ea",
+  "triangles": 1166,
+  "vertices": 849,
+  "records": [
+    {
+      "view": "front",
+      "case": "baseline",
+      "rays": 225504,
+      "blocked": 128406,
+      "nearHits": 414,
+      "seconds": 14.796518830999958
+    },
+    {
+      "view": "front",
+      "case": "direction",
+      "rays": 225504,
+      "blocked": 140331,
+      "nearHits": 479,
+      "seconds": 14.704698681999616
+    },
+    {
+      "view": "oblique",
+      "case": "baseline",
+      "rays": 247488,
+      "blocked": 150104,
+      "nearHits": 467,
+      "seconds": 16.3182753279998
+    },
+    {
+      "view": "oblique",
+      "case": "direction",
+      "rays": 247488,
+      "blocked": 181933,
+      "nearHits": 613,
+      "seconds": 16.15106011900025
+    }
+  ],
+  "totalSeconds": 160.30940908200046,
+  "processUserSeconds": 159.781881,
+  "processSystemSeconds": 1.7707950000000001,
+  "processPeakRSSKiB": 224172,
+  "normalOnlyAB": true,
+  "normalIndependentCache": true
+}

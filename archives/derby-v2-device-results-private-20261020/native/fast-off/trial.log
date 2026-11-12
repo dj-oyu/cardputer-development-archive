@@ -1,0 +1,37 @@
+APP_ID local.derby
+I (pocket.app) APP_LOAD prog bytes=2465 compile_us=0 run_us=0 used=87292>91296>95760
+I (pocket.app) APP_LOAD view bytes=11972 compile_us=0 run_us=0 used=95760>121736>131688
+I (pocket.app) APP_LOAD scene bytes=9497 compile_us=0 run_us=0 used=131688>148308>151980
+I (pocket.app) APP_LOAD pan bytes=2014 compile_us=0 run_us=0 used=151980>155232>155244
+I (pocket.app) APP_LOAD fixed bytes=2354 compile_us=0 run_us=0 used=168436>172764>172772
+DERBY READY tones=true
+I (pocket.app) APP_LOAD play bytes=6993 compile_us=0 run_us=0 used=155244>165136>177904
+ok   eval; source 4511 B
+ser oracle fuzz: 32000 calls, 103315 draws, 0 mismatches
+DEVICE_WINDOW {"rep":1,"contexts":120,"draws":4975,"input_hash":"986b2e6e027af00d","procedural_pixel_hash":"c1b0fdbde748d0de","panel_hash":"cec4b765a2794b14"}
+DEVICE_TRANSFER {"rep":1,"pixels":3888000,"equal_previous_pixels":3499706,"strips":2040,"equal_previous_strips":449}
+DERBY_FIXED v=1 fixture=oval-pan8-390-510-v1 manifest=84e0341ee1ac10c232e3008f28f8aada8823155e19229f926e633d7780a2021d variant=native session=1 rep=1 seq=1 valid=1 quality=0 independent=0 seed=9112A7AB oval=1 tier=1 cam=8 start=390 end=510 contexts=120 done=120 cont=0 capture=0 faults=0 refused=0 tx_fail=0 wall_us=121150 work_us=121090 finish=5DC86E18 p0=0:0:0 p1=0:0:0 p2=0:0:0 c0=0 c1=120 c2=600 c3=7735 c4=120 c5=7735 c6=0 c7=120 c8=0 c9=0 s0=70488:120 s1=608:2086 s2=11095:4569 s3=1318:4975 s4=9177:14925 s5=0:0 s6=10375:120 s7=653:2040 s8=0:0 s9=0:0
+DEVICE_WINDOW {"rep":2,"contexts":120,"draws":4975,"input_hash":"986b2e6e027af00d","procedural_pixel_hash":"c1b0fdbde748d0de","panel_hash":"cec4b765a2794b14"}
+DEVICE_TRANSFER {"rep":2,"pixels":3888000,"equal_previous_pixels":3499706,"strips":2040,"equal_previous_strips":449}
+DERBY_FIXED v=1 fixture=oval-pan8-390-510-v1 manifest=84e0341ee1ac10c232e3008f28f8aada8823155e19229f926e633d7780a2021d variant=native session=1 rep=2 seq=2 valid=1 quality=0 independent=0 seed=9112A7AB oval=1 tier=1 cam=8 start=390 end=510 contexts=120 done=120 cont=0 capture=0 faults=0 refused=0 tx_fail=0 wall_us=119021 work_us=118977 finish=5DC86E18 p0=0:0:0 p1=0:0:0 p2=0:0:0 c0=0 c1=120 c2=600 c3=7735 c4=120 c5=7735 c6=0 c7=120 c8=0 c9=0 s0=68328:120 s1=706:2086 s2=10645:4569 s3=1252:4975 s4=9044:14925 s5=0:0 s6=10566:120 s7=640:2040 s8=0:0 s9=0:0
+DEVICE_WINDOW {"rep":3,"contexts":120,"draws":4975,"input_hash":"986b2e6e027af00d","procedural_pixel_hash":"c1b0fdbde748d0de","panel_hash":"cec4b765a2794b14"}
+DEVICE_TRANSFER {"rep":3,"pixels":3888000,"equal_previous_pixels":3499706,"strips":2040,"equal_previous_strips":449}
+DERBY_FIXED v=1 fixture=oval-pan8-390-510-v1 manifest=84e0341ee1ac10c232e3008f28f8aada8823155e19229f926e633d7780a2021d variant=native session=1 rep=3 seq=3 valid=1 quality=0 independent=0 seed=9112A7AB oval=1 tier=1 cam=8 start=390 end=510 contexts=120 done=120 cont=0 capture=0 faults=0 refused=0 tx_fail=0 wall_us=126338 work_us=126278 finish=5DC86E18 p0=0:0:0 p1=0:0:0 p2=0:0:0 c0=0 c1=120 c2=600 c3=7735 c4=120 c5=7735 c6=0 c7=120 c8=0 c9=0 s0=72894:120 s1=731:2086 s2=11126:4569 s3=1423:4975 s4=9862:14925 s5=0:0 s6=11180:120 s7=617:2040 s8=0:0 s9=0:0
+DERBY_FIXED_END v=1 session=1 reps=3 valid=1 quality=0 independent=0
+DEVICE_TAIL {"rep":1,"steps":735,"turns":92,"max_steps":8,"settles":1,"guest_draws":0}
+DEVICE_TAIL {"rep":2,"steps":735,"turns":92,"max_steps":8,"settles":1,"guest_draws":0}
+DEVICE_TAIL {"rep":3,"steps":735,"turns":92,"max_steps":8,"settles":1,"guest_draws":0}
+APP_STOPPED
+HOME_READY
+DEVICE_FIXTURE_HOST PASS
+MEASURE_HOST functional_only=1 faults=0 scalar=41 pie=0
+MEASURE_HOST s0=995426:783546:1989
+MEASURE_HOST s1=226021:16044:69017
+MEASURE_HOST s2=365465:106807:172459
+MEASURE_HOST s3=49394:11543:38774
+MEASURE_HOST s4=106065:106065:116322
+MEASURE_HOST s5=37:37:82
+MEASURE_HOST s6=154825:150752:1710
+MEASURE_HOST s7=4073:4073:29070
+MEASURE_HOST s8=0:0:0
+MEASURE_HOST s9=0:0:0

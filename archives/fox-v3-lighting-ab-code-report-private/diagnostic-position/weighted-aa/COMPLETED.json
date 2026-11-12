@@ -1,0 +1,141 @@
+{
+  "records": [
+    {
+      "grid": 1,
+      "view": "front",
+      "case": "baseline",
+      "queries": 4698,
+      "rays": 117019,
+      "blocked": 31716,
+      "nearHits": 188,
+      "wallSeconds": 1.520868949000942,
+      "cpuSeconds": 1.5208273829999999
+    },
+    {
+      "grid": 1,
+      "view": "front",
+      "case": "direction",
+      "queries": 4698,
+      "rays": 112782,
+      "blocked": 40277,
+      "nearHits": 180,
+      "wallSeconds": 1.4703052209988527,
+      "cpuSeconds": 1.4701709580000002
+    },
+    {
+      "grid": 1,
+      "view": "oblique",
+      "case": "baseline",
+      "queries": 5156,
+      "rays": 121769,
+      "blocked": 37488,
+      "nearHits": 164,
+      "wallSeconds": 1.6349650909996853,
+      "cpuSeconds": 1.6347235900000001
+    },
+    {
+      "grid": 1,
+      "view": "oblique",
+      "case": "direction",
+      "queries": 5156,
+      "rays": 97875,
+      "blocked": 45140,
+      "nearHits": 193,
+      "wallSeconds": 1.2741385330009507,
+      "cpuSeconds": 1.274236771
+    },
+    {
+      "grid": 3,
+      "view": "front",
+      "case": "baseline",
+      "queries": 42282,
+      "rays": 1053171,
+      "blocked": 285444,
+      "nearHits": 1692,
+      "wallSeconds": 12.300411222000548,
+      "cpuSeconds": 12.300002078
+    },
+    {
+      "grid": 3,
+      "view": "front",
+      "case": "direction",
+      "queries": 42282,
+      "rays": 1015038,
+      "blocked": 362493,
+      "nearHits": 1620,
+      "wallSeconds": 12.736207871999795,
+      "cpuSeconds": 12.733052464
+    },
+    {
+      "grid": 3,
+      "view": "oblique",
+      "case": "baseline",
+      "queries": 46404,
+      "rays": 1095921,
+      "blocked": 337392,
+      "nearHits": 1476,
+      "wallSeconds": 13.313196343999152,
+      "cpuSeconds": 13.313448545999996
+    },
+    {
+      "grid": 3,
+      "view": "oblique",
+      "case": "direction",
+      "queries": 46404,
+      "rays": 880875,
+      "blocked": 406260,
+      "nearHits": 1737,
+      "wallSeconds": 12.401851071999772,
+      "cpuSeconds": 12.401877980000002
+    },
+    {
+      "grid": 5,
+      "view": "front",
+      "case": "baseline",
+      "queries": 117361,
+      "rays": 2925162,
+      "blocked": 786156,
+      "nearHits": 4357,
+      "wallSeconds": 34.95265586700043,
+      "cpuSeconds": 34.948766940999995
+    },
+    {
+      "grid": 5,
+      "view": "front",
+      "case": "direction",
+      "queries": 117361,
+      "rays": 2819573,
+      "blocked": 999063,
+      "nearHits": 4419,
+      "wallSeconds": 35.46535898199909,
+      "cpuSeconds": 35.46326513700001
+    },
+    {
+      "grid": 5,
+      "view": "oblique",
+      "case": "baseline",
+      "queries": 128750,
+      "rays": 3033582,
+      "blocked": 929030,
+      "nearHits": 4569,
+      "wallSeconds": 37.876593753000634,
+      "cpuSeconds": 37.87530168799998
+    },
+    {
+      "grid": 5,
+      "view": "oblique",
+      "case": "direction",
+      "queries": 128750,
+      "rays": 2440514,
+      "blocked": 1120332,
+      "nearHits": 4792,
+      "wallSeconds": 31.40685510900039,
+      "cpuSeconds": 31.403071076999993
+    }
+  ],
+  "wallSeconds": 196.4454823699998,
+  "userSeconds": 197.273212,
+  "systemSeconds": 0.32908,
+  "peakRSSKiB": 206404,
+  "pid": 5
+}

@@ -1,0 +1,9 @@
+2026-11-05T02:51:26Z
+Linux 52ec170f4c2d 6.18.57 #1 SMP Tue Oct 20 21:56:04 UTC 2026 x86_64 GNU/Linux
+gcc (Debian 14.2.0-19) 14.2.0
+gcc -std=c11 -O2 -fno-tree-vectorize -fno-tree-slp-vectorize -fno-lto bench_kernel.c -lm -o bench-kernel
+9175cf6e7c21fa78dbf757b33e02261c25627ce7748ae586080aad7fef5cfc0f  bench_kernel.c
+b2f61ede95f56d66916d03ff503cfdcabe7a8dc4a8da9903628dc35033e0d21f  fixed_kernel.h
+40c45bef677159b8e4eea72371981d7b5a7376649ec673165849c34755d0246c  reference.h
+6fb04f69e77790eff6f4d69ea8902b9aa89859c8e64994e9d29082060b7919d8  run_benchmark.sh
+d145671b12f4f6bb156da6971980c996ea4b0e996d9ab85cd52af5e5b32999fc  bench-kernel

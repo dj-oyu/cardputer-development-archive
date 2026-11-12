@@ -1,0 +1,55 @@
+APP_ID local.derby
+I (pocket.app) APP_LOAD prog bytes=2465 compile_us=0 run_us=0 used=87260>91264>95728
+I (pocket.app) APP_LOAD view bytes=11972 compile_us=0 run_us=0 used=95728>121704>131656
+I (pocket.app) APP_LOAD scene bytes=9497 compile_us=0 run_us=0 used=131656>148276>151948
+I (pocket.app) APP_LOAD pan bytes=2014 compile_us=0 run_us=0 used=151948>155200>155212
+I (pocket.app) APP_LOAD fixed bytes=2354 compile_us=0 run_us=0 used=168404>172732>172740
+DERBY READY tones=false
+I (pocket.app) APP_LOAD play bytes=6993 compile_us=0 run_us=0 used=155212>165104>177816
+ok   eval; source 4511 B
+QuickJS-ng memory usage -- 0.14.0 version, 64-bit, malloc limit: 524288
+
+  1144 + 0   JSRuntime
+  608 + 0   JSContext
+   72 + 0   JSObject
+   40 + 0   JSString
+  136 + 0   JSFunctionBytecode
+
+JSObject classes
+     64   1 Object
+     72   2 Array
+      1   4 Number
+      1   5 String
+      1   6 Boolean
+     93  12 Function
+     59  13 Function
+      1  15 Function
+      1     other
+
+NAME                    COUNT     SIZE
+memory allocated         1551   175448  (113.1 per block)
+memory used              1699   154630  (8 overhead, 12.3 average slack)
+atoms                     533    36278  (68.1 per atom)
+strings                    71     3381  (47.6 per string)
+objects                   293    21096  (72.0 per object)
+  properties              965    17312  (3.3 per object)
+  shapes                   80    13896  (173.7 per shape)
+bytecode functions         88    21884
+  bytecode                 88    19937  (226.6 per function)
+  pc2line                  80     3486  (43.6 per function)
+C functions                93
+arrays                     72
+  fast arrays              72
+  elements                602     9632  (8.4 per fast array)
+guest heap (TLSF model): before eval 64920, peak during eval 171696 (+106776), after eval 163040 (+98120)
+MEASURE_HOST functional_only=1 faults=0 scalar=0 pie=0
+MEASURE_HOST s0=0:0:0
+MEASURE_HOST s1=11:11:2
+MEASURE_HOST s2=0:0:0
+MEASURE_HOST s3=0:0:0
+MEASURE_HOST s4=0:0:0
+MEASURE_HOST s5=0:0:0
+MEASURE_HOST s6=0:0:0
+MEASURE_HOST s7=0:0:0
+MEASURE_HOST s8=0:0:0
+MEASURE_HOST s9=0:0:0

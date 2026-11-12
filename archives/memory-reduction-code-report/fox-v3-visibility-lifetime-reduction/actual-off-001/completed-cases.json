@@ -1,0 +1,1962 @@
+[
+  {
+    "name": "native-front-baseline",
+    "view": "front",
+    "case": "baseline",
+    "reverse": false,
+    "arm": "off",
+    "mode": "diagnostic",
+    "status": "PASS",
+    "files": {
+      ".u16le": "fb373165478a9984e5be41ffd88c73df34be4480fdf6480bc2fe24f796123b9e",
+      ".f32le": "03d9ee4d5a81118e7f2efe2947a64230132aad4daad2a2019d31f9f4959fea3f",
+      ".snapshot": "006cfd92bda231a4ae7922f23aa125176f807967feaf444e2f3f8b19ef72cab0",
+      ".targets.u8": "eebd4a3432074c6e6d84cf7e6a03b34c7dbd9d4309bd3fbd003b7caa47eeb4f6",
+      ".hdr.f64le": "7b5a6dfa3cdcd2cd7f3427f366723aa2635d4d56998b06fd9f549aef7dba870d",
+      ".json": "22197b1ebcf5a523b76be3c22de0f70b2ebbc6df7538b4a0dc9851e3df3e77a2",
+      ".aa.json": "2bdee4fe93c101bf5a7edadcd096cef0f0360df4322408336b4c886fa81bd098",
+      ".floor.json": "102ec79849b8b5c882a528f4692774b04e10f186c511df46e0a7299096e10a38",
+      ".background.json": "6f087b2f6a2dc4b429e60660fa365db0b836d70d2dfec7915d0dc4dc0598d78e",
+      ".row.json": "0f0ce9afabf79c46fab261cb419ff487a211a294190b1d5f43d59a0065f00933",
+      ".floor-world.json": "806e770efa438bda98e3a7b28525925f49498c91da6fad798e9cd890cc548f0d",
+      ".hdr-observer.json": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d",
+      ".cache.json": "54f00901d3a10c5cbadbdd5531884282d77d6abb73cd4a927b5849fb82711c4e",
+      ".depth-stream.json": "9a1c15480357845548e2b6e4579a186837cade5f46e07e0368306ba58ac35c77"
+    },
+    "reportObservations": {
+      ".json": {
+        "descriptiveTiming": {
+          "transportBuildNs": {
+            "baseline": 33867735,
+            "candidate": 35637578
+          },
+          "visibilityBuildNs": {
+            "baseline": 2194728,
+            "candidate": 2194638
+          },
+          "appendNs": {
+            "baseline": 36546125,
+            "candidate": 38429459
+          },
+          "evaluateNs": {
+            "baseline": 19750496,
+            "candidate": 9060610
+          },
+          "hostRenderNsFirstFrame": {
+            "baseline": 16674809730,
+            "candidate": 16436320065
+          }
+        },
+        "declaredNonTiming": []
+      },
+      ".aa.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".floor.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".background.json": {
+        "descriptiveTiming": {
+          "backgroundBuildNs": {
+            "baseline": 84078,
+            "candidate": 83786
+          }
+        },
+        "declaredNonTiming": []
+      },
+      ".row.json": {
+        "descriptiveTiming": {
+          "backgroundBuildNs": {
+            "baseline": 84078,
+            "candidate": 83786
+          }
+        },
+        "declaredNonTiming": []
+      },
+      ".floor-world.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".hdr-observer.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".cache.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".depth-stream.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      }
+    },
+    "elapsedSecondsDescriptiveOnly": 16.487275243009208,
+    "hostUserCPUSeconds": 16.463962,
+    "hostSystemCPUSeconds": 0.006830999999999999,
+    "hostPeakRSSKiB": 24612
+  },
+  {
+    "name": "native-front-baseline-reverse",
+    "view": "front",
+    "case": "baseline",
+    "reverse": true,
+    "arm": "off",
+    "mode": "diagnostic",
+    "status": "PASS",
+    "files": {
+      ".u16le": "fb373165478a9984e5be41ffd88c73df34be4480fdf6480bc2fe24f796123b9e",
+      ".f32le": "03d9ee4d5a81118e7f2efe2947a64230132aad4daad2a2019d31f9f4959fea3f",
+      ".snapshot": "ebd69b817beca5c8196350f55afd94dc07e1f4da43dc76c77a0a0f8a32606ee2",
+      ".targets.u8": "eebd4a3432074c6e6d84cf7e6a03b34c7dbd9d4309bd3fbd003b7caa47eeb4f6",
+      ".hdr.f64le": "7b5a6dfa3cdcd2cd7f3427f366723aa2635d4d56998b06fd9f549aef7dba870d",
+      ".json": "1b38da6cc14ec08e89e302f657060b1c591ce29f7fca8d1077d4ffad69871614",
+      ".aa.json": "8b5fd9304cc27becae8b620923d5972a2648a99ddc37d82a2310151decd7e69e",
+      ".floor.json": "da9835ab8f31841a0e509a44456086974de852992be9209311139b481a41281d",
+      ".background.json": "0463e6c69bc895d820969a84ae9be97387b0fbfa6f8484931c3c49a7481ba5d5",
+      ".row.json": "82c78eed4781f2001d987af90a99ed0ac366bca08a1cc415460fded3d311dfa6",
+      ".floor-world.json": "806e770efa438bda98e3a7b28525925f49498c91da6fad798e9cd890cc548f0d",
+      ".hdr-observer.json": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d",
+      ".cache.json": "54f00901d3a10c5cbadbdd5531884282d77d6abb73cd4a927b5849fb82711c4e",
+      ".depth-stream.json": "75811630898395bf89d21f34b82bfd40f4971fcf3dff3b6d0d9188a844899b01"
+    },
+    "reportObservations": {
+      ".json": {
+        "descriptiveTiming": {
+          "transportBuildNs": {
+            "baseline": 42658489,
+            "candidate": 35518941
+          },
+          "visibilityBuildNs": {
+            "baseline": 2232886,
+            "candidate": 2230031
+          },
+          "appendNs": {
+            "baseline": 45406143,
+            "candidate": 38233755
+          },
+          "evaluateNs": {
+            "baseline": 9852727,
+            "candidate": 9978166
+          },
+          "hostRenderNsFirstFrame": {
+            "baseline": 16057302539,
+            "candidate": 16246391623
+          }
+        },
+        "declaredNonTiming": []
+      },
+      ".aa.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".floor.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".background.json": {
+        "descriptiveTiming": {
+          "backgroundBuildNs": {
+            "baseline": 84137,
+            "candidate": 86951
+          }
+        },
+        "declaredNonTiming": []
+      },
+      ".row.json": {
+        "descriptiveTiming": {
+          "backgroundBuildNs": {
+            "baseline": 84137,
+            "candidate": 86951
+          }
+        },
+        "declaredNonTiming": []
+      },
+      ".floor-world.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".hdr-observer.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".cache.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".depth-stream.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      }
+    },
+    "elapsedSecondsDescriptiveOnly": 16.298559840011876,
+    "hostUserCPUSeconds": 16.29349,
+    "hostSystemCPUSeconds": 0.0,
+    "hostPeakRSSKiB": 24708
+  },
+  {
+    "name": "native-oblique-baseline",
+    "view": "oblique",
+    "case": "baseline",
+    "reverse": false,
+    "arm": "off",
+    "mode": "diagnostic",
+    "status": "PASS",
+    "files": {
+      ".u16le": "b09f23436d6cf4e83557e8f929fa90e98d703c6fb98ace972c844108604fcd27",
+      ".f32le": "3201f0507c4b7f65911ecea8edf4175d76f2b93cc8d9ca715e10f97cf410e77a",
+      ".snapshot": "510b27afbe66e125c3a39707408ab41b4ca381d6b81c69f6e43025d799852c90",
+      ".targets.u8": "a7b9fb46c60810bb1047503c80b15e7e0cc84d546faadc3f8a2af988bf8550a0",
+      ".hdr.f64le": "9ba1a905b2629040d9b74a0441ca996de722607d222660e01ae20c3f743f6aac",
+      ".json": "7250c3234f20d62eb3f96866127260bd2ba15938e28c03c8fac0b53524db03f4",
+      ".aa.json": "e3ada4f7452c35dc25700e8d90810ea1ad371fa845c8667ae7ee530dec235746",
+      ".floor.json": "eeeab6b7c90cb83513d6eaa308e751e42c2fe50d8627c756e18a1760d0a353f7",
+      ".background.json": "383dc75f91a227cbb8d703a11f5a0ed204f63af391e4605e222c88f527c6d9ee",
+      ".row.json": "da8c47f576daf39832ca9985618fbdcbdce951a9fdbec0c8c1262eded9d97af1",
+      ".floor-world.json": "806e770efa438bda98e3a7b28525925f49498c91da6fad798e9cd890cc548f0d",
+      ".hdr-observer.json": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d",
+      ".cache.json": "b96c4175e2d335a0dbacecbae55446c2bb74ab7faec04edf71461f435acbff99",
+      ".depth-stream.json": "5528b6d97722fdf10824673fb7adab5b40ded57ba4400377f7890eda48d85ed4"
+    },
+    "reportObservations": {
+      ".json": {
+        "descriptiveTiming": {
+          "transportBuildNs": {
+            "baseline": 36543090,
+            "candidate": 42031017
+          },
+          "visibilityBuildNs": {
+            "baseline": 2392548,
+            "candidate": 2254028
+          },
+          "appendNs": {
+            "baseline": 39489695,
+            "candidate": 45073066
+          },
+          "evaluateNs": {
+            "baseline": 9514776,
+            "candidate": 11410664
+          },
+          "hostRenderNsFirstFrame": {
+            "baseline": 16358611856,
+            "candidate": 18476173130
+          }
+        },
+        "declaredNonTiming": []
+      },
+      ".aa.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".floor.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".background.json": {
+        "descriptiveTiming": {
+          "backgroundBuildNs": {
+            "baseline": 83717,
+            "candidate": 86080
+          }
+        },
+        "declaredNonTiming": []
+      },
+      ".row.json": {
+        "descriptiveTiming": {
+          "backgroundBuildNs": {
+            "baseline": 83717,
+            "candidate": 86080
+          }
+        },
+        "declaredNonTiming": []
+      },
+      ".floor-world.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".hdr-observer.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".cache.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".depth-stream.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      }
+    },
+    "elapsedSecondsDescriptiveOnly": 18.53774945999612,
+    "hostUserCPUSeconds": 18.51832,
+    "hostSystemCPUSeconds": 0.01278,
+    "hostPeakRSSKiB": 24708
+  },
+  {
+    "name": "native-oblique-baseline-reverse",
+    "view": "oblique",
+    "case": "baseline",
+    "reverse": true,
+    "arm": "off",
+    "mode": "diagnostic",
+    "status": "PASS",
+    "files": {
+      ".u16le": "b09f23436d6cf4e83557e8f929fa90e98d703c6fb98ace972c844108604fcd27",
+      ".f32le": "3201f0507c4b7f65911ecea8edf4175d76f2b93cc8d9ca715e10f97cf410e77a",
+      ".snapshot": "d1bbf051ad2abad9cb95e0ab0d0a9d083a1bf970f7bbe41abf5d819fd7218bc9",
+      ".targets.u8": "a7b9fb46c60810bb1047503c80b15e7e0cc84d546faadc3f8a2af988bf8550a0",
+      ".hdr.f64le": "9ba1a905b2629040d9b74a0441ca996de722607d222660e01ae20c3f743f6aac",
+      ".json": "d53e2a052eb47431f27b687b76d9ee69317ecce33c9ad5578ceef823eb255e2c",
+      ".aa.json": "38fa624ebb353fa320d1fb4a37e4e586809a5eb4876899f38d1df59f3adff7c1",
+      ".floor.json": "0bd5ce8057d0094ef0b3f458bd6d22a054f5d88f345a06ae60f342517bf059d2",
+      ".background.json": "005fe0ef007d20bd829e5fb0afd66b71496b24d5269b84d9eb91b6e8616e7618",
+      ".row.json": "54eff763f95d65207d59510f101fb25c71136d9072d035fb0331db2e495a563e",
+      ".floor-world.json": "806e770efa438bda98e3a7b28525925f49498c91da6fad798e9cd890cc548f0d",
+      ".hdr-observer.json": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d",
+      ".cache.json": "b96c4175e2d335a0dbacecbae55446c2bb74ab7faec04edf71461f435acbff99",
+      ".depth-stream.json": "3cdce3419173f62f031f1af17266ca93a0aca6e2ac9b5ee064220b199fad443e"
+    },
+    "reportObservations": {
+      ".json": {
+        "descriptiveTiming": {
+          "transportBuildNs": {
+            "baseline": 44437045,
+            "candidate": 42280719
+          },
+          "visibilityBuildNs": {
+            "baseline": 4015892,
+            "candidate": 2723618
+          },
+          "appendNs": {
+            "baseline": 49175249,
+            "candidate": 45739158
+          },
+          "evaluateNs": {
+            "baseline": 10980612,
+            "candidate": 15249118
+          },
+          "hostRenderNsFirstFrame": {
+            "baseline": 16646934752,
+            "candidate": 19619619092
+          }
+        },
+        "declaredNonTiming": []
+      },
+      ".aa.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".floor.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".background.json": {
+        "descriptiveTiming": {
+          "backgroundBuildNs": {
+            "baseline": 83376,
+            "candidate": 85600
+          }
+        },
+        "declaredNonTiming": []
+      },
+      ".row.json": {
+        "descriptiveTiming": {
+          "backgroundBuildNs": {
+            "baseline": 83376,
+            "candidate": 85600
+          }
+        },
+        "declaredNonTiming": []
+      },
+      ".floor-world.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".hdr-observer.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".cache.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".depth-stream.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      }
+    },
+    "elapsedSecondsDescriptiveOnly": 19.686686122993706,
+    "hostUserCPUSeconds": 19.673651,
+    "hostSystemCPUSeconds": 0.004194,
+    "hostPeakRSSKiB": 24708
+  },
+  {
+    "name": "native-front-direction",
+    "view": "front",
+    "case": "direction",
+    "reverse": false,
+    "arm": "off",
+    "mode": "diagnostic",
+    "status": "PASS",
+    "files": {
+      ".u16le": "3787d423c9b7ba324fde1db14c56877a9dbbb09b130e6a0464b4d03cfb54e26a",
+      ".f32le": "03d9ee4d5a81118e7f2efe2947a64230132aad4daad2a2019d31f9f4959fea3f",
+      ".snapshot": "c08a551a5aa436e70ff7b9cc02e06757198c83abf202c623e2e20fcad1d1a518",
+      ".targets.u8": "eebd4a3432074c6e6d84cf7e6a03b34c7dbd9d4309bd3fbd003b7caa47eeb4f6",
+      ".hdr.f64le": "a8c6998b38b0116232afcb18731e679336db1e3e777c9aa1b7864a5571b7c5e1",
+      ".json": "3b60a59266ac414456942a832165ce58c789cb4e89a6bdd070852cf4aa46d835",
+      ".aa.json": "26b57b818bea6f7f01e2cb3d94a377022bdfa4f4844d5c44b8cafed84101edf7",
+      ".floor.json": "400fe30bebae4b3386a613daa4bd3f1a5a57fc723c773bdc9ae5d1af32b53c82",
+      ".background.json": "1a80944c7f9088928e6b5b231a78bfcffe4c4757e213267ce630a4fb06a368f8",
+      ".row.json": "e63c7b24fe3b70e664b0744a298eaeb46c2f1f9e4912ea0f59aed79a23858547",
+      ".floor-world.json": "806e770efa438bda98e3a7b28525925f49498c91da6fad798e9cd890cc548f0d",
+      ".hdr-observer.json": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d",
+      ".cache.json": "9c18c00f853cd480be70682ab4b49fc59e0f123f01030d92a18d88231ebd27a4",
+      ".depth-stream.json": "9a1c15480357845548e2b6e4579a186837cade5f46e07e0368306ba58ac35c77"
+    },
+    "reportObservations": {
+      ".json": {
+        "descriptiveTiming": {
+          "transportBuildNs": {
+            "baseline": 35822079,
+            "candidate": 37906948
+          },
+          "visibilityBuildNs": {
+            "baseline": 2155078,
+            "candidate": 2139325
+          },
+          "appendNs": {
+            "baseline": 38463983,
+            "candidate": 40550986
+          },
+          "evaluateNs": {
+            "baseline": 9560864,
+            "candidate": 10200234
+          },
+          "hostRenderNsFirstFrame": {
+            "baseline": 15829749403,
+            "candidate": 16917843327
+          }
+        },
+        "declaredNonTiming": []
+      },
+      ".aa.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".floor.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".background.json": {
+        "descriptiveTiming": {
+          "backgroundBuildNs": {
+            "baseline": 83827,
+            "candidate": 84939
+          }
+        },
+        "declaredNonTiming": []
+      },
+      ".row.json": {
+        "descriptiveTiming": {
+          "backgroundBuildNs": {
+            "baseline": 83827,
+            "candidate": 84939
+          }
+        },
+        "declaredNonTiming": []
+      },
+      ".floor-world.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".hdr-observer.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".cache.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".depth-stream.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      }
+    },
+    "elapsedSecondsDescriptiveOnly": 16.972918933985056,
+    "hostUserCPUSeconds": 16.961539,
+    "hostSystemCPUSeconds": 0.004321,
+    "hostPeakRSSKiB": 24708
+  },
+  {
+    "name": "native-front-direction-reverse",
+    "view": "front",
+    "case": "direction",
+    "reverse": true,
+    "arm": "off",
+    "mode": "diagnostic",
+    "status": "PASS",
+    "files": {
+      ".u16le": "3787d423c9b7ba324fde1db14c56877a9dbbb09b130e6a0464b4d03cfb54e26a",
+      ".f32le": "03d9ee4d5a81118e7f2efe2947a64230132aad4daad2a2019d31f9f4959fea3f",
+      ".snapshot": "d461918555e71adae7ab5d78e3ce6745b7da011613693d2dc196abeb4355cef1",
+      ".targets.u8": "eebd4a3432074c6e6d84cf7e6a03b34c7dbd9d4309bd3fbd003b7caa47eeb4f6",
+      ".hdr.f64le": "a8c6998b38b0116232afcb18731e679336db1e3e777c9aa1b7864a5571b7c5e1",
+      ".json": "f93f25d1df3ad1ee9ad6766510183cad45a690eee04d5c3af05d0c53931e4097",
+      ".aa.json": "e2b31e382efb3a8b72b27bcaa92a37471fb060994d7e7da38221a9518706b169",
+      ".floor.json": "d3aeb9613ec11657d1b70dcbc8fcf395fafa30d1c371959ff13f1ee932f7d614",
+      ".background.json": "7526a89bea8c25d45f8a8eca249418c9c7e204de7cdf7f7927f8c5d8bb23b9f4",
+      ".row.json": "7ec2bb300de630529ab24a486b65a450afaf0bb5e3ee87311bd57ee249adfbee",
+      ".floor-world.json": "806e770efa438bda98e3a7b28525925f49498c91da6fad798e9cd890cc548f0d",
+      ".hdr-observer.json": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d",
+      ".cache.json": "9c18c00f853cd480be70682ab4b49fc59e0f123f01030d92a18d88231ebd27a4",
+      ".depth-stream.json": "75811630898395bf89d21f34b82bfd40f4971fcf3dff3b6d0d9188a844899b01"
+    },
+    "reportObservations": {
+      ".json": {
+        "descriptiveTiming": {
+          "transportBuildNs": {
+            "baseline": 38575581,
+            "candidate": 48524540
+          },
+          "visibilityBuildNs": {
+            "baseline": 2692251,
+            "candidate": 2506811
+          },
+          "appendNs": {
+            "baseline": 41822981,
+            "candidate": 51764269
+          },
+          "evaluateNs": {
+            "baseline": 13487419,
+            "candidate": 12786523
+          },
+          "hostRenderNsFirstFrame": {
+            "baseline": 16579069618,
+            "candidate": 17915712514
+          }
+        },
+        "declaredNonTiming": []
+      },
+      ".aa.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".floor.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".background.json": {
+        "descriptiveTiming": {
+          "backgroundBuildNs": {
+            "baseline": 83476,
+            "candidate": 85119
+          }
+        },
+        "declaredNonTiming": []
+      },
+      ".row.json": {
+        "descriptiveTiming": {
+          "backgroundBuildNs": {
+            "baseline": 83476,
+            "candidate": 85119
+          }
+        },
+        "declaredNonTiming": []
+      },
+      ".floor-world.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".hdr-observer.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".cache.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".depth-stream.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      }
+    },
+    "elapsedSecondsDescriptiveOnly": 17.985796827997547,
+    "hostUserCPUSeconds": 17.973534,
+    "hostSystemCPUSeconds": 0.004679,
+    "hostPeakRSSKiB": 24708
+  },
+  {
+    "name": "native-oblique-direction",
+    "view": "oblique",
+    "case": "direction",
+    "reverse": false,
+    "arm": "off",
+    "mode": "diagnostic",
+    "status": "PASS",
+    "files": {
+      ".u16le": "ab251f9baa17f74f0417e9c0cd05fe6f6a54adf0f4273a51baa7fa4c94c4e06c",
+      ".f32le": "3201f0507c4b7f65911ecea8edf4175d76f2b93cc8d9ca715e10f97cf410e77a",
+      ".snapshot": "d27aea498e61ddab736ff7b660833c97effa37da0b47da7d37aba513565d6b00",
+      ".targets.u8": "a7b9fb46c60810bb1047503c80b15e7e0cc84d546faadc3f8a2af988bf8550a0",
+      ".hdr.f64le": "c8f4a8a06f04ef68060bd91d94c26644503e769bb8eba49e504982bfc527be7d",
+      ".json": "27e7b53481d7892969146b28c6cd5c6f804e308482d14bb44e2ab18a5e4f3f27",
+      ".aa.json": "d08c57c358a62f88a14628d90830e0b4b0de14330be7113e7767847d57f87727",
+      ".floor.json": "1526a0b04bd12642c21f65551d64445c0f549911c43ab7f517ca29dcb9cea1a9",
+      ".background.json": "c042aa77e6be5234c709aab4475201da287fb7810a3274032028f73fd306f35c",
+      ".row.json": "4d0cc23fea83ab276c35b01831d35f16a283cccb9fdf98a028034d53292a3203",
+      ".floor-world.json": "806e770efa438bda98e3a7b28525925f49498c91da6fad798e9cd890cc548f0d",
+      ".hdr-observer.json": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d",
+      ".cache.json": "9c18c00f853cd480be70682ab4b49fc59e0f123f01030d92a18d88231ebd27a4",
+      ".depth-stream.json": "5528b6d97722fdf10824673fb7adab5b40ded57ba4400377f7890eda48d85ed4"
+    },
+    "reportObservations": {
+      ".json": {
+        "descriptiveTiming": {
+          "transportBuildNs": {
+            "baseline": 78078002,
+            "candidate": 54408416
+          },
+          "visibilityBuildNs": {
+            "baseline": 6969811,
+            "candidate": 4408286
+          },
+          "appendNs": {
+            "baseline": 86606940,
+            "candidate": 59704315
+          },
+          "evaluateNs": {
+            "baseline": 18155413,
+            "candidate": 26360337
+          },
+          "hostRenderNsFirstFrame": {
+            "baseline": 17993580036,
+            "candidate": 18104057831
+          }
+        },
+        "declaredNonTiming": []
+      },
+      ".aa.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".floor.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".background.json": {
+        "descriptiveTiming": {
+          "backgroundBuildNs": {
+            "baseline": 85189,
+            "candidate": 86280
+          }
+        },
+        "declaredNonTiming": []
+      },
+      ".row.json": {
+        "descriptiveTiming": {
+          "backgroundBuildNs": {
+            "baseline": 85189,
+            "candidate": 86280
+          }
+        },
+        "declaredNonTiming": []
+      },
+      ".floor-world.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".hdr-observer.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".cache.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".depth-stream.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      }
+    },
+    "elapsedSecondsDescriptiveOnly": 18.199342533014715,
+    "hostUserCPUSeconds": 18.185075,
+    "hostSystemCPUSeconds": 0.007352999999999999,
+    "hostPeakRSSKiB": 24708
+  },
+  {
+    "name": "native-oblique-direction-reverse",
+    "view": "oblique",
+    "case": "direction",
+    "reverse": true,
+    "arm": "off",
+    "mode": "diagnostic",
+    "status": "PASS",
+    "files": {
+      ".u16le": "ab251f9baa17f74f0417e9c0cd05fe6f6a54adf0f4273a51baa7fa4c94c4e06c",
+      ".f32le": "3201f0507c4b7f65911ecea8edf4175d76f2b93cc8d9ca715e10f97cf410e77a",
+      ".snapshot": "93a60318a4a187c8ed85f6ac38ea0358083a510c7ea788bcd3daaa1bfb399e0c",
+      ".targets.u8": "a7b9fb46c60810bb1047503c80b15e7e0cc84d546faadc3f8a2af988bf8550a0",
+      ".hdr.f64le": "c8f4a8a06f04ef68060bd91d94c26644503e769bb8eba49e504982bfc527be7d",
+      ".json": "a56fe152c391b489a210e6eebfc42cc62e29c3bc508289e4cdb4f2ef724429ae",
+      ".aa.json": "5a376ddd8b12ea2f828cd433455d538816f439a9869d90e030e5b1f56462625d",
+      ".floor.json": "499be0f73d5fd6a3eae1839cebb668cd541c64a4bcbfbbc5943d454fd1665ac5",
+      ".background.json": "36fd1fd667b33370ebed7c66cd3aa096d07d3dc66c5851809ee847db687a205d",
+      ".row.json": "08b06eb6ba90d9a4f4a9fe7005ddc7822240d3d1e196f14696bb215d1e4f2f07",
+      ".floor-world.json": "806e770efa438bda98e3a7b28525925f49498c91da6fad798e9cd890cc548f0d",
+      ".hdr-observer.json": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d",
+      ".cache.json": "9c18c00f853cd480be70682ab4b49fc59e0f123f01030d92a18d88231ebd27a4",
+      ".depth-stream.json": "3cdce3419173f62f031f1af17266ca93a0aca6e2ac9b5ee064220b199fad443e"
+    },
+    "reportObservations": {
+      ".json": {
+        "descriptiveTiming": {
+          "transportBuildNs": {
+            "baseline": 46768663,
+            "candidate": 42442855
+          },
+          "visibilityBuildNs": {
+            "baseline": 2373388,
+            "candidate": 2127446
+          },
+          "appendNs": {
+            "baseline": 49689249,
+            "candidate": 45080482
+          },
+          "evaluateNs": {
+            "baseline": 9729172,
+            "candidate": 12916387
+          },
+          "hostRenderNsFirstFrame": {
+            "baseline": 17604214711,
+            "candidate": 18186028783
+          }
+        },
+        "declaredNonTiming": []
+      },
+      ".aa.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".floor.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".background.json": {
+        "descriptiveTiming": {
+          "backgroundBuildNs": {
+            "baseline": 84097,
+            "candidate": 84648
+          }
+        },
+        "declaredNonTiming": []
+      },
+      ".row.json": {
+        "descriptiveTiming": {
+          "backgroundBuildNs": {
+            "baseline": 84097,
+            "candidate": 84648
+          }
+        },
+        "declaredNonTiming": []
+      },
+      ".floor-world.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".hdr-observer.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".cache.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".depth-stream.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      }
+    },
+    "elapsedSecondsDescriptiveOnly": 18.24791394500062,
+    "hostUserCPUSeconds": 18.231521,
+    "hostSystemCPUSeconds": 0.010199,
+    "hostPeakRSSKiB": 24708
+  },
+  {
+    "name": "native-front-intensity",
+    "view": "front",
+    "case": "intensity",
+    "reverse": false,
+    "arm": "off",
+    "mode": "diagnostic",
+    "status": "PASS",
+    "files": {
+      ".u16le": "0c99538b5a9a4647f7371146358d3888501aa5c896f3e29b8b48c7fc0118c73b",
+      ".f32le": "03d9ee4d5a81118e7f2efe2947a64230132aad4daad2a2019d31f9f4959fea3f",
+      ".snapshot": "585fa6119b767f053899f01ba7148c8a533282ce583a2e3b693d7988fb81bd42",
+      ".targets.u8": "eebd4a3432074c6e6d84cf7e6a03b34c7dbd9d4309bd3fbd003b7caa47eeb4f6",
+      ".hdr.f64le": "b99fb124af4ec7bbe6ba5874532e56c0ae53c92ffa6a1b58807a16cbbaaf4796",
+      ".json": "139cb22d157f0c94d3099fe086f2b9076ce5d7fa88532604abd70489df76d595",
+      ".aa.json": "87068ebf28cf35e8c1cd651cf430823e4045a60311b99a8e4b057ea48313e16b",
+      ".floor.json": "f702475a5588a737dc69acc8376e11d6f042cd40dee0ef155b344028a493ea39",
+      ".background.json": "7a0acdff056a0cad6d2e298d6869ae302e8875ffaddca3abf32d8d588c7ce0cf",
+      ".row.json": "90df34b19d640f2207d0d0b8c9f4d9b6bb2e6d1f1fa724e6c66f10b6cc65621c",
+      ".floor-world.json": "806e770efa438bda98e3a7b28525925f49498c91da6fad798e9cd890cc548f0d",
+      ".hdr-observer.json": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d",
+      ".cache.json": "220a0fe3e3c203cd64605a3ce8775adce4a13b6be99ec4f57bd36adc0dc0780a",
+      ".depth-stream.json": "9a1c15480357845548e2b6e4579a186837cade5f46e07e0368306ba58ac35c77"
+    },
+    "reportObservations": {
+      ".json": {
+        "descriptiveTiming": {
+          "transportBuildNs": {
+            "baseline": 35579471,
+            "candidate": 40846519
+          },
+          "visibilityBuildNs": {
+            "baseline": 2355181,
+            "candidate": 2483856
+          },
+          "appendNs": {
+            "baseline": 38522311,
+            "candidate": 43800786
+          },
+          "evaluateNs": {
+            "baseline": 10308217,
+            "candidate": 13364166
+          },
+          "hostRenderNsFirstFrame": {
+            "baseline": 16920935643,
+            "candidate": 15167289541
+          }
+        },
+        "declaredNonTiming": []
+      },
+      ".aa.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".floor.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".background.json": {
+        "descriptiveTiming": {
+          "backgroundBuildNs": {
+            "baseline": 84368,
+            "candidate": 86160
+          }
+        },
+        "declaredNonTiming": []
+      },
+      ".row.json": {
+        "descriptiveTiming": {
+          "backgroundBuildNs": {
+            "baseline": 84368,
+            "candidate": 86160
+          }
+        },
+        "declaredNonTiming": []
+      },
+      ".floor-world.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".hdr-observer.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".cache.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".depth-stream.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      }
+    },
+    "elapsedSecondsDescriptiveOnly": 15.228020234993892,
+    "hostUserCPUSeconds": 15.219902,
+    "hostSystemCPUSeconds": 0.004215,
+    "hostPeakRSSKiB": 24708
+  },
+  {
+    "name": "native-front-intensity-reverse",
+    "view": "front",
+    "case": "intensity",
+    "reverse": true,
+    "arm": "off",
+    "mode": "diagnostic",
+    "status": "PASS",
+    "files": {
+      ".u16le": "0c99538b5a9a4647f7371146358d3888501aa5c896f3e29b8b48c7fc0118c73b",
+      ".f32le": "03d9ee4d5a81118e7f2efe2947a64230132aad4daad2a2019d31f9f4959fea3f",
+      ".snapshot": "901233a81470a789c376a917ef9594962ad5649f7a5cade45e6662fefec9568e",
+      ".targets.u8": "eebd4a3432074c6e6d84cf7e6a03b34c7dbd9d4309bd3fbd003b7caa47eeb4f6",
+      ".hdr.f64le": "b99fb124af4ec7bbe6ba5874532e56c0ae53c92ffa6a1b58807a16cbbaaf4796",
+      ".json": "d6bf482fcda31aa6cc7e88f834546962376524ec5e1e8b2c72b4bf45e286d3b9",
+      ".aa.json": "49be83bdf718c579bc470e17016dbdd88466b2d63ff96f510254ff29f1c9c188",
+      ".floor.json": "d5b0fbe18640fddd79319bf22fbdab583cff2ee17b21d406c9976c2dba2f4944",
+      ".background.json": "4c795fdb7632afa8dffdf0da433c306cd8a404528e9426285d9279a6a702cc06",
+      ".row.json": "e8533b161cb74b49b0971f062de0bf028832a13ed479e1b940c28e1e27300e64",
+      ".floor-world.json": "806e770efa438bda98e3a7b28525925f49498c91da6fad798e9cd890cc548f0d",
+      ".hdr-observer.json": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d",
+      ".cache.json": "220a0fe3e3c203cd64605a3ce8775adce4a13b6be99ec4f57bd36adc0dc0780a",
+      ".depth-stream.json": "75811630898395bf89d21f34b82bfd40f4971fcf3dff3b6d0d9188a844899b01"
+    },
+    "reportObservations": {
+      ".json": {
+        "descriptiveTiming": {
+          "transportBuildNs": {
+            "baseline": 41240858,
+            "candidate": 37244901
+          },
+          "visibilityBuildNs": {
+            "baseline": 3070673,
+            "candidate": 2291244
+          },
+          "appendNs": {
+            "baseline": 44861042,
+            "candidate": 40029502
+          },
+          "evaluateNs": {
+            "baseline": 11354689,
+            "candidate": 9077224
+          },
+          "hostRenderNsFirstFrame": {
+            "baseline": 16680316231,
+            "candidate": 16286982929
+          }
+        },
+        "declaredNonTiming": []
+      },
+      ".aa.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".floor.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".background.json": {
+        "descriptiveTiming": {
+          "backgroundBuildNs": {
+            "baseline": 98489,
+            "candidate": 85019
+          }
+        },
+        "declaredNonTiming": []
+      },
+      ".row.json": {
+        "descriptiveTiming": {
+          "backgroundBuildNs": {
+            "baseline": 98489,
+            "candidate": 85019
+          }
+        },
+        "declaredNonTiming": []
+      },
+      ".floor-world.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".hdr-observer.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".cache.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".depth-stream.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      }
+    },
+    "elapsedSecondsDescriptiveOnly": 16.34057078801561,
+    "hostUserCPUSeconds": 16.328399,
+    "hostSystemCPUSeconds": 0.008335,
+    "hostPeakRSSKiB": 24708
+  },
+  {
+    "name": "native-oblique-intensity",
+    "view": "oblique",
+    "case": "intensity",
+    "reverse": false,
+    "arm": "off",
+    "mode": "diagnostic",
+    "status": "PASS",
+    "files": {
+      ".u16le": "5dcde81b6908f91176f435dfa682f78ad90351dab00aade660b55fa187b11fe5",
+      ".f32le": "3201f0507c4b7f65911ecea8edf4175d76f2b93cc8d9ca715e10f97cf410e77a",
+      ".snapshot": "d9214929e9f4cedef47635ec07ed4d4abf816b06bbf547cc8425c66f5b82c65d",
+      ".targets.u8": "a7b9fb46c60810bb1047503c80b15e7e0cc84d546faadc3f8a2af988bf8550a0",
+      ".hdr.f64le": "0614cf498e9f2517743a6b61323f9d976dcb8dc6a48c23dd0bb34fb5ab64a8cb",
+      ".json": "0b871f2624b785dd6706efc4504b5cbbab3fbe183a87244665595e0d736f38bd",
+      ".aa.json": "6aef62d6f85b5b492ae1fd64cf968300f360f4f03ac33f53c408bb414408211b",
+      ".floor.json": "69b4ff76474a6781040b6c071c1f3659b92b92c96350200d94149fba42dd7be5",
+      ".background.json": "aaec200bee8224dc89139fafdac53bed0ee24907b5db2ec417ee5186f6d19b87",
+      ".row.json": "5de1c7f99badcd5dc3077abb3a81477604295a2f0f9a309f3c64a27f20f1afed",
+      ".floor-world.json": "806e770efa438bda98e3a7b28525925f49498c91da6fad798e9cd890cc548f0d",
+      ".hdr-observer.json": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d",
+      ".cache.json": "94770b6ff83d13a24a0ec9597c47463cc16e94505c1fe7c4754eb04d4c2c2794",
+      ".depth-stream.json": "5528b6d97722fdf10824673fb7adab5b40ded57ba4400377f7890eda48d85ed4"
+    },
+    "reportObservations": {
+      ".json": {
+        "descriptiveTiming": {
+          "transportBuildNs": {
+            "baseline": 37541636,
+            "candidate": 34817301
+          },
+          "visibilityBuildNs": {
+            "baseline": 2397866,
+            "candidate": 2087647
+          },
+          "appendNs": {
+            "baseline": 40435853,
+            "candidate": 37401849
+          },
+          "evaluateNs": {
+            "baseline": 10344922,
+            "candidate": 10250007
+          },
+          "hostRenderNsFirstFrame": {
+            "baseline": 16788754903,
+            "candidate": 16850835942
+          }
+        },
+        "declaredNonTiming": []
+      },
+      ".aa.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".floor.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".background.json": {
+        "descriptiveTiming": {
+          "backgroundBuildNs": {
+            "baseline": 83426,
+            "candidate": 84347
+          }
+        },
+        "declaredNonTiming": []
+      },
+      ".row.json": {
+        "descriptiveTiming": {
+          "backgroundBuildNs": {
+            "baseline": 83426,
+            "candidate": 84347
+          }
+        },
+        "declaredNonTiming": []
+      },
+      ".floor-world.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".hdr-observer.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".cache.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".depth-stream.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      }
+    },
+    "elapsedSecondsDescriptiveOnly": 16.903469168988522,
+    "hostUserCPUSeconds": 16.889653,
+    "hostSystemCPUSeconds": 0.007894,
+    "hostPeakRSSKiB": 24708
+  },
+  {
+    "name": "native-oblique-intensity-reverse",
+    "view": "oblique",
+    "case": "intensity",
+    "reverse": true,
+    "arm": "off",
+    "mode": "diagnostic",
+    "status": "PASS",
+    "files": {
+      ".u16le": "5dcde81b6908f91176f435dfa682f78ad90351dab00aade660b55fa187b11fe5",
+      ".f32le": "3201f0507c4b7f65911ecea8edf4175d76f2b93cc8d9ca715e10f97cf410e77a",
+      ".snapshot": "b29285e31a734a62388918585a4ec2c7bbc87a3a5054ecb047554f96fc4960a7",
+      ".targets.u8": "a7b9fb46c60810bb1047503c80b15e7e0cc84d546faadc3f8a2af988bf8550a0",
+      ".hdr.f64le": "0614cf498e9f2517743a6b61323f9d976dcb8dc6a48c23dd0bb34fb5ab64a8cb",
+      ".json": "e69bb29a47b737bd72d67d307b6b30bdd95638f1f5bf780a9f14e636c6795c35",
+      ".aa.json": "40c34b58548262ed806c27a5aa59c1a44b39aca19b0666a6889215b4af43bb38",
+      ".floor.json": "e42897bae6fd106ef6339bb15939644113c0adda1fad58142d1c034ab4f30bff",
+      ".background.json": "4582ba0d22320ad36dbab3aa0816c911e7ffb5b66e1cc33f1f4baf76c21bd7c8",
+      ".row.json": "11dccd73edac9c61f0216d05f6744f79a3a10c38e74a715439142200597c4fd8",
+      ".floor-world.json": "806e770efa438bda98e3a7b28525925f49498c91da6fad798e9cd890cc548f0d",
+      ".hdr-observer.json": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d",
+      ".cache.json": "94770b6ff83d13a24a0ec9597c47463cc16e94505c1fe7c4754eb04d4c2c2794",
+      ".depth-stream.json": "3cdce3419173f62f031f1af17266ca93a0aca6e2ac9b5ee064220b199fad443e"
+    },
+    "reportObservations": {
+      ".json": {
+        "descriptiveTiming": {
+          "transportBuildNs": {
+            "baseline": 36562373,
+            "candidate": 39182241
+          },
+          "visibilityBuildNs": {
+            "baseline": 2612350,
+            "candidate": 2438196
+          },
+          "appendNs": {
+            "baseline": 39725637,
+            "candidate": 42187544
+          },
+          "evaluateNs": {
+            "baseline": 10552826,
+            "candidate": 10029143
+          },
+          "hostRenderNsFirstFrame": {
+            "baseline": 16039771346,
+            "candidate": 16838642477
+          }
+        },
+        "declaredNonTiming": []
+      },
+      ".aa.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".floor.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".background.json": {
+        "descriptiveTiming": {
+          "backgroundBuildNs": {
+            "baseline": 83777,
+            "candidate": 85649
+          }
+        },
+        "declaredNonTiming": []
+      },
+      ".row.json": {
+        "descriptiveTiming": {
+          "backgroundBuildNs": {
+            "baseline": 83777,
+            "candidate": 85649
+          }
+        },
+        "declaredNonTiming": []
+      },
+      ".floor-world.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".hdr-observer.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".cache.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".depth-stream.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      }
+    },
+    "elapsedSecondsDescriptiveOnly": 16.894790552993072,
+    "hostUserCPUSeconds": 16.880682,
+    "hostSystemCPUSeconds": 0.008392,
+    "hostPeakRSSKiB": 24708
+  },
+  {
+    "name": "native-front-ambient",
+    "view": "front",
+    "case": "ambient",
+    "reverse": false,
+    "arm": "off",
+    "mode": "diagnostic",
+    "status": "PASS",
+    "files": {
+      ".u16le": "f32979b3f3c032641af22be363b3525b9557c5e34ee46b57266ecd7ef7a5d784",
+      ".f32le": "03d9ee4d5a81118e7f2efe2947a64230132aad4daad2a2019d31f9f4959fea3f",
+      ".snapshot": "f369591a0e5fedd63c059ee50b509bf4b8bd07efca5900b16ddeae9bcf03768b",
+      ".targets.u8": "eebd4a3432074c6e6d84cf7e6a03b34c7dbd9d4309bd3fbd003b7caa47eeb4f6",
+      ".hdr.f64le": "caf53a239c455b8908b1280689681a510f614261708c3448384069e12879853e",
+      ".json": "a7eb47c5527c689622ba1bed6cbba6c4ead6b2f37dd4bd275a1f170757cd290c",
+      ".aa.json": "be2da887e58342b241aff59ceb1a41e0610410095d0f5865dfc175f848c6bb62",
+      ".floor.json": "306abe4b3543faab08dab113a17d00eeac48585918807ccae19997a87466afab",
+      ".background.json": "3876bf702e1e417cc0e3442ed5ef762563a445b970de37d00dbe2c134faceea8",
+      ".row.json": "1f8c1dd9d5d21dd68798d19ffce568c070080b1ac631756a65aeccae4b651233",
+      ".floor-world.json": "806e770efa438bda98e3a7b28525925f49498c91da6fad798e9cd890cc548f0d",
+      ".hdr-observer.json": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d",
+      ".cache.json": "8cbcd5704b5bc3085a5bdb54b770d2ffbfdfa0567d93db11cf15bfcaa49cf8db",
+      ".depth-stream.json": "9a1c15480357845548e2b6e4579a186837cade5f46e07e0368306ba58ac35c77"
+    },
+    "reportObservations": {
+      ".json": {
+        "descriptiveTiming": {
+          "transportBuildNs": {
+            "baseline": 36990131,
+            "candidate": 36291932
+          },
+          "visibilityBuildNs": {
+            "baseline": 2108569,
+            "candidate": 2349752
+          },
+          "appendNs": {
+            "baseline": 39608882,
+            "candidate": 39169211
+          },
+          "evaluateNs": {
+            "baseline": 9258980,
+            "candidate": 10567834
+          },
+          "hostRenderNsFirstFrame": {
+            "baseline": 17123258216,
+            "candidate": 16826443904
+          }
+        },
+        "declaredNonTiming": []
+      },
+      ".aa.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".floor.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".background.json": {
+        "descriptiveTiming": {
+          "backgroundBuildNs": {
+            "baseline": 84839,
+            "candidate": 113452
+          }
+        },
+        "declaredNonTiming": []
+      },
+      ".row.json": {
+        "descriptiveTiming": {
+          "backgroundBuildNs": {
+            "baseline": 84839,
+            "candidate": 113452
+          }
+        },
+        "declaredNonTiming": []
+      },
+      ".floor-world.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".hdr-observer.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".cache.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".depth-stream.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      }
+    },
+    "elapsedSecondsDescriptiveOnly": 16.88093208000646,
+    "hostUserCPUSeconds": 16.874912,
+    "hostSystemCPUSeconds": 0.0,
+    "hostPeakRSSKiB": 24708
+  },
+  {
+    "name": "native-front-ambient-reverse",
+    "view": "front",
+    "case": "ambient",
+    "reverse": true,
+    "arm": "off",
+    "mode": "diagnostic",
+    "status": "PASS",
+    "files": {
+      ".u16le": "f32979b3f3c032641af22be363b3525b9557c5e34ee46b57266ecd7ef7a5d784",
+      ".f32le": "03d9ee4d5a81118e7f2efe2947a64230132aad4daad2a2019d31f9f4959fea3f",
+      ".snapshot": "09f50c68eb3ea5270dbf37fdb29bd30648f13f0d8d67c3c3f3c83eecbc8de981",
+      ".targets.u8": "eebd4a3432074c6e6d84cf7e6a03b34c7dbd9d4309bd3fbd003b7caa47eeb4f6",
+      ".hdr.f64le": "caf53a239c455b8908b1280689681a510f614261708c3448384069e12879853e",
+      ".json": "c075ac76fb4cc3b80265a20637269677555a5edd39ee6ba4eb8984e798765719",
+      ".aa.json": "dda657e76f5dde15252d80db8bc065691d7a0b6dc760ae14b3c67c2f22320160",
+      ".floor.json": "57ea1dc8df1cab31e30af4c939c8e090cd35fa33a0b94c9d49dc2817207a208f",
+      ".background.json": "7003fc6da7065063a306f40db2089f60cb40b427e1e3b5f6bdb93784680393b2",
+      ".row.json": "1bd7959b1fe31a4dc0af004fd607fc17d4f2284550ecb625649894ecc6c54a39",
+      ".floor-world.json": "806e770efa438bda98e3a7b28525925f49498c91da6fad798e9cd890cc548f0d",
+      ".hdr-observer.json": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d",
+      ".cache.json": "8cbcd5704b5bc3085a5bdb54b770d2ffbfdfa0567d93db11cf15bfcaa49cf8db",
+      ".depth-stream.json": "75811630898395bf89d21f34b82bfd40f4971fcf3dff3b6d0d9188a844899b01"
+    },
+    "reportObservations": {
+      ".json": {
+        "descriptiveTiming": {
+          "transportBuildNs": {
+            "baseline": 33976664,
+            "candidate": 36465831
+          },
+          "visibilityBuildNs": {
+            "baseline": 2347149,
+            "candidate": 2488662
+          },
+          "appendNs": {
+            "baseline": 36841436,
+            "candidate": 39453658
+          },
+          "evaluateNs": {
+            "baseline": 9686326,
+            "candidate": 9951865
+          },
+          "hostRenderNsFirstFrame": {
+            "baseline": 16018200590,
+            "candidate": 15466258321
+          }
+        },
+        "declaredNonTiming": []
+      },
+      ".aa.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".floor.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".background.json": {
+        "descriptiveTiming": {
+          "backgroundBuildNs": {
+            "baseline": 82966,
+            "candidate": 84608
+          }
+        },
+        "declaredNonTiming": []
+      },
+      ".row.json": {
+        "descriptiveTiming": {
+          "backgroundBuildNs": {
+            "baseline": 82966,
+            "candidate": 84608
+          }
+        },
+        "declaredNonTiming": []
+      },
+      ".floor-world.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".hdr-observer.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".cache.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".depth-stream.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      }
+    },
+    "elapsedSecondsDescriptiveOnly": 15.519558256986784,
+    "hostUserCPUSeconds": 15.512402,
+    "hostSystemCPUSeconds": 0.003994999999999999,
+    "hostPeakRSSKiB": 24708
+  },
+  {
+    "name": "native-oblique-ambient",
+    "view": "oblique",
+    "case": "ambient",
+    "reverse": false,
+    "arm": "off",
+    "mode": "diagnostic",
+    "status": "PASS",
+    "files": {
+      ".u16le": "be50fc2cc12b50dcb6070d4f90e63bdc79833601cd5f2c665f81553106e98272",
+      ".f32le": "3201f0507c4b7f65911ecea8edf4175d76f2b93cc8d9ca715e10f97cf410e77a",
+      ".snapshot": "9b0a939819e62d7333543c22d23e0d8bb49571994d9ab93f8b59f4b229597801",
+      ".targets.u8": "a7b9fb46c60810bb1047503c80b15e7e0cc84d546faadc3f8a2af988bf8550a0",
+      ".hdr.f64le": "dd3b45f908a7061ce54ea6d129bfddb0a9df29a5e3498bf8e5eececaf3b75946",
+      ".json": "963a1d7c5daeb82d1e42a87c7e7467449ade8894bbafb72e12b7708966c4d96f",
+      ".aa.json": "3877a1ab59705fab37f3f193fd4e46cd82c28d97bd689f74703eff0539a007d4",
+      ".floor.json": "c3d36c793c14caf7347891ed8c13501696124003d25d7f78554329546ae2b131",
+      ".background.json": "7792cf51fb44da394287e5ee2fb1969e9ff292a58d651cfac0555a2d81bcb8f0",
+      ".row.json": "995ee168ea985ebd9777f9bbc37a5702d2ecb25b3179413bdba694ee0240ed9b",
+      ".floor-world.json": "806e770efa438bda98e3a7b28525925f49498c91da6fad798e9cd890cc548f0d",
+      ".hdr-observer.json": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d",
+      ".cache.json": "42f4f56a4c5a36262e3bf90e97daeb02862f13f419af039bece56fe916625122",
+      ".depth-stream.json": "5528b6d97722fdf10824673fb7adab5b40ded57ba4400377f7890eda48d85ed4"
+    },
+    "reportObservations": {
+      ".json": {
+        "descriptiveTiming": {
+          "transportBuildNs": {
+            "baseline": 38375410,
+            "candidate": 39261023
+          },
+          "visibilityBuildNs": {
+            "baseline": 2444446,
+            "candidate": 2261198
+          },
+          "appendNs": {
+            "baseline": 41428837,
+            "candidate": 42116118
+          },
+          "evaluateNs": {
+            "baseline": 9809873,
+            "candidate": 11824894
+          },
+          "hostRenderNsFirstFrame": {
+            "baseline": 16748271906,
+            "candidate": 16250115391
+          }
+        },
+        "declaredNonTiming": []
+      },
+      ".aa.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".floor.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".background.json": {
+        "descriptiveTiming": {
+          "backgroundBuildNs": {
+            "baseline": 101904,
+            "candidate": 88363
+          }
+        },
+        "declaredNonTiming": []
+      },
+      ".row.json": {
+        "descriptiveTiming": {
+          "backgroundBuildNs": {
+            "baseline": 101904,
+            "candidate": 88363
+          }
+        },
+        "declaredNonTiming": []
+      },
+      ".floor-world.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".hdr-observer.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".cache.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".depth-stream.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      }
+    },
+    "elapsedSecondsDescriptiveOnly": 16.310331914020935,
+    "hostUserCPUSeconds": 16.294744,
+    "hostSystemCPUSeconds": 0.010598,
+    "hostPeakRSSKiB": 24708
+  },
+  {
+    "name": "native-oblique-ambient-reverse",
+    "view": "oblique",
+    "case": "ambient",
+    "reverse": true,
+    "arm": "off",
+    "mode": "diagnostic",
+    "status": "PASS",
+    "files": {
+      ".u16le": "be50fc2cc12b50dcb6070d4f90e63bdc79833601cd5f2c665f81553106e98272",
+      ".f32le": "3201f0507c4b7f65911ecea8edf4175d76f2b93cc8d9ca715e10f97cf410e77a",
+      ".snapshot": "e039384e55c407e689da01b8c80f59306ca80961419e091d8de44ec551041adf",
+      ".targets.u8": "a7b9fb46c60810bb1047503c80b15e7e0cc84d546faadc3f8a2af988bf8550a0",
+      ".hdr.f64le": "dd3b45f908a7061ce54ea6d129bfddb0a9df29a5e3498bf8e5eececaf3b75946",
+      ".json": "d36b47f6cc576cf82564d3ea3d06abc324681f8394f02f0eff26a412184ce004",
+      ".aa.json": "de161053280b667b04629d5dfb1ee75f2bfd0a44d99f174447cbb300d6d49f8b",
+      ".floor.json": "26dc030eac9f0ab1a35b5f98dcd513746e41c477d100325bdd0871507b6aea2f",
+      ".background.json": "20d552be1cb7988e1a8752c9169f26a74546a709ce1d9de7049a4ce70fe22abe",
+      ".row.json": "9b8aff43121153b17dbc03b94e749233f5c7f31701ee546b3a5192f47619caf5",
+      ".floor-world.json": "806e770efa438bda98e3a7b28525925f49498c91da6fad798e9cd890cc548f0d",
+      ".hdr-observer.json": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d",
+      ".cache.json": "42f4f56a4c5a36262e3bf90e97daeb02862f13f419af039bece56fe916625122",
+      ".depth-stream.json": "3cdce3419173f62f031f1af17266ca93a0aca6e2ac9b5ee064220b199fad443e"
+    },
+    "reportObservations": {
+      ".json": {
+        "descriptiveTiming": {
+          "transportBuildNs": {
+            "baseline": 38835260,
+            "candidate": 39208007
+          },
+          "visibilityBuildNs": {
+            "baseline": 2268350,
+            "candidate": 2457525
+          },
+          "appendNs": {
+            "baseline": 41671979,
+            "candidate": 42204537
+          },
+          "evaluateNs": {
+            "baseline": 11608513,
+            "candidate": 10080428
+          },
+          "hostRenderNsFirstFrame": {
+            "baseline": 18680116175,
+            "candidate": 16025617612
+          }
+        },
+        "declaredNonTiming": []
+      },
+      ".aa.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".floor.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".background.json": {
+        "descriptiveTiming": {
+          "backgroundBuildNs": {
+            "baseline": 83426,
+            "candidate": 84949
+          }
+        },
+        "declaredNonTiming": []
+      },
+      ".row.json": {
+        "descriptiveTiming": {
+          "backgroundBuildNs": {
+            "baseline": 83426,
+            "candidate": 84949
+          }
+        },
+        "declaredNonTiming": []
+      },
+      ".floor-world.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".hdr-observer.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".cache.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".depth-stream.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      }
+    },
+    "elapsedSecondsDescriptiveOnly": 16.08167239499744,
+    "hostUserCPUSeconds": 16.074268,
+    "hostSystemCPUSeconds": 0.0,
+    "hostPeakRSSKiB": 24708
+  },
+  {
+    "name": "native-front-albedo",
+    "view": "front",
+    "case": "albedo",
+    "reverse": false,
+    "arm": "off",
+    "mode": "diagnostic",
+    "status": "PASS",
+    "files": {
+      ".u16le": "4abc755fc1e6b24d426681f90138495f40b5c8a9d6fa2d4a33a4114fd0ab321b",
+      ".f32le": "03d9ee4d5a81118e7f2efe2947a64230132aad4daad2a2019d31f9f4959fea3f",
+      ".snapshot": "905d722f231dc03eb24222d9717fa3c0450d0e96189cacad4eac201687b3c21d",
+      ".targets.u8": "eebd4a3432074c6e6d84cf7e6a03b34c7dbd9d4309bd3fbd003b7caa47eeb4f6",
+      ".hdr.f64le": "3fdd676dc32783834fca8a39b8316ad1f15105ab6f44d524ee0395d5bb6a6cf1",
+      ".json": "4df94247e9a907e554c04ff3b04805388f7dc7a1e7324ccede7a93a1e0ad93c4",
+      ".aa.json": "91c14877f64286542489ba6ccb06ec4f526b1587622fd346b04c1adbea4d5de1",
+      ".floor.json": "83eecd446b8d42797fd9d3969cb5962a49560c2d7ad8aaaf58cf696d03c61dbb",
+      ".background.json": "4d4b0bf2332801732b78b01ae6070861956b64f5776fbbe5bd9200ce71389bd9",
+      ".row.json": "6ba04d71f53d92ff2915d8e1d26856301ae027c2691f137abb8e0c6d0901e37e",
+      ".floor-world.json": "806e770efa438bda98e3a7b28525925f49498c91da6fad798e9cd890cc548f0d",
+      ".hdr-observer.json": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d",
+      ".cache.json": "b22cd41ddb47d1a5c1bed323cbe9f202be3c39923d40399c5fed126ad4249483",
+      ".depth-stream.json": "9a1c15480357845548e2b6e4579a186837cade5f46e07e0368306ba58ac35c77"
+    },
+    "reportObservations": {
+      ".json": {
+        "descriptiveTiming": {
+          "transportBuildNs": {
+            "baseline": 38079386,
+            "candidate": 37469028
+          },
+          "visibilityBuildNs": {
+            "baseline": 2357555,
+            "candidate": 2162180
+          },
+          "appendNs": {
+            "baseline": 40942024,
+            "candidate": 40095210
+          },
+          "evaluateNs": {
+            "baseline": 10576552,
+            "candidate": 10239894
+          },
+          "hostRenderNsFirstFrame": {
+            "baseline": 17094400772,
+            "candidate": 16351038684
+          }
+        },
+        "declaredNonTiming": []
+      },
+      ".aa.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".floor.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".background.json": {
+        "descriptiveTiming": {
+          "backgroundBuildNs": {
+            "baseline": 83166,
+            "candidate": 84048
+          }
+        },
+        "declaredNonTiming": []
+      },
+      ".row.json": {
+        "descriptiveTiming": {
+          "backgroundBuildNs": {
+            "baseline": 83166,
+            "candidate": 84048
+          }
+        },
+        "declaredNonTiming": []
+      },
+      ".floor-world.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".hdr-observer.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".cache.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".depth-stream.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      }
+    },
+    "elapsedSecondsDescriptiveOnly": 16.40524409999489,
+    "hostUserCPUSeconds": 16.398507,
+    "hostSystemCPUSeconds": 0.0,
+    "hostPeakRSSKiB": 24708
+  },
+  {
+    "name": "native-front-albedo-reverse",
+    "view": "front",
+    "case": "albedo",
+    "reverse": true,
+    "arm": "off",
+    "mode": "diagnostic",
+    "status": "PASS",
+    "files": {
+      ".u16le": "4abc755fc1e6b24d426681f90138495f40b5c8a9d6fa2d4a33a4114fd0ab321b",
+      ".f32le": "03d9ee4d5a81118e7f2efe2947a64230132aad4daad2a2019d31f9f4959fea3f",
+      ".snapshot": "4d250d6606dde93ce133b6dc383c8c3582f4262bc90376dc78f8b1689df90ef6",
+      ".targets.u8": "eebd4a3432074c6e6d84cf7e6a03b34c7dbd9d4309bd3fbd003b7caa47eeb4f6",
+      ".hdr.f64le": "3fdd676dc32783834fca8a39b8316ad1f15105ab6f44d524ee0395d5bb6a6cf1",
+      ".json": "0e2ce1f47248be9243e29cfcb0b8f7f340dd7749b5d9bbe2c60a0b5df1f5d908",
+      ".aa.json": "f1458edcfb7a4b05d4afa4c8a75750c95d988253f2fff63b30ec47f1b31998f5",
+      ".floor.json": "35aee654a9a42fe4b03cafbf2cb628e1ea955052d07c342a590dee3b994fb57d",
+      ".background.json": "9d6ec1a4cfdcf39cb076370f2a550fe8a5a7981648638b00b93b1a14227fe7e7",
+      ".row.json": "eb9f7c2c1acd060e1945af1ba92b4422c1e7d32afe693a7ae26711b29cd29182",
+      ".floor-world.json": "806e770efa438bda98e3a7b28525925f49498c91da6fad798e9cd890cc548f0d",
+      ".hdr-observer.json": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d",
+      ".cache.json": "b22cd41ddb47d1a5c1bed323cbe9f202be3c39923d40399c5fed126ad4249483",
+      ".depth-stream.json": "75811630898395bf89d21f34b82bfd40f4971fcf3dff3b6d0d9188a844899b01"
+    },
+    "reportObservations": {
+      ".json": {
+        "descriptiveTiming": {
+          "transportBuildNs": {
+            "baseline": 40463876,
+            "candidate": 38281691
+          },
+          "visibilityBuildNs": {
+            "baseline": 2349081,
+            "candidate": 2486129
+          },
+          "appendNs": {
+            "baseline": 43425895,
+            "candidate": 41557544
+          },
+          "evaluateNs": {
+            "baseline": 12932584,
+            "candidate": 11590555
+          },
+          "hostRenderNsFirstFrame": {
+            "baseline": 16980395508,
+            "candidate": 15488190258
+          }
+        },
+        "declaredNonTiming": []
+      },
+      ".aa.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".floor.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".background.json": {
+        "descriptiveTiming": {
+          "backgroundBuildNs": {
+            "baseline": 84528,
+            "candidate": 84818
+          }
+        },
+        "declaredNonTiming": []
+      },
+      ".row.json": {
+        "descriptiveTiming": {
+          "backgroundBuildNs": {
+            "baseline": 84528,
+            "candidate": 84818
+          }
+        },
+        "declaredNonTiming": []
+      },
+      ".floor-world.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".hdr-observer.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".cache.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".depth-stream.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      }
+    },
+    "elapsedSecondsDescriptiveOnly": 15.545959008013597,
+    "hostUserCPUSeconds": 15.538483,
+    "hostSystemCPUSeconds": 0.003437,
+    "hostPeakRSSKiB": 24708
+  },
+  {
+    "name": "native-oblique-albedo",
+    "view": "oblique",
+    "case": "albedo",
+    "reverse": false,
+    "arm": "off",
+    "mode": "diagnostic",
+    "status": "PASS",
+    "files": {
+      ".u16le": "006b7ded88c4e6ceeae9ae6f0e96285389af6215d526aee442d97ebe8e002638",
+      ".f32le": "3201f0507c4b7f65911ecea8edf4175d76f2b93cc8d9ca715e10f97cf410e77a",
+      ".snapshot": "c4d6fea205a01c2b357a7bce238a43fa4c2ef015f49748dac54499678dab8425",
+      ".targets.u8": "a7b9fb46c60810bb1047503c80b15e7e0cc84d546faadc3f8a2af988bf8550a0",
+      ".hdr.f64le": "1cc9f47fd08d3cf497d5199416a9199c71a152dbe50edef6ff11d36083443b56",
+      ".json": "927e49de7d5eb909e74afbe81c2b0c6933c3ac924c2d19f2eba8fc09f2a9e896",
+      ".aa.json": "e1c1f12c7219d20e5e5d2b8bda280a5f6ae5631d774ab4fdf4cb40da6f9fbd6e",
+      ".floor.json": "70e2bd73a8c1035231d4720376adfdda14962125988ec9a2f49e89d56cba8f7f",
+      ".background.json": "acc64aa68e6a1d8f6dc334d3e89c089824781f0c1688a4a64079894e4da70fde",
+      ".row.json": "eb686eee546b9a22964f94c0bfd5914718248dbb51181c66e84549bd732edbab",
+      ".floor-world.json": "806e770efa438bda98e3a7b28525925f49498c91da6fad798e9cd890cc548f0d",
+      ".hdr-observer.json": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d",
+      ".cache.json": "c1eff33177c44c65ca005e527d1f0f0e86c82cd383c87a1a15dfa534dc0e981b",
+      ".depth-stream.json": "5528b6d97722fdf10824673fb7adab5b40ded57ba4400377f7890eda48d85ed4"
+    },
+    "reportObservations": {
+      ".json": {
+        "descriptiveTiming": {
+          "transportBuildNs": {
+            "baseline": 39401624,
+            "candidate": 38610438
+          },
+          "visibilityBuildNs": {
+            "baseline": 2453028,
+            "candidate": 2237693
+          },
+          "appendNs": {
+            "baseline": 42368329,
+            "candidate": 41325171
+          },
+          "evaluateNs": {
+            "baseline": 10256417,
+            "candidate": 10609261
+          },
+          "hostRenderNsFirstFrame": {
+            "baseline": 16010632752,
+            "candidate": 16814153348
+          }
+        },
+        "declaredNonTiming": []
+      },
+      ".aa.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".floor.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".background.json": {
+        "descriptiveTiming": {
+          "backgroundBuildNs": {
+            "baseline": 83566,
+            "candidate": 86340
+          }
+        },
+        "declaredNonTiming": []
+      },
+      ".row.json": {
+        "descriptiveTiming": {
+          "backgroundBuildNs": {
+            "baseline": 83566,
+            "candidate": 86340
+          }
+        },
+        "declaredNonTiming": []
+      },
+      ".floor-world.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".hdr-observer.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".cache.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".depth-stream.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      }
+    },
+    "elapsedSecondsDescriptiveOnly": 16.870215782982996,
+    "hostUserCPUSeconds": 16.864649,
+    "hostSystemCPUSeconds": 0.0,
+    "hostPeakRSSKiB": 24708
+  },
+  {
+    "name": "native-oblique-albedo-reverse",
+    "view": "oblique",
+    "case": "albedo",
+    "reverse": true,
+    "arm": "off",
+    "mode": "diagnostic",
+    "status": "PASS",
+    "files": {
+      ".u16le": "006b7ded88c4e6ceeae9ae6f0e96285389af6215d526aee442d97ebe8e002638",
+      ".f32le": "3201f0507c4b7f65911ecea8edf4175d76f2b93cc8d9ca715e10f97cf410e77a",
+      ".snapshot": "49777072c6c11f9e274be7bb924ed44fa9d68017a58a37a6445c2f949ce36ab4",
+      ".targets.u8": "a7b9fb46c60810bb1047503c80b15e7e0cc84d546faadc3f8a2af988bf8550a0",
+      ".hdr.f64le": "1cc9f47fd08d3cf497d5199416a9199c71a152dbe50edef6ff11d36083443b56",
+      ".json": "3844b0626bbe78a49215198c010fefc30c0eff2153e6fc67754c2c650ab1fba8",
+      ".aa.json": "4beb61d78b05ca8df6fbd8f6ee0cb88205314a6313714711beb07880ed10928d",
+      ".floor.json": "0fdc73c7e9430b5186f87f18129bc280eea5f6e64216f4d199457b33862b4451",
+      ".background.json": "4cf7c27d3c8eecd324185fb85842799a2145b85bf0a23824211ee0f64c933f0c",
+      ".row.json": "f7b16d2376e1b7020656682105fb297e1b6106740c00f4dff6e649f2a0bdde87",
+      ".floor-world.json": "806e770efa438bda98e3a7b28525925f49498c91da6fad798e9cd890cc548f0d",
+      ".hdr-observer.json": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d",
+      ".cache.json": "c1eff33177c44c65ca005e527d1f0f0e86c82cd383c87a1a15dfa534dc0e981b",
+      ".depth-stream.json": "3cdce3419173f62f031f1af17266ca93a0aca6e2ac9b5ee064220b199fad443e"
+    },
+    "reportObservations": {
+      ".json": {
+        "descriptiveTiming": {
+          "transportBuildNs": {
+            "baseline": 56730527,
+            "candidate": 42764669
+          },
+          "visibilityBuildNs": {
+            "baseline": 2401831,
+            "candidate": 2737149
+          },
+          "appendNs": {
+            "baseline": 59944826,
+            "candidate": 46211130
+          },
+          "evaluateNs": {
+            "baseline": 12445478,
+            "candidate": 13317917
+          },
+          "hostRenderNsFirstFrame": {
+            "baseline": 17091720082,
+            "candidate": 17503576809
+          }
+        },
+        "declaredNonTiming": []
+      },
+      ".aa.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".floor.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".background.json": {
+        "descriptiveTiming": {
+          "backgroundBuildNs": {
+            "baseline": 181284,
+            "candidate": 85719
+          }
+        },
+        "declaredNonTiming": []
+      },
+      ".row.json": {
+        "descriptiveTiming": {
+          "backgroundBuildNs": {
+            "baseline": 181284,
+            "candidate": 85719
+          }
+        },
+        "declaredNonTiming": []
+      },
+      ".floor-world.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".hdr-observer.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".cache.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      },
+      ".depth-stream.json": {
+        "descriptiveTiming": {},
+        "declaredNonTiming": []
+      }
+    },
+    "elapsedSecondsDescriptiveOnly": 17.567340226989472,
+    "hostUserCPUSeconds": 17.559008,
+    "hostSystemCPUSeconds": 0.0,
+    "hostPeakRSSKiB": 24708
+  }
+]

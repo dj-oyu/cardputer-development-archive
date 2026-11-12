@@ -1,0 +1,97 @@
+{
+  "ok": true,
+  "entries": [
+    {
+      "sequence": 31,
+      "text": "info: ROM read 2223104/2298336 bytes; elapsed 111 s",
+      "level": "info",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 32,
+      "text": "info: ROM read 2298336/2298336 bytes; elapsed 115 s",
+      "level": "info",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 33,
+      "text": "info: ROM read native exit 0; 2298336/2298336 bytes; elapsed 115 s",
+      "level": "info",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 34,
+      "text": "-- flash_write",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 35,
+      "text": "-- flash_readback_verify",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 36,
+      "text": "info: ROM read start 22528 bytes; hard deadline 300 s; idle 60 s",
+      "level": "info",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 37,
+      "text": "info: ROM read 22528/22528 bytes; elapsed 1 s",
+      "level": "info",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 38,
+      "text": "info: ROM read native exit 0; 22528/22528 bytes; elapsed 1 s",
+      "level": "info",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 39,
+      "text": "info: ROM read start 3072 bytes; hard deadline 300 s; idle 60 s",
+      "level": "info",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 40,
+      "text": "info: ROM read 3072/3072 bytes; elapsed 1 s",
+      "level": "info",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 41,
+      "text": "info: ROM read native exit 0; 3072/3072 bytes; elapsed 1 s",
+      "level": "info",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 42,
+      "text": "info: ROM read start 2296816 bytes; hard deadline 1375 s; idle 60 s",
+      "level": "info",
+      "stream": "stdout",
+      "progress": false
+    }
+  ],
+  "expired": false,
+  "gap": false,
+  "oldest_sequence": 1,
+  "next_cursor": {
+    "epoch": "9c5dfba631f4470b8919543c9b26d0f6",
+    "sequence": 42
+  },
+  "has_more": false
+}

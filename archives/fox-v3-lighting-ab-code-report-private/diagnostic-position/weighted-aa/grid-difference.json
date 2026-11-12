@@ -1,0 +1,42 @@
+{
+  "front": {
+    "baseline": {
+      "pixelsDifferent": 2438,
+      "foregroundRGBMAE": 0.022421863866820924,
+      "fullFrameRGBMAE": 0.003784101277131942,
+      "maxRGBDifference": 0.6129032258064516,
+      "foregroundRawMAE": 0.030350022866360134,
+      "maxRawDifference": 2.0480069684926336,
+      "notConvergenceProof": true
+    },
+    "direction": {
+      "pixelsDifferent": 2416,
+      "foregroundRGBMAE": 0.02209839011506924,
+      "fullFrameRGBMAE": 0.003724838225037349,
+      "maxRGBDifference": 0.6129032258064516,
+      "foregroundRawMAE": 0.031236063049688026,
+      "maxRawDifference": 1.974301790757183,
+      "notConvergenceProof": true
+    }
+  },
+  "oblique": {
+    "baseline": {
+      "pixelsDifferent": 2477,
+      "foregroundRGBMAE": 0.019633042017983854,
+      "fullFrameRGBMAE": 0.003737428331215666,
+      "maxRGBDifference": 0.5238095238095237,
+      "foregroundRawMAE": 0.025859709144202755,
+      "maxRawDifference": 1.4656366716046407,
+      "notConvergenceProof": true
+    },
+    "direction": {
+      "pixelsDifferent": 2471,
+      "foregroundRGBMAE": 0.019731818619168267,
+      "fullFrameRGBMAE": 0.0037587577621428676,
+      "maxRGBDifference": 0.5161290322580645,
+      "foregroundRawMAE": 0.026375266877441038,
+      "maxRawDifference": 1.3965173287677564,
+      "notConvergenceProof": true
+    }
+  }
+}

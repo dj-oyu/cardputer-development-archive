@@ -1,0 +1,20 @@
+commit 1b4524e3db8524365f58e8c7fb56531c31b55e22
+Author:     dj-oyu <68707227+dj-oyu@users.noreply.github.com>
+AuthorDate: Fri Oct 2 09:43:10 2026 +0900
+Commit:     dj-oyu <68707227+dj-oyu@users.noreply.github.com>
+CommitDate: Fri Oct 2 09:43:10 2026 +0900
+
+    derby: per-horse lanes (q26): oval steering, sway, depth order
+    
+    DL[l] (a lane constant) becomes lz[l] for drawing only. The oval steers
+    each runner once a sim step at .8 m/s at most toward a lane chosen by
+    running style and race phase, with the bend's lane ranked by the corner
+    multiplier F.m; behind the leader runners sway slowly (a function of
+    their x, no random draw). The 8 are re-sorted far to near every frame.
+    Odds, results, clock, seeds, demo, replay and save are unchanged (host,
+    ASan and m32, every run); pixel hashes change on purpose.
+    
+    Host m32: eval peak +1,544 B, after eval +1,252 B, live peak +1.7-2.8 KB,
+    source +662 B. Device not flashed (docs/apps/derby-lane-offset.md).
+    
+    Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>

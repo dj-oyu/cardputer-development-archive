@@ -1,0 +1,19 @@
+APP_ID local.derby
+I (pocket.app) APP_LOAD prog bytes=2465 compile_us=0 run_us=0 used=87776>91780>96244
+W (pocket.app) APP_LOAD view failed chunk 'view' threw while it ran: Error: DF_INIT_TEST at <anonymous> (init-fault.js:1:45)
+  /workspace/derby-evidence/controller-split-20261020/batch/fast-off/app/derby_watch.js threw: Error: chunk 'view' threw while it ran: Error: DF_INIT_TEST at <anonymous> (init-fault.js:1:45)
+    at load (native)
+    at <eval> (/workspace/derby-evidence/controller-split-20261020/batch/fast-off/app/derby_watch.js:80:39)
+
+FAIL eval; source 4511 B
+MEASURE_HOST functional_only=1 faults=0 scalar=0 pie=0
+MEASURE_HOST s0=0:0:0
+MEASURE_HOST s1=15:15:1
+MEASURE_HOST s2=0:0:0
+MEASURE_HOST s3=0:0:0
+MEASURE_HOST s4=0:0:0
+MEASURE_HOST s5=0:0:0
+MEASURE_HOST s6=0:0:0
+MEASURE_HOST s7=0:0:0
+MEASURE_HOST s8=0:0:0
+MEASURE_HOST s9=0:0:0

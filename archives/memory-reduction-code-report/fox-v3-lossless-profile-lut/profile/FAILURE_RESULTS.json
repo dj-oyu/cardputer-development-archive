@@ -1,0 +1,5 @@
+{
+  "status": "PASS",
+  "cases": 5,
+  "scope": "Candidate with deliberately one-byte malformed immutable table; valid inputs return3 without output writes; original invalid-input rejection returns2 first. Codec malformed-input coverage is independently reported."
+}

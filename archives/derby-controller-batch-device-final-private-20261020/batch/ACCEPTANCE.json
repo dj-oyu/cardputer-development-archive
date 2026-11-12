@@ -1,0 +1,835 @@
+{
+  "strict_pass": true,
+  "head": "711f94fa91c6e0d6ba7bc00def75ad686b724c7d",
+  "flash_job": "derby-controller-batch-flash-711f94fa-20261020",
+  "measurement_job": "derby-controller-batch-fixed-711f94fa-20261020",
+  "raw_sha256": "cde6ecae18d01e7cdb854320b227b48496852c17799f201536a090343b0c12c8",
+  "raw_bytes": 31000,
+  "receipt": {
+    "bytes": 31000,
+    "complete": true,
+    "disconnect": false,
+    "duration_ms": 85881,
+    "gaps": false,
+    "overflow": false,
+    "partial_tail": false,
+    "refused": false,
+    "reset": false,
+    "sha256": "cde6ecae18d01e7cdb854320b227b48496852c17799f201536a090343b0c12c8",
+    "truncated": false
+  },
+  "markers_lines_1based": {
+    "DERBY_FIXED_END": [
+      237
+    ],
+    "DERBY_DETAIL_EXIT": [
+      238
+    ],
+    "APP_STOPPED": [
+      240
+    ],
+    "HOME_READY": [
+      241
+    ]
+  },
+  "work_us": [
+    6606158,
+    6604002,
+    6608389
+  ],
+  "quality": [
+    "0",
+    "0",
+    "0"
+  ],
+  "valid": [
+    "1",
+    "1",
+    "1"
+  ],
+  "detail": [
+    {
+      "rep": 1,
+      "stages": [
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 1,
+          "stage": 0,
+          "inc_us": 3168598,
+          "self_us": 970450,
+          "calls": 120
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 1,
+          "stage": 1,
+          "inc_us": 196652,
+          "self_us": 196652,
+          "calls": 120
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 1,
+          "stage": 2,
+          "inc_us": 345454,
+          "self_us": 345454,
+          "calls": 240
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 1,
+          "stage": 3,
+          "inc_us": 48991,
+          "self_us": 48991,
+          "calls": 120
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 1,
+          "stage": 4,
+          "inc_us": 323101,
+          "self_us": 214163,
+          "calls": 120
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 1,
+          "stage": 5,
+          "inc_us": 122846,
+          "self_us": 122846,
+          "calls": 120
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 1,
+          "stage": 6,
+          "inc_us": 1135658,
+          "self_us": 674818,
+          "calls": 720
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 1,
+          "stage": 7,
+          "inc_us": 595224,
+          "self_us": 81206,
+          "calls": 4975
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 1,
+          "stage": 8,
+          "inc_us": 138873,
+          "self_us": 51061,
+          "calls": 4975
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 1,
+          "stage": 9,
+          "inc_us": 20003,
+          "self_us": 20003,
+          "calls": 4975
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 1,
+          "stage": 10,
+          "inc_us": 19736,
+          "self_us": 19736,
+          "calls": 4975
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 1,
+          "stage": 11,
+          "inc_us": 48073,
+          "self_us": 48073,
+          "calls": 4975
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 1,
+          "stage": 12,
+          "inc_us": 112573,
+          "self_us": 112573,
+          "calls": 4975
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 1,
+          "stage": 13,
+          "inc_us": 248129,
+          "self_us": 248129,
+          "calls": 4975
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 1,
+          "stage": 14,
+          "inc_us": 14443,
+          "self_us": 14443,
+          "calls": 4975
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 1,
+          "stage": 15,
+          "inc_us": 3176389,
+          "self_us": 18127,
+          "calls": 120
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 1,
+          "stage": 16,
+          "inc_us": 37308,
+          "self_us": 37308,
+          "calls": 120
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 1,
+          "stage": 17,
+          "inc_us": 9681,
+          "self_us": 9681,
+          "calls": 2040
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 1,
+          "stage": 18,
+          "inc_us": 2195826,
+          "self_us": 1000506,
+          "calls": 2040
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 1,
+          "stage": 19,
+          "inc_us": 1195320,
+          "self_us": 487205,
+          "calls": 129600
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 1,
+          "stage": 20,
+          "inc_us": 258265,
+          "self_us": 258265,
+          "calls": 2040
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 1,
+          "stage": 21,
+          "inc_us": 449850,
+          "self_us": 449850,
+          "calls": 129600
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 1,
+          "stage": 22,
+          "inc_us": 915447,
+          "self_us": 53156,
+          "calls": 2040
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 1,
+          "stage": 23,
+          "inc_us": 12892,
+          "self_us": 12892,
+          "calls": 2040
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 1,
+          "stage": 24,
+          "inc_us": 22611,
+          "self_us": 22611,
+          "calls": 2040
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 1,
+          "stage": 25,
+          "inc_us": 826788,
+          "self_us": 826788,
+          "calls": 2040
+        }
+      ],
+      "events": {
+        "BRIDGE_SNAPSHOT_BYTES": 38400,
+        "VM_ZERO_BYTES": 4955100,
+        "VM_CODE_COPY_BYTES": 2854704,
+        "SEGMENT_COPY_BYTES": 498540,
+        "BAND_CLEAR_BYTES": 7776000,
+        "SPAN_RGB_BYTES": 7776000,
+        "SPAN_ALPHA_BYTES": 3888000,
+        "SHARED_OUTPUT_BYTES": 7776000,
+        "TX_COPY_BYTES": 7776000,
+        "TX_PAYLOAD_BYTES": 7776000,
+        "TX_SUBMITS": 2040,
+        "TX_REAPS": 2040,
+        "TX_FAILURES": 0
+      },
+      "pairs": 315080
+    },
+    {
+      "rep": 2,
+      "stages": [
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 2,
+          "stage": 0,
+          "inc_us": 3165997,
+          "self_us": 971067,
+          "calls": 120
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 2,
+          "stage": 1,
+          "inc_us": 196593,
+          "self_us": 196593,
+          "calls": 120
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 2,
+          "stage": 2,
+          "inc_us": 345002,
+          "self_us": 345002,
+          "calls": 240
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 2,
+          "stage": 3,
+          "inc_us": 50157,
+          "self_us": 50157,
+          "calls": 120
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 2,
+          "stage": 4,
+          "inc_us": 321084,
+          "self_us": 212577,
+          "calls": 120
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 2,
+          "stage": 5,
+          "inc_us": 120399,
+          "self_us": 120399,
+          "calls": 120
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 2,
+          "stage": 6,
+          "inc_us": 1135918,
+          "self_us": 675142,
+          "calls": 720
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 2,
+          "stage": 7,
+          "inc_us": 595060,
+          "self_us": 81145,
+          "calls": 4975
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 2,
+          "stage": 8,
+          "inc_us": 138457,
+          "self_us": 50661,
+          "calls": 4975
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 2,
+          "stage": 9,
+          "inc_us": 19968,
+          "self_us": 19968,
+          "calls": 4975
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 2,
+          "stage": 10,
+          "inc_us": 19728,
+          "self_us": 19728,
+          "calls": 4975
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 2,
+          "stage": 11,
+          "inc_us": 48100,
+          "self_us": 48100,
+          "calls": 4975
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 2,
+          "stage": 12,
+          "inc_us": 112525,
+          "self_us": 112525,
+          "calls": 4975
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 2,
+          "stage": 13,
+          "inc_us": 248437,
+          "self_us": 248437,
+          "calls": 4975
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 2,
+          "stage": 14,
+          "inc_us": 14496,
+          "self_us": 14496,
+          "calls": 4975
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 2,
+          "stage": 15,
+          "inc_us": 3175258,
+          "self_us": 18029,
+          "calls": 120
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 2,
+          "stage": 16,
+          "inc_us": 36256,
+          "self_us": 36256,
+          "calls": 120
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 2,
+          "stage": 17,
+          "inc_us": 9709,
+          "self_us": 9709,
+          "calls": 2040
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 2,
+          "stage": 18,
+          "inc_us": 2195990,
+          "self_us": 1000549,
+          "calls": 2040
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 2,
+          "stage": 19,
+          "inc_us": 1195441,
+          "self_us": 487218,
+          "calls": 129600
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 2,
+          "stage": 20,
+          "inc_us": 258309,
+          "self_us": 258309,
+          "calls": 2040
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 2,
+          "stage": 21,
+          "inc_us": 449914,
+          "self_us": 449914,
+          "calls": 129600
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 2,
+          "stage": 22,
+          "inc_us": 915274,
+          "self_us": 53092,
+          "calls": 2040
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 2,
+          "stage": 23,
+          "inc_us": 12807,
+          "self_us": 12807,
+          "calls": 2040
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 2,
+          "stage": 24,
+          "inc_us": 22540,
+          "self_us": 22540,
+          "calls": 2040
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 2,
+          "stage": 25,
+          "inc_us": 826835,
+          "self_us": 826835,
+          "calls": 2040
+        }
+      ],
+      "events": {
+        "BRIDGE_SNAPSHOT_BYTES": 38400,
+        "VM_ZERO_BYTES": 4955100,
+        "VM_CODE_COPY_BYTES": 2854704,
+        "SEGMENT_COPY_BYTES": 498540,
+        "BAND_CLEAR_BYTES": 7776000,
+        "SPAN_RGB_BYTES": 7776000,
+        "SPAN_ALPHA_BYTES": 3888000,
+        "SHARED_OUTPUT_BYTES": 7776000,
+        "TX_COPY_BYTES": 7776000,
+        "TX_PAYLOAD_BYTES": 7776000,
+        "TX_SUBMITS": 2040,
+        "TX_REAPS": 2040,
+        "TX_FAILURES": 0
+      },
+      "pairs": 315080
+    },
+    {
+      "rep": 3,
+      "stages": [
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 3,
+          "stage": 0,
+          "inc_us": 3169469,
+          "self_us": 969776,
+          "calls": 120
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 3,
+          "stage": 1,
+          "inc_us": 196576,
+          "self_us": 196576,
+          "calls": 120
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 3,
+          "stage": 2,
+          "inc_us": 346455,
+          "self_us": 346455,
+          "calls": 240
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 3,
+          "stage": 3,
+          "inc_us": 49587,
+          "self_us": 49587,
+          "calls": 120
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 3,
+          "stage": 4,
+          "inc_us": 322212,
+          "self_us": 213064,
+          "calls": 120
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 3,
+          "stage": 5,
+          "inc_us": 122307,
+          "self_us": 122307,
+          "calls": 120
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 3,
+          "stage": 6,
+          "inc_us": 1137064,
+          "self_us": 675198,
+          "calls": 720
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 3,
+          "stage": 7,
+          "inc_us": 596506,
+          "self_us": 81365,
+          "calls": 4975
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 3,
+          "stage": 8,
+          "inc_us": 138961,
+          "self_us": 51037,
+          "calls": 4975
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 3,
+          "stage": 9,
+          "inc_us": 19999,
+          "self_us": 19999,
+          "calls": 4975
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 3,
+          "stage": 10,
+          "inc_us": 19720,
+          "self_us": 19720,
+          "calls": 4975
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 3,
+          "stage": 11,
+          "inc_us": 48205,
+          "self_us": 48205,
+          "calls": 4975
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 3,
+          "stage": 12,
+          "inc_us": 112750,
+          "self_us": 112750,
+          "calls": 4975
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 3,
+          "stage": 13,
+          "inc_us": 248897,
+          "self_us": 248897,
+          "calls": 4975
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 3,
+          "stage": 14,
+          "inc_us": 14533,
+          "self_us": 14533,
+          "calls": 4975
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 3,
+          "stage": 15,
+          "inc_us": 3175986,
+          "self_us": 18062,
+          "calls": 120
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 3,
+          "stage": 16,
+          "inc_us": 36892,
+          "self_us": 36892,
+          "calls": 120
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 3,
+          "stage": 17,
+          "inc_us": 9671,
+          "self_us": 9671,
+          "calls": 2040
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 3,
+          "stage": 18,
+          "inc_us": 2195929,
+          "self_us": 1000503,
+          "calls": 2040
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 3,
+          "stage": 19,
+          "inc_us": 1195426,
+          "self_us": 487432,
+          "calls": 129600
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 3,
+          "stage": 20,
+          "inc_us": 258278,
+          "self_us": 258278,
+          "calls": 2040
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 3,
+          "stage": 21,
+          "inc_us": 449716,
+          "self_us": 449716,
+          "calls": 129600
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 3,
+          "stage": 22,
+          "inc_us": 915432,
+          "self_us": 53061,
+          "calls": 2040
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 3,
+          "stage": 23,
+          "inc_us": 12866,
+          "self_us": 12866,
+          "calls": 2040
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 3,
+          "stage": 24,
+          "inc_us": 22682,
+          "self_us": 22682,
+          "calls": 2040
+        },
+        {
+          "v": 1,
+          "session": 1,
+          "rep": 3,
+          "stage": 25,
+          "inc_us": 826823,
+          "self_us": 826823,
+          "calls": 2040
+        }
+      ],
+      "events": {
+        "BRIDGE_SNAPSHOT_BYTES": 38400,
+        "VM_ZERO_BYTES": 4955100,
+        "VM_CODE_COPY_BYTES": 2854704,
+        "SEGMENT_COPY_BYTES": 498540,
+        "BAND_CLEAR_BYTES": 7776000,
+        "SPAN_RGB_BYTES": 7776000,
+        "SPAN_ALPHA_BYTES": 3888000,
+        "SHARED_OUTPUT_BYTES": 7776000,
+        "TX_COPY_BYTES": 7776000,
+        "TX_PAYLOAD_BYTES": 7776000,
+        "TX_SUBMITS": 2040,
+        "TX_REAPS": 2040,
+        "TX_FAILURES": 0
+      },
+      "pairs": 315080
+    }
+  ],
+  "device_boots": 1,
+  "dependent_replays": 3,
+  "independent_trials": false,
+  "target_off_overhead_control": false,
+  "physical_lcd_attested": false,
+  "old_batch_failure_preserved": true,
+  "quiet_close_basis": "Provider v2 complete transport and verified owner exit committed after serial close; not inferred from quality fields alone",
+  "input_sha256": {
+    "flash-plan.json": "a702da00c3a4ed9decaf8d97534eb87fc41573bbc3f90494b78336ece8ca4579",
+    "flash-result.json": "9119e3736c6574a33c08565414ba00526c80ef1d892881d5345fe584eab60d93",
+    "flash-final-logs.json": "0934bfe7056f8f568be1778fdf722c9af432230b167cc6c3e3c01f2de97939f8",
+    "trial-plan.json": "89e9403ebe309e37a8e66685b807964eec71a17688dcce63827fdc7a6b1463f3",
+    "trial-result.json": "e2209f532c02c696d74b0bc01f8b87c99c78d23a90bf5fb21cdb1496f34b2804",
+    "release.json": "9793b51e570d97038f40d634796672f5ccd95292dad3f89dea24b97acec83bcd",
+    "status-final.json": "2f1d386f1e349aaf096066e8fe3460a833dbb3ba99d876a973bbcf3d4a1dd1ca",
+    "build-final-logs.json": "9ede6854dac2f54fa37f5c531ce8da915aacac843168e7e879ac8bb235182995",
+    "preflight-native_current_receipt.json": "900a6ce53bbd8f8ba5cd84a653da52fe47ee8ab0fc16940371a327d20e86caf4"
+  }
+}

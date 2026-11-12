@@ -1,0 +1,68 @@
+{
+  "status": "PASS_DIAGNOSTIC_ONLY",
+  "freshActualCBuffersExact": 3,
+  "nonTimingMetadataExact": 77,
+  "inputPinsUnchanged": true,
+  "nearestCropExact": true,
+  "quota": {
+    "work": [
+      5954872,
+      8000000
+    ],
+    "snapshot": [
+      52212,
+      65536
+    ],
+    "transportRays": [
+      7321372,
+      20000000
+    ],
+    "transportNodes": [
+      496072334,
+      800000000
+    ],
+    "transportTriangles": [
+      187837529,
+      300000000
+    ],
+    "directRays": [
+      544452,
+      1000000
+    ],
+    "directNodes": [
+      31165314,
+      100000000
+    ],
+    "directTriangles": [
+      9865950,
+      50000000
+    ]
+  },
+  "parity": {
+    "m_m": {
+      "coverageMismatch": 0,
+      "rawMaxAbs": 2.9730951606410372e-05,
+      "rawMeanAbs": 1.060982112959175e-07,
+      "rawExact": false
+    },
+    "p_m": {
+      "coverageMismatch": 0,
+      "rawMaxAbs": 2.0946354089224073e-05,
+      "rawMeanAbs": 1.0487208197111011e-07,
+      "rawExact": false
+    },
+    "m_p": {
+      "coverageMismatch": 0,
+      "rawMaxAbs": 4.8744416330182005e-05,
+      "rawMeanAbs": 1.0305238054920104e-07,
+      "rawExact": false
+    },
+    "p_p": {
+      "coverageMismatch": 0,
+      "rawMaxAbs": 1.3849457406234222e-05,
+      "rawMeanAbs": 1.0480928333025276e-07,
+      "rawExact": false
+    }
+  },
+  "scope": "2x density cropped viewport, not formal full-frame score or product adoption"
+}

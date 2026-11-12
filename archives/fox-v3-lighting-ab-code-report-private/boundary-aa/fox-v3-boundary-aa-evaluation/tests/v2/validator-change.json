@@ -1,0 +1,11 @@
+{
+  "mutableValidatorSHA256": "baad740f12bc935daf5e167de84e8c68a80fc3930cf1a235cd002b50c9e81b1e",
+  "frozenValidatorSHA256": "0c1c37db15fb9aa7780c595e8f27a029e40f7c2ad124e4049eb20dd321b714d5",
+  "rendererRebuildRequired": false,
+  "frozenActualModified": false,
+  "changes": [
+    "expected reservations require exact int type and nonnegative values",
+    "successful failedCategory must equal21",
+    "workspaceBytes must equal137312 and newStackReserve must equal8192"
+  ]
+}

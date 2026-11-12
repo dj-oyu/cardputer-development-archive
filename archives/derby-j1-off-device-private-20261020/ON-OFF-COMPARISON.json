@@ -1,0 +1,34 @@
+{
+  "status": "OFF_STRICT_R2_FUNCTION_AND_FIXED_WORK_PARITY_PASS",
+  "source_commit": "b561aea1c0798feb28055a00d36681fae81ac58a",
+  "detail_mode": "OFF",
+  "variant": "baseline",
+  "ON_work_us": [
+    6767374,
+    6772187,
+    6771247
+  ],
+  "OFF_work_us": [
+    5355331,
+    5358850,
+    5352879
+  ],
+  "ON_mean_work_us": 6770269.333333333,
+  "OFF_mean_work_us": 5355686.666666667,
+  "ON_minus_OFF_mean_work_us": 1414582.666666666,
+  "observed_ON_over_OFF_percent": 26.412722676083856,
+  "fixed_identity_work_race_counters_and_native_build_calls_identical": true,
+  "OFF_detailed_records": 0,
+  "owner_STOP_HOME_verified": true,
+  "original_r2_function_executed": true,
+  "prove_stub_or_monkeypatch_used": false,
+  "provider_actual_build_modeproof_verified": true,
+  "local_actual_BIN_ELF_prove_recomputed": false,
+  "original_full_build_CLI_executed_here": false,
+  "scope": "Actual OFF raw/owner receipt/typed flash chain; three dependent reps per mode, descriptive elapsed-work comparison only.",
+  "limits": [
+    "Provider real-build proof is used; independent Windows full actual-prove/r2 CLI remains separately reportable.",
+    "Work time is elapsed and can include preemption; it is not pure bus transfer time.",
+    "Counters describe logical work, not direct wire traffic or physical LCD pixel acceptance."
+  ]
+}

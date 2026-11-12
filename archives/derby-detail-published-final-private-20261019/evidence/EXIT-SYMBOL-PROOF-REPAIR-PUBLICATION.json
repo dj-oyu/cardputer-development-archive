@@ -1,0 +1,413 @@
+{
+  "baseline": {
+    "root": "/workspace/derby-detail-recovery",
+    "base": "0c52600fc34deafbadc53bc48e4fc98931e404e4",
+    "previous_remote_commit": "90b9f686e7c6897bc53e26e3b82fbe5569b968fd",
+    "previous_tree": "e71155890817044917d63c1d08f785f322d44804",
+    "local_head": "64a13d3eda0b205cd560f4791c8211b2c458de01",
+    "tree": "fe90d7e2e78e680423f40131830071af99944225",
+    "branch": "feature/derby-detail-baseline-20261019",
+    "pr": 21,
+    "files": [
+      {
+        "path": "docs/platform/derby-detail-measure.md",
+        "mode": "100644",
+        "sha": "3636a059605920db4b3e7de621f3aee39e5feab0",
+        "sha256": "309ca70acd856a527817a9703a5a0de2036feb95a56a19f6e74b69b0e0de5b33"
+      },
+      {
+        "path": "main/app_session.c",
+        "mode": "100644",
+        "sha": "92df1a379c38882b518418a6f45d89de70244963",
+        "sha256": "fe6384dacae4f6023dea205247865aa4bc92638bfd4982fae0a580f26aabb9e8"
+      },
+      {
+        "path": "main/app_session.h",
+        "mode": "100644",
+        "sha": "c4cf6f834168c2d3172ed31cb7f2bfc040c8e689",
+        "sha256": "fc22360bad519f40a90b4b169253175d9b5b8881e85a12836a1574d92d403041"
+      },
+      {
+        "path": "main/main.c",
+        "mode": "100644",
+        "sha": "e7a5e74fc936a1f53f8bf741903878cd538986b6",
+        "sha256": "1b35f7b3f6ec2a311b3edba8e8a89ae1f4555600a30201d56b134e27506ce9e0"
+      },
+      {
+        "path": "main/pocket/derby_fixed_workload.c",
+        "mode": "100644",
+        "sha": "d8638044c0da7733a087469f5fb120bfa5dd41e1",
+        "sha256": "ea7df45c679595ddb4e5686c06bac72debf18c0bdbeb381e6ff2662494519fcd"
+      },
+      {
+        "path": "main/pocket/derby_fixed_workload.h",
+        "mode": "100644",
+        "sha": "1ef516a89afbdbd2f409b41bef7d945cb7d48e3d",
+        "sha256": "1e3d2aa2a90fb1c57d08cd55b7bdea65d91f67faf5a62291d5b511823a6fb5a4"
+      },
+      {
+        "path": "tools/games/derby_detail_result.py",
+        "mode": "100644",
+        "sha": "240d47eedfbab2b98ae04c7c7ef0b2707d0d4775",
+        "sha256": "9064850a370d1111f553368828c0c1698b2f1ff34579819f135a91710efd961e"
+      },
+      {
+        "path": "tools/games/run_derby_fixed.py",
+        "mode": "100644",
+        "sha": "6f2caa36b5ac0f9f0773ca4714b59aa38c0e039a",
+        "sha256": "8f0a0c472b2bc8a335b108682da67435afbc49492fe30bca1a68eda84a189f14"
+      },
+      {
+        "path": "tools/test_derby_detail.py",
+        "mode": "100644",
+        "sha": "b52ff9034c1e7c7f22492c3995936bb42740b1aa",
+        "sha256": "1cabf7adc5cd3ef268e122e79f58eb55ba39d904ee35b6c837acba44a852bc51"
+      },
+      {
+        "path": "tools/test_derby_detail_output.c",
+        "mode": "100644",
+        "sha": "bafeb379a044fcf17b13ad893d139fa587f654cd",
+        "sha256": "7aada0e7f3324daef10b256622a528eac6983ecc6a0284691474cb03adc850ac"
+      },
+      {
+        "path": "tools/test_session_dispatch.c",
+        "mode": "100644",
+        "sha": "e280cd015ee873160098f422d2e8fdfe035d417b",
+        "sha256": "d1109be571962a54adfca56ba8406f2bf8fd9de30d06c5d7c9c14f84ce7a255c"
+      },
+      {
+        "path": "tools/test_session_dispatch.py",
+        "mode": "100644",
+        "sha": "6e9fcaf19eafff4ba969509e26bab40a14f91c92",
+        "sha256": "f44542119d0689851b860f19a7fb5e1ea2f489db86dbcc142e306ea24566004f"
+      }
+    ],
+    "remote_tree_verified": true,
+    "remote_commit": "9b9e9ae46c08a6597f871419b280874d5e09033c",
+    "commit_result": {
+      "sha": "9b9e9ae46c08a6597f871419b280874d5e09033c"
+    },
+    "ref_update_result": {
+      "success": true
+    },
+    "ref_updated": true,
+    "pr_body": "\u56fa\u5b9a120 contexts\u30923\u56de\u518d\u751f\u3059\u308bDERBY\u8a3a\u65ad\u306b\u3001JS\u30fbprocedural VM\u30fb\u63cf\u753b\u30fb\u540c\u671fI/O\u306e\u8a73\u7d30\u5185\u8a33\u3092\u8ffd\u52a0\u3057\u307e\u3059\u3002\u8a08\u6e2c\u5b8c\u4e86\u5f8c\u306e `pocket.app.exit()` \u304c\u6b21\u306eguest frame\u3092interrupt\u3057\u3001APP ERROR\u306b\u306a\u308b\u7d42\u4e86\u7d4c\u8def\u3082\u4fee\u6b63\u3057\u307e\u3059\u3002\n\n`0c52600fc34deafbadc53bc48e4fc98931e404e4` \u304b\u3089\u306e\u6bd4\u8f03\u7248\u3067\u3059\u3002native\u3068batch\u306f\u72ec\u7acb\u7248\u3067\u3059\u3002\u30b3\u30fc\u30c9\u306f\u4ed5\u69d8\u304b\u3089\u518d\u69cb\u6210\u3057\u305f\u3082\u306e\u3067\u3001\u4ee5\u524d\u306e\u672a\u56de\u53ceWIP\u3068\u540c\u4e00\u3068\u306f\u4e3b\u5f35\u3057\u307e\u305b\u3093\u3002\n\n- 26 elapsed stages\u306813 event\u3092\u56fa\u5b9a\u30b5\u30a4\u30ba\u3067\u96c6\u8a08\u3002owner task\u9650\u5b9a\u3001ISR\u306fscope stack\u306b\u89e6\u308c\u307e\u305b\u3093\u3002elapsed\u306fpreemption\u3068wait\u3092\u542b\u307f\u3001bytes\u306f\u8ad6\u7406\u91cf\u3067\u3059\u3002\n- \u8a73\u7d30OFF\u306e\u751f\u6210JS\u3068\u4e3b\u8981C\u306e\u52d5\u4f5c\u3092\u4fdd\u6301\u3002\u56fa\u5b9aseed/camera\u3001390\u2192510\u306e120 contexts\u30013 dependent replays\u30018 step/frame\u306etail\u3001250ms guest watchdog\u3068180\u79d2session\u3092\u7dad\u6301\u3057\u307e\u3059\u3002\n- \u6700\u5f8c\u306eguest return\u304c\u6210\u529f\u3057\u3001DONE\u30fbexit\u8981\u6c42\u30fbqueue\u306a\u3057\u30fbstop\u8981\u6c42\u306a\u3057\u3092\u78ba\u8a8d\u3057\u305fowner\u304c\u65e2\u5b58teardown\u3078\u9032\u307f\u307e\u3059\u3002\u671f\u9650\u8d85\u904e\u306f\u5373timeout\u306b\u3057\u3001\u6b21turn\u306e\u518darm\u3067\u6210\u529f\u6271\u3044\u306b\u3057\u307e\u305b\u3093\u3002\n- owner\u3060\u3051\u304c\u4e00\u5ea6 `DERBY_DETAIL_EXIT` \u3092\u51fa\u3057\u3001strict parser\u306fEND\u2192EXIT\u2192STOP\u2192HOME\u3092\u8981\u6c42\u3057\u307e\u3059\u3002\u6b63\u3057\u3044tag\u306eESP-IDF marker\u306b\u5bfe\u5fdc\u3057\u3001InternalError\u30fbwatchdog\u30fbstop-hook\u5931\u6557\u306e\u62d2\u5426\u306f\u7dad\u6301\u3057\u307e\u3059\u3002\u6700\u9069\u5316\u306f\u8ffd\u52a0\u3057\u3066\u3044\u307e\u305b\u3093\u3002\n\nValidation: \u30ed\u30fc\u30ab\u30ebASan/UBSan\u30fbO2\u306e3\u7248ON/OFF\u8a0812\u5b9f\u884c\u300136 dependent windows\u3067work/race/\u63cf\u753bhash\u4e00\u81f4\u3002owner lifecycle\u8a66\u9a13\u300138 parser\u8ca0\u4f8b\u3001\u72ec\u7acb\u30ec\u30d3\u30e5\u30fc\u3001Xtensa syntax18\u4ef6/object6\u4ef6\u3082\u5408\u683c\u3002\u3053\u308c\u3089\u306ftarget\u901f\u5ea6\u3084\u72ec\u7acb\u8a66\u884c\u306e\u8a3c\u660e\u3067\u306f\u3042\u308a\u307e\u305b\u3093\u3002\n\nExact published head: `9b9e9ae46c08a6597f871419b280874d5e09033c`\u3002\u3053\u306ehead\u306eCI\u3068\u5b8c\u5168target link/mode proof\u3092\u78ba\u8a8d\u4e2d\u3067\u3059\u3002\u4ee5\u524d\u306ehead\u306eCI\u7d50\u679c\u3092\u6d41\u7528\u3057\u307e\u305b\u3093\u3002\n\n\u5b9f\u6a5f\u53d7\u5165\u306f\u4fdd\u7559\u3067\u3059\u3002\u4ee5\u524d\u306ebaseline\u8a3a\u65adhead\u306eEND\u5f8cexception\u3092\u4e0d\u5408\u683c\u306e\u307e\u307e\u4fdd\u6301\u3057\u3001\u3053\u306e\u4fee\u6b63\u3067\u9061\u53ca\u7684\u306bPASS\u3078\u5909\u66f4\u3057\u307e\u305b\u3093\u3002\u65b0head\u306esource\u53d6\u5f97\u30fbflash\u30fb\u5b9f\u6a5f\u8a08\u6e2c\u3001main merge\u306f\u884c\u3063\u3066\u3044\u307e\u305b\u3093\u3002\u5b9f\u6a5f\u751f\u30ed\u30b0\u306f\u516c\u958b\u3057\u307e\u305b\u3093\u3002",
+    "remote_git_commit": {
+      "sha": "9b9e9ae46c08a6597f871419b280874d5e09033c",
+      "node_id": "C_kwDOUPhoVdoAKDliOWU5YWU0NmMwOGE2NTk3Zjg3MTQxOWIyODA4NzRkNWUwOTAzM2M",
+      "url": "https://api.github.com/repos/dj-oyu/cardputer-adv-pocketjs/git/commits/9b9e9ae46c08a6597f871419b280874d5e09033c",
+      "html_url": "https://github.com/dj-oyu/cardputer-adv-pocketjs/commit/9b9e9ae46c08a6597f871419b280874d5e09033c",
+      "author": {
+        "name": "dj-oyu",
+        "email": "68707227+dj-oyu@users.noreply.github.com",
+        "date": "2026-10-19T21:53:01Z"
+      },
+      "committer": {
+        "name": "dj-oyu",
+        "email": "68707227+dj-oyu@users.noreply.github.com",
+        "date": "2026-10-19T21:53:01Z"
+      },
+      "tree": {
+        "sha": "fe90d7e2e78e680423f40131830071af99944225",
+        "url": "https://api.github.com/repos/dj-oyu/cardputer-adv-pocketjs/git/trees/fe90d7e2e78e680423f40131830071af99944225"
+      },
+      "message": "fix(derby): finish detailed fixture at the owner boundary",
+      "parents": [
+        {
+          "sha": "90b9f686e7c6897bc53e26e3b82fbe5569b968fd",
+          "url": "https://api.github.com/repos/dj-oyu/cardputer-adv-pocketjs/git/commits/90b9f686e7c6897bc53e26e3b82fbe5569b968fd",
+          "html_url": "https://github.com/dj-oyu/cardputer-adv-pocketjs/commit/90b9f686e7c6897bc53e26e3b82fbe5569b968fd"
+        }
+      ],
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "published_local_head": "9b9e9ae46c08a6597f871419b280874d5e09033c",
+    "published_local_branch": "feature/derby-detail-baseline-20261019",
+    "local_candidate_checkpoint": "checkpoint/derby-detail-baseline-local-clean-exit-20261019",
+    "remote_commit_raw_sha256": "3825d28597a60dea6ef4a2f31ba2358575fd4f67a83032aafc4c777976f91c4d",
+    "parent_before_proof_repair": "9b9e9ae46c08a6597f871419b280874d5e09033c",
+    "tree_before_proof_repair": "fe90d7e2e78e680423f40131830071af99944225",
+    "proof_repair_local_head": "c90ee61b392de779e1438d2674087e7ccd9e1824",
+    "proof_repair_tree": "7753c5c8919ee36c24080ce08102438a285da6f2"
+  },
+  "native": {
+    "root": "/workspace/derby-detail-native",
+    "base": "44f9c56121b5aab4fb2eca0fcf9fbe54d833a276",
+    "previous_remote_commit": "baa41e984339436dca6157a29326d3b863825761",
+    "previous_tree": "3caa8ee89c509a3f18f3e1fcf53eea79cf9dd6e9",
+    "local_head": "2b82842efd6762130a920600f3fb7f67aa57fd9a",
+    "tree": "6648060e994f1f240a15db8a1f7e8fae1286bbf8",
+    "branch": "feature/derby-detail-native-20261019",
+    "pr": 22,
+    "files": [
+      {
+        "path": "docs/platform/derby-detail-measure.md",
+        "mode": "100644",
+        "sha": "3636a059605920db4b3e7de621f3aee39e5feab0",
+        "sha256": "309ca70acd856a527817a9703a5a0de2036feb95a56a19f6e74b69b0e0de5b33"
+      },
+      {
+        "path": "main/app_session.c",
+        "mode": "100644",
+        "sha": "92df1a379c38882b518418a6f45d89de70244963",
+        "sha256": "fe6384dacae4f6023dea205247865aa4bc92638bfd4982fae0a580f26aabb9e8"
+      },
+      {
+        "path": "main/app_session.h",
+        "mode": "100644",
+        "sha": "c4cf6f834168c2d3172ed31cb7f2bfc040c8e689",
+        "sha256": "fc22360bad519f40a90b4b169253175d9b5b8881e85a12836a1574d92d403041"
+      },
+      {
+        "path": "main/main.c",
+        "mode": "100644",
+        "sha": "e7a5e74fc936a1f53f8bf741903878cd538986b6",
+        "sha256": "1b35f7b3f6ec2a311b3edba8e8a89ae1f4555600a30201d56b134e27506ce9e0"
+      },
+      {
+        "path": "main/pocket/derby_fixed_workload.c",
+        "mode": "100644",
+        "sha": "d8638044c0da7733a087469f5fb120bfa5dd41e1",
+        "sha256": "ea7df45c679595ddb4e5686c06bac72debf18c0bdbeb381e6ff2662494519fcd"
+      },
+      {
+        "path": "main/pocket/derby_fixed_workload.h",
+        "mode": "100644",
+        "sha": "1ef516a89afbdbd2f409b41bef7d945cb7d48e3d",
+        "sha256": "1e3d2aa2a90fb1c57d08cd55b7bdea65d91f67faf5a62291d5b511823a6fb5a4"
+      },
+      {
+        "path": "tools/games/derby_detail_result.py",
+        "mode": "100644",
+        "sha": "240d47eedfbab2b98ae04c7c7ef0b2707d0d4775",
+        "sha256": "9064850a370d1111f553368828c0c1698b2f1ff34579819f135a91710efd961e"
+      },
+      {
+        "path": "tools/games/run_derby_fixed.py",
+        "mode": "100644",
+        "sha": "6f2caa36b5ac0f9f0773ca4714b59aa38c0e039a",
+        "sha256": "8f0a0c472b2bc8a335b108682da67435afbc49492fe30bca1a68eda84a189f14"
+      },
+      {
+        "path": "tools/test_derby_detail.py",
+        "mode": "100644",
+        "sha": "b52ff9034c1e7c7f22492c3995936bb42740b1aa",
+        "sha256": "1cabf7adc5cd3ef268e122e79f58eb55ba39d904ee35b6c837acba44a852bc51"
+      },
+      {
+        "path": "tools/test_derby_detail_output.c",
+        "mode": "100644",
+        "sha": "bafeb379a044fcf17b13ad893d139fa587f654cd",
+        "sha256": "7aada0e7f3324daef10b256622a528eac6983ecc6a0284691474cb03adc850ac"
+      },
+      {
+        "path": "tools/test_session_dispatch.c",
+        "mode": "100644",
+        "sha": "e280cd015ee873160098f422d2e8fdfe035d417b",
+        "sha256": "d1109be571962a54adfca56ba8406f2bf8fd9de30d06c5d7c9c14f84ce7a255c"
+      },
+      {
+        "path": "tools/test_session_dispatch.py",
+        "mode": "100644",
+        "sha": "6e9fcaf19eafff4ba969509e26bab40a14f91c92",
+        "sha256": "f44542119d0689851b860f19a7fb5e1ea2f489db86dbcc142e306ea24566004f"
+      }
+    ],
+    "remote_tree_verified": true,
+    "remote_commit": "0e3a457f0bd1897ff147954104735a20b7735e52",
+    "commit_result": {
+      "sha": "0e3a457f0bd1897ff147954104735a20b7735e52"
+    },
+    "ref_update_result": {
+      "success": true
+    },
+    "ref_updated": true,
+    "pr_body": "\u56fa\u5b9a120 contexts\u30923\u56de\u518d\u751f\u3059\u308bDERBY\u8a3a\u65ad\u306b\u3001JS\u30fbprocedural VM\u30fb\u63cf\u753b\u30fb\u540c\u671fI/O\u306e\u8a73\u7d30\u5185\u8a33\u3092\u8ffd\u52a0\u3057\u307e\u3059\u3002\u8a08\u6e2c\u5b8c\u4e86\u5f8c\u306e `pocket.app.exit()` \u304c\u6b21\u306eguest frame\u3092interrupt\u3057\u3001APP ERROR\u306b\u306a\u308b\u7d42\u4e86\u7d4c\u8def\u3082\u4fee\u6b63\u3057\u307e\u3059\u3002\n\n`44f9c56121b5aab4fb2eca0fcf9fbe54d833a276` \u304b\u3089\u306e\u6bd4\u8f03\u7248\u3067\u3059\u3002native\u3068batch\u306f\u72ec\u7acb\u7248\u3067\u3059\u3002\u30b3\u30fc\u30c9\u306f\u4ed5\u69d8\u304b\u3089\u518d\u69cb\u6210\u3057\u305f\u3082\u306e\u3067\u3001\u4ee5\u524d\u306e\u672a\u56de\u53ceWIP\u3068\u540c\u4e00\u3068\u306f\u4e3b\u5f35\u3057\u307e\u305b\u3093\u3002\n\n- 26 elapsed stages\u306813 event\u3092\u56fa\u5b9a\u30b5\u30a4\u30ba\u3067\u96c6\u8a08\u3002owner task\u9650\u5b9a\u3001ISR\u306fscope stack\u306b\u89e6\u308c\u307e\u305b\u3093\u3002elapsed\u306fpreemption\u3068wait\u3092\u542b\u307f\u3001bytes\u306f\u8ad6\u7406\u91cf\u3067\u3059\u3002\n- \u8a73\u7d30OFF\u306e\u751f\u6210JS\u3068\u4e3b\u8981C\u306e\u52d5\u4f5c\u3092\u4fdd\u6301\u3002\u56fa\u5b9aseed/camera\u3001390\u2192510\u306e120 contexts\u30013 dependent replays\u30018 step/frame\u306etail\u3001250ms guest watchdog\u3068180\u79d2session\u3092\u7dad\u6301\u3057\u307e\u3059\u3002\n- \u6700\u5f8c\u306eguest return\u304c\u6210\u529f\u3057\u3001DONE\u30fbexit\u8981\u6c42\u30fbqueue\u306a\u3057\u30fbstop\u8981\u6c42\u306a\u3057\u3092\u78ba\u8a8d\u3057\u305fowner\u304c\u65e2\u5b58teardown\u3078\u9032\u307f\u307e\u3059\u3002\u671f\u9650\u8d85\u904e\u306f\u5373timeout\u306b\u3057\u3001\u6b21turn\u306e\u518darm\u3067\u6210\u529f\u6271\u3044\u306b\u3057\u307e\u305b\u3093\u3002\n- owner\u3060\u3051\u304c\u4e00\u5ea6 `DERBY_DETAIL_EXIT` \u3092\u51fa\u3057\u3001strict parser\u306fEND\u2192EXIT\u2192STOP\u2192HOME\u3092\u8981\u6c42\u3057\u307e\u3059\u3002\u6b63\u3057\u3044tag\u306eESP-IDF marker\u306b\u5bfe\u5fdc\u3057\u3001InternalError\u30fbwatchdog\u30fbstop-hook\u5931\u6557\u306e\u62d2\u5426\u306f\u7dad\u6301\u3057\u307e\u3059\u3002\u6700\u9069\u5316\u306f\u8ffd\u52a0\u3057\u3066\u3044\u307e\u305b\u3093\u3002\n\nValidation: \u30ed\u30fc\u30ab\u30ebASan/UBSan\u30fbO2\u306e3\u7248ON/OFF\u8a0812\u5b9f\u884c\u300136 dependent windows\u3067work/race/\u63cf\u753bhash\u4e00\u81f4\u3002owner lifecycle\u8a66\u9a13\u300138 parser\u8ca0\u4f8b\u3001\u72ec\u7acb\u30ec\u30d3\u30e5\u30fc\u3001Xtensa syntax18\u4ef6/object6\u4ef6\u3082\u5408\u683c\u3002\u3053\u308c\u3089\u306ftarget\u901f\u5ea6\u3084\u72ec\u7acb\u8a66\u884c\u306e\u8a3c\u660e\u3067\u306f\u3042\u308a\u307e\u305b\u3093\u3002\n\nExact published head: `0e3a457f0bd1897ff147954104735a20b7735e52`\u3002\u3053\u306ehead\u306eCI\u3068\u5b8c\u5168target link/mode proof\u3092\u78ba\u8a8d\u4e2d\u3067\u3059\u3002\u4ee5\u524d\u306ehead\u306eCI\u7d50\u679c\u3092\u6d41\u7528\u3057\u307e\u305b\u3093\u3002\n\n\u5b9f\u6a5f\u53d7\u5165\u306f\u4fdd\u7559\u3067\u3059\u3002\u4ee5\u524d\u306ebaseline\u8a3a\u65adhead\u306eEND\u5f8cexception\u3092\u4e0d\u5408\u683c\u306e\u307e\u307e\u4fdd\u6301\u3057\u3001\u3053\u306e\u4fee\u6b63\u3067\u9061\u53ca\u7684\u306bPASS\u3078\u5909\u66f4\u3057\u307e\u305b\u3093\u3002\u65b0head\u306esource\u53d6\u5f97\u30fbflash\u30fb\u5b9f\u6a5f\u8a08\u6e2c\u3001main merge\u306f\u884c\u3063\u3066\u3044\u307e\u305b\u3093\u3002\u5b9f\u6a5f\u751f\u30ed\u30b0\u306f\u516c\u958b\u3057\u307e\u305b\u3093\u3002",
+    "remote_git_commit": {
+      "sha": "0e3a457f0bd1897ff147954104735a20b7735e52",
+      "node_id": "C_kwDOUPhoVdoAKDBlM2E0NTdmMGJkMTg5N2ZmMTQ3OTU0MTA0NzM1YTIwYjc3MzVlNTI",
+      "url": "https://api.github.com/repos/dj-oyu/cardputer-adv-pocketjs/git/commits/0e3a457f0bd1897ff147954104735a20b7735e52",
+      "html_url": "https://github.com/dj-oyu/cardputer-adv-pocketjs/commit/0e3a457f0bd1897ff147954104735a20b7735e52",
+      "author": {
+        "name": "dj-oyu",
+        "email": "68707227+dj-oyu@users.noreply.github.com",
+        "date": "2026-10-19T21:53:08Z"
+      },
+      "committer": {
+        "name": "dj-oyu",
+        "email": "68707227+dj-oyu@users.noreply.github.com",
+        "date": "2026-10-19T21:53:08Z"
+      },
+      "tree": {
+        "sha": "6648060e994f1f240a15db8a1f7e8fae1286bbf8",
+        "url": "https://api.github.com/repos/dj-oyu/cardputer-adv-pocketjs/git/trees/6648060e994f1f240a15db8a1f7e8fae1286bbf8"
+      },
+      "message": "fix(derby): finish detailed fixture at the owner boundary",
+      "parents": [
+        {
+          "sha": "baa41e984339436dca6157a29326d3b863825761",
+          "url": "https://api.github.com/repos/dj-oyu/cardputer-adv-pocketjs/git/commits/baa41e984339436dca6157a29326d3b863825761",
+          "html_url": "https://github.com/dj-oyu/cardputer-adv-pocketjs/commit/baa41e984339436dca6157a29326d3b863825761"
+        }
+      ],
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "published_local_head": "0e3a457f0bd1897ff147954104735a20b7735e52",
+    "published_local_branch": "feature/derby-detail-native-20261019",
+    "local_candidate_checkpoint": "checkpoint/derby-detail-native-local-clean-exit-20261019",
+    "remote_commit_raw_sha256": "df8572cd7acbbefac78d77d4e60c71d61cf2c945248fab97d8cd50f123297e29",
+    "parent_before_proof_repair": "0e3a457f0bd1897ff147954104735a20b7735e52",
+    "tree_before_proof_repair": "6648060e994f1f240a15db8a1f7e8fae1286bbf8",
+    "proof_repair_local_head": "3d861298f12c4aaf01ac520e0a795231e3135c1d",
+    "proof_repair_tree": "24f0575743c7de7d4873c531221db6e1fcf1f14f"
+  },
+  "batch": {
+    "root": "/workspace/derby-detail-batch",
+    "base": "3a641d4d996938339b44fe735aba876ad031b3a2",
+    "previous_remote_commit": "fded982793d0b99246a7335fe22d791985fd6e96",
+    "previous_tree": "2dbe3903c2af4b2b790c24a22ebfc24583f18a07",
+    "local_head": "8b4923614bc0d57909fcc32e225997de1cce628b",
+    "tree": "020c8b038f7876adc458715f18552e065acc1dbc",
+    "branch": "feature/derby-detail-batch-20261019",
+    "pr": 23,
+    "files": [
+      {
+        "path": "docs/platform/derby-detail-measure.md",
+        "mode": "100644",
+        "sha": "3636a059605920db4b3e7de621f3aee39e5feab0",
+        "sha256": "309ca70acd856a527817a9703a5a0de2036feb95a56a19f6e74b69b0e0de5b33"
+      },
+      {
+        "path": "main/app_session.c",
+        "mode": "100644",
+        "sha": "92df1a379c38882b518418a6f45d89de70244963",
+        "sha256": "fe6384dacae4f6023dea205247865aa4bc92638bfd4982fae0a580f26aabb9e8"
+      },
+      {
+        "path": "main/app_session.h",
+        "mode": "100644",
+        "sha": "c4cf6f834168c2d3172ed31cb7f2bfc040c8e689",
+        "sha256": "fc22360bad519f40a90b4b169253175d9b5b8881e85a12836a1574d92d403041"
+      },
+      {
+        "path": "main/main.c",
+        "mode": "100644",
+        "sha": "e7a5e74fc936a1f53f8bf741903878cd538986b6",
+        "sha256": "1b35f7b3f6ec2a311b3edba8e8a89ae1f4555600a30201d56b134e27506ce9e0"
+      },
+      {
+        "path": "main/pocket/derby_fixed_workload.c",
+        "mode": "100644",
+        "sha": "d8638044c0da7733a087469f5fb120bfa5dd41e1",
+        "sha256": "ea7df45c679595ddb4e5686c06bac72debf18c0bdbeb381e6ff2662494519fcd"
+      },
+      {
+        "path": "main/pocket/derby_fixed_workload.h",
+        "mode": "100644",
+        "sha": "1ef516a89afbdbd2f409b41bef7d945cb7d48e3d",
+        "sha256": "1e3d2aa2a90fb1c57d08cd55b7bdea65d91f67faf5a62291d5b511823a6fb5a4"
+      },
+      {
+        "path": "tools/games/derby_detail_result.py",
+        "mode": "100644",
+        "sha": "240d47eedfbab2b98ae04c7c7ef0b2707d0d4775",
+        "sha256": "9064850a370d1111f553368828c0c1698b2f1ff34579819f135a91710efd961e"
+      },
+      {
+        "path": "tools/games/run_derby_fixed.py",
+        "mode": "100644",
+        "sha": "6f2caa36b5ac0f9f0773ca4714b59aa38c0e039a",
+        "sha256": "8f0a0c472b2bc8a335b108682da67435afbc49492fe30bca1a68eda84a189f14"
+      },
+      {
+        "path": "tools/test_derby_detail.py",
+        "mode": "100644",
+        "sha": "b52ff9034c1e7c7f22492c3995936bb42740b1aa",
+        "sha256": "1cabf7adc5cd3ef268e122e79f58eb55ba39d904ee35b6c837acba44a852bc51"
+      },
+      {
+        "path": "tools/test_derby_detail_output.c",
+        "mode": "100644",
+        "sha": "bafeb379a044fcf17b13ad893d139fa587f654cd",
+        "sha256": "7aada0e7f3324daef10b256622a528eac6983ecc6a0284691474cb03adc850ac"
+      },
+      {
+        "path": "tools/test_session_dispatch.c",
+        "mode": "100644",
+        "sha": "e280cd015ee873160098f422d2e8fdfe035d417b",
+        "sha256": "d1109be571962a54adfca56ba8406f2bf8fd9de30d06c5d7c9c14f84ce7a255c"
+      },
+      {
+        "path": "tools/test_session_dispatch.py",
+        "mode": "100644",
+        "sha": "6e9fcaf19eafff4ba969509e26bab40a14f91c92",
+        "sha256": "f44542119d0689851b860f19a7fb5e1ea2f489db86dbcc142e306ea24566004f"
+      }
+    ],
+    "remote_tree_verified": true,
+    "remote_commit": "efb9aa4ee71970ded23c80f8a4bc3eb375ea84fb",
+    "commit_result": {
+      "sha": "efb9aa4ee71970ded23c80f8a4bc3eb375ea84fb"
+    },
+    "ref_update_result": {
+      "success": true
+    },
+    "ref_updated": true,
+    "pr_body": "\u56fa\u5b9a120 contexts\u30923\u56de\u518d\u751f\u3059\u308bDERBY\u8a3a\u65ad\u306b\u3001JS\u30fbprocedural VM\u30fb\u63cf\u753b\u30fb\u540c\u671fI/O\u306e\u8a73\u7d30\u5185\u8a33\u3092\u8ffd\u52a0\u3057\u307e\u3059\u3002\u8a08\u6e2c\u5b8c\u4e86\u5f8c\u306e `pocket.app.exit()` \u304c\u6b21\u306eguest frame\u3092interrupt\u3057\u3001APP ERROR\u306b\u306a\u308b\u7d42\u4e86\u7d4c\u8def\u3082\u4fee\u6b63\u3057\u307e\u3059\u3002\n\n`3a641d4d996938339b44fe735aba876ad031b3a2` \u304b\u3089\u306e\u6bd4\u8f03\u7248\u3067\u3059\u3002native\u3068batch\u306f\u72ec\u7acb\u7248\u3067\u3059\u3002\u30b3\u30fc\u30c9\u306f\u4ed5\u69d8\u304b\u3089\u518d\u69cb\u6210\u3057\u305f\u3082\u306e\u3067\u3001\u4ee5\u524d\u306e\u672a\u56de\u53ceWIP\u3068\u540c\u4e00\u3068\u306f\u4e3b\u5f35\u3057\u307e\u305b\u3093\u3002\n\n- 26 elapsed stages\u306813 event\u3092\u56fa\u5b9a\u30b5\u30a4\u30ba\u3067\u96c6\u8a08\u3002owner task\u9650\u5b9a\u3001ISR\u306fscope stack\u306b\u89e6\u308c\u307e\u305b\u3093\u3002elapsed\u306fpreemption\u3068wait\u3092\u542b\u307f\u3001bytes\u306f\u8ad6\u7406\u91cf\u3067\u3059\u3002\n- \u8a73\u7d30OFF\u306e\u751f\u6210JS\u3068\u4e3b\u8981C\u306e\u52d5\u4f5c\u3092\u4fdd\u6301\u3002\u56fa\u5b9aseed/camera\u3001390\u2192510\u306e120 contexts\u30013 dependent replays\u30018 step/frame\u306etail\u3001250ms guest watchdog\u3068180\u79d2session\u3092\u7dad\u6301\u3057\u307e\u3059\u3002\n- \u6700\u5f8c\u306eguest return\u304c\u6210\u529f\u3057\u3001DONE\u30fbexit\u8981\u6c42\u30fbqueue\u306a\u3057\u30fbstop\u8981\u6c42\u306a\u3057\u3092\u78ba\u8a8d\u3057\u305fowner\u304c\u65e2\u5b58teardown\u3078\u9032\u307f\u307e\u3059\u3002\u671f\u9650\u8d85\u904e\u306f\u5373timeout\u306b\u3057\u3001\u6b21turn\u306e\u518darm\u3067\u6210\u529f\u6271\u3044\u306b\u3057\u307e\u305b\u3093\u3002\n- owner\u3060\u3051\u304c\u4e00\u5ea6 `DERBY_DETAIL_EXIT` \u3092\u51fa\u3057\u3001strict parser\u306fEND\u2192EXIT\u2192STOP\u2192HOME\u3092\u8981\u6c42\u3057\u307e\u3059\u3002\u6b63\u3057\u3044tag\u306eESP-IDF marker\u306b\u5bfe\u5fdc\u3057\u3001InternalError\u30fbwatchdog\u30fbstop-hook\u5931\u6557\u306e\u62d2\u5426\u306f\u7dad\u6301\u3057\u307e\u3059\u3002\u6700\u9069\u5316\u306f\u8ffd\u52a0\u3057\u3066\u3044\u307e\u305b\u3093\u3002\n\nValidation: \u30ed\u30fc\u30ab\u30ebASan/UBSan\u30fbO2\u306e3\u7248ON/OFF\u8a0812\u5b9f\u884c\u300136 dependent windows\u3067work/race/\u63cf\u753bhash\u4e00\u81f4\u3002owner lifecycle\u8a66\u9a13\u300138 parser\u8ca0\u4f8b\u3001\u72ec\u7acb\u30ec\u30d3\u30e5\u30fc\u3001Xtensa syntax18\u4ef6/object6\u4ef6\u3082\u5408\u683c\u3002\u3053\u308c\u3089\u306ftarget\u901f\u5ea6\u3084\u72ec\u7acb\u8a66\u884c\u306e\u8a3c\u660e\u3067\u306f\u3042\u308a\u307e\u305b\u3093\u3002\n\nExact published head: `efb9aa4ee71970ded23c80f8a4bc3eb375ea84fb`\u3002\u3053\u306ehead\u306eCI\u3068\u5b8c\u5168target link/mode proof\u3092\u78ba\u8a8d\u4e2d\u3067\u3059\u3002\u4ee5\u524d\u306ehead\u306eCI\u7d50\u679c\u3092\u6d41\u7528\u3057\u307e\u305b\u3093\u3002\n\n\u5b9f\u6a5f\u53d7\u5165\u306f\u4fdd\u7559\u3067\u3059\u3002\u4ee5\u524d\u306ebaseline\u8a3a\u65adhead\u306eEND\u5f8cexception\u3092\u4e0d\u5408\u683c\u306e\u307e\u307e\u4fdd\u6301\u3057\u3001\u3053\u306e\u4fee\u6b63\u3067\u9061\u53ca\u7684\u306bPASS\u3078\u5909\u66f4\u3057\u307e\u305b\u3093\u3002\u65b0head\u306esource\u53d6\u5f97\u30fbflash\u30fb\u5b9f\u6a5f\u8a08\u6e2c\u3001main merge\u306f\u884c\u3063\u3066\u3044\u307e\u305b\u3093\u3002\u5b9f\u6a5f\u751f\u30ed\u30b0\u306f\u516c\u958b\u3057\u307e\u305b\u3093\u3002",
+    "remote_git_commit": {
+      "sha": "efb9aa4ee71970ded23c80f8a4bc3eb375ea84fb",
+      "node_id": "C_kwDOUPhoVdoAKGVmYjlhYTRlZTcxOTcwZGVkMjNjODBmOGE0YmMzZWIzNzVlYTg0ZmI",
+      "url": "https://api.github.com/repos/dj-oyu/cardputer-adv-pocketjs/git/commits/efb9aa4ee71970ded23c80f8a4bc3eb375ea84fb",
+      "html_url": "https://github.com/dj-oyu/cardputer-adv-pocketjs/commit/efb9aa4ee71970ded23c80f8a4bc3eb375ea84fb",
+      "author": {
+        "name": "dj-oyu",
+        "email": "68707227+dj-oyu@users.noreply.github.com",
+        "date": "2026-10-19T21:53:14Z"
+      },
+      "committer": {
+        "name": "dj-oyu",
+        "email": "68707227+dj-oyu@users.noreply.github.com",
+        "date": "2026-10-19T21:53:14Z"
+      },
+      "tree": {
+        "sha": "020c8b038f7876adc458715f18552e065acc1dbc",
+        "url": "https://api.github.com/repos/dj-oyu/cardputer-adv-pocketjs/git/trees/020c8b038f7876adc458715f18552e065acc1dbc"
+      },
+      "message": "fix(derby): finish detailed fixture at the owner boundary",
+      "parents": [
+        {
+          "sha": "fded982793d0b99246a7335fe22d791985fd6e96",
+          "url": "https://api.github.com/repos/dj-oyu/cardputer-adv-pocketjs/git/commits/fded982793d0b99246a7335fe22d791985fd6e96",
+          "html_url": "https://github.com/dj-oyu/cardputer-adv-pocketjs/commit/fded982793d0b99246a7335fe22d791985fd6e96"
+        }
+      ],
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "published_local_head": "efb9aa4ee71970ded23c80f8a4bc3eb375ea84fb",
+    "published_local_branch": "feature/derby-detail-batch-20261019",
+    "local_candidate_checkpoint": "checkpoint/derby-detail-batch-local-clean-exit-20261019",
+    "remote_commit_raw_sha256": "0a20e14691f2a4244f0d4cfe6ff46503bb1b306c813706e8d30f75f915d4f27b",
+    "parent_before_proof_repair": "efb9aa4ee71970ded23c80f8a4bc3eb375ea84fb",
+    "tree_before_proof_repair": "020c8b038f7876adc458715f18552e065acc1dbc",
+    "proof_repair_local_head": "826c74a1676261fa9a086271678e61a90d0b88af",
+    "proof_repair_tree": "63bf0b2ee03168230de588f2a038e3e694b1d4d4"
+  }
+}

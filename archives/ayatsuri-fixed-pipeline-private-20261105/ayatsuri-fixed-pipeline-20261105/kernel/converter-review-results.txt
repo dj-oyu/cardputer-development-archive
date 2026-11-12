@@ -1,0 +1,4 @@
+source_sha256 b127e829cf4062cbd0364018e66af0c8281bd7f74e457f7a6e5d31a400bc530e
+PASS: all five source contract markers required
+PASS: CRC-valid nonunit normal rejected
+PASS: CLI existing-sidecar rejection, API existing-sidecar cleanup, injected write-failure cleanup, successful pair write

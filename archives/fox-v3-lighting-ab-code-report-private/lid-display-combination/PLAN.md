@@ -1,0 +1,11 @@
+# Current lid8 full-v3 fixed profile/filter diagnostic
+
+Baseline: frozen fox-v3-lid-evaluation/actual-lid8-v2, geometry certificate a18011982c6e2338368a9e5bafacec6af5a5bad1c1206d05640cb075fcdb62c3. Exact current geometry, normal-pair ON, source ground emission, DISK16/one-bounce16, materials, lighting and all runtime caps stay unchanged.
+
+Capture all ten conditions (front/oblique x baseline/direction/intensity/ambient/albedo), one process per frame. Add only host static observer at actual successful shader return before clamp/encoding; nearer accepted winners overwrite at the same absolute raster pixel. No image inputs to renderer. Observer 777600 bytes is diagnostic allocation, not product snapshot or RAM fit. Native old RGB/depth controls must match all20 buffers before any postprocessing. Also verify all ten actual compact/canonical snapshots against frozen contract, all accounting and input pins.
+
+Re-use prior bounce-combination contract: same raw capture for point vs fixed integer BH3x3 filter, crossed with clamp/sRGB vs pinned official AgX profile. This is an integer9-neighbor filter, not subpixel sampling. No-hit/outside-image samples stay black and retain fixed denominator. HDR average first, profile second, RGB565 once. Native coverage and union support reported separately. No renormalization, image fit, exposure, weights, precision or threshold changes.
+
+Re-use existing 3295500-byte RO LUT and manifest/20 installed official dependencies/source settings. No regeneration. Extend existing frozen v3 evaluator to all10color and8response per arm, retaining uncertain/unknown, per-seed/full foreground, bright/dark FP/FN/inactiveFP, shape/support and all metricwise 2x2 interactions. No global60% or adoption claim implied. Native missing silhouette remains in full foreground denominator.
+
+Costs separate observer/raw/filter/scratch RAM and LUT RO from postprocessing host min/median/max; diagnostic arrays and installed dependencies are not a product implementation. Observer functional rendering time is not a production speed benchmark. Controlled timings only after independent heavy coordination. No original/reference edits, public publishing, PR, device, or default adoption. Bundle includes code/tests/report/metrics/cost/hashes only, no raw/HDR/images/geometry.

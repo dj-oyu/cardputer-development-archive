@@ -1,0 +1,55 @@
+{
+  "status": "STATELESS_PROFILE_ACCELERATION_INDEPENDENT_PASS_NOT_INTEGRATED",
+  "blobBytes": 445248,
+  "blobUnchanged": true,
+  "candidate": "gather",
+  "fidelity": {
+    "exactLUTValues": 823875,
+    "exactProfileInputsPerArm": 1756224,
+    "arms": 3,
+    "retainedFrames": 40
+  },
+  "primaryNsPerProfile": {
+    "raw": 99.328,
+    "compressedBaseline": 9597.798,
+    "fastBits": 11182.132,
+    "gather": 4292.206,
+    "combined": 5083.291
+  },
+  "primaryGatherSpeedup": 2.236,
+  "primaryGatherSlowdownVsRaw": 43.212,
+  "alternateGatherSpeedup": 2.184,
+  "alternateGatherSlowdownVsRaw": 41.962,
+  "cost": {
+    "text": 3634,
+    "textIncreaseOverCompressedBaseline": 1052,
+    "readOnlyData": 445380,
+    "writableStatic": 0,
+    "namedStackChain": 648,
+    "stackIncreaseOverCompressedBaseline": 160,
+    "retainedCacheBytes": 0
+  },
+  "modeledCacheOnly": {
+    "LRU1HitPercent": 64.07,
+    "LRU4HitPercent": 97.97,
+    "payloadAndTagBytes": [
+      388,
+      1552
+    ],
+    "implemented": false,
+    "timed": false,
+    "metadataAlignmentAndLifecycleOverheadExcluded": true
+  },
+  "rendererIntegrated": false,
+  "deviceFitOrSpeedProven": false,
+  "pins": {
+    "PLAN.md": "a072b0f3faba77f4da88fd8517dbd3e7355f287442dca8f9791ab5c24c38ffb6",
+    "implementation/block_decoder.c": "384123bed89fab69bffd5eef1670366f4dbe4c02d57f731ff1cb0c9efba31885",
+    "implementation/candidate_profile.c": "b15db8fcf931d043d0cefa9fe726d74893f56bdddcb5c302e3aed4e3bde3fc73",
+    "bench/PLAN.md": "a408c9673c07cba4a1fed6bd39b0ea50410b5749a736ebe850fd0f3fe2b6608c",
+    "bench/BENCHMARK.json": "f2f47aeb03314b0d345e03683c916cf7946ebdcf6eb28ef38e3f1bd50ca5d4b5",
+    "bench/COSTS.json": "dfc367ceecf8219606acb8444961523dde44d1427c6eedf36495c671774e94d8",
+    "bench/LOCALITY.json": "3a38963ee1429072a0f1932e0f4d2036aa2cd9b7b2222cd94aae8f698f69755c",
+    "review/REVIEW.json": "13ca982233f3b8d45db8968c5617acddd4fc2ad27ab15c136b57c3c0957ff680"
+  }
+}

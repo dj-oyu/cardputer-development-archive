@@ -1,0 +1,13 @@
+test_invalid_unit_normal_and_output_conflict (__main__.ConverterTests.test_invalid_unit_normal_and_output_conflict) ... ok
+test_partial_blocks_and_multiple_parts (__main__.ConverterTests.test_partial_blocks_and_multiple_parts) ... ok
+test_random_roundtrip (__main__.ConverterTests.test_random_roundtrip) ... ok
+test_reject_invalid_source (__main__.ConverterTests.test_reject_invalid_source) ... ok
+test_rounding_and_bounds (__main__.ConverterTests.test_rounding_and_bounds) ... ok
+test_roundtrip (__main__.ConverterTests.test_roundtrip) ... ok
+test_single_bit_damage_and_truncation (__main__.ConverterTests.test_single_bit_damage_and_truncation) ... ok
+test_structural_damage_with_valid_crc (__main__.ConverterTests.test_structural_damage_with_valid_crc) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.060s
+
+OK

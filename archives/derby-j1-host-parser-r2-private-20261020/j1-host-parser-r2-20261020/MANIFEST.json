@@ -1,0 +1,132 @@
+[
+  {
+    "path": "ACCEPTANCE.json",
+    "bytes": 12077,
+    "sha256": "f0d6cea74826d6e070cdd12e759dcc01a8d36f59cd9baf8f5d54c8c16d751ea1"
+  },
+  {
+    "path": "CASESET.json",
+    "bytes": 7379,
+    "sha256": "1e70b87a1a095aace729d89d6a476f64a312ecccff154366d4d2f14e3d7da70e"
+  },
+  {
+    "path": "ORIGINAL-INPUT-HASHES.json",
+    "bytes": 11021,
+    "sha256": "ba5e0954250412470842a2a984dd7f6aa89a08bf11bafa953501c289d9a56845"
+  },
+  {
+    "path": "PATCH-CHECK.json",
+    "bytes": 312,
+    "sha256": "5f5f9c7718ed04cb33607ce7e8b819d1f70cc20020ed468b78085b724280baae"
+  },
+  {
+    "path": "REPORT.md",
+    "bytes": 3531,
+    "sha256": "56657aa22edc71abbd3ba645ae94d79b68765d1f80985fa70450ac3fe17eb374"
+  },
+  {
+    "path": "host-parser-r2-from-J1.patch",
+    "bytes": 6224,
+    "sha256": "88afbc268eb807dd4e2ad70b53fa0141f0d7e77cfc6303f9dc4cb5ddd660a5e7"
+  },
+  {
+    "path": "host-parser-r2-from-candidate.patch",
+    "bytes": 5094,
+    "sha256": "72cb6db3361fa6c97fe5dbbac72387de70b6174f3a8ebc1a460ef44b4d7eff43"
+  },
+  {
+    "path": "parser/check_derby_detail_pair.py",
+    "bytes": 1828,
+    "sha256": "78922273f428e9d0261a70c57150e39cb1a3285b40b722c1a27dc70103019d7e"
+  },
+  {
+    "path": "parser/derby_compare_chunks.py",
+    "bytes": 801,
+    "sha256": "84af3a144db9df96a5f2bc5068adcdb2b9de391a4d9d650996706279ddba4aa3"
+  },
+  {
+    "path": "parser/derby_detail_result.py",
+    "bytes": 4378,
+    "sha256": "0fff7ed1c6ab8a145dd851c6f46b590d75f0250bb1c19a6d651c9aaa51f258fe"
+  },
+  {
+    "path": "parser/derby_detail_schema.json",
+    "bytes": 781,
+    "sha256": "4027121a79b6511b4ed30a6e6142eb4735a70218f0fc72923ebef55c569fdf45"
+  },
+  {
+    "path": "parser/derby_fixed_collector_check.py",
+    "bytes": 7936,
+    "sha256": "80687c07907bc2646346c8eb8f4c743f59f13cf91db11c528b8ea7de625848f3"
+  },
+  {
+    "path": "parser/derby_fixed_completion.py",
+    "bytes": 3177,
+    "sha256": "237c43498778333a939a7481249d1f13a7b97ddd8127723e7af6b3b420ac29ed"
+  },
+  {
+    "path": "parser/derby_fixed_result.py",
+    "bytes": 8232,
+    "sha256": "6e2fb1beda9cc78ebcf45be3efe4180a6351f40c8604d495c09ae3962a664e89"
+  },
+  {
+    "path": "parser/derby_fixed_workload_chunks.py",
+    "bytes": 6700,
+    "sha256": "519cf5a2eeadf2b52e86c3d18586a7aadd36afa2b524194fdca216413fa8d828"
+  },
+  {
+    "path": "parser/fixtures/broker_v2/derby_fixed.py",
+    "bytes": 17155,
+    "sha256": "c23d435f123b65e5a65473d526803cc0d77208a8cd43ff43ee11fb32fda6e6ab"
+  },
+  {
+    "path": "parser/fixtures/broker_v2/device_faults.py",
+    "bytes": 2084,
+    "sha256": "da8d2c2cc8ac222dad5da8ed5c6ffc6560d4458e4b051da26903a10d91366402"
+  },
+  {
+    "path": "parser/verify_derby_recorded_trial.py",
+    "bytes": 10934,
+    "sha256": "a8d93c6656a850f577d7397a71ac5e597feaf22a25ea6ce1774166e589154b12"
+  },
+  {
+    "path": "regression/README.md",
+    "bytes": 1296,
+    "sha256": "949f2fe35edbeaa22a08a61d3c19cffa4b931da6a3a414b240db5fd3366a9c4f"
+  },
+  {
+    "path": "regression/fixed-cases.json",
+    "bytes": 7379,
+    "sha256": "1e70b87a1a095aace729d89d6a476f64a312ecccff154366d4d2f14e3d7da70e"
+  },
+  {
+    "path": "regression/fixed99-memory-input-fingerprints.json",
+    "bytes": 16784,
+    "sha256": "a5d0ce91d4ea5a251dff67469971a7454c9d713ec85b739aa86c8433f402a161"
+  },
+  {
+    "path": "regression/independent-r2-review.json",
+    "bytes": 3714,
+    "sha256": "bc6b2b31ac061eb3a1179e9b98b9aa68f476434d68a2cac327926777c49fc5f0"
+  },
+  {
+    "path": "regression/independent-r2-review.md",
+    "bytes": 1521,
+    "sha256": "49d10656f539f3a22279cd4188226cb420430d2f4802a2a510ef78d28690bd0c"
+  },
+  {
+    "path": "regression/prior-candidate-reproduction.json",
+    "bytes": 43156,
+    "sha256": "1bdb6ccb71471f9ce5c55fa561895a599640eea5508a23c92760c97fce0b7ccc"
+  },
+  {
+    "path": "regression/r2-fixed99-result.json",
+    "bytes": 42124,
+    "sha256": "7a0263a44aca590221d5cb7c98f76c505cc88a89295e5e5eca144de000027349"
+  },
+  {
+    "path": "regression/run_regression.py",
+    "bytes": 14556,
+    "sha256": "996f19b870a1d9244ec6c18dd1de8a09df3c787c06219ed48b173b7f8b77b3e3"
+  }
+]

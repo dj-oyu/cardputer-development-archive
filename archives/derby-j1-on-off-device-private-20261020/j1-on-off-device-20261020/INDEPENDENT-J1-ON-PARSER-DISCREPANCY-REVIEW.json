@@ -1,0 +1,146 @@
+{
+  "verdict": "OFF_HELD_ORIGINAL_J1_GATE_MISMATCH_REPRODUCED_HOST_CANDIDATE_PASSES",
+  "scope": "Local host candidate only. Original parser/reference/raw unchanged. No API/MCP/device/USB/replay/new firmware/build.",
+  "official_collector": {
+    "state": "succeeded",
+    "result": "derby_fixed_trial_verified",
+    "terminal_success_verified": true
+  },
+  "original_J1_gate": "completion_missing_or_duplicate_marker; APP_ID/READY require bare lines; verifier additionally expects obsolete configured_expected_firmware_sha256",
+  "actual_markers": {
+    "identity_line": 3,
+    "identity_tag": "app",
+    "ready_line": 10,
+    "ready_tag": "js",
+    "END": 238,
+    "EXIT": 239,
+    "STOP": 241,
+    "HOME": 242
+  },
+  "raw_bytes": 31325,
+  "raw_sha256": "f436833a2e6b3eb50492691f141ff13fd67607f6ce1df0755c2f457419523670",
+  "candidate_changes": {
+    "derby_fixed_completion.py": {
+      "original_sha256": "1e50411ad9bd0b3393d26152ce69214170f30aba95e5eb1fb3f1c374704889f4",
+      "candidate_sha256": "4987467164aa650763e58a4b61e22cb6a6e8bcb42db18bd405dc977ccd665aa1"
+    },
+    "verify_derby_recorded_trial.py": {
+      "original_sha256": "38b5c1a2860a80331bbdd81609dea8ab7fc3b058a4b5cd338a4169fb2c9a19da",
+      "candidate_sha256": "df1ebd29dc8bfa670735deaec0dfec6c9514bc6177dc91b62f1a2563ff5a1349"
+    }
+  },
+  "host_candidate_metadata_gate_pass": true,
+  "host_tests": [
+    {
+      "case": "actual_timestamp_ON_export",
+      "pass": true
+    },
+    {
+      "case": "wrong_identity_tag",
+      "rejected": true,
+      "reason": "completion_missing_or_duplicate_marker"
+    },
+    {
+      "case": "wrong_ready_tag",
+      "rejected": true,
+      "reason": "completion_missing_or_duplicate_marker"
+    },
+    {
+      "case": "duplicate_identity",
+      "rejected": true,
+      "reason": "completion_missing_or_duplicate_marker"
+    },
+    {
+      "case": "missing_ready",
+      "rejected": true,
+      "reason": "completion_missing_or_duplicate_marker"
+    },
+    {
+      "case": "missing_owner",
+      "rejected": true,
+      "reason": "completion_missing_or_duplicate_marker"
+    },
+    {
+      "case": "late_fault_after_HOME",
+      "rejected": true,
+      "reason": "completion_runtime_fault"
+    },
+    {
+      "case": "tampered_record_expected_elf",
+      "rejected": true,
+      "reason": "collection_export_binding_mismatch"
+    },
+    {
+      "case": "tampered_record_flash_receipt",
+      "rejected": true,
+      "reason": "typed_flash_binding_mismatch"
+    },
+    {
+      "case": "tampered_plan_mode",
+      "rejected": true,
+      "reason": "collection_job_not_committed"
+    },
+    {
+      "case": "tampered_plan_source",
+      "rejected": true,
+      "reason": "collection_job_not_committed"
+    }
+  ],
+  "negative_cases": 10,
+  "actual_ELF_prove_recomputed": false,
+  "prove_import_stubbed_host_metadata_only": true,
+  "limitations": [
+    "Function test uses already provider-verified proof; CLI actual BIN/ELF prove was not rerun and is explicitly unavailable in the host test stub.",
+    "Candidate is not a new firmware head or original exact-J1 parser acceptance. Official collector success is preserved; original project strict completion discrepancy remains a stop reason.",
+    "OFF not started, no ON rerun authorized or executed."
+  ],
+  "lease": {
+    "release_result": {
+      "ok": false,
+      "error": "invalid_session"
+    },
+    "final_idle": true,
+    "owner": null,
+    "lease_seconds": 0,
+    "current_uncertainty": false,
+    "interpretation": "Release was not successful; invalid_session after expiry with idle status is consistent with no active lease. No fresh physical state is inferred."
+  },
+  "original_reference_hashes": {
+    "derby_compare_chunks.py.metadata.json": "f4b3b2abe337eb530fe615c9ed48b4bcb9026f827560d023103bc5202b6f57e0",
+    "derby_fixed_collector_check.py": "80687c07907bc2646346c8eb8f4c743f59f13cf91db11c528b8ea7de625848f3",
+    "derby_fixed_collector_check.py.metadata.json": "6a22a793d217a24bc550a7b489b6ffdbab6546946686c1973bb71f8ef127db7d",
+    "check_derby_detail_pair.py.metadata.json": "7ff0542c054f0c18e1703469870386eaa817684201e80911f3463a35bade974b",
+    "derby_fixed_workload_chunks.py.metadata.json": "92a706ac6c8731b8e13f7380f2022ec345c432b38b3f35755a9844c8e3b2530f",
+    "derby_detail_result.py.metadata.json": "f186ea12bf89bd19b91e17e81050e05216a6b909535a2cdd0dbb76de6a445f75",
+    "verify_derby_recorded_trial.py.metadata.json": "0d51d9f76fc1ee52d09284215edf51a1888cc7666527c203f28d25975de5d04e",
+    "derby_detail_schema.json.metadata.json": "827050b4417980cf0f5cad70b1f84047accff9d511965394e4daf36fe03831d4",
+    "derby_detail_schema.json": "4027121a79b6511b4ed30a6e6142eb4735a70218f0fc72923ebef55c569fdf45",
+    "verify_derby_recorded_trial.py": "38b5c1a2860a80331bbdd81609dea8ab7fc3b058a4b5cd338a4169fb2c9a19da",
+    "derby_compare_chunks.py": "84af3a144db9df96a5f2bc5068adcdb2b9de391a4d9d650996706279ddba4aa3",
+    "derby_fixed_completion.py.metadata.json": "aaa29267724a0af530513adf5a7893b5f3ab5b77bb07396affe33d1d2f1df8ea",
+    "check_derby_detail_pair.py": "78922273f428e9d0261a70c57150e39cb1a3285b40b722c1a27dc70103019d7e",
+    "derby_fixed_completion.py.correct-path.metadata.json": "0b70dd4d4bfad6b567fc24cecc85f6c8a0ebd5d6f139b361cb5b8755fea8df8c",
+    "derby_fixed_result.py.metadata.json": "50324cdbdd1c4377db961a82e1691afe1ec7d156c02d31970cdde6331991c479",
+    "derby_fixed_result.py": "6e2fb1beda9cc78ebcf45be3efe4180a6351f40c8604d495c09ae3962a664e89",
+    "derby_fixed_completion.py": "1e50411ad9bd0b3393d26152ce69214170f30aba95e5eb1fb3f1c374704889f4",
+    "derby_fixed_workload_chunks.py": "519cf5a2eeadf2b52e86c3d18586a7aadd36afa2b524194fdca216413fa8d828",
+    "derby_detail_result.py": "0fff7ed1c6ab8a145dd851c6f46b590d75f0250bb1c19a6d651c9aaa51f258fe",
+    "fixtures/broker_v2/derby_fixed.py.metadata.json": "db8fced2e64543133662aa17d180d15c11037205f36ec0dfc4b8d98657bb21c1",
+    "fixtures/broker_v2/derby_fixed.py": "c23d435f123b65e5a65473d526803cc0d77208a8cd43ff43ee11fb32fda6e6ab",
+    "fixtures/broker_v2/device_faults.py.metadata.json": "a0bddaf78bf7ceea39c02c9075fa82cead834fc8df707ba08333f444b54f5dbc",
+    "fixtures/broker_v2/device_faults.py": "da8d2c2cc8ac222dad5da8ed5c6ffc6560d4458e4b051da26903a10d91366402"
+  },
+  "input_sha256": {
+    "on-trial-result-private.json": "6585d2e7b16ceca561f9b1fa4116a5e9c2c4442f653205079fa9996245a149d0",
+    "on-trial-raw-private.log": "f436833a2e6b3eb50492691f141ff13fd67607f6ce1df0755c2f457419523670",
+    "on-transport-receipt.json": "5a9ce0e586f4f90aa1f31ad98206f841f05b6dd31c29e3542f3a5043bfe19ba7",
+    "ON-PARSER-DISCREPANCY.json": "659b0c8f8107cea073cee67a29e5c6ef0de6bdc07c4033f250510167b3e7f0bf",
+    "status-stopped.json": "e1df344699d829e88050cc0d9b78f84dba58e66072210e4ca9f4b1c162371f11",
+    "on-release.json": "2f01a97ed3f40da3ca11dff39be37fc3ff2a5df669634d7f1a18e42459911475"
+  },
+  "host_reproduction_script": {
+    "path": "parser-candidate/reproduce_host_candidate.py",
+    "sha256": "0df6703fce2befea6fbaf80637c8453d121628278abb02a6ea227d378db9705a",
+    "reproduces": "one positive and10negative host cases only; no API or device; prove import stubbed and actual ELF proof not recomputed"
+  }
+}

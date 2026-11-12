@@ -1,0 +1,24 @@
+{
+  "8": {
+    "random_oracle_cases": 13900,
+    "batch_widths": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "fixtures": "shared edges, ties, winding/permutations, negative/offscreen, unit-area, degenerate, maximum bound, rejection",
+    "passed": true
+  },
+  "10": {
+    "random_oracle_cases": 13900,
+    "batch_widths": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "fixtures": "shared edges, ties, winding/permutations, negative/offscreen, unit-area, degenerate, maximum bound, rejection",
+    "passed": true
+  }
+}

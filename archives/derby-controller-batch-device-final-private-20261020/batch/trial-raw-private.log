@@ -1,0 +1,243 @@
+I (90551) background: FLOWER_FRAMES_RELEASE bytes=22174
+I (90562) app: APP_ID local.derby
+I (90599) pocket.app: APP_LOAD prog bytes=2465 compile_us=9938 run_us=933 used=51104>54476>56028
+I (90606) sound: SFX 1 played 1440 frames
+I (90659) pocket.app: APP_LOAD view bytes=12022 compile_us=51441 run_us=6758 used=56028>78720>89128
+I (90710) pocket.app: APP_LOAD scene bytes=9497 compile_us=47463 run_us=977 used=89128>104140>106484
+I (90725) pocket.app: APP_LOAD pan bytes=2302 compile_us=12009 run_us=952 used=106484>109972>111084
+I (90770) pocket.app: APP_LOAD fixed bytes=2667 compile_us=12373 run_us=587 used=124200>128548>128528
+I (90783) js: DERBY READY tones=true
+I (90784) pocket.app: APP_LOAD play bytes=7055 compile_us=27917 run_us=29111 used=111084>120388>133176
+I (90791) app: MEM free=35072 largest=21504 js=130488 frames=0
+I (90793) shell: RUN 4561 bytes -> ESP_OK
+I (90852) kasane: KASANE_FRAME_PRESENTED
+I (90960) motion: ACC -596 8513 4687 mm/s2 GYR 0 0 0 mrad/s (off) seq=4228 drop=52 TILT -15 0
+I (91843) kasane: KASANE_PAINT turn_ms=13.81 render_ms=11.81 send_ms=7.43 bytes=64800 bands=17 band_runs=1 band_mask=0x1ffff prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (92908) kasane: KASANE_PAINT turn_ms=17.30 render_ms=9.89 send_ms=7.44 bytes=64800 bands=17 band_runs=1 band_mask=0x1ffff prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (92979) motion: ACC -596 8507 4696 mm/s2 GYR 0 0 0 mrad/s (off) seq=4324 drop=52 TILT -15 0
+I (94091) kasane: KASANE_PAINT turn_ms=19.55 render_ms=9.91 send_ms=7.44 bytes=64800 bands=17 band_runs=1 band_mask=0x1ffff prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (94997) motion: ACC -572 8511 4707 mm/s2 GYR 0 0 0 mrad/s (off) seq=4420 drop=52 TILT -15 0
+I (95237) kasane: KASANE_PAINT turn_ms=20.01 render_ms=9.90 send_ms=7.44 bytes=64800 bands=17 band_runs=1 band_mask=0x1ffff prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (96387) kasane: KASANE_PAINT turn_ms=20.11 render_ms=9.92 send_ms=7.43 bytes=64800 bands=17 band_runs=1 band_mask=0x1ffff prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (97016) motion: ACC -589 8499 4695 mm/s2 GYR 0 0 0 mrad/s (off) seq=4516 drop=52 TILT -15 0
+I (97536) kasane: KASANE_PAINT turn_ms=20.09 render_ms=9.90 send_ms=7.44 bytes=64800 bands=17 band_runs=1 band_mask=0x1ffff prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (98685) kasane: KASANE_PAINT turn_ms=20.05 render_ms=9.95 send_ms=7.43 bytes=64800 bands=17 band_runs=1 band_mask=0x1ffff prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (99034) motion: ACC -585 8510 4696 mm/s2 GYR 0 0 0 mrad/s (off) seq=4612 drop=52 TILT -15 0
+I (99837) kasane: KASANE_PAINT turn_ms=20.13 render_ms=9.95 send_ms=7.44 bytes=64800 bands=17 band_runs=1 band_mask=0x1ffff prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (100985) kasane: KASANE_PAINT turn_ms=20.02 render_ms=9.96 send_ms=7.43 bytes=64800 bands=17 band_runs=1 band_mask=0x1ffff prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (101052) motion: ACC -591 8512 4684 mm/s2 GYR 0 0 0 mrad/s (off) seq=4708 drop=52 TILT -15 0
+I (102141) kasane: KASANE_PAINT turn_ms=20.21 render_ms=10.00 send_ms=7.43 bytes=64800 bands=17 band_runs=1 band_mask=0x1ffff prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (103070) motion: ACC -595 8509 4688 mm/s2 GYR 0 0 0 mrad/s (off) seq=4804 drop=52 TILT -15 0
+I (103300) kasane: KASANE_PAINT turn_ms=20.32 render_ms=10.03 send_ms=7.43 bytes=64800 bands=17 band_runs=1 band_mask=0x1ffff prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (104466) kasane: KASANE_PAINT turn_ms=20.52 render_ms=10.04 send_ms=7.43 bytes=64800 bands=17 band_runs=1 band_mask=0x1ffff prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (105088) motion: ACC -597 8501 4689 mm/s2 GYR 0 0 0 mrad/s (off) seq=4900 drop=52 TILT -15 0
+I (105653) kasane: KASANE_PAINT turn_ms=21.23 render_ms=10.05 send_ms=7.43 bytes=64800 bands=17 band_runs=1 band_mask=0x1ffff prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (106873) kasane: KASANE_PAINT turn_ms=22.32 render_ms=10.02 send_ms=7.43 bytes=64800 bands=17 band_runs=1 band_mask=0x1ffff prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (107106) motion: ACC -590 8510 4687 mm/s2 GYR 0 0 0 mrad/s (off) seq=4996 drop=52 TILT -15 0
+I (108148) kasane: KASANE_PAINT turn_ms=24.14 render_ms=10.07 send_ms=7.43 bytes=64800 bands=17 band_runs=1 band_mask=0x1ffff prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (109125) motion: ACC -601 8503 4690 mm/s2 GYR 0 0 0 mrad/s (off) seq=5092 drop=52 TILT -15 0
+I (109778) kasane: KASANE_PAINT turn_ms=26.91 render_ms=18.87 send_ms=7.57 bytes=64800 bands=17 band_runs=1 band_mask=0x1ffff prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (111143) motion: ACC -593 8508 4684 mm/s2 GYR 0 0 0 mrad/s (off) seq=5188 drop=52 TILT -15 0
+I (111421) kasane: KASANE_PAINT turn_ms=27.31 render_ms=18.94 send_ms=7.58 bytes=64800 bands=17 band_runs=1 band_mask=0x1ffff prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (113080) kasane: KASANE_PAINT turn_ms=27.69 render_ms=19.07 send_ms=7.58 bytes=64800 bands=17 band_runs=1 band_mask=0x1ffff prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (113161) motion: ACC -592 8500 4690 mm/s2 GYR 0 0 0 mrad/s (off) seq=5284 drop=52 TILT -15 0
+I (114759) kasane: KASANE_PAINT turn_ms=28.28 render_ms=19.16 send_ms=7.57 bytes=64800 bands=17 band_runs=1 band_mask=0x1ffff prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (115180) motion: ACC -587 8492 4700 mm/s2 GYR 0 0 0 mrad/s (off) seq=5380 drop=52 TILT -15 0
+I (117198) motion: ACC -596 8506 4680 mm/s2 GYR 0 0 0 mrad/s (off) seq=5476 drop=52 TILT -15 0
+DERBY_DETAIL v=1 session=1 rep=1 stage=0 inc_us=3168598 self_us=970450 calls=120
+DERBY_DETAIL v=1 session=1 rep=1 stage=1 inc_us=196652 self_us=196652 calls=120
+DERBY_DETAIL v=1 session=1 rep=1 stage=2 inc_us=345454 self_us=345454 calls=240
+DERBY_DETAIL v=1 session=1 rep=1 stage=3 inc_us=48991 self_us=48991 calls=120
+DERBY_DETAIL v=1 session=1 rep=1 stage=4 inc_us=323101 self_us=214163 calls=120
+DERBY_DETAIL v=1 session=1 rep=1 stage=5 inc_us=122846 self_us=122846 calls=120
+DERBY_DETAIL v=1 session=1 rep=1 stage=6 inc_us=1135658 self_us=674818 calls=720
+DERBY_DETAIL v=1 session=1 rep=1 stage=7 inc_us=595224 self_us=81206 calls=4975
+DERBY_DETAIL v=1 session=1 rep=1 stage=8 inc_us=138873 self_us=51061 calls=4975
+DERBY_DETAIL v=1 session=1 rep=1 stage=9 inc_us=20003 self_us=20003 calls=4975
+DERBY_DETAIL v=1 session=1 rep=1 stage=10 inc_us=19736 self_us=19736 calls=4975
+DERBY_DETAIL v=1 session=1 rep=1 stage=11 inc_us=48073 self_us=48073 calls=4975
+DERBY_DETAIL v=1 session=1 rep=1 stage=12 inc_us=112573 self_us=112573 calls=4975
+DERBY_DETAIL v=1 session=1 rep=1 stage=13 inc_us=248129 self_us=248129 calls=4975
+DERBY_DETAIL v=1 session=1 rep=1 stage=14 inc_us=14443 self_us=14443 calls=4975
+DERBY_DETAIL v=1 session=1 rep=1 stage=15 inc_us=3176389 self_us=18127 calls=120
+DERBY_DETAIL v=1 session=1 rep=1 stage=16 inc_us=37308 self_us=37308 calls=120
+DERBY_DETAIL v=1 session=1 rep=1 stage=17 inc_us=9681 self_us=9681 calls=2040
+DERBY_DETAIL v=1 session=1 rep=1 stage=18 inc_us=2195826 self_us=1000506 calls=2040
+DERBY_DETAIL v=1 session=1 rep=1 stage=19 inc_us=1195320 self_us=487205 calls=129600
+DERBY_DETAIL v=1 session=1 rep=1 stage=20 inc_us=258265 self_us=258265 calls=2040
+DERBY_DETAIL v=1 session=1 rep=1 stage=21 inc_us=449850 self_us=449850 calls=129600
+DERBY_DETAIL v=1 session=1 rep=1 stage=22 inc_us=915447 self_us=53156 calls=2040
+DERBY_DETAIL v=1 session=1 rep=1 stage=23 inc_us=12892 self_us=12892 calls=2040
+DERBY_DETAIL v=1 session=1 rep=1 stage=24 inc_us=22611 self_us=22611 calls=2040
+DERBY_DETAIL v=1 session=1 rep=1 stage=25 inc_us=826788 self_us=826788 calls=2040
+DERBY_DETAIL_BYTES v=1 session=1 rep=1 event=0 amount=38400
+DERBY_DETAIL_BYTES v=1 session=1 rep=1 event=1 amount=4955100
+DERBY_DETAIL_BYTES v=1 session=1 rep=1 event=2 amount=2854704
+DERBY_DETAIL_BYTES v=1 session=1 rep=1 event=3 amount=498540
+DERBY_DETAIL_BYTES v=1 session=1 rep=1 event=4 amount=7776000
+DERBY_DETAIL_BYTES v=1 session=1 rep=1 event=5 amount=7776000
+DERBY_DETAIL_BYTES v=1 session=1 rep=1 event=6 amount=3888000
+DERBY_DETAIL_BYTES v=1 session=1 rep=1 event=7 amount=7776000
+DERBY_DETAIL_BYTES v=1 session=1 rep=1 event=8 amount=7776000
+DERBY_DETAIL_BYTES v=1 session=1 rep=1 event=9 amount=7776000
+DERBY_DETAIL_BYTES v=1 session=1 rep=1 event=10 amount=2040
+DERBY_DETAIL_BYTES v=1 session=1 rep=1 event=11 amount=2040
+DERBY_DETAIL_BYTES v=1 session=1 rep=1 event=12 amount=0
+DERBY_DETAIL_END v=1 session=1 rep=1 stages=26 events=13 faults=0 pairs=315080 elapsed=1 logical_bytes=1
+DERBY_FIXED v=1 fixture=oval-pan8-390-510-v1 manifest=84e0341ee1ac10c232e3008f28f8aada8823155e19229f926e633d7780a2021d variant=batch session=1 rep=1 seq=1 valid=1 quality=0 independent=0 seed=9112A7AB oval=1 tier=1 cam=8 start=390 end=510 contexts=120 done=120 cont=0 capture=0 faults=0 refused=0 tx_fail=0 wall_us=6610461 work_us=6606158 finish=5DC86E18 p0=0:0:0 p1=0:0:0 p2=0:0:0 c0=0 c1=120 c2=600 c3=7735 c4=7735 c5=0 c6=0 c7=0 c8=120 c9=960 s0=1867995:120 s1=76918:1246 s2=743397:5649 s3=222333:4975 s4=389224:4975 s5=0:0 s6=2278627:120 s7=898727:2040 s8=0:0 s9=1448:120
+I (119216) motion: ACC -592 8506 4683 mm/s2 GYR 0 0 0 mrad/s (off) seq=5572 drop=52 TILT -15 0
+I (120287) kasane: KASANE_PAINT turn_ms=10.29 render_ms=11.79 send_ms=7.44 bytes=64800 bands=17 band_runs=1 band_mask=0x1ffff prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (121234) motion: ACC -600 8497 4690 mm/s2 GYR 0 0 0 mrad/s (off) seq=5668 drop=52 TILT -15 0
+I (121351) kasane: KASANE_PAINT turn_ms=17.27 render_ms=9.90 send_ms=7.44 bytes=64800 bands=17 band_runs=1 band_mask=0x1ffff prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (122535) kasane: KASANE_PAINT turn_ms=19.55 render_ms=9.90 send_ms=7.43 bytes=64800 bands=17 band_runs=1 band_mask=0x1ffff prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (123252) motion: ACC -594 8509 4686 mm/s2 GYR 0 0 0 mrad/s (off) seq=5764 drop=52 TILT -15 0
+I (123681) kasane: KASANE_PAINT turn_ms=20.00 render_ms=9.89 send_ms=7.43 bytes=64800 bands=17 band_runs=1 band_mask=0x1ffff prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (124830) kasane: KASANE_PAINT turn_ms=20.09 render_ms=9.91 send_ms=7.43 bytes=64800 bands=17 band_runs=1 band_mask=0x1ffff prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (125270) motion: ACC -588 8519 4674 mm/s2 GYR 0 0 0 mrad/s (off) seq=5860 drop=52 TILT -15 0
+I (125980) kasane: KASANE_PAINT turn_ms=20.09 render_ms=9.91 send_ms=7.44 bytes=64800 bands=17 band_runs=1 band_mask=0x1ffff prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (127130) kasane: KASANE_PAINT turn_ms=20.10 render_ms=9.94 send_ms=7.44 bytes=64800 bands=17 band_runs=1 band_mask=0x1ffff prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (127288) motion: ACC -582 8504 4678 mm/s2 GYR 0 0 0 mrad/s (off) seq=5956 drop=52 TILT -15 0
+I (128283) kasane: KASANE_PAINT turn_ms=20.19 render_ms=9.94 send_ms=7.43 bytes=64800 bands=17 band_runs=1 band_mask=0x1ffff prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (129306) motion: ACC -595 8492 4698 mm/s2 GYR 0 0 0 mrad/s (off) seq=6052 drop=52 TILT -15 0
+I (129430) kasane: KASANE_PAINT turn_ms=19.97 render_ms=9.94 send_ms=7.44 bytes=64800 bands=17 band_runs=1 band_mask=0x1ffff prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (130586) kasane: KASANE_PAINT turn_ms=20.25 render_ms=9.96 send_ms=7.44 bytes=64800 bands=17 band_runs=1 band_mask=0x1ffff prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (131324) motion: ACC -590 8503 4692 mm/s2 GYR 0 0 0 mrad/s (off) seq=6148 drop=52 TILT -15 0
+I (131745) kasane: KASANE_PAINT turn_ms=20.33 render_ms=10.01 send_ms=7.43 bytes=64800 bands=17 band_runs=1 band_mask=0x1ffff prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (132911) kasane: KASANE_PAINT turn_ms=20.53 render_ms=10.03 send_ms=7.43 bytes=64800 bands=17 band_runs=1 band_mask=0x1ffff prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (133342) motion: ACC -590 8502 4684 mm/s2 GYR 0 0 0 mrad/s (off) seq=6244 drop=52 TILT -15 0
+I (134096) kasane: KASANE_PAINT turn_ms=21.15 render_ms=10.06 send_ms=7.43 bytes=64800 bands=17 band_runs=1 band_mask=0x1ffff prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (135316) kasane: KASANE_PAINT turn_ms=22.32 render_ms=10.02 send_ms=7.43 bytes=64800 bands=17 band_runs=1 band_mask=0x1ffff prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (135360) motion: ACC -591 8497 4683 mm/s2 GYR 0 0 0 mrad/s (off) seq=6340 drop=52 TILT -15 0
+I (136588) kasane: KASANE_PAINT turn_ms=24.02 render_ms=10.06 send_ms=7.43 bytes=64800 bands=17 band_runs=1 band_mask=0x1ffff prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (137378) motion: ACC -584 8505 4690 mm/s2 GYR 0 0 0 mrad/s (off) seq=6436 drop=52 TILT -15 0
+I (138216) kasane: KASANE_PAINT turn_ms=26.88 render_ms=18.87 send_ms=7.57 bytes=64800 bands=17 band_runs=1 band_mask=0x1ffff prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (139396) motion: ACC -590 8503 4690 mm/s2 GYR 0 0 0 mrad/s (off) seq=6532 drop=52 TILT -15 0
+I (139859) kasane: KASANE_PAINT turn_ms=27.30 render_ms=18.93 send_ms=7.57 bytes=64800 bands=17 band_runs=1 band_mask=0x1ffff prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (141414) motion: ACC -584 8509 4700 mm/s2 GYR 0 0 0 mrad/s (off) seq=6628 drop=52 TILT -15 0
+I (141518) kasane: KASANE_PAINT turn_ms=27.71 render_ms=19.06 send_ms=7.57 bytes=64800 bands=17 band_runs=1 band_mask=0x1ffff prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (143196) kasane: KASANE_PAINT turn_ms=28.27 render_ms=19.14 send_ms=7.57 bytes=64800 bands=17 band_runs=1 band_mask=0x1ffff prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (143433) motion: ACC -600 8498 4690 mm/s2 GYR 0 0 0 mrad/s (off) seq=6724 drop=52 TILT -15 0
+I (145451) motion: ACC -591 8502 4697 mm/s2 GYR 0 0 0 mrad/s (off) seq=6820 drop=52 TILT -15 0
+DERBY_DETAIL v=1 session=1 rep=2 stage=0 inc_us=3165997 self_us=971067 calls=120
+DERBY_DETAIL v=1 session=1 rep=2 stage=1 inc_us=196593 self_us=196593 calls=120
+DERBY_DETAIL v=1 session=1 rep=2 stage=2 inc_us=345002 self_us=345002 calls=240
+DERBY_DETAIL v=1 session=1 rep=2 stage=3 inc_us=50157 self_us=50157 calls=120
+DERBY_DETAIL v=1 session=1 rep=2 stage=4 inc_us=321084 self_us=212577 calls=120
+DERBY_DETAIL v=1 session=1 rep=2 stage=5 inc_us=120399 self_us=120399 calls=120
+DERBY_DETAIL v=1 session=1 rep=2 stage=6 inc_us=1135918 self_us=675142 calls=720
+DERBY_DETAIL v=1 session=1 rep=2 stage=7 inc_us=595060 self_us=81145 calls=4975
+DERBY_DETAIL v=1 session=1 rep=2 stage=8 inc_us=138457 self_us=50661 calls=4975
+DERBY_DETAIL v=1 session=1 rep=2 stage=9 inc_us=19968 self_us=19968 calls=4975
+DERBY_DETAIL v=1 session=1 rep=2 stage=10 inc_us=19728 self_us=19728 calls=4975
+DERBY_DETAIL v=1 session=1 rep=2 stage=11 inc_us=48100 self_us=48100 calls=4975
+DERBY_DETAIL v=1 session=1 rep=2 stage=12 inc_us=112525 self_us=112525 calls=4975
+DERBY_DETAIL v=1 session=1 rep=2 stage=13 inc_us=248437 self_us=248437 calls=4975
+DERBY_DETAIL v=1 session=1 rep=2 stage=14 inc_us=14496 self_us=14496 calls=4975
+DERBY_DETAIL v=1 session=1 rep=2 stage=15 inc_us=3175258 self_us=18029 calls=120
+DERBY_DETAIL v=1 session=1 rep=2 stage=16 inc_us=36256 self_us=36256 calls=120
+DERBY_DETAIL v=1 session=1 rep=2 stage=17 inc_us=9709 self_us=9709 calls=2040
+DERBY_DETAIL v=1 session=1 rep=2 stage=18 inc_us=2195990 self_us=1000549 calls=2040
+DERBY_DETAIL v=1 session=1 rep=2 stage=19 inc_us=1195441 self_us=487218 calls=129600
+DERBY_DETAIL v=1 session=1 rep=2 stage=20 inc_us=258309 self_us=258309 calls=2040
+DERBY_DETAIL v=1 session=1 rep=2 stage=21 inc_us=449914 self_us=449914 calls=129600
+DERBY_DETAIL v=1 session=1 rep=2 stage=22 inc_us=915274 self_us=53092 calls=2040
+DERBY_DETAIL v=1 session=1 rep=2 stage=23 inc_us=12807 self_us=12807 calls=2040
+DERBY_DETAIL v=1 session=1 rep=2 stage=24 inc_us=22540 self_us=22540 calls=2040
+DERBY_DETAIL v=1 session=1 rep=2 stage=25 inc_us=826835 self_us=826835 calls=2040
+DERBY_DETAIL_BYTES v=1 session=1 rep=2 event=0 amount=38400
+DERBY_DETAIL_BYTES v=1 session=1 rep=2 event=1 amount=4955100
+DERBY_DETAIL_BYTES v=1 session=1 rep=2 event=2 amount=2854704
+DERBY_DETAIL_BYTES v=1 session=1 rep=2 event=3 amount=498540
+DERBY_DETAIL_BYTES v=1 session=1 rep=2 event=4 amount=7776000
+DERBY_DETAIL_BYTES v=1 session=1 rep=2 event=5 amount=7776000
+DERBY_DETAIL_BYTES v=1 session=1 rep=2 event=6 amount=3888000
+DERBY_DETAIL_BYTES v=1 session=1 rep=2 event=7 amount=7776000
+DERBY_DETAIL_BYTES v=1 session=1 rep=2 event=8 amount=7776000
+I (147469) motion: ACC -596 8510 4687 mm/s2 GYR 0 0 0 mrad/s (off) seq=6916 drop=52 TILT -15 0
+DERBY_DETAIL_BYTES v=1 session=1 rep=2 event=9 amount=7776000
+DERBY_DETAIL_BYTES v=1 session=1 rep=2 event=10 amount=2040
+DERBY_DETAIL_BYTES v=1 session=1 rep=2 event=11 amount=2040
+DERBY_DETAIL_BYTES v=1 session=1 rep=2 event=12 amount=0
+DERBY_DETAIL_END v=1 session=1 rep=2 stages=26 events=13 faults=0 pairs=315080 elapsed=1 logical_bytes=1
+DERBY_FIXED v=1 fixture=oval-pan8-390-510-v1 manifest=84e0341ee1ac10c232e3008f28f8aada8823155e19229f926e633d7780a2021d variant=batch session=1 rep=2 seq=2 valid=1 quality=0 independent=0 seed=9112A7AB oval=1 tier=1 cam=8 start=390 end=510 contexts=120 done=120 cont=0 capture=0 faults=0 refused=0 tx_fail=0 wall_us=6608335 work_us=6604002 finish=5DC86E18 p0=0:0:0 p1=0:0:0 p2=0:0:0 c0=0 c1=120 c2=600 c3=7735 c4=7735 c5=0 c6=0 c7=0 c8=120 c9=960 s0=1867739:120 s1=76744:1246 s2=742895:5649 s3=222213:4975 s4=389243:4975 s5=0:0 s6=2277752:120 s7=898504:2040 s8=0:0 s9=1463:120
+I (148729) kasane: KASANE_PAINT turn_ms=10.30 render_ms=11.80 send_ms=7.43 bytes=64800 bands=17 band_runs=1 band_mask=0x1ffff prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (149487) motion: ACC -590 8498 4693 mm/s2 GYR 0 0 0 mrad/s (off) seq=7012 drop=52 TILT -15 0
+I (149796) kasane: KASANE_PAINT turn_ms=17.34 render_ms=9.91 send_ms=7.43 bytes=64800 bands=17 band_runs=1 band_mask=0x1ffff prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (150979) kasane: KASANE_PAINT turn_ms=19.55 render_ms=9.91 send_ms=7.44 bytes=64800 bands=17 band_runs=1 band_mask=0x1ffff prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (151506) motion: ACC -593 8508 4684 mm/s2 GYR 0 0 0 mrad/s (off) seq=7108 drop=52 TILT -15 0
+I (152126) kasane: KASANE_PAINT turn_ms=20.04 render_ms=9.90 send_ms=7.44 bytes=64800 bands=17 band_runs=1 band_mask=0x1ffff prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (153277) kasane: KASANE_PAINT turn_ms=20.13 render_ms=9.92 send_ms=7.43 bytes=64800 bands=17 band_runs=1 band_mask=0x1ffff prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (153524) motion: ACC -577 8508 4691 mm/s2 GYR 0 0 0 mrad/s (off) seq=7204 drop=52 TILT -15 0
+I (154426) kasane: KASANE_PAINT turn_ms=20.08 render_ms=9.91 send_ms=7.43 bytes=64800 bands=17 band_runs=1 band_mask=0x1ffff prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (155543) motion: ACC -588 8490 4701 mm/s2 GYR 0 0 0 mrad/s (off) seq=7300 drop=52 TILT -15 0
+I (155576) kasane: KASANE_PAINT turn_ms=20.11 render_ms=9.94 send_ms=7.43 bytes=64800 bands=17 band_runs=1 band_mask=0x1ffff prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (156727) kasane: KASANE_PAINT turn_ms=20.12 render_ms=9.94 send_ms=7.43 bytes=64800 bands=17 band_runs=1 band_mask=0x1ffff prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (157561) motion: ACC -591 8495 4687 mm/s2 GYR 0 0 0 mrad/s (off) seq=7396 drop=52 TILT -15 0
+I (157875) kasane: KASANE_PAINT turn_ms=19.97 render_ms=9.96 send_ms=7.44 bytes=64800 bands=17 band_runs=1 band_mask=0x1ffff prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (159030) kasane: KASANE_PAINT turn_ms=20.23 render_ms=9.98 send_ms=7.43 bytes=64800 bands=17 band_runs=1 band_mask=0x1ffff prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (159579) motion: ACC -589 8498 4691 mm/s2 GYR 0 0 0 mrad/s (off) seq=7492 drop=52 TILT -15 0
+I (160190) kasane: KASANE_PAINT turn_ms=20.32 render_ms=10.02 send_ms=7.43 bytes=64800 bands=17 band_runs=1 band_mask=0x1ffff prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (161357) kasane: KASANE_PAINT turn_ms=20.58 render_ms=10.01 send_ms=7.43 bytes=64800 bands=17 band_runs=1 band_mask=0x1ffff prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (161597) motion: ACC -588 8503 4684 mm/s2 GYR 0 0 0 mrad/s (off) seq=7588 drop=52 TILT -15 0
+I (162545) kasane: KASANE_PAINT turn_ms=21.25 render_ms=10.05 send_ms=7.43 bytes=64800 bands=17 band_runs=1 band_mask=0x1ffff prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (163615) motion: ACC -588 8489 4687 mm/s2 GYR 0 0 0 mrad/s (off) seq=7684 drop=52 TILT -15 0
+I (163768) kasane: KASANE_PAINT turn_ms=22.44 render_ms=10.03 send_ms=7.44 bytes=64800 bands=17 band_runs=1 band_mask=0x1ffff prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (165047) kasane: KASANE_PAINT turn_ms=24.23 render_ms=10.08 send_ms=7.44 bytes=64800 bands=17 band_runs=1 band_mask=0x1ffff prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (165634) motion: ACC -583 8498 4696 mm/s2 GYR 0 0 0 mrad/s (off) seq=7780 drop=52 TILT -15 0
+I (166677) kasane: KASANE_PAINT turn_ms=26.90 render_ms=18.88 send_ms=7.58 bytes=64800 bands=17 band_runs=1 band_mask=0x1ffff prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (167652) motion: ACC -587 8495 4697 mm/s2 GYR 0 0 0 mrad/s (off) seq=7876 drop=52 TILT -15 0
+I (168321) kasane: KASANE_PAINT turn_ms=27.31 render_ms=18.94 send_ms=7.58 bytes=64800 bands=17 band_runs=1 band_mask=0x1ffff prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (169670) motion: ACC -590 8507 4680 mm/s2 GYR 0 0 0 mrad/s (off) seq=7972 drop=52 TILT -15 0
+I (169980) kasane: KASANE_PAINT turn_ms=27.73 render_ms=19.05 send_ms=7.58 bytes=64800 bands=17 band_runs=1 band_mask=0x1ffff prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (171660) kasane: KASANE_PAINT turn_ms=28.30 render_ms=19.16 send_ms=7.57 bytes=64800 bands=17 band_runs=1 band_mask=0x1ffff prof=0 fill_n=0 fill_cy=0 span_n=0 span_cy=0 tile_n=0 tile_cy=0 blend_n=0 blend_cy=0 read_n=0 read_cy=0 image_n=0 image_cy=0 frames=30
+I (171688) motion: ACC -592 8500 4682 mm/s2 GYR 0 0 0 mrad/s (off) seq=8068 drop=52 TILT -15 0
+I (173706) motion: ACC -589 8495 4693 mm/s2 GYR 0 0 0 mrad/s (off) seq=8164 drop=52 TILT -15 0
+DERBY_DETAIL v=1 session=1 rep=3 stage=0 inc_us=3169469 self_us=969776 calls=120
+DERBY_DETAIL v=1 session=1 rep=3 stage=1 inc_us=196576 self_us=196576 calls=120
+DERBY_DETAIL v=1 session=1 rep=3 stage=2 inc_us=346455 self_us=346455 calls=240
+DERBY_DETAIL v=1 session=1 rep=3 stage=3 inc_us=49587 self_us=49587 calls=120
+DERBY_DETAIL v=1 session=1 rep=3 stage=4 inc_us=322212 self_us=213064 calls=120
+DERBY_DETAIL v=1 session=1 rep=3 stage=5 inc_us=122307 self_us=122307 calls=120
+DERBY_DETAIL v=1 session=1 rep=3 stage=6 inc_us=1137064 self_us=675198 calls=720
+DERBY_DETAIL v=1 session=1 rep=3 stage=7 inc_us=596506 self_us=81365 calls=4975
+DERBY_DETAIL v=1 session=1 rep=3 stage=8 inc_us=138961 self_us=51037 calls=4975
+DERBY_DETAIL v=1 session=1 rep=3 stage=9 inc_us=19999 self_us=19999 calls=4975
+DERBY_DETAIL v=1 session=1 rep=3 stage=10 inc_us=19720 self_us=19720 calls=4975
+DERBY_DETAIL v=1 session=1 rep=3 stage=11 inc_us=48205 self_us=48205 calls=4975
+DERBY_DETAIL v=1 session=1 rep=3 stage=12 inc_us=112750 self_us=112750 calls=4975
+DERBY_DETAIL v=1 session=1 rep=3 stage=13 inc_us=248897 self_us=248897 calls=4975
+DERBY_DETAIL v=1 session=1 rep=3 stage=14 inc_us=14533 self_us=14533 calls=4975
+DERBY_DETAIL v=1 session=1 rep=3 stage=15 inc_us=3175986 self_us=18062 calls=120
+DERBY_DETAIL v=1 session=1 rep=3 stage=16 inc_us=36892 self_us=36892 calls=120
+DERBY_DETAIL v=1 session=1 rep=3 stage=17 inc_us=9671 self_us=9671 calls=2040
+DERBY_DETAIL v=1 session=1 rep=3 stage=18 inc_us=2195929 self_us=1000503 calls=2040
+DERBY_DETAIL v=1 session=1 rep=3 stage=19 inc_us=1195426 self_us=487432 calls=129600
+DERBY_DETAIL v=1 session=1 rep=3 stage=20 inc_us=258278 self_us=258278 calls=2040
+DERBY_DETAIL v=1 session=1 rep=3 stage=21 inc_us=449716 self_us=449716 calls=129600
+DERBY_DETAIL v=1 session=1 rep=3 stage=22 inc_us=915432 self_us=53061 calls=2040
+DERBY_DETAIL v=1 session=1 rep=3 stage=23 inc_us=12866 self_us=12866 calls=2040
+DERBY_DETAIL v=1 session=1 rep=3 stage=24 inc_us=22682 self_us=22682 calls=2040
+DERBY_DETAIL v=1 session=1 rep=3 stage=25 inc_us=826823 self_us=826823 calls=2040
+DERBY_DETAIL_BYTES v=1 session=1 rep=3 event=0 amount=38400
+DERBY_DETAIL_BYTES v=1 session=1 rep=3 event=1 amount=4955100
+DERBY_DETAIL_BYTES v=1 session=1 rep=3 event=2 amount=2854704
+I (175724) motion: ACC -598 8496 4694 mm/s2 GYR 0 0 0 mrad/s (off) seq=8260 drop=52 TILT -15 0
+DERBY_DETAIL_BYTES v=1 session=1 rep=3 event=3 amount=498540
+DERBY_DETAIL_BYTES v=1 session=1 rep=3 event=4 amount=7776000
+DERBY_DETAIL_BYTES v=1 session=1 rep=3 event=5 amount=7776000
+DERBY_DETAIL_BYTES v=1 session=1 rep=3 event=6 amount=3888000
+DERBY_DETAIL_BYTES v=1 session=1 rep=3 event=7 amount=7776000
+DERBY_DETAIL_BYTES v=1 session=1 rep=3 event=8 amount=7776000
+DERBY_DETAIL_BYTES v=1 session=1 rep=3 event=9 amount=7776000
+DERBY_DETAIL_BYTES v=1 session=1 rep=3 event=10 amount=2040
+DERBY_DETAIL_BYTES v=1 session=1 rep=3 event=11 amount=2040
+DERBY_DETAIL_BYTES v=1 session=1 rep=3 event=12 amount=0
+DERBY_DETAIL_END v=1 session=1 rep=3 stages=26 events=13 faults=0 pairs=315080 elapsed=1 logical_bytes=1
+DERBY_FIXED v=1 fixture=oval-pan8-390-510-v1 manifest=84e0341ee1ac10c232e3008f28f8aada8823155e19229f926e633d7780a2021d variant=batch session=1 rep=3 seq=3 valid=1 quality=0 independent=0 seed=9112A7AB oval=1 tier=1 cam=8 start=390 end=510 contexts=120 done=120 cont=0 capture=0 faults=0 refused=0 tx_fail=0 wall_us=6612695 work_us=6608389 finish=5DC86E18 p0=0:0:0 p1=0:0:0 p2=0:0:0 c0=0 c1=120 c2=600 c3=7735 c4=7735 c5=0 c6=0 c7=0 c8=120 c9=960 s0=1867844:120 s1=77090:1246 s2=743479:5649 s3=222814:4975 s4=390099:4975 s5=0:0 s6=2278301:120 s7=898695:2040 s8=0:0 s9=1456:120
+DERBY_FIXED_END v=1 session=1 reps=3 valid=1 quality=0 independent=0
+DERBY_DETAIL_EXIT v=1 session=1 clean=1
+I (176166) app: MEM free=209004 largest=47104 js=0 frames=2113
+I (176167) app: APP_STOPPED
+I (176168) shell: HOME_READY
+I (176201) background: PERF mode=3 async=1 clock=DEMO fps=0.2 draw=18.70 prep=0.67 loop=16.62 kernel=16.60 hud=0.89 (ovl=0.00 fmt=0.00 fps=0.00 menu=0.86) send=0.46
+I (176206) sound: SFX 2 played 1080 frames

@@ -1,0 +1,343 @@
+{
+  "status": "ALL10_FLOOR_WORLD_COMPOSITION_COMPLETE",
+  "arm": "off",
+  "frames": [
+    {
+      "view": "front",
+      "case": "baseline",
+      "hdr": "hdr-front-baseline.f64le",
+      "hdrSHA256": "7b5a6dfa3cdcd2cd7f3427f366723aa2635d4d56998b06fd9f549aef7dba870d",
+      "floorWorld": "floor-world-front-baseline.f64le",
+      "floorWorldSHA256": "ef6cf728a994caa583af244125cfec8b18e52ac81387abf53a0ce7856bc42eba",
+      "outputs": {
+        "legacy": {
+          "path": "legacy-front-baseline.u16le",
+          "sha256": "0828e958769b19e1f9988c5de3e5ce743067faf0c370e7823c62f386a617ee97"
+        },
+        "agx": {
+          "path": "agx-front-baseline.u16le",
+          "sha256": "fb373165478a9984e5be41ffd88c73df34be4480fdf6480bc2fe24f796123b9e"
+        }
+      },
+      "characterDepthPath": "/workspace/scratch/6d8dcdbcdc54/fox-v3-floor-world-reflection/capture/off/native-front-baseline.f32le",
+      "characterDepthSHA256": "03d9ee4d5a81118e7f2efe2947a64230132aad4daad2a2019d31f9f4959fea3f",
+      "targetSHA256": "eebd4a3432074c6e6d84cf7e6a03b34c7dbd9d4309bd3fbd003b7caa47eeb4f6",
+      "events": 39555,
+      "actionCounts": {
+        "keep": 10455,
+        "floor": 29100,
+        "world": 0
+      },
+      "floorOverrides": 2,
+      "clampedPixels": 0,
+      "compositionNs": 430484767,
+      "minimumHDR": 0.0008319687431285631,
+      "maximumHDR": 5.548058230939504,
+      "priorFloorOnExactControl": true
+    },
+    {
+      "view": "oblique",
+      "case": "baseline",
+      "hdr": "hdr-oblique-baseline.f64le",
+      "hdrSHA256": "9ba1a905b2629040d9b74a0441ca996de722607d222660e01ae20c3f743f6aac",
+      "floorWorld": "floor-world-oblique-baseline.f64le",
+      "floorWorldSHA256": "ef6cf728a994caa583af244125cfec8b18e52ac81387abf53a0ce7856bc42eba",
+      "outputs": {
+        "legacy": {
+          "path": "legacy-oblique-baseline.u16le",
+          "sha256": "8fd5c82de575f697aeb5dca3ed39cdde17ec2ea1d76d861db9a25b38a7fa7068"
+        },
+        "agx": {
+          "path": "agx-oblique-baseline.u16le",
+          "sha256": "b09f23436d6cf4e83557e8f929fa90e98d703c6fb98ace972c844108604fcd27"
+        }
+      },
+      "characterDepthPath": "/workspace/scratch/6d8dcdbcdc54/fox-v3-floor-world-reflection/capture/off/native-oblique-baseline.f32le",
+      "characterDepthSHA256": "3201f0507c4b7f65911ecea8edf4175d76f2b93cc8d9ca715e10f97cf410e77a",
+      "targetSHA256": "a7b9fb46c60810bb1047503c80b15e7e0cc84d546faadc3f8a2af988bf8550a0",
+      "events": 39573,
+      "actionCounts": {
+        "keep": 10671,
+        "floor": 28902,
+        "world": 0
+      },
+      "floorOverrides": 0,
+      "clampedPixels": 0,
+      "compositionNs": 552298887,
+      "minimumHDR": 0.0002676818958697196,
+      "maximumHDR": 5.521436382979067,
+      "priorFloorOnExactControl": true
+    },
+    {
+      "view": "front",
+      "case": "direction",
+      "hdr": "hdr-front-direction.f64le",
+      "hdrSHA256": "a8c6998b38b0116232afcb18731e679336db1e3e777c9aa1b7864a5571b7c5e1",
+      "floorWorld": "floor-world-front-direction.f64le",
+      "floorWorldSHA256": "ef6cf728a994caa583af244125cfec8b18e52ac81387abf53a0ce7856bc42eba",
+      "outputs": {
+        "legacy": {
+          "path": "legacy-front-direction.u16le",
+          "sha256": "8c0bf436770d797a2c3c6964c7b8f018028d7ad27f90cac2b87751868111479c"
+        },
+        "agx": {
+          "path": "agx-front-direction.u16le",
+          "sha256": "3787d423c9b7ba324fde1db14c56877a9dbbb09b130e6a0464b4d03cfb54e26a"
+        }
+      },
+      "characterDepthPath": "/workspace/scratch/6d8dcdbcdc54/fox-v3-floor-world-reflection/capture/off/native-front-direction.f32le",
+      "characterDepthSHA256": "03d9ee4d5a81118e7f2efe2947a64230132aad4daad2a2019d31f9f4959fea3f",
+      "targetSHA256": "eebd4a3432074c6e6d84cf7e6a03b34c7dbd9d4309bd3fbd003b7caa47eeb4f6",
+      "events": 39555,
+      "actionCounts": {
+        "keep": 10455,
+        "floor": 29100,
+        "world": 0
+      },
+      "floorOverrides": 2,
+      "clampedPixels": 0,
+      "compositionNs": 516569886,
+      "minimumHDR": 0.00030245697336927856,
+      "maximumHDR": 5.2344291387108886,
+      "priorFloorOnExactControl": true
+    },
+    {
+      "view": "oblique",
+      "case": "direction",
+      "hdr": "hdr-oblique-direction.f64le",
+      "hdrSHA256": "c8f4a8a06f04ef68060bd91d94c26644503e769bb8eba49e504982bfc527be7d",
+      "floorWorld": "floor-world-oblique-direction.f64le",
+      "floorWorldSHA256": "ef6cf728a994caa583af244125cfec8b18e52ac81387abf53a0ce7856bc42eba",
+      "outputs": {
+        "legacy": {
+          "path": "legacy-oblique-direction.u16le",
+          "sha256": "9cc6a49c91804c9e7369311f3a6b99e6a51e871e7c32cf5292c709ce8e9ed721"
+        },
+        "agx": {
+          "path": "agx-oblique-direction.u16le",
+          "sha256": "ab251f9baa17f74f0417e9c0cd05fe6f6a54adf0f4273a51baa7fa4c94c4e06c"
+        }
+      },
+      "characterDepthPath": "/workspace/scratch/6d8dcdbcdc54/fox-v3-floor-world-reflection/capture/off/native-oblique-direction.f32le",
+      "characterDepthSHA256": "3201f0507c4b7f65911ecea8edf4175d76f2b93cc8d9ca715e10f97cf410e77a",
+      "targetSHA256": "a7b9fb46c60810bb1047503c80b15e7e0cc84d546faadc3f8a2af988bf8550a0",
+      "events": 39573,
+      "actionCounts": {
+        "keep": 10671,
+        "floor": 28902,
+        "world": 0
+      },
+      "floorOverrides": 0,
+      "clampedPixels": 0,
+      "compositionNs": 417971411,
+      "minimumHDR": 9.458257034569156e-05,
+      "maximumHDR": 5.221362595754844,
+      "priorFloorOnExactControl": true
+    },
+    {
+      "view": "front",
+      "case": "intensity",
+      "hdr": "hdr-front-intensity.f64le",
+      "hdrSHA256": "b99fb124af4ec7bbe6ba5874532e56c0ae53c92ffa6a1b58807a16cbbaaf4796",
+      "floorWorld": "floor-world-front-intensity.f64le",
+      "floorWorldSHA256": "ef6cf728a994caa583af244125cfec8b18e52ac81387abf53a0ce7856bc42eba",
+      "outputs": {
+        "legacy": {
+          "path": "legacy-front-intensity.u16le",
+          "sha256": "a8e05b645da0111bf8a1837796a2c1d6e533db3ccdea6ba3d9d7f49bcd75b0d8"
+        },
+        "agx": {
+          "path": "agx-front-intensity.u16le",
+          "sha256": "0c99538b5a9a4647f7371146358d3888501aa5c896f3e29b8b48c7fc0118c73b"
+        }
+      },
+      "characterDepthPath": "/workspace/scratch/6d8dcdbcdc54/fox-v3-floor-world-reflection/capture/off/native-front-intensity.f32le",
+      "characterDepthSHA256": "03d9ee4d5a81118e7f2efe2947a64230132aad4daad2a2019d31f9f4959fea3f",
+      "targetSHA256": "eebd4a3432074c6e6d84cf7e6a03b34c7dbd9d4309bd3fbd003b7caa47eeb4f6",
+      "events": 39555,
+      "actionCounts": {
+        "keep": 10455,
+        "floor": 29100,
+        "world": 0
+      },
+      "floorOverrides": 2,
+      "clampedPixels": 0,
+      "compositionNs": 449553634,
+      "minimumHDR": 0.0006582209264468513,
+      "maximumHDR": 5.2959096394530984,
+      "priorFloorOnExactControl": true
+    },
+    {
+      "view": "oblique",
+      "case": "intensity",
+      "hdr": "hdr-oblique-intensity.f64le",
+      "hdrSHA256": "0614cf498e9f2517743a6b61323f9d976dcb8dc6a48c23dd0bb34fb5ab64a8cb",
+      "floorWorld": "floor-world-oblique-intensity.f64le",
+      "floorWorldSHA256": "ef6cf728a994caa583af244125cfec8b18e52ac81387abf53a0ce7856bc42eba",
+      "outputs": {
+        "legacy": {
+          "path": "legacy-oblique-intensity.u16le",
+          "sha256": "36343f448bcc2ee51a471a6c20114c20917f4d9bc83426b162acb777677c7139"
+        },
+        "agx": {
+          "path": "agx-oblique-intensity.u16le",
+          "sha256": "5dcde81b6908f91176f435dfa682f78ad90351dab00aade660b55fa187b11fe5"
+        }
+      },
+      "characterDepthPath": "/workspace/scratch/6d8dcdbcdc54/fox-v3-floor-world-reflection/capture/off/native-oblique-intensity.f32le",
+      "characterDepthSHA256": "3201f0507c4b7f65911ecea8edf4175d76f2b93cc8d9ca715e10f97cf410e77a",
+      "targetSHA256": "a7b9fb46c60810bb1047503c80b15e7e0cc84d546faadc3f8a2af988bf8550a0",
+      "events": 39573,
+      "actionCounts": {
+        "keep": 10671,
+        "floor": 28902,
+        "world": 0
+      },
+      "floorOverrides": 0,
+      "clampedPixels": 0,
+      "compositionNs": 426932679,
+      "minimumHDR": 0.00023740988154821835,
+      "maximumHDR": 5.2591209063159745,
+      "priorFloorOnExactControl": true
+    },
+    {
+      "view": "front",
+      "case": "ambient",
+      "hdr": "hdr-front-ambient.f64le",
+      "hdrSHA256": "caf53a239c455b8908b1280689681a510f614261708c3448384069e12879853e",
+      "floorWorld": "floor-world-front-ambient.f64le",
+      "floorWorldSHA256": "ef6cf728a994caa583af244125cfec8b18e52ac81387abf53a0ce7856bc42eba",
+      "outputs": {
+        "legacy": {
+          "path": "legacy-front-ambient.u16le",
+          "sha256": "3575ce23225c70764f5a8a1c2367b71e96c4f7518f11eeebeb1549b5aa3dc106"
+        },
+        "agx": {
+          "path": "agx-front-ambient.u16le",
+          "sha256": "f32979b3f3c032641af22be363b3525b9557c5e34ee46b57266ecd7ef7a5d784"
+        }
+      },
+      "characterDepthPath": "/workspace/scratch/6d8dcdbcdc54/fox-v3-floor-world-reflection/capture/off/native-front-ambient.f32le",
+      "characterDepthSHA256": "03d9ee4d5a81118e7f2efe2947a64230132aad4daad2a2019d31f9f4959fea3f",
+      "targetSHA256": "eebd4a3432074c6e6d84cf7e6a03b34c7dbd9d4309bd3fbd003b7caa47eeb4f6",
+      "events": 39555,
+      "actionCounts": {
+        "keep": 10455,
+        "floor": 29100,
+        "world": 0
+      },
+      "floorOverrides": 2,
+      "clampedPixels": 0,
+      "compositionNs": 507544367,
+      "minimumHDR": 0.0008508114334796402,
+      "maximumHDR": 5.867845583101413,
+      "priorFloorOnExactControl": true
+    },
+    {
+      "view": "oblique",
+      "case": "ambient",
+      "hdr": "hdr-oblique-ambient.f64le",
+      "hdrSHA256": "dd3b45f908a7061ce54ea6d129bfddb0a9df29a5e3498bf8e5eececaf3b75946",
+      "floorWorld": "floor-world-oblique-ambient.f64le",
+      "floorWorldSHA256": "ef6cf728a994caa583af244125cfec8b18e52ac81387abf53a0ce7856bc42eba",
+      "outputs": {
+        "legacy": {
+          "path": "legacy-oblique-ambient.u16le",
+          "sha256": "84be7aab375575c51982918a9f48ebac8478e939dfe7e2dfeba9ac39bd4fac96"
+        },
+        "agx": {
+          "path": "agx-oblique-ambient.u16le",
+          "sha256": "be50fc2cc12b50dcb6070d4f90e63bdc79833601cd5f2c665f81553106e98272"
+        }
+      },
+      "characterDepthPath": "/workspace/scratch/6d8dcdbcdc54/fox-v3-floor-world-reflection/capture/off/native-oblique-ambient.f32le",
+      "characterDepthSHA256": "3201f0507c4b7f65911ecea8edf4175d76f2b93cc8d9ca715e10f97cf410e77a",
+      "targetSHA256": "a7b9fb46c60810bb1047503c80b15e7e0cc84d546faadc3f8a2af988bf8550a0",
+      "events": 39573,
+      "actionCounts": {
+        "keep": 10671,
+        "floor": 28902,
+        "world": 0
+      },
+      "floorOverrides": 0,
+      "clampedPixels": 0,
+      "compositionNs": 565834011,
+      "minimumHDR": 0.000399791971222296,
+      "maximumHDR": 5.846299724857833,
+      "priorFloorOnExactControl": true
+    },
+    {
+      "view": "front",
+      "case": "albedo",
+      "hdr": "hdr-front-albedo.f64le",
+      "hdrSHA256": "3fdd676dc32783834fca8a39b8316ad1f15105ab6f44d524ee0395d5bb6a6cf1",
+      "floorWorld": "floor-world-front-albedo.f64le",
+      "floorWorldSHA256": "ef6cf728a994caa583af244125cfec8b18e52ac81387abf53a0ce7856bc42eba",
+      "outputs": {
+        "legacy": {
+          "path": "legacy-front-albedo.u16le",
+          "sha256": "8f1d8f7e52dc8b49fa4818d067965eb201f54b4b101969882834b97164a9ecc0"
+        },
+        "agx": {
+          "path": "agx-front-albedo.u16le",
+          "sha256": "4abc755fc1e6b24d426681f90138495f40b5c8a9d6fa2d4a33a4114fd0ab321b"
+        }
+      },
+      "characterDepthPath": "/workspace/scratch/6d8dcdbcdc54/fox-v3-floor-world-reflection/capture/off/native-front-albedo.f32le",
+      "characterDepthSHA256": "03d9ee4d5a81118e7f2efe2947a64230132aad4daad2a2019d31f9f4959fea3f",
+      "targetSHA256": "eebd4a3432074c6e6d84cf7e6a03b34c7dbd9d4309bd3fbd003b7caa47eeb4f6",
+      "events": 39555,
+      "actionCounts": {
+        "keep": 10455,
+        "floor": 29100,
+        "world": 0
+      },
+      "floorOverrides": 2,
+      "clampedPixels": 0,
+      "compositionNs": 569004938,
+      "minimumHDR": 0.0006601753622900261,
+      "maximumHDR": 3.3530674376368848,
+      "priorFloorOnExactControl": true
+    },
+    {
+      "view": "oblique",
+      "case": "albedo",
+      "hdr": "hdr-oblique-albedo.f64le",
+      "hdrSHA256": "1cc9f47fd08d3cf497d5199416a9199c71a152dbe50edef6ff11d36083443b56",
+      "floorWorld": "floor-world-oblique-albedo.f64le",
+      "floorWorldSHA256": "ef6cf728a994caa583af244125cfec8b18e52ac81387abf53a0ce7856bc42eba",
+      "outputs": {
+        "legacy": {
+          "path": "legacy-oblique-albedo.u16le",
+          "sha256": "0368361cd71527b735bcf292d0e2cec900d708c833628aa1069397109d801529"
+        },
+        "agx": {
+          "path": "agx-oblique-albedo.u16le",
+          "sha256": "006b7ded88c4e6ceeae9ae6f0e96285389af6215d526aee442d97ebe8e002638"
+        }
+      },
+      "characterDepthPath": "/workspace/scratch/6d8dcdbcdc54/fox-v3-floor-world-reflection/capture/off/native-oblique-albedo.f32le",
+      "characterDepthSHA256": "3201f0507c4b7f65911ecea8edf4175d76f2b93cc8d9ca715e10f97cf410e77a",
+      "targetSHA256": "a7b9fb46c60810bb1047503c80b15e7e0cc84d546faadc3f8a2af988bf8550a0",
+      "events": 39573,
+      "actionCounts": {
+        "keep": 10671,
+        "floor": 28902,
+        "world": 0
+      },
+      "floorOverrides": 0,
+      "clampedPixels": 0,
+      "compositionNs": 582440897,
+      "minimumHDR": 0.0002262297726136737,
+      "maximumHDR": 3.337242349176415,
+      "priorFloorOnExactControl": true
+    }
+  ],
+  "all10PriorFloorOnHDRLegacyAgxExact": true,
+  "backgroundReuseProofSHA256": "a0b3d9a95a45f1258d74b2a610aa671ea67b408def948b7362a1c523ecb52368",
+  "captureCompletionSHA256": "836fa8d04d5e35f24ba4b9bebe1f0d270cc9cb10b79ecbd1c7fbcacd1a4ef481",
+  "inputPinsSHA256": "ca887ab41e29c4f25d223e767b5a51be6eeeb16d581102d131675c97e42bbe69",
+  "sourceInputsUnchanged": true,
+  "fixedAgxAndQuarterMask": true,
+  "noNewLiveBridge": true
+}

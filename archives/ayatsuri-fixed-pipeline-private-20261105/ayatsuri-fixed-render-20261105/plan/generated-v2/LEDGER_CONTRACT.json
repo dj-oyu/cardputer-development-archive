@@ -1,0 +1,33 @@
+{
+  "status": "DERIVED_GUARDS_WITH_RETAINED_ORIGINAL_CONSERVATIVE_CAPACITY",
+  "originalBaselineLedgerByteExact": true,
+  "rows": [
+    {
+      "kind": "baseline",
+      "sourceLedgerSHA256": "fa4e6d87a39ec0853f64b09a3a0d5eb385a2b7963ea71b3deb9206e58a341bbf",
+      "derivedGuardNeed": 296565,
+      "derivedRoundedReservation": 300000,
+      "retainedGuardCapacity": 310000,
+      "reservedTotal": 7923890,
+      "ledgerSHA256": "6ea9a4dba9cc91eee4f87391d6de02be4f8c61cd4d12da6f4a0fa526829536dd"
+    },
+    {
+      "kind": "q16",
+      "sourceLedgerSHA256": "4f9bcb66481edd9229af355fd7f8e5c8b8b9d34f7b757aa656797aa56ba53e0d",
+      "derivedGuardNeed": 296565,
+      "derivedRoundedReservation": 300000,
+      "retainedGuardCapacity": 310000,
+      "reservedTotal": 7923890,
+      "ledgerSHA256": "6ea9a4dba9cc91eee4f87391d6de02be4f8c61cd4d12da6f4a0fa526829536dd"
+    },
+    {
+      "kind": "q20",
+      "sourceLedgerSHA256": "c68911ac878dfcd5b9af460c5844339c56b6204f3566b4e3b1c4ffe6aea21520",
+      "derivedGuardNeed": 296565,
+      "derivedRoundedReservation": 300000,
+      "retainedGuardCapacity": 310000,
+      "reservedTotal": 7923890,
+      "ledgerSHA256": "6ea9a4dba9cc91eee4f87391d6de02be4f8c61cd4d12da6f4a0fa526829536dd"
+    }
+  ]
+}

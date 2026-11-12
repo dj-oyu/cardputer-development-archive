@@ -1,0 +1,772 @@
+{
+  "baseline": "frozen stage2 actual groundLe + one-bounce16",
+  "scope": "Frozen-v3 conditional metrics; inherited muzzle geometry preservation FAIL remains independent; eye geometry audit reported separately; no formal adoption or 60% global claim",
+  "baselineMetrics": {
+    "front-baseline": {
+      "rgbAgreementPercent": 72.748959183662,
+      "rgbMAE": 0.27251040816337996,
+      "foregroundRGBDescriptive": 73.19013352710657,
+      "IoU": 0.8813463708160962,
+      "missingPixels": 620,
+      "extraPixels": 11
+    },
+    "front-direction": {
+      "rgbAgreementPercent": 71.82275930251504,
+      "rgbMAE": 0.2817724069748496,
+      "foregroundRGBDescriptive": 72.86963948212258,
+      "IoU": 0.8813463708160962,
+      "missingPixels": 620,
+      "extraPixels": 11,
+      "responseMagnitudeAgreementPercent": 67.82022026385866,
+      "directionAgreementPercent": 82.20498354489892,
+      "signedCorrelation": 0.7120688081955645,
+      "deltaLumaRMSE": 0.08500108020414371,
+      "deltaRGBRMSE": 0.1132853675574859,
+      "brightIoU": 0.6529255319148937,
+      "darkIoU": 0.8120195667365478
+    },
+    "front-intensity": {
+      "rgbAgreementPercent": 73.73038389944311,
+      "rgbMAE": 0.2626961610055689,
+      "foregroundRGBDescriptive": 75.14328659793512,
+      "IoU": 0.8813463708160962,
+      "missingPixels": 620,
+      "extraPixels": 11,
+      "responseMagnitudeAgreementPercent": 91.78927121462647,
+      "directionAgreementPercent": 81.18604651162791,
+      "signedCorrelation": 0.5685644608120902,
+      "deltaLumaRMSE": 0.042439469372286556,
+      "deltaRGBRMSE": 0.06806462693925672,
+      "brightIoU": null,
+      "darkIoU": 0.7632558139534884
+    },
+    "front-ambient": {
+      "rgbAgreementPercent": 71.08458762429703,
+      "rgbMAE": 0.2891541237570297,
+      "foregroundRGBDescriptive": 71.66009445665867,
+      "IoU": 0.8813463708160962,
+      "missingPixels": 620,
+      "extraPixels": 11,
+      "responseMagnitudeAgreementPercent": 63.720430629814096,
+      "directionAgreementPercent": 80.00765257317774,
+      "signedCorrelation": -0.13772716859672038,
+      "deltaLumaRMSE": 0.026052242717160393,
+      "deltaRGBRMSE": 0.03397219512865256,
+      "brightIoU": 0.6944710158790893,
+      "darkIoU": null
+    },
+    "front-albedo": {
+      "rgbAgreementPercent": 76.43843299385011,
+      "rgbMAE": 0.2356156700614989,
+      "foregroundRGBDescriptive": 77.52024553399363,
+      "IoU": 0.8813463708160962,
+      "missingPixels": 620,
+      "extraPixels": 11,
+      "responseMagnitudeAgreementPercent": 85.0797752019057,
+      "directionAgreementPercent": 87.89820923656927,
+      "signedCorrelation": 0.2680156055141521,
+      "deltaLumaRMSE": 0.06009190620361857,
+      "deltaRGBRMSE": 0.08523549957160849,
+      "brightIoU": null,
+      "darkIoU": 0.8701225259189443
+    },
+    "oblique-baseline": {
+      "rgbAgreementPercent": 71.44373632034385,
+      "rgbMAE": 0.2855626367965616,
+      "foregroundRGBDescriptive": 72.24008490599294,
+      "IoU": 0.8762763784887678,
+      "missingPixels": 719,
+      "extraPixels": 8
+    },
+    "oblique-direction": {
+      "rgbAgreementPercent": 70.65488307567465,
+      "rgbMAE": 0.2934511692432536,
+      "foregroundRGBDescriptive": 72.8694848079938,
+      "IoU": 0.8762763784887678,
+      "missingPixels": 719,
+      "extraPixels": 8,
+      "responseMagnitudeAgreementPercent": 75.99873623435845,
+      "directionAgreementPercent": 79.60945529290852,
+      "signedCorrelation": 0.634649418739826,
+      "deltaLumaRMSE": 0.08591465860368733,
+      "deltaRGBRMSE": 0.11983113032893843,
+      "brightIoU": 0.3929008567931457,
+      "darkIoU": 0.8066762728146013
+    },
+    "oblique-intensity": {
+      "rgbAgreementPercent": 72.42205017585897,
+      "rgbMAE": 0.27577949824141035,
+      "foregroundRGBDescriptive": 74.59916247957699,
+      "IoU": 0.8762763784887678,
+      "missingPixels": 719,
+      "extraPixels": 8,
+      "responseMagnitudeAgreementPercent": 98.46167794173573,
+      "directionAgreementPercent": 82.56430394659337,
+      "signedCorrelation": 0.5449265735653702,
+      "deltaLumaRMSE": 0.0434564140905284,
+      "deltaRGBRMSE": 0.07139274952380549,
+      "brightIoU": null,
+      "darkIoU": 0.7779304928333006
+    },
+    "oblique-ambient": {
+      "rgbAgreementPercent": 69.86652459189462,
+      "rgbMAE": 0.30133475408105376,
+      "foregroundRGBDescriptive": 70.75708511409928,
+      "IoU": 0.8762763784887678,
+      "missingPixels": 719,
+      "extraPixels": 8,
+      "responseMagnitudeAgreementPercent": 68.05673785378686,
+      "directionAgreementPercent": 79.39802802283342,
+      "signedCorrelation": -0.028664212575041263,
+      "deltaLumaRMSE": 0.024059115624009357,
+      "deltaRGBRMSE": 0.033261339820044714,
+      "brightIoU": 0.6998789136827539,
+      "darkIoU": null
+    },
+    "oblique-albedo": {
+      "rgbAgreementPercent": 75.39425700627422,
+      "rgbMAE": 0.2460574299372579,
+      "foregroundRGBDescriptive": 77.19763255540309,
+      "IoU": 0.8762763784887678,
+      "missingPixels": 719,
+      "extraPixels": 8,
+      "responseMagnitudeAgreementPercent": 76.3493969491403,
+      "directionAgreementPercent": 87.51918158567776,
+      "signedCorrelation": 0.2346365817535712,
+      "deltaLumaRMSE": 0.06573920993546595,
+      "deltaRGBRMSE": 0.0913374000439192,
+      "brightIoU": null,
+      "darkIoU": 0.8676896845694799
+    }
+  },
+  "candidates": {
+    "eyeA": {
+      "conditions": {
+        "front-baseline": {
+          "metrics": {
+            "rgbAgreementPercent": 72.69614269684969,
+            "rgbMAE": 0.273038573031503,
+            "foregroundRGBDescriptive": 73.15739989075642,
+            "IoU": 0.8813463708160962,
+            "missingPixels": 620,
+            "extraPixels": 11
+          },
+          "deltaVsStage2": {
+            "rgbAgreementPercent": -0.05281648681230422,
+            "rgbMAE": 0.0005281648681230156,
+            "foregroundRGBDescriptive": -0.03273363635014448,
+            "IoU": 0.0,
+            "missingPixels": 0,
+            "extraPixels": 0
+          }
+        },
+        "front-direction": {
+          "metrics": {
+            "rgbAgreementPercent": 71.7653253192678,
+            "rgbMAE": 0.28234674680732197,
+            "foregroundRGBDescriptive": 72.83588515522888,
+            "IoU": 0.8813463708160962,
+            "missingPixels": 620,
+            "extraPixels": 11,
+            "responseMagnitudeAgreementPercent": 67.76110769426174,
+            "directionAgreementPercent": 82.44418331374852,
+            "signedCorrelation": 0.7123145242808998,
+            "deltaLumaRMSE": 0.08507668015697915,
+            "deltaRGBRMSE": 0.11344548294954396,
+            "brightIoU": 0.6545092838196287,
+            "darkIoU": 0.8141809290953546
+          },
+          "deltaVsStage2": {
+            "rgbAgreementPercent": -0.05743398324723614,
+            "rgbMAE": 0.0005743398324723481,
+            "foregroundRGBDescriptive": -0.033754326893699726,
+            "IoU": 0.0,
+            "missingPixels": 0,
+            "extraPixels": 0,
+            "responseMagnitudeAgreementPercent": -0.059112569596919684,
+            "directionAgreementPercent": 0.23919976884960192,
+            "signedCorrelation": 0.0002457160853353013,
+            "deltaLumaRMSE": 7.559995283544507e-05,
+            "deltaRGBRMSE": 0.00016011539205805503,
+            "brightIoU": 0.0015837519047350312,
+            "darkIoU": 0.0021613623588067066
+          }
+        },
+        "front-intensity": {
+          "metrics": {
+            "rgbAgreementPercent": 73.69483390208195,
+            "rgbMAE": 0.2630516609791805,
+            "foregroundRGBDescriptive": 75.13244779816193,
+            "IoU": 0.8813463708160962,
+            "missingPixels": 620,
+            "extraPixels": 11,
+            "responseMagnitudeAgreementPercent": 91.85783793927737,
+            "directionAgreementPercent": 81.32558139534883,
+            "signedCorrelation": 0.5698704811258611,
+            "deltaLumaRMSE": 0.042330502085983206,
+            "deltaRGBRMSE": 0.06804830903416004,
+            "brightIoU": null,
+            "darkIoU": 0.7634883720930232
+          },
+          "deltaVsStage2": {
+            "rgbAgreementPercent": -0.0355499973611586,
+            "rgbMAE": 0.0003554999736115616,
+            "foregroundRGBDescriptive": -0.010838799773182473,
+            "IoU": 0.0,
+            "missingPixels": 0,
+            "extraPixels": 0,
+            "responseMagnitudeAgreementPercent": 0.06856672465090696,
+            "directionAgreementPercent": 0.13953488372092693,
+            "signedCorrelation": 0.001306020313770917,
+            "deltaLumaRMSE": -0.00010896728630335056,
+            "deltaRGBRMSE": -1.6317905096679963e-05,
+            "brightIoU": null,
+            "darkIoU": 0.00023255813953482196
+          }
+        },
+        "front-ambient": {
+          "metrics": {
+            "rgbAgreementPercent": 71.03106059628152,
+            "rgbMAE": 0.28968939403718474,
+            "foregroundRGBDescriptive": 71.62185879070493,
+            "IoU": 0.8813463708160962,
+            "missingPixels": 620,
+            "extraPixels": 11,
+            "responseMagnitudeAgreementPercent": 63.656371995276494,
+            "directionAgreementPercent": 80.23722976850966,
+            "signedCorrelation": -0.1381274188676822,
+            "deltaLumaRMSE": 0.026008024075836918,
+            "deltaRGBRMSE": 0.033960150769181276,
+            "brightIoU": 0.6971494164912952,
+            "darkIoU": null
+          },
+          "deltaVsStage2": {
+            "rgbAgreementPercent": -0.053527028015508904,
+            "rgbMAE": 0.0005352702801550424,
+            "foregroundRGBDescriptive": -0.038235665953735065,
+            "IoU": 0.0,
+            "missingPixels": 0,
+            "extraPixels": 0,
+            "responseMagnitudeAgreementPercent": -0.06405863453760219,
+            "directionAgreementPercent": 0.22957719533192744,
+            "signedCorrelation": -0.0004002502709618272,
+            "deltaLumaRMSE": -4.421864132347561e-05,
+            "deltaRGBRMSE": -1.2044359471281851e-05,
+            "brightIoU": 0.0026784006122059223,
+            "darkIoU": null
+          }
+        },
+        "front-albedo": {
+          "metrics": {
+            "rgbAgreementPercent": 76.42238189839364,
+            "rgbMAE": 0.23577618101606354,
+            "foregroundRGBDescriptive": 77.51582177230037,
+            "IoU": 0.8813463708160962,
+            "missingPixels": 620,
+            "extraPixels": 11,
+            "responseMagnitudeAgreementPercent": 84.94091571938657,
+            "directionAgreementPercent": 88.03016022620169,
+            "signedCorrelation": 0.268254524204262,
+            "deltaLumaRMSE": 0.05991164599371575,
+            "deltaRGBRMSE": 0.08514206774997311,
+            "brightIoU": null,
+            "darkIoU": 0.8718190386427899
+          },
+          "deltaVsStage2": {
+            "rgbAgreementPercent": -0.01605109545647565,
+            "rgbMAE": 0.00016051095456465214,
+            "foregroundRGBDescriptive": -0.004423761693260531,
+            "IoU": 0.0,
+            "missingPixels": 0,
+            "extraPixels": 0,
+            "responseMagnitudeAgreementPercent": -0.1388594825191376,
+            "directionAgreementPercent": 0.13195098963241492,
+            "signedCorrelation": 0.00023891869010989053,
+            "deltaLumaRMSE": -0.00018026020990281888,
+            "deltaRGBRMSE": -9.343182163537578e-05,
+            "brightIoU": null,
+            "darkIoU": 0.0016965127238455224
+          }
+        },
+        "oblique-baseline": {
+          "metrics": {
+            "rgbAgreementPercent": 71.38475808858742,
+            "rgbMAE": 0.2861524191141258,
+            "foregroundRGBDescriptive": 72.2233221581567,
+            "IoU": 0.8761061946902655,
+            "missingPixels": 720,
+            "extraPixels": 8
+          },
+          "deltaVsStage2": {
+            "rgbAgreementPercent": -0.058978231756427135,
+            "rgbMAE": 0.0005897823175642358,
+            "foregroundRGBDescriptive": -0.0167627478362391,
+            "IoU": -0.00017018379850231025,
+            "missingPixels": 1,
+            "extraPixels": 0
+          }
+        },
+        "oblique-direction": {
+          "metrics": {
+            "rgbAgreementPercent": 70.60270948190993,
+            "rgbMAE": 0.29397290518090086,
+            "foregroundRGBDescriptive": 72.8390867247403,
+            "IoU": 0.8761061946902655,
+            "missingPixels": 720,
+            "extraPixels": 8,
+            "responseMagnitudeAgreementPercent": 76.03693644122757,
+            "directionAgreementPercent": 79.67529798602548,
+            "signedCorrelation": 0.6331859863407827,
+            "deltaLumaRMSE": 0.08598284059890873,
+            "deltaRGBRMSE": 0.11992169931242445,
+            "brightIoU": 0.3950920245398773,
+            "darkIoU": 0.8074429771908763
+          },
+          "deltaVsStage2": {
+            "rgbAgreementPercent": -0.05217359376472075,
+            "rgbMAE": 0.0005217359376472608,
+            "foregroundRGBDescriptive": -0.030398083253501795,
+            "IoU": -0.00017018379850231025,
+            "missingPixels": 1,
+            "extraPixels": 0,
+            "responseMagnitudeAgreementPercent": 0.038200206869120734,
+            "directionAgreementPercent": 0.06584269311696289,
+            "signedCorrelation": -0.0014634323990433407,
+            "deltaLumaRMSE": 6.818199522140578e-05,
+            "deltaRGBRMSE": 9.056898348602793e-05,
+            "brightIoU": 0.002191167746731615,
+            "darkIoU": 0.0007667043762750181
+          }
+        },
+        "oblique-intensity": {
+          "metrics": {
+            "rgbAgreementPercent": 72.36053217519466,
+            "rgbMAE": 0.2763946782480534,
+            "foregroundRGBDescriptive": 74.58695147633172,
+            "IoU": 0.8761061946902655,
+            "missingPixels": 720,
+            "extraPixels": 8,
+            "responseMagnitudeAgreementPercent": 98.37086194898552,
+            "directionAgreementPercent": 82.66247791085804,
+            "signedCorrelation": 0.5443894979521843,
+            "deltaLumaRMSE": 0.043505052238015644,
+            "deltaRGBRMSE": 0.07142036917122423,
+            "brightIoU": null,
+            "darkIoU": 0.778715884547418
+          },
+          "deltaVsStage2": {
+            "rgbAgreementPercent": -0.06151800066430724,
+            "rgbMAE": 0.0006151800066430679,
+            "foregroundRGBDescriptive": -0.01221100324526958,
+            "IoU": -0.00017018379850231025,
+            "missingPixels": 1,
+            "extraPixels": 0,
+            "responseMagnitudeAgreementPercent": -0.09081599275020835,
+            "directionAgreementPercent": 0.0981739642646744,
+            "signedCorrelation": -0.0005370756131859444,
+            "deltaLumaRMSE": 4.863814748724132e-05,
+            "deltaRGBRMSE": 2.7619647418736237e-05,
+            "brightIoU": null,
+            "darkIoU": 0.0007853917141174005
+          }
+        },
+        "oblique-ambient": {
+          "metrics": {
+            "rgbAgreementPercent": 69.81729148736969,
+            "rgbMAE": 0.30182708512630324,
+            "foregroundRGBDescriptive": 70.73400285893689,
+            "IoU": 0.8761061946902655,
+            "missingPixels": 720,
+            "extraPixels": 8,
+            "responseMagnitudeAgreementPercent": 68.0080659734571,
+            "directionAgreementPercent": 79.3288358415499,
+            "signedCorrelation": -0.027544203960180057,
+            "deltaLumaRMSE": 0.02406107934733626,
+            "deltaRGBRMSE": 0.03326151436461371,
+            "brightIoU": 0.6990140114167099,
+            "darkIoU": null
+          },
+          "deltaVsStage2": {
+            "rgbAgreementPercent": -0.04923310452493013,
+            "rgbMAE": 0.0004923310452494833,
+            "foregroundRGBDescriptive": -0.02308225516239304,
+            "IoU": -0.00017018379850231025,
+            "missingPixels": 1,
+            "extraPixels": 0,
+            "responseMagnitudeAgreementPercent": -0.04867188032976344,
+            "directionAgreementPercent": -0.0691921812835119,
+            "signedCorrelation": 0.0011200086148612058,
+            "deltaLumaRMSE": 1.9637233269025056e-06,
+            "deltaRGBRMSE": 1.745445689996239e-07,
+            "brightIoU": -0.0008649022660439654,
+            "darkIoU": null
+          }
+        },
+        "oblique-albedo": {
+          "metrics": {
+            "rgbAgreementPercent": 75.37326004611369,
+            "rgbMAE": 0.2462673995388631,
+            "foregroundRGBDescriptive": 77.18948395631679,
+            "IoU": 0.8761061946902655,
+            "missingPixels": 720,
+            "extraPixels": 8,
+            "responseMagnitudeAgreementPercent": 76.33726890177043,
+            "directionAgreementPercent": 87.51918158567776,
+            "signedCorrelation": 0.2360852342965622,
+            "deltaLumaRMSE": 0.06562790861894437,
+            "deltaRGBRMSE": 0.09125308198554556,
+            "brightIoU": null,
+            "darkIoU": 0.8683716965046888
+          },
+          "deltaVsStage2": {
+            "rgbAgreementPercent": -0.020996960160530875,
+            "rgbMAE": 0.00020996960160518663,
+            "foregroundRGBDescriptive": -0.008148599086297281,
+            "IoU": -0.00017018379850231025,
+            "missingPixels": 1,
+            "extraPixels": 0,
+            "responseMagnitudeAgreementPercent": -0.012128047369870387,
+            "directionAgreementPercent": 0.0,
+            "signedCorrelation": 0.001448652542991008,
+            "deltaLumaRMSE": -0.00011130131652158093,
+            "deltaRGBRMSE": -8.431805837363915e-05,
+            "brightIoU": null,
+            "darkIoU": 0.0006820119352088927
+          }
+        }
+      },
+      "maxActualCounters": {
+        "snapshotBytes": 63232,
+        "work": 2756936,
+        "visibilityRays": 245681,
+        "visibilityNodeVisits": 14949056,
+        "visibilityTriangleTests": 4189878,
+        "transportRays": 3334260,
+        "transportNodeVisits": 225578158,
+        "transportTriangleTests": 72879291
+      },
+      "rgbImprovedConditions": 0,
+      "rgbRegressedConditions": 10,
+      "rgbDeltaRangePP": [
+        -0.06151800066430724,
+        -0.01605109545647565
+      ],
+      "sixtyPercentGoal": "NOT_ESTABLISHED_CONDITIONAL_METRICS_ONLY",
+      "globalAcceptance": "NOT_ESTABLISHED"
+    },
+    "eyeB": {
+      "conditions": {
+        "front-baseline": {
+          "metrics": {
+            "rgbAgreementPercent": 72.81727230022797,
+            "rgbMAE": 0.2718272769977204,
+            "foregroundRGBDescriptive": 73.23811058922199,
+            "IoU": 0.8813463708160962,
+            "missingPixels": 620,
+            "extraPixels": 11
+          },
+          "deltaVsStage2": {
+            "rgbAgreementPercent": 0.0683131165659745,
+            "rgbMAE": -0.0006831311656595451,
+            "foregroundRGBDescriptive": 0.04797706211542163,
+            "IoU": 0.0,
+            "missingPixels": 0,
+            "extraPixels": 0
+          }
+        },
+        "front-direction": {
+          "metrics": {
+            "rgbAgreementPercent": 71.92940585372382,
+            "rgbMAE": 0.2807059414627617,
+            "foregroundRGBDescriptive": 72.9517346480943,
+            "IoU": 0.8813463708160962,
+            "missingPixels": 620,
+            "extraPixels": 11,
+            "responseMagnitudeAgreementPercent": 68.40331211282758,
+            "directionAgreementPercent": 82.29901269393513,
+            "signedCorrelation": 0.7190026012810735,
+            "deltaLumaRMSE": 0.08340553363447989,
+            "deltaRGBRMSE": 0.11215766262344841,
+            "brightIoU": 0.6520584329349269,
+            "darkIoU": 0.8139209513816019
+          },
+          "deltaVsStage2": {
+            "rgbAgreementPercent": 0.10664655120878308,
+            "rgbMAE": -0.001066465512087944,
+            "foregroundRGBDescriptive": 0.0820951659717224,
+            "IoU": 0.0,
+            "missingPixels": 0,
+            "extraPixels": 0,
+            "responseMagnitudeAgreementPercent": 0.5830918489689196,
+            "directionAgreementPercent": 0.09402914903620285,
+            "signedCorrelation": 0.00693379308550901,
+            "deltaLumaRMSE": -0.0015955465696638194,
+            "deltaRGBRMSE": -0.0011277049340374934,
+            "brightIoU": -0.0008670989799667295,
+            "darkIoU": 0.0019013846450540717
+          }
+        },
+        "front-intensity": {
+          "metrics": {
+            "rgbAgreementPercent": 73.81714505967574,
+            "rgbMAE": 0.2618285494032426,
+            "foregroundRGBDescriptive": 75.20895676771397,
+            "IoU": 0.8813463708160962,
+            "missingPixels": 620,
+            "extraPixels": 11,
+            "responseMagnitudeAgreementPercent": 92.02172418364783,
+            "directionAgreementPercent": 81.11627906976744,
+            "signedCorrelation": 0.5716476011147934,
+            "deltaLumaRMSE": 0.0422685089728546,
+            "deltaRGBRMSE": 0.06796533989309654,
+            "brightIoU": null,
+            "darkIoU": 0.7609302325581395
+          },
+          "deltaVsStage2": {
+            "rgbAgreementPercent": 0.08676116023262637,
+            "rgbMAE": -0.0008676116023262903,
+            "foregroundRGBDescriptive": 0.06567016977885487,
+            "IoU": 0.0,
+            "missingPixels": 0,
+            "extraPixels": 0,
+            "responseMagnitudeAgreementPercent": 0.23245296902136658,
+            "directionAgreementPercent": -0.06976744186046346,
+            "signedCorrelation": 0.00308314030270318,
+            "deltaLumaRMSE": -0.0001709603994319575,
+            "deltaRGBRMSE": -9.928704616017636e-05,
+            "brightIoU": null,
+            "darkIoU": -0.0023255813953488857
+          }
+        },
+        "front-ambient": {
+          "metrics": {
+            "rgbAgreementPercent": 71.14176872469417,
+            "rgbMAE": 0.2885823127530582,
+            "foregroundRGBDescriptive": 71.70325515832809,
+            "IoU": 0.8813463708160962,
+            "missingPixels": 620,
+            "extraPixels": 11,
+            "responseMagnitudeAgreementPercent": 63.563392497830904,
+            "directionAgreementPercent": 80.08417830495505,
+            "signedCorrelation": -0.1346179374348724,
+            "deltaLumaRMSE": 0.026017881641641084,
+            "deltaRGBRMSE": 0.03397079264762557,
+            "brightIoU": 0.6946623302085326,
+            "darkIoU": null
+          },
+          "deltaVsStage2": {
+            "rgbAgreementPercent": 0.057181100397144746,
+            "rgbMAE": -0.000571811003971523,
+            "foregroundRGBDescriptive": 0.04316070166942154,
+            "IoU": 0.0,
+            "missingPixels": 0,
+            "extraPixels": 0,
+            "responseMagnitudeAgreementPercent": -0.15703813198319239,
+            "directionAgreementPercent": 0.07652573177730915,
+            "signedCorrelation": 0.0031092311618479695,
+            "deltaLumaRMSE": -3.436107551930967e-05,
+            "deltaRGBRMSE": -1.4024810269866461e-06,
+            "brightIoU": 0.00019131432944330395,
+            "darkIoU": null
+          }
+        },
+        "front-albedo": {
+          "metrics": {
+            "rgbAgreementPercent": 76.53450188423781,
+            "rgbMAE": 0.23465498115762184,
+            "foregroundRGBDescriptive": 77.59008242466327,
+            "IoU": 0.8813463708160962,
+            "missingPixels": 620,
+            "extraPixels": 11,
+            "responseMagnitudeAgreementPercent": 84.76163406428171,
+            "directionAgreementPercent": 87.95475966069746,
+            "signedCorrelation": 0.2689084163422417,
+            "deltaLumaRMSE": 0.06006500630085784,
+            "deltaRGBRMSE": 0.085220785032871,
+            "brightIoU": null,
+            "darkIoU": 0.8695570216776626
+          },
+          "deltaVsStage2": {
+            "rgbAgreementPercent": 0.0960688903876985,
+            "rgbMAE": -0.0009606889038770439,
+            "foregroundRGBDescriptive": 0.0698368906696345,
+            "IoU": 0.0,
+            "missingPixels": 0,
+            "extraPixels": 0,
+            "responseMagnitudeAgreementPercent": -0.31814113762399643,
+            "directionAgreementPercent": 0.05655042412819,
+            "signedCorrelation": 0.0008928108280896185,
+            "deltaLumaRMSE": -2.689990276072418e-05,
+            "deltaRGBRMSE": -1.4714538737484184e-05,
+            "brightIoU": null,
+            "darkIoU": -0.0005655042412817668
+          }
+        },
+        "oblique-baseline": {
+          "metrics": {
+            "rgbAgreementPercent": 71.45616592640094,
+            "rgbMAE": 0.28543834073599067,
+            "foregroundRGBDescriptive": 72.27286387113624,
+            "IoU": 0.8761061946902655,
+            "missingPixels": 720,
+            "extraPixels": 8
+          },
+          "deltaVsStage2": {
+            "rgbAgreementPercent": 0.012429606057096976,
+            "rgbMAE": -0.00012429606057090536,
+            "foregroundRGBDescriptive": 0.032778965143293703,
+            "IoU": -0.00017018379850231025,
+            "missingPixels": 1,
+            "extraPixels": 0
+          }
+        },
+        "oblique-direction": {
+          "metrics": {
+            "rgbAgreementPercent": 70.72204876565591,
+            "rgbMAE": 0.2927795123434409,
+            "foregroundRGBDescriptive": 72.91863603071337,
+            "IoU": 0.8761061946902655,
+            "missingPixels": 720,
+            "extraPixels": 8,
+            "responseMagnitudeAgreementPercent": 76.68178213493174,
+            "directionAgreementPercent": 79.54779033915725,
+            "signedCorrelation": 0.6418171422845316,
+            "deltaLumaRMSE": 0.08432394357381691,
+            "deltaRGBRMSE": 0.11871446666700505,
+            "brightIoU": 0.3906633906633907,
+            "darkIoU": 0.8066298342541437
+          },
+          "deltaVsStage2": {
+            "rgbAgreementPercent": 0.06716568998126604,
+            "rgbMAE": -0.0006716568998126893,
+            "foregroundRGBDescriptive": 0.04915122271957273,
+            "IoU": -0.00017018379850231025,
+            "missingPixels": 1,
+            "extraPixels": 0,
+            "responseMagnitudeAgreementPercent": 0.6830459005732905,
+            "directionAgreementPercent": -0.061664953751275675,
+            "signedCorrelation": 0.007167723544705518,
+            "deltaLumaRMSE": -0.0015907150298704181,
+            "deltaRGBRMSE": -0.001116663661933373,
+            "brightIoU": -0.002237466129755006,
+            "darkIoU": -4.643856045760675e-05
+          }
+        },
+        "oblique-intensity": {
+          "metrics": {
+            "rgbAgreementPercent": 72.44689919104567,
+            "rgbMAE": 0.2755310080895432,
+            "foregroundRGBDescriptive": 74.63351866743966,
+            "IoU": 0.8761061946902655,
+            "missingPixels": 720,
+            "extraPixels": 8,
+            "responseMagnitudeAgreementPercent": 98.67244749736587,
+            "directionAgreementPercent": 82.56430394659337,
+            "signedCorrelation": 0.546231119540796,
+            "deltaLumaRMSE": 0.04338712472457882,
+            "deltaRGBRMSE": 0.07133504773953536,
+            "brightIoU": null,
+            "darkIoU": 0.7773414490477125
+          },
+          "deltaVsStage2": {
+            "rgbAgreementPercent": 0.024849015186703127,
+            "rgbMAE": -0.0002484901518671756,
+            "foregroundRGBDescriptive": 0.03435618786267014,
+            "IoU": -0.00017018379850231025,
+            "missingPixels": 1,
+            "extraPixels": 0,
+            "responseMagnitudeAgreementPercent": 0.21076955563013655,
+            "directionAgreementPercent": 0.0,
+            "signedCorrelation": 0.0013045459754257305,
+            "deltaLumaRMSE": -6.928936594958329e-05,
+            "deltaRGBRMSE": -5.770178427012829e-05,
+            "brightIoU": null,
+            "darkIoU": -0.0005890437855881059
+          }
+        },
+        "oblique-ambient": {
+          "metrics": {
+            "rgbAgreementPercent": 69.88869583663322,
+            "rgbMAE": 0.30111304163366776,
+            "foregroundRGBDescriptive": 70.78832550689769,
+            "IoU": 0.8761061946902655,
+            "missingPixels": 720,
+            "extraPixels": 8,
+            "responseMagnitudeAgreementPercent": 67.94470510276797,
+            "directionAgreementPercent": 79.25964366026639,
+            "signedCorrelation": -0.024404666420532913,
+            "deltaLumaRMSE": 0.02406764046111444,
+            "deltaRGBRMSE": 0.03326374008536481,
+            "brightIoU": 0.6962463241653694,
+            "darkIoU": null
+          },
+          "deltaVsStage2": {
+            "rgbAgreementPercent": 0.022171244738601104,
+            "rgbMAE": -0.00022171244738600215,
+            "foregroundRGBDescriptive": 0.03124039279840929,
+            "IoU": -0.00017018379850231025,
+            "missingPixels": 1,
+            "extraPixels": 0,
+            "responseMagnitudeAgreementPercent": -0.11203275101888721,
+            "directionAgreementPercent": -0.1383843625670238,
+            "signedCorrelation": 0.00425954615450835,
+            "deltaLumaRMSE": 8.524837105082506e-06,
+            "deltaRGBRMSE": 2.400265320098849e-06,
+            "brightIoU": -0.0036325895173845435,
+            "darkIoU": null
+          }
+        },
+        "oblique-albedo": {
+          "metrics": {
+            "rgbAgreementPercent": 75.44568425870668,
+            "rgbMAE": 0.2455431574129332,
+            "foregroundRGBDescriptive": 77.23100799215148,
+            "IoU": 0.8761061946902655,
+            "missingPixels": 720,
+            "extraPixels": 8,
+            "responseMagnitudeAgreementPercent": 76.2338631969449,
+            "directionAgreementPercent": 87.51918158567776,
+            "signedCorrelation": 0.23783519552293217,
+            "deltaLumaRMSE": 0.06567452741493929,
+            "deltaRGBRMSE": 0.09126726908626101,
+            "brightIoU": null,
+            "darkIoU": 0.8673486786018755
+          },
+          "deltaVsStage2": {
+            "rgbAgreementPercent": 0.051427252432461046,
+            "rgbMAE": -0.0005142725243247048,
+            "foregroundRGBDescriptive": 0.03337543674838628,
+            "IoU": -0.00017018379850231025,
+            "missingPixels": 1,
+            "extraPixels": 0,
+            "responseMagnitudeAgreementPercent": -0.11553375219540385,
+            "directionAgreementPercent": 0.0,
+            "signedCorrelation": 0.0031986137693609806,
+            "deltaLumaRMSE": -6.46825205266599e-05,
+            "deltaRGBRMSE": -7.013095765819044e-05,
+            "brightIoU": null,
+            "darkIoU": -0.00034100596760444635
+          }
+        }
+      },
+      "maxActualCounters": {
+        "snapshotBytes": 65216,
+        "work": 2766638,
+        "visibilityRays": 246553,
+        "visibilityNodeVisits": 15504199,
+        "visibilityTriangleTests": 4703917,
+        "transportRays": 3330212,
+        "transportNodeVisits": 229020649,
+        "transportTriangleTests": 80026927
+      },
+      "rgbImprovedConditions": 10,
+      "rgbRegressedConditions": 0,
+      "rgbDeltaRangePP": [
+        0.012429606057096976,
+        0.10664655120878308
+      ],
+      "sixtyPercentGoal": "NOT_ESTABLISHED_CONDITIONAL_METRICS_ONLY",
+      "globalAcceptance": "NOT_ESTABLISHED"
+    }
+  }
+}

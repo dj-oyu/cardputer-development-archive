@@ -1,0 +1,32 @@
+{
+  "command": [
+    "cc",
+    "-std=c11",
+    "-O2",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-Wno-misleading-indentation",
+    "-ffp-contract=off",
+    "-fexcess-precision=standard",
+    "-I",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-hdr-observer/product/main",
+    "-I",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-hdr-observer/physical",
+    "-I",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-hdr-observer/visibility",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-hdr-observer/code/native_render.c",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-hdr-observer/physical/fox_disk_lighting.c",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-hdr-observer/visibility/visibility.c",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-hdr-observer/visibility/pixel_binding.c",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-hdr-observer/product/main/ayatsuri/ayatsuri_model.c",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-hdr-observer/product/main/ayatsuri/ayatsuri_visibility.c",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-hdr-observer/product/main/ayatsuri/compact_opaque.c",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-hdr-observer/product/main/ui/kasane/ksn_mesh_depth.c",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-hdr-observer/product/main/ui/kasane/ksn_procedural.c",
+    "-lm",
+    "-o",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-hdr-observer/run-001/native-render"
+  ],
+  "binarySHA256": "9ea90c09fb7122fca01e4f338a2d3eb2f39c45a47bcf119818ad35a525a7b6ca"
+}

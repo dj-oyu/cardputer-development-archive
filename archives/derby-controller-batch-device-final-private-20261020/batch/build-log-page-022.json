@@ -1,0 +1,713 @@
+{
+  "ok": true,
+  "entries": [
+    {
+      "sequence": 2017,
+      "text": "[1177/1193] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/scene/glass_rain.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 2018,
+      "text": "[1178/1193] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/scene/ocean.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 2019,
+      "text": "[1179/1193] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/scene/wave.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 2020,
+      "text": "[1180/1193] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/scene/flower_species.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 2021,
+      "text": "[1181/1193] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/scene/flower.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 2022,
+      "text": "C:/Users/core/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/esp-src/c0e622dd6c7488f3d1271108cb11304eab611f3df9c36a8a45831752a2a9fdbd/source/main/scene/flower.c:62:29: warning: 'prof_horrorn' defined but not used [-Wunused-variable]",
+      "level": "warning",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2023,
+      "text": "   62 | static uint32_t prof_horror,prof_horrorn;",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2024,
+      "text": "      |                             ^~~~~~~~~~~~",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2025,
+      "text": "C:/Users/core/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/esp-src/c0e622dd6c7488f3d1271108cb11304eab611f3df9c36a8a45831752a2a9fdbd/source/main/scene/flower.c:62:17: warning: 'prof_horror' defined but not used [-Wunused-variable]",
+      "level": "warning",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2026,
+      "text": "   62 | static uint32_t prof_horror,prof_horrorn;",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2027,
+      "text": "      |                 ^~~~~~~~~~~",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2028,
+      "text": "C:/Users/core/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/esp-src/c0e622dd6c7488f3d1271108cb11304eab611f3df9c36a8a45831752a2a9fdbd/source/main/scene/flower.c:56:66: warning: 'prof_ppetaln' defined but not used [-Wunused-variable]",
+      "level": "warning",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2029,
+      "text": "   56 | static uint32_t prof_pgarden,prof_pseeds,prof_pbuild,prof_ppetal,prof_ppetaln;",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2030,
+      "text": "      |                                                                  ^~~~~~~~~~~~",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2031,
+      "text": "C:/Users/core/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/esp-src/c0e622dd6c7488f3d1271108cb11304eab611f3df9c36a8a45831752a2a9fdbd/source/main/scene/flower.c:56:54: warning: 'prof_ppetal' defined but not used [-Wunused-variable]",
+      "level": "warning",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2032,
+      "text": "   56 | static uint32_t prof_pgarden,prof_pseeds,prof_pbuild,prof_ppetal,prof_ppetaln;",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2033,
+      "text": "      |                                                      ^~~~~~~~~~~",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2034,
+      "text": "C:/Users/core/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/esp-src/c0e622dd6c7488f3d1271108cb11304eab611f3df9c36a8a45831752a2a9fdbd/source/main/scene/flower.c:56:42: warning: 'prof_pbuild' defined but not used [-Wunused-variable]",
+      "level": "warning",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2035,
+      "text": "   56 | static uint32_t prof_pgarden,prof_pseeds,prof_pbuild,prof_ppetal,prof_ppetaln;",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2036,
+      "text": "      |                                          ^~~~~~~~~~~",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2037,
+      "text": "C:/Users/core/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/esp-src/c0e622dd6c7488f3d1271108cb11304eab611f3df9c36a8a45831752a2a9fdbd/source/main/scene/flower.c:56:30: warning: 'prof_pseeds' defined but not used [-Wunused-variable]",
+      "level": "warning",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2038,
+      "text": "   56 | static uint32_t prof_pgarden,prof_pseeds,prof_pbuild,prof_ppetal,prof_ppetaln;",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2039,
+      "text": "      |                              ^~~~~~~~~~~",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2040,
+      "text": "C:/Users/core/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/esp-src/c0e622dd6c7488f3d1271108cb11304eab611f3df9c36a8a45831752a2a9fdbd/source/main/scene/flower.c:56:17: warning: 'prof_pgarden' defined but not used [-Wunused-variable]",
+      "level": "warning",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2041,
+      "text": "   56 | static uint32_t prof_pgarden,prof_pseeds,prof_pbuild,prof_ppetal,prof_ppetaln;",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2042,
+      "text": "      |                 ^~~~~~~~~~~~",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2043,
+      "text": "C:/Users/core/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/esp-src/c0e622dd6c7488f3d1271108cb11304eab611f3df9c36a8a45831752a2a9fdbd/source/main/scene/flower.c:47:67: warning: 'prof_pre' defined but not used [-Wunused-variable]",
+      "level": "warning",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2044,
+      "text": "   47 | static uint32_t prof_span,prof_spann,prof_div,prof_divn,prof_scan,prof_pre;",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2045,
+      "text": "      |                                                                   ^~~~~~~~",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2046,
+      "text": "C:/Users/core/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/esp-src/c0e622dd6c7488f3d1271108cb11304eab611f3df9c36a8a45831752a2a9fdbd/source/main/scene/flower.c:47:57: warning: 'prof_scan' defined but not used [-Wunused-variable]",
+      "level": "warning",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2047,
+      "text": "   47 | static uint32_t prof_span,prof_spann,prof_div,prof_divn,prof_scan,prof_pre;",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2048,
+      "text": "      |                                                         ^~~~~~~~~",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2049,
+      "text": "C:/Users/core/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/esp-src/c0e622dd6c7488f3d1271108cb11304eab611f3df9c36a8a45831752a2a9fdbd/source/main/scene/flower.c:47:47: warning: 'prof_divn' defined but not used [-Wunused-variable]",
+      "level": "warning",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2050,
+      "text": "   47 | static uint32_t prof_span,prof_spann,prof_div,prof_divn,prof_scan,prof_pre;",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2051,
+      "text": "      |                                               ^~~~~~~~~",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2052,
+      "text": "C:/Users/core/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/esp-src/c0e622dd6c7488f3d1271108cb11304eab611f3df9c36a8a45831752a2a9fdbd/source/main/scene/flower.c:47:38: warning: 'prof_div' defined but not used [-Wunused-variable]",
+      "level": "warning",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2053,
+      "text": "   47 | static uint32_t prof_span,prof_spann,prof_div,prof_divn,prof_scan,prof_pre;",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2054,
+      "text": "      |                                      ^~~~~~~~",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2055,
+      "text": "C:/Users/core/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/esp-src/c0e622dd6c7488f3d1271108cb11304eab611f3df9c36a8a45831752a2a9fdbd/source/main/scene/flower.c:47:27: warning: 'prof_spann' defined but not used [-Wunused-variable]",
+      "level": "warning",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2056,
+      "text": "   47 | static uint32_t prof_span,prof_spann,prof_div,prof_divn,prof_scan,prof_pre;",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2057,
+      "text": "      |                           ^~~~~~~~~~",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2058,
+      "text": "C:/Users/core/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/esp-src/c0e622dd6c7488f3d1271108cb11304eab611f3df9c36a8a45831752a2a9fdbd/source/main/scene/flower.c:47:17: warning: 'prof_span' defined but not used [-Wunused-variable]",
+      "level": "warning",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2059,
+      "text": "   47 | static uint32_t prof_span,prof_spann,prof_div,prof_divn,prof_scan,prof_pre;",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2060,
+      "text": "      |                 ^~~~~~~~~",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2061,
+      "text": "C:/Users/core/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/esp-src/c0e622dd6c7488f3d1271108cb11304eab611f3df9c36a8a45831752a2a9fdbd/source/main/scene/flower.c:46:59: warning: 'prof_belln' defined but not used [-Wunused-variable]",
+      "level": "warning",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2062,
+      "text": "   46 | static uint32_t prof_sqrt,prof_sqrtn,prof_shade,prof_bell,prof_belln;",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2063,
+      "text": "      |                                                           ^~~~~~~~~~",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2064,
+      "text": "C:/Users/core/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/esp-src/c0e622dd6c7488f3d1271108cb11304eab611f3df9c36a8a45831752a2a9fdbd/source/main/scene/flower.c:46:49: warning: 'prof_bell' defined but not used [-Wunused-variable]",
+      "level": "warning",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2065,
+      "text": "   46 | static uint32_t prof_sqrt,prof_sqrtn,prof_shade,prof_bell,prof_belln;",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2066,
+      "text": "      |                                                 ^~~~~~~~~",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2067,
+      "text": "C:/Users/core/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/esp-src/c0e622dd6c7488f3d1271108cb11304eab611f3df9c36a8a45831752a2a9fdbd/source/main/scene/flower.c:46:38: warning: 'prof_shade' defined but not used [-Wunused-variable]",
+      "level": "warning",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2068,
+      "text": "   46 | static uint32_t prof_sqrt,prof_sqrtn,prof_shade,prof_bell,prof_belln;",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2069,
+      "text": "      |                                      ^~~~~~~~~~",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2070,
+      "text": "C:/Users/core/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/esp-src/c0e622dd6c7488f3d1271108cb11304eab611f3df9c36a8a45831752a2a9fdbd/source/main/scene/flower.c:46:27: warning: 'prof_sqrtn' defined but not used [-Wunused-variable]",
+      "level": "warning",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2071,
+      "text": "   46 | static uint32_t prof_sqrt,prof_sqrtn,prof_shade,prof_bell,prof_belln;",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2072,
+      "text": "      |                           ^~~~~~~~~~",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2073,
+      "text": "C:/Users/core/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/esp-src/c0e622dd6c7488f3d1271108cb11304eab611f3df9c36a8a45831752a2a9fdbd/source/main/scene/flower.c:46:17: warning: 'prof_sqrt' defined but not used [-Wunused-variable]",
+      "level": "warning",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2074,
+      "text": "   46 | static uint32_t prof_sqrt,prof_sqrtn,prof_shade,prof_bell,prof_belln;",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2075,
+      "text": "      |                 ^~~~~~~~~",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2076,
+      "text": "C:/Users/core/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/esp-src/c0e622dd6c7488f3d1271108cb11304eab611f3df9c36a8a45831752a2a9fdbd/source/main/scene/flower.c:45:62: warning: 'prof_frames' defined but not used [-Wunused-variable]",
+      "level": "warning",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2077,
+      "text": "   45 | static uint32_t prof_total,prof_garden,prof_visits,prof_hits,prof_frames;",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2078,
+      "text": "      |                                                              ^~~~~~~~~~~",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2079,
+      "text": "C:/Users/core/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/esp-src/c0e622dd6c7488f3d1271108cb11304eab611f3df9c36a8a45831752a2a9fdbd/source/main/scene/flower.c:45:52: warning: 'prof_hits' defined but not used [-Wunused-variable]",
+      "level": "warning",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2080,
+      "text": "   45 | static uint32_t prof_total,prof_garden,prof_visits,prof_hits,prof_frames;",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2081,
+      "text": "      |                                                    ^~~~~~~~~",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2082,
+      "text": "C:/Users/core/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/esp-src/c0e622dd6c7488f3d1271108cb11304eab611f3df9c36a8a45831752a2a9fdbd/source/main/scene/flower.c:45:40: warning: 'prof_visits' defined but not used [-Wunused-variable]",
+      "level": "warning",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2083,
+      "text": "   45 | static uint32_t prof_total,prof_garden,prof_visits,prof_hits,prof_frames;",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2084,
+      "text": "      |                                        ^~~~~~~~~~~",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2085,
+      "text": "C:/Users/core/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/esp-src/c0e622dd6c7488f3d1271108cb11304eab611f3df9c36a8a45831752a2a9fdbd/source/main/scene/flower.c:45:28: warning: 'prof_garden' defined but not used [-Wunused-variable]",
+      "level": "warning",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2086,
+      "text": "   45 | static uint32_t prof_total,prof_garden,prof_visits,prof_hits,prof_frames;",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2087,
+      "text": "      |                            ^~~~~~~~~~~",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2088,
+      "text": "C:/Users/core/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/esp-src/c0e622dd6c7488f3d1271108cb11304eab611f3df9c36a8a45831752a2a9fdbd/source/main/scene/flower.c:45:17: warning: 'prof_total' defined but not used [-Wunused-variable]",
+      "level": "warning",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2089,
+      "text": "   45 | static uint32_t prof_total,prof_garden,prof_visits,prof_hits,prof_frames;",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2090,
+      "text": "      |                 ^~~~~~~~~~",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2091,
+      "text": "[1182/1193] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/scene/garden.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 2092,
+      "text": "[1183/1193] Linking C static library esp-idf\\main\\libmain.a",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 2093,
+      "text": "[1184/1193] Generating esp-idf/esp_system/ld/sections.ld",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 2094,
+      "text": "[1185/1193] Building C object CMakeFiles/cardputer_pocketjs.elf.dir/project_elf_src_esp32s3.c.obj",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 2095,
+      "text": "[1186/1193] Linking CXX executable cardputer_pocketjs.elf",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 2096,
+      "text": "[1187/1193] Generating binary image from built executable",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 2097,
+      "text": "esptool v5.3.0",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2098,
+      "text": "Creating ESP32-S3 image...",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2099,
+      "text": "Merged 3 ELF sections.",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2100,
+      "text": "Successfully created ESP32-S3 image.",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2101,
+      "text": "Generated C:/Users/core/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/b-c83/o/7166b3fd7b7787cef41b88d85729b79c3314071b4b6c5ac6652fe80f5e733c21/cardputer_pocketjs.bin",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2102,
+      "text": "[1188/1193] C:\\windows\\system32\\cmd.exe /C \"cd /D C:\\Users\\core\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\b-c83\\o\\7166b3fd7b7787cef41b88d85729b79c3314071b4b6c5ac6652fe80f5e733c21 && [REDACTED]\\Scripts\\python.exe C:/Users/core/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/esp-src/c0e622dd6c7488f3d1271108cb11304eab611f3df9c36a8a45831752a2a9fdbd/source/tools/check_flash.py C:/Users/core/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/b-c83/o/7166b3fd7b7787cef41b88d85729b79c3314071b4b6c5ac6652fe80f5e733c21/cardputer_pocketjs.bin\"",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 2103,
+      "text": "FLASH_BUDGET app=2298416 limit=3145728 spare=847312 skk_reserved=2097152 font_reserved=524288 storage=2555904",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2104,
+      "text": "[1189/1193] C:\\windows\\system32\\cmd.exe /C \"cd /D C:\\Users\\core\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\b-c83\\o\\7166b3fd7b7787cef41b88d85729b79c3314071b4b6c5ac6652fe80f5e733c21 && [REDACTED]\\Scripts\\python.exe C:/esp/v6.0.1/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/Users/core/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/b-c83/o/7166b3fd7b7787cef41b88d85729b79c3314071b4b6c5ac6652fe80f5e733c21/partition_table/partition-table.bin C:/Users/core/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/b-c83/o/7166b3fd7b7787cef41b88d85729b79c3314071b4b6c5ac6652fe80f5e733c21/cardputer_pocketjs.bin\"",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 2105,
+      "text": "cardputer_pocketjs.bin binary size 0x231230 bytes. Smallest app partition is 0x300000 bytes. 0xcedd0 bytes (27%) free.",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2106,
+      "text": "[1190/1193] C:\\windows\\system32\\cmd.exe /C \"cd /D C:\\Users\\core\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\b-c83\\o\\7166b3fd7b7787cef41b88d85729b79c3314071b4b6c5ac6652fe80f5e733c21 && [REDACTED]\\Scripts\\python.exe -B C:/Users/core/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/esp-src/c0e622dd6c7488f3d1271108cb11304eab611f3df9c36a8a45831752a2a9fdbd/source/tools/verify_derby_runner_batch.py --build C:/Users/core/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/b-c83/o/7166b3fd7b7787cef41b88d85729b79c3314071b4b6c5ac6652fe80f5e733c21 --expect ON\"",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 2107,
+      "text": "DERBY_RUNNER_BATCH_PROOF {\"runner_batch_mode\":\"ON\",\"detail_mode\":\"ON\",\"native_symbol\":true,\"cmake_cache_sha256\":\"5e85b16e3b8f254837aebec0a074f2e2dd0247e0fe8147eb1e6907c4ba215693\",\"embedded_pan_sha256\":\"3c4a95f9c62abb5b20f668a5ac888a87849bcad16ee6559ec45fc4e89ecb2910\",\"embedded_pan_bytes\":2302,\"bin_sha256\":\"8daa2cb79582de437d48a16f2366eb2a748b5871ca1acc490506765b5a20a47c\",\"elf_sha256\":\"1093bc46b5987042ce8e0c110daf328339eb641a89f5e957ef7471c1d2c4850f\"}",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2108,
+      "text": "[1191/1193] C:\\windows\\system32\\cmd.exe /C \"cd /D C:\\Users\\core\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\b-c83\\o\\7166b3fd7b7787cef41b88d85729b79c3314071b4b6c5ac6652fe80f5e733c21 && [REDACTED]\\Scripts\\python.exe -B C:/Users/core/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/esp-src/c0e622dd6c7488f3d1271108cb11304eab611f3df9c36a8a45831752a2a9fdbd/source/tools/verify_diagnostic_build.py --build C:/Users/core/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/b-c83/o/7166b3fd7b7787cef41b88d85729b79c3314071b4b6c5ac6652fe80f5e733c21\"",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 2109,
+      "text": "DERBY_DIAGNOSTIC_BUILD_PROOF {\"artifacts\": {\"cardputer_pocketjs.bin\": {\"bytes\": 2298416, \"sha256\": \"8daa2cb79582de437d48a16f2366eb2a748b5871ca1acc490506765b5a20a47c\"}, \"cardputer_pocketjs.elf\": {\"bytes\": 20051584, \"sha256\": \"1093bc46b5987042ce8e0c110daf328339eb641a89f5e957ef7471c1d2c4850f\"}}, \"build_measure\": {\"cmake_cache_sha256\": \"5e85b16e3b8f254837aebec0a074f2e2dd0247e0fe8147eb1e6907c4ba215693\", \"measure_mode\": \"ON\", \"native_symbols\": [\"dm_batch\", \"dm_calibrate\", \"dm_dispatch\", \"dm_emit\", \"dm_enter\", \"dm_format_record\", \"dm_heap\", \"dm_leave\", \"dm_now_us\", \"dm_output_reset\", \"dm_present\", \"dm_read\", \"dm_refused\", \"dm_reset\", \"dm_transfer\"]}, \"build_mode\": {\"cmake_cache_sha256\": \"5e85b16e3b8f254837aebec0a074f2e2dd0247e0fe8147eb1e6907c4ba215693\", \"elf_embedded_play_verified\": true, \"embedded_play_bytes\": 7055, \"embedded_play_sha256\": \"b876b6a7bed75f2265034c9a17ac40bd626988dee24e535f79cbf4b4eeb0c807\", \"generated_chunk_present\": true, \"native_symbols\": [\"derby_telemetry_begin_frame\", \"derby_telemetry_eval\", \"derby_telemetry_io_us\", \"derby_telemetry_present\", \"derby_telemetry_reset\", \"derby_telemetry_set\", \"derby_telemetry_write\"], \"source_play_sha256\": \"a6c2240b648ac0e328a15c5c7ded9e1157e45dc3a2d381707ff4461d4bdb5078\", \"telemetry_mode\": \"ON\"}, \"comparison_seed\": {\"elf_embedded_view_verified\": true, \"elf_seed_symbol_verified\": true, \"embedded_view_sha256\": \"9e90ea8f986df8fcf71fd88b36f5a33a9bca8493c370963fb646fbd6d2b73ca8\", \"hardware_seed\": \"2545F491\", \"mode\": \"fixed\", \"saved_race\": 19}, \"detail_measurement\": {\"mode\": \"ON\", \"native_symbols\": [\"dd_active\", \"dd_add\", \"dd_cancel\", \"dd_depth\", \"dd_enter\", \"dd_finish\", \"dd_js\", \"dd_leave\", \"dd_owned\", \"dd_owner\", \"dd_resume\", \"dd_saved\", \"dd_saved_depth\", \"dd_stack\", \"dd_start\", \"dd_suspend\", \"dd_suspended_at\", \"dd_totals\"]}, \"fixed_workload\": {\"fixture\": {\"camera\": 8, \"contexts\": 120, \"end\": 510, \"finish\": \"5DC86E18\", \"id\": \"oval-pan8-390-510-v1\", \"independent\": false, \"oval\": 1, \"race\": 1000001, \"repetitions\": 3, \"seed\": \"9112A7AB\", \"start\": 390, \"tier\": 1}, \"manifest_sha256\": \"84e0341ee1ac10c232e3008f28f8aada8823155e19229f926e633d7780a2021d\", \"mode\": \"ON\", \"native_symbols\": [\"df_command\", \"df_count\", \"df_detail_exit_record\", \"df_dispatch\", \"df_fail\", \"df_fixture_id\", \"df_fixture_manifest\", \"df_now_us\", \"df_owner_begin\", \"df_owner_end\", \"df_owner_work_end\", \"df_pace_begin\", \"df_pace_end\", \"df_present\", \"df_reset\", \"df_session\", \"df_status\", \"df_variant\", \"df_write\"]}, \"hardware_tested\": false, \"schema_version\": 1}",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2110,
+      "text": "[1192/1193] C:\\windows\\system32\\cmd.exe /C \"cd /D C:\\Users\\core\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\b-c83\\o\\7166b3fd7b7787cef41b88d85729b79c3314071b4b6c5ac6652fe80f5e733c21 && [REDACTED]\\Scripts\\python.exe C:/Users/core/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/esp-src/c0e622dd6c7488f3d1271108cb11304eab611f3df9c36a8a45831752a2a9fdbd/source/tools/memlog.py --map C:/Users/core/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/b-c83/o/7166b3fd7b7787cef41b88d85729b79c3314071b4b6c5ac6652fe80f5e733c21/cardputer_pocketjs.map --log C:/Users/core/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/LocalCache/Local/b-c83/o/7166b3fd7b7787cef41b88d85729b79c3314071b4b6c5ac6652fe80f5e733c21/memory.jsonl --only-changes\"",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": true
+    },
+    {
+      "sequence": 2111,
+      "text": "MEMLOG commit=None diram=178572 flash=1559624",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2112,
+      "text": "MEMLOG first record; nothing to compare against",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2113,
+      "text": "",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2114,
+      "text": "Project build complete. To flash, run:",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2115,
+      "text": " idf.py flash",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    },
+    {
+      "sequence": 2116,
+      "text": "or",
+      "level": "unknown",
+      "stream": "stdout",
+      "progress": false
+    }
+  ],
+  "expired": false,
+  "gap": false,
+  "oldest_sequence": 74,
+  "next_cursor": {
+    "epoch": "10c4774557254de7b01b399046da2a57",
+    "sequence": 2116
+  },
+  "has_more": true
+}

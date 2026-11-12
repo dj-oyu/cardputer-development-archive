@@ -1,0 +1,65 @@
+{
+  "status": "PASS_CODE_AND_COMPILED_STACK_REVIEW",
+  "observedUTC": "2026-11-04T11:39:48.926722+00:00",
+  "actualRenderRunsByReviewer": 0,
+  "sourceChanges": [
+    "private-build/transport/bounce.h",
+    "private-build/transport/bounce.c",
+    "harness/run_compact_actual.py",
+    "harness/freeze_sources.py",
+    "harness/run_depth_actual.py",
+    "harness/native_render_row.c",
+    "harness/run_ring_actual.py",
+    "harness/run_actual.py"
+  ],
+  "allPostMaterialArithmeticAndBudgetsExactSource": true,
+  "actualAttributeConstructionRecords": 40,
+  "actualCompactBytesEach": 28592,
+  "maxGenericCompactBytes": 139848,
+  "arithmeticComparisonsPerMode": 49896,
+  "modes": [
+    "O2",
+    "O2 ASan/UBSan"
+  ],
+  "legacyCompatibility": "API/size/render behavior; private attribute offset moves580 to584 and internal byte layout is not identical",
+  "stack": {
+    "PRODUCT_NAMED_STACK.json": {
+      "hash": "aa7859d4bfd5ecf88371e82750663b1cc3aa952bd00d3c1d92bf95c3427bc0d1",
+      "background": 4080,
+      "renderer": 5008,
+      "main": 83744,
+      "freshCompiledFramesVerified": true
+    },
+    "NAMED_STACK.json": {
+      "hash": "8b8da916a2b383fcf0d6983a76fed6fde607e2b81855eecd68c25e7ffb34a2cd",
+      "background": 4080,
+      "renderer": 5008,
+      "main": 83744,
+      "freshCompiledFramesVerified": true
+    }
+  },
+  "guardBasis": "No admission or overlap-function source changes; owned allocation range remains s->bytes. Baseline guard927/985 and cap1024; producer637599 unchanged. Interning occurs before renderer and does not change render guard dispatch.",
+  "limitations": [
+    "No whole host/device fit claim",
+    "LSan unavailable under ptrace; ASan/UBSan ran with leak detection disabled",
+    "Actual fixed40 comparison still requires parent gate then retained audit"
+  ],
+  "pins": {
+    "private-build/transport/bounce.c": "d423bfed9ca33ddcb8aaa07c15dfce148073c6ce4778dfe6a9c4d9d459dca5b6",
+    "private-build/transport/bounce.h": "63f8805c95fdbd2abf3e406c5871ca0219ec7189617e2b03bc1572d7e1c5b6d7",
+    "harness/native_render_row.c": "28e77dc2e24c0a28272bb210387b5e3e227e903b9d35def7467db510ab8586ba",
+    "harness/run_actual.py": "4985802e0fc20fe2fde7e29535d1950997d058df4e055568c01e35e25ae715be",
+    "harness/run_ring_actual.py": "4985802e0fc20fe2fde7e29535d1950997d058df4e055568c01e35e25ae715be",
+    "harness/run_compact_actual.py": "4985802e0fc20fe2fde7e29535d1950997d058df4e055568c01e35e25ae715be",
+    "harness/run_depth_actual.py": "4985802e0fc20fe2fde7e29535d1950997d058df4e055568c01e35e25ae715be",
+    "harness/freeze_sources.py": "e361304a5734196f066de3bb2aae9f2af82ab995c0572d3e87ed8c6771c0e5a6",
+    "review/test_independent.c": "78dfd6f6bf0ffaf36834b2e776f6974f5ed6e2eb4f1669dd83d8b31fe879f658",
+    "review/reference_hit.inc": "9399809b22d8ac45135fb668cb67e47a2598b79ef0120ddc776763aa95b4d5fc",
+    "review/run_independent.sh": "73ecf6d4fe1912d4baac760599da1cde0b7ac2340baf501abdcdbb0c914b21f8",
+    "review/independent.log": "67258e33a34c4fca85e06beb1a4db6d88b0cb8a7b4242b90148133f70d46ad12",
+    "review/independent-san.log": "75428e81b0795245f3a23dda3f52c47fae67bc32fc9ccb33d7ee4879f25eee72",
+    "test-independent/RESULTS.json": "08266665d7608aa35ee405512b444cef570550d8970222050970761765b4fb1e",
+    "measure/measure_attributes.c": "31d8fbc96bc0406c382133a1dd1b8ee7f44d3ae66f1558ba8adc147f9c6dea7d",
+    "measure/ATTRIBUTES.txt": "23567230744259191f0a6ec1739cf84d517375d9696c9eb3fe3d0538571e7a5f"
+  }
+}

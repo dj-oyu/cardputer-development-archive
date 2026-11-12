@@ -1,0 +1,24 @@
+{
+  "status": "PASS_PREPARATION_NO_RENDER",
+  "unitTests": 20,
+  "actualFrames": 0,
+  "contractStatus": "FROZEN_REVIEWED_REPORT_CONTRACT",
+  "onlyNonTimingTransition": ".json visibilitySceneBytes = baseline - 36 * visibilitySceneNodes",
+  "fixedSchedule": "40 full-depth capture + 2 no-depth HDR",
+  "testFileSHA256": {
+    "audit_fixed42.py": "04ced756f45aceb51726bc105abf857f07d8104bb7c3cf3a72a9d06c7565ca08",
+    "prepare_contract.py": "914bd2ac705b0d7909743c991508a96d91783dd83bccee7989c2142dc89aec3c",
+    "report_contract.py": "5ef391500bd448055ede7b326640b34ff5b0e399c94a0fbde8e2f270852c8084",
+    "run_fixed40.py": "095aa46e308d3f966711d853ac997054fc9cbfe94cf2072c8fa3f76f41153a62",
+    "test_contract.py": "b00769a27ca341649269cfb0802652018411e4620eda8c3995a327256321aafa",
+    "test_indexed_contract.py": "0318b7151fd0dc7ae6c962c86d42e7f6b99fda2744a84c2933166a05b9e82ad8",
+    "test_predeclared_cases.py": "ceb2927cb494fd3b0204e60a1ccd5d04e304786b21025de4cd8d368f2dbd5ac3",
+    "test_schedule.py": "17b222233b70fff46b69d04c13ec50da7bcf8d13fa626aa22d3fcd7d4e93b33f"
+  },
+  "testLogSHA256": "a734ddb901253defe3a7d2b512dc12e9724ab803cfad4027141166e796aac24c",
+  "pending": [
+    "Independent final source/runner review",
+    "Source/build freeze and parent GO"
+  ],
+  "contractSHA256": "43c5c124e15f9615c01b998600e0ea6c56708db500b084d5fb589ae089cf23f7"
+}

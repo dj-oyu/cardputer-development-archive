@@ -1,0 +1,28 @@
+{
+  "status": "SYNTHETIC_GATES_PASS_FULL_RENDER_NOT_STARTED",
+  "sourceFreezeSHA256": "fb98fdcd29ca3a2dcb7a040db2fd08a952a4ffa6eba882ba3cc7cbb369e9a64f",
+  "files": {
+    "PLAN.md": "4a93f18737e0c1c64b2ff5589efaf8a9e644d8cbb9257f71d3dc3e1c79f31825",
+    "GATE_REPORT.md": "7cb8be35c1c777bc1b6250cb5405cf0c1f64421c5ffd447ee5f861a896a876d4",
+    "SOURCE_DIFF.json": "0fca1e529470b3fb02cb0a67bb86253f49587428a4a56c4b86488946c4116229",
+    "STACK_RESOURCES.json": "281692148b5af6dad8f4e21ce2fd7e21b9b403855dcc40b2ad3adfdd0c3e0952",
+    "BASELINE_PINS.json": "6556f5dcbb8592ca6ad3d7afadce5139d87863f5bea160f17123ec1f85c85de4",
+    "BASELINE_OUTPUT_PINS.json": "fee305b6051811ada789ca12a0755629469cc482d841d894058c15a896f61b0f",
+    "capture/SOURCE_FREEZE.json": "fb98fdcd29ca3a2dcb7a040db2fd08a952a4ffa6eba882ba3cc7cbb369e9a64f",
+    "code/compose.py": "308f1f959f4019e8671142e598397f915fc1f938fa5c543e844a5e997555d634",
+    "code/capture.py": "e8254da1197bb80e54c5a57626e495b705a0748dbebe7075901542c16718353e",
+    "code/integrate.py": "d7d4b8ad7a04644f39533ddb347c3abe73b00e6a6deed3c0dc05770ee84adc2b",
+    "code/build.py": "2e3d2945f18c2f98389ed9d38476ec7aa85b2d4a4735caeca55432eb123bc9a5",
+    "code/implement.py": "73f3c997e0ddd36c6495d1326f16e541b755b8a8fbd6e279b7a621d16728754a",
+    "tests/test_floor_world.c": "391a8096d42f268e621365ab0f6773a606d7d6b02205825bf36415bb7ad5bb24",
+    "tests/test_off_parity.c": "5d92dae17d9629664aa560fc2de7ddbb162c7b9e26e7156202142bf6c9b419d8",
+    "tests/parity.sh": "58c40362d1d7c0e9dec19d6d75de501fd5863157eb7c51bf3aa2688f015113f9",
+    "tests/run.sh": "717386dee1a4d293d24cf038af3ae6e53dde60abb91be62801c23f8b7d7520cb",
+    "tests/run.log": "bf3c3daabab0423dffb06e20f14f3ba7a61e5ddd803cf683287e6df39bcb497d",
+    "tests/parity.log": "b48df0ec9e7978b027700f1a9df7d838484a065d875722ff10c31062fda5903d"
+  },
+  "offParitySHA256": "ebedf5d8c8f4346edea6cfef32ce5f02e953c4817a543bd35ac7906a6533e05c",
+  "ASanUBSan": "PASS",
+  "LeakSanitizer": "UNAVAILABLE_UNDER_PTRACE",
+  "fullRenderStarted": false
+}

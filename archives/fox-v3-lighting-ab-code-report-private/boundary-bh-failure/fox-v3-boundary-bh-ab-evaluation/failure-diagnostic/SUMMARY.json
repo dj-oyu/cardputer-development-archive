@@ -1,0 +1,13 @@
+{
+  "returncode": 2,
+  "shaderNotCalledForFailedSample": true,
+  "falseLines": [
+    138,
+    163
+  ],
+  "originalFailureReproduced": true,
+  "sourceChanges": "fprintf branch/query logging only",
+  "originalSnapshotSHA256": "006cfd92bda231a4ae7922f23aa125176f807967feaf444e2f3f8b19ef72cab0",
+  "instrumentSnapshotSHA256": "006cfd92bda231a4ae7922f23aa125176f807967feaf444e2f3f8b19ef72cab0",
+  "oldFailedOutputPreserved": true
+}

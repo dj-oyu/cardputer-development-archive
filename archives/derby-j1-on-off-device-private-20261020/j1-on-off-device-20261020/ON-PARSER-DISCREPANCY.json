@@ -1,0 +1,128 @@
+{
+  "official_state": "succeeded",
+  "official_result": "derby_fixed_trial_verified",
+  "official_terminal_verified": true,
+  "terminal_contract": "owner_exit_v2",
+  "local_primary_completion_error": "completion_missing_or_duplicate_marker",
+  "markers": {
+    "identity": {
+      "exact_matches": [],
+      "token_occurrences": [
+        3
+      ],
+      "timestamp_prefixed_occurrences": [
+        3
+      ]
+    },
+    "ready": {
+      "exact_matches": [],
+      "token_occurrences": [
+        10
+      ],
+      "timestamp_prefixed_occurrences": [
+        10
+      ]
+    },
+    "end": {
+      "exact_matches": [
+        238
+      ],
+      "token_occurrences": [
+        238
+      ],
+      "timestamp_prefixed_occurrences": []
+    },
+    "owner": {
+      "exact_matches": [
+        239
+      ],
+      "token_occurrences": [
+        239
+      ],
+      "timestamp_prefixed_occurrences": []
+    },
+    "stop": {
+      "exact_matches": [
+        241
+      ],
+      "token_occurrences": [
+        241
+      ],
+      "timestamp_prefixed_occurrences": [
+        241
+      ]
+    },
+    "home": {
+      "exact_matches": [
+        242
+      ],
+      "token_occurrences": [
+        242
+      ],
+      "timestamp_prefixed_occurrences": [
+        242
+      ]
+    }
+  },
+  "raw_sha256": "f436833a2e6b3eb50492691f141ff13fd67607f6ce1df0755c2f457419523670",
+  "raw_bytes": 31325,
+  "transport": {
+    "bytes": 31325,
+    "complete": true,
+    "disconnect": false,
+    "duration_ms": 87895,
+    "gaps": false,
+    "overflow": false,
+    "partial_tail": false,
+    "refused": false,
+    "reset": false,
+    "sha256": "f436833a2e6b3eb50492691f141ff13fd67607f6ce1df0755c2f457419523670",
+    "truncated": false
+  },
+  "binding": {
+    "job_id": "derby-j1-on-fixed-b561aea1-20261020",
+    "plan_hash": "635b430c80f7d273db417a40237698b51462283d60cc4a6482ce6d6d251a3f78",
+    "principal_id": "ephemeral:remote_mcp",
+    "broker_epoch": "25fdbe66ee704b40ab4040bc390ee793",
+    "device_fingerprint": "550115278762c26269354dc573729668a6647f42c7c8ffc9eb56967b958e51e5",
+    "expected_firmware_sha256": "25249d3df9c9d5ea0eda71b51cd051767b355cdc14274261ea9066593c98e8f5",
+    "flash_receipt": {
+      "build_job_id": "derby-j1-on-build-b561aea1-s30-20261020",
+      "build_plan_hash": "7b272f7b95a99d2ff5fee82aa2e67e16cfe8d66d3b08c10c9852640b66f1c6d1",
+      "derby_detail_mode": "ON",
+      "device_fingerprint": "550115278762c26269354dc573729668a6647f42c7c8ffc9eb56967b958e51e5",
+      "device_id": "cardputer",
+      "expected_app_bin_sha256": "3f3eda8021804466be2ab5d1a6ed0953f96494e05ff1e42aa46a0dae919a0de9",
+      "expected_elf_sha256": "25249d3df9c9d5ea0eda71b51cd051767b355cdc14274261ea9066593c98e8f5",
+      "firmware_receipt": "db1e10643f69ab8510dfd43df9d4649ddf26f91a03c081910cfec15f6de46a18",
+      "flash_job_id": "derby-j1-on-flash-b561aea1-20261020",
+      "flash_plan_hash": "139671fed38eb6eeb52e315fbb66cacacb1eadc02db118dab925197e5db06096",
+      "manifest_sha256": "ec48b781a70826350e67e47983d8ca2653dee01d3ca2861775fde933f214d1c4",
+      "modeproof_sha256": "a504d85a5a3378469e68f278e4710d5bdee78e03147c68f6aa28f31d3c4953eb",
+      "principal_id": "ephemeral:remote_mcp",
+      "schema_version": 1,
+      "source_commit": "b561aea1c0798feb28055a00d36681fae81ac58a",
+      "source_receipt": "f943d8a86e72e70015040a73e1d389f09b3fda1839ae44ea361b1b8423ecb822"
+    },
+    "protocol_parser_commit": "4d60de5e82193975596bc23981d3189e2e6bf78d",
+    "device_reported_session": "1",
+    "installed_boot_source_image": "unverified"
+  },
+  "project_parse_collected_pass": true,
+  "pinned_parse_collected_pass": true,
+  "work_us": [
+    6767374,
+    6772187,
+    6771247
+  ],
+  "quality": [
+    "0",
+    "0",
+    "0"
+  ],
+  "valid": [
+    "1",
+    "1",
+    "1"
+  ]
+}

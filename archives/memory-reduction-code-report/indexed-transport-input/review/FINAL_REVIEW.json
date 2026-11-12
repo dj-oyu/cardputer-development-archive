@@ -1,0 +1,58 @@
+{
+  "status": "PASS_RETAINED_OUTPUT_INDEPENDENT_AUDIT",
+  "rerenders": 0,
+  "memoryLedgerAndGuardVerified": true,
+  "namedPeak": 496152,
+  "namedPeakSaved": 9800,
+  "renderPhasePayloadSaved": 0,
+  "mainStackIncrease": 16,
+  "transportAllocation": 28592,
+  "largestNamedConstructionAllocation": 81356,
+  "largestNamedRenderAllocation": 77312,
+  "backgroundStack": 4080,
+  "backgroundCap": 4096,
+  "guardUpperOffOn": [
+    927,
+    985
+  ],
+  "sourceFreezeSHA256": "42adcf46e7e46960351c43e09ffa41ee2c4bb68085cad6a23481f9c36781a9c2",
+  "gateSHA256": "316018305f9f65f6d327662495ef5531c8958db9c4f9b7bbc40c996ff5192065",
+  "completedManifestSHA256": {
+    "off": "d48c73d9bfae677bf2f7ed61faac65d93f5a53278ece87291c4f10aa18678a5b",
+    "on": "6171f6f8fb975c72d01824c059e6dba385272d1016d3aad3fc9085bd96428526"
+  },
+  "comparisons": {
+    "frames": 40,
+    "raw": 200,
+    "reports": 280,
+    "forwardReverse": 80
+  },
+  "onlyNonTimingDifferences": {
+    ".json": {
+      "transportTemporaryBytes": [
+        100224,
+        35868
+      ]
+    }
+  },
+  "timingExceptionsOnly": {
+    ".json": [
+      "transportBuildNs",
+      "visibilityBuildNs",
+      "appendNs",
+      "evaluateNs",
+      "hostRenderNsFirstFrame"
+    ],
+    ".background.json": [
+      "backgroundBuildNs"
+    ],
+    ".row.json": [
+      "backgroundBuildNs"
+    ]
+  },
+  "allPinsVerified": true,
+  "maximumObservedAA": 7804336,
+  "maximumProducerWork": 441972,
+  "auditScriptSHA256": "75ffab5fd8975374b32a075af78100d91f0f6db23a42a27d14183d98bcb073dc",
+  "memoryQualification": "Named initial-lifecycle peak only. Indexed caller input35868 versus100224; persistent scene28592 unchanged. Generic allunique compact may be8192 larger than legacy. No device/whole-host fit or speedup claim."
+}

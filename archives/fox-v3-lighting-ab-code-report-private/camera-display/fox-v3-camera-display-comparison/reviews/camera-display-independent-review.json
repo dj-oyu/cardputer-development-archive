@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "centerReuseProofExact": true,
+  "centerScope": "source/input-derived, no current f64 observation",
+  "reconstructionReview": "/tmp/camera-display-reconstruction-review.json",
+  "formalReview": "/tmp/camera-display-formal-review.json",
+  "pinCounts": {
+    "OUTPUT_PINS.json": 56,
+    "run-001/POSTPROCESS_INPUT_PINS.json": 68
+  },
+  "loaderRegressionTests": 19,
+  "rendererRuns": 0,
+  "globalAcceptance": "NOT_ESTABLISHED",
+  "stableDefinedStatusPass": 36,
+  "stableEmptyUnionNotPass": 6,
+  "retainedUncertaintyConditions": 18,
+  "timingScope": "concurrent host reference, not isolated benchmark"
+}

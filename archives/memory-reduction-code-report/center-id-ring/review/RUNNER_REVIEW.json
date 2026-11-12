@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "runnerSHA256": "5aa986ae496c267291dad80503b3fd8b277e2786035b30a21380290750e20b69",
+  "sourceFreezeSHA256": "63358b04f50a9c2e0757abe36e94c6f64e76daf0b7be4403df5b0e9352f96bd9",
+  "baselinePinsSHA256": "bb6019b3edb9a65f44cf16fd28176e6e567f0d55a224a0e93659efce908f4ac9",
+  "review": "Read-only source and manifest audit; runner not executed by reviewer.",
+  "checks": [
+    "Explicit parent fixed40 gate and review/source/build/baseline pins required before every case and publication",
+    "Completed same-arm/order baseline20+20 pinned, baseline first front canary",
+    "OFF20 completion required before ON",
+    "Fresh canary directory, exclusive stdout/stderr creation and any existing case artifacts block rerun",
+    "Exact RGB565,floatdepth,snapshot,targetmask,doubleHDR bytes",
+    "Seven report objects deeply equal except exact workspace137312to77312 and seven named timing fields",
+    "HONE environment cleared then restored from pinned baseline command; input path and reverse preserved",
+    "Failure keeps attempted artifacts and publishes no completion",
+    "Forward/reverse RGBdepthmaskHDR equality checked; all20 unique required for arm completion"
+  ],
+  "limits": [
+    "Parent must launch with ordinary Python, not -O/PYTHONOPTIMIZE, because guards are assertions",
+    "This review does not authorize actual renders or validate actual outputs"
+  ],
+  "actualFramesRunByReviewer": 0
+}

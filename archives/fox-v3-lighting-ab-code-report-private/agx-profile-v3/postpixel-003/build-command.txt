@@ -1,0 +1,1 @@
+cc -std=c11 -O2 -shared -fPIC -ffp-contract=off -fexcess-precision=standard -I fox-v3-agx-profile/profile -I fox-v3-agx-profile/product/main fox-v3-agx-profile/code/profile_buffer.c fox-v3-agx-profile/profile/agx_profile.c -lm -o fox-v3-agx-profile/profile-buffer.so

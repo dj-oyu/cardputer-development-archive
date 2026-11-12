@@ -1,0 +1,64 @@
+--- baseline/transport/bounce.c
++++ diagnostic-sampler/transport/bounce.c
+@@ -119,3 +119,44 @@
+ }
+ 
+ int bounce_scene_matches_ground(const bounce_scene *s,const bounce_ground *g){bounce_ground off={0};return s&&sameground(&s->ground,g?g:&off);}
++
++/* Private point-audit extension. Original implementation above is unchanged. */
++static void direction_diag(const double n[3],unsigned count,unsigned idx,double phase_turns,double d[3]){
++ unsigned m=count==16?2:count==64?4:8,az=idx%(4*m),ring=idx/(4*m);double r=sqrt((ring+.5)/m),phi=6.283185307179586476925286766559*(az+.5*(ring%2))/(4*m);
++ if(phase_turns!=0)phi+=6.283185307179586476925286766559*phase_turns;
++ double ref[3]={0,0,0},u[3],v[3];int axis=0;if(fabs(n[1])<fabs(n[axis]))axis=1;if(fabs(n[2])<fabs(n[axis]))axis=2;ref[axis]=1;cross(ref,n,u);norm(u,u);cross(n,u,v);
++ for(int k=0;k<3;k++)d[k]=r*cos(phi)*u[k]+r*sin(phi)*v[k]+sqrt(1-r*r)*n[k];
++ norm(d,d);
++}
++static bounce_status world_visible_diag(const bounce_scene *s,const double p[3],const double n[3],unsigned count,double phase_turns,vis_budget *budget,double out[3],bounce_counters *c){
++ unsigned misses=0;for(unsigned j=0;j<count;j++){double d[3];direction_diag(n,count,j,phase_turns,d);vis_hit h; c->secondary_world_rays++;vis_status v=vis_ray_nearest(&s->geometry,s->generation.visibility,p,d,budget,&h);if(v!=VIS_OK)return vst(v);if(!h.found)misses++;else if(isground(s,h.triangle_ordinal))c->secondary_ground_hits++;}for(int k=0;k<3;k++)out[k]=s->lights.world_radiance[k]*((double)misses/count);return BOUNCE_OK;
++}
++bounce_status bounce_eval_diagnostic(const bounce_binding *b,bounce_generation g,const double p[3],const double normal[3],const double rho[3],bounce_mode mode,unsigned outer,unsigned inner,double outer_phase_turns,double inner_phase_turns,vis_budget *direct_budget,vis_budget *budget,bounce_result *out){
++ if(!b||!b->scene||!p||!normal||!rho||!direct_budget||!budget||!out||mode<BOUNCE_OFF||mode>BOUNCE_ONE||(outer!=16&&outer!=64&&outer!=256)||(inner!=16&&inner!=64))return BOUNCE_INVALID;
++ if(!isfinite(outer_phase_turns)||!isfinite(inner_phase_turns)||outer_phase_turns<0||outer_phase_turns>=1||inner_phase_turns<0||inner_phase_turns>=1)return BOUNCE_INVALID;
++ const bounce_scene *s=b->scene;if(!eq(g,b->generation)||!eq(g,s->generation))return BOUNCE_GENERATION;
++ if(owned(s,out,sizeof(*out))||owned(s,direct_budget,sizeof(*direct_budget))||overlap(out,sizeof(*out),direct_budget,sizeof(*direct_budget))||overlap(direct_budget,sizeof(*direct_budget),budget,sizeof(*budget))||owned(s,budget,sizeof(*budget))||overlap(out,sizeof(*out),budget,sizeof(*budget))||overlap(out,sizeof(*out),b,sizeof(*b)))return BOUNCE_INVALID;
++ if(overlap(direct_budget,sizeof(*direct_budget),b,sizeof(*b))||overlap(budget,sizeof(*budget),b,sizeof(*b)))return BOUNCE_INVALID;
++ const double *inputs[3]={p,normal,rho};
++ for(int i=0;i<3;i++)if(overlap(direct_budget,sizeof(*direct_budget),inputs[i],3*sizeof(double))||overlap(budget,sizeof(*budget),inputs[i],3*sizeof(double)))return BOUNCE_INVALID;
++ double n[3];if(!norm(normal,n))return BOUNCE_INVALID;for(int k=0;k<3;k++)if(!isfinite(p[k])||!isfinite(rho[k])||rho[k]<0||rho[k]>1)return BOUNCE_INVALID;
++ bounce_result result={0};FoxDiskScene direct=s->lights;memset(direct.world_radiance,0,sizeof(direct.world_radiance));direct_context ctx={s,direct_budget,BOUNCE_OK,&result.counters.primary_direct_queries};
++ FoxDiskStatus fs=fox_disk_eval16_visible(&direct,p,n,rho,visible,&ctx,result.direct);if(fs!=FOX_DISK_OK)return ctx.failure?ctx.failure:BOUNCE_LIGHTING;
++ if(mode==BOUNCE_OFF){for(int k=0;k<3;k++)result.world[k]=rho[k]*s->lights.world_radiance[k];}
++ else for(unsigned j=0;j<outer;j++){
++  double d[3];direction_diag(n,outer,j,outer_phase_turns,d);vis_hit h;result.counters.primary_rays++;vis_status v=vis_ray_nearest(&s->geometry,g.visibility,p,d,budget,&h);if(v!=VIS_OK)return vst(v);
++  if(!h.found){result.counters.primary_misses++;for(int k=0;k<3;k++)result.world[k]+=rho[k]*s->lights.world_radiance[k]/outer;continue;}result.counters.primary_hits++;
++  if(isground(s,h.triangle_ordinal)){
++   result.counters.primary_ground_hits++;
++   if(s->ground.mode==BOUNCE_GROUND_PRIMARY_LE){result.counters.primary_ground_emission_hits++;for(int k=0;k<3;k++)result.ground[k]+=rho[k]*s->ground.le[k]/outer;}
++   continue;
++  }
++  if(mode!=BOUNCE_ONE)continue;
++  double ns[3],ry[3],secondary[3],world[3];int reflect;bounce_status st=hit_material(s,&h,d,ns,ry,&reflect,&result.counters);if(st)return st;if(!reflect)continue;
++  ctx.budget=budget;ctx.queries=&result.counters.secondary_direct_queries;fs=fox_disk_eval16_visible(&direct,h.position,ns,ry,visible,&ctx,secondary);if(fs!=FOX_DISK_OK)return ctx.failure?ctx.failure:BOUNCE_LIGHTING;
++  st=world_visible_diag(s,h.position,ns,inner,inner_phase_turns,budget,world,&result.counters);if(st)return st;
++  for(int k=0;k<3;k++)result.bounce[k]+=rho[k]*(secondary[k]+ry[k]*world[k])/outer;
++ }
++ for(int k=0;k<3;k++){result.combined[k]=result.direct[k]+result.world[k]+result.bounce[k];if(s->ground.mode!=BOUNCE_GROUND_OFF)result.combined[k]+=result.ground[k];if(!isfinite(result.combined[k])||result.combined[k]<0)return BOUNCE_INVALID;}
++ *out=result;return BOUNCE_OK;
++}
+--- baseline/transport/bounce.h
++++ diagnostic-sampler/transport/bounce.h
+@@ -68,4 +68,14 @@
+  bounce_mode mode,unsigned outer_samples,unsigned inner_samples,
+  vis_budget *direct_budget,vis_budget *transport_budget,bounce_result *out);
+ const char *bounce_status_string(bounce_status status);
++/* Private bounded point-audit API, never a native frame default.
++ * outer_samples: 16/64/256; inner_samples: 16/64. Phases are finite turns in
++ * [0,1), azimuth only. Zero phase preserves original 16/64 arithmetic exactly.
++ * Caller supplies separate cumulative diagnostic budgets; no automatic growth.
++ * On failure out remains unchanged; consumed work remains in budget.used. */
++bounce_status bounce_eval_diagnostic(const bounce_binding *binding,bounce_generation expected,
++ const double position[3],const double normal[3],const double rho[3],
++ bounce_mode mode,unsigned outer_samples,unsigned inner_samples,
++ double outer_phase_turns,double inner_phase_turns,
++ vis_budget *direct_budget,vis_budget *transport_budget,bounce_result *out);
+ #endif

@@ -1,0 +1,258 @@
+{
+  "review_version": 1,
+  "reviewed_utc": "2026-10-20T06:11:23.048010+00:00",
+  "verdict": "NATIVE_EXACT_SOURCE_BUILD_VERIFIED_LINKED_DETAIL_ON_ACCEPTED_NO_HARDWARE",
+  "scope": "Local saved evidence only; no API/MCP/USB/device/job/source/build/code actions, no test or target rebuild. Prior preliminary review unchanged.",
+  "source": {
+    "submodules": [
+      {
+        "path": "third_party/bmi270",
+        "repository": "boschsensortec/BMI270_SensorAPI",
+        "commit": "41129fcfe39c583ee5462d79195741945d51c1fe",
+        "tree_sha1": "d92e2a136c4beee1ebed056a383952621d1867fa",
+        "archive_sha256": "4916d6c23c0068555e272f5d90f6db95be36acae2ad4c824945c98690b4b23f3",
+        "source_sha256": "c31ac3c3a66fa9d694ff19e8117b559336d75417d2ff8ae6b0d830a1b6611184"
+      },
+      {
+        "path": "third_party/minimp3",
+        "repository": "lieff/minimp3",
+        "commit": "ea99364f61c14656440e8d77e9c233ccf3124633",
+        "tree_sha1": "9560d2efb899d694f331f93bb8c9cebf2928a194",
+        "archive_sha256": "5f966027ddc3dee3306c71829bdd59276673a2516f72aadde14adab75a851fc2",
+        "source_sha256": "a412c3127cab86430395c329e17811eb4d705f9d197a9e56193b138e8bf97d63"
+      },
+      {
+        "path": "third_party/opus",
+        "repository": "xiph/opus",
+        "commit": "22244de5a79bd1d6d623c32e72bf1954b56235be",
+        "tree_sha1": "a5e21b6751d8f187b83ad9d5f3a57aab801cf722",
+        "archive_sha256": "f5b624fdcd9e0e99254f8a3c9cac9f2d2830ba2a2a3c77955ac7acd0d069df5e",
+        "source_sha256": "bd9b409b79aaf9f2bfff88c1fcf09e98a99194f56a928b34ca429719902b9d57"
+      }
+    ],
+    "source_receipt": "bbf729af426e3110943d2fcad025311b1d088b773c0cecdbb53b4fde92e16679",
+    "repository": "dj-oyu/cardputer-adv-pocketjs",
+    "commit": "3fafcadbd72ecbd0d799cbe9d29f037ff62c05d5",
+    "tree_sha1": "b3de719ac438d8d3373a2c34786bc35c46e9200e",
+    "source_sha256": "2b6f8223ef87de643e976686905f7fe75346f39143ea5cbdd3e00210e1200e3d",
+    "files": 2856,
+    "bytes": 85814519
+  },
+  "source_job": "derby-controller-native-source-3fafcadb-20261020",
+  "build_job": "derby-controller-native-build-3fafcadb-20261020",
+  "build_plan_hash": "5278da581c85332db700e92a166db9b27476099ff192fd1fb6654335b5e5102d",
+  "build_finished": "2026-10-20 06:09:32",
+  "build_elapsed_seconds": 183.0,
+  "broker_epoch": "51bfd752bc2a460db00a835c45250282",
+  "log_entries": 2120,
+  "log_pages": 23,
+  "proof_sequence": 2107,
+  "provider_log_sha256": "afe817c266c1714dbae25215dced12a3611bcf9141e1e120d9a620d8e7ea6fae",
+  "manifest_sha256_canonical": "32cf6e6b8ec0c52462a4cef083232945e91fdf55749ec5e6a74f5d1e3ef503d1",
+  "artifacts": {
+    "cardputer_pocketjs.bin": {
+      "bytes": 2296944,
+      "sha256": "aeb601df47809fb6b651ee265a41dcbf727520dd0678c1030bd8e3c1ffd892b1"
+    },
+    "cardputer_pocketjs.elf": {
+      "bytes": 20046164,
+      "sha256": "0e8abb684ab242633288861488a969f15f91bfb004dd37708d2a793c8f0e80d4"
+    }
+  },
+  "actual_modes": {
+    "telemetry": "ON",
+    "measure": "ON",
+    "fixed": "ON",
+    "detail": "ON"
+  },
+  "fixture": {
+    "camera": 8,
+    "contexts": 120,
+    "end": 510,
+    "finish": "5DC86E18",
+    "id": "oval-pan8-390-510-v1",
+    "independent": false,
+    "oval": 1,
+    "race": 1000001,
+    "repetitions": 3,
+    "seed": "9112A7AB",
+    "start": 390,
+    "tier": 1
+  },
+  "hardware_seed": "2545F491",
+  "hardware_accepted": false,
+  "checks": {
+    "exact_native_source": true,
+    "successful_source": true,
+    "registered_plan_to_result": true,
+    "no_flash_build_success": true,
+    "source_provenance_exact": true,
+    "epoch_profile": true,
+    "time_budget_expiry": true,
+    "log_contiguous2120": true,
+    "verified_manifest_pages_consistent": true,
+    "manifest_job_plan": true,
+    "manifest_source_profile": true,
+    "manifest_not_flash_permission": true,
+    "unique_mandatory_proof": true,
+    "actual_four_modes_on": true,
+    "hardware_seed_fixed": true,
+    "full_fixture": true,
+    "linked_owner_exit": true,
+    "linked_detail": true,
+    "embedded_play_view_seed": true,
+    "same_cmake_modes_cache": true,
+    "artifact_manifest_pair_cardputer_pocketjs.bin": true,
+    "artifact_manifest_pair_cardputer_pocketjs.elf": true,
+    "native_bin_exact": true,
+    "native_elf_exact": true,
+    "redacted_log_identical": true,
+    "parent_summary_exact": true,
+    "no_hardware_claim": true,
+    "post_build_idle_unowned": true,
+    "post_build_no_uncertainty": true,
+    "prior_preliminary_unchanged": true
+  },
+  "input_sha256": {
+    "/workspace/derby-evidence/controller-native-20261020/build-001-logs.json": {
+      "sha256": "189e6f259ec184d71ae80bc360eb24d9df947ced65bbc64760ef6c5f3be3e002",
+      "bytes": 20759
+    },
+    "/workspace/derby-evidence/controller-native-20261020/build-log-page-002.json": {
+      "sha256": "feda65e30d4ec6bd263e3824d960fa2a3f89f6ac0f99b2a974a92e01a974b5cc",
+      "bytes": 20060
+    },
+    "/workspace/derby-evidence/controller-native-20261020/build-log-page-003.json": {
+      "sha256": "a43adac925d46622fb866b7d76edfdcb2525f63aa48026d288cd84b4662cb883",
+      "bytes": 17460
+    },
+    "/workspace/derby-evidence/controller-native-20261020/build-log-page-004.json": {
+      "sha256": "45bfbac49338fa72b0005f4e2d7ab666b506d016b69cbd2d83460236427bf2ad",
+      "bytes": 17224
+    },
+    "/workspace/derby-evidence/controller-native-20261020/build-log-page-005.json": {
+      "sha256": "9db241e8a54c28fab6ca377744ba1b8cfc1b5c16d88862d00ccb33fecadd73ac",
+      "bytes": 23264
+    },
+    "/workspace/derby-evidence/controller-native-20261020/build-log-page-006.json": {
+      "sha256": "b94ba6228c989ab48064ba3ac76f480d9ad4e1b388b6ee4d6cdf14dc7c601f0b",
+      "bytes": 13190
+    },
+    "/workspace/derby-evidence/controller-native-20261020/build-log-page-007.json": {
+      "sha256": "01cf0a81c33da66bc54eb9fa7f689cac6c33366198863de2b985548cfbb3a2e8",
+      "bytes": 22741
+    },
+    "/workspace/derby-evidence/controller-native-20261020/build-log-page-008.json": {
+      "sha256": "63f4fd2c75b1991cd1ed3cd3761f7348575a7caed6c149938e47ec8c552e8268",
+      "bytes": 23189
+    },
+    "/workspace/derby-evidence/controller-native-20261020/build-log-page-009.json": {
+      "sha256": "b04717fd82f800968958cf7de1107fb52ea573e70293b03128d6e9ded31b538d",
+      "bytes": 23200
+    },
+    "/workspace/derby-evidence/controller-native-20261020/build-log-page-010.json": {
+      "sha256": "55358fb6af632a3cf499b4638858ef33b86a45c85fedc8a4ee5e9645516eff06",
+      "bytes": 23714
+    },
+    "/workspace/derby-evidence/controller-native-20261020/build-log-page-011.json": {
+      "sha256": "af80389df7d789556b79a711de8a94923f122305880ddee1cea4642e6c89f0e0",
+      "bytes": 25697
+    },
+    "/workspace/derby-evidence/controller-native-20261020/build-log-page-012.json": {
+      "sha256": "33be26a290b374a974306d44191d8e50df8e0dcf83be9ad02971f0f688f06cab",
+      "bytes": 24254
+    },
+    "/workspace/derby-evidence/controller-native-20261020/build-log-page-013.json": {
+      "sha256": "e789926f71d194480da52f089f7ddecdd56cc844055420ded29a427d22b6086e",
+      "bytes": 23170
+    },
+    "/workspace/derby-evidence/controller-native-20261020/build-log-page-014.json": {
+      "sha256": "9df1ac9439908c528633bb38cf9bc22fa8ac37286cc33834dd403f448c468fee",
+      "bytes": 23305
+    },
+    "/workspace/derby-evidence/controller-native-20261020/build-log-page-015.json": {
+      "sha256": "f3f28192be22cb6612860f219bb799e20e2a5892febe1c1724432a48973853ba",
+      "bytes": 21076
+    },
+    "/workspace/derby-evidence/controller-native-20261020/build-log-page-016.json": {
+      "sha256": "0c4f0852d7a28d59d26097df6f64118b8cc3c62f95eda904bbc67b201bbd8299",
+      "bytes": 20727
+    },
+    "/workspace/derby-evidence/controller-native-20261020/build-log-page-017.json": {
+      "sha256": "e1c7aebfcb205ef8ffaaa88c035fd2ba73a3b74304e794d616bf867eaa731809",
+      "bytes": 16637
+    },
+    "/workspace/derby-evidence/controller-native-20261020/build-log-page-018.json": {
+      "sha256": "cccd53bd7b7bf276ff4281b1f39f38ff4c17356c2f76a0b8a76ab417c0972bb8",
+      "bytes": 23112
+    },
+    "/workspace/derby-evidence/controller-native-20261020/build-log-page-019.json": {
+      "sha256": "f53a6cab7bc86ca248bd8a1fd938d1fa9a07adc57f931d91321c2f96bbad3189",
+      "bytes": 26339
+    },
+    "/workspace/derby-evidence/controller-native-20261020/build-log-page-020.json": {
+      "sha256": "a6c0926cc7adbe4668694709fa7657cac5ef71dd19704bd47ad274f9c873f3fa",
+      "bytes": 27614
+    },
+    "/workspace/derby-evidence/controller-native-20261020/build-log-page-021.json": {
+      "sha256": "b59393b9039b3ce1ac50f8199e7368fd29878e107eb5972dbe268c1fa16e212d",
+      "bytes": 28966
+    },
+    "/workspace/derby-evidence/controller-native-20261020/build-log-page-022.json": {
+      "sha256": "e4f36fce0702fbc3fec1d1b3a7485b0a3871717d5e5bb7ce6cc4b06da69a92c4",
+      "bytes": 27347
+    },
+    "/workspace/derby-evidence/controller-native-20261020/build-final-logs.json": {
+      "sha256": "e4f36fce0702fbc3fec1d1b3a7485b0a3871717d5e5bb7ce6cc4b06da69a92c4",
+      "bytes": 27347
+    },
+    "/workspace/derby-evidence/controller-native-20261020/source-plan.json": {
+      "sha256": "f80bfddde12a5f56418e0a44102d172b3f4604e51d63ef9428973011b6afd5ad",
+      "bytes": 2524
+    },
+    "/workspace/derby-evidence/controller-native-20261020/source-result.json": {
+      "sha256": "687cd4c4ad806fbe3c52fd7c850d9dbc3bfc654b00b66e2725b8f7fb5e8530b4",
+      "bytes": 2366
+    },
+    "/workspace/derby-evidence/controller-native-20261020/build-plan.json": {
+      "sha256": "9daed409ed1ca43521f91ed7d87f75e2bf1d01dbc8de8a4ab15a58acc7a9234d",
+      "bytes": 4053
+    },
+    "/workspace/derby-evidence/controller-native-20261020/build-execute.json": {
+      "sha256": "b2e326388d16d35788de08e49d0baf5d7a832b99fb68caafabf7e43dbbcfe75b",
+      "bytes": 580
+    },
+    "/workspace/derby-evidence/controller-native-20261020/build-result.json": {
+      "sha256": "d34e2b020827cd00d7a2ee1196837220843f125323f4e0c6f7cd042c400e5051",
+      "bytes": 613
+    },
+    "/workspace/derby-evidence/controller-native-20261020/SOURCE-BUILD-PROOF.json": {
+      "sha256": "5a43769e07041bbb9cf4389aa6199aa7c8a895a0d14ba658d9cee820d1ec2197",
+      "bytes": 11207
+    },
+    "/workspace/derby-evidence/controller-native-20261020/build-output-redacted.log": {
+      "sha256": "afe817c266c1714dbae25215dced12a3611bcf9141e1e120d9a620d8e7ea6fae",
+      "bytes": 194549
+    },
+    "/workspace/derby-evidence/controller-native-20261020/status-after-build.json": {
+      "sha256": "ee32fddf5245fc2a063ba56e317fea56861f52177754bce1b789e6eef69716c0",
+      "bytes": 1117
+    },
+    "/workspace/derby-evidence/controller-native-20261020/verify_source_build.py": {
+      "sha256": "8cba0b9bca871f2511f079723dd297035a31e760a7af81782562d2f11adeced5",
+      "bytes": 5319
+    },
+    "/workspace/derby-evidence/controller-native-20261020/INDEPENDENT-NATIVE-PREFLIGHT-REVIEW.json": {
+      "sha256": "a52eccca0325cfafd96de36bf21149143f71b9197b7f6aed581db898880f23bd",
+      "bytes": 17602
+    }
+  },
+  "pending": [
+    "No native flash/readback/boot or ON finite trial acceptance yet. Owner must use a new exact plan and current baseline e40bf receipt under the separate existing hardware scope."
+  ],
+  "limits": [
+    "Provider verified manifest/linked-image proof was decoded independently; raw BIN/ELF/source archive bodies were not materialized or rehashed locally.",
+    "Build success and mode proof do not establish startup/OOM/runtime watchdog or performance outcome.",
+    "Earlier cache preservation/64B aggregate accounting note remain in unchanged preflight review. No new deletion, limits or configuration actions were taken by reviewer."
+  ]
+}

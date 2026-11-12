@@ -1,0 +1,85 @@
+Cardputer character authoring: bounded Blender proof, 2026-11-01
+
+結論
+Blender 原本の通常編集（頬の移動・細分割と口吻の拡幅）から、同じ export / identity compile / 実 native render 操作を再実行できた。
+ただし現 backend は遮蔽と runtime morph に不足があり、制作方式の製品採用には進めない。縮小なし対照で停止した。
+
+実施範囲
+新規の独立ディレクトリに、最小の顔面実証用 before.blend / after.blend を制作した。
+眼窩は head mesh の Boolean difference で作り、眼、瞼、口吻、顎、口内を重ねた。
+左右瞼に blink、顎に jawOpen の Shape Key を持つ（2種類の意味目標、計3 mesh target）。
+neutral / blink=.5 / blink=1 / jawOpen=.5 / jawOpen=1 / combined の6ポーズを評価。
+2 revision × 6 pose × yaw 0,-35,+35 の36条件。全条件 opaque、材質色だけ、240x135、正射影、縮小なし。
+原本編集は head 頂点106→123、source mesh 全体216→233頂点、400→434三角形。
+変更後も compiler / exported vertex index / triangle order の手修正なし。
+元の係数生成器・旧未公開ファイルは使用していない。既存 repo checkout は変更していない。
+
+実経路と失敗の区別
+1. .blend → bundled Blender 4.3.2 glTF exporter → with-morph.glb
+   現 importer は before/after とも meshes/2/weights: morph unsupported (UNSUPPORTED) を返す。
+   ここが動的表情経路の blocker。morph import / runtime 実装の成功とはしない。
+2. 診断用に同じ .blend の評価済みポーズを明示的に静的 mesh へ bake → GLB → 現 importer → 自動32/64 partition → 現 AYNM packer → 現 C evaluator / band renderer。
+   静的6ポーズの成功を runtime morph と呼ばない。silent rest fallback ではない。
+3. .blend の評価済み mesh を直接 JSON 化し、独立した offline depth raster で参照画像を作成。
+   同じ raster に GLB/IR を渡した参照画像と比較。36条件すべて source→export画像差0画素。
+   これは指定サンプルでの geometry/material-color export 確認。Blender beauty/PBR画像や連続全域の保証ではない。
+4. 同じ camera / scale / pose の実 native 最終RGB565と参照を比較。
+   実 native は34/36条件で内部領域の部品IDを誤る。最大419画素（before neutral正面: 左眼163、右眼163、顎93）。
+   輪郭境界の差を数えない内部領域でも発生。縮小・normal・照明の問題へ帰さない。
+   36条件すべてに、単一のsurface描画順では両立しない2方向の前後関係がある。
+   before neutral正面: 口吻が顎の手前になる7画素と、顎が口吻の手前になる44画素。
+   order-diagnosis.json に座標・depthと全caseの根拠を保持。
+   これは部品単位順序の不足の証拠。自動面分割や三角形順序で解ける可能性まで否定したものではない。
+
+比較画像
+results-v3/comparison-yaw0.png と comparison-yaw-35.png / comparison-yaw35.png。
+左: Blender評価済み原本geometryのoffline深度参照。中央: 既存C renderer。右: 差分。
+ピンクは画面4近傍が同じ部品である内部領域の部品ID誤り、橙はその他のRGB565差。
+各原画像は240x135、一覧はnearest拡大。入力ごとにcameraを再fitしていない。
+最小の瞼形状には斜めの閉眼で眼の端が残る。完成美術ではなく、これを修正してnative失敗を隠すこともしていない。
+
+再現性
+同一のexport_source.py / compile_identity.cjs / native rendererをbefore/afterの両方に使用。
+再実行で各revisionの7 GLB全byte一致、neutral AYNM一致、3視点のpixels/coverage/triangle-tag全byte一致。
+replay/replay.json に記録。source/compiled/renderのhashはEVIDENCE.jsonに保持。
+reference/ は GitHub connector で公開commit 76796a5c5ae53505de7de4f79b8e205ea1dc9c19 から取得。
+15 sourceのGit blob hash一致を確認。コピー時に付いた末尾改行を正規化した前後でnative executableも全byte一致。
+reference sourceにロジック変更はない。reference-provenance.json を参照。
+
+測定（host Linux x86_64、Blender 4.3.2、Node24.19.0、gcc14.2、O2）
+                             before      after
+cold AYNM bytes              12,224      14,056
+Instance arena bytes        18,572      21,484
+native nodes(root含む)       14          16
+neutral正面frame segments   629         733
+neutral正面raster cost      18,422      19,963
+7GLB export wall time       1,604 ms    1,351 ms
+neutral compile wall time   53.2 ms     63.9 ms
+3view native process        5.59-6.08ms 5.69-7.44ms
+Instanceは実C estimatorの64bit値。cold資産、snapshot、wrapper、全guest peak、stack等を含む総RAMではない。
+exportはBlender起動と7ファイル生成を含む1回ずつのwall測定。compileはNode起動を含む。
+native processは起動・モデル読込・通常画像・coverage画像・全triangle診断pass・ファイル出力を含む。1frameの速度でもFPSでもない。
+results-v3のnativeHostMaxRssKiB=9088はPython launcher経由のOS ru_maxrssで、exec前の継承highwaterを含み得る。native実使用量や実機RAMの根拠には使わない。
+未測定: m32/QuickJS guest peak、実機ESP free/largest/stack、native morph費用、実機描画時間、LCD画質、長時間挙動。
+
+再利用できた部分
+公開static GLB importer（限定profile）、自動partition、AYNM packer/reader、C TRS/normal評価、Model/Instance arena、C band rendererと診断tag replay。
+最小追加コードはBlender原本作成・通常編集・export、縮小なしcompiler接続、offline比較・再現記録。製品コードの追加ではない。
+partition後頂点は291→342で原本216→233より多い。縮小なしでも分割境界複製と固定slot費用がある。
+
+次に必要な最小変更案（今回は未実装）
+A. opaque mesh packetへview-depthを保持し、mesh/partをまたぐ深度判定を1つの描画passで共有する。
+   8行bandならF32 depthだけで240*8*4=7680B案。snapshot増分・全guest・物理RAM・raster費用を含めて別途判定。
+   従来packetはdepthを持たないため、sort設定変更だけではこの案にならない。
+   自動triangle分割/並べ替えは代案だが、表情中の交差を毎回解く費用が未確認。作者の面順指定を前提にしない。
+B. 少数morphのPOSITION/NORMAL deltaと対応をimport/IRへ保持し、同一topologyで2意味目標を評価するnative最小経路。
+   変形後にnormal、projection、backface、boundsを更新し、committed frameのsnapshotと失敗rollback契約を維持する。
+   毎表情のGLB load/Model recreateやstatic-bake列を、最終runtime解として採用しない。
+C. A/Bがこの原本で成立した後に初めて、1つの縮小予算と複合表情で共通対応を評価する。
+   今回のidentity失敗を改善せずに、縮小器や狐造形へ進まない。
+
+止めた地点
+既存backendの遮蔽不足とmorph拒否を再現し、失敗画像と必要変更を特定したため停止。
+広いrenderer再実装、新runtime morph、縮小、製品既定変更、追加install、public push、merge、実機操作は行っていない。
+拒否された権限操作はない。Blenderのoptional Draco library未配置という起動ログはあるが、非圧縮GLB exportは成功し使用extensionなし。追加導入なし。
+狐の美術的合格、新方式の製品採用、一般Blender shader対応は主張しない。

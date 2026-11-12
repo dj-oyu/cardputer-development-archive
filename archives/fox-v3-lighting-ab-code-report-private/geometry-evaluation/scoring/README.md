@@ -1,0 +1,147 @@
+# Candidate scorer against frozen reference v3
+
+This directory contains a new read-only scoring wrapper. It does not render, change any v3 artifact, publish, upload, or infer a replacement for missing historical candidate data.
+
+## Run
+
+From the workspace root:
+
+```sh
+python -B fox-v3-lighting-ab/scoring/test_score_candidate.py
+python -B fox-v3-lighting-ab/scoring/score_candidate.py \
+  fox-v3-lighting-ab/linear-on-001/candidate-manifest.json \
+  --reference fox-reference-uncertainty-v3 \
+  --output fox-v3-lighting-ab/score-linear-on-001
+```
+
+The output directory **must not exist**, and its parent must exist. Never reuse or overwrite an earlier score directory. An invalid manifest/input exits with code 2 before output creation. A filesystem failure during writing can leave a partial output directory; only a valid `COMPLETED.json` with matching hashes establishes a completed scoring run. Choose a new output directory after investigating such a failure.
+
+Dependencies: Python 3, NumPy, Pillow. No package installation is performed.
+
+## Candidate manifest
+
+The machine-readable structural schema is `manifest.schema.json`. Runtime validation additionally checks the full cross-record contract:
+
+- `schemaVersion` is `fox-candidate-rgb565-v1`.
+- `candidate` has nonempty `label`, `sourceLabel`, `head`, and a nonempty `sourceFiles` array of `{file, sha256}` records. Source/head labels are preserved exactly, not presented as proof that declared source produced the images.
+- `reference.version` is `new-reference-uncertainty-v3`; `reference.configSHA256` is `4a9d836a4dae2fc570f5f0fb99690ab0f13fbe394589f785b56e891e0573dc40`.
+- `resolution` is `[240,135]`, with width first.
+- `rgb565Format` is `RGB565_U16_LE_ROW_MAJOR`.
+- `depthFormat` is `FLOAT32_LE_ROW_MAJOR_NEG_INF_BACKGROUND`.
+- `frames` contains exactly one row for each `front`/`oblique` × `baseline`/`direction`/`intensity`/`ambient`/`albedo` combination.
+- Each frame has `view`, `case`, `rgb565:{file,sha256}`, `depth:{file,sha256}`, and `metadata`.
+- Each frame's `metadata` contains `resolution`, `nativeCamera`, `scenario`, `sourceLabel`, `head`, `nativeInput`, and `actual`. The camera array and scenario object must match the corresponding frozen `input/config.json` entries exactly. Source/head labels must match the top-level declaration. Extra metadata is retained.
+- `inputs/candidate-config.json` must be included in hashed `sourceFiles`. Its reference/source hashes, cameras, complete unique scenario grid, and reference-scenario fields are validated. Each frame's `nativeInput` must equal its configured native scenario exactly. The renderer echo `metadata.actual.camera` must match the frozen camera with absolute tolerance `1e-5`, and `metadata.actual.light` must match the configured concatenated `nativeDirection + intensity` with absolute tolerance `1e-6`; both use zero relative tolerance and require finite values with exact vector lengths. These are consistency checks on supplied records, not independent proof of execution.
+- Every path is normalized, relative to the candidate manifest directory, and contained within it. Absolute paths, `..`, absent files, reused resolved paths, duplicate JSON keys, nonfinite JSON numbers, wrong file hashes, duplicate/unexpected frames, and incomplete grids are rejected.
+- RGB565 filenames end in `.u16le` and contain exactly 64,800 bytes. Depth filenames end in `.f32le` and contain exactly 129,600 bytes.
+- Depth NaN and positive infinity are rejected. Negative infinity is the only nonfinite background marker. At least one finite foreground pixel must exist per frame.
+
+All raster records are row-major, top-to-bottom, left-to-right. RGB565 words use red bits 15–11, green 10–5, and blue 4–0. Direct float64 decoding is R5/31, G6/63, B5/31. The scorer never expands to uint8 or requantizes candidate colors through PNG.
+
+## Frozen reference contract
+
+`reference-pins.json` pins the existing v3 config, execution freeze, render manifest, artifact manifest, evaluator, pack evaluator, and saved evaluation. The entire pinned artifact manifest is checked, including all reference PNG/metadata/mask files. The original source blend is also hash-checked at its declared path. No rendering is invoked.
+
+The wrapper reproduces the read-only checks in `code/evaluate_pack.py`. It deliberately does **not** import or execute that script, whose top-level CLI writes into the reference directory. It compiles the verified `code/evaluator.py` bytes into a module in memory; this produces no reference `__pycache__` writes. The original evaluator's PNG8 functions are used unchanged.
+
+Each color/response stability array is compared exactly with the corresponding frozen `.npz` file. All 18 stored stability results must replay exactly. Every reference artifact and the original blend are checked again before writing output. The candidate files and manifest are likewise revalidated after calculation.
+
+## Scoring domains and interpretation
+
+- Color and response use **only the fixed source alpha8 > 0 foreground**. Candidate depth never trims that domain. Missing candidate geometry therefore remains visible in these errors.
+- Stable response domains retain stable inactive source pixels, so native false-positive brightening/darkening remains in IoU unions.
+- The exact reference PNG8 integer luma contract, 2/255 threshold, eight paired seeds, all-seed class consensus, and fixed Student-t mean confidence interval are unchanged.
+- Reference color mean-precision masks measure precision, not similarity to a candidate.
+- The frozen evaluator's stable-subset `valueStatus` is preserved. It is a conditional metric status, never a global PASS.
+- Uncertain subset, full-source pooled, and each-seed full-source scores remain descriptive and cannot establish acceptance. Their complete coverage/counts/uncertain coordinates are retained.
+- Empty unions/undefined metrics remain null with N/A semantics, never converted into 100%, PASS, or zero error.
+- Shape compares source foreground against finite candidate depth over the **entire frame**, reporting IoU, extra/missing counts and coverage. Candidate extras outside source are retained. Shape masks are saved for exact localization. Shape is descriptive, with no newly invented acceptance gate.
+- Overall `sixtyPercentGoal` remains `NOT_ESTABLISHED_CONDITIONAL_METRICS_ONLY`. Scoring completion is distinct from goal attainment. No aggregate acceptance rule is invented.
+
+## Output
+
+- `evaluation.json`: complete conditional metrics, per-seed/full-source/uncertain metrics, all source/head labels and candidate metadata, reference input hashes, scorer hashes, coverage, and uncertainty coordinates/frequencies/intervals.
+- Ten `*-masks.npz` files: fixed source, candidate shape, extra/missing pixels, color stability/uncertainty, and response class/stability/uncertainty masks.
+- `STARTED.json`: a writing-start marker.
+- `COMPLETED.json`: final completion marker and SHA256/size records for the evaluation and all ten mask files. The start marker is retained as an audit fact and is not a failure indicator if completion verifies.
+
+## Synthetic checks
+
+Twenty-nine tests currently cover exact little-endian RGB565 decoding without PNG8 conversion; valid depth/background handling; NaN/+inf/all-background rejection; malformed hashes, missing/truncated files, duplicate/unexpected/missing frames, camera/scenario/head/format/resolution mismatch, missing or corrupted actual camera/light echoes, native input mismatch, hashed native-config absence or camera corruption, path traversal/reuse, duplicate JSON keys/nonfinite numbers, full-frame shape extras/missing/empty union, candidate-independent stability, retained stable-inactive false positives, fresh-output rejection, and exact replay against all frozen stability arrays.
+
+Synthetic tests validate the scoring/input machinery, not rendering fidelity. Actual scored outputs must be interpreted with their specific candidate source/head labels and provenance limitations.
+
+## Linear-light A/B metadata extension
+
+Optional `linearLightEnabled` in the hashed `inputs/candidate-config.json` must be an actual JSON boolean. When declared, every frame must contain an exactly matching JSON boolean in `metadata.actual.linearLightEnabled`. Opposite modes, numeric 0/1, omitted echoes, and echoes without a configuration declaration are rejected. Legacy inputs may omit the field in both places. This extension changes validation only; all frozen reference classification, thresholds, confidence intervals, masks and scoring formulas remain unchanged.
+
+## Four-arm physical-disk metadata extension
+
+Optional `physicalDiskEnabled` uses the same strict-boolean/echo contract as `linearLightEnabled`, preserving old snapshots that omit it in both places. When true, hashed `inputs/physical-source.json` is required. Its source/reference identity hashes, complete unique five-case map, three uniquely named source DISK lights per case, finite vectors/positive diameters/nonnegative powers and world values are validated. Key power/location and world strength must also match the frozen reference case metadata within the reference metadata tolerance (1e-5).
+
+Each enabled native scenario must have a `physical` object exactly equal to the corresponding physical-source case, and frame `nativeInput` remains exactly equal to its entire native scenario. Disabled/absent physical mode forbids scenario `physical` fields. Legacy camera/light echoes are still validated as consistency records; the single-light echo is not claimed to be the active shading input in physical mode.
+
+These checks establish consistency of the supplied provenance records, not independent proof of execution or physical validity. Area-only keeps encoded reflectance/output as a diagnostic. Combined mode uses decoded reflectance with the physical lighting implementation and sRGB output; this does not add AgX or make complete renderer fidelity/goal attainment claims. The frozen statistical evaluator is unchanged.
+
+## Physical-source pin hardening
+
+`physical-source-pins.json` freezes the complete trusted `inputs/physical-source.json` bytes (SHA256 and size), source-blend identity/version, frozen-reference identity/version, and exact `code/read_lights.py` plus `code/read_source.py` extractor hashes. Any supplied physical-source file must match this pin, including when present in a physical-disabled snapshot. Extractor files must also be in hashed sourceFiles and match their pins.
+
+This closes a reusable-validator gap: coordinated edits to physical source, native configuration, frame nativeInput, and their manifest hashes are rejected against the external fixed pin. Regression tests exercise Fill power, world RGB and Rim position mutations together with consistent rehashing, plus extractor mutation. This hardening is not evidence that the actual earlier candidate inputs were wrong. Existing outputs are preserved; final reviewed runs use the `four-*-002` snapshots and `score-four-*-002` result directories.
+
+### Pixel-light runtime audit extension (private host64 experiment)
+
+The optional hashed config `pixelLightEnabled` and each actual echo must be strict matching booleans. If declared, both config and actual `agxProfileEnabled` must be boolean false: this experiment intentionally excludes AgX. Pixel ON requires config and actual linear-light and physical-disk modes to be true. Legacy inputs without a pixel declaration keep the prior validation contract; orphan pixel echoes are rejected.
+
+For both declared OFF and ON, actual `shadeUpdates`, `diskSamples`, `snapshotBytes`, `snapshotCapacity`, `work`, `snapshotControlBytes`, and `rawFieldScratchBytes` must be nonnegative JSON integers (not booleans or floats). Disk samples equal 48 times shade updates; ON requires positive updates, OFF zero. Snapshot capacity remains 65,536 bytes, and total snapshot bytes must fit it, including the ON 416-byte light prefix. Work may not exceed 8,000,000. On this current 64-bit host, runtime `sizeof` audit values are 64/48 snapshot-control bytes for ON/OFF and 2,080 raw-field scratch bytes. These are experiment-specific runtime audits, not universal product sizes or cross-ABI promises. Validation refuses this extension on a non-64-bit validator host.
+
+These checks validate metadata claims, not independent proof of renderer execution or output correctness. Existing candidate source hashes detect uncoordinated edits, but a new product-source fixed pin has not been introduced. Existing physical source/extractor pins remain enforced, including coordinated source/config/echo rehash attacks. Reference metrics, reference pins, masks, and stability rules are unchanged. Formal renderer QA is separate from these synthetic negative tests.
+
+Run `python -m unittest -v test_score_candidate.py` from this directory. The pixel extension adds seven multi-variant tests to the preserved 29-test suite, covering flags, coordinated config rehashes, dependencies, absent fields, AgX exclusion, strict integer types, counter relations, snapshot bounds and work limits.
+
+### Visibility runtime audit extension (separate private host arm)
+
+Hashed config `visibilityEnabled` is an optional strict boolean, default false. Actual metadata always requires the same strict boolean echo and `visibilityComplete: true`, including OFF. ON requires pixel lighting, linear lighting and physical disks, with AgX false. The visibility runner's actual baseline confirms 849 vertices and 1,166 triangles from the full-v3 geometry; the validator checks those counts for ON. Positive scene bytes, scene nodes, build time and temporary bytes are required ON. OFF requires all scene counts, bytes, build timing and traversal counters to be zero.
+
+Four exact budgets are mandatory in actual metadata: 1,000,000 rays, 100,000,000 node visits, 50,000,000 triangle tests and 524,288 scene bytes. Corresponding counters must not exceed them. All budget/count/timing values are strict nonnegative JSON integers; missing values, booleans and floating-point numbers are rejected. Scene data remains separate from the unchanged 65,536-byte snapshot budget.
+
+This arm's 45-test suite preserves the previous 36 tests with mandatory visibility-OFF metadata added to their fixtures, and adds nine multi-variant visibility tests. Coordinated unsupported config/actual rehashes, incorrect flags/types, missing/false completion, altered budgets, overflow and nonzero OFF fields are rejected. These metadata checks are not proof of ray correctness or runtime completeness; independent runtime QA is still required. Reference metrics, masks and existing source provenance checks are unchanged.
+
+From the workspace root, score a fresh output directory with:
+
+```
+python fox-v3-pixel-visibility/scoring/score_candidate.py fox-v3-pixel-visibility/on-001/candidate-manifest.json --output fox-v3-pixel-visibility/on-score-001
+```
+
+The output directory must not already exist. Substitute `off-001` and a different fresh output directory for OFF.
+
+
+Final-002 generation/fingerprint audit: actual `visibilityGeneration` must be exactly three JSON integers, `[1,1,1]` ON or `[0,0,0]` OFF. Geometry and snapshot fingerprints must each be 16 lowercase hexadecimal characters, nonzero ON and all-zero OFF. These are runtime accidental-change FNV64 audit values, not cryptographic integrity or independent geometry/snapshot correspondence guarantees. Missing fields and boolean/float generation tokens are rejected. `visibilityBindingBytes` and `visibilityBudgetBytes` must each be integer 48 on this 64-bit host. `visibility-size-probe.c`, compiled against the current headers, independently reports both `sizeof` values as 48. These ABI-specific sizes are not universal product-size promises.
+
+
+Fixed-fixture consistency hardening: ON scene allocation must be 326,496 bytes and temporary allocation 34,368 bytes. Scene nodes must be positive and at most min(4,095, 2×1,166−1)=2,331. Rays must be positive and no greater than disk samples; node visits must be at least rays; triangle tests must be positive for this particular frozen mesh. These stronger assertions audit this fixture, not generic BVH inputs where zero triangle tests can be legitimate. Mutation tests cover oversized node counts, contradictory allocation sizes, zero traversal, more rays than disk samples and fewer node visits than rays.
+
+### Separate host transport experiment
+
+The formal scoring contract accepts strict integer transport modes 0 (off), 1 (world visibility) and 2 (one bounce), defaulting omitted config mode to 0. Config sample counts default to outer=16/inner=16 for earlier test fixtures; explicit outer must be 16 or 64 and inner must be 16. The synthetic-only inner=64 experiment is deliberately not admitted. Actual mode/sample echoes are mandatory and exact, and `transportComplete` must be boolean true. Modes 1/2 require visibility, pixel, linear and physical modes plus AgX false.
+
+The separate transport budgets are fixed at 20,000,000 rays, 800,000,000 node visits, 300,000,000 triangle tests and 262,144 scene bytes. Primary visibility budgets are unchanged. Every transport count/byte/timing/budget field is a strict nonnegative integer. Context and budget audit sizes are 184/48 bytes. Mode 0 requires zero scene/temp/build timing/material generation, an all-zero 16-character fingerprint, and zero transport counters. Modes 1/2 require 75,128 scene bytes, 74,624 temporary bytes, positive build timing, material generation 1 and a nonzero lowercase 16-hex fingerprint. Fingerprints are accidental-change auditing, not cryptographic guarantees.
+
+Primary rays equal shadeUpdates×outerSamples; hits+misses equal primary rays. Primary direct queries equal the separate visibilityRays counter. Transport rays equal primary rays plus secondary world and secondary direct queries, and node visits must be at least transport rays. Mode 1 requires secondary and reflection/discard/grazing counters zero. Mode 2 bounds secondary world queries by hits×innerSamples, secondary direct queries by hits×48, and each reflection/discard/grazing counter by primary hits, without requiring them to be positive. The formal scope includes world visibility and one bounce; ground transport, PBR and AgX remain outside the validated scope.
+
+The suite has 52 tests, preserving 45 earlier tests with mandatory transport-OFF metadata and adding seven multi-variant transport tests. Run `python -m unittest -v test_score_candidate.py` in this directory. Scoring uses the unchanged CLI with a new output directory, for example `python fox-v3-bounce/scoring/score_candidate.py fox-v3-bounce/world-001/candidate-manifest.json --output fox-v3-bounce/world-score-001` from the workspace root. Metadata checks do not independently prove rendered-image provenance or transport correctness; existing source hashes, reference metrics and masks remain unchanged.
+
+
+Post-review exact bounce accounting: in mode 2, reflectableHits = primary_hits − back_single_discard − zero_reflection_ns_v must be nonnegative. Secondary world rays equal reflectableHits×innerSamples exactly, and secondary direct queries cannot exceed reflectableHits×48. Grazing does not reduce reflectableHits. A completely discarded set of hits can legitimately produce no secondary queries; zero queries with reflectable hits cannot. Fixed-fixture modes 1 and 2 also require positive transport triangle tests. Coordinated total-ray changes cannot bypass these identities. The 52-test regression suite includes negative mutations for each guard. Existing score-001 evidence is retained; score-002 records the tightened validator without changing input images.
+
+### Ground transport extension (private source-pinned host experiment)
+
+A declared `groundMode` is a strict integer 0/1/2 and requires transport mode 2 with outer/inner samples 16/16. Ground OFF retains the old bounce arithmetic and removes floor geometry. CONTROL adds owned floor geometry but no reflected/emitted floor contribution. PRIMARY_LE additionally enables the primary first-floor-hit emission term. Undeclared legacy fixtures keep their earlier contracts; orphan ground metadata is rejected.
+
+The independently verified source file SHA256 is fixed to 6320121022bc7ab8f23300b45181d58ed09e1bdffd7e2239fbd5194e9521be9b and the extractor is pinned too. All five source cases are used unchanged. Each ground text input must exactly match the canonical source-derived `FOXGROUND1` serialization (four vertices, two triangle rows, per-case linear Le, .17g doubles and final newline). Config, sourceFiles SHA256, scenario echoes and raw-file FNV1a64 must agree; coordinated config/echo rehashes cannot substitute altered geometry/Le. The private source geometry is not a shareable artifact.
+
+ON identity is object 1, first triangle 1166, two triangles, emission generation 1. OFF identity/generation/Le/fingerprint and ground counters are zero. ON Le is source-linear, checked without sRGB decoding. Visibility generation is [2,1,1] ON and [1,1,1] OFF. Geometry audits are OFF 1166 triangles/849 vertices/326496 scene bytes/34368 temporary bytes; ON 1168/853/327056/34488. Transport scene bytes are OFF75184/ON75312; attribute temporary bytes OFF74624/ON74752. The final expected-ground descriptor changes current host context size to 272 bytes (superseding the intermediate 224-byte probe); budget remains 48. These are host64 runtime audits, not product-fit promises. Snapshot remains 52212 bytes with 45 records inside the unchanged 65536-byte budget; existing work limit is unchanged.
+
+Primary ground hits cannot exceed all primary hits. PRIMARY_LE emission-hit count equals primary ground hits; CONTROL/OFF emission hits are zero. Secondary ground hits cannot exceed secondary world rays. Reflectable hits are primary_hits minus primary_ground_hits minus back_single_discard minus zero_reflection_ns_v. This must be nonnegative; secondary_world_rays equals reflectableHits×16 exactly and secondary_direct_queries cannot exceed reflectableHits×48. Grazing is not subtracted. No positivity is invented for floor hits. Existing total-ray identities and independent primary/transport budgets remain enforced.
+
+The 58-test suite preserves 52 earlier tests and adds six multi-variant ground tests covering modes, source/config/echo rehash attacks, types, identity/generation, counters, Le, geometry/size audits and reflectable-hit subtraction. Metrics, masks, references and thresholds are unchanged. SHA/FNV and runtime metadata are auditing evidence, not independent proof of rendered output correctness.

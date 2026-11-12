@@ -1,0 +1,1 @@
+cc -std=c11 -O2 -shared -fPIC -ffp-contract=off -fexcess-precision=standard -I fox-v3-lighting-ab/physical -I fox-v3-lighting-ab/product/main fox-v3-direct-lambert/native/shader.c -lm -o fox-v3-direct-lambert/native/shader.so

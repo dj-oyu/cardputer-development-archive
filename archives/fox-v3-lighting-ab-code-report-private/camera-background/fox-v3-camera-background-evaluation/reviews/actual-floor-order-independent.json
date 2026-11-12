@@ -1,0 +1,50 @@
+{
+  "method": "All 1564 actual character triangles, native F64 owned world transformed inverseB/38, F64 two-sided Moller-Trumbore no tolerance; floor separate. Exact C-export native rays. Raster rounding is not eliminated.",
+  "inputSHA": "112d5134565629eefb93902efe4b4f4149ae7b2ad9db5c405a7e04584bc952ba",
+  "triangleCount": 1564,
+  "allNearestNodeFacesMatchRaster": true,
+  "rows": [
+    {
+      "xy": [
+        118.75,
+        120.75
+      ],
+      "hitCount": 2,
+      "floorDistance": 7.76859629868007,
+      "node": 4,
+      "face": 30,
+      "distance": 7.817999569601632,
+      "floorAhead": true,
+      "distanceBehindFloor": 0.04940327092156238
+    },
+    {
+      "xy": [
+        141.25,
+        120.75
+      ],
+      "hitCount": 2,
+      "floorDistance": 7.7685963003418586,
+      "node": 8,
+      "face": 18,
+      "distance": 7.804523927912261,
+      "floorAhead": true,
+      "distanceBehindFloor": 0.0359276275704028
+    },
+    {
+      "xy": [
+        145,
+        115
+      ],
+      "hitCount": 2,
+      "floorDistance": 9.186799755217955,
+      "node": 10,
+      "face": 29,
+      "distance": 9.194472841301918,
+      "floorAhead": true,
+      "distanceBehindFloor": 0.007673086083963554
+    }
+  ],
+  "centerIsTargetMask1AndUnusedInFinal": true,
+  "quarterSlotsChangedInFinal": 2,
+  "caveat": "Ray-to-raster interpolation floating-point differences remain; this verifies same-geometry nearest-hit and floor ordering, not bitwise raster ray equivalence."
+}

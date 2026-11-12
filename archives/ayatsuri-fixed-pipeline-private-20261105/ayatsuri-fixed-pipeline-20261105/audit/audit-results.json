@@ -1,0 +1,248 @@
+{
+  "sourceRoot": "fox-v3-floor-direct-reflection-evaluation/actual-002",
+  "hashes": {
+    "code/compile.cjs": "42ae63f5a4d78d97a7b098edc7292b4f14da879cde304f6f6e9d290edd8a434a",
+    "product/tools/ayatsuri/asset/import_glb.cjs": "c038e9e4f27605cbdf54be461c78602d937450a8093e96fa138dd6ef47a17bee",
+    "product/tools/ayatsuri/asset/compile_static.cjs": "543adbb7b7eb9c1170865592e6768b66319c53db2c6968dd28227b1f79a43212",
+    "product/tools/ayatsuri/asset/compact_opaque/batch_static.cjs": "700ddafab4ce53c906d11bc641bc2e94d6f802dc8daf03b67213a1e0cd13ebc2",
+    "product/tools/ayatsuri/model/pack_model.cjs": "c19120f15291b95356560114579b430c33ec944ee99d4d6f4f3ad95a8e33e32d",
+    "inputs/geometry-source-sided.glb": "833ac7683872375f9e63f819618e0e25ed40e0ac761a35f7604cd45501207a8e",
+    "compiled/model-baseline/model.aynm": "68985ce128275a4b50c9bbad791bcd9eff8a41e788e4b5672d65c80755aade9f",
+    "compiled/model-baseline/compile.json": "b18e1fce384b2fc66e2e6f0183ab121c0ab18606867ed07feb181466affcb3ea"
+  },
+  "wireVersion": 1,
+  "sections": {
+    "1": {
+      "offset": 272,
+      "bytes": 880,
+      "count": 55,
+      "stride": 16
+    },
+    "2": {
+      "offset": 1152,
+      "bytes": 1980,
+      "count": 55,
+      "stride": 36
+    },
+    "3": {
+      "offset": 3136,
+      "bytes": 0,
+      "count": 0,
+      "stride": 12
+    },
+    "4": {
+      "offset": 3136,
+      "bytes": 0,
+      "count": 0,
+      "stride": 24
+    },
+    "5": {
+      "offset": 3136,
+      "bytes": 72,
+      "count": 1,
+      "stride": 72
+    },
+    "6": {
+      "offset": 3208,
+      "bytes": 440,
+      "count": 55,
+      "stride": 8
+    },
+    "7": {
+      "offset": 3648,
+      "bytes": 372,
+      "count": 372,
+      "stride": 1
+    },
+    "9": {
+      "offset": 4024,
+      "bytes": 1728,
+      "count": 54,
+      "stride": 32
+    },
+    "10": {
+      "offset": 5752,
+      "bytes": 32564,
+      "count": 1163,
+      "stride": 28
+    },
+    "11": {
+      "offset": 38320,
+      "bytes": 9384,
+      "count": 1564,
+      "stride": 6
+    },
+    "12": {
+      "offset": 47704,
+      "bytes": 0,
+      "count": 0,
+      "stride": 12
+    },
+    "13": {
+      "offset": 47704,
+      "bytes": 4,
+      "count": 1,
+      "stride": 4
+    }
+  },
+  "parts": 54,
+  "vertices": 1163,
+  "triangles": 1564,
+  "boundsMetres": [
+    [
+      -2.167154550552368,
+      0.8254675269126892
+    ],
+    [
+      -3.6494784355163574,
+      0.011079247109591961
+    ],
+    [
+      -2.129707098007202,
+      1.1890488862991333
+    ]
+  ],
+  "maxNormalLengthError": 3.3306690738754696e-16,
+  "allPartsDoubleSided": true,
+  "wireMatchesPositionsTimes38AndFloat32Normals": true,
+  "positionQuantization": [
+    {
+      "fractionalBits": 12,
+      "stepMetres": 0.000244140625,
+      "maxComponentErrorMetres": 0.0001220405101776123,
+      "collapsedTriangles": 0,
+      "flippedTriangleNormals": 0,
+      "maxAbsInteger": 14948
+    },
+    {
+      "fractionalBits": 16,
+      "stepMetres": 1.52587890625e-05,
+      "maxComponentErrorMetres": 7.62939453125e-06,
+      "collapsedTriangles": 0,
+      "flippedTriangleNormals": 0,
+      "maxAbsInteger": 239172
+    },
+    {
+      "fractionalBits": 20,
+      "stepMetres": 9.5367431640625e-07,
+      "maxComponentErrorMetres": 4.76837158203125e-07,
+      "collapsedTriangles": 0,
+      "flippedTriangleNormals": 0,
+      "maxAbsInteger": 3826756
+    }
+  ],
+  "albedoQuantization": [
+    {
+      "id": "material/0",
+      "linear": [
+        0.5699999928474426,
+        0.09200000017881393,
+        0.00800000037997961
+      ],
+      "decoded565": [
+        0.5610070143871524,
+        0.09084171118340768,
+        0.009529478582354435
+      ],
+      "maxAbsError": 0.008992978460290235
+    },
+    {
+      "id": "material/1",
+      "linear": [
+        0.02800000086426735,
+        0.008999999612569809,
+        0.003000000026077032
+      ],
+      "decoded565": [
+        0.03113008990948415,
+        0.009299642682664953,
+        0.0024967542195146308
+      ],
+      "maxAbsError": 0.0031300890452168016
+    },
+    {
+      "id": "material/2",
+      "linear": [
+        0.012000000104308128,
+        0.007000000216066837,
+        0.004000000189989805
+      ],
+      "decoded565": [
+        0.009529478582354435,
+        0.0071134697343294825,
+        0.0053705373494325435
+      ],
+      "maxAbsError": 0.0024705215219536936
+    },
+    {
+      "id": "material/3",
+      "linear": [
+        0.9399999976158142,
+        0.7799999713897705,
+        0.5199999809265137
+      ],
+      "decoded565": [
+        0.928180947914277,
+        0.7656040001989001,
+        0.5100464056783279
+      ],
+      "maxAbsError": 0.014395971190870438
+    },
+    {
+      "id": "material/4",
+      "linear": [
+        0.6700000166893005,
+        0.12999999523162842,
+        0.012000000104308128
+      ],
+      "decoded565": [
+        0.6715302834483289,
+        0.13065427661238635,
+        0.009529478582354435
+      ],
+      "maxAbsError": 0.0024705215219536936
+    },
+    {
+      "id": "material/5",
+      "linear": [
+        1,
+        0.9399999976158142,
+        0.7799999713897705
+      ],
+      "decoded565": [
+        1.0,
+        0.9292965973952962,
+        0.7938107350904249
+      ],
+      "maxAbsError": 0.013810763700654372
+    },
+    {
+      "id": "material/6",
+      "linear": [
+        0.23000000417232513,
+        0.06199999898672104,
+        0.012000000104308128
+      ],
+      "decoded565": [
+        0.229274769922375,
+        0.05918409018414887,
+        0.009529478582354435
+      ],
+      "maxAbsError": 0.0028159088025721674
+    },
+    {
+      "id": "material/7",
+      "linear": [
+        0.6600000262260437,
+        0.22499999403953552,
+        0.14000000059604645
+      ],
+      "decoded565": [
+        0.6715302834483289,
+        0.22146071219766902,
+        0.14683923082122904
+      ],
+      "maxAbsError": 0.011530257222285178
+    }
+  ]
+}

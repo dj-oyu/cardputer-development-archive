@@ -1,0 +1,1699 @@
+diff --git a/docs/ayatsuri/material-sidedness-local.md b/docs/ayatsuri/material-sidedness-local.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..706e4d71b24227b336d1038a6d15c41b751d86c5
+--- /dev/null
++++ b/docs/ayatsuri/material-sidedness-local.md
+@@ -0,0 +1,159 @@
++# Explicit material sidedness (local candidate)
++
++This candidate is based on the published a426f7a tree (equal-tree local f7d7fe6c).
++It changes no Blender original, camera/light/pose/scoring condition, renderer
++quota, color space, light approximation or runtime default. No public upload,
++PR, device test or firmware operation is part of this work.
++
++## Import, cold representation and compatibility
++
++`import_glb.cjs` preserves glTF `doubleSided`. All-single imports retain the
++legacy IR v1 output; double-sided imports use `hone-scene-ir-v2` with explicit
++`materials[].sidedness` and a single-sided default material. Unsupported alpha,
++textures, skin and morph still reject. An exporter that already erased the flag
++cannot be repaired by import: the comparison environment must stop overriding
++all exported materials to single-sided while retaining its original baseline.
++
++`compile_static.cjs` is an exact static import/batch/compile adapter, not a QEM
++or character generator. It requires explicit immutable scope mappings and shader
++material mappings. Ordered batching only merges adjacent compatible surfaces
++and partitions the original face sequence without sorting noncontiguous faces.
++32 vertices/64 faces per part remain enforced. Material dedup includes sidedness.
++
++Design v2 requires `materialSidedness` on meshes; v1 cannot silently carry that
++field. All-single designs, including explicit single v2, emit the old bytes.
++When double-sided is present, required AYNM section 13 has stride4/count=material
++count: U8 0=single or1=double, then three mandatory zero bytes. Its directory flag
++is1 (required), so old loaders reject. Previous formats assign only sections
++1..12; descriptor bytes19..31 stay mandatory zero. Unknown required sections,
++wrong counts/flags/values, padding and truncated inputs reject transactionally.
++
++The C model section array grows by one entry (8 bytes); rebuild consumers with
++the current header. This is cold-data compatibility, not C binary ABI compatibility.
++
++## Evaluation and native adapter
++
++Only double-sided nodes use packet kind5 and
++`ayatsuri_model_instance_sided_mesh_view()`. Old `mesh_view()` refuses them.
++Kind4/legacy paths are unchanged. Kind5 exposes a stable borrowed positive-winding
++patch, shared F32 depths, back color pairs and one back-facing bit per triangle.
++The extra aligned instance cache is `align8(4*vertices+8)`, at most136 B per
++sided mesh; cold geometry/normals are not duplicated.
++
++Back normals are inverted in transformed full precision before SNORM rounding,
++then sampled through the unchanged shader for A and B. Mask/albedos are not
++exchanged. Logical face side uses the runtime determinant once; raster winding
++normalization is separate. Static import already bakes/corrects its determinant,
++and the static adapter emits identity poses instead of reapplying that matrix.
++Legacy single reflection behavior remains unchanged.
++
++For kind5 in a shared-depth scope, call `ksn_mesh_append_sided(snapshot,
++view.patch, view.depth, view.back_colors, view.back_faces, node_id)` exactly once.
++Both managed submit methods use that path. A standalone native adapter must
++switch from the d3fdb778 per-run append loop to this call. Model cursor and
++stats.packets count logical draw nodes; each nonempty depth mesh now emits one
++record. The old `ksn_mesh_sided_run()` remains only for the painter fallback and
++the regression reference. No face is reordered or removed.
++
++The explicitly tagged compact mode2 stores front/back A/B per vertex and one
++side bit per face. It does not reinterpret reserved fields. Older readers reject
++mode2; old modes0/1 are unchanged. Equal palettes, all-front, or all-back meshes
++losslessly use the old encoding with the selected palette. Mode2 costs
++`align4(12 + 24*referenced_vertices + 3*faces + ceil(faces/8))`: at most980 B for
++32 vertices/64 faces, versus844 B in the old general mode. Source data is copied,
++not retained. Unknown modes, unused side bits, padding, invalid indices,
++nonfinite geometry, truncation and over-budget appends reject before mutation.
++The renderer selects colors once per triangle, outside the pixel loop; coverage,
++mask arithmetic, depth interpolation and first-face equal-depth ties stay intact.
++
++Both submit methods retain existing whole-call mark/rollback. Candidate and
++committed snapshots own numeric data through disposal, retry and ACK. Depth
++scratch, 256-record, byte and work quotas are unchanged. Holes/analytic/painter
++inputs remain unsupported in the depth scope.
++
++## Reproduce locally
++
++```
++python3 tools/ayatsuri/model/run_sidedness.py --opt 2 --baseline-ref f7d7fe6c5c7588ac7e1a8a4afa0fec6e8525ed85
++python3 tools/kasane_contract/run_pocket_proc_qjs.py --gouraud-only --opt 0
++```
++
++A checkout containing the public commit may use `--baseline-ref a426f7a`.
++The runner checks baseline blob identities before compiling. It downloads
++nothing and uses the same VM, renderer, flags and inputs in paired legacy
++captures. Optional `--legacy-input PATH` adds an existing old single asset;
++inputs and rendered binary captures remain local/.cache and are not committed.
++
++Synthetic O0/O2 ASan/UBSan checks pass. Legacy compiler comparison covers100
++single designs plus explicit-single v2 equivalents. Paired old/current actual-C
++renders matched all bytes for6 inputs x4 conditions (three generated controls
++plus the three existing public cloud/fox-face/fox-sheet assets). Those optional
++old assets are not copied into this candidate. The earlier 660-byte mesh fixture
++retains SHA256 59d431624fb828018a12e8540853f04d6f29366110269b59c649db7dc9fe3710.
++
++Additional checks cover material policy separation/immutability, positive
++winding, independently calculated inverse-scale back lighting, runtime mirror,
++static determinant correction, centroid ordering, run output alias rejection,
++32-vertex cache bound, both submit methods, post-disposal drawing, first-face
++depth ties versus last-face painter order, and whole-call byte/record rollback.
++
++## Record amplification correction and measured costs
++
++The previous d3fdb778 design copied each contiguous side run to a separate
++record. The private fixed-input accounting probe found front564/oblique543
++records for94 nonempty logical packets and1166 triangles, beyond256. Its
++rich used bytes60088/59748 (sweep maximum60112) remained below65536; work56462/
++54203 below8000000. These are accounting-only results, not successful rendering.
++The original, partition, face order, admission and scoring are not changed here.
++
++Alternatives considered: raising quotas leaves amplification unresolved;
++reordering nonadjacent faces changes ties; doubled vertex palettes violate the
++32-vertex boundary; a shared geometry table adds cross-record ownership and
++validation. A self-contained face-side record is the smallest local change.
++It keeps one record per logical mesh without a new lifetime or geometry table.
++
++Synthetic64 alternating faces sharing3 vertices compare the old ordered runs
++against one side-aware record. Both first-front and first-back cases retain
++RGB and F32 depth byte equality, including A/B mask boundaries and exact-depth
++ties. With varying A/B colors, records64->1, occupied bytes4864->284; equal
++unlit palettes3328->240. These differences do not remove triangles. The managed
++single control selects32 faces (144 B); sided64 selects64 faces (284 B), with
++unchanged work14112/28224 respectively. Five logical nodes now submit as5
++records. A252-record prefix followed by five nodes still rejects and rolls back
++the whole call; separate byte/work partial-failure tests do the same for both
++submit variants. Destroying source model/instance before render retains pixels.
++
++Representative O2 ASan/UBSan CPU samples (8 repeats, host only):
++
++| Test | Ordered run reference | One side-aware record |
++|---|---:|---:|
++| Varying A/B, first front, raster | 6.726 ms | 3.954 ms |
++| Varying A/B, first back, raster | 6.549 ms | 3.974 ms |
++| Unlit, raster | 5.278 ms | 3.181 ms |
++
++The integrated warm submit+render is4.449 ms (`submit`) /4.341 ms
++(`submitClipped`) for sided64; the single32-face control is2.208/2.004 ms.
++These are current samples, not a cross-run historical speedup claim.
++
++No new model arena/cold storage is introduced by this correction. The original
++sidedness cache remains at most136 B per32-vertex mesh; synthetic arena1644->1780 B.
++The private probe's cold40292 B and arena122620 B (old118300) therefore remain
++unaffected. Mode2 worst-case is980 B/record (+136 B over old general encoding).
++94*980=92120 B exceeds65536, so reducing record count alone does not prove byte
++admission. Actual private front/oblique used bytes must be measured again.
++
++Candidate+committed allocation capacities do not shrink merely because occupied
++bytes shrink: the host stress suite requests65536 B each,131072 B total, plus
++960 B depth scratch, metadata, allocator, old frames, VM, guest/model and stack.
++The append adapter uses a640-byte vertex scratch; all-back palette collapse has
++a separate noinline640-byte scratch. The1040-byte painter-run patch is isolated
++from the depth branch. These are source-level sizes, not measured peak stack.
++Raster CPU and managed warm-submit/render measurements are logged by the
++commands above; ASan/UBSan host times are not firmware performance. Formal
++firmware build, actual total RAM and device testing were not performed here.
++
++The real fox is private in another environment. Its7/5-pixel sidedness failure,
++quality FAIL, earlier depth auxiliary gate and near-tie uncertainty remain open.
++No Blender reproduction percentage or60% attainment is claimed. Next is the
++fixed v2 native adapter integration and independent shape/shading/light-response
++re-evaluation, without changing originals, partitions, conditions or budgets.
+diff --git a/main/ayatsuri/ayatsuri_model.c b/main/ayatsuri/ayatsuri_model.c
+index 58813122b061a7ae5c63d198675fa80d192ed9ff..691d3f0ed1dd9cede1508fec5b76c9aea7d41def 100644
+--- a/main/ayatsuri/ayatsuri_model.c
++++ b/main/ayatsuri/ayatsuri_model.c
+@@ -30,9 +30,15 @@ static const uint8_t *node_region(const ayatsuri_model *m,unsigned id){
+     for(uint32_t k=0;k<m->section[7].count;++k){const uint8_t *r=row(m,8,k,32);if(m16(r)==id)return r;}
+     return NULL;
+ }
++static bool mesh_double(const ayatsuri_model *m,const uint8_t *node){
++    return node[2]==3&&m->section[12].count&&row(m,13,m16(node+8),4)[0]==1;
++}
++static unsigned mesh_legacy_bytes(unsigned nv){return (84u+sizeof(ksn_proc_gouraud_patch)+12u*nv+7u)&~7u;}
++static uint16_t *mesh_back_colors(ayatsuri_model_instance *i,unsigned id,unsigned nv);
+ static unsigned node_slot_bytes(const ayatsuri_model *m,unsigned id,const uint8_t *node){
+     if(node[2]==3){const uint8_t *d=row(m,9,m16(node+4),32);
+-        return (84u+sizeof(ksn_proc_gouraud_patch)+12u*m16(d+2)+7u)&~7u;}
++        const unsigned nv=m16(d+2);
++        return mesh_legacy_bytes(nv)+(mesh_double(m,node)?((4u*nv+8u+7u)&~7u):0u);}
+     return slot_bytes(node)+(node[2]==2&&node_region(m,id)?24u:0u);
+ }
+ static bool float_rows_valid(const uint8_t *data,uint32_t count,unsigned floats,unsigned positive_start){
+@@ -93,7 +99,7 @@ ayatsuri_model_status ayatsuri_model_open(const void *data,size_t bytes,ayatsuri
+        sections>(bytes-32)/20)return AYATSURI_MODEL_INVALID;
+     const uint32_t directory_end=32+20*sections;
+     ayatsuri_model candidate={.data=p,.bytes=(uint32_t)bytes};unsigned seen=0;
+-    static const uint32_t strides[12]={16,36,12,24,72,8,1,32,32,28,6,12};
++    static const uint32_t strides[13]={16,36,12,24,72,8,1,32,32,28,6,12,4};
+     for(uint32_t i=0;i<sections;++i){
+         const uint8_t *d=p+32+20*i;const uint16_t type=m16(d),flags=m16(d+2);
+         const uint32_t offset=m32(d+4),length=m32(d+8),count=m32(d+12),stride=m32(d+16);
+@@ -103,7 +109,7 @@ ayatsuri_model_status ayatsuri_model_open(const void *data,size_t bytes,ayatsuri
+             const uint8_t *prior=p+32+20*j;
+             if(overlaps(p+offset,length,p+m32(prior+4),m32(prior+8)))return AYATSURI_MODEL_INVALID;
+         }
+-        if(type>=1&&type<=12){
++        if(type>=1&&type<=13){
+             const unsigned bit=1u<<(type-1);
+             if(flags!=1||(seen&bit)||stride!=strides[type-1]||(uint64_t)count*stride!=length)
+                 return AYATSURI_MODEL_INVALID;
+@@ -119,6 +125,13 @@ ayatsuri_model_status ayatsuri_model_open(const void *data,size_t bytes,ayatsuri
+        ((seen&128)&&(!candidate.section[7].count||candidate.section[7].count>count))||
+        ((seen&0xf00)&&(!candidate.section[8].count||candidate.section[8].count>count||
+         candidate.section[9].count>32*count||candidate.section[10].count>64*count||candidate.section[11].count>16*count)))return AYATSURI_MODEL_INVALID;
++    if(seen&(1u<<12)){
++        if(!candidate.section[12].count||candidate.section[12].count!=candidate.section[4].count)return AYATSURI_MODEL_INVALID;
++        for(uint32_t j=0;j<candidate.section[12].count;j++){
++            const uint8_t *v=row(&candidate,13,j,4);
++            if(v[0]>1||v[1]||v[2]||v[3])return AYATSURI_MODEL_INVALID;
++        }
++    }
+     candidate.node_count=(uint16_t)count;
+     if(!meshes_valid(&candidate))return AYATSURI_MODEL_INVALID;
+     for(uint32_t k=0;k<candidate.section[6].count;++k){const uint8_t c=*row(&candidate,7,k,1);
+@@ -145,6 +158,7 @@ ayatsuri_model_status ayatsuri_model_open(const void *data,size_t bytes,ayatsuri
+         if(!n[2]){if(shape!=UINT16_MAX||material!=UINT16_MAX||lobes||blend!=0)return AYATSURI_MODEL_INVALID;}
+         else{
+             if(material>=candidate.section[4].count)return AYATSURI_MODEL_INVALID;
++            if(n[2]!=3&&candidate.section[12].count&&row(&candidate,13,material,4)[0])return AYATSURI_MODEL_INVALID;
+             if(n[2]==1){if(shape>=candidate.section[2].count||lobes||blend!=0)return AYATSURI_MODEL_INVALID;}
+             else if(n[2]==2){if(!lobes||lobes>8||shape>candidate.section[3].count||lobes>candidate.section[3].count-shape||blend<0||blend>128)
+                 return AYATSURI_MODEL_INVALID;}
+@@ -425,11 +439,38 @@ static bool mesh_project(const float projection[12],const uint8_t *xyz,float *x,
+     *depth=projection[8]*a+projection[9]*b+projection[10]*c+projection[11];
+     return isfinite(*x)&&isfinite(*y)&&fabsf(*x)<=4096&&fabsf(*y)<=4096&&isfinite(*depth);
+ }
++static uint16_t *mesh_back_colors(ayatsuri_model_instance *i,unsigned id,unsigned nv){
++    return (uint16_t *)((uint8_t *)work(i,id)+mesh_legacy_bytes(nv));
++}
++/* Side classification is separate from raster winding. Static import already
++ * bakes determinant correction; runtime world determinant is applied once. */
++static void mesh_select_sided(const float *xy,const float *depth,const uint16_t *in,
++        unsigned nt,unsigned order,bool reflected,ksn_proc_gouraud_patch *out,uint8_t bits[8]){
++    uint8_t ids[64],flags[64];double keys[64];unsigned count=0;
++    memset(bits,0,8);
++    for(unsigned t=0;t<nt;t++){
++        const uint16_t *v=in+3*t;const double ax=xy[2*v[0]],ay=xy[2*v[0]+1],
++            bx=xy[2*v[1]],by=xy[2*v[1]+1],cx=xy[2*v[2]],cy=xy[2*v[2]+1],
++            area=(bx-ax)*(cy-ay)-(by-ay)*(cx-ax);
++        if(fabs(area)<=1e-5)continue;
++        flags[t]=(uint8_t)((area<0?1:0)|((area<0)!=reflected?2:0));
++        const double key=(double)depth[v[0]]+depth[v[1]]+depth[v[2]];unsigned at=count++;
++        if(order==AYATSURI_VISIBILITY_CENTROID_DEPTH)
++            while(at&&keys[at-1]>key){keys[at]=keys[at-1];ids[at]=ids[at-1];--at;}
++        keys[at]=key;ids[at]=(uint8_t)t;
++    }
++    for(unsigned t=0;t<count;t++){
++        unsigned id=ids[t];const uint16_t *v=in+3*id;uint16_t *dst=out->indices+3*t;
++        dst[0]=v[0];dst[1]=v[(flags[id]&1)?2:1];dst[2]=v[(flags[id]&1)?1:2];
++        if(flags[id]&2)bits[t/8]|=(uint8_t)(1u<<(t%8));
++    }
++    out->header.triangles=(uint8_t)count;
++}
+ /* Keep mesh-only scratch out of the nonmesh evaluator stack frame. */
+ static __attribute__((noinline)) bool mesh_packet(ayatsuri_model_instance *i,unsigned id,const float right[3],const float down[3],const float forward[3]){
+     const ayatsuri_model *model=i->model;const uint8_t *node=row(model,1,id,16),*d=row(model,9,m16(node+4),32),
+         *material=row(model,5,m16(node+8),72);
+-    const unsigned nv=m16(d+2),nt=m16(d+6);float *m=work(i,id);
++    const unsigned nv=m16(d+2),nt=m16(d+6);const bool sided=mesh_double(model,node);float *m=work(i,id);
+     ksn_proc_gouraud_patch *p=(ksn_proc_gouraud_patch *)((uint8_t *)m+84);
+     float *xy=(float *)((uint8_t *)p+sizeof *p),*depth=xy+2*nv;
+     const double a=m[0],b=m[1],c=m[2],e=m[4],f=m[5],g=m[6],h=m[8],j=m[9],k=m[10],
+@@ -464,12 +505,24 @@ static __attribute__((noinline)) bool mesh_packet(ayatsuri_model_instance *i,uns
+         if(!snorm[0]&&!snorm[1]&&!snorm[2])return false;
+         out->color_a=ayatsuri_shade_sample(snorm,m16(d+14),d[18],i->lighting,coeff,&shade);
+         out->color_b=ayatsuri_shade_sample(snorm,m16(d+16),d[18],i->lighting,coeff,&shade);
++        if(sided){
++            // Reverse before SNORM rounding, not after asymmetric tie rounding.
++            for(unsigned r=0;r<3;r++)snorm[r]=(int16_t)fmax(-32767,fmin(32767,floor(-components[r]*32767/length+0.5)));
++            uint16_t *back=mesh_back_colors(i,id,nv)+2*v;
++            back[0]=ayatsuri_shade_sample(snorm,m16(d+14),d[18],i->lighting,coeff,&shade);
++            back[1]=ayatsuri_shade_sample(snorm,m16(d+16),d[18],i->lighting,coeff,&shade);
++        }
+     }
+     /* Decode cold U16 indices instead of assuming the caller's span alignment. */
+     uint16_t indices[3*KSN_PROC_GOURAUD_TRIANGLES];uint32_t counts[3];
+     for(unsigned t=0;t<nt;t++)for(unsigned v=0;v<3;v++)indices[3*t+v]=m16(row(model,11,m16(d+4)+t,6)+2*v);
+-    if(ayatsuri_visibility_select(xy,depth,nv,indices,nt,(ayatsuri_visibility_order)d[11],p->indices,3*nt,counts)!=AYATSURI_VISIBILITY_OK)return false;
+-    p->header.triangles=(uint8_t)counts[0];
++    if(sided){
++        uint8_t *bits=(uint8_t *)(mesh_back_colors(i,id,nv)+2*nv);
++        mesh_select_sided(xy,depth,indices,nt,d[11],det<0,p,bits);counts[0]=p->header.triangles;
++    }else{
++        if(ayatsuri_visibility_select(xy,depth,nv,indices,nt,(ayatsuri_visibility_order)d[11],p->indices,3*nt,counts)!=AYATSURI_VISIBILITY_OK)return false;
++        p->header.triangles=(uint8_t)counts[0];
++    }
+     unsigned hole_at=m16(d+8);
+     for(unsigned hole=0;hole<d[10];hole++){
+         ksn_proc_ellipsoid_clip *clip=p->clips+hole;clip->count=d[12+hole];
+@@ -530,7 +583,7 @@ ayatsuri_model_status ayatsuri_model_instance_next(ayatsuri_model_instance *i,co
+             if(node[2]==3&&!((const ksn_proc_gouraud_patch *)((const uint8_t *)work(i,j)+84))->header.triangles)continue;
+             const unsigned bytes=node_slot_bytes(i->model,j,node);
+             *out=(ayatsuri_model_packet){(const uint8_t *)work(i,j),i->lighting,(uint16_t)j,(uint16_t)bytes,
+-                (uint8_t)(node[2]==3?4:node[2]==2&&bytes>slot_bytes(node)?3:node[2]),(uint8_t)m16(node+6)};
++                (uint8_t)(node[2]==3?(mesh_double(i->model,node)?5:4):node[2]==2&&bytes>slot_bytes(node)?3:node[2]),(uint8_t)m16(node+6)};
+             *cursor=j+1;return leave(i,AYATSURI_MODEL_OK);
+         }}
+     *cursor=i->model->node_count;return leave(i,AYATSURI_MODEL_DONE);
+@@ -545,9 +598,25 @@ ayatsuri_model_status ayatsuri_model_instance_mesh_view(ayatsuri_model_instance
+        overlaps(out,sizeof *out,i->arena,i->arena_bytes)||overlaps(out,sizeof *out,i->model->data,i->model->bytes))
+         return leave(i,AYATSURI_MODEL_INVALID);
+     const uint8_t *node=row(i->model,1,id,16);
+-    if(node[2]!=3||!states(i)[id].world_enabled)return leave(i,AYATSURI_MODEL_INVALID);
++    if(node[2]!=3||mesh_double(i->model,node)||!states(i)[id].world_enabled)return leave(i,AYATSURI_MODEL_INVALID);
+     const ksn_proc_gouraud_patch *p=(const ksn_proc_gouraud_patch *)((const uint8_t *)work(i,id)+84);
+     const float *xy=(const float *)((const uint8_t *)p+sizeof *p);
+     *out=(ayatsuri_model_mesh_view){p,xy+2*p->header.vertices,id,p->header.vertices};
+     return leave(i,AYATSURI_MODEL_OK);
+ }
++
++ayatsuri_model_status ayatsuri_model_instance_sided_mesh_view(ayatsuri_model_instance *i,
++        const void *owner,uint32_t generation,uint16_t id,ayatsuri_model_sided_mesh_view *out){
++    ayatsuri_model_status status=enter(i,owner,generation);if(status)return status;
++    if(!i->evaluated)return leave(i,AYATSURI_MODEL_STATE);
++    if(!out||id>=i->model->node_count||overlaps(out,sizeof *out,i,sizeof *i)||
++       overlaps(out,sizeof *out,i->model,sizeof *i->model)||overlaps(out,sizeof *out,i->arena,i->arena_bytes)||
++       overlaps(out,sizeof *out,i->model->data,i->model->bytes))return leave(i,AYATSURI_MODEL_INVALID);
++    const uint8_t *node=row(i->model,1,id,16);
++    if(!mesh_double(i->model,node)||!states(i)[id].world_enabled)return leave(i,AYATSURI_MODEL_INVALID);
++    const ksn_proc_gouraud_patch *p=(const ksn_proc_gouraud_patch *)((const uint8_t *)work(i,id)+84);
++    const float *xy=(const float *)((const uint8_t *)p+sizeof *p);
++    const uint16_t *back=mesh_back_colors(i,id,p->header.vertices);
++    *out=(ayatsuri_model_sided_mesh_view){p,xy+2*p->header.vertices,back,(const uint8_t *)(back+2*p->header.vertices),id,p->header.vertices};
++    return leave(i,AYATSURI_MODEL_OK);
++}
+diff --git a/main/ayatsuri/ayatsuri_model.h b/main/ayatsuri/ayatsuri_model.h
+index bbeeb2e1ef6313aee185e2b6817d228c85f6a741..27a69ed3916a46ac053bfb5700db757735c5cc68 100644
+--- a/main/ayatsuri/ayatsuri_model.h
++++ b/main/ayatsuri/ayatsuri_model.h
+@@ -28,8 +28,10 @@ typedef struct {
+     /* Sections 1..7 are mandatory; optional localPlane rows use required
+      * section 8. Mode 4 uses existing ellipse work; mode 5 adds 24 bytes
+      * only to each masked blend's work slot. Mesh kind 3 requires sections
+-     * 9..12 as a set: descriptor32, vertex28, triangle6, hole XYZ12. */
+-    ayatsuri_model_section section[12];
++     * 9..12 as a set: descriptor32, vertex28, triangle6, hole XYZ12.
++     * Required extension 13: material sidedness U8 + three zero bytes,
++     * one 4-byte row per material; absent means legacy single-sided. */
++    ayatsuri_model_section section[13];
+ } ayatsuri_model;
+ 
+ typedef struct {
+@@ -74,6 +76,20 @@ typedef struct {
+ ayatsuri_model_status ayatsuri_model_instance_mesh_view(ayatsuri_model_instance *instance,
+         const void *owner,uint32_t generation,uint16_t node_id,ayatsuri_model_mesh_view *out);
+ 
++/* Kind 5 is a sided mesh. All fields are immutable borrows until the next
++ * mutation/evaluation/dispose, like ordinary packets. back_faces bit t selects
++ * back_colors[2*v + A/B] for canonical-positive triangle t. */
++typedef struct {
++    const void *patch;
++    const float *depth;
++    const uint16_t *back_colors;
++    const uint8_t *back_faces;
++    uint16_t node_id;
++    uint8_t vertices;
++} ayatsuri_model_sided_mesh_view;
++ayatsuri_model_status ayatsuri_model_instance_sided_mesh_view(ayatsuri_model_instance *instance,
++        const void *owner,uint32_t generation,uint16_t node_id,ayatsuri_model_sided_mesh_view *out);
++
+ /* Failure does not publish a model. Names are non-NUL ASCII spans. */
+ ayatsuri_model_status ayatsuri_model_open(const void *data,size_t bytes,ayatsuri_model *out);
+ ayatsuri_model_status ayatsuri_model_find_node(const ayatsuri_model *model,
+@@ -121,6 +137,12 @@ ayatsuri_model_status ayatsuri_model_instance_evaluate(ayatsuri_model_instance *
+  * Kind 4 is a Gouraud mesh: the common 84-byte transform/pose prefix, then
+  * a 1040-byte ksn_proc_gouraud_patch, then xy[2*vertices]/depth[vertices]
+  * F32 scratch; the slot is rounded to 8 bytes. Empty selection is skipped.
++ * Kind 5 is an explicit double-sided mesh: use sided_mesh_view rather than
++ * assuming a legacy Gouraud packet. Its positive-winding triangles retain the
++ * global selected face order; side bits choose a second vertex color pair.
++ * The extra aligned cache is 4*vertices+8 bytes, at most 136 bytes. The old
++ * instance_next cursor and stats.packets still count logical draw nodes, not
++ * the number of emitted contiguous side-run records.
+  * Normals use inverse-transpose; source winding is never reversed, including
+  * reflected poses. No mutable vertices, expression morphs or mesh opacity. */
+ ayatsuri_model_status ayatsuri_model_instance_next(ayatsuri_model_instance *instance,
+diff --git a/main/ayatsuri/compact_opaque.c b/main/ayatsuri/compact_opaque.c
+index e1c37f77f1dffa3ecdea094897b53169def4a840..e158c2311484415cd89799fed63cd1adc41749b3 100644
+--- a/main/ayatsuri/compact_opaque.c
++++ b/main/ayatsuri/compact_opaque.c
+@@ -5,7 +5,9 @@
+ _Static_assert(sizeof(float)==4 && FLT_RADIX==2 && FLT_MANT_DIG==24,"IEEE binary32 required");
+ /* Wire v1: nv,nt,mode,reserved,u16 node,u16 reserved,u16 color,u16 bytes;
+  * mode0 = x/y/mask/depth F32 + A/B U16 (20B), mode1 = x/y/depth (12B).
+- * U8 triangle indices, then zero padding to four bytes. All fields little-endian.
++ * Explicit mode2 = x/y/mask/depth F32 + front A/B and back A/B U16 (24B),
++ * U8 triangle indices + ceil(triangles/8) side bytes; old reserved fields stay0.
++ * U8 triangle indices for modes0/1, then zero padding to four bytes. All fields little-endian.
+  * Constant mode is legal only when all referenced vertices have identical A=B.
+  * Depth is preserved exactly; interpretation/tie policy belongs to the renderer. */
+ static unsigned u16(const uint8_t*p){return (unsigned)p[0]|(unsigned)p[1]<<8;}
+@@ -39,26 +41,92 @@ bool co_append(co_buffer*b,const co_input*in){
+     uint8_t*ix=out+12+stride*count;for(unsigned j=0;j<3u*in->triangle_count;j++)ix[j]=remap[in->indices[j]];
+     b->size+=bytes;b->packets++;return true;
+ }
++static unsigned vertex_stride(unsigned mode){return mode==1?12u:mode==2?24u:20u;}
++static __attribute__((noinline)) bool append_back_only(co_buffer *b,const co_sided_input *in){
++    co_vertex selected[CO_MAX_VERTICES];
++    memcpy(selected,in->front.vertices,in->front.vertex_count*sizeof *selected);
++    for(unsigned v=0;v<in->front.vertex_count;v++){
++        selected[v].color_a=in->back_colors[2*v];selected[v].color_b=in->back_colors[2*v+1];
++    }
++    co_input front=in->front;front.vertices=selected;return co_append(b,&front);
++}
++bool co_append_sided(co_buffer *b,const co_sided_input *in){
++    if(!b||!in||!in->back_colors||!in->back_faces)return false;
++    const co_input *f=&in->front;
++    if(!b->data||!f->vertices||!f->indices||b->size>b->capacity||b->packets>=CO_MAX_PACKETS||
++       f->vertex_count<3||f->vertex_count>CO_MAX_VERTICES||!f->triangle_count||f->triangle_count>CO_MAX_TRIANGLES)return false;
++    const unsigned side_bytes=(f->triangle_count+7u)/8u;
++    if((f->triangle_count%8u)&&(in->back_faces[side_bytes-1]&(uint8_t)(0xffu<<(f->triangle_count%8u))))return false;
++    bool used[CO_MAX_VERTICES]={0},same=true,any_front=false,any_back=false;
++    uint8_t remap[CO_MAX_VERTICES]={0};unsigned count=0;
++    for(unsigned t=0;t<f->triangle_count;t++){
++        const uint16_t *ix=f->indices+3*t;
++        if(ix[0]>=f->vertex_count||ix[1]>=f->vertex_count||ix[2]>=f->vertex_count||ix[0]==ix[1]||ix[1]==ix[2]||ix[0]==ix[2])return false;
++        for(unsigned j=0;j<3;j++)used[ix[j]]=true;
++        if((in->back_faces[t/8]>>(t%8))&1u)any_back=true;else any_front=true;
++    }
++    for(unsigned v=0;v<f->vertex_count;v++)if(used[v]){
++        const co_vertex *p=f->vertices+v;if(!vertex_valid(p))return false;
++        remap[v]=(uint8_t)count++;
++        if(p->color_a!=in->back_colors[2*v]||p->color_b!=in->back_colors[2*v+1])same=false;
++    }
++    // Numeric snapshots can omit an unused/equal palette without changing any
++    // possible pixel. Geometry, selected faces and their order are unchanged.
++    if(!any_back||same)return co_append(b,f);
++    if(!any_front)return append_back_only(b,in);
++    const size_t raw=12u+24u*count+3u*f->triangle_count+side_bytes,bytes=aligned(raw);
++    if(bytes>b->capacity-b->size)return false;
++    uint8_t *out=b->data+b->size;memset(out,0,bytes);out[0]=(uint8_t)count;out[1]=f->triangle_count;out[2]=2;
++    w16(out+4,f->node);w16(out+10,(unsigned)bytes);
++    for(unsigned v=0;v<f->vertex_count;v++)if(used[v]){
++        const co_vertex *p=f->vertices+v;uint8_t *d=out+12+24*remap[v];
++        wf(d,p->x);wf(d+4,p->y);wf(d+8,p->mask);wf(d+12,p->depth);
++        w16(d+16,p->color_a);w16(d+18,p->color_b);w16(d+20,in->back_colors[2*v]);w16(d+22,in->back_colors[2*v+1]);
++    }
++    uint8_t *ix=out+12+24*count;for(unsigned j=0;j<3u*f->triangle_count;j++)ix[j]=remap[f->indices[j]];
++    memcpy(ix+3u*f->triangle_count,in->back_faces,side_bytes);
++    b->size+=bytes;b->packets++;return true;
++}
+ bool co_vertex_at(const co_view*v,unsigned index,co_vertex*out){
+-    if(!v||!out||!v->data||v->mode>1||index>=v->vertex_count)return false;
+-    const unsigned stride=v->mode?12:20;const size_t at=12u+stride*index;if(at>v->size||stride>v->size-at)return false;
++    if(!v||!out||!v->data||v->mode>2||index>=v->vertex_count)return false;
++    const unsigned stride=vertex_stride(v->mode);const size_t at=12u+stride*index;if(at>v->size||stride>v->size-at)return false;
+     const uint8_t*d=v->data+at;out->x=rf(d);out->y=rf(d+4);
+-    if(v->mode){out->mask=-1;out->depth=rf(d+8);out->color_a=out->color_b=v->color;}
++    if(v->mode==1){out->mask=-1;out->depth=rf(d+8);out->color_a=out->color_b=v->color;}
+     else{out->mask=rf(d+8);out->depth=rf(d+12);out->color_a=(uint16_t)u16(d+16);out->color_b=(uint16_t)u16(d+18);}
+     return true;
+ }
+ bool co_triangle_at(const co_view*v,unsigned index,uint8_t out[3]){
+-    if(!v||!out||!v->data||v->mode>1||index>=v->triangle_count)return false;
+-    size_t at=12u+(v->mode?12u:20u)*v->vertex_count+3u*index;if(at>v->size||3u>v->size-at)return false;
++    if(!v||!out||!v->data||v->mode>2||index>=v->triangle_count)return false;
++    size_t at=12u+vertex_stride(v->mode)*v->vertex_count+3u*index;if(at>v->size||3u>v->size-at)return false;
+     for(unsigned k=0;k<3;k++){out[k]=v->data[at+k];if(out[k]>=v->vertex_count)return false;}return true;
+ }
++bool co_vertex_at_side(const co_view *v,unsigned index,bool back,co_vertex *out){
++    if(!out)return false;
++    co_vertex value;if(!co_vertex_at(v,index,&value))return false;
++    if(back&&v->mode==2){
++        const size_t at=12u+24u*index;if(at>v->size||24u>v->size-at)return false;
++        value.color_a=(uint16_t)u16(v->data+at+20);value.color_b=(uint16_t)u16(v->data+at+22);
++    }
++    *out=value;return true;
++}
++bool co_triangle_side(const co_view *v,unsigned index,bool *back){
++    if(!v||!back||!v->data||v->mode>2||index>=v->triangle_count)return false;
++    bool value=false;
++    if(v->mode==2){
++        size_t at=12u+24u*v->vertex_count+3u*v->triangle_count+index/8u;
++        if(at>=v->size)return false;
++        value=((v->data[at]>>(index%8u))&1u)!=0;
++    }
++    *back=value;return true;
++}
+ bool co_read(const uint8_t*d,size_t available,co_view*out){
+-    if(!d||!out||available<12||d[0]<3||d[0]>CO_MAX_VERTICES||!d[1]||d[1]>CO_MAX_TRIANGLES||d[2]>1||d[3]||u16(d+6)||(!d[2]&&u16(d+8)))return false;
+-    const size_t raw=12u+(d[2]?12u:20u)*d[0]+3u*d[1],bytes=aligned(raw);
++    if(!d||!out||available<12||d[0]<3||d[0]>CO_MAX_VERTICES||!d[1]||d[1]>CO_MAX_TRIANGLES||d[2]>2||d[3]||u16(d+6)||(d[2]!=1&&u16(d+8)))return false;
++    const size_t raw=12u+vertex_stride(d[2])*d[0]+3u*d[1]+(d[2]==2?(d[1]+7u)/8u:0u),bytes=aligned(raw);
+     if(u16(d+10)!=bytes||bytes>available)return false;
+     co_view v={d,bytes,(uint16_t)u16(d+4),(uint16_t)u16(d+8),d[0],d[1],d[2]};
+     for(unsigned i=0;i<v.vertex_count;i++){co_vertex p;if(!co_vertex_at(&v,i,&p)||!vertex_valid(&p))return false;}
+     for(unsigned t=0;t<v.triangle_count;t++){uint8_t ix[3];if(!co_triangle_at(&v,t,ix)||ix[0]==ix[1]||ix[1]==ix[2]||ix[0]==ix[2])return false;}
++    if(d[2]==2&&(d[1]%8u)&&(d[raw-1]&(uint8_t)(0xffu<<(d[1]%8u))))return false;
+     for(size_t i=raw;i<bytes;i++)if(d[i])return false;
+     *out=v;return true;
+ }
+diff --git a/main/ayatsuri/compact_opaque.h b/main/ayatsuri/compact_opaque.h
+index 1fe4277f4f04835134ab57ebaf3824f5b940c208..4326a0bff722ef65a55322968acce3f41b7317f6 100644
+--- a/main/ayatsuri/compact_opaque.h
++++ b/main/ayatsuri/compact_opaque.h
+@@ -15,6 +15,11 @@ typedef struct {
+     uint16_t node;
+     uint8_t vertex_count,triangle_count;
+ } co_input;
++/* Explicit mode2 retains front/back A/B colors plus selected face-side bits.
++ * The unused high bits in the last side byte must be zero. Sources are
++ * synchronous, disjoint borrows, with2*vertex_count back colors and ceil(T/8)
++ * side bytes. No native/source pointer is retained in a record. */
++typedef struct { co_input front; const uint16_t *back_colors; const uint8_t *back_faces; } co_sided_input;
+ typedef struct { uint8_t *data; size_t capacity,size; unsigned packets; } co_buffer;
+ typedef struct {
+     const uint8_t *data; size_t size;
+@@ -24,9 +29,12 @@ typedef struct {
+ /* Rejection leaves buffer bytes, size and packet count unchanged. Distinct,
+  * non-overlapping source and destination spans are required. */
+ bool co_append(co_buffer *buffer,const co_input *input);
++bool co_append_sided(co_buffer *buffer,const co_sided_input *input);
+ /* Validate one complete record at the start of a span. view.size is its length.
+  * Reject malformed fields, nonfinite values, bad indices and nonzero padding. */
+ bool co_read(const uint8_t *data,size_t available,co_view *view);
+ bool co_vertex_at(const co_view *view,unsigned index,co_vertex *vertex);
++bool co_vertex_at_side(const co_view *view,unsigned index,bool back,co_vertex *vertex);
++bool co_triangle_side(const co_view *view,unsigned index,bool *back);
+ bool co_triangle_at(const co_view *view,unsigned index,uint8_t indices[3]);
+ #endif
+diff --git a/main/pocket/pocket_ayatsuri_model.inc b/main/pocket/pocket_ayatsuri_model.inc
+index 56fce9f5b6380628900eb907b6895ba7c67c196a..50942dcb64b8bd879389f4fee56e43dd4f6c2c79 100644
+--- a/main/pocket/pocket_ayatsuri_model.inc
++++ b/main/pocket/pocket_ayatsuri_model.inc
+@@ -1,3 +1,4 @@
++#include "ui/kasane/ksn_mesh_depth.h"
+ /* Immutable cold model + independently owned mutable instances. Include after
+  * shade_buffer/fail helpers. No JS backing pointer survives a synchronous call.
+  * All native storage is charged to the ordinary guest allocator. */
+@@ -189,6 +190,24 @@ static JSValue managed_submit_blend(JSContext *ctx,const char *op,const ayatsuri
+     }
+     return pocket_proc_native_blend_ellipsoids(ctx,op,p);
+ }
++/* Emit contiguous side runs in the selected global face order. Grouping all
++ * front faces before backs would alter painter order and exact-depth ties. */
++static __attribute__((noinline)) JSValue managed_submit_sided_painter(JSContext *ctx,const char *op,
++        const ayatsuri_model_sided_mesh_view *v){
++    const ksn_proc_gouraud_patch *source=v->patch;ksn_proc_gouraud_patch part;unsigned cursor=0;
++    while(cursor<source->header.triangles){
++        if(!ksn_mesh_sided_run(source,v->back_colors,v->back_faces,&cursor,&part))return invalid(ctx,op,"invalid sided mesh run");
++        JSValue result=pocket_proc_native_gouraud(ctx,op,&part);if(JS_IsException(result))return result;
++    }
++    return JS_UNDEFINED;
++}
++static JSValue managed_submit_sided(JSContext *ctx,const char *op,pocket_model_actor *a,uint16_t node){
++    ayatsuri_model_sided_mesh_view v;
++    ayatsuri_model_status status=ayatsuri_model_instance_sided_mesh_view(&a->core,a,1,node,&v);
++    if(status!=AYATSURI_MODEL_OK)return managed_model_error(ctx,op,status);
++    if(pocket_proc_native_mesh_depth())return pocket_proc_native_sided_mesh(ctx,op,v.patch,v.depth,v.back_colors,v.back_faces,node);
++    return managed_submit_sided_painter(ctx,op,&v);
++}
+ static JSValue managed_instance_submit(JSContext *ctx,JSValueConst self,int argc,JSValueConst *argv){
+     (void)argv;const char *op="ayatsuri.instance.submit";pocket_model_actor *a=managed_instance_enter(ctx,self,op,false);
+     if(!a)return JS_EXCEPTION;
+@@ -199,12 +218,14 @@ static JSValue managed_instance_submit(JSContext *ctx,JSValueConst self,int argc
+     pocket_proc_mark mark;JSValue result=pocket_proc_native_begin(ctx,op,&mark);
+     if(JS_IsException(result)){a->busy=false;return result;}
+     while(status==AYATSURI_MODEL_OK){
+-        if(pocket_proc_native_mesh_depth()&&packet.kind!=4){result=invalid(ctx,op,"opaque mesh scope rejects nonmesh packets and clips");break;}
++        if(pocket_proc_native_mesh_depth()&&packet.kind!=4&&packet.kind!=5){result=invalid(ctx,op,"opaque mesh scope rejects nonmesh packets and clips");break;}
+         if(packet.kind==1){
+             ksn_proc_ellipsoid p;managed_packet_ellipsoid(&packet,&p);
+             result=pocket_proc_native_ellipsoid(ctx,op,&p);
+         }else if(packet.kind==2||packet.kind==3){
+             ksn_proc_blend_ellipsoids p;result=managed_submit_blend(ctx,op,&packet,&p);
++        }else if(packet.kind==5){
++            result=managed_submit_sided(ctx,op,a,packet.node_id);
+         }else if(packet.kind==4){
+             /* Instance owns the aligned evaluated packet; the frame takes its
+              * existing bounded snapshot before this synchronous call returns. */
+@@ -259,7 +280,7 @@ static JSValue managed_instance_submit_clipped(JSContext *ctx,JSValueConst self,
+     pocket_proc_mark mark;JSValue result=pocket_proc_native_begin(ctx,op,&mark);
+     if(JS_IsException(result)){a->busy=false;return result;}
+     while(status==AYATSURI_MODEL_OK){
+-        if(pocket_proc_native_mesh_depth()&&packet.kind!=4){result=invalid(ctx,op,"opaque mesh scope rejects nonmesh packets and clips");break;}
++        if(pocket_proc_native_mesh_depth()&&packet.kind!=4&&packet.kind!=5){result=invalid(ctx,op,"opaque mesh scope rejects nonmesh packets and clips");break;}
+         size_t selected=k;for(size_t j=0;j<k;j++)if(managed_clip_id(&ids,j)==packet.node_id){selected=j;break;}
+         if(selected<k){
+             managed_packet_clip(&packet,&counts,&xy,selected,&scratch.clipped);
+@@ -269,6 +290,8 @@ static JSValue managed_instance_submit_clipped(JSContext *ctx,JSValueConst self,
+             result=pocket_proc_native_ellipsoid(ctx,op,&scratch.clipped.patch);
+         }else if(packet.kind==2||packet.kind==3){
+             result=managed_submit_blend(ctx,op,&packet,&scratch.blend);
++        }else if(packet.kind==5){
++            result=managed_submit_sided(ctx,op,a,packet.node_id);
+         }else if(packet.kind==4){
+             /* Instance owns the aligned evaluated packet; the frame takes its
+              * existing bounded snapshot before this synchronous call returns. */
+diff --git a/main/pocket/pocket_proc.c b/main/pocket/pocket_proc.c
+index 557a62c3ff349ad9388c0348342ec1b05f48591c..c2dccad7ae46e5ce388d52059177dd71ced2eb65 100644
+--- a/main/pocket/pocket_proc.c
++++ b/main/pocket/pocket_proc.c
+@@ -697,6 +697,13 @@ JSValue pocket_proc_native_mesh(JSContext *ctx,const char *op,const ksn_proc_gou
+         return failure(ctx,op,POCKET_ERR_LIMIT_EXCEEDED,"unsupported or over-budget opaque mesh");
+     image_band_valid=false;return JS_UNDEFINED;
+ }
++JSValue pocket_proc_native_sided_mesh(JSContext *ctx,const char *op,const ksn_proc_gouraud_patch *p,
++        const float *depth,const uint16_t *colors,const uint8_t bits[8],uint16_t node){
++    if(!pocket_proc_native_mesh_depth())return failure(ctx,op,POCKET_ERR_BUSY,"beginMeshFrame required");
++    if(!ksn_mesh_append_sided(&surfaces[building_surface].depth_candidate,p,depth,colors,bits,node))
++        return failure(ctx,op,POCKET_ERR_LIMIT_EXCEEDED,"unsupported or over-budget sided mesh");
++    image_band_valid=false;return JS_UNDEFINED;
++}
+ /* The second half of draw(), shared by H.draw (array or numbers) and the
+  * native callers (pocket_proc_draw_numbers): the inputs are read and each one
+  * is a finite double that stays finite as a float. Short input lists are
+diff --git a/main/pocket/pocket_proc.h b/main/pocket/pocket_proc.h
+index 69783a6d3a8c83e55f61f2e50936c9315664435c..a66e8e3a6dfdb9e80ca790f6c22c176a4ecc95bc 100644
+--- a/main/pocket/pocket_proc.h
++++ b/main/pocket/pocket_proc.h
+@@ -83,6 +83,8 @@ JSValue pocket_proc_native_blend_region(JSContext *ctx,const char *op,const ksn_
+ /* Screen-linear vertex colours and an independent model-attached scalar
+  * mask. Synchronous numeric snapshot; quota/validation is NOT_APPLIED. */
+ JSValue pocket_proc_native_gouraud(JSContext *ctx,const char *op,const ksn_proc_gouraud_patch *patch);
++JSValue pocket_proc_native_sided_mesh(JSContext *ctx,const char *op,const ksn_proc_gouraud_patch *patch,
++    const float *depth,const uint16_t *back_colors,const uint8_t back_faces[8],uint16_t node);
+ void pocket_proc_native_rollback(const pocket_proc_mark *mark);
+ /* The 8-row bands (17) of the image a just-committed frame changes, and on
+  * each its columns [x0, x1): the bands whose ordered entries differ from the
+diff --git a/main/ui/kasane/ksn_mesh_depth.c b/main/ui/kasane/ksn_mesh_depth.c
+index 59783fa3beb7c5eb4e75b8ec4a6ccda46db741e0..07958f292aca2a3a7f023943ab1d2bb4f468856c 100644
+--- a/main/ui/kasane/ksn_mesh_depth.c
++++ b/main/ui/kasane/ksn_mesh_depth.c
+@@ -2,6 +2,29 @@
+ #include <math.h>
+ #include <string.h>
+ #include <limits.h>
++static bool mesh_overlap(const void *a,size_t an,const void *b,size_t bn){
++    uintptr_t x=(uintptr_t)a,y=(uintptr_t)b;
++    return an&&bn&&(x<=y?y-x<an:x-y<bn);
++}
++bool ksn_mesh_sided_run(const ksn_proc_gouraud_patch *source,const uint16_t *colors,
++        const uint8_t bits[8],unsigned *cursor,ksn_proc_gouraud_patch *out){
++    if(!source||!colors||!bits||!cursor||!out||source->header.vertices<3||source->header.vertices>32||
++       !source->header.triangles||source->header.triangles>64||source->header.holes>2)return false;
++    const size_t colors_bytes=4u*source->header.vertices;
++    if(mesh_overlap(out,sizeof *out,source,sizeof *source)||mesh_overlap(out,sizeof *out,colors,colors_bytes)||
++       mesh_overlap(out,sizeof *out,bits,8)||mesh_overlap(out,sizeof *out,cursor,sizeof *cursor)||
++       mesh_overlap(cursor,sizeof *cursor,source,sizeof *source)||mesh_overlap(cursor,sizeof *cursor,colors,colors_bytes)||
++       mesh_overlap(cursor,sizeof *cursor,bits,8)||*cursor>=source->header.triangles)return false;
++    const unsigned first=*cursor;const bool back=(bits[first/8]>>(first%8))&1u;unsigned end=first+1;
++    while(end<source->header.triangles&&(((bits[end/8]>>(end%8))&1u)!=0)==back)++end;
++    *out=*source;out->header.triangles=(uint8_t)(end-first);
++    memset(out->indices,0,sizeof out->indices);
++    memcpy(out->indices,source->indices+3*first,3*(end-first)*sizeof out->indices[0]);
++    if(back)for(unsigned j=0;j<source->header.vertices;j++){
++        out->vertices[j].color_a=colors[2*j];out->vertices[j].color_b=colors[2*j+1];
++    }
++    *cursor=end;return true;
++}
+ bool ksn_mesh_append(ksn_mesh_snapshot *s,const ksn_proc_gouraud_patch *p,const float *depth,uint16_t node){
+     int l,t,r,b;unsigned cost;
+     if(!s||!s->enabled||!p||!depth||p->header.holes||
+@@ -16,6 +39,20 @@ bool ksn_mesh_append(ksn_mesh_snapshot *s,const ksn_proc_gouraud_patch *p,const
+     if(!co_append(&s->packets,&in))return false;
+     s->work+=cost;return true;
+ }
++bool ksn_mesh_append_sided(ksn_mesh_snapshot *s,const ksn_proc_gouraud_patch *p,const float *depth,
++        const uint16_t *colors,const uint8_t bits[8],uint16_t node){
++    int l,t,r,b;unsigned cost;
++    if(!s||!s->enabled||!p||!depth||!colors||!bits||p->header.holes||
++       !ksn_proc_gouraud_bounds(p,&l,&t,&r,&b,&cost)||s->work>s->work_limit||cost>s->work_limit-s->work)return false;
++    co_vertex vertices[CO_MAX_VERTICES];
++    for(unsigned j=0;j<p->header.vertices;j++){
++        const ksn_proc_gouraud_vertex *v=p->vertices+j;
++        vertices[j]=(co_vertex){v->x,v->y,v->mask,depth[j],v->color_a,v->color_b};
++    }
++    co_sided_input in={{vertices,p->indices,node,p->header.vertices,p->header.triangles},colors,bits};
++    if(!co_append_sided(&s->packets,&in))return false;
++    s->work+=cost;return true;
++}
+ typedef struct {double a,b,c;int sign;bool closed;} gouraud_edge;
+ static gouraud_edge gouraud_make_edge(const co_vertex *a,const co_vertex *b){
+     const double dx=(double)b->x-a->x,dy=(double)b->y-a->y;
+@@ -38,7 +75,8 @@ static bool strip(const ksn_mesh_snapshot *s,uint16_t *pixels,unsigned y,unsigne
+         for(unsigned face=0;face<view.triangle_count;face++){
+             uint8_t indices[3];co_vertex v[3];
+             if(!co_triangle_at(&view,face,indices))return false;
+-            for(unsigned j=0;j<3;j++)if(!co_vertex_at(&view,indices[j],v+j))return false;
++            bool back;if(!co_triangle_side(&view,face,&back))return false;
++            for(unsigned j=0;j<3;j++)if(!co_vertex_at_side(&view,indices[j],back,v+j))return false;
+             double area=((double)v[1].x-v[0].x)*((double)v[2].y-v[0].y)-((double)v[1].y-v[0].y)*((double)v[2].x-v[0].x);
+             if(!(area>1e-5))return false;
+             /* Match painter arithmetic exactly: division per weight can flip
+diff --git a/main/ui/kasane/ksn_mesh_depth.h b/main/ui/kasane/ksn_mesh_depth.h
+index 1891dacf083110093729f0bcb2731d2427577bce..2ce43493ff290c6279e23131da9c5ca7a0006a98 100644
+--- a/main/ui/kasane/ksn_mesh_depth.h
++++ b/main/ui/kasane/ksn_mesh_depth.h
+@@ -6,7 +6,17 @@
+  * Larger evaluated view depth wins; exact ties retain first submitted face.
+  * No alpha/holes/clips. No source pointers survive append. */
+ typedef struct { co_buffer packets; uint32_t work,work_limit; bool enabled; } ksn_mesh_snapshot;
++/* Copy one contiguous side run from a validated Model sided-mesh view.
++ * No retention/allocation; source/back-colors/bits are borrowed. Caller owns
++ * a full patch output, disjoint from the inputs. cursor advances on success.
++ * false (bad counts/cursor/output overlap) leaves output/cursor untouched. */
++bool ksn_mesh_sided_run(const ksn_proc_gouraud_patch *source,const uint16_t *back_colors,
++                      const uint8_t back_faces[8],unsigned *cursor,ksn_proc_gouraud_patch *out);
+ bool ksn_mesh_append(ksn_mesh_snapshot *s,const ksn_proc_gouraud_patch *p,const float *depth,uint16_t node);
++/* One owned record for a full sided logical mesh; side choices and palettes
++ * are copied. No regrouping/reordering or per-run packet amplification. */
++bool ksn_mesh_append_sided(ksn_mesh_snapshot *s,const ksn_proc_gouraud_patch *p,const float *depth,
++                           const uint16_t *back_colors,const uint8_t back_faces[8],uint16_t node);
+ /* scratch has width*rows floats, rows is 1 or 8. Caller supplies background
+  * pixels. A complete band can be processed in smaller scratch-sized strips. */
+ bool ksn_mesh_render(const ksn_mesh_snapshot *s,uint16_t *pixels,unsigned y,unsigned height,
+diff --git a/tools/ayatsuri/asset/compact_opaque/batch_static.cjs b/tools/ayatsuri/asset/compact_opaque/batch_static.cjs
+new file mode 100644
+index 0000000000000000000000000000000000000000..85017fc387f211c1ba2a47983f4cd296057d7626
+--- /dev/null
++++ b/tools/ayatsuri/asset/compact_opaque/batch_static.cjs
+@@ -0,0 +1,61 @@
++'use strict';
++// Offline exact packing only; callers MUST supply explicit immutable transform /
++// deformation scopes. This does not discover rigs or merge animated bindings.
++// Never use Array.every directly on caller triples: it skips sparse holes.
++const denseTriple=(a,valid)=>Array.isArray(a)&&a.length===3&&[0,1,2].every(k=>Object.prototype.hasOwnProperty.call(a,k)&&valid(a[k]));
++function finiteArea(positions,t){
++ const [a,b,c]=t.map(i=>positions[i]),u=b.map((x,k)=>x-a[k]),v=c.map((x,k)=>x-a[k]);
++ const n=[u[1]*v[2]-u[2]*v[1],u[2]*v[0]-u[0]*v[2],u[0]*v[1]-u[1]*v[0]];
++ return n.every(Number.isFinite)&&n.some(x=>x!==0);
++}
++function batchStaticSurfaces(surfaces,{scopeBySurface,preserveOrder=false}={}){
++ if(typeof preserveOrder!=='boolean')throw Error('INVALID_ORDER_POLICY');
++ if(!Array.isArray(surfaces)||!surfaces.length||surfaces.length>256||!(scopeBySurface instanceof Map))throw Error('EXPLICIT_STATIC_SCOPES_REQUIRED');
++ let vertexCount=0,triangleCount=0;const seen=new Set(),groups=new Map();
++ for(const s of surfaces){
++  const scope=scopeBySurface.get(s?.stableId);
++  if(!s||typeof s.stableId!=='string'||!s.stableId||seen.has(s.stableId)||typeof scope!=='string'||!scope||typeof s.materialId!=='string'||!s.materialId)throw Error('INVALID_SURFACE_ID_OR_SCOPE');seen.add(s.stableId);
++  if(!Array.isArray(s.positions)||s.positions.length<3||!Array.isArray(s.normals)||s.normals.length!==s.positions.length||!Array.isArray(s.triangles)||!s.triangles.length)throw Error('INVALID_SURFACE');
++  vertexCount+=s.positions.length;triangleCount+=s.triangles.length;if(vertexCount>4096||triangleCount>8192)throw Error('BOUNDED_INPUT_LIMIT');
++  for(const p of [...s.positions,...s.normals])if(!denseTriple(p,Number.isFinite))throw Error('INVALID_ATTRIBUTE');
++  for(const n of s.normals){const length=Math.hypot(...n);if(!Number.isFinite(length)||Math.abs(length-1)>1e-4)throw Error('INVALID_NORMAL');}
++  for(const t of s.triangles){
++   if(!denseTriple(t,i=>Number.isInteger(i)&&i>=0&&i<s.positions.length)||new Set(t).size!==3)throw Error('INVALID_TRIANGLE');
++   if(!finiteArea(s.positions,t))throw Error('DEGENERATE_TRIANGLE');
++  }
++  const side=s.materialSidedness??'single';
++  if(side!=='single'&&side!=='double')throw Error('INVALID_SIDEDNESS');
++  const groupKey=JSON.stringify([scope,s.materialId,side]);
++  // Ordered mode only merges adjacent compatible surfaces, never moving an
++  // intervening surface/face behind a different material or side policy.
++  const last=[...groups.values()].at(-1);
++  const key=preserveOrder?(last&&last.groupKey===groupKey?last.key:String(groups.size)):groupKey;
++  let g=groups.get(key);
++  if(!g){g={key,groupKey,scope,side,explicit:s.materialSidedness!==undefined,materialId:s.materialId,positions:[],normals:[],triangles:[],origins:[],lookup:new Map()};groups.set(key,g);}
++  if(s.materialSidedness!==undefined)g.explicit=true;
++  // No tolerance, quantization or vertex relocation. Signed zero is keyed
++  // separately as it can matter to downstream exact numeric transforms.
++  const exact=x=>Object.is(x,-0)?'-0':x;
++  const map=s.positions.map((p,i)=>{const n=s.normals[i],k=JSON.stringify([...p,...n].map(exact));let j=g.lookup.get(k);if(j===undefined){j=g.positions.length;g.lookup.set(k,j);g.positions.push(p.slice());g.normals.push(n.slice());}return j;});
++  s.triangles.forEach((t,i)=>{const mapped=t.map(j=>map[j]);if(new Set(mapped).size!==3)throw Error('DEGENERATE_TRIANGLE');g.triangles.push(mapped);g.origins.push({surface:s.stableId,triangle:i});});
++ }
++ const result=[...groups.values()].flatMap(g=>partition(g,preserveOrder).map(p=>({...p,scope:g.scope,...(g.explicit?{materialSidedness:g.side}:{})})));
++ return result;
++}
++function partition(g,preserveOrder){
++ const pending=new Set(g.triangles.map((_,i)=>i)),parts=[];
++ while(pending.size){let ids=new Set(),tris=[],origins=[];
++  while(tris.length<64){let best=-1,bestShared=-1,bestDist=Infinity;let center=[0,0,0];for(const id of ids)g.positions[id].forEach((v,k)=>center[k]+=v/ids.size);
++   for(const i of pending){const t=g.triangles[i],shared=t.filter(v=>ids.has(v)).length,add=3-shared;
++    if(preserveOrder){if(ids.size+add<=32)best=i;break;}
++    if(ids.size+add>32)continue;
++    const c=[0,1,2].map(k=>t.reduce((n,j)=>n+g.positions[j][k]/3,0));const dist=ids.size?c.reduce((n,v,k)=>n+(v-center[k])**2,0):0;
++    if(shared>bestShared||(shared===bestShared&&(dist<bestDist||(dist===bestDist&&i<best)))){best=i;bestShared=shared;bestDist=dist;}
++   }
++   if(best<0)break;const t=g.triangles[best];tris.push(t);origins.push(g.origins[best]);t.forEach(i=>ids.add(i));pending.delete(best);
++  }
++  const list=[...ids],map=new Map(list.map((v,i)=>[v,i]));parts.push({positions:list.map(i=>g.positions[i]),normals:list.map(i=>g.normals[i]),triangles:tris.map(t=>t.map(i=>map.get(i))),origins,materialId:g.materialId});
++ }
++ return parts;
++}
++module.exports={batchStaticSurfaces};
+diff --git a/tools/ayatsuri/asset/compact_opaque/test_batch.cjs b/tools/ayatsuri/asset/compact_opaque/test_batch.cjs
+new file mode 100644
+index 0000000000000000000000000000000000000000..77ae1e6ca9374373e067b0c70afbeb155ff9f5bd
+--- /dev/null
++++ b/tools/ayatsuri/asset/compact_opaque/test_batch.cjs
+@@ -0,0 +1,33 @@
++'use strict';
++const assert=require('node:assert/strict');const{batchStaticSurfaces}=require('./batch_static.cjs');
++const make=(id,x,material='orange')=>({stableId:id,materialId:material,positions:[[x,0,0],[x+1,0,0],[x,1,0]],normals:[[0,0,1],[0,0,1],[0,0,1]],triangles:[[0,1,2]]});
++const input=[make('a',0),make('b',2),make('c',4,'ivory'),make('d',6)];
++const scopes=new Map([['a','rigid-root'],['b','rigid-root'],['c','rigid-root'],['d','independent-jaw']]);const before=JSON.stringify(input);
++const out=batchStaticSurfaces(input,{scopeBySurface:scopes});assert.equal(out.length,3);assert.equal(JSON.stringify(input),before);
++assert(out.some(p=>p.scope==='rigid-root'&&p.materialId==='orange'&&p.origins.length===2));assert(out.some(p=>p.scope==='independent-jaw'&&p.origins.length===1));
++const key=(p,t)=>JSON.stringify([p.scope,p.materialId,...t.map(i=>[...p.positions[i],...p.normals[i]])]);
++const expected=input.flatMap(p=>p.triangles.map(t=>key({...p,scope:scopes.get(p.stableId)},t))).sort();
++assert.deepEqual(out.flatMap(p=>p.triangles.map(t=>key(p,t))).sort(),expected);
++assert.deepEqual(batchStaticSurfaces(input,{scopeBySurface:scopes}),out);
++const many=Array.from({length:40},(_,i)=>make('part-'+i,i*2));const manyScopes=new Map(many.map(x=>[x.stableId,'static']));
++const parts=batchStaticSurfaces(many,{scopeBySurface:manyScopes});assert(parts.length>1);assert(parts.every(p=>p.positions.length<=32&&p.triangles.length<=64));assert.equal(parts.reduce((n,p)=>n+p.triangles.length,0),40);
++assert.throws(()=>batchStaticSurfaces(input),/EXPLICIT_STATIC_SCOPES_REQUIRED/);
++assert.throws(()=>batchStaticSurfaces(input,{scopeBySurface:new Map()}),/INVALID_SURFACE_ID_OR_SCOPE/);
++const bad=structuredClone(input);bad[0].positions[0][0]=NaN;assert.throws(()=>batchStaticSurfaces(bad,{scopeBySurface:scopes}),/INVALID_ATTRIBUTE/);
++const alias=make('same',0);const exact=batchStaticSurfaces([make('a',0),alias],{scopeBySurface:new Map([['a','s'],['same','s']])});assert.equal(exact[0].positions.length,3);assert.equal(exact[0].triangles.length,2);
++// Regression: Array.every skips holes. Attribute and index triples must be dense.
++const rejectUnchanged=(surface,pattern)=>{const before=structuredClone(surface);assert.throws(()=>batchStaticSurfaces([surface],{scopeBySurface:new Map([[surface.stableId,'static']])}),pattern);assert.deepEqual(surface,before);};
++for(const field of ['positions','normals'])for(let component=0;component<3;component++){
++ const sparse=make('sparse',0);delete sparse[field][0][component];rejectUnchanged(sparse,/INVALID_ATTRIBUTE/);
++}
++const nonfiniteNormal=make('nonfinite-normal',0);nonfiniteNormal.normals[0][0]=NaN;rejectUnchanged(nonfiniteNormal,/INVALID_ATTRIBUTE/);
++const sparseIndices=make('sparse-indices',0);delete sparseIndices.triangles[0][1];rejectUnchanged(sparseIndices,/INVALID_TRIANGLE/);
++// Reject, never silently discard, an authored face that cannot survive exact dedup.
++for(const differentNormals of [false,true]){
++ const coincident=make('coincident',0);coincident.positions[1]=coincident.positions[0].slice();if(differentNormals)coincident.normals[1]=[0,1,0];rejectUnchanged(coincident,/DEGENERATE_TRIANGLE/);
++}
++const collinear=make('collinear',0);collinear.positions=[[0,0,0],[1,0,0],[2,0,0]];rejectUnchanged(collinear,/DEGENERATE_TRIANGLE/);
++// A later invalid surface must not alter an earlier valid input either.
++const lateBad=make('late-bad',0);lateBad.positions[1]=lateBad.positions[0].slice();const validFirst=make('valid-first',2);const mixed=[validFirst,lateBad],mixedBefore=structuredClone(mixed);
++assert.throws(()=>batchStaticSurfaces(mixed,{scopeBySurface:new Map(mixed.map(x=>[x.stableId,'static']))}),/DEGENERATE_TRIANGLE/);assert.deepEqual(mixed,mixedBefore);
++console.log('explicit-scope static batching synthetic: PASS');
+diff --git a/tools/ayatsuri/asset/compile_static.cjs b/tools/ayatsuri/asset/compile_static.cjs
+new file mode 100644
+index 0000000000000000000000000000000000000000..b81f34e7c783bd328b631df29d90834d0ed3eef4
+--- /dev/null
++++ b/tools/ayatsuri/asset/compile_static.cjs
+@@ -0,0 +1,33 @@
++'use strict';
++// Exact static IR -> bounded parts -> immutable AYNM. No reduction, authoring
++// mutation, asset defaults, implicit batching scopes or sidedness overrides.
++const {batchStaticSurfaces}=require('./compact_opaque/batch_static.cjs');
++const {compile}=require('../model/pack_model.cjs');
++function compileStatic(ir,{scopeBySurface,materials,scale=1}={}){
++ if(!ir||!['hone-scene-ir-v1','hone-scene-ir-v2'].includes(ir.schema)||!Array.isArray(ir.materials)||!Array.isArray(ir.surfaces)||!Number.isFinite(scale)||scale<=0)throw Error('INVALID_IR');
++ const ids=new Set();
++ const sideById=new Map(ir.materials.map(m=>{
++  if(typeof m.stableId!=='string'||!m.stableId||ids.has(m.stableId))throw Error('INVALID_MATERIAL_ID');ids.add(m.stableId);
++  if(ir.schema==='hone-scene-ir-v1'&&m.sidedness!==undefined)throw Error('SIDEDNESS_REQUIRES_IR_V2');
++  const side=ir.schema==='hone-scene-ir-v1'?'single':m.sidedness;
++  if(!['single','double'].includes(side))throw Error('MISSING_MATERIAL_SIDEDNESS');
++  return [m.stableId,side];
++ }));
++ const surfaces=ir.surfaces.map(s=>{
++  const id=s.materialId??'default',side=s.materialId===null?(ir.schema==='hone-scene-ir-v1'?'single':ir.defaultMaterial?.sidedness):sideById.get(id);
++  if(!side)throw Error('UNKNOWN_MATERIAL');
++  return {...s,materialId:id,materialSidedness:side};
++ });
++ const parts=batchStaticSurfaces(surfaces,{scopeBySurface,preserveOrder:true});
++ const root={index:0,name:'root',parent:-1,kind:'group',enabled:true,pose:[0,0,0,0,0,0,1,1,1]};
++ const nodes=[root,...parts.map((p,i)=>{
++  const m=materials?.[p.materialId];
++  if(!m||!Array.isArray(m.hone)||m.hone.length!==11||!Number.isInteger(m.albedo565)||m.albedo565<0||m.albedo565>65535)throw Error('MATERIAL_MAPPING_REQUIRED');
++  return {...root,index:i+1,name:'part-'+i,parent:0,kind:'gouraudMesh',materialSidedness:p.materialSidedness,
++   material:m.hone.slice(),color:0xffffff,thickness:1,opacity:1,edgeSoftness:0,
++   mesh:{vertices:p.positions.flat().map(v=>v*scale),normals:p.normals.flat(),indices:p.triangles.flat(),mask:p.positions.map(()=>-1),holes:[],order:'authored',albedoA:m.albedo565,albedoB:m.albedo565,thickness:255}};
++ })];
++ const manifest={schema:'ayatsuri-native-model-design-v2',nodes};
++ return {manifest,parts,bytes:compile(manifest)};
++}
++module.exports={compileStatic};
+diff --git a/tools/ayatsuri/asset/import_glb.cjs b/tools/ayatsuri/asset/import_glb.cjs
+new file mode 100644
+index 0000000000000000000000000000000000000000..46384e6da34e5108cd9f389820d4a804b69ec550
+--- /dev/null
++++ b/tools/ayatsuri/asset/import_glb.cjs
+@@ -0,0 +1,179 @@
++// Bounded static GLB adapter. No files, network, scripts or Blender are executed.
++'use strict';
++const {createHash}=require('node:crypto');
++const LIMITS=Object.freeze({maxBytes:32*1024*1024,maxJsonBytes:4*1024*1024,maxNodes:4096,maxMeshes:4096,
++  maxAccessors:16384,maxBufferViews:16384,maxMaterials:4096,maxSurfaces:16384,maxVertices:500000,
++  maxTriangles:1000000,maxDecodedBytes:128*1024*1024,maxDepth:128,maxNameBytes:1024});
++class ImportError extends Error{constructor(code,path,message){super(`${code} ${path}: ${message}`);this.name='ImportError';this.code=code;this.path=path;}}
++function fail(code,path,message){throw new ImportError(code,path,message);}
++function check(ok,path,message,code='INVALID_GLB'){if(!ok)fail(code,path,message);}
++const own=(o,k)=>Object.prototype.hasOwnProperty.call(o,k);
++function object(o,p){check(o!==null&&typeof o==='object'&&!Array.isArray(o),p,'object required');return o;}
++function integer(n,lo,hi,p){check(Number.isSafeInteger(n)&&n>=lo&&n<=hi,p,'integer outside bounds');return n;}
++function finite(n,p){check(typeof n==='number'&&Number.isFinite(n),p,'finite number required');return n;}
++function vector(a,n,p){check(Array.isArray(a)&&a.length===n,p,`expected ${n} values`);a.forEach((v,i)=>finite(v,`${p}/${i}`));return a;}
++function keys(o,allowed,p){object(o,p);for(const k of Object.keys(o))check(allowed.includes(k),`${p}/${k}`,'unsupported property','UNSUPPORTED');}
++function extensions(o,p){if(own(o,'extensions')){object(o.extensions,p+'/extensions');check(!Object.keys(o.extensions).length,p+'/extensions','extensions unsupported','UNSUPPORTED');}}
++function array(a,p,max,optional=false){if(a===undefined&&optional)return [];check(Array.isArray(a)&&a.length<=max,p,'array limit');return a;}
++function name(o,p,limits){if(!own(o,'name'))return null;check(typeof o.name==='string',p+'/name','string required');
++  check(Buffer.byteLength(o.name,'utf8')<=limits.maxNameBytes,p+'/name','name byte limit','LIMIT');
++  for(const c of o.name){const n=c.codePointAt(0);check(n>=32&&n!==127&&!(n>=0xd800&&n<=0xdfff),p+'/name','control or unpaired surrogate');}return o.name;}
++const IDENTITY=[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1];
++const BASIS=[1,0,0,0,0,-1,0,0,0,0,1,0,0,0,0,1];
++function multiply(a,b,p){const out=Array(16).fill(0);for(let c=0;c<4;c++)for(let r=0;r<4;r++){
++  for(let k=0;k<4;k++)out[c*4+r]+=a[k*4+r]*b[c*4+k];finite(out[c*4+r],p);}return out;}
++function matrix(n,p){
++  if(own(n,'matrix')){check(!['translation','rotation','scale'].some(k=>own(n,k)),p,'matrix and TRS are exclusive');const m=vector(n.matrix,16,p+'/matrix').slice();
++    check(m[3]===0&&m[7]===0&&m[11]===0&&m[15]===1,p+'/matrix','affine matrix required');
++    // glTF local matrices must decompose to TRS. Normalized column dots use
++    // absolute tolerance 1e-5 for authored rounding, independent of axis scale.
++    // Reflections are valid; composed world matrices may shear and are not tested.
++    const columns=[0,4,8].map(at=>{const c=m.slice(at,at+3),length=Math.hypot(...c);
++      check(Number.isFinite(length)&&length>0,p+'/matrix','finite nonzero column length required');
++      return c.map(v=>finite(v/length,p+'/matrix'));});
++    for(let a=0;a<3;a++)for(let b=a+1;b<3;b++){
++      const dot=columns[a].reduce((sum,v,i)=>sum+v*columns[b][i],0);
++      check(Number.isFinite(dot)&&Math.abs(dot)<=1e-5,p+'/matrix','local matrix must be TRS-decomposable');}
++    return m;}
++  const t=vector(n.translation===undefined?[0,0,0]:n.translation,3,p+'/translation'),s=vector(n.scale===undefined?[1,1,1]:n.scale,3,p+'/scale');
++  check(s.every(x=>x!==0),p+'/scale','singular scale');const q=vector(n.rotation===undefined?[0,0,0,1]:n.rotation,4,p+'/rotation');
++  const len=Math.hypot(...q);check(Math.abs(len-1)<=1e-5,p+'/rotation','unit quaternion required');
++  const [x,y,z,w]=q.map(v=>v/len),[sx,sy,sz]=s;
++  return [(1-2*(y*y+z*z))*sx,2*(x*y+z*w)*sx,2*(x*z-y*w)*sx,0,
++    2*(x*y-z*w)*sy,(1-2*(x*x+z*z))*sy,2*(y*z+x*w)*sy,0,
++    2*(x*z+y*w)*sz,2*(y*z-x*w)*sz,(1-2*(x*x+y*y))*sz,0,...t,1];
++}
++function inverseTranspose(m,p){
++  const a=m[0],b=m[4],c=m[8],d=m[1],e=m[5],f=m[9],g=m[2],h=m[6],i=m[10];
++  const co=[e*i-f*h,f*g-d*i,d*h-e*g,c*h-b*i,a*i-c*g,b*g-a*h,b*f-c*e,c*d-a*f,a*e-b*d];
++  const det=a*co[0]+b*co[1]+c*co[2];check(Number.isFinite(det)&&det!==0,p,'singular or nonfinite transform');
++  const out=co.map(v=>v/det);out.forEach(v=>finite(v,p));return {normal:out,det};
++}
++function canonicalZeros(ir,normalize=true){
++  // JSON preserves every finite number except signed zero. Normalize the owned
++  // output tree, including retained metadata, without serializing or recursing.
++  const stack=[{value:ir,keys:Object.keys(ir),at:0,path:''}];
++  while(stack.length){const frame=stack[stack.length-1];
++    if(frame.at===frame.keys.length){stack.pop();continue;}
++    const key=frame.keys[frame.at++],value=frame.value[key],p=frame.path?frame.path+'/'+key:key;
++    if(typeof value==='number'){finite(value,p);if(normalize&&Object.is(value,-0))frame.value[key]=0;}
++    else if(value!==null&&typeof value==='object')stack.push({value,keys:Object.keys(value),at:0,path:p});
++  }
++  return ir;
++}
++function importGlb(input,options={}){
++  object(options,'limits');for(const k of Object.keys(options))check(own(LIMITS,k),'limits/'+k,'unknown limit');
++  const limits={...LIMITS,...options};for(const [k,v]of Object.entries(limits))integer(v,1,Math.floor(Number.MAX_SAFE_INTEGER/256),'limits/'+k);
++  check(input instanceof Uint8Array,'input','Uint8Array or Buffer required');
++  check(!(typeof SharedArrayBuffer!=='undefined'&&input.buffer instanceof SharedArrayBuffer),'input','shared input unsupported','UNSUPPORTED');
++  check(input.byteLength<=limits.maxBytes,'input','GLB byte limit','LIMIT');
++  const bytes=Buffer.from(input);check(bytes.length>=20,'header','truncated');
++  check(bytes.readUInt32LE(0)===0x46546c67&&bytes.readUInt32LE(4)===2,'header','GLB version 2 required');
++  check(bytes.readUInt32LE(8)===bytes.length,'header/length','length mismatch');
++  let at=12,jsonBytes=null,bin=null;
++  while(at<bytes.length){check(bytes.length-at>=8,'chunk','truncated header');const size=bytes.readUInt32LE(at),type=bytes.readUInt32LE(at+4);at+=8;
++    check(size%4===0&&size<=bytes.length-at,'chunk','alignment or bounds');
++    if(jsonBytes===null){check(type===0x4e4f534a,'chunk','JSON must be first');check(size<=limits.maxJsonBytes,'chunk/JSON','JSON byte limit','LIMIT');jsonBytes=bytes.subarray(at,at+size);}
++    else{check(type===0x004e4942&&bin===null,'chunk','only one BIN chunk is supported','UNSUPPORTED');bin=bytes.subarray(at,at+size);}at+=size;}
++  let g;try{g=JSON.parse(new TextDecoder('utf-8',{fatal:true}).decode(jsonBytes));}catch{fail('INVALID_GLB','JSON','invalid UTF-8 or JSON');}
++  // JSON permits exponent overflow. Reject it even in currently unretained
++  // extras, before an IR roundtrip could silently replace Infinity with null.
++  if(g!==null&&typeof g==='object')canonicalZeros(g,false);
++  keys(g,['asset','scene','scenes','nodes','meshes','buffers','bufferViews','accessors','materials','skins','animations','cameras','images','textures','samplers','extensionsUsed','extensionsRequired','extensions','extras'],'root');extensions(g,'root');
++  for(const k of ['extensionsUsed','extensionsRequired','skins','animations','cameras','images','textures','samplers'])if(own(g,k))check(Array.isArray(g[k])&&g[k].length===0,k,'unsupported content','UNSUPPORTED');
++  keys(g.asset,['version','minVersion','generator','copyright','extensions','extras'],'asset');extensions(g.asset,'asset');
++  check(g.asset.version==='2.0'&&(g.asset.minVersion===undefined||g.asset.minVersion==='2.0'),'asset','version 2.0 required');
++  const ns=array(g.nodes,'nodes',limits.maxNodes),ms=array(g.meshes,'meshes',limits.maxMeshes),acs=array(g.accessors,'accessors',limits.maxAccessors),views=array(g.bufferViews,'bufferViews',limits.maxBufferViews),mats=array(g.materials,'materials',limits.maxMaterials,true);
++  check(ns.length&&ms.length,'root','nonempty static mesh scene required');
++  const buffers=array(g.buffers,'buffers',1);check(buffers.length===1&&bin!==null,'buffers','one embedded buffer required');
++  keys(buffers[0],['byteLength','name','uri','extensions','extras'],'buffers/0');extensions(buffers[0],'buffers/0');name(buffers[0],'buffers/0',limits);
++  check(!own(buffers[0],'uri'),'buffers/0/uri','external/data URI unsupported','UNSUPPORTED');
++  const bufferLength=integer(buffers[0].byteLength,1,bin.length,'buffers/0/byteLength');check(bin.length-bufferLength<=3,'BIN','unexpected trailing bytes');
++  for(let i=bufferLength;i<bin.length;i++)check(bin[i]===0,'BIN/padding','zero padding required');
++  const vs=views.map((v,i)=>{const p=`bufferViews/${i}`;keys(v,['buffer','byteOffset','byteLength','byteStride','target','name','extensions','extras'],p);extensions(v,p);name(v,p,limits);
++    check(v.buffer===0,p+'/buffer','embedded buffer index required');const offset=integer(v.byteOffset===undefined?0:v.byteOffset,0,bufferLength,p+'/byteOffset'),length=integer(v.byteLength,1,bufferLength,p+'/byteLength');
++    check(length<=bufferLength-offset,p,'view out of bounds');if(v.byteStride!==undefined)check(Number.isInteger(v.byteStride)&&v.byteStride>=4&&v.byteStride<=252&&v.byteStride%4===0,p+'/byteStride','invalid stride');
++    if(v.target!==undefined)check(v.target===34962||v.target===34963,p+'/target','unsupported target','UNSUPPORTED');return {...v,offset,length};});
++  const accessors=acs.map((a,i)=>{const p=`accessors/${i}`;keys(a,['bufferView','byteOffset','componentType','normalized','count','type','min','max','sparse','name','extensions','extras'],p);extensions(a,p);name(a,p,limits);
++    check(!own(a,'sparse'),p+'/sparse','sparse unsupported','UNSUPPORTED');check(a.normalized===undefined||a.normalized===false,p+'/normalized','normalized attributes unsupported','UNSUPPORTED');
++    const sizes={5121:1,5123:2,5125:4,5126:4},size=sizes[a.componentType];check(size!==undefined&&(a.type==='VEC3'||a.type==='SCALAR'),p,'unsupported accessor representation','UNSUPPORTED');
++    const count=integer(a.count,1,Math.max(limits.maxVertices,limits.maxTriangles*3),p+'/count'),view=vs[integer(a.bufferView,0,vs.length-1,p+'/bufferView')],components=a.type==='VEC3'?3:1,element=size*components;
++    const offset=integer(a.byteOffset===undefined?0:a.byteOffset,0,view.length,p+'/byteOffset'),stride=view.byteStride===undefined?element:view.byteStride;
++    check(offset%size===0&&(view.offset+offset)%size===0&&stride>=element,p,'accessor alignment or stride');
++    check(offset<=view.length-element&&count-1<=Math.floor((view.length-offset-element)/stride),p,'accessor out of bounds');
++    for(const k of ['min','max'])if(a[k]!==undefined){vector(a[k],components,p+'/'+k);for(const v of a[k]){
++      if(a.componentType===5126)check(Number.isFinite(Math.fround(v)),p+'/'+k,'finite F32 bound');
++      else integer(v,0,2**(8*size)-1,p+'/'+k);}}
++    if(a.min&&a.max)for(let j=0;j<components;j++)check((a.componentType===5126?Math.fround(a.min[j]):a.min[j])<=(a.componentType===5126?Math.fround(a.max[j]):a.max[j]),p,'invalid min/max');
++    return {a,view,count,offset:view.offset+offset,stride,size,components,path:p};});
++  let decoded=0,totalV=0,totalT=0,surfaceCount=0;
++  function charge(n,p){check(Number.isSafeInteger(n)&&n>=0&&n<=limits.maxDecodedBytes-decoded,p,'decoded numeric payload budget','LIMIT');decoded+=n;}
++  function decode(index,role){const p=`accessors/${index}`,d=accessors[integer(index,0,accessors.length-1,p)],{a,view,count,stride}=d;
++    if(role==='indices')check(a.type==='SCALAR'&&[5121,5123,5125].includes(a.componentType)&&view.byteStride===undefined&&(view.target===undefined||view.target===34963),p,'unsigned scalar index required');
++    else check(a.type==='VEC3'&&a.componentType===5126&&(view.target===undefined||view.target===34962),p,'FLOAT VEC3 vertex attribute required');
++    if(role==='POSITION'){check(own(a,'min'),p+'/min','POSITION min required');check(own(a,'max'),p+'/max','POSITION max required');}
++    charge(count*d.components*8,p);const result=Array(count),minimum=Array(d.components).fill(Infinity),maximum=Array(d.components).fill(-Infinity);
++    for(let i=0;i<count;i++){const row=[];for(let j=0;j<d.components;j++){const off=d.offset+i*stride+j*d.size;let value;
++      if(a.componentType===5126)value=bin.readFloatLE(off);else if(d.size===1)value=bin[off];else if(d.size===2)value=bin.readUInt16LE(off);else value=bin.readUInt32LE(off);
++      finite(value,p);if(a.min)check(value>=(a.componentType===5126?Math.fround(a.min[j]):a.min[j]),p,'data below min');
++      if(a.max)check(value<=(a.componentType===5126?Math.fround(a.max[j]):a.max[j]),p,'data above max');
++      minimum[j]=Math.min(minimum[j],value);maximum[j]=Math.max(maximum[j],value);row.push(value);}result[i]=d.components===1?row[0]:row;}
++    // Declared extrema describe actual binary values, not merely enclosing bounds.
++    for(const [key,actual] of [['min',minimum],['max',maximum]])if(a[key])for(let j=0;j<d.components;j++)
++      check(actual[j]===(a.componentType===5126?Math.fround(a[key][j]):a[key][j]),p+'/'+key,'bound must equal actual accessor extremum');
++    return result;}
++  const materials=mats.map((m,i)=>{const p=`materials/${i}`;keys(m,['name','pbrMetallicRoughness','normalTexture','occlusionTexture','emissiveTexture','emissiveFactor','alphaMode','alphaCutoff','doubleSided','extensions','extras'],p);extensions(m,p);
++    for(const k of ['normalTexture','occlusionTexture','emissiveTexture','alphaCutoff'])check(!own(m,k),p+'/'+k,'unsupported material feature','UNSUPPORTED');
++    check(m.alphaMode===undefined||m.alphaMode==='OPAQUE',p+'/alphaMode','alpha unsupported','UNSUPPORTED');check(m.doubleSided===undefined||typeof m.doubleSided==='boolean',p+'/doubleSided','boolean required');
++    if(m.emissiveFactor!==undefined)check(vector(m.emissiveFactor,3,p+'/emissiveFactor').every(x=>x===0),p+'/emissiveFactor','emission unsupported','UNSUPPORTED');
++    const pb=m.pbrMetallicRoughness===undefined?{}:m.pbrMetallicRoughness;keys(pb,['baseColorFactor','metallicFactor','roughnessFactor','baseColorTexture','metallicRoughnessTexture','extensions','extras'],p+'/pbrMetallicRoughness');extensions(pb,p+'/pbrMetallicRoughness');
++    check(!own(pb,'baseColorTexture')&&!own(pb,'metallicRoughnessTexture'),p,'textures unsupported','UNSUPPORTED');const color=vector(pb.baseColorFactor===undefined?[1,1,1,1]:pb.baseColorFactor,4,p+'/baseColorFactor').slice();
++    check(color.every(x=>x>=0&&x<=1)&&color[3]===1,p+'/baseColorFactor','opaque unit color required','UNSUPPORTED');
++    const metallic=finite(pb.metallicFactor===undefined?1:pb.metallicFactor,p+'/metallicFactor'),roughness=finite(pb.roughnessFactor===undefined?1:pb.roughnessFactor,p+'/roughnessFactor');check(metallic>=0&&metallic<=1&&roughness>=0&&roughness<=1,p,'PBR factor range');
++    return {stableId:`material/${i}`,name:name(m,p,limits),baseColor:color,sourceProperties:{metallicFactor:metallic,roughnessFactor:roughness},extras:m.extras??null,...(m.doubleSided===true?{sidedness:'double'}:{})};});
++  const sided=materials.some(m=>m.sidedness==='double');
++  if(sided)for(const m of materials)m.sidedness=m.sidedness||'single';
++  const primitives=ms.map((m,i)=>{const p=`meshes/${i}`;keys(m,['name','primitives','weights','extensions','extras'],p);extensions(m,p);name(m,p,limits);check(!own(m,'weights'),p+'/weights','morph unsupported','UNSUPPORTED');
++    const ps=array(m.primitives,p+'/primitives',limits.maxSurfaces);check(ps.length>0,p,'empty primitives');return ps.map((pr,j)=>{const q=p+`/primitives/${j}`;keys(pr,['attributes','indices','material','mode','targets','extensions','extras'],q);extensions(pr,q);
++      check(pr.mode===undefined||pr.mode===4,q+'/mode','only TRIANGLES supported','UNSUPPORTED');check(!own(pr,'targets'),q+'/targets','morph unsupported','UNSUPPORTED');keys(pr.attributes,['POSITION','NORMAL'],q+'/attributes');
++      integer(pr.attributes.POSITION,0,accessors.length-1,q+'/POSITION');integer(pr.attributes.NORMAL,0,accessors.length-1,q+'/NORMAL');
++      if(pr.indices!==undefined)integer(pr.indices,0,accessors.length-1,q+'/indices');if(pr.material!==undefined)integer(pr.material,0,materials.length-1,q+'/material');return pr;});});
++  const parent=Array(ns.length).fill(-1),local=ns.map((n,i)=>{const p=`nodes/${i}`;keys(n,['name','mesh','children','translation','rotation','scale','matrix','skin','weights','camera','extensions','extras'],p);extensions(n,p);name(n,p,limits);
++    for(const k of ['skin','weights','camera'])check(!own(n,k),p+'/'+k,'unsupported node feature','UNSUPPORTED');
++    if(n.mesh!==undefined)integer(n.mesh,0,ms.length-1,p+'/mesh');const children=array(n.children,p+'/children',limits.maxNodes,true),seen=new Set();
++    for(const child of children){integer(child,0,ns.length-1,p+'/children');check(!seen.has(child)&&parent[child]===-1,p+'/children','duplicate or multiple parent');seen.add(child);parent[child]=i;}
++    const mat=matrix(n,p);inverseTranspose(mat,p);return mat;});
++  const scenes=array(g.scenes,'scenes',1);check(scenes.length===1,'scenes','single selected static scene required','UNSUPPORTED');check(g.scene===undefined||g.scene===0,'scene','invalid scene index');
++  keys(scenes[0],['name','nodes','extensions','extras'],'scenes/0');extensions(scenes[0],'scenes/0');name(scenes[0],'scenes/0',limits);
++  const roots=array(scenes[0].nodes,'scenes/0/nodes',limits.maxNodes),seenRoots=new Set();
++  for(const id of roots){integer(id,0,ns.length-1,'scenes/0/nodes');check(!seenRoots.has(id)&&parent[id]===-1,'scenes/0/nodes','root duplicated or has parent');seenRoots.add(id);}
++  const nodes=[],surfaces=[],visited=new Set(),stack=roots.slice().reverse().map(id=>({id,world:IDENTITY,depth:1}));
++  while(stack.length){const {id,world,depth}=stack.pop(),n=ns[id],p=`nodes/${id}`;check(!visited.has(id),p,'cycle or repeated node');check(depth<=limits.maxDepth,p,'hierarchy depth limit','LIMIT');visited.add(id);
++    const next=multiply(world,local[id],p),baked=multiply(BASIS,next,p),{normal,det}=inverseTranspose(baked,p),nodeId=`node/${id}`;
++    nodes.push({stableId:nodeId,sourceIndex:id,name:name(n,p,limits),parentId:parent[id]<0?null:`node/${parent[id]}`,worldMatrix:baked,extras:n.extras??null});
++    if(n.mesh!==undefined)for(let pi=0;pi<primitives[n.mesh].length;pi++){
++      const pr=primitives[n.mesh][pi],sp=p+`/mesh/${n.mesh}/primitive/${pi}`;
++      check(++surfaceCount<=limits.maxSurfaces,sp,'surface count limit','LIMIT');const pc=accessors[pr.attributes.POSITION].count,nc=accessors[pr.attributes.NORMAL].count;
++      check(pc===nc,sp,'position/normal count mismatch');check(pc<=limits.maxVertices-totalV,sp,'expanded vertex budget','LIMIT');totalV+=pc;
++      const ic=pr.indices===undefined?pc:accessors[pr.indices].count;check(ic%3===0,sp,'triangle index count');check(ic/3<=limits.maxTriangles-totalT,sp,'expanded triangle budget','LIMIT');totalT+=ic/3;
++      const pos=decode(pr.attributes.POSITION,'POSITION'),norm=decode(pr.attributes.NORMAL,'NORMAL');
++      const ix=pr.indices===undefined?(charge(pc*8,sp),Array.from({length:pc},(_,i)=>i)):decode(pr.indices,'indices');
++      // Numeric payload allowance includes baked rows, triangle copies and correspondence.
++      // JS object/array overhead is bounded by the separate count/input caps, not this estimate.
++      charge(pc*56+ic*8+ic/3*8,sp);
++      for(let i=0;i<pc;i++){const v=pos[i],o=[0,1,2].map(r=>baked[r]*v[0]+baked[4+r]*v[1]+baked[8+r]*v[2]+baked[12+r]);o.forEach(x=>finite(x,sp));pos[i]=o;
++        const q=norm[i],sourceLength=Math.hypot(...q);check(Number.isFinite(sourceLength)&&Math.abs(sourceLength-1)<=1e-4,sp,'unit source normal required');
++        const t=[0,1,2].map(r=>normal[r*3]*q[0]+normal[r*3+1]*q[1]+normal[r*3+2]*q[2]),length=Math.hypot(...t);check(Number.isFinite(length)&&length>0,sp,'invalid transformed normal');norm[i]=t.map(v=>v/length);}
++      const triangles=[];for(let j=0;j<ic;j+=3){const t=ix.slice(j,j+3);t.forEach(v=>integer(v,0,pc-1,sp+'/indices'));check(new Set(t).size===3,sp,'duplicate triangle index');
++        const [a,b,c]=t.map(i=>pos[i]),u=b.map((x,k)=>x-a[k]),v=c.map((x,k)=>x-a[k]),cross=[u[1]*v[2]-u[2]*v[1],u[2]*v[0]-u[0]*v[2],u[0]*v[1]-u[1]*v[0]];
++        check(cross.every(Number.isFinite)&&Math.hypot(...cross)>0,sp,'degenerate or nonfinite triangle');if(det<0)[t[1],t[2]]=[t[2],t[1]];triangles.push(t);}
++      surfaces.push({stableId:`${nodeId}/mesh/${n.mesh}/primitive/${pi}`,nodeId,sourceMesh:n.mesh,sourcePrimitive:pi,name:ms[n.mesh].name??null,positions:pos,normals:norm,triangles,
++        materialId:pr.material===undefined?null:`material/${pr.material}`,sourceVertexIds:Array.from({length:pc},(_,i)=>i),sourceTriangleIds:Array.from({length:ic/3},(_,i)=>i)});
++    }
++    for(const child of (n.children??[]).slice().reverse())stack.push({id:child,world:next,depth:depth+1});
++  }
++  check(visited.size===ns.length,'nodes','unreachable nodes or hierarchy cycle','UNSUPPORTED');check(surfaces.length>0,'scene','no mesh instances');
++  return canonicalZeros({schema:sided?'hone-scene-ir-v2':'hone-scene-ir-v1',source:{format:'glb2',sha256:createHash('sha256').update(bytes).digest('hex'),byteLength:bytes.length,basis:[1,0,0,0,-1,0,0,0,1],units:'metres',generator:g.asset.generator??null},nodes,surfaces,materials,
++    diagnostics:[],limits,counts:{vertices:totalV,triangles:totalT,surfaces:surfaceCount,decodedNumericBytes:decoded},defaultMaterial:{baseColor:[1,1,1,1],metallicFactor:1,roughnessFactor:1,...(sided?{sidedness:'single'}:{})}});
++}
++module.exports={importGlb,ImportError,DEFAULT_LIMITS:LIMITS};
+diff --git a/tools/ayatsuri/asset/test_import.cjs b/tools/ayatsuri/asset/test_import.cjs
+new file mode 100644
+index 0000000000000000000000000000000000000000..d702ffff53f951f90c041ec5bef6cb7759266e5a
+--- /dev/null
++++ b/tools/ayatsuri/asset/test_import.cjs
+@@ -0,0 +1,153 @@
++// Synthetic GLB fixtures only; this does not establish real Blender compatibility.
++'use strict';
++const assert=require('node:assert/strict');
++const {importGlb,ImportError}=require('./import_glb.cjs');
++function makeGlb(json,bin){
++  const text=Buffer.from(JSON.stringify(json),'utf8'),j=Buffer.alloc((text.length+3)&~3,32);text.copy(j);
++  const b=Buffer.alloc((bin.length+3)&~3);bin.copy(b);const out=Buffer.alloc(12+8+j.length+8+b.length);
++  out.write('glTF');out.writeUInt32LE(2,4);out.writeUInt32LE(out.length,8);out.writeUInt32LE(j.length,12);out.writeUInt32LE(0x4e4f534a,16);j.copy(out,20);
++  const at=20+j.length;out.writeUInt32LE(b.length,at);out.writeUInt32LE(0x004e4942,at+4);b.copy(out,at+8);return out;
++}
++function triangleFixture(options={}){
++  const positions=options.positions||[[0,0,0],[1,0,0],[0,1,0]],normals=options.normals||positions.map(()=>[0,0,1]),indices=options.indices||[0,1,2],interleaved=!!options.interleaved,indexType=options.indexType||5123;
++  const size=({5121:1,5123:2,5125:4})[indexType],vertexBytes=positions.length*24,bin=Buffer.alloc(vertexBytes+indices.length*size);
++  positions.forEach((p,i)=>p.forEach((v,j)=>bin.writeFloatLE(v,interleaved?i*24+j*4:i*12+j*4)));
++  normals.forEach((p,i)=>p.forEach((v,j)=>bin.writeFloatLE(v,interleaved?i*24+12+j*4:positions.length*12+i*12+j*4)));
++  indices.forEach((v,i)=>size===1?bin.writeUInt8(v,vertexBytes+i):size===2?bin.writeUInt16LE(v,vertexBytes+i*2):bin.writeUInt32LE(v,vertexBytes+i*4));
++  const views=interleaved?[{buffer:0,byteOffset:0,byteLength:vertexBytes,byteStride:24,target:34962}]:[
++    {buffer:0,byteOffset:0,byteLength:positions.length*12,target:34962},{buffer:0,byteOffset:positions.length*12,byteLength:normals.length*12,target:34962}];
++  const indexView=views.length;views.push({buffer:0,byteOffset:vertexBytes,byteLength:indices.length*size,target:34963});
++  const json={asset:{version:'2.0',generator:'synthetic-test'},scene:0,scenes:[{nodes:[0]}],nodes:[{name:'狐',mesh:0}],meshes:[{name:'head',primitives:[{attributes:{POSITION:0,NORMAL:1},indices:2,material:0}]}],
++    buffers:[{byteLength:bin.length}],bufferViews:views,accessors:[
++      {bufferView:0,byteOffset:0,componentType:5126,count:positions.length,type:'VEC3',min:[0,1,2].map(k=>Math.min(...positions.map(v=>v[k]))),max:[0,1,2].map(k=>Math.max(...positions.map(v=>v[k])))},
++      {bufferView:interleaved?0:1,byteOffset:interleaved?12:0,componentType:5126,count:normals.length,type:'VEC3'},
++      {bufferView:indexView,componentType:indexType,count:indices.length,type:'SCALAR'}],materials:[{name:'fur',pbrMetallicRoughness:{baseColorFactor:[.7,.3,.1,1],metallicFactor:0,roughnessFactor:.8}}]};
++  return {json,bin,glb:makeGlb(json,bin)};
++}
++function runTests(){let tests=0;const test=(name,fn)=>{try{fn();tests++;}catch(e){e.message=`${name}: ${e.message}`;throw e;}};
++  const approx=(a,b,t=1e-12)=>{assert.equal(a.length,b.length);a.forEach((x,i)=>assert.ok(Math.abs(x-b[i])<=t,`${a} != ${b}`));};
++  const reject=(name,mutate,code='INVALID_GLB',options={})=>test(name,()=>{const f=triangleFixture();mutate(f.json,f.bin);assert.throws(()=>importGlb(makeGlb(f.json,f.bin),options),e=>e instanceof ImportError&&e.code===code&&typeof e.path==='string');});
++  test('basis and stable correspondence',()=>{const f=triangleFixture(),before=Buffer.from(f.glb),ir=importGlb(f.glb);assert.ok(f.glb.equals(before));
++    assert.equal(ir.schema,'hone-scene-ir-v1');assert.equal(ir.nodes[0].name,'狐');assert.equal(ir.surfaces[0].stableId,'node/0/mesh/0/primitive/0');
++    assert.deepEqual(ir.surfaces[0].positions,[[0,0,0],[1,0,0],[0,-1,0]]);assert.deepEqual(ir.surfaces[0].triangles,[[0,2,1]]);
++    assert.deepEqual(ir.surfaces[0].sourceVertexIds,[0,1,2]);assert.deepEqual(ir.materials[0].baseColor,[.7,.3,.1,1]);
++    assert.deepEqual(ir.materials[0].sourceProperties,{metallicFactor:0,roughnessFactor:.8});f.glb.fill(0);assert.equal(ir.surfaces[0].positions[1][0],1);});
++  test('input subarray honors its bounds',()=>{const f=triangleFixture(),b=Buffer.concat([Buffer.alloc(13),f.glb,Buffer.alloc(7)]);assert.deepEqual(importGlb(b.subarray(13,-7)),importGlb(f.glb));});
++  test('canonical signed zero and JSON roundtrip',()=>{
++    const f=triangleFixture({positions:[[-0,-0,-0],[1,-0,-0],[-0,1,-0]],normals:Array(3).fill([-0,-0,1])});
++    f.json.nodes[0].translation=[.5,0,0];f.json.nodes[0].extras={nested:[{signed:.5}]};
++    f.json.materials[0].pbrMetallicRoughness={baseColorFactor:[.5,.3,.1,1],metallicFactor:.5,roughnessFactor:.5};
++    f.json.materials[0].extras={signed:.5};
++    const b=makeGlb(f.json,f.bin),jsonLength=b.readUInt32LE(12);
++    // Preserve literal -0 in JSON; JSON.stringify itself would erase it.
++    b.write(b.toString('utf8',20,20+jsonLength).replace(/0\.5/g,'-0 '),20,'utf8');
++    assert.ok(Object.is(JSON.parse(b.toString('utf8',20,20+jsonLength)).nodes[0].extras.nested[0].signed,-0));
++    const before=Buffer.from(b),ir=importGlb(b);
++    assert.deepEqual(ir,JSON.parse(JSON.stringify(ir)));
++    const pending=[ir];while(pending.length){const v=pending.pop();assert.ok(!Object.is(v,-0));if(v!==null&&typeof v==='object')pending.push(...Object.values(v));}
++    assert.equal(ir.materials[0].baseColor[0],0);assert.equal(ir.materials[0].sourceProperties.metallicFactor,0);
++    assert.equal(ir.nodes[0].extras.nested[0].signed,0);assert.ok(b.equals(before));
++    assert.equal(ir.source.sha256,require('node:crypto').createHash('sha256').update(before).digest('hex'));
++  });
++  for(const [label,locate,expectedPath] of [
++    ['node extras',g=>g.nodes[0],'nodes/0/extras/nested/0/value'],
++    ['material extras',g=>g.materials[0],'materials/0/extras/nested/0/value'],
++    ['mesh extras',g=>g.meshes[0],'meshes/0/extras/nested/0/value'],
++    ['primitive extras',g=>g.meshes[0].primitives[0],'meshes/0/primitives/0/extras/nested/0/value'],
++    ['scene extras',g=>g.scenes[0],'scenes/0/extras/nested/0/value']])test('reject nonfinite '+label,()=>{
++      const f=triangleFixture();locate(f.json).extras={nested:[{value:12345}]};
++      const b=makeGlb(f.json,f.bin),length=b.readUInt32LE(12);
++      b.write(b.toString('utf8',20,20+length).replace('12345','1e999'),20,'utf8');
++      assert.throws(()=>importGlb(b),e=>e instanceof ImportError&&e.code==='INVALID_GLB'&&e.path===expectedPath);
++    });
++  for(const type of [5121,5123,5125])test(`index type ${type}`,()=>assert.deepEqual(importGlb(triangleFixture({indexType:type}).glb).surfaces[0].triangles,[[0,2,1]]));
++  test('interleaved attributes',()=>assert.deepEqual(importGlb(triangleFixture({interleaved:true}).glb).surfaces[0].positions,[[0,0,0],[1,0,0],[0,-1,0]]));
++  test('nonindexed triangles',()=>{const f=triangleFixture();delete f.json.meshes[0].primitives[0].indices;assert.deepEqual(importGlb(makeGlb(f.json,f.bin)).surfaces[0].triangles,[[0,2,1]]);});
++  test('negative scale cancels basis reflection once',()=>{const f=triangleFixture();f.json.nodes[0].scale=[-1,1,1];const s=importGlb(makeGlb(f.json,f.bin)).surfaces[0];assert.deepEqual(s.triangles,[[0,1,2]]);approx(s.normals[0],[0,0,1]);});
++  test('parent hierarchy and quaternion',()=>{const f=triangleFixture();f.json.nodes=[{translation:[1,2,3],children:[1]},{mesh:0,rotation:[0,0,Math.SQRT1_2,Math.SQRT1_2]}];const ir=importGlb(makeGlb(f.json,f.bin));assert.equal(ir.nodes[1].parentId,'node/0');approx(ir.surfaces[0].positions[1],[1,-3,3]);});
++  test('inverse transpose under nonuniform scale',()=>{const f=triangleFixture({normals:Array(3).fill([1/Math.sqrt(3),1/Math.sqrt(3),1/Math.sqrt(3)])});f.json.nodes[0].scale=[2,3,4];const n=[.5,-1/3,.25],len=Math.hypot(...n);approx(importGlb(makeGlb(f.json,f.bin)).surfaces[0].normals[0],n.map(v=>v/len));});
++  test('static TRS matrix with reflection and nonuniform scale',()=>{const f=triangleFixture({normals:Array(3).fill([1,0,0])});f.json.nodes[0].matrix=[0,-2,0,0,-3,0,0,0,0,0,4,0,4,5,6,1];const s=importGlb(makeGlb(f.json,f.bin)).surfaces[0];approx(s.positions[2],[1,-5,6]);approx(s.normals[0],[0,1,0]);assert.deepEqual(s.triangles,[[0,1,2]]);});
++  test('valid TRS hierarchy may produce global shear',()=>{const f=triangleFixture({normals:Array(3).fill([1,0,0])});
++    f.json.nodes=[{scale:[2,1,1],children:[1]},{mesh:0,rotation:[0,0,Math.sin(Math.PI/8),Math.cos(Math.PI/8)]}];
++    const ir=importGlb(makeGlb(f.json,f.bin)),s=ir.surfaces[0],m=ir.nodes[1].worldMatrix;
++    assert(Math.abs(m[0]*m[4]+m[1]*m[5]+m[2]*m[6])>1);
++    approx(s.positions[1],[Math.SQRT2,-Math.SQRT1_2,0]);approx(s.normals[0],[1/Math.sqrt(5),-2/Math.sqrt(5),0]);});
++  test('local matrix orthogonality tolerates authored rounding',()=>{const f=triangleFixture();f.json.nodes[0].matrix=[1,0,0,0,5e-6,1,0,0,0,0,1,0,0,0,0,1];assert.equal(importGlb(makeGlb(f.json,f.bin)).surfaces.length,1);});
++  test('POSITION extrema use declared F32 interpretation',()=>{const f=triangleFixture({positions:[[.1,.2,0],[.9,.2,0],[.1,.8,0]]});
++    const ir=importGlb(f.glb);assert.equal(ir.surfaces[0].positions[0][0],Math.fround(.1));assert.notEqual(Math.fround(.1),.1);});
++  test('POSITION bound ordering uses F32 interpretation',()=>{const f=triangleFixture({positions:[[.1,0,0],[.1,1,0],[.1,0,1]]});
++    f.json.accessors[0].min[0]=.1+1e-10;assert.equal(Math.fround(f.json.accessors[0].min[0]),Math.fround(f.json.accessors[0].max[0]));
++    assert.equal(importGlb(makeGlb(f.json,f.bin)).surfaces[0].positions[0][0],Math.fround(.1));});
++  test('mesh instancing preserves source IDs',()=>{const f=triangleFixture();f.json.nodes.push({mesh:0,translation:[10,0,0]});f.json.scenes[0].nodes.push(1);const ir=importGlb(makeGlb(f.json,f.bin));assert.equal(ir.surfaces.length,2);assert.equal(ir.counts.vertices,6);assert.equal(ir.surfaces[1].sourceMesh,0);assert.equal(ir.surfaces[1].positions[0][0],10);});
++  test('deterministic and default material retained',()=>{const f=triangleFixture();delete f.json.meshes[0].primitives[0].material;const b=makeGlb(f.json,f.bin);assert.deepEqual(importGlb(b),importGlb(b));assert.equal(importGlb(b).surfaces[0].materialId,null);assert.equal(importGlb(b).defaultMaterial.baseColor[3],1);});
++  reject('out of bounds view',g=>g.bufferViews[0].byteLength=g.buffers[0].byteLength+1);
++  reject('out of bounds accessor',g=>g.accessors[0].count=100);
++  reject('unsafe offset',g=>g.accessors[0].byteOffset=Number.MAX_SAFE_INTEGER);
++  reject('null offset',g=>g.accessors[0].byteOffset=null);
++  reject('unaligned accessor',g=>g.accessors[0].byteOffset=1);
++  reject('invalid stride',g=>g.bufferViews[0].byteStride=13);
++  reject('stride too small',g=>g.bufferViews[0].byteStride=4);
++  reject('index stride',g=>g.bufferViews[2].byteStride=4);
++  reject('position component',g=>g.accessors[0].componentType=5125);
++  reject('index range',(_g,b)=>b.writeUInt16LE(3,76));
++  reject('duplicate indices',(_g,b)=>b.writeUInt16LE(1,76));
++  reject('zero area',(_g,b)=>{b.writeFloatLE(0,24);b.writeFloatLE(0,28);});
++  reject('NaN vertex',(_g,b)=>b.writeFloatLE(NaN,0));
++  reject('infinite normal',(_g,b)=>b.writeFloatLE(Infinity,36));
++  reject('zero normal',(_g,b)=>b.writeFloatLE(0,44));
++  reject('min bounds violated',g=>g.accessors[0].min=[.5,0,0]);
++  reject('missing POSITION min',g=>delete g.accessors[0].min);
++  reject('missing POSITION max',g=>delete g.accessors[0].max);
++  reject('missing both POSITION bounds',g=>{delete g.accessors[0].min;delete g.accessors[0].max;});
++  reject('enclosing but inexact POSITION min',g=>g.accessors[0].min=[-1,0,0]);
++  reject('enclosing but inexact POSITION max',g=>g.accessors[0].max=[2,1,0]);
++  reject('normal count mismatch',g=>g.accessors[1].count=2);
++  reject('missing normals',g=>delete g.meshes[0].primitives[0].attributes.NORMAL);
++  reject('mode',g=>g.meshes[0].primitives[0].mode=5,'UNSUPPORTED');
++  reject('UV',g=>g.meshes[0].primitives[0].attributes.TEXCOORD_0=1,'UNSUPPORTED');
++  reject('vertex colors',g=>g.meshes[0].primitives[0].attributes.COLOR_0=1,'UNSUPPORTED');
++  reject('morph',g=>g.meshes[0].primitives[0].targets=[],'UNSUPPORTED');
++  reject('skin',g=>g.nodes[0].skin=0,'UNSUPPORTED');
++  reject('animation',g=>g.animations=[{}],'UNSUPPORTED');
++  reject('camera',g=>g.nodes[0].camera=0,'UNSUPPORTED');
++  reject('URI',g=>g.buffers[0].uri='file:///secret','UNSUPPORTED');
++  reject('sparse',g=>g.accessors[0].sparse={},'UNSUPPORTED');
++  reject('normalized',g=>g.accessors[0].normalized=true,'UNSUPPORTED');
++  reject('extension root',g=>g.extensionsUsed=['KHR_unknown'],'UNSUPPORTED');
++  reject('extension primitive',g=>g.meshes[0].primitives[0].extensions={KHR_draco_mesh_compression:{}},'UNSUPPORTED');
++  reject('alpha',g=>g.materials[0].alphaMode='BLEND','UNSUPPORTED');
++  reject('factor alpha',g=>g.materials[0].pbrMetallicRoughness.baseColorFactor[3]=.5,'UNSUPPORTED');
++  test('double sided explicit IR v2',()=>{const f=triangleFixture();f.json.materials[0].doubleSided=true;const ir=importGlb(makeGlb(f.json,f.bin));assert.equal(ir.schema,'hone-scene-ir-v2');assert.equal(ir.materials[0].sidedness,'double');});
++  reject('invalid sidedness type',g=>g.materials[0].doubleSided='yes');
++  reject('texture',g=>g.materials[0].pbrMetallicRoughness.baseColorTexture={index:0},'UNSUPPORTED');
++  reject('emission',g=>g.materials[0].emissiveFactor=[1,0,0],'UNSUPPORTED');
++  reject('null PBR',g=>g.materials[0].pbrMetallicRoughness=null);
++  reject('control in name',g=>g.nodes[0].name='bad\u0000name');
++  reject('unpaired surrogate name',g=>g.nodes[0].name='\ud800');
++  reject('matrix plus TRS',g=>{g.nodes[0].matrix=[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1];g.nodes[0].scale=[1,1,1];});
++  reject('non affine',g=>g.nodes[0].matrix=[1,0,0,1,0,1,0,0,0,0,1,0,0,0,0,1]);
++  reject('local shear matrix',g=>g.nodes[0].matrix=[1,0,0,0,1,1,0,0,0,0,1,0,4,5,6,1]);
++  reject('local matrix exceeds orthogonality tolerance',g=>g.nodes[0].matrix=[1,0,0,0,2e-5,1,0,0,0,0,1,0,0,0,0,1]);
++  reject('zero local matrix column',g=>g.nodes[0].matrix=[0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1]);
++  reject('overflowing local column length',g=>g.nodes[0].matrix=[1.7e308,1.7e308,0,0,0,1,0,0,0,0,1,0,0,0,0,1]);
++  reject('underflowing matrix determinant',g=>g.nodes[0].matrix=[1e-200,0,0,0,0,1e-200,0,0,0,0,1e-200,0,0,0,0,1]);
++  reject('singular scale',g=>g.nodes[0].scale=[0,1,1]);
++  reject('nonunit quaternion',g=>g.nodes[0].rotation=[0,0,0,2]);
++  reject('duplicate root',g=>g.scenes[0].nodes=[0,0]);
++  reject('cycle',g=>g.nodes[0].children=[0]);
++  reject('unreachable',g=>g.nodes.push({}),'UNSUPPORTED');
++  reject('multiple parents',g=>{g.nodes=[{children:[2]},{children:[2]},{mesh:0}];g.scenes[0].nodes=[0,1];});
++  reject('depth cap',g=>{g.nodes=[{children:[1]},{mesh:0}];},'LIMIT',{maxDepth:1});
++  reject('expanded vertex cap',g=>{g.nodes.push({mesh:0});g.scenes[0].nodes.push(1);},'LIMIT',{maxVertices:5});
++  reject('triangle cap',g=>{g.nodes.push({mesh:0});g.scenes[0].nodes.push(1);},'LIMIT',{maxTriangles:1});
++  reject('decoded bytes cap',()=>{},'LIMIT',{maxDecodedBytes:8});
++  test('input byte cap',()=>assert.throws(()=>importGlb(triangleFixture().glb,{maxBytes:20}),e=>e.code==='LIMIT'));
++  test('JSON cap',()=>assert.throws(()=>importGlb(triangleFixture().glb,{maxJsonBytes:8}),e=>e.code==='LIMIT'));
++  test('GLB header mutations',()=>{for(const offset of [0,4,8,12,16]){const b=triangleFixture().glb;b.writeUInt32LE(0xffffffff,offset);assert.throws(()=>importGlb(b),ImportError);}});
++  test('truncation all bytes',()=>{const b=triangleFixture().glb;for(let i=0;i<b.length;i++)assert.throws(()=>importGlb(b.subarray(0,i)),ImportError);});
++  test('wrong BIN chunk',()=>{const b=triangleFixture().glb,at=20+b.readUInt32LE(12);b.writeUInt32LE(0x4e4f534a,at+4);assert.throws(()=>importGlb(b),ImportError);});
++  test('invalid UTF8',()=>{const b=triangleFixture().glb;b[20]=255;assert.throws(()=>importGlb(b),ImportError);});
++  test('shared buffer rejected',()=>{const b=triangleFixture().glb,s=new Uint8Array(new SharedArrayBuffer(b.length));s.set(b);assert.throws(()=>importGlb(s),e=>e.code==='UNSUPPORTED');});
++  console.log(`IMPORT_GLB_SYNTHETIC_PASS tests=${tests} real_blender_export=NOT_TESTED`);return tests;
++}
++module.exports={makeGlb,triangleFixture,runTests};if(require.main===module)runTests();
+diff --git a/tools/ayatsuri/model/pack_model.cjs b/tools/ayatsuri/model/pack_model.cjs
+index 3ad150cfa8e08772c2a631a7b94dfcbcbe56fefa..24185e24401155951ee65f7411d053295797109b 100644
+--- a/tools/ayatsuri/model/pack_model.cjs
++++ b/tools/ayatsuri/model/pack_model.cjs
+@@ -52,8 +52,8 @@ function meshRows(mesh,vertexStart,triangleStart,holeStart){
+   return {descriptor,vertices,triangles,holeBytes,nv,nt,nh:holeXYZ.length/3};
+ }
+ function compile(m){
+-  if(!m||m.schema!=='ayatsuri-native-model-design-v1'||!Array.isArray(m.nodes))throw TypeError('manifest');
+-  const count=int(m.nodes.length,1,256),nodes=Buffer.alloc(count*16),poses=Buffer.alloc(count*36),radii=[],lobes=[],materials=[],bindings=Buffer.alloc(count*8),names=[],regions=[],meshes=[],meshVertices=[],meshTriangles=[],meshHoles=[];
++  if(!m||!['ayatsuri-native-model-design-v1','ayatsuri-native-model-design-v2'].includes(m.schema)||!Array.isArray(m.nodes))throw TypeError('manifest');
++  const count=int(m.nodes.length,1,256),nodes=Buffer.alloc(count*16),poses=Buffer.alloc(count*36),radii=[],lobes=[],materials=[],sides=[],bindings=Buffer.alloc(count*8),names=[],regions=[],meshes=[],meshVertices=[],meshTriangles=[],meshHoles=[];
+   let nameBytes=0,ellipseCount=0,lobeCount=0,meshVertexCount=0,meshTriangleCount=0,meshHoleCount=0;
+   for(let i=0;i<count;i++){
+     const n=m.nodes[i],kind={group:0,ellipsoid:1,blendEllipsoids:2,gouraudMesh:3}[n.kind];
+@@ -72,13 +72,16 @@ function compile(m){
+     int(n.parent,-1,i-1);floats(n.pose,9);for(let k=6;k<9;k++)if(Math.fround(n.pose[k])===0)throw TypeError('zero scale');
+     n.pose.forEach((v,k)=>poses.writeFloatLE(v,i*36+k*4));
+     let shape=65535,material=65535,lc=0,blend=0;
++    if(n.materialSidedness!==undefined&&(m.schema!=='ayatsuri-native-model-design-v2'||kind!==3||!['single','double'].includes(n.materialSidedness)))throw TypeError('material sidedness schema/kind');
++    if(m.schema==='ayatsuri-native-model-design-v2'&&kind===3&&n.materialSidedness===undefined)throw TypeError('explicit material sidedness required');
++    const side=n.materialSidedness==='double'?1:0;
+     if(kind){
+       if(kind===3&&(n.thickness!==1||n.opacity!==1||n.edgeSoftness!==0))throw TypeError('mesh common thickness/opacity/edgeSoftness must be 1/1/0');
+       const mat=Buffer.alloc(72);floats(n.material,11).forEach((v,k)=>{
+         if(k===3){if(v<1||v>128)throw TypeError('exponent');}else unit(v);mat.writeFloatLE(v,k*4);
+       });
+       int(n.color,0,0xffffff);mat.writeUInt32LE(n.color,44);mat.writeDoubleLE(unit(n.thickness),48);mat.writeDoubleLE(unit(n.opacity),56);mat.writeDoubleLE(unit(n.edgeSoftness),64);
+-      material=materials.findIndex(b=>b.equals(mat));if(material<0){material=materials.length;materials.push(mat);}
++      material=materials.findIndex((b,j)=>b.equals(mat)&&sides[j]===side);if(material<0){material=materials.length;materials.push(mat);sides.push(side);}
+       if(kind===1){floats(n.radii,3);n.radii.forEach(v=>{if(!(Math.fround(v)>0))throw TypeError('radii');});shape=ellipseCount++;const b=Buffer.alloc(12);n.radii.forEach((v,k)=>b.writeFloatLE(v,k*4));radii.push(b);}
+       else if(kind===3){
+         const mesh=meshRows(n.mesh,meshVertexCount,meshTriangleCount,meshHoleCount);shape=meshes.length;meshes.push(mesh.descriptor);
+@@ -97,6 +100,12 @@ function compile(m){
+     {type:10,data:Buffer.concat(meshVertices),count:meshVertexCount,stride:28},
+     {type:11,data:Buffer.concat(meshTriangles),count:meshTriangleCount,stride:6},
+     {type:12,data:Buffer.concat(meshHoles),count:meshHoleCount,stride:12});
++  // Required extension 13; legacy reserved descriptor bytes remain zero.
++  // All-single input emits exactly the v1 byte representation.
++  if(sides.some(Boolean)){
++    const data=Buffer.alloc(sides.length*4);sides.forEach((v,i)=>data[i*4]=v);
++    sections.push({type:13,data,count:sides.length,stride:4});
++  }
+   let total=32+sections.length*20;for(const s of sections){total=(total+7)&~7;s.offset=total;total+=s.data.length;}int(total,32,512*1024);
+   const out=Buffer.alloc(total);out.write('AYNM');out.writeUInt16LE(1,4);out.writeUInt16LE(32,6);out.writeUInt32LE(total,8);out.writeUInt32LE(sections.length,12);out.writeUInt32LE(32,16);out.writeUInt32LE(20,20);
+   sections.forEach((s,i)=>{const o=32+i*20;out.writeUInt16LE(s.type||i+1,o);out.writeUInt16LE(1,o+2);[s.offset,s.data.length,s.count,s.stride].forEach((v,k)=>out.writeUInt32LE(v,o+4+k*4));s.data.copy(out,s.offset);});return out;
+diff --git a/tools/ayatsuri/model/run_sidedness.py b/tools/ayatsuri/model/run_sidedness.py
+new file mode 100644
+index 0000000000000000000000000000000000000000..23ccc20ddd9dc27a09e6140c0bfc9521b5e24f2d
+--- /dev/null
++++ b/tools/ayatsuri/model/run_sidedness.py
+@@ -0,0 +1,57 @@
++"""Local synthetic and paired legacy compatibility checks; no downloads/device.
++Baseline ref may be a426f7a (public) or its equal-tree local f7d7fe6c.
++"""
++from pathlib import Path
++import argparse,os,subprocess,tempfile,hashlib,sys
++ROOT=Path(__file__).resolve().parents[3]
++p=argparse.ArgumentParser(description=__doc__);p.add_argument('--baseline-ref',default='f7d7fe6c5c7588ac7e1a8a4afa0fec6e8525ed85');p.add_argument('--legacy-input',action='append',default=[]);p.add_argument('--opt',choices=['0','2'],default='2');args=p.parse_args()
++env=dict(os.environ,ASAN_OPTIONS='detect_leaks=1:abort_on_error=1',UBSAN_OPTIONS='halt_on_error=1:print_stacktrace=1')
++cache=ROOT/'.cache/sidedness';cache.mkdir(parents=True,exist_ok=True)
++def run(cmd):
++ print('+', ' '.join(map(str,cmd)),flush=True);subprocess.run(list(map(str,cmd)),cwd=ROOT,env=env,check=True)
++flags=['-I',str(ROOT/'main/ayatsuri'),'-std=gnu11','-O'+args.opt,'-ffp-contract=off','-fsanitize=address,undefined','-fno-omit-frame-pointer','-DQUICKJS_NG_BUILD','-D_GNU_SOURCE','-DKSN_PROC_HOST_TEST']
++with tempfile.TemporaryDirectory(prefix='sidedness-baseline-') as tmp:
++ base=Path(tmp);old=base/'main';(old/'ayatsuri').mkdir(parents=True);(old/'pocket').mkdir()
++ for name in ['main/ayatsuri/ayatsuri_model.c','main/ayatsuri/ayatsuri_model.h','main/pocket/pocket_shape.c','main/pocket/pocket_ayatsuri_model.inc','tools/ayatsuri/model/pack_model.cjs','main/ayatsuri/compact_opaque.c']:
++  data=subprocess.check_output(['git','show',args.baseline_ref+':'+name],cwd=ROOT)
++  expected={'main/ayatsuri/ayatsuri_model.c':'58813122b061a7ae5c63d198675fa80d192ed9ff','main/ayatsuri/ayatsuri_model.h':'bbeeb2e1ef6313aee185e2b6817d228c85f6a741','main/pocket/pocket_shape.c':'26137d955defb0a38ec012626d5c3120fd1a445e','main/pocket/pocket_ayatsuri_model.inc':'56fce9f5b6380628900eb907b6895ba7c67c196a','tools/ayatsuri/model/pack_model.cjs':'3ad150cfa8e08772c2a631a7b94dfcbcbe56fefa','main/ayatsuri/compact_opaque.c':'e1c37f77f1dffa3ecdea094897b53169def4a840'}
++  blob=hashlib.sha1(b'blob '+str(len(data)).encode()+b'\0'+data).hexdigest()
++  assert blob==expected[name], 'baseline source does not match published a426f7a: '+name
++  target=base/name;target.parent.mkdir(parents=True,exist_ok=True);target.write_bytes(data)
++ (old/'ui').symlink_to(ROOT/'main/ui',target_is_directory=True)
++ run(['node','tools/ayatsuri/asset/test_import.cjs']);run(['node','tools/ayatsuri/asset/compact_opaque/test_batch.cjs'])
++ run(['node','tools/ayatsuri/model/test_sidedness.cjs',base/'tools/ayatsuri/model/pack_model.cjs'])
++ current=cache/'core';run(['cc',*flags,'-Wall','-Wextra','-Werror','-I',ROOT/'main',ROOT/'main/ayatsuri/ayatsuri_model.c',ROOT/'main/ayatsuri/ayatsuri_visibility.c',ROOT/'tools/ayatsuri/model/test_sidedness.c',ROOT/'main/ui/kasane/ksn_mesh_depth.c',ROOT/'main/ui/kasane/ksn_procedural.c',ROOT/'main/ayatsuri/compact_opaque.c','-lm','-o',current]);run([current])
++ driver=base/'old-loader.c';driver.write_text('#include "ayatsuri/ayatsuri_model.h"\n#include <assert.h>\n#include <stdio.h>\n#include <stdlib.h>\nint main(int n,char**v){assert(n==3);for(int j=1;j<3;j++){FILE*f=fopen(v[j],"rb");assert(f);fseek(f,0,2);long z=ftell(f);rewind(f);char*b=malloc(z);assert(b&&fread(b,1,z,f)==(size_t)z);fclose(f);ayatsuri_model m;assert(ayatsuri_model_open(b,z,&m)==(j==1?AYATSURI_MODEL_OK:AYATSURI_MODEL_INVALID));free(b);}puts("SIDED_OLD_LOADER_PASS legacy_accept required13_reject");}\n')
++ binary=cache/'old-loader';run(['cc',*flags,'-I',old,'-I',ROOT/'main',old/'ayatsuri/ayatsuri_model.c',ROOT/'main/ayatsuri/ayatsuri_visibility.c',driver,'-lm','-o',binary]);run([binary,'.cache/ayatsuri-native/sided-legacy64.aynm','.cache/ayatsuri-native/sided-sided64.aynm'])
++ # Actual previous codec comparison, including rejection of the new mode by
++ # the old reader. Renamed symbols avoid a second interpretation of old bytes.
++ old_codec=cache/'old-codec.o'
++ renames=['-D'+name+'=legacy_'+name for name in ['co_append','co_read','co_vertex_at','co_triangle_at']]
++ run(['cc',*flags,*renames,'-I',ROOT/'main/ayatsuri','-c',old/'ayatsuri/compact_opaque.c','-o',old_codec])
++ side_test=cache/'side-record'
++ run(['cc',*flags,'-Wall','-Wextra','-Werror','-I',ROOT/'main',ROOT/'main/ayatsuri/compact_opaque.c',ROOT/'main/ui/kasane/ksn_mesh_depth.c',ROOT/'main/ui/kasane/ksn_procedural.c',ROOT/'tools/kasane_contract/test_mesh_side_record.c',old_codec,'-lm','-o',side_test]);run([side_test])
++ # Reuse unchanged QuickJS objects from the registry test cache when present;
++ # otherwise compile a local cache once. Both compared paths use identical VM.
++ qjs=ROOT/'components/quickjs-ng/quickjs-ng';qcache=cache/'qjs';qcache.mkdir(exist_ok=True);objects=[]
++ key=hashlib.sha256((' '.join(flags)+subprocess.check_output(['cc','--version'],text=True)+''.join(hashlib.sha256(f.read_bytes()).hexdigest() for f in sorted(qjs.glob('*')) if f.suffix in ('.c','.h'))).encode()).hexdigest()
++ for name in ['dtoa','libregexp','libunicode','quickjs','quickjs-vm']:
++  obj=qcache/(key+'-'+name+'.o');objects.append(obj)
++  if not obj.exists():run(['cc',*flags,'-w','-I',qjs,'-c',qjs/(name+'.c'),'-o',obj])
++ sys.path.insert(0,str(ROOT/'tools/kasane_contract'));from megademo_chunks import rom_table
++ rom=rom_table(cache/'rom.c')
++ shared=['ksn_procedural.c','ksn_proc_analysis.c','ksn_proc_plan.c','ksn_proc_plan_points.c','ksn_proc_points.c','ksn_proc_points_pie.c','ksn_proc_points_dispatch.c','ksn_core.c','ksn_render.c','ksn_blend_pie.c','ksn_shiki.c','ksn_mesh_depth.c']
++ shared=[ROOT/'main/ui/kasane'/n for n in shared]+[ROOT/'main/ayatsuri/compact_opaque.c',ROOT/'main/ayatsuri/ayatsuri_visibility.c',ROOT/'main/pocket/pocket_proc.c',ROOT/'main/pocket/shiki_heap.c',ROOT/'tools/kasane_contract/proc_native_weak.c',ROOT/'tools/kasane_contract/test_sided_legacy_compat.c',rom]
++ inputs=[ROOT/'.cache/ayatsuri-native/sided-legacy64.aynm',ROOT/'.cache/ayatsuri-native/sided-single32.aynm',ROOT/'.cache/ayatsuri-native/mesh.aynm']+[Path(n).resolve() for n in args.legacy_input]
++ run(['node','tools/ayatsuri/model/test_pack_mesh.cjs'])
++ for label,source in [('baseline',old),('current',ROOT/'main')]:
++  binary=cache/('compat-'+label);run(['cc',*flags,'-I',source,'-I',qjs,'-I',ROOT/'main','-I',ROOT/'main/pocket','-I',ROOT/'main/ui/kasane','-I',ROOT/'tools/kasane_contract','-I',ROOT/'tools/hostshim',source/'ayatsuri/ayatsuri_model.c',source/'pocket/pocket_shape.c',*shared,*objects,'-lm','-o',binary]);run([binary,cache/(label+'.rgb565'),*inputs])
++ assert (cache/'baseline.rgb565').read_bytes()==(cache/'current.rgb565').read_bytes()
++ print('SIDED_LEGACY_PIXEL_PASS inputs='+str(len(inputs))+' views=4 both_submit byte_equal=1',flush=True)
++ # Use the same VM objects/flags for the full managed test, avoiding a second
++ # compilation of unchanged QuickJS. No alternate product implementation.
++ run(['node','tools/kasane_contract/mesh_depth_fixture.cjs'])
++ binary=cache/'managed-suite'
++ suite=[n for n in shared if n.name!='test_sided_legacy_compat.c']+[ROOT/'tools/kasane_contract/test_mesh_depth_qjs.c']
++ run(['cc',*flags,'-I',ROOT/'main','-I',qjs,'-I',ROOT/'main/pocket','-I',ROOT/'main/ui/kasane','-I',ROOT/'tools/kasane_contract','-I',ROOT/'tools/hostshim',ROOT/'main/ayatsuri/ayatsuri_model.c',ROOT/'main/pocket/pocket_shape.c',*suite,*objects,'-lm','-o',binary]);run([binary])
++print('SIDEDNESS_SYNTHETIC_PASS actual_fox_blender_comparison=NOT_RUN device=NOT_RUN')
+diff --git a/tools/ayatsuri/model/sided_fixtures.cjs b/tools/ayatsuri/model/sided_fixtures.cjs
+new file mode 100644
+index 0000000000000000000000000000000000000000..8f3e0ca44770d087286cdba147a5338dbe1d6555
+--- /dev/null
++++ b/tools/ayatsuri/model/sided_fixtures.cjs
+@@ -0,0 +1,26 @@
++'use strict';
++const fs=require('node:fs'),path=require('node:path');
++const {compile}=require('./pack_model.cjs');
++function design({side='single',triangles=64,backFirst=false,nodes=1,nv=3}={}){
++ const root={index:0,name:'root',parent:-1,kind:'group',enabled:true,pose:[0,0,0,0,0,0,1,1,1]};
++ const vertices=nv===3?[10,10,0,30,10,0,10,30,0]:Array.from({length:nv},(_,i)=>[20+10*Math.cos(i*2*Math.PI/nv),20+10*Math.sin(i*2*Math.PI/nv),0]).flat();
++ const indices=Array.from({length:triangles},(_,i)=>{const t=nv===3?[0,1,2]:[0,1+i%(nv-2),2+i%(nv-2)];if((i+(backFirst?1:0))%2)[t[1],t[2]]=[t[2],t[1]];return t;}).flat();
++ return {schema:side==='double'?'ayatsuri-native-model-design-v2':'ayatsuri-native-model-design-v1',nodes:[root,...Array.from({length:nodes},(_,i)=>({...root,pose:root.pose.slice(),index:i+1,name:'mesh'+i,parent:0,kind:'gouraudMesh',...(side==='double'?{materialSidedness:'double'}:{}),
++  material:[0,1,0,1,0,0,0,0,0,0,0],color:0xffffff,thickness:1,opacity:1,edgeSoftness:0,
++  mesh:{vertices:vertices.slice(),normals:Array.from({length:nv},()=>[0,0,1]).flat(),indices:indices.slice(),mask:Array(nv).fill(-1),holes:[],order:'authored',albedoA:0xffff,albedoB:0xffff,thickness:255}}))]};
++}
++function write(){
++ const dir=path.resolve('.cache/ayatsuri-native');fs.mkdirSync(dir,{recursive:true});
++ const fixtures={legacy64:design(),sided64:design({side:'double'}),backfirst:design({side:'double',backFirst:true}),back:design({side:'double',triangles:1,backFirst:true}),front:design({side:'double',triangles:1}),five:design({side:'double',nodes:5}),single32:design({nv:32,triangles:30}),sided32:design({side:'double',nv:32,triangles:30})};
++ const angled=design({side:'double',triangles:1,backFirst:true});
++ angled.nodes[1].pose[6]=1.3;angled.nodes[1].pose[7]=.7;angled.nodes[1].pose[8]=2.2;
++ angled.nodes[1].mesh.normals=Array.from({length:3},()=>[.3,.4,Math.sqrt(.75)]).flat();
++ angled.nodes[1].material=[.1,.6,.02,8,.2,.8,.5,.3,0,0,0];angled.nodes[1].mesh.albedoA=0xf800;angled.nodes[1].mesh.albedoB=0x07e0;angled.nodes[1].mesh.thickness=175;
++ fixtures.angled=angled;
++ const sorted=design({side:'double',triangles:2});
++ sorted.nodes[1].mesh={...sorted.nodes[1].mesh,vertices:[10,10,3,30,10,3,10,30,3,10,10,1,30,10,1,10,30,1],normals:Array.from({length:6},()=>[0,0,1]).flat(),indices:[0,1,2,3,5,4],mask:Array(6).fill(-1),order:'centroid-depth'};
++ fixtures.sorted=sorted;
++ for(const [name,m] of Object.entries(fixtures))fs.writeFileSync(path.join(dir,'sided-'+name+'.aynm'),compile(m));
++ return fixtures;
++}
++module.exports={design,write};if(require.main===module)write();
+diff --git a/tools/ayatsuri/model/test_sidedness.c b/tools/ayatsuri/model/test_sidedness.c
+new file mode 100644
+index 0000000000000000000000000000000000000000..19b8b38945b1746d66718a40aca3aceb7e294326
+--- /dev/null
++++ b/tools/ayatsuri/model/test_sidedness.c
+@@ -0,0 +1,94 @@
++#include "ayatsuri/ayatsuri_model.h"
++#include "ayatsuri/ayatsuri_shade.h"
++#include "ui/kasane/ksn_procedural.h"
++#include "ui/kasane/ksn_mesh_depth.h"
++#include <assert.h>
++#include <stdio.h>
++#include <stdlib.h>
++#include <string.h>
++#include <time.h>
++static uint32_t u32(const uint8_t *p){return (uint32_t)p[0]|(uint32_t)p[1]<<8|(uint32_t)p[2]<<16|(uint32_t)p[3]<<24;}
++static unsigned u16(const uint8_t *p){return p[0]|(unsigned)p[1]<<8;}
++static unsigned section(uint8_t *b,unsigned id){for(unsigned j=0;j<u32(b+12);j++)if(u16(b+32+j*20)==id)return 32+j*20;return 0;}
++static uint8_t *load(const char *name,size_t *size){char path[256];snprintf(path,sizeof path,".cache/ayatsuri-native/sided-%s.aynm",name);FILE *f=fopen(path,"rb");assert(f);fseek(f,0,SEEK_END);*size=(size_t)ftell(f);rewind(f);uint8_t *b=malloc(*size);assert(b&&fread(b,1,*size,f)==*size);fclose(f);return b;}
++static void reject(uint8_t *b,size_t size){ayatsuri_model m,sentinel;memset(&m,0x5a,sizeof m);sentinel=m;assert(ayatsuri_model_open(b,size,&m)==AYATSURI_MODEL_INVALID&&!memcmp(&m,&sentinel,sizeof m));}
++int main(void){
++ const char *names[]={"legacy64","sided64","backfirst","back","front","single32","sided32"};size_t sizes[7],arenas[7];
++ for(unsigned test=0;test<7;test++){
++  uint8_t *bytes=load(names[test],sizes+test);ayatsuri_model m;assert(ayatsuri_model_open(bytes,sizes[test],&m)==AYATSURI_MODEL_OK);
++  arenas[test]=ayatsuri_model_instance_bytes(&m);void *arena=malloc(arenas[test]);assert(arena);unsigned owner=1;ayatsuri_model_instance i;
++  assert(ayatsuri_model_instance_init(&m,arena,arenas[test],&owner,1,&i)==AYATSURI_MODEL_OK);
++  float camera[9]={0,0,400,0,0,0,1,0,0},light[6]={0,0,1,1,1,1};
++  assert(ayatsuri_model_instance_evaluate(&i,&owner,1,camera,light)==AYATSURI_MODEL_OK);
++  uint32_t cursor=0;ayatsuri_model_packet p;assert(ayatsuri_model_instance_next(&i,&owner,1,&cursor,&p)==AYATSURI_MODEL_OK);
++  if(test==0||test==5){assert(p.kind==4);ayatsuri_model_mesh_view v;assert(ayatsuri_model_instance_mesh_view(&i,&owner,1,1,&v)==AYATSURI_MODEL_OK);}
++  else{
++   assert(p.kind==5);ayatsuri_model_sided_mesh_view v,sentinel;memset(&sentinel,0xa5,sizeof sentinel);v=sentinel;
++   assert(ayatsuri_model_instance_sided_mesh_view(&i,&cursor,1,1,&v)==AYATSURI_MODEL_STATE&&!memcmp(&v,&sentinel,sizeof v));
++   assert(ayatsuri_model_instance_sided_mesh_view(&i,&owner,1,1,&v)==AYATSURI_MODEL_OK);
++   ayatsuri_model_mesh_view old;assert(ayatsuri_model_instance_mesh_view(&i,&owner,1,1,&old)==AYATSURI_MODEL_INVALID);
++   const ksn_proc_gouraud_patch *q=v.patch;
++   assert(q->header.vertices==(test==6?32:3));assert(q->header.triangles==(test==6?30:(test==3||test==4)?1:64));
++   for(unsigned t=0;t<q->header.triangles;t++){
++    assert(((v.back_faces[t/8]>>(t%8))&1u)==((t+(test==2||test==3))%2));
++    const ksn_proc_gouraud_vertex *a=q->vertices+q->indices[3*t],*b=q->vertices+q->indices[3*t+1],*c=q->vertices+q->indices[3*t+2];
++    assert(((double)b->x-a->x)*((double)c->y-a->y)-((double)b->y-a->y)*((double)c->x-a->x)>1e-5);
++   }
++   assert(q->vertices[0].color_a==0xffff&&v.back_colors[0]==0);
++   // Flip world X only: logical face side and lighting stay unchanged, screen
++   // winding is normalized separately. Static bake is tested in importer.
++   uint8_t dirty[2]={0,AYATSURI_TARGET_SCALE};float pose[18]={0};uint32_t color[2]={0};double opacity[2]={1,1};
++   assert(ayatsuri_model_instance_read_pose(&i,&owner,1,1,pose+9)==AYATSURI_MODEL_OK);pose[15]=-1;
++   ayatsuri_model_targets target={dirty,pose,color,opacity,2};assert(ayatsuri_model_instance_targets(&i,&owner,1,&target)==AYATSURI_MODEL_OK);
++   assert(ayatsuri_model_instance_sided_mesh_view(&i,&owner,1,1,&v)==AYATSURI_MODEL_STATE);
++   assert(ayatsuri_model_instance_evaluate(&i,&owner,1,camera,light)==AYATSURI_MODEL_OK);
++   assert(ayatsuri_model_instance_sided_mesh_view(&i,&owner,1,1,&v)==AYATSURI_MODEL_OK);
++   assert((v.back_faces[0]&1u)==(test==2||test==3));assert(((const ksn_proc_gouraud_patch *)v.patch)->vertices[0].color_a==0xffff&&v.back_colors[0]==0);
++  }
++  clock_t start=clock();for(unsigned j=0;j<100;j++){camera[7]=(float)(j&1);assert(ayatsuri_model_instance_evaluate(&i,&owner,1,camera,light)==AYATSURI_MODEL_OK);}
++  printf("SIDED_CORE name=%s cold=%zu arena=%zu eval100_us=%.0f\n",names[test],sizes[test],arenas[test],1e6*(clock()-start)/CLOCKS_PER_SEC);
++  assert(ayatsuri_model_instance_dispose(&i,&owner,1)==AYATSURI_MODEL_OK);free(arena);
++  if(test==1){
++   unsigned dir=section(bytes,13);assert(dir);unsigned at=u32(bytes+dir+4);uint8_t *copy=malloc(sizes[test]);assert(copy);
++   for(unsigned offset=0;offset<4;offset++){memcpy(copy,bytes,sizes[test]);copy[at+offset]=2;reject(copy,sizes[test]);}
++   memcpy(copy,bytes,sizes[test]);copy[dir]=14;reject(copy,sizes[test]);
++   memcpy(copy,bytes,sizes[test]);copy[dir+2]=0;reject(copy,sizes[test]);
++   memcpy(copy,bytes,sizes[test]);copy[dir+12]=0;reject(copy,sizes[test]);
++   memcpy(copy,bytes,sizes[test]);copy[u32(copy+section(copy,9)+4)+19]=1;reject(copy,sizes[test]);
++   for(size_t cut=0;cut<sizes[test];cut++)reject(bytes,cut);
++   free(copy);
++  }
++  free(bytes);
++ }
++ for(unsigned test=0;test<2;test++){
++  size_t size;uint8_t *b=load(test?"angled":"sorted",&size);ayatsuri_model m;assert(ayatsuri_model_open(b,size,&m)==AYATSURI_MODEL_OK);
++  size_t length=ayatsuri_model_instance_bytes(&m);void *arena=malloc(length);assert(arena);ayatsuri_model_instance i;unsigned owner=1;
++  assert(ayatsuri_model_instance_init(&m,arena,length,&owner,1,&i)==AYATSURI_MODEL_OK);
++  float camera[9]={0,0,400,0,0,0,1,0,0},light[6]={.3f,-.4f,.8660254f,1,.7f,.4f};
++  assert(ayatsuri_model_instance_evaluate(&i,&owner,1,camera,light)==AYATSURI_MODEL_OK);
++  ayatsuri_model_sided_mesh_view view;assert(ayatsuri_model_instance_sided_mesh_view(&i,&owner,1,1,&view)==AYATSURI_MODEL_OK);
++  const ksn_proc_gouraud_patch *q=view.patch;
++  assert((view.back_faces[0]&1u)==1u);
++  if(!test)assert(q->header.triangles==2&&q->indices[0]==3&&q->indices[3]==0&&view.back_faces[0]==1);
++  else{
++   // Independent scalar inverse-scale and signed quantization from the actual
++   // packed F32 normal. Same public shader, no packet-color oracle shortcut.
++   const uint8_t *cold=b+m.section[9].offset;double n[3],len;
++   const float scales[3]={1.3f,.7f,2.2f};
++   for(unsigned j=0;j<3;j++){uint32_t bits=u32(cold+12+4*j);float value;memcpy(&value,&bits,4);n[j]=(double)value/scales[j];}
++   len=hypot(hypot(n[0],n[1]),n[2]);int16_t sn[3];for(unsigned j=0;j<3;j++)sn[j]=(int16_t)floor(-n[j]*32767/len+.5);
++   float material[8]={.1f,.6f,.02f,8,.2f,.8f,.5f,.3f};ayatsuri_shade_basis basis;assert(ayatsuri_shade_prepare(i.lighting,&basis));
++   assert(view.back_colors[0]==ayatsuri_shade_sample(sn,0xf800,175,i.lighting,material,&basis));
++   assert(view.back_colors[1]==ayatsuri_shade_sample(sn,0x07e0,175,i.lighting,material,&basis));
++  }
++  unsigned cursor=0;ksn_proc_gouraud_patch part,sentinel;memset(&sentinel,0xa5,sizeof sentinel);part=sentinel;
++  assert(!ksn_mesh_sided_run(q,view.back_colors,view.back_faces,&cursor,(void *)q)&&cursor==0);
++  assert(ksn_mesh_sided_run(q,view.back_colors,view.back_faces,&cursor,&part));assert(cursor==1&&part.header.triangles==1&&part.vertices[0].color_a==view.back_colors[0]);
++  if(!test){assert(ksn_mesh_sided_run(q,view.back_colors,view.back_faces,&cursor,&part)&&cursor==2&&part.vertices[0].color_a==q->vertices[0].color_a);}
++  part=sentinel;assert(!ksn_mesh_sided_run(q,view.back_colors,view.back_faces,&cursor,&part)&&!memcmp(&part,&sentinel,sizeof part));
++  ayatsuri_model_instance_dispose(&i,&owner,1);free(arena);free(b);
++ }
++ puts("SIDED_NORMAL_SORT_RUN_PASS prequant_inverse_scale AB_lighting global_centroid_order positive_run overlap_atomic");
++ assert(arenas[1]-arenas[0]==24);assert(arenas[6]-arenas[5]==136);
++ puts("SIDED_CORE_PASS required_section reserved_zero mirrored_state winding side_normals old_view_refusal arena_bounds");
++}
+diff --git a/tools/ayatsuri/model/test_sidedness.cjs b/tools/ayatsuri/model/test_sidedness.cjs
+new file mode 100644
+index 0000000000000000000000000000000000000000..6edbd0e13fa91e786bbb871521caeec3375cca40
+--- /dev/null
++++ b/tools/ayatsuri/model/test_sidedness.cjs
+@@ -0,0 +1,35 @@
++'use strict';
++const assert=require('node:assert/strict'),path=require('node:path');
++const {compile}=require('./pack_model.cjs'),{design,write}=require('./sided_fixtures.cjs');
++const {triangleFixture,makeGlb}=require('../asset/test_import.cjs');
++const {importGlb}=require('../asset/import_glb.cjs'),{compileStatic}=require('../asset/compile_static.cjs');
++const {batchStaticSurfaces}=require('../asset/compact_opaque/batch_static.cjs');
++const baseline=process.argv[2]?require(path.resolve(process.argv[2])).compile:null;
++const fixture=triangleFixture();fixture.json.materials[0].doubleSided=true;
++const glb=makeGlb(fixture.json,fixture.bin),copy=Buffer.from(glb),ir=importGlb(glb),before=JSON.stringify(ir);
++const scopes=new Map(ir.surfaces.map(s=>[s.stableId,'explicit-static-scope']));
++const profile={'material/0':{albedo565:65535,hone:[0,1,0,1,0,0,0,0,0,0,0]}};
++const invalidIr=structuredClone(ir);invalidIr.schema='hone-scene-ir-v1';
++assert.throws(()=>compileStatic(invalidIr,{scopeBySurface:scopes,materials:profile}),/REQUIRES_IR_V2/);
++const missingSide=structuredClone(ir);delete missingSide.materials[0].sidedness;
++assert.throws(()=>compileStatic(missingSide,{scopeBySurface:scopes,materials:profile}),/MISSING_MATERIAL_SIDEDNESS/);
++const result=compileStatic(ir,{scopeBySurface:scopes,materials:profile});
++assert(glb.equals(copy));assert.equal(JSON.stringify(ir),before);assert.equal(result.manifest.nodes[1].materialSidedness,'double');
++function sec(b,id){for(let j=0;j<b.readUInt32LE(12);j++){let at=32+20*j;if(b.readUInt16LE(at)===id)return b.subarray(b.readUInt32LE(at+4),b.readUInt32LE(at+4)+b.readUInt32LE(at+8));}return null;}
++assert.equal(sec(result.bytes,13)[0],1);assert(sec(result.bytes,9).subarray(19).every(x=>x===0));
++let mixed=design({side:'double',nodes:2});mixed.nodes[1].materialSidedness='single';
++const bytes=compile(mixed);assert.equal(sec(bytes,5).length,144);assert.deepEqual([...sec(bytes,13)],[0,0,0,0,1,0,0,0]);
++const s=ir.surfaces[0],surfaces=['single','double','single'].map((side,i)=>({...s,stableId:'s'+i,materialSidedness:side}));
++const parts=batchStaticSurfaces(surfaces,{scopeBySurface:new Map(surfaces.map(s=>[s.stableId,'same'])),preserveOrder:true});
++assert.equal(parts.length,3);assert.deepEqual(parts.map(p=>p.materialSidedness),['single','double','single']);
++assert.deepEqual(parts.flatMap(p=>p.origins.map(o=>o.surface)),['s0','s1','s2']);
++assert.throws(()=>compile({...design(),nodes:design({side:'double'}).nodes}),/sidedness schema/);
++const invalid=design({side:'double'});delete invalid.nodes[1].materialSidedness;assert.throws(()=>compile(invalid),/explicit/);
++let count=0;if(baseline){
++ for(let j=0;j<100;j++){
++  const m=design({nodes:1+j%3,nv:j%2?32:3,triangles:1+j%64});
++  for(const n of m.nodes.slice(1)){n.pose[0]=j/7;n.pose[1]=-j/11;n.material[0]=(j%9)/10;n.mesh.albedoA=j*599%65536;n.mesh.albedoB=j*773%65536;}
++  assert(compile(m).equals(baseline(m)));const v2=structuredClone(m);v2.schema='ayatsuri-native-model-design-v2';v2.nodes.slice(1).forEach(n=>n.materialSidedness='single');assert(compile(v2).equals(baseline(m)));count++;
++ }
++}
++write();console.log('SIDED_PIPELINE_PASS import_batch_compile immutable mixed_material no_reorder reserved_zero legacy_byte_cases='+count);
+diff --git a/tools/kasane_contract/mesh_depth_fixture.cjs b/tools/kasane_contract/mesh_depth_fixture.cjs
+index db65418768ee5a3d9505d77516d994707ae466a8..d3e0cbe2930a05ac37326e100878402876aab2ea 100644
+--- a/tools/kasane_contract/mesh_depth_fixture.cjs
++++ b/tools/kasane_contract/mesh_depth_fixture.cjs
+@@ -5,3 +5,4 @@ const group={index:0,name:'root',parent:-1,kind:'group',enabled:true,pose:[0,0,0
+ const patch={...group,index:1,name:'mesh',parent:0,kind:'gouraudMesh',material:[.4,.6,.025,4,.08,1,.73,.44,0,0,0],color:0xe47b30,thickness:1,opacity:1,edgeSoftness:0,
+  mesh:{vertices:[-10,-10,0,10,-10,0,-10,10,0],indices:[0,1,2],mask:[-1,-1,1],holes:[],order:'authored',albedoA:0xe3c6,albedoB:0xff57,thickness:175}};
+ const output=path.resolve('.cache/ayatsuri-native/mesh-depth.aynm');fs.mkdirSync(path.dirname(output),{recursive:true});fs.writeFileSync(output,compile({schema:'ayatsuri-native-model-design-v1',nodes:[group,patch]}));
++require('../ayatsuri/model/sided_fixtures.cjs').write();
+diff --git a/tools/kasane_contract/proc_native_weak.c b/tools/kasane_contract/proc_native_weak.c
+index 68b809239d1f8dab4963f2d0788a5b3eea218aa1..c385eb3ad4cf2743bc6314619f60d00d2e0268b6 100644
+--- a/tools/kasane_contract/proc_native_weak.c
++++ b/tools/kasane_contract/proc_native_weak.c
+@@ -64,3 +64,9 @@ __attribute__((weak)) JSValue pocket_api_root(JSContext *ctx){
+     JSValue global=JS_GetGlobalObject(ctx),root=JS_GetPropertyStr(ctx,global,"pocket");
+     JS_FreeValue(ctx,global);return root;
+ }
++
++__attribute__((weak)) JSValue pocket_proc_native_sided_mesh(JSContext *ctx,const char *op,const ksn_proc_gouraud_patch *p,
++        const float *depth,const uint16_t *colors,const uint8_t bits[8],uint16_t node){
++    (void)p;(void)depth;(void)colors;(void)bits;(void)node;
++    return pocket_api_throw(ctx,POCKET_ERR_UNSUPPORTED,op,"sided mesh snapshot unavailable in this harness",false,NULL);
++}
+diff --git a/tools/kasane_contract/test_mesh_depth_qjs.c b/tools/kasane_contract/test_mesh_depth_qjs.c
+index 2cb3f81fa0dfb53b1522386f2ddbebee8d389e7f..1c38e0f70f180e94017236a9bbd68195a78ed800 100644
+--- a/tools/kasane_contract/test_mesh_depth_qjs.c
++++ b/tools/kasane_contract/test_mesh_depth_qjs.c
+@@ -46,6 +46,62 @@ static void direct(void){
+  memset(actual,0,sizeof actual);REQUIRE(ksn_mesh_render(&s,actual,0,135,one,1)&&actual[12*240+12]==31);
+  puts("MESH_DEPTH_RENDER_PASS crossing row1_row8 finite holes immutable_append");
+ }
++static size_t sided_actor(JSContext *ctx,const char *name){
++ char path[256];snprintf(path,sizeof path,".cache/ayatsuri-native/sided-%s.aynm",name);
++ FILE *f=fopen(path,"rb");REQUIRE(f);fseek(f,0,SEEK_END);size_t size=(size_t)ftell(f);rewind(f);
++ uint8_t *blob=malloc(size);REQUIRE(blob&&fread(blob,1,size,f)==size);fclose(f);
++ JSValue g=JS_GetGlobalObject(ctx);REQUIRE(JS_SetPropertyStr(ctx,g,"sideSource",JS_NewArrayBufferCopy(ctx,blob,size))>=0);JS_FreeValue(ctx,g);free(blob);
++ eval_ok(ctx,"globalThis.SM=pocket.ayatsuri.modelOpen(sideSource);globalThis.SA=SM.instance();sideSource=null;"
++  "SA.evaluate(new Float32Array([0,0,400,0,0,0,1,0,0]),new Float32Array([0,0,1,1,1,1]));"
++  "globalThis.emptyIds=new Uint16Array(0);globalThis.emptyCounts=new Uint8Array(0);globalThis.emptyXY=new Float32Array(0);");
++ return size;
++}
++static pocket_proc_mark side_mark(JSContext *ctx){pocket_proc_mark m;JSValue v=pocket_proc_native_begin(ctx,"sided-test",&m);REQUIRE(!JS_IsException(v));JS_FreeValue(ctx,v);return m;}
++static void side_close(JSContext *ctx){eval_ok(ctx,"SA.dispose();SM.dispose();SA=SM=null");pocket_proc_reset();}
++static void sided_contracts(JSContext *ctx){
++ const char *names[]={"legacy64","sided64","backfirst"};
++ for(unsigned n=0;n<3;n++)for(unsigned clipped=0;clipped<2;clipped++){
++  size_t cold=sided_actor(ctx,names[n]);const char *build=clipped?"P.beginMeshFrame(17,65536,8000000,1);SA.submitClipped(emptyIds,emptyCounts,emptyXY)":"P.beginMeshFrame(17,65536,8000000,1);SA.submit()";
++  pocket_proc_mark mark={0};clock_t start=0;
++  for(unsigned sample=0;sample<10;sample++){
++   if(sample==2)start=clock();
++   eval_ok(ctx,build);mark=side_mark(ctx);eval_ok(ctx,"P.commit()");
++   REQUIRE(pocket_proc_backdrop(NULL,0,135,actual)==KSN_OK);pocket_proc_present_result(KSN_OK);
++  }
++  REQUIRE(mark.depth_packets==1u);REQUIRE(actual[12*240+12]==(n==2?0:0xffff));
++  printf("SIDED_HOST name=%s submitClipped=%u cold=%zu records=%u snapshot=%zu work=%u warm_submit_render_us=%.0f samples=8\n",names[n],clipped,cold,mark.depth_packets,mark.depth_bytes,mark.depth_work,1e6*(clock()-start)/CLOCKS_PER_SEC/8);
++  // Painter observes LAST face; shared depth observes FIRST at exact ties.
++  eval_ok(ctx,clipped?"P.beginFrame(17);SA.submitClipped(emptyIds,emptyCounts,emptyXY);P.commit()":"P.beginFrame(17);SA.submit();P.commit()");
++  if(n){REQUIRE(pocket_proc_backdrop(NULL,0,135,actual)==KSN_OK);REQUIRE(actual[12*240+12]==(n==2?0xffff:0));pocket_proc_present_result(KSN_OK);}
++  else pocket_proc_present_result(KSN_OK);
++  side_close(ctx);
++ }
++ // Successful sided copies must survive actor/model disposal before draw.
++ for(unsigned clipped=0;clipped<2;clipped++){
++  sided_actor(ctx,"backfirst");eval_ok(ctx,clipped?"P.beginMeshFrame(17,1024,8000000,1);SA.submitClipped(emptyIds,emptyCounts,emptyXY);P.commit();SA.dispose();SM.dispose();SA=SM=null":"P.beginMeshFrame(17,1024,8000000,1);SA.submit();P.commit();SA.dispose();SM.dispose();SA=SM=null");
++  JS_RunGC(JS_GetRuntime(ctx));REQUIRE(pocket_proc_backdrop(NULL,0,135,actual)==KSN_OK&&actual[12*240+12]==0);
++  pocket_proc_present_result(KSN_OK);pocket_proc_reset();
++ }
++ // Five logical meshes now fit as five records, without raising any quota.
++ for(unsigned clipped=0;clipped<2;clipped++){
++  sided_actor(ctx,"five");eval_ok(ctx,clipped?"P.beginMeshFrame(17,65536,8000000,1);SA.submitClipped(emptyIds,emptyCounts,emptyXY)":"P.beginMeshFrame(17,65536,8000000,1);SA.submit()");
++  pocket_proc_mark m=side_mark(ctx);REQUIRE(m.depth_packets==5);eval_ok(ctx,"P.commit()");pocket_proc_present_result(KSN_OK);side_close(ctx);
++ }
++ // Same unmodified limits:252 previous records + five logical meshes exceeds
++ // 256; byte/work limits also fail after partial multi-node append.
++ for(unsigned limit=0;limit<3;limit++)for(unsigned clipped=0;clipped<2;clipped++){
++  sided_actor(ctx,"five");eval_ok(ctx,limit==1?"P.beginMeshFrame(17,800,8000000,1)":limit==2?"P.beginMeshFrame(17,65536,70000,1)":"P.beginMeshFrame(17,65536,8000000,1)");
++  ksn_proc_gouraud_patch prefix=triangle(2016);float z[3]={5,5,5};
++  for(unsigned j=0;j<(limit==0?252u:1u);j++)append(ctx,&prefix,z);
++  pocket_proc_mark before=side_mark(ctx);
++  eval_error(ctx,clipped?"SA.submitClipped(emptyIds,emptyCounts,emptyXY)":"SA.submit()");
++  pocket_proc_mark after=side_mark(ctx);
++  REQUIRE(after.depth_packets==before.depth_packets&&after.depth_bytes==before.depth_bytes&&after.depth_work==before.depth_work);
++  eval_ok(ctx,"P.commit();SA.dispose();SM.dispose();SA=SM=null");
++  REQUIRE(pocket_proc_backdrop(NULL,0,135,actual)==KSN_OK&&actual[12*240+12]==2016);pocket_proc_present_result(KSN_OK);pocket_proc_reset();
++ }
++ puts("SIDED_MANAGED_PASS order_tie painter depth both_submit one_mesh_one_record byte_record_work_limits whole_call_rollback independent_lifetime");
++}
+ int main(void){
+  direct();JSRuntime *rt=JS_NewRuntime();REQUIRE(rt);JSContext *ctx=JS_NewContext(rt);REQUIRE(ctx);
+  JSValue g=JS_GetGlobalObject(ctx),p=JS_NewObject(ctx);REQUIRE(pocket_proc_install(ctx,p)==ESP_OK);
+@@ -119,5 +175,5 @@ int main(void){
+  REQUIRE(pocket_proc_backdrop(NULL,0,135,actual)==KSN_OK&&!memcmp(actual,expected,sizeof actual));pocket_proc_present_result(KSN_OK);
+  pocket_proc_mesh_memory(&bytes);JSMemoryUsage usage;JS_ComputeMemoryUsage(rt,&usage);
+  printf("MESH_MANAGED_SUBMIT_PASS submit submitClipped independent_lifetime guest_used=%lld guest_malloc=%lld native_payload=%zu workspace=%zu metadata=%zu\n",(long long)usage.memory_used_size,(long long)usage.malloc_size,bytes.candidate+bytes.committed,bytes.workspace,bytes.metadata);
+- pocket_proc_reset();pocket_proc_host_classes_reset();JS_FreeContext(ctx);JS_FreeRuntime(rt);return 0;
++ pocket_proc_reset();sided_contracts(ctx);pocket_proc_host_classes_reset();JS_FreeContext(ctx);JS_FreeRuntime(rt);return 0;
+ }
+diff --git a/tools/kasane_contract/test_mesh_side_record.c b/tools/kasane_contract/test_mesh_side_record.c
+new file mode 100644
+index 0000000000000000000000000000000000000000..a9de41d301837612814231d3905436eab6576359
+--- /dev/null
++++ b/tools/kasane_contract/test_mesh_side_record.c
+@@ -0,0 +1,79 @@
++#include "ui/kasane/ksn_mesh_depth.h"
++#include <assert.h>
++#include <math.h>
++#include <stdio.h>
++#include <stdlib.h>
++#include <string.h>
++#include <time.h>
++bool legacy_co_append(co_buffer *,const co_input *);
++bool legacy_co_read(const uint8_t *,size_t,co_view *);
++static void codec(void){
++ uint8_t a[4096]={0},b[4096]={0},saved[4096];co_vertex vertices[32],selected[32];uint16_t indices[192],back[64];uint8_t bits[8];
++ for(unsigned n=3;n<=32;n+=29)for(unsigned solid=0;solid<2;solid++){
++  for(unsigned j=0;j<n;j++)vertices[j]=(co_vertex){(float)j,(float)(j%5),(float)j-2,(float)j/7,(uint16_t)(solid?31:j*23),(uint16_t)(solid?31:j*79)};
++  for(unsigned t=0;t<64;t++){indices[3*t]=(uint16_t)(t%n);indices[3*t+1]=(uint16_t)((t+1)%n);indices[3*t+2]=(uint16_t)((t+2)%n);}
++  co_input in={vertices,indices,42,(uint8_t)n,64};co_buffer now={a,sizeof a,0,0},old={b,sizeof b,0,0};
++  assert(co_append(&now,&in)&&legacy_co_append(&old,&in)&&now.size==old.size&&!memcmp(a,b,now.size));
++ }
++ for(unsigned j=0;j<32;j++){vertices[j]=(co_vertex){(float)j,(float)(j%5),(float)j-2,(float)j/7,(uint16_t)(j*23),(uint16_t)(j*79)};back[2*j]=(uint16_t)(65535-j);back[2*j+1]=(uint16_t)(32000-j);}
++ for(unsigned t=0;t<64;t++){indices[3*t]=(uint16_t)(t%32);indices[3*t+1]=(uint16_t)((t+1)%32);indices[3*t+2]=(uint16_t)((t+2)%32);}memset(bits,0xaa,8);
++ co_sided_input in={{vertices,indices,42,32,64},back,bits};co_buffer now={a,sizeof a,0,0};
++ assert(co_append_sided(&now,&in)&&now.size==980&&now.packets==1);co_view view;assert(co_read(a,now.size,&view)&&view.mode==2&&!legacy_co_read(a,now.size,&view));assert(co_read(a,now.size,&view));
++ for(unsigned t=0;t<64;t++){bool side=false;assert(co_triangle_side(&view,t,&side)&&side==(t%2!=0));}
++ for(unsigned j=0;j<32;j++){co_vertex v;assert(co_vertex_at_side(&view,j,true,&v)&&v.color_a==back[2*j]&&v.color_b==back[2*j+1]);assert(co_vertex_at_side(&view,j,false,&v)&&v.color_a==vertices[j].color_a);}
++ memcpy(saved,a,sizeof a);for(size_t cut=0;cut<now.size;cut++)assert(!co_read(a,cut,&view));
++ now.capacity=now.size;assert(!co_append_sided(&now,&in)&&now.size==980&&now.packets==1&&!memcmp(a,saved,sizeof a));now.capacity=sizeof a;
++ now.packets=256;assert(!co_append_sided(&now,&in)&&!memcmp(a,saved,sizeof a));now.packets=1;
++ vertices[0].depth=NAN;assert(!co_append_sided(&now,&in)&&!memcmp(a,saved,sizeof a));vertices[0].depth=0;
++ // All front and all back reuse the exact old encoding, without dropping a
++ // selected triangle. Equal palettes (e.g. unlit) also reuse the old bytes.
++ for(unsigned mode=0;mode<3;mode++){
++  memset(bits,mode==1?0xff:mode==2?0xaa:0,8);memcpy(selected,vertices,sizeof vertices);
++  for(unsigned j=0;j<32;j++){
++   if(mode==1){selected[j].color_a=back[2*j];selected[j].color_b=back[2*j+1];}
++   if(mode==2){back[2*j]=vertices[j].color_a;back[2*j+1]=vertices[j].color_b;}
++  }
++  now=(co_buffer){a,sizeof a,0,0};co_buffer old={b,sizeof b,0,0};co_input reference=in.front;reference.vertices=selected;
++  assert(co_append_sided(&now,&in)&&legacy_co_append(&old,&reference)&&now.size==old.size&&!memcmp(a,b,now.size));
++ }
++ // Small mode2 checks canonical side bits, padding, indices and complete copy.
++ in.front.vertex_count=3;in.front.triangle_count=2;uint16_t two[6]={0,1,2,0,1,2};in.front.indices=two;bits[0]=2;back[0]=0xf800;
++ now=(co_buffer){a,sizeof a,0,0};assert(co_append_sided(&now,&in)&&now.size==92);memcpy(saved,a,sizeof a);
++ size_t used=now.size;bits[0]=0x80;assert(!co_append_sided(&now,&in)&&now.size==used&&!memcmp(a,saved,sizeof a));bits[0]=2;
++ a[90]|=0x80;assert(!co_read(a,used,&view));memcpy(a,saved,sizeof a);a[91]=1;assert(!co_read(a,used,&view));memcpy(a,saved,sizeof a);
++ a[84]=3;assert(!co_read(a,used,&view));memcpy(a,saved,sizeof a);a[2]=3;assert(!co_read(a,used,&view));memcpy(a,saved,sizeof a);
++ memset(vertices,0x5a,sizeof vertices);memset(back,0x5a,sizeof back);memset(bits,0,8);
++ assert(co_read(a,used,&view)&&co_triangle_side(&view,1,(bool[1]){0}));co_vertex v;assert(co_vertex_at_side(&view,0,true,&v)&&v.color_a==0xf800);
++ puts("SIDE_RECORD_CODEC_PASS legacy_bytes mode2_bounds980 owned_copy malformed_truncated side_padding quota_transaction");
++}
++static void render_compare(unsigned first_back,bool unlit){
++ uint8_t *old_data=calloc(1,65536),*new_data=calloc(1,65536);assert(old_data&&new_data);
++ ksn_mesh_snapshot old={.packets={old_data,65536,0,0},.enabled=true,.work_limit=8000000},now={.packets={new_data,65536,0,0},.enabled=true,.work_limit=8000000};
++ ksn_proc_gouraud_patch p={0};p.header.vertices=3;p.header.triangles=64;
++ p.vertices[0]=(ksn_proc_gouraud_vertex){0,0,-1,0xf800,0x001f};p.vertices[1]=(ksn_proc_gouraud_vertex){3,0,2,0xf800,0x001f};p.vertices[2]=(ksn_proc_gouraud_vertex){0,4,-1,0xf800,0x001f};
++ for(unsigned t=0;t<64;t++){p.indices[3*t]=0;p.indices[3*t+1]=1;p.indices[3*t+2]=2;}
++ uint16_t colors[6]={0x07e0,0xffe0,0x07e0,0xffe0,0x07e0,0xffe0};uint8_t bits[8];memset(bits,first_back?0x55:0xaa,8);float depth[3]={0,0,0};
++ if(unlit)for(unsigned j=0;j<3;j++){p.vertices[j].color_a=p.vertices[j].color_b=65535;colors[2*j]=colors[2*j+1]=65535;}
++ unsigned cursor=0;ksn_proc_gouraud_patch part;
++ while(cursor<64){assert(ksn_mesh_sided_run(&p,colors,bits,&cursor,&part)&&ksn_mesh_append(&old,&part,depth,1));}
++ assert(ksn_mesh_append_sided(&now,&p,depth,colors,bits,1)&&now.packets.packets==1&&old.packets.packets==64&&now.work==old.work);
++ uint16_t a[240],b[240];float za[240],zb[240];clock_t start=clock();
++ for(unsigned repeat=0;repeat<8;repeat++)for(unsigned y=0;y<135;y++){
++  for(unsigned x=0;x<240;x++)a[x]=17;
++  assert(ksn_mesh_render(&old,a,y,1,za,1));
++ }
++ double old_us=1e6*(clock()-start)/CLOCKS_PER_SEC/8;start=clock();
++ for(unsigned repeat=0;repeat<8;repeat++)for(unsigned y=0;y<135;y++){
++  for(unsigned x=0;x<240;x++)b[x]=17;
++  assert(ksn_mesh_render(&now,b,y,1,zb,1));
++ }
++ double new_us=1e6*(clock()-start)/CLOCKS_PER_SEC/8;
++ for(unsigned y=0;y<135;y++){
++  for(unsigned x=0;x<240;x++)a[x]=b[x]=17;
++  assert(ksn_mesh_render(&old,a,y,1,za,1)&&ksn_mesh_render(&now,b,y,1,zb,1));assert(!memcmp(a,b,sizeof a)&&!memcmp(za,zb,sizeof za));
++  if(y==1)assert(b[1]==(unlit?65535:first_back?0xffe0:0x001f));
++ }
++ printf("SIDE_RECORD_COMPARE backFirst=%u unlit=%u records=%u->%u used=%zu->%zu arena_change=0 depth_scratch=960 raster_us=%.0f->%.0f RGB_depth_byte_equal=1\n",first_back,unlit,old.packets.packets,now.packets.packets,old.packets.size,now.packets.size,old_us,new_us);
++ free(old_data);free(new_data);
++}
++int main(void){codec();render_compare(0,false);render_compare(1,false);render_compare(0,true);puts("SIDE_RECORD_PASS");}
+diff --git a/tools/kasane_contract/test_sided_legacy_compat.c b/tools/kasane_contract/test_sided_legacy_compat.c
+new file mode 100644
+index 0000000000000000000000000000000000000000..be36fca51d345f652ed219d63055ff5e73569a38
+--- /dev/null
++++ b/tools/kasane_contract/test_sided_legacy_compat.c
+@@ -0,0 +1,30 @@
++#define pocket_api_lazy compat_unused_lazy
++#define main compat_baseline_fixture_main
++#include "test_pocket_proc_qjs.c"
++#undef main
++#undef pocket_api_lazy
++void pocket_proc_host_classes_reset(void);
++esp_err_t pocket_api_lazy(JSContext *ctx,const char *name,pocket_namespace_fn fn,void *user){
++ JSValue root=pocket_api_root(ctx),ns=JS_NewObject(ctx);REQUIRE(!JS_IsException(ns));esp_err_t status=fn(ctx,ns,user);
++ if(status==ESP_OK&&JS_SetPropertyStr(ctx,root,name,JS_DupValue(ctx,ns))<0)status=ESP_ERR_NO_MEM;
++ JS_FreeValue(ctx,ns);JS_FreeValue(ctx,root);return status;
++}
++int main(int argc,char **argv){
++ REQUIRE(argc>=3);FILE *output=fopen(argv[1],"wb");REQUIRE(output);
++ JSRuntime *rt=JS_NewRuntime();REQUIRE(rt);JSContext *ctx=JS_NewContext(rt);REQUIRE(ctx);
++ JSValue global=JS_GetGlobalObject(ctx),pocket=JS_NewObject(ctx),kasane=JS_NewObject(ctx);
++ REQUIRE(pocket_proc_install(ctx,kasane)==ESP_OK);REQUIRE(JS_SetPropertyStr(ctx,pocket,"kasane",kasane)>=0);
++ REQUIRE(JS_SetPropertyStr(ctx,global,"pocket",pocket)>=0);JS_FreeValue(ctx,global);REQUIRE(pocket_shape_install(ctx,NULL)==ESP_OK);
++ eval_ok(ctx,"globalThis.P=pocket.kasane.procedural");
++ for(int arg=2;arg<argc;arg++){
++  FILE *f=fopen(argv[arg],"rb");REQUIRE(f);fseek(f,0,SEEK_END);size_t size=(size_t)ftell(f);rewind(f);uint8_t *b=malloc(size);REQUIRE(b&&fread(b,1,size,f)==size);fclose(f);
++  global=JS_GetGlobalObject(ctx);REQUIRE(JS_SetPropertyStr(ctx,global,"input",JS_NewArrayBufferCopy(ctx,b,size))>=0);JS_FreeValue(ctx,global);free(b);
++  eval_ok(ctx,"globalThis.M=pocket.ayatsuri.modelOpen(input);globalThis.A=M.instance();input=null");
++  for(unsigned view=0;view<4;view++){
++   char script[512];snprintf(script,sizeof script,"A.evaluate(new Float32Array([%u,30,400,0,0,0,0.25,120,78]),new Float32Array([0,0,1,%g,%g,%g]));P.beginFrame(17);A.%s;P.commit()",view*40,view&1?.5:1,view&1?.7:1,view&1?.9:1,view&1?"submitClipped(new Uint16Array(0),new Uint8Array(0),new Float32Array(0))":"submit()");
++   eval_ok(ctx,script);REQUIRE(pocket_proc_backdrop(NULL,0,135,actual)==KSN_OK);REQUIRE(fwrite(actual,1,sizeof actual,output)==sizeof actual);pocket_proc_present_result(KSN_OK);
++  }
++  eval_ok(ctx,"A.dispose();M.dispose();A=M=null");pocket_proc_reset();
++ }
++ fclose(output);pocket_proc_host_classes_reset();JS_FreeContext(ctx);JS_FreeRuntime(rt);puts("SIDED_LEGACY_RENDER_CAPTURE_PASS");return 0;
++}

@@ -1,0 +1,42 @@
+--- frozen/code/native_render.c
++++ observer/code/native_render.c
+@@ -24,7 +24,9 @@
+  for(unsigned j=0;ok&&j<3;j++){lights[j].shape=FOX_DISK_SHAPE_DISK;for(unsigned k=0;ok&&k<3;k++)ok=fscanf(f,"%lf",&lights[j].center[k])==1;for(unsigned k=0;ok&&k<3;k++)ok=fscanf(f,"%lf",&lights[j].rotation_xyz[k])==1;for(unsigned k=0;ok&&k<3;k++)ok=fscanf(f,"%lf",&lights[j].color[k])==1;if(ok)ok=fscanf(f,"%lf %lf",&lights[j].power,&lights[j].diameter)==2;}
+  for(unsigned k=0;ok&&k<3;k++)ok=fscanf(f,"%lf",world+k)==1;if(ok)ok=fscanf(f,"%lf",&strength)==1;char extra;if(ok&&fscanf(f," %c",&extra)!=EOF)ok=0;fclose(f);return ok&&fox_disk_scene_init(out,lights,world,strength)==FOX_DISK_OK;
+ }
++extern const double *fox_combined_observer_data(void);
+ int main(int argc,char **argv){
++ const uint16_t endian=1;if(sizeof(double)!=8||*(const unsigned char *)&endian!=1)return fail("observer-format");
+  if(argc!=19)return fail("arguments: model color depth reverse camera9 light6");
+  float cam[9],light[6];for(int i=0;i<9;i++)cam[i]=strtof(argv[4+i],NULL);for(int i=0;i<6;i++)light[i]=strtof(argv[13+i],NULL);
+  FILE *f=fopen(argv[1],"rb");if(!f)return fail("input");fseek(f,0,SEEK_END);long bytes=ftell(f);rewind(f);if(bytes<1||bytes>1048576)return fail("size");
+@@ -109,6 +111,8 @@
+  char path[4096];snprintf(path,sizeof path,"%s.u16le",argv[2]);FILE *c=fopen(path,"wb");snprintf(path,sizeof path,"%s.f32le",argv[2]);FILE *d=fopen(path,"wb");if(!c||!d)return fail("output");
+  uint16_t color[240*8];float z[240*8];unsigned long long render_ns=0;ksn_mesh_pixel_stats stats={0};
+  for(unsigned y=0;y<135;y+=8){unsigned h=135-y<8?135-y:8;memset(color,0,sizeof color);unsigned long long begin=ns();if(!(transportmode?fox_transport_render(&tx,&px,color,y,h,z,8,&stats):visibility?fox_pixel_render_bound(&binding,generation,&px,color,y,h,z,8,&stats,&budget):pixel?ksn_mesh_pixel_render(&px,color,y,h,z,8,&stats):ksn_mesh_render(s,color,y,h,z,8)))return fail_render(&budget,&transport_budget,&tx.counters);render_ns+=ns()-begin;for(unsigned j=0;j<240*h;j++)if(isnan(z[j])||z[j]==INFINITY)return fail("nonfinite-depth");if(fwrite(color,2,240*h,c)!=240*h||fwrite(z,4,240*h,d)!=240*h)return fail("write");}fclose(c);fclose(d);
++ const double *combined=fox_combined_observer_data();for(unsigned i=0;i<135*240*3;i++)if(!isfinite(combined[i])||combined[i]<0)return fail("observer-nonfinite-negative");
++ snprintf(path,sizeof path,"%s-combined.f64le",argv[2]);FILE *hdr=fopen(path,"wb");if(!hdr||fwrite(combined,sizeof(double),135*240*3,hdr)!=135*240*3||fclose(hdr))return fail("observer-write");
+  printf("{\"normalPairCodecEnabled\":%s,\"normalPairMode4Records\":%u,\"normalPairMode5Records\":%u,\"normalPairSavedBytes\":%zu,",normal_pair?"true":"false",codec_mode4,codec_mode5,canonical_snapshot_bytes-(416+s->packets.size));
+  printf("\"transportMode\":%u,\"transportComplete\":true,\"outerSamples\":%u,\"innerSamples\":%u,\"materialGeneration\":%u,\"materialFingerprint\":\"%016llx\",\"transportSceneBytes\":%zu,\"transportTemporaryBytes\":%zu,\"transportContextBytes\":%zu,\"transportBudgetBytes\":%zu,\"transportBuildNs\":%llu,\"transportRays\":%llu,\"transportNodeVisits\":%llu,\"transportTriangleTests\":%llu,\"transportRayLimit\":20000000,\"transportNodeLimit\":800000000,\"transportTriangleLimit\":300000000,\"transportSceneLimit\":262144,",transportmode,outer,inner,transportmode?1:0,(unsigned long long)material_digest,transport_bytes,transport_temp,sizeof tx,sizeof transport_budget,transport_build_ns,(unsigned long long)transport_budget.used.rays,(unsigned long long)transport_budget.used.node_visits,(unsigned long long)transport_budget.used.triangle_tests);
+ #define COUNT(name) printf("\"" #name "\":%llu,",(unsigned long long)tx.counters.name);
+--- frozen/product/main/ui/kasane/ksn_mesh_depth.c
++++ observer/product/main/ui/kasane/ksn_mesh_depth.c
+@@ -4,6 +4,9 @@
+ #include <math.h>
+ #include <string.h>
+ #include <limits.h>
++/* Host diagnostic only: one process, one frame. Static zero background. */
++static double fox_combined_observer[135*240*3];
++const double *fox_combined_observer_data(void){return fox_combined_observer;}
+ static bool mesh_span_valid(const void *p,size_t n){return p&&n<=UINTPTR_MAX-(uintptr_t)p;}
+ static bool mesh_overlap(const void *a,size_t an,const void *b,size_t bn){
+     uintptr_t x=(uintptr_t)a,y=(uintptr_t)b;
+@@ -144,6 +147,8 @@
+                     for(unsigned k=0;k<3;k++){if(!isfinite(rho[k])||rho[k]<-64*DBL_EPSILON||rho[k]>1+64*DBL_EPSILON)return false;rho[k]=fmax(0,fmin(1,rho[k]));}
+                     const double position[3]={world[0]/38,-world[2]/38,-world[1]/38},nn[3]={normal[0],-normal[2],-normal[1]};double rgb[3];
+                     if(shader){if(!shader(shader_context,scene,position,nn,rho,rgb))return false;}else if((visibility?fox_disk_eval16_visible(scene,position,nn,rho,visibility,visibility_context,rgb):fox_disk_eval16(scene,position,nn,rho,rgb))!=FOX_DISK_OK)return false;
++                    /* Capture actual preclamp shader result; nearer winners overwrite. */
++                    if(shader)for(unsigned k=0;k<3;k++)fox_combined_observer[((unsigned)yy*240+(unsigned)x)*3+k]=rgb[k];
+                     unsigned q[3];for(unsigned k=0;k<3;k++){float value=ayatsuri_srgb_encode((float)fmin(1,rgb[k]));q[k]=(unsigned)lroundf(value*(k==1?63:31));}
+                     if(stats->shade_updates==UINT64_MAX||stats->disk_samples>UINT64_MAX-48)return false;
+                     pixels[at]=(uint16_t)((q[0]<<11)|(q[1]<<5)|q[2]);stats->shade_updates++;stats->disk_samples+=48;continue;

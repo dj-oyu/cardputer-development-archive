@@ -1,0 +1,35 @@
+{
+  "hostELF": [
+    {
+      "binary": "fox-v3-boundary-aa-evaluation/actual-001/native-render",
+      "text": 162012,
+      "data": 1192,
+      "bss": 16
+    },
+    {
+      "binary": "fox-v3-boundary-rho-affine-evaluation/actual-A2/native-render",
+      "text": 163548,
+      "data": 1192,
+      "bss": 16
+    },
+    {
+      "binary": "fox-v3-boundary-rho-affine-evaluation/actual-B2/native-render",
+      "text": 163548,
+      "data": 1192,
+      "bss": 16
+    }
+  ],
+  "scope": "whole host binary including adapter, strings and identity table; not product ROM",
+  "workspaceBytes": 137312,
+  "stackReserveBytes": 8192,
+  "AAFunctionStackOld": 1632,
+  "AAFunctionStackNew": 1696,
+  "retainedRGBDepthBytes": 194400,
+  "identityROBytes": 7930,
+  "newPreflightTableROBytes": 360,
+  "combinedTablesROBytes": 8290,
+  "preflightStaticScratchBytes": 130336,
+  "preflightMainStackBytes": 560,
+  "preflightDecoderCoReadStackBytes": 224,
+  "preflightCPUSeparateFromFrame": true
+}

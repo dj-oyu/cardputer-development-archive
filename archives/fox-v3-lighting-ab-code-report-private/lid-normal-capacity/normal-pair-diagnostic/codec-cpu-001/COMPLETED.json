@@ -1,0 +1,1032 @@
+{
+  "status": "COMPLETE_STANDALONE_DIAGNOSTIC_NOT_PRODUCT_COST",
+  "actualSnapshots": 20,
+  "syntheticFixtures": 2,
+  "repeats": 3,
+  "iterationsPerBatch": 1000,
+  "flags": [
+    "-std=c11",
+    "-O2",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-Wno-misleading-indentation",
+    "-ffp-contract=off",
+    "-fexcess-precision=standard"
+  ],
+  "inputPins": {
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-normal-pair-capacity/private-snapshots/native-front-baseline.snapshot": "262f53b65b3c437b52a2c9a26f577985f5cd63f6850760848535ec1176027bc8",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-normal-pair-capacity/private-encoded/native-front-baseline.diag-e4": "6481761717c5296095f8775cda920c090f2a789509c6bbfe175c52e34b5543fd",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-normal-pair-capacity/private-snapshots/native-front-baseline-reverse.snapshot": "10657f87e7571edcead9f0fe00f08ba7e6e40d72b4a45e0bd9b1a00341f02381",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-normal-pair-capacity/private-encoded/native-front-baseline-reverse.diag-e4": "aede9b9e7aba8e07bf1ea82aabaa05e88f7dfd2feb6a6a30308d90312c6dc29a",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-normal-pair-capacity/private-snapshots/native-oblique-baseline.snapshot": "28e6a465617ee7a2ea5c51518c4fa59c8f83a188e7854eba226a1c7173d3f3f4",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-normal-pair-capacity/private-encoded/native-oblique-baseline.diag-e4": "867bca6fd4162d561d50428e265136d0e97b28d09376d1946ec11f75e067b32b",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-normal-pair-capacity/private-snapshots/native-oblique-baseline-reverse.snapshot": "3fa86ed9c97ee28458fd20badc5f5ea2b076287e18d9b8752039061cc840f304",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-normal-pair-capacity/private-encoded/native-oblique-baseline-reverse.diag-e4": "a6010f14abfb9f2e0e9b77b9c15ecfdc9e01b9468edfa8b71f6db6bf39e7f1d4",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-normal-pair-capacity/private-snapshots/native-front-direction.snapshot": "4b156d3cf1460e50c9803d6a9a90f8e7b598b2de26315b07b1ae62022773ec2f",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-normal-pair-capacity/private-encoded/native-front-direction.diag-e4": "e66c71373158fbf54e9f8487ebf88524fb8a6c2a1c3010dd52737dbde44a4f03",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-normal-pair-capacity/private-snapshots/native-front-direction-reverse.snapshot": "d8c712be1de335cb656c8a3acedd8a82f64f6020e57ac43d443cb31a6b583f87",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-normal-pair-capacity/private-encoded/native-front-direction-reverse.diag-e4": "1d428d29a9a5576ccaa4287deade0eabe21a8050c4c819c7c73c35cdca00cf29",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-normal-pair-capacity/private-snapshots/native-oblique-direction.snapshot": "f10cb56fcd0f0e64c96d2026a3c7548ce366f9f48d3b57f2b7d8b6e756b69ebd",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-normal-pair-capacity/private-encoded/native-oblique-direction.diag-e4": "3ad51906a87b5d3a0d636ea8da0bb79352864ba2e176fdc19c3ec8888c628356",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-normal-pair-capacity/private-snapshots/native-oblique-direction-reverse.snapshot": "3869423bc9955b5d575b6132df933b3220a9ff4ad8d2f0546ebed1c1fac47ccc",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-normal-pair-capacity/private-encoded/native-oblique-direction-reverse.diag-e4": "9c52b3c719e0f85910efe49e36dba7c754f4119190ede516baef9c95b8ea54b3",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-normal-pair-capacity/private-snapshots/native-front-intensity.snapshot": "ee965c9fd2c50eb180ee160cdb5437c3e1789e5309f5eec8edc25ec71e037b13",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-normal-pair-capacity/private-encoded/native-front-intensity.diag-e4": "0f9ea46d93dc8e8b306969ee9284fbd4c5599b702a0ddf5ad80ece0a6a3bbd7d",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-normal-pair-capacity/private-snapshots/native-front-intensity-reverse.snapshot": "af8bb0d1d52a0a97d06255e6db50a9f14c7c42a6094587534aa0ab443b28821f",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-normal-pair-capacity/private-encoded/native-front-intensity-reverse.diag-e4": "3bcc95085132138d6c165dba2581f79982eaae1786fdf5092730b65e6c51964b",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-normal-pair-capacity/private-snapshots/native-oblique-intensity.snapshot": "60a3e9d383e0240b249d62ac64b04324624765fedfe4454055043c6a70981999",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-normal-pair-capacity/private-encoded/native-oblique-intensity.diag-e4": "025634243770af679e0c6e573852b4323f16ef447f922bf14c3034fe48d2d1d2",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-normal-pair-capacity/private-snapshots/native-oblique-intensity-reverse.snapshot": "bd47fe2b07354e637fd2239ea8fbd14ece8d82cad7ced6b3f814382e1dcf206f",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-normal-pair-capacity/private-encoded/native-oblique-intensity-reverse.diag-e4": "8e602d4066af60f7825ee840c30eca5c0ef7f03fcfb29a06b7bcbf763f732504",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-normal-pair-capacity/private-snapshots/native-front-ambient.snapshot": "bcfd5618fa6523047d18d17c5520fdf7251fcdd36a6eceef28ab5df82c18cc26",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-normal-pair-capacity/private-encoded/native-front-ambient.diag-e4": "b7bd20479095d91116a885b6ca33a770ef814bc152e2c4cd733353e1445b4eb0",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-normal-pair-capacity/private-snapshots/native-front-ambient-reverse.snapshot": "72650b3bd5622b79d383f7adbcd0835e1e27afc3d1ce2fcc1ad55aeccd76df0d",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-normal-pair-capacity/private-encoded/native-front-ambient-reverse.diag-e4": "fdd7c875dd75746a32f946ad639b4fbda763c4165d3bdc34d385831e738dfa29",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-normal-pair-capacity/private-snapshots/native-oblique-ambient.snapshot": "9deaa843796017c900bf33f54085bfe42193bfbc5754e43c9fc22a03cb57b860",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-normal-pair-capacity/private-encoded/native-oblique-ambient.diag-e4": "fd5a1e91616d58fb9373fcf459cf3ee520017edf7e8fb98016a69e968a7f07cf",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-normal-pair-capacity/private-snapshots/native-oblique-ambient-reverse.snapshot": "971913944040546d77e343c50cbbe3de24e88b6e978802a36227b4c52213b07b",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-normal-pair-capacity/private-encoded/native-oblique-ambient-reverse.diag-e4": "bed7900e14cc156943b9fc1e9fc0829940928ccba7ab27ac02346682527abdb7",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-normal-pair-capacity/private-snapshots/native-front-albedo.snapshot": "f730999cb295f2b9a37fb2812dd590f838ae080bc03836993f6f96795f3b761c",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-normal-pair-capacity/private-encoded/native-front-albedo.diag-e4": "131e5f87096ee67f165fb41ce9006b0eedcba5230a328823cfc7ded06f897fd3",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-normal-pair-capacity/private-snapshots/native-front-albedo-reverse.snapshot": "ffdad40294ae0f3f687f7d815894754ae0d950306f4611da65d694cede066b2c",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-normal-pair-capacity/private-encoded/native-front-albedo-reverse.diag-e4": "d603556f1e637b757f9d4f1f0745b66c00878c5e04b369e936fe635fff51a757",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-normal-pair-capacity/private-snapshots/native-oblique-albedo.snapshot": "b5185224383ddc748aa3c16ae8bc2e881b6342621d35ba036b30d326a8ce5336",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-normal-pair-capacity/private-encoded/native-oblique-albedo.diag-e4": "c49114e22c09347f989b92ed4dd76197738561d2d026c87b39e94a14f14ccf50",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-normal-pair-capacity/private-snapshots/native-oblique-albedo-reverse.snapshot": "7b84cc1e50c46c832059f616f61bd1b9967f0929583edaf5621085d81f9009ba",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-normal-pair-capacity/private-encoded/native-oblique-albedo-reverse.diag-e4": "453eb25918cfaba6b4cb5c193c83a28376ba3db0737fea447696ba9385971f87",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-normal-pair-capacity/private-snapshots/single-record-fallback.snapshot": "b7f063fc94cb5307d6a8bbcd8d378be9742e3fd48aa09d3b83b06b1bf36df9bd",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-normal-pair-capacity/private-encoded/single-record-fallback.diag-e4": "6ff80ba1e6ef6aa73c9aafe4b78d411134dbc653c94b4964cb713c1094dad55f",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-normal-pair-capacity/private-snapshots/all-record-fallback.snapshot": "cc40291c6e17495253657e4a703cc5a8a7f33fd849d50f8bafbe2405747c149c",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-normal-pair-capacity/private-encoded/all-record-fallback.diag-e4": "cc40291c6e17495253657e4a703cc5a8a7f33fd849d50f8bafbe2405747c149c",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-normal-pair-capacity/codec_bench.c": "4641859875c814c1dc6146a1121fb6c228067b11dbe7198329588717fdc8fb88",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-normal-pair-capacity/codec-cpu-001/codec-bench": "121a0c21912c5ad26db73d5d83f8a60535822921d9d1bfcd765e5eb95c307897"
+  },
+  "allBatchOutputsExact": true,
+  "actualAll60BatchesPerCallNs": {
+    "copy": {
+      "min": 1153.624,
+      "median": 1312.2485000000001,
+      "max": 2888.947
+    },
+    "encode": {
+      "min": 7812.69,
+      "median": 8874.309000000001,
+      "max": 12055.613
+    },
+    "decode": {
+      "min": 6575.821,
+      "median": 7682.423000000001,
+      "max": 9234.469
+    }
+  },
+  "rows": [
+    {
+      "inputBytes": 65216,
+      "encodedBytes": 58844,
+      "iterationsPerBatch": 1000,
+      "allBatchOutputBytesExact": true,
+      "consumed": 785355,
+      "batchNs": {
+        "copy": [
+          1271592,
+          1163689,
+          1217350
+        ],
+        "encode": [
+          9959304,
+          7970738,
+          8564817
+        ],
+        "decode": [
+          7483984,
+          7374817,
+          6847360
+        ]
+      },
+      "name": "native-front-baseline",
+      "kind": "actual",
+      "perCallNs": {
+        "copy": {
+          "min": 1163.689,
+          "median": 1217.35,
+          "max": 1271.592
+        },
+        "encode": {
+          "min": 7970.738,
+          "median": 8564.817,
+          "max": 9959.304
+        },
+        "decode": {
+          "min": 6847.36,
+          "median": 7374.817,
+          "max": 7483.984
+        }
+      }
+    },
+    {
+      "inputBytes": 65216,
+      "encodedBytes": 58844,
+      "iterationsPerBatch": 1000,
+      "allBatchOutputBytesExact": true,
+      "consumed": 848811,
+      "batchNs": {
+        "copy": [
+          1316440,
+          1390823,
+          1253655
+        ],
+        "encode": [
+          8446458,
+          9459520,
+          9361772
+        ],
+        "decode": [
+          7305823,
+          8005471,
+          8247507
+        ]
+      },
+      "name": "native-front-baseline-reverse",
+      "kind": "actual",
+      "perCallNs": {
+        "copy": {
+          "min": 1253.655,
+          "median": 1316.44,
+          "max": 1390.823
+        },
+        "encode": {
+          "min": 8446.458,
+          "median": 9361.772,
+          "max": 9459.52
+        },
+        "decode": {
+          "min": 7305.823,
+          "median": 8005.471,
+          "max": 8247.507
+        }
+      }
+    },
+    {
+      "inputBytes": 65216,
+      "encodedBytes": 58844,
+      "iterationsPerBatch": 1000,
+      "allBatchOutputBytesExact": true,
+      "consumed": 774597,
+      "batchNs": {
+        "copy": [
+          1310952,
+          1313545,
+          1800722
+        ],
+        "encode": [
+          9219246,
+          8687773,
+          8514730
+        ],
+        "decode": [
+          7537053,
+          8134656,
+          8067636
+        ]
+      },
+      "name": "native-oblique-baseline",
+      "kind": "actual",
+      "perCallNs": {
+        "copy": {
+          "min": 1310.952,
+          "median": 1313.545,
+          "max": 1800.722
+        },
+        "encode": {
+          "min": 8514.73,
+          "median": 8687.773,
+          "max": 9219.246
+        },
+        "decode": {
+          "min": 7537.053,
+          "median": 8067.636,
+          "max": 8134.656
+        }
+      }
+    },
+    {
+      "inputBytes": 65216,
+      "encodedBytes": 58844,
+      "iterationsPerBatch": 1000,
+      "allBatchOutputBytesExact": true,
+      "consumed": 819570,
+      "batchNs": {
+        "copy": [
+          1181916,
+          1342970,
+          1162487
+        ],
+        "encode": [
+          7829675,
+          8713993,
+          8458286
+        ],
+        "decode": [
+          6895613,
+          6749472,
+          6666897
+        ]
+      },
+      "name": "native-oblique-baseline-reverse",
+      "kind": "actual",
+      "perCallNs": {
+        "copy": {
+          "min": 1162.487,
+          "median": 1181.916,
+          "max": 1342.97
+        },
+        "encode": {
+          "min": 7829.675,
+          "median": 8458.286,
+          "max": 8713.993
+        },
+        "decode": {
+          "min": 6666.897,
+          "median": 6749.472,
+          "max": 6895.613
+        }
+      }
+    },
+    {
+      "inputBytes": 65216,
+      "encodedBytes": 58844,
+      "iterationsPerBatch": 1000,
+      "allBatchOutputBytesExact": true,
+      "consumed": 784695,
+      "batchNs": {
+        "copy": [
+          1192513,
+          1369940,
+          1421273
+        ],
+        "encode": [
+          8117411,
+          8592037,
+          10506040
+        ],
+        "decode": [
+          7659849,
+          9204188,
+          7539208
+        ]
+      },
+      "name": "native-front-direction",
+      "kind": "actual",
+      "perCallNs": {
+        "copy": {
+          "min": 1192.513,
+          "median": 1369.94,
+          "max": 1421.273
+        },
+        "encode": {
+          "min": 8117.411,
+          "median": 8592.037,
+          "max": 10506.04
+        },
+        "decode": {
+          "min": 7539.208,
+          "median": 7659.849,
+          "max": 9204.188
+        }
+      }
+    },
+    {
+      "inputBytes": 65216,
+      "encodedBytes": 58844,
+      "iterationsPerBatch": 1000,
+      "allBatchOutputBytesExact": true,
+      "consumed": 848151,
+      "batchNs": {
+        "copy": [
+          1383892,
+          1446967,
+          1352875
+        ],
+        "encode": [
+          8868215,
+          10179592,
+          8852451
+        ],
+        "decode": [
+          7985852,
+          8145478,
+          7438084
+        ]
+      },
+      "name": "native-front-direction-reverse",
+      "kind": "actual",
+      "perCallNs": {
+        "copy": {
+          "min": 1352.875,
+          "median": 1383.892,
+          "max": 1446.967
+        },
+        "encode": {
+          "min": 8852.451,
+          "median": 8868.215,
+          "max": 10179.592
+        },
+        "decode": {
+          "min": 7438.084,
+          "median": 7985.852,
+          "max": 8145.478
+        }
+      }
+    },
+    {
+      "inputBytes": 65216,
+      "encodedBytes": 58844,
+      "iterationsPerBatch": 1000,
+      "allBatchOutputBytesExact": true,
+      "consumed": 773937,
+      "batchNs": {
+        "copy": [
+          1377783,
+          1800612,
+          1437023
+        ],
+        "encode": [
+          8627702,
+          8696816,
+          8675905
+        ],
+        "decode": [
+          7470333,
+          7645677,
+          8631087
+        ]
+      },
+      "name": "native-oblique-direction",
+      "kind": "actual",
+      "perCallNs": {
+        "copy": {
+          "min": 1377.783,
+          "median": 1437.023,
+          "max": 1800.612
+        },
+        "encode": {
+          "min": 8627.702,
+          "median": 8675.905,
+          "max": 8696.816
+        },
+        "decode": {
+          "min": 7470.333,
+          "median": 7645.677,
+          "max": 8631.087
+        }
+      }
+    },
+    {
+      "inputBytes": 65216,
+      "encodedBytes": 58844,
+      "iterationsPerBatch": 1000,
+      "allBatchOutputBytesExact": true,
+      "consumed": 818910,
+      "batchNs": {
+        "copy": [
+          1174645,
+          1491795,
+          1154565
+        ],
+        "encode": [
+          8631758,
+          8435613,
+          9424617
+        ],
+        "decode": [
+          8366687,
+          8119914,
+          7531795
+        ]
+      },
+      "name": "native-oblique-direction-reverse",
+      "kind": "actual",
+      "perCallNs": {
+        "copy": {
+          "min": 1154.565,
+          "median": 1174.645,
+          "max": 1491.795
+        },
+        "encode": {
+          "min": 8435.613,
+          "median": 8631.758,
+          "max": 9424.617
+        },
+        "decode": {
+          "min": 7531.795,
+          "median": 8119.914,
+          "max": 8366.687
+        }
+      }
+    },
+    {
+      "inputBytes": 65216,
+      "encodedBytes": 58844,
+      "iterationsPerBatch": 1000,
+      "allBatchOutputBytesExact": true,
+      "consumed": 785226,
+      "batchNs": {
+        "copy": [
+          1338143,
+          1324512,
+          1153624
+        ],
+        "encode": [
+          8659620,
+          9372397,
+          8923268
+        ],
+        "decode": [
+          8834044,
+          7483762,
+          8600582
+        ]
+      },
+      "name": "native-front-intensity",
+      "kind": "actual",
+      "perCallNs": {
+        "copy": {
+          "min": 1153.624,
+          "median": 1324.512,
+          "max": 1338.143
+        },
+        "encode": {
+          "min": 8659.62,
+          "median": 8923.268,
+          "max": 9372.397
+        },
+        "decode": {
+          "min": 7483.762,
+          "median": 8600.582,
+          "max": 8834.044
+        }
+      }
+    },
+    {
+      "inputBytes": 65216,
+      "encodedBytes": 58844,
+      "iterationsPerBatch": 1000,
+      "allBatchOutputBytesExact": true,
+      "consumed": 848682,
+      "batchNs": {
+        "copy": [
+          2888947,
+          1506808,
+          1523493
+        ],
+        "encode": [
+          9260198,
+          8818700,
+          8555162
+        ],
+        "decode": [
+          7552607,
+          9234469,
+          7949026
+        ]
+      },
+      "name": "native-front-intensity-reverse",
+      "kind": "actual",
+      "perCallNs": {
+        "copy": {
+          "min": 1506.808,
+          "median": 1523.493,
+          "max": 2888.947
+        },
+        "encode": {
+          "min": 8555.162,
+          "median": 8818.7,
+          "max": 9260.198
+        },
+        "decode": {
+          "min": 7552.607,
+          "median": 7949.026,
+          "max": 9234.469
+        }
+      }
+    },
+    {
+      "inputBytes": 65216,
+      "encodedBytes": 58844,
+      "iterationsPerBatch": 1000,
+      "allBatchOutputBytesExact": true,
+      "consumed": 774468,
+      "batchNs": {
+        "copy": [
+          1273815,
+          1365844,
+          1206794
+        ],
+        "encode": [
+          8768775,
+          10304502,
+          9246387
+        ],
+        "decode": [
+          8265475,
+          7385754,
+          8048778
+        ]
+      },
+      "name": "native-oblique-intensity",
+      "kind": "actual",
+      "perCallNs": {
+        "copy": {
+          "min": 1206.794,
+          "median": 1273.815,
+          "max": 1365.844
+        },
+        "encode": {
+          "min": 8768.775,
+          "median": 9246.387,
+          "max": 10304.502
+        },
+        "decode": {
+          "min": 7385.754,
+          "median": 8048.778,
+          "max": 8265.475
+        }
+      }
+    },
+    {
+      "inputBytes": 65216,
+      "encodedBytes": 58844,
+      "iterationsPerBatch": 1000,
+      "allBatchOutputBytesExact": true,
+      "consumed": 819441,
+      "batchNs": {
+        "copy": [
+          1256800,
+          1277842,
+          1215988
+        ],
+        "encode": [
+          7812690,
+          8214277,
+          7996017
+        ],
+        "decode": [
+          6575821,
+          6738376,
+          6852418
+        ]
+      },
+      "name": "native-oblique-intensity-reverse",
+      "kind": "actual",
+      "perCallNs": {
+        "copy": {
+          "min": 1215.988,
+          "median": 1256.8,
+          "max": 1277.842
+        },
+        "encode": {
+          "min": 7812.69,
+          "median": 7996.017,
+          "max": 8214.277
+        },
+        "decode": {
+          "min": 6575.821,
+          "median": 6738.376,
+          "max": 6852.418
+        }
+      }
+    },
+    {
+      "inputBytes": 65216,
+      "encodedBytes": 58844,
+      "iterationsPerBatch": 1000,
+      "allBatchOutputBytesExact": true,
+      "consumed": 785355,
+      "batchNs": {
+        "copy": [
+          1227205,
+          1477794,
+          1206364
+        ],
+        "encode": [
+          8965193,
+          9444336,
+          8289921
+        ],
+        "decode": [
+          7486827,
+          7413416,
+          7269159
+        ]
+      },
+      "name": "native-front-ambient",
+      "kind": "actual",
+      "perCallNs": {
+        "copy": {
+          "min": 1206.364,
+          "median": 1227.205,
+          "max": 1477.794
+        },
+        "encode": {
+          "min": 8289.921,
+          "median": 8965.193,
+          "max": 9444.336
+        },
+        "decode": {
+          "min": 7269.159,
+          "median": 7413.416,
+          "max": 7486.827
+        }
+      }
+    },
+    {
+      "inputBytes": 65216,
+      "encodedBytes": 58844,
+      "iterationsPerBatch": 1000,
+      "allBatchOutputBytesExact": true,
+      "consumed": 848811,
+      "batchNs": {
+        "copy": [
+          1287306,
+          1264221,
+          1323610
+        ],
+        "encode": [
+          9004230,
+          9084393,
+          8880403
+        ],
+        "decode": [
+          8406277,
+          7883146,
+          7466307
+        ]
+      },
+      "name": "native-front-ambient-reverse",
+      "kind": "actual",
+      "perCallNs": {
+        "copy": {
+          "min": 1264.221,
+          "median": 1287.306,
+          "max": 1323.61
+        },
+        "encode": {
+          "min": 8880.403,
+          "median": 9004.23,
+          "max": 9084.393
+        },
+        "decode": {
+          "min": 7466.307,
+          "median": 7883.146,
+          "max": 8406.277
+        }
+      }
+    },
+    {
+      "inputBytes": 65216,
+      "encodedBytes": 58844,
+      "iterationsPerBatch": 1000,
+      "allBatchOutputBytesExact": true,
+      "consumed": 774597,
+      "batchNs": {
+        "copy": [
+          1243490,
+          1294717,
+          1220685
+        ],
+        "encode": [
+          9091453,
+          7942847,
+          8850639
+        ],
+        "decode": [
+          7598045,
+          7124680,
+          7704997
+        ]
+      },
+      "name": "native-oblique-ambient",
+      "kind": "actual",
+      "perCallNs": {
+        "copy": {
+          "min": 1220.685,
+          "median": 1243.49,
+          "max": 1294.717
+        },
+        "encode": {
+          "min": 7942.847,
+          "median": 8850.639,
+          "max": 9091.453
+        },
+        "decode": {
+          "min": 7124.68,
+          "median": 7598.045,
+          "max": 7704.997
+        }
+      }
+    },
+    {
+      "inputBytes": 65216,
+      "encodedBytes": 58844,
+      "iterationsPerBatch": 1000,
+      "allBatchOutputBytesExact": true,
+      "consumed": 819570,
+      "batchNs": {
+        "copy": [
+          1273855,
+          1248808,
+          1386586
+        ],
+        "encode": [
+          8521010,
+          10374708,
+          9092104
+        ],
+        "decode": [
+          8761694,
+          6915093,
+          7424894
+        ]
+      },
+      "name": "native-oblique-ambient-reverse",
+      "kind": "actual",
+      "perCallNs": {
+        "copy": {
+          "min": 1248.808,
+          "median": 1273.855,
+          "max": 1386.586
+        },
+        "encode": {
+          "min": 8521.01,
+          "median": 9092.104,
+          "max": 10374.708
+        },
+        "decode": {
+          "min": 6915.093,
+          "median": 7424.894,
+          "max": 8761.694
+        }
+      }
+    },
+    {
+      "inputBytes": 65216,
+      "encodedBytes": 58844,
+      "iterationsPerBatch": 1000,
+      "allBatchOutputBytesExact": true,
+      "consumed": 789912,
+      "batchNs": {
+        "copy": [
+          1341348,
+          1397412,
+          1719629
+        ],
+        "encode": [
+          8510134,
+          9437416,
+          8936368
+        ],
+        "decode": [
+          6855552,
+          7885475,
+          8160456
+        ]
+      },
+      "name": "native-front-albedo",
+      "kind": "actual",
+      "perCallNs": {
+        "copy": {
+          "min": 1341.348,
+          "median": 1397.412,
+          "max": 1719.629
+        },
+        "encode": {
+          "min": 8510.134,
+          "median": 8936.368,
+          "max": 9437.416
+        },
+        "decode": {
+          "min": 6855.552,
+          "median": 7885.475,
+          "max": 8160.456
+        }
+      }
+    },
+    {
+      "inputBytes": 65216,
+      "encodedBytes": 58844,
+      "iterationsPerBatch": 1000,
+      "allBatchOutputBytesExact": true,
+      "consumed": 827640,
+      "batchNs": {
+        "copy": [
+          1738998,
+          1450272,
+          1227345
+        ],
+        "encode": [
+          8887414,
+          8998002,
+          9352226
+        ],
+        "decode": [
+          8527080,
+          8737627,
+          8158613
+        ]
+      },
+      "name": "native-front-albedo-reverse",
+      "kind": "actual",
+      "perCallNs": {
+        "copy": {
+          "min": 1227.345,
+          "median": 1450.272,
+          "max": 1738.998
+        },
+        "encode": {
+          "min": 8887.414,
+          "median": 8998.002,
+          "max": 9352.226
+        },
+        "decode": {
+          "min": 8158.613,
+          "median": 8527.08,
+          "max": 8737.627
+        }
+      }
+    },
+    {
+      "inputBytes": 65216,
+      "encodedBytes": 58844,
+      "iterationsPerBatch": 1000,
+      "allBatchOutputBytesExact": true,
+      "consumed": 779154,
+      "batchNs": {
+        "copy": [
+          1285263,
+          1334967,
+          1203629
+        ],
+        "encode": [
+          9707954,
+          9443695,
+          9072829
+        ],
+        "decode": [
+          8983220,
+          7656373,
+          8384083
+        ]
+      },
+      "name": "native-oblique-albedo",
+      "kind": "actual",
+      "perCallNs": {
+        "copy": {
+          "min": 1203.629,
+          "median": 1285.263,
+          "max": 1334.967
+        },
+        "encode": {
+          "min": 9072.829,
+          "median": 9443.695,
+          "max": 9707.954
+        },
+        "decode": {
+          "min": 7656.373,
+          "median": 8384.083,
+          "max": 8983.22
+        }
+      }
+    },
+    {
+      "inputBytes": 65216,
+      "encodedBytes": 58844,
+      "iterationsPerBatch": 1000,
+      "allBatchOutputBytesExact": true,
+      "consumed": 798399,
+      "batchNs": {
+        "copy": [
+          1157419,
+          1642343,
+          1241497
+        ],
+        "encode": [
+          12055613,
+          8773863,
+          9167497
+        ],
+        "decode": [
+          7750727,
+          7806450,
+          7892711
+        ]
+      },
+      "name": "native-oblique-albedo-reverse",
+      "kind": "actual",
+      "perCallNs": {
+        "copy": {
+          "min": 1157.419,
+          "median": 1241.497,
+          "max": 1642.343
+        },
+        "encode": {
+          "min": 8773.863,
+          "median": 9167.497,
+          "max": 12055.613
+        },
+        "decode": {
+          "min": 7750.727,
+          "median": 7806.45,
+          "max": 7892.711
+        }
+      }
+    },
+    {
+      "inputBytes": 65216,
+      "encodedBytes": 59036,
+      "iterationsPerBatch": 1000,
+      "allBatchOutputBytesExact": true,
+      "consumed": 801045,
+      "batchNs": {
+        "copy": [
+          1552236,
+          1818109,
+          1522841
+        ],
+        "encode": [
+          9210353,
+          9518914,
+          9122861
+        ],
+        "decode": [
+          8232274,
+          7563422,
+          7618285
+        ]
+      },
+      "name": "single-record-fallback",
+      "kind": "synthetic-normal-range-asymmetry",
+      "perCallNs": {
+        "copy": {
+          "min": 1522.841,
+          "median": 1552.236,
+          "max": 1818.109
+        },
+        "encode": {
+          "min": 9122.861,
+          "median": 9210.353,
+          "max": 9518.914
+        },
+        "decode": {
+          "min": 7563.422,
+          "median": 7618.285,
+          "max": 8232.274
+        }
+      }
+    },
+    {
+      "inputBytes": 65216,
+      "encodedBytes": 65216,
+      "iterationsPerBatch": 1000,
+      "allBatchOutputBytesExact": true,
+      "consumed": 782478,
+      "batchNs": {
+        "copy": [
+          2084000,
+          1353155,
+          1543864
+        ],
+        "encode": [
+          8830157,
+          7776375,
+          7463702
+        ],
+        "decode": [
+          4995080,
+          4063874,
+          3715707
+        ]
+      },
+      "name": "all-record-fallback",
+      "kind": "synthetic-normal-range-asymmetry",
+      "perCallNs": {
+        "copy": {
+          "min": 1353.155,
+          "median": 1543.864,
+          "max": 2084.0
+        },
+        "encode": {
+          "min": 7463.702,
+          "median": 7776.375,
+          "max": 8830.157
+        },
+        "decode": {
+          "min": 3715.707,
+          "median": 4063.874,
+          "max": 4995.08
+        }
+      }
+    }
+  ],
+  "scope": "Standalone C byte copy vs diagnostic conditional encode/decode, preallocated buffers; not original product writer delta, not renderer overhead, not device timing"
+}

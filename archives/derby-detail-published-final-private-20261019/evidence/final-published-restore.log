@@ -1,0 +1,19 @@
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: will change to "main" in Git 3.0. To configure the initial branch name
+hint: to use in all of your new repositories, which will suppress this warning,
+hint: call:
+hint:
+hint: 	git config --global init.defaultBranch <name>
+hint:
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint:
+hint: 	git branch -m <name>
+hint:
+hint: Disable this message with "git config set advice.defaultBranchName false"
+Switched to a new branch 'feature/derby-detail-native-20261019'
+{"restored": true, "variant": "native", "destination": "/workspace/derby-published-final-restore-verified", "base_commit": "44f9c56121b5aab4fb2eca0fcf9fbe54d833a276", "branch": "feature/derby-detail-native-20261019", "hardware_tested": false}
+Reset branch 'feature/derby-detail-native-20261019'
+{"restored": true, "variant": "native", "exact_commit": "2b82842efd6762130a920600f3fb7f67aa57fd9a", "exact_tree": "6648060e994f1f240a15db8a1f7e8fae1286bbf8", "newhead_ci_verified": false, "hardware_accepted": false}
+Reset branch 'feature/derby-detail-native-20261019'
+{"restored": true, "variant": "native", "published_commit": "92e70b7fbb2c15d99734a518096dffdf046d2ae3", "tree": "24f0575743c7de7d4873c531221db6e1fcf1f14f", "modified_files_verified": 38, "hardware_accepted": false, "note": "Restoring code does not rerun CI or qualify hardware; inspect separate CI receipt."}

@@ -1,0 +1,63 @@
+{
+  "request": {
+    "job_id": "derby-v2-baseline-source-37af4225-20261020",
+    "test": "firmware_fetch_source",
+    "project_id": "cardputer-main",
+    "source_commit": "37af4225ad329aac4c5e79c880d7d69760b770be"
+  },
+  "result": {
+    "ok": true,
+    "plan_hash": "f6b77ef4b236bec88414ca3e992913817e323264226e52d072b82aeb47fbc156",
+    "plan": {
+      "version": 2,
+      "execution_context": "registered_project",
+      "broker_epoch": "62c7885ab3f34ce6b9fc6973754c85f2",
+      "job_id": "derby-v2-baseline-source-37af4225-20261020",
+      "test": "firmware_fetch_source",
+      "principal_id": "ephemeral:remote_mcp",
+      "origin": "remote_mcp",
+      "registration_sha256": "2e772670cee4380c10a250e35a3aa4fa0189058910a28fcedeee899b5a09f9a2",
+      "execution_seconds": 180,
+      "project_id": "cardputer-main",
+      "source_commit": "37af4225ad329aac4c5e79c880d7d69760b770be",
+      "source_principal": "ephemeral:remote_mcp",
+      "source_repository": "dj-oyu/cardputer-adv-pocketjs",
+      "source_registration_sha256": "1645838f57f903a2d527bfcff9a3e1889a98f2856c6b5985706536e783e1cb15",
+      "limits": {
+        "download_bytes": 67108864,
+        "expanded_bytes": 268435456,
+        "files": 100000,
+        "operation_seconds": 180,
+        "cache_snapshots": 16,
+        "cache_bytes": 2147483648,
+        "submodule_depth": 3,
+        "submodule_count": 16
+      },
+      "stages": [
+        "source_download",
+        "source_validate",
+        "source_publish"
+      ],
+      "effects": [
+        "Fetches a registered public GitHub commit and fixed allowlisted Gitlinks into a private snapshot",
+        "No user worktree overwrite, build, USB, flash, credential or SDK installation",
+        "Bounded cache; no automatic deletion of retained snapshots"
+      ]
+    },
+    "storage": {
+      "source_cache": {
+        "snapshots": 13,
+        "bytes": 1121839000,
+        "max_snapshots": 16,
+        "max_bytes": 2147483648,
+        "pending_snapshots": 0,
+        "remaining_snapshots": 3,
+        "remaining_bytes": 1025644648,
+        "scan_entries": 41442,
+        "scan_elapsed_ms": 2928
+      }
+    },
+    "approval_required": false
+  },
+  "observed_utc": "2026-10-20 00:56:04 UTC"
+}

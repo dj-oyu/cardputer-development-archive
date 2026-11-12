@@ -1,0 +1,50 @@
+{
+  "status": "PASS_PREACTUAL_INDEPENDENT_REVIEW",
+  "actualFrames": 0,
+  "sourceSHA256": "a516325cb207a50e4dd34d0fa4e28d321499b2c43d2ad617587ca00bed037b88",
+  "headerSHA256": "5744b70731fa86fdce43d9d6092c4b7cb759a4a96056fd1a2be2eb8b07e8d1ce",
+  "reviewedEvidence": {
+    "private-build/visibility/visibility.c": "a516325cb207a50e4dd34d0fa4e28d321499b2c43d2ad617587ca00bed037b88",
+    "private-build/visibility/visibility.h": "5744b70731fa86fdce43d9d6092c4b7cb759a4a96056fd1a2be2eb8b07e8d1ce",
+    "tests/test_capacity.c": "626f0de715d317f6781f5f7d6c99ab952f9d261c971eaef7eb6b52732bf0fbe6",
+    "test-results/RESULTS.json": "7a0eb4e8ed109604cf6a123047915779b294ee85c7d141ab710424e3750667eb",
+    "CACHED_SYNTHETIC_RESULTS.json": "f6942efd2fa8def2a03ea14272d8f0546581421c76258574163b252e8860ca78",
+    "MEMORY_LEDGER.json": "a63c5d402acfe5a70b33589ef79192d853304082a6d9116d1c577db3782774f3",
+    "PRODUCT_NAMED_STACK.json": "97ff04ff3e01f6b4c2853a7ed22246a8f6d13b89e07f4106383e2def22a75b9c",
+    "NAMED_STACK.json": "9a1393e52ea27ef7e96fa0623207b0328e220fcc9af8cc8b0e85e1927ea0aa74",
+    "CONSTRUCTION_NAMED_STACK.json": "edc44cfbec144f75dcf351b5d5b754a4662517adb12aabac4e3f6a97f1272788",
+    "SOURCE_DELTA.json": "b4f10c41f7125494acdbbb9fee04e71f7dc70a65286407829df3dd6b83540d8d",
+    "review/ORIGINAL_BUILDER_SOURCE.json": "f263517c1c612ab787f834962522edb94d3418f8e0bab6f5cef54ade9eb6cc5b",
+    "review/INDEPENDENT_SEMANTICS.json": "732352fe52ce8cd8ed318407fe8402d9a6ae6c7b03abf4c56eaa589b56aa83d6",
+    "review/INDEPENDENT_EDGES.json": "aae35f7e290cec1fc50f54111c9a465966caa15eee6adb231754b131dfe4d6ad",
+    "review/INDEPENDENT_STACK_LEDGER.json": "6bfe32f2301da54a184391134a3d23f02071c1e997a7474982f4cc98aaac82f5",
+    "review/RUNNER_REVIEW.json": "d6126583971c6cfa205058462d1fb14ed8eaa35d559ba40016eca62d7367a71d",
+    "review/test_independent_compact_failure.c": "2a9bb750f6c7f2455f6bc71f82e831d0f2c09828af208805c01bec17a1cf51bf",
+    "review/compact-failure-O0.log": "adbb3f30feeb5c40210d0ff96bf90085a19ed092aa01d5b41b63bc321f117d49",
+    "review/compact-failure-O2.log": "adbb3f30feeb5c40210d0ff96bf90085a19ed092aa01d5b41b63bc321f117d49",
+    "review/INITIAL_EXACTNESS_BLOCKER.json": "42abbae35842f8e8e1197e535654cd2e4286c723af649db54e310b4b77576ee9",
+    "review/LOCAL_ACCUMULATION_EDGE_BLOCKER.json": "1be9699e2e9363f0d21e868b389231fd41a97b5fc990711f8b09a462c5e48453"
+  },
+  "findings": {
+    "representation": "Unchanged original double-node construction followed by exact per-axis owned-xyz vertex witnesses. Published nodes28B; original topology/sort/triangle identity preserved. No quantization, borrowed inputs, added lifetime API or paged BVH.",
+    "originalConstruction": "sort_axis,build_bounds,build_node byte exact against immutable baseline. Full original tree retained until compaction succeeds.",
+    "exactSemantics": "138 synthetic scenes and141312 query calls per build with logical node doubles, topology, sorted triangles, outputs/status/budgets fingerprint-equal baseline/candidate across O0,O2,and both ASanUBSan. Additional25 scenes cover all8 signed-zero permutations on every axis and exact +/-1e50;63 invalid coordinate and4 invalid index replacements preserve retained old scene.",
+    "ownership": "All6 allocation failures tested with canaries, poison/free accounting and old scene byte snapshots. Independent forced unwitnessable bound at allocation6 tests cleanup branch under O0/O2 ASanUBSan. No tracked live allocations remain.",
+    "allCounts": "Author exhaustive4096 builds over triangle counts1..2048 and vertex counts3/4096 pass all4 compiler/sanitizer modes. Maximum original vertex ID4095 and all compact index ranges verified.",
+    "temporaryCorrection": "Peak-extra helper handles singleton transition: nodeDelta+max(centroidBytes,compactBytes). n1 overhead64, fixed1566 overhead74412. Centroids freed before6th allocation and oldtree before atomic publish.",
+    "stack": "Independently matched emitted SU hashes and each named chain. Background4016/cap4096; renderer4944/cap8192 unchanged. Constructor368+10*192+176=2464. Conversion inlined368.",
+    "memory": "Ledger phase sums independently verified: render336724,construction312580,conversion301544. Named peak saves36828 from373552. Final scene69276, original construction heap143688 and conversion134748. Each retained old scene remains additionally charged.",
+    "runner": "Independent20 tests PASS; frozen42 contracts allow only visibilitySceneBytes106104->69276, preexisting timing fields descriptive, all other report fields exact."
+  },
+  "rejectedVariants": [
+    "Per-merge witness helper changed O2 signed-zero tie bits.",
+    "Construction-local double accumulator still changed O2san signed-zero tie bits. Both failures retained and superseded by unchanged full-tree construction."
+  ],
+  "limitations": [
+    "Host compiler/ABI evidence only; target32bit/device not measured.",
+    "No whole-process fit or causal timing claim; libc/libm/allocator metadata and unnamed state excluded.",
+    "LSan disabled in ptrace environment; explicit allocation balance coverage is scoped, not general leak-clean claim.",
+    "Actual fixed42 output acceptance not yet performed."
+  ],
+  "approval": "PASS for parent to freeze and consider bounded fixed42 execution. This report itself does not grant execution GO. No device/public/PR/SDK/model/reference actions."
+}

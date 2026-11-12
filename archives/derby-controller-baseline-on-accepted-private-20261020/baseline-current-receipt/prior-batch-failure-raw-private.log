@@ -1,0 +1,12 @@
+I (72851) background: FLOWER_FRAMES_RELEASE bytes=22174
+I (72862) app: APP_ID local.derby
+I (72883) motion: ACC -222 8330 5049 mm/s2 GYR 0 0 0 mrad/s (off) seq=3382 drop=34 TILT -5 0
+I (72899) pocket.app: APP_LOAD prog bytes=2465 compile_us=9956 run_us=1009 used=51104>54476>56028
+I (72905) sound: SFX 1 played 1440 frames
+I (72960) pocket.app: APP_LOAD view bytes=12022 compile_us=51448 run_us=6829 used=56028>78720>89128
+I (73010) pocket.app: APP_LOAD scene bytes=9497 compile_us=47697 run_us=975 used=89128>104140>106484
+I (73025) pocket.app: APP_LOAD pan bytes=2302 compile_us=11873 run_us=961 used=106484>109972>111084
+W (73063) pocket.app: APP_LOAD play failed chunk 'play' did not compile: out of memory
+W (73066) app: EVAL_ERROR PocketError: chunk 'play' did not compile: out of memory     at load (native)
+E (73067) app: OOM n=1 first_req=9944 used=139340
+E (73068) app: START_FAILED ESP_FAIL

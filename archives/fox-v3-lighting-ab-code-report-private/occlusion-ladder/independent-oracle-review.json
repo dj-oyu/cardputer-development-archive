@@ -1,0 +1,171 @@
+{
+  "random1000": {
+    "inside->inside": 137,
+    "outside->outside": 863
+  },
+  "nearBoundary": [
+    {
+      "sign": -1,
+      "factor": 0,
+      "trueDistance": 0.0,
+      "bvhDistance": 1.2412670766236366e-16,
+      "expected": "band",
+      "actual": "band"
+    },
+    {
+      "sign": -1,
+      "factor": 0.1,
+      "trueDistance": 9.452928309006126e-07,
+      "bvhDistance": 9.452928309006126e-07,
+      "expected": "band",
+      "actual": "band"
+    },
+    {
+      "sign": -1,
+      "factor": 0.5,
+      "trueDistance": 4.726464154725107e-06,
+      "bvhDistance": 4.726464154725107e-06,
+      "expected": "band",
+      "actual": "band"
+    },
+    {
+      "sign": -1,
+      "factor": 0.99,
+      "trueDistance": 9.358399026382358e-06,
+      "bvhDistance": 9.358399026382358e-06,
+      "expected": "band",
+      "actual": "band"
+    },
+    {
+      "sign": -1,
+      "factor": 0.999,
+      "trueDistance": 9.443475381121225e-06,
+      "bvhDistance": 9.443475381121225e-06,
+      "expected": "band",
+      "actual": "band"
+    },
+    {
+      "sign": -1,
+      "factor": 1,
+      "trueDistance": 9.452928309450215e-06,
+      "bvhDistance": 9.452928309450215e-06,
+      "expected": "band",
+      "actual": "band"
+    },
+    {
+      "sign": -1,
+      "factor": 1.001,
+      "trueDistance": 9.462381237779205e-06,
+      "bvhDistance": 9.462381237779205e-06,
+      "expected": "inside",
+      "actual": "inside"
+    },
+    {
+      "sign": -1,
+      "factor": 1.01,
+      "trueDistance": 9.547457592518072e-06,
+      "bvhDistance": 9.547457592518072e-06,
+      "expected": "inside",
+      "actual": "inside"
+    },
+    {
+      "sign": -1,
+      "factor": 1.1,
+      "trueDistance": 1.039822114046185e-05,
+      "bvhDistance": 1.039822114046185e-05,
+      "expected": "inside",
+      "actual": "inside"
+    },
+    {
+      "sign": -1,
+      "factor": 2,
+      "trueDistance": 1.890585661890043e-05,
+      "bvhDistance": 1.890585661890043e-05,
+      "expected": "inside",
+      "actual": "inside"
+    },
+    {
+      "sign": 1,
+      "factor": 0,
+      "trueDistance": 0.0,
+      "bvhDistance": 1.2412670766236366e-16,
+      "expected": "band",
+      "actual": "band"
+    },
+    {
+      "sign": 1,
+      "factor": 0.1,
+      "trueDistance": 9.452928309006126e-07,
+      "bvhDistance": 9.452928309006126e-07,
+      "expected": "band",
+      "actual": "band"
+    },
+    {
+      "sign": 1,
+      "factor": 0.5,
+      "trueDistance": 4.726464154725107e-06,
+      "bvhDistance": 4.726464154725107e-06,
+      "expected": "band",
+      "actual": "band"
+    },
+    {
+      "sign": 1,
+      "factor": 0.99,
+      "trueDistance": 9.358399026382358e-06,
+      "bvhDistance": 9.358399026382358e-06,
+      "expected": "band",
+      "actual": "band"
+    },
+    {
+      "sign": 1,
+      "factor": 0.999,
+      "trueDistance": 9.443475381232247e-06,
+      "bvhDistance": 9.443475381232247e-06,
+      "expected": "band",
+      "actual": "band"
+    },
+    {
+      "sign": 1,
+      "factor": 1,
+      "trueDistance": 9.452928309450215e-06,
+      "bvhDistance": 9.452928309450215e-06,
+      "expected": "band",
+      "actual": "band"
+    },
+    {
+      "sign": 1,
+      "factor": 1.001,
+      "trueDistance": 9.462381237890227e-06,
+      "bvhDistance": 9.462381237890227e-06,
+      "expected": "outside",
+      "actual": "outside"
+    },
+    {
+      "sign": 1,
+      "factor": 1.01,
+      "trueDistance": 9.547457592518072e-06,
+      "bvhDistance": 9.547457592518072e-06,
+      "expected": "outside",
+      "actual": "outside"
+    },
+    {
+      "sign": 1,
+      "factor": 1.1,
+      "trueDistance": 1.0398221140350827e-05,
+      "bvhDistance": 1.0398221140350827e-05,
+      "expected": "outside",
+      "actual": "outside"
+    },
+    {
+      "sign": 1,
+      "factor": 2,
+      "trueDistance": 1.890585661890043e-05,
+      "bvhDistance": 1.890585661890043e-05,
+      "expected": "outside",
+      "actual": "outside"
+    }
+  ],
+  "openUncertain": "uncertain",
+  "reverseTopologyRejected": true,
+  "mismatches": []
+}

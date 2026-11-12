@@ -1,0 +1,40 @@
+{
+  "text_library_file_id": "libfile_fde3_f-cdc26e2462948191823f3632bfa732b7_6912d64812a8819193a206c2b1117894",
+  "file_id": "file_00000000e74081f5a0f3436e2c0d14db",
+  "version": 0,
+  "text_lines": 895,
+  "text_bytes": 65508,
+  "text_sha256": "ec346849f23c5058a3b475445f45003786c897874b6e6e692924388d326e436a",
+  "patch_bytes": 61502,
+  "patch_sha256": "6455fe71e493fc521f32dff26ad88eb08fabc1aa79278f1d6fae491da43df7a7",
+  "base_commit": "31572d5fe5e9aa752ab890e4dfe833c0db740327",
+  "expected_base_tree": "a4322fb9455d449fbe1eab8d8a6ef983761c14b8",
+  "expected_candidate_tree": "e488ab1ed190111a7bacd380c89841c47e756cb8",
+  "status": "exact text and patch verified; exact base unavailable; no apply/build",
+  "existing_repositories_checked": [
+    "cardputer-adv-pocketjs",
+    "cardputer-depth-main-minimal",
+    "cardputer-depth-product",
+    "cardputer-mesh-main122-20261105",
+    "cardputer-mesh-main123-20261105",
+    "cardputer-mesh-pr117-20261103",
+    "mesh-edge4-benchmark-c14c7889-s3-20261106/source"
+  ],
+  "base_fetch_argv": [
+    "git",
+    "-C",
+    "/workspace/private-q7-certified-full-s3-20261106/base-repository",
+    "fetch",
+    "--depth=1",
+    "https://github.com/dj-oyu/cardputer-adv-pocketjs.git",
+    "31572d5fe5e9aa752ab890e4dfe833c0db740327"
+  ],
+  "base_fetch_exit": 128,
+  "base_fetch_error": "fatal: unable to access 'https://github.com/dj-oyu/cardputer-adv-pocketjs.git/': CONNECT tunnel failed, response 503",
+  "permission_denial": false,
+  "uncertain_outcome": false,
+  "substitution": false,
+  "builds_started": false,
+  "candidate_file_hashes_and_tree": "not yet verified; requires exact base to apply patch",
+  "new_source_analysis": "reviewed patch strict flags/environment probes; installed S3 picolibc declares/provides fegetround/fesetround/nextafter; actual compile/link/fenv runtime contract unverified"
+}

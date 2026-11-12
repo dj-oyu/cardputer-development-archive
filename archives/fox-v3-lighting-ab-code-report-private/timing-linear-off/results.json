@@ -1,0 +1,635 @@
+{
+  "scope": "unsanitized O2 host-only process repetitions, includes init in evaluate; no device or firmware timing",
+  "rows": [
+    {
+      "view": "front",
+      "case": "baseline",
+      "repetitions": 11,
+      "samples": [
+        {
+          "evaluateNs": 325892,
+          "hostRenderNsFirstFrame": 3900583
+        },
+        {
+          "evaluateNs": 285832,
+          "hostRenderNsFirstFrame": 2230792
+        },
+        {
+          "evaluateNs": 263098,
+          "hostRenderNsFirstFrame": 4811520
+        },
+        {
+          "evaluateNs": 286873,
+          "hostRenderNsFirstFrame": 3223510
+        },
+        {
+          "evaluateNs": 278611,
+          "hostRenderNsFirstFrame": 2994221
+        },
+        {
+          "evaluateNs": 332623,
+          "hostRenderNsFirstFrame": 2592109
+        },
+        {
+          "evaluateNs": 277991,
+          "hostRenderNsFirstFrame": 2633029
+        },
+        {
+          "evaluateNs": 269196,
+          "hostRenderNsFirstFrame": 2899699
+        },
+        {
+          "evaluateNs": 262547,
+          "hostRenderNsFirstFrame": 2366810
+        },
+        {
+          "evaluateNs": 385051,
+          "hostRenderNsFirstFrame": 3302310
+        },
+        {
+          "evaluateNs": 258070,
+          "hostRenderNsFirstFrame": 2654632
+        }
+      ],
+      "medianNs": {
+        "evaluateNs": 278611,
+        "hostRenderNsFirstFrame": 2899699
+      },
+      "minNs": {
+        "evaluateNs": 258070,
+        "hostRenderNsFirstFrame": 2230792
+      },
+      "maxNs": {
+        "evaluateNs": 385051,
+        "hostRenderNsFirstFrame": 4811520
+      }
+    },
+    {
+      "view": "front",
+      "case": "direction",
+      "repetitions": 11,
+      "samples": [
+        {
+          "evaluateNs": 334937,
+          "hostRenderNsFirstFrame": 2588682
+        },
+        {
+          "evaluateNs": 256637,
+          "hostRenderNsFirstFrame": 2476991
+        },
+        {
+          "evaluateNs": 254875,
+          "hostRenderNsFirstFrame": 2394029
+        },
+        {
+          "evaluateNs": 262437,
+          "hostRenderNsFirstFrame": 2413229
+        },
+        {
+          "evaluateNs": 303388,
+          "hostRenderNsFirstFrame": 2248039
+        },
+        {
+          "evaluateNs": 268305,
+          "hostRenderNsFirstFrame": 2226303
+        },
+        {
+          "evaluateNs": 269717,
+          "hostRenderNsFirstFrame": 2544424
+        },
+        {
+          "evaluateNs": 331230,
+          "hostRenderNsFirstFrame": 2839260
+        },
+        {
+          "evaluateNs": 304180,
+          "hostRenderNsFirstFrame": 3822011
+        },
+        {
+          "evaluateNs": 256508,
+          "hostRenderNsFirstFrame": 2578917
+        },
+        {
+          "evaluateNs": 468588,
+          "hostRenderNsFirstFrame": 2574713
+        }
+      ],
+      "medianNs": {
+        "evaluateNs": 269717,
+        "hostRenderNsFirstFrame": 2544424
+      },
+      "minNs": {
+        "evaluateNs": 254875,
+        "hostRenderNsFirstFrame": 2226303
+      },
+      "maxNs": {
+        "evaluateNs": 468588,
+        "hostRenderNsFirstFrame": 3822011
+      }
+    },
+    {
+      "view": "front",
+      "case": "intensity",
+      "repetitions": 11,
+      "samples": [
+        {
+          "evaluateNs": 264140,
+          "hostRenderNsFirstFrame": 2378041
+        },
+        {
+          "evaluateNs": 338842,
+          "hostRenderNsFirstFrame": 2663702
+        },
+        {
+          "evaluateNs": 530892,
+          "hostRenderNsFirstFrame": 2362097
+        },
+        {
+          "evaluateNs": 431112,
+          "hostRenderNsFirstFrame": 2852828
+        },
+        {
+          "evaluateNs": 257729,
+          "hostRenderNsFirstFrame": 2440107
+        },
+        {
+          "evaluateNs": 319222,
+          "hostRenderNsFirstFrame": 3426446
+        },
+        {
+          "evaluateNs": 266693,
+          "hostRenderNsFirstFrame": 2542156
+        },
+        {
+          "evaluateNs": 300003,
+          "hostRenderNsFirstFrame": 2221200
+        },
+        {
+          "evaluateNs": 261846,
+          "hostRenderNsFirstFrame": 2569442
+        },
+        {
+          "evaluateNs": 307945,
+          "hostRenderNsFirstFrame": 2451455
+        },
+        {
+          "evaluateNs": 313253,
+          "hostRenderNsFirstFrame": 2350222
+        }
+      ],
+      "medianNs": {
+        "evaluateNs": 307945,
+        "hostRenderNsFirstFrame": 2451455
+      },
+      "minNs": {
+        "evaluateNs": 257729,
+        "hostRenderNsFirstFrame": 2221200
+      },
+      "maxNs": {
+        "evaluateNs": 530892,
+        "hostRenderNsFirstFrame": 3426446
+      }
+    },
+    {
+      "view": "front",
+      "case": "ambient",
+      "repetitions": 11,
+      "samples": [
+        {
+          "evaluateNs": 269377,
+          "hostRenderNsFirstFrame": 2365827
+        },
+        {
+          "evaluateNs": 430831,
+          "hostRenderNsFirstFrame": 2482219
+        },
+        {
+          "evaluateNs": 343990,
+          "hostRenderNsFirstFrame": 2438212
+        },
+        {
+          "evaluateNs": 258220,
+          "hostRenderNsFirstFrame": 2484697
+        },
+        {
+          "evaluateNs": 253884,
+          "hostRenderNsFirstFrame": 2673791
+        },
+        {
+          "evaluateNs": 295247,
+          "hostRenderNsFirstFrame": 2409608
+        },
+        {
+          "evaluateNs": 255286,
+          "hostRenderNsFirstFrame": 2543476
+        },
+        {
+          "evaluateNs": 322627,
+          "hostRenderNsFirstFrame": 2414609
+        },
+        {
+          "evaluateNs": 253253,
+          "hostRenderNsFirstFrame": 2883168
+        },
+        {
+          "evaluateNs": 307755,
+          "hostRenderNsFirstFrame": 2572329
+        },
+        {
+          "evaluateNs": 457752,
+          "hostRenderNsFirstFrame": 2742576
+        }
+      ],
+      "medianNs": {
+        "evaluateNs": 295247,
+        "hostRenderNsFirstFrame": 2484697
+      },
+      "minNs": {
+        "evaluateNs": 253253,
+        "hostRenderNsFirstFrame": 2365827
+      },
+      "maxNs": {
+        "evaluateNs": 457752,
+        "hostRenderNsFirstFrame": 2883168
+      }
+    },
+    {
+      "view": "front",
+      "case": "albedo",
+      "repetitions": 11,
+      "samples": [
+        {
+          "evaluateNs": 266072,
+          "hostRenderNsFirstFrame": 2317221
+        },
+        {
+          "evaluateNs": 289177,
+          "hostRenderNsFirstFrame": 2838680
+        },
+        {
+          "evaluateNs": 271760,
+          "hostRenderNsFirstFrame": 2652997
+        },
+        {
+          "evaluateNs": 279372,
+          "hostRenderNsFirstFrame": 4726183
+        },
+        {
+          "evaluateNs": 262046,
+          "hostRenderNsFirstFrame": 6599707
+        },
+        {
+          "evaluateNs": 290609,
+          "hostRenderNsFirstFrame": 2582072
+        },
+        {
+          "evaluateNs": 795222,
+          "hostRenderNsFirstFrame": 5260978
+        },
+        {
+          "evaluateNs": 345132,
+          "hostRenderNsFirstFrame": 2757861
+        },
+        {
+          "evaluateNs": 562890,
+          "hostRenderNsFirstFrame": 2484366
+        },
+        {
+          "evaluateNs": 349038,
+          "hostRenderNsFirstFrame": 2579577
+        },
+        {
+          "evaluateNs": 263317,
+          "hostRenderNsFirstFrame": 2783407
+        }
+      ],
+      "medianNs": {
+        "evaluateNs": 289177,
+        "hostRenderNsFirstFrame": 2757861
+      },
+      "minNs": {
+        "evaluateNs": 262046,
+        "hostRenderNsFirstFrame": 2317221
+      },
+      "maxNs": {
+        "evaluateNs": 795222,
+        "hostRenderNsFirstFrame": 6599707
+      }
+    },
+    {
+      "view": "oblique",
+      "case": "baseline",
+      "repetitions": 11,
+      "samples": [
+        {
+          "evaluateNs": 259983,
+          "hostRenderNsFirstFrame": 4564831
+        },
+        {
+          "evaluateNs": 267525,
+          "hostRenderNsFirstFrame": 2513188
+        },
+        {
+          "evaluateNs": 347625,
+          "hostRenderNsFirstFrame": 3540878
+        },
+        {
+          "evaluateNs": 277219,
+          "hostRenderNsFirstFrame": 3619812
+        },
+        {
+          "evaluateNs": 397621,
+          "hostRenderNsFirstFrame": 2193196
+        },
+        {
+          "evaluateNs": 274144,
+          "hostRenderNsFirstFrame": 2711656
+        },
+        {
+          "evaluateNs": 327134,
+          "hostRenderNsFirstFrame": 2296731
+        },
+        {
+          "evaluateNs": 315006,
+          "hostRenderNsFirstFrame": 2575771
+        },
+        {
+          "evaluateNs": 290439,
+          "hostRenderNsFirstFrame": 2564897
+        },
+        {
+          "evaluateNs": 427316,
+          "hostRenderNsFirstFrame": 2933355
+        },
+        {
+          "evaluateNs": 274875,
+          "hostRenderNsFirstFrame": 2491444
+        }
+      ],
+      "medianNs": {
+        "evaluateNs": 290439,
+        "hostRenderNsFirstFrame": 2575771
+      },
+      "minNs": {
+        "evaluateNs": 259983,
+        "hostRenderNsFirstFrame": 2193196
+      },
+      "maxNs": {
+        "evaluateNs": 427316,
+        "hostRenderNsFirstFrame": 4564831
+      }
+    },
+    {
+      "view": "oblique",
+      "case": "direction",
+      "repetitions": 11,
+      "samples": [
+        {
+          "evaluateNs": 267995,
+          "hostRenderNsFirstFrame": 3988154
+        },
+        {
+          "evaluateNs": 264319,
+          "hostRenderNsFirstFrame": 2494379
+        },
+        {
+          "evaluateNs": 493055,
+          "hostRenderNsFirstFrame": 2783937
+        },
+        {
+          "evaluateNs": 323568,
+          "hostRenderNsFirstFrame": 2304001
+        },
+        {
+          "evaluateNs": 337249,
+          "hostRenderNsFirstFrame": 2207837
+        },
+        {
+          "evaluateNs": 298632,
+          "hostRenderNsFirstFrame": 2621464
+        },
+        {
+          "evaluateNs": 271290,
+          "hostRenderNsFirstFrame": 4086516
+        },
+        {
+          "evaluateNs": 427866,
+          "hostRenderNsFirstFrame": 2361809
+        },
+        {
+          "evaluateNs": 264700,
+          "hostRenderNsFirstFrame": 2261048
+        },
+        {
+          "evaluateNs": 290759,
+          "hostRenderNsFirstFrame": 2604839
+        },
+        {
+          "evaluateNs": 457952,
+          "hostRenderNsFirstFrame": 2729524
+        }
+      ],
+      "medianNs": {
+        "evaluateNs": 298632,
+        "hostRenderNsFirstFrame": 2604839
+      },
+      "minNs": {
+        "evaluateNs": 264319,
+        "hostRenderNsFirstFrame": 2207837
+      },
+      "maxNs": {
+        "evaluateNs": 493055,
+        "hostRenderNsFirstFrame": 4086516
+      }
+    },
+    {
+      "view": "oblique",
+      "case": "intensity",
+      "repetitions": 11,
+      "samples": [
+        {
+          "evaluateNs": 520297,
+          "hostRenderNsFirstFrame": 2881164
+        },
+        {
+          "evaluateNs": 278802,
+          "hostRenderNsFirstFrame": 2579359
+        },
+        {
+          "evaluateNs": 343068,
+          "hostRenderNsFirstFrame": 3000172
+        },
+        {
+          "evaluateNs": 377410,
+          "hostRenderNsFirstFrame": 2751126
+        },
+        {
+          "evaluateNs": 264199,
+          "hostRenderNsFirstFrame": 2413939
+        },
+        {
+          "evaluateNs": 404552,
+          "hostRenderNsFirstFrame": 2556955
+        },
+        {
+          "evaluateNs": 309738,
+          "hostRenderNsFirstFrame": 3334169
+        },
+        {
+          "evaluateNs": 257219,
+          "hostRenderNsFirstFrame": 2933553
+        },
+        {
+          "evaluateNs": 307404,
+          "hostRenderNsFirstFrame": 2459396
+        },
+        {
+          "evaluateNs": 813199,
+          "hostRenderNsFirstFrame": 2947206
+        },
+        {
+          "evaluateNs": 260023,
+          "hostRenderNsFirstFrame": 3476092
+        }
+      ],
+      "medianNs": {
+        "evaluateNs": 309738,
+        "hostRenderNsFirstFrame": 2881164
+      },
+      "minNs": {
+        "evaluateNs": 257219,
+        "hostRenderNsFirstFrame": 2413939
+      },
+      "maxNs": {
+        "evaluateNs": 813199,
+        "hostRenderNsFirstFrame": 3476092
+      }
+    },
+    {
+      "view": "oblique",
+      "case": "ambient",
+      "repetitions": 11,
+      "samples": [
+        {
+          "evaluateNs": 441717,
+          "hostRenderNsFirstFrame": 2418655
+        },
+        {
+          "evaluateNs": 262877,
+          "hostRenderNsFirstFrame": 2574154
+        },
+        {
+          "evaluateNs": 273133,
+          "hostRenderNsFirstFrame": 2198849
+        },
+        {
+          "evaluateNs": 268946,
+          "hostRenderNsFirstFrame": 2704349
+        },
+        {
+          "evaluateNs": 263738,
+          "hostRenderNsFirstFrame": 2498815
+        },
+        {
+          "evaluateNs": 435618,
+          "hostRenderNsFirstFrame": 3035879
+        },
+        {
+          "evaluateNs": 264330,
+          "hostRenderNsFirstFrame": 2666919
+        },
+        {
+          "evaluateNs": 350289,
+          "hostRenderNsFirstFrame": 2604896
+        },
+        {
+          "evaluateNs": 261084,
+          "hostRenderNsFirstFrame": 2504256
+        },
+        {
+          "evaluateNs": 349839,
+          "hostRenderNsFirstFrame": 2432261
+        },
+        {
+          "evaluateNs": 291300,
+          "hostRenderNsFirstFrame": 2222777
+        }
+      ],
+      "medianNs": {
+        "evaluateNs": 273133,
+        "hostRenderNsFirstFrame": 2504256
+      },
+      "minNs": {
+        "evaluateNs": 261084,
+        "hostRenderNsFirstFrame": 2198849
+      },
+      "maxNs": {
+        "evaluateNs": 441717,
+        "hostRenderNsFirstFrame": 3035879
+      }
+    },
+    {
+      "view": "oblique",
+      "case": "albedo",
+      "repetitions": 11,
+      "samples": [
+        {
+          "evaluateNs": 333824,
+          "hostRenderNsFirstFrame": 2442488
+        },
+        {
+          "evaluateNs": 344711,
+          "hostRenderNsFirstFrame": 3036881
+        },
+        {
+          "evaluateNs": 334626,
+          "hostRenderNsFirstFrame": 2447307
+        },
+        {
+          "evaluateNs": 299693,
+          "hostRenderNsFirstFrame": 4279110
+        },
+        {
+          "evaluateNs": 452664,
+          "hostRenderNsFirstFrame": 3396272
+        },
+        {
+          "evaluateNs": 334926,
+          "hostRenderNsFirstFrame": 2932626
+        },
+        {
+          "evaluateNs": 267635,
+          "hostRenderNsFirstFrame": 2489089
+        },
+        {
+          "evaluateNs": 325412,
+          "hostRenderNsFirstFrame": 2505827
+        },
+        {
+          "evaluateNs": 340505,
+          "hostRenderNsFirstFrame": 2772441
+        },
+        {
+          "evaluateNs": 268496,
+          "hostRenderNsFirstFrame": 2578765
+        },
+        {
+          "evaluateNs": 354025,
+          "hostRenderNsFirstFrame": 3400969
+        }
+      ],
+      "medianNs": {
+        "evaluateNs": 334626,
+        "hostRenderNsFirstFrame": 2772441
+      },
+      "minNs": {
+        "evaluateNs": 267635,
+        "hostRenderNsFirstFrame": 2442488
+      },
+      "maxNs": {
+        "evaluateNs": 452664,
+        "hostRenderNsFirstFrame": 4279110
+      }
+    }
+  ]
+}

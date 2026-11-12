@@ -1,0 +1,374 @@
+{
+  "front": {
+    "11": {
+      "originalForeground": {
+        "baseline": {
+          "richRadianceFraction": {
+            "combined": 1.0,
+            "directDiffuse": 0.6350730145799779,
+            "indirectDiffuse": 0.22251376304104117,
+            "directSpecular": 0.07170991683419675,
+            "indirectSpecular": 0.03302501895797701,
+            "totalDiffuse": 0.8575867776210192
+          },
+          "nativeWorldFraction": 0.2430660345823437,
+          "nativeAreaMeanY": 0.2698304214246633,
+          "nativeWorldMeanY": 0.0866477309010524,
+          "indirectVsSignedRadianceGapCorrelation": 0.1966667564719242
+        },
+        "direction": {
+          "richRadianceFraction": {
+            "combined": 1.0,
+            "directDiffuse": 0.6222091369260183,
+            "indirectDiffuse": 0.22650906747673694,
+            "directSpecular": 0.07641798318427417,
+            "indirectSpecular": 0.03384561565359017,
+            "totalDiffuse": 0.8487182044027552
+          },
+          "nativeWorldFraction": 0.2763440054132625,
+          "nativeAreaMeanY": 0.22690251518253404,
+          "nativeWorldMeanY": 0.0866477309010524,
+          "indirectVsSignedRadianceGapCorrelation": 0.1778392742355222
+        }
+      },
+      "commonConditional": {
+        "baseline": {
+          "richRadianceFraction": {
+            "combined": 1.0,
+            "directDiffuse": 0.6298672010170849,
+            "indirectDiffuse": 0.25430154411288247,
+            "directSpecular": 0.07234958615008018,
+            "indirectSpecular": 0.037187980051338373,
+            "totalDiffuse": 0.8841687451299676
+          },
+          "nativeWorldFraction": 0.24306603458234377,
+          "nativeAreaMeanY": 0.30552379912538685,
+          "nativeWorldMeanY": 0.09810956003667273,
+          "indirectVsSignedRadianceGapCorrelation": 0.5629401623337703
+        },
+        "direction": {
+          "richRadianceFraction": {
+            "combined": 1.0,
+            "directDiffuse": 0.6122615853003771,
+            "indirectDiffuse": 0.2637223844241285,
+            "directSpecular": 0.07824071345920025,
+            "indirectSpecular": 0.038794125687654814,
+            "totalDiffuse": 0.8759839697245057
+          },
+          "nativeWorldFraction": 0.2763440054132625,
+          "nativeAreaMeanY": 0.25691735610704247,
+          "nativeWorldMeanY": 0.09810956003667273,
+          "indirectVsSignedRadianceGapCorrelation": 0.5148579992384665
+        }
+      },
+      "interior2Conditional": {
+        "baseline": {
+          "richRadianceFraction": {
+            "combined": 1.0,
+            "directDiffuse": 0.6311431445673592,
+            "indirectDiffuse": 0.2803494105475621,
+            "directSpecular": 0.055264267891470806,
+            "indirectSpecular": 0.03324318219168463,
+            "totalDiffuse": 0.9114925551149212
+          },
+          "nativeWorldFraction": 0.24883493431180453,
+          "nativeAreaMeanY": 0.32774069922951143,
+          "nativeWorldMeanY": 0.10856912693265837,
+          "indirectVsSignedRadianceGapCorrelation": 0.698232534386912
+        },
+        "direction": {
+          "richRadianceFraction": {
+            "combined": 1.0,
+            "directDiffuse": 0.6093236408141364,
+            "indirectDiffuse": 0.2968209853708538,
+            "directSpecular": 0.05874754193642035,
+            "indirectSpecular": 0.03510784701230246,
+            "totalDiffuse": 0.9061446261849901
+          },
+          "nativeWorldFraction": 0.2880056144667811,
+          "nativeAreaMeanY": 0.2683996593657104,
+          "nativeWorldMeanY": 0.10856912693265837,
+          "indirectVsSignedRadianceGapCorrelation": 0.64434920377295
+        }
+      }
+    },
+    "29": {
+      "originalForeground": {
+        "baseline": {
+          "richRadianceFraction": {
+            "combined": 1.0,
+            "directDiffuse": 0.6352407905024338,
+            "indirectDiffuse": 0.22221252502474576,
+            "directSpecular": 0.07183111989951547,
+            "indirectSpecular": 0.033035686755425814,
+            "totalDiffuse": 0.8574533155271797
+          },
+          "nativeWorldFraction": 0.2430660345823437,
+          "nativeAreaMeanY": 0.2698304214246633,
+          "nativeWorldMeanY": 0.0866477309010524,
+          "indirectVsSignedRadianceGapCorrelation": 0.19741627807936463
+        },
+        "direction": {
+          "richRadianceFraction": {
+            "combined": 1.0,
+            "directDiffuse": 0.6220525535262915,
+            "indirectDiffuse": 0.22650720951677403,
+            "directSpecular": 0.07651262304497099,
+            "indirectSpecular": 0.033877615343266165,
+            "totalDiffuse": 0.8485597630430656
+          },
+          "nativeWorldFraction": 0.2763440054132625,
+          "nativeAreaMeanY": 0.22690251518253404,
+          "nativeWorldMeanY": 0.0866477309010524,
+          "indirectVsSignedRadianceGapCorrelation": 0.1763956434225864
+        }
+      },
+      "commonConditional": {
+        "baseline": {
+          "richRadianceFraction": {
+            "combined": 1.0,
+            "directDiffuse": 0.6300672253022215,
+            "indirectDiffuse": 0.25396259847281266,
+            "directSpecular": 0.07248827315088203,
+            "indirectSpecular": 0.037189169194189756,
+            "totalDiffuse": 0.8840298237750341
+          },
+          "nativeWorldFraction": 0.24306603458234377,
+          "nativeAreaMeanY": 0.30552379912538685,
+          "nativeWorldMeanY": 0.09810956003667273,
+          "indirectVsSignedRadianceGapCorrelation": 0.5621195636486042
+        },
+        "direction": {
+          "richRadianceFraction": {
+            "combined": 1.0,
+            "directDiffuse": 0.6121506472782832,
+            "indirectDiffuse": 0.26371060657302786,
+            "directSpecular": 0.07830735973488596,
+            "indirectSpecular": 0.03884163414466507,
+            "totalDiffuse": 0.875861253851311
+          },
+          "nativeWorldFraction": 0.2763440054132625,
+          "nativeAreaMeanY": 0.25691735610704247,
+          "nativeWorldMeanY": 0.09810956003667273,
+          "indirectVsSignedRadianceGapCorrelation": 0.513472692854142
+        }
+      },
+      "interior2Conditional": {
+        "baseline": {
+          "richRadianceFraction": {
+            "combined": 1.0,
+            "directDiffuse": 0.6314512281228166,
+            "indirectDiffuse": 0.279994726457999,
+            "directSpecular": 0.05531694561338391,
+            "indirectSpecular": 0.03323709667829209,
+            "totalDiffuse": 0.9114459545808157
+          },
+          "nativeWorldFraction": 0.24883493431180453,
+          "nativeAreaMeanY": 0.32774069922951143,
+          "nativeWorldMeanY": 0.10856912693265837,
+          "indirectVsSignedRadianceGapCorrelation": 0.6962327665269178
+        },
+        "direction": {
+          "richRadianceFraction": {
+            "combined": 1.0,
+            "directDiffuse": 0.6092791686258672,
+            "indirectDiffuse": 0.29674421279225355,
+            "directSpecular": 0.058851994691692056,
+            "indirectSpecular": 0.03512462573407705,
+            "totalDiffuse": 0.9060233814181208
+          },
+          "nativeWorldFraction": 0.2880056144667811,
+          "nativeAreaMeanY": 0.2683996593657104,
+          "nativeWorldMeanY": 0.10856912693265837,
+          "indirectVsSignedRadianceGapCorrelation": 0.6428492013706832
+        }
+      }
+    }
+  },
+  "oblique": {
+    "11": {
+      "originalForeground": {
+        "baseline": {
+          "richRadianceFraction": {
+            "combined": 1.0,
+            "directDiffuse": 0.6286090311920839,
+            "indirectDiffuse": 0.21848500976218066,
+            "directSpecular": 0.07286678057096763,
+            "indirectSpecular": 0.03896312228413718,
+            "totalDiffuse": 0.8470940409542647
+          },
+          "nativeWorldFraction": 0.2490013032726583,
+          "nativeAreaMeanY": 0.2420240735012604,
+          "nativeWorldMeanY": 0.08024555833157604,
+          "indirectVsSignedRadianceGapCorrelation": 0.1394399901033794
+        },
+        "direction": {
+          "richRadianceFraction": {
+            "combined": 1.0,
+            "directDiffuse": 0.6041030196440095,
+            "indirectDiffuse": 0.22453840146921025,
+            "directSpecular": 0.08241210493855326,
+            "indirectSpecular": 0.04070779746927702,
+            "totalDiffuse": 0.8286414211132198
+          },
+          "nativeWorldFraction": 0.32699206892228777,
+          "nativeAreaMeanY": 0.16515965469408614,
+          "nativeWorldMeanY": 0.08024555833157604,
+          "indirectVsSignedRadianceGapCorrelation": 0.09102594629000173
+        }
+      },
+      "commonConditional": {
+        "baseline": {
+          "richRadianceFraction": {
+            "combined": 1.0,
+            "directDiffuse": 0.6138668222052458,
+            "indirectDiffuse": 0.2566809459747845,
+            "directSpecular": 0.07680594472724621,
+            "indirectSpecular": 0.04552008784934386,
+            "totalDiffuse": 0.8705477681800303
+          },
+          "nativeWorldFraction": 0.2490013032726583,
+          "nativeAreaMeanY": 0.27587359427066743,
+          "nativeWorldMeanY": 0.09146871334298527,
+          "indirectVsSignedRadianceGapCorrelation": 0.5667944274858605
+        },
+        "direction": {
+          "richRadianceFraction": {
+            "combined": 1.0,
+            "directDiffuse": 0.5720820970038917,
+            "indirectDiffuse": 0.27806114305724217,
+            "directSpecular": 0.09089608308117587,
+            "indirectSpecular": 0.050099685847443884,
+            "totalDiffuse": 0.8501432400611338
+          },
+          "nativeWorldFraction": 0.32699206892228777,
+          "nativeAreaMeanY": 0.1882589070988534,
+          "nativeWorldMeanY": 0.09146871334298527,
+          "indirectVsSignedRadianceGapCorrelation": 0.4782931059838234
+        }
+      },
+      "interior2Conditional": {
+        "baseline": {
+          "richRadianceFraction": {
+            "combined": 1.0,
+            "directDiffuse": 0.6010587484155989,
+            "indirectDiffuse": 0.2896721064792362,
+            "directSpecular": 0.06520419658297266,
+            "indirectSpecular": 0.044064820772987824,
+            "totalDiffuse": 0.890730854894835
+          },
+          "nativeWorldFraction": 0.2652899398037649,
+          "nativeAreaMeanY": 0.2671302822350692,
+          "nativeWorldMeanY": 0.09645570454687423,
+          "indirectVsSignedRadianceGapCorrelation": 0.7179456687655656
+        },
+        "direction": {
+          "richRadianceFraction": {
+            "combined": 1.0,
+            "directDiffuse": 0.5262400402031443,
+            "indirectDiffuse": 0.3414073201571476,
+            "directSpecular": 0.08054778000575552,
+            "indirectSpecular": 0.05180454841817489,
+            "totalDiffuse": 0.8676473603602918
+          },
+          "nativeWorldFraction": 0.4006791979762213,
+          "nativeAreaMeanY": 0.14427479764555176,
+          "nativeWorldMeanY": 0.09645570454687423,
+          "indirectVsSignedRadianceGapCorrelation": 0.6601453513168682
+        }
+      }
+    },
+    "29": {
+      "originalForeground": {
+        "baseline": {
+          "richRadianceFraction": {
+            "combined": 1.0,
+            "directDiffuse": 0.6286324708044625,
+            "indirectDiffuse": 0.21845771203005598,
+            "directSpecular": 0.07282613046933098,
+            "indirectSpecular": 0.03901825974199772,
+            "totalDiffuse": 0.8470901828345184
+          },
+          "nativeWorldFraction": 0.2490013032726583,
+          "nativeAreaMeanY": 0.2420240735012604,
+          "nativeWorldMeanY": 0.08024555833157604,
+          "indirectVsSignedRadianceGapCorrelation": 0.13967967807284792
+        },
+        "direction": {
+          "richRadianceFraction": {
+            "combined": 1.0,
+            "directDiffuse": 0.6040785798766529,
+            "indirectDiffuse": 0.2244806656091455,
+            "directSpecular": 0.08242724566899275,
+            "indirectSpecular": 0.04076546471918917,
+            "totalDiffuse": 0.8285592454857983
+          },
+          "nativeWorldFraction": 0.32699206892228777,
+          "nativeAreaMeanY": 0.16515965469408614,
+          "nativeWorldMeanY": 0.08024555833157604,
+          "indirectVsSignedRadianceGapCorrelation": 0.08840224855463166
+        }
+      },
+      "commonConditional": {
+        "baseline": {
+          "richRadianceFraction": {
+            "combined": 1.0,
+            "directDiffuse": 0.6138940180221379,
+            "indirectDiffuse": 0.25669691328339844,
+            "directSpecular": 0.07671179023808328,
+            "indirectSpecular": 0.04558597962695691,
+            "totalDiffuse": 0.8705909313055363
+          },
+          "nativeWorldFraction": 0.2490013032726583,
+          "nativeAreaMeanY": 0.27587359427066743,
+          "nativeWorldMeanY": 0.09146871334298527,
+          "indirectVsSignedRadianceGapCorrelation": 0.5681117724446624
+        },
+        "direction": {
+          "richRadianceFraction": {
+            "combined": 1.0,
+            "directDiffuse": 0.5720044063878598,
+            "indirectDiffuse": 0.27810474728420514,
+            "directSpecular": 0.09086115324065266,
+            "indirectSpecular": 0.05019086422965419,
+            "totalDiffuse": 0.850109153672065
+          },
+          "nativeWorldFraction": 0.32699206892228777,
+          "nativeAreaMeanY": 0.1882589070988534,
+          "nativeWorldMeanY": 0.09146871334298527,
+          "indirectVsSignedRadianceGapCorrelation": 0.4775539159830658
+        }
+      },
+      "interior2Conditional": {
+        "baseline": {
+          "richRadianceFraction": {
+            "combined": 1.0,
+            "directDiffuse": 0.6012526640256088,
+            "indirectDiffuse": 0.28943110599721966,
+            "directSpecular": 0.06523812243353459,
+            "indirectSpecular": 0.04407799181751709,
+            "totalDiffuse": 0.8906837700228284
+          },
+          "nativeWorldFraction": 0.2652899398037649,
+          "nativeAreaMeanY": 0.2671302822350692,
+          "nativeWorldMeanY": 0.09645570454687423,
+          "indirectVsSignedRadianceGapCorrelation": 0.7182335902518765
+        },
+        "direction": {
+          "richRadianceFraction": {
+            "combined": 1.0,
+            "directDiffuse": 0.526138100652668,
+            "indirectDiffuse": 0.3414173138395052,
+            "directSpecular": 0.08059851612762123,
+            "indirectSpecular": 0.051845974026850344,
+            "totalDiffuse": 0.8675554144921732
+          },
+          "nativeWorldFraction": 0.4006791979762213,
+          "nativeAreaMeanY": 0.14427479764555176,
+          "nativeWorldMeanY": 0.09645570454687423,
+          "indirectVsSignedRadianceGapCorrelation": 0.6599423479525327
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "status": "COMPLETE_FIXED42_INDEPENDENT_PASS",
+  "actualFrames": 42,
+  "diagnosticFullDepthFrames": 40,
+  "noDepthCaptureHDRCanaries": 2,
+  "pureProductNoHDRActualFrames": 0,
+  "counts": {
+    "diagnosticFrames": 40,
+    "noDepthCaptureHDRCanaries": 2,
+    "raw": 208,
+    "reports": 336,
+    "sidecars": 42,
+    "forwardReverse": 80
+  },
+  "sourceFreezeSHA256": "83e01a018e3f3839d26161b861b20c674b954ccd60f8b8b77332e890634604f0",
+  "frozenFilesVerified": 173,
+  "independentFinalReviewSHA256": "d021b53a5c8e8f4272e7638865cc8a0f03f154f011c1c2d597ed31fc4cb06a88",
+  "retainedComparisonSHA256": "d589f87af655a759defb80c025c87fe380df95d719623372e21249b9b21cf83f",
+  "executionGateSHA256": "7f2d50f1a927febf211d153534e34b5369b13400a491f62f6686ffab3bc72c5e",
+  "perModeWork": {
+    "actual-off-001": {
+      "frames": 20,
+      "maxCombinedProducerWork": 478196,
+      "maxAAWork": 7804336,
+      "pendingCopyFloats": 76800,
+      "captureCopyFloats": 648000,
+      "profileCalls": 648000,
+      "cacheHits": 2524772,
+      "cacheMisses": 67228,
+      "cacheInvalidations": 0
+    },
+    "actual-on-001": {
+      "frames": 20,
+      "maxCombinedProducerWork": 478224,
+      "maxAAWork": 7804336,
+      "pendingCopyFloats": 76800,
+      "captureCopyFloats": 648000,
+      "profileCalls": 648000,
+      "cacheHits": 2525682,
+      "cacheMisses": 66318,
+      "cacheInvalidations": 0
+    },
+    "production-off-001": {
+      "frames": 1,
+      "maxCombinedProducerWork": 443797,
+      "maxAAWork": 7804336,
+      "pendingCopyFloats": 3840,
+      "captureCopyFloats": 0,
+      "profileCalls": 32400,
+      "cacheHits": 126286,
+      "cacheMisses": 3314,
+      "cacheInvalidations": 0
+    },
+    "production-on-001": {
+      "frames": 1,
+      "maxCombinedProducerWork": 443824,
+      "maxAAWork": 7804336,
+      "pendingCopyFloats": 3840,
+      "captureCopyFloats": 0,
+      "profileCalls": 32400,
+      "cacheHits": 126352,
+      "cacheMisses": 3248,
+      "cacheInvalidations": 0
+    }
+  },
+  "workCapsUnchanged": {
+    "producerIncludingDepthCopies": 637599,
+    "AA": 8000000,
+    "RHAdmission": 1024,
+    "RHGuards": 100000,
+    "pendingCopyFloats": 3840,
+    "captureCopyFloats": 32400
+  },
+  "memory": {
+    "productCenterDepth": 8640,
+    "baselineCenterDepth": 129600,
+    "grossRenderDepthSaving": 120960,
+    "productNamedRender": 373552,
+    "baselineNamedRender": 494608,
+    "productNamedLifecyclePeak": 442964,
+    "baselineNamedLifecyclePeak": 494608,
+    "namedLifecycleSaved": 51644,
+    "dominatingPhase": "visibilityBuildConservative",
+    "largestProductAllocation": 72512,
+    "largestBaselineProductAllocation": 72512,
+    "productMainStack": 83760,
+    "observerMainStack": 83776,
+    "namedRendererChain": 4944,
+    "namedBackgroundChain": 4016,
+    "backgroundCap": 4096,
+    "profileCache": 3224,
+    "diagnosticExtraDepthHeap": 129600,
+    "diagnosticExtraHDRHeap": 777600,
+    "diagnosticHDRControl": 24,
+    "diagnosticWithDepthPeak": 1280792,
+    "diagnosticWithoutDepthPeak": 1151192,
+    "descriptorAndReportIncludedInMainStack": true,
+    "noWholeProcessOrDeviceFitClaim": true
+  },
+  "observations": {
+    "diagnostic-off": {
+      "wallSeconds": 337.1383222579607,
+      "userCPUSeconds": 336.90819999999997,
+      "systemCPUSeconds": 0.09328,
+      "maximumProcessPeakRSSKiB": 24520
+    },
+    "diagnostic-on": {
+      "wallSeconds": 362.0604215829808,
+      "userCPUSeconds": 361.850524,
+      "systemCPUSeconds": 0.101445,
+      "maximumProcessPeakRSSKiB": 24520
+    },
+    "production-off": {
+      "wallSeconds": 16.605645377974724,
+      "userCPUSeconds": 16.584775,
+      "systemCPUSeconds": 0.010990999999999999,
+      "maximumProcessPeakRSSKiB": 24516
+    },
+    "production-on": {
+      "wallSeconds": 18.265536999009782,
+      "userCPUSeconds": 18.255055,
+      "systemCPUSeconds": 0.0,
+      "maximumProcessPeakRSSKiB": 24520
+    }
+  },
+  "timing": {
+    "fixed40WallSeconds": 699.1987438409415,
+    "historicalCachedFixed40WallSeconds": 699.5638,
+    "descriptiveDifferenceSeconds": -0.36505615905855393,
+    "descriptiveDifferencePercent": -0.052183397576965884,
+    "noDepthCaptureCanariesExcludedFromFixed40Timing": true,
+    "historicalSeparateRunsNotControlledPairedBenchmark": true,
+    "noCausalPerformanceClaim": true
+  },
+  "output": "Exact RGB565, snapshots, masks and HDR across42; full float depth exact for40 diagnostic frames only. Two no-depth-capture canaries produce no full-depth artifact and retain HDR diagnostics. No no-depth-capture40 claim.",
+  "reportContract": "Only predeclared scratch/retention, admission and copy-guard differences plus descriptive timing exclusions; all remaining strict reports exact. Separate depth sidecars enforce new copy accounting.",
+  "publication": "Private RGB/depth scratch may be partial on failure. Existing source verification, background finish, postchecks and completion markers gate accepted outputs; diagnostics may exist after failure, no multi-file atomic transaction claim.",
+  "scope": "No device drawing, firmware integration, SDK, model/reference/profile change, public repository or PR action. Old full-depth APIs retained. No rejected owned-ray-context or paged-BVH dependency.",
+  "leakSanitizer": "Unavailable under ptrace; ASan/UBSan passed with detect_leaks=0, no general leak-clean claim."
+}

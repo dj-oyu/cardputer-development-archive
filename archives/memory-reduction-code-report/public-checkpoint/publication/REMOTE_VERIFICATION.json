@@ -1,0 +1,205 @@
+{
+  "status": "PUBLISHED_AND_READBACK_VERIFIED",
+  "repository": "dj-oyu/cardputer-adv-pocketjs",
+  "branch": "work/renderer-host-kernels-20261104",
+  "commit": "aba669858ab8b813b67ce5831f5d86086b3e0ca3",
+  "tree": "be79d462d61ab2be7aa7ba1117276d4a9f3da729",
+  "commit_url": "https://github.com/dj-oyu/cardputer-adv-pocketjs/commit/aba669858ab8b813b67ce5831f5d86086b3e0ca3",
+  "base_commit": "d7cca777302b32bf790e15d36cb6f4e39911261e",
+  "main_after": {
+    "name": "main",
+    "commit": {
+      "sha": "51f5febb753e3f0d0950043af0b579119d6fa0f0",
+      "url": "https://api.github.com/repos/dj-oyu/cardputer-adv-pocketjs/commits/51f5febb753e3f0d0950043af0b579119d6fa0f0"
+    },
+    "protected": true
+  },
+  "readback": [
+    {
+      "path": "tools/renderer_experiments/indexed_visibility/.gitignore",
+      "git_blob_sha": "2b6f486b59123f4dd5080ece2cd5281e9c91fd7c",
+      "sha256": "377622e33aeadb226678c541fc5c7b9d0e2249da59d9f218dac7cd9244c21861",
+      "exact_content_match": true,
+      "bytes": 27
+    },
+    {
+      "path": "tools/renderer_experiments/indexed_visibility/LICENSE",
+      "git_blob_sha": "aa38507a02aeb24890163120f2469d93c704bea9",
+      "sha256": "77fab6ded4aa617e9d24e2a47d41065fe3bdd5c5618152a4ca40d41e1ef2b08a",
+      "exact_content_match": true,
+      "bytes": 1063
+    },
+    {
+      "path": "tools/renderer_experiments/indexed_visibility/README.md",
+      "git_blob_sha": "de64353228018722a9532ec1aa723689c99d16fc",
+      "sha256": "4589e8ab63512c04ae506e15f66b098b2d6ab8f93d8509a4aff454a7897a7445",
+      "exact_content_match": true,
+      "bytes": 4593
+    },
+    {
+      "path": "tools/renderer_experiments/indexed_visibility/run_tests.py",
+      "git_blob_sha": "ec59579dd90d717230b3250a7f03e05d482b8967",
+      "sha256": "52c56c0ef342135d5c8f943f507b9fff8f0c6439b3661127e6cbff7269f4bb92",
+      "exact_content_match": true,
+      "bytes": 4398
+    },
+    {
+      "path": "tools/renderer_experiments/indexed_visibility/test_bruteforce.c",
+      "git_blob_sha": "b393bdb9eaed8222aaa4181d6043a7ea588885b9",
+      "sha256": "230f3809bffb2f69c1c4927487e086066605522a34437c8c75d9a43d8251f1bb",
+      "exact_content_match": true,
+      "bytes": 5453
+    },
+    {
+      "path": "tools/renderer_experiments/indexed_visibility/test_nearest.c",
+      "git_blob_sha": "70f24d522c9a8211f1f4470368e942c354b01c89",
+      "sha256": "096f631dc2f7239452450a6fa5507262345d772d015e0cc6d35e53714ea64f54",
+      "exact_content_match": true,
+      "bytes": 5321
+    },
+    {
+      "path": "tools/renderer_experiments/indexed_visibility/test_storage.c",
+      "git_blob_sha": "8a3a36b0285c740597f06bc70c71f15c52fc48ba",
+      "sha256": "02e61929da1e16c45eafcee847b4f9a84bc0d63bf647064dfcb90ae2d07dfb73",
+      "exact_content_match": true,
+      "bytes": 5409
+    },
+    {
+      "path": "tools/renderer_experiments/indexed_visibility/test_visibility.c",
+      "git_blob_sha": "f8ca15e96e26fc29a34215b7f9b16c224fabb1d2",
+      "sha256": "765c349f86a95bc4bd5e566b29dddbfbcd4e24a21d84f45871a0d16ce64659a9",
+      "exact_content_match": true,
+      "bytes": 8739
+    },
+    {
+      "path": "tools/renderer_experiments/indexed_visibility/visibility.c",
+      "git_blob_sha": "3e0507c71705b7471a00906deacac8745ff688da",
+      "sha256": "8eb08314bd75441c1f77699a7b56a30a71986d8112dec0cf39e56be770dd42f8",
+      "exact_content_match": true,
+      "bytes": 16148
+    },
+    {
+      "path": "tools/renderer_experiments/indexed_visibility/visibility.h",
+      "git_blob_sha": "8ad564cbe798ed27c41ec5f47acf89fce83391b0",
+      "sha256": "95d106ba97255313b78985789687764eb1ce1a36dbe79a3bd5450eb4efe70ee0",
+      "exact_content_match": true,
+      "bytes": 5668
+    }
+  ],
+  "compare": {
+    "repository_full_name": "dj-oyu/cardputer-adv-pocketjs",
+    "base": "d7cca777302b32bf790e15d36cb6f4e39911261e",
+    "head": "aba669858ab8b813b67ce5831f5d86086b3e0ca3",
+    "status": "ahead",
+    "ahead_by": 1,
+    "behind_by": 0,
+    "total_commits": 1,
+    "too_large": null,
+    "base_commit": {
+      "sha": "d7cca777302b32bf790e15d36cb6f4e39911261e",
+      "url": "https://api.github.com/repos/dj-oyu/cardputer-adv-pocketjs/commits/d7cca777302b32bf790e15d36cb6f4e39911261e",
+      "html_url": "https://github.com/dj-oyu/cardputer-adv-pocketjs/commit/d7cca777302b32bf790e15d36cb6f4e39911261e"
+    },
+    "merge_base_commit": {
+      "sha": "d7cca777302b32bf790e15d36cb6f4e39911261e",
+      "url": "https://api.github.com/repos/dj-oyu/cardputer-adv-pocketjs/commits/d7cca777302b32bf790e15d36cb6f4e39911261e",
+      "html_url": "https://github.com/dj-oyu/cardputer-adv-pocketjs/commit/d7cca777302b32bf790e15d36cb6f4e39911261e"
+    },
+    "files": [
+      {
+        "filename": "tools/renderer_experiments/indexed_visibility/README.md",
+        "status": "modified",
+        "additions": 15,
+        "deletions": 3,
+        "changes": 18,
+        "previous_filename": null
+      },
+      {
+        "filename": "tools/renderer_experiments/indexed_visibility/test_storage.c",
+        "status": "modified",
+        "additions": 34,
+        "deletions": 1,
+        "changes": 35,
+        "previous_filename": null
+      },
+      {
+        "filename": "tools/renderer_experiments/indexed_visibility/visibility.c",
+        "status": "modified",
+        "additions": 29,
+        "deletions": 17,
+        "changes": 46,
+        "previous_filename": null
+      }
+    ]
+  },
+  "ci": {
+    "statuses": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Action completed."
+        }
+      ],
+      "structuredContent": {
+        "content": "[]",
+        "title": "statuses",
+        "modified_date": null,
+        "url": "https://api.github.com/repos/dj-oyu/cardputer-adv-pocketjs/commits/aba669858ab8b813b67ce5831f5d86086b3e0ca3/statuses",
+        "display_url": "https://api.github.com/repos/dj-oyu/cardputer-adv-pocketjs/commits/aba669858ab8b813b67ce5831f5d86086b3e0ca3/statuses",
+        "display_title": "statuses",
+        "structuredContent": {
+          "title": "statuses",
+          "content": "[]",
+          "display_url": "https://api.github.com/repos/dj-oyu/cardputer-adv-pocketjs/commits/aba669858ab8b813b67ce5831f5d86086b3e0ca3/statuses"
+        }
+      },
+      "isError": false
+    },
+    "check_runs": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Action completed."
+        }
+      ],
+      "structuredContent": {
+        "content": "{\"total_count\":0,\"check_runs\":[]}",
+        "title": "check-runs",
+        "modified_date": null,
+        "url": "https://api.github.com/repos/dj-oyu/cardputer-adv-pocketjs/commits/aba669858ab8b813b67ce5831f5d86086b3e0ca3/check-runs",
+        "display_url": "https://api.github.com/repos/dj-oyu/cardputer-adv-pocketjs/commits/aba669858ab8b813b67ce5831f5d86086b3e0ca3/check-runs",
+        "display_title": "check-runs",
+        "structuredContent": {
+          "title": "check-runs",
+          "content": "{\"total_count\":0,\"check_runs\":[]}",
+          "display_url": "https://api.github.com/repos/dj-oyu/cardputer-adv-pocketjs/commits/aba669858ab8b813b67ce5831f5d86086b3e0ca3/check-runs"
+        }
+      },
+      "isError": false
+    },
+    "workflow_runs": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Action completed."
+        }
+      ],
+      "structuredContent": {
+        "content": "{\"total_count\":0,\"workflow_runs\":[]}",
+        "title": "runs",
+        "modified_date": null,
+        "url": "https://api.github.com/repos/dj-oyu/cardputer-adv-pocketjs/actions/runs?head_sha=aba669858ab8b813b67ce5831f5d86086b3e0ca3",
+        "display_url": "https://api.github.com/repos/dj-oyu/cardputer-adv-pocketjs/actions/runs?head_sha=aba669858ab8b813b67ce5831f5d86086b3e0ca3",
+        "display_title": "runs",
+        "structuredContent": {
+          "title": "runs",
+          "content": "{\"total_count\":0,\"workflow_runs\":[]}",
+          "display_url": "https://api.github.com/repos/dj-oyu/cardputer-adv-pocketjs/actions/runs?head_sha=aba669858ab8b813b67ce5831f5d86086b3e0ca3"
+        }
+      },
+      "isError": false
+    }
+  },
+  "verified_utc": "2026-11-04T10:34:04.330300+00:00",
+  "scope": "Exactly three generic changed files; no assets, PR, merge, firmware integration or device operation."
+}

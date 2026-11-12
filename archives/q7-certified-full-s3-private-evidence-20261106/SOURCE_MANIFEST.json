@@ -1,0 +1,95 @@
+{
+  "format": "Q7_GENERIC_SOURCE_PATCH_V1",
+  "base_commit_sha1": "31572d5fe5e9aa752ab890e4dfe833c0db740327",
+  "base_tree_sha1": "a4322fb9455d449fbe1eab8d8a6ef983761c14b8",
+  "patch_sha256": "6455fe71e493fc521f32dff26ad88eb08fabc1aa79278f1d6fae491da43df7a7",
+  "patch_bytes": 61502,
+  "line_endings": "LF only; UTF-8; final LF",
+  "files": [
+    {
+      "path": "main/CMakeLists.txt",
+      "base_blob_sha1": "ccf82dfa4d2ef3c94ae2c9d3a922ed429134662d",
+      "candidate_blob_sha1": "18a5f081a7a4e154670722a3d618c22ee5e3e76b",
+      "candidate_sha256": "49525c413f8a779e9cf9ebdfe9b04f5846245e8aabf7df539b83582e75afaf82",
+      "bytes": 43082
+    },
+    {
+      "path": "main/pocket/pocket_shiki_frame.c",
+      "base_blob_sha1": "07e04f9ba841141a55c1ee700bf0adfc83d34ed4",
+      "candidate_blob_sha1": "29a908b1a17bcb363f137b259a3554f44f761331",
+      "candidate_sha256": "931677586638a5fe64646c7ba63f5dd78490657feead194eff39f02273d3b591",
+      "bytes": 65599
+    },
+    {
+      "path": "main/ui/kasane/ksn_mesh_q7_certified.c",
+      "base_blob_sha1": null,
+      "candidate_blob_sha1": "c0679129f5bb4743dcb81b8e0ac78f9afe59e0f4",
+      "candidate_sha256": "bd3a73d33f7c09181c4da6f2356ad591ee50dec977fdca1ae449f8e6181c6447",
+      "bytes": 9605
+    },
+    {
+      "path": "main/ui/kasane/ksn_mesh_q7_certified.h",
+      "base_blob_sha1": null,
+      "candidate_blob_sha1": "816f10617713ec77164668a4045d03cefd4a671f",
+      "candidate_sha256": "32d82da61a8b9261429f50bbeee134ce4af46f122b42d7e72025cbec1ae746c7",
+      "bytes": 1526
+    },
+    {
+      "path": "docs/perf/mesh-q7-certified-experiment.md",
+      "base_blob_sha1": null,
+      "candidate_blob_sha1": "641753cd3effbe888f468d7903d0d7014b29d00f",
+      "candidate_sha256": "0dcd7d714ba06c0ae564634573fe6684278ffae654e651abfa7447eefbd955e8",
+      "bytes": 5163
+    },
+    {
+      "path": "tools/kasane_contract/run_mesh_q7.py",
+      "base_blob_sha1": null,
+      "candidate_blob_sha1": "d2950aae9256e6047e0202518aedb8a515268ce9",
+      "candidate_sha256": "37bcac3e6e68c43acf4db692975b5df8e598eb7689c3898902a5194217b7f191",
+      "bytes": 1229
+    },
+    {
+      "path": "tools/kasane_contract/run_mesh_q7_lifecycle.py",
+      "base_blob_sha1": null,
+      "candidate_blob_sha1": "552e201e48d05b962bab8e53e84ed19c92ec0cfa",
+      "candidate_sha256": "2b15684ae84a0af08db59963defb021177f6758b8a914c710be24ae6669e2518",
+      "bytes": 1244
+    },
+    {
+      "path": "tools/kasane_contract/test_mesh_q7_lifecycle.c",
+      "base_blob_sha1": null,
+      "candidate_blob_sha1": "60c5087a1c600f12f74ff91f6618efdaf0e65b46",
+      "candidate_sha256": "986c57ef56bbb5d2e6a2d5ffba314207052cf7bdb44d4376a37b81236f6a42c1",
+      "bytes": 4309
+    },
+    {
+      "path": "tools/kasane_contract/q7/baseline_q7.c",
+      "base_blob_sha1": null,
+      "candidate_blob_sha1": "937288a985e76f8de29bc30699061fdecb79d96f",
+      "candidate_sha256": "81aae10df4eb338ddd7b39da533fa1e76ac22e9adc648587b9f99b8e8049273c",
+      "bytes": 6609
+    },
+    {
+      "path": "tools/kasane_contract/q7/oracle_prepared.c",
+      "base_blob_sha1": null,
+      "candidate_blob_sha1": "6ff3b7883643c3f9f3d4055362299b8a5d14fe24",
+      "candidate_sha256": "5aac7a10e2148417b0d1700e499711a6cab67a4169311d581182ac06d25090f8",
+      "bytes": 7562
+    },
+    {
+      "path": "tools/kasane_contract/q7/test_certificate.c",
+      "base_blob_sha1": null,
+      "candidate_blob_sha1": "a01ba0c603099ede5e93f446cc3a17eb66a7c56c",
+      "candidate_sha256": "1b84a872ea901abe71ac536caf79869ac45d1ccb60983b685ae23af8848cd568",
+      "bytes": 4206
+    },
+    {
+      "path": "tools/kasane_contract/q7/test_numeric.c",
+      "base_blob_sha1": null,
+      "candidate_blob_sha1": "d4927856d405bec23ee4341ff6dfa2e408fca9fc",
+      "candidate_sha256": "f1fed16a2009c0a34e138adcce13e56dacb998b51b16b92f75dfe50950b0266e",
+      "bytes": 7915
+    }
+  ],
+  "candidate_tree_sha1": "e488ab1ed190111a7bacd380c89841c47e756cb8"
+}

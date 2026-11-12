@@ -1,0 +1,28 @@
+{
+  "scope": "One-shot fixed-mask offset-only AB; no tuning",
+  "A": {
+    "offset": 0.25,
+    "binarySHA256": "9d62fb7205ec6dd8c3b6e5ac0fbad8a7008e894b0f7cd77f2e003b0172c246c8",
+    "v32BinaryExact": true
+  },
+  "B": {
+    "offset": 0.28820947825813636,
+    "offsetHex": "0x1.272062ae104d0p-2",
+    "binarySHA256": "9f3b2e2e14217d54ff78f0597299e9841c8fa58ef57a861f92168d014406486e",
+    "coreFreezeSHA256": "8ce9d1d376db50d254bab3db6c2f1ee1da2d52a5e6d46dfeea54a6828aad5323"
+  },
+  "targetMasks": "unchanged v32 sourceObject 4-neighbor center selection",
+  "noHalfPixelShift": true,
+  "equalWeights": [
+    0.25,
+    0.25,
+    0.25,
+    0.25
+  ],
+  "currentPlanFreezeSHA256": "1cf770dbaaadc04e27711db4e88ff537d8bf8331816d7912056190ce6c40c0f3",
+  "BPreparedPlanFreezeSHA256": "9e8ee0d59f44209f3be226bfa82084542aae2b6ed76c205fdce049ca29d3bc82",
+  "planRevisionReason": "synthetic error labels and installed Blender metadata only; positions/ledger unchanged",
+  "capsUnchanged": true,
+  "outcome": "B_FIRST_FRAME_RENDER_REJECTED_0_COMPLETE_UNSCORED",
+  "formalScorerFunctionUnchanged": true
+}

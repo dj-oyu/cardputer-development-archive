@@ -1,0 +1,59 @@
+{
+  "ok": true,
+  "plan_hash": "6e50d0373ac9d6139c9502834b8a1a4d1cba59a32e0e78e5006deffa067ec1da",
+  "plan": {
+    "version": 1,
+    "broker_epoch": "62c7885ab3f34ce6b9fc6973754c85f2",
+    "session_id": "502e8f29d98b4a6586081f5876494ffa",
+    "device": "configured-cardputer",
+    "backend": "serial",
+    "job_id": "derby-v2-baseline-flash-37af4225-20261020",
+    "test": "firmware_flash",
+    "flash_operation": "flash",
+    "lkg_receipt": "7ce9285db9c68b8679a8f40c65ce37c163cebed1a66cdb083feb1e2ade8e40a4",
+    "recovery_kind": "artifact_bundle",
+    "device_id": "cardputer",
+    "build_job_id": "derby-v2-baseline-build-37af4225-20261020",
+    "backup_job_id": null,
+    "flash_principal": "ephemeral:remote_mcp",
+    "flash_bytes": 8388608,
+    "device_fingerprint": "550115278762c26269354dc573729668a6647f42c7c8ffc9eb56967b958e51e5",
+    "expected_device_sha256": "3591e6eb85ec490243dbedbd27bb49404f65bf33b6e8961d281809626e884801",
+    "backup_sha256": "7ce9285db9c68b8679a8f40c65ce37c163cebed1a66cdb083feb1e2ade8e40a4",
+    "manifest_sha256": "b7e7e8f5921b89f816cdc02166fe89987f24a96d13cd4442e0fcef26a539053b",
+    "expected_elf_sha256": "e2e49a8637d0ef0ee3c7f839c7323f76d5d230e66e474216419a7ba21f7c3a3b",
+    "expected_app_bin_sha256": "63f35801715ce8f211a7ded14c138f1e9a6a40415bc39170660f92c779743e7d",
+    "registration_sha256": "76e626de4fdef53d0aadbfcacbe5b2000da3c361f89650925e3df2626b0b93fd",
+    "fingerprint": "c95dfec93acc1cdac3374fcc6be321f0dace33f853e69bfb8f7bb2c6c735a53e",
+    "effects": [
+      "Successful flash/restore atomically selects verified recovery bytes with the successful job",
+      "Retained LKG may replace full backup input; the exact receipt is frozen at prepare time",
+      "Artifact restore targets firmware regions; full_backup restore also rewrites device data",
+      "Firmware may alter NVS/filesystem after boot; firmware recovery cannot promise data compatibility",
+      "Executes only the registered external Python/esptool 5.1.0 ROM worker; may reset the selected device",
+      "Backup reads full plaintext flash into a private local receipt; flash/restore require independent explicit operation",
+      "Writes only attested manifest regions or the exact device-bound backup; interrupted work remains diagnostic history; current uncertainty blocks execution",
+      "Flash/restore: one 100 ms normal-boot reset and up to 30 s passive IDF/ELF observation; at most one same-USB reopen after close, without another reset",
+      "Backup: ROM probe/read resets may occur; no normal-boot reset or firmware write",
+      "ROM reads: fixed 60 s + 600 s/MiB hard deadline, min 300 s/max 9660 s; 60 s without advancing progress stops; lease renewal remains explicit",
+      "Flash leaves the new firmware installed; restore is a separate explicit operation; no rollback",
+      "Shares bounded redacted progress/boot logs only with the requesting principal; no raw backup delivery"
+    ],
+    "stages": [
+      "flash_security_probe",
+      "flash_backup_or_verify",
+      "flash_write_or_restore",
+      "flash_readback_verify",
+      "flash_boot_observe",
+      "flash_close"
+    ],
+    "expected_idf": "6.0.1",
+    "target": "esp32s3",
+    "argv_template": [
+      "registered-python",
+      "fixed-flash-worker",
+      "broker-owned-operation"
+    ]
+  },
+  "approval_required": false
+}

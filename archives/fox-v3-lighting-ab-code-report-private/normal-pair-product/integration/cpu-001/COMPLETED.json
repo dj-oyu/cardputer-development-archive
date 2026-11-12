@@ -1,0 +1,237 @@
+{
+  "status": "COMPLETE",
+  "renders": 18,
+  "repeatsPerArmView": 3,
+  "flags": [
+    "-std=c11",
+    "-O2",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-Wno-misleading-indentation",
+    "-ffp-contract=off",
+    "-fexcess-precision=standard"
+  ],
+  "inputPins": {
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-eye-evaluation/actual-eyeB/native-render": "9b4962b2167f33a47240f8485f0f13cee04b2776b198acdbdfb936a9f318ecba",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-eye-evaluation/actual-eyeB/compiled/model-baseline/model.aynm": "bb6f9d2d92cf3114b552cc56ffa30a0f8caf1b8198716e0aaae7af2d38fb6af8",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-eye-evaluation/actual-eyeB/inputs/candidate-config.json": "dbc90e26ab879bbda05bc8639d664b06b3ddbe9e6a49d1d51c3f27db55822d4e",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-eye-evaluation/actual-eyeB/physical-baseline.txt": "c4111421126ce2b7f2db777fc7e446f76ad0429905be56ba593acc75ffd48bfa",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-eye-evaluation/actual-eyeB/inputs/ground-baseline.txt": "b924210e8a76f9cca85e1080d0a3623135529d7aeb299d9f01ddbaa04dc2769f",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-normal-pair-evaluation/actual-off/native-render": "f610930554dd440eb3bfda7ecfc086de7663be708ccd1fb38fd157c6484c5bb7",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-normal-pair-evaluation/actual-off/compiled/model-baseline/model.aynm": "bb6f9d2d92cf3114b552cc56ffa30a0f8caf1b8198716e0aaae7af2d38fb6af8",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-normal-pair-evaluation/actual-off/inputs/candidate-config.json": "8d428fafd5b635082dcb277ca281fec8862e97e29d2997c7d7c138a53c81af0d",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-normal-pair-evaluation/actual-off/physical-baseline.txt": "c4111421126ce2b7f2db777fc7e446f76ad0429905be56ba593acc75ffd48bfa",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-normal-pair-evaluation/actual-off/inputs/ground-baseline.txt": "b924210e8a76f9cca85e1080d0a3623135529d7aeb299d9f01ddbaa04dc2769f",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-normal-pair-evaluation/actual-on/native-render": "f610930554dd440eb3bfda7ecfc086de7663be708ccd1fb38fd157c6484c5bb7",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-normal-pair-evaluation/actual-on/compiled/model-baseline/model.aynm": "bb6f9d2d92cf3114b552cc56ffa30a0f8caf1b8198716e0aaae7af2d38fb6af8",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-normal-pair-evaluation/actual-on/inputs/candidate-config.json": "85f5c092460b7f0c686e37a3dd1f9cb36f06fc556e84d6e6b095ff2646f43210",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-normal-pair-evaluation/actual-on/physical-baseline.txt": "c4111421126ce2b7f2db777fc7e446f76ad0429905be56ba593acc75ffd48bfa",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-normal-pair-evaluation/actual-on/inputs/ground-baseline.txt": "b924210e8a76f9cca85e1080d0a3623135529d7aeb299d9f01ddbaa04dc2769f"
+  },
+  "all36RGBDepthBuffersExact": true,
+  "allCodecSnapshotsCanonicalExact": true,
+  "summaryNs": {
+    "originalEyeB": {
+      "front": {
+        "evaluateNs": {
+          "min": 8421770,
+          "median": 8517697,
+          "max": 9187778
+        },
+        "appendNs": {
+          "min": 3890942,
+          "median": 3989832,
+          "max": 4035791
+        },
+        "renderNs": {
+          "min": 8271263783,
+          "median": 8453133256,
+          "max": 8816332155
+        }
+      },
+      "oblique": {
+        "evaluateNs": {
+          "min": 9532480,
+          "median": 9660575,
+          "max": 10344334
+        },
+        "appendNs": {
+          "min": 3975511,
+          "median": 4154139,
+          "max": 4294522
+        },
+        "renderNs": {
+          "min": 7969356265,
+          "median": 8137773447,
+          "max": 8436977841
+        }
+      }
+    },
+    "codecOff": {
+      "front": {
+        "evaluateNs": {
+          "min": 8362983,
+          "median": 8772814,
+          "max": 10236191
+        },
+        "appendNs": {
+          "min": 3898403,
+          "median": 4278859,
+          "max": 4336226
+        },
+        "renderNs": {
+          "min": 8301908953,
+          "median": 8892305047,
+          "max": 9739665742
+        }
+      },
+      "oblique": {
+        "evaluateNs": {
+          "min": 9178966,
+          "median": 9260391,
+          "max": 10050178
+        },
+        "appendNs": {
+          "min": 4603019,
+          "median": 4622629,
+          "max": 6516963
+        },
+        "renderNs": {
+          "min": 8368534341,
+          "median": 8440937656,
+          "max": 8640663952
+        }
+      }
+    },
+    "codecOn": {
+      "front": {
+        "evaluateNs": {
+          "min": 8621344,
+          "median": 8624949,
+          "max": 11694782
+        },
+        "appendNs": {
+          "min": 3989982,
+          "median": 4780788,
+          "max": 6237354
+        },
+        "renderNs": {
+          "min": 8477594577,
+          "median": 8677777599,
+          "max": 9527190104
+        }
+      },
+      "oblique": {
+        "evaluateNs": {
+          "min": 8669197,
+          "median": 9206638,
+          "max": 13156464
+        },
+        "appendNs": {
+          "min": 3860556,
+          "median": 4020619,
+          "max": 4563699
+        },
+        "renderNs": {
+          "min": 8054599809,
+          "median": 8166772332,
+          "max": 8387000605
+        }
+      }
+    }
+  },
+  "order": [
+    {
+      "rep": 0,
+      "view": "front",
+      "arm": "originalEyeB"
+    },
+    {
+      "rep": 0,
+      "view": "front",
+      "arm": "codecOff"
+    },
+    {
+      "rep": 0,
+      "view": "front",
+      "arm": "codecOn"
+    },
+    {
+      "rep": 0,
+      "view": "oblique",
+      "arm": "originalEyeB"
+    },
+    {
+      "rep": 0,
+      "view": "oblique",
+      "arm": "codecOff"
+    },
+    {
+      "rep": 0,
+      "view": "oblique",
+      "arm": "codecOn"
+    },
+    {
+      "rep": 1,
+      "view": "front",
+      "arm": "codecOff"
+    },
+    {
+      "rep": 1,
+      "view": "front",
+      "arm": "codecOn"
+    },
+    {
+      "rep": 1,
+      "view": "front",
+      "arm": "originalEyeB"
+    },
+    {
+      "rep": 1,
+      "view": "oblique",
+      "arm": "codecOff"
+    },
+    {
+      "rep": 1,
+      "view": "oblique",
+      "arm": "codecOn"
+    },
+    {
+      "rep": 1,
+      "view": "oblique",
+      "arm": "originalEyeB"
+    },
+    {
+      "rep": 2,
+      "view": "front",
+      "arm": "codecOn"
+    },
+    {
+      "rep": 2,
+      "view": "front",
+      "arm": "originalEyeB"
+    },
+    {
+      "rep": 2,
+      "view": "front",
+      "arm": "codecOff"
+    },
+    {
+      "rep": 2,
+      "view": "oblique",
+      "arm": "codecOn"
+    },
+    {
+      "rep": 2,
+      "view": "oblique",
+      "arm": "originalEyeB"
+    },
+    {
+      "rep": 2,
+      "view": "oblique",
+      "arm": "codecOff"
+    }
+  ],
+  "scope": "Sequential host timing after owner heavy-finished confirmation; native private dump IO is outside evaluation/append/render timers; not device speed"
+}

@@ -1,0 +1,131 @@
+{
+  "geometryOnly": true,
+  "views": {
+    "front": {
+      "targets": 2385,
+      "coveredTargets": 1919,
+      "nohitTargets": 466,
+      "centerBboxVisits": 56128,
+      "centerReservedWork": 2750272,
+      "neighborComparisonWork": 129600,
+      "arms": [
+        {
+          "dx": -0.28820947825813636,
+          "dy": -0.28820947825813636,
+          "bboxVisits": 56064,
+          "nonemptyBandBoxes": 2257,
+          "targetBBoxVisits": 25851,
+          "conservativeWork": 1324327
+        },
+        {
+          "dx": 0.28820947825813636,
+          "dy": -0.28820947825813636,
+          "bboxVisits": 56002,
+          "nonemptyBandBoxes": 2242,
+          "targetBBoxVisits": 25990,
+          "conservativeWork": 1331076
+        },
+        {
+          "dx": -0.28820947825813636,
+          "dy": 0.28820947825813636,
+          "bboxVisits": 56124,
+          "nonemptyBandBoxes": 2238,
+          "targetBBoxVisits": 25978,
+          "conservativeWork": 1330610
+        },
+        {
+          "dx": 0.28820947825813636,
+          "dy": 0.28820947825813636,
+          "bboxVisits": 56040,
+          "nonemptyBandBoxes": 2224,
+          "targetBBoxVisits": 26094,
+          "conservativeWork": 1336210
+        }
+      ],
+      "cumulativeReservedWork": 8202095,
+      "workLimit": 8000000,
+      "workFits": false,
+      "upperExtraShadeCalls": 9540,
+      "upperExtraDirectRays": 457920,
+      "upperExtraTransportRays": 9921600,
+      "centerActualDirect": [
+        246781,
+        14440848,
+        4461593
+      ],
+      "centerActualTransport": [
+        3261596,
+        225860459,
+        80006908
+      ],
+      "centerShadeUpdates": 9392
+    },
+    "oblique": {
+      "targets": 2391,
+      "coveredTargets": 1851,
+      "nohitTargets": 540,
+      "centerBboxVisits": 53914,
+      "centerReservedWork": 2641786,
+      "neighborComparisonWork": 129600,
+      "arms": [
+        {
+          "dx": -0.28820947825813636,
+          "dy": -0.28820947825813636,
+          "bboxVisits": 54477,
+          "nonemptyBandBoxes": 2285,
+          "targetBBoxVisits": 23952,
+          "conservativeWork": 1229689
+        },
+        {
+          "dx": 0.28820947825813636,
+          "dy": -0.28820947825813636,
+          "bboxVisits": 54585,
+          "nonemptyBandBoxes": 2278,
+          "targetBBoxVisits": 23934,
+          "conservativeWork": 1228915
+        },
+        {
+          "dx": -0.28820947825813636,
+          "dy": 0.28820947825813636,
+          "bboxVisits": 54097,
+          "nonemptyBandBoxes": 2270,
+          "targetBBoxVisits": 23908,
+          "conservativeWork": 1227153
+        },
+        {
+          "dx": 0.28820947825813636,
+          "dy": 0.28820947825813636,
+          "bboxVisits": 54235,
+          "nonemptyBandBoxes": 2264,
+          "targetBBoxVisits": 23855,
+          "conservativeWork": 1224694
+        }
+      ],
+      "cumulativeReservedWork": 7681837,
+      "workLimit": 8000000,
+      "workFits": true,
+      "upperExtraShadeCalls": 9564,
+      "upperExtraDirectRays": 459072,
+      "upperExtraTransportRays": 9946560,
+      "centerActualDirect": [
+        246021,
+        13794182,
+        4318488
+      ],
+      "centerActualTransport": [
+        3280222,
+        215479559,
+        77936196
+      ],
+      "centerShadeUpdates": 9636
+    }
+  },
+  "inputPins": {
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-lid-transport-point-audit/verified-winners-v2/front-baseline.json": "a32847182478841121423a31588cf514bc2581c29a2bc9e618679e02cd853b1b",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-lid-evaluation/canonical-proof-lid8/private-snapshots/front-baseline.canonical": "67808269a5ad19c79010f0522cd83fba5e7577a27565042186450663856d0871",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-lid-evaluation/actual-lid8-v2/native-front-baseline.json": "5f53a64357d000c324672fb7a45e120444426fbcf7505d7419617dad02734f1f",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-lid-transport-point-audit/verified-winners-v2/oblique-baseline.json": "e39244cab2ff1c0e119f6fa13a8f49509d5dd8f482db453ea8e6aee7fe61e8cf",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-lid-evaluation/canonical-proof-lid8/private-snapshots/oblique-baseline.canonical": "90abcd14a44ffbb9e4dd37aa46781d041a55fba97918ae43d89e964610092612",
+    "/workspace/scratch/6d8dcdbcdc54/fox-v3-lid-evaluation/actual-lid8-v2/native-oblique-baseline.json": "f7a788fcd0f91822e34b805d5267531ffa40afd7344ce961111aff3eb66481c8"
+  }
+}

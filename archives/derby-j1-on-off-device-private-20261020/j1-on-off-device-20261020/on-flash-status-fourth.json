@@ -1,0 +1,19 @@
+{
+  "ok": true,
+  "id": "derby-j1-on-flash-b561aea1-20261020",
+  "plan_hash": "139671fed38eb6eeb52e315fbb66cacacb1eadc02db118dab925197e5db06096",
+  "state": "running",
+  "stage": "flash_readback_verify",
+  "result": null,
+  "diagnostic": null,
+  "reviewed": 0,
+  "created": "2026-10-20 10:42:00",
+  "finished": null,
+  "review": {
+    "historical_failure": false,
+    "uncertainty_resolved": false,
+    "failure_result_preserved": false,
+    "required_action": "consult_current_resource_status",
+    "physical_device_state": "not_inferred_from_job_history"
+  }
+}

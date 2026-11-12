@@ -1,0 +1,21 @@
+{
+  "status": "FROZEN_PREACTUAL_COMPARISON",
+  "actualFrames": 0,
+  "files": {
+    "comparison/BASELINE_PINS.json": "462eda66088195199705cc26b8bd2cb1606439d000e50a242817f532fef71663",
+    "comparison/COMPARISON_TESTS.json": "b74298be6a1adb89f641710ed64fb212a32fc79f36af882dfb50b1e508a1caf2",
+    "comparison/EXECUTION.md": "7404a0c50546b2d43e8ea86fcb76921b4571f18c6613c7f45cbb7ce043809be7",
+    "comparison/PLAN.md": "5f4ea0a759aede747e8546b6ba25bde7eed4e8ffaddd4bdcea08b02354d24d76",
+    "comparison/REPORT_CONTRACT.json": "43c5c124e15f9615c01b998600e0ea6c56708db500b084d5fb589ae089cf23f7",
+    "comparison/audit_fixed42.py": "04ced756f45aceb51726bc105abf857f07d8104bb7c3cf3a72a9d06c7565ca08",
+    "comparison/preexecution-tests.log": "a734ddb901253defe3a7d2b512dc12e9724ab803cfad4027141166e796aac24c",
+    "comparison/prepare_contract.py": "914bd2ac705b0d7909743c991508a96d91783dd83bccee7989c2142dc89aec3c",
+    "comparison/report_contract.py": "5ef391500bd448055ede7b326640b34ff5b0e399c94a0fbde8e2f270852c8084",
+    "comparison/run_fixed40.py": "095aa46e308d3f966711d853ac997054fc9cbfe94cf2072c8fa3f76f41153a62",
+    "comparison/test_contract.py": "b00769a27ca341649269cfb0802652018411e4620eda8c3995a327256321aafa",
+    "comparison/test_indexed_contract.py": "0318b7151fd0dc7ae6c962c86d42e7f6b99fda2744a84c2933166a05b9e82ad8",
+    "comparison/test_predeclared_cases.py": "ceb2927cb494fd3b0204e60a1ccd5d04e304786b21025de4cd8d368f2dbd5ac3",
+    "comparison/test_schedule.py": "17b222233b70fff46b69d04c13ec50da7bcf8d13fa626aa22d3fcd7d4e93b33f"
+  },
+  "requiresFinalIndependentReviewAndParentGO": true
+}

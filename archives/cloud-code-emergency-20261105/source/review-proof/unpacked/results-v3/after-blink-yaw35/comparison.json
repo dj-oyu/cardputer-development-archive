@@ -1,0 +1,30 @@
+{
+  "revision": "after",
+  "pose": "blink",
+  "yaw": 35,
+  "sourceToExportDifferentPixels": 0,
+  "nativeDifferentPixels": 178,
+  "interiorWrongPartPixels": 115,
+  "wrongPartByExpected": {
+    "eye_L": 15,
+    "eye_R": 14,
+    "head": 0,
+    "lid_L": 0,
+    "lid_R": 0,
+    "lower_jaw": 86,
+    "mouth_cavity": 0,
+    "upper_muzzle": 0
+  },
+  "coldBytes": 14056,
+  "instanceArenaBytes64bit": 21484,
+  "frameSegments": 730,
+  "rasterCost": 19000,
+  "compileWallMs": 69.23247500003527,
+  "compilerInternalMs": 24.854734,
+  "nativeHostProcessWallMsIncludingDiagnosticPasses": 36.61378699985107,
+  "nativeHostMaxRssKiB": 9088,
+  "sourceVertices": 233,
+  "partitionVertices": 342,
+  "sourceTriangles": 434,
+  "output": "results-v3/after-blink-yaw35"
+}

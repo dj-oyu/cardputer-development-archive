@@ -1,0 +1,52 @@
+{
+  "status": "PASS",
+  "inputPins": 87,
+  "frameArmChecksIncludingWarmups": 6400,
+  "measuredFrameArmChecks": 5760,
+  "scenarios": {
+    "manifest_order/cold_per_frame": {
+      "cacheNsPerProfile": 440.11716975308644,
+      "gatherSpeedup": 10.661473162137666,
+      "cacheVsRaw": 3.8960076232242886,
+      "actualCounts": [
+        5078554,
+        105446,
+        0
+      ]
+    },
+    "manifest_order/warm_across_frames": {
+      "cacheNsPerProfile": 405.0018927469136,
+      "gatherSpeedup": 11.28623750354253,
+      "cacheVsRaw": 3.926645395541655,
+      "actualCounts": [
+        5078559,
+        105441,
+        0
+      ]
+    },
+    "alternate_off_on/cold_per_frame": {
+      "cacheNsPerProfile": 407.8245563271605,
+      "gatherSpeedup": 10.868979848048577,
+      "cacheVsRaw": 3.7235899408436435,
+      "actualCounts": [
+        5078554,
+        105446,
+        0
+      ]
+    },
+    "alternate_off_on/warm_across_frames": {
+      "cacheNsPerProfile": 384.6859104938272,
+      "gatherSpeedup": 11.245311119818087,
+      "cacheVsRaw": 3.8384055202744185,
+      "actualCounts": [
+        5078556,
+        105444,
+        0
+      ]
+    }
+  },
+  "objectCostsVerified": true,
+  "compiledCompressedDataMatchesFrozenBlob": true,
+  "compiledRawDataMatchesFrozenTable": true,
+  "newTimingRuns": 0
+}

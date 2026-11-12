@@ -1,0 +1,18 @@
+# Ordered profile benchmark, frozen before candidate results
+
+Baseline: original raw fixed-u16 profile and four-independent-fetch compressed profile from fox-v3-lossless-profile-lut/profile. Candidate arms are implementation-frozen gather, and optional bounded one/four-block cache arms. Never tune to results or discard a slow arm. Use unchanged fixed profile float math and all 87 fixture pins.
+
+Primary input: all 40 retained INPUTS.json frames in listed order, each 240 by 135, full row-major pixel stream from little-endian float64 HDR cast once to float32. No sampling, sorting, pixel shuffling, source-image modification, new rendering, or threshold changes. Reset explicit decoder cache immediately before EVERY frame, including warmups and repeats. Retained reverse-named frames are not reversed again.
+
+Secondary order: interleave manifest frame indices [0,20,1,21,...,19,39], preserving each frame's pixel order and resetting cache per frame. This tests alternating off/on cases rather than a fitted favorable sequence. Primary and alternate are distinct results, never pooled.
+
+Cold worst-case diagnostic: first 8192 seeded_log_hdr synthetic inputs, reset decoder cache before EVERY pixel. This is not a representative image benchmark and is never substituted for full-frame results. For cache arms count cold misses and bound decode/eviction work; exact whole-corpus correctness remains separate.
+
+Timing: same resident input arrays, same generic checksum loop across every arm; one full scenario warmup per arm, then nine trials. Rotate starting arm by trial index; reverse order on odd trials. Every arm runs sequentially, not concurrently. One pass per frame per trial; report each frame elapsed time and total sum, median total and per-frame medians, ratios to raw and baseline, and all raw observations. Reset/setup is timed separately and excluded from pixel-loop time; report included setup total as well. Cold-per-pixel scenario includes resets inside timed loop by definition. Do not claim device or renderer performance from host measurements. Record CPU, compiler flags, binary/source hashes, load and process snapshots. Coordinate exclusive CPU-test interval with implementation/review workers; do not knowingly run alongside CPU-heavy tasks.
+
+Counts: separate non-timed pass for each frame/arm with cache reset; save exact hits, misses, blocks decoded, bytes/symbols decoded if exposed, eviction totals, and maximum working set. Do not estimate measured hit/miss counts by fitting runtime. Report actual cache struct bytes, writable static bytes, stack usage, read-only data and text per arm; include reset/init cost and worst-case bounds.
+
+Correctness gate: implementation/reviewer must establish full float-bit, status and RGB565 parity on all 460224 synthetic and 1296000 retained pixels; benchmark checksums supplement but never replace it. Fatal on any benchmark checksum divergence. No timing while correctness/sanitizer processes run. Save only code, plan, aggregate metadata/results, never raw input arrays or embedded profile data.
+
+## Pre-result arm clarification
+Implementation freeze is b11a6c612c2b519efe52041faef74c626e7b7122f46ca4c97767e0340bd8f087: actual arms fast_bits, gather, gather_fast_bits are stateless. No persistent caches are implemented, so actual reset/setup is zero/no-op. Cold input case remains seeded_log_hdr first 8192 with no cross-call state. Add non-timed exact LRU1/LRU4 locality simulation using actual ordered four block references per pixel; reset simulated LRU per frame, report hit/miss separately from gather unique-per-pixel counts. Cache payload model is 384 bytes per block plus explicit metadata model, not measured implementation RAM or speed.

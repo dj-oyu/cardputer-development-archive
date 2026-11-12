@@ -1,0 +1,685 @@
+{
+  "objects": [
+    {
+      "name": "Front review camera",
+      "type": "CAMERA",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Oblique review camera",
+      "type": "CAMERA",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Studio ground",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Key \u2022 large softbox",
+      "type": "LIGHT",
+      "hideRender": false,
+      "isShadowCatcher": true
+    },
+    {
+      "name": "Fill",
+      "type": "LIGHT",
+      "hideRender": false,
+      "isShadowCatcher": true
+    },
+    {
+      "name": "Rim",
+      "type": "LIGHT",
+      "hideRender": false,
+      "isShadowCatcher": true
+    },
+    {
+      "name": "Portrait camera",
+      "type": "CAMERA",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Torso \u2022 standing quadruped.001",
+      "type": "MESH",
+      "hideRender": true,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Haunch mass.001",
+      "type": "MESH",
+      "hideRender": true,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Shoulders.001",
+      "type": "MESH",
+      "hideRender": true,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Neck \u2022 integrated head support.001",
+      "type": "MESH",
+      "hideRender": true,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Foreleg -1.001",
+      "type": "MESH",
+      "hideRender": true,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Hindleg -1.001",
+      "type": "MESH",
+      "hideRender": true,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Foreleg 1.001",
+      "type": "MESH",
+      "hideRender": true,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Hindleg 1.001",
+      "type": "MESH",
+      "hideRender": true,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Head \u2022 fox cranial volume.001",
+      "type": "MESH",
+      "hideRender": true,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Forehead.001",
+      "type": "MESH",
+      "hideRender": true,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Cheek volume -1.001",
+      "type": "MESH",
+      "hideRender": true,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Cheek volume 1.001",
+      "type": "MESH",
+      "hideRender": true,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Ear warm base -1.001",
+      "type": "MESH",
+      "hideRender": true,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Ear warm base 1.001",
+      "type": "MESH",
+      "hideRender": true,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Anatomy \u2022 unified live sculpt surface",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Front cocoa sock -1",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Front paw -1",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Front toe crease",
+      "type": "CURVE",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Front toe crease.001",
+      "type": "CURVE",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Front toe crease.002",
+      "type": "CURVE",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Rear cocoa sock -1",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Rear paw -1",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Rear toe crease",
+      "type": "CURVE",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Rear toe crease.001",
+      "type": "CURVE",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Rear toe crease.002",
+      "type": "CURVE",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Front cocoa sock 1",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Front paw 1",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Front toe crease.003",
+      "type": "CURVE",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Front toe crease.004",
+      "type": "CURVE",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Front toe crease.005",
+      "type": "CURVE",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Rear cocoa sock 1",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Rear paw 1",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Rear toe crease.003",
+      "type": "CURVE",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Rear toe crease.004",
+      "type": "CURVE",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Rear toe crease.005",
+      "type": "CURVE",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Cream throat bib",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Cream swept cheek -1",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Cheek ruff lock -1 0",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Cheek ruff lock -1 1",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Cheek ruff lock -1 2",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Cheek ruff lock -1 3",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Cream swept cheek 1",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Cheek ruff lock 1 0",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Cheek ruff lock 1 1",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Cheek ruff lock 1 2",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Cheek ruff lock 1 3",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Muzzle \u2022 projecting orange bridge",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Muzzle \u2022 ivory chin",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Muzzle pad -1",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Muzzle pad 1",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Nose \u2022 soft triangular leather",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Philtrum",
+      "type": "CURVE",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Smile -1",
+      "type": "CURVE",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Smile 1",
+      "type": "CURVE",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Eye socket -1",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Eye white -1",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Amber iris -1",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Pupil -1",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Eye glint -1",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Eye glint small -1",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Upper eyelid -1",
+      "type": "CURVE",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Expressive brow -1",
+      "type": "CURVE",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Eye socket 1",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Eye white 1",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Amber iris 1",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Pupil 1",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Eye glint 1",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Eye glint small 1",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Upper eyelid 1",
+      "type": "CURVE",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Expressive brow 1",
+      "type": "CURVE",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Ear \u2022 solid rim -1",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Ear \u2022 recessed coral concha -1",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Inner ear ivory tuft -1 0",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Inner ear ivory tuft -1 1",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Inner ear ivory tuft -1 2",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Ear \u2022 solid rim 1",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Ear \u2022 recessed coral concha 1",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Inner ear ivory tuft 1 0",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Inner ear ivory tuft 1 1",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Inner ear ivory tuft 1 2",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Crown lock 0",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Crown lock 1",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Crown lock 2",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Crown lock 3",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Crown lock 4",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Tail \u2022 sweeping continuous silhouette",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Tail \u2022 broad ivory tip",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Tail silhouette tuft 0",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Tail silhouette tuft 1",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Tail silhouette tuft 2",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Tail silhouette tuft 3",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Tail silhouette tuft 4",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Tail silhouette tuft 5",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Tail silhouette tuft 6",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Tail tip sweep 0",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Tail tip sweep 1",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Tail tip sweep 2",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Tail tip sweep 3",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Tail tip sweep 4",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Tail tip sweep 5",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Chest ruff -1 0",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Chest ruff -1 1",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Chest ruff -1 2",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Chest ruff 1 0",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Chest ruff 1 1",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    },
+    {
+      "name": "Chest ruff 1 2",
+      "type": "MESH",
+      "hideRender": false,
+      "isShadowCatcher": false
+    }
+  ],
+  "filmTransparent": false,
+  "compositorNodes": false,
+  "geometryShadowCatchers": []
+}

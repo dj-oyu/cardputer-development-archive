@@ -1,0 +1,389 @@
+{
+  "snapshot_records_mapping_checked": 54,
+  "source_ayfq_front_normal_code_differences": 0,
+  "sample_rows": 9540,
+  "hit_samples": 7678,
+  "baseline_bitwise_mismatch_components": 0,
+  "first_mismatches": [],
+  "mapping": [
+    {
+      "node": 1,
+      "part": 0,
+      "materialId": "material/0",
+      "vertices": 32,
+      "triangles": 25
+    },
+    {
+      "node": 2,
+      "part": 1,
+      "materialId": "material/0",
+      "vertices": 32,
+      "triangles": 24
+    },
+    {
+      "node": 3,
+      "part": 2,
+      "materialId": "material/0",
+      "vertices": 29,
+      "triangles": 23
+    },
+    {
+      "node": 4,
+      "part": 3,
+      "materialId": "material/1",
+      "vertices": 21,
+      "triangles": 34
+    },
+    {
+      "node": 5,
+      "part": 4,
+      "materialId": "material/2",
+      "vertices": 24,
+      "triangles": 30
+    },
+    {
+      "node": 6,
+      "part": 5,
+      "materialId": "material/1",
+      "vertices": 21,
+      "triangles": 34
+    },
+    {
+      "node": 7,
+      "part": 6,
+      "materialId": "material/2",
+      "vertices": 21,
+      "triangles": 24
+    },
+    {
+      "node": 8,
+      "part": 7,
+      "materialId": "material/1",
+      "vertices": 21,
+      "triangles": 34
+    },
+    {
+      "node": 9,
+      "part": 8,
+      "materialId": "material/2",
+      "vertices": 23,
+      "triangles": 28
+    },
+    {
+      "node": 10,
+      "part": 9,
+      "materialId": "material/1",
+      "vertices": 21,
+      "triangles": 34
+    },
+    {
+      "node": 11,
+      "part": 10,
+      "materialId": "material/2",
+      "vertices": 20,
+      "triangles": 22
+    },
+    {
+      "node": 12,
+      "part": 11,
+      "materialId": "material/3",
+      "vertices": 23,
+      "triangles": 38
+    },
+    {
+      "node": 13,
+      "part": 12,
+      "materialId": "material/0",
+      "vertices": 28,
+      "triangles": 40
+    },
+    {
+      "node": 14,
+      "part": 13,
+      "materialId": "material/3",
+      "vertices": 11,
+      "triangles": 18
+    },
+    {
+      "node": 15,
+      "part": 14,
+      "materialId": "material/0",
+      "vertices": 28,
+      "triangles": 40
+    },
+    {
+      "node": 16,
+      "part": 15,
+      "materialId": "material/4",
+      "vertices": 12,
+      "triangles": 20
+    },
+    {
+      "node": 17,
+      "part": 16,
+      "materialId": "material/3",
+      "vertices": 32,
+      "triangles": 34
+    },
+    {
+      "node": 18,
+      "part": 17,
+      "materialId": "material/3",
+      "vertices": 32,
+      "triangles": 29
+    },
+    {
+      "node": 19,
+      "part": 18,
+      "materialId": "material/3",
+      "vertices": 32,
+      "triangles": 20
+    },
+    {
+      "node": 20,
+      "part": 19,
+      "materialId": "material/3",
+      "vertices": 32,
+      "triangles": 24
+    },
+    {
+      "node": 21,
+      "part": 20,
+      "materialId": "material/3",
+      "vertices": 32,
+      "triangles": 30
+    },
+    {
+      "node": 22,
+      "part": 21,
+      "materialId": "material/3",
+      "vertices": 8,
+      "triangles": 5
+    },
+    {
+      "node": 23,
+      "part": 22,
+      "materialId": "material/2",
+      "vertices": 7,
+      "triangles": 10
+    },
+    {
+      "node": 24,
+      "part": 23,
+      "materialId": "material/1",
+      "vertices": 30,
+      "triangles": 46
+    },
+    {
+      "node": 25,
+      "part": 24,
+      "materialId": "material/1",
+      "vertices": 24,
+      "triangles": 40
+    },
+    {
+      "node": 26,
+      "part": 25,
+      "materialId": "material/0",
+      "vertices": 9,
+      "triangles": 14
+    },
+    {
+      "node": 27,
+      "part": 26,
+      "materialId": "material/5",
+      "vertices": 18,
+      "triangles": 32
+    },
+    {
+      "node": 28,
+      "part": 27,
+      "materialId": "material/6",
+      "vertices": 14,
+      "triangles": 24
+    },
+    {
+      "node": 29,
+      "part": 28,
+      "materialId": "material/2",
+      "vertices": 14,
+      "triangles": 24
+    },
+    {
+      "node": 30,
+      "part": 29,
+      "materialId": "material/5",
+      "vertices": 7,
+      "triangles": 5
+    },
+    {
+      "node": 31,
+      "part": 30,
+      "materialId": "material/1",
+      "vertices": 32,
+      "triangles": 50
+    },
+    {
+      "node": 32,
+      "part": 31,
+      "materialId": "material/1",
+      "vertices": 30,
+      "triangles": 40
+    },
+    {
+      "node": 33,
+      "part": 32,
+      "materialId": "material/0",
+      "vertices": 9,
+      "triangles": 14
+    },
+    {
+      "node": 34,
+      "part": 33,
+      "materialId": "material/5",
+      "vertices": 18,
+      "triangles": 32
+    },
+    {
+      "node": 35,
+      "part": 34,
+      "materialId": "material/6",
+      "vertices": 14,
+      "triangles": 24
+    },
+    {
+      "node": 36,
+      "part": 35,
+      "materialId": "material/2",
+      "vertices": 14,
+      "triangles": 24
+    },
+    {
+      "node": 37,
+      "part": 36,
+      "materialId": "material/5",
+      "vertices": 7,
+      "triangles": 5
+    },
+    {
+      "node": 38,
+      "part": 37,
+      "materialId": "material/1",
+      "vertices": 32,
+      "triangles": 50
+    },
+    {
+      "node": 39,
+      "part": 38,
+      "materialId": "material/1",
+      "vertices": 30,
+      "triangles": 40
+    },
+    {
+      "node": 40,
+      "part": 39,
+      "materialId": "material/1",
+      "vertices": 13,
+      "triangles": 22
+    },
+    {
+      "node": 41,
+      "part": 40,
+      "materialId": "material/7",
+      "vertices": 9,
+      "triangles": 14
+    },
+    {
+      "node": 42,
+      "part": 41,
+      "materialId": "material/3",
+      "vertices": 18,
+      "triangles": 24
+    },
+    {
+      "node": 43,
+      "part": 42,
+      "materialId": "material/1",
+      "vertices": 13,
+      "triangles": 22
+    },
+    {
+      "node": 44,
+      "part": 43,
+      "materialId": "material/7",
+      "vertices": 9,
+      "triangles": 14
+    },
+    {
+      "node": 45,
+      "part": 44,
+      "materialId": "material/3",
+      "vertices": 18,
+      "triangles": 24
+    },
+    {
+      "node": 46,
+      "part": 45,
+      "materialId": "material/4",
+      "vertices": 30,
+      "triangles": 40
+    },
+    {
+      "node": 47,
+      "part": 46,
+      "materialId": "material/0",
+      "vertices": 31,
+      "triangles": 58
+    },
+    {
+      "node": 48,
+      "part": 47,
+      "materialId": "material/3",
+      "vertices": 18,
+      "triangles": 32
+    },
+    {
+      "node": 49,
+      "part": 48,
+      "materialId": "material/0",
+      "vertices": 30,
+      "triangles": 43
+    },
+    {
+      "node": 50,
+      "part": 49,
+      "materialId": "material/0",
+      "vertices": 9,
+      "triangles": 13
+    },
+    {
+      "node": 51,
+      "part": 50,
+      "materialId": "material/3",
+      "vertices": 31,
+      "triangles": 44
+    },
+    {
+      "node": 52,
+      "part": 51,
+      "materialId": "material/3",
+      "vertices": 32,
+      "triangles": 46
+    },
+    {
+      "node": 53,
+      "part": 52,
+      "materialId": "material/3",
+      "vertices": 30,
+      "triangles": 44
+    },
+    {
+      "node": 54,
+      "part": 53,
+      "materialId": "material/3",
+      "vertices": 28,
+      "triangles": 40
+    }
+  ],
+  "weight_fallbacks": 0
+}

@@ -1,0 +1,19 @@
+{
+  "include": [
+    "PLAN.md",
+    "census.py",
+    "source_rays.py",
+    "summarize_correspondence.py",
+    "census.json",
+    "correspondence-summary.json",
+    "REPORT.md",
+    "artifact-hashes.json",
+    "independent-review.json"
+  ],
+  "exclude": [
+    "source-rays-private.json",
+    "source-rays.log",
+    "initial-outside-label-bug"
+  ],
+  "scope": "code and aggregate report only; all geometry/source images/private raw intersections excluded"
+}

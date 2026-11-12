@@ -1,0 +1,118 @@
+{
+  "status": "PASS_INDEPENDENT_CORRECTNESS_AND_BENCHMARK_REVIEW",
+  "profileSamplesPerArm": 1756224,
+  "profileArms": [
+    "fast_bits",
+    "gather",
+    "gather_fast_bits"
+  ],
+  "directRetainedReplayPixels": 1296000,
+  "retainedFrames": 40,
+  "exactUint16Values": 823875,
+  "decoderTruncations": 425560,
+  "gatherExhaustiveGroupsPerBitMode": 274625,
+  "gatherRandomGroupsPerBitMode": 20000,
+  "gatherMutationRestorePerBitMode": 10000,
+  "sanitizers": "ASan+UBSan PASS; detect_leaks=0",
+  "persistentCacheImplemented": false,
+  "mutableGlobals": false,
+  "inputPinsVerified": 87,
+  "sourcePins": {
+    "fox-v3-lossless-profile-fast-access/implementation/candidate_profile.c": "b15db8fcf931d043d0cefa9fe726d74893f56bdddcb5c302e3aed4e3bde3fc73",
+    "fox-v3-lossless-profile-fast-access/implementation/block_decoder.c": "384123bed89fab69bffd5eef1670366f4dbe4c02d57f731ff1cb0c9efba31885"
+  },
+  "logs": {
+    "gather_failure.log": "3ffdff57e4bce0160220f88df5f5d196333f7c5ca7f8d3bcc5180df0ed600837",
+    "profile_both.log": "ba09479aa2d9b6fe5cf0fa0364fff5b7df81f95e28823eecd4e0c580e2bcb103",
+    "fast.log": "d062858bde64c1fc6bd684b8f450679373b8686a466414a4f61d9291553f2fe6",
+    "profile_gather.log": "ba09479aa2d9b6fe5cf0fa0364fff5b7df81f95e28823eecd4e0c580e2bcb103",
+    "direct_f64.log": "d2c9c9ce128f9080e258eb25d1cd0d56d2a2fdfe1512b886caf5f6469a05ff95",
+    "profile_fast.log": "ba09479aa2d9b6fe5cf0fa0364fff5b7df81f95e28823eecd4e0c580e2bcb103",
+    "gather_base.log": "bfd603cdfce2b2bf5e2645dff6abce8ff1eebae48776dbdb84f94663933d3e49",
+    "gather_fast.log": "bfd603cdfce2b2bf5e2645dff6abce8ff1eebae48776dbdb84f94663933d3e49",
+    "gather_san.log": "bfd603cdfce2b2bf5e2645dff6abce8ff1eebae48776dbdb84f94663933d3e49",
+    "fast_san.log": "d062858bde64c1fc6bd684b8f450679373b8686a466414a4f61d9291553f2fe6"
+  },
+  "benchmarkRecomputed": {
+    "manifest_order": {
+      "nsPerProfile": {
+        "raw": 99.32816512345678,
+        "baseline": 9597.798319444444,
+        "fast_bits": 11182.131999228395,
+        "gather": 4292.205675154321,
+        "gather_fast_bits": 5083.290739969136
+      },
+      "overRaw": {
+        "raw": 1.0,
+        "baseline": 96.6271581430621,
+        "fast_bits": 112.57765594813837,
+        "gather": 43.21237254125716,
+        "gather_fast_bits": 51.176730524026304
+      },
+      "overBaseline": {
+        "raw": 0.010349057337683907,
+        "baseline": 1.0,
+        "fast_bits": 1.1650726163493357,
+        "gather": 0.44720732112682793,
+        "gather_fast_bits": 0.5296309185483463
+      },
+      "all9PairedTrialsAndInputHashes": true
+    },
+    "alternate_off_on": {
+      "nsPerProfile": {
+        "raw": 103.64898302469136,
+        "baseline": 9498.079206018518,
+        "fast_bits": 11041.410238425926,
+        "gather": 4349.36513117284,
+        "gather_fast_bits": 4961.117233024691
+      },
+      "overRaw": {
+        "raw": 1.0,
+        "baseline": 91.63697441928473,
+        "fast_bits": 106.52695198944336,
+        "gather": 41.96244868255707,
+        "gather_fast_bits": 47.8646011591146
+      },
+      "overBaseline": {
+        "raw": 0.01091262567688565,
+        "baseline": 1.0,
+        "fast_bits": 1.1624887515603646,
+        "gather": 0.4579204949582687,
+        "gather_fast_bits": 0.5223284756228447
+      },
+      "all9PairedTrialsAndInputHashes": true
+    },
+    "cold_seeded_log_hdr": {
+      "nsPerProfile": {
+        "raw": 221.1717529296875,
+        "baseline": 2890.3525390625,
+        "fast_bits": 3973.8260498046875,
+        "gather": 1544.02880859375,
+        "gather_fast_bits": 2092.74755859375
+      },
+      "overRaw": {
+        "raw": 1.0,
+        "baseline": 13.068362034375019,
+        "fast_bits": 17.967149950961428,
+        "gather": 6.981130221835384,
+        "gather_fast_bits": 9.462092382380554
+      },
+      "overBaseline": {
+        "raw": 0.07652068387527068,
+        "baseline": 1.0,
+        "fast_bits": 1.3748586015371043,
+        "gather": 0.5342008587971636,
+        "gather_fast_bits": 0.7240457799907491
+      },
+      "all9PairedTrialsAndInputHashes": true
+    }
+  },
+  "costsRecomputed": true,
+  "benchmarkPins": {
+    "BENCHMARK.json": "f2f47aeb03314b0d345e03683c916cf7946ebdcf6eb28ef38e3f1bd50ca5d4b5",
+    "COSTS.json": "dfc367ceecf8219606acb8444961523dde44d1427c6eedf36495c671774e94d8",
+    "LOCALITY.json": "3a38963ee1429072a0f1932e0f4d2036aa2cd9b7b2222cd94aae8f698f69755c",
+    "PLAN.md": "a408c9673c07cba4a1fed6bd39b0ea50410b5749a736ebe850fd0f3fe2b6608c",
+    "BUILD.json": "9166ad761c0a29d29c793cff5692c8c8d01061f752f8884e5efe4299e0afd3d7"
+  }
+}

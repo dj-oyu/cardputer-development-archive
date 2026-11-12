@@ -1,0 +1,306 @@
+{
+  "status": "ALL12_BYTEEXACT_AND_PINS_PASS",
+  "observerIO": "ON per-sample unbuffered JSON fprintf included in native render and wall time; OFF has no such I/O. Not a pure rendering/kernel or device comparison.",
+  "schedule": "repeat then front/oblique then off/on, 3 repeats, serial",
+  "rows": [
+    {
+      "repeat": 0,
+      "view": "front",
+      "arm": "off",
+      "wallNs": 9168221137,
+      "evaluateNs": 10208916,
+      "renderNs": 9148619671,
+      "outputsSHA256": {
+        ".u16le": "bbcc5243d87cb937fed39260c1709a4b2eddfe1dda8f8f487806f760926bfd75",
+        ".f32le": "03d9ee4d5a81118e7f2efe2947a64230132aad4daad2a2019d31f9f4959fea3f",
+        ".snapshot": "006cfd92bda231a4ae7922f23aa125176f807967feaf444e2f3f8b19ef72cab0"
+      }
+    },
+    {
+      "repeat": 0,
+      "view": "front",
+      "arm": "on",
+      "wallNs": 12765586603,
+      "evaluateNs": 10520602,
+      "renderNs": 12747057747,
+      "outputsSHA256": {
+        ".u16le": "7293177b7ef0b5571a5f967026ea4e5d4e74dd2eefe6ab5cdab545a933de36df",
+        ".f32le": "03d9ee4d5a81118e7f2efe2947a64230132aad4daad2a2019d31f9f4959fea3f",
+        ".snapshot": "006cfd92bda231a4ae7922f23aa125176f807967feaf444e2f3f8b19ef72cab0"
+      }
+    },
+    {
+      "repeat": 0,
+      "view": "oblique",
+      "arm": "off",
+      "wallNs": 7995974239,
+      "evaluateNs": 9410501,
+      "renderNs": 7979237956,
+      "outputsSHA256": {
+        ".u16le": "12791a5c741c791a0108036914c9cb00e7f1f0245c139dbdc5d43a14cc1fa837",
+        ".f32le": "3201f0507c4b7f65911ecea8edf4175d76f2b93cc8d9ca715e10f97cf410e77a",
+        ".snapshot": "510b27afbe66e125c3a39707408ab41b4ca381d6b81c69f6e43025d799852c90"
+      }
+    },
+    {
+      "repeat": 0,
+      "view": "oblique",
+      "arm": "on",
+      "wallNs": 11897727213,
+      "evaluateNs": 21147536,
+      "renderNs": 11868892059,
+      "outputsSHA256": {
+        ".u16le": "c04979f7692e671bad1de6e8f5774f424239d8e5f6b129c8d18b20837c4efced",
+        ".f32le": "3201f0507c4b7f65911ecea8edf4175d76f2b93cc8d9ca715e10f97cf410e77a",
+        ".snapshot": "510b27afbe66e125c3a39707408ab41b4ca381d6b81c69f6e43025d799852c90"
+      }
+    },
+    {
+      "repeat": 1,
+      "view": "front",
+      "arm": "off",
+      "wallNs": 9206885801,
+      "evaluateNs": 12384680,
+      "renderNs": 9185183507,
+      "outputsSHA256": {
+        ".u16le": "bbcc5243d87cb937fed39260c1709a4b2eddfe1dda8f8f487806f760926bfd75",
+        ".f32le": "03d9ee4d5a81118e7f2efe2947a64230132aad4daad2a2019d31f9f4959fea3f",
+        ".snapshot": "006cfd92bda231a4ae7922f23aa125176f807967feaf444e2f3f8b19ef72cab0"
+      }
+    },
+    {
+      "repeat": 1,
+      "view": "front",
+      "arm": "on",
+      "wallNs": 12605574934,
+      "evaluateNs": 10616512,
+      "renderNs": 12587082821,
+      "outputsSHA256": {
+        ".u16le": "7293177b7ef0b5571a5f967026ea4e5d4e74dd2eefe6ab5cdab545a933de36df",
+        ".f32le": "03d9ee4d5a81118e7f2efe2947a64230132aad4daad2a2019d31f9f4959fea3f",
+        ".snapshot": "006cfd92bda231a4ae7922f23aa125176f807967feaf444e2f3f8b19ef72cab0"
+      }
+    },
+    {
+      "repeat": 1,
+      "view": "oblique",
+      "arm": "off",
+      "wallNs": 8283824444,
+      "evaluateNs": 11295838,
+      "renderNs": 8264163780,
+      "outputsSHA256": {
+        ".u16le": "12791a5c741c791a0108036914c9cb00e7f1f0245c139dbdc5d43a14cc1fa837",
+        ".f32le": "3201f0507c4b7f65911ecea8edf4175d76f2b93cc8d9ca715e10f97cf410e77a",
+        ".snapshot": "510b27afbe66e125c3a39707408ab41b4ca381d6b81c69f6e43025d799852c90"
+      }
+    },
+    {
+      "repeat": 1,
+      "view": "oblique",
+      "arm": "on",
+      "wallNs": 11972739011,
+      "evaluateNs": 11463953,
+      "renderNs": 11953173159,
+      "outputsSHA256": {
+        ".u16le": "c04979f7692e671bad1de6e8f5774f424239d8e5f6b129c8d18b20837c4efced",
+        ".f32le": "3201f0507c4b7f65911ecea8edf4175d76f2b93cc8d9ca715e10f97cf410e77a",
+        ".snapshot": "510b27afbe66e125c3a39707408ab41b4ca381d6b81c69f6e43025d799852c90"
+      }
+    },
+    {
+      "repeat": 2,
+      "view": "front",
+      "arm": "off",
+      "wallNs": 8625067532,
+      "evaluateNs": 10649124,
+      "renderNs": 8606325609,
+      "outputsSHA256": {
+        ".u16le": "bbcc5243d87cb937fed39260c1709a4b2eddfe1dda8f8f487806f760926bfd75",
+        ".f32le": "03d9ee4d5a81118e7f2efe2947a64230132aad4daad2a2019d31f9f4959fea3f",
+        ".snapshot": "006cfd92bda231a4ae7922f23aa125176f807967feaf444e2f3f8b19ef72cab0"
+      }
+    },
+    {
+      "repeat": 2,
+      "view": "front",
+      "arm": "on",
+      "wallNs": 13031874127,
+      "evaluateNs": 10109321,
+      "renderNs": 13014295703,
+      "outputsSHA256": {
+        ".u16le": "7293177b7ef0b5571a5f967026ea4e5d4e74dd2eefe6ab5cdab545a933de36df",
+        ".f32le": "03d9ee4d5a81118e7f2efe2947a64230132aad4daad2a2019d31f9f4959fea3f",
+        ".snapshot": "006cfd92bda231a4ae7922f23aa125176f807967feaf444e2f3f8b19ef72cab0"
+      }
+    },
+    {
+      "repeat": 2,
+      "view": "oblique",
+      "arm": "off",
+      "wallNs": 8416884475,
+      "evaluateNs": 10216830,
+      "renderNs": 8398530663,
+      "outputsSHA256": {
+        ".u16le": "12791a5c741c791a0108036914c9cb00e7f1f0245c139dbdc5d43a14cc1fa837",
+        ".f32le": "3201f0507c4b7f65911ecea8edf4175d76f2b93cc8d9ca715e10f97cf410e77a",
+        ".snapshot": "510b27afbe66e125c3a39707408ab41b4ca381d6b81c69f6e43025d799852c90"
+      }
+    },
+    {
+      "repeat": 2,
+      "view": "oblique",
+      "arm": "on",
+      "wallNs": 12370449592,
+      "evaluateNs": 10984924,
+      "renderNs": 12351990428,
+      "outputsSHA256": {
+        ".u16le": "c04979f7692e671bad1de6e8f5774f424239d8e5f6b129c8d18b20837c4efced",
+        ".f32le": "3201f0507c4b7f65911ecea8edf4175d76f2b93cc8d9ca715e10f97cf410e77a",
+        ".snapshot": "510b27afbe66e125c3a39707408ab41b4ca381d6b81c69f6e43025d799852c90"
+      }
+    }
+  ],
+  "summary": {
+    "off-front": {
+      "wallNs": {
+        "rawNs": [
+          9168221137,
+          9206885801,
+          8625067532
+        ],
+        "min": 8625067532,
+        "median": 9168221137,
+        "max": 9206885801
+      },
+      "evaluateNs": {
+        "rawNs": [
+          10208916,
+          12384680,
+          10649124
+        ],
+        "min": 10208916,
+        "median": 10649124,
+        "max": 12384680
+      },
+      "renderNs": {
+        "rawNs": [
+          9148619671,
+          9185183507,
+          8606325609
+        ],
+        "min": 8606325609,
+        "median": 9148619671,
+        "max": 9185183507
+      }
+    },
+    "off-oblique": {
+      "wallNs": {
+        "rawNs": [
+          7995974239,
+          8283824444,
+          8416884475
+        ],
+        "min": 7995974239,
+        "median": 8283824444,
+        "max": 8416884475
+      },
+      "evaluateNs": {
+        "rawNs": [
+          9410501,
+          11295838,
+          10216830
+        ],
+        "min": 9410501,
+        "median": 10216830,
+        "max": 11295838
+      },
+      "renderNs": {
+        "rawNs": [
+          7979237956,
+          8264163780,
+          8398530663
+        ],
+        "min": 7979237956,
+        "median": 8264163780,
+        "max": 8398530663
+      }
+    },
+    "on-front": {
+      "wallNs": {
+        "rawNs": [
+          12765586603,
+          12605574934,
+          13031874127
+        ],
+        "min": 12605574934,
+        "median": 12765586603,
+        "max": 13031874127
+      },
+      "evaluateNs": {
+        "rawNs": [
+          10520602,
+          10616512,
+          10109321
+        ],
+        "min": 10109321,
+        "median": 10520602,
+        "max": 10616512
+      },
+      "renderNs": {
+        "rawNs": [
+          12747057747,
+          12587082821,
+          13014295703
+        ],
+        "min": 12587082821,
+        "median": 12747057747,
+        "max": 13014295703
+      }
+    },
+    "on-oblique": {
+      "wallNs": {
+        "rawNs": [
+          11897727213,
+          11972739011,
+          12370449592
+        ],
+        "min": 11897727213,
+        "median": 11972739011,
+        "max": 12370449592
+      },
+      "evaluateNs": {
+        "rawNs": [
+          21147536,
+          11463953,
+          10984924
+        ],
+        "min": 10984924,
+        "median": 11463953,
+        "max": 21147536
+      },
+      "renderNs": {
+        "rawNs": [
+          11868892059,
+          11953173159,
+          12351990428
+        ],
+        "min": 11868892059,
+        "median": 11953173159,
+        "max": 12351990428
+      }
+    }
+  },
+  "binarySHA256": "9d62fb7205ec6dd8c3b6e5ac0fbad8a7008e894b0f7cd77f2e003b0172c246c8",
+  "inputHashesSHA256": "a222f230b99c983af25f16343adb367783e63d921c6f2593a89b5de932b48583",
+  "allInputPinsBeforeAfterExact": true,
+  "compilerFlags": [
+    "-std=c11",
+    "-O2",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-Wno-misleading-indentation",
+    "-ffp-contract=off",
+    "-fexcess-precision=standard"
+  ]
+}

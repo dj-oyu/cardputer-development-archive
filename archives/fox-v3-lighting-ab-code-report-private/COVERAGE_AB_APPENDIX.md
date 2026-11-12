@@ -1,0 +1,1 @@
+Coverage-only diagnosis: see diagnostic-position/coverage-ab/REPORT.md. Existing224entries retained byte-for-byte. Not AA adoption or color rescoring. Restore diagnostic-position as sibling fox-v3-position-diagnostic; same private inputs required. No source/assets/images/geometry/raw buffers included in this addition.

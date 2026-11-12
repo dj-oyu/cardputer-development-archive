@@ -1,0 +1,9 @@
+--- frozen/ksn_mesh_depth.c
++++ experiment/ksn_mesh_depth.c
+@@ -178,3 +178,6 @@
+ 
+ bool ksn_mesh_pixel_render_visible(const ksn_mesh_pixel_snapshot *s,uint16_t *pixels,unsigned y,unsigned height,float *scratch,unsigned rows,ksn_mesh_pixel_stats *stats,FoxDiskVisibilityCallback visibility,void *context){return pixel_render_extended(s,pixels,y,height,scratch,rows,stats,visibility,context,NULL,NULL);}
+ bool ksn_mesh_pixel_render_shaded(const ksn_mesh_pixel_snapshot *s,uint16_t *pixels,unsigned y,unsigned height,float *scratch,unsigned rows,ksn_mesh_pixel_stats *stats,FoxPixelShader shader,void *context){if(!shader)return false;return pixel_render_extended(s,pixels,y,height,scratch,rows,stats,NULL,NULL,shader,context);}
++
++/* Explicit host experiment; all preceding legacy function bodies unchanged. */
++#include "ksn_boundary_aa_impl.inc"

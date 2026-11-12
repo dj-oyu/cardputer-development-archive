@@ -1,0 +1,21 @@
+{
+  "status": "NARROW_ALLOWLIST_PASS",
+  "base": "/workspace/scratch/6d8dcdbcdc54/fox-v3-indexed-transport-input",
+  "changedExisting": [
+    "private-build/product/main/ayatsuri/ayatsuri_model.h",
+    "private-build/product/main/ayatsuri/ayatsuri_model.c",
+    "harness/run_compact_actual.py",
+    "harness/run_indexed_input_actual.py",
+    "harness/run_depth_actual.py",
+    "harness/run_transport_actual.py",
+    "harness/native_render_row.c",
+    "harness/run_ring_actual.py",
+    "harness/run_actual.py"
+  ],
+  "newSource": [
+    "harness/run_segmented_model_actual.py",
+    "harness/model_arena_owner.h"
+  ],
+  "excluded": "No source assets/reference/model geometry/rig/profile/threshold changes. No rejected owned-context/paged-BVH sources.",
+  "allBaseFilesStillMatch": true
+}

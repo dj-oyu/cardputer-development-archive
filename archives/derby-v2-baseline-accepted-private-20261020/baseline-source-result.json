@@ -1,0 +1,55 @@
+{
+  "ok": true,
+  "id": "derby-v2-baseline-source-37af4225-20261020",
+  "plan_hash": "f6b77ef4b236bec88414ca3e992913817e323264226e52d072b82aeb47fbc156",
+  "state": "succeeded",
+  "stage": "source_publish",
+  "result": "source_snapshot_fetched_no_build_no_flash",
+  "diagnostic": {
+    "source": {
+      "submodules": [
+        {
+          "path": "third_party/bmi270",
+          "repository": "boschsensortec/BMI270_SensorAPI",
+          "commit": "41129fcfe39c583ee5462d79195741945d51c1fe",
+          "tree_sha1": "d92e2a136c4beee1ebed056a383952621d1867fa",
+          "archive_sha256": "4916d6c23c0068555e272f5d90f6db95be36acae2ad4c824945c98690b4b23f3",
+          "source_sha256": "c31ac3c3a66fa9d694ff19e8117b559336d75417d2ff8ae6b0d830a1b6611184"
+        },
+        {
+          "path": "third_party/minimp3",
+          "repository": "lieff/minimp3",
+          "commit": "ea99364f61c14656440e8d77e9c233ccf3124633",
+          "tree_sha1": "9560d2efb899d694f331f93bb8c9cebf2928a194",
+          "archive_sha256": "5f966027ddc3dee3306c71829bdd59276673a2516f72aadde14adab75a851fc2",
+          "source_sha256": "a412c3127cab86430395c329e17811eb4d705f9d197a9e56193b138e8bf97d63"
+        },
+        {
+          "path": "third_party/opus",
+          "repository": "xiph/opus",
+          "commit": "22244de5a79bd1d6d623c32e72bf1954b56235be",
+          "tree_sha1": "a5e21b6751d8f187b83ad9d5f3a57aab801cf722",
+          "archive_sha256": "f5b624fdcd9e0e99254f8a3c9cac9f2d2830ba2a2a3c77955ac7acd0d069df5e",
+          "source_sha256": "bd9b409b79aaf9f2bfff88c1fcf09e98a99194f56a928b34ca429719902b9d57"
+        }
+      ],
+      "source_receipt": "2bc31c209533cbdfe3f205d1963530b925ec4d0bc81400873e6acba677ed0c8b",
+      "repository": "dj-oyu/cardputer-adv-pocketjs",
+      "commit": "37af4225ad329aac4c5e79c880d7d69760b770be",
+      "tree_sha1": "7753c5c8919ee36c24080ce08102438a285da6f2",
+      "source_sha256": "9e89fd87e0019e52a8111fc1adb24f3a689934188095539e157c92f8a1f5898d",
+      "files": 2853,
+      "bytes": 85799893
+    }
+  },
+  "reviewed": 0,
+  "created": "2026-10-20 00:56:19",
+  "finished": "2026-10-20 00:56:39",
+  "review": {
+    "historical_failure": false,
+    "uncertainty_resolved": false,
+    "failure_result_preserved": false,
+    "required_action": "consult_current_resource_status",
+    "physical_device_state": "not_inferred_from_job_history"
+  }
+}

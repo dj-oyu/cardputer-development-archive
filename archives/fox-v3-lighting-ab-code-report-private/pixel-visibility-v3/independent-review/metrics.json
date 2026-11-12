@@ -1,0 +1,2174 @@
+{
+  "scope": "Independent lightweight raw RGB565/f32 depth and original PNG8 numeric scores only; no renderer or benchmark run. Pixel-rate direct DISK16 plus uniform world, clamp/sRGB565; bounded character-only BVH visibility ON/OFF, no AgX or world/ground occlusion.",
+  "checkedNumericValues": 2700,
+  "candidateManifestHashes": {
+    "off": "e9e25d8fd025c6efbb1f9907be3f1994a974b5f831387aac1626cfa3268a3b43",
+    "on": "1671170d317fc4210a74d54815c4271a1113447c52c6aa45ac610f89cb403be4"
+  },
+  "allTwentyMasksRecomputedExact": true,
+  "uncertaintyExcludedFromAcceptance": true,
+  "globalAcceptance": "NOT_ESTABLISHED",
+  "depthOffOnExact": true,
+  "results": {
+    "off": {
+      "front-baseline": {
+        "RGB": 74.26645646167802,
+        "colorStablePixels": 4254,
+        "colorUncertainPixels": 1053,
+        "shapeIoU": 88.13463708160963,
+        "missing": 620,
+        "extra": 11
+      },
+      "front-direction": {
+        "RGB": 74.37974190788357,
+        "colorStablePixels": 4045,
+        "colorUncertainPixels": 1262,
+        "shapeIoU": 88.13463708160963,
+        "missing": 620,
+        "extra": 11,
+        "responseMagnitudeAgreementPercent": 93.62445148400467,
+        "directionAgreementPercent": 76.03013892159171,
+        "signedCorrelation": 0.6797761299218825,
+        "deltaLumaRMSE": 0.06781237746300493,
+        "deltaRGBRMSE": 0.09275121194289852,
+        "brightIoU": 60.05121638924456,
+        "darkIoU": 71.95249738037023,
+        "brightFP": 151,
+        "brightFN": 473
+      },
+      "front-intensity": {
+        "RGB": 75.31552661841839,
+        "colorStablePixels": 3864,
+        "colorUncertainPixels": 1443,
+        "shapeIoU": 88.13463708160963,
+        "missing": 620,
+        "extra": 11,
+        "responseMagnitudeAgreementPercent": 87.65181981921666,
+        "directionAgreementPercent": 79.45141794514178,
+        "signedCorrelation": 0.5583079780537076,
+        "deltaLumaRMSE": 0.04015536744531149,
+        "deltaRGBRMSE": 0.06458625021903602,
+        "brightIoU": null,
+        "darkIoU": 71.94328219432822,
+        "brightFP": 0,
+        "brightFN": 0
+      },
+      "front-ambient": {
+        "RGB": 73.90412497041827,
+        "colorStablePixels": 4375,
+        "colorUncertainPixels": 932,
+        "shapeIoU": 88.13463708160963,
+        "missing": 620,
+        "extra": 11,
+        "responseMagnitudeAgreementPercent": 67.09623200579587,
+        "directionAgreementPercent": 83.29825903960206,
+        "signedCorrelation": -0.06540087173562688,
+        "deltaLumaRMSE": 0.040576417604135114,
+        "deltaRGBRMSE": 0.052071630184287045,
+        "brightIoU": 74.51693131815573,
+        "darkIoU": null,
+        "brightFP": 0,
+        "brightFN": 1332
+      },
+      "front-albedo": {
+        "RGB": 77.54662150297706,
+        "colorStablePixels": 4023,
+        "colorUncertainPixels": 1284,
+        "shapeIoU": 88.13463708160963,
+        "missing": 620,
+        "extra": 11,
+        "responseMagnitudeAgreementPercent": 80.57260546313024,
+        "directionAgreementPercent": 87.76625824693686,
+        "signedCorrelation": 0.3833419042519256,
+        "deltaLumaRMSE": 0.05558403496300824,
+        "deltaRGBRMSE": 0.08221719508778785,
+        "brightIoU": null,
+        "darkIoU": 87.1253534401508,
+        "brightFP": 0,
+        "brightFN": 0
+      },
+      "oblique-baseline": {
+        "RGB": 73.41207388925216,
+        "colorStablePixels": 4491,
+        "colorUncertainPixels": 1377,
+        "shapeIoU": 87.61061946902655,
+        "missing": 720,
+        "extra": 8
+      },
+      "oblique-direction": {
+        "RGB": 73.53693800055474,
+        "colorStablePixels": 4124,
+        "colorUncertainPixels": 1744,
+        "shapeIoU": 87.61061946902655,
+        "missing": 720,
+        "extra": 8,
+        "responseMagnitudeAgreementPercent": 98.59758750410815,
+        "directionAgreementPercent": 74.58221580358985,
+        "signedCorrelation": 0.6072332742075456,
+        "deltaLumaRMSE": 0.07387304534456925,
+        "deltaRGBRMSE": 0.10289043123407363,
+        "brightIoU": 33.8337182448037,
+        "darkIoU": 73.95180722891567,
+        "brightFP": 157,
+        "brightFN": 416
+      },
+      "oblique-intensity": {
+        "RGB": 74.37524942338914,
+        "colorStablePixels": 3977,
+        "colorUncertainPixels": 1891,
+        "shapeIoU": 87.61061946902655,
+        "missing": 720,
+        "extra": 8,
+        "responseMagnitudeAgreementPercent": 82.92279222389126,
+        "directionAgreementPercent": 80.23963857788253,
+        "signedCorrelation": 0.5351106660808244,
+        "deltaLumaRMSE": 0.04299065250542904,
+        "deltaRGBRMSE": 0.0686401551419269,
+        "brightIoU": null,
+        "darkIoU": 74.17010410528383,
+        "brightFP": 0,
+        "brightFN": 0
+      },
+      "oblique-ambient": {
+        "RGB": 73.38126867023611,
+        "colorStablePixels": 4611,
+        "colorUncertainPixels": 1257,
+        "shapeIoU": 87.61061946902655,
+        "missing": 720,
+        "extra": 8,
+        "responseMagnitudeAgreementPercent": 63.138748493396896,
+        "directionAgreementPercent": 83.8955198062619,
+        "signedCorrelation": 0.06300200849074493,
+        "deltaLumaRMSE": 0.03883237201864931,
+        "deltaRGBRMSE": 0.05234354110239,
+        "brightIoU": 76.0768033212247,
+        "darkIoU": null,
+        "brightFP": 0,
+        "brightFN": 1383
+      },
+      "oblique-albedo": {
+        "RGB": 76.65559526042225,
+        "colorStablePixels": 4128,
+        "colorUncertainPixels": 1740,
+        "shapeIoU": 87.61061946902655,
+        "missing": 720,
+        "extra": 8,
+        "responseMagnitudeAgreementPercent": 73.92879356714586,
+        "directionAgreementPercent": 87.38277919863597,
+        "signedCorrelation": 0.3807050748487413,
+        "deltaLumaRMSE": 0.05967601858854823,
+        "deltaRGBRMSE": 0.0882094383673138,
+        "brightIoU": null,
+        "darkIoU": 86.95652173913044,
+        "brightFP": 0,
+        "brightFN": 0
+      }
+    },
+    "on": {
+      "front-baseline": {
+        "RGB": 73.73806415088022,
+        "colorStablePixels": 4254,
+        "colorUncertainPixels": 1053,
+        "shapeIoU": 88.13463708160963,
+        "missing": 620,
+        "extra": 11
+      },
+      "front-direction": {
+        "RGB": 73.37437263141098,
+        "colorStablePixels": 4045,
+        "colorUncertainPixels": 1262,
+        "shapeIoU": 88.13463708160963,
+        "missing": 620,
+        "extra": 11,
+        "responseMagnitudeAgreementPercent": 76.50427594742972,
+        "directionAgreementPercent": 79.33145009416197,
+        "signedCorrelation": 0.7158176709105629,
+        "deltaLumaRMSE": 0.07420058525075383,
+        "deltaRGBRMSE": 0.10245597153004435,
+        "brightIoU": 63.25301204819277,
+        "darkIoU": 77.6807544533706,
+        "brightFP": 83,
+        "brightFN": 466
+      },
+      "front-intensity": {
+        "RGB": 74.88030726029957,
+        "colorStablePixels": 3864,
+        "colorUncertainPixels": 1443,
+        "shapeIoU": 88.13463708160963,
+        "missing": 620,
+        "extra": 11,
+        "responseMagnitudeAgreementPercent": 99.00232565859571,
+        "directionAgreementPercent": 77.01443875174662,
+        "signedCorrelation": 0.5759993169850696,
+        "deltaLumaRMSE": 0.04023062900698353,
+        "deltaRGBRMSE": 0.06616107646630837,
+        "brightIoU": null,
+        "darkIoU": 72.72938984629715,
+        "brightFP": 0,
+        "brightFN": 0
+      },
+      "front-ambient": {
+        "RGB": 73.5929495353697,
+        "colorStablePixels": 4375,
+        "colorUncertainPixels": 932,
+        "shapeIoU": 88.13463708160963,
+        "missing": 620,
+        "extra": 11,
+        "responseMagnitudeAgreementPercent": 57.90982707916768,
+        "directionAgreementPercent": 85.76621388942031,
+        "signedCorrelation": -0.10734638815387706,
+        "deltaLumaRMSE": 0.046602930059460104,
+        "deltaRGBRMSE": 0.0581297133894609,
+        "brightIoU": 78.61105796824182,
+        "darkIoU": null,
+        "brightFP": 0,
+        "brightFN": 1118
+      },
+      "front-albedo": {
+        "RGB": 77.27600317605912,
+        "colorStablePixels": 4023,
+        "colorUncertainPixels": 1284,
+        "shapeIoU": 88.13463708160963,
+        "missing": 620,
+        "extra": 11,
+        "responseMagnitudeAgreementPercent": 83.79842499842484,
+        "directionAgreementPercent": 87.99245994344957,
+        "signedCorrelation": 0.3278338683111418,
+        "deltaLumaRMSE": 0.05647746149174318,
+        "deltaRGBRMSE": 0.08273982699210242,
+        "brightIoU": null,
+        "darkIoU": 87.33270499528747,
+        "brightFP": 0,
+        "brightFN": 0
+      },
+      "oblique-baseline": {
+        "RGB": 72.60739857787632,
+        "colorStablePixels": 4491,
+        "colorUncertainPixels": 1377,
+        "shapeIoU": 87.61061946902655,
+        "missing": 720,
+        "extra": 8
+      },
+      "oblique-direction": {
+        "RGB": 72.52733287499579,
+        "colorStablePixels": 4124,
+        "colorUncertainPixels": 1744,
+        "shapeIoU": 87.61061946902655,
+        "missing": 720,
+        "extra": 8,
+        "responseMagnitudeAgreementPercent": 85.987323253461,
+        "directionAgreementPercent": 76.66460523603381,
+        "signedCorrelation": 0.632736207451736,
+        "deltaLumaRMSE": 0.0770975168796306,
+        "deltaRGBRMSE": 0.10967615065105396,
+        "brightIoU": 39.22305764411028,
+        "darkIoU": 77.09335899903753,
+        "brightFP": 89,
+        "brightFN": 396
+      },
+      "oblique-intensity": {
+        "RGB": 73.81072047630803,
+        "colorStablePixels": 3977,
+        "colorUncertainPixels": 1891,
+        "shapeIoU": 87.61061946902655,
+        "missing": 720,
+        "extra": 8,
+        "responseMagnitudeAgreementPercent": 92.1539550242717,
+        "directionAgreementPercent": 78.46758349705306,
+        "signedCorrelation": 0.54948690317817,
+        "deltaLumaRMSE": 0.04236101456795644,
+        "deltaRGBRMSE": 0.06949222512262779,
+        "brightIoU": null,
+        "darkIoU": 74.59724950884087,
+        "brightFP": 0,
+        "brightFN": 0
+      },
+      "oblique-ambient": {
+        "RGB": 72.87129291707075,
+        "colorStablePixels": 4611,
+        "colorUncertainPixels": 1257,
+        "shapeIoU": 87.61061946902655,
+        "missing": 720,
+        "extra": 8,
+        "responseMagnitudeAgreementPercent": 54.155413405639365,
+        "directionAgreementPercent": 86.02317938072997,
+        "signedCorrelation": 0.016874820147916185,
+        "deltaLumaRMSE": 0.045616888230018166,
+        "deltaRGBRMSE": 0.059061266027060584,
+        "brightIoU": 79.79588306521363,
+        "darkIoU": null,
+        "brightFP": 0,
+        "brightFN": 1168
+      },
+      "oblique-albedo": {
+        "RGB": 76.29399680272347,
+        "colorStablePixels": 4128,
+        "colorUncertainPixels": 1740,
+        "shapeIoU": 87.61061946902655,
+        "missing": 720,
+        "extra": 8,
+        "responseMagnitudeAgreementPercent": 76.34651377922238,
+        "directionAgreementPercent": 87.45098039215686,
+        "signedCorrelation": 0.30984439461719115,
+        "deltaLumaRMSE": 0.06127048782358569,
+        "deltaRGBRMSE": 0.08950335687214406,
+        "brightIoU": null,
+        "darkIoU": 87.07587382779198,
+        "brightFP": 0,
+        "brightFN": 0
+      }
+    }
+  },
+  "changesOnMinusOff": {
+    "front-baseline": {
+      "RGB": -0.5283923107977984,
+      "colorStablePixels": 0,
+      "colorUncertainPixels": 0,
+      "shapeIoU": 0.0,
+      "missing": 0,
+      "extra": 0
+    },
+    "front-direction": {
+      "RGB": -1.0053692764725923,
+      "colorStablePixels": 0,
+      "colorUncertainPixels": 0,
+      "shapeIoU": 0.0,
+      "missing": 0,
+      "extra": 0,
+      "responseMagnitudeAgreementPercent": -17.120175536574948,
+      "directionAgreementPercent": 3.3013111725702515,
+      "signedCorrelation": 0.0360415409886804,
+      "deltaLumaRMSE": 0.006388207787748901,
+      "deltaRGBRMSE": 0.009704759587145825,
+      "brightIoU": 3.201795658948214,
+      "darkIoU": 5.728257073000364,
+      "brightFP": -68,
+      "brightFN": -7
+    },
+    "front-intensity": {
+      "RGB": -0.4352193581188146,
+      "colorStablePixels": 0,
+      "colorUncertainPixels": 0,
+      "shapeIoU": 0.0,
+      "missing": 0,
+      "extra": 0,
+      "responseMagnitudeAgreementPercent": 11.350505839379053,
+      "directionAgreementPercent": -2.4369791933951603,
+      "signedCorrelation": 0.01769133893136199,
+      "deltaLumaRMSE": 7.526156167203535e-05,
+      "deltaRGBRMSE": 0.0015748262472723429,
+      "darkIoU": 0.7861076519689334,
+      "brightFP": 0,
+      "brightFN": 0
+    },
+    "front-ambient": {
+      "RGB": -0.31117543504856826,
+      "colorStablePixels": 0,
+      "colorUncertainPixels": 0,
+      "shapeIoU": 0.0,
+      "missing": 0,
+      "extra": 0,
+      "responseMagnitudeAgreementPercent": -9.186404926628192,
+      "directionAgreementPercent": 2.4679548498182555,
+      "signedCorrelation": -0.04194551641825019,
+      "deltaLumaRMSE": 0.006026512455324991,
+      "deltaRGBRMSE": 0.006058083205173856,
+      "brightIoU": 4.094126650086096,
+      "brightFP": 0,
+      "brightFN": -214
+    },
+    "front-albedo": {
+      "RGB": -0.2706183269179405,
+      "colorStablePixels": 0,
+      "colorUncertainPixels": 0,
+      "shapeIoU": 0.0,
+      "missing": 0,
+      "extra": 0,
+      "responseMagnitudeAgreementPercent": 3.2258195352945904,
+      "directionAgreementPercent": 0.22620169651271738,
+      "signedCorrelation": -0.055508035940783795,
+      "deltaLumaRMSE": 0.0008934265287349405,
+      "deltaRGBRMSE": 0.0005226319043145633,
+      "darkIoU": 0.20735155513666825,
+      "brightFP": 0,
+      "brightFN": 0
+    },
+    "oblique-baseline": {
+      "RGB": -0.8046753113758314,
+      "colorStablePixels": 0,
+      "colorUncertainPixels": 0,
+      "shapeIoU": 0.0,
+      "missing": 0,
+      "extra": 0
+    },
+    "oblique-direction": {
+      "RGB": -1.0096051255589487,
+      "colorStablePixels": 0,
+      "colorUncertainPixels": 0,
+      "shapeIoU": 0.0,
+      "missing": 0,
+      "extra": 0,
+      "responseMagnitudeAgreementPercent": -12.610264250647148,
+      "directionAgreementPercent": 2.0823894324439607,
+      "signedCorrelation": 0.025502933244190396,
+      "deltaLumaRMSE": 0.003224471535061349,
+      "deltaRGBRMSE": 0.006785719416980335,
+      "brightIoU": 5.389339399306579,
+      "darkIoU": 3.1415517701218647,
+      "brightFP": -68,
+      "brightFN": -20
+    },
+    "oblique-intensity": {
+      "RGB": -0.5645289470811008,
+      "colorStablePixels": 0,
+      "colorUncertainPixels": 0,
+      "shapeIoU": 0.0,
+      "missing": 0,
+      "extra": 0,
+      "responseMagnitudeAgreementPercent": 9.231162800380432,
+      "directionAgreementPercent": -1.7720550808294746,
+      "signedCorrelation": 0.01437623709734559,
+      "deltaLumaRMSE": -0.0006296379374726019,
+      "deltaRGBRMSE": 0.0008520699807008925,
+      "darkIoU": 0.42714540355704855,
+      "brightFP": 0,
+      "brightFN": 0
+    },
+    "oblique-ambient": {
+      "RGB": -0.5099757531653637,
+      "colorStablePixels": 0,
+      "colorUncertainPixels": 0,
+      "shapeIoU": 0.0,
+      "missing": 0,
+      "extra": 0,
+      "responseMagnitudeAgreementPercent": -8.983335087757531,
+      "directionAgreementPercent": 2.127659574468069,
+      "signedCorrelation": -0.046127188342828744,
+      "deltaLumaRMSE": 0.006784516211368857,
+      "deltaRGBRMSE": 0.0067177249246705845,
+      "brightIoU": 3.719079743988928,
+      "brightFP": 0,
+      "brightFN": -215
+    },
+    "oblique-albedo": {
+      "RGB": -0.36159845769877563,
+      "colorStablePixels": 0,
+      "colorUncertainPixels": 0,
+      "shapeIoU": 0.0,
+      "missing": 0,
+      "extra": 0,
+      "responseMagnitudeAgreementPercent": 2.4177202120765173,
+      "directionAgreementPercent": 0.06820119352089193,
+      "signedCorrelation": -0.07086068023155012,
+      "deltaLumaRMSE": 0.0015944692350374629,
+      "deltaRGBRMSE": 0.001293918504830252,
+      "darkIoU": 0.11935208866154312,
+      "brightFP": 0,
+      "brightFN": 0
+    }
+  },
+  "stableDomainRegressions": [
+    {
+      "condition": "front-baseline",
+      "metric": "RGB",
+      "off": 74.26645646167802,
+      "on": 73.73806415088022,
+      "change": -0.5283923107977984
+    },
+    {
+      "condition": "front-direction",
+      "metric": "RGB",
+      "off": 74.37974190788357,
+      "on": 73.37437263141098,
+      "change": -1.0053692764725923
+    },
+    {
+      "condition": "front-direction",
+      "metric": "responseMagnitudeAgreementPercent",
+      "off": 93.62445148400467,
+      "on": 76.50427594742972,
+      "change": -17.120175536574948
+    },
+    {
+      "condition": "front-direction",
+      "metric": "deltaLumaRMSE",
+      "off": 0.06781237746300493,
+      "on": 0.07420058525075383,
+      "change": 0.006388207787748901
+    },
+    {
+      "condition": "front-direction",
+      "metric": "deltaRGBRMSE",
+      "off": 0.09275121194289852,
+      "on": 0.10245597153004435,
+      "change": 0.009704759587145825
+    },
+    {
+      "condition": "front-intensity",
+      "metric": "RGB",
+      "off": 75.31552661841839,
+      "on": 74.88030726029957,
+      "change": -0.4352193581188146
+    },
+    {
+      "condition": "front-intensity",
+      "metric": "directionAgreementPercent",
+      "off": 79.45141794514178,
+      "on": 77.01443875174662,
+      "change": -2.4369791933951603
+    },
+    {
+      "condition": "front-intensity",
+      "metric": "deltaLumaRMSE",
+      "off": 0.04015536744531149,
+      "on": 0.04023062900698353,
+      "change": 7.526156167203535e-05
+    },
+    {
+      "condition": "front-intensity",
+      "metric": "deltaRGBRMSE",
+      "off": 0.06458625021903602,
+      "on": 0.06616107646630837,
+      "change": 0.0015748262472723429
+    },
+    {
+      "condition": "front-ambient",
+      "metric": "RGB",
+      "off": 73.90412497041827,
+      "on": 73.5929495353697,
+      "change": -0.31117543504856826
+    },
+    {
+      "condition": "front-ambient",
+      "metric": "responseMagnitudeAgreementPercent",
+      "off": 67.09623200579587,
+      "on": 57.90982707916768,
+      "change": -9.186404926628192
+    },
+    {
+      "condition": "front-ambient",
+      "metric": "signedCorrelation",
+      "off": -0.06540087173562688,
+      "on": -0.10734638815387706,
+      "change": -0.04194551641825019
+    },
+    {
+      "condition": "front-ambient",
+      "metric": "deltaLumaRMSE",
+      "off": 0.040576417604135114,
+      "on": 0.046602930059460104,
+      "change": 0.006026512455324991
+    },
+    {
+      "condition": "front-ambient",
+      "metric": "deltaRGBRMSE",
+      "off": 0.052071630184287045,
+      "on": 0.0581297133894609,
+      "change": 0.006058083205173856
+    },
+    {
+      "condition": "front-albedo",
+      "metric": "RGB",
+      "off": 77.54662150297706,
+      "on": 77.27600317605912,
+      "change": -0.2706183269179405
+    },
+    {
+      "condition": "front-albedo",
+      "metric": "signedCorrelation",
+      "off": 0.3833419042519256,
+      "on": 0.3278338683111418,
+      "change": -0.055508035940783795
+    },
+    {
+      "condition": "front-albedo",
+      "metric": "deltaLumaRMSE",
+      "off": 0.05558403496300824,
+      "on": 0.05647746149174318,
+      "change": 0.0008934265287349405
+    },
+    {
+      "condition": "front-albedo",
+      "metric": "deltaRGBRMSE",
+      "off": 0.08221719508778785,
+      "on": 0.08273982699210242,
+      "change": 0.0005226319043145633
+    },
+    {
+      "condition": "oblique-baseline",
+      "metric": "RGB",
+      "off": 73.41207388925216,
+      "on": 72.60739857787632,
+      "change": -0.8046753113758314
+    },
+    {
+      "condition": "oblique-direction",
+      "metric": "RGB",
+      "off": 73.53693800055474,
+      "on": 72.52733287499579,
+      "change": -1.0096051255589487
+    },
+    {
+      "condition": "oblique-direction",
+      "metric": "responseMagnitudeAgreementPercent",
+      "off": 98.59758750410815,
+      "on": 85.987323253461,
+      "change": -12.610264250647148
+    },
+    {
+      "condition": "oblique-direction",
+      "metric": "deltaLumaRMSE",
+      "off": 0.07387304534456925,
+      "on": 0.0770975168796306,
+      "change": 0.003224471535061349
+    },
+    {
+      "condition": "oblique-direction",
+      "metric": "deltaRGBRMSE",
+      "off": 0.10289043123407363,
+      "on": 0.10967615065105396,
+      "change": 0.006785719416980335
+    },
+    {
+      "condition": "oblique-intensity",
+      "metric": "RGB",
+      "off": 74.37524942338914,
+      "on": 73.81072047630803,
+      "change": -0.5645289470811008
+    },
+    {
+      "condition": "oblique-intensity",
+      "metric": "directionAgreementPercent",
+      "off": 80.23963857788253,
+      "on": 78.46758349705306,
+      "change": -1.7720550808294746
+    },
+    {
+      "condition": "oblique-intensity",
+      "metric": "deltaRGBRMSE",
+      "off": 0.0686401551419269,
+      "on": 0.06949222512262779,
+      "change": 0.0008520699807008925
+    },
+    {
+      "condition": "oblique-ambient",
+      "metric": "RGB",
+      "off": 73.38126867023611,
+      "on": 72.87129291707075,
+      "change": -0.5099757531653637
+    },
+    {
+      "condition": "oblique-ambient",
+      "metric": "responseMagnitudeAgreementPercent",
+      "off": 63.138748493396896,
+      "on": 54.155413405639365,
+      "change": -8.983335087757531
+    },
+    {
+      "condition": "oblique-ambient",
+      "metric": "signedCorrelation",
+      "off": 0.06300200849074493,
+      "on": 0.016874820147916185,
+      "change": -0.046127188342828744
+    },
+    {
+      "condition": "oblique-ambient",
+      "metric": "deltaLumaRMSE",
+      "off": 0.03883237201864931,
+      "on": 0.045616888230018166,
+      "change": 0.006784516211368857
+    },
+    {
+      "condition": "oblique-ambient",
+      "metric": "deltaRGBRMSE",
+      "off": 0.05234354110239,
+      "on": 0.059061266027060584,
+      "change": 0.0067177249246705845
+    },
+    {
+      "condition": "oblique-albedo",
+      "metric": "RGB",
+      "off": 76.65559526042225,
+      "on": 76.29399680272347,
+      "change": -0.36159845769877563
+    },
+    {
+      "condition": "oblique-albedo",
+      "metric": "signedCorrelation",
+      "off": 0.3807050748487413,
+      "on": 0.30984439461719115,
+      "change": -0.07086068023155012
+    },
+    {
+      "condition": "oblique-albedo",
+      "metric": "deltaLumaRMSE",
+      "off": 0.05967601858854823,
+      "on": 0.06127048782358569,
+      "change": 0.0015944692350374629
+    },
+    {
+      "condition": "oblique-albedo",
+      "metric": "deltaRGBRMSE",
+      "off": 0.0882094383673138,
+      "on": 0.08950335687214406,
+      "change": 0.001293918504830252
+    }
+  ],
+  "allScoreDomainChangesOnMinusOff": {
+    "front-baseline": {
+      "colorMeanPrecision": {
+        "stableSubset": {
+          "rgbMAE": 0.005283923107977984,
+          "rgbRMSE": 0.004863304811153657,
+          "rgbAgreementPercent": -0.5283923107977984
+        },
+        "uncertainSubsetDescriptiveNotAcceptance": {
+          "rgbMAE": 0.014056761659076183,
+          "rgbRMSE": 0.009848779978312405,
+          "rgbAgreementPercent": -1.4056761659076216
+        },
+        "pooledFullForegroundDescriptive": {
+          "rgbMAE": 0.007024605036432208,
+          "rgbRMSE": 0.005619754089006224,
+          "rgbAgreementPercent": -0.7024605036432234
+        },
+        "eachReferenceSeedFullForeground": [
+          {
+            "rgbMAE": 0.007038227044956213,
+            "rgbRMSE": 0.005638058268523094,
+            "rgbAgreementPercent": -0.7038227044956074
+          },
+          {
+            "rgbMAE": 0.007026640817749147,
+            "rgbRMSE": 0.005615263780961277,
+            "rgbAgreementPercent": -0.7026640817748984
+          },
+          {
+            "rgbMAE": 0.007011889963660728,
+            "rgbRMSE": 0.005604829774893905,
+            "rgbAgreementPercent": -0.7011889963660565
+          },
+          {
+            "rgbMAE": 0.00699419620332134,
+            "rgbRMSE": 0.005598843459780012,
+            "rgbAgreementPercent": -0.6994196203321366
+          },
+          {
+            "rgbMAE": 0.0070253876799883375,
+            "rgbRMSE": 0.0056307764612817945,
+            "rgbAgreementPercent": -0.7025387679988455
+          },
+          {
+            "rgbMAE": 0.0070477754098506595,
+            "rgbRMSE": 0.005640926317421413,
+            "rgbAgreementPercent": -0.7047775409850772
+          },
+          {
+            "rgbMAE": 0.007020040656185528,
+            "rgbRMSE": 0.0056121493536404055,
+            "rgbAgreementPercent": -0.7020040656185529
+          },
+          {
+            "rgbMAE": 0.007017488220396273,
+            "rgbRMSE": 0.005611196819910957,
+            "rgbAgreementPercent": -0.7017488220396331
+          }
+        ]
+      }
+    },
+    "front-direction": {
+      "colorMeanPrecision": {
+        "stableSubset": {
+          "rgbMAE": 0.010053692764725952,
+          "rgbRMSE": 0.006483076681291111,
+          "rgbAgreementPercent": -1.0053692764725923
+        },
+        "uncertainSubsetDescriptiveNotAcceptance": {
+          "rgbMAE": 0.020385913455180954,
+          "rgbRMSE": 0.012156387310176403,
+          "rgbAgreementPercent": -2.0385913455180855
+        },
+        "pooledFullForegroundDescriptive": {
+          "rgbMAE": 0.012510685889156742,
+          "rgbRMSE": 0.007455049570927352,
+          "rgbAgreementPercent": -1.2510685889156719
+        },
+        "eachReferenceSeedFullForeground": [
+          {
+            "rgbMAE": 0.01248484767927957,
+            "rgbRMSE": 0.007455934893142058,
+            "rgbAgreementPercent": -1.2484847679279483
+          },
+          {
+            "rgbMAE": 0.012525641248365804,
+            "rgbRMSE": 0.00745154427993977,
+            "rgbAgreementPercent": -1.2525641248365957
+          },
+          {
+            "rgbMAE": 0.012428531395890036,
+            "rgbRMSE": 0.007407118068624541,
+            "rgbAgreementPercent": -1.242853139589016
+          },
+          {
+            "rgbMAE": 0.012517094788299404,
+            "rgbRMSE": 0.007481191669296616,
+            "rgbAgreementPercent": -1.2517094788299374
+          },
+          {
+            "rgbMAE": 0.012549977546908009,
+            "rgbRMSE": 0.007451536726257646,
+            "rgbAgreementPercent": -1.2549977546908053
+          },
+          {
+            "rgbMAE": 0.012510032267332521,
+            "rgbRMSE": 0.007458274305140844,
+            "rgbAgreementPercent": -1.2510032267332463
+          },
+          {
+            "rgbMAE": 0.012515918079834404,
+            "rgbRMSE": 0.00746651204305776,
+            "rgbAgreementPercent": -1.251591807983445
+          },
+          {
+            "rgbMAE": 0.01250631144706102,
+            "rgbRMSE": 0.0074586562899728315,
+            "rgbAgreementPercent": -1.2506311447061051
+          }
+        ]
+      },
+      "response": {
+        "stableSubset": {
+          "deltaLumaRMSE": 0.006388207787748901,
+          "deltaRGBRMSE": 0.009704759587145825,
+          "responseMagnitudeAgreementPercent": -17.120175536574948,
+          "directionAgreementPercent": 3.3013111725702515,
+          "signedCorrelation": 0.0360415409886804,
+          "brighteningIoU": 0.032017956589482144,
+          "darkeningIoU": 0.057282570730003535
+        },
+        "uncertainSubsetDescriptiveNotAcceptance": {
+          "deltaLumaRMSE": -0.0040944546878385335,
+          "deltaRGBRMSE": -0.0024410442194373883,
+          "responseMagnitudeAgreementPercent": 2.404159381948915,
+          "directionAgreementPercent": 0.4065942189694596,
+          "signedCorrelation": 0.02060137662779482,
+          "brighteningIoU": -0.005727453744099165,
+          "darkeningIoU": 0.0647176684881603
+        },
+        "pooledFullForegroundDescriptive": {
+          "deltaLumaRMSE": 0.0054615135202324,
+          "deltaRGBRMSE": 0.008719221153661819,
+          "responseMagnitudeAgreementPercent": -16.35592463242638,
+          "directionAgreementPercent": 3.088468263959399,
+          "signedCorrelation": 0.04071099789916166,
+          "brighteningIoU": 0.029322730127679608,
+          "darkeningIoU": 0.05474455141407253
+        },
+        "eachReferenceSeedFullForeground": [
+          {
+            "deltaLumaRMSE": 0.005448030449883928,
+            "deltaRGBRMSE": 0.00871308936558153,
+            "responseMagnitudeAgreementPercent": -16.392398681632315,
+            "directionAgreementPercent": 2.981724558676902,
+            "signedCorrelation": 0.04053967349064347,
+            "brighteningIoU": 0.02417246097972503,
+            "darkeningIoU": 0.053476610338834774
+          },
+          {
+            "deltaLumaRMSE": 0.005467498470304505,
+            "deltaRGBRMSE": 0.008690956368891042,
+            "responseMagnitudeAgreementPercent": -16.37299647457465,
+            "directionAgreementPercent": 3.0487646817986445,
+            "signedCorrelation": 0.040728863455906206,
+            "brighteningIoU": 0.028154923794356135,
+            "darkeningIoU": 0.056323513823040905
+          },
+          {
+            "deltaLumaRMSE": 0.005364574831955196,
+            "deltaRGBRMSE": 0.008626704020808118,
+            "responseMagnitudeAgreementPercent": -16.37647923275459,
+            "directionAgreementPercent": 3.092878320173199,
+            "signedCorrelation": 0.04150332395204237,
+            "brighteningIoU": 0.030813482908764955,
+            "darkeningIoU": 0.055361909920393915
+          },
+          {
+            "deltaLumaRMSE": 0.005478116112458464,
+            "deltaRGBRMSE": 0.008743445158291868,
+            "responseMagnitudeAgreementPercent": -16.387979403177937,
+            "directionAgreementPercent": 3.2123356505485816,
+            "signedCorrelation": 0.040325157647898235,
+            "brighteningIoU": 0.032769432452968816,
+            "darkeningIoU": 0.05528295285576834
+          },
+          {
+            "deltaLumaRMSE": 0.005434641280706601,
+            "deltaRGBRMSE": 0.008681684710850152,
+            "responseMagnitudeAgreementPercent": -16.40716761798393,
+            "directionAgreementPercent": 2.9996180679931683,
+            "signedCorrelation": 0.04028645524903951,
+            "brighteningIoU": 0.022289138094212735,
+            "darkeningIoU": 0.05133545498727721
+          },
+          {
+            "deltaLumaRMSE": 0.005426322956824076,
+            "deltaRGBRMSE": 0.008696732610114846,
+            "responseMagnitudeAgreementPercent": -16.381928409072856,
+            "directionAgreementPercent": 2.78304018763032,
+            "signedCorrelation": 0.040787222871797923,
+            "brighteningIoU": 0.016235478455512098,
+            "darkeningIoU": 0.05085174425376293
+          },
+          {
+            "deltaLumaRMSE": 0.0055448595517569865,
+            "deltaRGBRMSE": 0.00875989419082783,
+            "responseMagnitudeAgreementPercent": -16.383768693693384,
+            "directionAgreementPercent": 3.00929202207098,
+            "signedCorrelation": 0.039729600513151775,
+            "brighteningIoU": 0.02466986651383818,
+            "darkeningIoU": 0.05416081332792222
+          },
+          {
+            "deltaLumaRMSE": 0.005408226448293224,
+            "deltaRGBRMSE": 0.008695667844582186,
+            "responseMagnitudeAgreementPercent": -16.376021516315845,
+            "directionAgreementPercent": 2.9766091003995996,
+            "signedCorrelation": 0.04107412814532174,
+            "brighteningIoU": 0.02475552956113003,
+            "darkeningIoU": 0.051816224670710564
+          }
+        ]
+      }
+    },
+    "front-intensity": {
+      "colorMeanPrecision": {
+        "stableSubset": {
+          "rgbMAE": 0.004352193581188157,
+          "rgbRMSE": 0.003664850169277145,
+          "rgbAgreementPercent": -0.4352193581188146
+        },
+        "uncertainSubsetDescriptiveNotAcceptance": {
+          "rgbMAE": 0.012902343231248947,
+          "rgbRMSE": 0.00799493472533569,
+          "rgbAgreementPercent": -1.290234323124892
+        },
+        "pooledFullForegroundDescriptive": {
+          "rgbMAE": 0.0066770222876207375,
+          "rgbRMSE": 0.004461690177781696,
+          "rgbAgreementPercent": -0.6677022287620673
+        },
+        "eachReferenceSeedFullForeground": [
+          {
+            "rgbMAE": 0.0066808939800789,
+            "rgbRMSE": 0.004476798336050747,
+            "rgbAgreementPercent": -0.6680893980079077
+          },
+          {
+            "rgbMAE": 0.00666881512444048,
+            "rgbRMSE": 0.004454074267091268,
+            "rgbAgreementPercent": -0.6668815124440357
+          },
+          {
+            "rgbMAE": 0.00662515432167346,
+            "rgbRMSE": 0.004434218197649997,
+            "rgbAgreementPercent": -0.6625154321673534
+          },
+          {
+            "rgbMAE": 0.006630666311679051,
+            "rgbRMSE": 0.004436997456911063,
+            "rgbAgreementPercent": -0.6630666311678937
+          },
+          {
+            "rgbMAE": 0.006668167367240518,
+            "rgbRMSE": 0.004457930473356353,
+            "rgbAgreementPercent": -0.6668167367240443
+          },
+          {
+            "rgbMAE": 0.006698422774215396,
+            "rgbRMSE": 0.004489751372299622,
+            "rgbAgreementPercent": -0.6698422774215373
+          },
+          {
+            "rgbMAE": 0.006695243769545722,
+            "rgbRMSE": 0.004465948323343738,
+            "rgbAgreementPercent": -0.669524376954584
+          },
+          {
+            "rgbMAE": 0.006679957910386836,
+            "rgbRMSE": 0.004471335157650913,
+            "rgbAgreementPercent": -0.6679957910386918
+          }
+        ]
+      },
+      "response": {
+        "stableSubset": {
+          "deltaLumaRMSE": 7.526156167203535e-05,
+          "deltaRGBRMSE": 0.0015748262472723429,
+          "responseMagnitudeAgreementPercent": 11.350505839379053,
+          "directionAgreementPercent": -2.4369791933951603,
+          "signedCorrelation": 0.01769133893136199,
+          "brighteningIoU": null,
+          "darkeningIoU": 0.00786107651968937
+        },
+        "uncertainSubsetDescriptiveNotAcceptance": {
+          "deltaLumaRMSE": -0.0003049708283703774,
+          "deltaRGBRMSE": -0.001382304881823001,
+          "responseMagnitudeAgreementPercent": 15.108423256933861,
+          "directionAgreementPercent": -14.43911418530708,
+          "signedCorrelation": 0.01986708633617046,
+          "brighteningIoU": null,
+          "darkeningIoU": -0.0618341049813131
+        },
+        "pooledFullForegroundDescriptive": {
+          "deltaLumaRMSE": 5.7993891823378274e-05,
+          "deltaRGBRMSE": 0.0014216555350347257,
+          "responseMagnitudeAgreementPercent": 11.261008556391232,
+          "directionAgreementPercent": -3.098715331392995,
+          "signedCorrelation": 0.022452958474839857,
+          "brighteningIoU": null,
+          "darkeningIoU": 0.005693891478674495
+        },
+        "eachReferenceSeedFullForeground": [
+          {
+            "deltaLumaRMSE": 7.280917256031333e-05,
+            "deltaRGBRMSE": 0.0014271070650480958,
+            "responseMagnitudeAgreementPercent": 11.244075448532243,
+            "directionAgreementPercent": -3.0555240521227773,
+            "signedCorrelation": 0.021944652336063464,
+            "brighteningIoU": 0.0,
+            "darkeningIoU": 0.006786594324982853
+          },
+          {
+            "deltaLumaRMSE": 9.749922562325708e-05,
+            "deltaRGBRMSE": 0.0014322084087134285,
+            "responseMagnitudeAgreementPercent": 11.250799904674295,
+            "directionAgreementPercent": -3.044396939848639,
+            "signedCorrelation": 0.021584026911980136,
+            "brighteningIoU": 0.0,
+            "darkeningIoU": 0.007145568796086077
+          },
+          {
+            "deltaLumaRMSE": 7.795797834673351e-05,
+            "deltaRGBRMSE": 0.0014306226460905139,
+            "responseMagnitudeAgreementPercent": 11.240327595337831,
+            "directionAgreementPercent": -3.1772974316508567,
+            "signedCorrelation": 0.021907218991738198,
+            "brighteningIoU": 0.0,
+            "darkeningIoU": 0.002134589564235956
+          },
+          {
+            "deltaLumaRMSE": 5.5790481803090486e-05,
+            "deltaRGBRMSE": 0.0014356416404982114,
+            "responseMagnitudeAgreementPercent": 11.227341897740217,
+            "directionAgreementPercent": -3.0294456190370624,
+            "signedCorrelation": 0.022073870717349675,
+            "brighteningIoU": 0.0,
+            "darkeningIoU": 0.006131194659496519
+          },
+          {
+            "deltaLumaRMSE": -1.1880534655325792e-05,
+            "deltaRGBRMSE": 0.0013758482599348712,
+            "responseMagnitudeAgreementPercent": 11.234266625121634,
+            "directionAgreementPercent": -2.8271508207670735,
+            "signedCorrelation": 0.023811453568620133,
+            "brighteningIoU": 0.0,
+            "darkeningIoU": 0.007501047025262886
+          },
+          {
+            "deltaLumaRMSE": 4.468301495636623e-05,
+            "deltaRGBRMSE": 0.001421094076761581,
+            "responseMagnitudeAgreementPercent": 11.255185533741397,
+            "directionAgreementPercent": -3.053070960047691,
+            "signedCorrelation": 0.022988414297799742,
+            "brighteningIoU": 0.0,
+            "darkeningIoU": 0.005374060884887899
+          },
+          {
+            "deltaLumaRMSE": 4.902287674467265e-05,
+            "deltaRGBRMSE": 0.0013964928001279978,
+            "responseMagnitudeAgreementPercent": 11.23289778563445,
+            "directionAgreementPercent": -2.919622195607687,
+            "signedCorrelation": 0.02253417878910413,
+            "brighteningIoU": 0.0,
+            "darkeningIoU": 0.0064031307327753195
+          },
+          {
+            "deltaLumaRMSE": 7.582589358074571e-05,
+            "deltaRGBRMSE": 0.001421244327237614,
+            "responseMagnitudeAgreementPercent": 11.240878285136404,
+            "directionAgreementPercent": -3.013115664237162,
+            "signedCorrelation": 0.02181702265898311,
+            "brighteningIoU": 0.0,
+            "darkeningIoU": 0.005349447234352489
+          }
+        ]
+      }
+    },
+    "front-ambient": {
+      "colorMeanPrecision": {
+        "stableSubset": {
+          "rgbMAE": 0.003111754350485718,
+          "rgbRMSE": 0.0034156662317961217,
+          "rgbAgreementPercent": -0.31117543504856826
+        },
+        "uncertainSubsetDescriptiveNotAcceptance": {
+          "rgbMAE": 0.009693519215491525,
+          "rgbRMSE": 0.007244515196926704,
+          "rgbAgreementPercent": -0.9693519215491619
+        },
+        "pooledFullForegroundDescriptive": {
+          "rgbMAE": 0.004267624871342246,
+          "rgbRMSE": 0.0038680670135545214,
+          "rgbAgreementPercent": -0.42676248713421217
+        },
+        "eachReferenceSeedFullForeground": [
+          {
+            "rgbMAE": 0.004264940103146014,
+            "rgbRMSE": 0.003878337272530563,
+            "rgbAgreementPercent": -0.4264940103145989
+          },
+          {
+            "rgbMAE": 0.004273520615868914,
+            "rgbRMSE": 0.003865909523406652,
+            "rgbAgreementPercent": -0.42735206158690175
+          },
+          {
+            "rgbMAE": 0.004248603908714149,
+            "rgbRMSE": 0.0038572022855472565,
+            "rgbAgreementPercent": -0.4248603908714159
+          },
+          {
+            "rgbMAE": 0.004272375689883423,
+            "rgbRMSE": 0.003861926398455895,
+            "rgbAgreementPercent": -0.4272375689883319
+          },
+          {
+            "rgbMAE": 0.004277193005695568,
+            "rgbRMSE": 0.0038723002297910147,
+            "rgbAgreementPercent": -0.42771930056954943
+          },
+          {
+            "rgbMAE": 0.004263290441117923,
+            "rgbRMSE": 0.0038761603570182657,
+            "rgbAgreementPercent": -0.42632904411179595
+          },
+          {
+            "rgbMAE": 0.004264489851353942,
+            "rgbRMSE": 0.003867999081244078,
+            "rgbAgreementPercent": -0.4264489851353943
+          },
+          {
+            "rgbMAE": 0.0042544866943132476,
+            "rgbRMSE": 0.0038611956234009814,
+            "rgbAgreementPercent": -0.42544866943133286
+          }
+        ]
+      },
+      "response": {
+        "stableSubset": {
+          "deltaLumaRMSE": 0.006026512455324991,
+          "deltaRGBRMSE": 0.006058083205173856,
+          "responseMagnitudeAgreementPercent": -9.186404926628192,
+          "directionAgreementPercent": 2.4679548498182555,
+          "signedCorrelation": -0.04194551641825019,
+          "brighteningIoU": 0.04094126650086094,
+          "darkeningIoU": null
+        },
+        "uncertainSubsetDescriptiveNotAcceptance": {
+          "deltaLumaRMSE": 0.002167709971765512,
+          "deltaRGBRMSE": 0.003598474979744984,
+          "responseMagnitudeAgreementPercent": -1.8110172422500312,
+          "directionAgreementPercent": 10.000000000000004,
+          "signedCorrelation": 0.04199125445861712,
+          "brighteningIoU": 0.0,
+          "darkeningIoU": null
+        },
+        "pooledFullForegroundDescriptive": {
+          "deltaLumaRMSE": 0.005979459481075845,
+          "deltaRGBRMSE": 0.006030212619839659,
+          "responseMagnitudeAgreementPercent": -9.121542619717431,
+          "directionAgreementPercent": 2.5534329487421985,
+          "signedCorrelation": -0.03996995251172765,
+          "brighteningIoU": 0.04047664081709845,
+          "darkeningIoU": null
+        },
+        "eachReferenceSeedFullForeground": [
+          {
+            "deltaLumaRMSE": 0.0059820831914243686,
+            "deltaRGBRMSE": 0.006017772598688957,
+            "responseMagnitudeAgreementPercent": -9.145978672884311,
+            "directionAgreementPercent": 2.5326025326025388,
+            "signedCorrelation": -0.04052990756236515,
+            "brighteningIoU": 0.040453686200378036,
+            "darkeningIoU": 0.0
+          },
+          {
+            "deltaLumaRMSE": 0.005961016364653647,
+            "deltaRGBRMSE": 0.006041765083609374,
+            "responseMagnitudeAgreementPercent": -9.156638220780565,
+            "directionAgreementPercent": 2.558756633813502,
+            "signedCorrelation": -0.03916740484445554,
+            "brighteningIoU": 0.04056103108415465,
+            "darkeningIoU": null
+          },
+          {
+            "deltaLumaRMSE": 0.005946333979472723,
+            "deltaRGBRMSE": 0.005995147185340402,
+            "responseMagnitudeAgreementPercent": -9.14142342027614,
+            "directionAgreementPercent": 2.5592417061611457,
+            "signedCorrelation": -0.037585873877817436,
+            "brighteningIoU": 0.04056872037914694,
+            "darkeningIoU": null
+          },
+          {
+            "deltaLumaRMSE": 0.005941356494854069,
+            "deltaRGBRMSE": 0.005996060943277606,
+            "responseMagnitudeAgreementPercent": -9.157580368768038,
+            "directionAgreementPercent": 2.556818181818187,
+            "signedCorrelation": -0.03785162517321967,
+            "brighteningIoU": 0.04053030303030303,
+            "darkeningIoU": null
+          },
+          {
+            "deltaLumaRMSE": 0.005999591363168091,
+            "deltaRGBRMSE": 0.006042523298863879,
+            "responseMagnitudeAgreementPercent": -9.125240222044525,
+            "directionAgreementPercent": 2.575757575757578,
+            "signedCorrelation": -0.04082294316468679,
+            "brighteningIoU": 0.04053030303030303,
+            "darkeningIoU": null
+          },
+          {
+            "deltaLumaRMSE": 0.005991287997404872,
+            "deltaRGBRMSE": 0.006034736156225642,
+            "responseMagnitudeAgreementPercent": -9.136220580944169,
+            "directionAgreementPercent": 2.518462412421897,
+            "signedCorrelation": -0.04085809296461584,
+            "brighteningIoU": 0.04052262829009656,
+            "darkeningIoU": null
+          },
+          {
+            "deltaLumaRMSE": 0.0059643218468877005,
+            "deltaRGBRMSE": 0.006011844534019428,
+            "responseMagnitudeAgreementPercent": -9.14444857086108,
+            "directionAgreementPercent": 2.559726962457347,
+            "signedCorrelation": -0.03901313589125606,
+            "brighteningIoU": 0.04057641259006439,
+            "darkeningIoU": 0.0
+          },
+          {
+            "deltaLumaRMSE": 0.005974260110008102,
+            "deltaRGBRMSE": 0.006033263728796659,
+            "responseMagnitudeAgreementPercent": -9.1481637231972,
+            "directionAgreementPercent": 2.505694760820063,
+            "signedCorrelation": -0.039967352811101794,
+            "brighteningIoU": 0.04062262718299159,
+            "darkeningIoU": null
+          }
+        ]
+      }
+    },
+    "front-albedo": {
+      "colorMeanPrecision": {
+        "stableSubset": {
+          "rgbMAE": 0.0027061832691794574,
+          "rgbRMSE": 0.002151389173926377,
+          "rgbAgreementPercent": -0.2706183269179405
+        },
+        "uncertainSubsetDescriptiveNotAcceptance": {
+          "rgbMAE": 0.005601926564348297,
+          "rgbRMSE": 0.0008716298497077335,
+          "rgbAgreementPercent": -0.5601926564348219
+        },
+        "pooledFullForegroundDescriptive": {
+          "rgbMAE": 0.0034067927266877573,
+          "rgbRMSE": 0.001897803331672887,
+          "rgbAgreementPercent": -0.34067927266879394
+        },
+        "eachReferenceSeedFullForeground": [
+          {
+            "rgbMAE": 0.0034333360157367265,
+            "rgbRMSE": 0.001933063592319706,
+            "rgbAgreementPercent": -0.34333360157367565
+          },
+          {
+            "rgbMAE": 0.0033864682094491005,
+            "rgbRMSE": 0.0018902020526418983,
+            "rgbAgreementPercent": -0.33864682094491627
+          },
+          {
+            "rgbMAE": 0.003390452370264585,
+            "rgbRMSE": 0.0018904475853961378,
+            "rgbAgreementPercent": -0.33904523702646827
+          },
+          {
+            "rgbMAE": 0.003388087602449158,
+            "rgbRMSE": 0.0018750132989761026,
+            "rgbAgreementPercent": -0.33880876024491613
+          },
+          {
+            "rgbMAE": 0.003372023829269599,
+            "rgbRMSE": 0.001889932608046041,
+            "rgbAgreementPercent": -0.3372023829269608
+          },
+          {
+            "rgbMAE": 0.003402761270516058,
+            "rgbRMSE": 0.0019050667222716977,
+            "rgbAgreementPercent": -0.3402761270516095
+          },
+          {
+            "rgbMAE": 0.0033825688019122335,
+            "rgbRMSE": 0.0019066078137635056,
+            "rgbAgreementPercent": -0.33825688019122424
+          },
+          {
+            "rgbMAE": 0.003381711431693024,
+            "rgbRMSE": 0.0018889035196962833,
+            "rgbAgreementPercent": -0.33817114316929064
+          }
+        ]
+      },
+      "response": {
+        "stableSubset": {
+          "deltaLumaRMSE": 0.0008934265287349405,
+          "deltaRGBRMSE": 0.0005226319043145633,
+          "responseMagnitudeAgreementPercent": 3.2258195352945904,
+          "directionAgreementPercent": 0.22620169651271738,
+          "signedCorrelation": -0.055508035940783795,
+          "brighteningIoU": null,
+          "darkeningIoU": 0.0020735155513667003
+        },
+        "uncertainSubsetDescriptiveNotAcceptance": {
+          "deltaLumaRMSE": 0.0,
+          "deltaRGBRMSE": 0.0,
+          "responseMagnitudeAgreementPercent": 0.0,
+          "directionAgreementPercent": 0.0,
+          "brighteningIoU": null,
+          "darkeningIoU": 0.0
+        },
+        "pooledFullForegroundDescriptive": {
+          "deltaLumaRMSE": 0.0008931871711703246,
+          "deltaRGBRMSE": 0.0005225053497880661,
+          "responseMagnitudeAgreementPercent": 3.2256083027859006,
+          "directionAgreementPercent": 0.22611644997174096,
+          "signedCorrelation": -0.05540907518933885,
+          "brighteningIoU": null,
+          "darkeningIoU": 0.0020727341247408493
+        },
+        "eachReferenceSeedFullForeground": [
+          {
+            "deltaLumaRMSE": 0.0009162260535660813,
+            "deltaRGBRMSE": 0.0005279477109027125,
+            "responseMagnitudeAgreementPercent": 3.223795688853656,
+            "directionAgreementPercent": 0.22611644997174096,
+            "signedCorrelation": -0.05572359621356554,
+            "brighteningIoU": null,
+            "darkeningIoU": 0.0020727341247408493
+          },
+          {
+            "deltaLumaRMSE": 0.0008872309356413519,
+            "deltaRGBRMSE": 0.0005140975129858116,
+            "responseMagnitudeAgreementPercent": 3.2249280605938537,
+            "directionAgreementPercent": 0.22611644997174096,
+            "signedCorrelation": -0.05492936925424624,
+            "brighteningIoU": null,
+            "darkeningIoU": 0.0020727341247408493
+          },
+          {
+            "deltaLumaRMSE": 0.0008903831314127988,
+            "deltaRGBRMSE": 0.0005297310389569959,
+            "responseMagnitudeAgreementPercent": 3.225630931654891,
+            "directionAgreementPercent": 0.22611644997174096,
+            "signedCorrelation": -0.05500232252571169,
+            "brighteningIoU": null,
+            "darkeningIoU": 0.0020727341247408493
+          },
+          {
+            "deltaLumaRMSE": 0.0008862540888804477,
+            "deltaRGBRMSE": 0.000525294225055345,
+            "responseMagnitudeAgreementPercent": 3.2240599209509924,
+            "directionAgreementPercent": 0.22611644997174096,
+            "signedCorrelation": -0.05505570946050381,
+            "brighteningIoU": null,
+            "darkeningIoU": 0.0020727341247408493
+          },
+          {
+            "deltaLumaRMSE": 0.0008530616450093884,
+            "deltaRGBRMSE": 0.0004997378281612203,
+            "responseMagnitudeAgreementPercent": 3.2215097851441215,
+            "directionAgreementPercent": 0.22611644997174096,
+            "signedCorrelation": -0.05424925506933009,
+            "brighteningIoU": null,
+            "darkeningIoU": 0.0020727341247408493
+          },
+          {
+            "deltaLumaRMSE": 0.000858235613183829,
+            "deltaRGBRMSE": 0.0005046323119377027,
+            "responseMagnitudeAgreementPercent": 3.22447168123756,
+            "directionAgreementPercent": 0.22611644997174096,
+            "signedCorrelation": -0.054126456908520526,
+            "brighteningIoU": null,
+            "darkeningIoU": 0.0020727341247408493
+          },
+          {
+            "deltaLumaRMSE": 0.0009271632237441915,
+            "deltaRGBRMSE": 0.000541271233024998,
+            "responseMagnitudeAgreementPercent": 3.222556644768062,
+            "directionAgreementPercent": 0.22611644997174096,
+            "signedCorrelation": -0.056319822670092,
+            "brighteningIoU": null,
+            "darkeningIoU": 0.0020727341247408493
+          },
+          {
+            "deltaLumaRMSE": 0.0009085882788783667,
+            "deltaRGBRMSE": 0.0005295556385100098,
+            "responseMagnitudeAgreementPercent": 3.2213169027796624,
+            "directionAgreementPercent": 0.22611644997174096,
+            "signedCorrelation": -0.05573162895946143,
+            "brighteningIoU": null,
+            "darkeningIoU": 0.0020727341247408493
+          }
+        ]
+      }
+    },
+    "oblique-baseline": {
+      "colorMeanPrecision": {
+        "stableSubset": {
+          "rgbMAE": 0.008046753113758298,
+          "rgbRMSE": 0.005566304272996703,
+          "rgbAgreementPercent": -0.8046753113758314
+        },
+        "uncertainSubsetDescriptiveNotAcceptance": {
+          "rgbMAE": 0.02074518700533784,
+          "rgbRMSE": 0.015188703606553083,
+          "rgbAgreementPercent": -2.074518700533801
+        },
+        "pooledFullForegroundDescriptive": {
+          "rgbMAE": 0.01102660033064734,
+          "rgbRMSE": 0.007237073579825337,
+          "rgbAgreementPercent": -1.102660033064737
+        },
+        "eachReferenceSeedFullForeground": [
+          {
+            "rgbMAE": 0.011005779173721864,
+            "rgbRMSE": 0.007234625305216902,
+            "rgbAgreementPercent": -1.100577917372192
+          },
+          {
+            "rgbMAE": 0.011035896010912483,
+            "rgbRMSE": 0.007242051407020833,
+            "rgbAgreementPercent": -1.1035896010912438
+          },
+          {
+            "rgbMAE": 0.010989076189390767,
+            "rgbRMSE": 0.007226406431906418,
+            "rgbAgreementPercent": -1.0989076189390943
+          },
+          {
+            "rgbMAE": 0.011049607569179831,
+            "rgbRMSE": 0.007251199473510994,
+            "rgbAgreementPercent": -1.1049607569179898
+          },
+          {
+            "rgbMAE": 0.011009742419737623,
+            "rgbRMSE": 0.007230373112278643,
+            "rgbAgreementPercent": -1.100974241973745
+          },
+          {
+            "rgbMAE": 0.011007736501230936,
+            "rgbRMSE": 0.0072431344346893245,
+            "rgbAgreementPercent": -1.1007736501231022
+          },
+          {
+            "rgbMAE": 0.011001650307686184,
+            "rgbRMSE": 0.00722512664626912,
+            "rgbAgreementPercent": -1.100165030768622
+          },
+          {
+            "rgbMAE": 0.01101094076955178,
+            "rgbRMSE": 0.007235519812470392,
+            "rgbAgreementPercent": -1.101094076955178
+          }
+        ]
+      }
+    },
+    "oblique-direction": {
+      "colorMeanPrecision": {
+        "stableSubset": {
+          "rgbMAE": 0.010096051255589489,
+          "rgbRMSE": 0.005789991258756899,
+          "rgbAgreementPercent": -1.0096051255589487
+        },
+        "uncertainSubsetDescriptiveNotAcceptance": {
+          "rgbMAE": 0.02192681810319075,
+          "rgbRMSE": 0.015915650104171397,
+          "rgbAgreementPercent": -2.192681810319087
+        },
+        "pooledFullForegroundDescriptive": {
+          "rgbMAE": 0.013612216453649545,
+          "rgbRMSE": 0.007712025478380624,
+          "rgbAgreementPercent": -1.3612216453649637
+        },
+        "eachReferenceSeedFullForeground": [
+          {
+            "rgbMAE": 0.013603759139188126,
+            "rgbRMSE": 0.007708401106799989,
+            "rgbAgreementPercent": -1.3603759139188014
+          },
+          {
+            "rgbMAE": 0.013569266374692246,
+            "rgbRMSE": 0.007687522872351749,
+            "rgbAgreementPercent": -1.356926637469229
+          },
+          {
+            "rgbMAE": 0.013535801549328735,
+            "rgbRMSE": 0.007696362512488009,
+            "rgbAgreementPercent": -1.3535801549328852
+          },
+          {
+            "rgbMAE": 0.013630260395528976,
+            "rgbRMSE": 0.007753068371458005,
+            "rgbAgreementPercent": -1.3630260395529064
+          },
+          {
+            "rgbMAE": 0.01354586193897342,
+            "rgbRMSE": 0.007696872288421863,
+            "rgbAgreementPercent": -1.3545861938973474
+          },
+          {
+            "rgbMAE": 0.013647174168976373,
+            "rgbRMSE": 0.007733365875847276,
+            "rgbAgreementPercent": -1.3647174168976477
+          },
+          {
+            "rgbMAE": 0.013545777075822635,
+            "rgbRMSE": 0.007676424391255099,
+            "rgbAgreementPercent": -1.3545777075822798
+          },
+          {
+            "rgbMAE": 0.01363510238578311,
+            "rgbRMSE": 0.0077333572397428885,
+            "rgbAgreementPercent": -1.3635102385783
+          }
+        ]
+      },
+      "response": {
+        "stableSubset": {
+          "deltaLumaRMSE": 0.003224471535061349,
+          "deltaRGBRMSE": 0.006785719416980335,
+          "responseMagnitudeAgreementPercent": -12.610264250647148,
+          "directionAgreementPercent": 2.0823894324439607,
+          "signedCorrelation": 0.025502933244190396,
+          "brighteningIoU": 0.05389339399306581,
+          "darkeningIoU": 0.03141551770121864
+        },
+        "uncertainSubsetDescriptiveNotAcceptance": {
+          "deltaLumaRMSE": 0.0011191164149204624,
+          "deltaRGBRMSE": 0.0014897990716938522,
+          "responseMagnitudeAgreementPercent": -0.628907603723512,
+          "directionAgreementPercent": -0.7259275464643338,
+          "signedCorrelation": -0.002078165174981078,
+          "brighteningIoU": -0.008076358296622593,
+          "darkeningIoU": -0.04428727039407912
+        },
+        "pooledFullForegroundDescriptive": {
+          "deltaLumaRMSE": 0.003042950910284531,
+          "deltaRGBRMSE": 0.006372286466726357,
+          "responseMagnitudeAgreementPercent": -14.256424628784814,
+          "directionAgreementPercent": 1.7767950839971576,
+          "signedCorrelation": 0.02910491107515778,
+          "brighteningIoU": 0.03866962305986699,
+          "darkeningIoU": 0.025177154617656017
+        },
+        "eachReferenceSeedFullForeground": [
+          {
+            "deltaLumaRMSE": 0.0030890141245553254,
+            "deltaRGBRMSE": 0.00638680151219527,
+            "responseMagnitudeAgreementPercent": -13.875679190437396,
+            "directionAgreementPercent": 1.7678671366490732,
+            "signedCorrelation": 0.028254211092804016,
+            "brighteningIoU": 0.042087175668709564,
+            "darkeningIoU": 0.027539747458303787
+          },
+          {
+            "deltaLumaRMSE": 0.002961817185363591,
+            "deltaRGBRMSE": 0.0063129752877462975,
+            "responseMagnitudeAgreementPercent": -13.841250602479676,
+            "directionAgreementPercent": 1.8183255456067968,
+            "signedCorrelation": 0.029679955667075375,
+            "brighteningIoU": 0.038360099229664435,
+            "darkeningIoU": 0.027854712413304727
+          },
+          {
+            "deltaLumaRMSE": 0.00307814973843952,
+            "deltaRGBRMSE": 0.006365468929730625,
+            "responseMagnitudeAgreementPercent": -13.875052924309372,
+            "directionAgreementPercent": 1.926838662284851,
+            "signedCorrelation": 0.02834159315494278,
+            "brighteningIoU": 0.04535826734090259,
+            "darkeningIoU": 0.024373629294875965
+          },
+          {
+            "deltaLumaRMSE": 0.00304970830538448,
+            "deltaRGBRMSE": 0.006376365356496744,
+            "responseMagnitudeAgreementPercent": -14.226996248429955,
+            "directionAgreementPercent": 1.7586909269866453,
+            "signedCorrelation": 0.029352904078322917,
+            "brighteningIoU": 0.04290735322125455,
+            "darkeningIoU": 0.025201253523934097
+          },
+          {
+            "deltaLumaRMSE": 0.0029392375298874784,
+            "deltaRGBRMSE": 0.006304249200770301,
+            "responseMagnitudeAgreementPercent": -14.030226614468518,
+            "directionAgreementPercent": 1.6459141714590544,
+            "signedCorrelation": 0.030044392195102798,
+            "brighteningIoU": 0.04187142726929438,
+            "darkeningIoU": 0.023970116880367986
+          },
+          {
+            "deltaLumaRMSE": 0.003043694309476083,
+            "deltaRGBRMSE": 0.006366203705602161,
+            "responseMagnitudeAgreementPercent": -14.097497916228349,
+            "directionAgreementPercent": 1.708971064082121,
+            "signedCorrelation": 0.02895347053762265,
+            "brighteningIoU": 0.03726033866467193,
+            "darkeningIoU": 0.02752845007212701
+          },
+          {
+            "deltaLumaRMSE": 0.003065574583465777,
+            "deltaRGBRMSE": 0.006375606170745354,
+            "responseMagnitudeAgreementPercent": -14.006138753428914,
+            "directionAgreementPercent": 1.7121567612777682,
+            "signedCorrelation": 0.028771242527980023,
+            "brighteningIoU": 0.03944030879514748,
+            "darkeningIoU": 0.025955367512202843
+          },
+          {
+            "deltaLumaRMSE": 0.003052020462917915,
+            "deltaRGBRMSE": 0.006387927108039093,
+            "responseMagnitudeAgreementPercent": -14.004973411104373,
+            "directionAgreementPercent": 1.784778639484884,
+            "signedCorrelation": 0.028860760884877212,
+            "brighteningIoU": 0.03629836954107246,
+            "darkeningIoU": 0.026741601352083366
+          }
+        ]
+      }
+    },
+    "oblique-intensity": {
+      "colorMeanPrecision": {
+        "stableSubset": {
+          "rgbMAE": 0.005645289470810888,
+          "rgbRMSE": 0.0036202903017888977,
+          "rgbAgreementPercent": -0.5645289470811008
+        },
+        "uncertainSubsetDescriptiveNotAcceptance": {
+          "rgbMAE": 0.01707918777047787,
+          "rgbRMSE": 0.01305037971393272,
+          "rgbAgreementPercent": -1.7079187770477802
+        },
+        "pooledFullForegroundDescriptive": {
+          "rgbMAE": 0.009329935293010988,
+          "rgbRMSE": 0.005585638529866377,
+          "rgbAgreementPercent": -0.9329935293011005
+        },
+        "eachReferenceSeedFullForeground": [
+          {
+            "rgbMAE": 0.009294247172864534,
+            "rgbRMSE": 0.005581054059876023,
+            "rgbAgreementPercent": -0.9294247172864516
+          },
+          {
+            "rgbMAE": 0.009358494053019611,
+            "rgbRMSE": 0.005588365891151803,
+            "rgbAgreementPercent": -0.9358494053019655
+          },
+          {
+            "rgbMAE": 0.009330315380691151,
+            "rgbRMSE": 0.00557073450871054,
+            "rgbAgreementPercent": -0.9330315380691303
+          },
+          {
+            "rgbMAE": 0.00930002471091762,
+            "rgbRMSE": 0.005597758388647844,
+            "rgbAgreementPercent": -0.9300024710917683
+          },
+          {
+            "rgbMAE": 0.009321939935216988,
+            "rgbRMSE": 0.005599982892979416,
+            "rgbAgreementPercent": -0.9321939935217074
+          },
+          {
+            "rgbMAE": 0.009318051286648199,
+            "rgbRMSE": 0.005593579069886279,
+            "rgbAgreementPercent": -0.9318051286648199
+          },
+          {
+            "rgbMAE": 0.009247305531658673,
+            "rgbRMSE": 0.005549132456630246,
+            "rgbAgreementPercent": -0.9247305531658725
+          },
+          {
+            "rgbMAE": 0.009338677822940677,
+            "rgbRMSE": 0.005595521984502416,
+            "rgbAgreementPercent": -0.9338677822940582
+          }
+        ]
+      },
+      "response": {
+        "stableSubset": {
+          "deltaLumaRMSE": -0.0006296379374726019,
+          "deltaRGBRMSE": 0.0008520699807008925,
+          "responseMagnitudeAgreementPercent": 9.231162800380432,
+          "directionAgreementPercent": -1.7720550808294746,
+          "signedCorrelation": 0.01437623709734559,
+          "brighteningIoU": null,
+          "darkeningIoU": 0.004271454035570388
+        },
+        "uncertainSubsetDescriptiveNotAcceptance": {
+          "deltaLumaRMSE": 0.0005877012398951484,
+          "deltaRGBRMSE": 0.00044481935856680206,
+          "responseMagnitudeAgreementPercent": 2.2342257978107654,
+          "directionAgreementPercent": -6.372523797272962,
+          "signedCorrelation": 0.01677717229501549,
+          "brighteningIoU": null,
+          "darkeningIoU": -0.04735442929422863
+        },
+        "pooledFullForegroundDescriptive": {
+          "deltaLumaRMSE": -0.0005844199758649748,
+          "deltaRGBRMSE": 0.0008187096290054041,
+          "responseMagnitudeAgreementPercent": 9.219186223085728,
+          "directionAgreementPercent": -1.9875141188712746,
+          "signedCorrelation": 0.01667529295983916,
+          "brighteningIoU": null,
+          "darkeningIoU": 0.0017739755108414634
+        },
+        "eachReferenceSeedFullForeground": [
+          {
+            "deltaLumaRMSE": -0.0005527431817073658,
+            "deltaRGBRMSE": 0.0008357082740112626,
+            "responseMagnitudeAgreementPercent": 9.201465862167396,
+            "directionAgreementPercent": -2.0200899735009585,
+            "signedCorrelation": 0.015821839720796094,
+            "brighteningIoU": 0.0,
+            "darkeningIoU": 0.0024194076976218337
+          },
+          {
+            "deltaLumaRMSE": -0.0005726340828447543,
+            "deltaRGBRMSE": 0.0008230014487329851,
+            "responseMagnitudeAgreementPercent": 9.204721323934336,
+            "directionAgreementPercent": -1.9742949732099646,
+            "signedCorrelation": 0.016562574640435423,
+            "brighteningIoU": 0.0,
+            "darkeningIoU": 0.002736719539492727
+          },
+          {
+            "deltaLumaRMSE": -0.0005765790080783234,
+            "deltaRGBRMSE": 0.0008141515332236032,
+            "responseMagnitudeAgreementPercent": 9.209357596510586,
+            "directionAgreementPercent": -1.9488368183274218,
+            "signedCorrelation": 0.01638762107942926,
+            "brighteningIoU": 0.0,
+            "darkeningIoU": 0.0024276781419638738
+          },
+          {
+            "deltaLumaRMSE": -0.0005989404680399948,
+            "deltaRGBRMSE": 0.0007979902003386052,
+            "responseMagnitudeAgreementPercent": 9.196558032579063,
+            "directionAgreementPercent": -2.015447963144865,
+            "signedCorrelation": 0.016925385271564952,
+            "brighteningIoU": 0.0,
+            "darkeningIoU": 0.001795604531851125
+          },
+          {
+            "deltaLumaRMSE": -0.0006081451735318738,
+            "deltaRGBRMSE": 0.0008163041583614528,
+            "responseMagnitudeAgreementPercent": 9.216155409879434,
+            "directionAgreementPercent": -1.951104781301865,
+            "signedCorrelation": 0.017596111912536183,
+            "brighteningIoU": 0.0,
+            "darkeningIoU": 0.003050177120826336
+          },
+          {
+            "deltaLumaRMSE": -0.0005953427686332738,
+            "deltaRGBRMSE": 0.0008004111226923294,
+            "responseMagnitudeAgreementPercent": 9.195818708029321,
+            "directionAgreementPercent": -2.061805252539216,
+            "signedCorrelation": 0.016657392910082502,
+            "brighteningIoU": 0.0,
+            "darkeningIoU": 0.0018014810979325446
+          },
+          {
+            "deltaLumaRMSE": -0.0005851051337967192,
+            "deltaRGBRMSE": 0.0008195101715840064,
+            "responseMagnitudeAgreementPercent": 9.197948292952574,
+            "directionAgreementPercent": -2.015068496447057,
+            "signedCorrelation": 0.01649690307895868,
+            "brighteningIoU": null,
+            "darkeningIoU": 0.0014767704039521101
+          },
+          {
+            "deltaLumaRMSE": -0.0005618796451269115,
+            "deltaRGBRMSE": 0.0008224572453266604,
+            "responseMagnitudeAgreementPercent": 9.197058784257877,
+            "directionAgreementPercent": -1.9350648457592285,
+            "signedCorrelation": 0.016096933669609625,
+            "brighteningIoU": 0.0,
+            "darkeningIoU": 0.00400967159456922
+          }
+        ]
+      }
+    },
+    "oblique-ambient": {
+      "colorMeanPrecision": {
+        "stableSubset": {
+          "rgbMAE": 0.005099757531653537,
+          "rgbRMSE": 0.003830257948923721,
+          "rgbAgreementPercent": -0.5099757531653637
+        },
+        "uncertainSubsetDescriptiveNotAcceptance": {
+          "rgbMAE": 0.013571026937163305,
+          "rgbRMSE": 0.00968476411150107,
+          "rgbAgreementPercent": -1.3571026937163282
+        },
+        "pooledFullForegroundDescriptive": {
+          "rgbMAE": 0.006914410845001578,
+          "rgbRMSE": 0.004635150888949169,
+          "rgbAgreementPercent": -0.6914410845001555
+        },
+        "eachReferenceSeedFullForeground": [
+          {
+            "rgbMAE": 0.006911522931450281,
+            "rgbRMSE": 0.004631636965676533,
+            "rgbAgreementPercent": -0.6911522931450236
+          },
+          {
+            "rgbMAE": 0.006911269710758561,
+            "rgbRMSE": 0.004636829989880575,
+            "rgbAgreementPercent": -0.6911269710758461
+          },
+          {
+            "rgbMAE": 0.006899241727901073,
+            "rgbRMSE": 0.0046324942209524655,
+            "rgbAgreementPercent": -0.6899241727901
+          },
+          {
+            "rgbMAE": 0.00690293259057817,
+            "rgbRMSE": 0.004640724150148823,
+            "rgbAgreementPercent": -0.6902932590578246
+          },
+          {
+            "rgbMAE": 0.006894241645809679,
+            "rgbRMSE": 0.004633719374172451,
+            "rgbAgreementPercent": -0.68942416458097
+          },
+          {
+            "rgbMAE": 0.0069260057862571,
+            "rgbRMSE": 0.004643919938907837,
+            "rgbAgreementPercent": -0.692600578625715
+          },
+          {
+            "rgbMAE": 0.0068896597200497345,
+            "rgbRMSE": 0.004620924797591575,
+            "rgbAgreementPercent": -0.688965972004965
+          },
+          {
+            "rgbMAE": 0.0068971283616954815,
+            "rgbRMSE": 0.004636375903783074,
+            "rgbAgreementPercent": -0.6897128361695479
+          }
+        ]
+      },
+      "response": {
+        "stableSubset": {
+          "deltaLumaRMSE": 0.006784516211368857,
+          "deltaRGBRMSE": 0.0067177249246705845,
+          "responseMagnitudeAgreementPercent": -8.983335087757531,
+          "directionAgreementPercent": 2.127659574468069,
+          "signedCorrelation": -0.046127188342828744,
+          "brighteningIoU": 0.03719079743988929,
+          "darkeningIoU": null
+        },
+        "uncertainSubsetDescriptiveNotAcceptance": {
+          "deltaLumaRMSE": 0.00017070841688418548,
+          "deltaRGBRMSE": 0.0009946738703849219,
+          "responseMagnitudeAgreementPercent": -1.0321176625427668,
+          "directionAgreementPercent": 1.639344262295083,
+          "signedCorrelation": 0.06693629995429407,
+          "brighteningIoU": 0.0,
+          "darkeningIoU": null
+        },
+        "pooledFullForegroundDescriptive": {
+          "deltaLumaRMSE": 0.006731452748759741,
+          "deltaRGBRMSE": 0.006674366710142016,
+          "responseMagnitudeAgreementPercent": -8.95444555532049,
+          "directionAgreementPercent": 2.1225607668606727,
+          "signedCorrelation": -0.04356163834436178,
+          "brighteningIoU": 0.03680246490927763,
+          "darkeningIoU": null
+        },
+        "eachReferenceSeedFullForeground": [
+          {
+            "deltaLumaRMSE": 0.006711636870785215,
+            "deltaRGBRMSE": 0.006655055773112699,
+            "responseMagnitudeAgreementPercent": -8.978191137131162,
+            "directionAgreementPercent": 2.1262002743484203,
+            "signedCorrelation": -0.0423619992209178,
+            "brighteningIoU": 0.036865569272976684,
+            "darkeningIoU": null
+          },
+          {
+            "deltaLumaRMSE": 0.0067378001540772114,
+            "deltaRGBRMSE": 0.006671529750092289,
+            "responseMagnitudeAgreementPercent": -8.96194941830899,
+            "directionAgreementPercent": 2.128389975969796,
+            "signedCorrelation": -0.043617426554409526,
+            "brighteningIoU": 0.03690353587366979,
+            "darkeningIoU": null
+          },
+          {
+            "deltaLumaRMSE": 0.006714116742066262,
+            "deltaRGBRMSE": 0.006652579667596317,
+            "responseMagnitudeAgreementPercent": -8.988273393076753,
+            "directionAgreementPercent": 2.1276595744680975,
+            "signedCorrelation": -0.04272109867849956,
+            "brighteningIoU": 0.03689087165408367,
+            "darkeningIoU": null
+          },
+          {
+            "deltaLumaRMSE": 0.0067166850760241245,
+            "deltaRGBRMSE": 0.006662227122748901,
+            "responseMagnitudeAgreementPercent": -8.996879830647721,
+            "directionAgreementPercent": 2.111225540679712,
+            "signedCorrelation": -0.04319379884364976,
+            "brighteningIoU": 0.03690353587366979,
+            "darkeningIoU": null
+          },
+          {
+            "deltaLumaRMSE": 0.006714454200860177,
+            "deltaRGBRMSE": 0.006665018506121806,
+            "responseMagnitudeAgreementPercent": -8.980727028018364,
+            "directionAgreementPercent": 2.1276595744680975,
+            "signedCorrelation": -0.04261326111857303,
+            "brighteningIoU": 0.03689087165408367,
+            "darkeningIoU": null
+          },
+          {
+            "deltaLumaRMSE": 0.006695214237769073,
+            "deltaRGBRMSE": 0.006663480175250799,
+            "responseMagnitudeAgreementPercent": -8.9794944896177,
+            "directionAgreementPercent": 2.1262002743484203,
+            "signedCorrelation": -0.04093155485836928,
+            "brighteningIoU": 0.036865569272976684,
+            "darkeningIoU": null
+          },
+          {
+            "deltaLumaRMSE": 0.0067398996830866365,
+            "deltaRGBRMSE": 0.006674604238361706,
+            "responseMagnitudeAgreementPercent": -8.97295454333213,
+            "directionAgreementPercent": 2.1283899759697817,
+            "signedCorrelation": -0.04432151383726164,
+            "brighteningIoU": 0.03690353587366979,
+            "darkeningIoU": null
+          },
+          {
+            "deltaLumaRMSE": 0.006727608610630355,
+            "deltaRGBRMSE": 0.0066712410302764286,
+            "responseMagnitudeAgreementPercent": -8.974006926556775,
+            "directionAgreementPercent": 2.1276595744680833,
+            "signedCorrelation": -0.04303575855984536,
+            "brighteningIoU": 0.03689087165408367,
+            "darkeningIoU": null
+          }
+        ]
+      }
+    },
+    "oblique-albedo": {
+      "colorMeanPrecision": {
+        "stableSubset": {
+          "rgbMAE": 0.003615984576987724,
+          "rgbRMSE": 0.002223525088218492,
+          "rgbAgreementPercent": -0.36159845769877563
+        },
+        "uncertainSubsetDescriptiveNotAcceptance": {
+          "rgbMAE": 0.010217316770567642,
+          "rgbRMSE": 0.0063466816909208135,
+          "rgbAgreementPercent": -1.0217316770567635
+        },
+        "pooledFullForegroundDescriptive": {
+          "rgbMAE": 0.005573434818437806,
+          "rgbRMSE": 0.0030338727959057787,
+          "rgbAgreementPercent": -0.5573434818437875
+        },
+        "eachReferenceSeedFullForeground": [
+          {
+            "rgbMAE": 0.005531069114664694,
+            "rgbRMSE": 0.0030202343408267107,
+            "rgbAgreementPercent": -0.5531069114664575
+          },
+          {
+            "rgbMAE": 0.005595860077116904,
+            "rgbRMSE": 0.003052047427050175,
+            "rgbAgreementPercent": -0.5595860077116868
+          },
+          {
+            "rgbMAE": 0.005571921140424457,
+            "rgbRMSE": 0.003038829557665379,
+            "rgbAgreementPercent": -0.5571921140424507
+          },
+          {
+            "rgbMAE": 0.005580800289761156,
+            "rgbRMSE": 0.0030482636822767306,
+            "rgbAgreementPercent": -0.5580800289761214
+          },
+          {
+            "rgbMAE": 0.005579250852879802,
+            "rgbRMSE": 0.0030448508150148212,
+            "rgbAgreementPercent": -0.5579250852879909
+          },
+          {
+            "rgbMAE": 0.005560969003316707,
+            "rgbRMSE": 0.0030450939581376235,
+            "rgbAgreementPercent": -0.5560969003316814
+          },
+          {
+            "rgbMAE": 0.005535054260848438,
+            "rgbRMSE": 0.0030075883107507084,
+            "rgbAgreementPercent": -0.553505426084854
+          },
+          {
+            "rgbMAE": 0.005525880143624845,
+            "rgbRMSE": 0.0030084631042319177,
+            "rgbAgreementPercent": -0.5525880143624988
+          }
+        ]
+      },
+      "response": {
+        "stableSubset": {
+          "deltaLumaRMSE": 0.0015944692350374629,
+          "deltaRGBRMSE": 0.001293918504830252,
+          "responseMagnitudeAgreementPercent": 2.4177202120765173,
+          "directionAgreementPercent": 0.06820119352089193,
+          "signedCorrelation": -0.07086068023155012,
+          "brighteningIoU": null,
+          "darkeningIoU": 0.0011935208866155067
+        },
+        "uncertainSubsetDescriptiveNotAcceptance": {
+          "deltaLumaRMSE": 0.0011805496152782063,
+          "deltaRGBRMSE": 0.0032312835784539147,
+          "responseMagnitudeAgreementPercent": 2.308275688948882,
+          "directionAgreementPercent": 0.0,
+          "signedCorrelation": 0.18557002288525393,
+          "brighteningIoU": null,
+          "darkeningIoU": 0.0
+        },
+        "pooledFullForegroundDescriptive": {
+          "deltaLumaRMSE": 0.0015941931904825818,
+          "deltaRGBRMSE": 0.0012939624367734326,
+          "responseMagnitudeAgreementPercent": 2.4173528148963186,
+          "directionAgreementPercent": 0.06816632583502269,
+          "signedCorrelation": -0.0706895459729272,
+          "brighteningIoU": null,
+          "darkeningIoU": 0.0011929107021131369
+        },
+        "eachReferenceSeedFullForeground": [
+          {
+            "deltaLumaRMSE": 0.001611969623514134,
+            "deltaRGBRMSE": 0.0013101854815233266,
+            "responseMagnitudeAgreementPercent": 2.4153361362838126,
+            "directionAgreementPercent": 0.06816632583502269,
+            "signedCorrelation": -0.07096036391357191,
+            "brighteningIoU": null,
+            "darkeningIoU": 0.0011929107021131369
+          },
+          {
+            "deltaLumaRMSE": 0.001585573828573307,
+            "deltaRGBRMSE": 0.001285824788046147,
+            "responseMagnitudeAgreementPercent": 2.415904618298285,
+            "directionAgreementPercent": 0.06816632583502269,
+            "signedCorrelation": -0.07037705187548188,
+            "brighteningIoU": null,
+            "darkeningIoU": 0.0011929107021131369
+          },
+          {
+            "deltaLumaRMSE": 0.0015806982992624952,
+            "deltaRGBRMSE": 0.001278211242589672,
+            "responseMagnitudeAgreementPercent": 2.4174335624983314,
+            "directionAgreementPercent": 0.06816632583502269,
+            "signedCorrelation": -0.06997986966371039,
+            "brighteningIoU": null,
+            "darkeningIoU": 0.0011929107021131369
+          },
+          {
+            "deltaLumaRMSE": 0.0015934284927146339,
+            "deltaRGBRMSE": 0.001304821886113472,
+            "responseMagnitudeAgreementPercent": 2.4176856477710658,
+            "directionAgreementPercent": 0.0681663258350369,
+            "signedCorrelation": -0.0703632662230878,
+            "brighteningIoU": 0.0,
+            "darkeningIoU": 0.0011929107021131369
+          },
+          {
+            "deltaLumaRMSE": 0.0016014023106044883,
+            "deltaRGBRMSE": 0.0012939831216876585,
+            "responseMagnitudeAgreementPercent": 2.41630466458777,
+            "directionAgreementPercent": 0.06816632583502269,
+            "signedCorrelation": -0.07068367443410256,
+            "brighteningIoU": null,
+            "darkeningIoU": 0.0011929107021131369
+          },
+          {
+            "deltaLumaRMSE": 0.001568965351873633,
+            "deltaRGBRMSE": 0.0012719064849750356,
+            "responseMagnitudeAgreementPercent": 2.4129863452798475,
+            "directionAgreementPercent": 0.06816632583502269,
+            "signedCorrelation": -0.06979030124284163,
+            "brighteningIoU": null,
+            "darkeningIoU": 0.0011929107021131369
+          },
+          {
+            "deltaLumaRMSE": 0.0015746388666710229,
+            "deltaRGBRMSE": 0.001291377192609633,
+            "responseMagnitudeAgreementPercent": 2.4152228584026716,
+            "directionAgreementPercent": 0.06816632583502269,
+            "signedCorrelation": -0.06982919283855737,
+            "brighteningIoU": null,
+            "darkeningIoU": 0.0011929107021131369
+          },
+          {
+            "deltaLumaRMSE": 0.0016056037116054939,
+            "deltaRGBRMSE": 0.001295399686696036,
+            "responseMagnitudeAgreementPercent": 2.4150035801678342,
+            "directionAgreementPercent": 0.06816632583502269,
+            "signedCorrelation": -0.07101701706885477,
+            "brighteningIoU": null,
+            "darkeningIoU": 0.0011929107021131369
+          }
+        ]
+      }
+    }
+  },
+  "allReferenceDomainMetadataUnchanged": true,
+  "comparedScalarChanges": 945,
+  "metadataNegativeTests": {
+    "scorerSHA256": "5cca63dbaacac6e3f6e476f0e4a0187931fed3752fed34bd140170af258ba928",
+    "allTwentyRuntimeRecordsValid": true,
+    "mutationsRejected": {
+      "node_count_beyond_capacity": "visibility scene node count exceeds fixed-fixture bound",
+      "temporary_without_cap": "visibility fixed-fixture allocation audit mismatch",
+      "scene_bytes_understate": "visibility fixed-fixture allocation audit mismatch",
+      "no_queries_complete": "visibility rays must be positive and no greater than diskSamples",
+      "node_visits_below_rays": "visibility node visits must be at least rays",
+      "rays_over_samples": "visibility rays must be positive and no greater than diskSamples",
+      "zero_triangle_tests": "visibility fixed-fixture triangle tests must be positive",
+      "incomplete": "frame actual visibilityComplete must be boolean true"
+    }
+  },
+  "auditSource": "Final off-004/on-004 and score-off-004/score-on-004 only. Rejected on-001 not used.",
+  "scopeTextCaveat": "Frozen on-004 scope contains stale no AgX/visibility phrase followed by implemented BVH visibility. Owner correction is in REPORT.md; actual implementation is character-only visibility, no AgX, ground or world visibility.",
+  "scoreHashes": {
+    "off": "cd48525b33fbde57ac6e5e59461bc089d7605151cb8b40a372706f4f4f31c035",
+    "on": "8532b49fd40c775657f89f81e08f10ceaf59696aa1f82fbb219d0f4d7256c4ae"
+  }
+}

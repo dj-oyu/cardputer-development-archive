@@ -1,0 +1,17 @@
+{
+  "coreFreezeSHA256": "8ce9d1d376db50d254bab3db6c2f1ee1da2d52a5e6d46dfeea54a6828aad5323",
+  "baselineGeometryCertificateSHA256": "a18011982c6e2338368a9e5bafacec6af5a5bad1c1206d05640cb075fcdb62c3",
+  "flags": [
+    "-std=c11",
+    "-O2",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-Wno-misleading-indentation",
+    "-ffp-contract=off",
+    "-fexcess-precision=standard"
+  ],
+  "binarySHA256": "9f3b2e2e14217d54ff78f0597299e9841c8fa58ef57a861f92168d014406486e",
+  "inputsSHA256": "fc8729fcbc6b0bb7e5c3ef43abcdf81a5d70915b0559466bc2b961d57b2d2d32",
+  "status": "BUILT_NOT_RENDERED"
+}

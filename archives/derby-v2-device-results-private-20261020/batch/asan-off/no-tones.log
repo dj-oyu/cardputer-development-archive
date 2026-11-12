@@ -1,0 +1,57 @@
+APP_ID local.derby
+I (pocket.app) APP_LOAD prog bytes=2465 compile_us=0 run_us=0 used=87260>91264>95728
+I (pocket.app) APP_LOAD view bytes=11972 compile_us=0 run_us=0 used=95728>121704>131656
+I (pocket.app) APP_LOAD scene bytes=9497 compile_us=0 run_us=0 used=131656>148276>151948
+I (pocket.app) APP_LOAD pan bytes=2196 compile_us=0 run_us=0 used=151948>155648>157044
+I (pocket.app) APP_LOAD fixed bytes=2354 compile_us=0 run_us=0 used=170236>174564>174572
+DERBY READY tones=false
+I (pocket.app) APP_LOAD play bytes=6993 compile_us=0 run_us=0 used=157044>166936>180160
+ok   eval; source 4511 B
+QuickJS-ng memory usage -- 0.14.0 version, 64-bit, malloc limit: 524288
+
+  1144 + 0   JSRuntime
+  608 + 0   JSContext
+   72 + 0   JSObject
+   40 + 0   JSString
+  136 + 0   JSFunctionBytecode
+
+JSObject classes
+     65   1 Object
+     72   2 Array
+      1   4 Number
+      1   5 String
+      1   6 Boolean
+     94  12 Function
+     59  13 Function
+      1  15 Function
+      1  20 ArrayBuffer
+      1  33 Float64Array
+      1     other
+
+NAME                    COUNT     SIZE
+memory allocated         1570   177792  (113.2 per block)
+memory used              1718   156760  (8 overhead, 12.2 average slack)
+atoms                     536    36411  (67.9 per atom)
+strings                    72     3424  (47.6 per string)
+objects                   297    21384  (72.0 per object)
+  properties              970    17456  (3.3 per object)
+  shapes                   84    14288  (170.1 per shape)
+bytecode functions         88    21924
+  bytecode                 88    20118  (228.6 per function)
+  pc2line                  80     3507  (43.8 per function)
+C functions                94
+arrays                     72
+  fast arrays              72
+  elements                602     9632  (8.4 per fast array)
+guest heap (TLSF model): before eval 64920, peak during eval 173376 (+108456), after eval 165232 (+100312)
+MEASURE_HOST functional_only=1 faults=0 scalar=0 pie=0
+MEASURE_HOST s0=0:0:0
+MEASURE_HOST s1=34:34:2
+MEASURE_HOST s2=0:0:0
+MEASURE_HOST s3=0:0:0
+MEASURE_HOST s4=0:0:0
+MEASURE_HOST s5=0:0:0
+MEASURE_HOST s6=0:0:0
+MEASURE_HOST s7=0:0:0
+MEASURE_HOST s8=0:0:0
+MEASURE_HOST s9=0:0:0

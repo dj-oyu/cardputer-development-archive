@@ -1,0 +1,132 @@
+{
+  "status": "PASS",
+  "frames": [
+    {
+      "name": "native-front-baseline",
+      "view": "front",
+      "case": "baseline",
+      "reverse": false,
+      "arm": "off",
+      "mode": "diagnostic",
+      "status": "PASS",
+      "files": {
+        ".u16le": "fb373165478a9984e5be41ffd88c73df34be4480fdf6480bc2fe24f796123b9e",
+        ".f32le": "03d9ee4d5a81118e7f2efe2947a64230132aad4daad2a2019d31f9f4959fea3f",
+        ".snapshot": "006cfd92bda231a4ae7922f23aa125176f807967feaf444e2f3f8b19ef72cab0",
+        ".targets.u8": "eebd4a3432074c6e6d84cf7e6a03b34c7dbd9d4309bd3fbd003b7caa47eeb4f6",
+        ".hdr.f64le": "7b5a6dfa3cdcd2cd7f3427f366723aa2635d4d56998b06fd9f549aef7dba870d",
+        ".json": "24f3336194e0611302fba4395750552ea0d107de2e24b817bb8c4650c9d836a4",
+        ".aa.json": "2bdee4fe93c101bf5a7edadcd096cef0f0360df4322408336b4c886fa81bd098",
+        ".floor.json": "102ec79849b8b5c882a528f4692774b04e10f186c511df46e0a7299096e10a38",
+        ".background.json": "7a26216fa440e20de9aa11a3546797c827b8fccdd5152d7365d424fd15fa300d",
+        ".row.json": "2c824f08cba34f408d5c41846171ef610f5d146632efb6dd4f5cf59e5b6b083b",
+        ".floor-world.json": "806e770efa438bda98e3a7b28525925f49498c91da6fad798e9cd890cc548f0d",
+        ".hdr-observer.json": "05f47a285bde9e9786102893fd82c483225c30ded2ee93ffdd6cd81bcdbf212d",
+        ".cache.json": "54f00901d3a10c5cbadbdd5531884282d77d6abb73cd4a927b5849fb82711c4e",
+        ".depth-stream.json": "9a1c15480357845548e2b6e4579a186837cade5f46e07e0368306ba58ac35c77"
+      },
+      "reportObservations": {
+        ".json": {
+          "descriptiveTiming": {
+            "transportBuildNs": {
+              "baseline": 36265024,
+              "candidate": 33867735
+            },
+            "visibilityBuildNs": {
+              "baseline": 2215449,
+              "candidate": 2194728
+            },
+            "appendNs": {
+              "baseline": 38961811,
+              "candidate": 36546125
+            },
+            "evaluateNs": {
+              "baseline": 9091464,
+              "candidate": 19750496
+            },
+            "hostRenderNsFirstFrame": {
+              "baseline": 17650353091,
+              "candidate": 16674809730
+            }
+          },
+          "declaredNonTiming": [
+            {
+              "path": [
+                "depthScratchBytes"
+              ],
+              "baseline": 7680,
+              "candidate": 8640
+            }
+          ]
+        },
+        ".aa.json": {
+          "descriptiveTiming": {},
+          "declaredNonTiming": []
+        },
+        ".floor.json": {
+          "descriptiveTiming": {},
+          "declaredNonTiming": []
+        },
+        ".background.json": {
+          "descriptiveTiming": {
+            "backgroundBuildNs": {
+              "baseline": 83527,
+              "candidate": 84078
+            }
+          },
+          "declaredNonTiming": []
+        },
+        ".row.json": {
+          "descriptiveTiming": {
+            "backgroundBuildNs": {
+              "baseline": 83527,
+              "candidate": 84078
+            }
+          },
+          "declaredNonTiming": [
+            {
+              "path": [
+                "adapterSpanPairs"
+              ],
+              "baseline": 406,
+              "candidate": 378
+            },
+            {
+              "path": [
+                "producerUsed",
+                9
+              ],
+              "baseline": 43087,
+              "candidate": 43120
+            },
+            {
+              "path": [
+                "producerUsed",
+                10
+              ],
+              "baseline": 616,
+              "candidate": 567
+            }
+          ]
+        },
+        ".floor-world.json": {
+          "descriptiveTiming": {},
+          "declaredNonTiming": []
+        },
+        ".hdr-observer.json": {
+          "descriptiveTiming": {},
+          "declaredNonTiming": []
+        },
+        ".cache.json": {
+          "descriptiveTiming": {},
+          "declaredNonTiming": []
+        }
+      },
+      "elapsedSecondsDescriptiveOnly": 16.738933349988656,
+      "hostUserCPUSeconds": 16.732333,
+      "hostSystemCPUSeconds": 0.0,
+      "hostPeakRSSKiB": 24520
+    }
+  ],
+  "all20Complete": false
+}

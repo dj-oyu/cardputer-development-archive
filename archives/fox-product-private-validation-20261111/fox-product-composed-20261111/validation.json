@@ -1,0 +1,124 @@
+{
+  "host": {
+    "0": {
+      "bytes": 64800,
+      "reference_equal": true,
+      "sha256": "fd9d67cf29cfc580d68f0a0e54f3d951a7a537cfde01dd2c2fe68af232e68b23"
+    },
+    "125": {
+      "bytes": 64800,
+      "reference_equal": true,
+      "sha256": "6b06b7ff1b26d6a3fdecb42ecce2035e448d4f675ad86cadd1e750688d1e2b89"
+    },
+    "250": {
+      "bytes": 64800,
+      "reference_equal": true,
+      "sha256": "14743d708f2bf0cdd719d16aacbe6840d0161dd28bd66ebeaed9d1ce4b122072"
+    },
+    "375": {
+      "bytes": 64800,
+      "reference_equal": true,
+      "sha256": "e22281909aa86c7f8c20489874b6c7badfedaba00cd4fe62fa368326a1c9dfb0"
+    },
+    "500": {
+      "bytes": 64800,
+      "reference_equal": true,
+      "sha256": "4fbab979e2429fb46a3b8b5730170d21a3e9b6fc1f2efc5ed001d7b54038f64b"
+    },
+    "625": {
+      "bytes": 64800,
+      "reference_equal": true,
+      "sha256": "277eb3b703a6f3053b83a1c0237cb16ec4e9e2fe35ff770e017f2363e186326d"
+    },
+    "750": {
+      "bytes": 64800,
+      "reference_equal": true,
+      "sha256": "d0ee61526d8a4ddfb4fcb873b7fdbe6543f5d3115791a57c5bdc61400b5f6240"
+    },
+    "875": {
+      "bytes": 64800,
+      "reference_equal": true,
+      "sha256": "d93663e6d035518550d5c58e8a269360ed4b21edbc96b1c9ac764f4fd8899116"
+    },
+    "1000": {
+      "bytes": 64800,
+      "reference_equal": true,
+      "sha256": "0ccf1f974028e25dd07ba02698c3637ae1c022444e49d8753454e40693a78dcb"
+    }
+  },
+  "qemu": {
+    "0": {
+      "bytes": 64800,
+      "host_and_reference_equal": true,
+      "sha256": "fd9d67cf29cfc580d68f0a0e54f3d951a7a537cfde01dd2c2fe68af232e68b23"
+    },
+    "125": {
+      "bytes": 64800,
+      "host_and_reference_equal": true,
+      "sha256": "6b06b7ff1b26d6a3fdecb42ecce2035e448d4f675ad86cadd1e750688d1e2b89"
+    },
+    "250": {
+      "bytes": 64800,
+      "host_and_reference_equal": true,
+      "sha256": "14743d708f2bf0cdd719d16aacbe6840d0161dd28bd66ebeaed9d1ce4b122072"
+    },
+    "375": {
+      "bytes": 64800,
+      "host_and_reference_equal": true,
+      "sha256": "e22281909aa86c7f8c20489874b6c7badfedaba00cd4fe62fa368326a1c9dfb0"
+    },
+    "500": {
+      "bytes": 64800,
+      "host_and_reference_equal": true,
+      "sha256": "4fbab979e2429fb46a3b8b5730170d21a3e9b6fc1f2efc5ed001d7b54038f64b"
+    },
+    "625": {
+      "bytes": 64800,
+      "host_and_reference_equal": true,
+      "sha256": "277eb3b703a6f3053b83a1c0237cb16ec4e9e2fe35ff770e017f2363e186326d"
+    },
+    "750": {
+      "bytes": 64800,
+      "host_and_reference_equal": true,
+      "sha256": "d0ee61526d8a4ddfb4fcb873b7fdbe6543f5d3115791a57c5bdc61400b5f6240"
+    },
+    "875": {
+      "bytes": 64800,
+      "host_and_reference_equal": true,
+      "sha256": "d93663e6d035518550d5c58e8a269360ed4b21edbc96b1c9ac764f4fd8899116"
+    },
+    "1000": {
+      "bytes": 64800,
+      "host_and_reference_equal": true,
+      "sha256": "0ccf1f974028e25dd07ba02698c3637ae1c022444e49d8753454e40693a78dcb"
+    }
+  },
+  "limits": [
+    "Mock transport only, not production board or DMA",
+    "Synchronous QuickJS bridge only; public motion and AYNM unchanged",
+    "ASan+UBSan passes with leak detection disabled; LSan cannot run under this environment ptrace",
+    "Failure preserves latest hash/JS state; already submitted pixels are not undone"
+  ],
+  "inputs": {
+    "/workspace/scratch/6d8dcdbcdc54/fox-product-composed-20261111/private/main.c": "893db43b50aa4d1c391df2f65b55dd269d9b47a6271a9e318ef42b32938143b2",
+    "/workspace/scratch/6d8dcdbcdc54/fox-product-composed-20261111/private/bridge.c": "abadfa0be8687ab2ae68451068fa6b0ce3d821c7b031b234a92c744e5b0bda3e",
+    "/workspace/scratch/6d8dcdbcdc54/fox-product-composed-20261111/private/composed.c": "81dbbb09e1e022218e8c637782de707b7ca39166f941a82c92d84bde5442a971",
+    "/workspace/scratch/6d8dcdbcdc54/fox-eye-runtime-20261111/eye_runtime.c": "33395fcefb6d6a3aa9bd8737ca7b10acbc7bda44ee9119e722f935c6e77b5bbb",
+    "/workspace/scratch/6d8dcdbcdc54/qemu-render-20261111/components/quickjs-ng/quickjs-ng/dtoa.c": "db1f5cb6631452804ab53c404d783ccdbb1281cff9862f13036bcb2a7d762e40",
+    "/workspace/scratch/6d8dcdbcdc54/qemu-render-20261111/components/quickjs-ng/quickjs-ng/libregexp.c": "cae235bfaebe7b6901b42840f6da8ec894c5841f76791edd81445f98825ae1e9",
+    "/workspace/scratch/6d8dcdbcdc54/qemu-render-20261111/components/quickjs-ng/quickjs-ng/libunicode.c": "0e40cc05062f73b108e71c6948344769b0a1fc20034deefc2512d7f8f61ae27a",
+    "/workspace/scratch/6d8dcdbcdc54/qemu-render-20261111/components/quickjs-ng/quickjs-ng/quickjs.c": "6457dab068630b444b798591307e8b581a4fcc1d04e882be6c70c9fa7f82f38d",
+    "/workspace/scratch/6d8dcdbcdc54/qemu-render-20261111/components/quickjs-ng/quickjs-ng/quickjs-vm.c": "880c85ec9f5f4e280dd5de3b61667d5572b83a223f1d7c9befdcb59db7f8f781",
+    "/workspace/scratch/6d8dcdbcdc54/fox-eye-qemu-20261111/composite-final/frozen/scene_alpha.c": "ee47dd889c28bca9f6f06dfa7c72c86fd506dc1eae6ad71f9585ac2ac88593d7",
+    "/workspace/scratch/6d8dcdbcdc54/fox-eye-qemu-20261111/composite-final/frozen/prepared_alpha.c": "38be75d9d29f1e07c22b05b922a4c3cac0ef4625a1fb08ef9563a1c667c8ef29",
+    "/workspace/scratch/6d8dcdbcdc54/fox-firmware-budget-20261111/composite-cutout.c": "85659361857d10d0ccd00cc489fd48f2ec878301d32bb021ca0f2931c86b12dd",
+    "/workspace/scratch/6d8dcdbcdc54/fox-transfer-20261111/audit-extracted/fox-private-target-source/mesh-q7-depth-cache-20261107/main/ayatsuri/compact_opaque.c": "2e1759d37728c6c7e3e42798306e851562e73f80b15f586528b62100a92998e4",
+    "/workspace/scratch/6d8dcdbcdc54/fox-snapshot-lifetime-20261111/lease.c": "37c884c3e10d05e326c89059229f48c59c1f031d44fb786128672274b75f38f4",
+    "/workspace/scratch/6d8dcdbcdc54/fox-snapshot-lifetime-20261111/render_adapter.c": "cea27b84d370dcc3f2d9c6bbe0ceb3b3b2b790f6008bd668976be23eb8979364",
+    "generic/ayatsuri_controls.js": "206b1881c891dd2542ac609ed043dcb4f3ebddc1a815c4d558016d4777c99b35",
+    "private/fox_controls.js": "51aa78fc353171cc185d1d26579cf9e8dc1319afc1ad771c10cc5dbacf2572ca",
+    "private/scenario.js": "6bc1a6b576f6ff27c4b63723f5d0cad9007dc94d693e8cc7feee275f4a1214d2",
+    "public_ayatsuri_motion.js": "b29345c4d1815888e5e9eda6c24607e1ede4c12b94c08f0d9b1b1687590e2870"
+  },
+  "generic_source_unchanged": true
+}

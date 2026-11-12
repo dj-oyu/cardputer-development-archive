@@ -1,0 +1,22 @@
+[
+  {
+    "material": "Blink mask Expressive eye white -1",
+    "reachable_nodes": 132,
+    "uniform_math": 41,
+    "spatial_math": 77,
+    "uniform_plus_constants_math_note": "41 includes39control-only plus2invariant",
+    "retained_all_output_slots": 165,
+    "symbolic_peak_live_scalar_outputs": 29,
+    "live_count_caveat": "topological output liveness only; excludes helper temporaries, operands, lanes, caches, allocator constraints; not a register allocation"
+  },
+  {
+    "material": "Blink mask Expressive eye white 1",
+    "reachable_nodes": 132,
+    "uniform_math": 41,
+    "spatial_math": 77,
+    "uniform_plus_constants_math_note": "41 includes39control-only plus2invariant",
+    "retained_all_output_slots": 165,
+    "symbolic_peak_live_scalar_outputs": 29,
+    "live_count_caveat": "topological output liveness only; excludes helper temporaries, operands, lanes, caches, allocator constraints; not a register allocation"
+  }
+]

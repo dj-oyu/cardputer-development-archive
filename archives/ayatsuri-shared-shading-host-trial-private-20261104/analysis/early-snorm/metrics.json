@@ -1,0 +1,112 @@
+{
+  "compiler": "cc (Debian 14.2.0-19) 14.2.0",
+  "baseline": {
+    "text_class": 28420,
+    "text_section": 27004,
+    "mesh_stack_su": 1488,
+    "mesh_steady_frame": 1456,
+    "evaluator_stack_su": 1152,
+    "sample_stack_su": 112
+  },
+  "bounded": {
+    "text_class": 28668,
+    "text_section": 27196,
+    "mesh_symbol_bytes": 5144,
+    "mesh_stack_su": 1504,
+    "mesh_steady_frame": 1472,
+    "evaluator_stack_su": 1152,
+    "terms_stack_su": 96,
+    "colors_stack_su": 64,
+    "data": 0,
+    "bss": 0,
+    "static_mesh_instructions": 1067,
+    "static_explicit_rsp_memory_instructions": 224,
+    "static_calls": 21
+  },
+  "early": {
+    "text_class": 28732,
+    "text_section": 27260,
+    "mesh_symbol_bytes": 5208,
+    "mesh_stack_su": 1520,
+    "mesh_steady_frame": 1488,
+    "evaluator_stack_su": 1152,
+    "terms_stack_su": 96,
+    "colors_stack_su": 64,
+    "data": 0,
+    "bss": 0,
+    "static_mesh_instructions": 1069,
+    "static_explicit_rsp_memory_instructions": 223,
+    "static_calls": 21
+  },
+  "matrix_pairs": [
+    {
+      "configuration": "O0",
+      "fixture": "mixed",
+      "binary_exact": true,
+      "tsv_exact": true,
+      "binary_sha256": "fa6a02b2e4a33bd86721085734e4c83b708d431b6769c7df137e3b1a9f22f2cc",
+      "tsv_sha256": "d4c5d9cf4bb76f6beb1a78352024c4edbb76ec7a235d6ce3cff41c4b5ff2c6a5"
+    },
+    {
+      "configuration": "O0",
+      "fixture": "mesh_only",
+      "binary_exact": true,
+      "tsv_exact": true,
+      "binary_sha256": "8dd8a880c333d60da7c3c4784ab3a833cc9cef5f66170bef952c82fab2ec5ee1",
+      "tsv_sha256": "586788b0f8a212bb3608d85f3c0c0ccec4aad3a7d3c80fdad6c5ea1a58ad3344"
+    },
+    {
+      "configuration": "O2",
+      "fixture": "mixed",
+      "binary_exact": true,
+      "tsv_exact": true,
+      "binary_sha256": "fa6a02b2e4a33bd86721085734e4c83b708d431b6769c7df137e3b1a9f22f2cc",
+      "tsv_sha256": "d4c5d9cf4bb76f6beb1a78352024c4edbb76ec7a235d6ce3cff41c4b5ff2c6a5"
+    },
+    {
+      "configuration": "O2",
+      "fixture": "mesh_only",
+      "binary_exact": true,
+      "tsv_exact": true,
+      "binary_sha256": "8dd8a880c333d60da7c3c4784ab3a833cc9cef5f66170bef952c82fab2ec5ee1",
+      "tsv_sha256": "586788b0f8a212bb3608d85f3c0c0ccec4aad3a7d3c80fdad6c5ea1a58ad3344"
+    },
+    {
+      "configuration": "asan_ubsan_O0",
+      "fixture": "mixed",
+      "binary_exact": true,
+      "tsv_exact": true,
+      "binary_sha256": "fa6a02b2e4a33bd86721085734e4c83b708d431b6769c7df137e3b1a9f22f2cc",
+      "tsv_sha256": "d4c5d9cf4bb76f6beb1a78352024c4edbb76ec7a235d6ce3cff41c4b5ff2c6a5"
+    },
+    {
+      "configuration": "asan_ubsan_O0",
+      "fixture": "mesh_only",
+      "binary_exact": true,
+      "tsv_exact": true,
+      "binary_sha256": "8dd8a880c333d60da7c3c4784ab3a833cc9cef5f66170bef952c82fab2ec5ee1",
+      "tsv_sha256": "586788b0f8a212bb3608d85f3c0c0ccec4aad3a7d3c80fdad6c5ea1a58ad3344"
+    },
+    {
+      "configuration": "asan_ubsan_O2",
+      "fixture": "mixed",
+      "binary_exact": true,
+      "tsv_exact": true,
+      "binary_sha256": "fa6a02b2e4a33bd86721085734e4c83b708d431b6769c7df137e3b1a9f22f2cc",
+      "tsv_sha256": "d4c5d9cf4bb76f6beb1a78352024c4edbb76ec7a235d6ce3cff41c4b5ff2c6a5"
+    },
+    {
+      "configuration": "asan_ubsan_O2",
+      "fixture": "mesh_only",
+      "binary_exact": true,
+      "tsv_exact": true,
+      "binary_sha256": "8dd8a880c333d60da7c3c4784ab3a833cc9cef5f66170bef952c82fab2ec5ee1",
+      "tsv_sha256": "586788b0f8a212bb3608d85f3c0c0ccec4aad3a7d3c80fdad6c5ea1a58ad3344"
+    }
+  ],
+  "frozen_input_trees_unchanged": true,
+  "shade_header_identical_to_bounded": true,
+  "fresh_bounded_text_identical_to_prior": true,
+  "patch_sha256": "8c9b8d4bea4d6d282f6f4e56b62b1a7b5db87c93bbbf99d526323f974d791b10",
+  "claims": "Host-only emitted frame/code and strict-arithmetic differential evidence; no target speed, leak, whole-call-chain, all-input or 32-bit test claim."
+}
