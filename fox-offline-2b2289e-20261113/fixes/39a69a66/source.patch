@@ -1,0 +1,14 @@
+diff --git a/main/private_fox/composite.c b/main/private_fox/composite.c
+index 91da1581..9e6ba062 100644
+--- a/main/private_fox/composite.c
++++ b/main/private_fox/composite.c
+@@ -89,6 +89,9 @@ convert:
+  if(validate_only)return true;
+  /* All possible failures have occurred before publication. */
+  for(unsigned i=0;i<n;i++){
++  /* No accepted binary fragment over black leaves exact black. Keep all
++   * validation and callback work above; fractional and nonblack paths stay. */
++  if(fast_ok&&w->next_id[i]==UINT_MAX&&out[i]==0){w->scratch[i]=0;continue;}
+   uint16_t bg=out[i];float b[3]={linear((bg>>11)/31.f),linear(((bg>>5)&63)/63.f),linear((bg&31)/31.f)};
+   unsigned c[3];for(unsigned k=0;k<3;k++)c[k]=(unsigned)lroundf(srgb(w->accumulated[i][k]+w->transmittance[i]*b[k])*(k==1?63:31));
+   w->scratch[i]=(uint16_t)((c[0]<<11)|(c[1]<<5)|c[2]);
