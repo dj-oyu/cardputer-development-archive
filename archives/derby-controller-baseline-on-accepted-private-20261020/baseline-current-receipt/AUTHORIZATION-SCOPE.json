@@ -1,9 +1,0 @@
-{
-  "source_thread": "01a15560-53fc-74be-bdcc-e2ec8c3d200a",
-  "new_relevant_evidence": "Parent independently reviewed current MCP88890ed7. Prior failure before driver.write; incorrect current-comparison receipt. Correct registered batch receipt passes same gate only if actual bytes match.",
-  "authorization": "one new exact baseline flash using full registered batch receipt, then normal boot and one ON fixed trial only",
-  "trusted_user_authorization": "Sentinel_6d31198677008191b9da5dcd3fe82738: y, for corrected baseline build/write/re-measure with recovery preserved and stop on baseline error",
-  "stop_on": "uncertainty, explicit safety refusal, current bytes mismatch, fatal/OOM; no alternate receipt guesses/retry",
-  "forbidden": "native/batch/OFF, backup/restore without separate decision, config/auth/SDK changes, gate bypass, history rewrite, direct USB",
-  "physical_actions_before_new_plan": 0
-}

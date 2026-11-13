@@ -1,4 +1,0 @@
-PASS nearest known/miss/edge/epsilon/tie/negative/far/invalid/budget/poison/lifetime; brute-force 1000 rays: 570 hits, 430 misses
-PASS: independent long-double Moller-Trumbore vs public BVH; triangles=64 segments=1000 blocked=584 clear=416 borderline_skipped=0 nodes=11197 triangle_tests=7905; cumulative and individual budgets atomic
-PASS nearest known/miss/edge/epsilon/tie/negative/far/invalid/budget/poison/lifetime; brute-force 1000 rays: 570 hits, 430 misses
-PASS: independent long-double Moller-Trumbore vs public BVH; triangles=64 segments=1000 blocked=584 clear=416 borderline_skipped=0 nodes=11197 triangle_tests=7905; cumulative and individual budgets atomic

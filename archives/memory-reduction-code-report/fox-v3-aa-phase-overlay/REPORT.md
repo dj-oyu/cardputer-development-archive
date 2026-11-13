@@ -1,9 +1,0 @@
-# AA phase overlay: synthetic validation complete, actual validation pending
-
-Implemented only bounded-ring workspace placement and static assertions in a fresh private root. Product source files and legacy generic API are unchanged. Workspace77312→72512 saves4800 bytes; product named render/lifecycle peak496184→491384 with unchanged main83792, renderer5008 and background4080/4096. Largest named requested allocation72512. Product text increases128 bytes; data/bss unchanged. No device-fit or speed claim.
-
-All completed synthetic tests pass: legacy24 runs; integration48 compile/run steps; model6 modes; each normal/sanitized ring and depth80 exact cases+72 negatives; producer63 negatives; adapter94 negatives+2prefix cases. Ring/depth cover phase reuse, wraps, delayed rows, tail, IDs and ordering. First derived depth test failed because its inherited oracle omitted the established admission120→210 difference; final tests assert those exact values and compare every other field. Initial logs retained. No product fix was needed for that test issue.
-
-Core failures may leave private RGB/depth partial. Source/identity/budget finish rejection preserves existing scratch bytes; native success gates precede exports. Prefix reservation protects prior artifacts. This is source-order and synthetic evidence, not an end-to-end late-render publication injection or multi-file atomicity guarantee.
-
-Actual validation has not started. Independent source/runner review and a frozen source manifest precede parent authorization. The prepared runner requires exact fixed40 against completed segmented baseline: OFF20 thenON20, each canary first. Only AA workspaceBytes77312→72512 and predeclared timing fields may differ; all five raw streams and semantic counters must match. Parent owns gate and execution. Completed segmented baseline remains rollback.

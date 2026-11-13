@@ -1,5 +1,0 @@
-# Implementation clarifications, separate from frozen preimplementation history
-
-The frozen PLAN text describing bounded canonical descriptor serialization is superseded for this implementation by CORE-DESIGN.md's explicit optional-hash rule: core executes no descriptor serializer/hash (actual bytes0, optional hash guard0). Its16,384-byte+1guard reservation remains unused and is not reassigned. Resolver uses immutable owned semantic fields, their generation-group checks and frame-bound snapshot/identity hashes. No opaque structure/padding hash is introduced. Future actual descriptor serialization would be a new reviewed change.
-
-Core validation can return false before resetting a reused KsnSceneReport, preserving its old contents, including complete=true. Success always requires the actual API return true plus all current frame checks; stale report.complete alone never authorizes output or manifest. Local callback output is atomic, while caller image/report may be retained/partial depending on failure stage and remains unpublished after false.

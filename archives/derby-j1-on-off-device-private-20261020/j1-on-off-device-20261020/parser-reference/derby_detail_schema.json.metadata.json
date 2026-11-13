@@ -1,7 +1,0 @@
-{
-  "content": "{\n  \"v\": 1,\n  \"stages\": [\n    \"JS_FRAME\",\n    \"SIMULATION\",\n    \"POSE_PROJECTION\",\n    \"SORT\",\n    \"RUNNER\",\n    \"HUD\",\n    \"NATIVE_SERIES\",\n    \"PROC_BUILD\",\n    \"VM_SETUP\",\n    \"VM_ZERO\",\n    \"VM_COPY\",\n    \"VM_VALIDATE\",\n    \"VM_MATCH\",\n    \"VM_RUN\",\n    \"SEGMENT_APPEND\",\n    \"RENDER\",\n    \"RENDER_PREPARE\",\n    \"BACKDROP\",\n    \"COMPOSITE\",\n    \"IMAGE_SPAN\",\n    \"BAND_RASTER\",\n    \"SPAN_COPY\",\n    \"TX_SYNC\",\n    \"TX_COPY\",\n    \"TX_SUBMIT\",\n    \"TX_REAP\"\n  ],\n  \"events\": [\n    \"BRIDGE_SNAPSHOT_BYTES\",\n    \"VM_ZERO_BYTES\",\n    \"VM_CODE_COPY_BYTES\",\n    \"SEGMENT_COPY_BYTES\",\n    \"BAND_CLEAR_BYTES\",\n    \"SPAN_RGB_BYTES\",\n    \"SPAN_ALPHA_BYTES\",\n    \"SHARED_OUTPUT_BYTES\",\n    \"TX_COPY_BYTES\",\n    \"TX_PAYLOAD_BYTES\",\n    \"TX_SUBMITS\",\n    \"TX_REAPS\",\n    \"TX_FAILURES\"\n  ]\n}\n",
-  "encoding": "utf-8",
-  "sha": "8b09405e983c8c01e888f089479c07a426d328f8",
-  "display_url": "https://github.com/dj-oyu/cardputer-adv-pocketjs/blob/b561aea1c0798feb28055a00d36681fae81ac58a/tools/games/derby_detail_schema.json",
-  "display_title": "derby_detail_schema.json"
-}

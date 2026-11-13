@@ -1,5 +1,0 @@
-cmake_minimum_required(VERSION 3.16)
-set(REPO "${CMAKE_CURRENT_LIST_DIR}/../..")
-set(COMPONENTS main)
-include($ENV{IDF_PATH}/tools/cmake/project.cmake)
-project(qemu_scene)

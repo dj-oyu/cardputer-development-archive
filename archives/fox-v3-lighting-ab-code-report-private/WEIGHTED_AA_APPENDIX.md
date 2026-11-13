@@ -1,1 +1,0 @@
-Fixed3x3main/5x5sensitivity diagnostic complete and independently reproduced. Read diagnostic-position/weighted-aa/REPORT.md. Not adopted; oblique brightIoU remains below60. 3grid is exact pointHDR9-neighbor filtering, no new subpixel information. Prior240entries retained. No assets/media/geometry/raw buffers in this addition. Next oracle is a proposal only.

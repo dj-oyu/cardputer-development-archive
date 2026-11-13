@@ -1,6 +1,0 @@
-cc -std=c11 -ffp-contract=off -fexcess-precision=standard -fno-fast-math -O2 -m32 -msse2 -mfpmath=sse /workspace/scratch/6d8dcdbcdc54/ayatsuri-shared-shading-20261104/results/paired-colors/m32_probe.c -lm -o /workspace/scratch/6d8dcdbcdc54/ayatsuri-shared-shading-20261104/results/paired-colors/m32_probe
-In file included from /workspace/scratch/6d8dcdbcdc54/ayatsuri-shared-shading-20261104/results/paired-colors/m32_probe.c:1:
-/usr/include/stdio.h:28:10: fatal error: bits/libc-header-start.h: No such file or directory
-   28 | #include <bits/libc-header-start.h>
-      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~
-compilation terminated.

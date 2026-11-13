@@ -1,1 +1,0 @@
-cc -std=c11 -O2 -shared -fPIC -ffp-contract=off -fexcess-precision=standard -Ifox-v3-lighting-ab/product/main -Ifox-v3-lighting-ab/physical fox-v3-position-diagnostic/code/shader_probe.c fox-v3-lighting-ab/physical/fox_disk_lighting.c -lm -o fox-v3-position-diagnostic/shader_probe.so

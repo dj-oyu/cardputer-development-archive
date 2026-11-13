@@ -1,5 +1,0 @@
-PASS detail exclusive/inclusive, return cleanup, foreign task/ISR ignored, active read refused, overflow/clock/order faults
-PASS detail exclusive/inclusive, return cleanup, foreign task/ISR ignored, active read refused, overflow/clock/order faults
-PASS slow successful output: one record/return, 110ms native writes, all 42 refusal positions, timeout before final validity
-PASS slow successful output: one record/return, 110ms native writes, all 42 refusal positions, timeout before final validity
-PASS detail OFF does not evaluate arguments or reference instrumentation at O0

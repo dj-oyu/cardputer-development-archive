@@ -1,5 +1,0 @@
-src/cardputer_mcp/gateway_oauth.py:26: error: Cannot find implementation or library stub for module named "joserfc"  [import-not-found]
-src/cardputer_mcp/gateway_oauth.py:27: error: Cannot find implementation or library stub for module named "joserfc.errors"  [import-not-found]
-src/cardputer_mcp/gateway_oauth.py:27: note: See https://mypy.readthedocs.io/en/stable/running_mypy.html#missing-imports
-src/cardputer_mcp/gateway_oauth.py:28: error: Cannot find implementation or library stub for module named "joserfc.jwk"  [import-not-found]
-Found 3 errors in 1 file (checked 135 source files)

@@ -1,7 +1,0 @@
- const char *private_dump=getenv("HONE_PRIVATE_SNAPSHOT_DUMP");
- if(private_dump&&!strcmp(private_dump,"1")){
-  if(!pixel||!visibility||!transportmode)return fail("dump-dependency");
-  size_t total=416+s->packets.size;char dump_path[4096];snprintf(dump_path,sizeof dump_path,"%s.snapshot",argv[2]);FILE *df=fopen(dump_path,"wb");if(!df)return fail("dump-output");if(fwrite(px.storage,1,total,df)!=total||fclose(df))return fail("dump-write");
-  printf("{\"privateSnapshotDump\":true,\"renderExecuted\":false,\"snapshotBytes\":%zu,\"records\":%u,\"work\":%u,\"snapshotFingerprint\":\"%016llx\",\"disposedBeforeDump\":true,\"reverse\":%s}\n",total,s->packets.packets,s->work,(unsigned long long)binding.snapshot_hash,reverse?"true":"false");
-  bounce_binding_clear(&tx.binding);fox_pixel_unbind(&binding);return 0;
- }

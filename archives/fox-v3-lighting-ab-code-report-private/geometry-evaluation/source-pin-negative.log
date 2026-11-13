@@ -1,5 +1,0 @@
-Traceback (most recent call last):
-  File "/workspace/scratch/6d8dcdbcdc54/fox-v3-occlusion-evaluation/code/prepare_geometry.py", line 6, in <module>
-    assert sha(a.glb)==a.glb_sha256,'source GLB pin mismatch';out=a.output.resolve();out.mkdir(exist_ok=False)
-           ^^^^^^^^^^^^^^^^^^^^^^^^
-AssertionError: source GLB pin mismatch

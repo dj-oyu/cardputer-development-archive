@@ -1,9 +1,0 @@
-from pathlib import Path
-import subprocess,os,json,hashlib,datetime
-root=Path(__file__).resolve().parents[1];d=root/'test-independent';results=[]
-sources=[d/'negative.c',d/'visibility_probe.c',root/'private-build/physical/fox_disk_lighting.c']
-pins=[*sources,root/'private-build/transport/bounce.c',root/'private-build/transport/bounce.h',root/'private-build/visibility/visibility.c',root/'private-build/visibility/visibility.h',root/'private-build/physical/fox_disk_lighting.h',Path(__file__)]
-for mode,extra in [('O2',[]),('O2-asan-ubsan',['-fsanitize=address,undefined','-fno-omit-frame-pointer'])]:
- binary=d/('negative-'+mode.lower());cmd=['cc','-std=c11','-O2','-g','-Wall','-Wextra','-Werror','-Wno-misleading-indentation','-ffp-contract=off','-fexcess-precision=standard',*extra,*map(str,sources),'-Wl,--wrap=calloc','-Wl,--wrap=free','-lm','-o',str(binary)]
- subprocess.run(cmd,check=True);p=subprocess.run([str(binary)],capture_output=True,text=True,env={**os.environ,'ASAN_OPTIONS':'detect_leaks=0:halt_on_error=1','UBSAN_OPTIONS':'halt_on_error=1:print_stacktrace=1'});(d/(mode+'.log')).write_text(p.stdout+p.stderr);p.check_returncode();print(mode,p.stdout.strip(),flush=True);results.append({'mode':mode,'command':cmd,'output':p.stdout.strip(),'exit':p.returncode})
-(d/'RESULTS.json').write_text(json.dumps({'status':'PASS','observedUTC':datetime.datetime.now(datetime.timezone.utc).isoformat(),'results':results,'LSan':'Disabled. ASan and UBSan enabled in sanitizer arm; no claim of LeakSanitizer coverage.','scope':'Synthetic only; no actual renders/assets/models/original/reference/public/device edits. Legacy, compact and indexed builders in current candidate evaluated at identical O2 flags.','sha256':{str(p.relative_to(root)):hashlib.sha256(p.read_bytes()).hexdigest() for p in pins}},indent=2)+'\n')

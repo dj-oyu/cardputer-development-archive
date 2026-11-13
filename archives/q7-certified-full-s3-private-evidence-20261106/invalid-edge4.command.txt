@@ -1,1 +1,0 @@
-idf.py -C /workspace/private-q7-certified-full-s3-20261106/source -B /workspace/private-q7-certified-full-s3-20261106/invalid-edge4 -D SDKCONFIG=/workspace/private-q7-certified-full-s3-20261106/invalid-edge4/sdkconfig -D PROJECT_VER=q7-cert-e488ab1e -D KASANE_MESH_Q7_CERTIFIED_PROTOTYPE=ON -D KASANE_MESH_PREPARED_PROTOTYPE=ON -D KASANE_MESH_EDGE4_PROTOTYPE=ON reconfigure 

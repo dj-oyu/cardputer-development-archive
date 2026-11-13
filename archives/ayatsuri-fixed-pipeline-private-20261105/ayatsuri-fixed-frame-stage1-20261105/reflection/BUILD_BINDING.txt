@@ -1,5 +1,0 @@
-gcc (Debian 14.2.0-19) 14.2.0
-Tests: bash run_tests.sh
-Offline constants: gcc -std=c11 -O2 -ffp-contract=off -fexcess-precision=standard -fno-fast-math generate_constants.c -lm -o generate-constants; ./generate-constants > hemisphere_constants.h
-Object: gcc -std=c11 -O2 -fno-lto -fno-tree-vectorize -fno-tree-slp-vectorize -c core.c -o core.o
-Inspect: nm -u core.o; objdump -dr core.o

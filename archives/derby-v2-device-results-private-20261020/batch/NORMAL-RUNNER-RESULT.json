@@ -1,6 +1,0 @@
-{
-  "command": "python3 -B tools/games/run_derby.py --runner-batch --heap-limit 524288",
-  "exit_code": 0,
-  "log_sha256": "d52784a6745ffedeb6a23bec63ad3cd3c95cd697852cb37fbcf2f5f6f022bfaa",
-  "mode": "host-only ASan/UBSan batch runner oracle"
-}

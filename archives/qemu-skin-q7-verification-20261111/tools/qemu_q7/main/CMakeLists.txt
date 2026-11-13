@@ -1,6 +1,0 @@
-get_filename_component(REPO "${CMAKE_CURRENT_LIST_DIR}/../../.." ABSOLUTE)
-set(GEN "${CMAKE_CURRENT_LIST_DIR}/../generated")
-include(${GEN}/sources.cmake)
-idf_component_register(SRCS ${Q7_SOURCES} "${GEN}/profile.c" "${GEN}/test_workspace.c" "${GEN}/test_row_stats_failure.c" INCLUDE_DIRS "${REPO}/main" "${REPO}/main/ui/kasane" REQUIRES heap)
-target_compile_definitions(${COMPONENT_LIB} PRIVATE KSN_MESH_PREPARED_PROTOTYPE=1 KSN_MESH_Q7_CERTIFIED_PROTOTYPE=1 Q7_CERT_MODE=3)
-target_compile_options(${COMPONENT_LIB} PRIVATE -O2 -fno-fast-math -fno-associative-math -fno-reciprocal-math -ffp-contract=off -frounding-math -fno-lto -fstack-usage -UNDEBUG)

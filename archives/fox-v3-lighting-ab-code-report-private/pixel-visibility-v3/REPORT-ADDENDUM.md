@@ -1,8 +1,0 @@
-### Additional stack audit
-O2 no-LTO static compiler frames: bound-render272B + callback64B + segment traversal432B, in addition to existing pixel render/strip/lighting frames. Scene build208B plus recursive median build256B per level (bounded geometry count), not a whole-program peak proof. Host main83776B still places test payload/bands on stack; this is not product stack layout. Dynamic heap figures above do not silently absorb these frames.
-
-Manifest wording note: the inherited pixel mapping sentence says “no AgX/visibility” for the base path, then ON appends the bounded-BVH clause. For ON the latter is the active visibility capability; AgX remains OFF. The explicit visibilityEnabled flag, unsupported list and this report define the arm. Do not interpret the inherited base sentence as absence of ON visibility.
-Final summary provenance: summarize.py now reads score-off-004 and score-on-004, not intermediate002. Metrics are unchanged because final buffer contents are identical; frozen004 files remain untouched.
-Independent final004 replay: O2ASan/UBSan40renders/80buffers and440 runtime accounting fields exact. O0/O2 core tests pass ownership/allocation failures/alias/old-generation lifetime/frame-cumulative exhaustion and all9 uncull geometry fixtures. Separate callback endpoint probe confirms0.5epsilon excluded/1.5epsilon blocked and no shading-normal dependency. No unresolved core defect found. CPU median raster ratio11.71–14.54×, build medians2.11–2.38ms; whole timing run80.59s.
-
-Final independent2700 metric values match. All8 response RGB RMSE values regress; ambient magnitude falls to57.91/54.16%, below60. Independent review complete with no unresolved core defect; private preservation permitted, not adoption.
