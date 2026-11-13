@@ -1,0 +1,35 @@
+diff --git a/main/private_fox/ayatsuri_skin_dq.h b/main/private_fox/ayatsuri_skin_dq.h
+index c9058ac9..39dae084 100644
+--- a/main/private_fox/ayatsuri_skin_dq.h
++++ b/main/private_fox/ayatsuri_skin_dq.h
+@@ -57,7 +57,17 @@ static inline ayatsuri_status ayatsuri_skin_evaluate_rigid_dq(
+        !ayatsuri_skin_span(vertices,count,sizeof *vertices,&begin,&end)||
+        !ayatsuri_skin_disjoint(out,count,sizeof *out,palette,joints,sizeof *palette)||
+        !ayatsuri_skin_disjoint(out,count,sizeof *out,vertices,count,sizeof *vertices))return AYATSURI_INVALID;
+-    for(size_t j=0;j<joints;j++){double q[4],d[4];if(!ayatsuri_dq_from_rigid(palette+j,q,d))return AYATSURI_INVALID;}
++    /* Bounded per-call palette cache: the private rig has two bones. Keep
++     * larger palettes supported through the original conversion fallback,
++     * without a VLA, heap allocation or caller-visible storage contract.
++     * Populate during the existing all-bone admission pass; output remains
++     * untouched if any matrix or later vertex fails validation. */
++    double cached_q[2][4],cached_d[2][4];
++    for(size_t j=0;j<joints;j++){
++        double q[4],d[4];
++        if(!ayatsuri_dq_from_rigid(palette+j,q,d))return AYATSURI_INVALID;
++        if(j<2){memcpy(cached_q[j],q,sizeof q);memcpy(cached_d[j],d,sizeof d);}
++    }
+     for(unsigned pass=0;pass<2;pass++)for(size_t v=0;v<count;v++){
+         const ayatsuri_skin_vertex *in=vertices+v;unsigned sum=0;
+         for(unsigned k=0;k<4;k++){if(in->joints[k]>=joints)return AYATSURI_INVALID;sum+=in->weights[k];}
+@@ -65,7 +75,10 @@ static inline ayatsuri_status ayatsuri_skin_evaluate_rigid_dq(
+         for(unsigned k=0;k<3;k++)if(!isfinite(in->position[k])||!isfinite(in->normal[k]))return AYATSURI_INVALID;
+         double q[4]={0},d[4]={0},ref[4]={0},aligned[4][4];unsigned used=0;int have=0;
+         for(unsigned k=0;k<4;k++)if(in->weights[k]){
+-            double a[4],b[4],dot=0;ayatsuri_dq_from_rigid(palette+in->joints[k],a,b);
++            double a[4],b[4],dot=0;
++            const unsigned joint=in->joints[k];
++            if(joint<2){memcpy(a,cached_q[joint],sizeof a);memcpy(b,cached_d[joint],sizeof b);}
++            else ayatsuri_dq_from_rigid(palette+joint,a,b);
+             if(!have){memcpy(ref,a,sizeof ref);have=1;}
+             for(unsigned c=0;c<4;c++)dot+=ref[c]*a[c];
+             double sign=dot<0?-1:1;
