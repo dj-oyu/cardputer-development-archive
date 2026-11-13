@@ -1,0 +1,184 @@
+diff --git a/.github/workflows/session-dispatch.yml b/.github/workflows/session-dispatch.yml
+index 7aa1db2c..e4a5110f 100644
+--- a/.github/workflows/session-dispatch.yml
++++ b/.github/workflows/session-dispatch.yml
+@@ -7,6 +7,14 @@ on:
+       - 'main/hal/board.h'
+       - 'tools/test_session_dispatch.c'
+       - 'tools/test_session_dispatch.py'
++      - 'tools/test_session_query_headers.py'
++      - 'main/hal/sound*.h'
++      - 'main/hal/ima_adpcm.h'
++      - 'main/pocket/pocket_pixel.h'
++      - 'main/pocket/pocket_grid.h'
++      - 'main/pocket/pocket_video.h'
++      - 'main/ui/kasane/*.h'
++      - 'components/quickjs-ng/quickjs-ng/*.h'
+       - '.github/workflows/session-dispatch.yml'
+ permissions:
+   contents: read
+@@ -25,3 +33,5 @@ jobs:
+           persist-credentials: false
+       - name: Actual session functions with synthetic ports, sanitizers and optimized build
+         run: python3 tools/test_session_dispatch.py
++      - name: Session query declarations across display configurations
++        run: python3 tools/test_session_query_headers.py
+diff --git a/main/CMakeLists.txt b/main/CMakeLists.txt
+index 4763a6b8..f75a8b72 100644
+--- a/main/CMakeLists.txt
++++ b/main/CMakeLists.txt
+@@ -672,3 +672,9 @@ if(FOX_TEST_UNKNOWN_OUTCOME)
+     target_compile_definitions(${COMPONENT_LIB} PRIVATE FOX_TEST_UNKNOWN_OUTCOME=1)
+ endif()
+ target_link_options(${COMPONENT_LIB} INTERFACE "-Wl,--wrap=spi_device_queue_trans" "-Wl,--wrap=spi_device_get_trans_result" "-Wl,--wrap=gpio_set_level")
++
++# Private P1-only experiment. No deferred fox presentation or board migration.
++option(FOX_PREFLIGHT_P1 "Run private fox preflight on display task with immediate join" OFF)
++if(FOX_PREFLIGHT_P1)
++    target_compile_definitions(${COMPONENT_LIB} PRIVATE FOX_PREFLIGHT_P1=1)
++endif()
+diff --git a/main/app_session.c b/main/app_session.c
+index defb9151..873aa7e9 100644
+--- a/main/app_session.c
++++ b/main/app_session.c
+@@ -97,7 +97,7 @@ static int64_t hp_eval_t0;
+ #include "disp.h"
+ #if defined(CONFIG_POCKET_FRAME_BREAKDOWN) || \
+     (defined(CONFIG_POCKET_DISP_DEFER) && defined(KASANE_DMA_OVERLAP))
+-/* P0 eligibility and P2a deferred-present blockers use these host queries. */
++/* P0 eligibility and deferred-present blockers use these host queries. */
+ #include "pocket_pixel.h"
+ #include "pocket_grid.h"
+ #include "pocket_video.h"
+diff --git a/main/private_fox/render_adapter.c b/main/private_fox/render_adapter.c
+index 157e9649..188a25ba 100644
+--- a/main/private_fox/render_adapter.c
++++ b/main/private_fox/render_adapter.c
+@@ -1,6 +1,46 @@
+ #include "render_adapter.h"
+ #include <string.h>
+ static bool surface(void*u,const fox_fragment*f,float rgb[3],float*a){const fox_eye_snapshot*s=u;if(s->hidden[f->object]){*a=0;rgb[0]=rgb[1]=rgb[2]=0;return true;}return fox_eye_snapshot_surface(s,f->material,f->local[0],f->local[1],f->local[2],rgb,a);}
++/* The opt-in P1 experiment moves only pure frame preparation. The UI keeps
++ * cursor, lease accounting and transport ownership and joins before returning.
++ * No band handoff, JS access, board call or asynchronous teardown is added. */
++static bool prepare_frame(const fox_eye_snapshot *s,render_scratch *w){
++ scene_times times;
++ return fox_scene_prepare_controls(NULL,&w->frame,&w->workspace,3,-1,&times,s->local,s->controls.head_turn,s->controls.head_tilt)&&
++        fox_scene_composite_preflight(&w->frame,&w->workspace,s->local,surface,(void*)s,16,&w->composite);
++}
++#ifdef FOX_PREFLIGHT_P1
++#include "disp.h"
++#include <assert.h>
++/* Single UI producer; pointers refer to a pinned immutable snapshot and the
++ * exclusive scratch, never to automatic storage. disp_join orders completion. */
++static struct {
++ const fox_eye_snapshot *snapshot;
++ render_scratch *scratch;
++ bool active,finished,ok;
++} preflight_job;
++static esp_err_t preflight_run(void){
++ return prepare_frame(preflight_job.snapshot,preflight_job.scratch)?ESP_OK:ESP_FAIL;
++}
++static void preflight_finish(esp_err_t result){
++ assert(preflight_job.active&&!preflight_job.finished);
++ preflight_job.ok=result==ESP_OK;preflight_job.finished=true;
++}
++static bool prepare_cursor_frame(const fox_eye_snapshot *s,render_scratch *w){
++ assert(!preflight_job.active);
++ disp_join();
++ preflight_job.snapshot=s;preflight_job.scratch=w;
++ preflight_job.active=true;preflight_job.finished=preflight_job.ok=false;
++ disp_start(preflight_run,preflight_finish,true);
++ disp_join();
++ assert(preflight_job.finished);
++ bool ok=preflight_job.ok;
++ memset(&preflight_job,0,sizeof preflight_job);
++ return ok;
++}
++#else
++static bool prepare_cursor_frame(const fox_eye_snapshot *s,render_scratch *w){return prepare_frame(s,w);}
++#endif
+ bool render_leased(lease_pool*snapshots,lease_key key,lease_pool*strips,render_scratch*w,bool(*submit)(void*,const leased_strip*,lease_ticket),bool(*pump)(void*),void*ctx){
+  lease_ticket read;const void*borrow;if(!lease_pin(snapshots,key,&read,&borrow))return false;
+  const fox_eye_snapshot*s=borrow;scene_times times;bool ok=false;
+@@ -28,9 +68,7 @@ bool render_cursor_begin(render_cursor*c,lease_pool*snapshots,lease_key key,leas
+  memset(c,0,sizeof *c);const void*borrow;
+  if(!lease_pin(snapshots,key,&c->snapshot_ticket,&borrow))return false;
+  c->snapshots=snapshots;c->strips=strips;c->scratch=w;c->snapshot=borrow;c->active=true;
+- scene_times times;
+- if(!fox_scene_prepare_controls(NULL,&w->frame,&w->workspace,3,-1,&times,c->snapshot->local,c->snapshot->controls.head_turn,c->snapshot->controls.head_tilt)||
+-    !fox_scene_composite_preflight(&w->frame,&w->workspace,c->snapshot->local,surface,(void*)c->snapshot,16,&w->composite)){
++ if(!prepare_cursor_frame(c->snapshot,w)){
+   render_cursor_abort(c);return false;
+  }
+  return true;
+diff --git a/tools/test_session_query_headers.py b/tools/test_session_query_headers.py
+new file mode 100644
+index 00000000..452728b4
+--- /dev/null
++++ b/tools/test_session_query_headers.py
+@@ -0,0 +1,64 @@
++"""Strict-compile the real host-query headers under all display guard combinations.
++
++Only two SDK type declarations are supplied; no query implementation is mocked.
++This checks header availability and signatures, not target linking/concurrency.
++"""
++from itertools import product
++from pathlib import Path
++import os
++import re
++import shlex
++import subprocess
++import tempfile
++
++ROOT = Path(__file__).resolve().parents[1]
++source = (ROOT / 'main/app_session.c').read_text()
++after_display = source[source.index('#include "disp.h"'):]
++match = re.search(r'(#if[^\n]*(?:\\\n[^\n]*)*\n(?:(?!#endif).)*?'
++                  r'#include "sound.h"\n#endif)', after_display, re.S)
++assert match, 'host-query header block not found'
++block = match.group(1)
++for header in ('pocket_pixel.h', 'pocket_grid.h', 'pocket_video.h', 'sound.h'):
++    assert f'#include "{header}"' in block, header
++# Restore the original narrow guard as a negative control. The exact P2a-only
++# configuration must diagnose unavailable declarations instead of passing vacuously.
++body = block[block.index('/*'):]
++narrow = '#ifdef CONFIG_POCKET_FRAME_BREAKDOWN\n' + body
++cc = shlex.split(os.environ.get('CC', 'cc'))
++with tempfile.TemporaryDirectory(prefix='session-query-headers-') as directory:
++    temp = Path(directory)
++    (temp / 'driver').mkdir()
++    (temp / 'esp_err.h').write_text('typedef int esp_err_t;\n')
++    (temp / 'driver/i2c_master.h').write_text(
++        'typedef void *i2c_master_bus_handle_t;\n')
++    def compile_block(text, flags):
++        frame, defer, dma = flags
++        active = frame or (defer and dma)
++        calls = ('''bool query_types(void) {
++    bool (*sound)(void) = sound_capture_active;
++    bool (*pixel)(void) = pocket_pixel_pending;
++    bool (*video)(void) = pocket_video_pending;
++    bool (*grid)(void) = pocket_grid_pending;
++    return sound() || pixel() || video() || grid();
++}
++''' if active else 'int no_queries;\n')
++        test = temp / 'test.c'
++        test.write_text('#include <stdbool.h>\n' + text + '\n' + calls)
++        command = cc + ['-std=c11', '-O2', '-Werror=implicit-function-declaration',
++                        '-Werror=incompatible-pointer-types', '-DQUICKJS_NG_BUILD']
++        for include in (temp, ROOT / 'main', ROOT / 'main/pocket', ROOT / 'main/hal',
++                        ROOT / 'components/quickjs-ng/quickjs-ng'):
++            command += ['-I', str(include)]
++        for enabled, name in zip(flags, ('CONFIG_POCKET_FRAME_BREAKDOWN',
++                                        'CONFIG_POCKET_DISP_DEFER', 'KASANE_DMA_OVERLAP')):
++            if enabled:
++                command.append('-D' + name + '=1')
++        return subprocess.run(command + ['-c', str(test), '-o', str(temp / 'test.o')],
++                              capture_output=True, text=True)
++    for flags in product((False, True), repeat=3):
++        result = compile_block(block, flags)
++        assert result.returncode == 0, (flags, result.stderr)
++    result = compile_block(narrow, (False, True, True))
++    assert result.returncode != 0, 'narrow-guard negative control unexpectedly passed'
++    assert 'sound_capture_active' in result.stderr, result.stderr
++print('session query headers: 8 configurations PASS; narrow-guard regression detected')
