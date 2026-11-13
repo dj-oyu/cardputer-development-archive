@@ -1,0 +1,33 @@
+{
+  "base": "4d4382a909c6a0a624a6322d8af56711f780bd58",
+  "head": "385e6e8cdb09b1e1e06a427c3ebee1fe595f8df8",
+  "scope": "Private source delta for the already authorized existing offline build consumer only; no public publication or permission changes.",
+  "patch_sha256": "6227e4e2f8c775ee1a41b126253001c5728609e31ebc3adb05072a1ddb0fa121",
+  "files": [
+    {
+      "path": ".github/workflows/session-dispatch.yml",
+      "bytes": 1335,
+      "sha256": "d1f882fb96dd879cafd00fa59e43551f92eaa1ccc440677eb1e99313efc23bfa"
+    },
+    {
+      "path": "main/CMakeLists.txt",
+      "bytes": 46233,
+      "sha256": "c3bd9a0c0398bff2e087292e1b1789e41b28fc38acfa452053f62104f0b8da99"
+    },
+    {
+      "path": "main/app_session.c",
+      "bytes": 172706,
+      "sha256": "22bb8c893dc6ba89ea60982cb489967cf6745db2d7572dba308e0feddb1d2296"
+    },
+    {
+      "path": "main/private_fox/render_adapter.c",
+      "bytes": 5190,
+      "sha256": "946c2616386a784db4886d314069030ac763df61f73feca2f972a3ee5ca5a134"
+    },
+    {
+      "path": "tools/test_session_query_headers.py",
+      "bytes": 3219,
+      "sha256": "c3cf3641921ef31d962e3e3d83c0e603b7f6d1ff022a7ac507f6b629084df5d3"
+    }
+  ]
+}
