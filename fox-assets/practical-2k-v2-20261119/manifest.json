@@ -1,0 +1,15 @@
+{
+  "checkpoint": "Accepted practical 2k v2 ear-only Blender source",
+  "model_sha256": "e09cca9f44e0edac90df73c8bbf476fd83001c18ec460e2d70590723096da161",
+  "size_bytes": 5964206,
+  "previous_v1_commit": "5277615986aa0102da3c5b63eabc014f0e7de9a3",
+  "changes": "Only the selected ear B meshes replaced; 56 ear-interior triangles physically removed.",
+  "triangles": {
+    "neutral_simultaneously_visible": 1740,
+    "maximum_simultaneously_visible": 1924,
+    "stored_reachable_alternative_meshes": 2000
+  },
+  "preservation": "Other meshes, rig, breathing, expressions and packed assets unchanged.",
+  "visual_review": "Actual native front, three-quarter and side views, standing and sitting.",
+  "scope": "Blender source checkpoint only. No baked mask, paw trial, firmware, runtime or FPS claim. V1 remains historical and unchanged."
+}
