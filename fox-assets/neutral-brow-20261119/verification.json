@@ -1,0 +1,44 @@
+{
+  "baseline_sha256": "5165bbe8d1a1ee25d8fef9827497b4ae84521e21fb468bc197f66cb1a3114dd6",
+  "candidate_sha256": "e9bd836b7de55d408b02ebee96a7203229240292ef1107551e7906efab3f80d2",
+  "checks": {
+    "bones": true,
+    "actions": true,
+    "bindings": true,
+    "images": true,
+    "rig_motion": true,
+    "evaluated_triangle_budget": true
+  },
+  "bones": 18,
+  "actions": 7,
+  "packed_images": 7,
+  "frames": 81,
+  "evaluated_baseline": {
+    "1": [
+      6400,
+      11930
+    ],
+    "41": [
+      6400,
+      11930
+    ],
+    "81": [
+      6400,
+      11930
+    ]
+  },
+  "evaluated_candidate": {
+    "1": [
+      6400,
+      11930
+    ],
+    "41": [
+      6400,
+      11930
+    ],
+    "81": [
+      6400,
+      11930
+    ]
+  }
+}
