@@ -1,0 +1,32 @@
+{
+  "scope": "Blender eye-control proof only; no runtime or hardware validation",
+  "size_bytes": 6296762,
+  "sha256": "fc7a459d07b4a902cd4a84c0d7624ce74a4fd3c379b46e70146434072cc03eb8",
+  "original_image_count": 9,
+  "new_generated_bounds_image_count": 2,
+  "embedded_text_count": 0,
+  "default_gaze": 0,
+  "render_checks_passed": 7,
+  "render_checks_total": 7,
+  "held_gaze_values": [
+    -1,
+    1
+  ],
+  "held_gaze_blink_sequence": [
+    0,
+    1,
+    0
+  ],
+  "checked_frames": [
+    1,
+    41,
+    81
+  ],
+  "evaluated_counts_each_frame": {
+    "vertices": 6268,
+    "faces": 8123,
+    "triangles": 11802
+  },
+  "new_face_vertex_count": 0,
+  "rig_transform_checked_frames": 81
+}
