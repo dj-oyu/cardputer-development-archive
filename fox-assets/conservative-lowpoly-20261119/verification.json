@@ -1,0 +1,38 @@
+{
+  "model_sha256": "c0f1c8018ee4d80614200396d8e8950e381a90dfb75534667c9f96ce09793fed",
+  "size_bytes": 6529978,
+  "scope": "Visually conservative Blender reduction; not the later 2k target and not device or firmware validation.",
+  "removed_triangles": {
+    "feet": 264,
+    "head": 200,
+    "spiral": 48,
+    "total": 512
+  },
+  "render_active_triangles": {
+    "neutral_before": 11802,
+    "neutral_after": 11338,
+    "all_marks_before": 12030,
+    "all_marks_after": 11518,
+    "happy_before": 10186,
+    "happy_after": 9722,
+    "happy_all_marks_before": 10414,
+    "happy_all_marks_after": 9902
+  },
+  "bones": 18,
+  "actions": 7,
+  "packed_assets": 11,
+  "frames_verified": 81,
+  "checks": {
+    "images": true,
+    "actions": true,
+    "objects": true,
+    "frames": true,
+    "packed_image_bytes_unchanged": true,
+    "material_node_inputs_links_unchanged": true,
+    "object_custom_controls_unchanged": true,
+    "shape_keys_unchanged": true,
+    "driver_expressions_targets_unchanged": true
+  },
+  "max_world_axis_bounds_change_all81": 2.9802322387695312e-8,
+  "visual_review": "Independent native-size and close-up A/B"
+}
