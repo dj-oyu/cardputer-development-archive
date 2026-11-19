@@ -1,0 +1,75 @@
+{
+  "base_commit": "25e0fe50cf0015126cb8ccaf56e83b566777ca73",
+  "base_sha256": "778fe85d4c3b5418bda30a37e3254e02b6f625b36a3b5512bf3914493b5dabde",
+  "sha256": "0496497171bb3131811e7786b45150f8a92308fa8d4912fd1b69631e83cdaa72",
+  "size_bytes": 6526226,
+  "scope": "Blender-only additive breathing over the authored body and face controls",
+  "cycle_frames": 96,
+  "cycle_seconds": 4,
+  "controls": {
+    "Amount": 1.0,
+    "Tension": 0.5
+  },
+  "shape_keys": {
+    "Mass R01 chest": "Rib cage expansion",
+    "Mass R02 fore upper L": "Shoulder rise L",
+    "Mass R02 fore upper R": "Shoulder rise R"
+  },
+  "original_pose_frames_verified": [
+    1,
+    81
+  ],
+  "original_transforms_and_bone_poses_preserved": true,
+  "original_actions_preserved": 7,
+  "packed_images_preserved": 11,
+  "base_meshes_topology_material_bindings_and_parenting_preserved": true,
+  "face_visibility_verified": true,
+  "abdomen_paws_and_head_vertex_positions_preserved": true,
+  "peak_strength_at_tension_0_half_1": [
+    0.6499999761581421,
+    1.0,
+    1.350000023841858
+  ],
+  "shape_displacements_by_frame": {
+    "1": {
+      "Mass R01 chest": 0.0,
+      "Mass R02 fore upper L": 0.0,
+      "Mass R02 fore upper R": 0.0
+    },
+    "20": {
+      "Mass R01 chest": 0.0202061,
+      "Mass R02 fore upper L": 0.0095163,
+      "Mass R02 fore upper R": 0.0095163
+    },
+    "36": {
+      "Mass R01 chest": 0.0424664,
+      "Mass R02 fore upper L": 0.02,
+      "Mass R02 fore upper R": 0.0200001
+    },
+    "57": {
+      "Mass R01 chest": 0.0306786,
+      "Mass R02 fore upper L": 0.0144483,
+      "Mass R02 fore upper R": 0.0144484
+    },
+    "73": {
+      "Mass R01 chest": 0.0106266,
+      "Mass R02 fore upper L": 0.0050047,
+      "Mass R02 fore upper R": 0.0050047
+    },
+    "81": {
+      "Mass R01 chest": 0.0030263,
+      "Mass R02 fore upper L": 0.0014252,
+      "Mass R02 fore upper R": 0.0014252
+    },
+    "97": {
+      "Mass R01 chest": 0.0,
+      "Mass R02 fore upper L": 0.0,
+      "Mass R02 fore upper R": 0.0
+    },
+    "132": {
+      "Mass R01 chest": 0.0424664,
+      "Mass R02 fore upper L": 0.0199999,
+      "Mass R02 fore upper R": 0.0199999
+    }
+  }
+}
