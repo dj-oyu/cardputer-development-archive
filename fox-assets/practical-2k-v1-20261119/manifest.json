@@ -1,0 +1,21 @@
+{
+  "checkpoint": "First practical 2k Blender source, corrected color version",
+  "model_sha256": "c56b59dd3ff74bbc20c8c0ad210de5b292b3235fce8756bf9a5df07561ba41ef",
+  "size_bytes": 5965438,
+  "ground_truth_commit": "ba71ff28339200212297bef5fb4e98b385c2c5e2",
+  "scope": "Distinct Blender practical-source checkpoint before bake alternatives. Ground truth remains unchanged. No firmware, export, runtime or device pass is claimed.",
+  "triangles": {
+    "maximum_simultaneously_visible": 1980,
+    "combinations_checked": 640,
+    "stored_reachable_alternative_meshes": 2056,
+    "whole_file_at_most_2000_claim": false
+  },
+  "preservation": {
+    "bones": 18,
+    "original_actions": 7,
+    "movement_frames": 81,
+    "breathing_frames_checked_against_low_body": 193,
+    "packed_original_images": 11,
+    "expressions_and_marks": true
+  }
+}
