@@ -1,0 +1,39 @@
+{
+  "checkpoint": "Host simulator v4 asset derived from public practical v3",
+  "asset_sha256": "d8fd816c5e07267a0a0fd670a773e8bb6b2d68242061fde31f2b84b7410702b7",
+  "size_bytes": 122888,
+  "source_v3_commit": "40b6e2db5f0c13b888b2782b4d9219c6a0cdf97b",
+  "changes": {
+    "neck_triangles_removed": 4,
+    "eyes_scale": 1.15,
+    "marks_scale": 1.5,
+    "marks_offset_adjusted": true
+  },
+  "structure": {
+    "nodes": 187,
+    "packets": 133,
+    "stored_triangles": 1942,
+    "neutral_triangles": 1762
+  },
+  "verification": {
+    "silhouette_tested": true,
+    "actual_host_resolution": [
+      240,
+      135
+    ],
+    "views": [
+      "front",
+      "35 degrees"
+    ],
+    "poses": [
+      "standing",
+      "transition",
+      "seated"
+    ],
+    "marks": [
+      "off",
+      "on"
+    ]
+  },
+  "scope": "Host-only asset checkpoint. Not a Blender or firmware checkpoint. No full Blender synchronization, final color/shading, runtime breathing, device or performance validation is claimed. Prior v3 archive remains unchanged."
+}
