@@ -1,0 +1,231 @@
+{
+  "runtime_commit": "5a3dedcba86f46bf74567fc07c42a85e7bb3e25f",
+  "model_source_commit": "aa7e8f1193e8a394b7b79c9539edd4755c6dc918",
+  "model_sha256": "616033c06602ae3fe7ee8c14536ffba7654aa57bab257c67c19b25c63a584225",
+  "blender_sha256": "7001d416993a33a057f47d40ad8d6773ffd6378c73b8bc528a7664d07e38b4b5",
+  "sanitizers": "ASan/UBSan (LSan disabled)",
+  "capacity": {
+    "snapshot_bytes": 65536,
+    "work": 8000000,
+    "records": 256
+  },
+  "host_actor_arena_bytes": 211556,
+  "host_adapter_state_bytes": 7664,
+  "cases": {
+    "35": {
+      "frames": {
+        "0": {
+          "covered_pixels": 3671,
+          "changed_vs_cold_neutral": 0,
+          "breath": 0.0,
+          "yaw_radians": 0.0,
+          "rgb565_sha256": "079d0617f1f077064d78719263fa4ed18c6bd95613b3b114af1c4f3c3ea89a05"
+        },
+        "1500": {
+          "covered_pixels": 3693,
+          "changed_vs_cold_neutral": 42,
+          "breath": 1.0,
+          "yaw_radians": 0.0,
+          "rgb565_sha256": "36b44a03afa2c5a812afab0251900fae62e35d335ed4d5c73e7920472eda5283"
+        },
+        "4000": {
+          "covered_pixels": 3671,
+          "changed_vs_cold_neutral": 0,
+          "breath": 0.0,
+          "yaw_radians": 0.0,
+          "rgb565_sha256": "079d0617f1f077064d78719263fa4ed18c6bd95613b3b114af1c4f3c3ea89a05"
+        },
+        "7200": {
+          "covered_pixels": 3674,
+          "changed_vs_cold_neutral": 5,
+          "breath": 0.133509,
+          "yaw_radians": 0.0,
+          "rgb565_sha256": "859221b5604b47f3f0744c2c424fa05684cd8525e9af4719840717296b84ee3d"
+        },
+        "7500": {
+          "covered_pixels": 3780,
+          "changed_vs_cold_neutral": 820,
+          "breath": 0.0189036,
+          "yaw_radians": 0.2702599,
+          "rgb565_sha256": "23c945e1e50a8ebebe106c1dcc556479bb9458ca5927cec4ecdfee6a2f7f12f4"
+        },
+        "7850": {
+          "covered_pixels": 3807,
+          "changed_vs_cold_neutral": 1186,
+          "breath": 0.0,
+          "yaw_radians": 0.6108652,
+          "rgb565_sha256": "3d7295f58e12c7ea1b13faa285ca3670bec3363c768c0b228113109a1ef9fd74"
+        },
+        "8050": {
+          "covered_pixels": 3807,
+          "changed_vs_cold_neutral": 1186,
+          "breath": 0.0,
+          "yaw_radians": 0.6108652,
+          "rgb565_sha256": "3d7295f58e12c7ea1b13faa285ca3670bec3363c768c0b228113109a1ef9fd74"
+        },
+        "8500": {
+          "covered_pixels": 3810,
+          "changed_vs_cold_neutral": 1191,
+          "breath": 0.1654191,
+          "yaw_radians": 0.6108652,
+          "rgb565_sha256": "fe6b30f582926a04918762d0c1edf09d3f2688a9766411701a1c3b14dcbf3453"
+        },
+        "9000": {
+          "covered_pixels": 3782,
+          "changed_vs_cold_neutral": 757,
+          "breath": 0.7116243,
+          "yaw_radians": 0.2254221,
+          "rgb565_sha256": "48212d7ddc9f9297b76fc79a8a2ca3ccdef22611d6629719ab4692446d182eb3"
+        },
+        "9350": {
+          "covered_pixels": 3692,
+          "changed_vs_cold_neutral": 41,
+          "breath": 0.9783626,
+          "yaw_radians": 0.0,
+          "rgb565_sha256": "02f5110b519f04db91fa4c98cd28042142a626a45ef70df21c00105ed2677fcb"
+        },
+        "11999": {
+          "covered_pixels": 3671,
+          "changed_vs_cold_neutral": 0,
+          "breath": 0.0,
+          "yaw_radians": 0.0,
+          "rgb565_sha256": "079d0617f1f077064d78719263fa4ed18c6bd95613b3b114af1c4f3c3ea89a05"
+        },
+        "12000": {
+          "covered_pixels": 3671,
+          "changed_vs_cold_neutral": 0,
+          "breath": 0.0,
+          "yaw_radians": 0.0,
+          "rgb565_sha256": "079d0617f1f077064d78719263fa4ed18c6bd95613b3b114af1c4f3c3ea89a05"
+        }
+      },
+      "mark_visible_delta_log": [
+        "mark 0 at 0: 127 pixels",
+        "mark 0 at 7850: 155 pixels",
+        "mark 1 at 0: 154 pixels",
+        "mark 1 at 7850: 189 pixels",
+        "mark 2 at 0: 107 pixels",
+        "mark 2 at 7850: 133 pixels"
+      ],
+      "peak": {
+        "records": 125,
+        "snapshot_bytes": 45000,
+        "work": 45068
+      }
+    },
+    "-35": {
+      "frames": {
+        "0": {
+          "covered_pixels": 5766,
+          "changed_vs_cold_neutral": 0,
+          "breath": 0.0,
+          "yaw_radians": -0.0,
+          "rgb565_sha256": "7992c94d7e113a44118760f08329c6b3e45db9f1b6870f6217032cb2f5bde972"
+        },
+        "1500": {
+          "covered_pixels": 5786,
+          "changed_vs_cold_neutral": 57,
+          "breath": 1.0,
+          "yaw_radians": -0.0,
+          "rgb565_sha256": "8b96e22a149f18967380aff33ceca6a02e4f443fa559dbf08fc72ef45d046216"
+        },
+        "4000": {
+          "covered_pixels": 5766,
+          "changed_vs_cold_neutral": 0,
+          "breath": 0.0,
+          "yaw_radians": -0.0,
+          "rgb565_sha256": "7992c94d7e113a44118760f08329c6b3e45db9f1b6870f6217032cb2f5bde972"
+        },
+        "7200": {
+          "covered_pixels": 5771,
+          "changed_vs_cold_neutral": 11,
+          "breath": 0.133509,
+          "yaw_radians": -0.0,
+          "rgb565_sha256": "315f34b350d0f21300ef02e030f91ba32e5342334c097f0bd398718a9a14ddf4"
+        },
+        "7500": {
+          "covered_pixels": 5905,
+          "changed_vs_cold_neutral": 835,
+          "breath": 0.0189036,
+          "yaw_radians": -0.2702599,
+          "rgb565_sha256": "587218a5901b53da50e072c0267dd47743a3929fd8561b4aba233edf12165025"
+        },
+        "7850": {
+          "covered_pixels": 5963,
+          "changed_vs_cold_neutral": 1191,
+          "breath": 0.0,
+          "yaw_radians": -0.6108652,
+          "rgb565_sha256": "66f1461d4d6e6854e7188c857e914f556da4d8ea581a3de393c2983a0ef77ca2"
+        },
+        "8050": {
+          "covered_pixels": 5963,
+          "changed_vs_cold_neutral": 1191,
+          "breath": 0.0,
+          "yaw_radians": -0.6108652,
+          "rgb565_sha256": "66f1461d4d6e6854e7188c857e914f556da4d8ea581a3de393c2983a0ef77ca2"
+        },
+        "8500": {
+          "covered_pixels": 5969,
+          "changed_vs_cold_neutral": 1203,
+          "breath": 0.1654191,
+          "yaw_radians": -0.6108652,
+          "rgb565_sha256": "1dad2370236b1f8f66524ec6dcb72e89583ccea84e6d49526c33d5878ee3c809"
+        },
+        "9000": {
+          "covered_pixels": 5904,
+          "changed_vs_cold_neutral": 783,
+          "breath": 0.7116243,
+          "yaw_radians": -0.2254221,
+          "rgb565_sha256": "3c9f30172127efd103ea027b0b3d54e391932d4a5e968c3266e846dad3798dac"
+        },
+        "9350": {
+          "covered_pixels": 5786,
+          "changed_vs_cold_neutral": 56,
+          "breath": 0.9783626,
+          "yaw_radians": -0.0,
+          "rgb565_sha256": "84da4fa144137c79332b70669499933a9f27dd16a32005ddf075a4fb76a103e6"
+        },
+        "11999": {
+          "covered_pixels": 5766,
+          "changed_vs_cold_neutral": 0,
+          "breath": 0.0,
+          "yaw_radians": -0.0,
+          "rgb565_sha256": "7992c94d7e113a44118760f08329c6b3e45db9f1b6870f6217032cb2f5bde972"
+        },
+        "12000": {
+          "covered_pixels": 5766,
+          "changed_vs_cold_neutral": 0,
+          "breath": 0.0,
+          "yaw_radians": -0.0,
+          "rgb565_sha256": "7992c94d7e113a44118760f08329c6b3e45db9f1b6870f6217032cb2f5bde972"
+        }
+      },
+      "mark_visible_delta_log": [
+        "mark 0 at 0: 127 pixels",
+        "mark 0 at 7850: 155 pixels",
+        "mark 1 at 0: 159 pixels",
+        "mark 1 at 7850: 190 pixels",
+        "mark 2 at 0: 110 pixels",
+        "mark 2 at 7850: 132 pixels"
+      ],
+      "peak": {
+        "records": 125,
+        "snapshot_bytes": 45076,
+        "work": 49785
+      }
+    }
+  },
+  "checked": [
+    "same cold neutral RGB565 at 0,4000,12000 ms",
+    "reverse samples bit-identical to forward",
+    "all three optional marks visibly render on both anchors and their local pose exactly returns",
+    "each sampled frame in bounds",
+    "1-row and 8-row render bit-identical",
+    "invalid owner, generation and anchor rejected"
+  ],
+  "limitations": [
+    "not a firmware-app build, runtime memory-fit, target latency or FPS verification",
+    "affine breath approximation and idle/glance only; rest of Blender actions stay at source",
+    "at +35\u00b0 the tail is obscured in cold neutral for this test camera"
+  ]
+}
