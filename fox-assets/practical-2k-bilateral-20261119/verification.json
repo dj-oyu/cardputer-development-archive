@@ -1,0 +1,34 @@
+{
+  "checkpoint": "Bilateral rear-head cleanup, distinct Blender and host assets",
+  "blender": {
+    "file": "fox-2k-bilateral.blend",
+    "sha256": "7001d416993a33a057f47d40ad8d6773ffd6378c73b8bc528a7664d07e38b4b5",
+    "size_bytes": 5956414,
+    "source": "Practical v3 plus neck cleanup",
+    "motion_frames_verified": 81,
+    "rig_and_actions_preserved": true
+  },
+  "host": {
+    "file": "fox-host-v5.aynm",
+    "sha256": "616033c06602ae3fe7ee8c14536ffba7654aa57bab257c67c19b25c63a584225",
+    "size_bytes": 122024,
+    "source": "Host v4; eye and comic-mark adjustments are host-only",
+    "stored_triangles_before": 1942,
+    "stored_triangles_after": 1934,
+    "neutral_triangles_before": 1762,
+    "neutral_triangles_after": 1754,
+    "packets_before": 133,
+    "packets_after": 132,
+    "unmodified_packets_exact": true
+  },
+  "shared_change": "Eight triangles removed from bilateral rear head; these files are not equivalent.",
+  "host_regression": {
+    "left_right_35_degree_pose_and_marks_pairs": 16,
+    "breathing_peak_pairs": 8,
+    "front_pairs": 4,
+    "total_pairs": 28,
+    "all_pixel_differences_zero": true,
+    "front_gate": "PASS"
+  },
+  "limits": "Glance is a verification pose only, not implemented production motion. No device validation. Prior archives unchanged."
+}
