@@ -1,0 +1,30 @@
+{
+  "model_sha256": "d3edde66f2c538388f544989fe16bc60c2d391fc519000bfa1ed9e49c6295d22",
+  "size_bytes": 6558106,
+  "scope": "Canonical high-poly Blender ground truth with breathing and conservative cleanup. Not the separate 2k model or real-device validation.",
+  "sources": {
+    "breathing_commit": "5749b4e5fc4dd2c200ef13d22eba996872fc2a1e",
+    "conservative_commit": "ff30f47d5b347ffcc1303de3ccf3167fdb719eab"
+  },
+  "approved_mesh_deltas": 6,
+  "physically_removed_triangles": 512,
+  "visible_triangles": {
+    "neutral": 11338,
+    "all_marks": 11518
+  },
+  "breathing_shape_and_evaluated_trace_identical_frames": 193,
+  "bones": 18,
+  "actions": 7,
+  "movement_frames": 81,
+  "packed_images": 11,
+  "expressions_and_stickers_preserved": true,
+  "preservation_checks": {
+    "images": true,
+    "objects": true,
+    "geometry": true,
+    "actions": true,
+    "frames": true,
+    "materials": true,
+    "scene": true
+  }
+}
