@@ -1,0 +1,130 @@
+{
+  "scope": "Blender only: corrected diffuse eyelids and additive worried brow keys; no runtime or hardware validation",
+  "sha256": "9f887a797f87726d38d79c9ae36f40b032984eb6f26941a9cd16a3f2618d3444",
+  "size_bytes": 6277602,
+  "original_packed_images_preserved": true,
+  "original_image_count": 11,
+  "new_image_count": 0,
+  "embedded_text_count": 0,
+  "original_object_action_parent_bindings_unchanged": true,
+  "default_gaze": 0,
+  "pixel_checks": {
+    "gleft_original_gaze": {
+      "identical": true,
+      "different_pixels": 0,
+      "max_channel_delta": 0
+    },
+    "gleft_reopen": {
+      "identical": true,
+      "different_pixels": 0,
+      "max_channel_delta": 0
+    },
+    "gright_original_gaze": {
+      "identical": true,
+      "different_pixels": 0,
+      "max_channel_delta": 0
+    },
+    "gright_reopen": {
+      "identical": true,
+      "different_pixels": 0,
+      "max_channel_delta": 0
+    },
+    "neutral_original_gaze": {
+      "identical": true,
+      "different_pixels": 0,
+      "max_channel_delta": 0
+    },
+    "closed_gaze_invariant": {
+      "identical": true,
+      "different_pixels": 0,
+      "max_channel_delta": 0
+    }
+  },
+  "geometry_and_rig": {
+    "budget_columns": [
+      "vertices",
+      "faces",
+      "triangles"
+    ],
+    "baseline": {
+      "1": {
+        "raw": [
+          6256,
+          8107,
+          11778
+        ],
+        "evaluated": [
+          6268,
+          8123,
+          11802
+        ]
+      },
+      "41": {
+        "raw": [
+          6256,
+          8107,
+          11778
+        ],
+        "evaluated": [
+          6268,
+          8123,
+          11802
+        ]
+      },
+      "81": {
+        "raw": [
+          6256,
+          8107,
+          11778
+        ],
+        "evaluated": [
+          6268,
+          8123,
+          11802
+        ]
+      }
+    },
+    "candidate": {
+      "1": {
+        "raw": [
+          6256,
+          8107,
+          11778
+        ],
+        "evaluated": [
+          6268,
+          8123,
+          11802
+        ]
+      },
+      "41": {
+        "raw": [
+          6256,
+          8107,
+          11778
+        ],
+        "evaluated": [
+          6268,
+          8123,
+          11802
+        ]
+      },
+      "81": {
+        "raw": [
+          6256,
+          8107,
+          11778
+        ],
+        "evaluated": [
+          6268,
+          8123,
+          11802
+        ]
+      }
+    },
+    "protected_objects_identical": true,
+    "original_actions_bones_world_transforms_81frames_identical": true,
+    "new_face_vertex_count": 0,
+    "status": "Blender-only; hardware not assessed"
+  }
+}
