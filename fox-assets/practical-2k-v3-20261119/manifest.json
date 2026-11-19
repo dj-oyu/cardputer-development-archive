@@ -1,0 +1,26 @@
+{
+  "checkpoint": "Verified practical 2k v3 Blender source",
+  "model_sha256": "10d0ab05f893820de471aeaba321736fb995ffaa261e46018e0c33046597afdb",
+  "size_bytes": 5958398,
+  "previous_v2_commit": "a512f02f9c6c6b902918ef32984b72f2ecf9c744",
+  "changes": {
+    "foot_triangles_removed": 40,
+    "tail_underside_reverse_triangles_removed": 6,
+    "independently_verified": true
+  },
+  "triangles": {
+    "usual_simultaneously_visible": 1694,
+    "maximum_simultaneously_visible": 1878,
+    "stored_reachable_alternative_meshes": 1954
+  },
+  "preservation": {
+    "bones": 18,
+    "original_actions": 7,
+    "motion_frames": 81,
+    "breathing_trace_frames": 193,
+    "packed_assets_unchanged": true,
+    "controls_unchanged": true
+  },
+  "visual_review": "Native standing, intermediate and sitting views and tail color confirmed.",
+  "scope": "Blender authoring checkpoint only. No export, firmware or FPS claim. Prior checkpoints remain unchanged."
+}
