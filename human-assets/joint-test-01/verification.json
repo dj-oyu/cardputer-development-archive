@@ -1,0 +1,737 @@
+{
+  "source_sha256": "d4ef06944c9aede91c2a762c401709d81abdb1a9d7a7901150ef39d9d78b10f9",
+  "blend_sha256": "28193beaadb15bb5bfddb55125a780aeee7d0db4f0eab42703cdfc595587f872",
+  "bones_world": {
+    "root": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0.38
+      ]
+    ],
+    "pelvis": [
+      [
+        0,
+        0.03,
+        2.8
+      ],
+      [
+        0,
+        0.012,
+        3.1
+      ]
+    ],
+    "spine": [
+      [
+        0,
+        0.012,
+        3.1
+      ],
+      [
+        0,
+        0.018,
+        3.55
+      ]
+    ],
+    "chest": [
+      [
+        0,
+        0.018,
+        3.55
+      ],
+      [
+        0,
+        0.005,
+        3.89
+      ]
+    ],
+    "neck": [
+      [
+        0,
+        0.005,
+        3.89
+      ],
+      [
+        0,
+        -0.045,
+        4.43
+      ]
+    ],
+    "head": [
+      [
+        0,
+        -0.045,
+        4.43
+      ],
+      [
+        0,
+        0.02,
+        5.3
+      ]
+    ],
+    "clavicle.L": [
+      [
+        0.035,
+        0.005,
+        3.84
+      ],
+      [
+        0.465,
+        0.005,
+        3.84
+      ]
+    ],
+    "upper-arm.L": [
+      [
+        0.465,
+        0.005,
+        3.84
+      ],
+      [
+        0.802,
+        -0.018,
+        3.245
+      ]
+    ],
+    "forearm.L": [
+      [
+        0.802,
+        -0.018,
+        3.245
+      ],
+      [
+        1.04,
+        -0.115,
+        2.6
+      ]
+    ],
+    "hand.L": [
+      [
+        1.04,
+        -0.115,
+        2.6
+      ],
+      [
+        1.058,
+        -0.122,
+        2.4
+      ]
+    ],
+    "thigh.L": [
+      [
+        0.23,
+        0.025,
+        2.8
+      ],
+      [
+        0.38,
+        -0.0626,
+        1.45
+      ]
+    ],
+    "shin.L": [
+      [
+        0.38,
+        -0.0626,
+        1.45
+      ],
+      [
+        0.5,
+        -0.009999999999999995,
+        0.62
+      ]
+    ],
+    "foot.L": [
+      [
+        0.5,
+        -0.009999999999999995,
+        0.62
+      ],
+      [
+        0.5,
+        -0.39,
+        0.16
+      ]
+    ],
+    "clavicle.R": [
+      [
+        -0.035,
+        0.005,
+        3.84
+      ],
+      [
+        -0.465,
+        0.005,
+        3.84
+      ]
+    ],
+    "upper-arm.R": [
+      [
+        -0.465,
+        0.005,
+        3.84
+      ],
+      [
+        -0.802,
+        -0.018,
+        3.245
+      ]
+    ],
+    "forearm.R": [
+      [
+        -0.802,
+        -0.018,
+        3.245
+      ],
+      [
+        -1.04,
+        -0.115,
+        2.6
+      ]
+    ],
+    "hand.R": [
+      [
+        -1.04,
+        -0.115,
+        2.6
+      ],
+      [
+        -1.058,
+        -0.122,
+        2.4
+      ]
+    ],
+    "thigh.R": [
+      [
+        -0.23,
+        0.025,
+        2.8
+      ],
+      [
+        -0.38,
+        0.040799999999999996,
+        1.45
+      ]
+    ],
+    "shin.R": [
+      [
+        -0.38,
+        0.040799999999999996,
+        1.45
+      ],
+      [
+        -0.5,
+        0.21000000000000002,
+        0.62
+      ]
+    ],
+    "foot.R": [
+      [
+        -0.5,
+        0.21000000000000002,
+        0.62
+      ],
+      [
+        -0.5,
+        -0.16999999999999998,
+        0.16
+      ]
+    ]
+  },
+  "preview_rest_px": {
+    "root": [
+      [
+        120.0,
+        130.589
+      ],
+      [
+        120.0,
+        121.996
+      ]
+    ],
+    "pelvis": [
+      [
+        119.64,
+        67.245
+      ],
+      [
+        119.856,
+        60.479
+      ]
+    ],
+    "spine": [
+      [
+        119.856,
+        60.479
+      ],
+      [
+        119.784,
+        50.297
+      ]
+    ],
+    "chest": [
+      [
+        119.784,
+        50.297
+      ],
+      [
+        119.94,
+        42.622
+      ]
+    ],
+    "neck": [
+      [
+        119.94,
+        42.622
+      ],
+      [
+        120.54,
+        30.46
+      ]
+    ],
+    "head": [
+      [
+        120.54,
+        30.46
+      ],
+      [
+        119.76,
+        10.724
+      ]
+    ],
+    "clavicle.L": [
+      [
+        120.612,
+        43.731
+      ],
+      [
+        128.868,
+        43.469
+      ]
+    ],
+    "upper-arm.L": [
+      [
+        128.868,
+        43.469
+      ],
+      [
+        135.615,
+        56.741
+      ]
+    ],
+    "forearm.L": [
+      [
+        135.615,
+        56.741
+      ],
+      [
+        141.349,
+        71.276
+      ]
+    ],
+    "hand.L": [
+      [
+        141.349,
+        71.276
+      ],
+      [
+        141.778,
+        75.794
+      ]
+    ],
+    "clavicle.R": [
+      [
+        119.268,
+        43.773
+      ],
+      [
+        111.011,
+        44.035
+      ]
+    ],
+    "upper-arm.R": [
+      [
+        111.011,
+        44.035
+      ],
+      [
+        104.817,
+        57.717
+      ]
+    ],
+    "forearm.R": [
+      [
+        104.817,
+        57.717
+      ],
+      [
+        101.411,
+        72.541
+      ]
+    ],
+    "hand.R": [
+      [
+        101.411,
+        72.541
+      ],
+      [
+        101.149,
+        77.081
+      ]
+    ],
+    "thigh.L": [
+      [
+        124.116,
+        67.11
+      ],
+      [
+        128.047,
+        97.63
+      ]
+    ],
+    "shin.L": [
+      [
+        128.047,
+        97.63
+      ],
+      [
+        129.72,
+        116.275
+      ]
+    ],
+    "foot.L": [
+      [
+        129.72,
+        116.275
+      ],
+      [
+        134.28,
+        127.046
+      ]
+    ],
+    "thigh.R": [
+      [
+        115.284,
+        67.39
+      ],
+      [
+        112.214,
+        97.992
+      ]
+    ],
+    "shin.R": [
+      [
+        112.214,
+        97.992
+      ],
+      [
+        107.88,
+        116.669
+      ]
+    ],
+    "foot.R": [
+      [
+        107.88,
+        116.669
+      ],
+      [
+        112.439,
+        127.44
+      ]
+    ]
+  },
+  "preview_bend_px": {
+    "root": [
+      [
+        120.0,
+        130.589
+      ],
+      [
+        120.0,
+        121.996
+      ]
+    ],
+    "pelvis": [
+      [
+        119.64,
+        67.245
+      ],
+      [
+        119.856,
+        60.479
+      ]
+    ],
+    "spine": [
+      [
+        119.856,
+        60.479
+      ],
+      [
+        119.784,
+        50.297
+      ]
+    ],
+    "chest": [
+      [
+        119.784,
+        50.297
+      ],
+      [
+        119.94,
+        42.622
+      ]
+    ],
+    "neck": [
+      [
+        119.94,
+        42.622
+      ],
+      [
+        120.54,
+        30.46
+      ]
+    ],
+    "head": [
+      [
+        120.54,
+        30.46
+      ],
+      [
+        119.76,
+        10.724
+      ]
+    ],
+    "clavicle.L": [
+      [
+        120.612,
+        43.731
+      ],
+      [
+        128.868,
+        43.469
+      ]
+    ],
+    "upper-arm.L": [
+      [
+        128.868,
+        43.469
+      ],
+      [
+        135.615,
+        56.741
+      ]
+    ],
+    "forearm.L": [
+      [
+        135.615,
+        56.741
+      ],
+      [
+        146.56,
+        65.667
+      ]
+    ],
+    "hand.L": [
+      [
+        146.56,
+        65.667
+      ],
+      [
+        148.69,
+        68.829
+      ]
+    ],
+    "clavicle.R": [
+      [
+        119.268,
+        43.773
+      ],
+      [
+        111.011,
+        44.035
+      ]
+    ],
+    "upper-arm.R": [
+      [
+        111.011,
+        44.035
+      ],
+      [
+        104.817,
+        57.717
+      ]
+    ],
+    "forearm.R": [
+      [
+        104.817,
+        57.717
+      ],
+      [
+        101.411,
+        72.541
+      ]
+    ],
+    "hand.R": [
+      [
+        101.411,
+        72.541
+      ],
+      [
+        101.149,
+        77.081
+      ]
+    ],
+    "thigh.L": [
+      [
+        124.116,
+        67.11
+      ],
+      [
+        128.047,
+        97.63
+      ]
+    ],
+    "shin.L": [
+      [
+        128.047,
+        97.63
+      ],
+      [
+        129.72,
+        116.275
+      ]
+    ],
+    "foot.L": [
+      [
+        129.72,
+        116.275
+      ],
+      [
+        134.28,
+        127.046
+      ]
+    ],
+    "thigh.R": [
+      [
+        115.284,
+        67.39
+      ],
+      [
+        117.765,
+        96.724
+      ]
+    ],
+    "shin.R": [
+      [
+        117.765,
+        96.724
+      ],
+      [
+        110.148,
+        112.693
+      ]
+    ],
+    "foot.R": [
+      [
+        110.148,
+        112.693
+      ],
+      [
+        114.61,
+        123.606
+      ]
+    ]
+  },
+  "peak_edge_stretch": {
+    "Sculpted cheeks, jaw and cranium": 1.0,
+    "Neck": 1.0,
+    "Ear shell": 1.0,
+    "Ear bowl": 1.0,
+    "Ear shell.001": 1.0,
+    "Ear bowl.001": 1.0,
+    "Upper charcoal eye shape": 1.0,
+    "Ivory sclera": 1.0,
+    "Amber iris": 1.0,
+    "Dark oval pupil": 1.0,
+    "Large eye glint": 1.0,
+    "Arched expressive eyebrow": 1.0,
+    "Upper charcoal eye shape.001": 1.0,
+    "Ivory sclera.001": 1.0,
+    "Amber iris.001": 1.0,
+    "Dark oval pupil.001": 1.0,
+    "Large eye glint.001": 1.0,
+    "Arched expressive eyebrow.001": 1.0,
+    "Low nose bridge and tapered tip": 1.0,
+    "Small asymmetric warm smile": 1.0,
+    "Bob back mass": 1.0,
+    "Large right side-sweep": 1.0,
+    "Right split long sweep": 1.0,
+    "Left wide brushed fringe": 1.0,
+    "Left swept temple curl": 1.0,
+    "Right framing curl": 1.0,
+    "Little lifted crown tuft": 1.0,
+    "Outer light airy tuft": 1.0,
+    "Scalloped separate bob tip": 1.0,
+    "Scalloped separate bob tip.001": 1.0,
+    "Scalloped separate bob tip.002": 1.0,
+    "Scalloped separate bob tip.003": 1.0,
+    "Scalloped separate bob tip.004": 1.0,
+    "Scalloped separate bob tip.005": 1.0,
+    "Scalloped separate bob tip.006": 1.0,
+    "Scalloped separate bob tip.007": 1.0,
+    "Swept layered back nape lock": 1.0,
+    "Swept layered back nape lock.001": 1.0,
+    "Swept layered back nape lock.002": 1.0,
+    "Swept layered back nape lock.003": 1.0,
+    "Soft ivory tee base": 1.0,
+    "Ivory scoop binding": 1.0,
+    "Jacket cut front and back": 1.0,
+    "Cropped jacket hem": 1.0,
+    "Open jacket front binding": 1.0,
+    "Upturned jacket lapel": 1.0,
+    "Shaped rolled jacket sleeve": 1.0,
+    "Rolled fabric sleeve cuff": 1.0,
+    "Jacket cut front and back.001": 1.0,
+    "Cropped jacket hem.001": 1.0,
+    "Open jacket front binding.001": 1.0,
+    "Upturned jacket lapel.001": 1.0,
+    "Shaped rolled jacket sleeve.001": 1.378,
+    "Rolled fabric sleeve cuff.001": 1.326,
+    "Waist and seat": 1.0,
+    "Topstitched waistband": 1.0,
+    "Brass waist button": 1.0,
+    "Tailored high-rise shorts leg": 1.258,
+    "Double-rolled short hem": 1.0,
+    "Diagonal pocket opening": 1.0,
+    "Tailored high-rise shorts leg.001": 1.0,
+    "Double-rolled short hem.001": 1.0,
+    "Diagonal pocket opening.001": 1.0,
+    "Elbow and narrowing forearm": 1.0,
+    "Relaxed blockout fist": 1.0,
+    "Separate resting thumb": 1.0,
+    "Elbow and narrowing forearm.001": 1.216,
+    "Relaxed blockout fist.001": 1.0,
+    "Separate resting thumb.001": 1.0,
+    "Thigh to shin continuous leg": 1.172,
+    "Thigh to shin continuous leg.001": 1.0,
+    "Ochre ankle boot and rounded vamp": 1.272,
+    "Cream lug outsole": 1.0,
+    "Dark elastic boot inset": 1.112,
+    "Dark elastic boot inset.001": 1.113,
+    "Ochre ankle boot and rounded vamp.001": 1.0,
+    "Cream lug outsole.001": 1.0,
+    "Dark elastic boot inset.002": 1.0,
+    "Dark elastic boot inset.003": 1.0
+  },
+  "resolution": [
+    240,
+    135
+  ],
+  "weighted_objects": 79,
+  "scope": "Provisional editable Blender regional skin with rest and mild bend; no runtime/native export or hardware result."
+}
