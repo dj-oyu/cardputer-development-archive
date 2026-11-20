@@ -1,0 +1,6 @@
+baseline -35 peak records=125 snapshot_bytes=45076 work=49785
+baseline 35 peak records=125 snapshot_bytes=45000 work=45068
+weak -35 peak records=125 snapshot_bytes=46428 work=49785
+weak 35 peak records=125 snapshot_bytes=46352 work=45068
+strong -35 peak records=125 snapshot_bytes=46428 work=49785
+strong 35 peak records=125 snapshot_bytes=46352 work=45068
