@@ -1,0 +1,8 @@
+prior/weak -35 peak records=125 snapshot_bytes=46428 work=49785
+prior/weak 35 peak records=125 snapshot_bytes=46352 work=45068
+tail-forehead -35 peak records=125 snapshot_bytes=50620 work=49785
+tail-forehead 35 peak records=125 snapshot_bytes=50544 work=45068
+tail -35 peak records=125 snapshot_bytes=48828 work=49785
+tail 35 peak records=125 snapshot_bytes=48752 work=45068
+forehead -35 peak records=125 snapshot_bytes=48220 work=49785
+forehead 35 peak records=125 snapshot_bytes=48144 work=45068
