@@ -8,7 +8,7 @@
 | ビーチ | [background.png](beach/background.png) | [stage.blend](beach/stage.blend) | [ソース](../five-depth-eyeline-studies-20261120/beach) |
 | 恐竜の森 | [background.png](dinosaur-forest/background.png) | [stage.blend](dinosaur-forest/stage.blend) | [ソース](../three-depth-look-revisions-20261120/dino-procedural) |
 | Pipe Dream 倉庫版 | [background.png](pipe-warehouse/background.png) | [stage.blend](pipe-warehouse/stage.blend) | [ソース](../pipe-dream-warehouse-20261120) |
-| Vaporwave Temple | [background.png](vaporwave-temple/background.png) | [stage.blend](vaporwave-temple/stage.blend) | [ソース](../three-depth-look-revisions-20261120/temple-wide) |
+| Vaporwave Temple | [background.png](vaporwave-temple/background.png) | [stage.blend](vaporwave-temple/stage.blend) | [ソース](./vaporwave-temple) |
 | 初期Mac | [background.png](early-mac/background.png) | [stage.blend](early-mac/stage.blend) | [ソース](../six-backdrop-studies-20261120/retro-mac) |
 | 夕暮れの入江 | [background.png](dusk-bay/background.png) | [stage.blend](dusk-bay/stage.blend) | [ソース](../dusk-bay-pathtraced-01) |
 
