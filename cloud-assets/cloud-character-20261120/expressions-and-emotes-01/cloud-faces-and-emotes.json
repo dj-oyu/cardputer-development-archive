@@ -1,0 +1,73 @@
+{
+  "frozen_fox_commit": "ba71ff28339200212297bef5fb4e98b385c2c5e2",
+  "frozen_fox_sha256": "d3edde66f2c538388f544989fe16bc60c2d391fc519000bfa1ed9e49c6295d22",
+  "input_sha256": "09fd8af677b3d8e72a4ec83499311dcf2d1a559c60217bc3ecd35e35e4fd9010",
+  "output_sha256": "1a93a7f4e71327e35b446f4ccabf7ac86b1226827d5e2c0ad5253a37fbe2032d",
+  "verified_frame_range": [
+    1,
+    169
+  ],
+  "resolution": [
+    240,
+    135
+  ],
+  "center_px_lower_left": [
+    192,
+    97
+  ],
+  "maximum_dimensions_px": 23,
+  "min_screen_clearance_px": {
+    "Cloud body": 8.853,
+    "Floating hand L": 34.51,
+    "Floating hand R": 122.363,
+    "Eye rim L": 47.46,
+    "Eye white L": 48.288,
+    "Pupil L": 50.45,
+    "Catchlight L": 54.704,
+    "Catchlight small L": 53.323,
+    "Cheek L": 42.767,
+    "Eye rim R": 71.05,
+    "Eye white R": 71.879,
+    "Pupil R": 72.802,
+    "Catchlight R": 77.056,
+    "Catchlight small R": 75.675,
+    "Cheek R": 77.762,
+    "Open smile contour": 60.362,
+    "Halo vapor ribbon 00": 22.751,
+    "Halo vapor ribbon 01": 21.116,
+    "Halo vapor ribbon 02": 19.533,
+    "Halo vapor ribbon 03": 18.043,
+    "Halo vapor ribbon 04": 16.666,
+    "Brow L": 48.672,
+    "Brow R": 71.126,
+    "Expression Happy closed eye L": 84.039,
+    "Expression Sleepy lid L": 84.039,
+    "Expression Happy closed eye R": 84.039,
+    "Expression Sleepy lid R": 84.039,
+    "Expression Happy mouth interior": 84.039,
+    "Expression Happy mouth rim": 84.039,
+    "Expression Happy tongue": 84.039,
+    "Expression Concerned mouth": 84.039,
+    "Expression Surprised mouth interior": 84.039,
+    "Expression Surprised mouth rim": 84.039,
+    "Expression Surprised tongue": 84.039,
+    "Expression Sleepy mouth interior": 84.039,
+    "Expression Sleepy mouth rim": 84.039,
+    "Expression Happy eyebrow L": 84.039,
+    "Expression Concerned eyebrow L": 84.039,
+    "Expression Surprised eyebrow L": 84.039,
+    "Expression Sleepy eyebrow L": 84.039,
+    "Expression Happy eyebrow R": 84.039,
+    "Expression Concerned eyebrow R": 84.039,
+    "Expression Surprised eyebrow R": 84.039,
+    "Expression Sleepy eyebrow R": 84.039
+  },
+  "per_symbol_triangles": {
+    "Cloud emote \u2022 sweat": 20,
+    "Cloud emote \u2022 confusion": 96,
+    "Cloud emote \u2022 anger": 64
+  },
+  "inactive_visible_triangles": 0,
+  "stored_triangles": 180,
+  "budget_note": "Additive camera-facing overlay. One active symbol, no firmware or real performance test."
+}
