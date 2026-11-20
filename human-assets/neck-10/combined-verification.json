@@ -1,0 +1,530 @@
+{
+  "independent_frames": 30,
+  "bones": 20,
+  "action_curves_unchanged": 60,
+  "face_uv_unchanged": true,
+  "face_min_garment_clearance_before": 0.083586,
+  "face_min_garment_clearance_after": 0.052875,
+  "packed_images_unchanged": {
+    "Flow \u00b7 Bob back mass": "e7262c45069eae3896a36627c52d978f1b76bec125d2a4a7db2eca22f566e762",
+    "Flow \u00b7 Large right side-sweep": "09d81d08de7c35235fcf910684193fde61ce055f42eb8505e52136292b468264",
+    "Flow \u00b7 Left swept temple curl": "1c7e94b7f8200e12572d75cde644baa241daae4df312caca4a72701e91e20fb6",
+    "Flow \u00b7 Left wide brushed fringe": "d47f61a873e74be4d09a4fcfaf3e5c2594f89a316466d48a270db14e4beff70e",
+    "Flow \u00b7 Little lifted crown tuft": "6cdc3d6638f7ba19bf52a5a160b8e3137ac10b480777056eff91c48ce61abc61",
+    "Flow \u00b7 Outer light airy tuft": "57ac4c3fd2d22b75eee953d15e32d0f5756df7af3d457a80ebb076ba9d83ce7e",
+    "Flow \u00b7 Right framing curl": "73c1e2f741a3eaf51c48b3d0fde829d4d2589c8ad28e1635117fa37591707803",
+    "Packed face graphic / transparent sRGB": "f38d2924f21dd057abd8b1eb4a30bca99ff5533c8b320245cf49840f0fd06bc5"
+  },
+  "base": {
+    "1": {
+      "face_garment_overlap": 0,
+      "face_garment_min_vertex_clearance": 0.083586,
+      "hair_garment_overlap": 14,
+      "neck_garment_overlap": 34,
+      "jaw_min_z": 4.25
+    },
+    "2": {
+      "face_garment_overlap": 0,
+      "face_garment_min_vertex_clearance": 0.083586,
+      "hair_garment_overlap": 14,
+      "neck_garment_overlap": 34,
+      "jaw_min_z": 4.25
+    },
+    "3": {
+      "face_garment_overlap": 0,
+      "face_garment_min_vertex_clearance": 0.083586,
+      "hair_garment_overlap": 14,
+      "neck_garment_overlap": 34,
+      "jaw_min_z": 4.25
+    },
+    "4": {
+      "face_garment_overlap": 0,
+      "face_garment_min_vertex_clearance": 0.083586,
+      "hair_garment_overlap": 14,
+      "neck_garment_overlap": 34,
+      "jaw_min_z": 4.25
+    },
+    "5": {
+      "face_garment_overlap": 0,
+      "face_garment_min_vertex_clearance": 0.083586,
+      "hair_garment_overlap": 14,
+      "neck_garment_overlap": 34,
+      "jaw_min_z": 4.25
+    },
+    "6": {
+      "face_garment_overlap": 0,
+      "face_garment_min_vertex_clearance": 0.083586,
+      "hair_garment_overlap": 14,
+      "neck_garment_overlap": 34,
+      "jaw_min_z": 4.25
+    },
+    "7": {
+      "face_garment_overlap": 0,
+      "face_garment_min_vertex_clearance": 0.083586,
+      "hair_garment_overlap": 14,
+      "neck_garment_overlap": 34,
+      "jaw_min_z": 4.25
+    },
+    "8": {
+      "face_garment_overlap": 0,
+      "face_garment_min_vertex_clearance": 0.083586,
+      "hair_garment_overlap": 14,
+      "neck_garment_overlap": 34,
+      "jaw_min_z": 4.25
+    },
+    "9": {
+      "face_garment_overlap": 0,
+      "face_garment_min_vertex_clearance": 0.083586,
+      "hair_garment_overlap": 14,
+      "neck_garment_overlap": 34,
+      "jaw_min_z": 4.25
+    },
+    "10": {
+      "face_garment_overlap": 0,
+      "face_garment_min_vertex_clearance": 0.083586,
+      "hair_garment_overlap": 14,
+      "neck_garment_overlap": 34,
+      "jaw_min_z": 4.25
+    },
+    "11": {
+      "face_garment_overlap": 0,
+      "face_garment_min_vertex_clearance": 0.083586,
+      "hair_garment_overlap": 14,
+      "neck_garment_overlap": 34,
+      "jaw_min_z": 4.25
+    },
+    "12": {
+      "face_garment_overlap": 0,
+      "face_garment_min_vertex_clearance": 0.083586,
+      "hair_garment_overlap": 14,
+      "neck_garment_overlap": 34,
+      "jaw_min_z": 4.25
+    },
+    "13": {
+      "face_garment_overlap": 0,
+      "face_garment_min_vertex_clearance": 0.083586,
+      "hair_garment_overlap": 14,
+      "neck_garment_overlap": 34,
+      "jaw_min_z": 4.25
+    },
+    "14": {
+      "face_garment_overlap": 0,
+      "face_garment_min_vertex_clearance": 0.083586,
+      "hair_garment_overlap": 14,
+      "neck_garment_overlap": 34,
+      "jaw_min_z": 4.25
+    },
+    "15": {
+      "face_garment_overlap": 0,
+      "face_garment_min_vertex_clearance": 0.083586,
+      "hair_garment_overlap": 14,
+      "neck_garment_overlap": 34,
+      "jaw_min_z": 4.25
+    },
+    "16": {
+      "face_garment_overlap": 0,
+      "face_garment_min_vertex_clearance": 0.083586,
+      "hair_garment_overlap": 14,
+      "neck_garment_overlap": 34,
+      "jaw_min_z": 4.25
+    },
+    "17": {
+      "face_garment_overlap": 0,
+      "face_garment_min_vertex_clearance": 0.083586,
+      "hair_garment_overlap": 14,
+      "neck_garment_overlap": 34,
+      "jaw_min_z": 4.25
+    },
+    "18": {
+      "face_garment_overlap": 0,
+      "face_garment_min_vertex_clearance": 0.083586,
+      "hair_garment_overlap": 14,
+      "neck_garment_overlap": 34,
+      "jaw_min_z": 4.25
+    },
+    "19": {
+      "face_garment_overlap": 0,
+      "face_garment_min_vertex_clearance": 0.083586,
+      "hair_garment_overlap": 14,
+      "neck_garment_overlap": 34,
+      "jaw_min_z": 4.25
+    },
+    "20": {
+      "face_garment_overlap": 0,
+      "face_garment_min_vertex_clearance": 0.083586,
+      "hair_garment_overlap": 14,
+      "neck_garment_overlap": 34,
+      "jaw_min_z": 4.25
+    },
+    "21": {
+      "face_garment_overlap": 0,
+      "face_garment_min_vertex_clearance": 0.083586,
+      "hair_garment_overlap": 14,
+      "neck_garment_overlap": 34,
+      "jaw_min_z": 4.25
+    },
+    "22": {
+      "face_garment_overlap": 0,
+      "face_garment_min_vertex_clearance": 0.083586,
+      "hair_garment_overlap": 14,
+      "neck_garment_overlap": 34,
+      "jaw_min_z": 4.25
+    },
+    "23": {
+      "face_garment_overlap": 0,
+      "face_garment_min_vertex_clearance": 0.083586,
+      "hair_garment_overlap": 14,
+      "neck_garment_overlap": 34,
+      "jaw_min_z": 4.25
+    },
+    "24": {
+      "face_garment_overlap": 0,
+      "face_garment_min_vertex_clearance": 0.083586,
+      "hair_garment_overlap": 14,
+      "neck_garment_overlap": 34,
+      "jaw_min_z": 4.25
+    },
+    "25": {
+      "face_garment_overlap": 0,
+      "face_garment_min_vertex_clearance": 0.083586,
+      "hair_garment_overlap": 14,
+      "neck_garment_overlap": 34,
+      "jaw_min_z": 4.25
+    },
+    "26": {
+      "face_garment_overlap": 0,
+      "face_garment_min_vertex_clearance": 0.083586,
+      "hair_garment_overlap": 14,
+      "neck_garment_overlap": 34,
+      "jaw_min_z": 4.25
+    },
+    "27": {
+      "face_garment_overlap": 0,
+      "face_garment_min_vertex_clearance": 0.083586,
+      "hair_garment_overlap": 14,
+      "neck_garment_overlap": 34,
+      "jaw_min_z": 4.25
+    },
+    "28": {
+      "face_garment_overlap": 0,
+      "face_garment_min_vertex_clearance": 0.083586,
+      "hair_garment_overlap": 14,
+      "neck_garment_overlap": 34,
+      "jaw_min_z": 4.25
+    },
+    "29": {
+      "face_garment_overlap": 0,
+      "face_garment_min_vertex_clearance": 0.083586,
+      "hair_garment_overlap": 14,
+      "neck_garment_overlap": 34,
+      "jaw_min_z": 4.25
+    },
+    "30": {
+      "face_garment_overlap": 0,
+      "face_garment_min_vertex_clearance": 0.083586,
+      "hair_garment_overlap": 14,
+      "neck_garment_overlap": 34,
+      "jaw_min_z": 4.25
+    }
+  },
+  "adjusted": {
+    "1": {
+      "face_garment_overlap": 0,
+      "face_garment_min_vertex_clearance": 0.052875,
+      "hair_garment_overlap": 30,
+      "neck_garment_overlap": 34,
+      "jaw_min_z": 4.21
+    },
+    "2": {
+      "face_garment_overlap": 0,
+      "face_garment_min_vertex_clearance": 0.052875,
+      "hair_garment_overlap": 30,
+      "neck_garment_overlap": 34,
+      "jaw_min_z": 4.21
+    },
+    "3": {
+      "face_garment_overlap": 0,
+      "face_garment_min_vertex_clearance": 0.052875,
+      "hair_garment_overlap": 30,
+      "neck_garment_overlap": 34,
+      "jaw_min_z": 4.21
+    },
+    "4": {
+      "face_garment_overlap": 0,
+      "face_garment_min_vertex_clearance": 0.052875,
+      "hair_garment_overlap": 30,
+      "neck_garment_overlap": 34,
+      "jaw_min_z": 4.21
+    },
+    "5": {
+      "face_garment_overlap": 0,
+      "face_garment_min_vertex_clearance": 0.052875,
+      "hair_garment_overlap": 30,
+      "neck_garment_overlap": 34,
+      "jaw_min_z": 4.21
+    },
+    "6": {
+      "face_garment_overlap": 0,
+      "face_garment_min_vertex_clearance": 0.052875,
+      "hair_garment_overlap": 30,
+      "neck_garment_overlap": 34,
+      "jaw_min_z": 4.21
+    },
+    "7": {
+      "face_garment_overlap": 0,
+      "face_garment_min_vertex_clearance": 0.052875,
+      "hair_garment_overlap": 30,
+      "neck_garment_overlap": 34,
+      "jaw_min_z": 4.21
+    },
+    "8": {
+      "face_garment_overlap": 0,
+      "face_garment_min_vertex_clearance": 0.052875,
+      "hair_garment_overlap": 30,
+      "neck_garment_overlap": 34,
+      "jaw_min_z": 4.21
+    },
+    "9": {
+      "face_garment_overlap": 0,
+      "face_garment_min_vertex_clearance": 0.052875,
+      "hair_garment_overlap": 30,
+      "neck_garment_overlap": 34,
+      "jaw_min_z": 4.21
+    },
+    "10": {
+      "face_garment_overlap": 0,
+      "face_garment_min_vertex_clearance": 0.052875,
+      "hair_garment_overlap": 30,
+      "neck_garment_overlap": 34,
+      "jaw_min_z": 4.21
+    },
+    "11": {
+      "face_garment_overlap": 0,
+      "face_garment_min_vertex_clearance": 0.052875,
+      "hair_garment_overlap": 30,
+      "neck_garment_overlap": 34,
+      "jaw_min_z": 4.21
+    },
+    "12": {
+      "face_garment_overlap": 0,
+      "face_garment_min_vertex_clearance": 0.052875,
+      "hair_garment_overlap": 30,
+      "neck_garment_overlap": 34,
+      "jaw_min_z": 4.21
+    },
+    "13": {
+      "face_garment_overlap": 0,
+      "face_garment_min_vertex_clearance": 0.052875,
+      "hair_garment_overlap": 30,
+      "neck_garment_overlap": 34,
+      "jaw_min_z": 4.21
+    },
+    "14": {
+      "face_garment_overlap": 0,
+      "face_garment_min_vertex_clearance": 0.052875,
+      "hair_garment_overlap": 30,
+      "neck_garment_overlap": 34,
+      "jaw_min_z": 4.21
+    },
+    "15": {
+      "face_garment_overlap": 0,
+      "face_garment_min_vertex_clearance": 0.052875,
+      "hair_garment_overlap": 30,
+      "neck_garment_overlap": 34,
+      "jaw_min_z": 4.21
+    },
+    "16": {
+      "face_garment_overlap": 0,
+      "face_garment_min_vertex_clearance": 0.052875,
+      "hair_garment_overlap": 30,
+      "neck_garment_overlap": 34,
+      "jaw_min_z": 4.21
+    },
+    "17": {
+      "face_garment_overlap": 0,
+      "face_garment_min_vertex_clearance": 0.052875,
+      "hair_garment_overlap": 30,
+      "neck_garment_overlap": 34,
+      "jaw_min_z": 4.21
+    },
+    "18": {
+      "face_garment_overlap": 0,
+      "face_garment_min_vertex_clearance": 0.052875,
+      "hair_garment_overlap": 30,
+      "neck_garment_overlap": 34,
+      "jaw_min_z": 4.21
+    },
+    "19": {
+      "face_garment_overlap": 0,
+      "face_garment_min_vertex_clearance": 0.052875,
+      "hair_garment_overlap": 30,
+      "neck_garment_overlap": 34,
+      "jaw_min_z": 4.21
+    },
+    "20": {
+      "face_garment_overlap": 0,
+      "face_garment_min_vertex_clearance": 0.052875,
+      "hair_garment_overlap": 30,
+      "neck_garment_overlap": 34,
+      "jaw_min_z": 4.21
+    },
+    "21": {
+      "face_garment_overlap": 0,
+      "face_garment_min_vertex_clearance": 0.052875,
+      "hair_garment_overlap": 30,
+      "neck_garment_overlap": 34,
+      "jaw_min_z": 4.21
+    },
+    "22": {
+      "face_garment_overlap": 0,
+      "face_garment_min_vertex_clearance": 0.052875,
+      "hair_garment_overlap": 30,
+      "neck_garment_overlap": 34,
+      "jaw_min_z": 4.21
+    },
+    "23": {
+      "face_garment_overlap": 0,
+      "face_garment_min_vertex_clearance": 0.052875,
+      "hair_garment_overlap": 30,
+      "neck_garment_overlap": 34,
+      "jaw_min_z": 4.21
+    },
+    "24": {
+      "face_garment_overlap": 0,
+      "face_garment_min_vertex_clearance": 0.052875,
+      "hair_garment_overlap": 30,
+      "neck_garment_overlap": 34,
+      "jaw_min_z": 4.21
+    },
+    "25": {
+      "face_garment_overlap": 0,
+      "face_garment_min_vertex_clearance": 0.052875,
+      "hair_garment_overlap": 30,
+      "neck_garment_overlap": 34,
+      "jaw_min_z": 4.21
+    },
+    "26": {
+      "face_garment_overlap": 0,
+      "face_garment_min_vertex_clearance": 0.052875,
+      "hair_garment_overlap": 30,
+      "neck_garment_overlap": 34,
+      "jaw_min_z": 4.21
+    },
+    "27": {
+      "face_garment_overlap": 0,
+      "face_garment_min_vertex_clearance": 0.052875,
+      "hair_garment_overlap": 30,
+      "neck_garment_overlap": 34,
+      "jaw_min_z": 4.21
+    },
+    "28": {
+      "face_garment_overlap": 0,
+      "face_garment_min_vertex_clearance": 0.052875,
+      "hair_garment_overlap": 30,
+      "neck_garment_overlap": 34,
+      "jaw_min_z": 4.21
+    },
+    "29": {
+      "face_garment_overlap": 0,
+      "face_garment_min_vertex_clearance": 0.052875,
+      "hair_garment_overlap": 30,
+      "neck_garment_overlap": 34,
+      "jaw_min_z": 4.21
+    },
+    "30": {
+      "face_garment_overlap": 0,
+      "face_garment_min_vertex_clearance": 0.052875,
+      "hair_garment_overlap": 30,
+      "neck_garment_overlap": 34,
+      "jaw_min_z": 4.21
+    }
+  },
+  "stress_before": {
+    "-20/0": {
+      "face_garment_overlap": 0,
+      "face_garment_min_vertex_clearance": 0.078388,
+      "hair_garment_overlap": 16,
+      "neck_garment_overlap": 34,
+      "jaw_min_z": 4.246665
+    },
+    "20/0": {
+      "face_garment_overlap": 0,
+      "face_garment_min_vertex_clearance": 0.070731,
+      "hair_garment_overlap": 24,
+      "neck_garment_overlap": 34,
+      "jaw_min_z": 4.245646
+    },
+    "0/-12": {
+      "face_garment_overlap": 0,
+      "face_garment_min_vertex_clearance": 0.090953,
+      "hair_garment_overlap": 44,
+      "neck_garment_overlap": 34,
+      "jaw_min_z": 4.22441
+    },
+    "0/12": {
+      "face_garment_overlap": 0,
+      "face_garment_min_vertex_clearance": 0.059532,
+      "hair_garment_overlap": 0,
+      "neck_garment_overlap": 34,
+      "jaw_min_z": 4.208326
+    },
+    "-20/-12": {
+      "face_garment_overlap": 0,
+      "face_garment_min_vertex_clearance": 0.085073,
+      "hair_garment_overlap": 30,
+      "neck_garment_overlap": 34,
+      "jaw_min_z": 4.225443
+    },
+    "20/-12": {
+      "face_garment_overlap": 0,
+      "face_garment_min_vertex_clearance": 0.094705,
+      "hair_garment_overlap": 30,
+      "neck_garment_overlap": 34,
+      "jaw_min_z": 4.224424
+    }
+  },
+  "stress_after": {
+    "-20/0": {
+      "face_garment_overlap": 0,
+      "face_garment_min_vertex_clearance": 0.048616,
+      "hair_garment_overlap": 27,
+      "neck_garment_overlap": 34,
+      "jaw_min_z": 4.206665
+    },
+    "20/0": {
+      "face_garment_overlap": 0,
+      "face_garment_min_vertex_clearance": 0.03666,
+      "hair_garment_overlap": 26,
+      "neck_garment_overlap": 34,
+      "jaw_min_z": 4.205646
+    },
+    "0/-12": {
+      "face_garment_overlap": 0,
+      "face_garment_min_vertex_clearance": 0.061197,
+      "hair_garment_overlap": 42,
+      "neck_garment_overlap": 34,
+      "jaw_min_z": 4.18441
+    },
+    "0/12": {
+      "face_garment_overlap": 0,
+      "face_garment_min_vertex_clearance": 0.03699,
+      "hair_garment_overlap": 14,
+      "neck_garment_overlap": 34,
+      "jaw_min_z": 4.168325
+    },
+    "-20/-12": {
+      "face_garment_overlap": 0,
+      "face_garment_min_vertex_clearance": 0.060323,
+      "hair_garment_overlap": 44,
+      "neck_garment_overlap": 34,
+      "jaw_min_z": 4.185442
+    },
+    "20/-12": {
+      "face_garment_overlap": 0,
+      "face_garment_min_vertex_clearance": 0.062184,
+      "hair_garment_overlap": 26,
+      "neck_garment_overlap": 34,
+      "jaw_min_z": 4.184423
+    }
+  }
+}
