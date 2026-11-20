@@ -1,0 +1,413 @@
+{
+  "output_sha256": "060976e049557a01e3df0f205535183bcbd77af97c135e24615b33b7791fabd8",
+  "unchanged_meshes": 59,
+  "frame1_max_vertex_delta": 0.06635052695673944,
+  "shorts_topology_exact": true,
+  "bones": 20,
+  "actions": 1,
+  "images": 4,
+  "source_checks": {
+    "1": {
+      "collision": {
+        "Waist and seat": {
+          "self_crossings": 0,
+          "self_crossing_pairs": [],
+          "triangles": 382,
+          "thigh_pairs": {
+            "Thigh to shin continuous leg.001": 48,
+            "Thigh to shin continuous leg": 40
+          }
+        }
+      },
+      "projected_neutral": {
+        "0": {
+          "visible_thigh_above_z2.45": 0,
+          "waistband": 551
+        },
+        "35": {
+          "visible_thigh_above_z2.45": 0,
+          "waistband": 455
+        },
+        "-35": {
+          "visible_thigh_above_z2.45": 0,
+          "waistband": 445
+        },
+        "90": {
+          "visible_thigh_above_z2.45": 0,
+          "waistband": 190
+        },
+        "-90": {
+          "visible_thigh_above_z2.45": 0,
+          "waistband": 189
+        },
+        "145": {
+          "visible_thigh_above_z2.45": 0,
+          "waistband": 404
+        },
+        "180": {
+          "visible_thigh_above_z2.45": 0,
+          "waistband": 498
+        }
+      }
+    },
+    "8": {
+      "collision": {
+        "Waist and seat": {
+          "self_crossings": 0,
+          "self_crossing_pairs": [],
+          "triangles": 382,
+          "thigh_pairs": {
+            "Thigh to shin continuous leg.001": 48,
+            "Thigh to shin continuous leg": 40
+          }
+        }
+      },
+      "projected_neutral": {}
+    },
+    "15": {
+      "collision": {
+        "Waist and seat": {
+          "self_crossings": 0,
+          "self_crossing_pairs": [],
+          "triangles": 382,
+          "thigh_pairs": {
+            "Thigh to shin continuous leg.001": 48,
+            "Thigh to shin continuous leg": 40
+          }
+        }
+      },
+      "projected_neutral": {}
+    },
+    "23": {
+      "collision": {
+        "Waist and seat": {
+          "self_crossings": 0,
+          "self_crossing_pairs": [],
+          "triangles": 382,
+          "thigh_pairs": {
+            "Thigh to shin continuous leg.001": 48,
+            "Thigh to shin continuous leg": 40
+          }
+        }
+      },
+      "projected_neutral": {
+        "0": {
+          "visible_thigh_above_z2.45": 0,
+          "waistband": 551
+        },
+        "35": {
+          "visible_thigh_above_z2.45": 0,
+          "waistband": 455
+        },
+        "-35": {
+          "visible_thigh_above_z2.45": 0,
+          "waistband": 445
+        },
+        "90": {
+          "visible_thigh_above_z2.45": 0,
+          "waistband": 190
+        },
+        "-90": {
+          "visible_thigh_above_z2.45": 0,
+          "waistband": 189
+        },
+        "145": {
+          "visible_thigh_above_z2.45": 0,
+          "waistband": 404
+        },
+        "180": {
+          "visible_thigh_above_z2.45": 0,
+          "waistband": 498
+        }
+      }
+    },
+    "30": {
+      "collision": {
+        "Waist and seat": {
+          "self_crossings": 0,
+          "self_crossing_pairs": [],
+          "triangles": 382,
+          "thigh_pairs": {
+            "Thigh to shin continuous leg.001": 48,
+            "Thigh to shin continuous leg": 40
+          }
+        }
+      },
+      "projected_neutral": {
+        "0": {
+          "visible_thigh_above_z2.45": 0,
+          "waistband": 551
+        },
+        "35": {
+          "visible_thigh_above_z2.45": 0,
+          "waistband": 455
+        },
+        "-35": {
+          "visible_thigh_above_z2.45": 0,
+          "waistband": 445
+        },
+        "90": {
+          "visible_thigh_above_z2.45": 0,
+          "waistband": 190
+        },
+        "-90": {
+          "visible_thigh_above_z2.45": 0,
+          "waistband": 189
+        },
+        "145": {
+          "visible_thigh_above_z2.45": 0,
+          "waistband": 404
+        },
+        "180": {
+          "visible_thigh_above_z2.45": 0,
+          "waistband": 498
+        }
+      }
+    },
+    "thigh_bend_22": {
+      "collision": {
+        "Waist and seat": {
+          "self_crossings": 0,
+          "self_crossing_pairs": [],
+          "triangles": 382,
+          "thigh_pairs": {
+            "Thigh to shin continuous leg.001": 48,
+            "Thigh to shin continuous leg": 40
+          }
+        }
+      },
+      "projected_neutral": {
+        "0": {
+          "visible_thigh_above_z2.45": 0,
+          "waistband": 551
+        },
+        "35": {
+          "visible_thigh_above_z2.45": 0,
+          "waistband": 455
+        },
+        "-35": {
+          "visible_thigh_above_z2.45": 0,
+          "waistband": 445
+        },
+        "90": {
+          "visible_thigh_above_z2.45": 61,
+          "waistband": 190
+        },
+        "-90": {
+          "visible_thigh_above_z2.45": 78,
+          "waistband": 189
+        },
+        "145": {
+          "visible_thigh_above_z2.45": 272,
+          "waistband": 404
+        },
+        "180": {
+          "visible_thigh_above_z2.45": 344,
+          "waistband": 498
+        }
+      }
+    }
+  },
+  "result_checks": {
+    "1": {
+      "collision": {
+        "Waist and seat": {
+          "self_crossings": 0,
+          "self_crossing_pairs": [],
+          "triangles": 382,
+          "thigh_pairs": {
+            "Thigh to shin continuous leg.001": 50,
+            "Thigh to shin continuous leg": 40
+          }
+        }
+      },
+      "projected_neutral": {
+        "0": {
+          "visible_thigh_above_z2.45": 0,
+          "waistband": 552
+        },
+        "35": {
+          "visible_thigh_above_z2.45": 0,
+          "waistband": 455
+        },
+        "-35": {
+          "visible_thigh_above_z2.45": 0,
+          "waistband": 445
+        },
+        "90": {
+          "visible_thigh_above_z2.45": 0,
+          "waistband": 110
+        },
+        "-90": {
+          "visible_thigh_above_z2.45": 0,
+          "waistband": 102
+        },
+        "145": {
+          "visible_thigh_above_z2.45": 0,
+          "waistband": 1
+        },
+        "180": {
+          "visible_thigh_above_z2.45": 0,
+          "waistband": 2
+        }
+      }
+    },
+    "8": {
+      "collision": {
+        "Waist and seat": {
+          "self_crossings": 0,
+          "self_crossing_pairs": [],
+          "triangles": 382,
+          "thigh_pairs": {
+            "Thigh to shin continuous leg.001": 50,
+            "Thigh to shin continuous leg": 40
+          }
+        }
+      },
+      "projected_neutral": {}
+    },
+    "15": {
+      "collision": {
+        "Waist and seat": {
+          "self_crossings": 0,
+          "self_crossing_pairs": [],
+          "triangles": 382,
+          "thigh_pairs": {
+            "Thigh to shin continuous leg.001": 50,
+            "Thigh to shin continuous leg": 40
+          }
+        }
+      },
+      "projected_neutral": {}
+    },
+    "23": {
+      "collision": {
+        "Waist and seat": {
+          "self_crossings": 0,
+          "self_crossing_pairs": [],
+          "triangles": 382,
+          "thigh_pairs": {
+            "Thigh to shin continuous leg.001": 50,
+            "Thigh to shin continuous leg": 40
+          }
+        }
+      },
+      "projected_neutral": {
+        "0": {
+          "visible_thigh_above_z2.45": 0,
+          "waistband": 552
+        },
+        "35": {
+          "visible_thigh_above_z2.45": 0,
+          "waistband": 455
+        },
+        "-35": {
+          "visible_thigh_above_z2.45": 0,
+          "waistband": 445
+        },
+        "90": {
+          "visible_thigh_above_z2.45": 0,
+          "waistband": 110
+        },
+        "-90": {
+          "visible_thigh_above_z2.45": 0,
+          "waistband": 102
+        },
+        "145": {
+          "visible_thigh_above_z2.45": 0,
+          "waistband": 1
+        },
+        "180": {
+          "visible_thigh_above_z2.45": 0,
+          "waistband": 2
+        }
+      }
+    },
+    "30": {
+      "collision": {
+        "Waist and seat": {
+          "self_crossings": 0,
+          "self_crossing_pairs": [],
+          "triangles": 382,
+          "thigh_pairs": {
+            "Thigh to shin continuous leg.001": 50,
+            "Thigh to shin continuous leg": 40
+          }
+        }
+      },
+      "projected_neutral": {
+        "0": {
+          "visible_thigh_above_z2.45": 0,
+          "waistband": 552
+        },
+        "35": {
+          "visible_thigh_above_z2.45": 0,
+          "waistband": 455
+        },
+        "-35": {
+          "visible_thigh_above_z2.45": 0,
+          "waistband": 445
+        },
+        "90": {
+          "visible_thigh_above_z2.45": 0,
+          "waistband": 110
+        },
+        "-90": {
+          "visible_thigh_above_z2.45": 0,
+          "waistband": 102
+        },
+        "145": {
+          "visible_thigh_above_z2.45": 0,
+          "waistband": 1
+        },
+        "180": {
+          "visible_thigh_above_z2.45": 0,
+          "waistband": 2
+        }
+      }
+    },
+    "thigh_bend_22": {
+      "collision": {
+        "Waist and seat": {
+          "self_crossings": 0,
+          "self_crossing_pairs": [],
+          "triangles": 382,
+          "thigh_pairs": {
+            "Thigh to shin continuous leg.001": 48,
+            "Thigh to shin continuous leg": 40
+          }
+        }
+      },
+      "projected_neutral": {
+        "0": {
+          "visible_thigh_above_z2.45": 0,
+          "waistband": 552
+        },
+        "35": {
+          "visible_thigh_above_z2.45": 0,
+          "waistband": 455
+        },
+        "-35": {
+          "visible_thigh_above_z2.45": 0,
+          "waistband": 445
+        },
+        "90": {
+          "visible_thigh_above_z2.45": 61,
+          "waistband": 110
+        },
+        "-90": {
+          "visible_thigh_above_z2.45": 78,
+          "waistband": 102
+        },
+        "145": {
+          "visible_thigh_above_z2.45": 272,
+          "waistband": 1
+        },
+        "180": {
+          "visible_thigh_above_z2.45": 344,
+          "waistband": 2
+        }
+      }
+    }
+  }
+}
