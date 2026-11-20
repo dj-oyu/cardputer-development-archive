@@ -1,0 +1,623 @@
+{
+  "mode": "nearest visible evaluated mesh per center pixel, bin = highest source ring index of hit triangle",
+  "before": {
+    "close-180": {
+      "Left swept temple curl": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Right framing curl": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "rear-skull-close-180": 0,
+    "close-145": {
+      "Left swept temple curl": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Right framing curl": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "rear-skull-close-145": 0,
+    "close-90": {
+      "Left swept temple curl": [
+        0,
+        0,
+        6,
+        94,
+        52
+      ],
+      "Right framing curl": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "anterior-90": {
+      "same_rows": 11,
+      "minimum_anterior_gap_px": 13,
+      "nonanterior_pixels": 0,
+      "visible_pixels_over_ear": 0
+    },
+    "close-35": {
+      "Left swept temple curl": [
+        0,
+        0,
+        20,
+        54,
+        49
+      ],
+      "Right framing curl": [
+        0,
+        0,
+        3,
+        73,
+        89
+      ]
+    },
+    "close0": {
+      "Left swept temple curl": [
+        0,
+        0,
+        19,
+        48,
+        51
+      ],
+      "Right framing curl": [
+        0,
+        0,
+        9,
+        79,
+        73
+      ]
+    },
+    "close35": {
+      "Left swept temple curl": [
+        0,
+        0,
+        13,
+        62,
+        77
+      ],
+      "Right framing curl": [
+        0,
+        0,
+        12,
+        90,
+        74
+      ]
+    },
+    "close90": {
+      "Left swept temple curl": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Right framing curl": [
+        0,
+        0,
+        11,
+        108,
+        69
+      ]
+    },
+    "anterior90": {
+      "same_rows": 10,
+      "minimum_anterior_gap_px": 13,
+      "nonanterior_pixels": 0,
+      "visible_pixels_over_ear": 0
+    },
+    "close145": {
+      "Left swept temple curl": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Right framing curl": [
+        0,
+        0,
+        0,
+        74,
+        45
+      ]
+    },
+    "rear-skull-close145": 148,
+    "close180": {
+      "Left swept temple curl": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Right framing curl": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "rear-skull-close180": 0,
+    "native-180": {
+      "Left swept temple curl": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Right framing curl": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "rear-skull-native-180": 0,
+    "native-145": {
+      "Left swept temple curl": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Right framing curl": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "rear-skull-native-145": 0,
+    "native-90": {
+      "Left swept temple curl": [
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      "Right framing curl": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "native-35": {
+      "Left swept temple curl": [
+        0,
+        0,
+        0,
+        2,
+        0
+      ],
+      "Right framing curl": [
+        0,
+        0,
+        0,
+        2,
+        1
+      ]
+    },
+    "native0": {
+      "Left swept temple curl": [
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "Right framing curl": [
+        0,
+        0,
+        0,
+        1,
+        2
+      ]
+    },
+    "native35": {
+      "Left swept temple curl": [
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "Right framing curl": [
+        0,
+        0,
+        0,
+        2,
+        2
+      ]
+    },
+    "native90": {
+      "Left swept temple curl": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Right framing curl": [
+        0,
+        0,
+        1,
+        2,
+        1
+      ]
+    },
+    "native145": {
+      "Left swept temple curl": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Right framing curl": [
+        0,
+        0,
+        0,
+        2,
+        0
+      ]
+    },
+    "rear-skull-native145": 2,
+    "native180": {
+      "Left swept temple curl": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Right framing curl": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "rear-skull-native180": 0
+  },
+  "after": {
+    "close-180": {
+      "Left swept temple curl": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Right framing curl": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "rear-skull-close-180": 0,
+    "close-145": {
+      "Left swept temple curl": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Right framing curl": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "rear-skull-close-145": 0,
+    "close-90": {
+      "Left swept temple curl": [
+        0,
+        0,
+        6,
+        94,
+        52
+      ],
+      "Right framing curl": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "anterior-90": {
+      "same_rows": 11,
+      "minimum_anterior_gap_px": 13,
+      "nonanterior_pixels": 0,
+      "visible_pixels_over_ear": 0
+    },
+    "close-35": {
+      "Left swept temple curl": [
+        0,
+        0,
+        20,
+        54,
+        49
+      ],
+      "Right framing curl": [
+        0,
+        0,
+        3,
+        73,
+        89
+      ]
+    },
+    "close0": {
+      "Left swept temple curl": [
+        0,
+        0,
+        19,
+        48,
+        51
+      ],
+      "Right framing curl": [
+        0,
+        0,
+        9,
+        79,
+        73
+      ]
+    },
+    "close35": {
+      "Left swept temple curl": [
+        0,
+        0,
+        13,
+        62,
+        77
+      ],
+      "Right framing curl": [
+        0,
+        0,
+        12,
+        90,
+        74
+      ]
+    },
+    "close90": {
+      "Left swept temple curl": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Right framing curl": [
+        0,
+        0,
+        11,
+        108,
+        69
+      ]
+    },
+    "anterior90": {
+      "same_rows": 10,
+      "minimum_anterior_gap_px": 13,
+      "nonanterior_pixels": 0,
+      "visible_pixels_over_ear": 0
+    },
+    "close145": {
+      "Left swept temple curl": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Right framing curl": [
+        0,
+        0,
+        0,
+        74,
+        45
+      ]
+    },
+    "rear-skull-close145": 148,
+    "close180": {
+      "Left swept temple curl": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Right framing curl": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "rear-skull-close180": 0,
+    "native-180": {
+      "Left swept temple curl": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Right framing curl": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "rear-skull-native-180": 0,
+    "native-145": {
+      "Left swept temple curl": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Right framing curl": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "rear-skull-native-145": 0,
+    "native-90": {
+      "Left swept temple curl": [
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      "Right framing curl": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "native-35": {
+      "Left swept temple curl": [
+        0,
+        0,
+        0,
+        2,
+        0
+      ],
+      "Right framing curl": [
+        0,
+        0,
+        0,
+        2,
+        1
+      ]
+    },
+    "native0": {
+      "Left swept temple curl": [
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "Right framing curl": [
+        0,
+        0,
+        0,
+        1,
+        2
+      ]
+    },
+    "native35": {
+      "Left swept temple curl": [
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "Right framing curl": [
+        0,
+        0,
+        0,
+        2,
+        2
+      ]
+    },
+    "native90": {
+      "Left swept temple curl": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Right framing curl": [
+        0,
+        0,
+        1,
+        2,
+        1
+      ]
+    },
+    "native145": {
+      "Left swept temple curl": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Right framing curl": [
+        0,
+        0,
+        0,
+        2,
+        0
+      ]
+    },
+    "rear-skull-native145": 2,
+    "native180": {
+      "Left swept temple curl": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Right framing curl": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "rear-skull-native180": 0
+  }
+}

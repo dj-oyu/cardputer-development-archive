@@ -1,0 +1,542 @@
+{
+  "source_sha256": "6b9bb4fe2c05bbeb49aca31fc6735aff7256b4999b04a1e7957bebc2433e2021",
+  "result_sha256": "4c0432313c0363bba3885d44dcfcde6038986dacfa7a5f20cee77577969d33e9",
+  "parts": {
+    "Large right side-sweep": [
+      {
+        "vertex": 0,
+        "ring": 0,
+        "radial_cap_gap_before": -0.031481,
+        "radial_cap_gap_after": -0.119827,
+        "normal_mix": 0.81
+      },
+      {
+        "vertex": 1,
+        "ring": 0,
+        "radial_cap_gap_before": -0.013722,
+        "radial_cap_gap_after": -0.102124,
+        "normal_mix": 0.81
+      },
+      {
+        "vertex": 2,
+        "ring": 0,
+        "radial_cap_gap_before": 0.014508,
+        "radial_cap_gap_after": -0.073886,
+        "normal_mix": 0.81
+      },
+      {
+        "vertex": 3,
+        "ring": 0,
+        "radial_cap_gap_before": 0.042095,
+        "radial_cap_gap_after": -0.046294,
+        "normal_mix": 0.81
+      },
+      {
+        "vertex": 4,
+        "ring": 0,
+        "radial_cap_gap_before": 0.058301,
+        "radial_cap_gap_after": -0.030007,
+        "normal_mix": 0.81
+      },
+      {
+        "vertex": 5,
+        "ring": 0,
+        "radial_cap_gap_before": 0.057146,
+        "radial_cap_gap_after": -0.030939,
+        "normal_mix": 0.81
+      },
+      {
+        "vertex": 6,
+        "ring": 0,
+        "radial_cap_gap_before": 0.0393,
+        "radial_cap_gap_after": -0.048491,
+        "normal_mix": 0.81
+      },
+      {
+        "vertex": 7,
+        "ring": 0,
+        "radial_cap_gap_before": -0.032112,
+        "radial_cap_gap_after": -0.120215,
+        "normal_mix": 0.81
+      },
+      {
+        "vertex": 8,
+        "ring": 1,
+        "radial_cap_gap_before": 0.038662,
+        "radial_cap_gap_after": 0.029482,
+        "normal_mix": 0.5429
+      },
+      {
+        "vertex": 9,
+        "ring": 1,
+        "radial_cap_gap_before": 0.103663,
+        "radial_cap_gap_after": 0.081764,
+        "normal_mix": 0.211
+      },
+      {
+        "vertex": 10,
+        "ring": 1,
+        "radial_cap_gap_before": 0.165609,
+        "radial_cap_gap_after": 0.10612,
+        "normal_mix": 0.0564
+      },
+      {
+        "vertex": 11,
+        "ring": 1,
+        "radial_cap_gap_before": 0.202288,
+        "radial_cap_gap_after": 0.065489,
+        "normal_mix": 0.3143
+      },
+      {
+        "vertex": 12,
+        "ring": 1,
+        "radial_cap_gap_before": 0.199534,
+        "radial_cap_gap_after": 0.031163,
+        "normal_mix": 0.5322
+      },
+      {
+        "vertex": 13,
+        "ring": 1,
+        "radial_cap_gap_before": 0.182928,
+        "radial_cap_gap_after": 0.014751,
+        "normal_mix": 0.6364
+      },
+      {
+        "vertex": 14,
+        "ring": 1,
+        "radial_cap_gap_before": 0.124017,
+        "radial_cap_gap_after": 0.005149,
+        "normal_mix": 0.6973
+      },
+      {
+        "vertex": 15,
+        "ring": 1,
+        "radial_cap_gap_before": 0.047752,
+        "radial_cap_gap_after": -0.003732,
+        "normal_mix": 0.72
+      },
+      {
+        "vertex": 16,
+        "ring": 1,
+        "radial_cap_gap_before": -0.00861,
+        "radial_cap_gap_after": -0.013681,
+        "normal_mix": 0.72
+      },
+      {
+        "vertex": 17,
+        "ring": 1,
+        "radial_cap_gap_before": -0.009995,
+        "radial_cap_gap_after": -0.012444,
+        "normal_mix": 0.72
+      },
+      {
+        "vertex": 18,
+        "ring": 2,
+        "radial_cap_gap_before": 0.145568,
+        "radial_cap_gap_after": 0.126725,
+        "normal_mix": 0.0
+      },
+      {
+        "vertex": 19,
+        "ring": 2,
+        "radial_cap_gap_before": 0.229544,
+        "radial_cap_gap_after": 0.197858,
+        "normal_mix": 0.0
+      },
+      {
+        "vertex": 20,
+        "ring": 2,
+        "radial_cap_gap_before": 0.295115,
+        "radial_cap_gap_after": 0.222973,
+        "normal_mix": 0.0
+      },
+      {
+        "vertex": 21,
+        "ring": 2,
+        "radial_cap_gap_before": 0.337326,
+        "radial_cap_gap_after": 0.180414,
+        "normal_mix": 0.0
+      },
+      {
+        "vertex": 22,
+        "ring": 2,
+        "radial_cap_gap_before": 0.343615,
+        "radial_cap_gap_after": 0.144582,
+        "normal_mix": 0.0
+      },
+      {
+        "vertex": 23,
+        "ring": 2,
+        "radial_cap_gap_before": 0.297653,
+        "radial_cap_gap_after": 0.109776,
+        "normal_mix": 0.0232
+      },
+      {
+        "vertex": 24,
+        "ring": 2,
+        "radial_cap_gap_before": 0.219547,
+        "radial_cap_gap_after": 0.078159,
+        "normal_mix": 0.1637
+      },
+      {
+        "vertex": 25,
+        "ring": 2,
+        "radial_cap_gap_before": 0.125159,
+        "radial_cap_gap_after": 0.045448,
+        "normal_mix": 0.3091
+      },
+      {
+        "vertex": 26,
+        "ring": 2,
+        "radial_cap_gap_before": 0.064094,
+        "radial_cap_gap_after": 0.03257,
+        "normal_mix": 0.3663
+      },
+      {
+        "vertex": 27,
+        "ring": 2,
+        "radial_cap_gap_before": 0.066579,
+        "radial_cap_gap_after": 0.048175,
+        "normal_mix": 0.2969
+      },
+      {
+        "vertex": 28,
+        "ring": 3,
+        "radial_cap_gap_before": 0.133194,
+        "radial_cap_gap_after": 0.128024,
+        "normal_mix": 0.0
+      },
+      {
+        "vertex": 29,
+        "ring": 3,
+        "radial_cap_gap_before": 0.202904,
+        "radial_cap_gap_after": 0.194509,
+        "normal_mix": 0.0
+      },
+      {
+        "vertex": 30,
+        "ring": 3,
+        "radial_cap_gap_before": 0.267501,
+        "radial_cap_gap_after": 0.247972,
+        "normal_mix": 0.0
+      },
+      {
+        "vertex": 31,
+        "ring": 3,
+        "radial_cap_gap_before": 0.312481,
+        "radial_cap_gap_after": 0.269155,
+        "normal_mix": 0.0
+      },
+      {
+        "vertex": 32,
+        "ring": 3,
+        "radial_cap_gap_before": 0.321913,
+        "radial_cap_gap_after": 0.266371,
+        "normal_mix": 0.0
+      },
+      {
+        "vertex": 33,
+        "ring": 3,
+        "radial_cap_gap_before": 0.295911,
+        "radial_cap_gap_after": 0.240443,
+        "normal_mix": 0.0
+      },
+      {
+        "vertex": 34,
+        "ring": 3,
+        "radial_cap_gap_before": 0.226356,
+        "radial_cap_gap_after": 0.183178,
+        "normal_mix": 0.0
+      },
+      {
+        "vertex": 35,
+        "ring": 3,
+        "radial_cap_gap_before": 0.13182,
+        "radial_cap_gap_after": 0.107055,
+        "normal_mix": 0.0151
+      },
+      {
+        "vertex": 36,
+        "ring": 3,
+        "radial_cap_gap_before": 0.075005,
+        "radial_cap_gap_after": 0.064402,
+        "normal_mix": 0.0964
+      },
+      {
+        "vertex": 37,
+        "ring": 3,
+        "radial_cap_gap_before": 0.082026,
+        "radial_cap_gap_after": 0.075564,
+        "normal_mix": 0.0751
+      }
+    ],
+    "Left wide brushed fringe": [
+      {
+        "vertex": 0,
+        "ring": 0,
+        "radial_cap_gap_before": 0.016362,
+        "radial_cap_gap_after": -0.036554,
+        "normal_mix": 0.81
+      },
+      {
+        "vertex": 1,
+        "ring": 0,
+        "radial_cap_gap_before": 0.022239,
+        "radial_cap_gap_after": -0.030996,
+        "normal_mix": 0.81
+      },
+      {
+        "vertex": 2,
+        "ring": 0,
+        "radial_cap_gap_before": 0.016886,
+        "radial_cap_gap_after": -0.036544,
+        "normal_mix": 0.81
+      },
+      {
+        "vertex": 3,
+        "ring": 0,
+        "radial_cap_gap_before": 0.002188,
+        "radial_cap_gap_after": -0.051295,
+        "normal_mix": 0.81
+      },
+      {
+        "vertex": 4,
+        "ring": 0,
+        "radial_cap_gap_before": -0.016079,
+        "radial_cap_gap_after": -0.069475,
+        "normal_mix": 0.81
+      },
+      {
+        "vertex": 5,
+        "ring": 0,
+        "radial_cap_gap_before": -0.030672,
+        "radial_cap_gap_after": -0.083827,
+        "normal_mix": 0.81
+      },
+      {
+        "vertex": 6,
+        "ring": 0,
+        "radial_cap_gap_before": -0.036073,
+        "radial_cap_gap_after": -0.088866,
+        "normal_mix": 0.81
+      },
+      {
+        "vertex": 7,
+        "ring": 0,
+        "radial_cap_gap_before": 0.001716,
+        "radial_cap_gap_after": -0.050855,
+        "normal_mix": 0.81
+      },
+      {
+        "vertex": 8,
+        "ring": 1,
+        "radial_cap_gap_before": 0.172818,
+        "radial_cap_gap_after": 0.02169,
+        "normal_mix": 0.5923
+      },
+      {
+        "vertex": 9,
+        "ring": 1,
+        "radial_cap_gap_before": 0.191349,
+        "radial_cap_gap_after": 0.048154,
+        "normal_mix": 0.4243
+      },
+      {
+        "vertex": 10,
+        "ring": 1,
+        "radial_cap_gap_before": 0.181555,
+        "radial_cap_gap_after": 0.077387,
+        "normal_mix": 0.2388
+      },
+      {
+        "vertex": 11,
+        "ring": 1,
+        "radial_cap_gap_before": 0.153707,
+        "radial_cap_gap_after": 0.111982,
+        "normal_mix": 0.0192
+      },
+      {
+        "vertex": 12,
+        "ring": 1,
+        "radial_cap_gap_before": 0.102696,
+        "radial_cap_gap_after": 0.079884,
+        "normal_mix": 0.2229
+      },
+      {
+        "vertex": 13,
+        "ring": 1,
+        "radial_cap_gap_before": 0.046388,
+        "radial_cap_gap_after": 0.030162,
+        "normal_mix": 0.5385
+      },
+      {
+        "vertex": 14,
+        "ring": 1,
+        "radial_cap_gap_before": 0.010665,
+        "radial_cap_gap_after": -0.002492,
+        "normal_mix": 0.72
+      },
+      {
+        "vertex": 15,
+        "ring": 1,
+        "radial_cap_gap_before": 0.024678,
+        "radial_cap_gap_after": -0.009123,
+        "normal_mix": 0.72
+      },
+      {
+        "vertex": 16,
+        "ring": 1,
+        "radial_cap_gap_before": 0.0661,
+        "radial_cap_gap_after": -0.005048,
+        "normal_mix": 0.72
+      },
+      {
+        "vertex": 17,
+        "ring": 1,
+        "radial_cap_gap_before": 0.123682,
+        "radial_cap_gap_after": 0.001269,
+        "normal_mix": 0.72
+      },
+      {
+        "vertex": 18,
+        "ring": 2,
+        "radial_cap_gap_before": 0.27193,
+        "radial_cap_gap_after": 0.108642,
+        "normal_mix": 0.0283
+      },
+      {
+        "vertex": 19,
+        "ring": 2,
+        "radial_cap_gap_before": 0.305273,
+        "radial_cap_gap_after": 0.148033,
+        "normal_mix": 0.0
+      },
+      {
+        "vertex": 20,
+        "ring": 2,
+        "radial_cap_gap_before": 0.302381,
+        "radial_cap_gap_after": 0.183455,
+        "normal_mix": 0.0
+      },
+      {
+        "vertex": 21,
+        "ring": 2,
+        "radial_cap_gap_before": 0.266267,
+        "radial_cap_gap_after": 0.217145,
+        "normal_mix": 0.0
+      },
+      {
+        "vertex": 22,
+        "ring": 2,
+        "radial_cap_gap_before": 0.219096,
+        "radial_cap_gap_after": 0.18723,
+        "normal_mix": 0.0
+      },
+      {
+        "vertex": 23,
+        "ring": 2,
+        "radial_cap_gap_before": 0.160606,
+        "radial_cap_gap_after": 0.128599,
+        "normal_mix": 0.0
+      },
+      {
+        "vertex": 24,
+        "ring": 2,
+        "radial_cap_gap_before": 0.118704,
+        "radial_cap_gap_after": 0.074084,
+        "normal_mix": 0.1818
+      },
+      {
+        "vertex": 25,
+        "ring": 2,
+        "radial_cap_gap_before": 0.117199,
+        "radial_cap_gap_after": 0.041055,
+        "normal_mix": 0.3286
+      },
+      {
+        "vertex": 26,
+        "ring": 2,
+        "radial_cap_gap_before": 0.153329,
+        "radial_cap_gap_after": 0.050257,
+        "normal_mix": 0.2877
+      },
+      {
+        "vertex": 27,
+        "ring": 2,
+        "radial_cap_gap_before": 0.213451,
+        "radial_cap_gap_after": 0.071248,
+        "normal_mix": 0.1944
+      },
+      {
+        "vertex": 28,
+        "ring": 3,
+        "radial_cap_gap_before": 0.305289,
+        "radial_cap_gap_after": 0.251235,
+        "normal_mix": 0.0
+      },
+      {
+        "vertex": 29,
+        "ring": 3,
+        "radial_cap_gap_before": 0.335583,
+        "radial_cap_gap_after": 0.284526,
+        "normal_mix": 0.0
+      },
+      {
+        "vertex": 30,
+        "ring": 3,
+        "radial_cap_gap_before": 0.334605,
+        "radial_cap_gap_after": 0.295748,
+        "normal_mix": 0.0
+      },
+      {
+        "vertex": 31,
+        "ring": 3,
+        "radial_cap_gap_before": 0.305644,
+        "radial_cap_gap_after": 0.289041,
+        "normal_mix": 0.0
+      },
+      {
+        "vertex": 32,
+        "ring": 3,
+        "radial_cap_gap_before": 0.258577,
+        "radial_cap_gap_after": 0.247541,
+        "normal_mix": 0.0
+      },
+      {
+        "vertex": 33,
+        "ring": 3,
+        "radial_cap_gap_before": 0.208462,
+        "radial_cap_gap_after": 0.196414,
+        "normal_mix": 0.0
+      },
+      {
+        "vertex": 34,
+        "ring": 3,
+        "radial_cap_gap_before": 0.174177,
+        "radial_cap_gap_after": 0.155555,
+        "normal_mix": 0.0
+      },
+      {
+        "vertex": 35,
+        "ring": 3,
+        "radial_cap_gap_before": 0.171165,
+        "radial_cap_gap_after": 0.139537,
+        "normal_mix": 0.0
+      },
+      {
+        "vertex": 36,
+        "ring": 3,
+        "radial_cap_gap_before": 0.201888,
+        "radial_cap_gap_after": 0.162616,
+        "normal_mix": 0.0
+      },
+      {
+        "vertex": 37,
+        "ring": 3,
+        "radial_cap_gap_before": 0.254,
+        "radial_cap_gap_after": 0.204387,
+        "normal_mix": 0.0
+      }
+    ]
+  }
+}
