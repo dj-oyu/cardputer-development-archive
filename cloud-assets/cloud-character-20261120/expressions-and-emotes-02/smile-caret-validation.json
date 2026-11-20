@@ -1,0 +1,56 @@
+{
+  "source_sha256": "1a93a7f4e71327e35b446f4ccabf7ac86b1226827d5e2c0ad5253a37fbe2032d",
+  "output_sha256": "3c441fef0c37e53845f2e2a0d416e62de7d5af2b05d4301591e1bb017ca66f83",
+  "inputs_unchanged": true,
+  "two_edited_curves": {
+    "Expression Happy closed eye L": {
+      "3d_midpoint_x": 0.38099998980760574,
+      "span_factor": 0.67,
+      "unchanged_curve_bevel": 0.03799999877810478
+    },
+    "Expression Happy closed eye R": {
+      "3d_midpoint_x": -0.38099998980760574,
+      "span_factor": 0.67,
+      "unchanged_curve_bevel": 0.03799999877810478
+    }
+  },
+  "fixed_camera_240x135_before": {
+    "Expression Happy closed eye L": {
+      "width": 14.045476913452148,
+      "height": 6.410619020462036,
+      "x_center": 125.0044584274292,
+      "y_center": 69.20179724693298
+    },
+    "Expression Happy closed eye R": {
+      "width": 12.656915187835693,
+      "height": 6.723166108131409,
+      "x_center": 101.42446160316467,
+      "y_center": 69.78154063224792
+    }
+  },
+  "fixed_camera_240x135_after": {
+    "Expression Happy closed eye L": {
+      "width": 10.199532508850098,
+      "height": 6.5296246111392975,
+      "x_center": 125.01174688339233,
+      "y_center": 69.15355168282986
+    },
+    "Expression Happy closed eye R": {
+      "width": 8.8531494140625,
+      "height": 6.734258383512497,
+      "x_center": 101.4377760887146,
+      "y_center": 69.78276170790195
+    }
+  },
+  "saved_initial_face": {
+    "cloud_face_preset": 0.0,
+    "cloud_face_eyes": -1.0,
+    "cloud_face_brows": -1.0,
+    "cloud_face_mouth": -1.0
+  },
+  "ready_for_preset_and_emote": true,
+  "verified_idle_frames": [
+    1,
+    169
+  ]
+}
