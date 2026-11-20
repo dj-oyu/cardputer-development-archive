@@ -6,7 +6,7 @@ folder=os.path.dirname(os.path.realpath(__file__))
 args=sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else []
 pos=[x for x in args if x!='--no-preview']
 basename='cloud-faces-and-emotes-dot-gag.blend'
-options=[os.path.join(folder,'..',p,basename) for p in ('dot-gag-v3','cloud-expression-dot-gag-v3')]
+options=[os.path.join(folder,'..',p,basename) for p in ('expressions-and-emotes-03','dot-gag-v3','cloud-expression-dot-gag-v3')]
 src=os.path.abspath(pos[0]) if pos else next(x for x in options if os.path.isfile(x))
 dest=os.path.abspath(pos[1]) if len(pos)>1 else os.path.join(folder,'cloud-faces-and-emotes-epsilon.blend')
 assert os.path.realpath(src)!=os.path.realpath(dest)
