@@ -181,7 +181,7 @@ s.render.engine='CYCLES';s.cycles.use_denoising=False;s.cycles.samples=168;s.ren
 s.render.resolution_x=240;s.render.resolution_y=135;s.render.resolution_percentage=100
 s.render.film_transparent=False;s.render.image_settings.file_format='PNG';s.render.image_settings.color_mode='RGB'
 s.view_settings.view_transform='AgX';s.view_settings.exposure=.20
-s['scope']='First-pass editable original blockout, not production retopology, rig or hardware asset. Approved reference used visually but not embedded.'
+s['scope']='First-pass editable original blockout, not production retopology, rig or hardware asset. Existing concept proposal used visually but not embedded.'
 camera(32)
 bpy.context.preferences.filepaths.save_version=0
 for sc in bpy.data.screens:

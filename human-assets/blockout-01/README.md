@@ -1,7 +1,7 @@
 # Human character — first blockout
 
 A first, editable model designed from the existing front / three-quarter /
-profile concept. The broad asymmetric chestnut bob, amber eyes, cropped
+profile concept proposal. The broad asymmetric chestnut bob, amber eyes, cropped
 rolled-sleeve teal jacket, ivory tee, terracotta shorts and mustard boots
 are separate editable parts. Eyebrows, mouth, lids/eye surfaces, irises and
 pupils can be revised independently. No concept image is embedded.
@@ -17,5 +17,4 @@ new approximately 2k production model, preserving the recognizable hair
 and eye shapes first.
 
 Visual reference: [existing proposal in the character Space](https://chatgpt.com/space/page_0697a7f87a94819197f18a8b6d0210a3).
-The sheet is a proposal, not an adopted design. Generated review images are kept
-out of this archive.
+The sheet is a proposal, not an adopted design. Generated review images are kept out of this archive.
