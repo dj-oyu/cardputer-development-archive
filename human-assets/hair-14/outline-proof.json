@@ -1,0 +1,70 @@
+{
+  "width_measurement_z_BU": 4.64,
+  "views": {
+    "front": {
+      "cap_width_at_z_4_64": [
+        1.6108220219612122,
+        1.5389554500579834
+      ],
+      "all_hair_width_at_z_4_64": [
+        1.6108220219612122,
+        1.5389554500579834
+      ],
+      "cap_narrow_percent": 4.461,
+      "all_hair_narrow_percent": 4.461,
+      "native_mask_pixels_changed": 6,
+      "native_hair_area": [
+        909,
+        903
+      ]
+    },
+    "oblique": {
+      "cap_width_at_z_4_64": [
+        1.4065082017348494,
+        1.3498341758587724
+      ],
+      "all_hair_width_at_z_4_64": [
+        1.6355721838007646,
+        1.6079996768874132
+      ],
+      "cap_narrow_percent": 4.029,
+      "all_hair_narrow_percent": 1.686,
+      "native_mask_pixels_changed": 8,
+      "native_hair_area": [
+        883,
+        875
+      ]
+    },
+    "back": {
+      "cap_width_at_z_4_64": [
+        1.6108220219612122,
+        1.5389554500579834
+      ],
+      "all_hair_width_at_z_4_64": [
+        1.6108220219612122,
+        1.5389554500579834
+      ],
+      "cap_narrow_percent": 4.461,
+      "all_hair_narrow_percent": 4.461,
+      "native_mask_pixels_changed": 8,
+      "native_hair_area": [
+        946,
+        938
+      ]
+    }
+  },
+  "lower_z_4_26_and_4_32_width_exact": true,
+  "visible_trimmed_cap_edges_monotone_at_sampled_4_43_to_4_92": true,
+  "temple_face_pair_overlap_unchanged": {
+    "Left swept temple curl": {
+      "Bob back mass": 26,
+      "Left wide brushed fringe": 58,
+      "Large right side-sweep": 0
+    },
+    "Right framing curl": {
+      "Bob back mass": 0,
+      "Left wide brushed fringe": 0,
+      "Large right side-sweep": 66
+    }
+  }
+}
