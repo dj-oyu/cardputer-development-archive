@@ -1,0 +1,42 @@
+{
+  "sha256": "089ee166e3c8f4732e82894264c1a8416fa13dab8ede4d65a18fe11d770a3a4a",
+  "geometry_nodes_groups": {
+    "Mossy foreground islands": [
+      "NodeGroupInput",
+      "NodeGroupOutput",
+      "GeometryNodeDistributePointsOnFaces",
+      "GeometryNodeObjectInfo",
+      "FunctionNodeRandomValue",
+      "FunctionNodeRandomValue",
+      "GeometryNodeInstanceOnPoints"
+    ],
+    "Midground cycad banks": [
+      "NodeGroupInput",
+      "NodeGroupOutput",
+      "GeometryNodeDistributePointsOnFaces",
+      "GeometryNodeObjectInfo",
+      "FunctionNodeRandomValue",
+      "FunctionNodeRandomValue",
+      "GeometryNodeInstanceOnPoints"
+    ],
+    "Far forest ground layer": [
+      "NodeGroupInput",
+      "NodeGroupOutput",
+      "GeometryNodeDistributePointsOnFaces",
+      "GeometryNodeObjectInfo",
+      "FunctionNodeRandomValue",
+      "FunctionNodeRandomValue",
+      "GeometryNodeInstanceOnPoints"
+    ]
+  },
+  "evaluated_instances": {
+    "Mossy foreground islands": 47,
+    "Midground cycad banks": 42,
+    "Far forest ground layer": 54
+  },
+  "viewport_resolution": [
+    240,
+    135
+  ],
+  "no_addons_required": true
+}
