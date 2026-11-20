@@ -1,0 +1,31 @@
+{
+  "blend_sha256": "75aea37e3fff6b08e86bb86c7907780f7182549aa63f522f3e787f3ee238b0c2",
+  "render_sha256": "af519ad9948ee72b4da2832f94d8c511fcbb941976e300c5654a76fd7df78993",
+  "engine": "CYCLES",
+  "sample_budget": 1536,
+  "volume_bounces": 2,
+  "output": [
+    240,
+    135,
+    "RGB8"
+  ],
+  "volume_shader": "heterogeneous noise and height weighted Volume Scatter, anisotropy .44",
+  "light_sources": {
+    "warm_sun": 1,
+    "warm_raking_spots": 2,
+    "blue_fill_sun": 1
+  },
+  "rendered_from_reopened_blend": true,
+  "no_character": true,
+  "physical_device_test": false,
+  "median_luma": {
+    "central_halo_lane": 76.77,
+    "central_face_lane": 86.58,
+    "west_shaft": 122.28
+  },
+  "volume_off_control": {
+    "same_camera_and_lights": true,
+    "sample_budget": 256,
+    "west_shaft_abs_luma_delta_median": 46.42
+  }
+}

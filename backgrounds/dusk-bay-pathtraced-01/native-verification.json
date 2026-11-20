@@ -1,0 +1,46 @@
+{
+  "actorArenaBytes": 136092,
+  "snapshotBytes": 29748,
+  "packets": 93,
+  "work": 22043,
+  "coverage": 6332,
+  "bbox": [
+    55,
+    14,
+    183,
+    120
+  ],
+  "row1Row8Exact": true,
+  "resolution": [
+    240,
+    135
+  ],
+  "pose": "001",
+  "triangles": 1775,
+  "coveragePixels": 6332,
+  "backgroundPixels": 26068,
+  "actorPreservedExact": true,
+  "backgroundPreservedExact": true,
+  "backgroundSourceSha256": "af519ad9948ee72b4da2832f94d8c511fcbb941976e300c5654a76fd7df78993",
+  "outputRGB565Sha256": "9c48ff64345f15781867d46f2dbd7538002f140822098b38a07cd81dbfa011ad",
+  "outputPNGSha256": "e456831e1aea66b7cc68219917ee9570c64238d0f7b63ad4f0678fe548567a57",
+  "actorAssetSha256": "2dad7f6bfe7206d4435a0a99d758e1e2721270d95cc963a3bf2d29f02403d050",
+  "camera": [
+    100.31552665202938,
+    -49.610228574153524,
+    384.29223697328206,
+    0,
+    -2.11,
+    0,
+    29.62962962962963,
+    120,
+    67.5,
+    -0.6,
+    -0.35,
+    1
+  ],
+  "rendererPin": "fea78dce956a75d027b6fb24f3d89bd345e74f1c",
+  "compositorFirmware": "fea78dce956a75d027b6fb24f3d89bd345e74f1c",
+  "marker": "off",
+  "scope": "Host harness: native AYatsuri+Kasane model eval/depth and exact firmware C compositor; full 240 px windows; no device, DMA, performance, or live firmware app proof"
+}
