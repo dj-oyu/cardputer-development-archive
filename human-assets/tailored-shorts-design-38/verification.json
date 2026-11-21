@@ -1,0 +1,29 @@
+{
+  "source": "4d223a8e65bdc8a81088e3d15a4d8c04b268e1f67ae007ce8de864155e89a0d4",
+  "result": "10c954f9a9e9c034684cd6a18e053e4060858e964e357f02e1445f2569f3a258",
+  "unchanged_meshes": 61,
+  "bones": 20,
+  "unchanged_actions": [
+    "Provisional elbow + knee bend, not final"
+  ],
+  "unchanged_topology_weights_transform": true,
+  "sampled_evaluated_frames": [
+    1,
+    8,
+    15,
+    23,
+    30
+  ],
+  "shorts_triangles": 382,
+  "new_packed_images": {
+    "Tailored shorts | flush tailoring v38": "3c82944f5c18d9f26a00b6b798a17e7c9c6fc13146c3d4d89ef5e2134a9f9b0a"
+  },
+  "new_image_consumers": {
+    "Waist and seat": [
+      "Tailored shorts | flush tailoring v38"
+    ],
+    "Topstitched waistband": [
+      "Tailored shorts | flush tailoring v38"
+    ]
+  }
+}
