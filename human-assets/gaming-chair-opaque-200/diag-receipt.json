@@ -1,0 +1,57 @@
+{
+  "mode": "diag",
+  "arm_triangles": 16,
+  "chair_triangles": 200,
+  "source": "/workspace/scratch/6d8dcdbcdc54/chair-standing-26-opaque/chair-stand-opaque-26.blend",
+  "only_replaced_material_indexes": [
+    2,
+    3
+  ],
+  "new_components": {
+    "yellow_top": 4,
+    "yellow_outer": 4,
+    "yellow_front": 0,
+    "yellow_rear": 2,
+    "metal_panels": 6
+  },
+  "hand_bvh_overlap_pair_count": {
+    "Long ivory varsity sleeve and forest cuff.R": 0,
+    "Right sleeve Gold badge edge": 0,
+    "Right sleeve Golden amber badge": 0,
+    "Right sleeve lightning glyph only": 0,
+    "Long ivory varsity sleeve and forest cuff.L": 0,
+    "Elbow and narrowing forearm": 0,
+    "Relaxed blockout fist": 0,
+    "Separate resting thumb": 0,
+    "Elbow and narrowing forearm.001": 0,
+    "Relaxed blockout fist.001": 0,
+    "Separate resting thumb.001": 0
+  },
+  "non_arm_faces_exact": 63,
+  "part_roles_bound_sides": {
+    "left": [
+      [
+        -0.9300000071525574,
+        -0.6399999856948853,
+        1.8869999647140503
+      ],
+      [
+        -0.75,
+        -0.17000000178813934,
+        1.9509999752044678
+      ]
+    ],
+    "right": [
+      [
+        0.75,
+        -0.6399999856948853,
+        1.8869999647140503
+      ],
+      [
+        0.9300000071525574,
+        -0.17000000178813934,
+        1.9509999752044678
+      ]
+    ]
+  }
+}

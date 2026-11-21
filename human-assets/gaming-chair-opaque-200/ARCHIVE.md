@@ -1,0 +1,5 @@
+# Gaming chair: 200-triangle opaque candidate
+
+This editable preview combines a 26-triangle fixed stand (4 spoke quads, 4 two-quad opaque crossed wheel profiles, 1 shaft quad) and the 16-triangle armrest set (10 amber, 6 black). It has no transparent base textures; open surfaces depend on double-sided opaque rendering. The saved physical scene totals 200 chair triangles plus 1,913 human triangles. Compared with the 330-triangle export candidate, this saves 130 chair triangles. The separately loaded engine scenes are authored bake sources, not part of the chair mesh count. The stand remains stationary and the upper section remains separately editable. At 240×135 the slimmer stand is noticeable in some side and oblique views. This is not runtime integration, host benchmarking, or hardware validation.
+
+combine.py records the source mesh transplant from the corresponding fixed-base and armrest authoring variants. The packed Blender file is the editable artifact; regenerable renders and videos are omitted.
