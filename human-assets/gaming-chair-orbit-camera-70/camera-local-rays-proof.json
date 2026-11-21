@@ -1,0 +1,107 @@
+{
+  "tests": {
+    "neutral": {
+      "frame": 13,
+      "requested_camera_yaw_deg": 0,
+      "camera_yaw_deg": -0.0,
+      "requested_pitch_deg": 7.31,
+      "camera_pitch_deg": 7.309999648960057,
+      "stored_seat_yaw_deg": 0.0,
+      "stationary_base_max_vertices_drift": 0.0,
+      "look_at_alignment": 0.9999999795109034,
+      "feet_drift_blender_units": {
+        "L": 0.0,
+        "R": 0.0
+      }
+    },
+    "upper_oblique": {
+      "frame": 13,
+      "requested_camera_yaw_deg": 35,
+      "camera_yaw_deg": 35.00000134541444,
+      "requested_pitch_deg": 22,
+      "camera_pitch_deg": 22.000000342142975,
+      "stored_seat_yaw_deg": 0.0,
+      "stationary_base_max_vertices_drift": 0.0,
+      "look_at_alignment": 1.0000000596046448,
+      "feet_drift_blender_units": {
+        "L": 0.0,
+        "R": 0.0
+      }
+    },
+    "low_front": {
+      "frame": 13,
+      "requested_camera_yaw_deg": 145,
+      "camera_yaw_deg": 145.00000056491305,
+      "requested_pitch_deg": -4,
+      "camera_pitch_deg": -3.9999997986738545,
+      "stored_seat_yaw_deg": 0.0,
+      "stationary_base_max_vertices_drift": 0.0,
+      "look_at_alignment": 1.000000110361725,
+      "feet_drift_blender_units": {
+        "L": 0.0,
+        "R": 0.0
+      }
+    },
+    "swivel_a": {
+      "frame": 1,
+      "requested_camera_yaw_deg": -25,
+      "camera_yaw_deg": -25.000000584306505,
+      "requested_pitch_deg": 12,
+      "camera_pitch_deg": 11.999999258157946,
+      "stored_seat_yaw_deg": 35.00000498988355,
+      "stationary_base_max_vertices_drift": 0.0,
+      "look_at_alignment": 1.0000001192092896,
+      "feet_drift_blender_units": {
+        "L": 1.4333027191652118e-06,
+        "R": 2.5518863950500067e-06
+      }
+    },
+    "swivel_b": {
+      "frame": 25,
+      "requested_camera_yaw_deg": -25,
+      "camera_yaw_deg": -25.000000584306505,
+      "requested_pitch_deg": 12,
+      "camera_pitch_deg": 11.999999258157946,
+      "stored_seat_yaw_deg": -35.00000498988355,
+      "stationary_base_max_vertices_drift": 0.0,
+      "look_at_alignment": 1.0000001192092896,
+      "feet_drift_blender_units": {
+        "L": 2.7372747667324626e-06,
+        "R": 1.7047345216363777e-06
+      }
+    },
+    "same_seat_other_cam": {
+      "frame": 25,
+      "requested_camera_yaw_deg": 35,
+      "camera_yaw_deg": 35.00000055501992,
+      "requested_pitch_deg": -3,
+      "camera_pitch_deg": -3.0000000301194034,
+      "stored_seat_yaw_deg": -35.00000498988355,
+      "stationary_base_max_vertices_drift": 0.0,
+      "look_at_alignment": 1.0000000998843461,
+      "feet_drift_blender_units": {
+        "L": 2.7372747667324626e-06,
+        "R": 1.7047345216363777e-06
+      }
+    },
+    "cycle_end": {
+      "frame": 49,
+      "requested_camera_yaw_deg": 0,
+      "camera_yaw_deg": -0.0,
+      "requested_pitch_deg": 7.31,
+      "camera_pitch_deg": 7.309999648960057,
+      "stored_seat_yaw_deg": 35.00000498988355,
+      "stationary_base_max_vertices_drift": 0.0,
+      "look_at_alignment": 0.9999999795109034,
+      "feet_drift_blender_units": {
+        "L": 1.4333027191652118e-06,
+        "R": 2.5518863950500067e-06
+      }
+    }
+  },
+  "near_clip": 0.05999999865889549,
+  "display_actors_actions": [
+    "Cardputer | \u6905\u5b50\u306b\u5ea7\u308b\u30fb\u5f85\u6a5f",
+    "v70 \u2022 seated upper-frame swivel, fixed soles"
+  ]
+}
