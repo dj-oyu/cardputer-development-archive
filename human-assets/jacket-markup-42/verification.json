@@ -1,0 +1,29 @@
+{
+  "source": "28f5a304fbf4d7dafab8188bb5b7f8e229dab7e76ddb2a0a755a991de8f82baa",
+  "result": "71b6b440e5a7a23fc766b3db921df033e33c2e1fb6f14940bb7186e90560e76d",
+  "unchanged_meshes": 55,
+  "bones": 20,
+  "unchanged_actions": [
+    "Provisional elbow + knee bend, not final"
+  ],
+  "unchanged_topology_weights_transform": true,
+  "sampled_evaluated_frames": [
+    1,
+    8,
+    15,
+    23,
+    30
+  ],
+  "shorts_triangles": 382,
+  "new_packed_images": {
+    "Forest jacket | inset pocket welts v42": "cf9d72e450751fa24039ef81a7282c6105d74c6bb2defbdc74bb94afba83d0a6"
+  },
+  "new_image_consumers": {
+    "Jacket cut front and back": [
+      "Forest jacket | inset pocket welts v42"
+    ],
+    "Jacket cut front and back.001": [
+      "Forest jacket | inset pocket welts v42"
+    ]
+  }
+}
