@@ -1,0 +1,18 @@
+{
+  "human_sha256": "5b353f932c290ffe7718f0e6eee5fd6f493e2139da7c178ecb209001dc11a9f3",
+  "rig_rest_and_action_fcurves_exact": true,
+  "packed_image_hashes_exact": true,
+  "pose_joint_positions_exact": true,
+  "sampled_poses": [
+    "seat_1",
+    "seat_16",
+    "seat_32",
+    "seated_shin_-8",
+    "seated_shin_8",
+    "original_1",
+    "original_15",
+    "original_23",
+    "original_30"
+  ],
+  "arm_foot_body_status": "Seated human and independent chair; only shorts-to-seat cushion intersects; small armrest gap, upright pose not leaning against back; native firmware untested."
+}
