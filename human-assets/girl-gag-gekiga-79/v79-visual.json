@@ -1,0 +1,169 @@
+{
+  "front": {
+    "exact_preserved": {
+      "neutral": {
+        "exact_different": 0,
+        "rgb_difference_gt2": 0,
+        "bbox_gt2": null
+      },
+      "blink": {
+        "exact_different": 0,
+        "rgb_difference_gt2": 0,
+        "bbox_gt2": null
+      },
+      "smile": {
+        "exact_different": 0,
+        "rgb_difference_gt2": 0,
+        "bbox_gt2": null
+      },
+      "worried": {
+        "exact_different": 0,
+        "rgb_difference_gt2": 0,
+        "bbox_gt2": null
+      },
+      "surprised": {
+        "exact_different": 0,
+        "rgb_difference_gt2": 0,
+        "bbox_gt2": null
+      },
+      "sleepy": {
+        "exact_different": 0,
+        "rgb_difference_gt2": 0,
+        "bbox_gt2": null
+      },
+      "legacy-sweat": {
+        "exact_different": 0,
+        "rgb_difference_gt2": 0,
+        "bbox_gt2": null
+      },
+      "legacy-confusion": {
+        "exact_different": 0,
+        "rgb_difference_gt2": 0,
+        "bbox_gt2": null
+      },
+      "legacy-anger": {
+        "exact_different": 0,
+        "rgb_difference_gt2": 0,
+        "bbox_gt2": null
+      }
+    },
+    "old_gag_v_new_gag": {
+      "exact_different": 366,
+      "rgb_difference_gt2": 270,
+      "bbox_gt2": [
+        105,
+        13,
+        136,
+        53
+      ]
+    },
+    "additional": {
+      "dramatic_vs_neutral": {
+        "exact_different": 380,
+        "rgb_difference_gt2": 284,
+        "bbox_gt2": [
+          102,
+          13,
+          136,
+          35
+        ]
+      },
+      "dramatic_with_sweat_vs_without": {
+        "exact_different": 5144,
+        "rgb_difference_gt2": 2493,
+        "bbox_gt2": [
+          82,
+          3,
+          157,
+          133
+        ]
+      },
+      "dramatic_with_anger_vs_without": {
+        "exact_different": 5205,
+        "rgb_difference_gt2": 2542,
+        "bbox_gt2": [
+          82,
+          3,
+          161,
+          133
+        ]
+      }
+    }
+  },
+  "quarter": {
+    "exact_preserved": {
+      "neutral": {
+        "exact_different": 0,
+        "rgb_difference_gt2": 0,
+        "bbox_gt2": null
+      },
+      "blink": {
+        "exact_different": 0,
+        "rgb_difference_gt2": 0,
+        "bbox_gt2": null
+      },
+      "smile": {
+        "exact_different": 0,
+        "rgb_difference_gt2": 0,
+        "bbox_gt2": null
+      },
+      "worried": {
+        "exact_different": 0,
+        "rgb_difference_gt2": 0,
+        "bbox_gt2": null
+      },
+      "surprised": {
+        "exact_different": 0,
+        "rgb_difference_gt2": 0,
+        "bbox_gt2": null
+      },
+      "sleepy": {
+        "exact_different": 0,
+        "rgb_difference_gt2": 0,
+        "bbox_gt2": null
+      }
+    },
+    "old_gag_v_new_gag": {
+      "exact_different": 305,
+      "rgb_difference_gt2": 218,
+      "bbox_gt2": [
+        109,
+        12,
+        137,
+        60
+      ]
+    },
+    "additional": {
+      "dramatic_vs_neutral": {
+        "exact_different": 318,
+        "rgb_difference_gt2": 236,
+        "bbox_gt2": [
+          109,
+          12,
+          137,
+          60
+        ]
+      },
+      "dramatic_with_sweat_vs_without": {
+        "exact_different": 4921,
+        "rgb_difference_gt2": 2105,
+        "bbox_gt2": [
+          88,
+          2,
+          157,
+          134
+        ]
+      },
+      "dramatic_with_anger_vs_without": {
+        "exact_different": 4994,
+        "rgb_difference_gt2": 2157,
+        "bbox_gt2": [
+          88,
+          2,
+          161,
+          134
+        ]
+      }
+    }
+  }
+}
