@@ -1,0 +1,4 @@
+# Shallower chair descent and final release (v92)
+Editable Blender IK scene. A refinement of v91C, with unchanged established seated pose and stand-up motion. Both sole positions stay fixed. At first cushion contact (frame 31.5 at 24 fps), knees are farther forward (left knee 0.123 BU forward) and more flexed (left 99.8° to 104.6°). The head is 0.403 BU higher; trunk peak lean is 38.3°, previously 53.1°.
+
+The lowering is deliberately supported until the last short release. Pelvis height (BU) at frames 29–34: 2.035, 2.007, 1.965, 1.854, 1.857, 1.859. The final visible drop is 0.111 BU and stops at the seat, without a pronounced bounce. Hands are not extended as a balancing prop. Estimated fore-aft projected center stayed inside support until contact (three segment approximations, conservative 0.1313 BU margin). No new tested overlaps in 349 samples. Approximation and visual checks, not dynamics or Cardputer playback. No generated media in this directory.
