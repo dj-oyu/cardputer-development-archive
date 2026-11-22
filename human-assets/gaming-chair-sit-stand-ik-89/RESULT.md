@@ -1,0 +1,7 @@
+# Blender sit-to-stand and stand-to-sit IK proof (v89)
+
+Bundled editable Blender project, based on the v85 girl model with the selected packed gekiga texture. Chair neutral matches the reference v74 scene, frame 13 (+0.12 BU seat), verified on 20 bones and 57 evaluated meshes; the maximum vertex discrepancy was 0.00000547 BU.
+
+The standard Blender IK constraints follow independent ankle targets, knee-pole targets, and sole rotation controls, two-bone chains with stretching disabled. Controls are under the IK collection. Standing and sitting share the existing body and chair model. Standing to sitting and sitting to standing are independently authored; the latter shifts the chest forward before lift-off. Preview timeline: 1–88 at 24fps. The tested soles stay stationary to within 0.000028 BU, no new tested character/chair mesh overlap over 175 half-frame samples, and head shape stays rigid. The pre-existing waist-to-cushion contact at the original seated rest is retained.
+
+This is the authoring source, not a firmware export. A separate local evaluation showed that 20-bone FK visual keys match native IK at the half-frame bake samples; interpolation away from those samples is not identical. No Cardputer build, export compatibility or real performance is claimed. Generated review media intentionally excluded. This chair transition is independent of separately authored knee-cross animations.

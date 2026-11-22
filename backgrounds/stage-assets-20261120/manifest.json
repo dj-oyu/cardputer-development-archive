@@ -1,0 +1,86 @@
+{
+  "resolution": [
+    240,
+    135
+  ],
+  "image_format": "PNG RGB8 opaque",
+  "stages": [
+    {
+      "stage": "child-room",
+      "display_name": "子供部屋",
+      "stage_file": "child-room/stage.blend",
+      "background_file": "child-room/background.png",
+      "stage_sha256": "752887ca9e204c49ce3af8e126a2df948c535886cad42df0db02f57d874ab243",
+      "background_sha256": "1b3668e6e1e22c1431959abd8f97947e474e50dd5ae61ac287d269aaaadb0ee6",
+      "stage_git_blob": "3adde1dc46e8dc21170c05ff24c7e1beb67aba49",
+      "background_git_blob": "9128ca3eb1ffa1e1687d4d6901fa85a9044305a0",
+      "generator_archive": "../five-depth-eyeline-studies-20261120/room"
+    },
+    {
+      "stage": "beach",
+      "display_name": "ビーチ",
+      "stage_file": "beach/stage.blend",
+      "background_file": "beach/background.png",
+      "stage_sha256": "d6eeb3c09ac3ba4225f92c751dbc27da5c89df62eddddaf425e7acb354a6eb27",
+      "background_sha256": "ba56240c49c41060557043fa402e5cecdc6cb156bfdf028f78a7508ef2273f74",
+      "stage_git_blob": "88e6dfc226a167bca449410aa68e80639932b2b8",
+      "background_git_blob": "67d892b04452128c8775f2636f4300f99f0c3789",
+      "generator_archive": "../five-depth-eyeline-studies-20261120/beach"
+    },
+    {
+      "stage": "dinosaur-forest",
+      "display_name": "恐竜の森",
+      "stage_file": "dinosaur-forest/stage.blend",
+      "background_file": "dinosaur-forest/background.png",
+      "stage_sha256": "089ee166e3c8f4732e82894264c1a8416fa13dab8ede4d65a18fe11d770a3a4a",
+      "background_sha256": "28bd673949087cfa8c3c2363997e63df7eb204efba4eba7e00d768d69792c5a9",
+      "stage_git_blob": "e6fc975cd20d67504a948cb0f3a99d35955dc036",
+      "background_git_blob": "0345c323415bf3fb00ae5bb005ad49e50eb4c81b",
+      "generator_archive": "../three-depth-look-revisions-20261120/dino-procedural"
+    },
+    {
+      "stage": "pipe-warehouse",
+      "display_name": "Pipe Dream 倉庫版",
+      "stage_file": "pipe-warehouse/stage.blend",
+      "background_file": "pipe-warehouse/background.png",
+      "stage_sha256": "37f2f24b98d288e598e65292fcea4567133568b43ccdba234de4a35bca22235e",
+      "background_sha256": "985e1581c212a210192df87fac39ef73d8ad6cf205fd20c3868d82db37ce61da",
+      "stage_git_blob": "f75dd784b6a885a057ff647c61e31b700fcda550",
+      "background_git_blob": "c3bb57bb5fb995fd0f92e0e6cd4bbbff30600e87",
+      "generator_archive": "../pipe-dream-warehouse-20261120"
+    },
+    {
+      "stage": "vaporwave-temple",
+      "display_name": "Vaporwave Temple",
+      "stage_file": "vaporwave-temple/stage.blend",
+      "background_file": "vaporwave-temple/background.png",
+      "stage_sha256": "83ef284a400cf8294a48c2034bbc901a611893b2a80db9188560846e9fb6abb8",
+      "background_sha256": "d4334baf8cb8ba7f05acf43b5e38cd23abf618c08f0a3c34351f9a14006701cf",
+      "stage_git_blob": "bba6a4ea0cb0e112c9c1421222a54f67aa7eac33",
+      "background_git_blob": "3b5b51bc79f7198fbde17f0f48422c3903453ea1",
+      "generator_archive": "./vaporwave-temple"
+    },
+    {
+      "stage": "early-mac",
+      "display_name": "初期Mac",
+      "stage_file": "early-mac/stage.blend",
+      "background_file": "early-mac/background.png",
+      "stage_sha256": "80fd53a97a8a53fdbccb6b2e43887e0f65cc44702d2d4b145b7bcb466d722498",
+      "background_sha256": "19cb6cadc236153ce848b2e34eb731540dc844ddcd6f0fb0a748335b6cb40412",
+      "stage_git_blob": "bb0326c9289fda0062ebe56b544b53f0e2541b4b",
+      "background_git_blob": "eb09fa473b0b1a957b1238584e1711a528a2c541",
+      "generator_archive": "../six-backdrop-studies-20261120/retro-mac"
+    },
+    {
+      "stage": "dusk-bay",
+      "display_name": "夕暮れの入江",
+      "stage_file": "dusk-bay/stage.blend",
+      "background_file": "dusk-bay/background.png",
+      "stage_sha256": "75aea37e3fff6b08e86bb86c7907780f7182549aa63f522f3e787f3ee238b0c2",
+      "background_sha256": "af519ad9948ee72b4da2832f94d8c511fcbb941976e300c5654a76fd7df78993",
+      "stage_git_blob": "894dc6ebffa225338841fd5cac5c904a157412bb",
+      "background_git_blob": "7488a5dcd163c0a0a193fd8823d05e05275fce87",
+      "generator_archive": "../dusk-bay-pathtraced-01"
+    }
+  ]
+}

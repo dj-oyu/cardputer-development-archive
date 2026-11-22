@@ -1,0 +1,483 @@
+{
+  "chair": {
+    "rear": {
+      "caps": {
+        "triangles": 352,
+        "threshold_xor": 0,
+        "important_alpha_difference": 0,
+        "changed_bbox_xyxy": null
+      },
+      "arms": {
+        "triangles": 338,
+        "threshold_xor": 0,
+        "important_alpha_difference": 0,
+        "changed_bbox_xyxy": null
+      },
+      "mixed": {
+        "triangles": 330,
+        "threshold_xor": 7,
+        "important_alpha_difference": 11,
+        "changed_bbox_xyxy": [
+          100,
+          93,
+          141,
+          98
+        ]
+      },
+      "rect": {
+        "triangles": 322,
+        "threshold_xor": 7,
+        "important_alpha_difference": 11,
+        "changed_bbox_xyxy": [
+          100,
+          93,
+          141,
+          98
+        ]
+      }
+    },
+    "rear35L": {
+      "caps": {
+        "triangles": 352,
+        "threshold_xor": 0,
+        "important_alpha_difference": 0,
+        "changed_bbox_xyxy": null
+      },
+      "arms": {
+        "triangles": 338,
+        "threshold_xor": 4,
+        "important_alpha_difference": 4,
+        "changed_bbox_xyxy": [
+          89,
+          73,
+          100,
+          76
+        ]
+      },
+      "mixed": {
+        "triangles": 330,
+        "threshold_xor": 26,
+        "important_alpha_difference": 29,
+        "changed_bbox_xyxy": [
+          89,
+          73,
+          144,
+          100
+        ]
+      },
+      "rect": {
+        "triangles": 322,
+        "threshold_xor": 38,
+        "important_alpha_difference": 48,
+        "changed_bbox_xyxy": [
+          89,
+          73,
+          144,
+          100
+        ]
+      }
+    },
+    "rear35R": {
+      "caps": {
+        "triangles": 352,
+        "threshold_xor": 0,
+        "important_alpha_difference": 0,
+        "changed_bbox_xyxy": null
+      },
+      "arms": {
+        "triangles": 338,
+        "threshold_xor": 4,
+        "important_alpha_difference": 4,
+        "changed_bbox_xyxy": [
+          140,
+          73,
+          151,
+          76
+        ]
+      },
+      "mixed": {
+        "triangles": 330,
+        "threshold_xor": 24,
+        "important_alpha_difference": 29,
+        "changed_bbox_xyxy": [
+          96,
+          73,
+          151,
+          100
+        ]
+      },
+      "rect": {
+        "triangles": 322,
+        "threshold_xor": 38,
+        "important_alpha_difference": 48,
+        "changed_bbox_xyxy": [
+          96,
+          73,
+          151,
+          100
+        ]
+      }
+    },
+    "front": {
+      "caps": {
+        "triangles": 352,
+        "threshold_xor": 0,
+        "important_alpha_difference": 0,
+        "changed_bbox_xyxy": null
+      },
+      "arms": {
+        "triangles": 338,
+        "threshold_xor": 2,
+        "important_alpha_difference": 0,
+        "changed_bbox_xyxy": [
+          93,
+          77,
+          147,
+          78
+        ]
+      },
+      "mixed": {
+        "triangles": 330,
+        "threshold_xor": 9,
+        "important_alpha_difference": 6,
+        "changed_bbox_xyxy": [
+          93,
+          77,
+          147,
+          87
+        ]
+      },
+      "rect": {
+        "triangles": 322,
+        "threshold_xor": 12,
+        "important_alpha_difference": 16,
+        "changed_bbox_xyxy": [
+          93,
+          77,
+          147,
+          101
+        ]
+      }
+    },
+    "front35": {
+      "caps": {
+        "triangles": 352,
+        "threshold_xor": 0,
+        "important_alpha_difference": 0,
+        "changed_bbox_xyxy": null
+      },
+      "arms": {
+        "triangles": 338,
+        "threshold_xor": 4,
+        "important_alpha_difference": 4,
+        "changed_bbox_xyxy": [
+          89,
+          72,
+          101,
+          75
+        ]
+      },
+      "mixed": {
+        "triangles": 330,
+        "threshold_xor": 18,
+        "important_alpha_difference": 28,
+        "changed_bbox_xyxy": [
+          89,
+          72,
+          144,
+          96
+        ]
+      },
+      "rect": {
+        "triangles": 322,
+        "threshold_xor": 36,
+        "important_alpha_difference": 58,
+        "changed_bbox_xyxy": [
+          89,
+          72,
+          144,
+          102
+        ]
+      }
+    },
+    "side": {
+      "caps": {
+        "triangles": 352,
+        "threshold_xor": 0,
+        "important_alpha_difference": 0,
+        "changed_bbox_xyxy": null
+      },
+      "arms": {
+        "triangles": 338,
+        "threshold_xor": 3,
+        "important_alpha_difference": 0,
+        "changed_bbox_xyxy": [
+          101,
+          71,
+          115,
+          77
+        ]
+      },
+      "mixed": {
+        "triangles": 330,
+        "threshold_xor": 5,
+        "important_alpha_difference": 3,
+        "changed_bbox_xyxy": [
+          101,
+          71,
+          134,
+          99
+        ]
+      },
+      "rect": {
+        "triangles": 322,
+        "threshold_xor": 16,
+        "important_alpha_difference": 15,
+        "changed_bbox_xyxy": [
+          93,
+          71,
+          134,
+          99
+        ]
+      }
+    }
+  },
+  "full": {
+    "rear": {
+      "caps": {
+        "triangles": 352,
+        "threshold_xor": 0,
+        "important_alpha_difference": 0,
+        "changed_bbox_xyxy": null
+      },
+      "arms": {
+        "triangles": 338,
+        "threshold_xor": 0,
+        "important_alpha_difference": 0,
+        "changed_bbox_xyxy": null
+      },
+      "mixed": {
+        "triangles": 330,
+        "threshold_xor": 7,
+        "important_alpha_difference": 11,
+        "changed_bbox_xyxy": [
+          100,
+          93,
+          141,
+          98
+        ]
+      },
+      "rect": {
+        "triangles": 322,
+        "threshold_xor": 7,
+        "important_alpha_difference": 11,
+        "changed_bbox_xyxy": [
+          100,
+          93,
+          141,
+          98
+        ]
+      }
+    },
+    "rear35L": {
+      "caps": {
+        "triangles": 352,
+        "threshold_xor": 0,
+        "important_alpha_difference": 0,
+        "changed_bbox_xyxy": null
+      },
+      "arms": {
+        "triangles": 338,
+        "threshold_xor": 2,
+        "important_alpha_difference": 2,
+        "changed_bbox_xyxy": [
+          89,
+          73,
+          90,
+          75
+        ]
+      },
+      "mixed": {
+        "triangles": 330,
+        "threshold_xor": 21,
+        "important_alpha_difference": 23,
+        "changed_bbox_xyxy": [
+          89,
+          73,
+          144,
+          95
+        ]
+      },
+      "rect": {
+        "triangles": 322,
+        "threshold_xor": 21,
+        "important_alpha_difference": 23,
+        "changed_bbox_xyxy": [
+          89,
+          73,
+          144,
+          95
+        ]
+      }
+    },
+    "rear35R": {
+      "caps": {
+        "triangles": 352,
+        "threshold_xor": 0,
+        "important_alpha_difference": 0,
+        "changed_bbox_xyxy": null
+      },
+      "arms": {
+        "triangles": 338,
+        "threshold_xor": 2,
+        "important_alpha_difference": 2,
+        "changed_bbox_xyxy": [
+          150,
+          73,
+          151,
+          75
+        ]
+      },
+      "mixed": {
+        "triangles": 330,
+        "threshold_xor": 20,
+        "important_alpha_difference": 24,
+        "changed_bbox_xyxy": [
+          96,
+          73,
+          151,
+          95
+        ]
+      },
+      "rect": {
+        "triangles": 322,
+        "threshold_xor": 20,
+        "important_alpha_difference": 24,
+        "changed_bbox_xyxy": [
+          96,
+          73,
+          151,
+          95
+        ]
+      }
+    },
+    "front": {
+      "caps": {
+        "triangles": 352,
+        "threshold_xor": 0,
+        "important_alpha_difference": 0,
+        "changed_bbox_xyxy": null
+      },
+      "arms": {
+        "triangles": 338,
+        "threshold_xor": 2,
+        "important_alpha_difference": 0,
+        "changed_bbox_xyxy": [
+          93,
+          77,
+          147,
+          78
+        ]
+      },
+      "mixed": {
+        "triangles": 330,
+        "threshold_xor": 4,
+        "important_alpha_difference": 2,
+        "changed_bbox_xyxy": [
+          93,
+          77,
+          147,
+          87
+        ]
+      },
+      "rect": {
+        "triangles": 322,
+        "threshold_xor": 5,
+        "important_alpha_difference": 9,
+        "changed_bbox_xyxy": [
+          93,
+          77,
+          147,
+          101
+        ]
+      }
+    },
+    "front35": {
+      "caps": {
+        "triangles": 352,
+        "threshold_xor": 0,
+        "important_alpha_difference": 0,
+        "changed_bbox_xyxy": null
+      },
+      "arms": {
+        "triangles": 338,
+        "threshold_xor": 5,
+        "important_alpha_difference": 4,
+        "changed_bbox_xyxy": [
+          89,
+          71,
+          101,
+          75
+        ]
+      },
+      "mixed": {
+        "triangles": 330,
+        "threshold_xor": 19,
+        "important_alpha_difference": 26,
+        "changed_bbox_xyxy": [
+          89,
+          71,
+          144,
+          96
+        ]
+      },
+      "rect": {
+        "triangles": 322,
+        "threshold_xor": 22,
+        "important_alpha_difference": 29,
+        "changed_bbox_xyxy": [
+          89,
+          71,
+          144,
+          102
+        ]
+      }
+    },
+    "side": {
+      "caps": {
+        "triangles": 352,
+        "threshold_xor": 0,
+        "important_alpha_difference": 0,
+        "changed_bbox_xyxy": null
+      },
+      "arms": {
+        "triangles": 338,
+        "threshold_xor": 0,
+        "important_alpha_difference": 0,
+        "changed_bbox_xyxy": null
+      },
+      "mixed": {
+        "triangles": 330,
+        "threshold_xor": 2,
+        "important_alpha_difference": 3,
+        "changed_bbox_xyxy": [
+          132,
+          98,
+          134,
+          99
+        ]
+      },
+      "rect": {
+        "triangles": 322,
+        "threshold_xor": 8,
+        "important_alpha_difference": 10,
+        "changed_bbox_xyxy": [
+          93,
+          86,
+          134,
+          99
+        ]
+      }
+    }
+  }
+}

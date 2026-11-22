@@ -1,0 +1,60 @@
+{
+  "sha256": "b2801c79d3d0d7215764cdbb5f67040a38f7fb397d7b0b937b4c211f004bf1e9",
+  "rig_bones": 20,
+  "unchanged_original_actions": 60,
+  "verified_frames": [
+    1,
+    15,
+    30
+  ],
+  "unchanged_non_outfit_meshes": 50,
+  "raw_bound_triangles": 8521,
+  "patch_objects": [
+    "Right sleeve Gold badge edge",
+    "Right sleeve Golden amber badge",
+    "Right sleeve lightning glyph only"
+  ],
+  "anatomical_side": "upper-arm.R / X negative",
+  "patch_vertex_distance_to_sleeve": {
+    "neutral": {
+      "Right sleeve Gold badge edge": [
+        0.012914,
+        0.013991
+      ],
+      "Right sleeve Golden amber badge": [
+        0.020789,
+        0.020998
+      ],
+      "Right sleeve lightning glyph only": [
+        0.034633,
+        0.034964
+      ]
+    },
+    "elbow95": {
+      "Right sleeve Gold badge edge": [
+        0.012914,
+        0.015916
+      ],
+      "Right sleeve Golden amber badge": [
+        0.020789,
+        0.022016
+      ],
+      "Right sleeve lightning glyph only": [
+        0.034633,
+        0.034964
+      ]
+    }
+  },
+  "jacket_materials": [
+    "Dark charcoal lightning embroidery",
+    "Golden amber embroidered badge",
+    "Golden edge embroidery",
+    "Ivory jersey",
+    "Ivory neck binding",
+    "Varsity dark forest rib knit",
+    "Varsity forest green wool",
+    "Varsity warm ivory sleeves",
+    "Warm ivory welt and stripe",
+    "Warm pewter varsity snap"
+  ]
+}

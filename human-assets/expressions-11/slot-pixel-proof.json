@@ -1,0 +1,117 @@
+{
+  "neutral_sha256": "59e5bec557563aaa5a27c7987f3da80ee9cb456299e201a11232feb3b359f64c",
+  "slots": {
+    "blink": {
+      "regions": [
+        [
+          337,
+          482,
+          482,
+          629
+        ],
+        [
+          543,
+          482,
+          692,
+          629
+        ]
+      ],
+      "input_features": [
+        {
+          "source_sha256": "e2ce4c12406da040d9ebf733dd9887ddabe31e2c2149c9c95452c33e4cc802e2",
+          "source_crop": [
+            221,
+            397,
+            512,
+            509
+          ],
+          "source_trimmed_size": [
+            240,
+            59
+          ],
+          "position": [
+            348,
+            542
+          ],
+          "size": [
+            119,
+            29
+          ]
+        },
+        {
+          "source_sha256": "e2ce4c12406da040d9ebf733dd9887ddabe31e2c2149c9c95452c33e4cc802e2",
+          "source_crop": [
+            746,
+            397,
+            1035,
+            509
+          ],
+          "source_trimmed_size": [
+            241,
+            58
+          ],
+          "position": [
+            558,
+            542
+          ],
+          "size": [
+            119,
+            29
+          ]
+        }
+      ],
+      "changed_pixels": 29141,
+      "out_of_slot_changed_pixels": 0,
+      "png_sha256": "5b920ed319fba852482e2846b2c67d493d9b58db0d6eb50300974be41a59f3d6",
+      "replacement_alpha_bbox": [
+        348,
+        542,
+        677,
+        571
+      ]
+    },
+    "smile": {
+      "regions": [
+        [
+          438,
+          630,
+          595,
+          686
+        ]
+      ],
+      "input_features": [
+        {
+          "source_sha256": "e2ce4c12406da040d9ebf733dd9887ddabe31e2c2149c9c95452c33e4cc802e2",
+          "source_crop": [
+            492,
+            825,
+            764,
+            996
+          ],
+          "source_trimmed_size": [
+            218,
+            108
+          ],
+          "position": [
+            466,
+            632
+          ],
+          "size": [
+            99,
+            49
+          ]
+        }
+      ],
+      "changed_pixels": 3133,
+      "out_of_slot_changed_pixels": 0,
+      "png_sha256": "b4c2a64e6c24140b63735a24ea2828b90073ca7bfc0214f4eaef9abe80e1ad51",
+      "replacement_alpha_bbox": [
+        466,
+        632,
+        565,
+        681
+      ]
+    }
+  },
+  "combined_slot_diff": 32274
+}

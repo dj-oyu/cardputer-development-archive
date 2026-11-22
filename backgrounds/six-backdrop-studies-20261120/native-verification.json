@@ -1,0 +1,80 @@
+{
+  "themeCount": 6,
+  "common": {
+    "camera": [
+      100.31552665202938,
+      -49.610228574153524,
+      384.29223697328206,
+      0,
+      -2.11,
+      0,
+      29.62962962962963,
+      120,
+      67.5,
+      -0.6,
+      -0.35,
+      1
+    ],
+    "actorAssetSha256": "2dad7f6bfe7206d4435a0a99d758e1e2721270d95cc963a3bf2d29f02403d050",
+    "rendererPin": "fea78dce956a75d027b6fb24f3d89bd345e74f1c",
+    "compositorFirmware": "fea78dce956a75d027b6fb24f3d89bd345e74f1c",
+    "coveragePixels": 6332,
+    "backgroundPixels": 26068,
+    "pose": "001",
+    "resolution": [
+      240,
+      135
+    ]
+  },
+  "themes": {
+    "room": {
+      "backgroundSourceSha256": "de9835391813f9903474e032fa0e06640eb4d302343bc855f70bfc63beea0e4a",
+      "outputPNGSha256": "04663bc6dc7a0c4cc2dca80653ca6778e0b1e25d8f39bf3b3d19e5fff04555b7",
+      "outputRGB565Sha256": "61aebc96a48c01ea412dfd34683e1a4068e3187cc88cd0b932c76157a96ae03f",
+      "row1Row8Exact": true,
+      "actorPreservedExact": true,
+      "backgroundPreservedExact": true
+    },
+    "beach": {
+      "backgroundSourceSha256": "bf6200d33b3a0bed6974455093afd0568ed3126acb38d8583d1a217724706334",
+      "outputPNGSha256": "a17876e4b9affdb8a20bfe8b579d051ca17a26f055de70a1a298b01c17d61965",
+      "outputRGB565Sha256": "158437f5a72f8b6b07167927cd645775dc51623e2515ad326e4f61c46e94918a",
+      "row1Row8Exact": true,
+      "actorPreservedExact": true,
+      "backgroundPreservedExact": true
+    },
+    "classic-mac": {
+      "backgroundSourceSha256": "19cb6cadc236153ce848b2e34eb731540dc844ddcd6f0fb0a748335b6cb40412",
+      "outputPNGSha256": "fa6067e42a5b01d0e97a0d9cbfac83851a35b2025bc3c398e60b47e97ba68e0b",
+      "outputRGB565Sha256": "2f33ab66c838cdd37640a93c1a9573339820501ce3719715655e37abc6afc21d",
+      "row1Row8Exact": true,
+      "actorPreservedExact": true,
+      "backgroundPreservedExact": true
+    },
+    "retro-3d-v2": {
+      "backgroundSourceSha256": "3927ef8024f1bd245a728257d6c73ea4b61207870ef06a03ba733d1358ff0b1f",
+      "outputPNGSha256": "00c42ce9c9a5f010ada192bcd557a6568f2517bd4ec31bbef62e253cf706854c",
+      "outputRGB565Sha256": "a6dbc4ad3711f2b6651f9d0cef462c6d988bcfe622a511661e27f4e1bda9af2b",
+      "row1Row8Exact": true,
+      "actorPreservedExact": true,
+      "backgroundPreservedExact": true
+    },
+    "temple": {
+      "backgroundSourceSha256": "53789bc88d7659aa35481d2fa9c2e8035137f7e3a2020d9918980c15719c3113",
+      "outputPNGSha256": "4ecc6edb2ff11ffebf17b5de258177b9f4519c4c5ef4b630609139180b4b50c8",
+      "outputRGB565Sha256": "5d4dfb03bcbe9300dd46422e5d90a008bfb190929f766cfa9f319f73ed22a8ad",
+      "row1Row8Exact": true,
+      "actorPreservedExact": true,
+      "backgroundPreservedExact": true
+    },
+    "dino": {
+      "backgroundSourceSha256": "954e24514e79fc3a70f41c203be9898f61993229b75099295a70bf5c1bf848b2",
+      "outputPNGSha256": "c10637fab46581c4943a9c5907de49e3533807d15b21b45c0b1e0c49c9bb1641",
+      "outputRGB565Sha256": "3074c2f7c5fdce625977becb7079e4c2a404eb499be7a4dfe8d29992dc446759",
+      "row1Row8Exact": true,
+      "actorPreservedExact": true,
+      "backgroundPreservedExact": true
+    }
+  },
+  "scope": "Same-head native host checks, no real-device tests"
+}

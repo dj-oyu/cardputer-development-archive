@@ -1,0 +1,52 @@
+{
+ "source_sha256": "3c441fef0c37e53845f2e2a0d416e62de7d5af2b05d4301591e1bb017ca66f83",
+ "variant_sha256": "7f42b9379865be20d3ba122ed2e7c8b2546e3b81c1a27dc16e2abc106a5ac041",
+ "checked_unchanged_presets_frames": [
+  [
+   1,
+   0
+  ],
+  [
+   1,
+   1
+  ],
+  [
+   74,
+   1
+  ],
+  [
+   1,
+   2
+  ],
+  [
+   1,
+   3
+  ],
+  [
+   1,
+   4
+  ],
+  [
+   169,
+   0
+  ]
+ ],
+ "max_previous_pose_vertex_error": 0.0,
+ "new_preset": 5,
+ "visible_face_components": [
+  "Brow L",
+  "Brow R",
+  "Expression Dot gag epsilon mouth",
+  "Expression Dot gag eye L",
+  "Expression Dot gag eye R"
+ ],
+ "gag_epsilon_proj_size_px": [
+  9.178612232208252,
+  9.19445425271988
+ ],
+ "gag_epsilon_editable_triangles": 224,
+ "whole_eye_dot_mesh_triangles": 448,
+ "preserves_7s": true,
+ "verified_independent_layers": true,
+ "verified_emote_combination_after_reopen": true
+}

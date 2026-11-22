@@ -1,0 +1,50 @@
+{
+  "front": {
+    "v16_vs_plain": {
+      "silhouette_pixels_changed": 17,
+      "rgb565_head_crop_pixels_changed": 46,
+      "head_crop_pixels_with_delta_ge_16": 38
+    },
+    "plain_vs_detail": {
+      "silhouette_pixels_changed": 0,
+      "rgb565_head_crop_pixels_changed": 2,
+      "head_crop_pixels_with_delta_ge_16": 0
+    }
+  },
+  "oblique": {
+    "v16_vs_plain": {
+      "silhouette_pixels_changed": 0,
+      "rgb565_head_crop_pixels_changed": 1,
+      "head_crop_pixels_with_delta_ge_16": 0
+    },
+    "plain_vs_detail": {
+      "silhouette_pixels_changed": 21,
+      "rgb565_head_crop_pixels_changed": 89,
+      "head_crop_pixels_with_delta_ge_16": 52
+    }
+  },
+  "profile": {
+    "v16_vs_plain": {
+      "silhouette_pixels_changed": 0,
+      "rgb565_head_crop_pixels_changed": 116,
+      "head_crop_pixels_with_delta_ge_16": 22
+    },
+    "plain_vs_detail": {
+      "silhouette_pixels_changed": 45,
+      "rgb565_head_crop_pixels_changed": 229,
+      "head_crop_pixels_with_delta_ge_16": 99
+    }
+  },
+  "back": {
+    "v16_vs_plain": {
+      "silhouette_pixels_changed": 14,
+      "rgb565_head_crop_pixels_changed": 92,
+      "head_crop_pixels_with_delta_ge_16": 35
+    },
+    "plain_vs_detail": {
+      "silhouette_pixels_changed": 0,
+      "rgb565_head_crop_pixels_changed": 565,
+      "head_crop_pixels_with_delta_ge_16": 65
+    }
+  }
+}

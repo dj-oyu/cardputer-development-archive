@@ -1,0 +1,82 @@
+{
+  "close-baseline10-neutral": {
+    "significant_pixel_count_at_delta_7": 1832,
+    "significant_diff_bbox": [
+      146,
+      150,
+      259,
+      205
+    ],
+    "alpha_exact": true
+  },
+  "close-chosen-blink": {
+    "significant_pixel_count_at_delta_7": 2574,
+    "significant_diff_bbox": [
+      139,
+      138,
+      261,
+      205
+    ],
+    "alpha_exact": true
+  },
+  "close-chosen-smile": {
+    "significant_pixel_count_at_delta_7": 309,
+    "significant_diff_bbox": [
+      207,
+      206,
+      238,
+      224
+    ],
+    "alpha_exact": true
+  },
+  "close-chosen-both": {
+    "significant_pixel_count_at_delta_7": 2883,
+    "significant_diff_bbox": [
+      139,
+      138,
+      261,
+      224
+    ],
+    "alpha_exact": true
+  },
+  "native-baseline10-neutral": {
+    "significant_pixel_count_at_delta_7": 44,
+    "significant_diff_bbox": [
+      117,
+      23,
+      132,
+      29
+    ],
+    "alpha_exact": true
+  },
+  "native-chosen-blink": {
+    "significant_pixel_count_at_delta_7": 63,
+    "significant_diff_bbox": [
+      117,
+      22,
+      132,
+      29
+    ],
+    "alpha_exact": true
+  },
+  "native-chosen-smile": {
+    "significant_pixel_count_at_delta_7": 7,
+    "significant_diff_bbox": [
+      124,
+      30,
+      128,
+      32
+    ],
+    "alpha_exact": true
+  },
+  "native-chosen-both": {
+    "significant_pixel_count_at_delta_7": 70,
+    "significant_diff_bbox": [
+      117,
+      22,
+      132,
+      32
+    ],
+    "alpha_exact": true
+  }
+}

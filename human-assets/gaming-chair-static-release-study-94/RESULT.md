@@ -1,0 +1,6 @@
+# Stand-to-sit pre-release geometry study (v94)
+The C file is an independent editable static checkpoint from v92, not a new motion and not a final seating animation. The chair stays where it was; both feet in C are prepositioned 0.150 BU nearer the chair (about 4.5 cm when 5.35 BU is mapped to 1.60 m) and then remain fixed. No arm or hand support is added.
+
+To isolate the fall reference, the evaluated lower buttock band was projected vertically without any sideways/rearward displacement. On the true cushion plane, z=1.493 BU, the baseline v92 pose places about 16.4% of that band over the cushion and first touches its front edge. With v92's original feet, independent A/B static search poses had 53%/70% coverage and 49°/54° trunk lean. C shows 95.1% coverage, first contact 0.221 BU behind the front edge, trunk lean 46.1°, and a conservative fore-aft heel support margin about 0.030 BU. These are geometrical approximations, not a dynamic simulation; coverage and first-contact depth are different metrics. Reopening the Blender scene and testing through 17 pure vertical offsets found no new tested overlaps before contact. The C pose does not freeze an artistic choice for the full movement; an animation can pass briefly through a preparation pose rather than holding the bend.
+
+No character animation, firmware work or review media included.

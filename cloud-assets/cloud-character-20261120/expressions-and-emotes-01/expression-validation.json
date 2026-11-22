@@ -1,0 +1,156 @@
+{
+ "source_sha256": "7c661aeafcadf55b8c7435a463f87892d31adb4142a75efb54bc5a930c86e231",
+ "variant_sha256": "09fd8af677b3d8e72a4ec83499311dcf2d1a559c60217bc3ecd35e35e4fd9010",
+ "controls": [
+  "cloud_face_preset",
+  "cloud_face_eyes",
+  "cloud_face_brows",
+  "cloud_face_mouth"
+ ],
+ "preset_active_objects": {
+  "neutral": [],
+  "happy": [
+   "Expression Happy closed eye L",
+   "Expression Happy eyebrow L",
+   "Expression Happy closed eye R",
+   "Expression Happy eyebrow R",
+   "Expression Happy mouth interior",
+   "Expression Happy mouth rim",
+   "Expression Happy tongue"
+  ],
+  "concerned": [
+   "Expression Concerned eyebrow L",
+   "Expression Concerned eyebrow R",
+   "Expression Concerned mouth"
+  ],
+  "surprised": [
+   "Expression Surprised eyebrow L",
+   "Expression Surprised eyebrow R",
+   "Expression Surprised mouth interior",
+   "Expression Surprised mouth rim",
+   "Expression Surprised tongue"
+  ],
+  "sleepy": [
+   "Expression Sleepy lid L",
+   "Expression Sleepy eyebrow L",
+   "Expression Sleepy lid R",
+   "Expression Sleepy eyebrow R",
+   "Expression Sleepy mouth interior",
+   "Expression Sleepy mouth rim"
+  ]
+ },
+ "mixed_happy_eyes_concerned_brows_surprised_mouth": [
+  "Expression Happy closed eye L",
+  "Expression Concerned eyebrow L",
+  "Expression Happy closed eye R",
+  "Expression Concerned eyebrow R",
+  "Expression Surprised mouth interior",
+  "Expression Surprised mouth rim",
+  "Expression Surprised tongue"
+ ],
+ "new_objects": 21,
+ "preserved_idle_seconds": 7,
+ "neutral_additions_visible": 0,
+ "brows_width_height_before_after_px": {
+  "Brow L": [
+   [
+    8.6773681640625,
+    4.223352670669556
+   ],
+   [
+    8.6773681640625,
+    4.900685548782349
+   ]
+  ],
+  "Brow R": [
+   [
+    8.122150897979736,
+    4.005900621414185
+   ],
+   [
+    8.122150897979736,
+    4.6757179498672485
+   ]
+  ],
+  "Expression Happy eyebrow L": [
+   [
+    9.351611137390137,
+    4.50738251209259
+   ],
+   [
+    9.351611137390137,
+    5.110340416431427
+   ]
+  ],
+  "Expression Concerned eyebrow L": [
+   [
+    8.864951133728027,
+    6.071341037750244
+   ],
+   [
+    8.864951133728027,
+    6.779090166091919
+   ]
+  ],
+  "Expression Surprised eyebrow L": [
+   [
+    9.915447235107422,
+    4.154924154281616
+   ],
+   [
+    9.915447235107422,
+    4.849090576171875
+   ]
+  ],
+  "Expression Sleepy eyebrow L": [
+   [
+    9.062061309814453,
+    2.620464563369751
+   ],
+   [
+    9.062061309814453,
+    3.0794763565063477
+   ]
+  ],
+  "Expression Happy eyebrow R": [
+   [
+    8.375895023345947,
+    4.287291169166565
+   ],
+   [
+    8.375895023345947,
+    4.892341196537018
+   ]
+  ],
+  "Expression Concerned eyebrow R": [
+   [
+    8.994419574737549,
+    5.607927739620209
+   ],
+   [
+    8.994419574737549,
+    6.314662992954254
+   ]
+  ],
+  "Expression Surprised eyebrow R": [
+   [
+    8.958477973937988,
+    3.8968849182128906
+   ],
+   [
+    8.958477973937988,
+    4.588323533535004
+   ]
+  ],
+  "Expression Sleepy eyebrow R": [
+   [
+    8.319082260131836,
+    2.3875388503074646
+   ],
+   [
+    8.319082260131836,
+    2.850123345851898
+   ]
+  ]
+ }
+}
